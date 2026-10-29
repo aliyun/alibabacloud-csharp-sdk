@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class UpdateIdentityProviderResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code of the API request. SUCCESS indicates that the request is successful, but does not mean that the asynchronous configuration or synchronization task is completed.</para>
+        /// <para>The business status code for this API request. A value of SUCCESS indicates that the request succeeded, but does not indicate that the asynchronous configuration or synchronization task is complete.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public UpdateIdentityProviderResponseBodyData Data { get; set; }
         public class UpdateIdentityProviderResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The actual SAML configuration read back from the upstream. This update operation does not perform the read-back and usually does not return this field. Use GetIdentityProvider to obtain it.</para>
+            /// <para>The actual SAML configuration read back from the upstream. This update API does not perform this read-back and usually does not return this field. Use GetIdentityProvider to obtain it.</para>
             /// </summary>
             [NameInMap("configuration")]
             [Validation(Required=false)]
             public UpdateIdentityProviderResponseBodyDataConfiguration Configuration { get; set; }
             public class UpdateIdentityProviderResponseBodyDataConfiguration : TeaModel {
                 /// <summary>
-                /// <para>The actual SAML binding type saved in the upstream, which is HTTP-Redirect or HTTP-POST.</para>
+                /// <para>The actual SAML binding type saved upstream, which is HTTP-Redirect or HTTP-POST.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HTTP-Redirect</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string BindingType { get; set; }
 
                 /// <summary>
-                /// <para>The actual enterprise IdP entity ID saved in the upstream.</para>
+                /// <para>The actual enterprise IdP entity ID saved upstream.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string EntityId { get; set; }
 
                 /// <summary>
-                /// <para>The actual enterprise IdP SSO logon URL saved in the upstream.</para>
+                /// <para>The actual enterprise IdP SSO logon URL saved upstream.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string LoginUrl { get; set; }
 
                 /// <summary>
-                /// <para>The actual SSO logon status in the upstream. Enabled indicates that it is turned on, and Disabled indicates that it is turned off. This should be evaluated separately from the expected value of loginEnabled.</para>
+                /// <para>The actual SSO logon status upstream. Enabled indicates that it is turned on, and Disabled indicates that it is turned off. This should be evaluated separately from the expected value of loginEnabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Enabled</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The type of the identity provider. DingTalk: DingTalk. Feishu: Lark. CustomSSO: custom enterprise identity provider connected through SAML. The value must be the same as the type of the identity provider bound to the current workspace.</para>
+            /// <para>The type of the identity provider. DingTalk indicates DingTalk. Feishu indicates Feishu. CustomSSO indicates a custom enterprise identity provider connected through SAML. The value must be the same as the type of the identity provider bound to the current workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DingTalk</para>
@@ -86,14 +86,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string IdentityProviderType { get; set; }
 
             /// <summary>
-            /// <para>The currently saved expected value of the logon switch, which alone does not prove that the upstream logon configuration has taken effect.</para>
+            /// <para>The currently saved expected value for the logon switch. This alone does not prove that the upstream logon configuration has taken effect.</para>
             /// </summary>
             [NameInMap("loginEnabled")]
             [Validation(Required=false)]
             public bool? LoginEnabled { get; set; }
 
             /// <summary>
-            /// <para>The currently saved logon protocol for CustomSSO, which is SAML when configured. This field is not returned for DingTalk or Lark.</para>
+            /// <para>The currently saved logon protocol for CustomSSO. The value is SAML when configured. This field is not returned for DingTalk or Lark.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SAML</para>
@@ -157,13 +157,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <item><description>CONFIGURED: The configuration is accepted.</description></item>
             /// <item><description>UPDATING: The configuration is being updated.</description></item>
             /// <item><description>SYNCING: Synchronization is in progress.</description></item>
-            /// <item><description>SYNCED: The synchronization phase is completed.</description></item>
+            /// <item><description>SYNCED: The synchronization phase is complete.</description></item>
             /// <item><description>READY: The resource is ready.</description></item>
             /// <item><description>SYNC_FAILED: Synchronization failed.</description></item>
             /// <item><description>UPDATE_FAILED: The update failed.</description></item>
             /// <item><description>DISCONNECTING: Unbinding is in progress.</description></item>
             /// <item><description>DISCONNECT_FAILED: Unbinding failed.
-            /// READY alone does not indicate that users have been imported. Query the SCIM operation results for CustomSSO separately.</description></item>
+            /// A value of READY does not alone indicate that users are imported. Query the SCIM operation results for CustomSSO separately.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -174,21 +174,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The currently saved expected value of the synchronization switch. For DingTalk and Lark, it is used for subsequent address book change events. The SCIM switch for CustomSSO is managed through UpdateIdentityProviderSCIM, and the operation results are queried through GetIdentityProviderSCIM.</para>
+            /// <para>The currently saved expected value for the synchronization switch. For DingTalk and Lark, this is used for subsequent address book change events. For CustomSSO, the SCIM switch is managed by using UpdateIdentityProviderSCIM, and the operation results are queried by using GetIdentityProviderSCIM.</para>
             /// </summary>
             [NameInMap("syncEnabled")]
             [Validation(Required=false)]
             public bool? SyncEnabled { get; set; }
 
             /// <summary>
-            /// <para>The saved synchronization scope for DingTalk and Lark. The default value for valid historical configurations is AllAuthorized, and this field may not be returned for corrupted historical configurations. This field is not returned for CustomSSO.</para>
+            /// <para>The saved synchronization scope for DingTalk and Lark. The default value for valid historical configurations is AllAuthorized. This field may not be returned for corrupted historical configurations. This field is not returned for CustomSSO.</para>
             /// </summary>
             [NameInMap("syncScope")]
             [Validation(Required=false)]
             public UpdateIdentityProviderResponseBodyDataSyncScope SyncScope { get; set; }
             public class UpdateIdentityProviderResponseBodyDataSyncScope : TeaModel {
                 /// <summary>
-                /// <para>The list of department IDs in the synchronization scope, obtained from ListIdentityProviderDepartments. In SelectedDepartments mode, at least one non-empty department ID must be provided. In AllAuthorized mode, this parameter should be omitted or an empty array should be passed.</para>
+                /// <para>The list of department IDs in the synchronization scope, which are obtained from ListIdentityProviderDepartments. In SelectedDepartments mode, you must provide at least one non-empty department ID. In AllAuthorized mode, this field should be omitted or an empty array should be passed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;10001&quot;]</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public List<string> DepartmentIds { get; set; }
 
                 /// <summary>
-                /// <para>The synchronization scope mode. AllAuthorized: all members within the authorization scope of the application address book. SelectedDepartments: the selected departments and all their sub-departments. A valid mode must be provided when syncScope is explicitly submitted.</para>
+                /// <para>The synchronization scope mode. Valid values: AllAuthorized and SelectedDepartments. AllAuthorized indicates all members within the authorization scope of the application address book. SelectedDepartments indicates the selected departments and all their sub-departments. When explicitly submitting syncScope, you must provide a valid mode.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SelectedDepartments</para>
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code of the API request, which does not represent the execution result of the background task.</para>
+        /// <para>The HTTP status code for this API request. This does not indicate the execution result of the background task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message of the API request. An error description is returned if the request fails.</para>
+        /// <para>The response message for this API request. An error description is returned if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request. Provide this value when you troubleshoot issues.</para>
+        /// <para>The unique identifier for this request. Provide this value when you troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request-123456</para>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API request is successful. To check whether the background configuration has taken effect, query the identity provider status separately.</para>
+        /// <para>Indicates whether this API request succeeded. To check whether the background configuration has taken effect, you must query the identity provider status separately.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

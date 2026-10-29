@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AcrInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The RAM authorization URL used to create or append target ACR permissions for the shared role.</para>
+            /// <para>The RAM authorization URL for creating or appending target ACR permissions for the shared role.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

@@ -1351,17 +1351,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom agent in a specified workspace. Container image and code package deployments are supported. The creation process is asynchronous. You can call GetCustomAgent to query the deployment result.</para>
+        /// <para>Creates a custom agent in a specified workspace by using a container image or a code package. The creation process is asynchronous. You can call GetCustomAgent to query the deployment result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, prepare a writable workspace, a RAM role ARN, a container image or code package, and runtime configurations. You must specify name, artifact, roleArn, and runtime. The runtime parameter must include both compute and sessionPolicy.
-        /// In container mode, use artifact.container and specify artifact.port. The image must have the required access permissions and be accessible over the network allowed by the workspace.
-        /// In code package pattern, specify artifact.port, and the sourceUri, languageRuntime, and entrypoint of artifact.code. Do not specify container at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported. The compressed package size cannot exceed 500,000,000 bytes. You can call ListAgentCodeRuntimes to query the runtime environment identity. The sourceUri parameter supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, call GetAgentCodePackageUploadUrl to obtain an upload URL, upload the file directly, and then commit the returned sourceUri.
-        /// When you submit a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not mean that the agent is ready to run.
-        /// The creation process is asynchronous. A successful response indicates that the request is accepted. You can use the returned agentId to call GetCustomAgent and check the latestVersionStatus, latestExecutionError, and status corresponding to latestSpecVersion to confirm the deployment result. After the deployment is ready, you can call CreateServiceEndpoint to configure the access endpoint.
-        /// The clientToken parameter does not provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold parameter for health checks does not take effect. Omit this parameter.</para>
+        /// To use the container mode, configure artifact.container and specify artifact.port. The image must have the required access permissions and be accessible over the network allowed by the workspace.
+        /// To use the code package pattern, specify artifact.port, and configure sourceUri, languageRuntime, and entrypoint in artifact.code. Do not configure container at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported. The compressed package size cannot exceed 500,000,000 bytes. You can call ListAgentCodeRuntimes to query the runtime environment identity. The sourceUri parameter supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. To upload a local file, call GetAgentCodePackageUploadUrl to obtain the upload URL, upload the file directly, and then commit the returned sourceUri.
+        /// When you submit a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
+        /// The creation process is asynchronous. A successful response indicates that the request is accepted. Use the returned agentId to call GetCustomAgent and check latestVersionStatus, latestExecutionError, and status corresponding to latestSpecVersion to confirm the deployment result. After the deployment is ready, you can call CreateServiceEndpoint to configure the access endpoint.
+        /// The clientToken parameter does not provide idempotence guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold parameter for health checks does not take effect. Omit this parameter.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1419,17 +1419,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom agent in a specified workspace. Container image and code package deployments are supported. The creation process is asynchronous. You can call GetCustomAgent to query the deployment result.</para>
+        /// <para>Creates a custom agent in a specified workspace by using a container image or a code package. The creation process is asynchronous. You can call GetCustomAgent to query the deployment result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, prepare a writable workspace, a RAM role ARN, a container image or code package, and runtime configurations. You must specify name, artifact, roleArn, and runtime. The runtime parameter must include both compute and sessionPolicy.
-        /// In container mode, use artifact.container and specify artifact.port. The image must have the required access permissions and be accessible over the network allowed by the workspace.
-        /// In code package pattern, specify artifact.port, and the sourceUri, languageRuntime, and entrypoint of artifact.code. Do not specify container at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported. The compressed package size cannot exceed 500,000,000 bytes. You can call ListAgentCodeRuntimes to query the runtime environment identity. The sourceUri parameter supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, call GetAgentCodePackageUploadUrl to obtain an upload URL, upload the file directly, and then commit the returned sourceUri.
-        /// When you submit a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not mean that the agent is ready to run.
-        /// The creation process is asynchronous. A successful response indicates that the request is accepted. You can use the returned agentId to call GetCustomAgent and check the latestVersionStatus, latestExecutionError, and status corresponding to latestSpecVersion to confirm the deployment result. After the deployment is ready, you can call CreateServiceEndpoint to configure the access endpoint.
-        /// The clientToken parameter does not provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold parameter for health checks does not take effect. Omit this parameter.</para>
+        /// To use the container mode, configure artifact.container and specify artifact.port. The image must have the required access permissions and be accessible over the network allowed by the workspace.
+        /// To use the code package pattern, specify artifact.port, and configure sourceUri, languageRuntime, and entrypoint in artifact.code. Do not configure container at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported. The compressed package size cannot exceed 500,000,000 bytes. You can call ListAgentCodeRuntimes to query the runtime environment identity. The sourceUri parameter supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. To upload a local file, call GetAgentCodePackageUploadUrl to obtain the upload URL, upload the file directly, and then commit the returned sourceUri.
+        /// When you submit a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
+        /// The creation process is asynchronous. A successful response indicates that the request is accepted. Use the returned agentId to call GetCustomAgent and check latestVersionStatus, latestExecutionError, and status corresponding to latestSpecVersion to confirm the deployment result. After the deployment is ready, you can call CreateServiceEndpoint to configure the access endpoint.
+        /// The clientToken parameter does not provide idempotence guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold parameter for health checks does not take effect. Omit this parameter.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1487,17 +1487,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom agent in a specified workspace. Container image and code package deployments are supported. The creation process is asynchronous. You can call GetCustomAgent to query the deployment result.</para>
+        /// <para>Creates a custom agent in a specified workspace by using a container image or a code package. The creation process is asynchronous. You can call GetCustomAgent to query the deployment result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, prepare a writable workspace, a RAM role ARN, a container image or code package, and runtime configurations. You must specify name, artifact, roleArn, and runtime. The runtime parameter must include both compute and sessionPolicy.
-        /// In container mode, use artifact.container and specify artifact.port. The image must have the required access permissions and be accessible over the network allowed by the workspace.
-        /// In code package pattern, specify artifact.port, and the sourceUri, languageRuntime, and entrypoint of artifact.code. Do not specify container at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported. The compressed package size cannot exceed 500,000,000 bytes. You can call ListAgentCodeRuntimes to query the runtime environment identity. The sourceUri parameter supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, call GetAgentCodePackageUploadUrl to obtain an upload URL, upload the file directly, and then commit the returned sourceUri.
-        /// When you submit a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not mean that the agent is ready to run.
-        /// The creation process is asynchronous. A successful response indicates that the request is accepted. You can use the returned agentId to call GetCustomAgent and check the latestVersionStatus, latestExecutionError, and status corresponding to latestSpecVersion to confirm the deployment result. After the deployment is ready, you can call CreateServiceEndpoint to configure the access endpoint.
-        /// The clientToken parameter does not provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold parameter for health checks does not take effect. Omit this parameter.</para>
+        /// To use the container mode, configure artifact.container and specify artifact.port. The image must have the required access permissions and be accessible over the network allowed by the workspace.
+        /// To use the code package pattern, specify artifact.port, and configure sourceUri, languageRuntime, and entrypoint in artifact.code. Do not configure container at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported. The compressed package size cannot exceed 500,000,000 bytes. You can call ListAgentCodeRuntimes to query the runtime environment identity. The sourceUri parameter supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. To upload a local file, call GetAgentCodePackageUploadUrl to obtain the upload URL, upload the file directly, and then commit the returned sourceUri.
+        /// When you submit a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
+        /// The creation process is asynchronous. A successful response indicates that the request is accepted. Use the returned agentId to call GetCustomAgent and check latestVersionStatus, latestExecutionError, and status corresponding to latestSpecVersion to confirm the deployment result. After the deployment is ready, you can call CreateServiceEndpoint to configure the access endpoint.
+        /// The clientToken parameter does not provide idempotence guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold parameter for health checks does not take effect. Omit this parameter.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1516,17 +1516,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom agent in a specified workspace. Container image and code package deployments are supported. The creation process is asynchronous. You can call GetCustomAgent to query the deployment result.</para>
+        /// <para>Creates a custom agent in a specified workspace by using a container image or a code package. The creation process is asynchronous. You can call GetCustomAgent to query the deployment result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Before you call this operation, prepare a writable workspace, a RAM role ARN, a container image or code package, and runtime configurations. You must specify name, artifact, roleArn, and runtime. The runtime parameter must include both compute and sessionPolicy.
-        /// In container mode, use artifact.container and specify artifact.port. The image must have the required access permissions and be accessible over the network allowed by the workspace.
-        /// In code package pattern, specify artifact.port, and the sourceUri, languageRuntime, and entrypoint of artifact.code. Do not specify container at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported. The compressed package size cannot exceed 500,000,000 bytes. You can call ListAgentCodeRuntimes to query the runtime environment identity. The sourceUri parameter supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, call GetAgentCodePackageUploadUrl to obtain an upload URL, upload the file directly, and then commit the returned sourceUri.
-        /// When you submit a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not mean that the agent is ready to run.
-        /// The creation process is asynchronous. A successful response indicates that the request is accepted. You can use the returned agentId to call GetCustomAgent and check the latestVersionStatus, latestExecutionError, and status corresponding to latestSpecVersion to confirm the deployment result. After the deployment is ready, you can call CreateServiceEndpoint to configure the access endpoint.
-        /// The clientToken parameter does not provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold parameter for health checks does not take effect. Omit this parameter.</para>
+        /// To use the container mode, configure artifact.container and specify artifact.port. The image must have the required access permissions and be accessible over the network allowed by the workspace.
+        /// To use the code package pattern, specify artifact.port, and configure sourceUri, languageRuntime, and entrypoint in artifact.code. Do not configure container at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported. The compressed package size cannot exceed 500,000,000 bytes. You can call ListAgentCodeRuntimes to query the runtime environment identity. The sourceUri parameter supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. To upload a local file, call GetAgentCodePackageUploadUrl to obtain the upload URL, upload the file directly, and then commit the returned sourceUri.
+        /// When you submit a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
+        /// The creation process is asynchronous. A successful response indicates that the request is accepted. Use the returned agentId to call GetCustomAgent and check latestVersionStatus, latestExecutionError, and status corresponding to latestSpecVersion to confirm the deployment result. After the deployment is ready, you can call CreateServiceEndpoint to configure the access endpoint.
+        /// The clientToken parameter does not provide idempotence guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold parameter for health checks does not take effect. Omit this parameter.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1869,34 +1869,37 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an external identity provider to a specified workspace for single sign-on and organization member synchronization of workspace users. A maximum of one external identity provider can be bound to each workspace. The binding is an asynchronous operation. After the API returns, you can query the status by calling GetIdentityProvider to track the progress.</para>
+        /// <para>Binds a DingTalk, Lark, or CustomSSO identity source to a workspace. CustomSSO only asynchronously initializes the shared user pool. SAML logon and SCIM synchronization are configured separately later.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>A workspace can be bound to only one external identity provider. The identityProviderType parameter supports DingTalk, Feishu, and CustomSSO. CustomSSO only initializes the shared user pool. Do not pass non-empty metadata, and do not pass true for loginEnabled or syncEnabled. By default, both switches are turned off. Protocols and SAML configurations are saved by calling UpdateIdentityProvider. SCIM is configured through a separate API. Saving SAML first is not required. After the request is accepted and CONFIGURED is returned, call GetIdentityProvider and wait for the user pool initialization to complete. READY only indicates that the resource is ready, not that SAML is configured. If the same CustomSSO binding is in the CONFIGURED or READY state, the existing binding may be returned. Not all states can be treated as repeatedly creatable.
-        /// For DingTalk, appKey, appSecret, and corpId are required in metadata. For Feishu, appId and appSecret are required. The vendor login switch is enabled by default. The synchronization switch is disabled by default. When synchronization is enabled, encryptKey and verificationToken are also required. The vendor syncOnBind and syncScope parameters retain the existing department-based synchronization definitions. Do not use these vendor pull parameters to replace SCIM configurations during CustomSSO initialization.</para>
+        /// <para>The WAITING_CONFIGURATION status also occupies the single external identity source quota for a workspace. CustomSSO (SAML/OIDC and SCIM) is mutually exclusive with DingTalk and Lark. SCIM reuses the CustomSSO binding and does not create a second identity source. Creating another type returns a 409 IdentityProviderAlreadyBound error. You can change the identity source only after the existing binding is unbound and removed.
+        /// A workspace can have only one external identity source binding. The identityProviderType parameter supports DingTalk, Lark, and CustomSSO. CustomSSO only initializes the shared user pool. Do not pass non-empty metadata, and do not pass true for loginEnabled or syncEnabled. Both switches are disabled by default. Protocols and SAML configurations are saved by using UpdateIdentityProvider. SCIM is configured by using a separate API operation. You do not need to save SAML configurations first. If initialization is complete but SAML metadata is not saved, the system returns WAITING_CONFIGURATION. CONFIGURED and SYNCING indicate that the resource is still being initialized. You can call GetIdentityProvider to query the status. After you save the metadata, the system returns UPDATING. After the configuration is complete and the internal OIDC is published, the system returns READY. READY does not mean that the logon switch is enabled. For the same CustomSSO binding, the system may return the existing binding after the initialization request is accepted or completed. You cannot treat all statuses as repeatable creations.
+        /// For DingTalk, the metadata must include appKey, appSecret, and corpId. For Lark, the metadata must include appId and appSecret. The vendor logon switch is enabled by default, and the synchronization switch is disabled by default. If synchronization is enabled, encryptKey and verificationToken are also required. The vendor syncOnBind and syncScope parameters retain the existing department-based synchronization definitions. Do not use these vendor pull parameters to replace SCIM configurations during CustomSSO initialization.</para>
         /// <h2>Requests and examples</h2>
         /// <para>POST /workspaces/{workspaceId}/identity-providers
-        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity provider resources of the workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// Call conventions: Call the API operation in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
         /// <pre><code class="language-text">POST /workspaces/ws-example/identity-providers
         /// {&quot;identityProviderType&quot;: &quot;CustomSSO&quot;}
         /// </c></pre>
-        /// <h2>Response example</h2>
+        /// <h2>Response examples</h2>
         /// <pre><code class="language-json">{
         ///   &quot;data&quot;: {
         ///     &quot;workspaceId&quot;: &quot;ws-example&quot;,
         ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
         ///     &quot;loginEnabled&quot;: false,
         ///     &quot;syncEnabled&quot;: false,
-        ///     &quot;status&quot;: &quot;CONFIGURED&quot;
+        ///     &quot;status&quot;: &quot;WAITING_CONFIGURATION&quot;
         ///   }
         /// }
         /// </c></pre>
         /// <h2>Errors and handling</h2>
-        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call failure to an upstream service may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
-        /// 409 IdentityProviderAlreadyBound: An external binding already exists. Query and reuse the correct binding first. Do not automatically unbind the entire binding. Asynchronous initialization failure does not equal HTTP request failure. You must continue to query the status.</para>
+        /// <para>Error handling: A 400 InvalidParameter error indicates that the parameters or current configuration prerequisites are not met. A 404 IdentityProviderNotFound error indicates that no binding of the matching type exists. If a synchronous call to the upstream service fails, a 503 IdentityProviderProvisioningUnavailable error may be returned. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling process.
+        /// 409 IdentityProviderAlreadyBound: An external binding already exists. Query and reuse the correct binding first. Do not automatically unbind the entire binding. If the initialization request fails, retain the request ID for troubleshooting. If a binding already exists, query the current status first to avoid repeated creation.</para>
+        /// <h2>Call relationships and usage boundaries</h2>
+        /// <para>CustomSSO call sequence: Create the binding first. After initialization is complete, the system returns WAITING_CONFIGURATION. If the system returns CONFIGURED or SYNCING, you can call GetIdentityProvider to query the status. Then, you can configure SAML and SCIM separately. You do not need to complete them in a fixed sequence. For SAML, use GetIdentityProviderServiceProvider to obtain the SP information of your side, and use UpdateIdentityProvider to save the external IdP configuration. For SCIM, use PrepareIdentityProviderSCIM to obtain the pre-provisioning address and credentials, and then use UpdateIdentityProviderSCIM to confirm synchronization.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1948,34 +1951,37 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an external identity provider to a specified workspace for single sign-on and organization member synchronization of workspace users. A maximum of one external identity provider can be bound to each workspace. The binding is an asynchronous operation. After the API returns, you can query the status by calling GetIdentityProvider to track the progress.</para>
+        /// <para>Binds a DingTalk, Lark, or CustomSSO identity source to a workspace. CustomSSO only asynchronously initializes the shared user pool. SAML logon and SCIM synchronization are configured separately later.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>A workspace can be bound to only one external identity provider. The identityProviderType parameter supports DingTalk, Feishu, and CustomSSO. CustomSSO only initializes the shared user pool. Do not pass non-empty metadata, and do not pass true for loginEnabled or syncEnabled. By default, both switches are turned off. Protocols and SAML configurations are saved by calling UpdateIdentityProvider. SCIM is configured through a separate API. Saving SAML first is not required. After the request is accepted and CONFIGURED is returned, call GetIdentityProvider and wait for the user pool initialization to complete. READY only indicates that the resource is ready, not that SAML is configured. If the same CustomSSO binding is in the CONFIGURED or READY state, the existing binding may be returned. Not all states can be treated as repeatedly creatable.
-        /// For DingTalk, appKey, appSecret, and corpId are required in metadata. For Feishu, appId and appSecret are required. The vendor login switch is enabled by default. The synchronization switch is disabled by default. When synchronization is enabled, encryptKey and verificationToken are also required. The vendor syncOnBind and syncScope parameters retain the existing department-based synchronization definitions. Do not use these vendor pull parameters to replace SCIM configurations during CustomSSO initialization.</para>
+        /// <para>The WAITING_CONFIGURATION status also occupies the single external identity source quota for a workspace. CustomSSO (SAML/OIDC and SCIM) is mutually exclusive with DingTalk and Lark. SCIM reuses the CustomSSO binding and does not create a second identity source. Creating another type returns a 409 IdentityProviderAlreadyBound error. You can change the identity source only after the existing binding is unbound and removed.
+        /// A workspace can have only one external identity source binding. The identityProviderType parameter supports DingTalk, Lark, and CustomSSO. CustomSSO only initializes the shared user pool. Do not pass non-empty metadata, and do not pass true for loginEnabled or syncEnabled. Both switches are disabled by default. Protocols and SAML configurations are saved by using UpdateIdentityProvider. SCIM is configured by using a separate API operation. You do not need to save SAML configurations first. If initialization is complete but SAML metadata is not saved, the system returns WAITING_CONFIGURATION. CONFIGURED and SYNCING indicate that the resource is still being initialized. You can call GetIdentityProvider to query the status. After you save the metadata, the system returns UPDATING. After the configuration is complete and the internal OIDC is published, the system returns READY. READY does not mean that the logon switch is enabled. For the same CustomSSO binding, the system may return the existing binding after the initialization request is accepted or completed. You cannot treat all statuses as repeatable creations.
+        /// For DingTalk, the metadata must include appKey, appSecret, and corpId. For Lark, the metadata must include appId and appSecret. The vendor logon switch is enabled by default, and the synchronization switch is disabled by default. If synchronization is enabled, encryptKey and verificationToken are also required. The vendor syncOnBind and syncScope parameters retain the existing department-based synchronization definitions. Do not use these vendor pull parameters to replace SCIM configurations during CustomSSO initialization.</para>
         /// <h2>Requests and examples</h2>
         /// <para>POST /workspaces/{workspaceId}/identity-providers
-        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity provider resources of the workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// Call conventions: Call the API operation in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
         /// <pre><code class="language-text">POST /workspaces/ws-example/identity-providers
         /// {&quot;identityProviderType&quot;: &quot;CustomSSO&quot;}
         /// </c></pre>
-        /// <h2>Response example</h2>
+        /// <h2>Response examples</h2>
         /// <pre><code class="language-json">{
         ///   &quot;data&quot;: {
         ///     &quot;workspaceId&quot;: &quot;ws-example&quot;,
         ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
         ///     &quot;loginEnabled&quot;: false,
         ///     &quot;syncEnabled&quot;: false,
-        ///     &quot;status&quot;: &quot;CONFIGURED&quot;
+        ///     &quot;status&quot;: &quot;WAITING_CONFIGURATION&quot;
         ///   }
         /// }
         /// </c></pre>
         /// <h2>Errors and handling</h2>
-        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call failure to an upstream service may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
-        /// 409 IdentityProviderAlreadyBound: An external binding already exists. Query and reuse the correct binding first. Do not automatically unbind the entire binding. Asynchronous initialization failure does not equal HTTP request failure. You must continue to query the status.</para>
+        /// <para>Error handling: A 400 InvalidParameter error indicates that the parameters or current configuration prerequisites are not met. A 404 IdentityProviderNotFound error indicates that no binding of the matching type exists. If a synchronous call to the upstream service fails, a 503 IdentityProviderProvisioningUnavailable error may be returned. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling process.
+        /// 409 IdentityProviderAlreadyBound: An external binding already exists. Query and reuse the correct binding first. Do not automatically unbind the entire binding. If the initialization request fails, retain the request ID for troubleshooting. If a binding already exists, query the current status first to avoid repeated creation.</para>
+        /// <h2>Call relationships and usage boundaries</h2>
+        /// <para>CustomSSO call sequence: Create the binding first. After initialization is complete, the system returns WAITING_CONFIGURATION. If the system returns CONFIGURED or SYNCING, you can call GetIdentityProvider to query the status. Then, you can configure SAML and SCIM separately. You do not need to complete them in a fixed sequence. For SAML, use GetIdentityProviderServiceProvider to obtain the SP information of your side, and use UpdateIdentityProvider to save the external IdP configuration. For SCIM, use PrepareIdentityProviderSCIM to obtain the pre-provisioning address and credentials, and then use UpdateIdentityProviderSCIM to confirm synchronization.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2027,34 +2033,37 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an external identity provider to a specified workspace for single sign-on and organization member synchronization of workspace users. A maximum of one external identity provider can be bound to each workspace. The binding is an asynchronous operation. After the API returns, you can query the status by calling GetIdentityProvider to track the progress.</para>
+        /// <para>Binds a DingTalk, Lark, or CustomSSO identity source to a workspace. CustomSSO only asynchronously initializes the shared user pool. SAML logon and SCIM synchronization are configured separately later.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>A workspace can be bound to only one external identity provider. The identityProviderType parameter supports DingTalk, Feishu, and CustomSSO. CustomSSO only initializes the shared user pool. Do not pass non-empty metadata, and do not pass true for loginEnabled or syncEnabled. By default, both switches are turned off. Protocols and SAML configurations are saved by calling UpdateIdentityProvider. SCIM is configured through a separate API. Saving SAML first is not required. After the request is accepted and CONFIGURED is returned, call GetIdentityProvider and wait for the user pool initialization to complete. READY only indicates that the resource is ready, not that SAML is configured. If the same CustomSSO binding is in the CONFIGURED or READY state, the existing binding may be returned. Not all states can be treated as repeatedly creatable.
-        /// For DingTalk, appKey, appSecret, and corpId are required in metadata. For Feishu, appId and appSecret are required. The vendor login switch is enabled by default. The synchronization switch is disabled by default. When synchronization is enabled, encryptKey and verificationToken are also required. The vendor syncOnBind and syncScope parameters retain the existing department-based synchronization definitions. Do not use these vendor pull parameters to replace SCIM configurations during CustomSSO initialization.</para>
+        /// <para>The WAITING_CONFIGURATION status also occupies the single external identity source quota for a workspace. CustomSSO (SAML/OIDC and SCIM) is mutually exclusive with DingTalk and Lark. SCIM reuses the CustomSSO binding and does not create a second identity source. Creating another type returns a 409 IdentityProviderAlreadyBound error. You can change the identity source only after the existing binding is unbound and removed.
+        /// A workspace can have only one external identity source binding. The identityProviderType parameter supports DingTalk, Lark, and CustomSSO. CustomSSO only initializes the shared user pool. Do not pass non-empty metadata, and do not pass true for loginEnabled or syncEnabled. Both switches are disabled by default. Protocols and SAML configurations are saved by using UpdateIdentityProvider. SCIM is configured by using a separate API operation. You do not need to save SAML configurations first. If initialization is complete but SAML metadata is not saved, the system returns WAITING_CONFIGURATION. CONFIGURED and SYNCING indicate that the resource is still being initialized. You can call GetIdentityProvider to query the status. After you save the metadata, the system returns UPDATING. After the configuration is complete and the internal OIDC is published, the system returns READY. READY does not mean that the logon switch is enabled. For the same CustomSSO binding, the system may return the existing binding after the initialization request is accepted or completed. You cannot treat all statuses as repeatable creations.
+        /// For DingTalk, the metadata must include appKey, appSecret, and corpId. For Lark, the metadata must include appId and appSecret. The vendor logon switch is enabled by default, and the synchronization switch is disabled by default. If synchronization is enabled, encryptKey and verificationToken are also required. The vendor syncOnBind and syncScope parameters retain the existing department-based synchronization definitions. Do not use these vendor pull parameters to replace SCIM configurations during CustomSSO initialization.</para>
         /// <h2>Requests and examples</h2>
         /// <para>POST /workspaces/{workspaceId}/identity-providers
-        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity provider resources of the workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// Call conventions: Call the API operation in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
         /// <pre><code class="language-text">POST /workspaces/ws-example/identity-providers
         /// {&quot;identityProviderType&quot;: &quot;CustomSSO&quot;}
         /// </c></pre>
-        /// <h2>Response example</h2>
+        /// <h2>Response examples</h2>
         /// <pre><code class="language-json">{
         ///   &quot;data&quot;: {
         ///     &quot;workspaceId&quot;: &quot;ws-example&quot;,
         ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
         ///     &quot;loginEnabled&quot;: false,
         ///     &quot;syncEnabled&quot;: false,
-        ///     &quot;status&quot;: &quot;CONFIGURED&quot;
+        ///     &quot;status&quot;: &quot;WAITING_CONFIGURATION&quot;
         ///   }
         /// }
         /// </c></pre>
         /// <h2>Errors and handling</h2>
-        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call failure to an upstream service may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
-        /// 409 IdentityProviderAlreadyBound: An external binding already exists. Query and reuse the correct binding first. Do not automatically unbind the entire binding. Asynchronous initialization failure does not equal HTTP request failure. You must continue to query the status.</para>
+        /// <para>Error handling: A 400 InvalidParameter error indicates that the parameters or current configuration prerequisites are not met. A 404 IdentityProviderNotFound error indicates that no binding of the matching type exists. If a synchronous call to the upstream service fails, a 503 IdentityProviderProvisioningUnavailable error may be returned. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling process.
+        /// 409 IdentityProviderAlreadyBound: An external binding already exists. Query and reuse the correct binding first. Do not automatically unbind the entire binding. If the initialization request fails, retain the request ID for troubleshooting. If a binding already exists, query the current status first to avoid repeated creation.</para>
+        /// <h2>Call relationships and usage boundaries</h2>
+        /// <para>CustomSSO call sequence: Create the binding first. After initialization is complete, the system returns WAITING_CONFIGURATION. If the system returns CONFIGURED or SYNCING, you can call GetIdentityProvider to query the status. Then, you can configure SAML and SCIM separately. You do not need to complete them in a fixed sequence. For SAML, use GetIdentityProviderServiceProvider to obtain the SP information of your side, and use UpdateIdentityProvider to save the external IdP configuration. For SCIM, use PrepareIdentityProviderSCIM to obtain the pre-provisioning address and credentials, and then use UpdateIdentityProviderSCIM to confirm synchronization.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2073,34 +2082,37 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an external identity provider to a specified workspace for single sign-on and organization member synchronization of workspace users. A maximum of one external identity provider can be bound to each workspace. The binding is an asynchronous operation. After the API returns, you can query the status by calling GetIdentityProvider to track the progress.</para>
+        /// <para>Binds a DingTalk, Lark, or CustomSSO identity source to a workspace. CustomSSO only asynchronously initializes the shared user pool. SAML logon and SCIM synchronization are configured separately later.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>A workspace can be bound to only one external identity provider. The identityProviderType parameter supports DingTalk, Feishu, and CustomSSO. CustomSSO only initializes the shared user pool. Do not pass non-empty metadata, and do not pass true for loginEnabled or syncEnabled. By default, both switches are turned off. Protocols and SAML configurations are saved by calling UpdateIdentityProvider. SCIM is configured through a separate API. Saving SAML first is not required. After the request is accepted and CONFIGURED is returned, call GetIdentityProvider and wait for the user pool initialization to complete. READY only indicates that the resource is ready, not that SAML is configured. If the same CustomSSO binding is in the CONFIGURED or READY state, the existing binding may be returned. Not all states can be treated as repeatedly creatable.
-        /// For DingTalk, appKey, appSecret, and corpId are required in metadata. For Feishu, appId and appSecret are required. The vendor login switch is enabled by default. The synchronization switch is disabled by default. When synchronization is enabled, encryptKey and verificationToken are also required. The vendor syncOnBind and syncScope parameters retain the existing department-based synchronization definitions. Do not use these vendor pull parameters to replace SCIM configurations during CustomSSO initialization.</para>
+        /// <para>The WAITING_CONFIGURATION status also occupies the single external identity source quota for a workspace. CustomSSO (SAML/OIDC and SCIM) is mutually exclusive with DingTalk and Lark. SCIM reuses the CustomSSO binding and does not create a second identity source. Creating another type returns a 409 IdentityProviderAlreadyBound error. You can change the identity source only after the existing binding is unbound and removed.
+        /// A workspace can have only one external identity source binding. The identityProviderType parameter supports DingTalk, Lark, and CustomSSO. CustomSSO only initializes the shared user pool. Do not pass non-empty metadata, and do not pass true for loginEnabled or syncEnabled. Both switches are disabled by default. Protocols and SAML configurations are saved by using UpdateIdentityProvider. SCIM is configured by using a separate API operation. You do not need to save SAML configurations first. If initialization is complete but SAML metadata is not saved, the system returns WAITING_CONFIGURATION. CONFIGURED and SYNCING indicate that the resource is still being initialized. You can call GetIdentityProvider to query the status. After you save the metadata, the system returns UPDATING. After the configuration is complete and the internal OIDC is published, the system returns READY. READY does not mean that the logon switch is enabled. For the same CustomSSO binding, the system may return the existing binding after the initialization request is accepted or completed. You cannot treat all statuses as repeatable creations.
+        /// For DingTalk, the metadata must include appKey, appSecret, and corpId. For Lark, the metadata must include appId and appSecret. The vendor logon switch is enabled by default, and the synchronization switch is disabled by default. If synchronization is enabled, encryptKey and verificationToken are also required. The vendor syncOnBind and syncScope parameters retain the existing department-based synchronization definitions. Do not use these vendor pull parameters to replace SCIM configurations during CustomSSO initialization.</para>
         /// <h2>Requests and examples</h2>
         /// <para>POST /workspaces/{workspaceId}/identity-providers
-        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity provider resources of the workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// Call conventions: Call the API operation in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
         /// <pre><code class="language-text">POST /workspaces/ws-example/identity-providers
         /// {&quot;identityProviderType&quot;: &quot;CustomSSO&quot;}
         /// </c></pre>
-        /// <h2>Response example</h2>
+        /// <h2>Response examples</h2>
         /// <pre><code class="language-json">{
         ///   &quot;data&quot;: {
         ///     &quot;workspaceId&quot;: &quot;ws-example&quot;,
         ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
         ///     &quot;loginEnabled&quot;: false,
         ///     &quot;syncEnabled&quot;: false,
-        ///     &quot;status&quot;: &quot;CONFIGURED&quot;
+        ///     &quot;status&quot;: &quot;WAITING_CONFIGURATION&quot;
         ///   }
         /// }
         /// </c></pre>
         /// <h2>Errors and handling</h2>
-        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call failure to an upstream service may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
-        /// 409 IdentityProviderAlreadyBound: An external binding already exists. Query and reuse the correct binding first. Do not automatically unbind the entire binding. Asynchronous initialization failure does not equal HTTP request failure. You must continue to query the status.</para>
+        /// <para>Error handling: A 400 InvalidParameter error indicates that the parameters or current configuration prerequisites are not met. A 404 IdentityProviderNotFound error indicates that no binding of the matching type exists. If a synchronous call to the upstream service fails, a 503 IdentityProviderProvisioningUnavailable error may be returned. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling process.
+        /// 409 IdentityProviderAlreadyBound: An external binding already exists. Query and reuse the correct binding first. Do not automatically unbind the entire binding. If the initialization request fails, retain the request ID for troubleshooting. If a binding already exists, query the current status first to avoid repeated creation.</para>
+        /// <h2>Call relationships and usage boundaries</h2>
+        /// <para>CustomSSO call sequence: Create the binding first. After initialization is complete, the system returns WAITING_CONFIGURATION. If the system returns CONFIGURED or SYNCING, you can call GetIdentityProvider to query the status. Then, you can configure SAML and SCIM separately. You do not need to complete them in a fixed sequence. For SAML, use GetIdentityProviderServiceProvider to obtain the SP information of your side, and use UpdateIdentityProvider to save the external IdP configuration. For SCIM, use PrepareIdentityProviderSCIM to obtain the pre-provisioning address and credentials, and then use UpdateIdentityProviderSCIM to confirm synchronization.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5241,17 +5253,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disconnects the identity source integration of a workspace. For CustomSSO, this operation clears the shared user pool and related SAML and SCIM resources. To disable only logon or synchronization, use the corresponding switch API operations.</para>
+        /// <para>Disconnects the identity source integration of a workspace. For CustomSSO, this operation clears the shared user pool and related SAML and SCIM resources. To disable only logon or synchronization, use the corresponding toggle operations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>This operation completely disconnects the integration, rather than simply disabling logon. Disconnecting CustomSSO clears the AC users imported from this identity source, the remote shared user pool and related resources, and the logon publishing configurations and bindings. Therefore, both SAML and SCIM are affected. However, this operation does not delete the enterprise applications created by users on external platforms such as Azure. Before disconnecting, the system checks for references between users and teams. If references exist, the disconnection is rejected.
-        /// After the request is accepted, the status returned is DISCONNECTING. You can query the status by calling GetIdentityProvider. The cleanup is complete only when the binding no longer exists (IdentityProviderNotFound). The binding should also no longer appear in the list. DISCONNECT_FAILED indicates that partial cleanup may have occurred, and the state cannot be restored to a completely unconfigured state. You can retry based on the returned status. If the binding does not exist in the first place, the API operation returns a placeholder result indicating no binding without creating new resources. An ongoing disconnection task may return the current binding. Do not use this API operation as a substitute for setting loginEnabled=false, syncEnabled=false, or deleting a single token.</para>
+        /// <para>This operation disconnects the integration as a whole, rather than disabling logon individually. Disconnecting CustomSSO clears the users imported from this identity source, the remote shared user pool and related resources, and the logon publishing configurations and bindings. Therefore, both SAML and SCIM are affected. This operation does not delete the enterprise applications created by users on external platforms such as Azure. The system checks the references between users and teams before disconnecting. If references exist, the disconnection is rejected.
+        /// After the request is accepted, the system returns DISCONNECTING. You can call GetIdentityProvider to query the status. The cleanup is complete only when the binding does not exist (IdentityProviderNotFound). The binding should also no longer appear in the list. DISCONNECT_FAILED indicates that partial cleanup may have occurred and the state cannot be restored to a brand new unconfigured state. You can retry based on the returned status. If the binding does not exist in the first place, the operation returns a placeholder result indicating no binding without creating new resources. An ongoing disconnection task may return the current binding. Do not use this operation as a substitute for setting loginEnabled=false, syncEnabled=false, or deleting a single token.</para>
         /// <h2>Requests and examples</h2>
         /// <para>DELETE /workspaces/{workspaceId}/identity-providers/{identityProviderType}
-        /// Calling conventions: Call the API operation in the region of the target workspace, using an AK/STS identity that has the corresponding workspace identity source resource permissions. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not log secrets. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// Calling conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
         /// <pre><code class="language-text">DELETE /workspaces/ws-example/identity-providers/CustomSSO
         /// </c></pre>
         /// <h2>Response examples</h2>
@@ -5264,10 +5276,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// }
         /// </c></pre>
         /// <h2>Errors and handling</h2>
-        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to upstream services that fail may return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to the upstream may fail and return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
         /// 409 IdentityProvider.Disconnect.Conflict: Users of this identity source still belong to a team. Remove the references first. 409 IdentityProviderOperationConflict: The current status does not allow disconnection. 404 IdentityProviderNotFound: An external binding exists but the type does not match. Asynchronous failures may result in partial cleanup. You cannot claim completion based solely on the first response.</para>
-        /// <h2>Calling relationships and usage boundaries</h2>
-        /// <para>If you only need to disable a specific capability: To disable SAML logon, use UpdateIdentityProvider and set loginEnabled=false. To disable SCIM, use UpdateIdentityProviderSCIM and set syncEnabled=false. To revoke a single token, use DeleteIdentityProviderSCIMCredential. Call this API operation only when you need to completely disconnect the integration.</para>
+        /// <h2>Call relationships and usage boundaries</h2>
+        /// <para>If you only need to disable a specific capability: To disable SAML logon, set loginEnabled=false in UpdateIdentityProvider. To disable SCIM, set syncEnabled=false in UpdateIdentityProviderSCIM. To revoke a single token, use DeleteIdentityProviderSCIMCredential. Call this operation only when you need to disconnect the integration as a whole.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5313,17 +5325,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disconnects the identity source integration of a workspace. For CustomSSO, this operation clears the shared user pool and related SAML and SCIM resources. To disable only logon or synchronization, use the corresponding switch API operations.</para>
+        /// <para>Disconnects the identity source integration of a workspace. For CustomSSO, this operation clears the shared user pool and related SAML and SCIM resources. To disable only logon or synchronization, use the corresponding toggle operations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>This operation completely disconnects the integration, rather than simply disabling logon. Disconnecting CustomSSO clears the AC users imported from this identity source, the remote shared user pool and related resources, and the logon publishing configurations and bindings. Therefore, both SAML and SCIM are affected. However, this operation does not delete the enterprise applications created by users on external platforms such as Azure. Before disconnecting, the system checks for references between users and teams. If references exist, the disconnection is rejected.
-        /// After the request is accepted, the status returned is DISCONNECTING. You can query the status by calling GetIdentityProvider. The cleanup is complete only when the binding no longer exists (IdentityProviderNotFound). The binding should also no longer appear in the list. DISCONNECT_FAILED indicates that partial cleanup may have occurred, and the state cannot be restored to a completely unconfigured state. You can retry based on the returned status. If the binding does not exist in the first place, the API operation returns a placeholder result indicating no binding without creating new resources. An ongoing disconnection task may return the current binding. Do not use this API operation as a substitute for setting loginEnabled=false, syncEnabled=false, or deleting a single token.</para>
+        /// <para>This operation disconnects the integration as a whole, rather than disabling logon individually. Disconnecting CustomSSO clears the users imported from this identity source, the remote shared user pool and related resources, and the logon publishing configurations and bindings. Therefore, both SAML and SCIM are affected. This operation does not delete the enterprise applications created by users on external platforms such as Azure. The system checks the references between users and teams before disconnecting. If references exist, the disconnection is rejected.
+        /// After the request is accepted, the system returns DISCONNECTING. You can call GetIdentityProvider to query the status. The cleanup is complete only when the binding does not exist (IdentityProviderNotFound). The binding should also no longer appear in the list. DISCONNECT_FAILED indicates that partial cleanup may have occurred and the state cannot be restored to a brand new unconfigured state. You can retry based on the returned status. If the binding does not exist in the first place, the operation returns a placeholder result indicating no binding without creating new resources. An ongoing disconnection task may return the current binding. Do not use this operation as a substitute for setting loginEnabled=false, syncEnabled=false, or deleting a single token.</para>
         /// <h2>Requests and examples</h2>
         /// <para>DELETE /workspaces/{workspaceId}/identity-providers/{identityProviderType}
-        /// Calling conventions: Call the API operation in the region of the target workspace, using an AK/STS identity that has the corresponding workspace identity source resource permissions. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not log secrets. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// Calling conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
         /// <pre><code class="language-text">DELETE /workspaces/ws-example/identity-providers/CustomSSO
         /// </c></pre>
         /// <h2>Response examples</h2>
@@ -5336,10 +5348,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// }
         /// </c></pre>
         /// <h2>Errors and handling</h2>
-        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to upstream services that fail may return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to the upstream may fail and return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
         /// 409 IdentityProvider.Disconnect.Conflict: Users of this identity source still belong to a team. Remove the references first. 409 IdentityProviderOperationConflict: The current status does not allow disconnection. 404 IdentityProviderNotFound: An external binding exists but the type does not match. Asynchronous failures may result in partial cleanup. You cannot claim completion based solely on the first response.</para>
-        /// <h2>Calling relationships and usage boundaries</h2>
-        /// <para>If you only need to disable a specific capability: To disable SAML logon, use UpdateIdentityProvider and set loginEnabled=false. To disable SCIM, use UpdateIdentityProviderSCIM and set syncEnabled=false. To revoke a single token, use DeleteIdentityProviderSCIMCredential. Call this API operation only when you need to completely disconnect the integration.</para>
+        /// <h2>Call relationships and usage boundaries</h2>
+        /// <para>If you only need to disable a specific capability: To disable SAML logon, set loginEnabled=false in UpdateIdentityProvider. To disable SCIM, set syncEnabled=false in UpdateIdentityProviderSCIM. To revoke a single token, use DeleteIdentityProviderSCIMCredential. Call this operation only when you need to disconnect the integration as a whole.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5385,17 +5397,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disconnects the identity source integration of a workspace. For CustomSSO, this operation clears the shared user pool and related SAML and SCIM resources. To disable only logon or synchronization, use the corresponding switch API operations.</para>
+        /// <para>Disconnects the identity source integration of a workspace. For CustomSSO, this operation clears the shared user pool and related SAML and SCIM resources. To disable only logon or synchronization, use the corresponding toggle operations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>This operation completely disconnects the integration, rather than simply disabling logon. Disconnecting CustomSSO clears the AC users imported from this identity source, the remote shared user pool and related resources, and the logon publishing configurations and bindings. Therefore, both SAML and SCIM are affected. However, this operation does not delete the enterprise applications created by users on external platforms such as Azure. Before disconnecting, the system checks for references between users and teams. If references exist, the disconnection is rejected.
-        /// After the request is accepted, the status returned is DISCONNECTING. You can query the status by calling GetIdentityProvider. The cleanup is complete only when the binding no longer exists (IdentityProviderNotFound). The binding should also no longer appear in the list. DISCONNECT_FAILED indicates that partial cleanup may have occurred, and the state cannot be restored to a completely unconfigured state. You can retry based on the returned status. If the binding does not exist in the first place, the API operation returns a placeholder result indicating no binding without creating new resources. An ongoing disconnection task may return the current binding. Do not use this API operation as a substitute for setting loginEnabled=false, syncEnabled=false, or deleting a single token.</para>
+        /// <para>This operation disconnects the integration as a whole, rather than disabling logon individually. Disconnecting CustomSSO clears the users imported from this identity source, the remote shared user pool and related resources, and the logon publishing configurations and bindings. Therefore, both SAML and SCIM are affected. This operation does not delete the enterprise applications created by users on external platforms such as Azure. The system checks the references between users and teams before disconnecting. If references exist, the disconnection is rejected.
+        /// After the request is accepted, the system returns DISCONNECTING. You can call GetIdentityProvider to query the status. The cleanup is complete only when the binding does not exist (IdentityProviderNotFound). The binding should also no longer appear in the list. DISCONNECT_FAILED indicates that partial cleanup may have occurred and the state cannot be restored to a brand new unconfigured state. You can retry based on the returned status. If the binding does not exist in the first place, the operation returns a placeholder result indicating no binding without creating new resources. An ongoing disconnection task may return the current binding. Do not use this operation as a substitute for setting loginEnabled=false, syncEnabled=false, or deleting a single token.</para>
         /// <h2>Requests and examples</h2>
         /// <para>DELETE /workspaces/{workspaceId}/identity-providers/{identityProviderType}
-        /// Calling conventions: Call the API operation in the region of the target workspace, using an AK/STS identity that has the corresponding workspace identity source resource permissions. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not log secrets. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// Calling conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
         /// <pre><code class="language-text">DELETE /workspaces/ws-example/identity-providers/CustomSSO
         /// </c></pre>
         /// <h2>Response examples</h2>
@@ -5408,10 +5420,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// }
         /// </c></pre>
         /// <h2>Errors and handling</h2>
-        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to upstream services that fail may return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to the upstream may fail and return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
         /// 409 IdentityProvider.Disconnect.Conflict: Users of this identity source still belong to a team. Remove the references first. 409 IdentityProviderOperationConflict: The current status does not allow disconnection. 404 IdentityProviderNotFound: An external binding exists but the type does not match. Asynchronous failures may result in partial cleanup. You cannot claim completion based solely on the first response.</para>
-        /// <h2>Calling relationships and usage boundaries</h2>
-        /// <para>If you only need to disable a specific capability: To disable SAML logon, use UpdateIdentityProvider and set loginEnabled=false. To disable SCIM, use UpdateIdentityProviderSCIM and set syncEnabled=false. To revoke a single token, use DeleteIdentityProviderSCIMCredential. Call this API operation only when you need to completely disconnect the integration.</para>
+        /// <h2>Call relationships and usage boundaries</h2>
+        /// <para>If you only need to disable a specific capability: To disable SAML logon, set loginEnabled=false in UpdateIdentityProvider. To disable SCIM, set syncEnabled=false in UpdateIdentityProviderSCIM. To revoke a single token, use DeleteIdentityProviderSCIMCredential. Call this operation only when you need to disconnect the integration as a whole.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5430,17 +5442,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disconnects the identity source integration of a workspace. For CustomSSO, this operation clears the shared user pool and related SAML and SCIM resources. To disable only logon or synchronization, use the corresponding switch API operations.</para>
+        /// <para>Disconnects the identity source integration of a workspace. For CustomSSO, this operation clears the shared user pool and related SAML and SCIM resources. To disable only logon or synchronization, use the corresponding toggle operations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>This operation completely disconnects the integration, rather than simply disabling logon. Disconnecting CustomSSO clears the AC users imported from this identity source, the remote shared user pool and related resources, and the logon publishing configurations and bindings. Therefore, both SAML and SCIM are affected. However, this operation does not delete the enterprise applications created by users on external platforms such as Azure. Before disconnecting, the system checks for references between users and teams. If references exist, the disconnection is rejected.
-        /// After the request is accepted, the status returned is DISCONNECTING. You can query the status by calling GetIdentityProvider. The cleanup is complete only when the binding no longer exists (IdentityProviderNotFound). The binding should also no longer appear in the list. DISCONNECT_FAILED indicates that partial cleanup may have occurred, and the state cannot be restored to a completely unconfigured state. You can retry based on the returned status. If the binding does not exist in the first place, the API operation returns a placeholder result indicating no binding without creating new resources. An ongoing disconnection task may return the current binding. Do not use this API operation as a substitute for setting loginEnabled=false, syncEnabled=false, or deleting a single token.</para>
+        /// <para>This operation disconnects the integration as a whole, rather than disabling logon individually. Disconnecting CustomSSO clears the users imported from this identity source, the remote shared user pool and related resources, and the logon publishing configurations and bindings. Therefore, both SAML and SCIM are affected. This operation does not delete the enterprise applications created by users on external platforms such as Azure. The system checks the references between users and teams before disconnecting. If references exist, the disconnection is rejected.
+        /// After the request is accepted, the system returns DISCONNECTING. You can call GetIdentityProvider to query the status. The cleanup is complete only when the binding does not exist (IdentityProviderNotFound). The binding should also no longer appear in the list. DISCONNECT_FAILED indicates that partial cleanup may have occurred and the state cannot be restored to a brand new unconfigured state. You can retry based on the returned status. If the binding does not exist in the first place, the operation returns a placeholder result indicating no binding without creating new resources. An ongoing disconnection task may return the current binding. Do not use this operation as a substitute for setting loginEnabled=false, syncEnabled=false, or deleting a single token.</para>
         /// <h2>Requests and examples</h2>
         /// <para>DELETE /workspaces/{workspaceId}/identity-providers/{identityProviderType}
-        /// Calling conventions: Call the API operation in the region of the target workspace, using an AK/STS identity that has the corresponding workspace identity source resource permissions. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not log secrets. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// Calling conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
         /// <pre><code class="language-text">DELETE /workspaces/ws-example/identity-providers/CustomSSO
         /// </c></pre>
         /// <h2>Response examples</h2>
@@ -5453,10 +5465,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// }
         /// </c></pre>
         /// <h2>Errors and handling</h2>
-        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to upstream services that fail may return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to the upstream may fail and return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
         /// 409 IdentityProvider.Disconnect.Conflict: Users of this identity source still belong to a team. Remove the references first. 409 IdentityProviderOperationConflict: The current status does not allow disconnection. 404 IdentityProviderNotFound: An external binding exists but the type does not match. Asynchronous failures may result in partial cleanup. You cannot claim completion based solely on the first response.</para>
-        /// <h2>Calling relationships and usage boundaries</h2>
-        /// <para>If you only need to disable a specific capability: To disable SAML logon, use UpdateIdentityProvider and set loginEnabled=false. To disable SCIM, use UpdateIdentityProviderSCIM and set syncEnabled=false. To revoke a single token, use DeleteIdentityProviderSCIMCredential. Call this API operation only when you need to completely disconnect the integration.</para>
+        /// <h2>Call relationships and usage boundaries</h2>
+        /// <para>If you only need to disable a specific capability: To disable SAML logon, set loginEnabled=false in UpdateIdentityProvider. To disable SCIM, set syncEnabled=false in UpdateIdentityProviderSCIM. To revoke a single token, use DeleteIdentityProviderSCIMCredential. Call this operation only when you need to disconnect the integration as a whole.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5475,12 +5487,30 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 SCIM 凭据</para>
+        /// <para>Revokes a specified SCIM credential. This operation does not automatically create a new token, modify the AC synchronization switch, or disable SAML logon.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>功能与前提\n撤销指定凭据，credentialId 必填且非空，从凭据列表取得。要求共享池可用，但不要求 SAML 已配置或 SCIM 接收为 Enabled。删除后使用该 Token 的外部预配请求会失效；只影响选定凭据，不自动关闭接收、不自动关闭 AC syncEnabled，也不影响另一枚凭据或 SAML。\n即使删除最后一枚凭据，也不自动回写同步开关或重发新 Token；用户应按需要先停用外部预配或更换其使用的 Token。成功返回公共响应，无业务 data 内容；刷新列表确认。对未知或已删除 ID 的结果由上游决定，不承诺统一 404 或无条件幂等成功。\n\n## 请求与示例\nDELETE /workspaces/{workspaceId}/scim-provisioning/credentials/{credentialId}\n调用约定：按目标 Workspace 的地域调用，使用有相应 Workspace 身份源资源权限的 AK/STS 身份。下文示例中的 ws-example、URL、证书和 Token 均为占位值，需替换为真实值。请求体示例表示公开 API 的 body 参数内容，不是后端直连接口额外的 body 包装。返回示例只展示业务部分，外层还包括 requestId、success、code、message、httpStatusCode；排障请保留 requestId，不记录密钥。业务任务异步不意味着 HTTP 请求长连接等待完成。\n<c>text\nDELETE /workspaces/ws-example/scim-provisioning/credentials/credential-example\n</c>\n\n## 返回示例\n<c>json\n{\n  &quot;success&quot;: true,\n  &quot;httpStatusCode&quot;: 200\n}\n</c>\n\n## 错误与处理\n错误处理：400 InvalidParameter 表示参数或当前配置前提不满足；404 IdentityProviderNotFound 表示没有匹配类型的绑定。同步调用上游失败可能返回 503 IdentityProviderProvisioningUnavailable；保留请求 ID 排查，不把读取失败解释为未配置。实际鉴权和 Workspace 不存在错误沿用公共错误处理。\n400 InvalidParameter：credentialId 为空或共享池不可用。404 IdentityProviderNotFound 指绑定不存在，不代表所有未知凭据 ID 都返回该码。其他删除错误按上游结果处理，失败时刷新列表核对，不自动创建替代 Token。\n\n## 调用关系与使用边界\n使用 ListIdentityProviderSCIMCredentials 取得 credentialId 后删除指定凭据。若外部预配系统仍使用该 Token，后续预配可能鉴权失败，因此应先确认实际使用情况。删除后不会自动创建新凭据、关闭 AC 同步开关或关闭 SAML 登录。</h2>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>Revokes a specified credential. The credentialId parameter is required and cannot be empty. You can obtain it from the credential list. The shared pool must be available, but SAML configuration or SCIM accept being Enabled is not required. After deletion, external provisioning requests that use this token become invalid. This operation only affects the selected credential. It does not automatically disable the accept feature, does not automatically disable AC syncEnabled, and does not affect other credentials or SAML.
+        /// Even if you delete the last credential, the synchronization switch is not automatically written back and a new token is not reissued. Disable external provisioning or replace the token in use as needed. A successful response returns a common response without business data. Refresh the list to confirm the deletion. The result for unknown or deleted IDs is determined by the upstream service. A unified 404 or unconditional idempotent success is not guaranteed.</para>
+        /// <h2>Request and examples</h2>
+        /// <para>DELETE /workspaces/{workspaceId}/scim-provisioning/credentials/{credentialId}
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey (AK) or Security Token Service (STS) identity that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct-connect API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// <pre><code class="language-text">DELETE /workspaces/ws-example/scim-provisioning/credentials/credential-example
+        /// </c></pre>
+        /// <h2>Response example</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;success&quot;: true,
+        ///   &quot;httpStatusCode&quot;: 200
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. If a synchronous call to the upstream service fails, a 503 IdentityProviderProvisioningUnavailable error may be returned. Keep the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
+        /// 400 InvalidParameter: The credentialId parameter is empty or the shared pool is not available. 404 IdentityProviderNotFound indicates that the binding does not exist, which does not mean that all unknown credential IDs return this code. Handle other deletion errors based on upstream results. If the operation fails, refresh the list to check. No automatic creation of a replacement token is performed.</para>
+        /// <h2>Call relationships and usage boundaries</h2>
+        /// <para>Call ListIdentityProviderSCIMCredentials to obtain the credentialId and then delete the specified credential. If the external provisioning system still uses this token, subsequent provisioning may result in authentication failures. Therefore, confirm the actual usage first. After deletion, no automatic creation of a new credential is performed, and the AC synchronization switch or SAML logon is not disabled.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5520,12 +5550,30 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 SCIM 凭据</para>
+        /// <para>Revokes a specified SCIM credential. This operation does not automatically create a new token, modify the AC synchronization switch, or disable SAML logon.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>功能与前提\n撤销指定凭据，credentialId 必填且非空，从凭据列表取得。要求共享池可用，但不要求 SAML 已配置或 SCIM 接收为 Enabled。删除后使用该 Token 的外部预配请求会失效；只影响选定凭据，不自动关闭接收、不自动关闭 AC syncEnabled，也不影响另一枚凭据或 SAML。\n即使删除最后一枚凭据，也不自动回写同步开关或重发新 Token；用户应按需要先停用外部预配或更换其使用的 Token。成功返回公共响应，无业务 data 内容；刷新列表确认。对未知或已删除 ID 的结果由上游决定，不承诺统一 404 或无条件幂等成功。\n\n## 请求与示例\nDELETE /workspaces/{workspaceId}/scim-provisioning/credentials/{credentialId}\n调用约定：按目标 Workspace 的地域调用，使用有相应 Workspace 身份源资源权限的 AK/STS 身份。下文示例中的 ws-example、URL、证书和 Token 均为占位值，需替换为真实值。请求体示例表示公开 API 的 body 参数内容，不是后端直连接口额外的 body 包装。返回示例只展示业务部分，外层还包括 requestId、success、code、message、httpStatusCode；排障请保留 requestId，不记录密钥。业务任务异步不意味着 HTTP 请求长连接等待完成。\n<c>text\nDELETE /workspaces/ws-example/scim-provisioning/credentials/credential-example\n</c>\n\n## 返回示例\n<c>json\n{\n  &quot;success&quot;: true,\n  &quot;httpStatusCode&quot;: 200\n}\n</c>\n\n## 错误与处理\n错误处理：400 InvalidParameter 表示参数或当前配置前提不满足；404 IdentityProviderNotFound 表示没有匹配类型的绑定。同步调用上游失败可能返回 503 IdentityProviderProvisioningUnavailable；保留请求 ID 排查，不把读取失败解释为未配置。实际鉴权和 Workspace 不存在错误沿用公共错误处理。\n400 InvalidParameter：credentialId 为空或共享池不可用。404 IdentityProviderNotFound 指绑定不存在，不代表所有未知凭据 ID 都返回该码。其他删除错误按上游结果处理，失败时刷新列表核对，不自动创建替代 Token。\n\n## 调用关系与使用边界\n使用 ListIdentityProviderSCIMCredentials 取得 credentialId 后删除指定凭据。若外部预配系统仍使用该 Token，后续预配可能鉴权失败，因此应先确认实际使用情况。删除后不会自动创建新凭据、关闭 AC 同步开关或关闭 SAML 登录。</h2>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>Revokes a specified credential. The credentialId parameter is required and cannot be empty. You can obtain it from the credential list. The shared pool must be available, but SAML configuration or SCIM accept being Enabled is not required. After deletion, external provisioning requests that use this token become invalid. This operation only affects the selected credential. It does not automatically disable the accept feature, does not automatically disable AC syncEnabled, and does not affect other credentials or SAML.
+        /// Even if you delete the last credential, the synchronization switch is not automatically written back and a new token is not reissued. Disable external provisioning or replace the token in use as needed. A successful response returns a common response without business data. Refresh the list to confirm the deletion. The result for unknown or deleted IDs is determined by the upstream service. A unified 404 or unconditional idempotent success is not guaranteed.</para>
+        /// <h2>Request and examples</h2>
+        /// <para>DELETE /workspaces/{workspaceId}/scim-provisioning/credentials/{credentialId}
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey (AK) or Security Token Service (STS) identity that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct-connect API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// <pre><code class="language-text">DELETE /workspaces/ws-example/scim-provisioning/credentials/credential-example
+        /// </c></pre>
+        /// <h2>Response example</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;success&quot;: true,
+        ///   &quot;httpStatusCode&quot;: 200
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. If a synchronous call to the upstream service fails, a 503 IdentityProviderProvisioningUnavailable error may be returned. Keep the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
+        /// 400 InvalidParameter: The credentialId parameter is empty or the shared pool is not available. 404 IdentityProviderNotFound indicates that the binding does not exist, which does not mean that all unknown credential IDs return this code. Handle other deletion errors based on upstream results. If the operation fails, refresh the list to check. No automatic creation of a replacement token is performed.</para>
+        /// <h2>Call relationships and usage boundaries</h2>
+        /// <para>Call ListIdentityProviderSCIMCredentials to obtain the credentialId and then delete the specified credential. If the external provisioning system still uses this token, subsequent provisioning may result in authentication failures. Therefore, confirm the actual usage first. After deletion, no automatic creation of a new credential is performed, and the AC synchronization switch or SAML logon is not disabled.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5565,12 +5613,30 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 SCIM 凭据</para>
+        /// <para>Revokes a specified SCIM credential. This operation does not automatically create a new token, modify the AC synchronization switch, or disable SAML logon.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>功能与前提\n撤销指定凭据，credentialId 必填且非空，从凭据列表取得。要求共享池可用，但不要求 SAML 已配置或 SCIM 接收为 Enabled。删除后使用该 Token 的外部预配请求会失效；只影响选定凭据，不自动关闭接收、不自动关闭 AC syncEnabled，也不影响另一枚凭据或 SAML。\n即使删除最后一枚凭据，也不自动回写同步开关或重发新 Token；用户应按需要先停用外部预配或更换其使用的 Token。成功返回公共响应，无业务 data 内容；刷新列表确认。对未知或已删除 ID 的结果由上游决定，不承诺统一 404 或无条件幂等成功。\n\n## 请求与示例\nDELETE /workspaces/{workspaceId}/scim-provisioning/credentials/{credentialId}\n调用约定：按目标 Workspace 的地域调用，使用有相应 Workspace 身份源资源权限的 AK/STS 身份。下文示例中的 ws-example、URL、证书和 Token 均为占位值，需替换为真实值。请求体示例表示公开 API 的 body 参数内容，不是后端直连接口额外的 body 包装。返回示例只展示业务部分，外层还包括 requestId、success、code、message、httpStatusCode；排障请保留 requestId，不记录密钥。业务任务异步不意味着 HTTP 请求长连接等待完成。\n<c>text\nDELETE /workspaces/ws-example/scim-provisioning/credentials/credential-example\n</c>\n\n## 返回示例\n<c>json\n{\n  &quot;success&quot;: true,\n  &quot;httpStatusCode&quot;: 200\n}\n</c>\n\n## 错误与处理\n错误处理：400 InvalidParameter 表示参数或当前配置前提不满足；404 IdentityProviderNotFound 表示没有匹配类型的绑定。同步调用上游失败可能返回 503 IdentityProviderProvisioningUnavailable；保留请求 ID 排查，不把读取失败解释为未配置。实际鉴权和 Workspace 不存在错误沿用公共错误处理。\n400 InvalidParameter：credentialId 为空或共享池不可用。404 IdentityProviderNotFound 指绑定不存在，不代表所有未知凭据 ID 都返回该码。其他删除错误按上游结果处理，失败时刷新列表核对，不自动创建替代 Token。\n\n## 调用关系与使用边界\n使用 ListIdentityProviderSCIMCredentials 取得 credentialId 后删除指定凭据。若外部预配系统仍使用该 Token，后续预配可能鉴权失败，因此应先确认实际使用情况。删除后不会自动创建新凭据、关闭 AC 同步开关或关闭 SAML 登录。</h2>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>Revokes a specified credential. The credentialId parameter is required and cannot be empty. You can obtain it from the credential list. The shared pool must be available, but SAML configuration or SCIM accept being Enabled is not required. After deletion, external provisioning requests that use this token become invalid. This operation only affects the selected credential. It does not automatically disable the accept feature, does not automatically disable AC syncEnabled, and does not affect other credentials or SAML.
+        /// Even if you delete the last credential, the synchronization switch is not automatically written back and a new token is not reissued. Disable external provisioning or replace the token in use as needed. A successful response returns a common response without business data. Refresh the list to confirm the deletion. The result for unknown or deleted IDs is determined by the upstream service. A unified 404 or unconditional idempotent success is not guaranteed.</para>
+        /// <h2>Request and examples</h2>
+        /// <para>DELETE /workspaces/{workspaceId}/scim-provisioning/credentials/{credentialId}
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey (AK) or Security Token Service (STS) identity that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct-connect API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// <pre><code class="language-text">DELETE /workspaces/ws-example/scim-provisioning/credentials/credential-example
+        /// </c></pre>
+        /// <h2>Response example</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;success&quot;: true,
+        ///   &quot;httpStatusCode&quot;: 200
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. If a synchronous call to the upstream service fails, a 503 IdentityProviderProvisioningUnavailable error may be returned. Keep the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
+        /// 400 InvalidParameter: The credentialId parameter is empty or the shared pool is not available. 404 IdentityProviderNotFound indicates that the binding does not exist, which does not mean that all unknown credential IDs return this code. Handle other deletion errors based on upstream results. If the operation fails, refresh the list to check. No automatic creation of a replacement token is performed.</para>
+        /// <h2>Call relationships and usage boundaries</h2>
+        /// <para>Call ListIdentityProviderSCIMCredentials to obtain the credentialId and then delete the specified credential. If the external provisioning system still uses this token, subsequent provisioning may result in authentication failures. Therefore, confirm the actual usage first. After deletion, no automatic creation of a new credential is performed, and the AC synchronization switch or SAML logon is not disabled.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5589,12 +5655,30 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 SCIM 凭据</para>
+        /// <para>Revokes a specified SCIM credential. This operation does not automatically create a new token, modify the AC synchronization switch, or disable SAML logon.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>功能与前提\n撤销指定凭据，credentialId 必填且非空，从凭据列表取得。要求共享池可用，但不要求 SAML 已配置或 SCIM 接收为 Enabled。删除后使用该 Token 的外部预配请求会失效；只影响选定凭据，不自动关闭接收、不自动关闭 AC syncEnabled，也不影响另一枚凭据或 SAML。\n即使删除最后一枚凭据，也不自动回写同步开关或重发新 Token；用户应按需要先停用外部预配或更换其使用的 Token。成功返回公共响应，无业务 data 内容；刷新列表确认。对未知或已删除 ID 的结果由上游决定，不承诺统一 404 或无条件幂等成功。\n\n## 请求与示例\nDELETE /workspaces/{workspaceId}/scim-provisioning/credentials/{credentialId}\n调用约定：按目标 Workspace 的地域调用，使用有相应 Workspace 身份源资源权限的 AK/STS 身份。下文示例中的 ws-example、URL、证书和 Token 均为占位值，需替换为真实值。请求体示例表示公开 API 的 body 参数内容，不是后端直连接口额外的 body 包装。返回示例只展示业务部分，外层还包括 requestId、success、code、message、httpStatusCode；排障请保留 requestId，不记录密钥。业务任务异步不意味着 HTTP 请求长连接等待完成。\n<c>text\nDELETE /workspaces/ws-example/scim-provisioning/credentials/credential-example\n</c>\n\n## 返回示例\n<c>json\n{\n  &quot;success&quot;: true,\n  &quot;httpStatusCode&quot;: 200\n}\n</c>\n\n## 错误与处理\n错误处理：400 InvalidParameter 表示参数或当前配置前提不满足；404 IdentityProviderNotFound 表示没有匹配类型的绑定。同步调用上游失败可能返回 503 IdentityProviderProvisioningUnavailable；保留请求 ID 排查，不把读取失败解释为未配置。实际鉴权和 Workspace 不存在错误沿用公共错误处理。\n400 InvalidParameter：credentialId 为空或共享池不可用。404 IdentityProviderNotFound 指绑定不存在，不代表所有未知凭据 ID 都返回该码。其他删除错误按上游结果处理，失败时刷新列表核对，不自动创建替代 Token。\n\n## 调用关系与使用边界\n使用 ListIdentityProviderSCIMCredentials 取得 credentialId 后删除指定凭据。若外部预配系统仍使用该 Token，后续预配可能鉴权失败，因此应先确认实际使用情况。删除后不会自动创建新凭据、关闭 AC 同步开关或关闭 SAML 登录。</h2>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>Revokes a specified credential. The credentialId parameter is required and cannot be empty. You can obtain it from the credential list. The shared pool must be available, but SAML configuration or SCIM accept being Enabled is not required. After deletion, external provisioning requests that use this token become invalid. This operation only affects the selected credential. It does not automatically disable the accept feature, does not automatically disable AC syncEnabled, and does not affect other credentials or SAML.
+        /// Even if you delete the last credential, the synchronization switch is not automatically written back and a new token is not reissued. Disable external provisioning or replace the token in use as needed. A successful response returns a common response without business data. Refresh the list to confirm the deletion. The result for unknown or deleted IDs is determined by the upstream service. A unified 404 or unconditional idempotent success is not guaranteed.</para>
+        /// <h2>Request and examples</h2>
+        /// <para>DELETE /workspaces/{workspaceId}/scim-provisioning/credentials/{credentialId}
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey (AK) or Security Token Service (STS) identity that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct-connect API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// <pre><code class="language-text">DELETE /workspaces/ws-example/scim-provisioning/credentials/credential-example
+        /// </c></pre>
+        /// <h2>Response example</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;success&quot;: true,
+        ///   &quot;httpStatusCode&quot;: 200
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. If a synchronous call to the upstream service fails, a 503 IdentityProviderProvisioningUnavailable error may be returned. Keep the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
+        /// 400 InvalidParameter: The credentialId parameter is empty or the shared pool is not available. 404 IdentityProviderNotFound indicates that the binding does not exist, which does not mean that all unknown credential IDs return this code. Handle other deletion errors based on upstream results. If the operation fails, refresh the list to check. No automatic creation of a replacement token is performed.</para>
+        /// <h2>Call relationships and usage boundaries</h2>
+        /// <para>Call ListIdentityProviderSCIMCredentials to obtain the credentialId and then delete the specified credential. If the external provisioning system still uses this token, subsequent provisioning may result in authentication failures. Therefore, confirm the actual usage first. After deletion, no automatic creation of a new credential is performed, and the AC synchronization switch or SAML logon is not disabled.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7845,6 +7929,156 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves the image preparation task by using the client token submitted when creating or explicitly updating an image. This operation only queries the task and does not create a dump. If the returned phase is SUCCEEDED, the target version is deployed successfully.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the task by using the original client token for creation or update when the response is lost. The backend parses the target agent and verifies permissions. A 404 error does not necessarily mean that the original submission was not accepted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// FindCustomAgentImagePreparationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FindCustomAgentImagePreparationResponse
+        /// </returns>
+        public FindCustomAgentImagePreparationResponse FindCustomAgentImagePreparationWithOptions(string workspaceId, FindCustomAgentImagePreparationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FindCustomAgentImagePreparation",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/custom-image-preparations",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FindCustomAgentImagePreparationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the image preparation task by using the client token submitted when creating or explicitly updating an image. This operation only queries the task and does not create a dump. If the returned phase is SUCCEEDED, the target version is deployed successfully.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the task by using the original client token for creation or update when the response is lost. The backend parses the target agent and verifies permissions. A 404 error does not necessarily mean that the original submission was not accepted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// FindCustomAgentImagePreparationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FindCustomAgentImagePreparationResponse
+        /// </returns>
+        public async Task<FindCustomAgentImagePreparationResponse> FindCustomAgentImagePreparationWithOptionsAsync(string workspaceId, FindCustomAgentImagePreparationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FindCustomAgentImagePreparation",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/custom-image-preparations",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FindCustomAgentImagePreparationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the image preparation task by using the client token submitted when creating or explicitly updating an image. This operation only queries the task and does not create a dump. If the returned phase is SUCCEEDED, the target version is deployed successfully.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the task by using the original client token for creation or update when the response is lost. The backend parses the target agent and verifies permissions. A 404 error does not necessarily mean that the original submission was not accepted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// FindCustomAgentImagePreparationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FindCustomAgentImagePreparationResponse
+        /// </returns>
+        public FindCustomAgentImagePreparationResponse FindCustomAgentImagePreparation(string workspaceId, FindCustomAgentImagePreparationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return FindCustomAgentImagePreparationWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the image preparation task by using the client token submitted when creating or explicitly updating an image. This operation only queries the task and does not create a dump. If the returned phase is SUCCEEDED, the target version is deployed successfully.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the task by using the original client token for creation or update when the response is lost. The backend parses the target agent and verifies permissions. A 404 error does not necessarily mean that the original submission was not accepted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// FindCustomAgentImagePreparationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FindCustomAgentImagePreparationResponse
+        /// </returns>
+        public async Task<FindCustomAgentImagePreparationResponse> FindCustomAgentImagePreparationAsync(string workspaceId, FindCustomAgentImagePreparationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await FindCustomAgentImagePreparationWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Skips the regular review process and forcibly publishes a specified Skill version.</para>
         /// </summary>
         /// 
@@ -9325,13 +9559,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a custom agent in a specified workspace, including deployment configurations, the execute status of the latest configuration version, and the running instance status statistics.</para>
+        /// <para>Queries the details of a custom agent in a specified workspace, including the deployment configuration, the execute status of the latest configuration version, and the instance status statistics of running instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After creating or updating a custom agent, you can poll this operation to query the execution result of the latest configuration version. latestVersionStatus corresponds to latestSpecVersion. latestExecutionError indicates the cause of the pending or failed status for this version. If retryable is true, you can query again later.
-        /// The returned configuration is the latest submitted configuration and may not have taken effect. Verify the deployment and running status by checking latestVersionStatus, the overall agent status, and the running instance statistics sandboxPhaseCounts.
+        /// <para>After creating or updating a custom agent, you can poll this operation to query the execution result of the latest configuration version. latestVersionStatus corresponds to latestSpecVersion. latestExecutionError indicates the cause of the pending or failed state for the version. If retryable is true, you can query again later.
+        /// The returned configuration is the most recently submitted one and may not have taken effect yet. Verify the deployment and running status by combining latestVersionStatus, the overall agent status, and the sandboxPhaseCounts running instance statistics.
         /// If the queried custom agent does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</para>
         /// </description>
         /// 
@@ -9372,13 +9606,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a custom agent in a specified workspace, including deployment configurations, the execute status of the latest configuration version, and the running instance status statistics.</para>
+        /// <para>Queries the details of a custom agent in a specified workspace, including the deployment configuration, the execute status of the latest configuration version, and the instance status statistics of running instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After creating or updating a custom agent, you can poll this operation to query the execution result of the latest configuration version. latestVersionStatus corresponds to latestSpecVersion. latestExecutionError indicates the cause of the pending or failed status for this version. If retryable is true, you can query again later.
-        /// The returned configuration is the latest submitted configuration and may not have taken effect. Verify the deployment and running status by checking latestVersionStatus, the overall agent status, and the running instance statistics sandboxPhaseCounts.
+        /// <para>After creating or updating a custom agent, you can poll this operation to query the execution result of the latest configuration version. latestVersionStatus corresponds to latestSpecVersion. latestExecutionError indicates the cause of the pending or failed state for the version. If retryable is true, you can query again later.
+        /// The returned configuration is the most recently submitted one and may not have taken effect yet. Verify the deployment and running status by combining latestVersionStatus, the overall agent status, and the sandboxPhaseCounts running instance statistics.
         /// If the queried custom agent does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</para>
         /// </description>
         /// 
@@ -9419,13 +9653,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a custom agent in a specified workspace, including deployment configurations, the execute status of the latest configuration version, and the running instance status statistics.</para>
+        /// <para>Queries the details of a custom agent in a specified workspace, including the deployment configuration, the execute status of the latest configuration version, and the instance status statistics of running instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After creating or updating a custom agent, you can poll this operation to query the execution result of the latest configuration version. latestVersionStatus corresponds to latestSpecVersion. latestExecutionError indicates the cause of the pending or failed status for this version. If retryable is true, you can query again later.
-        /// The returned configuration is the latest submitted configuration and may not have taken effect. Verify the deployment and running status by checking latestVersionStatus, the overall agent status, and the running instance statistics sandboxPhaseCounts.
+        /// <para>After creating or updating a custom agent, you can poll this operation to query the execution result of the latest configuration version. latestVersionStatus corresponds to latestSpecVersion. latestExecutionError indicates the cause of the pending or failed state for the version. If retryable is true, you can query again later.
+        /// The returned configuration is the most recently submitted one and may not have taken effect yet. Verify the deployment and running status by combining latestVersionStatus, the overall agent status, and the sandboxPhaseCounts running instance statistics.
         /// If the queried custom agent does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</para>
         /// </description>
         /// 
@@ -9445,13 +9679,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a custom agent in a specified workspace, including deployment configurations, the execute status of the latest configuration version, and the running instance status statistics.</para>
+        /// <para>Queries the details of a custom agent in a specified workspace, including the deployment configuration, the execute status of the latest configuration version, and the instance status statistics of running instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After creating or updating a custom agent, you can poll this operation to query the execution result of the latest configuration version. latestVersionStatus corresponds to latestSpecVersion. latestExecutionError indicates the cause of the pending or failed status for this version. If retryable is true, you can query again later.
-        /// The returned configuration is the latest submitted configuration and may not have taken effect. Verify the deployment and running status by checking latestVersionStatus, the overall agent status, and the running instance statistics sandboxPhaseCounts.
+        /// <para>After creating or updating a custom agent, you can poll this operation to query the execution result of the latest configuration version. latestVersionStatus corresponds to latestSpecVersion. latestExecutionError indicates the cause of the pending or failed state for the version. If retryable is true, you can query again later.
+        /// The returned configuration is the most recently submitted one and may not have taken effect yet. Verify the deployment and running status by combining latestVersionStatus, the overall agent status, and the sandboxPhaseCounts running instance statistics.
         /// If the queried custom agent does not exist, has been deleted, or does not belong to the specified workspace, a resource not found error is returned.</para>
         /// </description>
         /// 
@@ -9467,6 +9701,144 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetCustomAgentWithOptionsAsync(workspaceId, agentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the image preparation and deployment phases by using the preparation ID. Regular polling does not create a dump task. Only phase=SUCCEEDED indicates that the deployment of the target version is successful. The health of the previous instance does not indicate the success of the current deployment.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the preparation and deployment phases of the current submission. The health of the previous instance does not indicate the success of the current deployment. Only phase=SUCCEEDED indicates completion. Regular polling does not create a dump task. A network interruption does not indicate task failure.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCustomAgentImagePreparationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCustomAgentImagePreparationResponse
+        /// </returns>
+        public GetCustomAgentImagePreparationResponse GetCustomAgentImagePreparationWithOptions(string workspaceId, string preparationId, GetCustomAgentImagePreparationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCustomAgentImagePreparation",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/custom-image-preparations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(preparationId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCustomAgentImagePreparationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the image preparation and deployment phases by using the preparation ID. Regular polling does not create a dump task. Only phase=SUCCEEDED indicates that the deployment of the target version is successful. The health of the previous instance does not indicate the success of the current deployment.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the preparation and deployment phases of the current submission. The health of the previous instance does not indicate the success of the current deployment. Only phase=SUCCEEDED indicates completion. Regular polling does not create a dump task. A network interruption does not indicate task failure.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCustomAgentImagePreparationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCustomAgentImagePreparationResponse
+        /// </returns>
+        public async Task<GetCustomAgentImagePreparationResponse> GetCustomAgentImagePreparationWithOptionsAsync(string workspaceId, string preparationId, GetCustomAgentImagePreparationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCustomAgentImagePreparation",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/custom-image-preparations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(preparationId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCustomAgentImagePreparationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the image preparation and deployment phases by using the preparation ID. Regular polling does not create a dump task. Only phase=SUCCEEDED indicates that the deployment of the target version is successful. The health of the previous instance does not indicate the success of the current deployment.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the preparation and deployment phases of the current submission. The health of the previous instance does not indicate the success of the current deployment. Only phase=SUCCEEDED indicates completion. Regular polling does not create a dump task. A network interruption does not indicate task failure.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCustomAgentImagePreparationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCustomAgentImagePreparationResponse
+        /// </returns>
+        public GetCustomAgentImagePreparationResponse GetCustomAgentImagePreparation(string workspaceId, string preparationId, GetCustomAgentImagePreparationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetCustomAgentImagePreparationWithOptions(workspaceId, preparationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the image preparation and deployment phases by using the preparation ID. Regular polling does not create a dump task. Only phase=SUCCEEDED indicates that the deployment of the target version is successful. The health of the previous instance does not indicate the success of the current deployment.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the preparation and deployment phases of the current submission. The health of the previous instance does not indicate the success of the current deployment. Only phase=SUCCEEDED indicates completion. Regular polling does not create a dump task. A network interruption does not indicate task failure.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCustomAgentImagePreparationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCustomAgentImagePreparationResponse
+        /// </returns>
+        public async Task<GetCustomAgentImagePreparationResponse> GetCustomAgentImagePreparationAsync(string workspaceId, string preparationId, GetCustomAgentImagePreparationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetCustomAgentImagePreparationWithOptionsAsync(workspaceId, preparationId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9747,17 +10119,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the binding and expected configuration of a specified identity provider. When CustomSSO is configured with SAML, this operation reads back the actual upstream SSO configuration. The SCIM status is queried through a separate API operation.</para>
+        /// <para>Queries the binding and expected configuration of a specified identity provider. If CustomSSO is configured with SAML, this operation reads back the actual upstream SSO configuration. The SCIM status is queried through a separate API operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>Reads existing bindings by type. CustomSSO returns the saved protocol, standardized saml, expected loginEnabled, syncEnabled, and shared binding status. If SAML is not configured, the saml and configuration fields may not be returned. When saml is configured, the system additionally queries AgentIdentity, and configuration represents the actual SSO configuration. The saml field is the data source for the edit form. The status switch for configuration can be Enabled or Disabled. If the upstream query fails, an error is reported. Do not treat this as an unconfigured state.
-        /// Only this operation reads back the actual SAML configuration. List and write operations do not guarantee that configuration is returned. A user pool in the READY state does not indicate that SAML is configured. UPDATING and UPDATE_FAILED describe logon configuration tasks, not SCIM tasks. The vendor callback URL for CustomSSO is empty. Use GetIdentityProviderSCIM.operationStatus to query SCIM operation results.</para>
-        /// <h2>Request and examples</h2>
+        /// <para>Reads existing bindings by type. CustomSSO returns the saved protocol, normalized saml, expected loginEnabled, syncEnabled, and shared binding status. If SAML is not configured, saml and configuration may not be returned. If saml is configured, the system additionally queries AgentIdentity, and configuration represents the actual SSO configuration. The saml field is the data source for the edit form. The status switch for configuration is Enabled or Disabled. If the upstream query fails, an error is returned. The failure cannot be treated as an unconfigured state.
+        /// Only this operation reads back the actual SAML configuration. List and write operations do not guarantee that configuration is returned. WAITING_CONFIGURATION indicates that user pool initialization is complete but the SAML metadata has not been saved. In this case, you can read the service provider (SP) information, fill in the configuration, or disconnect the integration. Do not lock the form and wait for the READY state. UPDATING and UPDATE_FAILED describe logon configuration tasks, not SCIM tasks. The vendor callback URL for CustomSSO is empty. Use GetIdentityProviderSCIM.operationStatus to query SCIM operation results.</para>
+        /// <h2>Requests and examples</h2>
         /// <para>GET /workspaces/{workspaceId}/identity-providers/{identityProviderType}
-        /// Calling conventions: Call the API operation in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not log keys. Asynchronous business tasks do not mean that the HTTP request uses a persistent connection to wait for completion.</para>
+        /// Call conventions: Call the operation in the region of the target workspace by using an AccessKey pair or STS credential that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API operation, not the extra body wrapper of the backend direct-connection API operation. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a persistent connection to wait for completion.</para>
         /// <pre><code class="language-text">GET /workspaces/ws-example/identity-providers/CustomSSO
         /// </c></pre>
         /// <h2>Response examples</h2>
@@ -9765,17 +10137,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         ///   &quot;data&quot;: {
         ///     &quot;workspaceId&quot;: &quot;ws-example&quot;,
         ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
-        ///     &quot;status&quot;: &quot;READY&quot;,
+        ///     &quot;status&quot;: &quot;WAITING_CONFIGURATION&quot;,
         ///     &quot;loginEnabled&quot;: false,
         ///     &quot;syncEnabled&quot;: false
         ///   }
         /// }
         /// </c></pre>
         /// <h2>Errors and handling</h2>
-        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call to the upstream service may fail and return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret a read failure as an unconfigured state. Actual authentication and workspace not found errors follow common error handling.
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call to the upstream service may fail and return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret a read failure as an unconfigured state. Actual authentication and workspace non-existence errors follow common error handling procedures.
         /// 404 IdentityProviderNotFound: No binding exists, or the input type is inconsistent with the current binding. If SAML is already configured, an upstream readback failure does not degrade to a successful empty configuration.</para>
         /// <h2>Call relationships and usage boundaries</h2>
-        /// <para>SAML configuration completion and logon enabling are independent operations. protocol=SAML and the presence of saml indicate that the logon configuration has been submitted, and loginEnabled indicates the expected logon switch. Check the effective status based on the actual SSO status in configuration. SCIM uses an independent query API operation. Do not use status=READY of this API operation as the basis for successful SCIM synchronization. Currently, OIDC, JIT configuration, or JIT status fields are not provided.</para>
+        /// <para>SAML configuration completion and logon enabling are independent operations. protocol=SAML and the presence of the saml field indicate that the logon configuration has been submitted, and loginEnabled indicates the expected logon switch. Check the effective status based on the actual SSO status in configuration. SCIM uses an independent query operation. Do not use status=READY of this operation as the basis for successful SCIM synchronization. Currently, OIDC and JIT configurations or JIT status fields are not provided.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9815,17 +10187,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the binding and expected configuration of a specified identity provider. When CustomSSO is configured with SAML, this operation reads back the actual upstream SSO configuration. The SCIM status is queried through a separate API operation.</para>
+        /// <para>Queries the binding and expected configuration of a specified identity provider. If CustomSSO is configured with SAML, this operation reads back the actual upstream SSO configuration. The SCIM status is queried through a separate API operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>Reads existing bindings by type. CustomSSO returns the saved protocol, standardized saml, expected loginEnabled, syncEnabled, and shared binding status. If SAML is not configured, the saml and configuration fields may not be returned. When saml is configured, the system additionally queries AgentIdentity, and configuration represents the actual SSO configuration. The saml field is the data source for the edit form. The status switch for configuration can be Enabled or Disabled. If the upstream query fails, an error is reported. Do not treat this as an unconfigured state.
-        /// Only this operation reads back the actual SAML configuration. List and write operations do not guarantee that configuration is returned. A user pool in the READY state does not indicate that SAML is configured. UPDATING and UPDATE_FAILED describe logon configuration tasks, not SCIM tasks. The vendor callback URL for CustomSSO is empty. Use GetIdentityProviderSCIM.operationStatus to query SCIM operation results.</para>
-        /// <h2>Request and examples</h2>
+        /// <para>Reads existing bindings by type. CustomSSO returns the saved protocol, normalized saml, expected loginEnabled, syncEnabled, and shared binding status. If SAML is not configured, saml and configuration may not be returned. If saml is configured, the system additionally queries AgentIdentity, and configuration represents the actual SSO configuration. The saml field is the data source for the edit form. The status switch for configuration is Enabled or Disabled. If the upstream query fails, an error is returned. The failure cannot be treated as an unconfigured state.
+        /// Only this operation reads back the actual SAML configuration. List and write operations do not guarantee that configuration is returned. WAITING_CONFIGURATION indicates that user pool initialization is complete but the SAML metadata has not been saved. In this case, you can read the service provider (SP) information, fill in the configuration, or disconnect the integration. Do not lock the form and wait for the READY state. UPDATING and UPDATE_FAILED describe logon configuration tasks, not SCIM tasks. The vendor callback URL for CustomSSO is empty. Use GetIdentityProviderSCIM.operationStatus to query SCIM operation results.</para>
+        /// <h2>Requests and examples</h2>
         /// <para>GET /workspaces/{workspaceId}/identity-providers/{identityProviderType}
-        /// Calling conventions: Call the API operation in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not log keys. Asynchronous business tasks do not mean that the HTTP request uses a persistent connection to wait for completion.</para>
+        /// Call conventions: Call the operation in the region of the target workspace by using an AccessKey pair or STS credential that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API operation, not the extra body wrapper of the backend direct-connection API operation. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a persistent connection to wait for completion.</para>
         /// <pre><code class="language-text">GET /workspaces/ws-example/identity-providers/CustomSSO
         /// </c></pre>
         /// <h2>Response examples</h2>
@@ -9833,17 +10205,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         ///   &quot;data&quot;: {
         ///     &quot;workspaceId&quot;: &quot;ws-example&quot;,
         ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
-        ///     &quot;status&quot;: &quot;READY&quot;,
+        ///     &quot;status&quot;: &quot;WAITING_CONFIGURATION&quot;,
         ///     &quot;loginEnabled&quot;: false,
         ///     &quot;syncEnabled&quot;: false
         ///   }
         /// }
         /// </c></pre>
         /// <h2>Errors and handling</h2>
-        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call to the upstream service may fail and return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret a read failure as an unconfigured state. Actual authentication and workspace not found errors follow common error handling.
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call to the upstream service may fail and return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret a read failure as an unconfigured state. Actual authentication and workspace non-existence errors follow common error handling procedures.
         /// 404 IdentityProviderNotFound: No binding exists, or the input type is inconsistent with the current binding. If SAML is already configured, an upstream readback failure does not degrade to a successful empty configuration.</para>
         /// <h2>Call relationships and usage boundaries</h2>
-        /// <para>SAML configuration completion and logon enabling are independent operations. protocol=SAML and the presence of saml indicate that the logon configuration has been submitted, and loginEnabled indicates the expected logon switch. Check the effective status based on the actual SSO status in configuration. SCIM uses an independent query API operation. Do not use status=READY of this API operation as the basis for successful SCIM synchronization. Currently, OIDC, JIT configuration, or JIT status fields are not provided.</para>
+        /// <para>SAML configuration completion and logon enabling are independent operations. protocol=SAML and the presence of the saml field indicate that the logon configuration has been submitted, and loginEnabled indicates the expected logon switch. Check the effective status based on the actual SSO status in configuration. SCIM uses an independent query operation. Do not use status=READY of this operation as the basis for successful SCIM synchronization. Currently, OIDC and JIT configurations or JIT status fields are not provided.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9883,17 +10255,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the binding and expected configuration of a specified identity provider. When CustomSSO is configured with SAML, this operation reads back the actual upstream SSO configuration. The SCIM status is queried through a separate API operation.</para>
+        /// <para>Queries the binding and expected configuration of a specified identity provider. If CustomSSO is configured with SAML, this operation reads back the actual upstream SSO configuration. The SCIM status is queried through a separate API operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>Reads existing bindings by type. CustomSSO returns the saved protocol, standardized saml, expected loginEnabled, syncEnabled, and shared binding status. If SAML is not configured, the saml and configuration fields may not be returned. When saml is configured, the system additionally queries AgentIdentity, and configuration represents the actual SSO configuration. The saml field is the data source for the edit form. The status switch for configuration can be Enabled or Disabled. If the upstream query fails, an error is reported. Do not treat this as an unconfigured state.
-        /// Only this operation reads back the actual SAML configuration. List and write operations do not guarantee that configuration is returned. A user pool in the READY state does not indicate that SAML is configured. UPDATING and UPDATE_FAILED describe logon configuration tasks, not SCIM tasks. The vendor callback URL for CustomSSO is empty. Use GetIdentityProviderSCIM.operationStatus to query SCIM operation results.</para>
-        /// <h2>Request and examples</h2>
+        /// <para>Reads existing bindings by type. CustomSSO returns the saved protocol, normalized saml, expected loginEnabled, syncEnabled, and shared binding status. If SAML is not configured, saml and configuration may not be returned. If saml is configured, the system additionally queries AgentIdentity, and configuration represents the actual SSO configuration. The saml field is the data source for the edit form. The status switch for configuration is Enabled or Disabled. If the upstream query fails, an error is returned. The failure cannot be treated as an unconfigured state.
+        /// Only this operation reads back the actual SAML configuration. List and write operations do not guarantee that configuration is returned. WAITING_CONFIGURATION indicates that user pool initialization is complete but the SAML metadata has not been saved. In this case, you can read the service provider (SP) information, fill in the configuration, or disconnect the integration. Do not lock the form and wait for the READY state. UPDATING and UPDATE_FAILED describe logon configuration tasks, not SCIM tasks. The vendor callback URL for CustomSSO is empty. Use GetIdentityProviderSCIM.operationStatus to query SCIM operation results.</para>
+        /// <h2>Requests and examples</h2>
         /// <para>GET /workspaces/{workspaceId}/identity-providers/{identityProviderType}
-        /// Calling conventions: Call the API operation in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not log keys. Asynchronous business tasks do not mean that the HTTP request uses a persistent connection to wait for completion.</para>
+        /// Call conventions: Call the operation in the region of the target workspace by using an AccessKey pair or STS credential that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API operation, not the extra body wrapper of the backend direct-connection API operation. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a persistent connection to wait for completion.</para>
         /// <pre><code class="language-text">GET /workspaces/ws-example/identity-providers/CustomSSO
         /// </c></pre>
         /// <h2>Response examples</h2>
@@ -9901,17 +10273,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         ///   &quot;data&quot;: {
         ///     &quot;workspaceId&quot;: &quot;ws-example&quot;,
         ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
-        ///     &quot;status&quot;: &quot;READY&quot;,
+        ///     &quot;status&quot;: &quot;WAITING_CONFIGURATION&quot;,
         ///     &quot;loginEnabled&quot;: false,
         ///     &quot;syncEnabled&quot;: false
         ///   }
         /// }
         /// </c></pre>
         /// <h2>Errors and handling</h2>
-        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call to the upstream service may fail and return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret a read failure as an unconfigured state. Actual authentication and workspace not found errors follow common error handling.
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call to the upstream service may fail and return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret a read failure as an unconfigured state. Actual authentication and workspace non-existence errors follow common error handling procedures.
         /// 404 IdentityProviderNotFound: No binding exists, or the input type is inconsistent with the current binding. If SAML is already configured, an upstream readback failure does not degrade to a successful empty configuration.</para>
         /// <h2>Call relationships and usage boundaries</h2>
-        /// <para>SAML configuration completion and logon enabling are independent operations. protocol=SAML and the presence of saml indicate that the logon configuration has been submitted, and loginEnabled indicates the expected logon switch. Check the effective status based on the actual SSO status in configuration. SCIM uses an independent query API operation. Do not use status=READY of this API operation as the basis for successful SCIM synchronization. Currently, OIDC, JIT configuration, or JIT status fields are not provided.</para>
+        /// <para>SAML configuration completion and logon enabling are independent operations. protocol=SAML and the presence of the saml field indicate that the logon configuration has been submitted, and loginEnabled indicates the expected logon switch. Check the effective status based on the actual SSO status in configuration. SCIM uses an independent query operation. Do not use status=READY of this operation as the basis for successful SCIM synchronization. Currently, OIDC and JIT configurations or JIT status fields are not provided.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9930,17 +10302,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the binding and expected configuration of a specified identity provider. When CustomSSO is configured with SAML, this operation reads back the actual upstream SSO configuration. The SCIM status is queried through a separate API operation.</para>
+        /// <para>Queries the binding and expected configuration of a specified identity provider. If CustomSSO is configured with SAML, this operation reads back the actual upstream SSO configuration. The SCIM status is queried through a separate API operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>Reads existing bindings by type. CustomSSO returns the saved protocol, standardized saml, expected loginEnabled, syncEnabled, and shared binding status. If SAML is not configured, the saml and configuration fields may not be returned. When saml is configured, the system additionally queries AgentIdentity, and configuration represents the actual SSO configuration. The saml field is the data source for the edit form. The status switch for configuration can be Enabled or Disabled. If the upstream query fails, an error is reported. Do not treat this as an unconfigured state.
-        /// Only this operation reads back the actual SAML configuration. List and write operations do not guarantee that configuration is returned. A user pool in the READY state does not indicate that SAML is configured. UPDATING and UPDATE_FAILED describe logon configuration tasks, not SCIM tasks. The vendor callback URL for CustomSSO is empty. Use GetIdentityProviderSCIM.operationStatus to query SCIM operation results.</para>
-        /// <h2>Request and examples</h2>
+        /// <para>Reads existing bindings by type. CustomSSO returns the saved protocol, normalized saml, expected loginEnabled, syncEnabled, and shared binding status. If SAML is not configured, saml and configuration may not be returned. If saml is configured, the system additionally queries AgentIdentity, and configuration represents the actual SSO configuration. The saml field is the data source for the edit form. The status switch for configuration is Enabled or Disabled. If the upstream query fails, an error is returned. The failure cannot be treated as an unconfigured state.
+        /// Only this operation reads back the actual SAML configuration. List and write operations do not guarantee that configuration is returned. WAITING_CONFIGURATION indicates that user pool initialization is complete but the SAML metadata has not been saved. In this case, you can read the service provider (SP) information, fill in the configuration, or disconnect the integration. Do not lock the form and wait for the READY state. UPDATING and UPDATE_FAILED describe logon configuration tasks, not SCIM tasks. The vendor callback URL for CustomSSO is empty. Use GetIdentityProviderSCIM.operationStatus to query SCIM operation results.</para>
+        /// <h2>Requests and examples</h2>
         /// <para>GET /workspaces/{workspaceId}/identity-providers/{identityProviderType}
-        /// Calling conventions: Call the API operation in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not log keys. Asynchronous business tasks do not mean that the HTTP request uses a persistent connection to wait for completion.</para>
+        /// Call conventions: Call the operation in the region of the target workspace by using an AccessKey pair or STS credential that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API operation, not the extra body wrapper of the backend direct-connection API operation. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a persistent connection to wait for completion.</para>
         /// <pre><code class="language-text">GET /workspaces/ws-example/identity-providers/CustomSSO
         /// </c></pre>
         /// <h2>Response examples</h2>
@@ -9948,17 +10320,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         ///   &quot;data&quot;: {
         ///     &quot;workspaceId&quot;: &quot;ws-example&quot;,
         ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
-        ///     &quot;status&quot;: &quot;READY&quot;,
+        ///     &quot;status&quot;: &quot;WAITING_CONFIGURATION&quot;,
         ///     &quot;loginEnabled&quot;: false,
         ///     &quot;syncEnabled&quot;: false
         ///   }
         /// }
         /// </c></pre>
         /// <h2>Errors and handling</h2>
-        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call to the upstream service may fail and return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret a read failure as an unconfigured state. Actual authentication and workspace not found errors follow common error handling.
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call to the upstream service may fail and return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret a read failure as an unconfigured state. Actual authentication and workspace non-existence errors follow common error handling procedures.
         /// 404 IdentityProviderNotFound: No binding exists, or the input type is inconsistent with the current binding. If SAML is already configured, an upstream readback failure does not degrade to a successful empty configuration.</para>
         /// <h2>Call relationships and usage boundaries</h2>
-        /// <para>SAML configuration completion and logon enabling are independent operations. protocol=SAML and the presence of saml indicate that the logon configuration has been submitted, and loginEnabled indicates the expected logon switch. Check the effective status based on the actual SSO status in configuration. SCIM uses an independent query API operation. Do not use status=READY of this API operation as the basis for successful SCIM synchronization. Currently, OIDC, JIT configuration, or JIT status fields are not provided.</para>
+        /// <para>SAML configuration completion and logon enabling are independent operations. protocol=SAML and the presence of the saml field indicate that the logon configuration has been submitted, and loginEnabled indicates the expected logon switch. Check the effective status based on the actual SSO status in configuration. SCIM uses an independent query operation. Do not use status=READY of this operation as the basis for successful SCIM synchronization. Currently, OIDC and JIT configurations or JIT status fields are not provided.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9983,16 +10355,34 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>The shared CustomSSO user pool must be created and must not be in the overall dissociation process or have failed to be dissociated. Prior SAML configuration is not required. SAML updates in progress or failed SAML updates do not block the query. The configuration.status and baseUrl parameters are obtained from AgentIdentity. The syncEnabled parameter is the expected AC synchronization switch. The operationStatus parameter indicates the most recent independent SCIM switch and the first full import task when the switch is enabled. The presence of a URL does not mean that external provisioning is complete, nor does it mean that AC synchronization is enabled.
-        /// operationStatus: PENDING (waiting), RUNNING (in progress), PAUSED (paused), SUCCESS (succeeded), FAILED (failed), CANCELED (canceled). If there are no historical tasks, it returns null or is not returned. You can poll when the status is PENDING or RUNNING. Stop polling when a terminal state is reached. You can manually refresh when the status is PAUSED. This operation does not provide taskId or failure details, and does not indicate credential issuance, external provisioning connection tests, or the health of continuous incremental synchronization. After it is disabled, the URL, credentials, and historical task records may still be retained.</para>
+        /// <para>The shared CustomSSO user pool must be created and not in the process of overall unbinding or unbinding failure. Prior SAML configuration is not required. SAML updates or update failures do not block the query. configuration.status and baseUrl are retrieved from AgentIdentity. syncEnabled is the expected synchronization switch for AC. operationStatus represents the most recent independent SCIM switch and the initial full import task when enabled. The presence of a URL does not indicate that external provisioning is complete or that AC synchronization is enabled.
+        /// operationStatus valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PENDING: Waiting.</description></item>
+        /// <item><description>RUNNING: Executing.</description></item>
+        /// <item><description>PAUSED: Paused.</description></item>
+        /// <item><description>SUCCESS: Succeeded.</description></item>
+        /// <item><description>FAILED: Failed.</description></item>
+        /// <item><description>CANCELED: Canceled.
+        /// If there are no historical tasks, it returns null or is not returned. You can poll when the status is PENDING or RUNNING. Stop polling when a terminal state is reached. You can manually refresh when the status is PAUSED. This operation does not provide the taskId or failure details, and does not indicate credential issuance, external provisioning connection tests, or continuous incremental synchronization health. The URL, credentials, and historical task records may be retained after the feature is disabled.
+        /// status represents the independent SCIM configuration status:</description></item>
+        /// <item><description>UNCONFIGURED: Preparation is not complete.</description></item>
+        /// <item><description>WAITING_CONFIGURATION: The receiving end is enabled, the HTTPS URL is valid, and a valid token exists, waiting for external configuration and enablement confirmation.</description></item>
+        /// <item><description>UPDATING: The enablement or disablement task is executing.</description></item>
+        /// <item><description>READY: Synchronization is enabled and the current enablement task succeeded, and the receiving end, URL, and credentials are still available.</description></item>
+        /// <item><description>DISABLED: Disabled and configuration is retained.</description></item>
+        /// <item><description>UPDATE_FAILED: The operation failed, was paused, was canceled, or the configuration and credentials are unavailable after enablement.
+        /// The original facts of configuration, syncEnabled, and operationStatus are retained. The SAML or OIDC binding status is not used to determine the SCIM status. READY does not prove that Matrix execution is complete, the external connection test passed, or continuous incremental synchronization is healthy.</description></item>
+        /// </list>
         /// <h2>Requests and examples</h2>
         /// <para>GET /workspaces/{workspaceId}/scim-provisioning
-        /// Calling conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// Call conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS token that has the permissions on the identity source resources of the workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example only shows the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
         /// <pre><code class="language-text">GET /workspaces/ws-example/scim-provisioning
         /// </c></pre>
-        /// <h2>Response example</h2>
+        /// <h2>Response examples</h2>
         /// <pre><code class="language-json">{
         ///   &quot;data&quot;: {
+        ///     &quot;status&quot;: &quot;READY&quot;,
         ///     &quot;configuration&quot;: {
         ///       &quot;status&quot;: &quot;Enabled&quot;,
         ///       &quot;baseUrl&quot;: &quot;https://example.com/scim/v2&quot;
@@ -10003,10 +10393,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// }
         /// </c></pre>
         /// <h2>Errors and handling</h2>
-        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that there is no binding of the matching type. Synchronous calls to upstream services that fail may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
-        /// 400 InvalidParameter: The shared user pool is unavailable, being dissociated, or failed to be dissociated. If there is no binding, 404 IdentityProviderNotFound is returned. Upstream read failures must retain the error and cannot be mapped to Disabled, unconfigured, or synchronization success.</para>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that there is no binding of the matching type. Synchronous calls to upstream services that fail may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling process.
+        /// 400 InvalidParameter: The shared user pool is unavailable, being unbound, or failed to unbind. If there is no binding, 404 IdentityProviderNotFound is returned. Upstream read failures must retain the error and cannot be mapped to Disabled, unconfigured, or synchronization succeeded.</para>
         /// <h2>Call relationships and usage boundaries</h2>
-        /// <para>SCIM configuration sequence: After preparing the shared pool, call PrepareIdentityProviderSCIM and configure the returned baseUrl and newly issued token to the provisioning system of the external IdP. After completing the external connection test, call UpdateIdentityProviderSCIM to enable synchronization, and then call this operation to query operationStatus. SUCCESS only indicates that the most recent SCIM task is completed, and does not represent the health of continuous incremental synchronization or the success of the external provisioning connection test.</para>
+        /// <para>SCIM configuration sequence: After preparing the shared pool, call PrepareIdentityProviderSCIM and configure the returned baseUrl and newly issued token to the provisioning system of the external IdP. After completing the external connection test, call UpdateIdentityProviderSCIM to enable synchronization, and then call this operation to query operationStatus. SUCCESS only indicates that the most recent SCIM task is complete, and does not represent continuous incremental synchronization health or the success of the external provisioning connection test.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10052,16 +10442,34 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>The shared CustomSSO user pool must be created and must not be in the overall dissociation process or have failed to be dissociated. Prior SAML configuration is not required. SAML updates in progress or failed SAML updates do not block the query. The configuration.status and baseUrl parameters are obtained from AgentIdentity. The syncEnabled parameter is the expected AC synchronization switch. The operationStatus parameter indicates the most recent independent SCIM switch and the first full import task when the switch is enabled. The presence of a URL does not mean that external provisioning is complete, nor does it mean that AC synchronization is enabled.
-        /// operationStatus: PENDING (waiting), RUNNING (in progress), PAUSED (paused), SUCCESS (succeeded), FAILED (failed), CANCELED (canceled). If there are no historical tasks, it returns null or is not returned. You can poll when the status is PENDING or RUNNING. Stop polling when a terminal state is reached. You can manually refresh when the status is PAUSED. This operation does not provide taskId or failure details, and does not indicate credential issuance, external provisioning connection tests, or the health of continuous incremental synchronization. After it is disabled, the URL, credentials, and historical task records may still be retained.</para>
+        /// <para>The shared CustomSSO user pool must be created and not in the process of overall unbinding or unbinding failure. Prior SAML configuration is not required. SAML updates or update failures do not block the query. configuration.status and baseUrl are retrieved from AgentIdentity. syncEnabled is the expected synchronization switch for AC. operationStatus represents the most recent independent SCIM switch and the initial full import task when enabled. The presence of a URL does not indicate that external provisioning is complete or that AC synchronization is enabled.
+        /// operationStatus valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PENDING: Waiting.</description></item>
+        /// <item><description>RUNNING: Executing.</description></item>
+        /// <item><description>PAUSED: Paused.</description></item>
+        /// <item><description>SUCCESS: Succeeded.</description></item>
+        /// <item><description>FAILED: Failed.</description></item>
+        /// <item><description>CANCELED: Canceled.
+        /// If there are no historical tasks, it returns null or is not returned. You can poll when the status is PENDING or RUNNING. Stop polling when a terminal state is reached. You can manually refresh when the status is PAUSED. This operation does not provide the taskId or failure details, and does not indicate credential issuance, external provisioning connection tests, or continuous incremental synchronization health. The URL, credentials, and historical task records may be retained after the feature is disabled.
+        /// status represents the independent SCIM configuration status:</description></item>
+        /// <item><description>UNCONFIGURED: Preparation is not complete.</description></item>
+        /// <item><description>WAITING_CONFIGURATION: The receiving end is enabled, the HTTPS URL is valid, and a valid token exists, waiting for external configuration and enablement confirmation.</description></item>
+        /// <item><description>UPDATING: The enablement or disablement task is executing.</description></item>
+        /// <item><description>READY: Synchronization is enabled and the current enablement task succeeded, and the receiving end, URL, and credentials are still available.</description></item>
+        /// <item><description>DISABLED: Disabled and configuration is retained.</description></item>
+        /// <item><description>UPDATE_FAILED: The operation failed, was paused, was canceled, or the configuration and credentials are unavailable after enablement.
+        /// The original facts of configuration, syncEnabled, and operationStatus are retained. The SAML or OIDC binding status is not used to determine the SCIM status. READY does not prove that Matrix execution is complete, the external connection test passed, or continuous incremental synchronization is healthy.</description></item>
+        /// </list>
         /// <h2>Requests and examples</h2>
         /// <para>GET /workspaces/{workspaceId}/scim-provisioning
-        /// Calling conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// Call conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS token that has the permissions on the identity source resources of the workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example only shows the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
         /// <pre><code class="language-text">GET /workspaces/ws-example/scim-provisioning
         /// </c></pre>
-        /// <h2>Response example</h2>
+        /// <h2>Response examples</h2>
         /// <pre><code class="language-json">{
         ///   &quot;data&quot;: {
+        ///     &quot;status&quot;: &quot;READY&quot;,
         ///     &quot;configuration&quot;: {
         ///       &quot;status&quot;: &quot;Enabled&quot;,
         ///       &quot;baseUrl&quot;: &quot;https://example.com/scim/v2&quot;
@@ -10072,10 +10480,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// }
         /// </c></pre>
         /// <h2>Errors and handling</h2>
-        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that there is no binding of the matching type. Synchronous calls to upstream services that fail may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
-        /// 400 InvalidParameter: The shared user pool is unavailable, being dissociated, or failed to be dissociated. If there is no binding, 404 IdentityProviderNotFound is returned. Upstream read failures must retain the error and cannot be mapped to Disabled, unconfigured, or synchronization success.</para>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that there is no binding of the matching type. Synchronous calls to upstream services that fail may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling process.
+        /// 400 InvalidParameter: The shared user pool is unavailable, being unbound, or failed to unbind. If there is no binding, 404 IdentityProviderNotFound is returned. Upstream read failures must retain the error and cannot be mapped to Disabled, unconfigured, or synchronization succeeded.</para>
         /// <h2>Call relationships and usage boundaries</h2>
-        /// <para>SCIM configuration sequence: After preparing the shared pool, call PrepareIdentityProviderSCIM and configure the returned baseUrl and newly issued token to the provisioning system of the external IdP. After completing the external connection test, call UpdateIdentityProviderSCIM to enable synchronization, and then call this operation to query operationStatus. SUCCESS only indicates that the most recent SCIM task is completed, and does not represent the health of continuous incremental synchronization or the success of the external provisioning connection test.</para>
+        /// <para>SCIM configuration sequence: After preparing the shared pool, call PrepareIdentityProviderSCIM and configure the returned baseUrl and newly issued token to the provisioning system of the external IdP. After completing the external connection test, call UpdateIdentityProviderSCIM to enable synchronization, and then call this operation to query operationStatus. SUCCESS only indicates that the most recent SCIM task is complete, and does not represent continuous incremental synchronization health or the success of the external provisioning connection test.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10121,16 +10529,34 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>The shared CustomSSO user pool must be created and must not be in the overall dissociation process or have failed to be dissociated. Prior SAML configuration is not required. SAML updates in progress or failed SAML updates do not block the query. The configuration.status and baseUrl parameters are obtained from AgentIdentity. The syncEnabled parameter is the expected AC synchronization switch. The operationStatus parameter indicates the most recent independent SCIM switch and the first full import task when the switch is enabled. The presence of a URL does not mean that external provisioning is complete, nor does it mean that AC synchronization is enabled.
-        /// operationStatus: PENDING (waiting), RUNNING (in progress), PAUSED (paused), SUCCESS (succeeded), FAILED (failed), CANCELED (canceled). If there are no historical tasks, it returns null or is not returned. You can poll when the status is PENDING or RUNNING. Stop polling when a terminal state is reached. You can manually refresh when the status is PAUSED. This operation does not provide taskId or failure details, and does not indicate credential issuance, external provisioning connection tests, or the health of continuous incremental synchronization. After it is disabled, the URL, credentials, and historical task records may still be retained.</para>
+        /// <para>The shared CustomSSO user pool must be created and not in the process of overall unbinding or unbinding failure. Prior SAML configuration is not required. SAML updates or update failures do not block the query. configuration.status and baseUrl are retrieved from AgentIdentity. syncEnabled is the expected synchronization switch for AC. operationStatus represents the most recent independent SCIM switch and the initial full import task when enabled. The presence of a URL does not indicate that external provisioning is complete or that AC synchronization is enabled.
+        /// operationStatus valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PENDING: Waiting.</description></item>
+        /// <item><description>RUNNING: Executing.</description></item>
+        /// <item><description>PAUSED: Paused.</description></item>
+        /// <item><description>SUCCESS: Succeeded.</description></item>
+        /// <item><description>FAILED: Failed.</description></item>
+        /// <item><description>CANCELED: Canceled.
+        /// If there are no historical tasks, it returns null or is not returned. You can poll when the status is PENDING or RUNNING. Stop polling when a terminal state is reached. You can manually refresh when the status is PAUSED. This operation does not provide the taskId or failure details, and does not indicate credential issuance, external provisioning connection tests, or continuous incremental synchronization health. The URL, credentials, and historical task records may be retained after the feature is disabled.
+        /// status represents the independent SCIM configuration status:</description></item>
+        /// <item><description>UNCONFIGURED: Preparation is not complete.</description></item>
+        /// <item><description>WAITING_CONFIGURATION: The receiving end is enabled, the HTTPS URL is valid, and a valid token exists, waiting for external configuration and enablement confirmation.</description></item>
+        /// <item><description>UPDATING: The enablement or disablement task is executing.</description></item>
+        /// <item><description>READY: Synchronization is enabled and the current enablement task succeeded, and the receiving end, URL, and credentials are still available.</description></item>
+        /// <item><description>DISABLED: Disabled and configuration is retained.</description></item>
+        /// <item><description>UPDATE_FAILED: The operation failed, was paused, was canceled, or the configuration and credentials are unavailable after enablement.
+        /// The original facts of configuration, syncEnabled, and operationStatus are retained. The SAML or OIDC binding status is not used to determine the SCIM status. READY does not prove that Matrix execution is complete, the external connection test passed, or continuous incremental synchronization is healthy.</description></item>
+        /// </list>
         /// <h2>Requests and examples</h2>
         /// <para>GET /workspaces/{workspaceId}/scim-provisioning
-        /// Calling conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// Call conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS token that has the permissions on the identity source resources of the workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example only shows the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
         /// <pre><code class="language-text">GET /workspaces/ws-example/scim-provisioning
         /// </c></pre>
-        /// <h2>Response example</h2>
+        /// <h2>Response examples</h2>
         /// <pre><code class="language-json">{
         ///   &quot;data&quot;: {
+        ///     &quot;status&quot;: &quot;READY&quot;,
         ///     &quot;configuration&quot;: {
         ///       &quot;status&quot;: &quot;Enabled&quot;,
         ///       &quot;baseUrl&quot;: &quot;https://example.com/scim/v2&quot;
@@ -10141,10 +10567,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// }
         /// </c></pre>
         /// <h2>Errors and handling</h2>
-        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that there is no binding of the matching type. Synchronous calls to upstream services that fail may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
-        /// 400 InvalidParameter: The shared user pool is unavailable, being dissociated, or failed to be dissociated. If there is no binding, 404 IdentityProviderNotFound is returned. Upstream read failures must retain the error and cannot be mapped to Disabled, unconfigured, or synchronization success.</para>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that there is no binding of the matching type. Synchronous calls to upstream services that fail may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling process.
+        /// 400 InvalidParameter: The shared user pool is unavailable, being unbound, or failed to unbind. If there is no binding, 404 IdentityProviderNotFound is returned. Upstream read failures must retain the error and cannot be mapped to Disabled, unconfigured, or synchronization succeeded.</para>
         /// <h2>Call relationships and usage boundaries</h2>
-        /// <para>SCIM configuration sequence: After preparing the shared pool, call PrepareIdentityProviderSCIM and configure the returned baseUrl and newly issued token to the provisioning system of the external IdP. After completing the external connection test, call UpdateIdentityProviderSCIM to enable synchronization, and then call this operation to query operationStatus. SUCCESS only indicates that the most recent SCIM task is completed, and does not represent the health of continuous incremental synchronization or the success of the external provisioning connection test.</para>
+        /// <para>SCIM configuration sequence: After preparing the shared pool, call PrepareIdentityProviderSCIM and configure the returned baseUrl and newly issued token to the provisioning system of the external IdP. After completing the external connection test, call UpdateIdentityProviderSCIM to enable synchronization, and then call this operation to query operationStatus. SUCCESS only indicates that the most recent SCIM task is complete, and does not represent continuous incremental synchronization health or the success of the external provisioning connection test.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10169,16 +10595,34 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>The shared CustomSSO user pool must be created and must not be in the overall dissociation process or have failed to be dissociated. Prior SAML configuration is not required. SAML updates in progress or failed SAML updates do not block the query. The configuration.status and baseUrl parameters are obtained from AgentIdentity. The syncEnabled parameter is the expected AC synchronization switch. The operationStatus parameter indicates the most recent independent SCIM switch and the first full import task when the switch is enabled. The presence of a URL does not mean that external provisioning is complete, nor does it mean that AC synchronization is enabled.
-        /// operationStatus: PENDING (waiting), RUNNING (in progress), PAUSED (paused), SUCCESS (succeeded), FAILED (failed), CANCELED (canceled). If there are no historical tasks, it returns null or is not returned. You can poll when the status is PENDING or RUNNING. Stop polling when a terminal state is reached. You can manually refresh when the status is PAUSED. This operation does not provide taskId or failure details, and does not indicate credential issuance, external provisioning connection tests, or the health of continuous incremental synchronization. After it is disabled, the URL, credentials, and historical task records may still be retained.</para>
+        /// <para>The shared CustomSSO user pool must be created and not in the process of overall unbinding or unbinding failure. Prior SAML configuration is not required. SAML updates or update failures do not block the query. configuration.status and baseUrl are retrieved from AgentIdentity. syncEnabled is the expected synchronization switch for AC. operationStatus represents the most recent independent SCIM switch and the initial full import task when enabled. The presence of a URL does not indicate that external provisioning is complete or that AC synchronization is enabled.
+        /// operationStatus valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PENDING: Waiting.</description></item>
+        /// <item><description>RUNNING: Executing.</description></item>
+        /// <item><description>PAUSED: Paused.</description></item>
+        /// <item><description>SUCCESS: Succeeded.</description></item>
+        /// <item><description>FAILED: Failed.</description></item>
+        /// <item><description>CANCELED: Canceled.
+        /// If there are no historical tasks, it returns null or is not returned. You can poll when the status is PENDING or RUNNING. Stop polling when a terminal state is reached. You can manually refresh when the status is PAUSED. This operation does not provide the taskId or failure details, and does not indicate credential issuance, external provisioning connection tests, or continuous incremental synchronization health. The URL, credentials, and historical task records may be retained after the feature is disabled.
+        /// status represents the independent SCIM configuration status:</description></item>
+        /// <item><description>UNCONFIGURED: Preparation is not complete.</description></item>
+        /// <item><description>WAITING_CONFIGURATION: The receiving end is enabled, the HTTPS URL is valid, and a valid token exists, waiting for external configuration and enablement confirmation.</description></item>
+        /// <item><description>UPDATING: The enablement or disablement task is executing.</description></item>
+        /// <item><description>READY: Synchronization is enabled and the current enablement task succeeded, and the receiving end, URL, and credentials are still available.</description></item>
+        /// <item><description>DISABLED: Disabled and configuration is retained.</description></item>
+        /// <item><description>UPDATE_FAILED: The operation failed, was paused, was canceled, or the configuration and credentials are unavailable after enablement.
+        /// The original facts of configuration, syncEnabled, and operationStatus are retained. The SAML or OIDC binding status is not used to determine the SCIM status. READY does not prove that Matrix execution is complete, the external connection test passed, or continuous incremental synchronization is healthy.</description></item>
+        /// </list>
         /// <h2>Requests and examples</h2>
         /// <para>GET /workspaces/{workspaceId}/scim-provisioning
-        /// Calling conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// Call conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS token that has the permissions on the identity source resources of the workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example only shows the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
         /// <pre><code class="language-text">GET /workspaces/ws-example/scim-provisioning
         /// </c></pre>
-        /// <h2>Response example</h2>
+        /// <h2>Response examples</h2>
         /// <pre><code class="language-json">{
         ///   &quot;data&quot;: {
+        ///     &quot;status&quot;: &quot;READY&quot;,
         ///     &quot;configuration&quot;: {
         ///       &quot;status&quot;: &quot;Enabled&quot;,
         ///       &quot;baseUrl&quot;: &quot;https://example.com/scim/v2&quot;
@@ -10189,10 +10633,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// }
         /// </c></pre>
         /// <h2>Errors and handling</h2>
-        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that there is no binding of the matching type. Synchronous calls to upstream services that fail may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
-        /// 400 InvalidParameter: The shared user pool is unavailable, being dissociated, or failed to be dissociated. If there is no binding, 404 IdentityProviderNotFound is returned. Upstream read failures must retain the error and cannot be mapped to Disabled, unconfigured, or synchronization success.</para>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that there is no binding of the matching type. Synchronous calls to upstream services that fail may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling process.
+        /// 400 InvalidParameter: The shared user pool is unavailable, being unbound, or failed to unbind. If there is no binding, 404 IdentityProviderNotFound is returned. Upstream read failures must retain the error and cannot be mapped to Disabled, unconfigured, or synchronization succeeded.</para>
         /// <h2>Call relationships and usage boundaries</h2>
-        /// <para>SCIM configuration sequence: After preparing the shared pool, call PrepareIdentityProviderSCIM and configure the returned baseUrl and newly issued token to the provisioning system of the external IdP. After completing the external connection test, call UpdateIdentityProviderSCIM to enable synchronization, and then call this operation to query operationStatus. SUCCESS only indicates that the most recent SCIM task is completed, and does not represent the health of continuous incremental synchronization or the success of the external provisioning connection test.</para>
+        /// <para>SCIM configuration sequence: After preparing the shared pool, call PrepareIdentityProviderSCIM and configure the returned baseUrl and newly issued token to the provisioning system of the external IdP. After completing the external connection test, call UpdateIdentityProviderSCIM to enable synchronization, and then call this operation to query operationStatus. SUCCESS only indicates that the most recent SCIM task is complete, and does not represent continuous incremental synchronization health or the success of the external provisioning connection test.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10211,12 +10655,34 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 SAML 服务提供商信息</para>
+        /// <para>Queries the SAML service provider (SP) information for CustomSSO, including the entity ID, ACS URL, and SP metadata XML, for configuring an external IdP.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>功能与前提\n要求已有可用 CustomSSO 共享用户池，identityProviderType=CustomSSO，protocol 必填且仅支持精确值 SAML；不要求先上传 IdP Metadata。返回我方 SP 的 entityId、acsUrl、metadataXml，供用户配置外部 IdP。它们不是外部 IdP 的登录 URL 或 IdP Entity ID，不能将 SP XML 作为 IdP XML 提交 UpdateIdentityProvider。\n本接口只读取，不启用登录、不开启 SCIM、不创建凭据、不执行登录连接测试。共享池初始化中、解绑中或解绑失败时不可读取。\n\n## 请求与示例\nGET /workspaces/{workspaceId}/identity-providers/{identityProviderType}/service-provider\n调用约定：按目标 Workspace 的地域调用，使用有相应 Workspace 身份源资源权限的 AK/STS 身份。下文示例中的 ws-example、URL、证书和 Token 均为占位值，需替换为真实值。请求体示例表示公开 API 的 body 参数内容，不是后端直连接口额外的 body 包装。返回示例只展示业务部分，外层还包括 requestId、success、code、message、httpStatusCode；排障请保留 requestId，不记录密钥。业务任务异步不意味着 HTTP 请求长连接等待完成。\n<c>text\nGET /workspaces/ws-example/identity-providers/CustomSSO/service-provider?protocol=SAML\n</c>\n\n## 返回示例\n<c>json\n{\n  &quot;data&quot;: {\n    &quot;protocol&quot;: &quot;SAML&quot;,\n    &quot;entityId&quot;: &quot;&lt;我方 SP Entity ID&gt;&quot;,\n    &quot;acsUrl&quot;: &quot;https://example.com/saml/acs&quot;,\n    &quot;metadataXml&quot;: &quot;&lt;我方 SP Metadata XML&gt;&quot;\n  }\n}\n</c>\n\n## 错误与处理\n错误处理：400 InvalidParameter 表示参数或当前配置前提不满足；404 IdentityProviderNotFound 表示没有匹配类型的绑定。同步调用上游失败可能返回 503 IdentityProviderProvisioningUnavailable；保留请求 ID 排查，不把读取失败解释为未配置。实际鉴权和 Workspace 不存在错误沿用公共错误处理。\n400 InvalidParameter：identityProviderType 或 protocol 不支持。404 IdentityProviderNotFound：尚无 CustomSSO 绑定。409 IdentityProviderOperationConflict：用户池未准备好、解绑中或解绑失败。\n\n## 调用关系与使用边界\nSAML 配置顺序：CreateIdentityProvider 初始化 CustomSSO 共享池，等待 GetIdentityProvider 返回 READY；调用本接口取得 SP 信息并配置到外部 IdP；再将外部 IdP Metadata XML 或完整手填配置提交 UpdateIdentityProvider。保存后按需单独启用 loginEnabled。SP 信息查询不会完成外部 IdP 配置或验证登录。</h2>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>An available CustomSSO shared user pool is required. The identityProviderType must be CustomSSO. The protocol parameter is required and only supports the exact value SAML. Uploading the IdP metadata in advance is not required. This operation returns the entityId, acsUrl, and metadataXml of the SP for configuring an external IdP. These values are not the logon URL or IdP entity ID of the external IdP. You cannot submit the SP XML as the IdP XML to UpdateIdentityProvider.
+        /// This operation is read-only. It does not enable logon, enable SCIM, create credentials, or perform logon connection tests. You cannot read the information when the shared pool is being initialized, being unbound, or has failed to unbind.</para>
+        /// <h2>Requests and examples</h2>
+        /// <para>GET /workspaces/{workspaceId}/identity-providers/{identityProviderType}/service-provider
+        /// Call conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a persistent connection to wait for completion.</para>
+        /// <pre><code class="language-text">GET /workspaces/ws-example/identity-providers/CustomSSO/service-provider?protocol=SAML
+        /// </c></pre>
+        /// <h2>Response examples</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;data&quot;: {
+        ///     &quot;protocol&quot;: &quot;SAML&quot;,
+        ///     &quot;entityId&quot;: &quot;&lt;SP entity ID&gt;&quot;,
+        ///     &quot;acsUrl&quot;: &quot;https://example.com/saml/acs&quot;,
+        ///     &quot;metadataXml&quot;: &quot;&lt;SP metadata XML&gt;&quot;
+        ///   }
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to upstream services that fail may return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
+        /// 400 InvalidParameter: identityProviderType or protocol is not supported. 404 IdentityProviderNotFound: No CustomSSO binding exists. 409 IdentityProviderOperationConflict: The user pool is not ready, is being unbound, or has failed to unbind.</para>
+        /// <h2>Call relationships and usage boundaries</h2>
+        /// <para>SAML configuration sequence: Call CreateIdentityProvider to initialize the CustomSSO shared pool and wait for GetIdentityProvider to return READY. Call this operation to obtain the SP information and configure it in the external IdP. Then, submit the external IdP metadata XML or complete manual configuration to UpdateIdentityProvider. After saving, enable loginEnabled separately as needed. Querying the SP information does not complete the external IdP configuration or verify logon.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10262,12 +10728,34 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 SAML 服务提供商信息</para>
+        /// <para>Queries the SAML service provider (SP) information for CustomSSO, including the entity ID, ACS URL, and SP metadata XML, for configuring an external IdP.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>功能与前提\n要求已有可用 CustomSSO 共享用户池，identityProviderType=CustomSSO，protocol 必填且仅支持精确值 SAML；不要求先上传 IdP Metadata。返回我方 SP 的 entityId、acsUrl、metadataXml，供用户配置外部 IdP。它们不是外部 IdP 的登录 URL 或 IdP Entity ID，不能将 SP XML 作为 IdP XML 提交 UpdateIdentityProvider。\n本接口只读取，不启用登录、不开启 SCIM、不创建凭据、不执行登录连接测试。共享池初始化中、解绑中或解绑失败时不可读取。\n\n## 请求与示例\nGET /workspaces/{workspaceId}/identity-providers/{identityProviderType}/service-provider\n调用约定：按目标 Workspace 的地域调用，使用有相应 Workspace 身份源资源权限的 AK/STS 身份。下文示例中的 ws-example、URL、证书和 Token 均为占位值，需替换为真实值。请求体示例表示公开 API 的 body 参数内容，不是后端直连接口额外的 body 包装。返回示例只展示业务部分，外层还包括 requestId、success、code、message、httpStatusCode；排障请保留 requestId，不记录密钥。业务任务异步不意味着 HTTP 请求长连接等待完成。\n<c>text\nGET /workspaces/ws-example/identity-providers/CustomSSO/service-provider?protocol=SAML\n</c>\n\n## 返回示例\n<c>json\n{\n  &quot;data&quot;: {\n    &quot;protocol&quot;: &quot;SAML&quot;,\n    &quot;entityId&quot;: &quot;&lt;我方 SP Entity ID&gt;&quot;,\n    &quot;acsUrl&quot;: &quot;https://example.com/saml/acs&quot;,\n    &quot;metadataXml&quot;: &quot;&lt;我方 SP Metadata XML&gt;&quot;\n  }\n}\n</c>\n\n## 错误与处理\n错误处理：400 InvalidParameter 表示参数或当前配置前提不满足；404 IdentityProviderNotFound 表示没有匹配类型的绑定。同步调用上游失败可能返回 503 IdentityProviderProvisioningUnavailable；保留请求 ID 排查，不把读取失败解释为未配置。实际鉴权和 Workspace 不存在错误沿用公共错误处理。\n400 InvalidParameter：identityProviderType 或 protocol 不支持。404 IdentityProviderNotFound：尚无 CustomSSO 绑定。409 IdentityProviderOperationConflict：用户池未准备好、解绑中或解绑失败。\n\n## 调用关系与使用边界\nSAML 配置顺序：CreateIdentityProvider 初始化 CustomSSO 共享池，等待 GetIdentityProvider 返回 READY；调用本接口取得 SP 信息并配置到外部 IdP；再将外部 IdP Metadata XML 或完整手填配置提交 UpdateIdentityProvider。保存后按需单独启用 loginEnabled。SP 信息查询不会完成外部 IdP 配置或验证登录。</h2>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>An available CustomSSO shared user pool is required. The identityProviderType must be CustomSSO. The protocol parameter is required and only supports the exact value SAML. Uploading the IdP metadata in advance is not required. This operation returns the entityId, acsUrl, and metadataXml of the SP for configuring an external IdP. These values are not the logon URL or IdP entity ID of the external IdP. You cannot submit the SP XML as the IdP XML to UpdateIdentityProvider.
+        /// This operation is read-only. It does not enable logon, enable SCIM, create credentials, or perform logon connection tests. You cannot read the information when the shared pool is being initialized, being unbound, or has failed to unbind.</para>
+        /// <h2>Requests and examples</h2>
+        /// <para>GET /workspaces/{workspaceId}/identity-providers/{identityProviderType}/service-provider
+        /// Call conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a persistent connection to wait for completion.</para>
+        /// <pre><code class="language-text">GET /workspaces/ws-example/identity-providers/CustomSSO/service-provider?protocol=SAML
+        /// </c></pre>
+        /// <h2>Response examples</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;data&quot;: {
+        ///     &quot;protocol&quot;: &quot;SAML&quot;,
+        ///     &quot;entityId&quot;: &quot;&lt;SP entity ID&gt;&quot;,
+        ///     &quot;acsUrl&quot;: &quot;https://example.com/saml/acs&quot;,
+        ///     &quot;metadataXml&quot;: &quot;&lt;SP metadata XML&gt;&quot;
+        ///   }
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to upstream services that fail may return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
+        /// 400 InvalidParameter: identityProviderType or protocol is not supported. 404 IdentityProviderNotFound: No CustomSSO binding exists. 409 IdentityProviderOperationConflict: The user pool is not ready, is being unbound, or has failed to unbind.</para>
+        /// <h2>Call relationships and usage boundaries</h2>
+        /// <para>SAML configuration sequence: Call CreateIdentityProvider to initialize the CustomSSO shared pool and wait for GetIdentityProvider to return READY. Call this operation to obtain the SP information and configure it in the external IdP. Then, submit the external IdP metadata XML or complete manual configuration to UpdateIdentityProvider. After saving, enable loginEnabled separately as needed. Querying the SP information does not complete the external IdP configuration or verify logon.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10313,12 +10801,34 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 SAML 服务提供商信息</para>
+        /// <para>Queries the SAML service provider (SP) information for CustomSSO, including the entity ID, ACS URL, and SP metadata XML, for configuring an external IdP.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>功能与前提\n要求已有可用 CustomSSO 共享用户池，identityProviderType=CustomSSO，protocol 必填且仅支持精确值 SAML；不要求先上传 IdP Metadata。返回我方 SP 的 entityId、acsUrl、metadataXml，供用户配置外部 IdP。它们不是外部 IdP 的登录 URL 或 IdP Entity ID，不能将 SP XML 作为 IdP XML 提交 UpdateIdentityProvider。\n本接口只读取，不启用登录、不开启 SCIM、不创建凭据、不执行登录连接测试。共享池初始化中、解绑中或解绑失败时不可读取。\n\n## 请求与示例\nGET /workspaces/{workspaceId}/identity-providers/{identityProviderType}/service-provider\n调用约定：按目标 Workspace 的地域调用，使用有相应 Workspace 身份源资源权限的 AK/STS 身份。下文示例中的 ws-example、URL、证书和 Token 均为占位值，需替换为真实值。请求体示例表示公开 API 的 body 参数内容，不是后端直连接口额外的 body 包装。返回示例只展示业务部分，外层还包括 requestId、success、code、message、httpStatusCode；排障请保留 requestId，不记录密钥。业务任务异步不意味着 HTTP 请求长连接等待完成。\n<c>text\nGET /workspaces/ws-example/identity-providers/CustomSSO/service-provider?protocol=SAML\n</c>\n\n## 返回示例\n<c>json\n{\n  &quot;data&quot;: {\n    &quot;protocol&quot;: &quot;SAML&quot;,\n    &quot;entityId&quot;: &quot;&lt;我方 SP Entity ID&gt;&quot;,\n    &quot;acsUrl&quot;: &quot;https://example.com/saml/acs&quot;,\n    &quot;metadataXml&quot;: &quot;&lt;我方 SP Metadata XML&gt;&quot;\n  }\n}\n</c>\n\n## 错误与处理\n错误处理：400 InvalidParameter 表示参数或当前配置前提不满足；404 IdentityProviderNotFound 表示没有匹配类型的绑定。同步调用上游失败可能返回 503 IdentityProviderProvisioningUnavailable；保留请求 ID 排查，不把读取失败解释为未配置。实际鉴权和 Workspace 不存在错误沿用公共错误处理。\n400 InvalidParameter：identityProviderType 或 protocol 不支持。404 IdentityProviderNotFound：尚无 CustomSSO 绑定。409 IdentityProviderOperationConflict：用户池未准备好、解绑中或解绑失败。\n\n## 调用关系与使用边界\nSAML 配置顺序：CreateIdentityProvider 初始化 CustomSSO 共享池，等待 GetIdentityProvider 返回 READY；调用本接口取得 SP 信息并配置到外部 IdP；再将外部 IdP Metadata XML 或完整手填配置提交 UpdateIdentityProvider。保存后按需单独启用 loginEnabled。SP 信息查询不会完成外部 IdP 配置或验证登录。</h2>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>An available CustomSSO shared user pool is required. The identityProviderType must be CustomSSO. The protocol parameter is required and only supports the exact value SAML. Uploading the IdP metadata in advance is not required. This operation returns the entityId, acsUrl, and metadataXml of the SP for configuring an external IdP. These values are not the logon URL or IdP entity ID of the external IdP. You cannot submit the SP XML as the IdP XML to UpdateIdentityProvider.
+        /// This operation is read-only. It does not enable logon, enable SCIM, create credentials, or perform logon connection tests. You cannot read the information when the shared pool is being initialized, being unbound, or has failed to unbind.</para>
+        /// <h2>Requests and examples</h2>
+        /// <para>GET /workspaces/{workspaceId}/identity-providers/{identityProviderType}/service-provider
+        /// Call conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a persistent connection to wait for completion.</para>
+        /// <pre><code class="language-text">GET /workspaces/ws-example/identity-providers/CustomSSO/service-provider?protocol=SAML
+        /// </c></pre>
+        /// <h2>Response examples</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;data&quot;: {
+        ///     &quot;protocol&quot;: &quot;SAML&quot;,
+        ///     &quot;entityId&quot;: &quot;&lt;SP entity ID&gt;&quot;,
+        ///     &quot;acsUrl&quot;: &quot;https://example.com/saml/acs&quot;,
+        ///     &quot;metadataXml&quot;: &quot;&lt;SP metadata XML&gt;&quot;
+        ///   }
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to upstream services that fail may return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
+        /// 400 InvalidParameter: identityProviderType or protocol is not supported. 404 IdentityProviderNotFound: No CustomSSO binding exists. 409 IdentityProviderOperationConflict: The user pool is not ready, is being unbound, or has failed to unbind.</para>
+        /// <h2>Call relationships and usage boundaries</h2>
+        /// <para>SAML configuration sequence: Call CreateIdentityProvider to initialize the CustomSSO shared pool and wait for GetIdentityProvider to return READY. Call this operation to obtain the SP information and configure it in the external IdP. Then, submit the external IdP metadata XML or complete manual configuration to UpdateIdentityProvider. After saving, enable loginEnabled separately as needed. Querying the SP information does not complete the external IdP configuration or verify logon.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10337,12 +10847,34 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 SAML 服务提供商信息</para>
+        /// <para>Queries the SAML service provider (SP) information for CustomSSO, including the entity ID, ACS URL, and SP metadata XML, for configuring an external IdP.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>功能与前提\n要求已有可用 CustomSSO 共享用户池，identityProviderType=CustomSSO，protocol 必填且仅支持精确值 SAML；不要求先上传 IdP Metadata。返回我方 SP 的 entityId、acsUrl、metadataXml，供用户配置外部 IdP。它们不是外部 IdP 的登录 URL 或 IdP Entity ID，不能将 SP XML 作为 IdP XML 提交 UpdateIdentityProvider。\n本接口只读取，不启用登录、不开启 SCIM、不创建凭据、不执行登录连接测试。共享池初始化中、解绑中或解绑失败时不可读取。\n\n## 请求与示例\nGET /workspaces/{workspaceId}/identity-providers/{identityProviderType}/service-provider\n调用约定：按目标 Workspace 的地域调用，使用有相应 Workspace 身份源资源权限的 AK/STS 身份。下文示例中的 ws-example、URL、证书和 Token 均为占位值，需替换为真实值。请求体示例表示公开 API 的 body 参数内容，不是后端直连接口额外的 body 包装。返回示例只展示业务部分，外层还包括 requestId、success、code、message、httpStatusCode；排障请保留 requestId，不记录密钥。业务任务异步不意味着 HTTP 请求长连接等待完成。\n<c>text\nGET /workspaces/ws-example/identity-providers/CustomSSO/service-provider?protocol=SAML\n</c>\n\n## 返回示例\n<c>json\n{\n  &quot;data&quot;: {\n    &quot;protocol&quot;: &quot;SAML&quot;,\n    &quot;entityId&quot;: &quot;&lt;我方 SP Entity ID&gt;&quot;,\n    &quot;acsUrl&quot;: &quot;https://example.com/saml/acs&quot;,\n    &quot;metadataXml&quot;: &quot;&lt;我方 SP Metadata XML&gt;&quot;\n  }\n}\n</c>\n\n## 错误与处理\n错误处理：400 InvalidParameter 表示参数或当前配置前提不满足；404 IdentityProviderNotFound 表示没有匹配类型的绑定。同步调用上游失败可能返回 503 IdentityProviderProvisioningUnavailable；保留请求 ID 排查，不把读取失败解释为未配置。实际鉴权和 Workspace 不存在错误沿用公共错误处理。\n400 InvalidParameter：identityProviderType 或 protocol 不支持。404 IdentityProviderNotFound：尚无 CustomSSO 绑定。409 IdentityProviderOperationConflict：用户池未准备好、解绑中或解绑失败。\n\n## 调用关系与使用边界\nSAML 配置顺序：CreateIdentityProvider 初始化 CustomSSO 共享池，等待 GetIdentityProvider 返回 READY；调用本接口取得 SP 信息并配置到外部 IdP；再将外部 IdP Metadata XML 或完整手填配置提交 UpdateIdentityProvider。保存后按需单独启用 loginEnabled。SP 信息查询不会完成外部 IdP 配置或验证登录。</h2>
+        /// <h2>Features and prerequisites</h2>
+        /// <para>An available CustomSSO shared user pool is required. The identityProviderType must be CustomSSO. The protocol parameter is required and only supports the exact value SAML. Uploading the IdP metadata in advance is not required. This operation returns the entityId, acsUrl, and metadataXml of the SP for configuring an external IdP. These values are not the logon URL or IdP entity ID of the external IdP. You cannot submit the SP XML as the IdP XML to UpdateIdentityProvider.
+        /// This operation is read-only. It does not enable logon, enable SCIM, create credentials, or perform logon connection tests. You cannot read the information when the shared pool is being initialized, being unbound, or has failed to unbind.</para>
+        /// <h2>Requests and examples</h2>
+        /// <para>GET /workspaces/{workspaceId}/identity-providers/{identityProviderType}/service-provider
+        /// Call conventions: Call this operation in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request body example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Keep the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a persistent connection to wait for completion.</para>
+        /// <pre><code class="language-text">GET /workspaces/ws-example/identity-providers/CustomSSO/service-provider?protocol=SAML
+        /// </c></pre>
+        /// <h2>Response examples</h2>
+        /// <pre><code class="language-json">{
+        ///   &quot;data&quot;: {
+        ///     &quot;protocol&quot;: &quot;SAML&quot;,
+        ///     &quot;entityId&quot;: &quot;&lt;SP entity ID&gt;&quot;,
+        ///     &quot;acsUrl&quot;: &quot;https://example.com/saml/acs&quot;,
+        ///     &quot;metadataXml&quot;: &quot;&lt;SP metadata XML&gt;&quot;
+        ///   }
+        /// }
+        /// </c></pre>
+        /// <h2>Errors and handling</h2>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to upstream services that fail may return 503 IdentityProviderProvisioningUnavailable. Keep the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow common error handling.
+        /// 400 InvalidParameter: identityProviderType or protocol is not supported. 404 IdentityProviderNotFound: No CustomSSO binding exists. 409 IdentityProviderOperationConflict: The user pool is not ready, is being unbound, or has failed to unbind.</para>
+        /// <h2>Call relationships and usage boundaries</h2>
+        /// <para>SAML configuration sequence: Call CreateIdentityProvider to initialize the CustomSSO shared pool and wait for GetIdentityProvider to return READY. Call this operation to obtain the SP information and configure it in the external IdP. Then, submit the external IdP metadata XML or complete manual configuration to UpdateIdentityProvider. After saving, enable loginEnabled separately as needed. Querying the SP information does not complete the external IdP configuration or verify logon.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13127,12 +13659,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ACR RAM authorization URL of a workspace.</para>
+        /// <para>Queries the RAM authorization URL for ACR in a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>ACR and user OSS mounts share the workspace role. If no existing role is found, AliyunAgentCoreWorkspace-{workspaceId} is used. If a valid legacy OSS mount role exists, it is reused and permissions are appended without overwriting existing OSS policies. Fixed historical shared roles continue to be reused and are not recreated or renamed due to new naming templates. The acrInstanceId, namespace, and repository parameters are required. The region and account are derived from the workspace context. Returns the role resolved by the backend and the authorization URL for the target repository. This operation does not create ACR or agent execution versions, nor does it deliver runtime configurations. After authorization is complete, you can call Verify before creating or updating an agent, without the need to call an independent Ensure operation.</para>
+        /// <para>ACR and user OSS mounts share the workspace role. If no existing role is found, AliyunAgentCoreWorkspace-{workspaceId} is used. If a valid legacy OSS mount role exists, it is retained and only new permissions are appended without overwriting existing OSS policies. Fixed historical shared roles continue to be reused and are not recreated or renamed due to new naming templates. The acrInstanceId, namespace, and repository parameters are required. The region and account are derived from the workspace context. Returns the role resolved by the backend and the authorization URL for the target repository. It does not create ACR or agent execution versions, nor does it deliver runtime configurations. After authorization is complete, you can verify it and then create or update the agent without calling a separate Ensure operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13186,12 +13718,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ACR RAM authorization URL of a workspace.</para>
+        /// <para>Queries the RAM authorization URL for ACR in a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>ACR and user OSS mounts share the workspace role. If no existing role is found, AliyunAgentCoreWorkspace-{workspaceId} is used. If a valid legacy OSS mount role exists, it is reused and permissions are appended without overwriting existing OSS policies. Fixed historical shared roles continue to be reused and are not recreated or renamed due to new naming templates. The acrInstanceId, namespace, and repository parameters are required. The region and account are derived from the workspace context. Returns the role resolved by the backend and the authorization URL for the target repository. This operation does not create ACR or agent execution versions, nor does it deliver runtime configurations. After authorization is complete, you can call Verify before creating or updating an agent, without the need to call an independent Ensure operation.</para>
+        /// <para>ACR and user OSS mounts share the workspace role. If no existing role is found, AliyunAgentCoreWorkspace-{workspaceId} is used. If a valid legacy OSS mount role exists, it is retained and only new permissions are appended without overwriting existing OSS policies. Fixed historical shared roles continue to be reused and are not recreated or renamed due to new naming templates. The acrInstanceId, namespace, and repository parameters are required. The region and account are derived from the workspace context. Returns the role resolved by the backend and the authorization URL for the target repository. It does not create ACR or agent execution versions, nor does it deliver runtime configurations. After authorization is complete, you can verify it and then create or update the agent without calling a separate Ensure operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13245,12 +13777,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ACR RAM authorization URL of a workspace.</para>
+        /// <para>Queries the RAM authorization URL for ACR in a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>ACR and user OSS mounts share the workspace role. If no existing role is found, AliyunAgentCoreWorkspace-{workspaceId} is used. If a valid legacy OSS mount role exists, it is reused and permissions are appended without overwriting existing OSS policies. Fixed historical shared roles continue to be reused and are not recreated or renamed due to new naming templates. The acrInstanceId, namespace, and repository parameters are required. The region and account are derived from the workspace context. Returns the role resolved by the backend and the authorization URL for the target repository. This operation does not create ACR or agent execution versions, nor does it deliver runtime configurations. After authorization is complete, you can call Verify before creating or updating an agent, without the need to call an independent Ensure operation.</para>
+        /// <para>ACR and user OSS mounts share the workspace role. If no existing role is found, AliyunAgentCoreWorkspace-{workspaceId} is used. If a valid legacy OSS mount role exists, it is retained and only new permissions are appended without overwriting existing OSS policies. Fixed historical shared roles continue to be reused and are not recreated or renamed due to new naming templates. The acrInstanceId, namespace, and repository parameters are required. The region and account are derived from the workspace context. Returns the role resolved by the backend and the authorization URL for the target repository. It does not create ACR or agent execution versions, nor does it deliver runtime configurations. After authorization is complete, you can verify it and then create or update the agent without calling a separate Ensure operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13269,12 +13801,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ACR RAM authorization URL of a workspace.</para>
+        /// <para>Queries the RAM authorization URL for ACR in a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>ACR and user OSS mounts share the workspace role. If no existing role is found, AliyunAgentCoreWorkspace-{workspaceId} is used. If a valid legacy OSS mount role exists, it is reused and permissions are appended without overwriting existing OSS policies. Fixed historical shared roles continue to be reused and are not recreated or renamed due to new naming templates. The acrInstanceId, namespace, and repository parameters are required. The region and account are derived from the workspace context. Returns the role resolved by the backend and the authorization URL for the target repository. This operation does not create ACR or agent execution versions, nor does it deliver runtime configurations. After authorization is complete, you can call Verify before creating or updating an agent, without the need to call an independent Ensure operation.</para>
+        /// <para>ACR and user OSS mounts share the workspace role. If no existing role is found, AliyunAgentCoreWorkspace-{workspaceId} is used. If a valid legacy OSS mount role exists, it is retained and only new permissions are appended without overwriting existing OSS policies. Fixed historical shared roles continue to be reused and are not recreated or renamed due to new naming templates. The acrInstanceId, namespace, and repository parameters are required. The region and account are derived from the workspace context. Returns the role resolved by the backend and the authorization URL for the target repository. It does not create ACR or agent execution versions, nor does it deliver runtime configurations. After authorization is complete, you can verify it and then create or update the agent without calling a separate Ensure operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15155,14 +15687,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query for paging through the custom agent summary in a specified workspace. For the complete configuration and the latest execute results, call GetCustomAgent.</para>
+        /// <para>Performs a paged query to retrieve the custom agent summary in a specified workspace. Use paging to navigate through the results. To obtain the complete configuration and execute the latest version to get the results, call GetCustomAgent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The default value of maxResults is 20 and the maximum value is 100. If this parameter is omitted or set to 0, the default value is used.
-        /// Omit nextToken in the first request. For subsequent requests, pass the nextToken returned in the previous response as is and keep the same workspace. The nextToken is an opaque token. Do not parse or construct it. An empty token in the response indicates that there are no more pages.
-        /// This operation returns the summaries of the current page and does not return the complete deployment configurations or the execution errors of the latest version. To obtain this information, call GetCustomAgent by using the agentId in items.</para>
+        /// <para>The default value of maxResults is 20, and the maximum value is 100. If this parameter is omitted or set to 0, the default value is used.
+        /// Omit nextToken in the first request. For subsequent requests, pass the nextToken returned in the previous response as is, and keep the same workspace. The nextToken is an opaque token. Do not parse or construct it. An empty token in the response indicates that there are no more pages.
+        /// This operation returns the summaries for the current page and does not return the complete deployment configurations or the execution errors of the latest version. To obtain this information, call GetCustomAgent by using the agentId from items.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15212,14 +15744,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query for paging through the custom agent summary in a specified workspace. For the complete configuration and the latest execute results, call GetCustomAgent.</para>
+        /// <para>Performs a paged query to retrieve the custom agent summary in a specified workspace. Use paging to navigate through the results. To obtain the complete configuration and execute the latest version to get the results, call GetCustomAgent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The default value of maxResults is 20 and the maximum value is 100. If this parameter is omitted or set to 0, the default value is used.
-        /// Omit nextToken in the first request. For subsequent requests, pass the nextToken returned in the previous response as is and keep the same workspace. The nextToken is an opaque token. Do not parse or construct it. An empty token in the response indicates that there are no more pages.
-        /// This operation returns the summaries of the current page and does not return the complete deployment configurations or the execution errors of the latest version. To obtain this information, call GetCustomAgent by using the agentId in items.</para>
+        /// <para>The default value of maxResults is 20, and the maximum value is 100. If this parameter is omitted or set to 0, the default value is used.
+        /// Omit nextToken in the first request. For subsequent requests, pass the nextToken returned in the previous response as is, and keep the same workspace. The nextToken is an opaque token. Do not parse or construct it. An empty token in the response indicates that there are no more pages.
+        /// This operation returns the summaries for the current page and does not return the complete deployment configurations or the execution errors of the latest version. To obtain this information, call GetCustomAgent by using the agentId from items.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15269,14 +15801,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query for paging through the custom agent summary in a specified workspace. For the complete configuration and the latest execute results, call GetCustomAgent.</para>
+        /// <para>Performs a paged query to retrieve the custom agent summary in a specified workspace. Use paging to navigate through the results. To obtain the complete configuration and execute the latest version to get the results, call GetCustomAgent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The default value of maxResults is 20 and the maximum value is 100. If this parameter is omitted or set to 0, the default value is used.
-        /// Omit nextToken in the first request. For subsequent requests, pass the nextToken returned in the previous response as is and keep the same workspace. The nextToken is an opaque token. Do not parse or construct it. An empty token in the response indicates that there are no more pages.
-        /// This operation returns the summaries of the current page and does not return the complete deployment configurations or the execution errors of the latest version. To obtain this information, call GetCustomAgent by using the agentId in items.</para>
+        /// <para>The default value of maxResults is 20, and the maximum value is 100. If this parameter is omitted or set to 0, the default value is used.
+        /// Omit nextToken in the first request. For subsequent requests, pass the nextToken returned in the previous response as is, and keep the same workspace. The nextToken is an opaque token. Do not parse or construct it. An empty token in the response indicates that there are no more pages.
+        /// This operation returns the summaries for the current page and does not return the complete deployment configurations or the execution errors of the latest version. To obtain this information, call GetCustomAgent by using the agentId from items.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15295,14 +15827,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query for paging through the custom agent summary in a specified workspace. For the complete configuration and the latest execute results, call GetCustomAgent.</para>
+        /// <para>Performs a paged query to retrieve the custom agent summary in a specified workspace. Use paging to navigate through the results. To obtain the complete configuration and execute the latest version to get the results, call GetCustomAgent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The default value of maxResults is 20 and the maximum value is 100. If this parameter is omitted or set to 0, the default value is used.
-        /// Omit nextToken in the first request. For subsequent requests, pass the nextToken returned in the previous response as is and keep the same workspace. The nextToken is an opaque token. Do not parse or construct it. An empty token in the response indicates that there are no more pages.
-        /// This operation returns the summaries of the current page and does not return the complete deployment configurations or the execution errors of the latest version. To obtain this information, call GetCustomAgent by using the agentId in items.</para>
+        /// <para>The default value of maxResults is 20, and the maximum value is 100. If this parameter is omitted or set to 0, the default value is used.
+        /// Omit nextToken in the first request. For subsequent requests, pass the nextToken returned in the previous response as is, and keep the same workspace. The nextToken is an opaque token. Do not parse or construct it. An empty token in the response indicates that there are no more pages.
+        /// This operation returns the summaries for the current page and does not return the complete deployment configurations or the execution errors of the latest version. To obtain this information, call GetCustomAgent by using the agentId from items.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15977,20 +16509,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>Returns the local binding summary without querying the actual SAML and SCIM configurations of AgentIdentity. If no bindings exist, items is an empty array. A workspace currently supports only one external binding. The default value of maxResults is 10, and the valid values are 1 to 100. Currently, nextToken must be omitted or left empty. A non-empty value returns InvalidParameter, and multi-page results cannot be fabricated.
-        /// The status of CustomSSO indicates the task status of shared resources and logon configurations. You must combine protocol and saml to determine whether SAML is configured. SCIM queries are independently performed by using GetIdentityProviderSCIM. The list does not issue tokens and does not return the vendor appSecret, encryptKey, or verificationToken.</para>
+        /// <para>WAITING_CONFIGURATION also occupies the unique external identity provider quota for the workspace. CustomSSO (SAML/OIDC and SCIM) is mutually exclusive with DingTalk and Lark. SCIM reuses the CustomSSO binding and does not create a second identity provider. Creating other types returns 409 IdentityProviderAlreadyBound. You can change the binding only after unbinding and removing the existing binding.
+        /// Returns the local binding summary without querying the actual SAML and SCIM configurations of AgentIdentity. If no binding exists, items is an empty array. Currently, a workspace supports only one external binding. The default value of maxResults is 10, and the valid values are 1 to 100. Currently, nextToken can only be omitted or left empty. A non-empty value returns InvalidParameter, and multi-page results cannot be fabricated.
+        /// When CustomSSO initialization is complete but SAML metadata is not saved, the status is WAITING_CONFIGURATION. You can upload the configuration, which does not indicate that a background task is still running. After the configuration is saved, the status changes to UPDATING, and changes to READY after the task succeeds. To query SCIM independently, use GetIdentityProviderSCIM. The list does not issue tokens and does not return the vendor appSecret, encryptKey, or verificationToken.</para>
         /// <h2>Requests and examples</h2>
         /// <para>GET /workspaces/{workspaceId}/identity-providers
-        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity provider resources of the workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
         /// <pre><code class="language-text">GET /workspaces/ws-example/identity-providers?maxResults=10
         /// </c></pre>
-        /// <h2>Response example</h2>
+        /// <h2>Response examples</h2>
         /// <pre><code class="language-json">{
         ///   &quot;items&quot;: [
         ///     {
         ///       &quot;workspaceId&quot;: &quot;ws-example&quot;,
         ///       &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
-        ///       &quot;status&quot;: &quot;READY&quot;,
+        ///       &quot;status&quot;: &quot;WAITING_CONFIGURATION&quot;,
         ///       &quot;loginEnabled&quot;: false,
         ///       &quot;syncEnabled&quot;: false
         ///     }
@@ -16001,9 +16534,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </c></pre>
         /// <h2>Errors and handling</h2>
         /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call failure to the upstream may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
-        /// 400 InvalidParameter: maxResults is out of bounds or nextToken is non-empty, which is currently not supported. When a query fails, an error is displayed instead of being cleared as unconfigured.</para>
+        /// 400 InvalidParameter: maxResults is out of bounds or nextToken is non-empty, which is currently not supported. When a query fails, an error is displayed, and the status is not cleared to unconfigured.</para>
         /// <h2>Call relationships and usage boundaries</h2>
-        /// <para>This API is used to discover current bindings. The specific SAML configuration of CustomSSO is queried by using GetIdentityProvider. The SP address is queried by using GetIdentityProviderServiceProvider. The actual SCIM configuration and independent operation results are queried by using GetIdentityProviderSCIM.</para>
+        /// <para>This API is used to discover the current binding. To query the specific SAML configuration of CustomSSO, use GetIdentityProvider. To query the SP address, use GetIdentityProviderServiceProvider. To query the actual SCIM configuration and independent operation results, use GetIdentityProviderSCIM.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16059,20 +16592,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>Returns the local binding summary without querying the actual SAML and SCIM configurations of AgentIdentity. If no bindings exist, items is an empty array. A workspace currently supports only one external binding. The default value of maxResults is 10, and the valid values are 1 to 100. Currently, nextToken must be omitted or left empty. A non-empty value returns InvalidParameter, and multi-page results cannot be fabricated.
-        /// The status of CustomSSO indicates the task status of shared resources and logon configurations. You must combine protocol and saml to determine whether SAML is configured. SCIM queries are independently performed by using GetIdentityProviderSCIM. The list does not issue tokens and does not return the vendor appSecret, encryptKey, or verificationToken.</para>
+        /// <para>WAITING_CONFIGURATION also occupies the unique external identity provider quota for the workspace. CustomSSO (SAML/OIDC and SCIM) is mutually exclusive with DingTalk and Lark. SCIM reuses the CustomSSO binding and does not create a second identity provider. Creating other types returns 409 IdentityProviderAlreadyBound. You can change the binding only after unbinding and removing the existing binding.
+        /// Returns the local binding summary without querying the actual SAML and SCIM configurations of AgentIdentity. If no binding exists, items is an empty array. Currently, a workspace supports only one external binding. The default value of maxResults is 10, and the valid values are 1 to 100. Currently, nextToken can only be omitted or left empty. A non-empty value returns InvalidParameter, and multi-page results cannot be fabricated.
+        /// When CustomSSO initialization is complete but SAML metadata is not saved, the status is WAITING_CONFIGURATION. You can upload the configuration, which does not indicate that a background task is still running. After the configuration is saved, the status changes to UPDATING, and changes to READY after the task succeeds. To query SCIM independently, use GetIdentityProviderSCIM. The list does not issue tokens and does not return the vendor appSecret, encryptKey, or verificationToken.</para>
         /// <h2>Requests and examples</h2>
         /// <para>GET /workspaces/{workspaceId}/identity-providers
-        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity provider resources of the workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
         /// <pre><code class="language-text">GET /workspaces/ws-example/identity-providers?maxResults=10
         /// </c></pre>
-        /// <h2>Response example</h2>
+        /// <h2>Response examples</h2>
         /// <pre><code class="language-json">{
         ///   &quot;items&quot;: [
         ///     {
         ///       &quot;workspaceId&quot;: &quot;ws-example&quot;,
         ///       &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
-        ///       &quot;status&quot;: &quot;READY&quot;,
+        ///       &quot;status&quot;: &quot;WAITING_CONFIGURATION&quot;,
         ///       &quot;loginEnabled&quot;: false,
         ///       &quot;syncEnabled&quot;: false
         ///     }
@@ -16083,9 +16617,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </c></pre>
         /// <h2>Errors and handling</h2>
         /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call failure to the upstream may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
-        /// 400 InvalidParameter: maxResults is out of bounds or nextToken is non-empty, which is currently not supported. When a query fails, an error is displayed instead of being cleared as unconfigured.</para>
+        /// 400 InvalidParameter: maxResults is out of bounds or nextToken is non-empty, which is currently not supported. When a query fails, an error is displayed, and the status is not cleared to unconfigured.</para>
         /// <h2>Call relationships and usage boundaries</h2>
-        /// <para>This API is used to discover current bindings. The specific SAML configuration of CustomSSO is queried by using GetIdentityProvider. The SP address is queried by using GetIdentityProviderServiceProvider. The actual SCIM configuration and independent operation results are queried by using GetIdentityProviderSCIM.</para>
+        /// <para>This API is used to discover the current binding. To query the specific SAML configuration of CustomSSO, use GetIdentityProvider. To query the SP address, use GetIdentityProviderServiceProvider. To query the actual SCIM configuration and independent operation results, use GetIdentityProviderSCIM.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16141,20 +16675,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>Returns the local binding summary without querying the actual SAML and SCIM configurations of AgentIdentity. If no bindings exist, items is an empty array. A workspace currently supports only one external binding. The default value of maxResults is 10, and the valid values are 1 to 100. Currently, nextToken must be omitted or left empty. A non-empty value returns InvalidParameter, and multi-page results cannot be fabricated.
-        /// The status of CustomSSO indicates the task status of shared resources and logon configurations. You must combine protocol and saml to determine whether SAML is configured. SCIM queries are independently performed by using GetIdentityProviderSCIM. The list does not issue tokens and does not return the vendor appSecret, encryptKey, or verificationToken.</para>
+        /// <para>WAITING_CONFIGURATION also occupies the unique external identity provider quota for the workspace. CustomSSO (SAML/OIDC and SCIM) is mutually exclusive with DingTalk and Lark. SCIM reuses the CustomSSO binding and does not create a second identity provider. Creating other types returns 409 IdentityProviderAlreadyBound. You can change the binding only after unbinding and removing the existing binding.
+        /// Returns the local binding summary without querying the actual SAML and SCIM configurations of AgentIdentity. If no binding exists, items is an empty array. Currently, a workspace supports only one external binding. The default value of maxResults is 10, and the valid values are 1 to 100. Currently, nextToken can only be omitted or left empty. A non-empty value returns InvalidParameter, and multi-page results cannot be fabricated.
+        /// When CustomSSO initialization is complete but SAML metadata is not saved, the status is WAITING_CONFIGURATION. You can upload the configuration, which does not indicate that a background task is still running. After the configuration is saved, the status changes to UPDATING, and changes to READY after the task succeeds. To query SCIM independently, use GetIdentityProviderSCIM. The list does not issue tokens and does not return the vendor appSecret, encryptKey, or verificationToken.</para>
         /// <h2>Requests and examples</h2>
         /// <para>GET /workspaces/{workspaceId}/identity-providers
-        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity provider resources of the workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
         /// <pre><code class="language-text">GET /workspaces/ws-example/identity-providers?maxResults=10
         /// </c></pre>
-        /// <h2>Response example</h2>
+        /// <h2>Response examples</h2>
         /// <pre><code class="language-json">{
         ///   &quot;items&quot;: [
         ///     {
         ///       &quot;workspaceId&quot;: &quot;ws-example&quot;,
         ///       &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
-        ///       &quot;status&quot;: &quot;READY&quot;,
+        ///       &quot;status&quot;: &quot;WAITING_CONFIGURATION&quot;,
         ///       &quot;loginEnabled&quot;: false,
         ///       &quot;syncEnabled&quot;: false
         ///     }
@@ -16165,9 +16700,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </c></pre>
         /// <h2>Errors and handling</h2>
         /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call failure to the upstream may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
-        /// 400 InvalidParameter: maxResults is out of bounds or nextToken is non-empty, which is currently not supported. When a query fails, an error is displayed instead of being cleared as unconfigured.</para>
+        /// 400 InvalidParameter: maxResults is out of bounds or nextToken is non-empty, which is currently not supported. When a query fails, an error is displayed, and the status is not cleared to unconfigured.</para>
         /// <h2>Call relationships and usage boundaries</h2>
-        /// <para>This API is used to discover current bindings. The specific SAML configuration of CustomSSO is queried by using GetIdentityProvider. The SP address is queried by using GetIdentityProviderServiceProvider. The actual SCIM configuration and independent operation results are queried by using GetIdentityProviderSCIM.</para>
+        /// <para>This API is used to discover the current binding. To query the specific SAML configuration of CustomSSO, use GetIdentityProvider. To query the SP address, use GetIdentityProviderServiceProvider. To query the actual SCIM configuration and independent operation results, use GetIdentityProviderSCIM.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16192,20 +16727,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>Returns the local binding summary without querying the actual SAML and SCIM configurations of AgentIdentity. If no bindings exist, items is an empty array. A workspace currently supports only one external binding. The default value of maxResults is 10, and the valid values are 1 to 100. Currently, nextToken must be omitted or left empty. A non-empty value returns InvalidParameter, and multi-page results cannot be fabricated.
-        /// The status of CustomSSO indicates the task status of shared resources and logon configurations. You must combine protocol and saml to determine whether SAML is configured. SCIM queries are independently performed by using GetIdentityProviderSCIM. The list does not issue tokens and does not return the vendor appSecret, encryptKey, or verificationToken.</para>
+        /// <para>WAITING_CONFIGURATION also occupies the unique external identity provider quota for the workspace. CustomSSO (SAML/OIDC and SCIM) is mutually exclusive with DingTalk and Lark. SCIM reuses the CustomSSO binding and does not create a second identity provider. Creating other types returns 409 IdentityProviderAlreadyBound. You can change the binding only after unbinding and removing the existing binding.
+        /// Returns the local binding summary without querying the actual SAML and SCIM configurations of AgentIdentity. If no binding exists, items is an empty array. Currently, a workspace supports only one external binding. The default value of maxResults is 10, and the valid values are 1 to 100. Currently, nextToken can only be omitted or left empty. A non-empty value returns InvalidParameter, and multi-page results cannot be fabricated.
+        /// When CustomSSO initialization is complete but SAML metadata is not saved, the status is WAITING_CONFIGURATION. You can upload the configuration, which does not indicate that a background task is still running. After the configuration is saved, the status changes to UPDATING, and changes to READY after the task succeeds. To query SCIM independently, use GetIdentityProviderSCIM. The list does not issue tokens and does not return the vendor appSecret, encryptKey, or verificationToken.</para>
         /// <h2>Requests and examples</h2>
         /// <para>GET /workspaces/{workspaceId}/identity-providers
-        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity provider resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity provider resources of the workspace. The ws-example, URLs, certificates, and tokens in the following examples are placeholder values and must be replaced with actual values. The request example shows the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
         /// <pre><code class="language-text">GET /workspaces/ws-example/identity-providers?maxResults=10
         /// </c></pre>
-        /// <h2>Response example</h2>
+        /// <h2>Response examples</h2>
         /// <pre><code class="language-json">{
         ///   &quot;items&quot;: [
         ///     {
         ///       &quot;workspaceId&quot;: &quot;ws-example&quot;,
         ///       &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
-        ///       &quot;status&quot;: &quot;READY&quot;,
+        ///       &quot;status&quot;: &quot;WAITING_CONFIGURATION&quot;,
         ///       &quot;loginEnabled&quot;: false,
         ///       &quot;syncEnabled&quot;: false
         ///     }
@@ -16216,9 +16752,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </c></pre>
         /// <h2>Errors and handling</h2>
         /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call failure to the upstream may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
-        /// 400 InvalidParameter: maxResults is out of bounds or nextToken is non-empty, which is currently not supported. When a query fails, an error is displayed instead of being cleared as unconfigured.</para>
+        /// 400 InvalidParameter: maxResults is out of bounds or nextToken is non-empty, which is currently not supported. When a query fails, an error is displayed, and the status is not cleared to unconfigured.</para>
         /// <h2>Call relationships and usage boundaries</h2>
-        /// <para>This API is used to discover current bindings. The specific SAML configuration of CustomSSO is queried by using GetIdentityProvider. The SP address is queried by using GetIdentityProviderServiceProvider. The actual SCIM configuration and independent operation results are queried by using GetIdentityProviderSCIM.</para>
+        /// <para>This API is used to discover the current binding. To query the specific SAML configuration of CustomSSO, use GetIdentityProvider. To query the SP address, use GetIdentityProviderServiceProvider. To query the actual SCIM configuration and independent operation results, use GetIdentityProviderSCIM.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20345,21 +20881,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prepares the SCIM receiving configuration, and returns the provisioning URL and credential summary. Issues a token if no available credentials exist and returns the plaintext only in the current response. Does not automatically enable user synchronization.</para>
+        /// <para>Prepares the SCIM receiving configuration and returns the provisioning URL and credential summary. Issues a token if no available credentials exist and returns the plaintext only for the current request. This operation does not automatically enable user synchronization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>A CustomSSO shared user pool must be available. This operation does not depend on SAML metadata and is not blocked by SAML updating or update failure states. It synchronously calls AgentIdentity to enable SCIM receiving, and reads the configuration and credential list. If a credential in the Enabled state that has not expired already exists, its summary is returned and the token is set to null. If no available credentials exist, a new credential is created and the token is returned only in the current response. Existing invalid or expired credentials are not automatically deleted and may still trigger the upstream limit of up to two credentials.
-        /// The prepare operation has the side effects of enabling receiving and potentially issuing credentials, but it does not set the AC syncEnabled parameter, initiate the first import, or indicate that the external provisioning connection test has passed. After configuring the baseUrl and the current token in the external provisioning system, call UpdateIdentityProviderSCIM to confirm and enable synchronization. Existing tokens cannot be retrieved again. If the response is lost, query the credential list first. Tokens are not automatically reissued. Tokens must not be logged or persisted in frontend caches.</para>
+        /// <para>Requires an available CustomSSO shared user pool. Does not depend on SAML metadata and is not blocked by SAML updates or update failures. Synchronously calls AgentIdentity to enable SCIM receiving and reads the configuration and credential list. Reuses the existing configuration if receiving is already enabled. Repeated initialization does not create duplicate valid credentials or automatically enable user synchronization. If an enabled and unexpired credential exists, returns its summary and sets the token to null. If no available credentials exist, creates one and returns the token only for the current request. Existing invalid or expired credentials are not automatically deleted and may still count towards the upstream limit of two credentials.
+        /// The prepare operation enables receiving and may issue credentials, but does not set the AC syncEnabled parameter, initiate the first import, or indicate that the external provisioning connection test has passed. After configuring the baseUrl and the current token in the external provisioning system, call UpdateIdentityProviderSCIM to confirm and enable synchronization. Existing tokens cannot be retrieved. If the response is lost, query the credential list first instead of automatically reissuing a token. Do not log tokens or persist them in frontend caches.</para>
         /// <h2>Requests and examples</h2>
         /// <para>POST /workspaces/{workspaceId}/scim-provisioning/prepare
-        /// Calling conventions: Call this operation in the region of the target workspace by using an AccessKey ID/STS identity that has permissions on the identity source resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not log secrets. Asynchronous business tasks do not mean that the HTTP request uses a persistent connection to wait for completion.</para>
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not log the keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
         /// <pre><code class="language-text">POST /workspaces/ws-example/scim-provisioning/prepare
         /// No business request body.
         /// </c></pre>
-        /// <h2>Response examples</h2>
+        /// <h2>Response example</h2>
         /// <pre><code class="language-json">{
         ///   &quot;data&quot;: {
         ///     &quot;configuration&quot;: {
@@ -20369,17 +20905,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         ///     &quot;credential&quot;: {
         ///       &quot;credentialId&quot;: &quot;credential-example&quot;,
         ///       &quot;status&quot;: &quot;Enabled&quot;,
-        ///       &quot;expireTime&quot;: &quot;&lt;Expiration time returned by the upstream service&gt;&quot;
+        ///       &quot;expireTime&quot;: &quot;&lt;Expiration time returned by the upstream&gt;&quot;
         ///     },
-        ///     &quot;token&quot;: &quot;&lt;Token issued only in the current response; null if an available credential already exists&gt;&quot;
+        ///     &quot;token&quot;: &quot;&lt;Token newly issued only for this request; null if an available credential already exists&gt;&quot;
         ///   }
         /// }
         /// </c></pre>
         /// <h2>Errors and handling</h2>
-        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to the upstream service that fail may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace not found errors follow the common error handling process.
-        /// 400 LimitExceeded.ScimCredential: The maximum limit of two credentials has been reached. You must explicitly delete one credential and try again. Credentials are not automatically deleted, rotated, or expanded. 400 InvalidParameter: The shared pool is unavailable. This call may have enabled upstream receiving and then reported an error due to issuance failure. The error does not mean that the operation has been automatically rolled back.</para>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to the upstream may return 503 IdentityProviderProvisioningUnavailable if they fail. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace not found errors follow the common error handling.
+        /// 400 LimitExceeded.ScimCredential: The maximum of two credentials has been reached. You must explicitly delete one credential and try again. Credentials are not automatically deleted, rotated, or expanded. 400 InvalidParameter: The shared pool is unavailable. This call may have enabled upstream receiving and then reported an error due to issuance failure. The error does not mean that the operation has been automatically rolled back.</para>
         /// <h2>Call relationships and usage boundaries</h2>
-        /// <para>The shared pool is created by using CreateIdentityProvider with identityProviderType set to CustomSSO. SAML configuration is not required. If an existing credential is reused and token is null, use the token that the user has already saved. Do not configure a null value in the external system. If the token is lost, call ListIdentityProviderSCIMCredentials to check first, and then explicitly call CreateIdentityProviderSCIMCredential to issue a new token. When the limit of two credentials is reached, the user must confirm and delete the unused credential.</para>
+        /// <para>The shared pool is created by using CreateIdentityProvider with identityProviderType set to CustomSSO. SAML configuration is not required. If an existing credential is reused and the token is null, use the token already saved by the user. Do not configure a null value in the external system. If the token is lost, call ListIdentityProviderSCIMCredentials to check first, and then explicitly call CreateIdentityProviderSCIMCredential to issue a new one. When the limit of two credentials is reached, the user must confirm and delete the unused one.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20419,21 +20955,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prepares the SCIM receiving configuration, and returns the provisioning URL and credential summary. Issues a token if no available credentials exist and returns the plaintext only in the current response. Does not automatically enable user synchronization.</para>
+        /// <para>Prepares the SCIM receiving configuration and returns the provisioning URL and credential summary. Issues a token if no available credentials exist and returns the plaintext only for the current request. This operation does not automatically enable user synchronization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>A CustomSSO shared user pool must be available. This operation does not depend on SAML metadata and is not blocked by SAML updating or update failure states. It synchronously calls AgentIdentity to enable SCIM receiving, and reads the configuration and credential list. If a credential in the Enabled state that has not expired already exists, its summary is returned and the token is set to null. If no available credentials exist, a new credential is created and the token is returned only in the current response. Existing invalid or expired credentials are not automatically deleted and may still trigger the upstream limit of up to two credentials.
-        /// The prepare operation has the side effects of enabling receiving and potentially issuing credentials, but it does not set the AC syncEnabled parameter, initiate the first import, or indicate that the external provisioning connection test has passed. After configuring the baseUrl and the current token in the external provisioning system, call UpdateIdentityProviderSCIM to confirm and enable synchronization. Existing tokens cannot be retrieved again. If the response is lost, query the credential list first. Tokens are not automatically reissued. Tokens must not be logged or persisted in frontend caches.</para>
+        /// <para>Requires an available CustomSSO shared user pool. Does not depend on SAML metadata and is not blocked by SAML updates or update failures. Synchronously calls AgentIdentity to enable SCIM receiving and reads the configuration and credential list. Reuses the existing configuration if receiving is already enabled. Repeated initialization does not create duplicate valid credentials or automatically enable user synchronization. If an enabled and unexpired credential exists, returns its summary and sets the token to null. If no available credentials exist, creates one and returns the token only for the current request. Existing invalid or expired credentials are not automatically deleted and may still count towards the upstream limit of two credentials.
+        /// The prepare operation enables receiving and may issue credentials, but does not set the AC syncEnabled parameter, initiate the first import, or indicate that the external provisioning connection test has passed. After configuring the baseUrl and the current token in the external provisioning system, call UpdateIdentityProviderSCIM to confirm and enable synchronization. Existing tokens cannot be retrieved. If the response is lost, query the credential list first instead of automatically reissuing a token. Do not log tokens or persist them in frontend caches.</para>
         /// <h2>Requests and examples</h2>
         /// <para>POST /workspaces/{workspaceId}/scim-provisioning/prepare
-        /// Calling conventions: Call this operation in the region of the target workspace by using an AccessKey ID/STS identity that has permissions on the identity source resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not log secrets. Asynchronous business tasks do not mean that the HTTP request uses a persistent connection to wait for completion.</para>
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not log the keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
         /// <pre><code class="language-text">POST /workspaces/ws-example/scim-provisioning/prepare
         /// No business request body.
         /// </c></pre>
-        /// <h2>Response examples</h2>
+        /// <h2>Response example</h2>
         /// <pre><code class="language-json">{
         ///   &quot;data&quot;: {
         ///     &quot;configuration&quot;: {
@@ -20443,17 +20979,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         ///     &quot;credential&quot;: {
         ///       &quot;credentialId&quot;: &quot;credential-example&quot;,
         ///       &quot;status&quot;: &quot;Enabled&quot;,
-        ///       &quot;expireTime&quot;: &quot;&lt;Expiration time returned by the upstream service&gt;&quot;
+        ///       &quot;expireTime&quot;: &quot;&lt;Expiration time returned by the upstream&gt;&quot;
         ///     },
-        ///     &quot;token&quot;: &quot;&lt;Token issued only in the current response; null if an available credential already exists&gt;&quot;
+        ///     &quot;token&quot;: &quot;&lt;Token newly issued only for this request; null if an available credential already exists&gt;&quot;
         ///   }
         /// }
         /// </c></pre>
         /// <h2>Errors and handling</h2>
-        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to the upstream service that fail may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace not found errors follow the common error handling process.
-        /// 400 LimitExceeded.ScimCredential: The maximum limit of two credentials has been reached. You must explicitly delete one credential and try again. Credentials are not automatically deleted, rotated, or expanded. 400 InvalidParameter: The shared pool is unavailable. This call may have enabled upstream receiving and then reported an error due to issuance failure. The error does not mean that the operation has been automatically rolled back.</para>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to the upstream may return 503 IdentityProviderProvisioningUnavailable if they fail. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace not found errors follow the common error handling.
+        /// 400 LimitExceeded.ScimCredential: The maximum of two credentials has been reached. You must explicitly delete one credential and try again. Credentials are not automatically deleted, rotated, or expanded. 400 InvalidParameter: The shared pool is unavailable. This call may have enabled upstream receiving and then reported an error due to issuance failure. The error does not mean that the operation has been automatically rolled back.</para>
         /// <h2>Call relationships and usage boundaries</h2>
-        /// <para>The shared pool is created by using CreateIdentityProvider with identityProviderType set to CustomSSO. SAML configuration is not required. If an existing credential is reused and token is null, use the token that the user has already saved. Do not configure a null value in the external system. If the token is lost, call ListIdentityProviderSCIMCredentials to check first, and then explicitly call CreateIdentityProviderSCIMCredential to issue a new token. When the limit of two credentials is reached, the user must confirm and delete the unused credential.</para>
+        /// <para>The shared pool is created by using CreateIdentityProvider with identityProviderType set to CustomSSO. SAML configuration is not required. If an existing credential is reused and the token is null, use the token already saved by the user. Do not configure a null value in the external system. If the token is lost, call ListIdentityProviderSCIMCredentials to check first, and then explicitly call CreateIdentityProviderSCIMCredential to issue a new one. When the limit of two credentials is reached, the user must confirm and delete the unused one.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20493,21 +21029,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prepares the SCIM receiving configuration, and returns the provisioning URL and credential summary. Issues a token if no available credentials exist and returns the plaintext only in the current response. Does not automatically enable user synchronization.</para>
+        /// <para>Prepares the SCIM receiving configuration and returns the provisioning URL and credential summary. Issues a token if no available credentials exist and returns the plaintext only for the current request. This operation does not automatically enable user synchronization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>A CustomSSO shared user pool must be available. This operation does not depend on SAML metadata and is not blocked by SAML updating or update failure states. It synchronously calls AgentIdentity to enable SCIM receiving, and reads the configuration and credential list. If a credential in the Enabled state that has not expired already exists, its summary is returned and the token is set to null. If no available credentials exist, a new credential is created and the token is returned only in the current response. Existing invalid or expired credentials are not automatically deleted and may still trigger the upstream limit of up to two credentials.
-        /// The prepare operation has the side effects of enabling receiving and potentially issuing credentials, but it does not set the AC syncEnabled parameter, initiate the first import, or indicate that the external provisioning connection test has passed. After configuring the baseUrl and the current token in the external provisioning system, call UpdateIdentityProviderSCIM to confirm and enable synchronization. Existing tokens cannot be retrieved again. If the response is lost, query the credential list first. Tokens are not automatically reissued. Tokens must not be logged or persisted in frontend caches.</para>
+        /// <para>Requires an available CustomSSO shared user pool. Does not depend on SAML metadata and is not blocked by SAML updates or update failures. Synchronously calls AgentIdentity to enable SCIM receiving and reads the configuration and credential list. Reuses the existing configuration if receiving is already enabled. Repeated initialization does not create duplicate valid credentials or automatically enable user synchronization. If an enabled and unexpired credential exists, returns its summary and sets the token to null. If no available credentials exist, creates one and returns the token only for the current request. Existing invalid or expired credentials are not automatically deleted and may still count towards the upstream limit of two credentials.
+        /// The prepare operation enables receiving and may issue credentials, but does not set the AC syncEnabled parameter, initiate the first import, or indicate that the external provisioning connection test has passed. After configuring the baseUrl and the current token in the external provisioning system, call UpdateIdentityProviderSCIM to confirm and enable synchronization. Existing tokens cannot be retrieved. If the response is lost, query the credential list first instead of automatically reissuing a token. Do not log tokens or persist them in frontend caches.</para>
         /// <h2>Requests and examples</h2>
         /// <para>POST /workspaces/{workspaceId}/scim-provisioning/prepare
-        /// Calling conventions: Call this operation in the region of the target workspace by using an AccessKey ID/STS identity that has permissions on the identity source resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not log secrets. Asynchronous business tasks do not mean that the HTTP request uses a persistent connection to wait for completion.</para>
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not log the keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
         /// <pre><code class="language-text">POST /workspaces/ws-example/scim-provisioning/prepare
         /// No business request body.
         /// </c></pre>
-        /// <h2>Response examples</h2>
+        /// <h2>Response example</h2>
         /// <pre><code class="language-json">{
         ///   &quot;data&quot;: {
         ///     &quot;configuration&quot;: {
@@ -20517,17 +21053,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         ///     &quot;credential&quot;: {
         ///       &quot;credentialId&quot;: &quot;credential-example&quot;,
         ///       &quot;status&quot;: &quot;Enabled&quot;,
-        ///       &quot;expireTime&quot;: &quot;&lt;Expiration time returned by the upstream service&gt;&quot;
+        ///       &quot;expireTime&quot;: &quot;&lt;Expiration time returned by the upstream&gt;&quot;
         ///     },
-        ///     &quot;token&quot;: &quot;&lt;Token issued only in the current response; null if an available credential already exists&gt;&quot;
+        ///     &quot;token&quot;: &quot;&lt;Token newly issued only for this request; null if an available credential already exists&gt;&quot;
         ///   }
         /// }
         /// </c></pre>
         /// <h2>Errors and handling</h2>
-        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to the upstream service that fail may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace not found errors follow the common error handling process.
-        /// 400 LimitExceeded.ScimCredential: The maximum limit of two credentials has been reached. You must explicitly delete one credential and try again. Credentials are not automatically deleted, rotated, or expanded. 400 InvalidParameter: The shared pool is unavailable. This call may have enabled upstream receiving and then reported an error due to issuance failure. The error does not mean that the operation has been automatically rolled back.</para>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to the upstream may return 503 IdentityProviderProvisioningUnavailable if they fail. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace not found errors follow the common error handling.
+        /// 400 LimitExceeded.ScimCredential: The maximum of two credentials has been reached. You must explicitly delete one credential and try again. Credentials are not automatically deleted, rotated, or expanded. 400 InvalidParameter: The shared pool is unavailable. This call may have enabled upstream receiving and then reported an error due to issuance failure. The error does not mean that the operation has been automatically rolled back.</para>
         /// <h2>Call relationships and usage boundaries</h2>
-        /// <para>The shared pool is created by using CreateIdentityProvider with identityProviderType set to CustomSSO. SAML configuration is not required. If an existing credential is reused and token is null, use the token that the user has already saved. Do not configure a null value in the external system. If the token is lost, call ListIdentityProviderSCIMCredentials to check first, and then explicitly call CreateIdentityProviderSCIMCredential to issue a new token. When the limit of two credentials is reached, the user must confirm and delete the unused credential.</para>
+        /// <para>The shared pool is created by using CreateIdentityProvider with identityProviderType set to CustomSSO. SAML configuration is not required. If an existing credential is reused and the token is null, use the token already saved by the user. Do not configure a null value in the external system. If the token is lost, call ListIdentityProviderSCIMCredentials to check first, and then explicitly call CreateIdentityProviderSCIMCredential to issue a new one. When the limit of two credentials is reached, the user must confirm and delete the unused one.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20546,21 +21082,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prepares the SCIM receiving configuration, and returns the provisioning URL and credential summary. Issues a token if no available credentials exist and returns the plaintext only in the current response. Does not automatically enable user synchronization.</para>
+        /// <para>Prepares the SCIM receiving configuration and returns the provisioning URL and credential summary. Issues a token if no available credentials exist and returns the plaintext only for the current request. This operation does not automatically enable user synchronization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>A CustomSSO shared user pool must be available. This operation does not depend on SAML metadata and is not blocked by SAML updating or update failure states. It synchronously calls AgentIdentity to enable SCIM receiving, and reads the configuration and credential list. If a credential in the Enabled state that has not expired already exists, its summary is returned and the token is set to null. If no available credentials exist, a new credential is created and the token is returned only in the current response. Existing invalid or expired credentials are not automatically deleted and may still trigger the upstream limit of up to two credentials.
-        /// The prepare operation has the side effects of enabling receiving and potentially issuing credentials, but it does not set the AC syncEnabled parameter, initiate the first import, or indicate that the external provisioning connection test has passed. After configuring the baseUrl and the current token in the external provisioning system, call UpdateIdentityProviderSCIM to confirm and enable synchronization. Existing tokens cannot be retrieved again. If the response is lost, query the credential list first. Tokens are not automatically reissued. Tokens must not be logged or persisted in frontend caches.</para>
+        /// <para>Requires an available CustomSSO shared user pool. Does not depend on SAML metadata and is not blocked by SAML updates or update failures. Synchronously calls AgentIdentity to enable SCIM receiving and reads the configuration and credential list. Reuses the existing configuration if receiving is already enabled. Repeated initialization does not create duplicate valid credentials or automatically enable user synchronization. If an enabled and unexpired credential exists, returns its summary and sets the token to null. If no available credentials exist, creates one and returns the token only for the current request. Existing invalid or expired credentials are not automatically deleted and may still count towards the upstream limit of two credentials.
+        /// The prepare operation enables receiving and may issue credentials, but does not set the AC syncEnabled parameter, initiate the first import, or indicate that the external provisioning connection test has passed. After configuring the baseUrl and the current token in the external provisioning system, call UpdateIdentityProviderSCIM to confirm and enable synchronization. Existing tokens cannot be retrieved. If the response is lost, query the credential list first instead of automatically reissuing a token. Do not log tokens or persist them in frontend caches.</para>
         /// <h2>Requests and examples</h2>
         /// <para>POST /workspaces/{workspaceId}/scim-provisioning/prepare
-        /// Calling conventions: Call this operation in the region of the target workspace by using an AccessKey ID/STS identity that has permissions on the identity source resources of the workspace. In the following examples, ws-example, URLs, certificates, and tokens are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API operation, not the extra body wrapper of the backend direct connection API operation. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not log secrets. Asynchronous business tasks do not mean that the HTTP request uses a persistent connection to wait for completion.</para>
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS token that has permissions on the identity source resources of the workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the extra body wrapper of the backend direct connection API. The response example shows only the business data. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not log the keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
         /// <pre><code class="language-text">POST /workspaces/ws-example/scim-provisioning/prepare
         /// No business request body.
         /// </c></pre>
-        /// <h2>Response examples</h2>
+        /// <h2>Response example</h2>
         /// <pre><code class="language-json">{
         ///   &quot;data&quot;: {
         ///     &quot;configuration&quot;: {
@@ -20570,17 +21106,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         ///     &quot;credential&quot;: {
         ///       &quot;credentialId&quot;: &quot;credential-example&quot;,
         ///       &quot;status&quot;: &quot;Enabled&quot;,
-        ///       &quot;expireTime&quot;: &quot;&lt;Expiration time returned by the upstream service&gt;&quot;
+        ///       &quot;expireTime&quot;: &quot;&lt;Expiration time returned by the upstream&gt;&quot;
         ///     },
-        ///     &quot;token&quot;: &quot;&lt;Token issued only in the current response; null if an available credential already exists&gt;&quot;
+        ///     &quot;token&quot;: &quot;&lt;Token newly issued only for this request; null if an available credential already exists&gt;&quot;
         ///   }
         /// }
         /// </c></pre>
         /// <h2>Errors and handling</h2>
-        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to the upstream service that fail may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace not found errors follow the common error handling process.
-        /// 400 LimitExceeded.ScimCredential: The maximum limit of two credentials has been reached. You must explicitly delete one credential and try again. Credentials are not automatically deleted, rotated, or expanded. 400 InvalidParameter: The shared pool is unavailable. This call may have enabled upstream receiving and then reported an error due to issuance failure. The error does not mean that the operation has been automatically rolled back.</para>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. Synchronous calls to the upstream may return 503 IdentityProviderProvisioningUnavailable if they fail. Retain the request ID for troubleshooting and do not interpret read failures as unconfigured. Actual authentication and workspace not found errors follow the common error handling.
+        /// 400 LimitExceeded.ScimCredential: The maximum of two credentials has been reached. You must explicitly delete one credential and try again. Credentials are not automatically deleted, rotated, or expanded. 400 InvalidParameter: The shared pool is unavailable. This call may have enabled upstream receiving and then reported an error due to issuance failure. The error does not mean that the operation has been automatically rolled back.</para>
         /// <h2>Call relationships and usage boundaries</h2>
-        /// <para>The shared pool is created by using CreateIdentityProvider with identityProviderType set to CustomSSO. SAML configuration is not required. If an existing credential is reused and token is null, use the token that the user has already saved. Do not configure a null value in the external system. If the token is lost, call ListIdentityProviderSCIMCredentials to check first, and then explicitly call CreateIdentityProviderSCIMCredential to issue a new token. When the limit of two credentials is reached, the user must confirm and delete the unused credential.</para>
+        /// <para>The shared pool is created by using CreateIdentityProvider with identityProviderType set to CustomSSO. SAML configuration is not required. If an existing credential is reused and the token is null, use the token already saved by the user. Do not configure a null value in the external system. If the token is lost, call ListIdentityProviderSCIMCredentials to check first, and then explicitly call CreateIdentityProviderSCIMCredential to issue a new one. When the limit of two credentials is reached, the user must confirm and delete the unused one.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22607,18 +23143,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a specified custom agent in a workspace and executes the update asynchronously. Omitted top-level fields retain their original configurations. You can call the GetCustomAgent operation to query the update result.</para>
+        /// <para>Updates the configuration of a custom agent in a specified workspace and executes the update asynchronously. Omitted top-level fields retain their original configurations. You can call GetCustomAgent to query the update result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Provide at least one top-level field to update. Omitted top-level fields retain their original configurations. When providing a configuration object, specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole. Pass an empty array [] to clear a list. The agenticFsMounts field does not accept null. Pass null for the description field to clear the description, and pass null for the healthCheck field to remove the health check.
-        /// When updating an image, you must specify artifact.port and the type, instanceId, namespace, repo, and tag fields of artifact.container. To retain a custom startup command, also provide the entrypoint field.
-        /// In code package pattern, specify artifact.port and the sourceUri, languageRuntime, and entrypoint fields of artifact.code. Do not specify the container field at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported, and the compressed package size cannot exceed 500,000,000 bytes. Query the runtime environment identity by calling the ListAgentCodeRuntimes operation. The sourceUri field supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, first call the GetAgentCodePackageUploadUrl operation to obtain an upload URL, upload the file directly, and then commit the returned sourceUri.
-        /// When submitting a new code package source, the backend rechecks read permissions, objects, and sizes. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
-        /// When providing the runtime field, the compute and sessionPolicy fields must be provided at the same time. If the hpa field or its subfields are omitted, unspecified elastic configurations use default values. To retain the original elastic configurations, provide them together. When providing the network field, omitted access items are treated as allowed, but actual access is still restricted by the workspace network configurations. To retain the original restrictions, provide both accessInternet and accessVpc. When providing the healthCheck field, the port field is required, and other unspecified items use default values. When providing the logging.sls field, both project and logstore must be specified.
-        /// The update is an asynchronous process. A successful response indicates that the request is accepted. Call the GetCustomAgent operation to query latestSpecVersion, latestVersionStatus, and latestExecutionError, and check the status field to confirm the update result.
-        /// The clientToken field currently does not provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold field for health checks currently does not take effect. Omit this field.</para>
+        /// <para>Specify at least one top-level field to update. Omitted top-level fields retain their original configurations. When you provide a configuration object, you must also specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole. Pass an empty array [] to clear a list. The agenticFsMounts field does not accept null. Pass null for the description field to clear the description, and pass null for the healthCheck field to remove the health check.
+        /// When you update an image, you must specify artifact.port and the type, instanceId, namespace, repo, and tag fields of artifact.container. To retain a custom startup command, you must also provide the entrypoint field.
+        /// In code package pattern, specify artifact.port and the sourceUri, languageRuntime, and entrypoint fields of artifact.code. Do not specify the container field at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported. The compressed package size cannot exceed 500,000,000 bytes. You can call ListAgentCodeRuntimes to query the runtime environment identity. The sourceUri field supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, call GetAgentCodePackageUploadUrl to obtain an upload URL, upload the file directly, and then commit the returned sourceUri.
+        /// When you submit a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
+        /// When you provide the runtime field, the compute and sessionPolicy fields must also be provided. If you omit the hpa field or its subfields, unspecified elastic configurations use default values. To retain the original elastic configurations, you must provide them together. When you provide the network field, omitted access items are treated as allowed, but actual access is still restricted by the workspace network. To retain the original restrictions, provide both accessInternet and accessVpc. When you provide the healthCheck field, you must specify the port field. Other unspecified items use default values. When you provide the logging.sls field, you must specify both the project and logstore fields.
+        /// The update is an asynchronous process. A successful response indicates that the request is accepted. You can call GetCustomAgent to query latestSpecVersion, latestVersionStatus, and latestExecutionError, and check the status field to confirm the update result.
+        /// The clientToken field does not currently provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold field for health checks does not currently take effect. Omit this field.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -22676,18 +23212,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a specified custom agent in a workspace and executes the update asynchronously. Omitted top-level fields retain their original configurations. You can call the GetCustomAgent operation to query the update result.</para>
+        /// <para>Updates the configuration of a custom agent in a specified workspace and executes the update asynchronously. Omitted top-level fields retain their original configurations. You can call GetCustomAgent to query the update result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Provide at least one top-level field to update. Omitted top-level fields retain their original configurations. When providing a configuration object, specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole. Pass an empty array [] to clear a list. The agenticFsMounts field does not accept null. Pass null for the description field to clear the description, and pass null for the healthCheck field to remove the health check.
-        /// When updating an image, you must specify artifact.port and the type, instanceId, namespace, repo, and tag fields of artifact.container. To retain a custom startup command, also provide the entrypoint field.
-        /// In code package pattern, specify artifact.port and the sourceUri, languageRuntime, and entrypoint fields of artifact.code. Do not specify the container field at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported, and the compressed package size cannot exceed 500,000,000 bytes. Query the runtime environment identity by calling the ListAgentCodeRuntimes operation. The sourceUri field supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, first call the GetAgentCodePackageUploadUrl operation to obtain an upload URL, upload the file directly, and then commit the returned sourceUri.
-        /// When submitting a new code package source, the backend rechecks read permissions, objects, and sizes. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
-        /// When providing the runtime field, the compute and sessionPolicy fields must be provided at the same time. If the hpa field or its subfields are omitted, unspecified elastic configurations use default values. To retain the original elastic configurations, provide them together. When providing the network field, omitted access items are treated as allowed, but actual access is still restricted by the workspace network configurations. To retain the original restrictions, provide both accessInternet and accessVpc. When providing the healthCheck field, the port field is required, and other unspecified items use default values. When providing the logging.sls field, both project and logstore must be specified.
-        /// The update is an asynchronous process. A successful response indicates that the request is accepted. Call the GetCustomAgent operation to query latestSpecVersion, latestVersionStatus, and latestExecutionError, and check the status field to confirm the update result.
-        /// The clientToken field currently does not provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold field for health checks currently does not take effect. Omit this field.</para>
+        /// <para>Specify at least one top-level field to update. Omitted top-level fields retain their original configurations. When you provide a configuration object, you must also specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole. Pass an empty array [] to clear a list. The agenticFsMounts field does not accept null. Pass null for the description field to clear the description, and pass null for the healthCheck field to remove the health check.
+        /// When you update an image, you must specify artifact.port and the type, instanceId, namespace, repo, and tag fields of artifact.container. To retain a custom startup command, you must also provide the entrypoint field.
+        /// In code package pattern, specify artifact.port and the sourceUri, languageRuntime, and entrypoint fields of artifact.code. Do not specify the container field at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported. The compressed package size cannot exceed 500,000,000 bytes. You can call ListAgentCodeRuntimes to query the runtime environment identity. The sourceUri field supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, call GetAgentCodePackageUploadUrl to obtain an upload URL, upload the file directly, and then commit the returned sourceUri.
+        /// When you submit a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
+        /// When you provide the runtime field, the compute and sessionPolicy fields must also be provided. If you omit the hpa field or its subfields, unspecified elastic configurations use default values. To retain the original elastic configurations, you must provide them together. When you provide the network field, omitted access items are treated as allowed, but actual access is still restricted by the workspace network. To retain the original restrictions, provide both accessInternet and accessVpc. When you provide the healthCheck field, you must specify the port field. Other unspecified items use default values. When you provide the logging.sls field, you must specify both the project and logstore fields.
+        /// The update is an asynchronous process. A successful response indicates that the request is accepted. You can call GetCustomAgent to query latestSpecVersion, latestVersionStatus, and latestExecutionError, and check the status field to confirm the update result.
+        /// The clientToken field does not currently provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold field for health checks does not currently take effect. Omit this field.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -22745,18 +23281,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a specified custom agent in a workspace and executes the update asynchronously. Omitted top-level fields retain their original configurations. You can call the GetCustomAgent operation to query the update result.</para>
+        /// <para>Updates the configuration of a custom agent in a specified workspace and executes the update asynchronously. Omitted top-level fields retain their original configurations. You can call GetCustomAgent to query the update result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Provide at least one top-level field to update. Omitted top-level fields retain their original configurations. When providing a configuration object, specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole. Pass an empty array [] to clear a list. The agenticFsMounts field does not accept null. Pass null for the description field to clear the description, and pass null for the healthCheck field to remove the health check.
-        /// When updating an image, you must specify artifact.port and the type, instanceId, namespace, repo, and tag fields of artifact.container. To retain a custom startup command, also provide the entrypoint field.
-        /// In code package pattern, specify artifact.port and the sourceUri, languageRuntime, and entrypoint fields of artifact.code. Do not specify the container field at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported, and the compressed package size cannot exceed 500,000,000 bytes. Query the runtime environment identity by calling the ListAgentCodeRuntimes operation. The sourceUri field supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, first call the GetAgentCodePackageUploadUrl operation to obtain an upload URL, upload the file directly, and then commit the returned sourceUri.
-        /// When submitting a new code package source, the backend rechecks read permissions, objects, and sizes. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
-        /// When providing the runtime field, the compute and sessionPolicy fields must be provided at the same time. If the hpa field or its subfields are omitted, unspecified elastic configurations use default values. To retain the original elastic configurations, provide them together. When providing the network field, omitted access items are treated as allowed, but actual access is still restricted by the workspace network configurations. To retain the original restrictions, provide both accessInternet and accessVpc. When providing the healthCheck field, the port field is required, and other unspecified items use default values. When providing the logging.sls field, both project and logstore must be specified.
-        /// The update is an asynchronous process. A successful response indicates that the request is accepted. Call the GetCustomAgent operation to query latestSpecVersion, latestVersionStatus, and latestExecutionError, and check the status field to confirm the update result.
-        /// The clientToken field currently does not provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold field for health checks currently does not take effect. Omit this field.</para>
+        /// <para>Specify at least one top-level field to update. Omitted top-level fields retain their original configurations. When you provide a configuration object, you must also specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole. Pass an empty array [] to clear a list. The agenticFsMounts field does not accept null. Pass null for the description field to clear the description, and pass null for the healthCheck field to remove the health check.
+        /// When you update an image, you must specify artifact.port and the type, instanceId, namespace, repo, and tag fields of artifact.container. To retain a custom startup command, you must also provide the entrypoint field.
+        /// In code package pattern, specify artifact.port and the sourceUri, languageRuntime, and entrypoint fields of artifact.code. Do not specify the container field at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported. The compressed package size cannot exceed 500,000,000 bytes. You can call ListAgentCodeRuntimes to query the runtime environment identity. The sourceUri field supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, call GetAgentCodePackageUploadUrl to obtain an upload URL, upload the file directly, and then commit the returned sourceUri.
+        /// When you submit a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
+        /// When you provide the runtime field, the compute and sessionPolicy fields must also be provided. If you omit the hpa field or its subfields, unspecified elastic configurations use default values. To retain the original elastic configurations, you must provide them together. When you provide the network field, omitted access items are treated as allowed, but actual access is still restricted by the workspace network. To retain the original restrictions, provide both accessInternet and accessVpc. When you provide the healthCheck field, you must specify the port field. Other unspecified items use default values. When you provide the logging.sls field, you must specify both the project and logstore fields.
+        /// The update is an asynchronous process. A successful response indicates that the request is accepted. You can call GetCustomAgent to query latestSpecVersion, latestVersionStatus, and latestExecutionError, and check the status field to confirm the update result.
+        /// The clientToken field does not currently provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold field for health checks does not currently take effect. Omit this field.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22775,18 +23311,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a specified custom agent in a workspace and executes the update asynchronously. Omitted top-level fields retain their original configurations. You can call the GetCustomAgent operation to query the update result.</para>
+        /// <para>Updates the configuration of a custom agent in a specified workspace and executes the update asynchronously. Omitted top-level fields retain their original configurations. You can call GetCustomAgent to query the update result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Provide at least one top-level field to update. Omitted top-level fields retain their original configurations. When providing a configuration object, specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole. Pass an empty array [] to clear a list. The agenticFsMounts field does not accept null. Pass null for the description field to clear the description, and pass null for the healthCheck field to remove the health check.
-        /// When updating an image, you must specify artifact.port and the type, instanceId, namespace, repo, and tag fields of artifact.container. To retain a custom startup command, also provide the entrypoint field.
-        /// In code package pattern, specify artifact.port and the sourceUri, languageRuntime, and entrypoint fields of artifact.code. Do not specify the container field at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported, and the compressed package size cannot exceed 500,000,000 bytes. Query the runtime environment identity by calling the ListAgentCodeRuntimes operation. The sourceUri field supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, first call the GetAgentCodePackageUploadUrl operation to obtain an upload URL, upload the file directly, and then commit the returned sourceUri.
-        /// When submitting a new code package source, the backend rechecks read permissions, objects, and sizes. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
-        /// When providing the runtime field, the compute and sessionPolicy fields must be provided at the same time. If the hpa field or its subfields are omitted, unspecified elastic configurations use default values. To retain the original elastic configurations, provide them together. When providing the network field, omitted access items are treated as allowed, but actual access is still restricted by the workspace network configurations. To retain the original restrictions, provide both accessInternet and accessVpc. When providing the healthCheck field, the port field is required, and other unspecified items use default values. When providing the logging.sls field, both project and logstore must be specified.
-        /// The update is an asynchronous process. A successful response indicates that the request is accepted. Call the GetCustomAgent operation to query latestSpecVersion, latestVersionStatus, and latestExecutionError, and check the status field to confirm the update result.
-        /// The clientToken field currently does not provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold field for health checks currently does not take effect. Omit this field.</para>
+        /// <para>Specify at least one top-level field to update. Omitted top-level fields retain their original configurations. When you provide a configuration object, you must also specify its required subfields and include any optional configurations that you want to retain. Arrays are replaced as a whole. Pass an empty array [] to clear a list. The agenticFsMounts field does not accept null. Pass null for the description field to clear the description, and pass null for the healthCheck field to remove the health check.
+        /// When you update an image, you must specify artifact.port and the type, instanceId, namespace, repo, and tag fields of artifact.container. To retain a custom startup command, you must also provide the entrypoint field.
+        /// In code package pattern, specify artifact.port and the sourceUri, languageRuntime, and entrypoint fields of artifact.code. Do not specify the container field at the same time. Dependencies must be packaged by the user. ZIP and TAR.GZ formats are supported. The compressed package size cannot exceed 500,000,000 bytes. You can call ListAgentCodeRuntimes to query the runtime environment identity. The sourceUri field supports oss:// addresses or HTTPS object addresses of standard OSS public domain names, including signed URLs. For local files, call GetAgentCodePackageUploadUrl to obtain an upload URL, upload the file directly, and then commit the returned sourceUri.
+        /// When you submit a new code package source, the backend rechecks the read permissions, object, and size. The configuration is saved only after the transfer succeeds. If the transfer fails, the current configuration is not saved. Saved fixed packages can be reused. Set the client timeout to 210 seconds for code package requests. Archive integrity and secure decompression are checked at startup. A successful acceptance does not indicate that the agent is ready to run.
+        /// When you provide the runtime field, the compute and sessionPolicy fields must also be provided. If you omit the hpa field or its subfields, unspecified elastic configurations use default values. To retain the original elastic configurations, you must provide them together. When you provide the network field, omitted access items are treated as allowed, but actual access is still restricted by the workspace network. To retain the original restrictions, provide both accessInternet and accessVpc. When you provide the healthCheck field, you must specify the port field. Other unspecified items use default values. When you provide the logging.sls field, you must specify both the project and logstore fields.
+        /// The update is an asynchronous process. A successful response indicates that the request is accepted. You can call GetCustomAgent to query latestSpecVersion, latestVersionStatus, and latestExecutionError, and check the status field to confirm the update result.
+        /// The clientToken field does not currently provide idempotency guarantees. Do not rely on this parameter to prevent duplicate requests. The healthyThreshold field for health checks does not currently take effect. Omit this field.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22979,23 +23515,23 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the logon configuration of a bound identity provider in a specified workspace. DingTalk and Lark support logon switches, incremental synchronization switches, application configurations, and synchronization scopes. CustomSSO supports SAML configurations and logon switches. Actual updates take effect asynchronously. Call GetIdentityProvider to query the status.</para>
+        /// <para>Modifies the logon configuration of a bound identity provider in a specified workspace. DingTalk and Feishu support the logon switch, incremental synchronization switch, application configuration, and synchronization scope. CustomSSO supports SAML configuration and the logon switch. Actual updates take effect asynchronously. Call GetIdentityProvider to query the status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Prerequisites and update methods</h3>
-        /// <para>The workspace must be bound to an identity provider of the corresponding type. For DingTalk and Lark, you must submit at least one of loginEnabled, syncEnabled, metadata, and syncScope. protocol and saml are not accepted. For CustomSSO, use protocol, saml, and loginEnabled. metadata, syncEnabled, and syncScope are not accepted. The SCIM synchronization switch is managed separately through UpdateIdentityProviderSCIM.</para>
-        /// <h3>DingTalk and Lark</h3>
-        /// <para>The metadata is merged by field. Submit only the fields that need to be updated. Omitted fields and existing keys remain unchanged. Explicitly submitting null, empty strings, or blank strings will be rejected. The server validates the complete configuration after merging. When incremental synchronization is enabled, the merged configuration must include encryptKey and verificationToken.
-        /// syncEnabled controls subsequent address book change events and does not control the initial synchronization or manual synchronization. syncScope applies only to DingTalk and Lark. If it is omitted or set to null, the current scope is retained. Saving the scope does not automatically trigger a full synchronization. To perform manual synchronization, call CreateIdentityProviderSyncJob after saving and waiting for the identity provider to be ready, and then call GetIdentityProviderSyncJob to query the task result.</para>
+        /// <para>The workspace must be bound to an identity provider of the corresponding type. For DingTalk and Feishu, you must submit at least one of the following fields: loginEnabled, syncEnabled, metadata, and syncScope. The protocol and saml fields are not accepted. For CustomSSO, use the protocol, saml, and loginEnabled fields. The metadata, syncEnabled, and syncScope fields are not accepted. The SCIM synchronization switch is managed separately by using UpdateIdentityProviderSCIM.</para>
+        /// <h3>DingTalk and Feishu</h3>
+        /// <para>The metadata field is merged by field. Submit only the fields that need to be updated. Omitted fields and existing keys remain unchanged. Explicitly submitting null, empty strings, or blank strings is rejected. The server validates the complete configuration after merging. When incremental synchronization is enabled, the merged configuration must include the encryptKey and verificationToken fields.
+        /// The syncEnabled field controls subsequent address book change events and does not control the initial synchronization or manual synchronization. The syncScope field applies only to DingTalk and Feishu. If this field is omitted or set to null, the current scope is retained. Saving the scope does not automatically trigger a full synchronization. To perform a manual synchronization, call CreateIdentityProviderSyncJob after the save operation is complete and the identity provider is ready, and then call GetIdentityProviderSyncJob to query the task result.</para>
         /// <h3>Custom SAML identity provider</h3>
-        /// <para>CustomSSO currently supports only SAML. The saml parameter supports two mutually exclusive methods: providing metadataXml, or providing the four manual configuration fields: entityId, loginUrl, bindingType, and x509Certificates.
-        /// metadataXml is a single IdP EntityDescriptor XML text of up to 1 MiB, not a URL or file path. DTDs and external entities are prohibited. For manual configuration, entityId must be non-empty and up to 2,048 characters, and cannot be changed after saving. loginUrl must be an absolute HTTPS URL without user credentials and fragments. bindingType must be HTTP-Redirect or HTTP-POST. Certificates must be valid X.509 signing certificates, with a maximum of 10 certificates.
-        /// jitProvisionEnabled controls the automatic creation of users during the initial logon, and jitUpdateEnabled controls whether user information is updated during logon. Omitting these switches during an update retains the existing values. Modifying only the JIT switches also requires an existing valid SAML configuration. Saving the SAML configuration does not automatically enable logon. A valid configuration must exist before enabling logon. Setting loginEnabled to false only triggers a shutdown of logon and does not delete the saved SAML or SCIM configurations.</para>
+        /// <para>CustomSSO currently supports only SAML. The saml field supports two mutually exclusive methods: providing metadataXml, or providing the four manually entered configuration fields: entityId, loginUrl, bindingType, and x509Certificates.
+        /// The metadataXml field is a single IdP EntityDescriptor XML text of up to 1 MiB, not a URL or file path. DTD and external entities are prohibited. When manually entering the configuration, the entityId field must be non-empty and contain up to 2,048 characters, and cannot be changed after saving. The loginUrl field must be an absolute HTTPS URL without user credentials and fragments. The bindingType field must be HTTP-Redirect or HTTP-POST. The certificates must be valid X.509 signing certificates, with a maximum of 10 certificates.
+        /// The jitProvisionEnabled field controls the automatic creation of users during the initial logon. The jitUpdateEnabled field controls whether user information is updated during logon. Omitting these switches during an update retains the existing values. Modifying only the JIT switches also requires an existing valid SAML configuration. Saving the SAML configuration does not automatically enable logon. A valid configuration must exist before enabling logon. Setting loginEnabled to false only triggers a shutdown of logon and does not delete the saved SAML or SCIM configuration.</para>
         /// <h3>Asynchronous results and retries</h3>
-        /// <para>When actual changes exist, the expected configuration and the UPDATING status of the identity provider are returned. The CONFIGURED status may also be returned when resource configurations are restored. Call GetIdentityProvider to wait for the READY status. If the operation fails, check for statuses such as UPDATE_FAILED. If the configuration is identical and no restoration is required, the current binding may be returned directly without generating a new task. A successful HTTP request does not indicate that the background task or upstream configuration has taken effect.
-        /// Operation conflicts occur when in-flight operations exist. If a submission times out, query the configuration and status before deciding whether to retry. The status parameter describes the status of the identity provider resource and logon configuration. The SCIM operation results for CustomSSO must be queried through GetIdentityProviderSCIM and cannot be inferred from this operation.</para>
+        /// <para>When actual changes exist, the expected configuration and the UPDATING status of the identity provider are returned. The CONFIGURED status may also be returned when resource configuration is restored. Call GetIdentityProvider to wait for the READY status. If the operation fails, check for statuses such as UPDATE_FAILED. If the configuration is identical and no restoration is required, the current binding may be returned directly without generating a new task. A successful HTTP request does not indicate that the background task or upstream configuration has taken effect.
+        /// Operation conflicts occur when in-flight operations exist. If a submission times out, query the configuration and status before deciding whether to retry. The status field describes the status of the identity provider resource and logon configuration. The SCIM operation results for CustomSSO must be queried by using GetIdentityProviderSCIM and cannot be inferred from this status.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -23047,23 +23583,23 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the logon configuration of a bound identity provider in a specified workspace. DingTalk and Lark support logon switches, incremental synchronization switches, application configurations, and synchronization scopes. CustomSSO supports SAML configurations and logon switches. Actual updates take effect asynchronously. Call GetIdentityProvider to query the status.</para>
+        /// <para>Modifies the logon configuration of a bound identity provider in a specified workspace. DingTalk and Feishu support the logon switch, incremental synchronization switch, application configuration, and synchronization scope. CustomSSO supports SAML configuration and the logon switch. Actual updates take effect asynchronously. Call GetIdentityProvider to query the status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Prerequisites and update methods</h3>
-        /// <para>The workspace must be bound to an identity provider of the corresponding type. For DingTalk and Lark, you must submit at least one of loginEnabled, syncEnabled, metadata, and syncScope. protocol and saml are not accepted. For CustomSSO, use protocol, saml, and loginEnabled. metadata, syncEnabled, and syncScope are not accepted. The SCIM synchronization switch is managed separately through UpdateIdentityProviderSCIM.</para>
-        /// <h3>DingTalk and Lark</h3>
-        /// <para>The metadata is merged by field. Submit only the fields that need to be updated. Omitted fields and existing keys remain unchanged. Explicitly submitting null, empty strings, or blank strings will be rejected. The server validates the complete configuration after merging. When incremental synchronization is enabled, the merged configuration must include encryptKey and verificationToken.
-        /// syncEnabled controls subsequent address book change events and does not control the initial synchronization or manual synchronization. syncScope applies only to DingTalk and Lark. If it is omitted or set to null, the current scope is retained. Saving the scope does not automatically trigger a full synchronization. To perform manual synchronization, call CreateIdentityProviderSyncJob after saving and waiting for the identity provider to be ready, and then call GetIdentityProviderSyncJob to query the task result.</para>
+        /// <para>The workspace must be bound to an identity provider of the corresponding type. For DingTalk and Feishu, you must submit at least one of the following fields: loginEnabled, syncEnabled, metadata, and syncScope. The protocol and saml fields are not accepted. For CustomSSO, use the protocol, saml, and loginEnabled fields. The metadata, syncEnabled, and syncScope fields are not accepted. The SCIM synchronization switch is managed separately by using UpdateIdentityProviderSCIM.</para>
+        /// <h3>DingTalk and Feishu</h3>
+        /// <para>The metadata field is merged by field. Submit only the fields that need to be updated. Omitted fields and existing keys remain unchanged. Explicitly submitting null, empty strings, or blank strings is rejected. The server validates the complete configuration after merging. When incremental synchronization is enabled, the merged configuration must include the encryptKey and verificationToken fields.
+        /// The syncEnabled field controls subsequent address book change events and does not control the initial synchronization or manual synchronization. The syncScope field applies only to DingTalk and Feishu. If this field is omitted or set to null, the current scope is retained. Saving the scope does not automatically trigger a full synchronization. To perform a manual synchronization, call CreateIdentityProviderSyncJob after the save operation is complete and the identity provider is ready, and then call GetIdentityProviderSyncJob to query the task result.</para>
         /// <h3>Custom SAML identity provider</h3>
-        /// <para>CustomSSO currently supports only SAML. The saml parameter supports two mutually exclusive methods: providing metadataXml, or providing the four manual configuration fields: entityId, loginUrl, bindingType, and x509Certificates.
-        /// metadataXml is a single IdP EntityDescriptor XML text of up to 1 MiB, not a URL or file path. DTDs and external entities are prohibited. For manual configuration, entityId must be non-empty and up to 2,048 characters, and cannot be changed after saving. loginUrl must be an absolute HTTPS URL without user credentials and fragments. bindingType must be HTTP-Redirect or HTTP-POST. Certificates must be valid X.509 signing certificates, with a maximum of 10 certificates.
-        /// jitProvisionEnabled controls the automatic creation of users during the initial logon, and jitUpdateEnabled controls whether user information is updated during logon. Omitting these switches during an update retains the existing values. Modifying only the JIT switches also requires an existing valid SAML configuration. Saving the SAML configuration does not automatically enable logon. A valid configuration must exist before enabling logon. Setting loginEnabled to false only triggers a shutdown of logon and does not delete the saved SAML or SCIM configurations.</para>
+        /// <para>CustomSSO currently supports only SAML. The saml field supports two mutually exclusive methods: providing metadataXml, or providing the four manually entered configuration fields: entityId, loginUrl, bindingType, and x509Certificates.
+        /// The metadataXml field is a single IdP EntityDescriptor XML text of up to 1 MiB, not a URL or file path. DTD and external entities are prohibited. When manually entering the configuration, the entityId field must be non-empty and contain up to 2,048 characters, and cannot be changed after saving. The loginUrl field must be an absolute HTTPS URL without user credentials and fragments. The bindingType field must be HTTP-Redirect or HTTP-POST. The certificates must be valid X.509 signing certificates, with a maximum of 10 certificates.
+        /// The jitProvisionEnabled field controls the automatic creation of users during the initial logon. The jitUpdateEnabled field controls whether user information is updated during logon. Omitting these switches during an update retains the existing values. Modifying only the JIT switches also requires an existing valid SAML configuration. Saving the SAML configuration does not automatically enable logon. A valid configuration must exist before enabling logon. Setting loginEnabled to false only triggers a shutdown of logon and does not delete the saved SAML or SCIM configuration.</para>
         /// <h3>Asynchronous results and retries</h3>
-        /// <para>When actual changes exist, the expected configuration and the UPDATING status of the identity provider are returned. The CONFIGURED status may also be returned when resource configurations are restored. Call GetIdentityProvider to wait for the READY status. If the operation fails, check for statuses such as UPDATE_FAILED. If the configuration is identical and no restoration is required, the current binding may be returned directly without generating a new task. A successful HTTP request does not indicate that the background task or upstream configuration has taken effect.
-        /// Operation conflicts occur when in-flight operations exist. If a submission times out, query the configuration and status before deciding whether to retry. The status parameter describes the status of the identity provider resource and logon configuration. The SCIM operation results for CustomSSO must be queried through GetIdentityProviderSCIM and cannot be inferred from this operation.</para>
+        /// <para>When actual changes exist, the expected configuration and the UPDATING status of the identity provider are returned. The CONFIGURED status may also be returned when resource configuration is restored. Call GetIdentityProvider to wait for the READY status. If the operation fails, check for statuses such as UPDATE_FAILED. If the configuration is identical and no restoration is required, the current binding may be returned directly without generating a new task. A successful HTTP request does not indicate that the background task or upstream configuration has taken effect.
+        /// Operation conflicts occur when in-flight operations exist. If a submission times out, query the configuration and status before deciding whether to retry. The status field describes the status of the identity provider resource and logon configuration. The SCIM operation results for CustomSSO must be queried by using GetIdentityProviderSCIM and cannot be inferred from this status.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -23115,23 +23651,23 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the logon configuration of a bound identity provider in a specified workspace. DingTalk and Lark support logon switches, incremental synchronization switches, application configurations, and synchronization scopes. CustomSSO supports SAML configurations and logon switches. Actual updates take effect asynchronously. Call GetIdentityProvider to query the status.</para>
+        /// <para>Modifies the logon configuration of a bound identity provider in a specified workspace. DingTalk and Feishu support the logon switch, incremental synchronization switch, application configuration, and synchronization scope. CustomSSO supports SAML configuration and the logon switch. Actual updates take effect asynchronously. Call GetIdentityProvider to query the status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Prerequisites and update methods</h3>
-        /// <para>The workspace must be bound to an identity provider of the corresponding type. For DingTalk and Lark, you must submit at least one of loginEnabled, syncEnabled, metadata, and syncScope. protocol and saml are not accepted. For CustomSSO, use protocol, saml, and loginEnabled. metadata, syncEnabled, and syncScope are not accepted. The SCIM synchronization switch is managed separately through UpdateIdentityProviderSCIM.</para>
-        /// <h3>DingTalk and Lark</h3>
-        /// <para>The metadata is merged by field. Submit only the fields that need to be updated. Omitted fields and existing keys remain unchanged. Explicitly submitting null, empty strings, or blank strings will be rejected. The server validates the complete configuration after merging. When incremental synchronization is enabled, the merged configuration must include encryptKey and verificationToken.
-        /// syncEnabled controls subsequent address book change events and does not control the initial synchronization or manual synchronization. syncScope applies only to DingTalk and Lark. If it is omitted or set to null, the current scope is retained. Saving the scope does not automatically trigger a full synchronization. To perform manual synchronization, call CreateIdentityProviderSyncJob after saving and waiting for the identity provider to be ready, and then call GetIdentityProviderSyncJob to query the task result.</para>
+        /// <para>The workspace must be bound to an identity provider of the corresponding type. For DingTalk and Feishu, you must submit at least one of the following fields: loginEnabled, syncEnabled, metadata, and syncScope. The protocol and saml fields are not accepted. For CustomSSO, use the protocol, saml, and loginEnabled fields. The metadata, syncEnabled, and syncScope fields are not accepted. The SCIM synchronization switch is managed separately by using UpdateIdentityProviderSCIM.</para>
+        /// <h3>DingTalk and Feishu</h3>
+        /// <para>The metadata field is merged by field. Submit only the fields that need to be updated. Omitted fields and existing keys remain unchanged. Explicitly submitting null, empty strings, or blank strings is rejected. The server validates the complete configuration after merging. When incremental synchronization is enabled, the merged configuration must include the encryptKey and verificationToken fields.
+        /// The syncEnabled field controls subsequent address book change events and does not control the initial synchronization or manual synchronization. The syncScope field applies only to DingTalk and Feishu. If this field is omitted or set to null, the current scope is retained. Saving the scope does not automatically trigger a full synchronization. To perform a manual synchronization, call CreateIdentityProviderSyncJob after the save operation is complete and the identity provider is ready, and then call GetIdentityProviderSyncJob to query the task result.</para>
         /// <h3>Custom SAML identity provider</h3>
-        /// <para>CustomSSO currently supports only SAML. The saml parameter supports two mutually exclusive methods: providing metadataXml, or providing the four manual configuration fields: entityId, loginUrl, bindingType, and x509Certificates.
-        /// metadataXml is a single IdP EntityDescriptor XML text of up to 1 MiB, not a URL or file path. DTDs and external entities are prohibited. For manual configuration, entityId must be non-empty and up to 2,048 characters, and cannot be changed after saving. loginUrl must be an absolute HTTPS URL without user credentials and fragments. bindingType must be HTTP-Redirect or HTTP-POST. Certificates must be valid X.509 signing certificates, with a maximum of 10 certificates.
-        /// jitProvisionEnabled controls the automatic creation of users during the initial logon, and jitUpdateEnabled controls whether user information is updated during logon. Omitting these switches during an update retains the existing values. Modifying only the JIT switches also requires an existing valid SAML configuration. Saving the SAML configuration does not automatically enable logon. A valid configuration must exist before enabling logon. Setting loginEnabled to false only triggers a shutdown of logon and does not delete the saved SAML or SCIM configurations.</para>
+        /// <para>CustomSSO currently supports only SAML. The saml field supports two mutually exclusive methods: providing metadataXml, or providing the four manually entered configuration fields: entityId, loginUrl, bindingType, and x509Certificates.
+        /// The metadataXml field is a single IdP EntityDescriptor XML text of up to 1 MiB, not a URL or file path. DTD and external entities are prohibited. When manually entering the configuration, the entityId field must be non-empty and contain up to 2,048 characters, and cannot be changed after saving. The loginUrl field must be an absolute HTTPS URL without user credentials and fragments. The bindingType field must be HTTP-Redirect or HTTP-POST. The certificates must be valid X.509 signing certificates, with a maximum of 10 certificates.
+        /// The jitProvisionEnabled field controls the automatic creation of users during the initial logon. The jitUpdateEnabled field controls whether user information is updated during logon. Omitting these switches during an update retains the existing values. Modifying only the JIT switches also requires an existing valid SAML configuration. Saving the SAML configuration does not automatically enable logon. A valid configuration must exist before enabling logon. Setting loginEnabled to false only triggers a shutdown of logon and does not delete the saved SAML or SCIM configuration.</para>
         /// <h3>Asynchronous results and retries</h3>
-        /// <para>When actual changes exist, the expected configuration and the UPDATING status of the identity provider are returned. The CONFIGURED status may also be returned when resource configurations are restored. Call GetIdentityProvider to wait for the READY status. If the operation fails, check for statuses such as UPDATE_FAILED. If the configuration is identical and no restoration is required, the current binding may be returned directly without generating a new task. A successful HTTP request does not indicate that the background task or upstream configuration has taken effect.
-        /// Operation conflicts occur when in-flight operations exist. If a submission times out, query the configuration and status before deciding whether to retry. The status parameter describes the status of the identity provider resource and logon configuration. The SCIM operation results for CustomSSO must be queried through GetIdentityProviderSCIM and cannot be inferred from this operation.</para>
+        /// <para>When actual changes exist, the expected configuration and the UPDATING status of the identity provider are returned. The CONFIGURED status may also be returned when resource configuration is restored. Call GetIdentityProvider to wait for the READY status. If the operation fails, check for statuses such as UPDATE_FAILED. If the configuration is identical and no restoration is required, the current binding may be returned directly without generating a new task. A successful HTTP request does not indicate that the background task or upstream configuration has taken effect.
+        /// Operation conflicts occur when in-flight operations exist. If a submission times out, query the configuration and status before deciding whether to retry. The status field describes the status of the identity provider resource and logon configuration. The SCIM operation results for CustomSSO must be queried by using GetIdentityProviderSCIM and cannot be inferred from this status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23150,23 +23686,23 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the logon configuration of a bound identity provider in a specified workspace. DingTalk and Lark support logon switches, incremental synchronization switches, application configurations, and synchronization scopes. CustomSSO supports SAML configurations and logon switches. Actual updates take effect asynchronously. Call GetIdentityProvider to query the status.</para>
+        /// <para>Modifies the logon configuration of a bound identity provider in a specified workspace. DingTalk and Feishu support the logon switch, incremental synchronization switch, application configuration, and synchronization scope. CustomSSO supports SAML configuration and the logon switch. Actual updates take effect asynchronously. Call GetIdentityProvider to query the status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Prerequisites and update methods</h3>
-        /// <para>The workspace must be bound to an identity provider of the corresponding type. For DingTalk and Lark, you must submit at least one of loginEnabled, syncEnabled, metadata, and syncScope. protocol and saml are not accepted. For CustomSSO, use protocol, saml, and loginEnabled. metadata, syncEnabled, and syncScope are not accepted. The SCIM synchronization switch is managed separately through UpdateIdentityProviderSCIM.</para>
-        /// <h3>DingTalk and Lark</h3>
-        /// <para>The metadata is merged by field. Submit only the fields that need to be updated. Omitted fields and existing keys remain unchanged. Explicitly submitting null, empty strings, or blank strings will be rejected. The server validates the complete configuration after merging. When incremental synchronization is enabled, the merged configuration must include encryptKey and verificationToken.
-        /// syncEnabled controls subsequent address book change events and does not control the initial synchronization or manual synchronization. syncScope applies only to DingTalk and Lark. If it is omitted or set to null, the current scope is retained. Saving the scope does not automatically trigger a full synchronization. To perform manual synchronization, call CreateIdentityProviderSyncJob after saving and waiting for the identity provider to be ready, and then call GetIdentityProviderSyncJob to query the task result.</para>
+        /// <para>The workspace must be bound to an identity provider of the corresponding type. For DingTalk and Feishu, you must submit at least one of the following fields: loginEnabled, syncEnabled, metadata, and syncScope. The protocol and saml fields are not accepted. For CustomSSO, use the protocol, saml, and loginEnabled fields. The metadata, syncEnabled, and syncScope fields are not accepted. The SCIM synchronization switch is managed separately by using UpdateIdentityProviderSCIM.</para>
+        /// <h3>DingTalk and Feishu</h3>
+        /// <para>The metadata field is merged by field. Submit only the fields that need to be updated. Omitted fields and existing keys remain unchanged. Explicitly submitting null, empty strings, or blank strings is rejected. The server validates the complete configuration after merging. When incremental synchronization is enabled, the merged configuration must include the encryptKey and verificationToken fields.
+        /// The syncEnabled field controls subsequent address book change events and does not control the initial synchronization or manual synchronization. The syncScope field applies only to DingTalk and Feishu. If this field is omitted or set to null, the current scope is retained. Saving the scope does not automatically trigger a full synchronization. To perform a manual synchronization, call CreateIdentityProviderSyncJob after the save operation is complete and the identity provider is ready, and then call GetIdentityProviderSyncJob to query the task result.</para>
         /// <h3>Custom SAML identity provider</h3>
-        /// <para>CustomSSO currently supports only SAML. The saml parameter supports two mutually exclusive methods: providing metadataXml, or providing the four manual configuration fields: entityId, loginUrl, bindingType, and x509Certificates.
-        /// metadataXml is a single IdP EntityDescriptor XML text of up to 1 MiB, not a URL or file path. DTDs and external entities are prohibited. For manual configuration, entityId must be non-empty and up to 2,048 characters, and cannot be changed after saving. loginUrl must be an absolute HTTPS URL without user credentials and fragments. bindingType must be HTTP-Redirect or HTTP-POST. Certificates must be valid X.509 signing certificates, with a maximum of 10 certificates.
-        /// jitProvisionEnabled controls the automatic creation of users during the initial logon, and jitUpdateEnabled controls whether user information is updated during logon. Omitting these switches during an update retains the existing values. Modifying only the JIT switches also requires an existing valid SAML configuration. Saving the SAML configuration does not automatically enable logon. A valid configuration must exist before enabling logon. Setting loginEnabled to false only triggers a shutdown of logon and does not delete the saved SAML or SCIM configurations.</para>
+        /// <para>CustomSSO currently supports only SAML. The saml field supports two mutually exclusive methods: providing metadataXml, or providing the four manually entered configuration fields: entityId, loginUrl, bindingType, and x509Certificates.
+        /// The metadataXml field is a single IdP EntityDescriptor XML text of up to 1 MiB, not a URL or file path. DTD and external entities are prohibited. When manually entering the configuration, the entityId field must be non-empty and contain up to 2,048 characters, and cannot be changed after saving. The loginUrl field must be an absolute HTTPS URL without user credentials and fragments. The bindingType field must be HTTP-Redirect or HTTP-POST. The certificates must be valid X.509 signing certificates, with a maximum of 10 certificates.
+        /// The jitProvisionEnabled field controls the automatic creation of users during the initial logon. The jitUpdateEnabled field controls whether user information is updated during logon. Omitting these switches during an update retains the existing values. Modifying only the JIT switches also requires an existing valid SAML configuration. Saving the SAML configuration does not automatically enable logon. A valid configuration must exist before enabling logon. Setting loginEnabled to false only triggers a shutdown of logon and does not delete the saved SAML or SCIM configuration.</para>
         /// <h3>Asynchronous results and retries</h3>
-        /// <para>When actual changes exist, the expected configuration and the UPDATING status of the identity provider are returned. The CONFIGURED status may also be returned when resource configurations are restored. Call GetIdentityProvider to wait for the READY status. If the operation fails, check for statuses such as UPDATE_FAILED. If the configuration is identical and no restoration is required, the current binding may be returned directly without generating a new task. A successful HTTP request does not indicate that the background task or upstream configuration has taken effect.
-        /// Operation conflicts occur when in-flight operations exist. If a submission times out, query the configuration and status before deciding whether to retry. The status parameter describes the status of the identity provider resource and logon configuration. The SCIM operation results for CustomSSO must be queried through GetIdentityProviderSCIM and cannot be inferred from this operation.</para>
+        /// <para>When actual changes exist, the expected configuration and the UPDATING status of the identity provider are returned. The CONFIGURED status may also be returned when resource configuration is restored. Call GetIdentityProvider to wait for the READY status. If the operation fails, check for statuses such as UPDATE_FAILED. If the configuration is identical and no restoration is required, the current binding may be returned directly without generating a new task. A successful HTTP request does not indicate that the background task or upstream configuration has taken effect.
+        /// Operation conflicts occur when in-flight operations exist. If a submission times out, query the configuration and status before deciding whether to retry. The status field describes the status of the identity provider resource and logon configuration. The SCIM operation results for CustomSSO must be queried by using GetIdentityProviderSCIM and cannot be inferred from this status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23185,21 +23721,22 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables SCIM user synchronization independently. When enabled, the initial full import is executed asynchronously. You can query the result by calling GetIdentityProviderSCIM. The SAML logon configuration is retained.</para>
+        /// <para>Enables or disables SCIM-based user synchronization independently. When enabled, the initial full import is executed asynchronously. You can query the result by calling GetIdentityProviderSCIM. The SAML logon configuration is retained.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>The syncEnabled parameter is required. If you set this parameter to true, a task is submitted to independently enable SCIM and perform the initial full user import. During execution, the AgentIdentity receiving status must be Enabled, and an enabled and unexpired credential must exist. Therefore, you must first call the prepare operation and complete the URL and token configuration in the external system. If you set this parameter to false, a task is submitted to disable synchronization and upstream receiving. Existing users, credentials, and SAML logon configurations are retained. If you re-enable synchronization later and receiving is disabled, you must call the prepare operation again.
-        /// Request acceptance only saves the expected switch status in AC and submits the task. The returned data is still the shared binding and does not contain the SCIM taskId. The status is not overwritten by this task and may be READY or UPDATE_FAILED from a previous logon task. Neither can be used to determine the success or failure of SCIM. Query GetIdentityProviderSCIM.operationStatus to wait for the result. Prerequisite checks for enabling are executed within the task. If the prerequisites are not met, you may receive a successful request response first, and then operationStatus=FAILED. A failure does not automatically roll back the expected switch status.
-        /// SCIM does not depend on SAML configuration and does not affect the SAML status or switch. A successful task and a successful full import of empty users do not prove that continuous incremental synchronization is healthy. Whether users exist depends on whether the external system has actually pre-provisioned them.</para>
+        /// <para>The syncEnabled parameter is required. If you set this parameter to true, a task is submitted to independently enable SCIM and perform the initial full user import. During execution, the AgentIdentity receiving status must be Enabled, and an Enabled and unexpired credential must exist. Therefore, you must first call the prepare operation and complete the URL and token configuration in the external system. If you set this parameter to false, a task is submitted to disable synchronization and upstream receiving. Existing users, credentials, and SAML logon configurations are retained. If you re-enable the feature later and receiving is disabled, you must call the prepare operation again.
+        /// After the request is accepted, the expected switch status in AC is saved and an independent SCIM task is submitted. The original shared binding fields are returned, and the status field still indicates the status of shared resources and logon configurations. The new scimStatus field indicates the independent SCIM status, and the operationStatus field indicates task result of the original SCIM task. The SCIM taskId is not returned. You can call GetIdentityProviderSCIM to query task result. The prerequisite checks for enabling the feature are executed within the task. If the prerequisites are not met, you may receive a successful request response first, and then the operationStatus becomes FAILED. A failure does not automatically roll back the expected switch status.
+        /// SCIM does not depend on SAML configurations and does not affect the SAML status or switch. A successful task or a successful full import of empty users does not prove that continuous incremental synchronization is healthy. Whether users exist depends on whether the external system actually pre-provisions them.
+        /// The scimStatus field indicates the independent SCIM configuration status. UNCONFIGURED: The preparation is not completed. WAITING_CONFIGURATION: The receiving end is enabled, the HTTPS URL is valid, and a valid token exists. The system is waiting for external configuration and enablement confirmation. UPDATING: The enablement or disablement is being executed. READY: Synchronization is enabled and the current enablement task is successful. The receiving end, URL, and credentials are still available. DISABLED: The feature is disabled and the configuration is retained. UPDATE_FAILED: The operation failed, was paused, was canceled, or the configuration and credentials became unavailable after enablement. The original facts of configuration, syncEnabled, and operationStatus are retained. The SAML or OIDC binding status is not used to determine the SCIM status. The READY status does not prove that Matrix execution is completed, the external connection test is passed, or continuous incremental synchronization is healthy.</para>
         /// <h2>Requests and examples</h2>
         /// <para>PUT /workspaces/{workspaceId}/scim-provisioning
-        /// Call conventions: Call the API in the region of the target workspace by using an AK/STS identity that has permissions on the identity provider resources of the corresponding workspace. In the following examples, ws-example, URL, certificate, and Token are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the additional body wrapper of the backend direct connection API. The response example only shows the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS credential that has permissions on the identity provider resources of the corresponding workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the additional body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
         /// <pre><code class="language-text">PUT /workspaces/ws-example/scim-provisioning
         /// {&quot;syncEnabled&quot;: true}
-        /// To disable: {&quot;syncEnabled&quot;: false}
+        /// To disable the feature: {&quot;syncEnabled&quot;: false}
         /// </c></pre>
         /// <h2>Response example</h2>
         /// <pre><code class="language-json">{
@@ -23208,15 +23745,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
         ///     &quot;status&quot;: &quot;READY&quot;,
         ///     &quot;loginEnabled&quot;: false,
-        ///     &quot;syncEnabled&quot;: true
+        ///     &quot;scimStatus&quot;: &quot;UPDATING&quot;,
+        ///     &quot;syncEnabled&quot;: true,
+        ///     &quot;operationStatus&quot;: &quot;PENDING&quot;
         ///   }
         /// }
         /// </c></pre>
         /// <h2>Errors and handling</h2>
-        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call to the upstream system that fails may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
-        /// 400 InvalidParameter: syncEnabled is missing. 404 IdentityProviderNotFound: No CustomSSO binding exists. 409 IdentityProviderOperationConflict: The user pool is not ready, is being unbound, failed to unbind, or has a concurrent status conflict. Upstream not being enabled or having no valid credentials may manifest as an asynchronous FAILED after acceptance. You cannot only handle HTTP errors.</para>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call failure to the upstream system may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling process.
+        /// 400 InvalidParameter: The syncEnabled parameter is missing. 404 IdentityProviderNotFound: No CustomSSO binding exists. 409 IdentityProviderOperationConflict: The user pool is not ready, is being unbound, failed to unbind, or has a concurrent status conflict. If the upstream system is not enabled or has no valid credentials, it may manifest as an asynchronous FAILED status after acceptance. You cannot only handle HTTP errors.</para>
         /// <h2>Call relationships and usage boundaries</h2>
-        /// <para>The call example for enabling is body={&quot;syncEnabled&quot;:true}, and for disabling is body={&quot;syncEnabled&quot;:false}. This API returns a snapshot of the shared binding, and its status is not the status of this SCIM task. After acceptance, use GetIdentityProviderSCIM to query operationStatus. Pre-provisioning tests or user assignments for external IdPs must still be completed in the external system. AC does not configure external IdPs for users.</para>
+        /// <para>The call example for enabling the feature is body={&quot;syncEnabled&quot;:true}, and for disabling the feature is body={&quot;syncEnabled&quot;:false}. This API retains the original binding details and the meaning of the status field, and adds the scimStatus and operationStatus fields. After acceptance, call GetIdentityProviderSCIM to query the independent status and operationStatus. Pre-provisioning tests or user assignments for external IdPs must still be completed in the external system. AC does not configure external IdPs for users.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -23268,21 +23807,22 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables SCIM user synchronization independently. When enabled, the initial full import is executed asynchronously. You can query the result by calling GetIdentityProviderSCIM. The SAML logon configuration is retained.</para>
+        /// <para>Enables or disables SCIM-based user synchronization independently. When enabled, the initial full import is executed asynchronously. You can query the result by calling GetIdentityProviderSCIM. The SAML logon configuration is retained.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>The syncEnabled parameter is required. If you set this parameter to true, a task is submitted to independently enable SCIM and perform the initial full user import. During execution, the AgentIdentity receiving status must be Enabled, and an enabled and unexpired credential must exist. Therefore, you must first call the prepare operation and complete the URL and token configuration in the external system. If you set this parameter to false, a task is submitted to disable synchronization and upstream receiving. Existing users, credentials, and SAML logon configurations are retained. If you re-enable synchronization later and receiving is disabled, you must call the prepare operation again.
-        /// Request acceptance only saves the expected switch status in AC and submits the task. The returned data is still the shared binding and does not contain the SCIM taskId. The status is not overwritten by this task and may be READY or UPDATE_FAILED from a previous logon task. Neither can be used to determine the success or failure of SCIM. Query GetIdentityProviderSCIM.operationStatus to wait for the result. Prerequisite checks for enabling are executed within the task. If the prerequisites are not met, you may receive a successful request response first, and then operationStatus=FAILED. A failure does not automatically roll back the expected switch status.
-        /// SCIM does not depend on SAML configuration and does not affect the SAML status or switch. A successful task and a successful full import of empty users do not prove that continuous incremental synchronization is healthy. Whether users exist depends on whether the external system has actually pre-provisioned them.</para>
+        /// <para>The syncEnabled parameter is required. If you set this parameter to true, a task is submitted to independently enable SCIM and perform the initial full user import. During execution, the AgentIdentity receiving status must be Enabled, and an Enabled and unexpired credential must exist. Therefore, you must first call the prepare operation and complete the URL and token configuration in the external system. If you set this parameter to false, a task is submitted to disable synchronization and upstream receiving. Existing users, credentials, and SAML logon configurations are retained. If you re-enable the feature later and receiving is disabled, you must call the prepare operation again.
+        /// After the request is accepted, the expected switch status in AC is saved and an independent SCIM task is submitted. The original shared binding fields are returned, and the status field still indicates the status of shared resources and logon configurations. The new scimStatus field indicates the independent SCIM status, and the operationStatus field indicates task result of the original SCIM task. The SCIM taskId is not returned. You can call GetIdentityProviderSCIM to query task result. The prerequisite checks for enabling the feature are executed within the task. If the prerequisites are not met, you may receive a successful request response first, and then the operationStatus becomes FAILED. A failure does not automatically roll back the expected switch status.
+        /// SCIM does not depend on SAML configurations and does not affect the SAML status or switch. A successful task or a successful full import of empty users does not prove that continuous incremental synchronization is healthy. Whether users exist depends on whether the external system actually pre-provisions them.
+        /// The scimStatus field indicates the independent SCIM configuration status. UNCONFIGURED: The preparation is not completed. WAITING_CONFIGURATION: The receiving end is enabled, the HTTPS URL is valid, and a valid token exists. The system is waiting for external configuration and enablement confirmation. UPDATING: The enablement or disablement is being executed. READY: Synchronization is enabled and the current enablement task is successful. The receiving end, URL, and credentials are still available. DISABLED: The feature is disabled and the configuration is retained. UPDATE_FAILED: The operation failed, was paused, was canceled, or the configuration and credentials became unavailable after enablement. The original facts of configuration, syncEnabled, and operationStatus are retained. The SAML or OIDC binding status is not used to determine the SCIM status. The READY status does not prove that Matrix execution is completed, the external connection test is passed, or continuous incremental synchronization is healthy.</para>
         /// <h2>Requests and examples</h2>
         /// <para>PUT /workspaces/{workspaceId}/scim-provisioning
-        /// Call conventions: Call the API in the region of the target workspace by using an AK/STS identity that has permissions on the identity provider resources of the corresponding workspace. In the following examples, ws-example, URL, certificate, and Token are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the additional body wrapper of the backend direct connection API. The response example only shows the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS credential that has permissions on the identity provider resources of the corresponding workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the additional body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
         /// <pre><code class="language-text">PUT /workspaces/ws-example/scim-provisioning
         /// {&quot;syncEnabled&quot;: true}
-        /// To disable: {&quot;syncEnabled&quot;: false}
+        /// To disable the feature: {&quot;syncEnabled&quot;: false}
         /// </c></pre>
         /// <h2>Response example</h2>
         /// <pre><code class="language-json">{
@@ -23291,15 +23831,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
         ///     &quot;status&quot;: &quot;READY&quot;,
         ///     &quot;loginEnabled&quot;: false,
-        ///     &quot;syncEnabled&quot;: true
+        ///     &quot;scimStatus&quot;: &quot;UPDATING&quot;,
+        ///     &quot;syncEnabled&quot;: true,
+        ///     &quot;operationStatus&quot;: &quot;PENDING&quot;
         ///   }
         /// }
         /// </c></pre>
         /// <h2>Errors and handling</h2>
-        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call to the upstream system that fails may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
-        /// 400 InvalidParameter: syncEnabled is missing. 404 IdentityProviderNotFound: No CustomSSO binding exists. 409 IdentityProviderOperationConflict: The user pool is not ready, is being unbound, failed to unbind, or has a concurrent status conflict. Upstream not being enabled or having no valid credentials may manifest as an asynchronous FAILED after acceptance. You cannot only handle HTTP errors.</para>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call failure to the upstream system may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling process.
+        /// 400 InvalidParameter: The syncEnabled parameter is missing. 404 IdentityProviderNotFound: No CustomSSO binding exists. 409 IdentityProviderOperationConflict: The user pool is not ready, is being unbound, failed to unbind, or has a concurrent status conflict. If the upstream system is not enabled or has no valid credentials, it may manifest as an asynchronous FAILED status after acceptance. You cannot only handle HTTP errors.</para>
         /// <h2>Call relationships and usage boundaries</h2>
-        /// <para>The call example for enabling is body={&quot;syncEnabled&quot;:true}, and for disabling is body={&quot;syncEnabled&quot;:false}. This API returns a snapshot of the shared binding, and its status is not the status of this SCIM task. After acceptance, use GetIdentityProviderSCIM to query operationStatus. Pre-provisioning tests or user assignments for external IdPs must still be completed in the external system. AC does not configure external IdPs for users.</para>
+        /// <para>The call example for enabling the feature is body={&quot;syncEnabled&quot;:true}, and for disabling the feature is body={&quot;syncEnabled&quot;:false}. This API retains the original binding details and the meaning of the status field, and adds the scimStatus and operationStatus fields. After acceptance, call GetIdentityProviderSCIM to query the independent status and operationStatus. Pre-provisioning tests or user assignments for external IdPs must still be completed in the external system. AC does not configure external IdPs for users.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -23351,21 +23893,22 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables SCIM user synchronization independently. When enabled, the initial full import is executed asynchronously. You can query the result by calling GetIdentityProviderSCIM. The SAML logon configuration is retained.</para>
+        /// <para>Enables or disables SCIM-based user synchronization independently. When enabled, the initial full import is executed asynchronously. You can query the result by calling GetIdentityProviderSCIM. The SAML logon configuration is retained.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>The syncEnabled parameter is required. If you set this parameter to true, a task is submitted to independently enable SCIM and perform the initial full user import. During execution, the AgentIdentity receiving status must be Enabled, and an enabled and unexpired credential must exist. Therefore, you must first call the prepare operation and complete the URL and token configuration in the external system. If you set this parameter to false, a task is submitted to disable synchronization and upstream receiving. Existing users, credentials, and SAML logon configurations are retained. If you re-enable synchronization later and receiving is disabled, you must call the prepare operation again.
-        /// Request acceptance only saves the expected switch status in AC and submits the task. The returned data is still the shared binding and does not contain the SCIM taskId. The status is not overwritten by this task and may be READY or UPDATE_FAILED from a previous logon task. Neither can be used to determine the success or failure of SCIM. Query GetIdentityProviderSCIM.operationStatus to wait for the result. Prerequisite checks for enabling are executed within the task. If the prerequisites are not met, you may receive a successful request response first, and then operationStatus=FAILED. A failure does not automatically roll back the expected switch status.
-        /// SCIM does not depend on SAML configuration and does not affect the SAML status or switch. A successful task and a successful full import of empty users do not prove that continuous incremental synchronization is healthy. Whether users exist depends on whether the external system has actually pre-provisioned them.</para>
+        /// <para>The syncEnabled parameter is required. If you set this parameter to true, a task is submitted to independently enable SCIM and perform the initial full user import. During execution, the AgentIdentity receiving status must be Enabled, and an Enabled and unexpired credential must exist. Therefore, you must first call the prepare operation and complete the URL and token configuration in the external system. If you set this parameter to false, a task is submitted to disable synchronization and upstream receiving. Existing users, credentials, and SAML logon configurations are retained. If you re-enable the feature later and receiving is disabled, you must call the prepare operation again.
+        /// After the request is accepted, the expected switch status in AC is saved and an independent SCIM task is submitted. The original shared binding fields are returned, and the status field still indicates the status of shared resources and logon configurations. The new scimStatus field indicates the independent SCIM status, and the operationStatus field indicates task result of the original SCIM task. The SCIM taskId is not returned. You can call GetIdentityProviderSCIM to query task result. The prerequisite checks for enabling the feature are executed within the task. If the prerequisites are not met, you may receive a successful request response first, and then the operationStatus becomes FAILED. A failure does not automatically roll back the expected switch status.
+        /// SCIM does not depend on SAML configurations and does not affect the SAML status or switch. A successful task or a successful full import of empty users does not prove that continuous incremental synchronization is healthy. Whether users exist depends on whether the external system actually pre-provisions them.
+        /// The scimStatus field indicates the independent SCIM configuration status. UNCONFIGURED: The preparation is not completed. WAITING_CONFIGURATION: The receiving end is enabled, the HTTPS URL is valid, and a valid token exists. The system is waiting for external configuration and enablement confirmation. UPDATING: The enablement or disablement is being executed. READY: Synchronization is enabled and the current enablement task is successful. The receiving end, URL, and credentials are still available. DISABLED: The feature is disabled and the configuration is retained. UPDATE_FAILED: The operation failed, was paused, was canceled, or the configuration and credentials became unavailable after enablement. The original facts of configuration, syncEnabled, and operationStatus are retained. The SAML or OIDC binding status is not used to determine the SCIM status. The READY status does not prove that Matrix execution is completed, the external connection test is passed, or continuous incremental synchronization is healthy.</para>
         /// <h2>Requests and examples</h2>
         /// <para>PUT /workspaces/{workspaceId}/scim-provisioning
-        /// Call conventions: Call the API in the region of the target workspace by using an AK/STS identity that has permissions on the identity provider resources of the corresponding workspace. In the following examples, ws-example, URL, certificate, and Token are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the additional body wrapper of the backend direct connection API. The response example only shows the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS credential that has permissions on the identity provider resources of the corresponding workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the additional body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
         /// <pre><code class="language-text">PUT /workspaces/ws-example/scim-provisioning
         /// {&quot;syncEnabled&quot;: true}
-        /// To disable: {&quot;syncEnabled&quot;: false}
+        /// To disable the feature: {&quot;syncEnabled&quot;: false}
         /// </c></pre>
         /// <h2>Response example</h2>
         /// <pre><code class="language-json">{
@@ -23374,15 +23917,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
         ///     &quot;status&quot;: &quot;READY&quot;,
         ///     &quot;loginEnabled&quot;: false,
-        ///     &quot;syncEnabled&quot;: true
+        ///     &quot;scimStatus&quot;: &quot;UPDATING&quot;,
+        ///     &quot;syncEnabled&quot;: true,
+        ///     &quot;operationStatus&quot;: &quot;PENDING&quot;
         ///   }
         /// }
         /// </c></pre>
         /// <h2>Errors and handling</h2>
-        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call to the upstream system that fails may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
-        /// 400 InvalidParameter: syncEnabled is missing. 404 IdentityProviderNotFound: No CustomSSO binding exists. 409 IdentityProviderOperationConflict: The user pool is not ready, is being unbound, failed to unbind, or has a concurrent status conflict. Upstream not being enabled or having no valid credentials may manifest as an asynchronous FAILED after acceptance. You cannot only handle HTTP errors.</para>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call failure to the upstream system may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling process.
+        /// 400 InvalidParameter: The syncEnabled parameter is missing. 404 IdentityProviderNotFound: No CustomSSO binding exists. 409 IdentityProviderOperationConflict: The user pool is not ready, is being unbound, failed to unbind, or has a concurrent status conflict. If the upstream system is not enabled or has no valid credentials, it may manifest as an asynchronous FAILED status after acceptance. You cannot only handle HTTP errors.</para>
         /// <h2>Call relationships and usage boundaries</h2>
-        /// <para>The call example for enabling is body={&quot;syncEnabled&quot;:true}, and for disabling is body={&quot;syncEnabled&quot;:false}. This API returns a snapshot of the shared binding, and its status is not the status of this SCIM task. After acceptance, use GetIdentityProviderSCIM to query operationStatus. Pre-provisioning tests or user assignments for external IdPs must still be completed in the external system. AC does not configure external IdPs for users.</para>
+        /// <para>The call example for enabling the feature is body={&quot;syncEnabled&quot;:true}, and for disabling the feature is body={&quot;syncEnabled&quot;:false}. This API retains the original binding details and the meaning of the status field, and adds the scimStatus and operationStatus fields. After acceptance, call GetIdentityProviderSCIM to query the independent status and operationStatus. Pre-provisioning tests or user assignments for external IdPs must still be completed in the external system. AC does not configure external IdPs for users.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23401,21 +23946,22 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables SCIM user synchronization independently. When enabled, the initial full import is executed asynchronously. You can query the result by calling GetIdentityProviderSCIM. The SAML logon configuration is retained.</para>
+        /// <para>Enables or disables SCIM-based user synchronization independently. When enabled, the initial full import is executed asynchronously. You can query the result by calling GetIdentityProviderSCIM. The SAML logon configuration is retained.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Features and prerequisites</h2>
-        /// <para>The syncEnabled parameter is required. If you set this parameter to true, a task is submitted to independently enable SCIM and perform the initial full user import. During execution, the AgentIdentity receiving status must be Enabled, and an enabled and unexpired credential must exist. Therefore, you must first call the prepare operation and complete the URL and token configuration in the external system. If you set this parameter to false, a task is submitted to disable synchronization and upstream receiving. Existing users, credentials, and SAML logon configurations are retained. If you re-enable synchronization later and receiving is disabled, you must call the prepare operation again.
-        /// Request acceptance only saves the expected switch status in AC and submits the task. The returned data is still the shared binding and does not contain the SCIM taskId. The status is not overwritten by this task and may be READY or UPDATE_FAILED from a previous logon task. Neither can be used to determine the success or failure of SCIM. Query GetIdentityProviderSCIM.operationStatus to wait for the result. Prerequisite checks for enabling are executed within the task. If the prerequisites are not met, you may receive a successful request response first, and then operationStatus=FAILED. A failure does not automatically roll back the expected switch status.
-        /// SCIM does not depend on SAML configuration and does not affect the SAML status or switch. A successful task and a successful full import of empty users do not prove that continuous incremental synchronization is healthy. Whether users exist depends on whether the external system has actually pre-provisioned them.</para>
+        /// <para>The syncEnabled parameter is required. If you set this parameter to true, a task is submitted to independently enable SCIM and perform the initial full user import. During execution, the AgentIdentity receiving status must be Enabled, and an Enabled and unexpired credential must exist. Therefore, you must first call the prepare operation and complete the URL and token configuration in the external system. If you set this parameter to false, a task is submitted to disable synchronization and upstream receiving. Existing users, credentials, and SAML logon configurations are retained. If you re-enable the feature later and receiving is disabled, you must call the prepare operation again.
+        /// After the request is accepted, the expected switch status in AC is saved and an independent SCIM task is submitted. The original shared binding fields are returned, and the status field still indicates the status of shared resources and logon configurations. The new scimStatus field indicates the independent SCIM status, and the operationStatus field indicates task result of the original SCIM task. The SCIM taskId is not returned. You can call GetIdentityProviderSCIM to query task result. The prerequisite checks for enabling the feature are executed within the task. If the prerequisites are not met, you may receive a successful request response first, and then the operationStatus becomes FAILED. A failure does not automatically roll back the expected switch status.
+        /// SCIM does not depend on SAML configurations and does not affect the SAML status or switch. A successful task or a successful full import of empty users does not prove that continuous incremental synchronization is healthy. Whether users exist depends on whether the external system actually pre-provisions them.
+        /// The scimStatus field indicates the independent SCIM configuration status. UNCONFIGURED: The preparation is not completed. WAITING_CONFIGURATION: The receiving end is enabled, the HTTPS URL is valid, and a valid token exists. The system is waiting for external configuration and enablement confirmation. UPDATING: The enablement or disablement is being executed. READY: Synchronization is enabled and the current enablement task is successful. The receiving end, URL, and credentials are still available. DISABLED: The feature is disabled and the configuration is retained. UPDATE_FAILED: The operation failed, was paused, was canceled, or the configuration and credentials became unavailable after enablement. The original facts of configuration, syncEnabled, and operationStatus are retained. The SAML or OIDC binding status is not used to determine the SCIM status. The READY status does not prove that Matrix execution is completed, the external connection test is passed, or continuous incremental synchronization is healthy.</para>
         /// <h2>Requests and examples</h2>
         /// <para>PUT /workspaces/{workspaceId}/scim-provisioning
-        /// Call conventions: Call the API in the region of the target workspace by using an AK/STS identity that has permissions on the identity provider resources of the corresponding workspace. In the following examples, ws-example, URL, certificate, and Token are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the additional body wrapper of the backend direct connection API. The response example only shows the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
+        /// Call conventions: Call the API in the region of the target workspace by using an AccessKey pair or STS credential that has permissions on the identity provider resources of the corresponding workspace. The ws-example, URL, certificate, and token in the following examples are placeholder values and must be replaced with actual values. The request body example represents the body parameters of the public API, not the additional body wrapper of the backend direct connection API. The response example shows only the business part. The outer layer also includes requestId, success, code, message, and httpStatusCode. Retain the requestId for troubleshooting and do not record keys. Asynchronous business tasks do not mean that the HTTP request uses a long connection to wait for completion.</para>
         /// <pre><code class="language-text">PUT /workspaces/ws-example/scim-provisioning
         /// {&quot;syncEnabled&quot;: true}
-        /// To disable: {&quot;syncEnabled&quot;: false}
+        /// To disable the feature: {&quot;syncEnabled&quot;: false}
         /// </c></pre>
         /// <h2>Response example</h2>
         /// <pre><code class="language-json">{
@@ -23424,15 +23970,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         ///     &quot;identityProviderType&quot;: &quot;CustomSSO&quot;,
         ///     &quot;status&quot;: &quot;READY&quot;,
         ///     &quot;loginEnabled&quot;: false,
-        ///     &quot;syncEnabled&quot;: true
+        ///     &quot;scimStatus&quot;: &quot;UPDATING&quot;,
+        ///     &quot;syncEnabled&quot;: true,
+        ///     &quot;operationStatus&quot;: &quot;PENDING&quot;
         ///   }
         /// }
         /// </c></pre>
         /// <h2>Errors and handling</h2>
-        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call to the upstream system that fails may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling.
-        /// 400 InvalidParameter: syncEnabled is missing. 404 IdentityProviderNotFound: No CustomSSO binding exists. 409 IdentityProviderOperationConflict: The user pool is not ready, is being unbound, failed to unbind, or has a concurrent status conflict. Upstream not being enabled or having no valid credentials may manifest as an asynchronous FAILED after acceptance. You cannot only handle HTTP errors.</para>
+        /// <para>Error handling: 400 InvalidParameter indicates that the parameters or current configuration prerequisites are not met. 404 IdentityProviderNotFound indicates that no binding of the matching type exists. A synchronous call failure to the upstream system may return 503 IdentityProviderProvisioningUnavailable. Retain the request ID for troubleshooting and do not interpret a read failure as unconfigured. Actual authentication and workspace non-existence errors follow the common error handling process.
+        /// 400 InvalidParameter: The syncEnabled parameter is missing. 404 IdentityProviderNotFound: No CustomSSO binding exists. 409 IdentityProviderOperationConflict: The user pool is not ready, is being unbound, failed to unbind, or has a concurrent status conflict. If the upstream system is not enabled or has no valid credentials, it may manifest as an asynchronous FAILED status after acceptance. You cannot only handle HTTP errors.</para>
         /// <h2>Call relationships and usage boundaries</h2>
-        /// <para>The call example for enabling is body={&quot;syncEnabled&quot;:true}, and for disabling is body={&quot;syncEnabled&quot;:false}. This API returns a snapshot of the shared binding, and its status is not the status of this SCIM task. After acceptance, use GetIdentityProviderSCIM to query operationStatus. Pre-provisioning tests or user assignments for external IdPs must still be completed in the external system. AC does not configure external IdPs for users.</para>
+        /// <para>The call example for enabling the feature is body={&quot;syncEnabled&quot;:true}, and for disabling the feature is body={&quot;syncEnabled&quot;:false}. This API retains the original binding details and the meaning of the status field, and adds the scimStatus and operationStatus fields. After acceptance, call GetIdentityProviderSCIM to query the independent status and operationStatus. Pre-provisioning tests or user assignments for external IdPs must still be completed in the external system. AC does not configure external IdPs for users.</para>
         /// </description>
         /// 
         /// <param name="request">

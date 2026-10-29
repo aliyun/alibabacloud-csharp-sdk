@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListCustomAgentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request result code. The value is SUCCESS when the request is successful.</para>
+        /// <para>The request result code. The value is SUCCESS if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code of the current request. The value is 200 when the request is successful.</para>
+        /// <para>The HTTP status code of the request. The value is 200 if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Entrypoint { get; set; }
 
                     /// <summary>
-                    /// <para>The identifier of the code runtime environment in the currently saved configuration. The runtime image uses a saved snapshot. Adding a new version to the directory does not automatically change the existing configuration.</para>
+                    /// <para>The identifier of the code runtime environment in the currently saved configuration. The runtime image uses the saved snapshot. Adding a new version to the directory does not automatically change the existing configuration.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -113,8 +113,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Entrypoint { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the Container Registry Enterprise instance.</para>
-                    /// <para>This parameter is required.</para>
+                    /// <para>The ID of the ACR Enterprise instance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cri-example</para>
@@ -124,8 +123,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string InstanceId { get; set; }
 
                     /// <summary>
-                    /// <para>The namespace of the Container Registry instance.</para>
-                    /// <para>This parameter is required.</para>
+                    /// <para>The ACR namespace.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>team</para>
@@ -135,8 +133,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Namespace { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the Container Registry image repository.</para>
-                    /// <para>This parameter is required.</para>
+                    /// <para>The name of the ACR image repository.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>app</para>
@@ -146,8 +143,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Repo { get; set; }
 
                     /// <summary>
-                    /// <para>The tag of the image.</para>
-                    /// <para>This parameter is required.</para>
+                    /// <para>The image tag.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>v1</para>
@@ -309,7 +305,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<ListCustomAgentsResponseBodyItemsProtocol> Protocol { get; set; }
             public class ListCustomAgentsResponseBodyItemsProtocol : TeaModel {
                 /// <summary>
-                /// <para>The request header configuration for the current protocol. The key is the header name and the value is a string.</para>
+                /// <para>The request header configuration of the current protocol. The key is the header name and the value is a string.</para>
                 /// </summary>
                 [NameInMap("headers")]
                 [Validation(Required=false)]
@@ -346,7 +342,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The invoke Protocol Type. Valid values: agui (AG-UI protocol), openai-chat-completion (OpenAI Chat Completions compatible protocol), and custom (custom protocol).</para>
+                /// <para>The invoke Protocol Type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>agui: AG-UI protocol.</description></item>
+                /// <item><description>openai-chat-completion: OpenAI Chat Completions compatible protocol.</description></item>
+                /// <item><description>custom: Custom protocol.</description></item>
+                /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -369,7 +370,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Runtime { get; set; }
 
             /// <summary>
-            /// <para>The overall status of the agent. Valid values: Creating, Running, Failed, Updating, Deleting, and Deleted. To query the execution progress of the latest configuration, call the GetCustomAgent operation.</para>
+            /// <para>The overall status of the agent. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Creating: The agent is being created.</description></item>
+            /// <item><description>Running: The agent is running.</description></item>
+            /// <item><description>Failed: The agent failed.</description></item>
+            /// <item><description>Updating: The agent is being updated.</description></item>
+            /// <item><description>Deleting: The agent is being deleted.</description></item>
+            /// <item><description>Deleted: The agent is deleted.
+            /// To query the execution progress of the latest configuration, call the GetCustomAgent operation.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -411,7 +421,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The message that describes the processing result of the request. The value is success if the request succeeds.</para>
+        /// <para>The message that describes the result of the request. The value is success if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -421,7 +431,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The opaque token used to query the next page. An empty value indicates that no more pages exist. Pass this token as is in subsequent requests.</para>
+        /// <para>The opaque token used to query the next page. An empty value indicates that no more pages are available. Pass this token as-is in subsequent requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>djE6YWdlbnRjb3JlLmFnZW50Lmxpc3QuY3VzdG9tOjIw</para>
@@ -431,7 +441,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request, used to locate and troubleshoot issues.</para>
+        /// <para>The unique identifier of the request. You can use this ID to locate and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>550E8400-E29B-41D4-A716-446655440000</para>
@@ -441,7 +451,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was processed successfully. A value of true indicates success. A successful creation, update, or deletion does not mean that the background operation is complete.</para>
+        /// <para>Indicates whether the request was processed successfully. A value of true indicates that the request was successful. A successful creation, update, or deletion response does not mean that the background operation is complete.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

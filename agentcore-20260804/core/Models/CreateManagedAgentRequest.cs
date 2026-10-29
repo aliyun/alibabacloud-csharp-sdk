@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateManagedAgentRequestBody Body { get; set; }
         public class CreateManagedAgentRequestBody : TeaModel {
             /// <summary>
-            /// <para>The AgenticFS mount list. Omit or set to [] to indicate no AFS mounts. Set to null to reject. The total number of AFS and OSS mounts cannot exceed 10.</para>
+            /// <para>The AgenticFS mounts. Omitting this parameter or passing an empty array indicates no AgenticFS mounts. Null values are rejected. The total number of AgenticFS and OSS mounts cannot exceed 10.</para>
             /// </summary>
             [NameInMap("agenticFsMounts")]
             [Validation(Required=false)]
             public List<CreateManagedAgentRequestBodyAgenticFsMounts> AgenticFsMounts { get; set; }
             public class CreateManagedAgentRequestBodyAgenticFsMounts : TeaModel {
                 /// <summary>
-                /// <para>The subdirectory under /mnt/agenticfs/ in the container. Required for each mount item as validated by the backend. Mount targets must not be duplicated or have parent-child overlaps.</para>
+                /// <para>The subdirectory under /mnt/agenticfs/ in the container. This parameter is required and validated by the backend for each mount item. Mount targets must not be duplicated or overlap in parent-child relationships.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/mnt/agenticfs/data</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string MountPath { get; set; }
 
                 /// <summary>
-                /// <para>The non-empty relative directory that exists under the AccessPoint. Required for each mount item as validated by the backend. Root directories, absolute paths, and parent directory segments are not allowed.</para>
+                /// <para>The existing non-empty relative directory under the access point. This parameter is required and validated by the backend for each mount item. Root directories, absolute paths, and parent directory segments are not allowed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>workspace/data</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to mount in read-only mode. Default value: false. This is not a RAM role read-only policy.</para>
+                /// <para>Specifies whether the mount is read-only. Default value: false. This parameter does not represent a read-only policy for a RAM role.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? ReadOnly { get; set; }
 
                 /// <summary>
-                /// <para>The AccessPoint domain name. Required for each mount item as validated by the backend. Do not include the protocol, port, or path. Use the DomainName from the NAS ListAccessPoints response.</para>
+                /// <para>The domain name of the access point. This parameter is required and validated by the backend for each mount item. Do not include the protocol, port, or path. Use the DomainName value from the NAS ListAccessPoints response.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ap-0123456789abcdef0.0123456789-vlm36.cn-hangzhou.nas.aliyuncs.com</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The description of the managed agent.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>An agent for code review</para>
+            /// <para>Agent for code review</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -136,14 +136,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The agent runtime harness.</para>
+            /// <para>The agent runtime framework.</para>
             /// </summary>
             [NameInMap("harness")]
             [Validation(Required=false)]
             public CreateManagedAgentRequestBodyHarness Harness { get; set; }
             public class CreateManagedAgentRequestBodyHarness : TeaModel {
                 /// <summary>
-                /// <para>The runtime harness configuration.</para>
+                /// <para>The runtime framework configuration.</para>
                 /// </summary>
                 [NameInMap("configuration")]
                 [Validation(Required=false)]
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The runtime harness type.</para>
+                /// <para>The type of the runtime framework.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qodercli</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The agent instruction that guides the behavior of the agent.</para>
+            /// <para>The agent instruction used to guide the behavior of the agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>You are a code review assistant</para>
@@ -223,14 +223,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string ModelName { get; set; }
 
                 /// <summary>
-                /// <para>The model token quota configuration. If not specified, no quota is configured.</para>
+                /// <para>The model token quota configuration. If this parameter is not passed, no quota is configured.</para>
                 /// </summary>
                 [NameInMap("quota")]
                 [Validation(Required=false)]
                 public CreateManagedAgentRequestBodyModelQuota Quota { get; set; }
                 public class CreateManagedAgentRequestBodyModelQuota : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to enable token quota. Default value: true. Set to false to disable and delete existing quota rules.</para>
+                    /// <para>Specifies whether to enable the token quota. Default value: true. If you set this parameter to false, the quota is disabled and existing quota rules are deleted.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>The quota limit type. Required when quota is enabled, as validated by the backend. Fixed value: token.</para>
+                    /// <para>The quota limit type. This parameter is required and validated by the backend when the quota is enabled. Fixed value: token.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>token</para>
@@ -250,11 +250,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string LimitType { get; set; }
 
                     /// <summary>
-                    /// <para>The quota statistical period. Required when quota is enabled, as validated by the backend. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>day: daily.</description></item>
-                    /// <item><description>month: monthly.</description></item>
-                    /// </list>
+                    /// <para>The statistical period for the quota. This parameter is required and validated by the backend when the quota is enabled. Valid values: day (daily) and month (monthly).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>day</para>
@@ -264,7 +260,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string PeriodType { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of tokens allowed within a single period. Required when quota is enabled, as validated by the backend. The value must be greater than 0.</para>
+                    /// <para>The maximum number of tokens that can be consumed within a single period. This parameter is required and validated by the backend when the quota is enabled. The value must be greater than 0.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1000000</para>
@@ -303,7 +299,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public CreateManagedAgentRequestBodyNetworkAccessInternet AccessInternet { get; set; }
                 public class CreateManagedAgentRequestBodyNetworkAccessInternet : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to allow public network access.</para>
+                    /// <para>Specifies whether to allow Internet access.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -336,14 +332,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The OSS mount list. A maximum of 10 items are allowed.</para>
+            /// <para>The list of OSS mounts. A maximum of 10 items are allowed.</para>
             /// </summary>
             [NameInMap("ossMounts")]
             [Validation(Required=false)]
             public List<CreateManagedAgentRequestBodyOssMounts> OssMounts { get; set; }
             public class CreateManagedAgentRequestBodyOssMounts : TeaModel {
                 /// <summary>
-                /// <para>The OSS bucket name. Required for each mount item as validated by the backend.</para>
+                /// <para>The name of the OSS bucket. This parameter is required and validated by the backend for each mount item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bucket-001</para>
@@ -353,7 +349,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string BucketName { get; set; }
 
                 /// <summary>
-                /// <para>The absolute mount path in the container. Required for each mount item as validated by the backend.</para>
+                /// <para>The absolute mount path in the container. This parameter is required and validated by the backend for each mount item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/mnt/oss/datasets</para>
@@ -363,7 +359,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string MountPath { get; set; }
 
                 /// <summary>
-                /// <para>The relative object prefix within the bucket. If not specified, the entire bucket is mounted.</para>
+                /// <para>The relative object prefix in the bucket. If this parameter is not specified, the entire bucket is mounted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>datasets</para>
@@ -373,11 +369,50 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to mount in read-only mode. Default value: false.</para>
+                /// <para>Specifies whether the mount is read-only. Default value: false.</para>
                 /// </summary>
                 [NameInMap("readOnly")]
                 [Validation(Required=false)]
                 public bool? ReadOnly { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The prompt variable declarations.</para>
+            /// </summary>
+            [NameInMap("promptVariables")]
+            [Validation(Required=false)]
+            public List<CreateManagedAgentRequestBodyPromptVariables> PromptVariables { get; set; }
+            public class CreateManagedAgentRequestBodyPromptVariables : TeaModel {
+                /// <summary>
+                /// <para>The default value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>default</para>
+                /// </summary>
+                [NameInMap("defaultValue")]
+                [Validation(Required=false)]
+                public string DefaultValue { get; set; }
+
+                /// <summary>
+                /// <para>The description of the variable.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>desc</para>
+                /// </summary>
+                [NameInMap("description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                /// <summary>
+                /// <para>The name of the variable.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>brand</para>
+                /// </summary>
+                [NameInMap("name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
 
             }
 
@@ -411,21 +446,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The sandbox auto scaling and session configuration.</para>
+                /// <para>The sandbox auto-scaling and session configuration.</para>
                 /// </summary>
                 [NameInMap("hpa")]
                 [Validation(Required=false)]
                 public CreateManagedAgentRequestBodyRuntimeHpa Hpa { get; set; }
                 public class CreateManagedAgentRequestBodyRuntimeHpa : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to enable auto scaling. Required when hpa is present, as validated by the backend.</para>
+                    /// <para>Specifies whether auto-scaling is enabled. This parameter is required and validated by the backend when HPA is present.</para>
                     /// </summary>
                     [NameInMap("enabled")]
                     [Validation(Required=false)]
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of active sessions per sandbox. Required when hpa is present, as validated by the backend.</para>
+                    /// <para>The maximum number of active sessions per sandbox. This parameter is required and validated by the backend when HPA is present.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5</para>
@@ -435,7 +470,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? MaxConcurrentSessionsPerSandbox { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of sandboxes. Required when HPA is enabled and must be greater than or equal to the minimum value.</para>
+                    /// <para>The maximum number of sandboxes. This parameter is required and must not be less than the minimum value when HPA is enabled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3</para>
@@ -445,7 +480,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? MaxSandboxCount { get; set; }
 
                     /// <summary>
-                    /// <para>The minimum number of sandboxes. Required when HPA is enabled.</para>
+                    /// <para>The minimum number of sandboxes. This parameter is required when HPA is enabled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -455,7 +490,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? MinSandboxCount { get; set; }
 
                     /// <summary>
-                    /// <para>The time-to-live for an inactive session, in seconds. Required when hpa is present, as validated by the backend.</para>
+                    /// <para>The timeout period in seconds for reclaiming an inactive session. This parameter is required and validated by the backend when HPA is present.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3600</para>
@@ -475,7 +510,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public CreateManagedAgentRequestBodyRuntimeSessionPolicy SessionPolicy { get; set; }
                 public class CreateManagedAgentRequestBodyRuntimeSessionPolicy : TeaModel {
                     /// <summary>
-                    /// <para>The name of the HTTP header used for session affinity. This parameter takes effect only when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</para>
+                    /// <para>The name of the HTTP header used for session affinity. This parameter takes effect when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>X-Session-Id</para>
@@ -518,11 +553,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The skill source type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>REFERENCE: referenced from AI Registry.</description></item>
-                /// <item><description>STATIC: statically bundled with the package.</description></item>
-                /// </list>
+                /// <para>The skill source type. Valid values: REFERENCE: references the AI registry. STATIC: statically provided with the package.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>REFERENCE</para>
@@ -542,18 +573,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Version { get; set; }
 
                 /// <summary>
-                /// <para>The version selector for the reference. Defaults to LABEL/latest if omitted. Currently supports LABEL/latest.</para>
+                /// <para>The referenced version selector. If omitted, the default value is LABEL/latest. Currently, only LABEL/latest is supported.</para>
                 /// </summary>
                 [NameInMap("versionSelector")]
                 [Validation(Required=false)]
                 public CreateManagedAgentRequestBodySkillsVersionSelector VersionSelector { get; set; }
                 public class CreateManagedAgentRequestBodySkillsVersionSelector : TeaModel {
                     /// <summary>
-                    /// <para>The version selector type. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>LABEL: select by label.</description></item>
-                    /// <item><description>VERSION: select by specific version.</description></item>
-                    /// </list>
+                    /// <para>The version selector type. Valid values: LABEL: selects by label. VERSION: selects by specific version.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>LABEL</para>
@@ -563,7 +590,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The selector value. When the type is LABEL, specify a label name such as latest. When the type is VERSION, specify a specific version number.</para>
+                    /// <para>The selector value. When the type is LABEL, this is the label name, such as latest. When the type is VERSION, this is the specific version number.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>latest</para>
@@ -606,14 +633,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The skills exclusively used by this sub-agent. Skill names must be unique within the same sub-agent. If not specified or an empty array is passed, no skills are configured.</para>
+                /// <para>The list of sub-agent skills.</para>
                 /// </summary>
                 [NameInMap("skills")]
                 [Validation(Required=false)]
                 public List<CreateManagedAgentRequestBodySubAgentsSkills> Skills { get; set; }
                 public class CreateManagedAgentRequestBodySubAgentsSkills : TeaModel {
                     /// <summary>
-                    /// <para>The skill name used by the sub-agent. Declared as optional for compatibility, but the backend validates that each entry is required.</para>
+                    /// <para>The skill name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>web-search</para>
@@ -623,7 +650,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The optional version number. If omitted, set to null, or left blank, the latest version is resolved.</para>
+                    /// <para>The skill version.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1.0.0</para>
@@ -644,14 +671,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public CreateManagedAgentRequestBodyTemplate Template { get; set; }
             public class CreateManagedAgentRequestBodyTemplate : TeaModel {
                 /// <summary>
-                /// <para>The AI Registry template configuration.</para>
+                /// <para>The AI registry template configuration.</para>
                 /// </summary>
                 [NameInMap("aiRegistry")]
                 [Validation(Required=false)]
                 public CreateManagedAgentRequestBodyTemplateAiRegistry AiRegistry { get; set; }
                 public class CreateManagedAgentRequestBodyTemplateAiRegistry : TeaModel {
                     /// <summary>
-                    /// <para>The name of the template in AI Registry.</para>
+                    /// <para>The name of the template in the AI registry.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -662,7 +689,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The version of the template in AI Registry.</para>
+                    /// <para>The version of the template in the AI registry.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1.0.0</para>
@@ -709,7 +736,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The reserved idempotency token. The backend does not provide idempotency guarantees in the current release.</para>
+        /// <para>The reserved idempotency token. The backend does not provide idempotency guarantees in the current phase.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-1</para>

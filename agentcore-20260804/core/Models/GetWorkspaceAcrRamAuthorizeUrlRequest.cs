@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string AcrInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The target ACR namespace, which corresponds to artifact.container.namespace of the agent. This is not a Kubernetes namespace. This parameter, together with the instance and repository, determines the authorization scope.</para>
+        /// <para>The target ACR namespace, which corresponds to artifact.container.namespace of the agent. This is not a Kubernetes namespace. It determines the authorization scope together with the instance and repository.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The name of the target repository, which corresponds to artifact.container.repo of the agent. The name cannot contain tags, namespaces, or path separators. Wildcards are not supported.</para>
+        /// <para>The target repository name, which corresponds to artifact.container.repo of the agent. It does not include tags, namespaces, or path separators. Wildcards are not supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

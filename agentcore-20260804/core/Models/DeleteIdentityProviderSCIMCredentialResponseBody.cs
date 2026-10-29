@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class DeleteIdentityProviderSCIMCredentialResponseBody : TeaModel {
         /// <summary>
-        /// <para>失败时结合 HTTP 状态及 message 处理。</para>
+        /// <para>The result code. Handle failures based on the HTTP status code and message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>本次请求的处理状态，不等同后台任务最终结果。</para>
+        /// <para>The HTTP status code of the request. This does not indicate the final result of the background task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>请求受理或错误消息；异步任务结果需按对应查询接口核对。</para>
+        /// <para>The message returned for the request. For asynchronous tasks, query the task result by calling the corresponding API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>用于关联本次调用与排障，失败时请保留。</para>
+        /// <para>The request ID. You can use this ID to troubleshoot issues. Keep the ID if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request-example</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>true 表示本次请求处理成功；异步写入仍需继续查询任务结果。</para>
+        /// <para>Indicates whether the request was successful. A value of true indicates that the request was successful. For asynchronous write operations, you must still query the task result.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
