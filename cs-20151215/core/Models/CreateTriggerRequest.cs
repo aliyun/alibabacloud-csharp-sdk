@@ -10,8 +10,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateTriggerRequest : TeaModel {
         /// <summary>
-        /// <para>The trigger action. Valid values:</para>
-        /// <para><c>redeploy</c>: redeploys the resource defined in <c>project_id</c>.</para>
+        /// <para>The action of the trigger. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>redeploy</c>: Redeploys the resources defined in <c>project_id</c>.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,8 +35,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The trigger project name.</para>
-        /// <para>The value consists of the namespace and application name in the format of <c>${namespace}/${name}</c>.</para>
+        /// <para>The project name of the trigger.</para>
+        /// <para>It consists of the namespace and the name of the application, in the format of <c>${namespace}/${name}</c>.</para>
         /// <para>Example: <c>default/test-app</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,11 +48,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The trigger type. Valid values:</para>
+        /// <para>The type of the trigger. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>deployment</c>: a trigger for stateless applications. </para>
+        /// <item><description><para><c>deployment</c>: The trigger for stateless applications. </para>
         /// </description></item>
-        /// <item><description><para><c>application</c>: a trigger for App Hub applications.</para>
+        /// <item><description><para><c>application</c>: The trigger for Application Center applications.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: <c>deployment</c>.</para>

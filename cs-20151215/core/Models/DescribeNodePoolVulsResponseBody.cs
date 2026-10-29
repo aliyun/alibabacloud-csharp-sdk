@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeNodePoolVulsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of node pool vulnerabilities.</para>
+        /// <para>The list of vulnerabilities in the node pool.</para>
         /// </summary>
         [NameInMap("vul_records")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The node name, which is the identifier of the node within the cluster.</para>
+            /// <para>The name of the node, which identifies the node in the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou.192.168.x.x</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<DescribeNodePoolVulsResponseBodyVulRecordsVulList> VulList { get; set; }
             public class DescribeNodePoolVulsResponseBodyVulRecordsVulList : TeaModel {
                 /// <summary>
-                /// <para>The vulnerability alias.</para>
+                /// <para>The alias of the vulnerability.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>RHSA-2019:3197-Important: sudo security update</para>
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string AliasName { get; set; }
 
                 /// <summary>
-                /// <para>The list of CVEs associated with the vulnerability.</para>
+                /// <para>The list of CVEs corresponding to the vulnerability.</para>
                 /// </summary>
                 [NameInMap("cve_list")]
                 [Validation(Required=false)]
                 public List<string> CveList { get; set; }
 
                 /// <summary>
-                /// <para>The vulnerability name.</para>
+                /// <para>The name of the vulnerability.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>oval:com.redhat.rhsa:def:20193197</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The vulnerability severity level.</para>
+                /// <para>The vulnerability level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>asap</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public List<DescribeNodePoolVulsResponseBodyVulRecordsVulListPackageList> PackageList { get; set; }
                 public class DescribeNodePoolVulsResponseBodyVulRecordsVulListPackageList : TeaModel {
                     /// <summary>
-                    /// <para>The package name.</para>
+                    /// <para>The name of the package.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>WebLogic</para>
@@ -114,12 +114,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the China Cloud Security CVE fix service has been purchased.</para>
+        /// <para>Indicates whether the Security Center CVE fix service is purchased. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Purchased.</para>
-        /// </description></item>
-        /// <item><description><para>false: Not purchased.</para>
-        /// </description></item>
+        /// <item><description>true: Purchased.</description></item>
+        /// <item><description>false: Not purchased.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UpdateResourcesDeleteProtectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The namespace of the resource.</para>
+        /// <para>The namespace where the resource resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of resources whose deletion protection status is updated.</para>
+        /// <para>The list of resources for which the deletion protection status is updated.</para>
         /// </summary>
         [NameInMap("resources")]
         [Validation(Required=false)]

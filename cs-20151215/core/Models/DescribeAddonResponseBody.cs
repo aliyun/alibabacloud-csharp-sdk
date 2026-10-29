@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> Architecture { get; set; }
 
         /// <summary>
-        /// <para>The component category.</para>
+        /// <para>The category of the component.</para>
         /// 
         /// <b>Example:</b>
         /// <para>network</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The schema of custom parameters for the component.</para>
+        /// <para>The custom parameter schema of the component.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? InstallByDefault { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the component is managed.</para>
+        /// <para>Indicates whether the component is a managed component.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The information about newer versions of the component.</para>
+        /// <para>The information about the latest versions of the component.</para>
         /// </summary>
         [NameInMap("newer_versions")]
         [Validation(Required=false)]
@@ -84,12 +84,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string MinimumClusterVersion { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the component can be upgraded to this version.</para>
+            /// <para>Indicates whether the component can be upgraded to this version. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: The upgrade is supported.</para>
-            /// </description></item>
-            /// <item><description><para>false: The upgrade is not supported.</para>
-            /// </description></item>
+            /// <item><description>true: Supported.</description></item>
+            /// <item><description>false: Not supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

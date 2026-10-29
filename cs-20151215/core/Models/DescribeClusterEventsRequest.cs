@@ -11,13 +11,19 @@ namespace AlibabaCloud.SDK.CS20151215.Models
     public class DescribeClusterEventsRequest : TeaModel {
         /// <summary>
         /// <para>The maximum number of results to return for a single request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("max_results")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. The value is the next_token parameter returned by the previous API call.</para>
+        /// <para>The pagination token. Set the value to the next_token value returned from the previous API call.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0123456789abcdef0123456789abcdef</para>
         /// </summary>
         [NameInMap("next_token")]
         [Validation(Required=false)]
@@ -34,9 +40,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return per page.</para>
-        /// <para>Valid values: 1 to 100.</para>
-        /// <para>Default value: 50.</para>
+        /// <para>The maximum number of entries to return on each page. Valid values: 1 to 100. Default value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

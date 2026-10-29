@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ListUserKubeConfigStatesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The pagination parameters.</para>
         /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of records per page.</para>
+            /// <para>The number of entries returned per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of results.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<ListUserKubeConfigStatesResponseBodyStates> States { get; set; }
         public class ListUserKubeConfigStatesResponseBodyStates : TeaModel {
             /// <summary>
-            /// <para>The expiration time of the KubeConfig certificate. Format: UTC time in RFC 3339 format.</para>
+            /// <para>The expiration time of the KubeConfig certificate. The time is displayed in UTC and follows the RFC 3339 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2028-04-09T06:20:47Z</para>
@@ -68,16 +68,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The current status of the KubeConfig certificate. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Expired: The certificate has expired.</para>
-            /// </description></item>
-            /// <item><description><para>Unexpired: The certificate has not expired.</para>
-            /// </description></item>
-            /// <item><description><para>Unissued: The certificate has not been issued.</para>
-            /// </description></item>
-            /// <item><description><para>Unknown: The status is unknown.</para>
-            /// </description></item>
-            /// <item><description><para>Removed: The certificate has been removed (an issuance record exists for the certificate).</para>
-            /// </description></item>
+            /// <item><description>Expired: The certificate has expired.</description></item>
+            /// <item><description>Unexpired: The certificate has not expired.</description></item>
+            /// <item><description>Unissued: The certificate has not been issued.</description></item>
+            /// <item><description>Unknown: The status is unknown.</description></item>
+            /// <item><description>Removed: The certificate has been removed (the certificate has an issuance record).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -116,9 +111,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <item><description><c>updating</c>: The cluster is being upgraded.</description></item>
             /// <item><description><c>updating_failed</c>: The cluster failed to be upgraded.</description></item>
             /// <item><description><c>scaling</c>: The cluster is being scaled.</description></item>
-            /// <item><description><c>stopped</c>: The cluster has stopped running.</description></item>
+            /// <item><description><c>stopped</c>: The cluster is stopped.</description></item>
             /// <item><description><c>deleting</c>: The cluster is being deleted.</description></item>
-            /// <item><description><c>deleted</c>: The cluster has been deleted.</description></item>
+            /// <item><description><c>deleted</c>: The cluster is deleted.</description></item>
             /// <item><description><c>delete_failed</c>: The cluster failed to be deleted.</description></item>
             /// </list>
             /// 

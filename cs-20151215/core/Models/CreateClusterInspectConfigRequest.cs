@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The inspection cycle defined by using the RFC5545 Recurrence Rule syntax. You must specify BYHOUR and BYMINUTE. Only FREQ=DAILY is supported. COUNT and UNTIL are not supported.</para>
+        /// <para>The inspection cycle defined by using the RFC5545 Recurrence Rule syntax. BYHOUR and BYMINUTE must be specified. Only FREQ=DAILY is supported. COUNT or UNTIL is not supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

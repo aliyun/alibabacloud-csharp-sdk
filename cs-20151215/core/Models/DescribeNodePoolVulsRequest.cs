@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeNodePoolVulsRequest : TeaModel {
         /// <summary>
-        /// <para>The severity levels of vulnerabilities to query. Separate multiple levels with commas (,). Valid values:</para>
+        /// <para>The necessity levels of the vulnerability fixes to query. Separate multiple levels with commas (,). Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>asap</c>: high</description></item>
         /// <item><description><c>later</c>: medium</description></item>

@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The diagnosis result code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: Diagnosis completed.</description></item>
-        /// <item><description>1: Diagnosis failed.</description></item>
+        /// <item><description>0: The diagnosis is completed.</description></item>
+        /// <item><description>1: The diagnosis failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Finished { get; set; }
 
         /// <summary>
-        /// <para>The diagnosis status information.</para>
+        /// <para>The diagnosis status message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -76,9 +76,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The diagnosis status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: Diagnosis created.</description></item>
-        /// <item><description>1: Diagnosis running.</description></item>
-        /// <item><description>2: Diagnosis completed.</description></item>
+        /// <item><description>0: The diagnosis is created.</description></item>
+        /// <item><description>1: The diagnosis is running.</description></item>
+        /// <item><description>2: The diagnosis is completed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

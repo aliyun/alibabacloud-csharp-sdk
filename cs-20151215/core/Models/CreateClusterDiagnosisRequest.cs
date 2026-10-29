@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateClusterDiagnosisRequest : TeaModel {
         /// <summary>
-        /// <para>The parameters used to specify the diagnosis target. The following examples show the parameters for different diagnosis types:</para>
+        /// <para>The parameters used to specify the diagnosis target. Examples of parameters for different diagnosis types:</para>
         /// <para>node:</para>
         /// <pre><c>{&quot;name&quot;: &quot;cn-shanghai.10.10.10.107&quot;}
         /// </c></pre>

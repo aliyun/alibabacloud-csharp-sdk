@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The agent permission mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>admin: Administrator mode. Grants all permissions.</description></item>
-        /// <item><description>restricted: Restricted mode. Grants only partial permissions.</description></item>
+        /// <item><description>admin: Administrator mode. The agent has all permissions.</description></item>
+        /// <item><description>restricted: Restricted mode. The agent has only partial permissions.</description></item>
         /// </list>
         /// <para>Default value: admin.</para>
         /// 

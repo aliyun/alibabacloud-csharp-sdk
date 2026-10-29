@@ -17,9 +17,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public Dictionary<string, string> Options { get; set; }
 
         /// <summary>
-        /// <para>The check target.</para>
-        /// <para>If the check type parameter <c>type</c> is set to <c>NodePoolUpgrade</c>, this parameter must be set to the node pool ID.</para>
-        /// <para>If other check types are selected, this parameter does not need to be set.</para>
+        /// <para>The check target. If the type parameter is set to NodePoolUpgrade, this parameter must be set to the node pool ID. For other check types, this parameter is not required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>np1f6779297c4444a3a1cdd29be8******</para>

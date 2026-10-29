@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The governance action of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>enforce</c>: blocks non-compliant deployments.</description></item>
-        /// <item><description><c>inform</c>: generates alerts.</description></item>
+        /// <item><description><c>enforce</c>: Blocks non-compliant deployments.</description></item>
+        /// <item><description><c>inform</c>: Triggers alerts.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Action { get; set; }
 
         /// <summary>
-        /// <para>The templatetype of the rule.</para>
+        /// <para>The rule templatetype.</para>
         /// 
         /// <b>Example:</b>
         /// <para>k8s-general</para>
@@ -46,8 +46,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>Indicates whether the rule is deleted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: not deleted.</description></item>
-        /// <item><description>1: deleted.</description></item>
+        /// <item><description>0: Not deleted.</description></item>
+        /// <item><description>1: Deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,10 +68,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the policy requires configuration. Valid values: </para>
+        /// <para>Specifies whether policy configuration is required. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>0: parameter settings required.</description></item>
-        /// <item><description>1: no parameter settings required.</description></item>
+        /// <item><description>0: Parameter settings are required.</description></item>
+        /// <item><description>1: No parameter settings are required.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,9 +84,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The governance severity of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>high</c>: high risk.</description></item>
-        /// <item><description><c>medium</c>: medium risk.</description></item>
-        /// <item><description><c>low</c>: low risk.</description></item>
+        /// <item><description><c>high</c>: High-risk.</description></item>
+        /// <item><description><c>medium</c>: Medium-risk.</description></item>
+        /// <item><description><c>low</c>: Low-risk.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The details of the rule template.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>For more information, see the request example</para>
+        /// <para>For more information, see the request examples</para>
         /// </summary>
         [NameInMap("template")]
         [Validation(Required=false)]

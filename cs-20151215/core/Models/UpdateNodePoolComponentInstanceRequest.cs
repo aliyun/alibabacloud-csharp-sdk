@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to disable the rolling update. Default value: false. Updating the baseline configuration triggers a rolling update of the nodes.</para>
+        /// <para>Specifies whether to disable rolling updates. Default value: false. Updating the baseline configuration triggers a rolling update of the nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? DisableRolling { get; set; }
 
         /// <summary>
-        /// <para>The list of nodes to be updated in a rolling manner. By default, all nodes are updated.</para>
+        /// <para>The list of nodes to be updated in a rolling manner. Default value: all nodes.</para>
         /// </summary>
         [NameInMap("node_names")]
         [Validation(Required=false)]
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? BatchInterval { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of nodes that are allowed to fail during the rolling update. Default value: 0. A value of 0 indicates that the task fails if any node fails. A value greater than 0 indicates that the task fails and stops if the cumulative number of failed nodes exceeds this value.</para>
+            /// <para>The maximum number of nodes allowed to fail during the rolling update. Default value: 0. A value of 0 indicates that the task fails if any node fails. A value greater than 0 indicates that the task fails and stops if the cumulative number of failed nodes exceeds this value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? MaxFailedNodes { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of parallel updates per batch. Default value: 1.</para>
+            /// <para>The maximum number of parallel nodes per batch. Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? MaxParallelism { get; set; }
 
             /// <summary>
-            /// <para>The auto-pause policy during the node upgrade process. Valid values: NotPause, FirstBatch, and EveryBatch. Default value: NotPause.</para>
+            /// <para>The automatic pause policy during node upgrades. Valid values: NotPause, FirstBatch, and EveryBatch. Default value: NotPause.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NotPause</para>

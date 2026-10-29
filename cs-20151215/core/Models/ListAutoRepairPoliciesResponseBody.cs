@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<string> ResourceIds { get; set; }
 
             /// <summary>
-            /// <para>The subtype of resource bound to the self-healing rule.</para>
+            /// <para>The resource subtype bound to the self-healing rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ess</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ResourceSubType { get; set; }
 
             /// <summary>
-            /// <para>The type of resource bound to the self-healing rule.</para>
+            /// <para>The resource type bound to the self-healing rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nodepool</para>
@@ -71,14 +71,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<ListAutoRepairPoliciesResponseBodyItemsRules> Rules { get; set; }
             public class ListAutoRepairPoliciesResponseBodyItemsRules : TeaModel {
                 /// <summary>
-                /// <para>The list of identified faults.</para>
+                /// <para>The list of identified incidents.</para>
                 /// </summary>
                 [NameInMap("incidents")]
                 [Validation(Required=false)]
                 public List<ListAutoRepairPoliciesResponseBodyItemsRulesIncidents> Incidents { get; set; }
                 public class ListAutoRepairPoliciesResponseBodyItemsRulesIncidents : TeaModel {
                     /// <summary>
-                    /// <para>The name of the fault.</para>
+                    /// <para>The name of the incident.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Node.FaultNeedReboot.HOST</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The diagnosis type.</para>
+                    /// <para>The diagnostic type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>system</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                     public ListAutoRepairPoliciesResponseBodyItemsRulesRepairProcedureIntervention Intervention { get; set; }
                     public class ListAutoRepairPoliciesResponseBodyItemsRulesRepairProcedureIntervention : TeaModel {
                         /// <summary>
-                        /// <para>The label configuration for authorization confirmation. When you add the following labels to the node, you authorize ACK to execute the operation for this stage. After completing the operation for this stage, ACK automatically removes the authorization inquiry and authorization confirmation labels corresponding to this stage. If you do not add the following labels in time to grant authorization, ACK will not execute the action for this stage and subsequent actions, and the node may remain in a damaged state.</para>
+                        /// <para>The label configuration for authorization confirmation. When you add the following labels to a node, you authorize ACK to perform operations in this phase. After completing the operations in this phase, ACK automatically removes the inquiry and confirmation labels for this phase. If you do not add the following labels in time, ACK will not perform the actions in this phase and subsequent phases, and the node may remain in a damaged state.</para>
                         /// </summary>
                         [NameInMap("approved_label")]
                         [Validation(Required=false)]
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                         public bool? Enable { get; set; }
 
                         /// <summary>
-                        /// <para>The label configuration for authorization inquiry. When this stage is reached, ACK adds the following labels to your node and waits for your authorization to execute the action for this stage.</para>
+                        /// <para>The label configuration for authorization inquiry. When this phase is entered, ACK adds the following labels to your node and waits for your authorization to perform the actions in this phase.</para>
                         /// </summary>
                         [NameInMap("inquiring_label")]
                         [Validation(Required=false)]
@@ -213,6 +213,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 }
 
             }
+
+            /// <summary>
+            /// <para>The rule type. The value is case-sensitive. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>custom: user-defined rules that support modification and deletion</description></item>
+            /// <item><description>builtin: built-in system rules that are read-only and do not support creation, modification, or deletion</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>custom</para>
+            /// </summary>
+            [NameInMap("type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
 
         }
 

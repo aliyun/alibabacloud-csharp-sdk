@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>Specifies whether to delete all custom tags. This parameter takes effect only when <c>tag_keys</c> is empty. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: Deletes all tags.</description></item>
-        /// <item><description><c>false</c>: Does not delete all tags.</description></item>
+        /// <item><description><c>true</c>: deletes all tags.</description></item>
+        /// <item><description><c>false</c>: does not delete all tags.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of resource IDs. You can specify up to 50 resource IDs.</para>
+        /// <para>The list of resource IDs. Up to 50 resource IDs can be specified.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("resource_ids")]
@@ -43,8 +43,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> ResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The resource type.</para>
-        /// <para>CLUSTER: cluster.</para>
+        /// <para>The resource type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>CLUSTER: cluster.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of tag keys for the resource. You can specify up to 20 tag keys.</para>
+        /// <para>The list of tag keys for the resources. Up to 20 tag keys can be specified.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("tag_keys")]

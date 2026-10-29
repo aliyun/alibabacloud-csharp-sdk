@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The collection of tag resources.</para>
+        /// <para>The collection of tagged resources.</para>
         /// </summary>
         [NameInMap("tag_resources")]
         [Validation(Required=false)]
         public ListTagResourcesResponseBodyTagResources TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// <para>The tag resource.</para>
+            /// <para>The tagged resource.</para>
             /// </summary>
             [NameInMap("tag_resource")]
             [Validation(Required=false)]

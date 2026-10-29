@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The names of the components in the group.</para>
+            /// <para>The names of the components included in the group.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]

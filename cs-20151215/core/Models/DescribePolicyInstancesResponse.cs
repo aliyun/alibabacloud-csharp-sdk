@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribePolicyInstancesResponseBody> Body { get; set; }
         public class DescribePolicyInstancesResponseBody : TeaModel {
             /// <summary>
-            /// <para>The UID of the policy instance implementer.</para>
+            /// <para>The UID of the policy instance enforcer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16298168****</para>
@@ -102,9 +102,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string PolicySeverity { get; set; }
 
             /// <summary>
-            /// <para>The scope of the policy instance.</para>
-            /// <para>By default, an asterisk (*) indicates all namespaces in the cluster.</para>
-            /// <para>Otherwise, the names of the namespaces to which the policy applies are returned. Multiple namespaces are separated by commas (,).</para>
+            /// <para>The enforcement scope of the policy instance.</para>
+            /// <para>A value of &quot;*&quot; indicates all namespaces in the cluster.</para>
+            /// <para>Otherwise, the names of the target namespaces are returned, separated by commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <list type="bullet">
             /// <item><description><para><c>deny</c>: Blocks non-compliant deployments.</para>
             /// </description></item>
-            /// <item><description><para><c>warn</c>: Generates an alert.</para>
+            /// <item><description><para><c>warn</c>: Triggers an alert.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The creation time. This parameter is deprecated. Do not use it.</para>
+            /// <para><b>[Deprecated]</b> The creation time. Do not use this parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-29T18:09:12+08:00</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The update time. This parameter is deprecated. Do not use it.</para>
+            /// <para><b>[Deprecated]</b> The update time. Do not use this parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-29T18:09:12+08:00</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The resource ID. This parameter is deprecated. Do not use it.</para>
+            /// <para><b>[Deprecated]</b> The resource ID. Do not use this parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456***</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The number of violations processed in the cluster. This parameter is deprecated. Do not use it.</para>
+            /// <para><b>[Deprecated]</b> The number of processed violations in the cluster. Do not use this parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The deletion status. This parameter is deprecated. Do not use it.</para>
+            /// <para><b>[Deprecated]</b> The deletion status. Do not use this parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

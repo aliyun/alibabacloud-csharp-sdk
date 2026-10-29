@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<UnInstallClusterAddonsRequestAddons> Addons { get; set; }
         public class UnInstallClusterAddonsRequestAddons : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to clean up associated cloud resources when uninstalling the component. Valid values:</para>
+            /// <para>Specifies whether to clean up the associated cloud resources when uninstalling the component. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: Clean up.</description></item>
             /// <item><description>false: Retain.</description></item>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? CleanupCloudResources { get; set; }
 
             /// <summary>
-            /// <para>The name of the component to uninstall. You can call the <a href="https://help.aliyun.com/document_detail/2667940.html">ListClusterAddonInstances</a> operation to query the components installed in a cluster.</para>
+            /// <para>The name of the component to uninstall. You can call the <a href="https://help.aliyun.com/document_detail/2667940.html">ListClusterAddonInstances</a> operation to query the components installed in the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ack-node-problem-detector</para>

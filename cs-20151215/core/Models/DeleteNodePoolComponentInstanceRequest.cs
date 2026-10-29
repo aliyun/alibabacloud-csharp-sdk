@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? BatchInterval { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of nodes that can fail during the rolling process. Default value: 0. A value of 0 indicates that the task fails if any node fails. A value greater than 0 indicates that the task fails and stops if the cumulative number of failed nodes exceeds this value.</para>
+        /// <para>The maximum number of nodes that are allowed to fail during the rolling process. Default value: 0. A value of 0 indicates that the task fails if any node fails. A value greater than 0 indicates that the task fails and stops if the cumulative number of failed nodes exceeds this value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? MaxFailedNodes { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of parallel operations per batch. Default value: 1.</para>
+        /// <para>The maximum number of parallel nodes per batch. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> NodeNames { get; set; }
 
         /// <summary>
-        /// <para>The auto-pause policy during a node upgrade. Valid values:</para>
+        /// <para>The auto-pause policy during the node upgrade process. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>NotPause</description></item>
         /// <item><description>FirstBatch</description></item>

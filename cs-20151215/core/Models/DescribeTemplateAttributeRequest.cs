@@ -12,12 +12,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The templatetype.</para>
         /// <list type="bullet">
-        /// <item><description><para>If the value is set to <c>kubernetes</c>, the template is displayed on the Orchestration Templates page in the console.</para>
+        /// <item><description><para>If this parameter is set to <c>kubernetes</c>, the template is displayed on the Orchestration Templates page in the console.</para>
         /// </description></item>
-        /// <item><description><para>If this parameter is left empty or set to other values, the template is not displayed on the Orchestration Templates page in the console.</para>
+        /// <item><description><para>If this parameter is not specified or is set to another value, the template is not displayed on the Orchestration Templates page in the console.</para>
         /// </description></item>
         /// </list>
-        /// <para>Settings this parameter to <c>kubernetes</c> is recommended.</para>
+        /// <para>Recommended Settings: <c>kubernetes</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>kubernetes</para>

@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The state of the component.</para>
+            /// <para>The state of the component. Valid values: installing, failed, active, upgrading, updating, and uninstalling.</para>
             /// 
             /// <b>Example:</b>
             /// <para>active</para>

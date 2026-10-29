@@ -35,9 +35,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The project name of the trigger.</para>
-        /// <para>It consists of the namespace and the name of the application, in the format of <c>${namespace}/${name}</c>.</para>
-        /// <para>Example: <c>default/test-app</c>.</para>
+        /// <para>The project name of the trigger. It consists of the namespace and the name of the application, in the format of <c>${namespace}/${name}</c>. Example: <c>default/test-app</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,10 +48,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The type of the trigger. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>deployment</c>: The trigger for stateless applications. </description></item>
-        /// <item><description><c>application</c>: The trigger for Hybrid Cloud Application Center applications.</description></item>
+        /// <item><description><c>deployment</c>: The trigger for stateless applications.</description></item>
+        /// <item><description><c>application</c>: The trigger for applications in Hybrid Cloud Application Center.
+        /// Default value: <c>deployment</c>.</description></item>
         /// </list>
-        /// <para>Default value: <c>deployment</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>deployment</para>

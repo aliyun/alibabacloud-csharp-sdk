@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The list of nodes for the rolling update. Default value: all nodes.</para>
+        /// <para>The list of nodes specified for the rolling update. Default value: all nodes.</para>
         /// </summary>
         [NameInMap("node_names")]
         [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public CreateNodePoolComponentInstancesRequestRollingPolicy RollingPolicy { get; set; }
         public class CreateNodePoolComponentInstancesRequestRollingPolicy : TeaModel {
             /// <summary>
-            /// <para>The interval between batches in seconds. Default value: 0.</para>
+            /// <para>The upgrade interval between batches, in seconds. Default value: 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? BatchInterval { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of nodes that can fail during the rolling update. Default value: 0. A value of 0 indicates that the task fails if any node fails. A value greater than 0 indicates that the task fails and stops if the cumulative number of failed nodes exceeds this value.</para>
+            /// <para>The maximum number of nodes allowed to fail during the rolling update. Default value: 0. A value of 0 indicates that the task fails if any node fails. A value greater than 0 indicates that the task fails and stops if the cumulative number of failed nodes exceeds this value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? MaxParallelism { get; set; }
 
             /// <summary>
-            /// <para>The auto-pause policy during the node upgrade. Valid values: NotPause, FirstBatch, and EveryBatch. Default value: NotPause.</para>
+            /// <para>The auto-pause policy during the node upgrade process. Valid values: NotPause, FirstBatch, and EveryBatch. Default value: NotPause.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NotPause</para>

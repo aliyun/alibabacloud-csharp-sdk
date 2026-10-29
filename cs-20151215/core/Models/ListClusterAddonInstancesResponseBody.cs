@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ListClusterAddonInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of installed component instances.</para>
+        /// <para>The list of installed add-on instances.</para>
         /// </summary>
         [NameInMap("addons")]
         [Validation(Required=false)]
         public List<ListClusterAddonInstancesResponseBodyAddons> Addons { get; set; }
         public class ListClusterAddonInstancesResponseBodyAddons : TeaModel {
             /// <summary>
-            /// <para>The component name.</para>
+            /// <para>The add-on name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>coredns</para>
@@ -27,12 +27,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The component status. Valid values:</para>
+            /// <para>The add-on status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>active: installed</description></item>
-            /// <item><description>updating: being updated</description></item>
-            /// <item><description>upgrading: being upgraded</description></item>
-            /// <item><description>deleting: being uninstalled</description></item>
+            /// <item><description>active: Installed.</description></item>
+            /// <item><description>updating: Modifying.</description></item>
+            /// <item><description>upgrading: Upgrading.</description></item>
+            /// <item><description>deleting: Uninstalling.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The component version.</para>
+            /// <para>The add-on version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1.9.3.10-7dfca203-aliyun</para>

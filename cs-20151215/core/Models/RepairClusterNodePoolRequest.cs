@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para><b>[Deprecated]</b> Specifies whether to allow instance restart.</para>
+        /// <para><b>[Deprecated]</b> Specifies whether to restart the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> Nodes { get; set; }
 
         /// <summary>
-        /// <para>The repair operations to perform. If not specified, all repair operations are performed by default. In most scenarios, you do not need to specify this parameter.</para>
+        /// <para>The repair operations to be performed. If you do not specify this parameter, all repair operations are performed by default. You do not need to specify this parameter in common scenarios.</para>
         /// </summary>
         [NameInMap("operations")]
         [Validation(Required=false)]
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <item><description>restart.docker: Restarts Docker.</description></item>
             /// <item><description>restart.containerd: Restarts Containerd.</description></item>
             /// <item><description>restart.ntp: Restarts ntpd or chronyd.</description></item>
-            /// <item><description>remove.containerdContainerInSandbox: Removes a specified sandbox container under Containerd.</description></item>
-            /// <item><description>remove.dockerContainerInSandbox: Removes a specified sandbox container under Docker.</description></item>
-            /// <item><description>remove.containerdContainer: Removes a specified container under Containerd.</description></item>
-            /// <item><description>remove.dockerContainer: Removes a specified container under Docker.</description></item>
+            /// <item><description>remove.containerdContainerInSandbox: Deletes the specified sandbox container in Containerd.</description></item>
+            /// <item><description>remove.dockerContainerInSandbox: Deletes the specified sandbox container in Docker.</description></item>
+            /// <item><description>remove.containerdContainer: Deletes the specified container in Containerd.</description></item>
+            /// <item><description>remove.dockerContainer: Deletes the specified container in Docker.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

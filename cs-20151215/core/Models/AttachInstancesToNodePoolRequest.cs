@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class AttachInstancesToNodePoolRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to store container data and images on a data cloud disk. Valid values:</para>
+        /// <para>Specifies whether to store container data and images on data cloud disks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: Stores container data and images on a data cloud disk.</para>
+        /// <item><description><para><c>true</c>: Stores container data and images on data cloud disks.</para>
         /// </description></item>
-        /// <item><description><para><c>false</c>: Does not store container data and images on a data cloud disk.</para>
+        /// <item><description><para><c>false</c>: Does not store container data and images on data cloud disks.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: <c>false</c>.</para>
         /// <para>Data cloud disk mounting rules:</para>
         /// <list type="bullet">
-        /// <item><description>If the ECS instance has data cloud disks mounted and the file system of the last data cloud disk is not initialized, the system automatically formats the data cloud disk to EXT4 to store the content of /var/lib/docker and /var/lib/kubelet.</description></item>
-        /// <item><description>If the ECS instance has no data cloud disks mounted, no new data cloud disk is mounted.<remarks>
-        /// <para>If you choose to store data on a data cloud disk and the ECS instance already has data cloud disks mounted, the existing data on the data cloud disk is lost. Back up your data in advance.</para>
+        /// <item><description>If the ECS instance has data cloud disks mounted and the file system of the last data cloud disk is not initialized, the system automatically formats the data cloud disk to EXT4 to store the /var/lib/docker and /var/lib/kubelet directories.</description></item>
+        /// <item><description>If the ECS instance does not have data cloud disks mounted, no new data cloud disks are mounted.<remarks>
+        /// <para>If you choose to store data on data cloud disks and the ECS instance already has data cloud disks mounted, the existing data on the data cloud disks will be lost. Back up your data in advance.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? KeepInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The SSH logon password of the instances to be added.</para>
+        /// <para>The SSH logon password for the instances to be added.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>

@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UpdateK8sClusterUserConfigExpireRequest : TeaModel {
         /// <summary>
-        /// <para>The custom expiration time specified by the user. Unit: hours.</para>
-        /// <para>Valid values: [1, 876000], which indicates a maximum of 100 years.</para>
+        /// <para>The custom expiration time. Unit: hours.</para>
+        /// <para>Valid values: 1 to 876000, which is equivalent to a maximum of 100 years.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

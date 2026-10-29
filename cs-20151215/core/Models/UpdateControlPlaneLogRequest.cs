@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> Components { get; set; }
 
         /// <summary>
-        /// <para>The name of the SLS project used to store control plane component logs.</para>
-        /// <para>Default value: k8s-log-$Cluster ID.</para>
+        /// <para>The name of the SLS project where control plane component logs are stored.</para>
+        /// <para>Default value: k8s-log-$ClusterId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>k8s-log-c5b5e80b0b64a4bf6939d2d8fbbc5****</para>
@@ -44,8 +44,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string LogProject { get; set; }
 
         /// <summary>
-        /// <para>The log retention period in the SLS Logstore. Valid values: 1 to 3000. Unit: days.</para>
-        /// <para>Default value: 30 days.</para>
+        /// <para>The retention period of logs in the SLS Logstore. Valid values: 1 to 3000. Unit: days.</para>
+        /// <para>Default value: 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class RunClusterInspectRequest : TeaModel {
         /// <summary>
-        /// <para>The idempotence token.</para>
+        /// <para>The idempotency token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c82e6987e2961451182edacd74faf</para>

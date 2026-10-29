@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// <para>Specifies the cluster name for fuzzy matching.</para>
+        /// <para>The cluster name used for fuzzy matching.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -29,6 +29,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the resource group used to filter clusters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-a1b2c3d4e5f6g7h</para>
+        /// </summary>
         [NameInMap("resource_group_id")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

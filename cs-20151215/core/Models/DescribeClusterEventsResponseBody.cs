@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribeClusterEventsResponseBodyEvents> Events { get; set; }
         public class DescribeClusterEventsResponseBodyEvents : TeaModel {
             /// <summary>
-            /// <para>The ID of the cluster.</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c82e6987e2961451182edacd74faf****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The description of the event.</para>
+            /// <para>The event description.</para>
             /// </summary>
             [NameInMap("data")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Level { get; set; }
 
                 /// <summary>
-                /// <para>The details of the event.</para>
+                /// <para>The event details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Start to upgrade NodePool nodePool/npdd89dc2b76c04f14b06774883b******</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>The status of the event.</para>
+                /// <para>The event status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Started</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// <para>The ID of the event.</para>
+            /// <para>The event ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>e-9ad04f72-8ee7-46bf-a02c-e4a06b39****</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string EventId { get; set; }
 
             /// <summary>
-            /// <para>The source of the event.</para>
+            /// <para>The event source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>task</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The operation object associated with the event.</para>
+            /// <para>The object associated with the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>npdd89dc2b76c04f14b06774883b******</para>
@@ -108,22 +108,22 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The event type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cluster_create: Creates a cluster.</description></item>
-            /// <item><description>cluster_scaleout: Scales out a cluster.</description></item>
-            /// <item><description>cluster_attach: Adds existing nodes.</description></item>
-            /// <item><description>cluster_delete: Deletes a cluster.</description></item>
-            /// <item><description>cluster_upgrade: Upgrades a cluster.</description></item>
-            /// <item><description>cluster_migrate: Migrates a cluster.</description></item>
-            /// <item><description>cluster_node_delete: Removes a node.</description></item>
-            /// <item><description>cluster_node_drain: Drains a node.</description></item>
-            /// <item><description>cluster_modify: Modifies a cluster.</description></item>
-            /// <item><description>cluster_configuration_modify: Modifies the control configurations of a cluster.</description></item>
-            /// <item><description>cluster_addon_install: Installs a component.</description></item>
-            /// <item><description>cluster_addon_upgrade: Upgrades a component.</description></item>
-            /// <item><description>cluster_addon_uninstall: Uninstalls a component.</description></item>
-            /// <item><description>runtime_upgrade: Upgrades the runtime.</description></item>
-            /// <item><description>nodepool_upgrade: Upgrades a node pool.</description></item>
-            /// <item><description>nodepool_update: Updates a node pool.</description></item>
+            /// <item><description>cluster_create: cluster creation</description></item>
+            /// <item><description>cluster_scaleout: cluster scale-out</description></item>
+            /// <item><description>cluster_attach: addition of existing nodes</description></item>
+            /// <item><description>cluster_delete: cluster deletion</description></item>
+            /// <item><description>cluster_upgrade: cluster upgrade</description></item>
+            /// <item><description>cluster_migrate: cluster migration</description></item>
+            /// <item><description>cluster_node_delete: node removal</description></item>
+            /// <item><description>cluster_node_drain: node draining</description></item>
+            /// <item><description>cluster_modify: cluster modification</description></item>
+            /// <item><description>cluster_configuration_modify: cluster management configuration modification</description></item>
+            /// <item><description>cluster_addon_install: add-on installation</description></item>
+            /// <item><description>cluster_addon_upgrade: add-on upgrade</description></item>
+            /// <item><description>cluster_addon_uninstall: add-on uninstallation</description></item>
+            /// <item><description>runtime_upgrade: runtime upgrade</description></item>
+            /// <item><description>nodepool_upgrade: node pool upgrade</description></item>
+            /// <item><description>nodepool_update: node pool update</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of results to return per page.</para>
+            /// <para>The maximum number of results to display on each page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>

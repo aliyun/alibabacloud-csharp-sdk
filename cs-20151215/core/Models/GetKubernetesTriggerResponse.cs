@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The trigger project name. It consists of the namespace and the name of the application, in the format of <c>${namespace}/${name}</c>. Example: default/test-app.</para>
+            /// <para>The trigger project name. It consists of the namespace and name of the application, in the <c>${namespace}/${name}</c> format. Example: default/test-app.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default/test-app</para>

@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<CheckServiceRoleRequestRoles> Roles { get; set; }
         public class CheckServiceRoleRequestRoles : TeaModel {
             /// <summary>
-            /// <para>Container service role name. For information about container service roles and permission scopes included in ACK, see <a href="https://help.aliyun.com/document_detail/86483.html">ACK service roles</a>.</para>
+            /// <para>The name of the service role. For more information about the service roles and permission scopes in Container Service for Kubernetes (ACK), see <a href="https://help.aliyun.com/document_detail/86483.html">Service roles for ACK</a>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

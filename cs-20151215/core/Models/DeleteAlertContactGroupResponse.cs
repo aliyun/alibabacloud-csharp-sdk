@@ -22,10 +22,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DeleteAlertContactGroupResponseBody> Body { get; set; }
         public class DeleteAlertContactGroupResponseBody : TeaModel {
             /// <summary>
-            /// <para>The deletion status. Valid values:</para>
+            /// <para>The deletion status.</para>
             /// <list type="bullet">
-            /// <item><description>true: Deleted.</description></item>
-            /// <item><description>false: Failed to delete.</description></item>
+            /// <item><description>true: Deletion succeeded.</description></item>
+            /// <item><description>false: Deletion failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? Status { get; set; }
 
             /// <summary>
-            /// <para>The message returned when the operation fails.</para>
+            /// <para>The message returned when the execution fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Delete contact group resource failed.</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Msg { get; set; }
 
             /// <summary>
-            /// <para>The alert contact group ID.</para>
+            /// <para>The ID of the alert contact group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12345</para>

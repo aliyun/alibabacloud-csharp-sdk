@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The precheck report ID.</para>
+        /// <para>The ID of the precheck report.</para>
         /// 
         /// <b>Example:</b>
         /// <para>be4c8eb72de94d459ea7ace7c811d119</para>
@@ -32,10 +32,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The current upgrade status of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>success</c>: The upgrade is successful.</description></item>
-        /// <item><description><c>fail</c>: The upgrade failed.</description></item>
-        /// <item><description><c>pause</c>: The upgrade is paused.</description></item>
-        /// <item><description><c>running</c>: The upgrade is in progress.</description></item>
+        /// <item><description><c>success</c>: Upgrade succeeded.</description></item>
+        /// <item><description><c>fail</c>: Upgrade failed.</description></item>
+        /// <item><description><c>pause</c>: Upgrade paused.</description></item>
+        /// <item><description><c>running</c>: Upgrade in progress.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,13 +46,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The current upgrade phase of the cluster. Valid values:</para>
+        /// <para>The current upgrade stage of the cluster. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>not_start</c>: Not started.</description></item>
         /// <item><description><c>prechecking</c>: Prechecking.</description></item>
         /// <item><description><c>upgrading</c>: Upgrading.</description></item>
         /// <item><description><c>pause</c>: Paused.</description></item>
-        /// <item><description><c>success</c>: The upgrade is successful.</description></item>
+        /// <item><description><c>success</c>: Upgrade succeeded.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string UpgradeStep { get; set; }
 
         /// <summary>
-        /// <para>The upgrade task details.</para>
+        /// <para>The details of the upgrade task.</para>
         /// </summary>
         [NameInMap("upgrade_task")]
         [Validation(Required=false)]
@@ -80,10 +80,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The upgrade task status. Valid values:</para>
+            /// <para>The status of the upgrade task. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>running</c>: Running.</description></item>
-            /// <item><description><c>Success</c>: Successful.</description></item>
+            /// <item><description><c>Success</c>: Succeeded.</description></item>
             /// <item><description><c>Failed</c>: Failed.</description></item>
             /// </list>
             /// 

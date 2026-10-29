@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Version { get; set; }
 
         /// <summary>
-        /// <para>The description of the component.</para>
+        /// <para>The description of the component features.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -40,11 +40,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the component is required for the cluster. Valid values:</para>
+        /// <para>Specifies whether the component is required for the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: The component is required and must be installed when the cluster is created.</para>
+        /// <item><description><para>true: The component is required and must be installed when the cluster is created.</para>
         /// </description></item>
-        /// <item><description><para><c>false</c>: The component is not required. You can install it through component management after the cluster is created.</para>
+        /// <item><description><para>false: The component is not required. You can install it in the Components module after the cluster is created.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -56,10 +56,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Required { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to disable default installation. When a cluster is created, in addition to the required components, some log-related or routing-related components (such as Ingress) are installed by default. If you do not want these components to be installed by default, set this parameter to disable default installation. Valid values:</para>
+        /// <para>Specifies whether to disable the default installation of the component. When a cluster is created, components required for the cluster are installed. In addition, some components related to logs or routing, such as Ingress, are installed by default. If you do not want to install these components by default, you can set this parameter to disable the default installation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: Default installation is disabled.</description></item>
-        /// <item><description><c>false</c>: Default installation is enabled.</description></item>
+        /// <item><description>true: disables the default installation.</description></item>
+        /// <item><description>false: enables the default installation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

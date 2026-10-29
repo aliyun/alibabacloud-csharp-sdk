@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The governance action of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>deny</c>: blocks non-compliant deployments.</description></item>
-        /// <item><description><c>warn</c>: generates alerts.</description></item>
+        /// <item><description><c>deny</c>: Blocks non-compliant deployments.</description></item>
+        /// <item><description><c>warn</c>: Generates an alert.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Action { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the policy rule instance.</para>
+        /// <para>The instance ID of the policy rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>allowed-repos-cbhhb</para>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The namespaces to which the policy applies. An empty value indicates all namespaces.</para>
+        /// <para>The namespaces where the policy is enforced. If this parameter is left empty, the policy is enforced in all namespaces.</para>
         /// </summary>
         [NameInMap("namespaces")]
         [Validation(Required=false)]
         public List<string> Namespaces { get; set; }
 
         /// <summary>
-        /// <para>The configuration parameters of the current rule instance. For more information about parameter settings rules, see <a href="https://help.aliyun.com/document_detail/359819.html">Container Security Policy Rule Library</a>.</para>
+        /// <para>The configuration parameters of the current rule instance. For more information about the rules for parameter settings, see <a href="https://help.aliyun.com/document_detail/359819.html">Container security policy rule library</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;restrictedNamespaces&quot;: [ &quot;test&quot; ]</para>

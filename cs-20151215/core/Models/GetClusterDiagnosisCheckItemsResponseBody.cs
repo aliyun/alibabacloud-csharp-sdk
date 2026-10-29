@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Group { get; set; }
 
             /// <summary>
-            /// <para>The assessment result of the check item.</para>
+            /// <para>The evaluation result of the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>normal</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The check item name.</para>
+            /// <para>The name of the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HostDNS</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Refer { get; set; }
 
             /// <summary>
-            /// <para>The check item value.</para>
+            /// <para>The value of the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>True</para>

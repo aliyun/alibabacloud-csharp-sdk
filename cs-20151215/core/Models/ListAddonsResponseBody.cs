@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ListAddonsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of available add-on components.</para>
+        /// <para>The list of available components.</para>
         /// </summary>
         [NameInMap("addons")]
         [Validation(Required=false)]
@@ -24,16 +24,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<string> Architecture { get; set; }
 
             /// <summary>
-            /// <para>The component categorization. Valid values:</para>
+            /// <para>The category of the component. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>core: core component.</description></item>
-            /// <item><description>network: network type component.</description></item>
-            /// <item><description>security: security component.</description></item>
-            /// <item><description>storage: storage component.</description></item>
-            /// <item><description>monitor: logging and monitoring component.</description></item>
-            /// <item><description>application: application component.</description></item>
+            /// <item><description>core: core component</description></item>
+            /// <item><description>network: network component</description></item>
+            /// <item><description>security: security component</description></item>
+            /// <item><description>storage: storage component</description></item>
+            /// <item><description>monitor: logging and monitoring component</description></item>
+            /// <item><description>application: application component</description></item>
             /// </list>
-            /// <para>An empty value indicates that the component belongs to another categorization.</para>
+            /// <para>An empty value indicates that the component belongs to another category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>monitor</para>
@@ -55,10 +55,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>Indicates whether the component is installed by default. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: The component is installed by default when a cluster is created.</para>
-            /// </description></item>
-            /// <item><description><para>false: The component is not installed by default.</para>
-            /// </description></item>
+            /// <item><description>true: The component is installed by default when the cluster is created.</description></item>
+            /// <item><description>false: The component is not installed by default.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,10 +69,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>Indicates whether the component is managed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: The component is managed.</para>
-            /// </description></item>
-            /// <item><description><para>false: The component is not managed.</para>
-            /// </description></item>
+            /// <item><description>true: The component is managed.</description></item>
+            /// <item><description>false: The component is not managed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,7 +81,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? Managed { get; set; }
 
             /// <summary>
-            /// <para>The component name.</para>
+            /// <para>The name of the component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>arms-prometheus</para>
@@ -102,7 +98,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<string> SupportedActions { get; set; }
 
             /// <summary>
-            /// <para>The component version.</para>
+            /// <para>The version of the component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.1.9</para>

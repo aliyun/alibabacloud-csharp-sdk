@@ -1,3 +1,9 @@
+2026-10-29 Version: 7.2.5
+- Update API CreateClusterNodePool: add request parameters body.management.auto_repair_policy.auto_repair_policy_id.
+- Update API DescribeAutoRepairPolicy: add response parameters Body.type.
+- Update API ListAutoRepairPolicies: add response parameters Body.items.$.type.
+
+
 2026-10-21 Version: 7.2.3
 - Generated csharp 2015-12-15 for CS.
 

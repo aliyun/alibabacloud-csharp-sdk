@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The Kubernetes API version to which the object belongs.</para>
+            /// <para>The Kubernetes API version of the object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1</para>

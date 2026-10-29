@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para><b>[Deprecated]</b> You do not need to specify this parameter.</para>
+        /// <para><b>[Deprecated]</b> Do not specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -23,10 +23,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ComponentName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to upgrade only the control plane.</para>
+        /// <para>Specifies whether to upgrade only the control plane. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Upgrades only the control plane.</description></item>
-        /// <item><description>false: Upgrades both the control plane and worker nodes.</description></item>
+        /// <item><description>false: Upgrades the control plane and worker nodes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The rolling upgrade configuration.</para>
+        /// <para>The rolling update configuration.</para>
         /// </summary>
         [NameInMap("rolling_policy")]
         [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// 
             /// <summary>
             /// <para>The maximum number of worker nodes that can be upgraded in parallel per batch.</para>
-            /// <para>During the worker node upgrade, nodes are upgraded in batches based on the specified maximum parallelism. The number of nodes upgraded in each batch increases as follows: 1, 2, 4, 8, and so on until the maximum parallelism is reached. After the maximum parallelism is reached, each subsequent batch upgrades the maximum number of nodes.</para>
+            /// <para>During the worker node upgrade process, nodes are upgraded in sequence based on the specified maximum parallelism. The number of nodes upgraded in each batch increases in the sequence of 1, 2, 4, 8, and so on, until the maximum parallelism is reached. After the maximum parallelism is reached, each subsequent batch upgrades the maximum number of nodes in parallel.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para><b>[Deprecated]</b> Use the <c>next_version</c> parameter instead.</para>
+        /// <para><b>[Deprecated]</b> Use the next_version parameter instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>

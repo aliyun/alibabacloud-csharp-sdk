@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<string> CveList { get; set; }
 
             /// <summary>
-            /// <para>The vulnerability severity level.</para>
+            /// <para>The severity level of the vulnerability.</para>
             /// 
             /// <b>Example:</b>
             /// <para>asap</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Necessity { get; set; }
 
             /// <summary>
-            /// <para>The number of nodes that have this vulnerability.</para>
+            /// <para>The number of nodes that have the vulnerability.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? NodeCount { get; set; }
 
             /// <summary>
-            /// <para>The node pool ID.</para>
+            /// <para>The ID of the node pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>np0156da1082b54fa987e32618dd******</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string NodepoolId { get; set; }
 
             /// <summary>
-            /// <para>The node pool name.</para>
+            /// <para>The name of the node pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string NodepoolName { get; set; }
 
             /// <summary>
-            /// <para>The vulnerability alias.</para>
+            /// <para>The alias of the vulnerability.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CVE-2022-xxxx:rsync security vulnerability</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string VulAliasName { get; set; }
 
             /// <summary>
-            /// <para>The vulnerability name.</para>
+            /// <para>The name of the vulnerability.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oval:com.redhat.rhsa:def:xxxxxxx</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string VulName { get; set; }
 
             /// <summary>
-            /// <para>The vulnerability type.</para>
+            /// <para>The type of the vulnerability.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cve</para>

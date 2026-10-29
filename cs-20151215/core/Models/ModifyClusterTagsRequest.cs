@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ModifyClusterTagsRequest : TeaModel {
         /// <summary>
-        /// <para>The data to update.</para>
+        /// <para>The data to be updated.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

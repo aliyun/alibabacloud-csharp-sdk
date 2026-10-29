@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The resource subtype to which the self-healing rule can be bound.</para>
+        /// <para>The resource subtype that can be associated with the self-healing rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ess</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ResourceSubType { get; set; }
 
         /// <summary>
-        /// <para>The resource type to which the self-healing rule can be bound.</para>
+        /// <para>The resource type that can be associated with the self-healing rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nodepool</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of self-healing sub-rules.</para>
+        /// <para>The list of self-healing subrules.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;np-xxx&quot;]</para>
@@ -93,14 +93,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public Dictionary<string, object> Config { get; set; }
 
                 /// <summary>
-                /// <para>The manual intervention process.</para>
+                /// <para>The configuration for the manual intervention procedure.</para>
                 /// </summary>
                 [NameInMap("intervention")]
                 [Validation(Required=false)]
                 public CreateAutoRepairPolicyRequestRulesRepairProcedureIntervention Intervention { get; set; }
                 public class CreateAutoRepairPolicyRequestRulesRepairProcedureIntervention : TeaModel {
                     /// <summary>
-                    /// <para>The label configuration for authorization confirmation. Adding the following labels to the node indicates that you authorize ACK to execute the action for this stage. After completing the action for this stage, ACK automatically removes the authorization inquiry and authorization confirmation labels corresponding to this stage. If you do not add the following labels in time to grant authorization, ACK will not execute the action for this stage and subsequent actions, and the node may remain in an impaired state.</para>
+                    /// <para>The label configuration for authorization confirmation. Adding the following labels to the node indicates that you authorize ACK to execute the operations in this stage. After completing the operations in this stage, ACK automatically removes the authorization inquiry and confirmation labels corresponding to this stage. If you do not add the following labels in time to grant authorization, ACK will not execute the actions in this stage and subsequent stages, and the node may remain in a damaged state.</para>
                     /// </summary>
                     [NameInMap("approved_label")]
                     [Validation(Required=false)]
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                     public bool? Enable { get; set; }
 
                     /// <summary>
-                    /// <para>The label configuration for authorization inquiry. When this stage is reached, ACK adds the following labels to your node and waits for your authorization to execute the action for this stage.</para>
+                    /// <para>The label configuration for authorization inquiry. When this stage is reached, ACK adds the following labels to your node and waits for your authorization to execute the actions in this stage.</para>
                     /// </summary>
                     [NameInMap("inquiring_label")]
                     [Validation(Required=false)]

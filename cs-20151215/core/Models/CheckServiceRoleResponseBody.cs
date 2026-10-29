@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CheckServiceRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The service role check results.</para>
+        /// <para>The check results of the service roles.</para>
         /// </summary>
         [NameInMap("roles")]
         [Validation(Required=false)]
         public List<CheckServiceRoleResponseBodyRoles> Roles { get; set; }
         public class CheckServiceRoleResponseBodyRoles : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the role has been authorized.</para>
+            /// <para>Indicates whether the service role is authorized.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? Granted { get; set; }
 
             /// <summary>
-            /// <para>The message returned when the role is not authorized.</para>
+            /// <para>The prompt message when the service role is not authorized.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The role does not exist: AliyunCSManagedAutoScalerRole</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The service role name.</para>
+            /// <para>The name of the service role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AliyunCSManagedAutoScalerRole</para>

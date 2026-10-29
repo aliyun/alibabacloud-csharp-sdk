@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterTasksResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The pagination token.</para>
+        /// </summary>
         [NameInMap("next_token")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -31,7 +34,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The number of items per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -63,7 +66,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task array.</para>
+        /// <para>The array of tasks.</para>
         /// </summary>
         [NameInMap("tasks")]
         [Validation(Required=false)]
@@ -80,7 +83,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Created { get; set; }
 
             /// <summary>
-            /// <para>The node fault error message.</para>
+            /// <para>The node fault message.</para>
             /// </summary>
             [NameInMap("error")]
             [Validation(Required=false)]

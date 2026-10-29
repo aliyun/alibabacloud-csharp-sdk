@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? AutoRestart { get; set; }
 
         /// <summary>
-        /// <para>The list of node names to fix. If this parameter is not specified, all nodes in the node pool are fixed by default.</para>
+        /// <para>The list of node names to fix. If not specified, all nodes in the node pool are fixed by default.</para>
         /// </summary>
         [NameInMap("nodes")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public class FixNodePoolVulsRequestRolloutPolicy : TeaModel {
             /// <summary>
             /// <para>CVE fixes for nodes in the node pool are performed in batches. This parameter specifies the maximum number of nodes that can be fixed in parallel per batch.</para>
-            /// <para>Valid values: The minimum value is 1 and the maximum value is the number of nodes in the node pool.</para>
+            /// <para>Valid values: 1 to the total number of nodes in the node pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

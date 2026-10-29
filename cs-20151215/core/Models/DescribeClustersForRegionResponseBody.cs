@@ -39,14 +39,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The specification of the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>ack.standard</c>: Basic</description></item>
-            /// <item><description><c>ack.pro.small</c>: Pro</description></item>
-            /// <item><description><c>ack.pro.xlarge</c>: Pro XL</description></item>
-            /// <item><description><c>ack.pro.2xlarge</c>: Pro 2XL</description></item>
-            /// <item><description><c>ack.pro.4xlarge</c>: Pro 4XL (Contact customer service to add your account to the whitelist.)</description></item>
+            /// <item><description><c>ack.standard</c>: Basic Edition.</description></item>
+            /// <item><description><c>ack.pro.small</c>: Pro Edition.</description></item>
+            /// <item><description><c>ack.pro.xlarge</c>: Pro XL.</description></item>
+            /// <item><description><c>ack.pro.2xlarge</c>: Pro 2XL.</description></item>
+            /// <item><description><c>ack.pro.4xlarge</c>: Pro 4XL. To use this specification, submit a ticket to contact customer service and apply for whitelist access.</description></item>
             /// </list>
-            /// <para>Pro XL, Pro 2XL, and Pro 4XL are three tiers provided by &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>. By pre-allocating and dedicating control plane resources, these tiers ensure that API concurrency and pod scheduling capabilities remain at a consistently high level. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</para>
-            /// <para>For information about the cluster management fees for Pro and provisioned control plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</para>
+            /// <para>Pro XL, Pro 2XL, and Pro 4XL are the three tiers provided by the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>. By pre-allocating and reserving control plane resources, these tiers ensure that API concurrency and pod scheduling capabilities remain consistently at a high level. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</para>
+            /// <para>For more information about the cluster management fees for the Pro Edition and provisioned control plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ack.standard</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The cluster type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Kubernetes: ACK dedicated cluster.</description></item>
-            /// <item><description>ManagedKubernetes: ACK managed cluster types, including ACK managed clusters (ACK Pro and ACK Basic), ACK Serverless clusters (Pro and Basic), ACK Edge clusters (Pro and Basic), and ACK Lingjun clusters (Pro).</description></item>
+            /// <item><description>ManagedKubernetes: ACK managed clusters, including ACK managed clusters (ACK Pro and ACK Basic), ACK Serverless clusters (Pro and Basic), ACK Edge clusters (Pro and Basic), and ACK Lingjun clusters (Pro).</description></item>
             /// <item><description>ExternalKubernetes: registered cluster.</description></item>
             /// </list>
             /// 
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterType { get; set; }
 
             /// <summary>
-            /// <para>The CIDR block used by the cluster pods.</para>
+            /// <para>The CIDR block for pods in the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.20.0.0/16</para>
@@ -101,10 +101,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string CurrentVersion { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether deletion protection is enabled for the cluster. Deletion protection prevents the cluster from being accidentally deleted in the console or by calling API operations. Valid values:</para>
+            /// <para>Indicates whether deletion protection is enabled for the cluster to prevent accidental deletion through the console or API. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Deletion protection is enabled. The cluster cannot be deleted in the console or by calling API operations.</description></item>
-            /// <item><description>false: Deletion protection is disabled. The cluster can be deleted in the console or by calling API operations.</description></item>
+            /// <item><description>true: Deletion protection is enabled. The cluster cannot be deleted through the console or API.</description></item>
+            /// <item><description>false: Deletion protection is disabled. The cluster can be deleted through the console or API.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InitVersion { get; set; }
 
             /// <summary>
-            /// <para>The IP protocol stack of the cluster.</para>
+            /// <para>The IP stack of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ipv4</para>
@@ -155,12 +155,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string NextVersion { get; set; }
 
             /// <summary>
-            /// <para>The cluster subtype. Valid values:</para>
+            /// <para>The subtype of the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Default: ACK managed cluster, including ACK Pro and ACK Basic.</description></item>
-            /// <item><description>Edge: ACK Edge cluster, including ACK Edge Pro and ACK Edge Basic.</description></item>
-            /// <item><description>Serverless: ACK Serverless cluster, including ACK Serverless Pro and ACK Serverless Basic.</description></item>
-            /// <item><description>LingJun: ACK Lingjun cluster, available in Pro.</description></item>
+            /// <item><description>Default: ACK managed clusters, including ACK Pro and ACK Basic.</description></item>
+            /// <item><description>Edge: ACK Edge clusters, including ACK Edge Pro and ACK Edge Basic.</description></item>
+            /// <item><description>Serverless: ACK Serverless clusters, including ACK Serverless Pro and ACK Serverless Basic.</description></item>
+            /// <item><description>LingJun: ACK Lingjun clusters, which provide the Pro edition.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Profile { get; set; }
 
             /// <summary>
-            /// <para>The kube-proxy mode of the cluster.</para>
+            /// <para>The proxy mode of kube-proxy in the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ipvs</para>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the security group associated with the cluster.</para>
+            /// <para>The ID of the security group to which the cluster belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-2zeihch86ooz9io4****</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The service CIDR block.</para>
+            /// <para>The CIDR block for services.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -245,9 +245,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <item><description><c>inactive</c>: The cluster is inactive.</description></item>
             /// <item><description><c>unavailable</c>: The cluster is unavailable.</description></item>
             /// <item><description><c>deleting</c>: The cluster is being deleted.</description></item>
-            /// <item><description><c>deleted</c>: The cluster has been deleted.</description></item>
+            /// <item><description><c>deleted</c>: The cluster is deleted.</description></item>
             /// <item><description><c>delete_failed</c>: The cluster failed to be deleted.</description></item>
-            /// <item><description><c>waiting</c>: The cluster is in the accessed state, waiting to be connected.</description></item>
+            /// <item><description><c>waiting</c>: The cluster is waiting to be accessed.</description></item>
             /// <item><description><c>disconnected</c>: The cluster is disconnected.</description></item>
             /// </list>
             /// 
@@ -259,7 +259,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The list of cluster tags.</para>
+            /// <para>The list of tags for the cluster.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
@@ -296,7 +296,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The list of vSwitches used by the cluster control plane.</para>
+            /// <para>The list of vSwitches for the cluster control plane.</para>
             /// </summary>
             [NameInMap("vswitch_ids")]
             [Validation(Required=false)]
@@ -322,7 +322,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of records per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

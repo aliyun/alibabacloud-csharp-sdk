@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class QuotasValue : TeaModel {
         /// <summary>
-        /// <para>The quota value. If you need to exceed the quota, submit a request on the <a href="https://quotas.console.aliyun.com/products/csk/quotas">Quota Center page</a> to increase the quota.</para>
+        /// <para>The quota value. If the quota is exceeded, <a href="https://quotas.console.aliyun.com/products/csk/quotas">submit an application in Quota Center</a> to increase the quota.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string OperationCode { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the quota is adjustable.</para>
+        /// <para>Indicates whether the quota can be adjusted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

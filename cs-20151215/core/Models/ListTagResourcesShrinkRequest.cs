@@ -43,7 +43,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// <para>The resource type.</para>
-        /// <para>CLUSTER: cluster.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>CLUSTER: cluster.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of tags to query. A maximum of 20 items can be specified.</para>
+        /// <para>The list of tags to query. You can specify a maximum of 20 tags.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{\&quot;key\&quot;:\&quot;env\&quot;,\&quot;value\&quot;,\&quot;dev\&quot;},{\&quot;key\&quot;:\&quot;dev\&quot;, \&quot;value\&quot;:\&quot;IT\&quot;}]</para>

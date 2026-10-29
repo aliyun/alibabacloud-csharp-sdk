@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>Specifies whether to enable deletion protection for the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Enables deletion protection. After deletion protection is enabled, you must manually disable deletion protection before you can delete the specified resource.</para>
+        /// <item><description><para>true: Enables deletion protection. After deletion protection is enabled, you must manually disable it before you can delete the specified resource.</para>
         /// </description></item>
         /// <item><description><para>false: Disables deletion protection.</para>
         /// </description></item>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>The namespace of the resource.</para>
+        /// <para>The namespace where the resource resides.</para>
         /// <para>Default value: default.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The type of resource to update. Valid values:</para>
+        /// <para>The type of the resource to update. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>namespaces: namespace.</para>
         /// </description></item>

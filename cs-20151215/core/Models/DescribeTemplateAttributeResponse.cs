@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribeTemplateAttributeResponseBody> Body { get; set; }
         public class DescribeTemplateAttributeResponseBody : TeaModel {
             /// <summary>
-            /// <para>The orchestration template ID. A new ID is generated each time the template is modified.</para>
+            /// <para>The ID of the orchestration template. A new template ID is generated each time the template is modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>72d20cf8-a533-4ea9-a10d-e7630d3d****</para>
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The access permissions of the orchestration template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>private</c>: private.</description></item>
-            /// <item><description><c>public</c>: public.</description></item>
-            /// <item><description><c>shared</c>: shared.</description></item>
+            /// <item><description><c>private</c>: Private.</description></item>
+            /// <item><description><c>public</c>: Public.</description></item>
+            /// <item><description><c>shared</c>: Shared.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <list type="bullet">
             /// <item><description><para>If the value is kubernetes, the template is displayed on the Orchestration Templates page in the console.</para>
             /// </description></item>
-            /// <item><description><para>If this parameter is not set or is set to other values, the template is not displayed on the Orchestration Templates page in the console.</para>
+            /// <item><description><para>If this parameter is not specified or is set to another value, the template is not displayed on the Orchestration Templates page in the console.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Created { get; set; }
 
             /// <summary>
-            /// <para>The time when the orchestration template was last updated.</para>
+            /// <para>The time when the orchestration template was updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-25T16:56:33+08:00</para>

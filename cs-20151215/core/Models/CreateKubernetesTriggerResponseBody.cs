@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateKubernetesTriggerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The action of the trigger. Example: <c>redeploy</c>: Redeployment.</para>
+        /// <para>The action of the trigger. For example, <c>redeploy</c>: Redeploys the resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>redeploy</para>
@@ -52,8 +52,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The type of the trigger. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>deployment</c>: The trigger for stateless applications. </description></item>
-        /// <item><description><c>application</c>: The trigger for Hybrid Cloud Application Center applications.</description></item>
+        /// <item><description><c>deployment</c>: The trigger for stateless applications.</description></item>
+        /// <item><description><c>application</c>: The trigger for applications in Hybrid Cloud Application Center.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

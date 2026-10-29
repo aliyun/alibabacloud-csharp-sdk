@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ListNodePoolComponentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of node components.</para>
+        /// <para>The node components.</para>
         /// </summary>
         [NameInMap("components")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of results to return. Default value: 200.</para>
+        /// <para>The maximum number of results per page. Default value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

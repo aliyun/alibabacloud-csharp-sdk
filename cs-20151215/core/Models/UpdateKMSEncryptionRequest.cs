@@ -26,10 +26,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The KMS key ID used for the encryption at rest feature for Secrets.</para>
         /// <remarks>
-        /// <para>Notice: You cannot use a service key. You must use a master key or a customer master key (CMK). The key type must be <c>Aliyun_AES_256</c>, and the key usage must be <c>ENCRYPT/DECRYPT</c>.</para>
+        /// <para>Notice: You cannot use a service key. You can only use a master key or a customer master key (CMK). The key type must be <c>Aliyun_AES_256</c>, and the key usage must be <c>ENCRYPT/DECRYPT</c>.</para>
         /// </remarks>
         /// <remarks>
-        /// <para>Warning: Do not use the KMS console or OpenAPI to disable or delete this KMS key during the enable or shutdown procedure for encryption at rest, or after the feature is successfully enabled. Otherwise, the cluster API server becomes inactive, which prevents you from retrieving objects such as Secrets and ServiceAccounts and affects the normal operation of your applications.</para>
+        /// <para>Warning: Do not disable or delete the KMS key in the KMS console or by calling API operations during the start or shutdown procedure of the encryption at rest feature, or after the feature is started. Otherwise, the cluster API server becomes inactive. As a result, objects such as Secrets and ServiceAccounts cannot be retrieved, which affects the normal operation of your applications.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

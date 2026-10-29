@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DeleteClusterNodesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically drain Pods on the nodes. Valid values:</para>
+        /// <para>Specifies whether to automatically drain the pods on the nodes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: Automatically drains Pods on the nodes.</description></item>
-        /// <item><description><c>false</c>: Does not automatically drain Pods on the nodes.</description></item>
+        /// <item><description><c>true</c>: Automatically drains the pods on the nodes.</description></item>
+        /// <item><description><c>false</c>: Does not automatically drain the pods on the nodes.</description></item>
         /// </list>
         /// <para>Default value: <c>false</c>.</para>
         /// 
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </list>
         /// <para>Default value: <c>false</c>.</para>
         /// <remarks>
-        /// <para>Releasing ECS instances at the same time is not supported when the nodes are subscription instances.</para>
+        /// <para>If the nodes are subscription instances, you cannot release the ECS instances at the same time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Config { get; set; }
 
             /// <summary>
-            /// <para>The component name. You can call the <a href="https://help.aliyun.com/document_detail/2667939.html">ListAddons</a> operation to query information about available components, including component names and versions.</para>
+            /// <para>The name of the component. You can call the <a href="https://help.aliyun.com/document_detail/2667939.html">ListAddons</a> operation to query the information about available components, including component names and versions.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The component version. You can call the <a href="https://help.aliyun.com/document_detail/2667939.html">ListAddons</a> operation to query information about available components, including component names and versions.</para>
+            /// <para>The version of the component. You can call the <a href="https://help.aliyun.com/document_detail/2667939.html">ListAddons</a> operation to query the information about available components, including component names and versions.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

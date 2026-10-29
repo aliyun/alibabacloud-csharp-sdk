@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             /// <summary>
             /// <para>The trigger project name.</para>
-            /// <para>The value consists of the namespace and application name in the format <c>${namespace}/${name}</c>. Example: default/test-app.</para>
+            /// <para>It consists of the namespace and application name in the <c>${namespace}/${name}</c> format. Example: default/test-app.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default/test-app</para>
@@ -66,9 +66,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The trigger type.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>deployment</c>: a trigger for stateless applications. </para>
+            /// <item><description><para><c>deployment</c>: the trigger for stateless applications. </para>
             /// </description></item>
-            /// <item><description><para><c>application</c>: a trigger for App Hub applications.</para>
+            /// <item><description><para><c>application</c>: the trigger for Hybrid Cloud Application Center applications.</para>
             /// </description></item>
             /// </list>
             /// 

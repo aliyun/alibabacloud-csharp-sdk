@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class GetClusterAddonInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The custom parameter settings of the component.</para>
+        /// <para>The custom parameter settings of the add-on.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;sls_project_name&quot;:&quot;&quot;}</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The logging status of the component.</para>
+        /// <para>The log feature status of the add-on.</para>
         /// </summary>
         [NameInMap("logging")]
         [Validation(Required=false)]
         public GetClusterAddonInstanceResponseBodyLogging Logging { get; set; }
         public class GetClusterAddonInstanceResponseBodyLogging : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the component supports the logging feature.</para>
+            /// <para>Specifies whether the add-on supports the log feature. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>true: Supported.</para>
             /// </description></item>
@@ -43,11 +43,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? Capable { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the logging feature is enabled for the component.</para>
+            /// <para>Specifies whether the log feature is enabled. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>true: Enabled.</para>
             /// </description></item>
-            /// <item><description><para>false: Not enabled.</para>
+            /// <item><description><para>false: Disabled.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The log project used by the logging feature of the component.</para>
+            /// <para>The Log Service project used by the add-on log feature.</para>
             /// 
             /// <b>Example:</b>
             /// <para>k8s-log-c02b3e03be10643e8a644a843ffcb****</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string LogProject { get; set; }
 
             /// <summary>
-            /// <para>The Logstore used by the logging feature of the component.</para>
+            /// <para>The Logstore used by the add-on log feature.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-logstore</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The component instance name.</para>
+        /// <para>The name of the add-on instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ack-node-problem-detector</para>
@@ -91,12 +91,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The component status. Valid values:</para>
+        /// <para>The state of the add-on. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>active: The component is installed.</description></item>
-        /// <item><description>updating: The component is being modified.</description></item>
-        /// <item><description>upgrading: The component is being upgraded.</description></item>
-        /// <item><description>deleting: The component is being uninstalled.</description></item>
+        /// <item><description>active: Installed.</description></item>
+        /// <item><description>updating: Updating.</description></item>
+        /// <item><description>upgrading: Upgrading.</description></item>
+        /// <item><description>deleting: Uninstalling.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>The component instance version.</para>
+        /// <para>The version of the add-on instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.2.16</para>

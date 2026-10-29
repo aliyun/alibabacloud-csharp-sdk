@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of resource IDs. You can specify up to 50 resource IDs.</para>
+        /// <para>The list of resource IDs. You can add up to 50 resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("resource_ids")]
@@ -29,8 +29,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> ResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The resource type.</para>
-        /// <para>CLUSTER: cluster.</para>
+        /// <para>The resource type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>CLUSTER: cluster.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,9 +43,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tag key-value pairs of the resource. You can specify up to 20 tag key-value pairs. Note:</para>
+        /// <para>The tag key-value pairs of the resource. You can add up to 20 tag key-value pairs. Take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>Once a value is specified, it cannot be an empty string. The value can be up to 128 characters in length.</description></item>
+        /// <item><description>If a value is specified, it cannot be an empty string and can be up to 128 characters in length.</description></item>
         /// <item><description>The value cannot start with <c>aliyun</c> or <c>acs:</c>.</description></item>
         /// <item><description>The value cannot contain <c>http://</c> or <c>https://</c>.</description></item>
         /// </list>

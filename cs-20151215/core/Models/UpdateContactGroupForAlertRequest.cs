@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UpdateContactGroupForAlertRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the alert metric contact group.</para>
+        /// <para>The name of the contact group for the alert metric.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sample</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string CrName { get; set; }
 
         /// <summary>
-        /// <para>The namespace in which the resource resides.</para>
+        /// <para>The namespace where the resource resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>

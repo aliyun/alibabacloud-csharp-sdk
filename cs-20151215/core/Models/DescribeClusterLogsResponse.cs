@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterLog { get; set; }
 
             /// <summary>
-            /// <para>The time when the log was created.</para>
+            /// <para>The time when the log was generated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-10T17:54:26+08:00</para>

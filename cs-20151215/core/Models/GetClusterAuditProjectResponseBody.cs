@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class GetClusterAuditProjectResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the API server audit feature is enabled for the cluster.</para>
+        /// <para>Indicates whether the API server audit feature is enabled for the cluster. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><c>true</c>: Enabled.</para>
         /// </description></item>
-        /// <item><description><para><c>false</c>: Not enabled.</para>
+        /// <item><description><para><c>false</c>: Disabled.</para>
         /// </description></item>
         /// </list>
         /// 

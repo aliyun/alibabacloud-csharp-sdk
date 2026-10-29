@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<ModifyAutoRepairPolicyRequestRules> Rules { get; set; }
         public class ModifyAutoRepairPolicyRequestRules : TeaModel {
             /// <summary>
-            /// <para>The list of identified faults.</para>
+            /// <para>The list of identified incidents.</para>
             /// </summary>
             [NameInMap("incidents")]
             [Validation(Required=false)]
             public List<ModifyAutoRepairPolicyRequestRulesIncidents> Incidents { get; set; }
             public class ModifyAutoRepairPolicyRequestRulesIncidents : TeaModel {
                 /// <summary>
-                /// <para>The name of the fault.</para>
+                /// <para>The name of the incident.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Node.FaultNeedReboot.HOST</para>
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public ModifyAutoRepairPolicyRequestRulesRepairProcedureIntervention Intervention { get; set; }
                 public class ModifyAutoRepairPolicyRequestRulesRepairProcedureIntervention : TeaModel {
                     /// <summary>
-                    /// <para>The label configuration for authorization confirmation. When you add the following labels to the node, you authorize ACK to execute the operation for this stage. After completing the operation for this stage, ACK automatically removes the authorization inquiry and authorization confirmation labels corresponding to this stage. If you do not promptly add the following labels to grant authorization, ACK will not execute the action for this stage and subsequent actions, and the node may remain in a damaged state.</para>
+                    /// <para>The label configuration for authorization confirmation. When you add the following labels to the node, you authorize ACK to execute the operation for this stage. After completing the operation for this stage, ACK automatically removes the authorization inquiry and confirmation labels corresponding to this stage. If you do not add the following labels in time to grant authorization, ACK will not execute the action for this stage and subsequent actions, and the node may remain in a damaged state.</para>
                     /// </summary>
                     [NameInMap("approved_label")]
                     [Validation(Required=false)]
                     public ModifyAutoRepairPolicyRequestRulesRepairProcedureInterventionApprovedLabel ApprovedLabel { get; set; }
                     public class ModifyAutoRepairPolicyRequestRulesRepairProcedureInterventionApprovedLabel : TeaModel {
                         /// <summary>
-                        /// <para>The key value of the label.</para>
+                        /// <para>The key of the label.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>k8s.aliyun.com/incident</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                     public ModifyAutoRepairPolicyRequestRulesRepairProcedureInterventionInquiringLabel InquiringLabel { get; set; }
                     public class ModifyAutoRepairPolicyRequestRulesRepairProcedureInterventionInquiringLabel : TeaModel {
                         /// <summary>
-                        /// <para>The key value of the label.</para>
+                        /// <para>The key of the label.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>k8s.aliyun.com/incident</para>
