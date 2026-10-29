@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class DeleteEventAnalysisJobRequest : TeaModel {
         /// <summary>
-        /// <para>The identifier of the source resource.</para>
+        /// <para>The source resource identifier.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public DeleteEventAnalysisJobRequestSourceResourceKafka Kafka { get; set; }
             public class DeleteEventAnalysisJobRequestSourceResourceKafka : TeaModel {
                 /// <summary>
-                /// <para>The instance ID of the Kafka instance.</para>
+                /// <para>The Kafka instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>alikafka_post-cn-xxx</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public DeleteEventAnalysisJobRequestSourceResourceRocketMQ RocketMQ { get; set; }
             public class DeleteEventAnalysisJobRequestSourceResourceRocketMQ : TeaModel {
                 /// <summary>
-                /// <para>The instance ID of the RocketMQ instance.</para>
+                /// <para>The RocketMQ instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rmq-cn-xxx</para>

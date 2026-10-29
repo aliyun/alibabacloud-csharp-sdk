@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class CreateTableShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The data catalog to which the table belongs.</para>
+        /// <para>The data catalog.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_catalog</para>
@@ -33,24 +33,24 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// <para>The column definitions.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;主键&quot;}]</para>
+        /// <para>[{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;Primary key&quot;}]</para>
         /// </summary>
         [NameInMap("Columns")]
         [Validation(Required=false)]
         public string ColumnsShrink { get; set; }
 
         /// <summary>
-        /// <para>The description.</para>
+        /// <para>The comment.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试事件表</para>
+        /// <para>Test event table</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The name of the table.</para>
+        /// <para>The table name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The namespace to which the table belongs.</para>
+        /// <para>The namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_namespace</para>

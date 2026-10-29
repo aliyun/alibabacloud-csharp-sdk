@@ -10,12 +10,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class CreateEventSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The API response code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Success</c>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para>Other values indicate errors. For more information, see the &quot;Error codes&quot; section.</para>
-        /// </description></item>
+        /// <item><description>Success: The operation is successful.                                 </description></item>
+        /// <item><description>Other values: An error code.
+        /// For more information, see Error codes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,14 +25,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned by the request.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateEventSourceResponseBodyData Data { get; set; }
         public class CreateEventSourceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the event source.</para>
+            /// <para>The resource ARN.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:eventbridge:cn-hangzhou:164901546557****:eventbus/my-event-bus/eventsource/mymns.source</para>
@@ -45,7 +44,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>The error message returned if the request is unsuccessful.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Remote error. requestId: [A8EFABD2-95B9-1C46-9E01-xxxx], error code: [CreateRelatedResourceFailed], message: [Create related resource failed, EntityNotExist.Role : The role not exists: xxxx. \r\nRequestId : xxxx-168C-54ED-8FEB-BF11CB70AEB7]</para>
@@ -65,7 +64,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. A value of <c>true</c> indicates that the request was successful.</para>
+        /// <para>Indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
     public class DeleteEventSourceRequest : TeaModel {
         /// <summary>
         /// <para>The event bus to which the event source is attached.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eEXaMPLEBUSNameAaAaAa</para>
         /// </summary>
         [NameInMap("EventBusName")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class Namespace : TeaModel {
         /// <summary>
-        /// <para>The name of the data catalog to which the namespace belongs</para>
+        /// <para>The name of the data catalog to which the namespace belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,17 +21,17 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Catalog { get; set; }
 
         /// <summary>
-        /// <para>The description information of the namespace</para>
+        /// <para>The comment of the namespace.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试命名空间</para>
+        /// <para>Test namespace</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier name of the namespace</para>
+        /// <para>The unique identifier name of the namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_namespace</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The extended properties of the namespace</para>
+        /// <para>The extended properties of the namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;key&quot;:&quot;value&quot;}</para>

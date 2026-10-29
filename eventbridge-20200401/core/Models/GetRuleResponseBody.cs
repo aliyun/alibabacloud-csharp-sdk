@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// <summary>
         /// <para>The response code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Success</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>Other values</b>: The request returned an error code. For more information, see Error codes.</para>
-        /// </description></item>
+        /// <item><description><b>Success</b>: The request is successful.</description></item>
+        /// <item><description><b>Other values</b>: The error code. For more information, see Error codes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,14 +24,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetRuleResponseBodyData Data { get; set; }
         public class GetRuleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The creation timestamp of the rule.</para>
+            /// <para>The creation timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1607071602000</para>
@@ -63,12 +61,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string EventBusName { get; set; }
 
             /// <summary>
-            /// <para>The event pattern in JSON format. The following modes are supported:</para>
+            /// <para>The event pattern in JSON format. The following rules apply:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>stringEqual mode</b>: In the map structure, each field can contain up to five expressions.</para>
-            /// </description></item>
-            /// <item><description><para><b>stringExpression mode</b>: In the map structure, each field can contain up to five expressions.</para>
-            /// </description></item>
+            /// <item><description><b>stringEqual mode</b>: A maximum of five expressions are allowed for each field (map structure).</description></item>
+            /// <item><description><b>stringExpression mode</b>: A maximum of five expressions are allowed for each field (map structure).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,10 +97,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             /// <summary>
             /// <para>The status of the rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>ENABLE</b>: The rule is enabled. This is the default.</para>
-            /// </description></item>
-            /// <item><description><para><b>DISABLE</b>: The rule is disabled.</para>
-            /// </description></item>
+            /// <item><description><b>ENABLE</b>: The rule is enabled. This is the default status.</description></item>
+            /// <item><description><b>DISABLE</b>: The rule is disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -122,14 +116,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public List<GetRuleResponseBodyDataTargets> Targets { get; set; }
             public class GetRuleResponseBodyDataTargets : TeaModel {
                 /// <summary>
-                /// <para>The concurrency settings.</para>
+                /// <para>The concurrency configuration.</para>
                 /// </summary>
                 [NameInMap("ConcurrentConfig")]
                 [Validation(Required=false)]
                 public GetRuleResponseBodyDataTargetsConcurrentConfig ConcurrentConfig { get; set; }
                 public class GetRuleResponseBodyDataTargetsConcurrentConfig : TeaModel {
                     /// <summary>
-                    /// <para>The maximum number of concurrent pushes.</para>
+                    /// <para>The concurrency.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -148,7 +142,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public GetRuleResponseBodyDataTargetsDeadLetterQueue DeadLetterQueue { get; set; }
                 public class GetRuleResponseBodyDataTargetsDeadLetterQueue : TeaModel {
                     /// <summary>
-                    /// <para>The Alibaba Cloud Resource Name (ARN) of the dead-letter queue.</para>
+                    /// <para>The Alibaba Cloud Resource Name (ARN) of the queried dead-letter queue.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>acs:eventbridge:cn-hangzhou:164901546557****:eventbus/my-event-bus/eventsource/myRocketMQ.source</para>
@@ -159,6 +153,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                     /// <summary>
                     /// <para>The network type of the dead-letter queue.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>PrivateNetwork</para>
                     /// </summary>
                     [NameInMap("Network")]
                     [Validation(Required=false)]
@@ -166,6 +163,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                     /// <summary>
                     /// <para>The security group ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>sg-2v****</para>
                     /// </summary>
                     [NameInMap("SecurityGroupId")]
                     [Validation(Required=false)]
@@ -173,13 +173,19 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                     /// <summary>
                     /// <para>The vSwitch IDs.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>vsw-m5e****</para>
                     /// </summary>
                     [NameInMap("VSwitchIds")]
                     [Validation(Required=false)]
                     public string VSwitchIds { get; set; }
 
                     /// <summary>
-                    /// <para>The VPC ID.</para>
+                    /// <para>The ID of the VPC where the dead-letter queue resides.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>vpc-2z****</para>
                     /// </summary>
                     [NameInMap("VpcId")]
                     [Validation(Required=false)]
@@ -188,14 +194,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// <para>The details of the event target.</para>
+                /// <para>The detailed information.</para>
                 /// </summary>
                 [NameInMap("DetailMap")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> DetailMap { get; set; }
 
                 /// <summary>
-                /// <para>The delivery endpoint for the event.</para>
+                /// <para>The endpoint URL for delivery.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>acs:mns:cn-hangzhou:123456789098****:queues/myqueue</para>
@@ -205,12 +211,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string Endpoint { get; set; }
 
                 /// <summary>
-                /// <para>The fault tolerance policy. Valid values:</para>
+                /// <para>The fault tolerance strategy. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>ALL</b>: Enables fault tolerance. Errors do not block event delivery. If all retries fail, the system sends the event to the specified dead-letter queue or discards it.</para>
-                /// </description></item>
-                /// <item><description><para><b>NONE</b>: Disables fault tolerance. If an error persists after all retries, the system blocks event delivery.</para>
-                /// </description></item>
+                /// <item><description><b>ALL</b>: Allows fault tolerance. When an exception occurs, the execution is not blocked. If the retry strategy is exhausted, the message is delivered to the dead-letter queue or discarded based on the configuration.</description></item>
+                /// <item><description><b>NONE</b>: Disables fault tolerance. When an exception occurs and the retry strategy is exhausted, the execution is blocked.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -221,7 +225,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string ErrorsTolerance { get; set; }
 
                 /// <summary>
-                /// <para>The custom ID of the event target.</para>
+                /// <para>The ID of the custom event target.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Mlm123456JHd2RsRoKw</para>
@@ -248,7 +252,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string Form { get; set; }
 
                     /// <summary>
-                    /// <para>The resource key of the event target. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</para>
+                    /// <para>The resource parameter of the event target. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>body</para>
@@ -258,7 +262,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string ResourceKey { get; set; }
 
                     /// <summary>
-                    /// <para>The template of the event target parameter.</para>
+                    /// <para>The style of the event target parameter template.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>The value of ${key} is ${value}!</para>
@@ -280,12 +284,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// <para>The retry policy for pushing events. Valid values:</para>
+                /// <para>The push retry policy. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>BACKOFF_RETRY</b>: A backoff retry policy. The event is retried 3 times at a random interval between 10 and 20 seconds.</para>
-                /// </description></item>
-                /// <item><description><para><b>EXPONENTIAL_DECAY_RETRY</b>: An exponential decay retry policy. The event is retried 176 times over one day. The retry interval starts at 1 second and exponentially increases to a maximum of 512 seconds. The specific retry intervals are 1, 2, 4, 8, 16, 32, 64, 128, 256, and then 512 for the remaining 167 retries.</para>
-                /// </description></item>
+                /// <item><description><b>BACKOFF_RETRY</b>: The backoff retry policy. The system retries three times. The interval between two consecutive retries is a random value between 10 seconds and 20 seconds.</description></item>
+                /// <item><description><b>EXPONENTIAL_DECAY_RETRY</b>: The exponential decay retry. The system retries 176 times. The interval between two consecutive retries exponentially increments up to 512 seconds. The total retry time is one day. The specific intervals are 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, and 512 seconds (167 intervals of 512 seconds).</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -330,7 +332,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique request ID generated by Alibaba Cloud.</para>
+        /// <para>The unique identifier generated by Alibaba Cloud for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2BC1857D-E633-5E79-B2C2-43EF5F7730D8</para>
@@ -340,7 +342,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. A value of <c>true</c> indicates success.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

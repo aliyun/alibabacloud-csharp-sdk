@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class CreateKnowledgeBaseResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of Success indicates a successful operation. An error code is returned if the operation fails.</para>
+        /// <para>The response code. Success indicates that the call was successful. If the call fails, a specific error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public KnowledgeBase Data { get; set; }
 
         /// <summary>
-        /// <para>The response message. A value of Operation success is returned if the operation succeeds. A specific error description is returned if the operation fails.</para>
+        /// <para>The response message. Operation success is returned if the call is successful. A specific error description is returned if the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Operation success</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful. A value of true indicates success.</para>
+        /// <para>Indicates whether the call was successful. A value of true indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

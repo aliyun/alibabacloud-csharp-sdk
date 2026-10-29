@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class CreateAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. Valid values:</para>
+        /// <para>The API response code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Success: The request was successful.</para>
+        /// <item><description><para>Success: indicates success.</para>
         /// </description></item>
-        /// <item><description><para>Other values: An error occurred. For more information, see Error codes.</para>
+        /// <item><description><para>Other values: indicates an error code. For more information, see Error codes.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -65,7 +65,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values: true: The request was successful. false: The request failed.</para>
+        /// <para>Specifies whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

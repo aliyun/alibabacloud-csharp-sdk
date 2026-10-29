@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class UpdateEventHouseRuntimeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. Success indicates that the operation is successful.</para>
+        /// <para>The response code. A value of Success indicates that the operation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The Runtime information.</para>
+        /// <para>The runtime information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public EventHouseRuntime Data { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message returned by the API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Operation success</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful.</para>
+        /// <para>Indicates whether the operation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// <para>The description of the event source.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>RabbitMQ event source</para>
+        /// <para>Event source of the RabbitMQ type</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string EventSourceName { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the external data source.</para>
+        /// <para>The external data source configuration.</para>
         /// </summary>
         [NameInMap("ExternalSourceConfig")]
         [Validation(Required=false)]
@@ -69,40 +69,31 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public bool? LinkedExternalSource { get; set; }
 
         /// <summary>
-        /// <para>Parameters for an HTTP endpoint event source.</para>
+        /// <para>The request parameter SourceHttpEventParameters.</para>
         /// </summary>
         [NameInMap("SourceHttpEventParameters")]
         [Validation(Required=false)]
         public CreateEventSourceRequestSourceHttpEventParameters SourceHttpEventParameters { get; set; }
         public class CreateEventSourceRequestSourceHttpEventParameters : TeaModel {
             /// <summary>
-            /// <para>The IP address range for security settings. This parameter is required only if you set <c>SecurityConfig</c> to <c>ip</c>. You can specify a single IP address or a CIDR block.</para>
+            /// <para>The CIDR block for security configuration. This parameter is required only when the SecurityConfig parameter is set to ip. You can enter a CIDR block or an IP address.</para>
             /// </summary>
             [NameInMap("Ip")]
             [Validation(Required=false)]
             public List<string> Ip { get; set; }
 
             /// <summary>
-            /// <para>The HTTP request methods supported by the webhook. You can specify more than one method. Valid values:</para>
+            /// <para>The HTTP request methods supported by the generated webhook. You can select multiple values. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>GET</c></para>
-            /// </description></item>
-            /// <item><description><para><c>POST</c></para>
-            /// </description></item>
-            /// <item><description><para><c>PUT</c></para>
-            /// </description></item>
-            /// <item><description><para><c>PATCH</c></para>
-            /// </description></item>
-            /// <item><description><para><c>DELETE</c></para>
-            /// </description></item>
-            /// <item><description><para><c>HEAD</c></para>
-            /// </description></item>
-            /// <item><description><para><c>OPTIONS</c></para>
-            /// </description></item>
-            /// <item><description><para><c>TRACE</c></para>
-            /// </description></item>
-            /// <item><description><para><c>CONNECT</c></para>
-            /// </description></item>
+            /// <item><description>GET</description></item>
+            /// <item><description>POST</description></item>
+            /// <item><description>PUT</description></item>
+            /// <item><description>PATCH</description></item>
+            /// <item><description>DELETE</description></item>
+            /// <item><description>HEAD</description></item>
+            /// <item><description>OPTIONS</description></item>
+            /// <item><description>TRACE</description></item>
+            /// <item><description>CONNECT</description></item>
             /// </list>
             /// </summary>
             [NameInMap("Method")]
@@ -110,21 +101,18 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public List<string> Method { get; set; }
 
             /// <summary>
-            /// <para>The security domain names. This parameter is required only if you set <c>SecurityConfig</c> to <c>referer</c>. You can specify one or more domain names.</para>
+            /// <para>The secure domain name for security configuration. This parameter is required only when the SecurityConfig parameter is set to referer. You can enter a domain name.</para>
             /// </summary>
             [NameInMap("Referer")]
             [Validation(Required=false)]
             public List<string> Referer { get; set; }
 
             /// <summary>
-            /// <para>The type of security configuration. Valid values:</para>
+            /// <para>The type of the security configuration. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>none</c>: No configuration is required.</para>
-            /// </description></item>
-            /// <item><description><para><c>ip</c>: IP address range.</para>
-            /// </description></item>
-            /// <item><description><para><c>referer</c>: Security domain name.</para>
-            /// </description></item>
+            /// <item><description>none: No configuration is required.</description></item>
+            /// <item><description>ip: CIDR block.</description></item>
+            /// <item><description>referer: Secure domain name.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -135,14 +123,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string SecurityConfig { get; set; }
 
             /// <summary>
-            /// <para>The supported protocol for the webhook. Valid values:</para>
+            /// <para>The protocol type supported by the generated webhook. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>HTTP</c></para>
-            /// </description></item>
-            /// <item><description><para><c>HTTPS</c></para>
-            /// </description></item>
-            /// <item><description><para><c>HTTP&amp;HTTPS</c></para>
-            /// </description></item>
+            /// <item><description>HTTP</description></item>
+            /// <item><description>HTTPS</description></item>
+            /// <item><description>HTTP&amp;HTTPS</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -155,14 +140,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>Parameters for the Message Queue for Apache Kafka event source.</para>
+        /// <para>The request parameter SourceKafkaParameters.</para>
         /// </summary>
         [NameInMap("SourceKafkaParameters")]
         [Validation(Required=false)]
         public CreateEventSourceRequestSourceKafkaParameters SourceKafkaParameters { get; set; }
         public class CreateEventSourceRequestSourceKafkaParameters : TeaModel {
             /// <summary>
-            /// <para>The consumer group ID.</para>
+            /// <para>The group ID of the consumer that subscribes to the topic.</para>
             /// 
             /// <b>Example:</b>
             /// <para>wechat_peer_****</para>
@@ -182,7 +167,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The concurrent consumption quota (number of consumers).</para>
+            /// <para>The concurrency quota, which is the number of consumers.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -192,7 +177,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public int? MaximumTasks { get; set; }
 
             /// <summary>
-            /// <para>The network type. Valid values are <c>Default</c> and <c>PublicNetwork</c>. Specify <c>PublicNetwork</c> if the instance is in a VPC.</para>
+            /// <para>The network configuration. Valid values: Default and PublicNetwork.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Default</para>
@@ -202,7 +187,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Network { get; set; }
 
             /// <summary>
-            /// <para>The consumer offset reset policy.</para>
+            /// <para>The consumption offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>latest</para>
@@ -222,7 +207,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The security group ID. This parameter is required if <c>Network</c> is set to <c>PublicNetwork</c>.</para>
+            /// <para>The security group ID. Required for self-managed networks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-8vbf66aoyp0wfzrz****</para>
@@ -232,7 +217,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The topic name.</para>
+            /// <para>The name of the topic.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prod_ma_dispatch_center_call_re****</para>
@@ -242,7 +227,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Topic { get; set; }
 
             /// <summary>
-            /// <para>The vSwitch ID. This parameter is required if <c>Network</c> is set to <c>PublicNetwork</c>.</para>
+            /// <para>The vSwitch ID. Required for self-managed networks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-bp127azpeirmwu4q9****</para>
@@ -252,7 +237,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string VSwitchIds { get; set; }
 
             /// <summary>
-            /// <para>The VPC ID. This parameter is required if <c>Network</c> is set to <c>PublicNetwork</c>.</para>
+            /// <para>The VPC ID. Required for self-managed networks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-2ze5ejm986a73qq3v****</para>
@@ -264,14 +249,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>Parameters for the Message Service (MNS) event source. The <c>RegionId</c>, <c>IsBase64Decode</c>, and <c>QueueName</c> parameters are required for this type.</para>
+        /// <para>The parameters for a Simple Message Queue (formerly MNS) event source. If you select Simple Message Queue (formerly MNS) as the event source, the RegionId, IsBase64Decode, and QueueName parameters are required.</para>
         /// </summary>
         [NameInMap("SourceMNSParameters")]
         [Validation(Required=false)]
         public CreateEventSourceRequestSourceMNSParameters SourceMNSParameters { get; set; }
         public class CreateEventSourceRequestSourceMNSParameters : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable Base64 decoding. Valid values: <c>true</c> and <c>false</c>.</para>
+            /// <para>Specifies whether to enable Base64 decoding. A value of true indicates that Base64 decoding is enabled. Valid values: true and false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -281,7 +266,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public bool? IsBase64Decode { get; set; }
 
             /// <summary>
-            /// <para>The name of the queue in Message Service (MNS).</para>
+            /// <para>The name of the Simple Message Queue (formerly MNS) queue.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MyQueue</para>
@@ -291,8 +276,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string QueueName { get; set; }
 
             /// <summary>
-            /// <para>The region where the Message Service (MNS) queue is located.
-            /// You can specify the following regions: <c>cn-qingdao</c>, <c>cn-beijing</c>, <c>cn-zhangjiakou</c>, <c>cn-huhehaote</c>, <c>cn-wulanchabu</c>, <c>cn-hangzhou</c>, <c>cn-shanghai</c>, <c>cn-shenzhen</c>, <c>cn-guangzhou</c>, <c>cn-chengdu</c>, <c>cn-hongkong</c>, <c>ap-southeast-1</c>, <c>ap-southeast-2</c>, <c>ap-southeast-3</c>, <c>ap-southeast-5</c>, <c>ap-northeast-1</c>, <c>eu-central-1</c>, <c>us-west-1</c>, <c>us-east-1</c>, <c>ap-south-1</c>, <c>me-east-1</c>, and <c>cn-north-2-gov-1</c>.</para>
+            /// <para>The region where the Simple Message Queue (formerly MNS) queue resides.
+            /// Valid values: cn-qingdao, cn-beijing, cn-zhangjiakou, cn-huhehaote, cn-wulanchabu, cn-hangzhou, cn-shanghai, cn-shenzhen, cn-guangzhou, cn-chengdu, cn-hongkong, ap-southeast-1, ap-southeast-2, ap-southeast-3, ap-southeast-5, ap-northeast-1, eu-central-1, us-west-1, us-east-1, ap-south-1, me-east-1, and cn-north-2-gov-1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -304,7 +289,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>Parameters for the Object Storage Service (OSS) event source.</para>
+        /// <para>The parameters for an OSS event source.</para>
         /// </summary>
         [NameInMap("SourceOSSEventParameters")]
         [Validation(Required=false)]
@@ -318,7 +303,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public List<string> EventTypes { get; set; }
 
             /// <summary>
-            /// <para>The match rules.</para>
+            /// <para>The matching rules.</para>
             /// </summary>
             [NameInMap("MatchRules")]
             [Validation(Required=false)]
@@ -326,6 +311,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public class CreateEventSourceRequestSourceOSSEventParametersMatchRules : TeaModel {
                 /// <summary>
                 /// <para>The prefix.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>fun/document/</para>
                 /// </summary>
                 [NameInMap("Prefix")]
                 [Validation(Required=false)]
@@ -333,6 +321,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                 /// <summary>
                 /// <para>The suffix.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>document</para>
                 /// </summary>
                 [NameInMap("Suffix")]
                 [Validation(Required=false)]
@@ -340,6 +331,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                 /// <summary>
                 /// <para>The name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>bucketName</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -355,7 +349,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the Security Token Service (STS) role.</para>
+            /// <para>The ARN of the STS role.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>acs:eventbridge:cn-hangzhou:**</para>
             /// </summary>
             [NameInMap("StsRoleArn")]
             [Validation(Required=false)]
@@ -364,14 +361,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>Parameters for the Message Queue for RabbitMQ event source.</para>
+        /// <para>The request parameter SourceRabbitMQParameters.</para>
         /// </summary>
         [NameInMap("SourceRabbitMQParameters")]
         [Validation(Required=false)]
         public CreateEventSourceRequestSourceRabbitMQParameters SourceRabbitMQParameters { get; set; }
         public class CreateEventSourceRequestSourceRabbitMQParameters : TeaModel {
             /// <summary>
-            /// <para>The ID of the Message Queue for RabbitMQ instance. For more information, see Limits.</para>
+            /// <para>The instance ID of the ApsaraMQ for RabbitMQ instance. For more information, see Limits.</para>
             /// 
             /// <b>Example:</b>
             /// <para>amqp-cn-nif22u74****</para>
@@ -381,7 +378,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the queue on the Message Queue for RabbitMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</para>
+            /// <para>The queue name of the ApsaraMQ for RabbitMQ instance, such as eb-connect. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>demo</para>
@@ -391,7 +388,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string QueueName { get; set; }
 
             /// <summary>
-            /// <para>The region where the Message Queue for RabbitMQ instance resides.</para>
+            /// <para>The region where the ApsaraMQ for RabbitMQ instance resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -401,7 +398,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The name of the virtual host (vhost) of the Message Queue for RabbitMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</para>
+            /// <para>The vhost name of the ApsaraMQ for RabbitMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eb-connect</para>
@@ -413,14 +410,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>Parameters for the Message Queue for Apache RocketMQ event source.</para>
+        /// <para>The request parameter SourceRocketMQParameters.</para>
         /// </summary>
         [NameInMap("SourceRocketMQParameters")]
         [Validation(Required=false)]
         public CreateEventSourceRequestSourceRocketMQParameters SourceRocketMQParameters { get; set; }
         public class CreateEventSourceRequestSourceRocketMQParameters : TeaModel {
             /// <summary>
-            /// <para>The authentication type. You can set this parameter to <c>ACL</c> or leave it empty.</para>
+            /// <para>The authentication type. Valid values: ACL. You can also leave this parameter empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACL</para>
@@ -430,7 +427,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string AuthType { get; set; }
 
             /// <summary>
-            /// <para>The consumer group ID on the Message Queue for Apache RocketMQ instance.</para>
+            /// <para>The group ID of the ApsaraMQ for RocketMQ instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GID-test</para>
@@ -440,7 +437,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string GroupID { get; set; }
 
             /// <summary>
-            /// <para>The instance endpoint.</para>
+            /// <para>The endpoint of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>registry-vpc****.aliyuncs.com</para>
@@ -450,7 +447,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string InstanceEndpoint { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Message Queue for Apache RocketMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</para>
+            /// <para>The instance ID of the ApsaraMQ for RocketMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MQ_INST_164901546557****_BAAN****</para>
@@ -460,24 +457,27 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>This parameter is not in use.</para>
+            /// <para>The network type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PublicNetwork</para>
             /// </summary>
             [NameInMap("InstanceNetwork")]
             [Validation(Required=false)]
             public string InstanceNetwork { get; set; }
 
             /// <summary>
-            /// <para>The password for the instance.</para>
+            /// <para>The password of the instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>yourPassword</para>
             /// </summary>
             [NameInMap("InstancePassword")]
             [Validation(Required=false)]
             public string InstancePassword { get; set; }
 
             /// <summary>
-            /// <para>The security group ID. This parameter is required if the instance is deployed in a VPC.</para>
+            /// <para>The security group ID. Required for VPCs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-catalog-eventlist****</para>
@@ -489,10 +489,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             /// <summary>
             /// <para>The instance type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>Cloud_4</c>: For v4.0 instances.</para>
-            /// </description></item>
-            /// <item><description><para><c>Cloud_5</c>: For v5.0 instances.</para>
-            /// </description></item>
+            /// <item><description>Cloud_4: Version 4.0 instance.</description></item>
+            /// <item><description>Cloud_5: Version 5.0 instance.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -503,7 +501,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The username for the instance.</para>
+            /// <para>The username of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>root</para>
@@ -513,7 +511,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string InstanceUsername { get; set; }
 
             /// <summary>
-            /// <para>The vSwitch ID. This parameter is required if the instance is deployed in a VPC.</para>
+            /// <para>The vSwitch ID. Required for VPCs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-bp10rbrt6rb6vrd89****</para>
@@ -523,7 +521,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string InstanceVSwitchIds { get; set; }
 
             /// <summary>
-            /// <para>The ID of the virtual private cloud (VPC). This parameter is required if the instance is deployed in a VPC.</para>
+            /// <para>The ID of the virtual private cloud (VPC). Required for VPCs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1a4gmlk31hyg6pt****</para>
@@ -533,7 +531,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string InstanceVpcId { get; set; }
 
             /// <summary>
-            /// <para>The consumer offset from which message consumption starts. Valid values:</para>
+            /// <para>The consumption offset of the message. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>CONSUME_FROM_LAST_OFFSET: Consumes messages from the latest offset.</description></item>
+            /// <item><description>CONSUME_FROM_FIRST_OFFSET: Consumes messages from the earliest offset.</description></item>
+            /// <item><description>CONSUME_FROM_TIMESTAMP: Consumes messages from the offset at a specified point in time.
+            /// Default value: CONSUME_FROM_LAST_OFFSET.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>CONSUME_FROM_LAST_OFFSET</para>
@@ -543,7 +547,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Offset { get; set; }
 
             /// <summary>
-            /// <para>The region where the Message Queue for Apache RocketMQ instance resides.</para>
+            /// <para>The region where the ApsaraMQ for RocketMQ instance resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -553,7 +557,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The tag used to filter messages.</para>
+            /// <para>The filter tag of the message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -563,7 +567,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Tag { get; set; }
 
             /// <summary>
-            /// <para>The point in time to start consumption, specified as a timestamp. This parameter is valid only if you set the <c>Offset</c> parameter to <c>CONSUME_FROM_TIMESTAMP</c>.</para>
+            /// <para>The timestamp. This parameter takes effect only when the Offset parameter is set to CONSUME_FROM_TIMESTAMP.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1636597951964</para>
@@ -573,7 +577,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public long? Timestamp { get; set; }
 
             /// <summary>
-            /// <para>The name of the topic on the Message Queue for Apache RocketMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</para>
+            /// <para>The topic name of the ApsaraMQ for RocketMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mytopic</para>
@@ -585,14 +589,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>Parameters for the Simple Log Service (SLS) event source.</para>
+        /// <para>The parameters for a Simple Log Service event source.</para>
         /// </summary>
         [NameInMap("SourceSLSParameters")]
         [Validation(Required=false)]
         public CreateEventSourceRequestSourceSLSParameters SourceSLSParameters { get; set; }
         public class CreateEventSourceRequestSourceSLSParameters : TeaModel {
             /// <summary>
-            /// <para>The consumer offset. Specifies where to start consumption. Valid values are <c>begin</c> (earliest offset), <c>end</c> (latest offset), or a specific UNIX timestamp.</para>
+            /// <para>The start consumption offset. You can set this parameter to begin to consume from the earliest offset, end to consume from the latest offset, or a specific timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>end</para>
@@ -602,7 +606,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string ConsumePosition { get; set; }
 
             /// <summary>
-            /// <para>The Logstore in Simple Log Service.</para>
+            /// <para>The Simple Log Service Logstore.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-logstore</para>
@@ -612,7 +616,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string LogStore { get; set; }
 
             /// <summary>
-            /// <para>The Log Project in Simple Log Service.</para>
+            /// <para>The Simple Log Service project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-project</para>
@@ -622,7 +626,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Project { get; set; }
 
             /// <summary>
-            /// <para>The RAM role that EventBridge assumes to read logs from Simple Log Service. When you create this role in the RAM console, select <b>Alibaba Cloud Service</b> as the trusted entity and <b>EventBridge</b> as the trusted service. For more information about the permissions for this role, see Custom event sources for Simple Log Service (SLS).</para>
+            /// <para>When granting authorization to EventBridge to read Simple Log Service logs by using this role, the following conditions must be met: When you create the role in the Resource Access Management (RAM) console, you must select Alibaba Cloud Service as the trusted entity and EventBridge as the trusted service. For more information about the access policy for this role, see Custom event source: Simple Log Service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testRole</para>
@@ -634,7 +638,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>Parameters for a scheduled event source.</para>
+        /// <para>The request parameter SourceScheduledEventParameters.</para>
         /// </summary>
         [NameInMap("SourceScheduledEventParameters")]
         [Validation(Required=false)]
@@ -651,7 +655,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Schedule { get; set; }
 
             /// <summary>
-            /// <para>The time zone in which the cron expression is executed.</para>
+            /// <para>The time zone for cron execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GMT+0:00</para>
@@ -661,7 +665,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string TimeZone { get; set; }
 
             /// <summary>
-            /// <para>A user-defined JSON string.</para>
+            /// <para>The JSON string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;a&quot;: &quot;b&quot;}</para>

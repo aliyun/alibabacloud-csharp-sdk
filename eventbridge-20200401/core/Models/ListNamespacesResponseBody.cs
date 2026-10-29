@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class ListNamespacesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response code. 200 indicates success.</para>
+        /// <para>The response code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Response data</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListNamespacesResponseBodyData Data { get; set; }
         public class ListNamespacesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Namespace list</para>
+            /// <para>The list of namespaces.</para>
             /// </summary>
             [NameInMap("Namespaces")]
             [Validation(Required=false)]
             public List<Namespace> Namespaces { get; set; }
 
             /// <summary>
-            /// <para>Next page token</para>
+            /// <para>The next page token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>Total count</para>
+            /// <para>The total number of items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>Response message</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Operation success</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>34AD682D-5B91-5773-8132-AA38C130****</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the operation succeeded</para>
+        /// <para>Indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

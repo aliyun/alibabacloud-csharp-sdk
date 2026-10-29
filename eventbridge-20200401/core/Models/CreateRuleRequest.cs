@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class CreateRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the event rule.</para>
+        /// <para>The description of the event bus.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SMQ filter rule</para>
+        /// <para>Filter rule for Simple Message Queue (formerly MNS) (SMQ)</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string EventBusName { get; set; }
 
         /// <summary>
-        /// <para>A list of event targets.</para>
+        /// <para>The list of event targets.</para>
         /// </summary>
         [NameInMap("EventTargets")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public CreateRuleRequestEventTargetsConcurrentConfig ConcurrentConfig { get; set; }
             public class CreateRuleRequestEventTargetsConcurrentConfig : TeaModel {
                 /// <summary>
-                /// <para>The maximum number of concurrent executions for the event target.</para>
+                /// <para>The number of concurrent executions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// <para>The dead-letter queue. If an event fails to be processed or exceeds the retry limit, it is sent to the dead-letter queue. Supported services for the dead-letter queue include Message Queue for Apache RocketMQ, Message Service (MNS), Message Queue for Apache Kafka, and EventBridge event buses.</para>
+            /// <para>The dead-letter queue. Unprocessed events or events that exceed the retry count are written to the dead-letter queue. Supported queue types include ApsaraMQ for RocketMQ, Simple Message Queue (formerly MNS), ApsaraMQ for Kafka, and EventBridge event buses.</para>
             /// </summary>
             [NameInMap("DeadLetterQueue")]
             [Validation(Required=false)]
             public CreateRuleRequestEventTargetsDeadLetterQueue DeadLetterQueue { get; set; }
             public class CreateRuleRequestEventTargetsDeadLetterQueue : TeaModel {
                 /// <summary>
-                /// <para>The Alibaba Cloud Resource Name (ARN) of the dead-letter queue. Events that fail to be processed or exceed the retry limit are sent to this ARN. Supported services for this parameter include Message Service (MNS) and Message Queue for Apache RocketMQ.</para>
+                /// <para>The ARN of the dead-letter queue. Unprocessed events or events that exceed the retry count are written to the dead-letter queue. Simple Message Queue (formerly MNS) and ApsaraMQ for RocketMQ are supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>acs:mns:cn-hangzhou:123456789098****:/queues/deadletterqueue</para>
@@ -75,6 +75,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                 /// <summary>
                 /// <para>The network type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>PrivateNetwork</para>
                 /// </summary>
                 [NameInMap("Network")]
                 [Validation(Required=false)]
@@ -82,6 +85,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                 /// <summary>
                 /// <para>The security group ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>sg-2d****</para>
                 /// </summary>
                 [NameInMap("SecurityGroupId")]
                 [Validation(Required=false)]
@@ -89,13 +95,19 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                 /// <summary>
                 /// <para>The vSwitch ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vsw-m12345****</para>
                 /// </summary>
                 [NameInMap("VSwitchIds")]
                 [Validation(Required=false)]
                 public string VSwitchIds { get; set; }
 
                 /// <summary>
-                /// <para>The VPC ID.</para>
+                /// <para>The ID of the VPC where the dead-letter queue resides.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-2z****</para>
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
@@ -104,7 +116,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// <para>The delivery endpoint for events.</para>
+            /// <para>The endpoint URL for delivery.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:mns:cn-hangzhou:123456789098****:queues/myqueue</para>
@@ -114,7 +126,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// <para>The fault tolerance policy. Valid values:<br><c>ALL</c>: Enables fault tolerance. Execution continues even if an error occurs. After all retry attempts fail, the event is sent to the dead-letter queue (if configured) or discarded.<br><c>NONE</c>: Disables fault tolerance. Execution is blocked if an error occurs and all retry attempts fail.<br><br></para>
+            /// <para>The fault tolerance strategy. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ALL: allows fault tolerance. Exceptions do not block execution. If the retry strategy is exhausted, messages are delivered to the dead-letter queue or discarded based on the configuration.</description></item>
+            /// <item><description>NONE: disables fault tolerance. Exceptions block execution when the retry strategy is exhausted.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>
@@ -135,7 +151,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The parameters for the event target.</para>
+            /// <para>The parameters of the event target.</para>
             /// </summary>
             [NameInMap("ParamList")]
             [Validation(Required=false)]
@@ -152,7 +168,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string Form { get; set; }
 
                 /// <summary>
-                /// <para>The name of the target parameter. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</para>
+                /// <para>The resource parameter of the event target. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>body</para>
@@ -162,7 +178,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string ResourceKey { get; set; }
 
                 /// <summary>
-                /// <para>The template for the event target parameter.</para>
+                /// <para>The parameter template style of the event target.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>The value of ${key} is ${value}!</para>
@@ -184,7 +200,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// <para>The push retry strategy. Valid values:<br><c>BACKOFF_RETRY</c>: A backoff retry strategy where the system makes three retry attempts at random intervals of 10 to 20 seconds.<br><c>EXPONENTIAL_DECAY_RETRY</c>: An exponential decay retry strategy where the system makes 176 retry attempts over 24 hours. The interval starts at 1 second and doubles with each of the first 10 attempts (up to 512 seconds). Subsequent retries occur every 512 seconds.<br><br></para>
+            /// <para>The retry policy for pushing events. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>BACKOFF_RETRY: backoff retry policy. The system retries 3 times, with a random interval of 10 to 20 seconds between each retry.</description></item>
+            /// <item><description>EXPONENTIAL_DECAY_RETRY: exponential decay retry. The system retries 176 times, with the interval exponentially incrementing to 512 seconds. The total retry time is 1 day. The specific intervals are 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, and then 512 seconds for the remaining 167 retries.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>BACKOFF_RETRY</para>
@@ -207,7 +227,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>The event pattern, in JSON format. Supported pattern types are <c>stringEqual</c> and <c>stringExpression</c>. Each field can contain a maximum of five expressions in a map structure.</para>
+        /// <para>The event pattern in JSON format. The following patterns are supported:</para>
+        /// <list type="bullet">
+        /// <item><description>stringEqual pattern</description></item>
+        /// <item><description>stringExpression pattern
+        /// Each field supports up to five expressions in a map structure.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -246,7 +271,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The status of the event rule. Valid values: <c>ENABLE</c>: The rule is enabled. This is the default value. <c>DISABLE</c>: The rule is disabled.</para>
+        /// <para>The status of the rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ENABLE: The rule is enabled. This is the default status.</description></item>
+        /// <item><description>DISABLE: The rule is disabled.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ENABLE</para>

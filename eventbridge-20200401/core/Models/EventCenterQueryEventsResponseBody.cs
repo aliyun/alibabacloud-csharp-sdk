@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class EventCenterQueryEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status of the API call, which can be Success or a POP error code.</para>
+        /// <para>The API status or POP error code. Valid values: Success: Successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public EventCenterQueryEventsResponseBodyData Data { get; set; }
         public class EventCenterQueryEventsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The maximum number of entries to return.</para>
+            /// <para>The maximum number of records returned for the current request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The token used to retrieve the next page of results. If this parameter is empty, all results have been returned.</para>
+            /// <para>The token that indicates the read position returned by the current call. An empty value indicates that all data has been read.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The query results for the <c>table</c> query type.</para>
+            /// <para>The query results for the table query type.</para>
             /// </summary>
             [NameInMap("Table")]
             [Validation(Required=false)]
             public List<EventCenterQueryEventsResponseBodyDataTable> Table { get; set; }
             public class EventCenterQueryEventsResponseBodyDataTable : TeaModel {
                 /// <summary>
-                /// <para>A query result entry, represented as a key-value pair.</para>
+                /// <para>The entries in the query results, represented as key-value pairs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{
@@ -69,14 +69,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// <para>The query results for the <c>time series</c> query type.</para>
+            /// <para>The query results for the timeseries query type.</para>
             /// </summary>
             [NameInMap("TimeSeries")]
             [Validation(Required=false)]
             public List<EventCenterQueryEventsResponseBodyDataTimeSeries> TimeSeries { get; set; }
             public class EventCenterQueryEventsResponseBodyDataTimeSeries : TeaModel {
                 /// <summary>
-                /// <para>A query result entry, represented as a key-value pair.</para>
+                /// <para>The entries in the query results, represented as key-value pairs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public Dictionary<string, object> RowData { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp.</para>
+                /// <para>The timestamp used for display.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1683561600000</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// <para>The total number of entries that meet the filter conditions. This parameter is optional and is not returned by default.</para>
+            /// <para>The total number of data entries that meet the request conditions. This parameter is optional and is not returned by default.</para>
             /// 
             /// <b>Example:</b>
             /// <para>76</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5DAF96FB-A4B6-548C-B999-XXXXXXXX</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. <c>true</c> indicates success, and <c>false</c> indicates failure.</para>
+        /// <para>Indicates whether the operation is successful. Valid values: true: Successful. false: Failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

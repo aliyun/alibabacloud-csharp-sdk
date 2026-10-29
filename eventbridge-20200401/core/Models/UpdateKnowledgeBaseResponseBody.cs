@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class UpdateKnowledgeBaseResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of Success indicates that the call was successful. If the call fails, a specific error code is returned.</para>
+        /// <para>The response code. A value of Success indicates that the call is successful. If the call fails, a specific error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The details of the knowledge base after the update.</para>
+        /// <para>The updated details of the knowledge base.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public KnowledgeBase Data { get; set; }
 
         /// <summary>
-        /// <para>The message returned by the operation. A value of Operation success is returned if the call was successful. If the call fails, a specific error description is returned.</para>
+        /// <para>The response message. If the call is successful, the value is Operation success. If the call fails, a specific error description is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Operation success</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. A value of true indicates success.</para>
+        /// <para>Indicates whether the call is successful. A value of true indicates that the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

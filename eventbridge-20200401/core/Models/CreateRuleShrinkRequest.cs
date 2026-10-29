@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class CreateRuleShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the event rule.</para>
+        /// <para>The description of the event bus.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SMQ filter rule</para>
+        /// <para>Filter rule for Simple Message Queue (formerly MNS) (SMQ)</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -31,14 +31,19 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string EventBusName { get; set; }
 
         /// <summary>
-        /// <para>A list of event targets.</para>
+        /// <para>The list of event targets.</para>
         /// </summary>
         [NameInMap("EventTargets")]
         [Validation(Required=false)]
         public string EventTargetsShrink { get; set; }
 
         /// <summary>
-        /// <para>The event pattern, in JSON format. Supported pattern types are <c>stringEqual</c> and <c>stringExpression</c>. Each field can contain a maximum of five expressions in a map structure.</para>
+        /// <para>The event pattern in JSON format. The following patterns are supported:</para>
+        /// <list type="bullet">
+        /// <item><description>stringEqual pattern</description></item>
+        /// <item><description>stringExpression pattern
+        /// Each field supports up to five expressions in a map structure.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +82,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The status of the event rule. Valid values: <c>ENABLE</c>: The rule is enabled. This is the default value. <c>DISABLE</c>: The rule is disabled.</para>
+        /// <para>The status of the rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ENABLE: The rule is enabled. This is the default status.</description></item>
+        /// <item><description>DISABLE: The rule is disabled.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ENABLE</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class QueryTracedEventsRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range for the query, specified as a UNIX timestamp in milliseconds.</para>
+        /// <para>The end time of the time range to retrieve events. Unit: milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page. Use this parameter with NextToken to paginate the results.&gt;Notice: The maximum value is 100.</para>
+        /// <para>The maximum number of entries to return per page. You can use this parameter together with NextToken to paginate query results. &gt;Notice: The maximum number of entries returned per page cannot exceed 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string MatchedRule { get; set; }
 
         /// <summary>
-        /// <para>The token for retrieving the next page of results. It is returned in the response to a previous request if more results are available.</para>
+        /// <para>The pagination token. If you specify Limit and more results are available, this token is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range for the query, specified as a UNIX timestamp in milliseconds.</para>
+        /// <para>The start time of the time range to retrieve events. Unit: milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,7 +93,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The event subject.</para>
+        /// <para>The subject of the event.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>order-1001</para>
         /// </summary>
         [NameInMap("Subject")]
         [Validation(Required=false)]

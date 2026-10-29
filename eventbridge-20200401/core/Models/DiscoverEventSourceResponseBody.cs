@@ -44,6 +44,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                 /// <summary>
                 /// <para>The estimated number of rows. Unit: rows.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("EstimatedRows")]
                 [Validation(Required=false)]
@@ -51,6 +54,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                 /// <summary>
                 /// <para>The number of days before binary logs (binlogs) expire. Unit: days.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("ExpireLogsDays")]
                 [Validation(Required=false)]
@@ -159,6 +165,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                 /// <summary>
                 /// <para>The maximum idle time for a non-interactive connection. Unit: seconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>86400</para>
                 /// </summary>
                 [NameInMap("WaitTimeout")]
                 [Validation(Required=false)]

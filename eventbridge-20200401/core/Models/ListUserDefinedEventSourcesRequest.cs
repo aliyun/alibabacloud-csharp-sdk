@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string EventBusName { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per request. You can use this parameter with NextToken for pagination. The maximum value is 100.</para>
+        /// <para>The maximum number of entries to return per request. You can use this parameter with NextToken to paginate results. The maximum value is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string NamePrefix { get; set; }
 
         /// <summary>
-        /// <para>The token used to retrieve the next page of results. Set this parameter to the NextToken value returned from a previous call.</para>
+        /// <para>The token returned when Limit is specified and additional results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public class SinkBaiLianParametersAfter : TeaModel {
             /// <summary>
             /// <para>The method for generating the value. The <c>JSONPATH</c> option extracts data from the event payload. Valid values: <c>CONSTANT</c>, <c>JSONPATH</c>, and <c>TEMPLATE</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CONSTANT</para>
             /// </summary>
             [NameInMap("Form")]
             [Validation(Required=false)]
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
             /// <summary>
             /// <para>The template string for formatting the value. This parameter is used only when <c>Form</c> is set to <c>TEMPLATE</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The value of ${key} is ${value}!</para>
             /// </summary>
             [NameInMap("Template")]
             [Validation(Required=false)]
@@ -32,6 +38,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
             /// <summary>
             /// <para>The source content for the value, as specified by the <c>Form</c> parameter. For example, if <c>Form</c> is <c>JSONPATH</c>, this value must be a JSONPath expression.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -41,6 +50,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// <para>The type of the Model Studio application to invoke.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>KnowledgeBase</para>
         /// </summary>
         [NameInMap("ApplicationType")]
         [Validation(Required=false)]
@@ -55,6 +67,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public class SinkBaiLianParametersBefore : TeaModel {
             /// <summary>
             /// <para>The method for generating the value. The <c>JSONPATH</c> option extracts data from the event payload. Valid values: <c>CONSTANT</c>, <c>JSONPATH</c>, and <c>TEMPLATE</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CONSTANT</para>
             /// </summary>
             [NameInMap("Form")]
             [Validation(Required=false)]
@@ -62,6 +77,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
             /// <summary>
             /// <para>The template string for formatting the value. This parameter is used only when <c>Form</c> is set to <c>TEMPLATE</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The value of ${key} is ${value}!</para>
             /// </summary>
             [NameInMap("Template")]
             [Validation(Required=false)]
@@ -69,6 +87,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
             /// <summary>
             /// <para>The source content for the value, as specified by the <c>Form</c> parameter. For example, if <c>Form</c> is <c>JSONPATH</c>, this value must be a JSONPath expression.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -78,6 +99,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// <para>Context information for the application. The value must be a JSON object.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;k1&quot;:&quot;v1&quot;}</para>
         /// </summary>
         [NameInMap("Context")]
         [Validation(Required=false)]
@@ -85,6 +109,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// <para>Additional key-value pairs to pass to the target. The value must be a valid JSON object.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;k1&quot;:&quot;v1&quot;}</para>
         /// </summary>
         [NameInMap("Extend")]
         [Validation(Required=false)]
@@ -99,6 +126,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public class SinkBaiLianParametersOffset : TeaModel {
             /// <summary>
             /// <para>The method for generating the value. The <c>JSONPATH</c> option extracts data from the event payload. Valid values: <c>CONSTANT</c>, <c>JSONPATH</c>, and <c>TEMPLATE</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CONSTANT</para>
             /// </summary>
             [NameInMap("Form")]
             [Validation(Required=false)]
@@ -106,6 +136,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
             /// <summary>
             /// <para>The template string for formatting the value. This parameter is used only when <c>Form</c> is set to <c>TEMPLATE</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The value of ${key} is ${value}!</para>
             /// </summary>
             [NameInMap("Template")]
             [Validation(Required=false)]
@@ -113,6 +146,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
             /// <summary>
             /// <para>The source content for the value, as specified by the <c>Form</c> parameter. For example, if <c>Form</c> is <c>JSONPATH</c>, this value must be a JSONPath expression.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -129,6 +165,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public class SinkBaiLianParametersOp : TeaModel {
             /// <summary>
             /// <para>The method for generating the value. The <c>JSONPATH</c> option extracts data from the event payload. Valid values: <c>CONSTANT</c>, <c>JSONPATH</c>, and <c>TEMPLATE</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CONSTANT</para>
             /// </summary>
             [NameInMap("Form")]
             [Validation(Required=false)]
@@ -136,6 +175,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
             /// <summary>
             /// <para>The template string for formatting the value. This parameter is used only when <c>Form</c> is set to <c>TEMPLATE</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>The value of ${key} is ${value}!</para>
             /// </summary>
             [NameInMap("Template")]
             [Validation(Required=false)]
@@ -143,6 +185,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
             /// <summary>
             /// <para>The source content for the value, as specified by the <c>Form</c> parameter. For example, if <c>Form</c> is <c>JSONPATH</c>, this value must be a JSONPath expression.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -159,6 +204,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public class SinkBaiLianParametersPartition : TeaModel {
             /// <summary>
             /// <para>The method for generating the value. The <c>JSONPATH</c> option extracts data from the event payload. Valid values: <c>CONSTANT</c>, <c>JSONPATH</c>, and <c>TEMPLATE</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CONSTANT</para>
             /// </summary>
             [NameInMap("Form")]
             [Validation(Required=false)]
@@ -166,6 +214,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
             /// <summary>
             /// <para>The template string for formatting the value. This parameter is used only when <c>Form</c> is set to <c>TEMPLATE</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>${partition}</para>
             /// </summary>
             [NameInMap("Template")]
             [Validation(Required=false)]
@@ -173,6 +224,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
             /// <summary>
             /// <para>The source content for the value, as specified by the <c>Form</c> parameter. For example, if <c>Form</c> is <c>JSONPATH</c>, this value must be a JSONPath expression.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -182,6 +236,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// <para>The unique ID of the Model Studio workspace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>llm-a1b2c3d4e5f6g7h8</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

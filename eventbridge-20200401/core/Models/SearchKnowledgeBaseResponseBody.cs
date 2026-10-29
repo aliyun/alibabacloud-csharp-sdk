@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class SearchKnowledgeBaseResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of Success indicates a successful call. If the call fails, a specific error code is returned.</para>
+        /// <para>The response code. A value of Success indicates success. If the call fails, a specific error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The search results, including the list of matched chunks and the time spent.</para>
+        /// <para>The search results, which include the list of matched chunks and the time taken.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             /// <para>The list of matched chunks, sorted by relevance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{&quot;DocumentId&quot;:&quot;doc-bp1xxxxxxxxxxxx&quot;,&quot;ChunkSeq&quot;:3,&quot;Content&quot;:&quot;EventBridge supports event routing&quot;}]</para>
+            /// <para>[{&quot;DocumentId&quot;:&quot;doc-bp1xxxxxxxxxxxx&quot;,&quot;ChunkSeq&quot;:3,&quot;Content&quot;:&quot;EventBridge supports event routing.&quot;}]</para>
             /// </summary>
             [NameInMap("Chunks")]
             [Validation(Required=false)]
             public List<KnowledgeBaseSearchChunk> Chunks { get; set; }
 
             /// <summary>
-            /// <para>The server-side processing duration of this search. Unit: milliseconds.</para>
+            /// <para>The server-side processing time for this search, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>128</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>The response message. A value of Operation success is returned for a successful call. A specific error description is returned for a failed call.</para>
+        /// <para>The response message. The value is Operation success if the call is successful, or a specific error description if the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Operation success</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. A value of true indicates success.</para>
+        /// <para>Indicates whether the call is successful. A value of true indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

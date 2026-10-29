@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class CreateTableRequest : TeaModel {
         /// <summary>
-        /// <para>The data catalog to which the table belongs.</para>
+        /// <para>The data catalog.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_catalog</para>
@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// <para>The column definitions.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;主键&quot;}]</para>
+        /// <para>[{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;Primary key&quot;}]</para>
         /// </summary>
         [NameInMap("Columns")]
         [Validation(Required=false)]
         public List<CreateTableRequestColumns> Columns { get; set; }
         public class CreateTableRequestColumns : TeaModel {
             /// <summary>
-            /// <para>The description of the field.</para>
+            /// <para>The comment of the field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Isp</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The name of the connector.</para>
+            /// <para>The connector name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>kafka-default-agent-alikafka_pre-cn-28t3sfzno003</para>
@@ -72,17 +72,17 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>The description.</para>
+        /// <para>The comment.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试事件表</para>
+        /// <para>Test event table</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The name of the table.</para>
+        /// <para>The table name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The namespace to which the table belongs.</para>
+        /// <para>The namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_namespace</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public CreateTableRequestRetentionPolicy RetentionPolicy { get; set; }
         public class CreateTableRequestRetentionPolicy : TeaModel {
             /// <summary>
-            /// <para>The cold storage retention time.</para>
+            /// <para>The cold storage duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public int? ColdTTL { get; set; }
 
             /// <summary>
-            /// <para>The hot storage retention time.</para>
+            /// <para>The hot storage duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>

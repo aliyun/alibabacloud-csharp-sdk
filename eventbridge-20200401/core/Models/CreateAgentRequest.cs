@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// <para>The description of the event bus.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>连接配置描述信息</para>
+        /// <para>Connection configuration description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// <para>You are an IoT data analytics assistant...</para>
         /// 
         /// <b>Example:</b>
-        /// <para>我想要她，你这样增加请求头获取用户IP CF-Connecting-IP%3B</para>
+        /// <para>I want her, you add the request header to obtain the user IP CF-Connecting-IP%3B</para>
         /// </summary>
         [NameInMap("Prompt")]
         [Validation(Required=false)]

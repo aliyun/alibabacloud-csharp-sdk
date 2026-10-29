@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class DeleteKnowledgeBaseResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. Success indicates a successful call. If the call fails, a specific error code is returned.</para>
+        /// <para>The response code of the API operation. A value of Success indicates that the call is successful. If the call fails, a specific error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public KnowledgeBase Data { get; set; }
 
         /// <summary>
-        /// <para>The response message. Operation success is returned if the call succeeds. A specific error description is returned if the call fails.</para>
+        /// <para>The message returned by the API operation. If the call is successful, the value is Operation success. If the call fails, a specific error description is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Operation success</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>34AD682D-5B91-5773-8132-AA38C130****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. A value of true indicates success.</para>
+        /// <para>Indicates whether the call is successful. A value of true indicates that the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

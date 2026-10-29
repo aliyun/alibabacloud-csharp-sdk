@@ -10,21 +10,28 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class QueryAskLumaLogResult : TeaModel {
         /// <summary>
-        /// <para>The log entries returned by the query.</para>
+        /// <para>The list of log records returned by the query.</para>
         /// </summary>
         [NameInMap("Entries")]
         [Validation(Required=false)]
         public List<AskLumaLogEntry> Entries { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether more results are available. The value is <c>true</c> if more results can be retrieved, and <c>false</c> otherwise.</para>
+        /// <para>Indicates whether more query results are available. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: More results are available.</description></item>
+        /// <item><description>false: No more results are available.</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("HasMore")]
         [Validation(Required=false)]
         public bool? HasMore { get; set; }
 
         /// <summary>
-        /// <para>The token to use for retrieving the next page of results. If present, pass this value as the <c>LastKey</c> parameter in a subsequent request to fetch more data. This field is omitted when all results have been retrieved.</para>
+        /// <para>The token used to retrieve the next page of query results. Pass this value as LastKey in subsequent requests to continue the query. This field is not returned when all results have been returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eyJ0cyI6MTcxN...</para>
         /// </summary>
         [NameInMap("LastKey")]
         [Validation(Required=false)]

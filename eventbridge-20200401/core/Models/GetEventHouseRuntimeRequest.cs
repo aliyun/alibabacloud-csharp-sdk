@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class GetEventHouseRuntimeRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the EventHouse Runtime. If this parameter is not specified, the default Runtime is queried.</para>
+        /// <para>The name of the EventHouse runtime. If this parameter is not specified, the default runtime is queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>

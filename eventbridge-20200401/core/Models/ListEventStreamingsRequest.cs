@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class ListEventStreamingsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return per request. You can use this parameter together with NextToken to implement paging.</para>
-        /// <remarks>
-        /// <para>Notice: The maximum number of entries to return per request cannot exceed 100.</para>
-        /// </remarks>
+        /// <para>Specifies the maximum number of entries to return per request. You can use this parameter together with NextToken to paginate results.&gt;Notice: The maximum number of entries returned per request cannot exceed 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -23,7 +20,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The name prefix of the event stream.</para>
+        /// <para>The prefix of the event stream name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name</para>
@@ -33,7 +30,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string NamePrefix { get; set; }
 
         /// <summary>
-        /// <para>If the number of entries that match the specified conditions exceeds the value of Limit, a NextToken is returned.</para>
+        /// <para>The token that is returned when Limit is specified and additional results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -53,14 +50,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string SinkArn { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the event source.</para>
+        /// <para>The ARN of the event source.</para>
         /// </summary>
         [NameInMap("SourceArn")]
         [Validation(Required=false)]
         public string SourceArn { get; set; }
 
         /// <summary>
-        /// <para>The tags used for filtering.</para>
+        /// <para>The tags used to filter results.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

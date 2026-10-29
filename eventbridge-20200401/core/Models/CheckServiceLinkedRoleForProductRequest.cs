@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class CheckServiceLinkedRoleForProductRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the service-linked role (SLR) for the cloud product.</para>
+        /// <para>The name of the service-linked role associated with the cloud service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AliyunServiceRoleForEventBridgeConnectVPC</para>

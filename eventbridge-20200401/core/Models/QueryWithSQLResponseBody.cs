@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class QueryWithSQLResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. Valid values:</para>
+        /// <para>The response code returned by the API operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Success: The request was successful.    </para>
+        /// <item><description><para>Success: The request is successful.    </para>
         /// </description></item>
-        /// <item><description><para>Other values: An error occurred. For more information, see error codes.</para>
+        /// <item><description><para>Other values: An error code. For more information, see Error codes.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public QueryWithSQLResponseBodyData Data { get; set; }
         public class QueryWithSQLResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The query result rows.</para>
+            /// <para>The rows in the query result.</para>
             /// </summary>
             [NameInMap("Rows")]
             [Validation(Required=false)]
@@ -72,7 +72,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. A value of true indicates success. A value of false indicates failure.</para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: The operation is successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The operation fails.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

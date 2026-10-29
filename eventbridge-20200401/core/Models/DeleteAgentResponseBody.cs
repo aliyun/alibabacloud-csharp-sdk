@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class DeleteAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The API status or POP error code. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Success: the operation is successful.</description></item>
-        /// </list>
+        /// <para>The API status or POP error code. Valid values: Success: The operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AgentNotFound</para>

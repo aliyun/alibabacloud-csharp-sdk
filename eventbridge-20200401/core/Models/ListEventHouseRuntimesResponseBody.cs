@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class ListEventHouseRuntimesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. Success indicates that the operation was successful.</para>
+        /// <para>The response code. A value of Success indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,13 +20,15 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The runtime list result.</para>
+        /// <para>The runtime list results.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListEventHouseRuntimesResponseBodyData Data { get; set; }
         public class ListEventHouseRuntimesResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The maximum number of runtimes returned per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -34,18 +36,26 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             [Validation(Required=false)]
             public int? MaxResults { get; set; }
 
+            /// <summary>
+            /// <para>The token for the next page. An empty value indicates that there are no more pages.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("NextToken")]
             [Validation(Required=false)]
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The list of runtimes.</para>
+            /// <para>The runtime list.</para>
             /// </summary>
             [NameInMap("Runtimes")]
             [Validation(Required=false)]
             public List<EventHouseRuntime> Runtimes { get; set; }
 
             /// <summary>
+            /// <para>The total number of runtimes that meet the query conditions.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -56,7 +66,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>The message returned by the operation.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Operation success</para>
@@ -76,7 +86,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -26,14 +26,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public EventCenterQueryEventsRequestBodyParameters Parameters { get; set; }
             public class EventCenterQueryEventsRequestBodyParameters : TeaModel {
                 /// <summary>
-                /// <para>An array of column names to use as dimensions for splitting the dataset.</para>
+                /// <para>Further splits the dataset by specific dimensions (column names).</para>
                 /// </summary>
                 [NameInMap("Breakdowns")]
                 [Validation(Required=false)]
                 public List<string> Breakdowns { get; set; }
 
                 /// <summary>
-                /// <para>The calculations to perform on specified columns.</para>
+                /// <para>Performs calculations on the specified columns by using operators.</para>
                 /// </summary>
                 [NameInMap("Calculations")]
                 [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// <para>The end timestamp for the event query. Unit: milliseconds.</para>
+                /// <para>The end timestamp for querying events, in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1687861201814</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public long? EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The logical operator for combining filter conditions.</para>
+                /// <para>The logic for combining filter conditions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AND</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string FilterCombination { get; set; }
 
                 /// <summary>
-                /// <para>A list of filter conditions.</para>
+                /// <para>The list of filter conditions.</para>
                 /// </summary>
                 [NameInMap("Filters")]
                 [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string Column { get; set; }
 
                     /// <summary>
-                    /// <para>The logical operator for combining nested filters.</para>
+                    /// <para>The logical combination method for nested filter conditions.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>AND</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string NestedFilterCombination { get; set; }
 
                     /// <summary>
-                    /// <para>A list of nested filters.</para>
+                    /// <para>The list of nested filter conditions.</para>
                     /// </summary>
                     [NameInMap("NestedFilters")]
                     [Validation(Required=false)]
@@ -117,6 +117,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public class EventCenterQueryEventsRequestBodyParametersFiltersNestedFilters : TeaModel {
                         /// <summary>
                         /// <para>The column name.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>source</para>
                         /// </summary>
                         [NameInMap("Column")]
                         [Validation(Required=false)]
@@ -124,13 +127,16 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         /// <summary>
                         /// <para>The operator.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>=</para>
                         /// </summary>
                         [NameInMap("Op")]
                         [Validation(Required=false)]
                         public string Op { get; set; }
 
                         /// <summary>
-                        /// <para>A list of values to use with the operator.</para>
+                        /// <para>The list of values used with the operator.</para>
                         /// </summary>
                         [NameInMap("Values")]
                         [Validation(Required=false)]
@@ -149,7 +155,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string Op { get; set; }
 
                     /// <summary>
-                    /// <para>The values to use with the operator.</para>
+                    /// <para>The values used with the operator.</para>
                     /// </summary>
                     [NameInMap("Values")]
                     [Validation(Required=false)]
@@ -158,7 +164,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// <para>The time granularity, in seconds, for querying time series data. The minimum value is 1. This is a suggested value; the actual granularity is returned in the response.</para>
+                /// <para>The time granularity, which is the minimum time unit for querying time series data. Unit: seconds. Minimum value: 1. This parameter is a recommended value. The actual granularity is subject to the returned value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30</para>
@@ -168,7 +174,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public int? Granularity { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of events to query. Valid values: 1 to 10,000.</para>
+                /// <para>The maximum number of events to query. Valid values: 1 to 10000.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -178,7 +184,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public int? Limit { get; set; }
 
                 /// <summary>
-                /// <para>The starting position of the query. The count starts from 0.</para>
+                /// <para>The starting position of the current query. The value starts from 0.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -188,7 +194,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public int? Offset { get; set; }
 
                 /// <summary>
-                /// <para>The sort order for the query results. This parameter applies only when QueryType is set to table.</para>
+                /// <para>Sorts the query results. This parameter is valid only for queries where QueryType is set to table.</para>
                 /// </summary>
                 [NameInMap("Orders")]
                 [Validation(Required=false)]
@@ -227,7 +233,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// <para>The start timestamp for the event query. Unit: milliseconds.</para>
+                /// <para>The start timestamp for querying events, in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1687860901814</para>
@@ -237,7 +243,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public long? StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The time range. Unit: milliseconds. The minimum value is 1,000.</para>
+                /// <para>The time range. Unit: milliseconds. Minimum value: 1000.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000000</para>
@@ -251,12 +257,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             /// <summary>
             /// <para>The query type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>timeseries</b>: queries time series data.</para>
-            /// </description></item>
-            /// <item><description><para><b>table</b>: queries table data.</para>
-            /// </description></item>
-            /// <item><description><para><b>timeseries_and_table</b>: queries both time series data and table data.</para>
-            /// </description></item>
+            /// <item><description><b>timeseries</b>: time series data</description></item>
+            /// <item><description><b>table</b>: tabular data</description></item>
+            /// <item><description><b>timeseries_and_table</b>: both time series and tabular data</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -268,7 +271,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string QueryType { get; set; }
 
             /// <summary>
-            /// <para>The schema ID.</para>
+            /// <para>The ID of the schema.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -291,7 +294,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string BusName { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return. Valid values: 0 to 10,000. The default value is 100.</para>
+        /// <para>The maximum number of results to return. Valid values: 0 to 10000. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -301,7 +304,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results.</para>
+        /// <para>The token used to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

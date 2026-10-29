@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class Catalog : TeaModel {
         /// <summary>
-        /// <para>The comment or description of the data catalog.</para>
+        /// <para>The comment of the data catalog.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test data catalog</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The connection name associated with a mounted catalog. This parameter has a value only when Provider is set to MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, or Iceberg.</para>
+        /// <para>The name of the connection associated with a mounted catalog. This property has a value only when the provider is MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, or Iceberg.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_connection</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string ConnectionName { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier name of the data catalog.</para>
+        /// <para>The unique name of the data catalog.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_catalog</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The extended properties (JSON object). For the Elasticsearch type, this includes information such as IndexPattern.</para>
+        /// <para>The extended properties as a JSON object. The Elasticsearch type includes information such as IndexPattern.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;IndexPattern&quot;:&quot;my-index-*&quot;}</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public Dictionary<string, object> Properties { get; set; }
 
         /// <summary>
-        /// <para>The data source provider. EventHouse indicates built-in storage. MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, and Iceberg indicate externally mounted sources.</para>
+        /// <para>The data source provider. EventHouse uses built-in storage, while MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, and Iceberg are externally mounted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EventHouse</para>

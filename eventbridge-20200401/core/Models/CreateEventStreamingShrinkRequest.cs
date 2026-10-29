@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string EventStreamingName { get; set; }
 
         /// <summary>
-        /// <para>The event filtering rule. If you do not specify this parameter, all events are matched.</para>
+        /// <para>The event filtering rule. If this parameter is not specified, all events are matched.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -57,35 +57,38 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string FilterPattern { get; set; }
 
         /// <summary>
-        /// <para>The general JSON Configurations for the event provider. This parameter is mutually exclusive with Source. Specify one of the two parameters.</para>
+        /// <para>The common JSON configurations for the event provider. This parameter is mutually exclusive with the Source parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;key&quot;:&quot;value&quot;}</para>
         /// </summary>
         [NameInMap("Metadata")]
         [Validation(Required=false)]
         public string Metadata { get; set; }
 
         /// <summary>
-        /// <para>The runtime parameters.</para>
+        /// <para>The runtime environment parameters.</para>
         /// </summary>
         [NameInMap("RunOptions")]
         [Validation(Required=false)]
         public string RunOptionsShrink { get; set; }
 
         /// <summary>
-        /// <para>The event target. You must select exactly one type of Sink.</para>
+        /// <para>The event target. You must select one and only one sink.</para>
         /// </summary>
         [NameInMap("Sink")]
         [Validation(Required=false)]
         public string SinkShrink { get; set; }
 
         /// <summary>
-        /// <para>The event provider. You must select exactly one Source type.</para>
+        /// <para>The event provider. You must specify exactly one source.</para>
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string SourceShrink { get; set; }
 
         /// <summary>
-        /// <para>The list of tags. A maximum of 20 tags can be specified.</para>
+        /// <para>The list of tags. You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -93,6 +96,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public class CreateEventStreamingShrinkRequestTags : TeaModel {
             /// <summary>
             /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>env</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -100,6 +106,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
             /// <summary>
             /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>prod</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -108,7 +117,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>The Transform-related configurations.</para>
+        /// <para>The transform configurations.</para>
         /// </summary>
         [NameInMap("Transforms")]
         [Validation(Required=false)]

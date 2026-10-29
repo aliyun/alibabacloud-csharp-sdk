@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class QueryWithSQLRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of rows to return. Default value: 20. Maximum value: 50.</para>
+        /// <para>The number of entries to return. Default value: 20. Maximum value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The query statement. Typically uses a three-part table name in the format of catalog.namespace.table.</para>
+        /// <para>The query statement. Typically, a three-part table name in the format of catalog.namespace.table is used.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

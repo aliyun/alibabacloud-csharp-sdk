@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class ListChunksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of Success indicates a successful call. If the call fails, a specific error code is returned.</para>
+        /// <para>The response code. A value of Success indicates that the call is successful. If the call fails, a specific error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The chunk list query result, which contains chunk entries and pagination information.</para>
+        /// <para>The query result of the chunk list, which includes chunk entries and pagination information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public List<KnowledgeBaseChunk> Chunks { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of results per page that took effect for this request.</para>
+            /// <para>The actual maximum number of results per page that takes effect for the current request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The pagination token for the next page (an opaque string). Pass this value as the NextToken parameter in the next request to retrieve the next page. An empty value indicates that no more data is available.</para>
+            /// <para>The pagination token for the next page, which is an opaque string. Pass this value to the NextToken parameter of the next request to obtain the next page. An empty value indicates that no more data is available.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ca1eb85f5d99c7d6a97e6****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The total number of chunks in the specified document when DocumentId is specified. In full knowledge base mode (when DocumentId is not specified), this field is not returned. Pagination ends when NextToken is empty.</para>
+            /// <para>The total number of chunks in the specified document. This parameter is returned only when DocumentId is specified. In full-base mode (when DocumentId is not specified), this parameter is not returned, and pagination ends when NextToken is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>The message returned by the operation. The value is Operation success if the call succeeds, or a specific error description if the call fails.</para>
+        /// <para>The prompt message returned by the API. If the call is successful, the value is Operation success. If the call fails, a specific error description is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Operation success</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. A value of true indicates success.</para>
+        /// <para>Indicates whether the call is successful. A value of true indicates that the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

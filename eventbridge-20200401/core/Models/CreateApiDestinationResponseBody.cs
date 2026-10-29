@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class CreateApiDestinationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned response code. The value Success indicates that the request is successful.</para>
+        /// <para>The API status code or POP error code. Valid values: Success: The operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned if the API destination is created.</para>
+        /// <para>The data structure returned upon successful creation of the API destination.</para>
         /// </summary>
         [NameInMap("Date")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class DeleteApiDestinationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned response code. The value Success indicates that the request is successful.</para>
+        /// <para>The API operation status or POP error code. Valid values: Success: The operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message. If the request is successful, success is returned. If the request failed, an error code is returned.</para>
+        /// <para>The additional information. If the request is normal, success is returned. If the request is abnormal, a specific error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

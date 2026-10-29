@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class DeleteEventAnalysisJobShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The identifier of the source resource.</para>
+        /// <para>The source resource identifier.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string BusName { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return. Valid values: 0 to 10,000. The default value is 100.</para>
+        /// <para>The maximum number of results to return. Valid values: 0 to 10000. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results.</para>
+        /// <para>The token used to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class SearchLumaKnowledgeBaseRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the Agent.</para>
+        /// <para>The name of the agent.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string AgentName { get; set; }
 
         /// <summary>
-        /// <para>The name of the data catalog bound to the Agent. You can call ListLumaCatalogs to obtain the catalog name.</para>
+        /// <para>The name of the data catalog bound to the agent. You can call ListLumaCatalogs to obtain this value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Catalog { get; set; }
 
         /// <summary>
-        /// <para>The name of the knowledge base bound to the Agent. You can call ListLumaKnowledgeBases to obtain the knowledge base name.</para>
+        /// <para>The name of the knowledge base bound to the agent. You can call ListLumaKnowledgeBases to obtain this value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string KnowledgeBaseName { get; set; }
 
         /// <summary>
-        /// <para>A JSON string that filters the retrieval scope based on document metadata. For available fields, refer to the MetadataSchema of the knowledge base.</para>
+        /// <para>The metadata filter conditions. The value is a JSON string used to filter the recall scope based on document metadata. For available fields, see the MetadataSchema of the knowledge base.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;category&quot;:&quot;faq&quot;}</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string MetadataFilter { get; set; }
 
         /// <summary>
-        /// <para>Valid values: vector (AISearch), keyword (keyword match), hybrid (hybrid search). If not specified, the retrieve configuration of the knowledge base is used.</para>
+        /// <para>The retrieve mode. Valid values: vector (AISearch), keyword (keyword retrieve), and hybrid (hybrid retrieve). If you do not specify this parameter, the retrieve configuration of the knowledge base is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hybrid</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Mode { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace bound to the Agent. You can call ListLumaNamespaces to obtain the namespace name.</para>
+        /// <para>The name of the namespace bound to the agent. You can call ListLumaNamespaces to obtain this value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The natural language query for retrieval.</para>
+        /// <para>The search query in natural language.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable reranking for the retrieved results. Reranking improves accuracy but increases latency. If not specified, the retrieval configuration of the knowledge base is used.</para>
+        /// <para>Specifies whether to enable reranking. If enabled, the recalled results are reranked to improve precision at the cost of longer execution duration. If you do not specify this parameter, the search configuration of the knowledge base is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public bool? Rerank { get; set; }
 
         /// <summary>
-        /// <para>Valid values: 1 to 100. If not specified, the retrieval configuration of the knowledge base is used.</para>
+        /// <para>The number of text chunks to return. Valid values: 1 to 100. If you do not specify this parameter, the search configuration of the knowledge base is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

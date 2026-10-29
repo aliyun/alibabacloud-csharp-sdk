@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class Table : TeaModel {
         /// <summary>
-        /// <para>The name of the data catalog to which the table belongs</para>
+        /// <para>The name of the data catalog to which the table belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_catalog</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Catalog { get; set; }
 
         /// <summary>
-        /// <para>The column definition list of the table. Each column contains Name (column name), Type (data type), and Comment (remarks)</para>
+        /// <para>The column definitions of the table. Each column includes the name, data type, and comment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;Primary key&quot;}]</para>
@@ -30,14 +30,18 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public List<TableColumns> Columns { get; set; }
         public class TableColumns : TeaModel {
             /// <summary>
+            /// <para>The comment of the column.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>主键ID</para>
+            /// <para>Primary key ID</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
 
             /// <summary>
+            /// <para>The name of the column.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>id</para>
             /// </summary>
@@ -46,6 +50,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The data type of the column.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>bigint</para>
             /// </summary>
@@ -56,17 +62,17 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>Comment description of the table</para>
+        /// <para>The comment of the table.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试事件表</para>
+        /// <para>Test event table</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The creation time of the table (Unix timestamp, in milliseconds)</para>
+        /// <para>The creation time of the table. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1717948800000</para>
@@ -76,7 +82,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier name of the event table</para>
+        /// <para>The unique name of the event table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_table</para>
@@ -86,7 +92,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace to which the table belongs</para>
+        /// <para>The name of the namespace to which the table belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_namespace</para>
@@ -96,14 +102,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>Data retention policy. Includes the retention days for hot data and cold data</para>
+        /// <para>The data retention policy. This includes the retention periods for hot and cold data in days.</para>
         /// </summary>
         [NameInMap("RetentionPolicy")]
         [Validation(Required=false)]
         public TableRetentionPolicy RetentionPolicy { get; set; }
         public class TableRetentionPolicy : TeaModel {
             /// <summary>
-            /// <para>Retention days for cold data, used for low-cost archival storage</para>
+            /// <para>The number of days to retain cold data in low-cost archive storage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -113,7 +119,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public int? ColdTTL { get; set; }
 
             /// <summary>
-            /// <para>Retention days for hot data, used for high-performance query storage</para>
+            /// <para>The number of days to retain hot data in high-performance query storage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -125,7 +131,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>The last update time of the table (Unix timestamp, in milliseconds)</para>
+        /// <para>The last update time of the table. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1717948800000</para>

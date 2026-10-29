@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// <para>The text content of the message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>根据您的问题，我将查询过去7天的事件量...</para>
+        /// <para>Based on your question, I will query the number of events over the past 7 days..</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -30,21 +30,21 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The extension metadata.</para>
+        /// <para>The extended metadata.</para>
         /// </summary>
         [NameInMap("Metadata")]
         [Validation(Required=false)]
         public AguiMessageMetadata Metadata { get; set; }
         public class AguiMessageMetadata : TeaModel {
             /// <summary>
-            /// <para>The extension data.</para>
+            /// <para>The extended data.</para>
             /// </summary>
             [NameInMap("Attachments")]
             [Validation(Required=false)]
             public AguiMessageMetadataAttachments Attachments { get; set; }
             public class AguiMessageMetadataAttachments : TeaModel {
                 /// <summary>
-                /// <para>The name of the extension data.</para>
+                /// <para>The name of the extended data.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>acs:eventbridge:cn-hangzhou:12345:eventhouse/system-rocketmq/namespace/rmq-cn-xxx/table/order</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The type of the extension data.</para>
+                /// <para>The type of the extended data.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>inner-resource/event-table</para>
@@ -67,6 +67,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         }
 
+        /// <summary>
+        /// <para>The reasoning content.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;The user asked me to execute ***&quot;</para>
+        /// </summary>
         [NameInMap("Reasoning")]
         [Validation(Required=false)]
         public string Reasoning { get; set; }
@@ -99,14 +105,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public List<AguiMessageToolCalls> ToolCalls { get; set; }
         public class AguiMessageToolCalls : TeaModel {
             /// <summary>
-            /// <para>The tool calling function.</para>
+            /// <para>The tool invocation method.</para>
             /// </summary>
             [NameInMap("Function")]
             [Validation(Required=false)]
             public AguiMessageToolCallsFunction Function { get; set; }
             public class AguiMessageToolCallsFunction : TeaModel {
                 /// <summary>
-                /// <para>The arguments of the tool calling function.</para>
+                /// <para>The parameters of the tool invocation method.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -116,7 +122,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string Arguments { get; set; }
 
                 /// <summary>
-                /// <para>The name of the tool calling function.</para>
+                /// <para>The name of the tool invocation method.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>discoverMetadata</para>
@@ -128,7 +134,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// <para>The tool calling ID.</para>
+            /// <para>The tool invocation ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>call_xxx</para>
@@ -138,7 +144,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The tool calling type.</para>
+            /// <para>The tool invocation type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>function</para>

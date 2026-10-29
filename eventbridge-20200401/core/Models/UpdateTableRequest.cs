@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// <para>Add column</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;主键&quot;}</para>
+        /// <para>{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;Primary key&quot;}</para>
         /// </summary>
         [NameInMap("AddColumn")]
         [Validation(Required=false)]
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// <para>Update column comment</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;Name&quot;:&quot;id&quot;,&quot;Comment&quot;:&quot;主键ID&quot;}</para>
+        /// <para>{&quot;Name&quot;:&quot;id&quot;,&quot;Comment&quot;:&quot;Primary key ID&quot;}</para>
         /// </summary>
         [NameInMap("UpdateColumnComment")]
         [Validation(Required=false)]

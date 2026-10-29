@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class GetDocumentDownloadUrlRequest : TeaModel {
         /// <summary>
-        /// <para>The data catalog to which the knowledge base belongs. This parameter, together with Namespace and KnowledgeBaseName, uniquely identifies a knowledge base. You can call ListCatalogs to obtain the value.</para>
+        /// <para>The data catalog to which the knowledge base belongs. This parameter, together with Namespace and KnowledgeBaseName, uniquely identifies the knowledge base. You can call ListCatalogs to obtain the value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Catalog { get; set; }
 
         /// <summary>
-        /// <para>The document ID.</para>
+        /// <para>The ID of the document.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string DocumentId { get; set; }
 
         /// <summary>
-        /// <para>The name of the knowledge base. The name is unique within the namespace and is determined at creation time. It cannot be modified.</para>
+        /// <para>The name of the knowledge base. The name must be unique within the namespace. It is specified upon creation and cannot be modified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string KnowledgeBaseName { get; set; }
 
         /// <summary>
-        /// <para>The namespace to which the knowledge base belongs. The namespace must belong to the specified data catalog. This parameter, together with Catalog and KnowledgeBaseName, uniquely identifies a knowledge base. You can call ListNamespaces to obtain the value.</para>
+        /// <para>The namespace to which the knowledge base belongs. The namespace must belong to the specified data catalog. This parameter, together with Catalog and KnowledgeBaseName, uniquely identifies the knowledge base. You can call ListNamespaces to obtain the value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The network type of the pre-signed URL. Valid values:</para>
+        /// <para>The network type of the presigned URL. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PUBLIC (default): accessible over the Internet.</description></item>
-        /// <item><description>INTERNAL: accessible only within the same region on the Alibaba Cloud internal network, with no Internet data transfer fees.</description></item>
+        /// <item><description>PUBLIC: Accessible over the Internet. This is the default value.</description></item>
+        /// <item><description>INTERNAL: Accessible only over the internal network within the same Alibaba Cloud region. No Internet traffic fees are incurred.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

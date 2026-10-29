@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public class TestEventSourceConfigRequestSourceMySQLParameters : TeaModel {
             /// <summary>
             /// <para>The list of allowed CIDR blocks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.0.2.0/24</para>
             /// </summary>
             [NameInMap("AllowedCIDRs")]
             [Validation(Required=false)]
@@ -95,6 +98,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
             /// <summary>
             /// <para>The snapshot mode.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>when_needed</para>
             /// </summary>
             [NameInMap("SnapshotMode")]
             [Validation(Required=false)]

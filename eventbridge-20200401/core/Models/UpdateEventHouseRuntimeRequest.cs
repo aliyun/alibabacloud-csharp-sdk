@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class UpdateEventHouseRuntimeRequest : TeaModel {
         /// <summary>
-        /// <para>The number of CUs for the EventHouse Runtime. The value must be greater than 0.</para>
+        /// <para>The number of compute units (CUs) for the EventHouse runtime. The value must be greater than 0.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public int? Cu { get; set; }
 
         /// <summary>
-        /// <para>The name of the EventHouse Runtime. If this parameter is not specified, the default Runtime is used. In most cases, you do not need to specify this parameter.</para>
+        /// <para>The name of the EventHouse runtime. If you do not specify this parameter, the default runtime is used. Typically, you do not need to specify this parameter in the initial phase.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>

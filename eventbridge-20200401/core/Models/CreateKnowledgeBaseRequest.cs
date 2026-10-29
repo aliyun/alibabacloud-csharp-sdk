@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class CreateKnowledgeBaseRequest : TeaModel {
         /// <summary>
-        /// <para>The EventHouse catalog to which the knowledge base belongs. This parameter, together with Namespace and KnowledgeBaseName, uniquely identifies the knowledge base. This parameter cannot be modified after the knowledge base is created. System catalogs cannot be bound.</para>
+        /// <para>The EventHouse catalog to which the knowledge base belongs. This parameter, together with Namespace and KnowledgeBaseName, uniquely identifies the knowledge base. This parameter cannot be modified after the knowledge base is created. You cannot bind a system catalog.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Catalog { get; set; }
 
         /// <summary>
-        /// <para>Optional. The default chunking strategy for the knowledge base. This strategy applies only to documents uploaded after the configuration is set. If this parameter is not specified, the system default chunking strategy is used.</para>
+        /// <para>Optional. The default chunking strategy for the knowledge base. This strategy applies only to documents uploaded after the configuration. If this parameter is not specified, the system default chunking strategy is used.</para>
         /// </summary>
         [NameInMap("ChunkConfiguration")]
         [Validation(Required=false)]
         public CreateKnowledgeBaseRequestChunkConfiguration ChunkConfiguration { get; set; }
         public class CreateKnowledgeBaseRequestChunkConfiguration : TeaModel {
             /// <summary>
-            /// <para>Required for the BY_HEADING strategy. Valid values: 1 to 6. This parameter is ignored for other strategies. Headings at or above the specified level are used as split boundaries. For example, if you set this parameter to 2, both H1 and H2 headings are used as split boundaries. Deeper-level headings are not used for splitting and are retained in the chunk body. If the content within a section exceeds MaxChunkSize, the system falls back to splitting by paragraphs or sentences. Documents without headings fall back to intelligent chunking.</para>
+            /// <para>Required for the BY_HEADING strategy. Valid values: 1 to 6. This parameter is ignored for other strategies. Headings at or above the specified level are used as chunking boundaries. For example, if you set this parameter to 2, both H1 and H2 headings are used as boundaries. Lower-level headings are not used as boundaries and are retained in the chunk text. If the section content exceeds MaxChunkSize, the system falls back to chunking by paragraph or sentence. For documents without headings, the system falls back to intelligent chunking.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public int? HeadingLevel { get; set; }
 
             /// <summary>
-            /// <para>The maximum character length of a single chunk. Valid values: 1 to 6000 (characters). An error is returned if the value exceeds the limit.</para>
+            /// <para>The maximum number of characters in a single chunk. Valid values: 1 to 6000. An error is reported if the limit is exceeded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>512</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public int? MaxChunkSize { get; set; }
 
             /// <summary>
-            /// <para>Takes effect only for the BY_LENGTH strategy. This parameter is ignored for other strategies. Specifies the overlap length (in characters) between adjacent chunks. If the value is greater than 0, the beginning of the next chunk repeats the content from the end of the previous chunk within this window. The overlap does not cause a chunk to exceed MaxChunkSize. Default value: 0, which indicates no overlap.</para>
+            /// <para>Applies only to the BY_LENGTH strategy. This parameter is ignored for other strategies. The overlap size between adjacent chunks, in characters. If the value is greater than 0, the beginning of the next chunk repeats the content at the end of the previous chunk within this window. The overlap does not cause the chunk to exceed MaxChunkSize. Default value: 0, which indicates no overlap.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public int? OverlapSize { get; set; }
 
             /// <summary>
-            /// <para>The pre-processing rules.</para>
+            /// <para>The preprocessing rules.</para>
             /// </summary>
             [NameInMap("PreprocessRules")]
             [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public bool? RemoveUrlsAndEmails { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to replace consecutive whitespace characters (spaces, line breaks, and tabs) with a single space.</para>
+                /// <para>Specifies whether to replace consecutive whitespace characters, such as spaces, line breaks, and tabs, with a single space.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -87,9 +87,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// <para>Required for the BY_SEPARATOR strategy. This parameter is ignored for other strategies. The system splits content by matching the literal string as a whole (not as a regular expression). The maximum length is 32 characters. Example: \
+            /// <para>Required for the BY_SEPARATOR strategy. This parameter is ignored for other strategies. The literal string used to split the text. Regular expressions are not supported. The maximum length is 32 characters. Example: \
             /// \
-            ///  for paragraph separators.</para>
+            ///  for paragraph breaks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>\\n\\n</para>
@@ -99,13 +99,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Separator { get; set; }
 
             /// <summary>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>AUTO: Intelligent chunking (heading-aware + paragraph packing).</description></item>
-            /// <item><description>BY_LENGTH: Sliding window chunking by length. You can specify OverlapSize.</description></item>
-            /// <item><description>BY_SEPARATOR: Chunking by separator. You must specify Separator.</description></item>
-            /// <item><description>BY_HEADING: Chunking by heading level. You must specify HeadingLevel.</description></item>
-            /// </list>
+            /// <para>The chunking strategy. AUTO indicates intelligent chunking, which is heading-aware and groups paragraphs. BY_LENGTH indicates sliding window chunking by length, where you can specify OverlapSize. BY_SEPARATOR indicates chunking by separator, where you must specify Separator. BY_HEADING indicates chunking by heading level, where you must specify HeadingLevel. Valid values: AUTO, BY_LENGTH, BY_SEPARATOR, and BY_HEADING.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -128,7 +122,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Optional. The vector dimensions. The value is validated against the embedding model: text-embedding-v3 supports 64, 128, 256, 512, 768, and 1024. text-embedding-v4 supports 64, 128, 256, 512, 768, 1024, 1536, and 2048. qwen3.7-text-embedding supports 256, 512, 768, 1024, 1536, 2048, and 2560. qwen3.7-text-embedding-flash supports 256, 512, 768, and 1024. Default value: 1024 (the default dimension of the model). This parameter cannot be modified after the knowledge base is created. Even if the dimensions are the same, you must rebuild the knowledge base when switching models.</para>
+        /// <para>Optional. The vector dimensions. This parameter is attached to the embedding model for validation. Valid values for text-embedding-v3: 64, 128, 256, 512, 768, and 1024. Valid values for text-embedding-v4: 64, 128, 256, 512, 768, 1024, 1536, and 2048. Valid values for qwen3.7-text-embedding: 256, 512, 768, 1024, 1536, 2048, and 2560. Valid values for qwen3.7-text-embedding-flash: 256, 512, 768, and 1024. If this parameter is not specified, the default dimension of the model, 1024, is used. This parameter cannot be modified after the knowledge base is created. To change the model, you must rebuild the knowledge base, even if the dimensions remain the same.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1024</para>
@@ -138,7 +132,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public int? EmbeddingDimension { get; set; }
 
         /// <summary>
-        /// <para>Optional. The embedding model used for vectorization. This parameter cannot be modified after the knowledge base is created. Valid values: text-embedding-v3, text-embedding-v4, qwen3.7-text-embedding, and qwen3.7-text-embedding-flash. Only Bailian Tongyi models are supported. Third-party models are not supported. Default value: text-embedding-v4.</para>
+        /// <para>Optional. The embedding model. This parameter cannot be modified after the knowledge base is created. Valid values: text-embedding-v3, text-embedding-v4, qwen3.7-text-embedding, and qwen3.7-text-embedding-flash. Only Qwen models provided by Model Studio are supported. Third-party models are not supported. Default value: text-embedding-v4.</para>
         /// 
         /// <b>Example:</b>
         /// <para>text-embedding-v4</para>
@@ -148,7 +142,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string EmbeddingModel { get; set; }
 
         /// <summary>
-        /// <para>The name of the knowledge base. The name must be unique within the namespace.</para>
+        /// <para>The name of the knowledge base. The name must be unique within the same namespace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -159,7 +153,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string KnowledgeBaseName { get; set; }
 
         /// <summary>
-        /// <para>Declares the metadata fields of the knowledge base. When you upload documents, the metadata can contain only the fields declared here. This parameter cannot be modified after the knowledge base is created.</para>
+        /// <para>Declares the metadata fields for the knowledge base. When you upload documents, the metadata can only contain the fields declared here. This parameter cannot be modified after the knowledge base is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;Name&quot;:&quot;department&quot;,&quot;Type&quot;:&quot;STRING&quot;}]</para>
@@ -180,7 +174,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Valid values: STRING, LONG, DOUBLE, BOOLEAN, and DATETIME.</para>
+            /// <para>The type of the field. Valid values: STRING, LONG, DOUBLE, BOOLEAN, and DATETIME.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -191,7 +185,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>When ValueMode is set to CONSTANT, this parameter specifies a fixed value. An empty value indicates that the value can be assigned during upload. When ValueMode is set to SYSTEM_VARIABLE, this parameter specifies a system variable name, such as DOCUMENT_NAME, FILE_TYPE, FILE_SIZE, DOCUMENT_UPLOAD_TIME, SOURCE_TYPE, SOURCE_URI, or SOURCE_MODIFIED_TIME.</para>
+            /// <para>The value configuration. If ValueMode is set to CONSTANT, this parameter specifies a fixed value. If it is left empty, you can assign a value during upload. If ValueMode is set to SYSTEM_VARIABLE, this parameter specifies a system variable name, such as DOCUMENT_NAME, FILE_TYPE, FILE_SIZE, DOCUMENT_UPLOAD_TIME, SOURCE_TYPE, SOURCE_URI, or SOURCE_MODIFIED_TIME.</para>
             /// 
             /// <b>Example:</b>
             /// <para>EventHouse</para>
@@ -201,11 +195,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Value { get; set; }
 
             /// <summary>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>CONSTANT: Constant. If Value is not empty, all documents use the fixed value. If Value is empty, the value can be assigned during upload.</description></item>
-            /// <item><description>SYSTEM_VARIABLE: System variable. Value specifies the variable name. The system automatically generates the value, and the value cannot be overridden during upload.</description></item>
-            /// </list>
+            /// <para>The value mode. CONSTANT indicates a constant. If Value is not empty, all documents use the fixed value. If Value is empty, you can assign a value during upload. SYSTEM_VARIABLE indicates a system variable. Value specifies the variable name, which is automatically generated by the system and cannot be overwritten during upload.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -229,19 +219,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>Optional. The default search configuration at the knowledge base level. This configuration takes effect when the corresponding parameters are not specified in search requests. You can modify this configuration after creation by calling UpdateKnowledgeBase.</para>
+        /// <para>Optional. The default search configuration at the knowledge base level. This configuration takes effect when the corresponding parameters are not specified in a search request. You can modify this configuration by calling UpdateKnowledgeBase after the knowledge base is created.</para>
         /// </summary>
         [NameInMap("SearchConfiguration")]
         [Validation(Required=false)]
         public CreateKnowledgeBaseRequestSearchConfiguration SearchConfiguration { get; set; }
         public class CreateKnowledgeBaseRequestSearchConfiguration : TeaModel {
             /// <summary>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>KEYWORD: Keyword retrieval.</description></item>
-            /// <item><description>VECTOR: Vector retrieval.</description></item>
-            /// <item><description>HYBRID: Hybrid retrieval.</description></item>
-            /// </list>
+            /// <para>The search mode. KEYWORD indicates keyword retrieve. VECTOR indicates AISearch. HYBRID indicates hybrid retrieve. Valid values: KEYWORD, VECTOR, and HYBRID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HYBRID</para>
@@ -251,12 +236,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>Takes effect only in hybrid search mode. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>RRF: Reciprocal rank fusion.</description></item>
-            /// <item><description>WEIGHTED: Weighted normalization fusion. Use this value together with VectorWeight.</description></item>
-            /// </list>
-            /// <para>Default value: RRF.</para>
+            /// <para>Applies only to the hybrid search mode. RRF indicates reciprocal rank fusion. WEIGHTED indicates weighted normalization fusion, which is used together with VectorWeight. Default value: RRF.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RRF</para>
@@ -266,7 +246,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string RankAlgorithm { get; set; }
 
             /// <summary>
-            /// <para>Takes effect only in hybrid search mode. Specifies whether to enable reranking by default when the search request does not specify a Rerank parameter.</para>
+            /// <para>Applies only to the hybrid search mode. Specifies whether to enable reranking by default when a search request does not specify the Rerank parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -276,7 +256,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public bool? RerankEnabled { get; set; }
 
             /// <summary>
-            /// <para>The default reranking model used when the search request does not specify a RerankModel parameter. Valid values: qwen3-rerank. Default value: qwen3-rerank.</para>
+            /// <para>The default rerank model used when a search request does not specify the RerankModel parameter. Valid value: qwen3-rerank. Default value: qwen3-rerank.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qwen3-rerank</para>
@@ -306,7 +286,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public int? TopK { get; set; }
 
             /// <summary>
-            /// <para>The vector weight for the WEIGHTED fusion algorithm. Valid values: 0 to 1. The keyword weight equals 1 minus this value. Default value: 0.7.</para>
+            /// <para>The vector weight for the WEIGHTED fusion algorithm. Valid values: 0 to 1. The keyword weight is 1 minus this value. Default value: 0.7.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.7</para>

@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// <para>Response data</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;Tables&quot;:[{&quot;Name&quot;:&quot;my_table&quot;,&quot;Comment&quot;:&quot;测试事件表&quot;}],&quot;NextToken&quot;:&quot;10&quot;,&quot;Total&quot;:1}</para>
+        /// <para>{&quot;Tables&quot;:[{&quot;Name&quot;:&quot;my_table&quot;,&quot;Comment&quot;:&quot;Test event table&quot;}],&quot;NextToken&quot;:&quot;10&quot;,&quot;Total&quot;:1}</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

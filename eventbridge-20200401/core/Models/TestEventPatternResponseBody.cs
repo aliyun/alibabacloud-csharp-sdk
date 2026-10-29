@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class TestEventPatternResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code. <c>Success</c> indicates that the call was successful. For more information about other return codes, see Error codes.</para>
+        /// <para>The return code of the API operation. A value of Success indicates that the request is successful. Other values indicate error codes. For more information, see Error codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The result of the test.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public TestEventPatternResponseBodyData Data { get; set; }
         public class TestEventPatternResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates if the event matches the event pattern.</para>
+            /// <para>Indicates whether the event pattern matches the provided JSON-formatted event. A value of true indicates that the event pattern matches the event. A value of false indicates that the event pattern does not match the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -40,6 +40,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         /// <summary>
         /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Operation success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -56,7 +59,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates if the request was successful.</para>
+        /// <para>Indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

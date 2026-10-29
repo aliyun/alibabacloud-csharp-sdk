@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>A list of event targets to create or update. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</para>
+        /// <para>The list of event targets to be added or updated. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Targets")]
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public List<PutTargetsRequestTargets> Targets { get; set; }
         public class PutTargetsRequestTargets : TeaModel {
             /// <summary>
-            /// <para>The concurrency control settings.</para>
+            /// <para>The concurrency control configuration.</para>
             /// </summary>
             [NameInMap("ConcurrentConfig")]
             [Validation(Required=false)]
             public PutTargetsRequestTargetsConcurrentConfig ConcurrentConfig { get; set; }
             public class PutTargetsRequestTargetsConcurrentConfig : TeaModel {
                 /// <summary>
-                /// <para>The maximum number of concurrent executions for the event target.</para>
+                /// <para>The concurrency.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>34</para>
@@ -59,17 +59,17 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// <para>The dead-letter queue (DLQ) to which events are sent after all retry attempts fail. Supported DLQ types include Message Queue for Apache RocketMQ, Message Service (MNS), Message Queue for Apache Kafka, and EventBridge.</para>
+            /// <para>The dead-letter queue. Unprocessed events or events that exceed the retry limit are written to the dead-letter queue. The supported queue types for the dead-letter queue include ApsaraMQ for RocketMQ, Simple Message Queue (formerly MNS), Message Queue for Apache Kafka, and EventBridge event bus.</para>
             /// </summary>
             [NameInMap("DeadLetterQueue")]
             [Validation(Required=false)]
             public PutTargetsRequestTargetsDeadLetterQueue DeadLetterQueue { get; set; }
             public class PutTargetsRequestTargetsDeadLetterQueue : TeaModel {
                 /// <summary>
-                /// <para>The Alibaba Cloud Resource Name (ARN) of the dead-letter queue.</para>
+                /// <para>The ARN of the dead-letter queue. Unprocessed events or events that exceed the maximum number of retries are written to the dead-letter queue.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Acs:mns:cn-hangzhou:123456789098****:/queues/deadletterqueue
+                /// <para>acs:mns:cn-hangzhou:123456789098****:/queues/deadletterqueue
                 /// or
                 /// acs:mq:cn-hangzhou:123456789098****:/instances/MQ_INST_123456789098****_BX8QbBPL/topic/deadlettertopic
                 /// or
@@ -83,6 +83,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                 /// <summary>
                 /// <para>The network type of the dead-letter queue.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>PrivateNetwork</para>
                 /// </summary>
                 [NameInMap("Network")]
                 [Validation(Required=false)]
@@ -90,20 +93,29 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                 /// <summary>
                 /// <para>The security group ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>sg-2vp****</para>
                 /// </summary>
                 [NameInMap("SecurityGroupId")]
                 [Validation(Required=false)]
                 public string SecurityGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The VSwitch IDs.</para>
+                /// <para>The vSwitch ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vsw-m5****</para>
                 /// </summary>
                 [NameInMap("VSwitchIds")]
                 [Validation(Required=false)]
                 public string VSwitchIds { get; set; }
 
                 /// <summary>
-                /// <para>The VPC ID.</para>
+                /// <para>The ID of the VPC where the dead-letter queue resides.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-2z****</para>
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
@@ -112,7 +124,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// <para>The endpoint of the event target.</para>
+            /// <para>The delivery endpoint URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:fc:cn-hangzhou:123456789098****:services/guide.LATEST/functions/HelloFC</para>
@@ -122,11 +134,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// <para>The fault tolerance policy. Valid values:</para>
+            /// <para>The fault tolerance strategy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>ALL</b>: Enables fault tolerance. If an error occurs, execution continues. After the retry attempts defined by the retry strategy are exhausted, the event is sent to the configured dead-letter queue or discarded.</para>
+            /// <item><description><para><b>ALL</b>: Allows fault tolerance. Exceptions are tolerated and do not block execution. If the retry strategy is exhausted, messages are delivered to the dead-letter queue or discarded based on the configuration.</para>
             /// </description></item>
-            /// <item><description><para><b>NONE</b>: Disables fault tolerance. If an error persists after all retry attempts fail, execution is blocked.</para>
+            /// <item><description><para><b>NONE</b>: Disables fault tolerance. Exceptions are not tolerated. If an exception occurs and the retry strategy is exhausted, execution is blocked.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -149,14 +161,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>A list of parameters for the event target.</para>
+            /// <para>The parameters of the event target.</para>
             /// </summary>
             [NameInMap("ParamList")]
             [Validation(Required=false)]
             public List<PutTargetsRequestTargetsParamList> ParamList { get; set; }
             public class PutTargetsRequestTargetsParamList : TeaModel {
                 /// <summary>
-                /// <para>The format of the parameter value. For more information, see <a href="https://help.aliyun.com/document_detail/185887.html">Event target parameters</a>.</para>
+                /// <para>The format of the event target parameter. For more information, see <a href="https://help.aliyun.com/document_detail/185887.html">Event target parameters</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TEMPLATE</para>
@@ -166,7 +178,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string Form { get; set; }
 
                 /// <summary>
-                /// <para>The key of the parameter. For more information, see <a href="https://help.aliyun.com/document_detail/185887.html">Event target parameters</a>.</para>
+                /// <para>The resource parameter of the event target. For more information, see <a href="https://help.aliyun.com/document_detail/185887.html">Event target parameters</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>body</para>
@@ -176,7 +188,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string ResourceKey { get; set; }
 
                 /// <summary>
-                /// <para>The template for the parameter value. This parameter applies only when <c>Form</c> is set to <c>TEMPLATE</c>.</para>
+                /// <para>The parameter template style of the event target.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>The value of ${key} is ${value}!</para>
@@ -186,7 +198,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string Template { get; set; }
 
                 /// <summary>
-                /// <para>The value of the parameter.</para>
+                /// <para>The value of the event target parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;key\&quot;=\&quot;value\&quot;}</para>
@@ -198,11 +210,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// <para>The retry strategy for pushing events. Valid values:</para>
+            /// <para>The push retry policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>BACKOFF_RETRY</b>: The event is retried up to three times at random intervals between 10 and 20 seconds.</para>
+            /// <item><description><para><b>BACKOFF_RETRY</b>: Backoff retry policy. The system retries three times, and the interval between each retry is a random value between 10 and 20 seconds.</para>
             /// </description></item>
-            /// <item><description><para><b>EXPONENTIAL_DECAY_RETRY</b>: The event is retried up to 176 times over 24 hours. The retry interval starts at 1 second, doubles with each attempt (1, 2, 4, ..., 256 seconds), and is capped at 512 seconds for all subsequent retries.</para>
+            /// <item><description><para><b>EXPONENTIAL_DECAY_RETRY</b>: Exponential decay retry. The system retries 176 times, and the interval between retries increments exponentially up to 512 seconds. The total retry time is one day. The specific intervals are 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 512...512 seconds (167 intervals of 512 seconds in total).</para>
             /// </description></item>
             /// </list>
             /// 
