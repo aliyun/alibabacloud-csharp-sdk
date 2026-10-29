@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>Alias for the space ID.</para>
+        /// <para>The alias of the workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>337639*****24964-cn-qingdao</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string AliasId { get; set; }
 
         /// <summary>
-        /// <para>The name of the application used by the group.</para>
+        /// <para>The name of the application used by the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>live</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string App { get; set; }
 
         /// <summary>
-        /// <para>The callback URL that is used to receive device status updates in the group.</para>
+        /// <para>The callback triggered when the device status in the workspace is updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://example.com/callback">http://example.com/callback</a></para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Callback { get; set; }
 
         /// <summary>
-        /// <para>The time when the group was created.</para>
+        /// <para>The time when the workspace was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-02-28T17:00:17Z</para>
@@ -50,17 +50,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string CreatedTime { get; set; }
 
         /// <summary>
-        /// <para>A description of the group.</para>
+        /// <para>The workspace description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>上海高速监控</para>
+        /// <para>Shanghai Expressway Monitoring</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the group is enabled.</para>
+        /// <para>Indicates whether the workspace is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -70,9 +70,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The GB/T 28181 ID that is associated with the group.</para>
+        /// <para>The GB/T 28181 ID associated with the workspace.</para>
         /// <remarks>
-        /// <para>This parameter is returned only for groups that use the GB/T 28181 protocol for stream ingest.</para>
+        /// <para>This parameter is applicable only to workspaces that are accessed by using the GB/T 28181 protocol.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -83,9 +83,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string GbId { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the GB/T 28181 signaling server that is associated with the group.</para>
+        /// <para>The IP address of the GB/T 28181 signaling server associated with the workspace.</para>
         /// <remarks>
-        /// <para>This parameter is returned only for groups that use the GB/T 28181 protocol for stream ingest.</para>
+        /// <para>This parameter is applicable only to workspaces that are accessed by using the GB/T 28181 protocol.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -96,9 +96,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string GbIp { get; set; }
 
         /// <summary>
-        /// <para>The port of the GB/T 28181 signaling server that is associated with the group.</para>
+        /// <para>The server port of the GB/T 28181 signaling server associated with the workspace.</para>
         /// <remarks>
-        /// <para>This parameter is returned only for groups that use the GB/T 28181 protocol for stream ingest.</para>
+        /// <para>This parameter is applicable only to workspaces that are accessed by using the GB/T 28181 protocol.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -109,9 +109,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? GbPort { get; set; }
 
         /// <summary>
-        /// <para>The TCP ports of the GB/T 28181 signaling server that are provided by the group.</para>
+        /// <para>The TCP port of the GB/T 28181 signaling server provided by the workspace.</para>
         /// <remarks>
-        /// <para>This parameter is returned only for groups that use the GB/T 28181 protocol for stream ingest.</para>
+        /// <para>This parameter is applicable only to workspaces that are accessed by using the GB/T 28181 protocol.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("GbTcpPorts")]
@@ -119,9 +119,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public List<string> GbTcpPorts { get; set; }
 
         /// <summary>
-        /// <para>The UDP ports of the GB/T 28181 signaling server that are provided by the group.</para>
+        /// <para>The UDP port of the GB/T 28181 signaling server provided by the workspace.</para>
         /// <remarks>
-        /// <para>This parameter is returned only for groups that use the GB/T 28181 protocol for stream ingest.</para>
+        /// <para>This parameter is applicable only to workspaces that are accessed by using the GB/T 28181 protocol.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("GbUdpPorts")]
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public List<string> GbUdpPorts { get; set; }
 
         /// <summary>
-        /// <para>The ID of the space.</para>
+        /// <para>The workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>337639****224964-cn-qingdao</para>
@@ -139,12 +139,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The ingest protocol used by the group. Valid values:</para>
+        /// <para>The access protocol used by the workspace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>gb28181</para>
-        /// </description></item>
-        /// <item><description><para>rtmp</para>
-        /// </description></item>
+        /// <item><description>gb28181</description></item>
+        /// <item><description>rtmp</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -165,28 +163,25 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public bool? LazyPull { get; set; }
 
         /// <summary>
-        /// <para>The name of the space.</para>
+        /// <para>The workspace name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>上海高速监控</para>
+        /// <para>Shanghai Expressway Monitoring</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The streaming protocol used by the group. Valid values:</para>
+        /// <para>The playback protocol used by the workspace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>flv</para>
-        /// </description></item>
-        /// <item><description><para>hls</para>
-        /// </description></item>
-        /// <item><description><para>rtmp</para>
+        /// <item><description>flv</description></item>
+        /// <item><description>hls</description></item>
+        /// <item><description>rtmp<remarks>
+        /// <para>You can specify multiple values. Separate multiple values with commas (,).</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>You can specify multiple protocols. Separate them with commas (,).</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>flv,hls,rtmp</para>
@@ -196,7 +191,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string OutProtocol { get; set; }
 
         /// <summary>
-        /// <para>The streaming domain used by the group.</para>
+        /// <para>The streaming domain name used by the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.aliyundoc.com</para>
@@ -206,7 +201,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string PlayDomain { get; set; }
 
         /// <summary>
-        /// <para>The ingest domain used by the group.</para>
+        /// <para>The ingest domain name used by the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo.aliyundoc.com</para>
@@ -216,7 +211,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string PushDomain { get; set; }
 
         /// <summary>
-        /// <para>The region where the space is located, which is the service center.</para>
+        /// <para>The region to which the workspace belongs, which is the service center.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-qingdao</para>
@@ -236,14 +231,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The statistics of devices in the group.</para>
+        /// <para>The statistics information of the devices in the workspace.</para>
         /// </summary>
         [NameInMap("Stats")]
         [Validation(Required=false)]
         public DescribeGroupResponseBodyStats Stats { get; set; }
         public class DescribeGroupResponseBodyStats : TeaModel {
             /// <summary>
-            /// <para>The total number of devices in the group.</para>
+            /// <para>The total number of devices in the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -253,7 +248,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public long? DeviceNum { get; set; }
 
             /// <summary>
-            /// <para>The number of intelligent electronic devices (IEDs) in the group.</para>
+            /// <para>The number of intelligent devices in the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -263,7 +258,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public long? IedNum { get; set; }
 
             /// <summary>
-            /// <para>The number of cameras in the group.</para>
+            /// <para>The number of cameras in the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -273,7 +268,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public long? IpcNum { get; set; }
 
             /// <summary>
-            /// <para>The number of platforms in the group.</para>
+            /// <para>The number of platforms in the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -285,7 +280,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>The status of the group.</para>
+        /// <para>The workspace status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>on</para>

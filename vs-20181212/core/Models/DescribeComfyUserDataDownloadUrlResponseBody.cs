@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The download URL for the application package.</para>
+        /// <para>The download URL of the application package.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://xxx.xxx.xxx">https://xxx.xxx.xxx</a>.</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DownloadUrl { get; set; }
 
         /// <summary>
-        /// <para>The expiration time for the download link.</para>
+        /// <para>The expiration time of the download URL. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1752805579553</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>The result message.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>

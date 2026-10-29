@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListFilePushStatusesRequest : TeaModel {
         /// <summary>
-        /// <para>A time range filter parameter. Specify the value in ISO8601 format using UTC time: yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The start time for the time range filter. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-06-23T02:13:00Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The file ID, which uniquely identifies a file.</para>
+        /// <para>The ID of the file, which uniquely identifies the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f-1671accd4dafdag3er256cvgewt13f7141db2f7</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string FileId { get; set; }
 
         /// <summary>
-        /// <para>The file name.</para>
+        /// <para>The name of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myfile</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The page number of the results to return. Pages start from 1.Default value: 1.</para>
+        /// <para>The page number of the list to query. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Valid values: 1 to 100.Default value: 10.</para>
+        /// <para>The Settings for the number of entries per page during paging in a paged query. Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The cloud application service instance ID. Use this parameter to query files installed on a specific instance.</para>
+        /// <para>The instance ID of the cloud application service, which is used to query the files installed on the specified instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>render-9f8c57355d224ad7beaf95e145f22111</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RenderingInstanceId { get; set; }
 
         /// <summary>
-        /// <para>A time range filter parameter. Specify the value in ISO8601 format using UTC time: yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The start time for the time range filter. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-06-17T12:16:00Z</para>

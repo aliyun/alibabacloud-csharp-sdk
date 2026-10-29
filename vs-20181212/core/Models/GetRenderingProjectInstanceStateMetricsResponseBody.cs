@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class GetRenderingProjectInstanceStateMetricsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>List of project instance state statistics</para>
+        /// <para>The list of statistics information for project instance status.</para>
         /// </summary>
         [NameInMap("StateMetrics")]
         [Validation(Required=false)]
         public List<GetRenderingProjectInstanceStateMetricsResponseBodyStateMetrics> StateMetrics { get; set; }
         public class GetRenderingProjectInstanceStateMetricsResponseBodyStateMetrics : TeaModel {
             /// <summary>
-            /// <para>Number of instances</para>
+            /// <para>The number of instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Count { get; set; }
 
             /// <summary>
-            /// <para>Project instance state</para>
+            /// <para>The instance status of the project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Idle</para>

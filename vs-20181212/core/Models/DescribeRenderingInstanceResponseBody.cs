@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeRenderingInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of optional ingress network information.</para>
+        /// <para>The additional optional ingress network information.</para>
         /// </summary>
         [NameInMap("AdditionalIngresses")]
         [Validation(Required=false)]
         public List<DescribeRenderingInstanceResponseBodyAdditionalIngresses> AdditionalIngresses { get; set; }
         public class DescribeRenderingInstanceResponseBodyAdditionalIngresses : TeaModel {
             /// <summary>
-            /// <para>The domain name or IP address of the rendering instance.</para>
+            /// <para>The domain name or IP address of the cloud application service instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>101.66.165.213</para>
@@ -28,14 +28,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 
             /// <summary>
             /// <para>The ISP code. Valid values:</para>
-            /// <ol>
-            /// <item><description><para><c>cmcc</c></para>
-            /// </description></item>
-            /// <item><description><para><c>unicom</c></para>
-            /// </description></item>
-            /// <item><description><para><c>telecom</c></para>
-            /// </description></item>
-            /// </ol>
+            /// <list type="bullet">
+            /// <item><description>cmcc</description></item>
+            /// <item><description>unicom</description></item>
+            /// <item><description>telecom</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>cmcc</para>
@@ -45,14 +42,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Isp { get; set; }
 
             /// <summary>
-            /// <para>A list of port mappings.</para>
+            /// <para>The port mappings.</para>
             /// </summary>
             [NameInMap("PortMappings")]
             [Validation(Required=false)]
             public List<DescribeRenderingInstanceResponseBodyAdditionalIngressesPortMappings> PortMappings { get; set; }
             public class DescribeRenderingInstanceResponseBodyAdditionalIngressesPortMappings : TeaModel {
                 /// <summary>
-                /// <para>The external port or port range, such as <c>22</c>. For a port range, use a forward slash (<c>/</c>) to separate the start and end ports, for example, <c>10/20</c>.</para>
+                /// <para>The external port or port range, such as 22. If a port range is specified, separate the start and end ports with a forward slash (/), such as 10/20.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12500/12519</para>
@@ -62,7 +59,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                 public string ExternalPort { get; set; }
 
                 /// <summary>
-                /// <para>The internal port or port range. The ports correspond one-to-one with the external ports. For a port range, use a forward slash (<c>/</c>) to separate the start and end ports, for example, <c>10/20</c>.</para>
+                /// <para>The internal port or port range. The internal ports correspond to the external ports one by one. If a port range is specified, separate the start and end ports with a forward slash (/), such as 10/20.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>11120/11139</para>
@@ -76,28 +73,28 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>The configuration information of the rendering instance.</para>
+        /// <para>The instance configuration.</para>
         /// </summary>
         [NameInMap("ConfigInfo")]
         [Validation(Required=false)]
         public DescribeRenderingInstanceResponseBodyConfigInfo ConfigInfo { get; set; }
         public class DescribeRenderingInstanceResponseBodyConfigInfo : TeaModel {
             /// <summary>
-            /// <para>A list of configured physical device simulation modules.</para>
+            /// <para>The list of configured physical device simulation modules.</para>
             /// </summary>
             [NameInMap("Configuration")]
             [Validation(Required=false)]
             public List<DescribeRenderingInstanceResponseBodyConfigInfoConfiguration> Configuration { get; set; }
             public class DescribeRenderingInstanceResponseBodyConfigInfoConfiguration : TeaModel {
                 /// <summary>
-                /// <para>A list of attributes.</para>
+                /// <para>The attributes.</para>
                 /// </summary>
                 [NameInMap("Attributes")]
                 [Validation(Required=false)]
                 public List<DescribeRenderingInstanceResponseBodyConfigInfoConfigurationAttributes> Attributes { get; set; }
                 public class DescribeRenderingInstanceResponseBodyConfigInfoConfigurationAttributes : TeaModel {
                     /// <summary>
-                    /// <para>The name of the attribute.</para>
+                    /// <para>The attribute name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>lon</para>
@@ -107,7 +104,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the attribute.</para>
+                    /// <para>The attribute value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -120,26 +117,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 
                 /// <summary>
                 /// <para>The name of the physical device simulation module. Valid values:</para>
-                /// <ol>
-                /// <item><description><para><c>ctl</c>: Control module</para>
-                /// </description></item>
-                /// <item><description><para><c>prop</c>: Property module</para>
-                /// </description></item>
-                /// <item><description><para><c>location</c>: Location module</para>
-                /// </description></item>
-                /// <item><description><para><c>battery</c>: Battery module</para>
-                /// </description></item>
-                /// <item><description><para><c>network</c>: Network module</para>
-                /// </description></item>
-                /// <item><description><para><c>bluetooth</c>: Bluetooth module</para>
-                /// </description></item>
-                /// <item><description><para><c>sim</c>: SIM card module</para>
-                /// </description></item>
-                /// <item><description><para><c>display</c>: Display module</para>
-                /// </description></item>
-                /// <item><description><para><c>system</c>: System module</para>
-                /// </description></item>
-                /// </ol>
+                /// <list type="bullet">
+                /// <item><description>ctl: control module</description></item>
+                /// <item><description>prop: property module</description></item>
+                /// <item><description>location: location module</description></item>
+                /// <item><description>battery: battery module</description></item>
+                /// <item><description>network: network module</description></item>
+                /// <item><description>bluetooth: Bluetooth module</description></item>
+                /// <item><description>sim: SIM card module</description></item>
+                /// <item><description>display: display module</description></item>
+                /// <item><description>system: basic module</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>location</para>
@@ -151,22 +139,19 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             }
 
             /// <summary>
-            /// <para>Ingress and egress bandwidth limits, in Mbps.</para>
+            /// <para>The outbound and inbound bandwidth throttling. Unit: Mbit/s.</para>
             /// </summary>
             [NameInMap("NetworkConfig")]
             [Validation(Required=false)]
             public DescribeRenderingInstanceResponseBodyConfigInfoNetworkConfig NetworkConfig { get; set; }
             public class DescribeRenderingInstanceResponseBodyConfigInfoNetworkConfig : TeaModel {
                 /// <summary>
-                /// <para>The status of the bandwidth configuration. Valid values:</para>
-                /// <ol>
-                /// <item><description><para><c>waiting</c>: The configuration is being applied.</para>
-                /// </description></item>
-                /// <item><description><para><c>success</c>: The configuration change is complete.</para>
-                /// </description></item>
-                /// <item><description><para><c>failed</c>: The configuration change failed.</para>
-                /// </description></item>
-                /// </ol>
+                /// <para>The bandwidth application status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>waiting: taking effect</description></item>
+                /// <item><description>success: taken effect</description></item>
+                /// <item><description>failed: failed to take effect</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>success</para>
@@ -176,7 +161,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                 public string BandwidthStatus { get; set; }
 
                 /// <summary>
-                /// <para>The maximum egress bandwidth, in Mbps. A value of 0 indicates no limit.</para>
+                /// <para>The maximum outbound bandwidth limit. Unit: Mbit/s. A value of 0 indicates that no bandwidth limit is configured.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -186,7 +171,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                 public int? MaxEgressBandwidth { get; set; }
 
                 /// <summary>
-                /// <para>The maximum ingress bandwidth, in Mbps. A value of 0 indicates no limit.</para>
+                /// <para>The maximum inbound bandwidth limit. Unit: Mbit/s. A value of 0 indicates that no bandwidth limit is configured.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -196,7 +181,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                 public int? MaxIngressBandwidth { get; set; }
 
                 /// <summary>
-                /// <para>The time the configuration was last updated.</para>
+                /// <para>The update time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-08-17T09:54:35Z</para>
@@ -210,7 +195,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>The instance creation time, in UTC (ISO 8601).</para>
+        /// <para>The instance creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-05-07T02:27:06Z</para>
@@ -230,7 +215,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string EgressIp { get; set; }
 
         /// <summary>
-        /// <para>The domain name or access IP address of the rendering instance.</para>
+        /// <para>The expiration time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2029-03-28T16:00Z</para>
+        /// </summary>
+        [NameInMap("ExpiredTime")]
+        [Validation(Required=false)]
+        public string ExpiredTime { get; set; }
+
+        /// <summary>
+        /// <para>The domain name or access IP address of the cloud application service instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-xxx.ecr.aliyuncs.com</para>
@@ -240,7 +235,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Hostname { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the instance.</para>
+        /// <para>The instance billing method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PostPaid</para>
@@ -248,6 +243,16 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("InstanceChargeType")]
         [Validation(Required=false)]
         public string InstanceChargeType { get; set; }
+
+        /// <summary>
+        /// <para>The instance name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TestInstance</para>
+        /// </summary>
+        [NameInMap("InstanceName")]
+        [Validation(Required=false)]
+        public string InstanceName { get; set; }
 
         /// <summary>
         /// <para>The internal IP address.</para>
@@ -261,14 +266,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 
         /// <summary>
         /// <para>The ISP code. Valid values:</para>
-        /// <ol>
-        /// <item><description><para><c>cmcc</c></para>
-        /// </description></item>
-        /// <item><description><para><c>unicom</c></para>
-        /// </description></item>
-        /// <item><description><para><c>telecom</c></para>
-        /// </description></item>
-        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>cmcc</description></item>
+        /// <item><description>unicom</description></item>
+        /// <item><description>telecom</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>telecom</para>
@@ -278,14 +280,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Isp { get; set; }
 
         /// <summary>
-        /// <para>A list of port mappings.</para>
+        /// <para>The port mappings.</para>
         /// </summary>
         [NameInMap("PortMappings")]
         [Validation(Required=false)]
         public List<DescribeRenderingInstanceResponseBodyPortMappings> PortMappings { get; set; }
         public class DescribeRenderingInstanceResponseBodyPortMappings : TeaModel {
             /// <summary>
-            /// <para>The external port or port range, such as <c>22</c>. For a port range, use a forward slash (<c>/</c>) to separate the start and end ports, for example, <c>10/20</c>.</para>
+            /// <para>The external port or port range, such as 22. If a port range is specified, separate the start and end ports with a forward slash (/), such as 10/20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10013/10020</para>
@@ -295,7 +297,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string ExternalPort { get; set; }
 
             /// <summary>
-            /// <para>The internal port or port range. The ports correspond one-to-one with the external ports. For a port range, use a forward slash (<c>/</c>) to separate the start and end ports, for example, <c>10/20</c>.</para>
+            /// <para>The internal port or port range. The internal ports correspond to the external ports one by one. If a port range is specified, separate the start and end ports with a forward slash (/), such as 10/20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>49008/49015</para>
@@ -307,7 +309,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>The ID of the rendering instance.</para>
+        /// <para>The cloud application service instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>render-9f8c57355d224ad7beaf95e145f22111</para>
@@ -317,7 +319,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RenderingInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The specification of the rendering instance.</para>
+        /// <para>The instance type of the cloud application service instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crs.cp.l1</para>
@@ -327,24 +329,24 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RenderingSpec { get; set; }
 
         /// <summary>
-        /// <para>The operational status of the rendering instance.</para>
+        /// <para>The instance operation status.</para>
         /// </summary>
         [NameInMap("RenderingStatus")]
         [Validation(Required=false)]
         public DescribeRenderingInstanceResponseBodyRenderingStatus RenderingStatus { get; set; }
         public class DescribeRenderingInstanceResponseBodyRenderingStatus : TeaModel {
             /// <summary>
-            /// <para>Additional details about the current status.</para>
+            /// <para>The status description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>工作中</para>
+            /// <para>Working</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The name of the last action performed on the instance.</para>
+            /// <para>The name of the latest instance operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MigrateLocalData</para>
@@ -354,19 +356,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string LatestAction { get; set; }
 
             /// <summary>
-            /// <para>The operational status of the instance. Valid values:</para>
-            /// <ol>
-            /// <item><description><para><c>Preparing</c>: The instance is being initialized.</para>
-            /// </description></item>
-            /// <item><description><para><c>Rebooting</c>: The instance is rebooting.</para>
-            /// </description></item>
-            /// <item><description><para><c>Resetting</c>: The instance is being reset.</para>
-            /// </description></item>
-            /// <item><description><para><c>Working</c>: The instance is running normally. This is a terminal state.</para>
-            /// </description></item>
-            /// <item><description><para><c>Failure</c>: The instance has failed to start or operate. This is a terminal state.</para>
-            /// </description></item>
-            /// </ol>
+            /// <para>The instance operation status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Preparing: initializing</description></item>
+            /// <item><description>Rebooting: restarting</description></item>
+            /// <item><description>Resetting: resetting</description></item>
+            /// <item><description>Working: working. This is a final state.</description></item>
+            /// <item><description>Failure: operation failed. This is a final state.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Working</para>
@@ -388,20 +385,18 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The attributes of the rendering instance.</para>
+        /// <para>The resource attributes of the cloud application service instance.</para>
         /// </summary>
         [NameInMap("ResourceAttributes")]
         [Validation(Required=false)]
         public DescribeRenderingInstanceResponseBodyResourceAttributes ResourceAttributes { get; set; }
         public class DescribeRenderingInstanceResponseBodyResourceAttributes : TeaModel {
             /// <summary>
-            /// <para>The configuration of the edge media service. Valid values:</para>
-            /// <ol>
-            /// <item><description><para><c>ON</c>: Enabled.</para>
-            /// </description></item>
-            /// <item><description><para><c>OFF</c>: Disabled.</para>
-            /// </description></item>
-            /// </ol>
+            /// <para>The streaming service. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ON: enabled</description></item>
+            /// <item><description>OFF: disabled</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>ON</para>
@@ -411,13 +406,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string EdgeMediaService { get; set; }
 
             /// <summary>
-            /// <para>The ingress network access configuration. Valid values:</para>
-            /// <ol>
-            /// <item><description><para><c>ON</c>: Enabled. The rendering instance can be accessed from the public internet.</para>
-            /// </description></item>
-            /// <item><description><para><c>OFF</c>: Disabled.</para>
-            /// </description></item>
-            /// </ol>
+            /// <para>The inbound access configuration. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ON: enabled. The resource can be accessed from external networks.</description></item>
+            /// <item><description>OFF: disabled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>ON</para>
@@ -427,13 +420,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string InAccess { get; set; }
 
             /// <summary>
-            /// <para>The egress network access configuration. Valid values:</para>
-            /// <ol>
-            /// <item><description><para><c>ON</c>: Enabled. The rendering instance can access the public internet.</para>
-            /// </description></item>
-            /// <item><description><para><c>OFF</c>: Disabled.</para>
-            /// </description></item>
-            /// </ol>
+            /// <para>The outbound access configuration. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ON: enabled. The resource can access the Internet.</description></item>
+            /// <item><description>OFF: disabled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>ON</para>
@@ -443,7 +434,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string OutAccess { get; set; }
 
             /// <summary>
-            /// <para>The resource zone. Valid values: <c>Private</c> and <c>Public</c>.</para>
+            /// <para>The resource zone. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Private</description></item>
+            /// <item><description>Public</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Public</para>
@@ -455,21 +450,18 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>The status of the underlying computing resource.</para>
+        /// <para>The compute resource status information.</para>
         /// </summary>
         [NameInMap("ResourceStatus")]
         [Validation(Required=false)]
         public DescribeRenderingInstanceResponseBodyResourceStatus ResourceStatus { get; set; }
         public class DescribeRenderingInstanceResponseBodyResourceStatus : TeaModel {
             /// <summary>
-            /// <para>The running status of the computing resource. Valid values:</para>
+            /// <para>The running state of the compute resource. Valid values:</para>
             /// <ol>
-            /// <item><description><para><c>running</c>: The edge instance is running normally.</para>
-            /// </description></item>
-            /// <item><description><para><c>operating</c>: The edge instance is under maintenance.</para>
-            /// </description></item>
-            /// <item><description><para><c>error</c>: An exception is detected on the edge instance.</para>
-            /// </description></item>
+            /// <item><description>running: The edge instance status is normal.</description></item>
+            /// <item><description>operating: The edge instance is under maintenance.</description></item>
+            /// <item><description>error: An edge anomaly is detected.</description></item>
             /// </ol>
             /// 
             /// <b>Example:</b>
@@ -482,7 +474,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>The storage capacity of the rendering instance.</para>
+        /// <para>The storage capacity of the cloud application service instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -492,7 +484,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? StorageSize { get; set; }
 
         /// <summary>
-        /// <para>The system information of the rendering instance, such as its resolution.</para>
+        /// <para>The system information, including the resolution.</para>
         /// </summary>
         [NameInMap("SystemInfo")]
         [Validation(Required=false)]
@@ -511,21 +503,21 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             /// <summary>
             /// <para>The resolution. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>1920*864</c></para>
+            /// <item><description><para>1920*864</para>
             /// </description></item>
-            /// <item><description><para><c>1080*1920</c></para>
+            /// <item><description><para>1080*1920</para>
             /// </description></item>
-            /// <item><description><para><c>1920*1080</c></para>
+            /// <item><description><para>1920*1080</para>
             /// </description></item>
-            /// <item><description><para><c>720*1280</c></para>
+            /// <item><description><para>720*1280</para>
             /// </description></item>
-            /// <item><description><para><c>2400*1080</c></para>
+            /// <item><description><para>2400*1080</para>
             /// </description></item>
-            /// <item><description><para><c>1080*2400</c></para>
+            /// <item><description><para>1080*2400</para>
             /// </description></item>
-            /// <item><description><para><c>1280*720</c></para>
+            /// <item><description><para>1280*720</para>
             /// </description></item>
-            /// <item><description><para><c>864*1920</c></para>
+            /// <item><description><para>864*1920</para>
             /// </description></item>
             /// </list>
             /// 

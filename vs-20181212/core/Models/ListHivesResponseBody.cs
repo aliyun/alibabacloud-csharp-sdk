@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public List<ListHivesResponseBodyHives> Hives { get; set; }
         public class ListHivesResponseBodyHives : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time follows the ISO 8601 standard and includes the time zone offset. Format: YYYY-MM-DDTHH:mm:ss+HH:mm.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-05-14T15:20:37+08:00</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

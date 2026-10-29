@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The download link for the production. Use an Alibaba Cloud Object Storage Service (OSS) SDK to download the file.</para>
+        /// <para>The download URL of the production. Use the Alibaba Cloud OSS SDK to download the production.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://xxx.xxx.xxx">https://xxx.xxx.xxx</a></para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DownloadUrl { get; set; }
 
         /// <summary>
-        /// <para>The download link\&quot;s expiration time.</para>
+        /// <para>The expiration time of the download URL. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mmZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2029-03-28T16:00Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>

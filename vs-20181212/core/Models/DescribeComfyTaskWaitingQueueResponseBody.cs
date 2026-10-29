@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The description.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The waiting queue information.</para>
+        /// <para>The task waiting queue information.</para>
         /// </summary>
         [NameInMap("TaskWaitingQueue")]
         [Validation(Required=false)]

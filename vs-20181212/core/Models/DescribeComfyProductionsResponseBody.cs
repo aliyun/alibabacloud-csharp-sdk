@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The current page number.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries on the current page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>A list of productions.</para>
+        /// <para>The list of productions.</para>
         /// </summary>
         [NameInMap("Productions")]
         [Validation(Required=false)]
         public List<DescribeComfyProductionsResponseBodyProductions> Productions { get; set; }
         public class DescribeComfyProductionsResponseBodyProductions : TeaModel {
             /// <summary>
-            /// <para>The ID of the Comfy task.</para>
+            /// <para>The ComfyTask ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6c8234f4-d1e1-4cea-b08b-7926fbdea144</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string ComfyTaskId { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the production, in ISO 8601 format.</para>
+            /// <para>The creation time. The time follows the ISO 8601 standard and includes a time zone offset. The format is YYYY-MM-DDTHH:mm:ss+HH:mm.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-02-06T20:20:26+08:00</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the production.</para>
+            /// <para>The production ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3e5bda20-5cd4-4d55-8d23-88d624a18caa</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string ProductionId { get; set; }
 
             /// <summary>
-            /// <para>The state of the production.</para>
+            /// <para>The production status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NORMAL</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The last modification time of the production, as a Unix timestamp.</para>
+            /// <para>The last modified time. The time is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1773707865</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total count of productions.</para>
+        /// <para>The total number of alert rules.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

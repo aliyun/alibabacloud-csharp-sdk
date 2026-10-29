@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class RenewRenderingInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Enable or disable auto-renewal. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enable.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Disable.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The duration of the subscription. Valid values are 1 (default), 2, 3, 4, 5, 6, 7, 8, 9, 12. A value of 12 is converted to one year; other values are in months.</para>
+        /// <para>The subscription duration. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, and 12. Default value: 1. A value of 12 indicates one year, while other values indicate months.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>Cloud application service instance ID.</para>
+        /// <para>The cloud application service instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

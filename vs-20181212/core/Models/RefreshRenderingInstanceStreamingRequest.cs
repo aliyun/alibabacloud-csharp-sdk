@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class RefreshRenderingInstanceStreamingRequest : TeaModel {
         /// <summary>
-        /// <para>Client information.</para>
+        /// <para>The client information.</para>
         /// </summary>
         [NameInMap("ClientInfo")]
         [Validation(Required=false)]
         public RefreshRenderingInstanceStreamingRequestClientInfo ClientInfo { get; set; }
         public class RefreshRenderingInstanceStreamingRequestClientInfo : TeaModel {
             /// <summary>
-            /// <para>Client IP address.</para>
+            /// <para>The IP address of the client.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.21.128.110</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string ClientIp { get; set; }
 
             /// <summary>
-            /// <para>Indicates if the client is new.</para>
+            /// <para>Specifies whether the client is a new client.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>Cloud application service instance ID.</para>
+        /// <para>The instance ID of the cloud application service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

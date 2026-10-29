@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class UpdateRenderingProjectRequest : TeaModel {
         /// <summary>
-        /// <para>Project description</para>
+        /// <para>The project description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>目录1</para>
+        /// <para>Directory 1</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Project ID</para>
+        /// <para>The project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,15 +31,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>Default naming rules:</para>
-        /// <ol>
-        /// <item><description><para>Length 1-128</para>
-        /// </description></item>
-        /// <item><description><para>Lowercase letters, numbers, underscores (_), hyphens (-), and periods (.).</para>
-        /// </description></item>
-        /// <item><description><para>The first and last characters must be letters or digits. At least one of ProjectName, SessionAttribs, or Description must be specified.</para>
-        /// </description></item>
-        /// </ol>
+        /// <para>The custom project name, which serves as the unique identifier of the project. Default naming conventions: 1. The length must be 1 to 128 characters. 2. The name can contain lowercase letters, digits, underscores (_), hyphens (-), and periods (.). 3. The first and last characters must be letters or digits. At least one of ProjectName, SessionAttribs, or Description must be specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>idata_content</para>
@@ -49,20 +41,18 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>Session attributes</para>
+        /// <para>The session attributes.</para>
         /// </summary>
         [NameInMap("SessionAttribs")]
         [Validation(Required=false)]
         public UpdateRenderingProjectRequestSessionAttribs SessionAttribs { get; set; }
         public class UpdateRenderingProjectRequestSessionAttribs : TeaModel {
             /// <summary>
-            /// <para>The mode used to start cloud application services for the session. Valid values:</para>
-            /// <ol>
-            /// <item><description><para>Async: asynchronous</para>
-            /// </description></item>
-            /// <item><description><para>Sync: synchronization</para>
-            /// </description></item>
-            /// </ol>
+            /// <para>The mode in which the session starts the cloud application service. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Async: asynchronous.</description></item>
+            /// <item><description>Sync: synchronous.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Async</para>

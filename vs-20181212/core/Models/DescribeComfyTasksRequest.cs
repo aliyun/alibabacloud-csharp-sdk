@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeComfyTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The HiveId used as a filter condition to query tasks executed under the specified HiveId.</para>
+        /// <para>The Hive ID, used as a filter to query tasks executed under the specified Hive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hive-26cd567b35c04a0a90f0xxxxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page.</para>
+        /// <para>The number of records to display on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,14 +40,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The Comfy workflow ID used as a filter condition.</para>
+        /// <para>The ID of the Comfy task, used as a filter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6c8234f4-d1e1-4cea-b08b-7926fbdea144</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The task status used as a filter condition.</para>
+        /// <para>The task state, used as a filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>QUEUED</para>
@@ -57,7 +60,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string TaskState { get; set; }
 
         /// <summary>
-        /// <para>The Comfy workflow ID used as a filter condition.</para>
+        /// <para>The ID of the Comfy workflow, used as a filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>wf_adb32aed-ccdc-42ae-b4d4-a21181ac8a5f</para>

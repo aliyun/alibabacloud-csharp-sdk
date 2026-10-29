@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeComfyProductionDownloadUrlRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the production.</para>
+        /// <para>The production ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

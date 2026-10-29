@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class UpgradeRenderingInstanceImageRequest : TeaModel {
         /// <summary>
-        /// <para>The image ID.</para>
+        /// <para>The ID of the image.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The list of cloud application service instance IDs. A maximum of 100 IDs can be specified.</para>
+        /// <para>The IDs of the cloud application service instances. A maximum of 100 instance IDs can be specified.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RenderingInstanceIds")]

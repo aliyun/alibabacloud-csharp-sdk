@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class CreateRenderingDataPackageRequest : TeaModel {
         /// <summary>
-        /// <para>Data type. Valid values:</para>
+        /// <para>The data type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Package (default value).</para>
-        /// </description></item>
-        /// <item><description><para>Baseline.</para>
-        /// </description></item>
+        /// <item><description>Package (default)</description></item>
+        /// <item><description>Baseline</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>Description.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testdescription</para>
@@ -36,9 +34,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Billing type. Valid values:</para>
+        /// <para>The billing type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Hour: Hour.</description></item>
+        /// <item><description>Hour: hourly.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +47,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string InstanceBillingCycle { get; set; }
 
         /// <summary>
-        /// <para>Cloud application service instance ID (Note: This operation is only for crs.cp.\* series instance types.)</para>
+        /// <para>The instance ID of the Cloud Application Service. Note: This operation applies only to crs.cp.* series instance types.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class UploadPublicKeyRequest : TeaModel {
         /// <summary>
-        /// <para>Base64-encoded public key content.</para>
+        /// <para>The encoded content of the public key. The default encoding format is Base64.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,24 +21,22 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>Description of the public key.</para>
+        /// <para>The description of the public key.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试使用</para>
+        /// <para>For testing purposes</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Group for the public key. Used for public key management.</para>
+        /// <para>The group of the public key. Used for public key management.
+        /// Naming conventions:</para>
         /// <ol>
-        /// <item><description><para>Length: 0 to 255 characters.</para>
-        /// </description></item>
-        /// <item><description><para>Valid characters: lowercase letters, digits, underscores (_), hyphens (-), and periods (.).</para>
-        /// </description></item>
-        /// <item><description><para>First character must be a letter or digit.</para>
-        /// </description></item>
+        /// <item><description>The length must be 0 to 255 characters.</description></item>
+        /// <item><description>The name can contain lowercase letters, digits, underscores (_), hyphens (-), and periods (.).</description></item>
+        /// <item><description>The first character must be a letter or a digit.</description></item>
         /// </ol>
         /// 
         /// <b>Example:</b>
@@ -49,16 +47,13 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string KeyGroup { get; set; }
 
         /// <summary>
-        /// <para>Name of the public key. Must be unique.</para>
+        /// <para>The name of the public key. The name must be unique.
+        /// Naming conventions:</para>
         /// <ol>
-        /// <item><description><para>Length: 8 to 255 characters.</para>
-        /// </description></item>
-        /// <item><description><para>Valid characters: lowercase letters, digits, underscores (_), hyphens (-), and periods (.).</para>
-        /// </description></item>
-        /// <item><description><para>First character must be a letter or digit.</para>
-        /// </description></item>
-        /// <item><description><para>Prefix cannot be group-.</para>
-        /// </description></item>
+        /// <item><description>The length must be 8 to 255 characters.</description></item>
+        /// <item><description>The name can contain lowercase letters, digits, underscores (_), hyphens (-), and periods (.).</description></item>
+        /// <item><description>The first character must be a letter or a digit.</description></item>
+        /// <item><description>The prefix cannot be &quot;group-&quot;.</description></item>
         /// </ol>
         /// <para>This parameter is required.</para>
         /// 
@@ -70,12 +65,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string KeyName { get; set; }
 
         /// <summary>
-        /// <para>Type of the public key. Valid values:</para>
+        /// <para>The type of the public key. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>adb</b>: ADB key.</para>
-        /// </description></item>
-        /// <item><description><para><b>ssh</b>: SSH key.</para>
-        /// </description></item>
+        /// <item><description><b>adb</b>: ADB key.</description></item>
+        /// <item><description><b>ssh</b>: SSH key.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

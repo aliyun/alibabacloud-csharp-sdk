@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class RefreshRenderingInstanceStreamingShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Client information.</para>
+        /// <para>The client information.</para>
         /// </summary>
         [NameInMap("ClientInfo")]
         [Validation(Required=false)]
         public string ClientInfoShrink { get; set; }
 
         /// <summary>
-        /// <para>Cloud application service instance ID.</para>
+        /// <para>The instance ID of the cloud application service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

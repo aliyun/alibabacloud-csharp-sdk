@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListEdgeWorkersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of loads.</para>
+        /// <para>The list of workloads.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<ListEdgeWorkersResponseBodyInstances> Instances { get; set; }
         public class ListEdgeWorkersResponseBodyInstances : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time is expressed in the ISO 8601 standard and includes a time zone offset. Format: YYYY-MM-DDTHH:mm:ss+HH:mm.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-05-14T15:20:37+08:00</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The expiration time.</para>
+            /// <para>The end time. The time is expressed in the ISO 8601 standard and includes a time zone offset. Format: YYYY-MM-DDTHH:mm:ss+HH:mm.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-05-14T15:20:37+08:00</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string HiveId { get; set; }
 
             /// <summary>
-            /// <para>The load ID.</para>
+            /// <para>The workload ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>as-d135ca4425c24b99b79cd0b6c552cac9</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string PlanId { get; set; }
 
             /// <summary>
-            /// <para>The specification.</para>
+            /// <para>The specifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>crs.xic.s1</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>The page number of the query list. The value starts from 1. Default value: 1.</para>
+        /// <para>The page number of the list to query. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Settings for paging. Maximum value: 100. Default value: 100.</para>
+        /// <para>The Settings for the number of lines per page during paging and paged query. Maximum value: 100. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

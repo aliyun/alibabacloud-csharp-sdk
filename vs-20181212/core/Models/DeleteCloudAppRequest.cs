@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DeleteCloudAppRequest : TeaModel {
         /// <summary>
-        /// <para>The cloud application ID, which corresponds to a unique application package.</para>
+        /// <para>The ID of the cloud application, which corresponds to a unique application package.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

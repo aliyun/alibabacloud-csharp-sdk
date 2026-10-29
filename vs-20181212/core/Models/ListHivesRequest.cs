@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListHivesRequest : TeaModel {
         /// <summary>
-        /// <para>The time range filter parameter. Specify the time in the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The end time. The time follows the ISO 8601 standard and must be in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-05-14T15:20:37+08:00</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The cloud application service group ID.</para>
+        /// <para>The ID of the cloud application service group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>g-xxxx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page number of the query list. Minimum value: 1. Default value: 1.</para>
+        /// <para>The page number of the list to query. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</para>
+        /// <para>Settings for the number of entries per page during paging in a paged query. Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The creation time. The time follows the ISO 8601 standard and includes the time zone offset. Format: YYYY-MM-DDTHH:mm:ss+HH:mm.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-05-14T15:20:37+08:00</para>

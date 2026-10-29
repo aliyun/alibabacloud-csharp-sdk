@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeComfyUserDatasRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the file to query, or the folder to query. For a folder, provide the path ending with a forward slash (/).</para>
+        /// <para>The name of the file to query, or the directory to query. To query a directory, pass the path ending with a forward slash (/).</para>
         /// 
         /// <b>Example:</b>
         /// <para>myfile</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The page number of the list to query.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

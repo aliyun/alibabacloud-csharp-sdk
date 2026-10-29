@@ -14,11 +14,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The file URL of the VOD video.</para>
+        /// <para>The file URL of the video-on-demand video.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="http://xxx/xxx.mp4">http://xxx/xxx.mp4</a></para>
+        /// <para><a href="http://xxx/xxxx.mp4">http://xxx/xxxx.mp4</a></para>
         /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]

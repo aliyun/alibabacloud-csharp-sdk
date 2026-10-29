@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The description.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <summary>
         /// <para>The page size.</para>
         /// <remarks>
-        /// <para>Only available for recording queries.</para>
+        /// <para>Only for recording queries.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,14 +63,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task list.</para>
+        /// <para>The list of tasks.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public List<DescribeComfyTasksResponseBodyTasks> Tasks { get; set; }
         public class DescribeComfyTasksResponseBodyTasks : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time, represented as a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1780387493000</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The task end time.</para>
+            /// <para>The end time of the task, represented as a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1780387494000</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The resource pool ID used by the task.</para>
+            /// <para>The ID of the resource pool used by the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hive-26cd567b35c04a0a90f017388207b2</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string HiveId { get; set; }
 
             /// <summary>
-            /// <para>The task status.</para>
+            /// <para>The task error message.</para>
             /// </summary>
             [NameInMap("TaskErrorMessage")]
             [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The task status.</para>
+            /// <para>The task state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -127,14 +127,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string TaskState { get; set; }
 
             /// <summary>
-            /// <para>The task status.</para>
+            /// <para>The task state message.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>任务执行成功</para>
             /// </summary>
             [NameInMap("TaskStateMessage")]
             [Validation(Required=false)]
             public string TaskStateMessage { get; set; }
 
             /// <summary>
-            /// <para>The last modified time.</para>
+            /// <para>The last modified time, represented as a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1780387494000</para>
@@ -144,7 +147,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string UpdatedTime { get; set; }
 
             /// <summary>
-            /// <para>The Comfy workflow ID used by the task.</para>
+            /// <para>The ID of the Comfy workflow used by the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>wf_adb32aed-ccdc-42ae-b4d4-a21181ac8a5f</para>

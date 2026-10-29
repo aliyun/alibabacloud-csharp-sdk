@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribePurchasedDevicesRequest : TeaModel {
         /// <summary>
-        /// <para>Queries by the ID of the group to which the device belongs.</para>
+        /// <para>The ID of the workspace to which the device belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>348*****174-cn-qingdao</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>Queries by device ID.</para>
+        /// <para>The device ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4070*****1132-cn-qingdao</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>Queries by device name.</para>
+        /// <para>The device name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx路口摄像头</para>
+        /// <para>XXX intersection camera</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The default is 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. The default is 20.</para>
+        /// <para>The number of entries per page. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The field to sort by. Valid value:</para>
+        /// <para>The field by which to sort the results. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>id (default)</description></item>
         /// </list>
@@ -77,12 +77,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The sorting order. The default is ascending. Valid values:</para>
+        /// <para>The sort order. Default value: asc. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>asc (ascending)</para>
-        /// </description></item>
-        /// <item><description><para>desc (descending)</para>
-        /// </description></item>
+        /// <item><description>asc: Ascending order.</description></item>
+        /// <item><description>desc: Descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,14 +91,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string SortDirection { get; set; }
 
         /// <summary>
-        /// <para>Queries by device subtype. Valid values:</para>
+        /// <para>The device subtype. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>bullet (bullet camera)</para>
-        /// </description></item>
-        /// <item><description><para>dome (dome camera)</para>
-        /// </description></item>
-        /// <item><description><para>ptz (PTZ camera)</para>
-        /// </description></item>
+        /// <item><description>bullet: Bullet camera.</description></item>
+        /// <item><description>dome: Dome camera.</description></item>
+        /// <item><description>ptz: PTZ camera.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -111,14 +106,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string SubType { get; set; }
 
         /// <summary>
-        /// <para>Queries by device type. Valid values:</para>
+        /// <para>The device type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ipc (camera)</para>
-        /// </description></item>
-        /// <item><description><para>platform (platform)</para>
-        /// </description></item>
-        /// <item><description><para>ied (intelligent edge device)</para>
-        /// </description></item>
+        /// <item><description>ipc: Camera.</description></item>
+        /// <item><description>platform: Platform.</description></item>
+        /// <item><description>ied: Intelligent device.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -129,10 +121,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>Queries by device vendor.</para>
+        /// <para>The device vendor.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>公司A</para>
+        /// <para>Company A</para>
         /// </summary>
         [NameInMap("Vendor")]
         [Validation(Required=false)]

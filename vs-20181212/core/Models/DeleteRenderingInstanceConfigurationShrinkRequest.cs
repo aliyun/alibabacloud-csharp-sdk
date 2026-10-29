@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DeleteRenderingInstanceConfigurationShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Configuration content. Purge all configured modules by default.</para>
+        /// <para>The configuration content. By default, all configured modules are cleared.</para>
         /// </summary>
         [NameInMap("Configuration")]
         [Validation(Required=false)]
         public string ConfigurationShrink { get; set; }
 
         /// <summary>
-        /// <para>Cloud application service instance ID.</para>
+        /// <para>The cloud application service instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

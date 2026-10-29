@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ManageLoginResponseBody : TeaModel {
         /// <summary>
-        /// <para>Connection information.</para>
+        /// <para>The connection information.</para>
         /// </summary>
         [NameInMap("LoginInfo")]
         [Validation(Required=false)]
         public ManageLoginResponseBodyLoginInfo LoginInfo { get; set; }
         public class ManageLoginResponseBodyLoginInfo : TeaModel {
             /// <summary>
-            /// <para>Port for ADB connections.</para>
+            /// <para>The port for the ADB connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10005</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public int? AdbLoginPort { get; set; }
 
             /// <summary>
-            /// <para>Host for SSH connections.</para>
+            /// <para>The host for the SSH connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12.10.4.10</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string LoginHostname { get; set; }
 
             /// <summary>
-            /// <para>Port for SSH connections.</para>
+            /// <para>The port for the SSH connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10004</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>

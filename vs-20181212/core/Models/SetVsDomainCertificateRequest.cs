@@ -13,21 +13,18 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <para>The certificate name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Cert-77****7</para>
+        /// <para>Cert-77****6</para>
         /// </summary>
         [NameInMap("CertName")]
         [Validation(Required=false)]
         public string CertName { get; set; }
 
         /// <summary>
-        /// <para>The certificate type.</para>
+        /// <para>The certificate type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>upload: Upload certificate</para>
-        /// </description></item>
-        /// <item><description><para>cas: Alibaba Cloud Security certificate</para>
-        /// </description></item>
-        /// <item><description><para>free: Personal test certificate (Free Edition)</para>
-        /// </description></item>
+        /// <item><description>upload: uploaded certificate</description></item>
+        /// <item><description>cas: SSL Certificates Service certificate</description></item>
+        /// <item><description>free: free certificate</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,7 +37,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <summary>
         /// <para>The accelerated domain name to which the certificate belongs.</para>
         /// <remarks>
-        /// <para>The domain must use HTTPS acceleration.</para>
+        /// <para>The domain name must use HTTPS acceleration.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,7 +49,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>Set to 1 to skip the certificate name duplication check and overwrite an existing certificate with the same name.</para>
+        /// <para>If you set this parameter to 1, the system ignores the validation for duplicate certificate names and overwrites the existing certificate with the same name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -76,7 +73,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The private key content. Omit this parameter if you disable the certificate. Provide the private key content if you configure a certificate.</para>
+        /// <para>The content of the private key. This parameter is not required if the certificate is disabled. If you configure a certificate, enter the private key content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxxxx</para>
@@ -86,12 +83,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string SSLPri { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable the HTTPS certificate. Valid values:</para>
+        /// <para>Specifies whether the HTTPS certificate is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>on</b>: Enable.</para>
-        /// </description></item>
-        /// <item><description><para><b>off</b> (default): Disable.</para>
-        /// </description></item>
+        /// <item><description><b>on</b>: Enabled.</description></item>
+        /// <item><description><b>off</b>: Disabled. This is the default value.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -103,7 +98,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string SSLProtocol { get; set; }
 
         /// <summary>
-        /// <para>The public certificate content. Omit this parameter if you disable the certificate. Provide the certificate content if you configure a certificate.</para>
+        /// <para>The content of the security certificate. This parameter is not required if the certificate is disabled. If you configure a certificate, enter the certificate content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>328uiuii28****82dsada81</para>

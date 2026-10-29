@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeStreamsRequest : TeaModel {
         /// <summary>
-        /// <para>Filter by application.</para>
+        /// <para>The application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>live</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string App { get; set; }
 
         /// <summary>
-        /// <para>Filter by device ID.</para>
+        /// <para>The device ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>348*****380-cn-qingdao</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DeviceId { get; set; }
 
         /// <summary>
-        /// <para>Filter by domain name.</para>
+        /// <para>The domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.aliyundoc.com</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The ID of the space to query.</para>
+        /// <para>The space ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>348*****174-cn-qingdao</para>
@@ -50,10 +50,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>Stream ID.</para>
-        /// <remarks>
-        /// <para>Enter multiple IDs separated by commas (,).</para>
-        /// </remarks>
+        /// <para>The stream ID. You can specify multiple IDs separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>323*****997-cn-qingdao</para>
@@ -63,10 +60,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>Filter by stream name.</para>
-        /// <remarks>
-        /// <para>Enter multiple names separated by commas (,).</para>
-        /// </remarks>
+        /// <para>The stream name. You can specify multiple names separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>3100000*****00000002</para>
@@ -80,7 +74,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Page number. Default value: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -90,7 +84,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageNum { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page. Default value: 20.</para>
+        /// <para>The number of entries per page. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -100,7 +94,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Parent device ID of the device that hosts this stream.</para>
+        /// <para>The parent device ID of the device to which the stream belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>399*****774-cn-qingdao</para>
@@ -110,22 +104,15 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ParentId { get; set; }
 
         /// <summary>
-        /// <para>Sort results by a field. Valid values:</para>
+        /// <para>The field by which to sort the results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Id (default)</para>
-        /// </description></item>
-        /// <item><description><para>GroupId</para>
-        /// </description></item>
-        /// <item><description><para>Name</para>
-        /// </description></item>
-        /// <item><description><para>DeviceId</para>
-        /// </description></item>
-        /// <item><description><para>Protocol</para>
-        /// </description></item>
+        /// <item><description>Id (default)</description></item>
+        /// <item><description>GroupId</description></item>
+        /// <item><description>Name</description></item>
+        /// <item><description>DeviceId</description></item>
+        /// <item><description>Protocol
+        /// You can specify only one field.</description></item>
         /// </list>
-        /// <remarks>
-        /// <para>You can specify only one field.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Id</para>
@@ -135,12 +122,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>Sort order. Valid values:</para>
+        /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>asc (ascending, default)</para>
-        /// </description></item>
-        /// <item><description><para>desc (descending)</para>
-        /// </description></item>
+        /// <item><description>asc: ascending order (default)</description></item>
+        /// <item><description>desc: descending order</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

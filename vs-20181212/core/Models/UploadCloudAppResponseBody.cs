@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class UploadCloudAppResponseBody : TeaModel {
         /// <summary>
-        /// <para>The cloud application ID, which uniquely identifies the application package.</para>
+        /// <para>The ID of the cloud application, which corresponds to a unique application package.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cap-b06b26edfhytbn b94a75ae1a79efc90eb</para>

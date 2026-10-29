@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListRenderingInstanceGatewayResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of custom gateway information.</para>
+        /// <para>The list of custom gateway information.</para>
         /// </summary>
         [NameInMap("GatewayConfigurationInfos")]
         [Validation(Required=false)]
         public List<ListRenderingInstanceGatewayResponseBodyGatewayConfigurationInfos> GatewayConfigurationInfos { get; set; }
         public class ListRenderingInstanceGatewayResponseBodyGatewayConfigurationInfos : TeaModel {
             /// <summary>
-            /// <para>The time when the cloud application service instance was created.</para>
+            /// <para>The creation time of the cloud application service instance. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-15 10:19:13</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the custom gateway instance.</para>
+            /// <para>The instance ID of the custom gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>render-xxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string GatewayInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud application service instance.</para>
+            /// <para>The instance ID of the cloud application service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>render-342012a227dc4ddf91f024639e43051a</para>
@@ -48,12 +48,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 
             /// <summary>
             /// <para>The status of the custom gateway. Valid values:</para>
-            /// <ol>
-            /// <item><description><para>Transitional states: creating, deleting</para>
-            /// </description></item>
-            /// <item><description><para>Desired states: available, failed</para>
-            /// </description></item>
-            /// </ol>
+            /// <list type="bullet">
+            /// <item><description>Intermediate states: creating and deleting. </description></item>
+            /// <item><description>Final states: available and failed.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>available</para>
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the information was last updated.</para>
+            /// <para>The update time. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-11-02 12:08:26</para>
@@ -75,7 +73,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>The page number of the query results list</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -85,7 +83,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries on the current page.</para>
+        /// <para>The number of entries per page in the paging Settings for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -105,7 +103,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of installation records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

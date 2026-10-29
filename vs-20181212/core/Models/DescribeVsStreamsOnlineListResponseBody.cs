@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries displayed per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries that meet the criteria.</para>
+        /// <para>The total number of entries that meet the conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

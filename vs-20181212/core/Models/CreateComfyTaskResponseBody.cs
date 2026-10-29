@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class CreateComfyTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned if the call fails. For more information, see error codes.</para>
+        /// <para>The error code returned if the call fails. For more information, see Error codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

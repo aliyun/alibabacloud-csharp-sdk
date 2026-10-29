@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeStreamVodListRequest : TeaModel {
         /// <summary>
-        /// <para>VOD record end time (unix timestamp, unit: seconds)</para>
+        /// <para>The end time of the video-on-demand records. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>Stream ID.</para>
+        /// <para>The stream ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>18526049*****219118918-cn-beijing</para>
+        /// <para>18526049******19118918-cn-beijing</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>VOD record start time (unix timestamp, unit: seconds)</para>
+        /// <para>The start time of the video-on-demand records. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class AssociateRenderingProjectInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Number of failed cloud application service instances</para>
+        /// <para>The number of cloud application service instances that failed to be associated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string FailedInstanceCount { get; set; }
 
         /// <summary>
-        /// <para>List of instances that failed to associate</para>
+        /// <para>The list of instances that failed to be associated.</para>
         /// </summary>
         [NameInMap("FailedInstances")]
         [Validation(Required=false)]
         public List<AssociateRenderingProjectInstancesResponseBodyFailedInstances> FailedInstances { get; set; }
         public class AssociateRenderingProjectInstancesResponseBodyFailedInstances : TeaModel {
             /// <summary>
-            /// <para>Failure reason</para>
+            /// <para>The cause of the failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>invalid id</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Cloud application service instance ID</para>
+            /// <para>The instance ID of the cloud application service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>render-b45f28650ffe4591bf4c5c95996a428c</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Number of successful cloud application service instances</para>
+        /// <para>The number of successfully associated cloud application service instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -69,14 +69,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string SuccessInstanceCount { get; set; }
 
         /// <summary>
-        /// <para>List of successfully associated instances</para>
+        /// <para>The list of successfully associated instances.</para>
         /// </summary>
         [NameInMap("SuccessInstances")]
         [Validation(Required=false)]
         public List<AssociateRenderingProjectInstancesResponseBodySuccessInstances> SuccessInstances { get; set; }
         public class AssociateRenderingProjectInstancesResponseBodySuccessInstances : TeaModel {
             /// <summary>
-            /// <para>Description</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Cloud application service instance ID</para>
+            /// <para>The instance ID of the cloud application service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>render-5130e2feb23f442fb9456a3d977f03d4</para>

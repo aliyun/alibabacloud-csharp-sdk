@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListFilePushStatusesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned results.</para>
+        /// <para>The page number of the returned list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query.</para>
+        /// <para>The Settings for the number of entries per page during paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The list of file push status records.</para>
+        /// <para>The list of file push statuses.</para>
         /// </summary>
         [NameInMap("PushStatuses")]
         [Validation(Required=false)]
         public List<ListFilePushStatusesResponseBodyPushStatuses> PushStatuses { get; set; }
         public class ListFilePushStatusesResponseBodyPushStatuses : TeaModel {
             /// <summary>
-            /// <para>The file ID.</para>
+            /// <para>The ID of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>f-1671accd4dafdag3er256cvgewt13f7141db2f7</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string FileId { get; set; }
 
             /// <summary>
-            /// <para>The file name.</para>
+            /// <para>The name of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>myfile</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The scheduled push start time.</para>
+            /// <para>The start time of the push. The time is displayed in the ISO 8601 standard with time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-03-26T16:32:20+08:00</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string PushTime { get; set; }
 
             /// <summary>
-            /// <para>The cloud application service instance ID.</para>
+            /// <para>The instance ID of the cloud application service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>render-9f8c57355d224ad7beaf95e145f22111</para>
@@ -77,17 +77,13 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string RenderingInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The file push status. Valid values:</para>
-            /// <ol>
-            /// <item><description><para>Created</para>
-            /// </description></item>
-            /// <item><description><para>Doing</para>
-            /// </description></item>
-            /// <item><description><para>Success: desired state</para>
-            /// </description></item>
-            /// <item><description><para>Failed: desired state</para>
-            /// </description></item>
-            /// </ol>
+            /// <para>The push status of the file. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Created</description></item>
+            /// <item><description>Doing</description></item>
+            /// <item><description>Success: final state.</description></item>
+            /// <item><description>Failed: final state.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Success</para>
@@ -97,7 +93,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The status description.</para>
+            /// <para>The description of the status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>push success</para>
@@ -107,7 +103,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string StatusDescription { get; set; }
 
             /// <summary>
-            /// <para>The latest update time of the status.</para>
+            /// <para>The latest update time of the status. The time is displayed in the ISO 8601 standard with time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-03-26T17:02:10+08:00</para>
@@ -119,7 +115,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
@@ -129,7 +125,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of matching file push records.</para>
+        /// <para>The total number of matched file push records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

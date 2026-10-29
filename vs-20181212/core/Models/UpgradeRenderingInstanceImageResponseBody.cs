@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? FailedCount { get; set; }
 
         /// <summary>
-        /// <para>The information about failed instances.</para>
+        /// <para>The information about the failed instances.</para>
         /// </summary>
         [NameInMap("FailedItems")]
         [Validation(Required=false)]
         public List<UpgradeRenderingInstanceImageResponseBodyFailedItems> FailedItems { get; set; }
         public class UpgradeRenderingInstanceImageResponseBodyFailedItems : TeaModel {
             /// <summary>
-            /// <para>The error code of the failure.</para>
+            /// <para>The error code for the failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200302</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string ErrCode { get; set; }
 
             /// <summary>
-            /// <para>The error message of the failure.</para>
+            /// <para>The error message for the failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Not Applied</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of successful instances.</para>
+        /// <para>The number of successfully upgraded instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? SuccessCount { get; set; }
 
         /// <summary>
-        /// <para>The information about successful instances.</para>
+        /// <para>The information about the successfully upgraded instances.</para>
         /// </summary>
         [NameInMap("SuccessItems")]
         [Validation(Required=false)]

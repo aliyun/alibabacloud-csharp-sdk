@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class RecoverRenderingDataPackageRequest : TeaModel {
         /// <summary>
-        /// <para>Cloud application service data pack ID</para>
+        /// <para>The ID of the cloud application service data package.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,12 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DataPackageId { get; set; }
 
         /// <summary>
-        /// <para>Data loading mode. Valid values: System or Process. Default value: System. System indicates system-level loading, which offers high stability but takes longer. Process indicates process-level loading, which provides high timeliness but relatively lower stability.</para>
+        /// <para>The data loading mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>System: system-level loading, which provides high stability but takes a relatively long time.</description></item>
+        /// <item><description>Process: process-level loading, which provides high loading timeliness but relatively low stability.
+        /// Default value: System.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Process</para>
@@ -31,7 +36,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string LoadMode { get; set; }
 
         /// <summary>
-        /// <para>Cloud application service instance ID</para>
+        /// <para>The cloud application service instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

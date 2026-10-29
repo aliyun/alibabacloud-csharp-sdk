@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class StopRenderingSessionRequest : TeaModel {
         /// <summary>
-        /// <para>Unique ID of the end customer. Specify either SessionId or ClientId.</para>
+        /// <para>The unique ID of the end client. You must specify at least one of SessionId or ClientId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04c30850-1d91-4da1-b811-66d0ee94af7d</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ClientId { get; set; }
 
         /// <summary>
-        /// <para>Project ID</para>
+        /// <para>The project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>Session ID. Specify either SessionId or ClientId.</para>
+        /// <para>The session ID. You must specify at least one of SessionId or ClientId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>session-i205217481741918129226</para>

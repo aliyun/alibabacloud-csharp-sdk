@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListEdgeWorkersRequest : TeaModel {
         /// <summary>
-        /// <para>The expiration time.</para>
+        /// <para>The end time. The time is expressed in the ISO 8601 standard and includes a time zone offset. Format: YYYY-MM-DDTHH:mm:ss+HH:mm.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-05-14T15:20:37+08:00</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public List<string> HiveIds { get; set; }
 
         /// <summary>
-        /// <para>The list of load IDs.</para>
+        /// <para>The list of workload IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ew-xxxxxx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The page number of the query list. The value starts from 1. Default value: 1.</para>
+        /// <para>The page number of the list to query. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Settings for paging. Maximum value: 100. Default value: 10.</para>
+        /// <para>The Settings for the number of lines per page during paging and paged query. Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public List<string> PlanIds { get; set; }
 
         /// <summary>
-        /// <para>The specification.</para>
+        /// <para>The specifications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ew.gn8t6xlarge-rb.x1p</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Spec { get; set; }
 
         /// <summary>
-        /// <para>The time range filter parameter. The value is in the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The start time of the time range filter. The time is expressed in the ISO 8601 standard and must be in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-05-25T06:35:26+08:00</para>

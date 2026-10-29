@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class InstallCloudAppShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Cloud application ID</para>
+        /// <para>The cloud application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,18 +21,16 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>Page number for paged queries of instance associations under the project. Paged queries default to reverse order by instance association time. This applies only when ProjectId is not empty. It limits the maximum number of instances for actions within the project, controlling the impact scope. Default is 1.</para>
+        /// <para>The page number for the paged query of instance associations under the project. By default, the paged query is sorted by instance association time in descending order. This parameter takes effect only when ProjectId is not empty. It limits the maximum number of instances on which the operation is executed under the project to control the impact scope. Default value: 1.</para>
         /// <ol>
-        /// <item><description><para>PageNumber value range:
-        /// a. Method one (recommended): Calculate the upper limit using the total number of instances associated with the project. The ListRenderingProjectInstances interface provides this count.
-        /// b. Method two: Determine if PageNumber reaches the project\&quot;s upper limit by checking the interface return value. This avoids calculating the range. PageNumber reaches the upper limit if the interface returns any of these conditions:
-        /// ⅰ. A 403 status code and error code 200301.
-        /// ⅱ. The sum of \<c>SuccessInstanceCount\\</c> and \<c>FailedInstanceCount\\</c> is less than \<c>PageSize\\</c>.</para>
-        /// </description></item>
-        /// <item><description><para>Scenario examples:
-        /// a. Full installation for project instances: If the number of project instances exceeds \<c>PageSize\\</c> (default 100), invoke Install multiple times. Increment PageNumber by 1 for each call to complete the full installation. Get project instance installation progress using the ListCloudAppInstallations interface.
-        /// b. New instance installation for a project: Start with \<c>PageNumber=1\\</c>. Paged queries default to reverse order by instance association time. The \<c>PageNumber=1\\</c> page shows the latest new instances.</para>
-        /// </description></item>
+        /// <item><description>About the value range of PageNumber:
+        ///   a. [Recommended] Method 1: Calculate the upper limit based on the total number of instances associated with the project (you can call the ListRenderingProjectInstances operation to obtain the total number).
+        ///   b. Method 2: Determine whether PageNumber has reached the upper limit of the project based on the response. [Advantage: You do not need to calculate the value range.] If the response meets either of the following conditions, PageNumber has reached the upper limit:
+        ///  i. The response returns HTTP status code 403 and error code 200301.
+        ///  ii. The response returns SuccessInstanceCount + FailedInstanceCount &lt; PageSize.</description></item>
+        /// <item><description>Example scenarios:
+        ///   a. Full installation for instances under a project: If the number of instances in the project is greater than PageSize (default value: 100), you can call the Install operation multiple times by incrementing PageNumber by 1 each time to perform a full installation. You can call the ListCloudAppInstallations operation to query the installation progress of the instances.
+        ///   b. Installation for newly added instances under a project: Start with PageNumber=1. By default, the paged query is sorted by instance association time in descending order. The page with PageNumber=1 contains the most recently added instances.</description></item>
         /// </ol>
         /// 
         /// <b>Example:</b>
@@ -43,7 +41,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Maximum number of instances selected for the project. This applies only when ProjectId is not empty. It limits the maximum number of instances for actions within the project, controlling the impact scope. Default is 100. The value range is 1-100.</para>
+        /// <para>The maximum number of instances that can be selected under the project. This parameter takes effect only when ProjectId is not empty. It limits the maximum number of instances on which the operation is performed under the project to control the impact scope. Default value: 100. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -53,12 +51,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Patch package ID to install. This is only for Windows scenarios.</para>
+        /// <para>The patch package ID to install. This parameter is supported only in Windows scenarios.</para>
         /// <ol>
-        /// <item><description><para>Install \<c>StablePatchId\\</c> by default.</para>
-        /// </description></item>
-        /// <item><description><para>Enter \<c>origin\\</c> to install the original version.</para>
-        /// </description></item>
+        /// <item><description>By default, StablePatchId is installed.</description></item>
+        /// <item><description>If you set the value to origin, the original version is installed.</description></item>
         /// </ol>
         /// 
         /// <b>Example:</b>
@@ -69,7 +65,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string PatchId { get; set; }
 
         /// <summary>
-        /// <para>Project ID</para>
+        /// <para>The project ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>project-422bc38dfgh5eb44149f135ef76304f63b</para>
@@ -79,7 +75,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>Cloud application service instance ID</para>
+        /// <para>The cloud application service instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>render-9f8c57355d224ad7beaf95e145f22111</para>
@@ -89,7 +85,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RenderingInstanceId { get; set; }
 
         /// <summary>
-        /// <para>List of cloud application service instance IDs</para>
+        /// <para>The list of cloud application service instance IDs.</para>
         /// </summary>
         [NameInMap("RenderingInstanceIds")]
         [Validation(Required=false)]

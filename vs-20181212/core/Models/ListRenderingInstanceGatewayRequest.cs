@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListRenderingInstanceGatewayRequest : TeaModel {
         /// <summary>
-        /// <para>The time range for filtering. The time must be in ISO 8601 format and in UTC, such as \<c>yyyy-MM-ddTHH:mm:ssZ\\</c>.</para>
+        /// <para>The time range filter parameter. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-05-20T12:23:02Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the gateway instance.</para>
+        /// <para>The instance ID of the gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>render-xxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string GatewayInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the list to query.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page for a paged query.</para>
+        /// <para>The number of entries per page in the paging Settings for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud application service instance.</para>
+        /// <para>The instance ID of the cloud application service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>render-9f8c57355d224ad7beaf95e145f22111</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RenderingInstanceId { get; set; }
 
         /// <summary>
-        /// <para>This parameter specifies the time range filter. The time must be in ISO 8601 format and UTC time, such as yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The time range filter parameter. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-05-18T02:20:00Z</para>

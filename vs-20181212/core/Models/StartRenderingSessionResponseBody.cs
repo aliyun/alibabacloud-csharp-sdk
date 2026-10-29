@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class StartRenderingSessionResponseBody : TeaModel {
         /// <summary>
-        /// <para>Instance hostname. By default, this is the EIP used for access.</para>
+        /// <para>The instance hostname. The default value is the access elastic IP address (EIP).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-xxx.ecr.aliyuncs.com</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Hostname { get; set; }
 
         /// <summary>
-        /// <para>Is this a repeated request</para>
+        /// <para>Indicates whether the request is a repeated request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public bool? IsRepeatedRequest { get; set; }
 
         /// <summary>
-        /// <para>Cloud application service instance location information</para>
+        /// <para>The location information of the cloud application service instance.</para>
         /// </summary>
         [NameInMap("Location")]
         [Validation(Required=false)]
         public StartRenderingSessionResponseBodyLocation Location { get; set; }
         public class StartRenderingSessionResponseBodyLocation : TeaModel {
             /// <summary>
-            /// <para>Province code of the cloud application service instance</para>
+            /// <para>The province code of the cloud application service instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>610000</para>
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>Port mapping information</para>
+        /// <para>The port mapping information.</para>
         /// </summary>
         [NameInMap("PortMappings")]
         [Validation(Required=false)]
         public List<StartRenderingSessionResponseBodyPortMappings> PortMappings { get; set; }
         public class StartRenderingSessionResponseBodyPortMappings : TeaModel {
             /// <summary>
-            /// <para>External port or port range, such as 22. For a port range, separate the start and end ports with a forward slash (/), for example, 10/20.</para>
+            /// <para>The public port or port range, such as 22. For a port range, separate the start port and end port with a forward slash (/), for example, 10/20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10013/10020</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string ExternalPort { get; set; }
 
             /// <summary>
-            /// <para>Internal port or port range. Ports correspond one-to-one with external ports. For a port range, separate the start and end ports with a forward slash (/), for example, 10/20.</para>
+            /// <para>The internal port or port range. The internal port corresponds to the public port on a one-to-one basis. For a port range, separate the start port and end port with a forward slash (/), for example, 10/20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>49008/49015</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>Cloud application service instance ID</para>
+        /// <para>The cloud application service instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>render-9f8c57355d224ad7beaf95e145f22111</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RenderingInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Session ID</para>
+        /// <para>The session ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>session-i205217481741918129226</para>
@@ -108,24 +108,24 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>Session state information</para>
+        /// <para>The session state information.</para>
         /// </summary>
         [NameInMap("StateInfo")]
         [Validation(Required=false)]
         public StartRenderingSessionResponseBodyStateInfo StateInfo { get; set; }
         public class StartRenderingSessionResponseBodyStateInfo : TeaModel {
             /// <summary>
-            /// <para>State description</para>
+            /// <para>The state description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>会话启动中</para>
+            /// <para>Session starting</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>Session state</para>
+            /// <para>The session state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SessionStarting</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>Last update time of the state</para>
+            /// <para>The time when the state was last updated. The value is a UTC time in the YYYY-MM-DDTHH:mmZ format based on the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-05-06T06:37Z</para>

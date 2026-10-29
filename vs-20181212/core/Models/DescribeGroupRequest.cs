@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeGroupRequest : TeaModel {
         /// <summary>
-        /// <para>Space ID.</para>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the statistics of devices in the group. The default value is false.</para>
+        /// <para>Specifies whether to return the statistics information of the devices in the workspace. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

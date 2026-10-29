@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeDeviceRequest : TeaModel {
         /// <summary>
-        /// <para>Device ID.</para>
+        /// <para>The device ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>Return directory information. Default value: false.</para>
+        /// <para>Specifies whether to return directory information. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public bool? IncludeDirectory { get; set; }
 
         /// <summary>
-        /// <para>Return stream statistics. Default value: false.</para>
+        /// <para>Specifies whether to return stream statistics information. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

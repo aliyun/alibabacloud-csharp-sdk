@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeRenderingInstanceSettingsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public List<DescribeRenderingInstanceSettingsResponseBodySettings> Settings { get; set; }
         public class DescribeRenderingInstanceSettingsResponseBodySettings : TeaModel {
             /// <summary>
-            /// <para>The name of an instance configuration.</para>
+            /// <para>The instance configuration name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>navbar.hide</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string AttributeName { get; set; }
 
             /// <summary>
-            /// <para>The value of an instance configuration.</para>
+            /// <para>The content of the instance configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

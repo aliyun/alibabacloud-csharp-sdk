@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The start time to query the next record.</para>
+        /// <para>The start time for querying the next record.</para>
         /// <remarks>
-        /// <para>Applies only to snapshot queries.</para>
+        /// <para>Only applicable to snapshot queries. Specify the time in the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time must be in UTC.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <summary>
         /// <para>The total number of pages.</para>
         /// <remarks>
-        /// <para>Applies only to recording queries.</para>
+        /// <para>Only applicable to recording queries.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <summary>
         /// <para>The page number.</para>
         /// <remarks>
-        /// <para>Applies only to recording queries.</para>
+        /// <para>Only applicable to recording queries.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// <remarks>
-        /// <para>Applies only to recording queries.</para>
+        /// <para>Only applicable to recording queries.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -62,14 +62,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The list of stored records.</para>
+        /// <para>The list of storage records.</para>
         /// </summary>
         [NameInMap("Records")]
         [Validation(Required=false)]
         public List<DescribeRecordsResponseBodyRecords> Records { get; set; }
         public class DescribeRecordsResponseBodyRecords : TeaModel {
             /// <summary>
-            /// <para>The end time of the stored record.</para>
+            /// <para>The end time of the storage record. The time is in the YYYY-MM-DDTHH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-23T18:33:48</para>
@@ -79,16 +79,12 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The format of the stored file. Valid values:</para>
+            /// <para>The format of the storage file. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>mp4</para>
-            /// </description></item>
-            /// <item><description><para>flv</para>
-            /// </description></item>
-            /// <item><description><para>hls</para>
-            /// </description></item>
-            /// <item><description><para>jpg</para>
-            /// </description></item>
+            /// <item><description>mp4</description></item>
+            /// <item><description>flv</description></item>
+            /// <item><description>hls</description></item>
+            /// <item><description>jpg</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,9 +105,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public long? Height { get; set; }
 
             /// <summary>
-            /// <para>The ID of the stored record.</para>
+            /// <para>The ID of the storage record.</para>
             /// <remarks>
-            /// <para>Applies only to recording queries.</para>
+            /// <para>Only applicable to recording queries.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -122,7 +118,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The bucket where the file is stored.</para>
+            /// <para>The OSS bucket of the storage file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my_oss_bucket</para>
@@ -142,7 +138,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string OssEndpoint { get; set; }
 
             /// <summary>
-            /// <para>The object of the stored file.</para>
+            /// <para>The OSS object of the storage file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>record/live/310*****007/2021-11-23-18-19-38_2021-11-23-18-33-48.m3u8</para>
@@ -152,7 +148,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string OssObject { get; set; }
 
             /// <summary>
-            /// <para>The start time of the stored record.</para>
+            /// <para>The start time of the storage record. The time is in the YYYY-MM-DDTHH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-23T18:19:32</para>
@@ -182,12 +178,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string TemplateId { get; set; }
 
             /// <summary>
-            /// <para>The type of the stored record. Valid values:</para>
+            /// <para>The type of the storage record. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>record</para>
-            /// </description></item>
-            /// <item><description><para>snapshot</para>
-            /// </description></item>
+            /// <item><description>record: recording</description></item>
+            /// <item><description>snapshot: snapshot</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -198,7 +192,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The URL of the stored file.</para>
+            /// <para>The URL of the storage file.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://my_oss_bucket.oss-cn-qingdao.aliyuncs.com/record/live/310*****007/2021-11-23-18-19-38_2021-11-23-18-33-48.m3u8">http://my_oss_bucket.oss-cn-qingdao.aliyuncs.com/record/live/310*****007/2021-11-23-18-19-38_2021-11-23-18-33-48.m3u8</a></para>
@@ -220,7 +214,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
@@ -230,9 +224,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of stored records.</para>
+        /// <para>The total number of storage records.</para>
         /// <remarks>
-        /// <para>Applies only to recording queries.</para>
+        /// <para>Only applicable to recording queries.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <item><description>1: motion detection alerting</description></item>
         /// <item><description>2: intelligent alerting</description></item>
         /// <item><description>3: switch alerting</description></item>
-        /// <item><description>4: video loss alerting.</description></item>
+        /// <item><description>4: video loss alerting</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <item><description>0: none</description></item>
         /// <item><description>1: JPEG image</description></item>
         /// <item><description>2: video</description></item>
-        /// <item><description>3: GIF image.</description></item>
+        /// <item><description>3: GIF image</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -105,6 +105,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <summary>
         /// <para>The alert subtype.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("SubAlarm")]
         [Validation(Required=false)]

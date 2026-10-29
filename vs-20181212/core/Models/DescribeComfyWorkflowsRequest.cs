@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeComfyWorkflowsRequest : TeaModel {
         /// <summary>
-        /// <para>The workflow name.</para>
+        /// <para>The name of the workflow.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>图生视频工作流</para>
+        /// <para>Image-to-video workflow</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the list to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of Comfy workflows per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

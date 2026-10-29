@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeRenderingInstanceConfigurationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configuration.</para>
+        /// <para>The configuration content.</para>
         /// </summary>
         [NameInMap("Configuration")]
         [Validation(Required=false)]
         public List<DescribeRenderingInstanceConfigurationResponseBodyConfiguration> Configuration { get; set; }
         public class DescribeRenderingInstanceConfigurationResponseBodyConfiguration : TeaModel {
             /// <summary>
-            /// <para>The list of properties for the module.</para>
+            /// <para>The list of attributes for the module.</para>
             /// </summary>
             [NameInMap("Attributes")]
             [Validation(Required=false)]
             public List<DescribeRenderingInstanceConfigurationResponseBodyConfigurationAttributes> Attributes { get; set; }
             public class DescribeRenderingInstanceConfigurationResponseBodyConfigurationAttributes : TeaModel {
                 /// <summary>
-                /// <para>The name of the attribute.</para>
+                /// <para>The attribute name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>lon</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The value of the attribute.</para>
+                /// <para>The attribute value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -46,27 +46,18 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             }
 
             /// <summary>
-            /// <para>The name of the device simulation feature module. Valid values:</para>
-            /// <ol>
-            /// <item><description><para>ctl: The control module.</para>
-            /// </description></item>
-            /// <item><description><para>prop: The property module.</para>
-            /// </description></item>
-            /// <item><description><para>location: The location module.</para>
-            /// </description></item>
-            /// <item><description><para>battery: The battery module.</para>
-            /// </description></item>
-            /// <item><description><para>network: The network module.</para>
-            /// </description></item>
-            /// <item><description><para>bluetooth: The Bluetooth module.</para>
-            /// </description></item>
-            /// <item><description><para>sim: The SIM card module.</para>
-            /// </description></item>
-            /// <item><description><para>display: The device module.</para>
-            /// </description></item>
-            /// <item><description><para>system: The basic module.</para>
-            /// </description></item>
-            /// </ol>
+            /// <para>The name of the real-device simulation feature module. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ctl: Control module.</description></item>
+            /// <item><description>prop: Attribute module.</description></item>
+            /// <item><description>location: Location module.</description></item>
+            /// <item><description>battery: Battery module.</description></item>
+            /// <item><description>network: Network module.</description></item>
+            /// <item><description>bluetooth: Bluetooth module.</description></item>
+            /// <item><description>sim: SIM card module.</description></item>
+            /// <item><description>display: Device module.</description></item>
+            /// <item><description>system: Basic module.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>location</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class UninstallCloudAppShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Cloud application ID</para>
+        /// <para>The ID of the cloud application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,17 +21,15 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>Page number for paged queries of instance associations in the project. Results are sorted by association time in descending order. This parameter applies only when ProjectId is not empty. It limits the maximum number of instances affected by this operation to control impact scope. Default value: 1.</para>
+        /// <para>The page number for instance associations in a project. By default, a paged query sorts results in descending order of instance association time. This parameter is valid only when ProjectId is not empty. It limits the maximum number of instances on which the action is executed in the project to control the impact scope of the action. Default value: 1.</para>
         /// <ol>
-        /// <item><description><para>Valid PageNumber range:
-        /// a. Recommended method: Calculate the upper limit based on the total number of instances associated with the project. You can get this count using the ListRenderingProjectInstances API.
-        /// b. Alternative method: Check the API response to determine whether PageNumber has reached the upper limit. This avoids manual calculation. PageNumber has reached the upper limit if either of the following occurs:
-        /// ⅰ. The API returns HTTP status 403 and error code 200301.
-        /// ⅱ. The sum of SuccessInstanceCount and FailedInstanceCount in the response is less than PageSize.</para>
-        /// </description></item>
-        /// <item><description><para>Example scenario:
-        /// a. Full uninstall across all project instances: If the project has more instances than PageSize (default 100), call UninstallCloudApp multiple times, incrementing PageNumber by 1 each time. Track uninstall progress using the ListCloudAppInstallations API.</para>
-        /// </description></item>
+        /// <item><description>Valid values of PageNumber:
+        ///   a. [Recommended] Method 1: Calculate the upper limit based on the total number of instances associated with the project. You can call the ListRenderingProjectInstances operation to obtain the total number.
+        ///   b. Method 2: Determine whether PageNumber reaches the upper limit for the project based on the response. [Advantage: No need to calculate the valid value range]. PageNumber reaches the upper limit if the response meets any of the following conditions:
+        ///  i. The response returns HTTP status code 403 and error code 200301.
+        ///  ii. The sum of SuccessInstanceCount and FailedInstanceCount in the response is less than PageSize.</description></item>
+        /// <item><description>Scenario example:
+        ///   a. Uninstall instances in a project in full: If the number of instances in the project is greater than PageSize (default value: 100), you can call the Uninstall operation multiple times and increment PageNumber by 1 each time to uninstall all instances. You can call the ListCloudAppInstallations operation to query the uninstallation progress of the instances in the project.</description></item>
         /// </ol>
         /// 
         /// <b>Example:</b>
@@ -42,7 +40,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Maximum number of instances selected in the project. This parameter applies only when ProjectId is not empty. It limits the maximum number of instances affected by this operation to control impact scope. Default value: 100. Valid values: 1 to 100.</para>
+        /// <para>The maximum number of selected instances in a project. This parameter is valid only when ProjectId is not empty. It limits the maximum number of instances on which the action is executed in the project to control the impact scope of the action. Default value: 100. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -52,14 +50,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>ID of the patch package to uninstall. Supported only on Windows.</para>
+        /// <para>The ID of the patch package to uninstall. This parameter is supported only in Windows scenarios.</para>
         /// <ol>
-        /// <item><description><para>Default: uninstall the StablePatchId.</para>
-        /// </description></item>
-        /// <item><description><para>Set to origin to uninstall the original version.</para>
-        /// </description></item>
-        /// <item><description><para>Set to all to uninstall all installed versions.</para>
-        /// </description></item>
+        /// <item><description>By default, the StablePatchId is uninstalled.</description></item>
+        /// <item><description>If you set this parameter to origin, the original version is uninstalled.</description></item>
+        /// <item><description>If you set this parameter to all, all installed versions are uninstalled.</description></item>
         /// </ol>
         /// 
         /// <b>Example:</b>
@@ -70,7 +65,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string PatchId { get; set; }
 
         /// <summary>
-        /// <para>Project ID</para>
+        /// <para>The ID of the project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>project-422bc38dfgh5eb44149f135ef76304f63b</para>
@@ -80,7 +75,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>Cloud application instance ID</para>
+        /// <para>The cloud application service instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>render-9f8c57355d224ad7beaf95e145f22111</para>
@@ -90,7 +85,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RenderingInstanceId { get; set; }
 
         /// <summary>
-        /// <para>List of cloud application instance IDs</para>
+        /// <para>The list of cloud application service instance IDs.</para>
         /// </summary>
         [NameInMap("RenderingInstanceIds")]
         [Validation(Required=false)]

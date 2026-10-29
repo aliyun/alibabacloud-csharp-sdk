@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribePurchasedDeviceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Device creation time.</para>
+        /// <para>The time when the device was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-12-10T21:00:00Z</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string CreatedTime { get; set; }
 
         /// <summary>
-        /// <para>Device description.</para>
+        /// <para>The device description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx路口摄像头</para>
+        /// <para>Camera at xxx intersection</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Space ID.</para>
+        /// <para>The group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>348*****174-cn-qingdao</para>
@@ -40,17 +40,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>Space name.</para>
+        /// <para>The group name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试空间</para>
+        /// <para>Test group</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>Device ID.</para>
+        /// <para>The device ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>33763****77224964-cn-qingdao</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>Device name.</para>
+        /// <para>The device name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Order ID.</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2117*****0447</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>Region where the space belongs, also known as the service center.</para>
+        /// <para>The region to which the group belongs, which is the service center.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-qingdao</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>Device registration code.</para>
+        /// <para>The device registration code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345*****67890</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RegisterCode { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
@@ -110,14 +110,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Device child type. Valid values:</para>
+        /// <para>The device subtype. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>bullet (bullet camera)</para>
-        /// </description></item>
-        /// <item><description><para>dome (dome camera)</para>
-        /// </description></item>
-        /// <item><description><para>ptz (PTZ)</para>
-        /// </description></item>
+        /// <item><description>bullet: Bullet camera.</description></item>
+        /// <item><description>dome: Dome camera.</description></item>
+        /// <item><description>ptz: PTZ camera.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -128,14 +125,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string SubType { get; set; }
 
         /// <summary>
-        /// <para>Device type. Valid values:</para>
+        /// <para>The device type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ipc (camera)</para>
-        /// </description></item>
-        /// <item><description><para>platform</para>
-        /// </description></item>
-        /// <item><description><para>ied (intelligent device)</para>
-        /// </description></item>
+        /// <item><description>ipc: Camera.</description></item>
+        /// <item><description>platform: Platform.</description></item>
+        /// <item><description>ied: Intelligent device.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -146,7 +140,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>Device vendor.</para>
+        /// <para>The device vendor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8yd*****qem</para>

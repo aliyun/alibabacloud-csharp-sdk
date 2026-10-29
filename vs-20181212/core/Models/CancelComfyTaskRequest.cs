@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class CancelComfyTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Comfy task to cancel.</para>
+        /// <para>The ID of the Comfy task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

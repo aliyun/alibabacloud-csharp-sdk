@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message. If <c>Status</c> is <c>Failed</c>, this parameter provides the reason for the failure.</para>
+        /// <para>The description. If Status is Failed, it includes the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>conn failed!</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>A list of missing nodes.</para>
+        /// <para>The list of missing nodes.</para>
         /// </summary>
         [NameInMap("MissingNodes")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class StartRenderingSessionRequest : TeaModel {
         /// <summary>
-        /// <para>Cloud application ID</para>
+        /// <para>The cloud application ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cap-b06b26edfhytbn b94a75ae1a79efc90eb</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>Unique ID of the client</para>
+        /// <para>The unique ID of the end user.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ClientId { get; set; }
 
         /// <summary>
-        /// <para>Client parameter information</para>
+        /// <para>The parameter information of the end user.</para>
         /// </summary>
         [NameInMap("ClientParams")]
         [Validation(Required=false)]
         public StartRenderingSessionRequestClientParams ClientParams { get; set; }
         public class StartRenderingSessionRequestClientParams : TeaModel {
             /// <summary>
-            /// <para>Client IP address. This IP address is used by default for scheduling instances based on proximity.</para>
+            /// <para>The IP address of the end user. By default, this IP address is used for proximity-based instance scheduling.</para>
             /// 
             /// <b>Example:</b>
             /// <para>106.11.43.1</para>
@@ -50,12 +50,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>Cloud application patch ID.</para>
+        /// <para>The cloud application patch package ID.</para>
         /// <ol>
-        /// <item><description><para>By default, start the stable version of the AppId (if no stable patch version is set, the original version is used).</para>
-        /// </description></item>
-        /// <item><description><para>If you enter &quot;origin&quot;, start the original version.</para>
-        /// </description></item>
+        /// <item><description>By default, the stable version of the application specified by AppId is started. If no stable patch version is set, the original version is started.</description></item>
+        /// <item><description>If you specify origin, the original version is started.</description></item>
         /// </ol>
         /// 
         /// <b>Example:</b>
@@ -66,7 +64,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string PatchId { get; set; }
 
         /// <summary>
-        /// <para>Project ID</para>
+        /// <para>The project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

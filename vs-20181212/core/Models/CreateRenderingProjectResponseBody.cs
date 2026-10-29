@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class CreateRenderingProjectResponseBody : TeaModel {
         /// <summary>
-        /// <para>The project ID. Call ListRenderingProjects to view the project ID.</para>
+        /// <para>The project ID. You can call the ListRenderingProjects operation to query the project ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>project-b93ea81de76f48609eed3cd420f0399f</para>

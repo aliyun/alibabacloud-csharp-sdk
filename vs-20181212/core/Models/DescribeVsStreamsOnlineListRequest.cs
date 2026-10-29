@@ -31,13 +31,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query.</para>
+        /// <para>The end time.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Specify the time in the UTC format. Example: 2016-06-30T19:00:00Z.</para>
-        /// </description></item>
-        /// <item><description><para>The time range between EndTime and StartTime cannot exceed 30 days.</para>
-        /// </description></item>
+        /// <item><description>The time must be in UTC. Example: 2016-06-30T19:00:00Z.</description></item>
+        /// <item><description>The interval between EndTime and StartTime cannot exceed 30 days.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -51,14 +49,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <summary>
         /// <para>The sorting method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>stream_name_desc: sorts by stream name in descending order.</para>
-        /// </description></item>
-        /// <item><description><para>stream_name_asc: sorts by stream name in ascending order.</para>
-        /// </description></item>
-        /// <item><description><para>publish_time_desc: sorts by ingest time in descending order.</para>
-        /// </description></item>
-        /// <item><description><para>publish_time_asc (default): sorts by ingest time in ascending order.</para>
-        /// </description></item>
+        /// <item><description>stream_name_desc: sorts by live stream name in descending order.</description></item>
+        /// <item><description>stream_name_asc: sorts by live stream name in ascending order.</description></item>
+        /// <item><description>publish_time_desc: sorts by stream ingest time in descending order.</description></item>
+        /// <item><description>publish_time_asc: sorts by stream ingest time in ascending order. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,12 +88,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a fuzzy match for the stream name. Valid values:</para>
+        /// <para>Specifies whether to use fuzzy match for the stream name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>fuzzy: fuzzy match</para>
-        /// </description></item>
-        /// <item><description><para>strict: exact match</para>
-        /// </description></item>
+        /// <item><description>fuzzy: fuzzy match.</description></item>
+        /// <item><description>strict: exact match.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -110,9 +102,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string QueryType { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query.</para>
+        /// <para>The start time.</para>
         /// <remarks>
-        /// <para>Specify the time in the UTC format. Example: 2016-06-29T19:00:00Z.</para>
+        /// <para>The time must be in UTC. Example: 2016-06-29T19:00:00Z.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -135,12 +127,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <summary>
         /// <para>The stream type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>all (default): all streams</para>
-        /// </description></item>
-        /// <item><description><para>raw: raw streams</para>
-        /// </description></item>
-        /// <item><description><para>trans: transcoded streams</para>
-        /// </description></item>
+        /// <item><description>all: all streams. This is the default value.</description></item>
+        /// <item><description>raw: raw streams.</description></item>
+        /// <item><description>trans: transcoded streams.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class GetRenderingInstanceStreamingInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>Token for this connection</para>
+        /// <para>The token for the current connection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>792fy125-594c-4dde-ab35-9ff8hrf0a86f</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string FlowId { get; set; }
 
         /// <summary>
-        /// <para>Domain name of the cloud application service instance streaming gateway</para>
+        /// <para>The domain name of the streaming gateway for the cloud application service instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.178.208.22</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Gateway { get; set; }
 
         /// <summary>
-        /// <para>Hostname or IP address of the cloud application service instance stream</para>
+        /// <para>The streaming domain name or IP address of the cloud application service instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.18.20.2</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Hostname { get; set; }
 
         /// <summary>
-        /// <para>Streaming connection port</para>
+        /// <para>The streaming connection port.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10003</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Port { get; set; }
 
         /// <summary>
-        /// <para>Cloud application service instance ID</para>
+        /// <para>The cloud application service instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>render-9f8c57355d224ad7beaf95e145f22111</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RenderingInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>

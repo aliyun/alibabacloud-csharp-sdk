@@ -10,15 +10,12 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeVsDevicesDataRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. The end time must be later than the start time.</para>
+        /// <para>The end time of the data to retrieve. The end time must be later than the start time.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>The date must follow the ISO 8601 standard and be in UTC. The format is YYYY-MM-DDThh:mm:ssZ.</para>
-        /// </description></item>
-        /// <item><description><para>The minimum data granularity is 5 minutes.</para>
-        /// </description></item>
-        /// <item><description><para>If you do not specify this parameter, data from the last 24 hours is retrieved by default.</para>
-        /// </description></item>
+        /// <item><description>Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</description></item>
+        /// <item><description>The minimum data granularity is 5 minutes.</description></item>
+        /// <item><description>If you do not specify this parameter, the data of the last 24 hours is retrieved by default.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -30,7 +27,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>You can query by space ID.</para>
+        /// <para>The workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>348*****174-cn-qingdao</para>
@@ -44,15 +41,12 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query.</para>
+        /// <para>The start time of the data to retrieve.    </para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>The date must follow the ISO 8601 standard and be in UTC. The format is YYYY-MM-DDThh:mm:ssZ.</para>
-        /// </description></item>
-        /// <item><description><para>The minimum data granularity is 5 minutes.</para>
-        /// </description></item>
-        /// <item><description><para>If you do not specify this parameter, data from the last 24 hours is retrieved by default.</para>
-        /// </description></item>
+        /// <item><description>Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</description></item>
+        /// <item><description>The minimum data granularity is 5 minutes.</description></item>
+        /// <item><description>If you do not specify this parameter, the data of the last 24 hours is retrieved by default.</description></item>
         /// </list>
         /// </remarks>
         /// 

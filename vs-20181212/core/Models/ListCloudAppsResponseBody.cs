@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListCloudAppsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of cloud application information.</para>
+        /// <para>The list of cloud applications.</para>
         /// </summary>
         [NameInMap("CloudApps")]
         [Validation(Required=false)]
         public List<ListCloudAppsResponseBodyCloudApps> CloudApps { get; set; }
         public class ListCloudAppsResponseBodyCloudApps : TeaModel {
             /// <summary>
-            /// <para>The application ID.</para>
+            /// <para>The ID of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cap-b06b26edfhytbn b94a75ae1a79efc90eb</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The application name.</para>
+            /// <para>The name of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>com.aaa.bbb</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>The application version.</para>
+            /// <para>The version of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.5.0</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string AppVersion { get; set; }
 
             /// <summary>
-            /// <para>The application description.</para>
+            /// <para>The description of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>demo</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The installation package format.</para>
+            /// <para>The format of the installation package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apk</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string PkgFormat { get; set; }
 
             /// <summary>
-            /// <para>The installation package type. Valid values: android and win.</para>
+            /// <para>The type of the installation package, such as android or win.</para>
             /// 
             /// <b>Example:</b>
             /// <para>android</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string PkgType { get; set; }
 
             /// <summary>
-            /// <para>The relative path of the post-command within the application package. Only win type applications are supported.</para>
+            /// <para>The relative path of the post-command in the application package. This parameter is supported only for Windows applications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>install.ps1</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string PostCommandPath { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for post-command execution, in seconds. Only win type applications are supported.</para>
+            /// <para>The timeout period for executing the post-command, in seconds. This parameter is supported only for Windows applications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public int? PostCommandTimeoutSec { get; set; }
 
             /// <summary>
-            /// <para>The ID of the stable version patch package.</para>
+            /// <para>The ID of the stable patch package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>patch-7bdf679812484df08a956b73e0b3bdf6</para>
@@ -107,15 +107,13 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string StablePatchId { get; set; }
 
             /// <summary>
-            /// <para>The application upload status. Valid values:</para>
-            /// <ol>
+            /// <para>The upload status of the application. Valid values:</para>
+            /// <list type="bullet">
             /// <item><description>Created</description></item>
             /// <item><description>Doing</description></item>
-            /// <item><description>Success: desired state.</description></item>
-            /// <item><description>Failed: desired state.</description></item>
-            /// <item><description>Deleting</description></item>
-            /// <item><description>DeleteFailed: desired state.</description></item>
-            /// </ol>
+            /// <item><description>Success: This is a final state.</description></item>
+            /// <item><description>Failed: This is a final state.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Success</para>
@@ -125,7 +123,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The status description.</para>
+            /// <para>The description of the status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>upload success</para>
@@ -135,7 +133,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string StatusDescription { get; set; }
 
             /// <summary>
-            /// <para>The latest status update time.</para>
+            /// <para>The time when the status was last updated. The time is displayed in the ISO 8601 standard with a time zone offset, in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-05-28T14:48:34+08:00</para>
@@ -145,7 +143,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The application upload time.</para>
+            /// <para>The time when the application was uploaded. The time is displayed in the ISO 8601 standard with a time zone offset, in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-05-28T14:28:14+08:00</para>
@@ -157,7 +155,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>The page number of the query list.</para>
+        /// <para>The page number of the returned list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -167,7 +165,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for the paged query.</para>
+        /// <para>The Settings for the number of entries returned on each page during paging for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -177,7 +175,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
@@ -187,7 +185,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of matched cloud applications.</para>
+        /// <para>The total number of cloud applications that match the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

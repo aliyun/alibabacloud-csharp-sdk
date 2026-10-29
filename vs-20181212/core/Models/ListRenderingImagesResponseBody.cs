@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListRenderingImagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The session list.</para>
+        /// <para>The list of sessions.</para>
         /// </summary>
         [NameInMap("Images")]
         [Validation(Required=false)]
         public List<ListRenderingImagesResponseBodyImages> Images { get; set; }
         public class ListRenderingImagesResponseBodyImages : TeaModel {
             /// <summary>
-            /// <para>The image description.</para>
+            /// <para>The description of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>this is test.</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The image ID.</para>
+            /// <para>The ID of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>m-0nd0nxyl7zn220n2y</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The image name.</para>
+            /// <para>The name of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The publish time.</para>
+            /// <para>The time when the image was published. The time follows the ISO 8601 standard and includes a time zone offset. The format is YYYY-MM-DDTHH:mm:ss+HH:mm.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-17T00:22:53+08:00</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>

@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ModifyComfyWorkflowRequest : TeaModel {
         /// <summary>
-        /// <para>The new workflow description.</para>
+        /// <para>The description of the workflow template.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>这是一个图生视频的工作流</para>
+        /// <para>This is an image-to-video workflow</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workflow to modify.</para>
+        /// <para>The workflow ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string WorkflowId { get; set; }
 
         /// <summary>
-        /// <para>The new workflow name.</para>
+        /// <para>The name of the workflow template.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>图生视频工作流示例</para>
+        /// <para>Image-to-video workflow example</para>
         /// </summary>
         [NameInMap("WorkflowName")]
         [Validation(Required=false)]

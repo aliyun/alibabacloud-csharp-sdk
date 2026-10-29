@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class BatchCaptureRenderingInstanceScreenshotResponseBody : TeaModel {
         /// <summary>
-        /// <para>The dry run result.</para>
+        /// <para>The data pre-check result.</para>
         /// </summary>
         [NameInMap("Datatest")]
         [Validation(Required=false)]
         public BatchCaptureRenderingInstanceScreenshotResponseBodyDatatest Datatest { get; set; }
         public class BatchCaptureRenderingInstanceScreenshotResponseBodyDatatest : TeaModel {
             /// <summary>
-            /// <para>The dry run result.</para>
+            /// <para>The pre-check result.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
@@ -48,14 +48,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? FailedCount { get; set; }
 
         /// <summary>
-        /// <para>The list of instances for which screenshots failed.</para>
+        /// <para>The list of instances for which screenshot capture failed.</para>
         /// </summary>
         [NameInMap("FailedItems")]
         [Validation(Required=false)]
         public List<BatchCaptureRenderingInstanceScreenshotResponseBodyFailedItems> FailedItems { get; set; }
         public class BatchCaptureRenderingInstanceScreenshotResponseBodyFailedItems : TeaModel {
             /// <summary>
-            /// <para>The error code of the failure.</para>
+            /// <para>The error code for the failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Success</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string ErrCode { get; set; }
 
             /// <summary>
-            /// <para>The error message of the failure.</para>
+            /// <para>The reason for the failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Not Applied</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string ErrMessage { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the cloud application service instance.</para>
+            /// <para>The cloud application service instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>render-072da95539d3402da90353b244191722</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public List<BatchCaptureRenderingInstanceScreenshotResponseBodySuccessItems> SuccessItems { get; set; }
         public class BatchCaptureRenderingInstanceScreenshotResponseBodySuccessItems : TeaModel {
             /// <summary>
-            /// <para>The time when the screenshot was created.</para>
+            /// <para>The time when the screenshot was created. The time is displayed in the ISO 8601 standard with a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-05-19T14:46:37+08:00</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string DownloadUrl { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the cloud application service instance.</para>
+            /// <para>The cloud application service instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>render-1ada8cd82783407b99fa202826fc6447</para>

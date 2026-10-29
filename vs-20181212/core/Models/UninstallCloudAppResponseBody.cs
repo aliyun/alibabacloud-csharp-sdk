@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class UninstallCloudAppResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of cloud application service instances that failed.</para>
+        /// <para>The number of cloud application service instances on which the operation failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? FailedInstanceCount { get; set; }
 
         /// <summary>
-        /// <para>List of failed cloud application service instances</para>
+        /// <para>The list of cloud application service instances on which the operation failed.</para>
         /// </summary>
         [NameInMap("FailedInstances")]
         [Validation(Required=false)]
         public List<UninstallCloudAppResponseBodyFailedInstances> FailedInstances { get; set; }
         public class UninstallCloudAppResponseBodyFailedInstances : TeaModel {
             /// <summary>
-            /// <para>Error code</para>
+            /// <para>The error code for the failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>300000</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public int? ErrCode { get; set; }
 
             /// <summary>
-            /// <para>Error message</para>
+            /// <para>The cause of the failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Rejected due to timeout</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string ErrMessage { get; set; }
 
             /// <summary>
-            /// <para>Cloud application instance ID</para>
+            /// <para>The cloud application service instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>render-b45f28650ffe4591bf4c5c95996a428c</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Number of successfully uninstalled cloud application instances</para>
+        /// <para>The number of cloud application service instances on which the operation succeeded.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -79,14 +79,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? SuccessInstanceCount { get; set; }
 
         /// <summary>
-        /// <para>A list of service instances for which the cloud application was uninstalled successfully.</para>
+        /// <para>The list of cloud application service instances on which the operation succeeded.</para>
         /// </summary>
         [NameInMap("SuccessInstances")]
         [Validation(Required=false)]
         public List<UninstallCloudAppResponseBodySuccessInstances> SuccessInstances { get; set; }
         public class UninstallCloudAppResponseBodySuccessInstances : TeaModel {
             /// <summary>
-            /// <para>Cloud application instance ID</para>
+            /// <para>The cloud application service instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>render-e6cf423c787e4e43b460a788da254fe3</para>

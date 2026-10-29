@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>A list of public keys.</para>
+        /// <para>The list of user public keys.</para>
         /// </summary>
         [NameInMap("PublicKeys")]
         [Validation(Required=false)]
         public List<ListPublicKeysResponseBodyPublicKeys> PublicKeys { get; set; }
         public class ListPublicKeysResponseBodyPublicKeys : TeaModel {
             /// <summary>
-            /// <para>The content of the public key. The content is encoded in Base64 format by default.</para>
+            /// <para>The encoded content of the public key. Default encoding format: Base64.</para>
             /// 
             /// <b>Example:</b>
             /// <para>verify_30d89ccb0905c8c7882c1d14a991954b</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             /// <para>The description of the public key.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试使用</para>
+            /// <para>For testing purposes</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The public key group.</para>
+            /// <para>The group of the public key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mygroup</para>
@@ -79,10 +79,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             /// <summary>
             /// <para>The type of the public key. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>adb</b>: ADB key</para>
-            /// </description></item>
-            /// <item><description><para><b>ssh</b>: SSH key</para>
-            /// </description></item>
+            /// <item><description><b>adb</b>: ADB key</description></item>
+            /// <item><description><b>ssh</b>: SSH key</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,7 +91,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string KeyType { get; set; }
 
             /// <summary>
-            /// <para>The time when the public key was uploaded.</para>
+            /// <para>The time when the public key was uploaded. The time is specified in the ISO 8601 standard with a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-06-11T14:26:48+08:00</para>
@@ -105,7 +103,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>

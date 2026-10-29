@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ResetRenderingInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the operation. Set the value to Reset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Reset</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ActionName { get; set; }
 
         /// <summary>
-        /// <para>Data baseline ID</para>
+        /// <para>The ID of the data baseline.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dp-449ea3d16c0841b8bf33ec5bbc86a152</para>
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DataPackageId { get; set; }
 
         /// <summary>
-        /// <para>Service instance ID</para>
+        /// <para>The cloud application service instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

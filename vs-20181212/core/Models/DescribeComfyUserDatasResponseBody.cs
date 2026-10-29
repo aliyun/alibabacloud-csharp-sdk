@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The description.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned list.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. The default value is 20.</para>
+        /// <para>The number of entries per page. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -69,12 +69,15 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public int? Total { get; set; }
 
+        /// <summary>
+        /// <para>The list of user data.</para>
+        /// </summary>
         [NameInMap("UserDatas")]
         [Validation(Required=false)]
         public List<DescribeComfyUserDatasResponseBodyUserDatas> UserDatas { get; set; }
         public class DescribeComfyUserDatasResponseBodyUserDatas : TeaModel {
             /// <summary>
-            /// <para>The name of the file or folder.</para>
+            /// <para>The name of the file or directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>myfile</para>
@@ -94,7 +97,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public long? FileSize { get; set; }
 
             /// <summary>
-            /// <para>The entry type. Valid values are \<c>file\\</c> and \<c>dir\\</c>.</para>
+            /// <para>The file type. Valid values: file and dir.</para>
             /// 
             /// <b>Example:</b>
             /// <para>file</para>
@@ -104,7 +107,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The time the file was last modified.</para>
+            /// <para>The last modified time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1776646928000</para>

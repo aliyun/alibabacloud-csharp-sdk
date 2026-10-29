@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public List<UpdateRenderingInstanceConfigurationRequestConfiguration> Configuration { get; set; }
         public class UpdateRenderingInstanceConfigurationRequestConfiguration : TeaModel {
             /// <summary>
-            /// <para>The list of properties for the module.</para>
+            /// <para>The list of attributes corresponding to the module.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Attributes")]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public List<UpdateRenderingInstanceConfigurationRequestConfigurationAttributes> Attributes { get; set; }
             public class UpdateRenderingInstanceConfigurationRequestConfigurationAttributes : TeaModel {
                 /// <summary>
-                /// <para>The name of the property.</para>
+                /// <para>The name of the attribute.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The value of the property.</para>
+                /// <para>The value of the attribute.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -50,27 +50,18 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             }
 
             /// <summary>
-            /// <para>The name of the real device simulation module. Valid values include the following:</para>
-            /// <ol>
-            /// <item><description><para>ctl: control module</para>
-            /// </description></item>
-            /// <item><description><para>prop: property module</para>
-            /// </description></item>
-            /// <item><description><para>location: location module</para>
-            /// </description></item>
-            /// <item><description><para>battery: battery module</para>
-            /// </description></item>
-            /// <item><description><para>network: network module</para>
-            /// </description></item>
-            /// <item><description><para>bluetooth: bluetooth module</para>
-            /// </description></item>
-            /// <item><description><para>sim: SIM card module</para>
-            /// </description></item>
-            /// <item><description><para>display: device module</para>
-            /// </description></item>
-            /// <item><description><para>system: basic module</para>
-            /// </description></item>
-            /// </ol>
+            /// <para>The name of the real-device simulation feature module. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ctl: Control module.</description></item>
+            /// <item><description>prop: Property module.</description></item>
+            /// <item><description>location: Location module.</description></item>
+            /// <item><description>battery: Battery module.</description></item>
+            /// <item><description>network: Network module.</description></item>
+            /// <item><description>bluetooth: Bluetooth module.</description></item>
+            /// <item><description>sim: SIM card module.</description></item>
+            /// <item><description>display: Device module.</description></item>
+            /// <item><description>system: Basic module.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -83,7 +74,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>The ID of the cloud application service instance.</para>
+        /// <para>The instance ID of the cloud application service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,8 +10,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ModifyRenderingInstanceAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>Password for the device.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The name of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TestInstance</para>
+        /// </summary>
+        [NameInMap("InstanceName")]
+        [Validation(Required=false)]
+        public string InstanceName { get; set; }
+
+        /// <summary>
+        /// <para>The device password.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Toehold2020</para>
@@ -21,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>ID of the cloud application service instance.</para>
+        /// <para>The cloud application service instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

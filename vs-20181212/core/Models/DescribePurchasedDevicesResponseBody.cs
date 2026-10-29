@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public List<DescribePurchasedDevicesResponseBodyDevices> Devices { get; set; }
         public class DescribePurchasedDevicesResponseBodyDevices : TeaModel {
             /// <summary>
-            /// <para>The time the device was created.</para>
+            /// <para>The time when the device was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-02-28T17:00:17Z</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             /// <para>The device description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx路口摄像头</para>
+            /// <para>XXX intersection camera</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the group to which the device belongs.</para>
+            /// <para>The ID of the workspace to which the device belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>348*****174-cn-qingdao</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string GroupId { get; set; }
 
             /// <summary>
-            /// <para>Group name.</para>
+            /// <para>The workspace name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试空间</para>
+            /// <para>Test workspace</para>
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             /// <para>The device name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx路口摄像头</para>
+            /// <para>XXX intersection camera</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string OrderId { get; set; }
 
             /// <summary>
-            /// <para>The region to which the space belongs. This is the service center.</para>
+            /// <para>The region of the workspace, which is the service center.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-qingdao</para>
@@ -109,12 +109,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             /// <summary>
             /// <para>The device subtype. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>bullet (bullet camera)</para>
-            /// </description></item>
-            /// <item><description><para>dome (dome camera)</para>
-            /// </description></item>
-            /// <item><description><para>ptz (PTZ camera)</para>
-            /// </description></item>
+            /// <item><description>bullet: Bullet camera.</description></item>
+            /// <item><description>dome: Dome camera.</description></item>
+            /// <item><description>ptz: PTZ camera.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -127,12 +124,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             /// <summary>
             /// <para>The device type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>ipc (camera)</para>
-            /// </description></item>
-            /// <item><description><para>platform (platform)</para>
-            /// </description></item>
-            /// <item><description><para>ied (intelligent edge device)</para>
-            /// </description></item>
+            /// <item><description>ipc: Camera.</description></item>
+            /// <item><description>platform: Platform.</description></item>
+            /// <item><description>ied: Intelligent device.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -146,7 +140,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             /// <para>The device vendor.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>公司A</para>
+            /// <para>Company A</para>
             /// </summary>
             [NameInMap("Vendor")]
             [Validation(Required=false)]

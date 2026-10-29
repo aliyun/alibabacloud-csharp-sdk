@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ConfigurationShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud application service instance.</para>
+        /// <para>The instance ID of the cloud application service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class GetRenderingInstanceCommandsStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>Description. When Status=Failed, this field contains the failure reason.</para>
+        /// <para>The description. When Status is Failed, this field includes the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>conn failed!</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Command execution result string</para>
+        /// <para>The execution result string of the command.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Thu Jun 27 16:06:26 CST 2024</para>
@@ -40,15 +40,12 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Result { get; set; }
 
         /// <summary>
-        /// <para>Command execution status. Valid values:</para>
-        /// <ol>
-        /// <item><description><para>Doing: Executing</para>
-        /// </description></item>
-        /// <item><description><para>Success: Succeeded</para>
-        /// </description></item>
-        /// <item><description><para>Failed: Failed. The system automatically retries within the timeout period. You can either wait or resend the request.</para>
-        /// </description></item>
-        /// </ol>
+        /// <para>The command execution status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Doing: Executing.</description></item>
+        /// <item><description>Success: Succeeded.</description></item>
+        /// <item><description>Failed: Failed. Within the timeout period, the system automatically retries the command. You can continue to wait or initiate a new request.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

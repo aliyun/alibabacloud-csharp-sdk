@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListCloudAppInstallationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>List of installation records.</para>
+        /// <para>The list of installation information.</para>
         /// </summary>
         [NameInMap("InstallationInfos")]
         [Validation(Required=false)]
         public List<ListCloudAppInstallationsResponseBodyInstallationInfos> InstallationInfos { get; set; }
         public class ListCloudAppInstallationsResponseBodyInstallationInfos : TeaModel {
             /// <summary>
-            /// <para>Application ID.</para>
+            /// <para>The ID of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cap-b06b26edfhytbn b94a75ae1a79efc90eb</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>Application name.</para>
+            /// <para>The name of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>com.aaa.bbb</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>Application version.</para>
+            /// <para>The version of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.5.0</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string AppVersion { get; set; }
 
             /// <summary>
-            /// <para>Installation time.</para>
+            /// <para>The installation time. The time is displayed in the ISO 8601 standard with a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-05-28T14:48:34+08:00</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string InstallationTime { get; set; }
 
             /// <summary>
-            /// <para>Patch package ID.</para>
+            /// <para>The ID of the patch package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>patch-7bdf679812484df08a956b73e0b3bdf6</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string PatchId { get; set; }
 
             /// <summary>
-            /// <para>Cloud application service instance ID.</para>
+            /// <para>The cloud application service instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>render-9f8c57355d224ad7beaf95e145f22111</para>
@@ -77,13 +77,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string RenderingInstanceId { get; set; }
 
             /// <summary>
-            /// <para>Cloud application installation status. Valid values:</para>
-            /// <ol>
-            /// <item><description><para>Intermediate states: install-init, installing</para>
-            /// </description></item>
-            /// <item><description><para>Final states: installed, install-failed</para>
-            /// </description></item>
-            /// </ol>
+            /// <para>The installation status of the cloud application. Valid values: install-init and installing (intermediate states), and installed and install-failed (final states).</para>
             /// 
             /// <b>Example:</b>
             /// <para>installed</para>
@@ -93,7 +87,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Status description.</para>
+            /// <para>The description of the status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>install success</para>
@@ -103,7 +97,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string StatusDescription { get; set; }
 
             /// <summary>
-            /// <para>Time when the status was last updated.</para>
+            /// <para>The time when the status was last updated. The time is displayed in the ISO 8601 standard with a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-05-28T14:50:04+08:00</para>
@@ -115,7 +109,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>Page number of the returned list.</para>
+        /// <para>The page number of the returned list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -125,7 +119,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of entries per page for paged queries.</para>
+        /// <para>The number of entries returned per page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -135,7 +129,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
@@ -145,7 +139,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of installation records.</para>
+        /// <para>The total number of installation records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

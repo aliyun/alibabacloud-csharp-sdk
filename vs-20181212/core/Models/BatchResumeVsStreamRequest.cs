@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class BatchResumeVsStreamRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the stream in the AppName/StreamName format. To specify multiple streams, separate the stream names with commas.</para>
+        /// <para>The stream name in the format of AppName/StreamName. Separate multiple stream names with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string Channel { get; set; }
 
+        /// <summary>
+        /// <para>The stream control operation. Set the value to resume to resume the stream push.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>resume</para>
+        /// </summary>
         [NameInMap("ControlStreamAction")]
         [Validation(Required=false)]
         public string ControlStreamAction { get; set; }
@@ -36,7 +42,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The type of live stream. Only publisher is supported, which indicates that the stream is ingested by a streamer.</para>
+        /// <para>Specifies whether the stream is pushed by the broadcaster or pulled by the client. Valid value: publisher (broadcaster push).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

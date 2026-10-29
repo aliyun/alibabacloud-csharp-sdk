@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListCloudAppInstallationsRequest : TeaModel {
         /// <summary>
-        /// <para>Cloud application ID. Each ID maps to a unique application package.</para>
+        /// <para>The ID of the cloud application, which corresponds to a unique application package.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cap-b06b26edfhytbn b94a75ae1a79efc90eb</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>Application name.</para>
+        /// <para>The name of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>com.aaa.bbb</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>Application version.</para>
+        /// <para>The version of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.0</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string AppVersion { get; set; }
 
         /// <summary>
-        /// <para>Time range filter. Use ISO 8601 format and UTC time, such as yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The start time of the time range filter. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-06-02T02:18:00Z</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Page number of the returned list. Minimum value: 1. Default value: 1.</para>
+        /// <para>The page number of the list to query. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of entries per page for paged queries. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The number of entries to return on each page for a paged query. Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -70,10 +70,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Patch package ID. Supported only in Windows scenarios.</para>
-        /// <ol>
-        /// <item><description>Set to origin to return only original versions.</description></item>
-        /// </ol>
+        /// <para>The ID of the patch package. This parameter is supported only in Windows scenarios. If you enter origin, only the original version is filtered.</para>
         /// 
         /// <b>Example:</b>
         /// <para>patch-7bdf679812484df08a956b73e0b3bdf6</para>
@@ -83,7 +80,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string PatchId { get; set; }
 
         /// <summary>
-        /// <para>Project ID.</para>
+        /// <para>The ID of the project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>project-b93ea81de76f48609eed3cd420f0399f</para>
@@ -93,7 +90,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>Cloud application service instance ID. Use this to list installations on a specific instance.</para>
+        /// <para>The cloud application service instance ID, which is used to query the cloud applications installed on the specified instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>render-9f8c57355d224ad7beaf95e145f22111</para>
@@ -103,7 +100,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RenderingInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Start time of the time range filter. Specify in ISO 8601 format using UTC time. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The start time of the time range filter. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-05-26T16:00:00Z</para>

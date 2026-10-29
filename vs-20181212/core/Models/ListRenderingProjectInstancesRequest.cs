@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListRenderingProjectInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>End time of the time range. Use ISO 8601 format in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The start time of the time range filter. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-11-30T02:18:00Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Page number. Start from 1.</para>
+        /// <para>The page number. Pages start from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of entries per page.</para>
+        /// <para>The Settings for the number of entries per page during paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Project ID</para>
+        /// <para>The project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>Cloud application service instance ID</para>
+        /// <para>The cloud application service instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>render-9f8c57355d224ad7beaf95e145f22111</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RenderingInstanceId { get; set; }
 
         /// <summary>
-        /// <para>A parameter for filtering by a time range. The time must be in UTC and formatted according to the ISO 8601 standard as \<c>yyyy-MM-ddTHH:mm:ssZ\\</c>.</para>
+        /// <para>The start time of the time range filter. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-11-27T16:00:00Z</para>
@@ -71,15 +71,12 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>Instance status. Valid values:</para>
-        /// <ol>
-        /// <item><description><para>Idle</para>
-        /// </description></item>
-        /// <item><description><para>Locked</para>
-        /// </description></item>
-        /// <item><description><para>InUse</para>
-        /// </description></item>
-        /// </ol>
+        /// <para>The project instance status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Idle: idle</description></item>
+        /// <item><description>Locked: locked</description></item>
+        /// <item><description>InUse: in use</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Idle</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DisassociateRenderingProjectInstancesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the project.</para>
+        /// <para>The project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>A list of cloud application service instance IDs.</para>
+        /// <para>The list of cloud application service instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RenderingInstanceIds")]

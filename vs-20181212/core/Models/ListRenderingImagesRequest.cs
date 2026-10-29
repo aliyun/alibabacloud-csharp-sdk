@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListRenderingImagesRequest : TeaModel {
         /// <summary>
-        /// <para>The cloud application service instance ID.</para>
+        /// <para>The ID of the cloud application service instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>m-9timxhrrgopkec8ju</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value starts from 1.</para>
+        /// <para>The page number. Pages start from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query.</para>
+        /// <para>The number of entries to return on each page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

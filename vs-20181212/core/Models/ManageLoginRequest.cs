@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ManageLoginRequest : TeaModel {
         /// <summary>
-        /// <para>Name of the management action. Valid values:</para>
+        /// <para>The name of the management action. Valid values:</para>
         /// <ol>
-        /// <item><description><para>open — Activate the public key. This is the default value.</para>
-        /// </description></item>
-        /// <item><description><para>close — Deactivate the public key.</para>
-        /// </description></item>
+        /// <item><description>open - Activate the public key, default value</description></item>
+        /// <item><description>close - Deactivate the public key</description></item>
         /// </ol>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ActionName { get; set; }
 
         /// <summary>
-        /// <para>Name of the public key group. If you do not specify KeyName, all public keys in this group are applied.</para>
+        /// <para>The public key group. If KeyName is not specified, all public keys in KeyGroup are delivered.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mygroup</para>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string KeyGroup { get; set; }
 
         /// <summary>
-        /// <para>Name of the public key. You must specify either KeyName or KeyGroup.</para>
+        /// <para>The name of the public key. At least one of KeyName and KeyGroup must be specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mykey</para>
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string KeyName { get; set; }
 
         /// <summary>
-        /// <para>ID of the Cloud Application Service instance.</para>
+        /// <para>The instance ID of the cloud application service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

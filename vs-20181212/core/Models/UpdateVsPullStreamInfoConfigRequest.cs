@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>Your stream pulling domain.</para>
+        /// <para>The stream pulling domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <summary>
         /// <para>The end time of stream pulling.</para>
         /// <remarks>
-        /// <para>UTC time format. The interval between StartTime and EndTime must be within 7 days, and EndTime must be later than the current time.</para>
+        /// <para>Specify the time in UTC. The interval between StartTime and EndTime must be within 7 days, and EndTime must be later than the current time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,9 +53,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The origin server of your live stream.</para>
+        /// <para>The origin server of the live stream.</para>
         /// <remarks>
-        /// <para>Supports multiple values, separated by English semicolons (;).</para>
+        /// <para>Multiple origin servers are supported. Separate them with semicolons (;).</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <summary>
         /// <para>The start time of stream pulling.</para>
         /// <remarks>
-        /// <para>UTC time format. The interval between StartTime and EndTime must be within 7 days.</para>
+        /// <para>Specify the time in UTC. The interval between StartTime and EndTime must be within 7 days.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

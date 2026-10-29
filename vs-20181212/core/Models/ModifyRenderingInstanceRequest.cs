@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ModifyRenderingInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>ID of the cloud application service instance. You can only upgrade or downgrade to another instance type in the same series.</para>
+        /// <para>The instance ID of the cloud application service instance. Note: Only Upgrade/Downgrade within the same instance family is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RenderingInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Instance type of the cloud application service instance.</para>
+        /// <para>The specifications of the cloud application service instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crs.cp.l1</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RenderingSpec { get; set; }
 
         /// <summary>
-        /// <para>Cloud storage capacity used by the cloud application service instance. This is not local storage.</para>
+        /// <para>The cloud storage capacity used by the cloud application service instance. Note: This is not local storage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

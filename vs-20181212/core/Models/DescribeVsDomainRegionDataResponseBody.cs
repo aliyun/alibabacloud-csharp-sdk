@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeVsDomainRegionDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>Time interval, in seconds.</para>
+        /// <para>The time interval.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DataInterval { get; set; }
 
         /// <summary>
-        /// <para>The domain name that is accelerated by Visual Edge Computing Service.</para>
+        /// <para>The domain name of Visual Edge Computing Service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.aliyundoc.com</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>End time.</para>
+        /// <para>The end time. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-10-31T15:59:59Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Start time.</para>
+        /// <para>The start time in UTC. The time follows the ISO 8601 standard and is formatted as YYYY-MM-DDTHH:mm:ssZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-10-30T16:00:00Z</para>

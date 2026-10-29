@@ -10,13 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class UploadCloudAppRequest : TeaModel {
         /// <summary>
-        /// <para>The application name. For Android applications, use the package name, such as com.aaa.bbb.</para>
-        /// <para>Value rules:</para>
-        /// <ol>
-        /// <item><description>Length: 4 to 50 characters.</description></item>
-        /// <item><description>Lowercase letters, digits, underscores (_), hyphens (-), and periods (.).</description></item>
-        /// <item><description>The first and last characters must be letters or digits.</description></item>
-        /// </ol>
+        /// <para>The application name. For Android applications, we recommend that you use the package name, such as com.aaa.bbb. Naming conventions: 1. The length is 4 to 50 characters. 2. The name can contain lowercase letters, digits, underscores (_), hyphens (-), and periods (.). 3. The first and last characters must be letters or digits.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,13 +21,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The application version. For Android applications, use the VersionName, such as 1.1.1.</para>
-        /// <para>Value rules:</para>
-        /// <ol>
-        /// <item><description>Length: 1 to 50 characters.</description></item>
-        /// <item><description>Lowercase letters, digits, underscores (_), hyphens (-), and periods (.).</description></item>
-        /// <item><description>The first and last characters must be letters or digits.</description></item>
-        /// </ol>
+        /// <para>The application version. For Android applications, we recommend that you use the VersionName, such as 1.1.1. Naming conventions: 1. The length is 1 to 50 characters. 2. The version can contain lowercase letters, digits, underscores (_), hyphens (-), and periods (.). 3. The first and last characters must be letters or digits.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +53,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DownloadUrl { get; set; }
 
         /// <summary>
-        /// <para>The MD5 checksum of the application package, used to verify package integrity.</para>
+        /// <para>The MD5 hash of the application package, which is used to check the integrity of the application package.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,14 +64,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Md5 { get; set; }
 
         /// <summary>
-        /// <para>The package format. The default value is the file extension of the download URL. Valid values:</para>
-        /// <ol>
-        /// <item><description>apk</description></item>
-        /// <item><description>tar.gz</description></item>
-        /// <item><description>tar</description></item>
-        /// <item><description>zip</description></item>
-        /// <item><description>rar</description></item>
-        /// </ol>
+        /// <para>The format of the installation package. The default value is the file name extension of the download URL. Valid values: 1. apk 2. tar.gz 3. tar 4. zip 5. rar.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apk</para>
@@ -93,34 +74,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string PkgFormat { get; set; }
 
         /// <summary>
-        /// <para>The cloud application labels. You can select multiple values. Valid values:</para>
-        /// <ol>
-        /// <item><description>hot</description></item>
-        /// <item><description>game</description></item>
-        /// <item><description>app</description></item>
-        /// </ol>
+        /// <para>The tags of the cloud application. You can specify multiple tags. Valid values: 1. hot 2. game 3. app.</para>
         /// </summary>
         [NameInMap("PkgLabels")]
         [Validation(Required=false)]
         public List<string> PkgLabels { get; set; }
 
         /// <summary>
-        /// <para>The package type.</para>
-        /// <h2>Valid values:</h2>
-        /// <ol>
-        /// <item><description>android</description></item>
-        /// <item><description>win</description></item>
-        /// <item><description>android_appmarket: corresponds to the Android app marketplace scenario. In this scenario, the actual APK PackageName is restricted:
-        /// a. Different AppName values cannot share the same PackageName.
-        /// b. The same AppName with different AppVersion values can be associated with different PackageName values.</description></item>
-        /// </ol>
-        /// <h2>Default value:</h2>
-        /// <para>If not specified, the package type is automatically mapped based on PkgFormat (or the file extension of DownloadUrl). Default mappings between PkgFormat and package type:</para>
-        /// <ol>
-        /// <item><description>android: apk (the apk format is mapped to android by default).</description></item>
-        /// <item><description>win: tar.gz, tar, zip, rar.</description></item>
-        /// <item><description>android_appmarket: apk.</description></item>
-        /// </ol>
+        /// <para>The type of the installation package. ## Valid values: 1. android 2. win 3. android_appmarket: This value applies to Android app marketplace scenarios. In this scenario, the actual package name of the APK is restricted. a. The package names of different AppName values cannot be duplicated. b. Different AppVersion values of the same AppName can be associated with different package names. ## Default value description: If this parameter is not specified, the installation package type is automatically mapped based on the PkgFormat parameter or the file name extension of the DownloadUrl parameter. The default mapping between PkgFormat and the installation package type is as follows: 1. android: apk. The apk format is mapped to android by default. 2. win: tar.gz, tar, zip, and rar. 3. android_appmarket: apk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>android</para>
@@ -130,7 +91,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string PkgType { get; set; }
 
         /// <summary>
-        /// <para>The relative path of the post-installation command within the application package. Only supported for win type applications.</para>
+        /// <para>The relative path of the post-command in the application package. This parameter is supported only for Windows applications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>install.ps1</para>
@@ -140,7 +101,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string PostCommandPath { get; set; }
 
         /// <summary>
-        /// <para>The timeout period (in seconds) for the post-installation command. Only supported for win type applications.</para>
+        /// <para>The timeout period for executing the post-command, in seconds. This parameter is supported only for Windows applications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

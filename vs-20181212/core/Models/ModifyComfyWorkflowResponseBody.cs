@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ModifyComfyWorkflowResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is returned only if the request fails.</para>
+        /// <para>The error code. If the activity status is Fail, a specific error code is returned. If the activity status is Success, this parameter is not returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-05-07T02:27:06Z</para>
@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <para>The workflow description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>这是一个图生视频的工作流</para>
+        /// <para>This is an image-to-video workflow</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The returned message. This parameter provides error details if the request fails.</para>
+        /// <para>The message. If the status is Failed, this parameter contains the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>conn failed!</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <para>The workflow name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>图生视频工作流示例</para>
+        /// <para>Image-to-video workflow example</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The update time.</para>
+        /// <para>The update time of the task. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-05-07T02:27:06Z</para>

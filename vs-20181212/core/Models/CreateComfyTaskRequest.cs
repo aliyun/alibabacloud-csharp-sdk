@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class CreateComfyTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The resource pool ID.</para>
+        /// <para>The identifier of the resource pool.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string HiveId { get; set; }
 
         /// <summary>
-        /// <para>The workflow parameters that the user wants to replace.</para>
+        /// <para>The workflow parameters to be replaced.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

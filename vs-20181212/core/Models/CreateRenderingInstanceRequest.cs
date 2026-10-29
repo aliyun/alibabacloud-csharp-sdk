@@ -11,16 +11,16 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
     public class CreateRenderingInstanceRequest : TeaModel {
         /// <summary>
         /// <remarks>
-        /// <para>Unless you have specific requirements, keep the default values. For customers with special requirements, fill in the relevant parameters after communication and confirmation.</para>
+        /// <para>Unless you have special requirements, keep the default value. If you have special requirements, consult and confirm before specifying this parameter.</para>
         /// </remarks>
-        /// <para>Attribute information.</para>
+        /// <para>The attribute information.</para>
         /// </summary>
         [NameInMap("Attributes")]
         [Validation(Required=false)]
         public CreateRenderingInstanceRequestAttributes Attributes { get; set; }
         public class CreateRenderingInstanceRequestAttributes : TeaModel {
             /// <summary>
-            /// <para>Streaming service.</para>
+            /// <para>The streaming service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ON</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string EdgeMediaService { get; set; }
 
             /// <summary>
-            /// <para>Inbound access configuration.</para>
+            /// <para>The inbound network configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ON</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string InAccess { get; set; }
 
             /// <summary>
-            /// <para>Outbound access configuration.</para>
+            /// <para>The outbound network configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ON</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string OutAccess { get; set; }
 
             /// <summary>
-            /// <para>Resource domain.</para>
+            /// <para>The resource domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Public</para>
@@ -63,14 +63,12 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This value is valid only when <c>InstanceChargeType</c> is <c>PrePaid</c> (subscription).</para>
+        /// <para>This parameter takes effect only when <c>InstanceChargeType</c> is set to <c>PrePaid</c> (subscription).</para>
         /// </remarks>
-        /// <para>Enable or disable auto-renewal. Values:</para>
+        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enable.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Disable.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
+        /// <item><description><b>false</b>: disables auto-renewal.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,14 +79,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>Client information.</para>
+        /// <para>The client information.</para>
         /// </summary>
         [NameInMap("ClientInfo")]
         [Validation(Required=false)]
         public CreateRenderingInstanceRequestClientInfo ClientInfo { get; set; }
         public class CreateRenderingInstanceRequestClientInfo : TeaModel {
             /// <summary>
-            /// <para>Client IP address.</para>
+            /// <para>The IP address of the client.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.21.128.110</para>
@@ -101,11 +99,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This value is valid only when <c>InstanceChargeType</c> is <c>PostPaid</c> (pay-as-you-go).</para>
+        /// <para>This parameter takes effect only when <c>InstanceChargeType</c> is set to <c>PostPaid</c> (pay-as-you-go).</para>
         /// </remarks>
-        /// <para>Billing type. Valid values:</para>
+        /// <para>The billing cycle. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Hour: Hourly.</description></item>
+        /// <item><description>Hour: hour.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -116,12 +114,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string InstanceBillingCycle { get; set; }
 
         /// <summary>
-        /// <para>The billing method for the instance. Valid values:</para>
+        /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>PrePaid (default): Subscription.</para>
-        /// </description></item>
-        /// <item><description><para>PostPaid: Pay-as-you-go.</para>
-        /// </description></item>
+        /// <item><description>PrePaid (default): subscription.</description></item>
+        /// <item><description>PostPaid: pay-as-you-go.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -133,11 +129,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>Only one billing method is allowed. If a billing method already exists, the new value is invalid by default, and the existing one prevails. Note that this field is required when a user makes the first purchase.</para>
+        /// <para>Only one billing method is supported. If a billing method already exists, the new value is invalid by default, and the existing billing method prevails. Note that this parameter is required when you purchase the instance for the first time.</para>
         /// </remarks>
-        /// <para>Network billing type. Value:</para>
+        /// <para>The network billing type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>95BandwidthByMonth: Monthly 95th percentile bandwidth.</description></item>
+        /// <item><description>95BandwidthByMonth: monthly 95th percentile bandwidth.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -148,7 +144,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string InternetChargeType { get; set; }
 
         /// <summary>
-        /// <para>Maximum bandwidth, in Mbps. Default is 10.</para>
+        /// <para>The maximum bandwidth. Unit: Mbit/s. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -159,30 +155,20 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This value is valid only when <c>InstanceChargeType</c> is <c>PrePaid</c> (subscription).</para>
+        /// <para>This parameter takes effect only when <c>InstanceChargeType</c> is set to <c>PrePaid</c> (subscription).</para>
         /// </remarks>
-        /// <para>The subscription period. Valid values (Note: 12 is converted to one year; other values are in months):</para>
+        /// <para>The subscription duration. Valid values (note: if you select 12, it is calculated as one year, and other values are calculated in months):</para>
         /// <list type="bullet">
-        /// <item><description><para>1 (default)</para>
-        /// </description></item>
-        /// <item><description><para>2</para>
-        /// </description></item>
-        /// <item><description><para>3</para>
-        /// </description></item>
-        /// <item><description><para>4</para>
-        /// </description></item>
-        /// <item><description><para>5</para>
-        /// </description></item>
-        /// <item><description><para>6</para>
-        /// </description></item>
-        /// <item><description><para>7</para>
-        /// </description></item>
-        /// <item><description><para>8</para>
-        /// </description></item>
-        /// <item><description><para>9</para>
-        /// </description></item>
-        /// <item><description><para>12</para>
-        /// </description></item>
+        /// <item><description>1 (default)</description></item>
+        /// <item><description>2</description></item>
+        /// <item><description>3</description></item>
+        /// <item><description>4</description></item>
+        /// <item><description>5</description></item>
+        /// <item><description>6</description></item>
+        /// <item><description>7</description></item>
+        /// <item><description>8</description></item>
+        /// <item><description>9</description></item>
+        /// <item><description>12</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -193,14 +179,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>Cloud application service instance specifications.</para>
+        /// <para>The specifications of the cloud application service instance.</para>
         /// <list type="bullet">
-        /// <item><description><para>For crs.cp.\* series specifications, choose between subscription or pay-as-you-go billing.</para>
-        /// </description></item>
-        /// <item><description><para>For crs.vm.\* series specifications, choose between subscription or pay-as-you-go billing.</para>
-        /// </description></item>
-        /// <item><description><para>For other series, only subscription billing is supported.</para>
-        /// </description></item>
+        /// <item><description>For the crs.cp.* series, the billing method can be subscription or pay-as-you-go.</description></item>
+        /// <item><description>For the crs.vm.* series, the billing method can be subscription or pay-as-you-go.</description></item>
+        /// <item><description>For other series, only the subscription billing method is supported.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -212,7 +195,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RenderingSpec { get; set; }
 
         /// <summary>
-        /// <para>The cloud storage capacity used by the cloud application service instance (Note: not local storage).</para>
+        /// <para>The cloud storage capacity used by the cloud application service instance. Note: This is not local storage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

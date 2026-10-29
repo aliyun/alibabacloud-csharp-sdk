@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The current page number.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of workflows on the current page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of workflows that match the query.</para>
+        /// <para>The total number of workflows.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>A list of Comfy workflows.</para>
+        /// <para>The list of workflows.</para>
         /// </summary>
         [NameInMap("Workflows")]
         [Validation(Required=false)]
         public List<DescribeComfyWorkflowsResponseBodyWorkflows> Workflows { get; set; }
         public class DescribeComfyWorkflowsResponseBodyWorkflows : TeaModel {
             /// <summary>
-            /// <para>The time when the workflow was created.</para>
+            /// <para>The creation time. The time follows the ISO 8601 standard and includes a time zone offset. The format is YYYY-MM-DDTHH:mm:ss+HH:mm.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-02-03T07:31:45+08:00</para>
@@ -90,24 +90,24 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             /// <para>The workflow description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>这是一个图生视频工作流</para>
+            /// <para>This is an image-to-video workflow</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The workflow name.</para>
+            /// <para>The name of the workflow.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>图生视频工作流</para>
+            /// <para>Image-to-video workflow</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The time when the workflow was last updated.</para>
+            /// <para>The update time. The time is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1778897586</para>

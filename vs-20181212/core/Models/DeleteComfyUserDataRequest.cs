@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DeleteComfyUserDataRequest : TeaModel {
         /// <summary>
-        /// <para>The file or directory to delete. To specify a directory, provide a path that ends with a forward slash (/).</para>
+        /// <para>The name of the file or directory to delete. If a path is passed, it is treated as a directory and must end with a forward slash (/).
+        /// File name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mytest</para>

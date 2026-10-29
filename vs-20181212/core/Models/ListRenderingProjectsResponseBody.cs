@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListRenderingProjectsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Project list</para>
+        /// <para>The list of projects.</para>
         /// </summary>
         [NameInMap("Projects")]
         [Validation(Required=false)]
         public List<ListRenderingProjectsResponseBodyProjects> Projects { get; set; }
         public class ListRenderingProjectsResponseBodyProjects : TeaModel {
             /// <summary>
-            /// <para>Project creation time</para>
+            /// <para>The time when the project was created. The time follows the ISO 8601 standard and includes a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-09-09T18:44:49+08:00</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>Project description</para>
+            /// <para>The project description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>description</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Project ID</para>
+            /// <para>The project ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>project-422bc38dfgh5eb44149f135ef76304f63b</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string ProjectId { get; set; }
 
             /// <summary>
-            /// <para>Project name</para>
+            /// <para>The project name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prod-project</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string ProjectName { get; set; }
 
             /// <summary>
-            /// <para>Project session attributes</para>
+            /// <para>The session attributes of the project.</para>
             /// </summary>
             [NameInMap("SessionAttribs")]
             [Validation(Required=false)]
             public ListRenderingProjectsResponseBodyProjectsSessionAttribs SessionAttribs { get; set; }
             public class ListRenderingProjectsResponseBodyProjectsSessionAttribs : TeaModel {
                 /// <summary>
-                /// <para>Startup mode</para>
+                /// <para>The startup mode.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Sync</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             }
 
             /// <summary>
-            /// <para>Last update time</para>
+            /// <para>The time when the project was updated. The time follows the ISO 8601 standard and includes a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-09T18:44:49+08:00</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of matching projects</para>
+        /// <para>The total number of matched projects.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

@@ -17,23 +17,13 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public List<DescribeDevicesResponseBodyDevices> Devices { get; set; }
         public class DescribeDevicesResponseBodyDevices : TeaModel {
             /// <summary>
-            /// <para>The GB/T 28181 alarm subscription method. Valid values:</para>
+            /// <para>The subscribed national standard alarm methods. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>0 (all)</para>
-            /// </description></item>
-            /// <item><description><para>5 (video alarm)</para>
-            /// </description></item>
-            /// <item><description><para>7 (other alarm)</para>
-            /// </description></item>
+            /// <item><description>0: All.</description></item>
+            /// <item><description>5: Video alarm.</description></item>
+            /// <item><description>7: Other alarms.
+            /// An empty value indicates no subscription. You can specify multiple values separated by commas (,).</description></item>
             /// </list>
-            /// <remarks>
-            /// <list type="bullet">
-            /// <item><description><para>An empty value indicates that no alarm is subscribed.</para>
-            /// </description></item>
-            /// <item><description><para>Specify multiple values. Separate them with commas (,).</para>
-            /// </description></item>
-            /// </list>
-            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -43,7 +33,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string AlarmMethod { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether directory reporting is enabled for the platform device.</para>
+            /// <para>Specifies whether to enable directory reporting for platform devices.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -53,7 +43,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public bool? AutoDirectory { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether to enable position subscription for the device.</para>
+            /// <para>Specifies whether to enable device position subscription.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -63,7 +53,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public bool? AutoPos { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether to automatically start the stream.</para>
+            /// <para>Specifies whether to automatically start the stream.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -73,7 +63,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public bool? AutoStart { get; set; }
 
             /// <summary>
-            /// <para>The time when the channels were synchronized.</para>
+            /// <para>The channel synchronization time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-02-28T17:01:17Z</para>
@@ -83,7 +73,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string ChannelSyncTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the device was created.</para>
+            /// <para>The time when the device was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-02-28T17:00:17Z</para>
@@ -93,10 +83,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the device.</para>
+            /// <para>The device description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx路口摄像头</para>
+            /// <para>Camera at the XXX intersection</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -110,7 +100,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public DescribeDevicesResponseBodyDevicesDirectory Directory { get; set; }
             public class DescribeDevicesResponseBodyDevicesDirectory : TeaModel {
                 /// <summary>
-                /// <para>The time when the directory was created.</para>
+                /// <para>The time when the directory was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2019-02-28T17:00:17Z</para>
@@ -120,17 +110,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                 public string CreatedTime { get; set; }
 
                 /// <summary>
-                /// <para>The description of the directory.</para>
+                /// <para>The directory description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>目录1</para>
+                /// <para>Directory 1</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the group to which the directory belongs.</para>
+                /// <para>The ID of the workspace to which the directory belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>348*****174-cn-qingdao</para>
@@ -150,10 +140,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The name of the directory.</para>
+                /// <para>The directory name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>目录1</para>
+                /// <para>Directory 1</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -182,10 +172,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string DirectoryId { get; set; }
 
             /// <summary>
-            /// <para>The serial number of the device.</para>
-            /// <remarks>
-            /// <para>This parameter applies only to the AUVSP and ODCAP protocols.</para>
-            /// </remarks>
+            /// <para>The device serial number. This parameter is applicable only to the AUVSP and ODCAP protocols.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7D0*****4C0</para>
@@ -195,7 +182,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Dsn { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the device is enabled.</para>
+            /// <para>Specifies whether the device is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -205,10 +192,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The GB/T 28181 ID of the device.</para>
-            /// <remarks>
-            /// <para>This parameter applies only to the GB/T 28181 protocol.</para>
-            /// </remarks>
+            /// <para>The national standard ID of the device. This parameter is applicable only to the national standard protocol.</para>
             /// 
             /// <b>Example:</b>
             /// <para>310000000****0000002</para>
@@ -218,7 +202,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string GbId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the group to which the device belongs.</para>
+            /// <para>The ID of the workspace to which the device belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>348*****174-cn-qingdao</para>
@@ -271,7 +255,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             /// <para>The device name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxx路口摄像头</para>
+            /// <para>Camera at the XXX intersection</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -338,7 +322,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The time when the device was registered.</para>
+            /// <para>The time when the device was registered. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-02-28T17:00:17Z</para>
@@ -348,7 +332,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string RegisteredTime { get; set; }
 
             /// <summary>
-            /// <para>The stream statistics of the device.</para>
+            /// <para>The stream statistics information of the device.</para>
             /// </summary>
             [NameInMap("Stats")]
             [Validation(Required=false)]
@@ -409,14 +393,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             /// <summary>
             /// <para>The device status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>on (online)</para>
-            /// </description></item>
-            /// <item><description><para>off (offline)</para>
-            /// </description></item>
-            /// <item><description><para>failed</para>
-            /// </description></item>
-            /// <item><description><para>new (unregistered)</para>
-            /// </description></item>
+            /// <item><description>on: Online.</description></item>
+            /// <item><description>off: Offline.</description></item>
+            /// <item><description>failed: Locked.</description></item>
+            /// <item><description>new: Unregistered.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -429,12 +409,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             /// <summary>
             /// <para>The device type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>ipc (camera)</para>
-            /// </description></item>
-            /// <item><description><para>platform</para>
-            /// </description></item>
-            /// <item><description><para>ied (intelligent edge device)</para>
-            /// </description></item>
+            /// <item><description>ipc: Camera.</description></item>
+            /// <item><description>platform: Platform.</description></item>
+            /// <item><description>ied: Intelligent device.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -455,7 +432,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Url { get; set; }
 
             /// <summary>
-            /// <para>The username for the device.</para>
+            /// <para>The device username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>admin</para>
@@ -465,10 +442,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Username { get; set; }
 
             /// <summary>
-            /// <para>The manufacturer of the device.</para>
+            /// <para>The device vendor.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>公司A</para>
+            /// <para>Company A</para>
             /// </summary>
             [NameInMap("Vendor")]
             [Validation(Required=false)]
