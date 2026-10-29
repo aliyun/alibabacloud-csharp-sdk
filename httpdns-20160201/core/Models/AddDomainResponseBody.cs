@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
 {
     public class AddDomainResponseBody : TeaModel {
         /// <summary>
+        /// <para>The domain name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.example.com">www.example.com</a></para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
         public string DomainName { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ADA27798-6911-4B06-AF34-53F62F62XXXX</para>
         /// </summary>

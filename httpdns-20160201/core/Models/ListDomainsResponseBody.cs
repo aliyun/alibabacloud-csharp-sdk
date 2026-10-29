@@ -58,6 +58,8 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
         }
 
         /// <summary>
+        /// <para>The total number of domain names in the list.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -66,6 +68,8 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of domain names returned in this query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -74,6 +78,8 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>50F9C40E-188D-4208-BE2C-7427E531****</para>
         /// </summary>
@@ -82,6 +88,8 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of domain names in the list.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>18</para>
         /// </summary>

@@ -26,6 +26,8 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
         }
 
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -42,6 +46,8 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A6B3BB61-69CB-50E0-9DC0-0C1658D44A47</para>
         /// </summary>
@@ -50,6 +56,8 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12</para>
         /// </summary>

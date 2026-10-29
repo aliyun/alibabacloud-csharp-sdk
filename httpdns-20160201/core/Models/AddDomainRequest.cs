@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
 {
     public class AddDomainRequest : TeaModel {
         /// <summary>
+        /// <para>The HTTPDNS account ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123456</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
         public string AccountId { get; set; }
 
         /// <summary>
+        /// <para>The domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>50F9C40E-188D-B00B-BE2C-7427E531****</para>
         /// </summary>

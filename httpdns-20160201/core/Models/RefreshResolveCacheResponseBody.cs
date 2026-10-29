@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FA8C2599-362D-4113-8FB4-E88A40C2****</para>
         /// </summary>

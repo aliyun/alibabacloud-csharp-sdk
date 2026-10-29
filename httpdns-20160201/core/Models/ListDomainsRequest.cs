@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
 {
     public class ListDomainsRequest : TeaModel {
         /// <summary>
+        /// <para>The number of the current page. Starting value: 1. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page for paging in a paged query. Settings: Maximum value: 100. Default value: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
 {
     public class GetResolveCountSummaryRequest : TeaModel {
         /// <summary>
+        /// <para>The data granularity of the statistics. Valid values: <b>day</b> and <b>month</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
         public string Granularity { get; set; }
 
         /// <summary>
+        /// <para>The time span for the statistics.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

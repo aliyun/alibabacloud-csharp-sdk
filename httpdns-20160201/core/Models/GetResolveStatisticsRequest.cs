@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
 {
     public class GetResolveStatisticsRequest : TeaModel {
         /// <summary>
+        /// <para>The domain name for which to retrieve statistics information.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
         public string DomainName { get; set; }
 
         /// <summary>
+        /// <para>The data granularity. Valid values: <b>day</b> and <b>month</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
         public string Granularity { get; set; }
 
         /// <summary>
+        /// <para>The protocol type for resolution. Valid values: http (default) and https.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>https</para>
         /// </summary>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
         public string ProtocolName { get; set; }
 
         /// <summary>
+        /// <para>The length of the time span.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

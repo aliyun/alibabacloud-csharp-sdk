@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
 {
     public class GetResolveCountSummaryResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3106FFF3-3612-542A-B2CD-3CF4CD48****</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The statistics result.</para>
+        /// </summary>
         [NameInMap("ResolveSummary")]
         [Validation(Required=false)]
         public GetResolveCountSummaryResponseBodyResolveSummary ResolveSummary { get; set; }
@@ -26,6 +31,8 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
             public long? Doh { get; set; }
 
             /// <summary>
+            /// <para>The number of IPv4 HTTP resolution requests.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -34,6 +41,8 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
             public long? Http { get; set; }
 
             /// <summary>
+            /// <para>The number of IPv6 HTTP resolution requests.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -46,6 +55,8 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
             public string HttpAes { get; set; }
 
             /// <summary>
+            /// <para>The number of IPv4 HTTPS resolution requests.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -54,6 +65,8 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
             public long? Https { get; set; }
 
             /// <summary>
+            /// <para>The number of IPv6 HTTPS resolution requests.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
