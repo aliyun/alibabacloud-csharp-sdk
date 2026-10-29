@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             }
 
             /// <summary>
-            /// <para>The estimated hourly fee calculated based on the maximum number of RCUs selected by the user.</para>
+            /// <para>The estimated hourly fee calculated based on the maximum number of RCUs selected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1**</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? TradeMaxRCUAmount { get; set; }
 
             /// <summary>
-            /// <para>The estimated hourly fee calculated based on the minimum number of RCUs selected by the user.</para>
+            /// <para>The estimated hourly fee calculated based on the minimum number of RCUs selected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2**</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public float? TradeMinRCUAmount { get; set; }
 
             /// <summary>
-            /// <para>The final price, which is the original price minus the discount amount.</para>
+            /// <para>The final price, which is the original price minus the discount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10508</para>
@@ -332,7 +332,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public bool? ShowDiscount { get; set; }
 
         /// <summary>
-        /// <para>The estimated hourly fee calculated based on the maximum number of RCUs selected by the user.</para>
+        /// <para>The estimated hourly fee calculated based on the maximum number of RCUs selected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2**</para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public float? TradeMaxRCUAmount { get; set; }
 
         /// <summary>
-        /// <para>The estimated hourly fee calculated based on the minimum number of RCUs selected by the user.</para>
+        /// <para>The estimated hourly fee calculated based on the minimum number of RCUs selected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1**</para>

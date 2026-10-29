@@ -9683,12 +9683,12 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a database in an ApsaraDB RDS instance.</para>
+        /// <para>Creates a database on an ApsaraDB RDS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Supported database engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
@@ -9697,7 +9697,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// </list>
         /// <h3>Related documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</para>
+        /// <para>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and impacts.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/96105.html">Create a database on an ApsaraDB RDS for MySQL instance</a></description></item>
@@ -9786,12 +9786,12 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a database in an ApsaraDB RDS instance.</para>
+        /// <para>Creates a database on an ApsaraDB RDS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Supported database engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
@@ -9800,7 +9800,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// </list>
         /// <h3>Related documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</para>
+        /// <para>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and impacts.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/96105.html">Create a database on an ApsaraDB RDS for MySQL instance</a></description></item>
@@ -9889,12 +9889,12 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a database in an ApsaraDB RDS instance.</para>
+        /// <para>Creates a database on an ApsaraDB RDS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Supported database engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
@@ -9903,7 +9903,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// </list>
         /// <h3>Related documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</para>
+        /// <para>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and impacts.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/96105.html">Create a database on an ApsaraDB RDS for MySQL instance</a></description></item>
@@ -9928,12 +9928,12 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a database in an ApsaraDB RDS instance.</para>
+        /// <para>Creates a database on an ApsaraDB RDS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Supported database engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
@@ -9942,7 +9942,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// </list>
         /// <h3>Related documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</para>
+        /// <para>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and impacts.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/96105.html">Create a database on an ApsaraDB RDS for MySQL instance</a></description></item>
@@ -41827,6 +41827,158 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询操作权限</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeOperatorPermissionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOperatorPermissionResponse
+        /// </returns>
+        public DescribeOperatorPermissionResponse DescribeOperatorPermissionWithOptions(DescribeOperatorPermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeOperatorPermission",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeOperatorPermissionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询操作权限</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeOperatorPermissionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOperatorPermissionResponse
+        /// </returns>
+        public async Task<DescribeOperatorPermissionResponse> DescribeOperatorPermissionWithOptionsAsync(DescribeOperatorPermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeOperatorPermission",
+                Version = "2014-08-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeOperatorPermissionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询操作权限</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeOperatorPermissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOperatorPermissionResponse
+        /// </returns>
+        public DescribeOperatorPermissionResponse DescribeOperatorPermission(DescribeOperatorPermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeOperatorPermissionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询操作权限</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeOperatorPermissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeOperatorPermissionResponse
+        /// </returns>
+        public async Task<DescribeOperatorPermissionResponse> DescribeOperatorPermissionAsync(DescribeOperatorPermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeOperatorPermissionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the file details of a backup data migration task for an ApsaraDB RDS for SQL Server instance.</para>
         /// </summary>
         /// 
@@ -62511,23 +62663,23 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the minor version update policy for an ApsaraDB RDS for MySQL or ApsaraDB RDS for PostgreSQL instance.</para>
+        /// <para>Modifies the minor version upgrade method for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and ApsaraDB RDS for SQL Server instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Applicable engines</h3>
         /// <list type="bullet">
-        /// <item><description>RDS MySQL</description></item>
-        /// <item><description>RDS PostgreSQL</description></item>
+        /// <item><description>ApsaraDB RDS for MySQL</description></item>
+        /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
         /// </list>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</para>
+        /// <para>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/96059.html">Modify the automatic upgrade settings for an ApsaraDB RDS for MySQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/146895.html">Modify the automatic upgrade settings for an ApsaraDB RDS for PostgreSQL instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/96059.html">Modify the automatic upgrade settings for ApsaraDB RDS for MySQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/146895.html">Modify the automatic upgrade settings for ApsaraDB RDS for PostgreSQL</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -62590,23 +62742,23 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the minor version update policy for an ApsaraDB RDS for MySQL or ApsaraDB RDS for PostgreSQL instance.</para>
+        /// <para>Modifies the minor version upgrade method for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and ApsaraDB RDS for SQL Server instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Applicable engines</h3>
         /// <list type="bullet">
-        /// <item><description>RDS MySQL</description></item>
-        /// <item><description>RDS PostgreSQL</description></item>
+        /// <item><description>ApsaraDB RDS for MySQL</description></item>
+        /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
         /// </list>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</para>
+        /// <para>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/96059.html">Modify the automatic upgrade settings for an ApsaraDB RDS for MySQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/146895.html">Modify the automatic upgrade settings for an ApsaraDB RDS for PostgreSQL instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/96059.html">Modify the automatic upgrade settings for ApsaraDB RDS for MySQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/146895.html">Modify the automatic upgrade settings for ApsaraDB RDS for PostgreSQL</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -62669,23 +62821,23 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the minor version update policy for an ApsaraDB RDS for MySQL or ApsaraDB RDS for PostgreSQL instance.</para>
+        /// <para>Modifies the minor version upgrade method for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and ApsaraDB RDS for SQL Server instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Applicable engines</h3>
         /// <list type="bullet">
-        /// <item><description>RDS MySQL</description></item>
-        /// <item><description>RDS PostgreSQL</description></item>
+        /// <item><description>ApsaraDB RDS for MySQL</description></item>
+        /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
         /// </list>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</para>
+        /// <para>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/96059.html">Modify the automatic upgrade settings for an ApsaraDB RDS for MySQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/146895.html">Modify the automatic upgrade settings for an ApsaraDB RDS for PostgreSQL instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/96059.html">Modify the automatic upgrade settings for ApsaraDB RDS for MySQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/146895.html">Modify the automatic upgrade settings for ApsaraDB RDS for PostgreSQL</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -62704,23 +62856,23 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the minor version update policy for an ApsaraDB RDS for MySQL or ApsaraDB RDS for PostgreSQL instance.</para>
+        /// <para>Modifies the minor version upgrade method for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and ApsaraDB RDS for SQL Server instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Applicable engines</h3>
         /// <list type="bullet">
-        /// <item><description>RDS MySQL</description></item>
-        /// <item><description>RDS PostgreSQL</description></item>
+        /// <item><description>ApsaraDB RDS for MySQL</description></item>
+        /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
         /// </list>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</para>
+        /// <para>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/96059.html">Modify the automatic upgrade settings for an ApsaraDB RDS for MySQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/146895.html">Modify the automatic upgrade settings for an ApsaraDB RDS for PostgreSQL instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/96059.html">Modify the automatic upgrade settings for ApsaraDB RDS for MySQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/146895.html">Modify the automatic upgrade settings for ApsaraDB RDS for PostgreSQL</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -66351,18 +66503,18 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables native replication mode for an ApsaraDB RDS instance by calling the ModifyDBInstanceReplicationSwitch operation.</para>
+        /// <para>Enables or disables the native replication mode for an ApsaraDB RDS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>ApsaraDB RDS for MySQL instances with native replication enabled must meet the following requirements:</para>
+        /// <para>To enable the native replication feature for an ApsaraDB RDS for MySQL instance, the following requirements must be met:</para>
         /// <list type="bullet">
-        /// <item><description>Database engine version: MySQL 5.7</description></item>
-        /// <item><description>Instance edition: Basic Edition</description></item>
+        /// <item><description>DPI engine version: MySQL 5.7</description></item>
+        /// <item><description>Edition: Basic Edition</description></item>
         /// <item><description>Billing method: pay-as-you-go or subscription</description></item>
-        /// <item><description>Minor engine version: 20240930 or later
-        /// For more information about native replication, see <a href="https://help.aliyun.com/document_detail/2856530.html">RDS native replication</a>.</description></item>
+        /// <item><description>Milvus version: 20240930 or later
+        /// For more information about native replication, see <a href="https://help.aliyun.com/document_detail/2856530.html">Native replication for ApsaraDB RDS</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -66421,18 +66573,18 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables native replication mode for an ApsaraDB RDS instance by calling the ModifyDBInstanceReplicationSwitch operation.</para>
+        /// <para>Enables or disables the native replication mode for an ApsaraDB RDS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>ApsaraDB RDS for MySQL instances with native replication enabled must meet the following requirements:</para>
+        /// <para>To enable the native replication feature for an ApsaraDB RDS for MySQL instance, the following requirements must be met:</para>
         /// <list type="bullet">
-        /// <item><description>Database engine version: MySQL 5.7</description></item>
-        /// <item><description>Instance edition: Basic Edition</description></item>
+        /// <item><description>DPI engine version: MySQL 5.7</description></item>
+        /// <item><description>Edition: Basic Edition</description></item>
         /// <item><description>Billing method: pay-as-you-go or subscription</description></item>
-        /// <item><description>Minor engine version: 20240930 or later
-        /// For more information about native replication, see <a href="https://help.aliyun.com/document_detail/2856530.html">RDS native replication</a>.</description></item>
+        /// <item><description>Milvus version: 20240930 or later
+        /// For more information about native replication, see <a href="https://help.aliyun.com/document_detail/2856530.html">Native replication for ApsaraDB RDS</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -66491,18 +66643,18 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables native replication mode for an ApsaraDB RDS instance by calling the ModifyDBInstanceReplicationSwitch operation.</para>
+        /// <para>Enables or disables the native replication mode for an ApsaraDB RDS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>ApsaraDB RDS for MySQL instances with native replication enabled must meet the following requirements:</para>
+        /// <para>To enable the native replication feature for an ApsaraDB RDS for MySQL instance, the following requirements must be met:</para>
         /// <list type="bullet">
-        /// <item><description>Database engine version: MySQL 5.7</description></item>
-        /// <item><description>Instance edition: Basic Edition</description></item>
+        /// <item><description>DPI engine version: MySQL 5.7</description></item>
+        /// <item><description>Edition: Basic Edition</description></item>
         /// <item><description>Billing method: pay-as-you-go or subscription</description></item>
-        /// <item><description>Minor engine version: 20240930 or later
-        /// For more information about native replication, see <a href="https://help.aliyun.com/document_detail/2856530.html">RDS native replication</a>.</description></item>
+        /// <item><description>Milvus version: 20240930 or later
+        /// For more information about native replication, see <a href="https://help.aliyun.com/document_detail/2856530.html">Native replication for ApsaraDB RDS</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -66521,18 +66673,18 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables native replication mode for an ApsaraDB RDS instance by calling the ModifyDBInstanceReplicationSwitch operation.</para>
+        /// <para>Enables or disables the native replication mode for an ApsaraDB RDS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>ApsaraDB RDS for MySQL instances with native replication enabled must meet the following requirements:</para>
+        /// <para>To enable the native replication feature for an ApsaraDB RDS for MySQL instance, the following requirements must be met:</para>
         /// <list type="bullet">
-        /// <item><description>Database engine version: MySQL 5.7</description></item>
-        /// <item><description>Instance edition: Basic Edition</description></item>
+        /// <item><description>DPI engine version: MySQL 5.7</description></item>
+        /// <item><description>Edition: Basic Edition</description></item>
         /// <item><description>Billing method: pay-as-you-go or subscription</description></item>
-        /// <item><description>Minor engine version: 20240930 or later
-        /// For more information about native replication, see <a href="https://help.aliyun.com/document_detail/2856530.html">RDS native replication</a>.</description></item>
+        /// <item><description>Milvus version: 20240930 or later
+        /// For more information about native replication, see <a href="https://help.aliyun.com/document_detail/2856530.html">Native replication for ApsaraDB RDS</a>.</description></item>
         /// </list>
         /// </description>
         /// 

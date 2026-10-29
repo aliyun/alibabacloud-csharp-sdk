@@ -1,3 +1,7 @@
+2026-10-29 Version: 15.10.0
+- Support API DescribeOperatorPermission.
+
+
 2026-10-26 Version: 15.9.4
 - Update API CreateDBInstance: add request parameters AutoUpgradeMinorVersion.
 

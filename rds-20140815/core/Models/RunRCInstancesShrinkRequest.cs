@@ -80,6 +80,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <para>The business information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;rds_ai_app&quot;:&quot;true&quot;}</para>
         /// </summary>
         [NameInMap("BusinessInfo")]
         [Validation(Required=false)]

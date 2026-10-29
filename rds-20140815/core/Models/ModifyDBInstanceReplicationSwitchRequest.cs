@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyDBInstanceReplicationSwitchRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable or disable native replication mode. Valid values:</para>
+        /// <para>Specifies whether to enable or disable the native replication mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ON</b>: Enable native replication.</description></item>
-        /// <item><description><b>OFF</b>: Disable native replication.</description></item>
+        /// <item><description><b>ON</b>: enables the native replication mode.</description></item>
+        /// <item><description><b>OFF</b>: disables the native replication mode.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. This parameter can be left empty.</para>
+        /// <para>The ID of the resource group. This parameter can be left empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy****</para>
