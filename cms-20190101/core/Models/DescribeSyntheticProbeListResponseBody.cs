@@ -27,17 +27,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public List<DescribeSyntheticProbeListResponseBodyIspCityList> IspCityList { get; set; }
         public class DescribeSyntheticProbeListResponseBodyIspCityList : TeaModel {
             /// <summary>
-            /// <para>The name of the area in Chinese.</para>
+            /// <para>The Chinese name of the region.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>华北</para>
+            /// <para>North China</para>
             /// </summary>
             [NameInMap("AreaCn")]
             [Validation(Required=false)]
             public string AreaCn { get; set; }
 
             /// <summary>
-            /// <para>The name of the area in English.</para>
+            /// <para>The English name of the region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Huabei</para>
@@ -57,17 +57,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string City { get; set; }
 
             /// <summary>
-            /// <para>The name of the city in Chinese.</para>
+            /// <para>The Chinese name of the city.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>北京</para>
+            /// <para>Beijing</para>
             /// </summary>
             [NameInMap("CityCn")]
             [Validation(Required=false)]
             public string CityCn { get; set; }
 
             /// <summary>
-            /// <para>The name of the city in English.</para>
+            /// <para>The English name of the city.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Beijing</para>
@@ -87,17 +87,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Country { get; set; }
 
             /// <summary>
-            /// <para>The name of the country in Chinese.</para>
+            /// <para>The Chinese name of the country.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>中国</para>
+            /// <para>China</para>
             /// </summary>
             [NameInMap("CountryCn")]
             [Validation(Required=false)]
             public string CountryCn { get; set; }
 
             /// <summary>
-            /// <para>The name of the country or region in English.</para>
+            /// <para>The English name of the country or region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>China</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string CountryEn { get; set; }
 
             /// <summary>
-            /// <para>The number of IPv4 detection points in data centers.</para>
+            /// <para>The number of IPv4 nodes in the IDC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public int? IdcV4ProbeCount { get; set; }
 
             /// <summary>
-            /// <para>The number of IDC IPv6 nodes.</para>
+            /// <para>The number of IPv6 nodes in the IDC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -144,17 +144,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Isp { get; set; }
 
             /// <summary>
-            /// <para>The name of the carrier in Chinese.</para>
+            /// <para>The Chinese name of the carrier.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>联通</para>
+            /// <para>China Unicom</para>
             /// </summary>
             [NameInMap("IspCn")]
             [Validation(Required=false)]
             public string IspCn { get; set; }
 
             /// <summary>
-            /// <para>The name of the carrier in English.</para>
+            /// <para>The English name of the carrier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>China-Unicom</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string IspEn { get; set; }
 
             /// <summary>
-            /// <para>The number of last-mile detection points.</para>
+            /// <para>The number of Lastmile detection points.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -194,17 +194,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The name of the province in Chinese.</para>
+            /// <para>The Chinese name of the province.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>江西省</para>
+            /// <para>Jiangxi</para>
             /// </summary>
             [NameInMap("RegionCn")]
             [Validation(Required=false)]
             public string RegionCn { get; set; }
 
             /// <summary>
-            /// <para>The name of the province in English.</para>
+            /// <para>The English name of the province.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Jiangxi</para>
@@ -236,7 +236,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values: true: The operation was successful. false: The operation failed.</para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The operation is successful.</description></item>
+        /// <item><description>false: The operation fails.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeAlertLogCountRequest : TeaModel {
         /// <summary>
-        /// <para>The alert group.</para>
+        /// <para>The alert contact group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECS_Group</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string ContactGroup { get; set; }
 
         /// <summary>
-        /// <para>The end timestamp of the alert logs to be queried.</para>
+        /// <para>The end timestamp for querying alert history.</para>
         /// <para>Unit: milliseconds.</para>
-        /// <para>You can query only the alert logs within the last year. If the query time is longer than one year, the return value of the <c>AlertLogCount</c> parameter is empty.</para>
+        /// <para>You can query only the alert history within the last year. If the query time range exceeds one year, the <c>AlertLogCount</c> response parameter is empty.</para>
         /// <remarks>
-        /// <para>The interval between the start time (StartTime) and end time (EndTime) must be less than or equal to 15 days. The start time and end time must be specified or left empty at the same time. If you do not specify the start time and end time, the alert logs within the last 15 minutes are queried by default.</para>
+        /// <para>The interval between the start time (StartTime) and end time (EndTime) must be less than or equal to 15 days. Both parameters must be specified or left empty at the same time. If neither is specified, the alert history of the last 15 minutes is queried by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,11 +35,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The type of the alert event. Valid values:</para>
+        /// <para>The alert type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>TRIGGERED: The alert is triggered.</para>
         /// </description></item>
-        /// <item><description><para>RESOLVED: The alert is resolved.</para>
+        /// <item><description><para>RESOLVED: The alert recovers.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -51,18 +51,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>The dimension based on which data is aggregated. This parameter is similar to the Group By clause of SQL statements. Valid values:</para>
+        /// <para>Aggregates data by a spatial dimension, which is equivalent to the Group By clause in SQL. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>product</c>: aggregates data by cloud service.</para>
-        /// </description></item>
-        /// <item><description><para><c>level</c>: aggregates data by alert level.</para>
-        /// </description></item>
-        /// <item><description><para><c>groupId</c>: aggregates data by application group.</para>
-        /// </description></item>
-        /// <item><description><para><c>contactGroup</c>: aggregates data by alert group.</para>
-        /// </description></item>
-        /// <item><description><para><c>product,metricName</c>: aggregates data both by cloud service and by metric.</para>
-        /// </description></item>
+        /// <item><description><c>product</c>: aggregates by Alibaba Cloud service.</description></item>
+        /// <item><description><c>level</c>: aggregates by alert level.</description></item>
+        /// <item><description><c>groupId</c>: aggregates by application group.</description></item>
+        /// <item><description><c>contactGroup</c>: aggregates by alert contact group.</description></item>
+        /// <item><description><c>product,metricName</c>: aggregates by Alibaba Cloud service and metric.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -74,7 +69,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string GroupBy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application group.</para>
+        /// <para>The application group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7301****</para>
@@ -84,7 +79,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The statistical period of alert logs. Unit: minutes.</para>
+        /// <para>The period for obtaining logs. Unit: minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>360</para>
@@ -94,13 +89,15 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string LastMin { get; set; }
 
         /// <summary>
-        /// <para>The level and notification method of the alert. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>P4: Alert notifications are sent by using emails and DingTalk chatbots.</para>
-        /// </description></item>
-        /// <item><description><para>OK: No alert is generated.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The alert level and notification method. Valid values:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;- P2: Phone call + text message + email + DingTalk chatbot.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;- P3: Text message + email + DingTalk chatbot.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;- P4: Email + DingTalk chatbot.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;- OK: No alert.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;- P4: Email + DingTalk chatbot.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;- OK: No alert.</para>
+        /// <para>&lt;props=&quot;partner&quot;&gt;- P4: Email + DingTalk chatbot.</para>
+        /// <para>&lt;props=&quot;partner&quot;&gt;- OK: No alert.</para>
         /// 
         /// <b>Example:</b>
         /// <para>P4</para>
@@ -110,9 +107,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Level { get; set; }
 
         /// <summary>
-        /// <para>The name of the metric.</para>
+        /// <para>The metric name.</para>
         /// <remarks>
-        /// <para>For more information about the metrics of different cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+        /// <para>For information about the metrics of Alibaba Cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service metrics</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -123,9 +120,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The namespace of the cloud service.</para>
+        /// <para>The namespace of the Alibaba Cloud service.</para>
         /// <remarks>
-        /// <para>For more information about the namespaces of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+        /// <para>For information about the namespaces of Alibaba Cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service metrics</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -136,19 +133,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The dimension based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><c>product</c>: aggregates data by cloud service.</para>
-        /// </description></item>
-        /// <item><description><para><c>level</c>: aggregates data by alert level.</para>
-        /// </description></item>
-        /// <item><description><para><c>groupId</c>: aggregates data by application group.</para>
-        /// </description></item>
-        /// <item><description><para><c>contactGroup</c>: aggregates data by alert contact group.</para>
-        /// </description></item>
-        /// <item><description><para><c>product,metricName</c>: aggregates data both by cloud service and by metric.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -158,7 +143,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 10.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -168,7 +153,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The abbreviation of the service name.</para>
+        /// <para>The abbreviation of the Alibaba Cloud service name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECS</para>
@@ -183,7 +168,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The ID of the alert rule.</para>
-        /// <para>For more information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</para>
+        /// <para>For information about how to obtain the alert rule ID, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bfae2ca5b4e07d2c7278772e***********</para>
@@ -203,7 +188,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The keyword based on which the alert logs to be counted are searched.</para>
+        /// <para>The search keyword for querying alert history statistics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -213,20 +198,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string SearchKey { get; set; }
 
         /// <summary>
-        /// <para>The status of the alert. Valid values:</para>
+        /// <para>The alert status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: The alert is triggered or cleared.</para>
-        /// </description></item>
-        /// <item><description><para>1: The alert is generated not during the effective period.</para>
-        /// </description></item>
-        /// <item><description><para>2: The alert is muted and not triggered in a specified period.</para>
-        /// </description></item>
-        /// <item><description><para>3: The host is restarting.</para>
-        /// </description></item>
-        /// <item><description><para>4: Notifications are not sent for the alert.</para>
-        /// </description></item>
+        /// <item><description>0: An alert is triggered or the alert recovers to Normal.</description></item>
+        /// <item><description>1: The alert rule is not effective.</description></item>
+        /// <item><description>2: The mute period.</description></item>
+        /// <item><description>3: The host is restarting.</description></item>
+        /// <item><description>4: Alerts are not send.</description></item>
         /// </list>
-        /// <para>When the value of the SendStatus parameter is 0, the value P4 of the Level parameter indicates a triggered alert and the value OK indicates a cleared alert.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;When the alert status is 0, if the value of Level is P2, P3, or P4, an alert is triggered. If the value of Level is OK, the alert recovers to Normal.
+        /// &lt;props=&quot;intl&quot;&gt;When the alert status is 0, if the value of Level is P4, an alert is triggered. If the value of Level is OK, the alert recovers to Normal.
+        /// &lt;props=&quot;partner&quot;&gt;When the alert status is 0, if the value of Level is P4, an alert is triggered. If the value of Level is OK, the alert recovers to Normal.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -235,22 +217,25 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string SendStatus { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated and does not need to be specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>无</para>
         /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]
+        [Obsolete]
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The start timestamp of the alert logs to be queried.</para>
+        /// <para>The start timestamp for querying alert history.</para>
         /// <para>Unit: milliseconds.</para>
-        /// <para>You can query only the alert logs within the last year. If the query time is longer than one year, the return value of the <c>AlertLogCount</c> parameter is empty.</para>
+        /// <para>You can query only the alert history within the last year. If the query time range exceeds one year, the <c>AlertLogCount</c> response parameter is empty.</para>
         /// <remarks>
-        /// <para>The interval between the start time (StartTime) and end time (EndTime) must be less than or equal to 15 days. The start time and end time must be specified or left empty at the same time. If you do not specify the start time and end time, the alert logs within the last 15 minutes are queried by default.</para>
+        /// <para>The interval between the start time (StartTime) and end time (EndTime) must be less than or equal to 15 days. Both parameters must be specified or left empty at the same time. If neither is specified, the alert history of the last 15 minutes is queried by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

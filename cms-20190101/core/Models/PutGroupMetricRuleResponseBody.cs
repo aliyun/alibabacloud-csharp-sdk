@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutGroupMetricRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The HTTP status code.</para>
         /// <remarks>
-        /// <para>A value of 200 indicates success.</para>
+        /// <para>A status code of 200 indicates success.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public PutGroupMetricRuleResponseBodyResult Result { get; set; }
         public class PutGroupMetricRuleResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The alert rule ID.</para>
+            /// <para>The ID of the alert rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -62,11 +62,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The operation was successful.</para>
+        /// <item><description><para>true: The operation is successful.</para>
         /// </description></item>
-        /// <item><description><para>false: The operation failed.</para>
+        /// <item><description><para>false: The operation fails.</para>
         /// </description></item>
         /// </list>
         /// 

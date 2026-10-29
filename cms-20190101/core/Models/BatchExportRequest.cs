@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class BatchExportRequest : TeaModel {
         /// <summary>
-        /// <para>When you call this operation in a loop to export data, you must specify the value of <c>Cursor</c>. You can obtain the value of <c>Cursor</c> by using the following methods:</para>
+        /// <para>The cursor value. This parameter is required when you repeatedly call this operation to export data. You can obtain the Cursor value by using one of the following methods:</para>
         /// <list type="bullet">
-        /// <item><description><para>When you call this operation for the first time, you must first call the Cursor operation to obtain the value of <c>Cursor</c>. For more information, see <a href="https://help.aliyun.com/document_detail/2330730.html">Cursor</a>.</para>
+        /// <item><description><para>When you call this operation for the first time, you must call the Cursor operation to obtain the Cursor value. For more information, see <a href="https://help.aliyun.com/document_detail/2330730.html">Cursor</a>.</para>
         /// </description></item>
-        /// <item><description><para>When you call this operation again, you can obtain the value of <c>Cursor</c> from the response of the last call.</para>
+        /// <item><description><para>When you call this operation again, you can obtain the Cursor value from the response of the previous call.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Cursor { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of data entries to return each time.</para>
+        /// <para>The maximum number of data records to return each time.</para>
         /// <para>Valid values: 1 to 10000.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,19 +39,19 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public int? Length { get; set; }
 
         /// <summary>
-        /// <para>The measurements that are used to customize the returned data. By default, all measurements are returned.</para>
-        /// <para>For example, the metric <c>cpu_idle</c> of the cloud service <c>acs_ecs_dashboard</c> has three measurement columns: <c>Average</c>, <c>Maximum</c>, and <c>Minimum</c>. If you only need to return the <c>Average</c> and <c>Maximum</c> columns, set this parameter to the array <c>[&quot;Average&quot;, &quot;Maximum&quot;]</c>.</para>
-        /// <para>For information about how to obtain the measurements of a metric of a cloud service, see the <c>statistics</c> column of <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+        /// <para>The measurements used to customize the returned data. By default, all measurements are returned.</para>
+        /// <para>For example, the <c>cpu_idle</c> monitoring metrics for the <c>acs_ecs_dashboard</c> cloud service have three measurement columns: <c>Average</c>, <c>Maximum</c>, and <c>Minimum</c>. If you want to return only the <c>Average</c> and <c>Maximum</c> columns, set the Settings of this parameter to the <c>[&quot;Average&quot;, &quot;Maximum&quot;]</c> array.</para>
+        /// <para>For more information about how to obtain the measurements of the monitoring metrics for a cloud service, see the <c>statistics</c> column in <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
         /// </summary>
         [NameInMap("Measurements")]
         [Validation(Required=false)]
         public List<string> Measurements { get; set; }
 
         /// <summary>
-        /// <para>The name of the metric of the cloud service.</para>
-        /// <para>For information about how to obtain the name of a metric of a cloud service, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+        /// <para>The name of the monitoring metric for the cloud service.</para>
+        /// <para>For more information about how to obtain the monitoring metric name of a cloud service, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
         /// <remarks>
-        /// <para>This parameter must be the same as the request parameter <c>Metric</c> in the Cursor operation.</para>
+        /// <para>This parameter must be the same as the Metric request parameter in the Cursor operation.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -64,9 +64,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The data namespace of the cloud service.</para>
-        /// <para>For information about how to obtain the data namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+        /// <para>For more information about how to obtain the data namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
         /// <remarks>
-        /// <para>This parameter must be the same as the request parameter <c>Namespace</c> in the Cursor operation.</para>
+        /// <para>This parameter must be the same as the Namespace request parameter in the Cursor operation.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

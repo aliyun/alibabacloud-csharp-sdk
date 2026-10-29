@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateMonitorGroupNotifyPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code.</para>
         /// <remarks>
-        /// <para>The value 200 indicates success.</para>
+        /// <para>200 indicates success.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,14 +36,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>13356BCA-3EC3-4748-A771-2064DA69AEF1</para>
+        /// <para>B7AF834D-D38B-4A46-920B-FE974EB7E135</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned for the creation result.</para>
+        /// <para>The number of affected rows.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

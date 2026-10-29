@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class ApplyMetricRuleTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The responses code.</para>
+        /// <para>The status code.</para>
         /// <remarks>
-        /// <para>The status code 200 indicates that the request was successful.</para>
+        /// <para>A status code of 200 indicates success.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The specified resource is not found.</para>
@@ -43,23 +43,23 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resources that are affected by the alert rule.</para>
+        /// <para>The resources affected by the alert rule.</para>
         /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
         public ApplyMetricRuleTemplateResponseBodyResource Resource { get; set; }
         public class ApplyMetricRuleTemplateResponseBodyResource : TeaModel {
             /// <summary>
-            /// <para>The details of the generated alert rule.</para>
+            /// <para>The detailed results of the generated alert rules.</para>
             /// </summary>
             [NameInMap("AlertResults")]
             [Validation(Required=false)]
             public List<ApplyMetricRuleTemplateResponseBodyResourceAlertResults> AlertResults { get; set; }
             public class ApplyMetricRuleTemplateResponseBodyResourceAlertResults : TeaModel {
                 /// <summary>
-                /// <para>The responses code.</para>
+                /// <para>The status code.</para>
                 /// <remarks>
-                /// <para>The status code 200 indicates that the request was successful.</para>
+                /// <para>A status code of 200 indicates success.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -100,11 +100,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the request was successful. Valid values:</para>
+                /// <para>Indicates whether the operation is successful. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>true</para>
+                /// <item><description><para>true: The operation is successful.</para>
                 /// </description></item>
-                /// <item><description><para>false</para>
+                /// <item><description><para>false: The operation fails.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -130,11 +130,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
+        /// <item><description><para>true: The operation is successful.</para>
         /// </description></item>
-        /// <item><description><para>false</para>
+        /// <item><description><para>false: The operation fails.</para>
         /// </description></item>
         /// </list>
         /// 

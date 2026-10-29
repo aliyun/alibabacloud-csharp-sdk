@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The list of site monitoring tasks.</para>
         /// <remarks>
-        /// <para>You must create at least one site monitoring task. The <c>Address</c>, <c>TaskName</c>, and <c>TaskType</c> parameters are required.</para>
+        /// <para>You must create at least one site monitoring task, and you must specify <c>Address</c>, <c>TaskName</c>, and <c>TaskType</c>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The URL or IP address of the site monitoring task.</para>
             /// <remarks>
-            /// <para>You must create at least one site monitoring task. The <c>Address</c>, <c>TaskName</c>, and <c>TaskType</c> parameters are required.</para>
+            /// <para>You must create at least one site monitoring task, and you must specify <c>Address</c>, <c>TaskName</c>, and <c>TaskType</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -38,8 +38,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Address { get; set; }
 
             /// <summary>
-            /// <para>The information about the detection points. If you leave this parameter empty, the system randomly selects three detection points.</para>
-            /// <para>The value must be a <c>JSONArray</c>. For example, <c>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</c> corresponds to Beijing, Hangzhou, and Qingdao.</para>
+            /// <para>The detection point information. If this parameter is left empty, the system randomly selects three detection points.</para>
+            /// <para>The value is a JSON array. Example: <c>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</c>. The values correspond to Beijing, Hangzhou, and Qingdao.</para>
             /// <para>For more information about how to obtain detection point information, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>.</para>
             /// 
             /// <b>Example:</b>
@@ -61,14 +61,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
             /// <summary>
             /// <para>The name of the site monitoring task.</para>
-            /// <para>&lt;props=&quot;china&quot;&gt;</para>
-            /// <para>The value must be 4 to 100 characters in length and can contain English letters, numbers, underscores (_), and Chinese characters.</para>
-            /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-            /// <para>The name of the site monitoring task.</para>
-            /// <para>&lt;props=&quot;partner&quot;&gt;</para>
-            /// <para>The name must be 4 to 100 characters in length and can contain letters, digits, and underscores (_).</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;The name must be 4 to 100 characters in length and can contain letters, digits, underscores (_), and Chinese characters.</para>
+            /// <para>&lt;props=&quot;intl&quot;&gt;The name must be 4 to 100 characters in length and can contain letters, digits, and underscores (_).</para>
+            /// <para>&lt;props=&quot;partner&quot;&gt;The name must be 4 to 100 characters in length and can contain letters, digits, and underscores (_).</para>
             /// <remarks>
-            /// <para>You must create at least one site monitoring task. The <c>Address</c>, <c>TaskName</c>, and <c>TaskType</c> parameters are required.</para>
+            /// <para>You must create at least one site monitoring task, and you must specify <c>Address</c>, <c>TaskName</c>, and <c>TaskType</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -79,10 +76,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>The protocol type of the monitoring task.</para>
+            /// <para>The monitoring type of the site monitoring task.</para>
             /// <para>Valid values: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</para>
             /// <remarks>
-            /// <para>You must create at least one site monitoring task. The <c>Address</c>, <c>TaskName</c>, and <c>TaskType</c> parameters are required.</para>
+            /// <para>You must create at least one site monitoring task, and you must specify <c>Address</c>, <c>TaskName</c>, and <c>TaskType</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

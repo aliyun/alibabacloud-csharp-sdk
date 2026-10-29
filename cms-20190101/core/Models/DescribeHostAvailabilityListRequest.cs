@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the availability monitoring tasks. Separate multiple IDs with commas (,).</para>
+        /// <para>The IDs of multiple availability monitoring tasks. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456,345678</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The page number.</para>
-        /// <para>Pages start from page 1. Default value: 1.</para>
+        /// <para>Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The number of entries per page.</para>
-        /// <para>Minimum value: 1. Default value: 10</para>
+        /// <para>Minimum value: 1. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

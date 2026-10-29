@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class BatchCreateInstantSiteMonitorResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The HTTP status code.</para>
         /// <remarks>
-        /// <para>A value of 200 indicates that the request was successful.</para>
+        /// <para>A value of 200 indicates that the operation is successful.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -75,12 +75,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The operation was successful.</para>
-        /// </description></item>
-        /// <item><description><para>false: The operation failed.</para>
-        /// </description></item>
+        /// <item><description>true: The operation is successful.</description></item>
+        /// <item><description>false: The operation fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

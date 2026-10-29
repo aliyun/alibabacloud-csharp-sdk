@@ -14,12 +14,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return information about used quotas. Valid values:</para>
+        /// <para>Specifies whether the response includes used quotas. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true (default): yes</para>
-        /// </description></item>
-        /// <item><description><para>false: no</para>
-        /// </description></item>
+        /// <item><description>true (default): Included.</description></item>
+        /// <item><description>false: Not included.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

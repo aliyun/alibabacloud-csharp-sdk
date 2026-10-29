@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
     public class DescribeMetricLastRequest : TeaModel {
         /// <summary>
         /// <para>The monitoring dimensions of the specified resource.</para>
-        /// <para>Set the value to a collection of <c>key:value</c> pairs. Example: <c>{&quot;userId&quot;:&quot;120886317861****&quot;}</c> or <c>{&quot;instanceId&quot;:&quot;i-2ze2d6j5uhg20x47****&quot;}</c>.</para>
+        /// <para>Format: a collection of <c>key:value</c> pairs. Example: <c>{&quot;userId&quot;:&quot;120886317861****&quot;}</c> or <c>{&quot;instanceId&quot;:&quot;i-2ze2d6j5uhg20x47****&quot;}</c>.</para>
         /// <remarks>
-        /// <para>You can query a maximum of 50 instances in each request.</para>
+        /// <para>A maximum of 50 instances can be queried in a single request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,15 +24,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Dimensions { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query monitoring data.</para>
-        /// <list type="bullet">
-        /// <item><description><para>For second-level data, the start time is obtained by comparing the time that is specified by the StartTime parameter and 20 minutes earlier of the time that is specified by the EndTime parameter. The earlier one of the compared points in time is used as the start time.</para>
-        /// </description></item>
-        /// <item><description><para>For minute-level data, the start time is obtained by comparing the time that is specified by the StartTime parameter and 2 hours earlier of the time that is specified by the EndTime parameter. The earlier one of the compared points in time is used as the start time.</para>
-        /// </description></item>
-        /// <item><description><para>For hour-level data, the start time is obtained by comparing the time that is specified by the StartTime parameter and two days earlier of the time that is specified by the EndTime parameter. The earlier one of the compared points in time is used as the start time.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The end time for querying the metric.</para>
+        /// <para>The system automatically limits the query start time (query window size) based on data granularity:</para>
+        /// <ol>
+        /// <item><description>Second-level data: The maximum query span is 20 minutes (start time = Max(startTime, EndTime - 20min)).</description></item>
+        /// <item><description>Minute-level data: The maximum query span is 2 hours (start time = Max(startTime, EndTime - 2h)).</description></item>
+        /// <item><description>Hour-level data: The maximum query span is 2 days (start time = Max(startTime, EndTime - 2d)).</description></item>
+        /// </ol>
+        /// <remarks>
+        /// <para>If the specified startTime is earlier than the limit, the system automatically uses the limit as the actual query start time.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2019-01-31 10:10:00</para>
@@ -42,7 +43,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The expression that is used to calculate the query results in real time.</para>
+        /// <para>The expression for real-time computation on existing query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;groupby&quot;:[&quot;userId&quot;,&quot;instanceId&quot;]}</para>
@@ -52,10 +53,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Express { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Default value: 1000. This value indicates that a maximum of 1,000 entries of monitoring data can be returned on each page.</para>
+        /// <para>The number of entries per page for monitoring data. This parameter is used for paged query.</para>
+        /// <para>Default value: 1000, which indicates 1000 entries of monitoring data per page.</para>
         /// <remarks>
-        /// <para>The maximum value of the Length parameter for each request is 1440.</para>
+        /// <para>The maximum value of Length in a single request is 1440.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -66,8 +67,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Length { get; set; }
 
         /// <summary>
-        /// <para>The metric that is used to monitor the cloud service.</para>
-        /// <para>For more information about metric names, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+        /// <para>The metric name of the cloud service.</para>
+        /// <para>For information about metric names, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -79,7 +80,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The namespace of the cloud service.</para>
-        /// <para>For more information about the namespaces of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+        /// <para>For information about namespaces of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,12 +91,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The pagination token.</para>
+        /// <para>The pagination cursor.</para>
         /// <list type="bullet">
-        /// <item><description><para>If the number of results exceeds the maximum number of entries allowed on a single page, a pagination token is returned.</para>
-        /// </description></item>
-        /// <item><description><para>This token can be used as an input parameter to obtain the next page of results. If all results are obtained, no token is returned.</para>
-        /// </description></item>
+        /// <item><description>If the query results that match the filter conditions exceed the page size, a pagination cursor is returned.</description></item>
+        /// <item><description>To retrieve the next page of data, use the returned cursor value as the request parameter until no cursor value is returned, which indicates that all data has been retrieved.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -110,10 +109,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>Valid values: 15, 60, 900, and 3600.</para>
         /// <para>Unit: seconds.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>If this parameter is not specified, monitoring data is queried based on the period in which metric values are reported. The statistical period of metrics (<c>MetricName</c>) varies for each cloud service. The statistical period of metrics is displayed in the <c>MinPeriods</c> column on the <b>Metrics</b> page for each cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</description></item>
+        /// <item><description>If you do not set the statistical period, monitoring data is queried based on the reporting period that was specified when the metric was registered.<list type="bullet">
+        /// <item><description>The statistical period varies by metric (<c>MetricName</c>) for each cloud service. For more information, see the <c>Min Periods</c> column on the metric list page of the target cloud service in <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</description></item>
         /// </list>
+        /// </description></item>
+        /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -127,7 +129,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query monitoring data.</para>
+        /// <para>The start time.</para>
+        /// <para>Two formats are supported: 1. A UNIX timestamp string in milliseconds (ms), which represents the number of milliseconds elapsed since 1970-01-01 00:00:00 UTC. 2. A time string in the ISO 8601 format of YYYY-MM-DDThh:mm:ssZ in UTC.</para>
+        /// <remarks>
+        /// <para>The query range uses a left-exclusive and right-inclusive mode. StartTime cannot be equal to or greater than EndTime, and the interval between them must be less than or equal to 31 days.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2019-01-31 10:00:00</para>

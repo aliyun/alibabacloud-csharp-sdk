@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string ContactGroups { get; set; }
 
         /// <summary>
-        /// <para>The effective time range of the alert rule. Valid values: 00:00-23:59.</para>
+        /// <para>The time range during which the alert rule is effective. Valid values: 00:00-23:59.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00:00-23:59</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string EmailSubject { get; set; }
 
         /// <summary>
-        /// <para>The number of alert retries.</para>
+        /// <para>The number of retries for the alert.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The alert level. Valid values:</para>
+        /// <para>The severity level of the alert. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>CRITICAL: critical.</description></item>
         /// <item><description>WARN: warning.</description></item>
@@ -108,9 +108,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Level { get; set; }
 
         /// <summary>
-        /// <para>The metric name.</para>
+        /// <para>The name of the metric.</para>
         /// <remarks>
-        /// <para>For more information about how to obtain the metric name, see <a href="https://help.aliyun.com/document_detail/115005.html">DescribeCustomMetricList</a>.</para>
+        /// <para>For information about how to obtain the metric name, see <a href="https://help.aliyun.com/document_detail/115005.html">DescribeCustomMetricList</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The aggregation period of the custom monitoring data. Unit: seconds. Set the value to 60 or a multiple of 60. Default value: the original reporting period of the custom monitoring data.</para>
+        /// <para>The aggregation period of the custom monitoring data. Unit: seconds. The value must be 60 or a multiple of 60. Default value: the original reporting period of the custom monitoring data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The mute for period. Unit: seconds. Default value: 86400 (1 day).</para>
         /// <remarks>
-        /// <para>If the monitoring data continuously exceeds the alert threshold, only one alert notification is sent within each mute for period.</para>
+        /// <para>If monitoring data continuously exceeds the alert rule threshold, only one alert notification is sent within each mute for period.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public int? SilenceTime { get; set; }
 
         /// <summary>
-        /// <para>The statistical method for alerts.</para>
+        /// <para>The statistical method for the alert.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Threshold { get; set; }
 
         /// <summary>
-        /// <para>The alert callback URL. An HTTP POST request is sent to the specified URL when an alert is triggered.</para>
+        /// <para>The webhook URL that is called when an alert is triggered. A POST request is sent to this URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://www.aliyun.com">https://www.aliyun.com</a></para>

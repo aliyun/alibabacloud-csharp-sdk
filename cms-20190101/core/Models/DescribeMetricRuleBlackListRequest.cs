@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMetricRuleBlackListRequest : TeaModel {
         /// <summary>
-        /// <para>The category of the Alibaba Cloud service. For example, Redis has different editions, such as <c>kvstore_standard</c> (Standard Edition), <c>kvstore_sharding</c> (Cluster Edition), and <c>kvstore_splitrw</c> (Read/write Splitting Edition).</para>
+        /// <para>The category of the Alibaba Cloud service. For example, ApsaraDB for Redis has <c>kvstore_standard</c> (Standard Edition), <c>kvstore_sharding</c> (Cluster Edition), and <c>kvstore_splitrw</c> (read/write splitting Edition).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs</para>
@@ -20,27 +20,25 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the blacklist policies.</para>
+        /// <para>The IDs of the alert blacklist policies.</para>
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
         public List<string> Ids { get; set; }
 
         /// <summary>
-        /// <para>The IDs of instances in the blacklist policy.</para>
-        /// <para>The value of N can be an integer from 0 to 10.</para>
+        /// <para>The instance ID list in the alert blacklist policy.</para>
+        /// <para>Valid values of N: 0 to 10.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The status of the blacklist policy. Valid values:</para>
+        /// <para>The status of the alert blacklist policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: enabled.</para>
-        /// </description></item>
-        /// <item><description><para>false: disabled.</para>
-        /// </description></item>
+        /// <item><description>true: Enabled.</description></item>
+        /// <item><description>false: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,8 +49,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public bool? IsEnable { get; set; }
 
         /// <summary>
-        /// <para>The name of the blacklist policy.</para>
-        /// <para>Fuzzy queries are supported.</para>
+        /// <para>The name of the alert blacklist policy.</para>
+        /// <para>This parameter supports fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Blacklist-01</para>
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The namespace of the Alibaba Cloud service.</para>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Metrics</a>.</para>
+        /// <para>For information about the namespaces of Alibaba Cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service metrics</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs_ecs_dashboard</para>
@@ -73,16 +71,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The order in which to sort the results by time. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>DESC (default): descending order.</para>
-        /// </description></item>
-        /// <item><description><para>ASC: ascending order.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The order in which the query results are sorted by time. Valid values:</para>
+        /// <para>0: ascending order (ASC).</para>
+        /// <para>1: descending order (DESC). This is the default value.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DESC</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]
@@ -100,7 +94,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -115,11 +109,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The scope of the blacklist policy. Valid values:</para>
+        /// <para>The effective scope of the alert blacklist policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>USER: The blacklist policy takes effect only for the current Alibaba Cloud account.</para>
+        /// <item><description><para>USER: The alert blacklist policy takes effect only within the current Alibaba Cloud account.</para>
         /// </description></item>
-        /// <item><description><para>GROUP: The blacklist policy takes effect for the specified application groups.</para>
+        /// <item><description><para>GROUP: The alert blacklist policy takes effect in the specified application groups.</para>
         /// </description></item>
         /// </list>
         /// 

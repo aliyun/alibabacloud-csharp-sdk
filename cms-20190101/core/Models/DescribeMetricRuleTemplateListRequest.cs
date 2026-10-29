@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMetricRuleTemplateListRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to display the history of applying the alert templates to application groups. Valid values:</para>
+        /// <para>Specifies whether to display the history of applying the alert template to application groups. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
+        /// <item><description><para>true: Displays the history.</para>
         /// </description></item>
-        /// <item><description><para>false (default)</para>
+        /// <item><description><para>false: Does not display the history. This is the default value.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public bool? History { get; set; }
 
         /// <summary>
-        /// <para>The keyword of the alert template name.</para>
+        /// <para>The keyword in the alert template name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECS</para>
@@ -46,11 +46,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The sorting order. Valid values:</para>
+        /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true (default): ascending order</para>
+        /// <item><description><para>true: Ascending order. This is the default value.   </para>
         /// </description></item>
-        /// <item><description><para>false: descending order</para>
+        /// <item><description><para>false: Descending order.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -62,11 +62,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public bool? Order { get; set; }
 
         /// <summary>
-        /// <para>The sorting basis. Valid values:</para>
+        /// <para>The sort field. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>gmtMotified: sorts alert templates by modification time</para>
+        /// <item><description><para>gmtMotified: Modification date.  </para>
         /// </description></item>
-        /// <item><description><para>gmtCreate (default): sorts alert templates by creation time</para>
+        /// <item><description><para>gmtCreate: Creation date. This is the default value.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

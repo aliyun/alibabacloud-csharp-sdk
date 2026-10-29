@@ -10,30 +10,40 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class EnableActiveMetricRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The cloud service for which you want to enable initiative alert. Valid values:</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can generate the value of this parameter on the client side. Make sure that the value is unique across different requests. The value can be up to 64 ASCII characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>00000-xxxx-xxxxx--xxxx</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to check the availability of the webhook.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
+        /// <para>The name of the Alibaba Cloud service that supports one-click alert rules. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ECS: Elastic Compute Service (ECS)</para>
-        /// </description></item>
-        /// <item><description><para>rds: ApsaraDB RDS</para>
-        /// </description></item>
-        /// <item><description><para>slb: Server Load Balancer (SLB)</para>
-        /// </description></item>
-        /// <item><description><para>redis_standard: Redis Open-Source Edition (standard architecture)</para>
-        /// </description></item>
-        /// <item><description><para>redis_sharding: Redis Open-Source Edition (cluster architecture)</para>
-        /// </description></item>
-        /// <item><description><para>redis_splitrw: Redis Open-Source Edition (read/write splitting architecture)</para>
-        /// </description></item>
-        /// <item><description><para>mongodb: ApsaraDB for MongoDB of the replica set architecture</para>
-        /// </description></item>
-        /// <item><description><para>mongodb_sharding: ApsaraDB for MongoDB of the sharded cluster architecture</para>
-        /// </description></item>
-        /// <item><description><para>hbase: ApsaraDB for HBase</para>
-        /// </description></item>
-        /// <item><description><para>elasticsearch: Elasticsearch</para>
-        /// </description></item>
-        /// <item><description><para>opensearch: OpenSearch</para>
-        /// </description></item>
+        /// <item><description>ecs: Elastic Compute Service (ECS).</description></item>
+        /// <item><description>rds: ApsaraDB RDS.</description></item>
+        /// <item><description>slb: Server Load Balancer (SLB).</description></item>
+        /// <item><description>redis_standard: Standard architecture of open-source Redis.</description></item>
+        /// <item><description>redis_sharding: Cluster architecture of open-source Redis.</description></item>
+        /// <item><description>redis_splitrw: Read/write splitting architecture of open-source Redis.</description></item>
+        /// <item><description>mongodb: ApsaraDB for MongoDB (replica set).</description></item>
+        /// <item><description>mongodb_sharding: ApsaraDB for MongoDB (sharded cluster).</description></item>
+        /// <item><description>hbase: ApsaraDB for HBase.</description></item>
+        /// <item><description>elasticsearch: Elasticsearch.</description></item>
+        /// <item><description>opensearch: OpenSearch.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

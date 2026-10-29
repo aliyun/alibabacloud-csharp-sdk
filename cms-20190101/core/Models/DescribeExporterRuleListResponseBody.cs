@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:  </para>
+        /// <para>Indicates whether the request was successful. Valid values:  </para>
         /// <list type="bullet">
         /// <item><description><c>true</c>: Successful.</description></item>
         /// <item><description><c>false</c>: Failed.</description></item>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>

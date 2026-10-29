@@ -16,9 +16,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The names of the event rules to enable.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ruleName1</para>
         /// </summary>
         [NameInMap("RuleNames")]
         [Validation(Required=false)]

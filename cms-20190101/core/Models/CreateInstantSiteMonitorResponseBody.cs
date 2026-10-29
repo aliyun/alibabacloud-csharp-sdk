@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <remarks>
-        /// <para>A value of 200 indicates that the call is successful.</para>
+        /// <para>A value of 200 indicates success.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The results of the one-time detection task.</para>
+        /// <para>The result list of the one-time synthetic monitoring task creation.</para>
         /// </summary>
         [NameInMap("CreateResultList")]
         [Validation(Required=false)]
         public List<CreateInstantSiteMonitorResponseBodyCreateResultList> CreateResultList { get; set; }
         public class CreateInstantSiteMonitorResponseBodyCreateResultList : TeaModel {
             /// <summary>
-            /// <para>The ID of the detection task.</para>
+            /// <para>The ID of the synthetic monitoring task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2c8dbdf9-a3ab-46a1-85a4-f094965e****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The name of the detection task.</para>
+            /// <para>The name of the synthetic monitoring task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>task1</para>
@@ -74,10 +74,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The operation was successful.</para>
-        /// </description></item>
-        /// <item><description><para>false: The operation failed.</para>
-        /// </description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

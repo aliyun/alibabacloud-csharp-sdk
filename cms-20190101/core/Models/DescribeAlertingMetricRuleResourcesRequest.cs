@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeAlertingMetricRuleResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Queries the alerts that were triggered before the specified time. Timestamps in milliseconds are supported.</para>
+        /// <para>Queries alerts that occurred before this point in time. The value is a millisecond-level timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1698827400000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string AlertBeforeTime { get; set; }
 
         /// <summary>
-        /// <para>The dimensions that specify the resources whose monitoring data you want to query.</para>
+        /// <para>The dimension map used to query monitoring data of a specified resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;userId\&quot;:\&quot;120886317861****\&quot;,\&quot;region\&quot;:\&quot;cn-huhehaote\&quot;,\&quot;queue\&quot;:\&quot;test-0128\&quot;}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Dimensions { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application group. For information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</para>
+        /// <para>The ID of the application group. For more information about how to query application group IDs, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7671****</para>
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The namespace of the cloud service.</para>
-        /// <para>For more information about the namespaces of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+        /// <para>The data namespace of the Alibaba Cloud service.</para>
+        /// <para>For more information about how to obtain the data namespace of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs_mns_new</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number. </para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the alert rule. For information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</para>
+        /// <para>The ID of the alert rule. For more information about how to query alert rule IDs, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>putNewAlarm_user_7e78d765-0e3e-4671-ba6d-7ce39108****</para>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <remarks>
-        /// <para>The status code 200 indicates that the request was successful.</para>
+        /// <para>200 indicates success.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,21 +43,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details about the resource quotas of CloudMonitor.</para>
+        /// <para>The quota details of CloudMonitor.</para>
         /// </summary>
         [NameInMap("ResourceQuota")]
         [Validation(Required=false)]
         public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota ResourceQuota { get; set; }
         public class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuota : TeaModel {
             /// <summary>
-            /// <para>The details about the quota of API calls.</para>
+            /// <para>The API quota.</para>
             /// </summary>
             [NameInMap("Api")]
             [Validation(Required=false)]
             public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi Api { get; set; }
             public class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaApi : TeaModel {
                 /// <summary>
-                /// <para>The total quota of API calls. Unit: 10,000 calls.</para>
+                /// <para>The total API quota. Unit: 10,000 calls.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>500</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? QuotaLimit { get; set; }
 
                 /// <summary>
-                /// <para>The quota of API calls in your resource plan. Unit: 10,000 calls.</para>
+                /// <para>The API quota included in the plan. Unit: 10,000 calls.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>500</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? QuotaPackage { get; set; }
 
                 /// <summary>
-                /// <para>The used quota of API calls in your resource plan. Unit: calls.</para>
+                /// <para>The used API quota in the plan. Unit: calls.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9987</para>
@@ -89,14 +89,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The details about the quota for custom monitoring.</para>
+            /// <para>The quota of custom monitoring.</para>
             /// </summary>
             [NameInMap("CustomMonitor")]
             [Validation(Required=false)]
             public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaCustomMonitor CustomMonitor { get; set; }
             public class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaCustomMonitor : TeaModel {
                 /// <summary>
-                /// <para>The total quota of the time series for custom monitoring.</para>
+                /// <para>The total quota of custom monitoring time series. Unit: time series.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1200</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? QuotaLimit { get; set; }
 
                 /// <summary>
-                /// <para>The quota of the time series for custom monitoring in your resource plan.</para>
+                /// <para>The quota of custom monitoring time series included in the plan. Unit: time series.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? QuotaPackage { get; set; }
 
                 /// <summary>
-                /// <para>The used quota of the time series for custom monitoring in your resource plan.</para>
+                /// <para>The used quota of custom monitoring time series in the plan. Unit: time series.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8</para>
@@ -128,14 +128,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The details about the quota of Hybrid Cloud Monitoring.</para>
+            /// <para>The quota details of Hybrid Cloud Monitoring.</para>
             /// </summary>
             [NameInMap("EnterpriseQuota")]
             [Validation(Required=false)]
             public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota EnterpriseQuota { get; set; }
             public class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEnterpriseQuota : TeaModel {
                 /// <summary>
-                /// <para>The ID of the instance monitored by Hybrid Cloud Monitoring.</para>
+                /// <para>The instance ID of Hybrid Cloud Monitoring.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cms_enterprise_public_cn-7mz27pd****</para>
@@ -157,14 +157,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The details about the quota for event monitoring.</para>
+            /// <para>The quota of event monitoring.</para>
             /// </summary>
             [NameInMap("EventMonitor")]
             [Validation(Required=false)]
             public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEventMonitor EventMonitor { get; set; }
             public class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaEventMonitor : TeaModel {
                 /// <summary>
-                /// <para>The total quota of events that can be reported in event monitoring. The total quota is the value that is multiplied by 10,000.</para>
+                /// <para>The total quota of event monitoring. Unit: 10,000 events.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>55</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? QuotaLimit { get; set; }
 
                 /// <summary>
-                /// <para>The quota of events that can be reported in event monitoring in your resource plan. The total quota is the value that is multiplied by 10,000.</para>
+                /// <para>The quota of event monitoring included in the plan. Unit: 10,000 events.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? QuotaPackage { get; set; }
 
                 /// <summary>
-                /// <para>The used quota of events that can be reported in event monitoring in your resource plan. The total quota is the value that is multiplied by 10,000.</para>
+                /// <para>The used quota of event monitoring in the plan. Unit: 10,000 events.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The time when the resource plan expires.</para>
+            /// <para>The expiration time of the plan. The time follows the ISO 8601 standard in the YYYY-MM-DD format. The default time zone is UTC+8.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-02-28</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource plan.</para>
+            /// <para>The subscription plan ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cms_edition-cn-n6w20rn****</para>
@@ -216,14 +216,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The details about the quota for log monitoring.</para>
+            /// <para>The quota of Log Monitoring.</para>
             /// </summary>
             [NameInMap("LogMonitor")]
             [Validation(Required=false)]
             public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor LogMonitor { get; set; }
             public class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaLogMonitor : TeaModel {
                 /// <summary>
-                /// <para>The total quota of processed log data in log monitoring. Unit: MB/min.</para>
+                /// <para>The total quota of Log Monitoring. Unit: MByte/Min.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>150</para>
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? QuotaLimit { get; set; }
 
                 /// <summary>
-                /// <para>The quota of processed log data in log monitoring in your resource plan. Unit: MB/min.</para>
+                /// <para>The quota of Log Monitoring included in the plan. Unit: MByte/Min.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>150</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? QuotaPackage { get; set; }
 
                 /// <summary>
-                /// <para>The used quota of processed log data in log monitoring in your resource plan. Unit: MB/min.</para>
+                /// <para>The used quota of Log Monitoring in the plan. Unit: MByte/Min.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>80</para>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The details about the quota of alert phone calls.</para>
+            /// <para>The quota of alert phone call packages.</para>
             /// </summary>
             [NameInMap("Phone")]
             [Validation(Required=false)]
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? QuotaLimit { get; set; }
 
                 /// <summary>
-                /// <para>The quota of alert phone calls in your resource plan. Unit: calls.</para>
+                /// <para>The quota of alert phone call packages. Unit: calls.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>500</para>
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? QuotaPackage { get; set; }
 
                 /// <summary>
-                /// <para>The used quota of alert phone calls in your resource plan. Unit: calls.</para>
+                /// <para>The used quota of alert phone call packages. Unit: calls.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -294,7 +294,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The details about the quota of alert text messages.</para>
+            /// <para>The quota of alert text message packages.</para>
             /// </summary>
             [NameInMap("SMS")]
             [Validation(Required=false)]
@@ -311,7 +311,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? QuotaLimit { get; set; }
 
                 /// <summary>
-                /// <para>The quota of alert text messages in your resource plan. Unit: messages.</para>
+                /// <para>The quota of alert text message packages. Unit: messages.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>500</para>
@@ -321,7 +321,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? QuotaPackage { get; set; }
 
                 /// <summary>
-                /// <para>The used quota of alert text messages in your resource plan. Unit: messages.</para>
+                /// <para>The used quota of alert text message packages. Unit: messages.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>38</para>
@@ -333,14 +333,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The quota of browser detection tasks.</para>
+            /// <para>The quota of browser-based monitoring tasks.</para>
             /// </summary>
             [NameInMap("SiteMonitorBrowser")]
             [Validation(Required=false)]
             public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorBrowser SiteMonitorBrowser { get; set; }
             public class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorBrowser : TeaModel {
                 /// <summary>
-                /// <para>The total quota of browser detection tasks.</para>
+                /// <para>The total quota of browser-based monitoring tasks. Unit: tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -350,7 +350,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? QuotaLimit { get; set; }
 
                 /// <summary>
-                /// <para>The quota of browser detection tasks in your resource plan.</para>
+                /// <para>The quota of browser-based monitoring tasks included in the plan. Unit: tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -360,7 +360,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? QuotaPackage { get; set; }
 
                 /// <summary>
-                /// <para>The used quota of browser detection tasks in your resource plan.</para>
+                /// <para>The used quota of browser-based monitoring tasks in the plan. Unit: tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>15</para>
@@ -372,7 +372,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The details about the quota of ECS detection points for site monitoring.</para>
+            /// <para>The quota of ECS detection points for site monitoring.</para>
             /// </summary>
             [NameInMap("SiteMonitorEcsProbe")]
             [Validation(Required=false)]
@@ -381,7 +381,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// <para>The total quota of ECS detection points for site monitoring.</para>
                 /// <remarks>
-                /// <para>The value indicates the maximum number of ECS detection points that you can select for a site monitoring task.</para>
+                /// <para>The maximum number of ECS detection points that can be selected for a single site monitoring task.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -392,7 +392,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? QuotaLimit { get; set; }
 
                 /// <summary>
-                /// <para>The quota of ECS detection points for site monitoring in your resource plan.</para>
+                /// <para>The quota of ECS detection points for site monitoring included in the plan.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -402,9 +402,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? QuotaPackage { get; set; }
 
                 /// <summary>
-                /// <para>The used quota of ECS detection points for site monitoring in your resource plan.</para>
+                /// <para>The used quota of ECS detection points for site monitoring in the plan.</para>
                 /// <remarks>
-                /// <para>The value indicates the total number of ECS detection points that are used by existing site monitoring tasks.</para>
+                /// <para>The total number of ECS detection points across all site monitoring tasks that have been created.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -417,14 +417,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The quota of mobile detection tasks.</para>
+            /// <para>The quota of mobile monitoring tasks.</para>
             /// </summary>
             [NameInMap("SiteMonitorMobile")]
             [Validation(Required=false)]
             public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorMobile SiteMonitorMobile { get; set; }
             public class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorMobile : TeaModel {
                 /// <summary>
-                /// <para>The total quota of mobile detection tasks.</para>
+                /// <para>The total quota of mobile monitoring tasks. Unit: tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -434,7 +434,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? QuotaLimit { get; set; }
 
                 /// <summary>
-                /// <para>The quota of mobile detection tasks in your resource plan.</para>
+                /// <para>The quota of mobile monitoring tasks included in the plan. Unit: tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -444,7 +444,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? QuotaPackage { get; set; }
 
                 /// <summary>
-                /// <para>The used quota of mobile detection tasks in your resource plan.</para>
+                /// <para>The used quota of mobile monitoring tasks in the plan. Unit: tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>15</para>
@@ -456,7 +456,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The details about the quota of carrier detection points for site monitoring.</para>
+            /// <para>The quota of carrier detection points for site monitoring.</para>
             /// </summary>
             [NameInMap("SiteMonitorOperatorProbe")]
             [Validation(Required=false)]
@@ -473,7 +473,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? QuotaLimit { get; set; }
 
                 /// <summary>
-                /// <para>The quota of carrier detection points for site monitoring in your resource plan.</para>
+                /// <para>The quota of carrier detection points for site monitoring included in the plan.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -483,7 +483,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? QuotaPackage { get; set; }
 
                 /// <summary>
-                /// <para>The used quota of carrier detection points for site monitoring in your resource plan.</para>
+                /// <para>The used quota of carrier detection points for site monitoring in the plan.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -502,7 +502,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorTask SiteMonitorTask { get; set; }
             public class DescribeMonitorResourceQuotaAttributeResponseBodyResourceQuotaSiteMonitorTask : TeaModel {
                 /// <summary>
-                /// <para>The total quota of site monitoring tasks.</para>
+                /// <para>The total quota of site monitoring tasks. Unit: tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>25</para>
@@ -512,7 +512,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? QuotaLimit { get; set; }
 
                 /// <summary>
-                /// <para>The quota of site monitoring tasks in your resource plan.</para>
+                /// <para>The quota of site monitoring tasks included in the plan. Unit: tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -522,7 +522,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? QuotaPackage { get; set; }
 
                 /// <summary>
-                /// <para>The used quota of site monitoring tasks in your resource plan.</para>
+                /// <para>The used quota of site monitoring tasks in the plan. Unit: tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>15</para>
@@ -536,12 +536,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The current edition of CloudMonitor. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>free: Free Edition</para>
-            /// </description></item>
-            /// <item><description><para>pro: Pro Edition</para>
-            /// </description></item>
-            /// <item><description><para>cms_post: pay-as-you-go</para>
-            /// </description></item>
+            /// <item><description>free: Free Edition.</description></item>
+            /// <item><description>pro: Pro Edition.</description></item>
+            /// <item><description>cms_post: Pay-as-you-go.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

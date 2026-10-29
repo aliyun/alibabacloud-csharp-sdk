@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSiteMonitorListRequest : TeaModel {
         /// <summary>
-        /// <para>The type of detection points used by the task. Valid values:</para>
+        /// <para>The type of monitoring nodes used by the task. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>PC: PC-based detection points.</para>
         /// </description></item>
-        /// <item><description><para>MOBILE: mobile-based detection points.</para>
+        /// <item><description><para>MOBILE: Mobile-based detection points.</para>
         /// </description></item>
-        /// <item><description><para>FC: internal detection points.</para>
+        /// <item><description><para>FC: Internal detection points.</para>
         /// </description></item>
         /// </list>
         /// 

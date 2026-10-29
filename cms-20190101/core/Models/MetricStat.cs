@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class MetricStat : TeaModel {
         /// <summary>
-        /// <para>The additional information about the monitored object (instance).</para>
+        /// <para>The additional information of the monitored object (instance).</para>
         /// </summary>
         [NameInMap("Associated")]
         [Validation(Required=false)]
         public Dictionary<string, string> Associated { get; set; }
 
         /// <summary>
-        /// <para>The dimension information that is used to identify the monitored object (instance).</para>
+        /// <para>The dimension information used to identify the monitored object (instance).</para>
         /// </summary>
         [NameInMap("Dimensions")]
         [Validation(Required=false)]
         public List<Dimension> Dimensions { get; set; }
 
         /// <summary>
-        /// <para>The recorded time of the monitoring data. Unit: milliseconds. For non-raw data (aggregated data), the value of LogTime is NULL.</para>
+        /// <para>The recording time of the monitoring data, in milliseconds. For non-raw data (aggregated data), LogTime is null.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1683686550073</para>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public long? LogTime { get; set; }
 
         /// <summary>
-        /// <para>The measured value of the metric. The parameter contains multiple values by default.</para>
+        /// <para>The measurement values of the metric (multi-value mode by default).</para>
         /// </summary>
         [NameInMap("Measurements")]
         [Validation(Required=false)]
         public Dictionary<string, object> Measurements { get; set; }
 
         /// <summary>
-        /// <para>The metric that is used to monitor the cloud service.</para>
+        /// <para>The name of the metric for the cloud service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cpu_idle</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Metric { get; set; }
 
         /// <summary>
-        /// <para>The namespace of the cloud service.</para>
+        /// <para>The data namespace of the cloud service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs_ecs_dashboard</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The time interval based on which the metric value is measured.</para>
+        /// <para>The time interval of the metric.</para>
         /// <para>Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The timestamp of the monitoring data. Unit: milliseconds.</para>
+        /// <para>The timestamp of the monitoring data, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1641454680000</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeAlertLogHistogramResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of alert logs that were generated during each interval of a time period.</para>
+        /// <para>The histogram list of alert history.</para>
         /// </summary>
         [NameInMap("AlertLogHistogramList")]
         [Validation(Required=false)]
         public List<DescribeAlertLogHistogramResponseBodyAlertLogHistogramList> AlertLogHistogramList { get; set; }
         public class DescribeAlertLogHistogramResponseBodyAlertLogHistogramList : TeaModel {
             /// <summary>
-            /// <para>The number of alert logs.</para>
+            /// <para>The number of alert history entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The start timestamp of the queried alert logs.</para>
+            /// <para>The start timestamp for querying alert history.</para>
             /// <para>Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public long? From { get; set; }
 
             /// <summary>
-            /// <para>The end timestamp of the queried alert logs.</para>
+            /// <para>The end timestamp for querying alert history.</para>
             /// <para>Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
@@ -51,9 +51,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The status code.</para>
         /// <remarks>
-        /// <para>The status code 200 indicates that the request was successful.</para>
+        /// <para>The value 200 indicates success.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -84,11 +84,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
+        /// <item><description><para>true: Successful.</para>
         /// </description></item>
-        /// <item><description><para>false</para>
+        /// <item><description><para>false: Failed.</para>
         /// </description></item>
         /// </list>
         /// 

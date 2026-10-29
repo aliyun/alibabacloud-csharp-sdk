@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteSiteMonitorsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to delete the alert rules associated with the tasks. Valid values:</para>
+        /// <para>Specifies whether to delete alert rules when you delete the tasks. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>true (default): Deletes the alert rules.</para>
         /// </description></item>

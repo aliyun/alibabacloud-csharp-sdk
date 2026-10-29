@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string City { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return only detection points in data centers.</para>
+        /// <para>Specifies whether to query only IDC detection points.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public bool? IdcProbe { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return only IPv4 detection points.</para>
+        /// <para>Specifies whether to show only IPv4 nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public bool? Ipv4 { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return only IPv6 detection points.</para>
+        /// <para>Specifies whether to show only IPv6 nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public bool? Ipv6 { get; set; }
 
         /// <summary>
-        /// <para>The name or ID of the carrier.</para>
+        /// <para>The name or ID of the carrier detection point.</para>
         /// 
         /// <b>Example:</b>
         /// <para>China Unicom</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Isp { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return only last-mile detection points.</para>
+        /// <para>Specifies whether to query only Lastmile residential broadband nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public bool? LmProbe { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return only mobile detection points.</para>
+        /// <para>Specifies whether to query only mobile detection points.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -86,10 +86,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Specifies whether to return all detection points. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>false (default): Returns the detection points that are available to you.</para>
-        /// </description></item>
-        /// <item><description><para>true: Returns all detection points.</para>
-        /// </description></item>
+        /// <item><description>false: Returns only the detection points available to the user. This is the default value.</description></item>
+        /// <item><description>true: Returns all detection points.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

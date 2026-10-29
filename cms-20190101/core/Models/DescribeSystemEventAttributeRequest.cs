@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSystemEventAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query.</para>
-        /// <para>The value must be a UNIX timestamp. It is the number of seconds that have elapsed since 00:00:00 UTC, January 1, 1970.</para>
+        /// <para>The end time.</para>
+        /// <para>The value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1552221584949</para>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The type of the system event.</para>
+        /// <para>The event type.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the types of system events.</para>
+        /// <para>For more information about valid values for the event type, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -44,14 +44,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The level of the system event. Valid values:</para>
+        /// <para>The event level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>CRITICAL: critical</para>
-        /// </description></item>
-        /// <item><description><para>WARN: warning</para>
-        /// </description></item>
-        /// <item><description><para>INFO: information</para>
-        /// </description></item>
+        /// <item><description>CRITICAL: critical.</description></item>
+        /// <item><description>WARN: warning.</description></item>
+        /// <item><description>INFO: information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,9 +59,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Level { get; set; }
 
         /// <summary>
-        /// <para>The name of the system event.</para>
+        /// <para>The event name.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the names of system events.</para>
+        /// <para>For more information about valid values for the event name, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -75,7 +72,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// <para>Valid values: 1 to 100000000.</para>
         /// <para>Default value: 1.</para>
         /// 
@@ -87,9 +84,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// <para>Valid values: 1 to 100.</para>
-        /// <para>Default value: 10</para>
+        /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -99,9 +96,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The abbreviation of the service name.</para>
+        /// <para>The abbreviation of the product name.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the abbreviations of service names.</para>
+        /// <para>For more information about valid values for the product name abbreviation, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -116,11 +113,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The keywords that are used to search for the system event. Valid values:</para>
+        /// <para>The keywords used to search event content. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If you want to search for the system event whose content contains a and b, set the value to <c>a and b</c>.</para>
+        /// <item><description><para>If the event content you want to search for includes both a and b, you can search for <c>a and b</c>.</para>
         /// </description></item>
-        /// <item><description><para>If you want to search for the system event whose content contains a or b, set the value to <c>a or b</c>.</para>
+        /// <item><description><para>If the event content you want to search for includes either a or b, you can search for <c>a or b</c>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -132,8 +129,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string SearchKeywords { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
-        /// <para>The value must be a UNIX timestamp. It is the number of seconds that have elapsed since 00:00:00 UTC, January 1, 1970.</para>
+        /// <para>The start time.</para>
+        /// <para>The value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1552199984949</para>
@@ -143,9 +140,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the system event.</para>
+        /// <para>The event status.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the statuses of system events.</para>
+        /// <para>For more information about valid values for the event status, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

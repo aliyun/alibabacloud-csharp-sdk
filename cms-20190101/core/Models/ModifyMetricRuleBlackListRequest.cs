@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class ModifyMetricRuleBlackListRequest : TeaModel {
         /// <summary>
-        /// <para>The category of the cloud service. For example, ApsaraDB for Redis supports the standard architecture, the cluster architecture, and the read/write splitting architecture. In this case, the valid values of this parameter for ApsaraDB for Redis include <c>kvstore_standard</c>, <c>kvstore_sharding</c>, and <c>kvstore_splitrw</c>.</para>
+        /// <para>The category of the Alibaba Cloud service. For example, Redis has categories such as <c>kvstore_standard</c> (Standard Edition), <c>kvstore_sharding</c> (Cluster Edition), and <c>kvstore_splitrw</c> (Read/Write Splitting Edition).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,16 +21,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The time range within which the blacklist policy is effective. Take note of the following information:</para>
+        /// <para>The effective period of the alert blacklist policy. The implications of the settings for this parameter are as follows:</para>
         /// <list type="bullet">
-        /// <item><description><para>If you do not configure this parameter, the blacklist policy is permanently effective.</para>
+        /// <item><description><para>If you do not configure the settings for this parameter, the alert blacklist policy is permanently valid.</para>
         /// </description></item>
-        /// <item><description><para>If you configure this parameter, the blacklist policy is effective only within the specified time range. Examples:</para>
+        /// <item><description><para>If you configure the settings for this parameter, the blacklist policy is valid only within the specified time range. The following examples show two formats for this parameter:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>03:00-04:59</c>: The blacklist policy is effective from 03:00 to 05:00 local time. 05:00 local time is excluded.</para>
-        /// </description></item>
-        /// <item><description><para><c>03:00-04:59 UTC+0700</c>: The blacklist policy is effective from 03:00 to 05:00 (UTC+7). 05:00 (UTC+7) is excluded.</para>
-        /// </description></item>
+        /// <item><description><c>03:00-04:59</c>: The alert blacklist policy is valid from 03:00 to 05:00 (excluding 05:00) local time.</description></item>
+        /// <item><description><c>03:00-04:59 UTC+0700</c>: The alert blacklist policy is valid from 03:00 to 05:00 (excluding 05:00) UTC+7.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -43,7 +41,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string EffectiveTime { get; set; }
 
         /// <summary>
-        /// <para>The timestamp when the blacklist policy expires.</para>
+        /// <para>The end timestamp of the effective period for the alert blacklist policy.</para>
         /// <para>Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +52,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string EnableEndTime { get; set; }
 
         /// <summary>
-        /// <para>The timestamp when the blacklist policy starts to take effect.</para>
+        /// <para>The start timestamp of the effective period for the alert blacklist policy.</para>
         /// <para>Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
@@ -65,8 +63,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string EnableStartTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the blacklist policy.</para>
-        /// <para>For information about how to obtain the ID of a blacklist policy, see <a href="https://help.aliyun.com/document_detail/457257.html">DescribeMetricRuleBlackList</a>.</para>
+        /// <para>The ID of the alert blacklist policy.</para>
+        /// <para>For more information about how to obtain the ID of an alert blacklist policy, see <a href="https://help.aliyun.com/document_detail/457257.html">DescribeMetricRuleBlackList</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +75,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the instances that belong to the specified cloud service.</para>
+        /// <para>The list of instances of the specified Alibaba Cloud service in the alert blacklist policy.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Instances")]
@@ -85,11 +83,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public List<string> Instances { get; set; }
 
         /// <summary>
-        /// <para>The metrics of the instance.</para>
+        /// <para>The monitoring metrics of the instances.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you do not configure this parameter, the blacklist policy applies to all metrics of the specified cloud service.</para>
+        /// <item><description><para>If you do not configure the settings for this parameter, the alert blacklist policy applies to all monitoring metrics of the specified Alibaba Cloud service.</para>
         /// </description></item>
-        /// <item><description><para>If you configure this parameter, the blacklist policy applies only to the current metric.</para>
+        /// <item><description><para>If you configure the settings for this parameter, the blacklist policy applies only to the current monitoring metrics.</para>
         /// </description></item>
         /// </list>
         /// </summary>
@@ -98,7 +96,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public List<ModifyMetricRuleBlackListRequestMetrics> Metrics { get; set; }
         public class ModifyMetricRuleBlackListRequestMetrics : TeaModel {
             /// <summary>
-            /// <para>The name of the metric.</para>
+            /// <para>The name of the monitoring metrics.</para>
             /// <para>Valid values of N: 1 to 10.</para>
             /// <para>This parameter is required.</para>
             /// 
@@ -110,7 +108,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string MetricName { get; set; }
 
             /// <summary>
-            /// <para>The extended dimension of the instance. For example, <c>{&quot;device&quot;:&quot;C:&quot;}</c> specifies that the blacklist policy is applied to all C disks of the specified Elastic Compute Service (ECS) instance.</para>
+            /// <para>The extended dimension information of the instance. For example, <c>{&quot;device&quot;:&quot;C:&quot;}</c> indicates that the blacklist policy applies to all C drives of the ECS instance of the Alibaba Cloud service.</para>
             /// <para>Valid values of N: 1 to 10.</para>
             /// 
             /// <b>Example:</b>
@@ -123,7 +121,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>The name of the blacklist policy.</para>
+        /// <para>The name of the alert blacklist policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -134,8 +132,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The namespace of the cloud service.</para>
-        /// <para>For more information about the namespaces of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+        /// <para>The data namespace of the cloud service.</para>
+        /// <para>For more information about the namespaces of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -150,11 +148,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The effective scope of the blacklist policy. Valid values:</para>
+        /// <para>The effective scope of the alert blacklist policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>USER: The blacklist policy takes effect only within the current Alibaba Cloud account.</para>
+        /// <item><description><para>USER: The alert blacklist policy takes effect only within the current Alibaba Cloud account.</para>
         /// </description></item>
-        /// <item><description><para>GROUP (default): The blacklist policy takes effect only within the specified application group. For information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</para>
+        /// <item><description><para>GROUP (default): The alert blacklist policy takes effect within the specified application group. You must specify an application group.
+        /// For more information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -166,7 +165,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string ScopeType { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the application groups.</para>
+        /// <para>The list of application group IDs.</para>
         /// <remarks>
         /// <para>This parameter is required only when <c>ScopeType</c> is set to <c>GROUP</c>.</para>
         /// </remarks>

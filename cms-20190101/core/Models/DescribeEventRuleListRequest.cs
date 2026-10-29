@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Specifies whether to enable the event-triggered alert rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true (default)</para>
+        /// <item><description><para>true: enabled. This is the default value.</para>
         /// </description></item>
-        /// <item><description><para>false</para>
+        /// <item><description><para>false: disabled.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public bool? IsEnable { get; set; }
 
         /// <summary>
-        /// <para>The prefix in the name of the event-triggered alert rule.</para>
+        /// <para>The prefix of the event-triggered alert rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -46,8 +46,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string NamePrefix { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -57,8 +56,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Pages start from page 1. Default value: 10.</para>
+        /// <para>The number of entries to return on each page. Minimum value: 1. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The number of rows affected when the Event-triggered Alert Rule is created or modified.</para>
+        /// <para>The number of rows affected when the event-triggered alert rule is created or modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

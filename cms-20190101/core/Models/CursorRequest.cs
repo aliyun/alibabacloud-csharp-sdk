@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CursorRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query.</para>
+        /// <para>The end timestamp.</para>
         /// <para>Unit: milliseconds.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Unix timestamp: the number of milliseconds that have elapsed since 00:00:00 on January 1, 1970. The value is in the YYYY-MM-DDThh:mm:ssZ format. For example, 2023-01-01T00:00:00Z indicates 00:00:00 on January 1, 2023 (GMT).</description></item>
+        /// <item><description>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970. The format YYYY-MM-DDThh:mm:ssZ is supported. Example: 2023-01-01T00:00:00Z, which specifies 00:00:00 on January 1, 2023 (GMT).</description></item>
         /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>If you do not specify an end time, the end time is unlimited. You do not need to specify this parameter when you export data in real time.</description></item>
-        /// <item><description>The time to live (TTL) of monitoring data varies based on the statistical granularity in CloudMonitor. Configure a proper time range based on the TTL of the data that corresponds to the <c>Period</c> parameter.</description></item>
+        /// <item><description>If you do not specify the end time, the end time is considered infinite. In real-time export scenarios, you can leave this parameter empty.</description></item>
+        /// <item><description>The TTL of monitoring data in CloudMonitor varies with the time granularity. Refer to the data TTL corresponding to the Period request parameter to set a reasonable time interval.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public List<Matcher> Matchers { get; set; }
 
         /// <summary>
-        /// <para>The metric name of the cloud service.</para>
-        /// <para>For information about how to obtain the metric name of a cloud service, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+        /// <para>The name of the metric for the cloud service.</para>
+        /// <para>For more information about how to obtain the metric name of a cloud service, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The data namespace of the cloud service.</para>
-        /// <para>For information about how to obtain the data namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+        /// <para>For more information about how to obtain the data namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,10 +61,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The statistical period of the metric.</para>
+        /// <para>The time interval of the metric.</para>
         /// <para>Unit: seconds.</para>
         /// <remarks>
-        /// <para>The statistical period of a metric is typically 60 seconds. For special values, see the <c>Period</c> parameter in <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+        /// <para>The time interval of a metric is typically 60 seconds. For special values, see the Period parameter in <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -76,10 +76,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
-        /// <para>The value is in the YYYY-MM-DDThh:mm:ssZ format. For example, 2023-01-01T00:00:00Z indicates 00:00:00 on January 1, 2023 (GMT).</para>
+        /// <para>The start timestamp.</para>
+        /// <para>The format YYYY-MM-DDThh:mm:ssZ is supported. Example: 2023-01-01T00:00:00Z, which specifies 00:00:00 on January 1, 2023 (GMT).</para>
         /// <remarks>
-        /// <para>The time to live (TTL) of monitoring data varies based on the statistical granularity in CloudMonitor. Configure a proper time range based on the TTL of the data that corresponds to the <c>Period</c> parameter.</para>
+        /// <para>The time-to-live (TTL) of monitoring data in CloudMonitor varies with the time granularity. Refer to the data TTL corresponding to the Period request parameter to set a reasonable time interval.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

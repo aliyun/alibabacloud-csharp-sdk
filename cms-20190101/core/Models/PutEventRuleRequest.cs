@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutEventRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the Event-triggered Alert Rule.</para>
+        /// <para>The description of the event-triggered alert rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Event alert test</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The pattern of the Event-triggered Alert Rule.</para>
+        /// <para>The pattern of the event-triggered alert rule.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("EventPattern")]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string CustomFilters { get; set; }
 
             /// <summary>
-            /// <para>The type of the Event-triggered Alert Rule. Valid values of N: 1 to 50. Valid values:</para>
+            /// <para>The type of the event-triggered alert rule. Valid values of N: 1 to 50. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>StatusNotification: fault notification.</para>
             /// </description></item>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<string> EventTypeList { get; set; }
 
             /// <summary>
-            /// <para>The level of the Event-triggered Alert Rule. Valid values of N: 1 to 50. Valid values:</para>
+            /// <para>The level of the event-triggered alert rule. Valid values of N: 1 to 50. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>CRITICAL: critical.</para>
             /// </description></item>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<string> LevelList { get; set; }
 
             /// <summary>
-            /// <para>The name of the Event-triggered Alert Rule. Valid values of N: 1 to 50.</para>
+            /// <para>The name of the event-triggered alert rule. Valid values of N: 1 to 50.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Agent_Status_Stopped</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The Alibaba Cloud service type. Valid values of N: 1 to 50.</para>
             /// <remarks>
-            /// <para>For information about the Alibaba Cloud services supported by Event-triggered Alert Rules, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</para>
+            /// <para>For information about the Alibaba Cloud services supported by event-triggered alert rules, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string SQLFilter { get; set; }
 
             /// <summary>
-            /// <para>The status of the Event-triggered Alert Rule. Valid values of N: 1 to 50.</para>
+            /// <para>The status of the event-triggered alert rule. Valid values of N: 1 to 50.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Failed</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>The type of the Event-triggered Alert Rule. Valid values:</para>
+        /// <para>The type of the event-triggered alert rule. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>SYSTEM: system event.</description></item>
         /// <item><description>CUSTOM: custom event.</description></item>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application group to which the Event-triggered Alert Rule belongs.</para>
+        /// <para>The ID of the application group to which the event-triggered alert rule belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7378****</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the Event-triggered Alert Rule.</para>
+        /// <para>The name of the event-triggered alert rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -176,10 +176,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public long? SilenceTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the Event-triggered Alert Rule. Valid values:</para>
+        /// <para>The status of the event-triggered alert rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ENABLED: enabled.</description></item>
-        /// <item><description>DISABLED: disabled.</description></item>
+        /// <item><description>ENABLED: Enabled.</description></item>
+        /// <item><description>DISABLED: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

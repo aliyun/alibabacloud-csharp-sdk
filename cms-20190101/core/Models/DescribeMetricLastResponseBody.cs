@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMetricLastResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code.</para>
         /// <remarks>
-        /// <para>The status code 200 indicates that the request was successful.</para>
+        /// <para>A value of 200 indicates success.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The monitoring data.</para>
+        /// <para>The monitoring data list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;timestamp&quot;:1548777660000,&quot;userId&quot;:&quot;123456789876****&quot;,&quot;instanceId&quot;:&quot;i-abcdefgh12****&quot;,&quot;Minimum&quot;:93.1,&quot;Average&quot;:99.52,&quot;Maximum&quot;:100}]</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token.</para>
+        /// <para>The pagination cursor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxxx</para>
@@ -74,11 +74,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
+        /// <item><description><para>true: Successful.</para>
         /// </description></item>
-        /// <item><description><para>false</para>
+        /// <item><description><para>false: Failed.</para>
         /// </description></item>
         /// </list>
         /// 

@@ -10,11 +10,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteEventRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The names of the event-triggered alert rules to delete.</para>
+        /// <para>The names of the rules to delete.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rule1</para>
         /// </summary>
         [NameInMap("RuleNames")]
         [Validation(Required=false)]

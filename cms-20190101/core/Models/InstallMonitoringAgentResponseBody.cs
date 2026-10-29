@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <remarks>
-        /// <para>A value of 200 indicates that the request was successful.</para>
+        /// <para>A status code of 200 indicates success.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

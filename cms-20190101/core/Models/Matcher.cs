@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Label { get; set; }
 
         /// <summary>
-        /// <para>The matching mode of the metric dimension. Only EQUALS is supported. Default value: EQUALS.</para>
+        /// <para>The matching method for the metric dimension. Only EQUALS is supported. Default value: EQUALS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EQUALS</para>

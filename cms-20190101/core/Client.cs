@@ -21,49 +21,46 @@ namespace AlibabaCloud.SDK.Cms20190101
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"us-west-1", "metrics.us-west-1.aliyuncs.com"},
-                {"us-southeast-1", "metrics.us-southeast-1.aliyuncs.com"},
-                {"us-east-1", "metrics.us-east-1.aliyuncs.com"},
-                {"na-south-1", "metrics.na-south-1.aliyuncs.com"},
-                {"me-east-1", "metrics.me-east-1.aliyuncs.com"},
-                {"me-central-1", "metrics.me-central-1.aliyuncs.com"},
-                {"eu-west-2", "metrics.eu-west-2.aliyuncs.com"},
-                {"eu-west-1", "metrics.eu-west-1.aliyuncs.com"},
-                {"eu-central-1", "metrics.eu-central-1.aliyuncs.com"},
-                {"cn-zhongwei", "metrics.cn-zhongwei.aliyuncs.com"},
-                {"cn-zhengzhou-jva", "metrics.cn-zhengzhou-jva.aliyuncs.com"},
-                {"cn-zhangjiakou", "metrics.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-wulanchabu-gic-1", "metrics.cn-wulanchabu-gic-1.aliyuncs.com"},
-                {"cn-wulanchabu", "metrics.cn-wulanchabu.aliyuncs.com"},
-                {"cn-wuhan-lr", "metrics.cn-wuhan-lr.aliyuncs.com"},
-                {"cn-shenzhen-finance-1", "metrics.cn-shenzhen-finance-1.aliyuncs.com"},
-                {"cn-shenzhen", "metrics.cn-shenzhen.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "metrics.cn-shanghai-finance-1.aliyuncs.com"},
-                {"cn-shanghai", "metrics.cn-shanghai.aliyuncs.com"},
-                {"cn-qingdao", "metrics.cn-qingdao.aliyuncs.com"},
-                {"cn-north-2-gov-1", "metrics.cn-north-2-gov-1.aliyuncs.com"},
-                {"cn-nanjing", "metrics.cn-nanjing.aliyuncs.com"},
-                {"cn-huhehaote", "metrics.cn-huhehaote.aliyuncs.com"},
-                {"cn-hongkong", "metrics.cn-hongkong.aliyuncs.com"},
-                {"cn-heyuan-acdr-1", "metrics.cn-heyuan-acdr-1.aliyuncs.com"},
-                {"cn-heyuan", "metrics.cn-heyuan.aliyuncs.com"},
-                {"cn-hangzhou-finance", "metrics.cn-hangzhou-finance.aliyuncs.com"},
-                {"cn-hangzhou", "metrics.cn-hangzhou.aliyuncs.com"},
-                {"cn-guangzhou", "metrics.cn-guangzhou.aliyuncs.com"},
-                {"cn-fuzhou", "metrics.cn-fuzhou.aliyuncs.com"},
-                {"cn-chengdu", "metrics.cn-chengdu.aliyuncs.com"},
-                {"cn-beijing-finance-1", "metrics.cn-beijing-finance-1.aliyuncs.com"},
                 {"cn-beijing", "metrics.cn-beijing.aliyuncs.com"},
-                {"ap-southeast-8", "metrics.ap-southeast-8.aliyuncs.com"},
-                {"ap-southeast-7", "metrics.ap-southeast-7.aliyuncs.com"},
-                {"ap-southeast-6", "metrics.ap-southeast-6.aliyuncs.com"},
-                {"ap-southeast-5", "metrics.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-3", "metrics.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-2", "metrics.ap-southeast-2.aliyuncs.com"},
-                {"ap-southeast-1", "metrics.ap-southeast-1.aliyuncs.com"},
-                {"ap-south-1", "metrics.ap-south-1.aliyuncs.com"},
+                {"cn-zhengzhou-jva", "metrics.cn-zhengzhou-jva.aliyuncs.com"},
+                {"cn-heyuan", "metrics.cn-heyuan.aliyuncs.com"},
+                {"cn-zhangjiakou", "metrics.cn-zhangjiakou.aliyuncs.com"},
                 {"ap-northeast-2", "metrics.ap-northeast-2.aliyuncs.com"},
                 {"ap-northeast-1", "metrics.ap-northeast-1.aliyuncs.com"},
+                {"ap-southeast-1", "metrics.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-3", "metrics.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-5", "metrics.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-6", "metrics.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-7", "metrics.ap-southeast-7.aliyuncs.com"},
+                {"ap-southeast-8", "metrics.ap-southeast-8.aliyuncs.com"},
+                {"cn-zhongwei", "metrics.cn-zhongwei.aliyuncs.com"},
+                {"cn-wulanchabu", "metrics.cn-wulanchabu.aliyuncs.com"},
+                {"cn-qingdao", "metrics.cn-qingdao.aliyuncs.com"},
+                {"cn-wuhan-lr", "metrics.cn-wuhan-lr.aliyuncs.com"},
+                {"cn-shanghai", "metrics.cn-shanghai.aliyuncs.com"},
+                {"cn-hongkong", "metrics.cn-hongkong.aliyuncs.com"},
+                {"cn-shenzhen", "metrics.cn-shenzhen.aliyuncs.com"},
+                {"cn-chengdu", "metrics.cn-chengdu.aliyuncs.com"},
+                {"cn-guangzhou", "metrics.cn-guangzhou.aliyuncs.com"},
+                {"cn-huhehaote", "metrics.cn-huhehaote.aliyuncs.com"},
+                {"cn-hangzhou", "metrics.cn-hangzhou.aliyuncs.com"},
+                {"us-southeast-1", "metrics.us-southeast-1.aliyuncs.com"},
+                {"eu-west-1", "metrics.eu-west-1.aliyuncs.com"},
+                {"eu-west-2", "metrics.eu-west-2.aliyuncs.com"},
+                {"eu-central-1", "metrics.eu-central-1.aliyuncs.com"},
+                {"us-east-1", "metrics.us-east-1.aliyuncs.com"},
+                {"us-west-1", "metrics.us-west-1.aliyuncs.com"},
+                {"na-south-1", "metrics.na-south-1.aliyuncs.com"},
+                {"me-east-1", "metrics.me-east-1.aliyuncs.com"},
+                {"ap-south-1", "metrics.ap-south-1.aliyuncs.com"},
+                {"me-central-1", "metrics.me-central-1.aliyuncs.com"},
+                {"cn-hangzhou-finance", "metrics.cn-hangzhou-finance.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "metrics.cn-shenzhen-finance-1.aliyuncs.com"},
+                {"cn-beijing-finance-1", "metrics.cn-beijing-finance-1.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "metrics.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-wulanchabu-gic-1", "metrics.cn-wulanchabu-gic-1.aliyuncs.com"},
+                {"cn-heyuan-acdr-1", "metrics.cn-heyuan-acdr-1.aliyuncs.com"},
+                {"cn-north-2-gov-1", "metrics.cn-north-2-gov-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("cms", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -233,12 +230,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies an alert template to an application group to generate an alert rule.</para>
+        /// <para>Applies an alert template to an application group to generate alert rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In this example, the <c>700****</c> alert template is applied to the <c>123456</c> application group. For the generated alert rule, the ID is <c>applyTemplate8ab74c6b-9f27-47ab-8841-de01dc08****</c>, and the name is <c>test123</c>.</para>
+        /// <para>This topic provides an example of applying the alert template <c>700****</c> to the application group <c>123456</c>. The generated alert rule has the ID <c>applyTemplate8ab74c6b-9f27-47ab-8841-de01dc08****</c> and the name <c>test123</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -262,6 +259,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyMode))
             {
                 query["ApplyMode"] = request.ApplyMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableEndTime))
             {
@@ -312,12 +313,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies an alert template to an application group to generate an alert rule.</para>
+        /// <para>Applies an alert template to an application group to generate alert rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In this example, the <c>700****</c> alert template is applied to the <c>123456</c> application group. For the generated alert rule, the ID is <c>applyTemplate8ab74c6b-9f27-47ab-8841-de01dc08****</c>, and the name is <c>test123</c>.</para>
+        /// <para>This topic provides an example of applying the alert template <c>700****</c> to the application group <c>123456</c>. The generated alert rule has the ID <c>applyTemplate8ab74c6b-9f27-47ab-8841-de01dc08****</c> and the name <c>test123</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -341,6 +342,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyMode))
             {
                 query["ApplyMode"] = request.ApplyMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableEndTime))
             {
@@ -391,12 +396,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies an alert template to an application group to generate an alert rule.</para>
+        /// <para>Applies an alert template to an application group to generate alert rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In this example, the <c>700****</c> alert template is applied to the <c>123456</c> application group. For the generated alert rule, the ID is <c>applyTemplate8ab74c6b-9f27-47ab-8841-de01dc08****</c>, and the name is <c>test123</c>.</para>
+        /// <para>This topic provides an example of applying the alert template <c>700****</c> to the application group <c>123456</c>. The generated alert rule has the ID <c>applyTemplate8ab74c6b-9f27-47ab-8841-de01dc08****</c> and the name <c>test123</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -414,12 +419,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies an alert template to an application group to generate an alert rule.</para>
+        /// <para>Applies an alert template to an application group to generate alert rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In this example, the <c>700****</c> alert template is applied to the <c>123456</c> application group. For the generated alert rule, the ID is <c>applyTemplate8ab74c6b-9f27-47ab-8841-de01dc08****</c>, and the name is <c>test123</c>.</para>
+        /// <para>This topic provides an example of applying the alert template <c>700****</c> to the application group <c>123456</c>. The generated alert rule has the ID <c>applyTemplate8ab74c6b-9f27-47ab-8841-de01dc08****</c> and the name <c>test123</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -437,12 +442,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the BatchCreateInstantSiteMonitor operation to create a batch of site monitoring tasks.</para>
+        /// <para>Creates multiple site monitoring tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to create a site monitoring task named <c>HangZhou_ECS1</c>. The task uses the <c>HTTP</c> protocol to monitor <c>https://www.aliyun.com</c>. The response shows that the task is successfully created with the name <c>HangZhou_ECS1</c> and the ID <c>679fbe4f-b80b-4706-91b2-5427b43e****</c>.</para>
+        /// <para>This topic provides an example of creating a site monitoring task named <c>HangZhou_ECS1</c>. The monitored address of the task is <c>https://www.aliyun.com</c>, and the monitoring type is <c>HTTP</c>. The response shows that the site monitoring task is created. The name of the task is <c>HangZhou_ECS1</c>, and the ID is <c>679fbe4f-b80b-4706-91b2-5427b43e****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -484,12 +489,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the BatchCreateInstantSiteMonitor operation to create a batch of site monitoring tasks.</para>
+        /// <para>Creates multiple site monitoring tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to create a site monitoring task named <c>HangZhou_ECS1</c>. The task uses the <c>HTTP</c> protocol to monitor <c>https://www.aliyun.com</c>. The response shows that the task is successfully created with the name <c>HangZhou_ECS1</c> and the ID <c>679fbe4f-b80b-4706-91b2-5427b43e****</c>.</para>
+        /// <para>This topic provides an example of creating a site monitoring task named <c>HangZhou_ECS1</c>. The monitored address of the task is <c>https://www.aliyun.com</c>, and the monitoring type is <c>HTTP</c>. The response shows that the site monitoring task is created. The name of the task is <c>HangZhou_ECS1</c>, and the ID is <c>679fbe4f-b80b-4706-91b2-5427b43e****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -531,12 +536,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the BatchCreateInstantSiteMonitor operation to create a batch of site monitoring tasks.</para>
+        /// <para>Creates multiple site monitoring tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to create a site monitoring task named <c>HangZhou_ECS1</c>. The task uses the <c>HTTP</c> protocol to monitor <c>https://www.aliyun.com</c>. The response shows that the task is successfully created with the name <c>HangZhou_ECS1</c> and the ID <c>679fbe4f-b80b-4706-91b2-5427b43e****</c>.</para>
+        /// <para>This topic provides an example of creating a site monitoring task named <c>HangZhou_ECS1</c>. The monitored address of the task is <c>https://www.aliyun.com</c>, and the monitoring type is <c>HTTP</c>. The response shows that the site monitoring task is created. The name of the task is <c>HangZhou_ECS1</c>, and the ID is <c>679fbe4f-b80b-4706-91b2-5427b43e****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -554,12 +559,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the BatchCreateInstantSiteMonitor operation to create a batch of site monitoring tasks.</para>
+        /// <para>Creates multiple site monitoring tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to create a site monitoring task named <c>HangZhou_ECS1</c>. The task uses the <c>HTTP</c> protocol to monitor <c>https://www.aliyun.com</c>. The response shows that the task is successfully created with the name <c>HangZhou_ECS1</c> and the ID <c>679fbe4f-b80b-4706-91b2-5427b43e****</c>.</para>
+        /// <para>This topic provides an example of creating a site monitoring task named <c>HangZhou_ECS1</c>. The monitored address of the task is <c>https://www.aliyun.com</c>, and the monitoring type is <c>HTTP</c>. The response shows that the site monitoring task is created. The name of the task is <c>HangZhou_ECS1</c>, and the ID is <c>679fbe4f-b80b-4706-91b2-5427b43e****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -577,15 +582,15 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the BatchExport operation to export monitoring data defined in the Cursor operation.</para>
+        /// <para>Exports the monitoring data defined in the Cursor operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Make sure that you have called the <a href="https://help.aliyun.com/document_detail/2330730.html">Cursor</a> operation to obtain the initial <c>Cursor</c>.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that you have called the <a href="https://help.aliyun.com/document_detail/2330730.html">Cursor</a> operation to obtain the initial Cursor.</para>
         /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example to show how to export the monitoring data of an initial <c>Cursor</c> of the metric <c>cpu_idle</c> of the cloud service <c>acs_ecs_dashboard</c>. A maximum of 1,000 data entries are returned per call.</para>
+        /// <para>This topic provides an example to export the monitoring data of the <c>cpu_idle</c> metric for the <c>acs_ecs_dashboard</c> cloud service by using an initial Cursor. A maximum of 1,000 data records are returned each time.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -649,15 +654,15 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the BatchExport operation to export monitoring data defined in the Cursor operation.</para>
+        /// <para>Exports the monitoring data defined in the Cursor operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Make sure that you have called the <a href="https://help.aliyun.com/document_detail/2330730.html">Cursor</a> operation to obtain the initial <c>Cursor</c>.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that you have called the <a href="https://help.aliyun.com/document_detail/2330730.html">Cursor</a> operation to obtain the initial Cursor.</para>
         /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example to show how to export the monitoring data of an initial <c>Cursor</c> of the metric <c>cpu_idle</c> of the cloud service <c>acs_ecs_dashboard</c>. A maximum of 1,000 data entries are returned per call.</para>
+        /// <para>This topic provides an example to export the monitoring data of the <c>cpu_idle</c> metric for the <c>acs_ecs_dashboard</c> cloud service by using an initial Cursor. A maximum of 1,000 data records are returned each time.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -721,15 +726,15 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the BatchExport operation to export monitoring data defined in the Cursor operation.</para>
+        /// <para>Exports the monitoring data defined in the Cursor operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Make sure that you have called the <a href="https://help.aliyun.com/document_detail/2330730.html">Cursor</a> operation to obtain the initial <c>Cursor</c>.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that you have called the <a href="https://help.aliyun.com/document_detail/2330730.html">Cursor</a> operation to obtain the initial Cursor.</para>
         /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example to show how to export the monitoring data of an initial <c>Cursor</c> of the metric <c>cpu_idle</c> of the cloud service <c>acs_ecs_dashboard</c>. A maximum of 1,000 data entries are returned per call.</para>
+        /// <para>This topic provides an example to export the monitoring data of the <c>cpu_idle</c> metric for the <c>acs_ecs_dashboard</c> cloud service by using an initial Cursor. A maximum of 1,000 data records are returned each time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -747,15 +752,15 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the BatchExport operation to export monitoring data defined in the Cursor operation.</para>
+        /// <para>Exports the monitoring data defined in the Cursor operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Make sure that you have called the <a href="https://help.aliyun.com/document_detail/2330730.html">Cursor</a> operation to obtain the initial <c>Cursor</c>.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that you have called the <a href="https://help.aliyun.com/document_detail/2330730.html">Cursor</a> operation to obtain the initial Cursor.</para>
         /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example to show how to export the monitoring data of an initial <c>Cursor</c> of the metric <c>cpu_idle</c> of the cloud service <c>acs_ecs_dashboard</c>. A maximum of 1,000 data entries are returned per call.</para>
+        /// <para>This topic provides an example to export the monitoring data of the <c>cpu_idle</c> metric for the <c>acs_ecs_dashboard</c> cloud service by using an initial Cursor. A maximum of 1,000 data records are returned each time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -773,13 +778,13 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the CreateDynamicTagGroup operation to automatically create application groups using tags.</para>
+        /// <para>Automatically creates an application group based on tags.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports the following Alibaba Cloud services: Elastic Compute Service (ECS), ApsaraDB RDS, and Server Load Balancer (SLB).
-        /// This topic provides an example of how to automatically create an application group for resources that have the <c>ecs_instance</c> tag key. The alert contact group for the application group is <c>ECS_Group</c>.</para>
+        /// <para>The Alibaba Cloud services supported by this operation include cloud servers (ECS), ApsaraDB RDS, and Server Load Balancer (SLB).
+        /// This topic provides an example on how to automatically create an application group for resources that are attached with the tag key <c>ecs_instance</c>. The alert contact group of the application group is <c>ECS_Group</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -799,6 +804,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactGroupList))
             {
                 query["ContactGroupList"] = request.ContactGroupList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableInstallAgent))
             {
@@ -849,13 +858,13 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the CreateDynamicTagGroup operation to automatically create application groups using tags.</para>
+        /// <para>Automatically creates an application group based on tags.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports the following Alibaba Cloud services: Elastic Compute Service (ECS), ApsaraDB RDS, and Server Load Balancer (SLB).
-        /// This topic provides an example of how to automatically create an application group for resources that have the <c>ecs_instance</c> tag key. The alert contact group for the application group is <c>ECS_Group</c>.</para>
+        /// <para>The Alibaba Cloud services supported by this operation include cloud servers (ECS), ApsaraDB RDS, and Server Load Balancer (SLB).
+        /// This topic provides an example on how to automatically create an application group for resources that are attached with the tag key <c>ecs_instance</c>. The alert contact group of the application group is <c>ECS_Group</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -875,6 +884,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactGroupList))
             {
                 query["ContactGroupList"] = request.ContactGroupList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableInstallAgent))
             {
@@ -925,13 +938,13 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the CreateDynamicTagGroup operation to automatically create application groups using tags.</para>
+        /// <para>Automatically creates an application group based on tags.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports the following Alibaba Cloud services: Elastic Compute Service (ECS), ApsaraDB RDS, and Server Load Balancer (SLB).
-        /// This topic provides an example of how to automatically create an application group for resources that have the <c>ecs_instance</c> tag key. The alert contact group for the application group is <c>ECS_Group</c>.</para>
+        /// <para>The Alibaba Cloud services supported by this operation include cloud servers (ECS), ApsaraDB RDS, and Server Load Balancer (SLB).
+        /// This topic provides an example on how to automatically create an application group for resources that are attached with the tag key <c>ecs_instance</c>. The alert contact group of the application group is <c>ECS_Group</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -949,13 +962,13 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the CreateDynamicTagGroup operation to automatically create application groups using tags.</para>
+        /// <para>Automatically creates an application group based on tags.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports the following Alibaba Cloud services: Elastic Compute Service (ECS), ApsaraDB RDS, and Server Load Balancer (SLB).
-        /// This topic provides an example of how to automatically create an application group for resources that have the <c>ecs_instance</c> tag key. The alert contact group for the application group is <c>ECS_Group</c>.</para>
+        /// <para>The Alibaba Cloud services supported by this operation include cloud servers (ECS), ApsaraDB RDS, and Server Load Balancer (SLB).
+        /// This topic provides an example on how to automatically create an application group for resources that are attached with the tag key <c>ecs_instance</c>. The alert contact group of the application group is <c>ECS_Group</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -978,7 +991,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to create an alert rule for the <c>cpu_total</c> metric of Elastic Compute Service (ECS) in the application group <c>123456</c>. The alert rule ID is <c>456789</c>, the alert rule name is <c>ECS_Rule1</c>, the alert severity is <c>Critical</c>, the statistical method is <c>Average</c>, the comparison operator is <c>GreaterThanOrEqualToThreshold</c>, the threshold is <c>90</c>, and the retry count is <c>3</c>. The response shows that the alert rule <c>ECS_Rule1</c> is created.</para>
+        /// <para>This topic provides an example on how to create an alert rule for the monitoring metric <c>cpu_total</c> of Elastic Computing Service (ECS) in the application group <c>123456</c>. The alert rule ID is <c>456789</c>, the alert rule name is <c>ECS_Rule1</c>, the alert severity is <c>Critical</c>, the statistical method is <c>Average</c>, the comparison operator is <c>GreaterThanOrEqualToThreshold</c>, the threshold is <c>90</c>, and the retry count is <c>3</c>. The response shows that the alert rule <c>ECS_Rule1</c> is created.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1029,7 +1042,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to create an alert rule for the <c>cpu_total</c> metric of Elastic Compute Service (ECS) in the application group <c>123456</c>. The alert rule ID is <c>456789</c>, the alert rule name is <c>ECS_Rule1</c>, the alert severity is <c>Critical</c>, the statistical method is <c>Average</c>, the comparison operator is <c>GreaterThanOrEqualToThreshold</c>, the threshold is <c>90</c>, and the retry count is <c>3</c>. The response shows that the alert rule <c>ECS_Rule1</c> is created.</para>
+        /// <para>This topic provides an example on how to create an alert rule for the monitoring metric <c>cpu_total</c> of Elastic Computing Service (ECS) in the application group <c>123456</c>. The alert rule ID is <c>456789</c>, the alert rule name is <c>ECS_Rule1</c>, the alert severity is <c>Critical</c>, the statistical method is <c>Average</c>, the comparison operator is <c>GreaterThanOrEqualToThreshold</c>, the threshold is <c>90</c>, and the retry count is <c>3</c>. The response shows that the alert rule <c>ECS_Rule1</c> is created.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1080,7 +1093,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to create an alert rule for the <c>cpu_total</c> metric of Elastic Compute Service (ECS) in the application group <c>123456</c>. The alert rule ID is <c>456789</c>, the alert rule name is <c>ECS_Rule1</c>, the alert severity is <c>Critical</c>, the statistical method is <c>Average</c>, the comparison operator is <c>GreaterThanOrEqualToThreshold</c>, the threshold is <c>90</c>, and the retry count is <c>3</c>. The response shows that the alert rule <c>ECS_Rule1</c> is created.</para>
+        /// <para>This topic provides an example on how to create an alert rule for the monitoring metric <c>cpu_total</c> of Elastic Computing Service (ECS) in the application group <c>123456</c>. The alert rule ID is <c>456789</c>, the alert rule name is <c>ECS_Rule1</c>, the alert severity is <c>Critical</c>, the statistical method is <c>Average</c>, the comparison operator is <c>GreaterThanOrEqualToThreshold</c>, the threshold is <c>90</c>, and the retry count is <c>3</c>. The response shows that the alert rule <c>ECS_Rule1</c> is created.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1103,7 +1116,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to create an alert rule for the <c>cpu_total</c> metric of Elastic Compute Service (ECS) in the application group <c>123456</c>. The alert rule ID is <c>456789</c>, the alert rule name is <c>ECS_Rule1</c>, the alert severity is <c>Critical</c>, the statistical method is <c>Average</c>, the comparison operator is <c>GreaterThanOrEqualToThreshold</c>, the threshold is <c>90</c>, and the retry count is <c>3</c>. The response shows that the alert rule <c>ECS_Rule1</c> is created.</para>
+        /// <para>This topic provides an example on how to create an alert rule for the monitoring metric <c>cpu_total</c> of Elastic Computing Service (ECS) in the application group <c>123456</c>. The alert rule ID is <c>456789</c>, the alert rule name is <c>ECS_Rule1</c>, the alert severity is <c>Critical</c>, the statistical method is <c>Average</c>, the comparison operator is <c>GreaterThanOrEqualToThreshold</c>, the threshold is <c>90</c>, and the retry count is <c>3</c>. The response shows that the alert rule <c>ECS_Rule1</c> is created.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1273,12 +1286,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an availability monitoring task by calling the CreateHostAvailability operation.</para>
+        /// <para>Creates an availability monitoring task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to create an availability monitoring task named <c>task1</c> with the detection type set to <c>HTTP</c> in application group <c>123456</c>. Alert notifications are sent by email and DingTalk chatbot.</para>
+        /// <para>This topic provides an example on how to create an availability monitoring task named <c>task1</c> with the detection type set to <c>HTTP</c> in application group <c>123456</c>. Alert notifications are sent by email and DingTalk chatbot.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1352,12 +1365,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an availability monitoring task by calling the CreateHostAvailability operation.</para>
+        /// <para>Creates an availability monitoring task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to create an availability monitoring task named <c>task1</c> with the detection type set to <c>HTTP</c> in application group <c>123456</c>. Alert notifications are sent by email and DingTalk chatbot.</para>
+        /// <para>This topic provides an example on how to create an availability monitoring task named <c>task1</c> with the detection type set to <c>HTTP</c> in application group <c>123456</c>. Alert notifications are sent by email and DingTalk chatbot.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1431,12 +1444,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an availability monitoring task by calling the CreateHostAvailability operation.</para>
+        /// <para>Creates an availability monitoring task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to create an availability monitoring task named <c>task1</c> with the detection type set to <c>HTTP</c> in application group <c>123456</c>. Alert notifications are sent by email and DingTalk chatbot.</para>
+        /// <para>This topic provides an example on how to create an availability monitoring task named <c>task1</c> with the detection type set to <c>HTTP</c> in application group <c>123456</c>. Alert notifications are sent by email and DingTalk chatbot.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1454,12 +1467,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an availability monitoring task by calling the CreateHostAvailability operation.</para>
+        /// <para>Creates an availability monitoring task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to create an availability monitoring task named <c>task1</c> with the detection type set to <c>HTTP</c> in application group <c>123456</c>. Alert notifications are sent by email and DingTalk chatbot.</para>
+        /// <para>This topic provides an example on how to create an availability monitoring task named <c>task1</c> with the detection type set to <c>HTTP</c> in application group <c>123456</c>. Alert notifications are sent by email and DingTalk chatbot.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1829,18 +1842,18 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CreateHybridMonitorTask operation to create a data import task for an Alibaba Cloud service or a metric for Simple Log Service (SLS) logs.</para>
+        /// <para>Creates a monitoring task for Alibaba Cloud services or Simple Log Service (SLS) logs in Hybrid Cloud Monitoring.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Before you begin</h2>
-        /// <list type="bullet">
-        /// <item><description>Make sure that you have activated Hybrid Cloud Monitoring. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</description></item>
-        /// <item><description>If you want to create a metric for SLS logs, make sure that you have activated SLS and created a project and a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/54604.html">Quick Start</a>.</description></item>
-        /// </list>
         /// <h2>Operation description</h2>
-        /// <para>This topic provides an example of how to create a data import task named <c>aliyun_task</c> for an Alibaba Cloud service to import the <c>cpu_total</c> metric of Elastic Compute Service (ECS) into the <c>aliyun</c> metric repository. The response shows that the data import task is created.</para>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, make sure that Hybrid Cloud Monitoring is activated.</description></item>
+        /// <item><description>To create a metric for SLS logs, make sure that SLS is activated and that you have created a project and a Logstore.</description></item>
+        /// <item><description>Depending on the value of <c>TaskType</c>, some parameters are required. For example, when <c>TaskType</c> is set to <c>aliyun_fc</c>, you must set <c>YARMConfig</c>. When <c>TaskType</c> is set to <c>aliyun_sls</c>, you must configure parameters such as <c>CollectInterval</c>.</description></item>
+        /// <item><description>For cross-account operations, specify <c>TargetUserId</c> or <c>TargetUserIdList</c> to import resources of other members into Hybrid Cloud Monitoring.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -1930,18 +1943,18 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CreateHybridMonitorTask operation to create a data import task for an Alibaba Cloud service or a metric for Simple Log Service (SLS) logs.</para>
+        /// <para>Creates a monitoring task for Alibaba Cloud services or Simple Log Service (SLS) logs in Hybrid Cloud Monitoring.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Before you begin</h2>
-        /// <list type="bullet">
-        /// <item><description>Make sure that you have activated Hybrid Cloud Monitoring. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</description></item>
-        /// <item><description>If you want to create a metric for SLS logs, make sure that you have activated SLS and created a project and a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/54604.html">Quick Start</a>.</description></item>
-        /// </list>
         /// <h2>Operation description</h2>
-        /// <para>This topic provides an example of how to create a data import task named <c>aliyun_task</c> for an Alibaba Cloud service to import the <c>cpu_total</c> metric of Elastic Compute Service (ECS) into the <c>aliyun</c> metric repository. The response shows that the data import task is created.</para>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, make sure that Hybrid Cloud Monitoring is activated.</description></item>
+        /// <item><description>To create a metric for SLS logs, make sure that SLS is activated and that you have created a project and a Logstore.</description></item>
+        /// <item><description>Depending on the value of <c>TaskType</c>, some parameters are required. For example, when <c>TaskType</c> is set to <c>aliyun_fc</c>, you must set <c>YARMConfig</c>. When <c>TaskType</c> is set to <c>aliyun_sls</c>, you must configure parameters such as <c>CollectInterval</c>.</description></item>
+        /// <item><description>For cross-account operations, specify <c>TargetUserId</c> or <c>TargetUserIdList</c> to import resources of other members into Hybrid Cloud Monitoring.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -2031,18 +2044,18 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CreateHybridMonitorTask operation to create a data import task for an Alibaba Cloud service or a metric for Simple Log Service (SLS) logs.</para>
+        /// <para>Creates a monitoring task for Alibaba Cloud services or Simple Log Service (SLS) logs in Hybrid Cloud Monitoring.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Before you begin</h2>
-        /// <list type="bullet">
-        /// <item><description>Make sure that you have activated Hybrid Cloud Monitoring. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</description></item>
-        /// <item><description>If you want to create a metric for SLS logs, make sure that you have activated SLS and created a project and a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/54604.html">Quick Start</a>.</description></item>
-        /// </list>
         /// <h2>Operation description</h2>
-        /// <para>This topic provides an example of how to create a data import task named <c>aliyun_task</c> for an Alibaba Cloud service to import the <c>cpu_total</c> metric of Elastic Compute Service (ECS) into the <c>aliyun</c> metric repository. The response shows that the data import task is created.</para>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, make sure that Hybrid Cloud Monitoring is activated.</description></item>
+        /// <item><description>To create a metric for SLS logs, make sure that SLS is activated and that you have created a project and a Logstore.</description></item>
+        /// <item><description>Depending on the value of <c>TaskType</c>, some parameters are required. For example, when <c>TaskType</c> is set to <c>aliyun_fc</c>, you must set <c>YARMConfig</c>. When <c>TaskType</c> is set to <c>aliyun_sls</c>, you must configure parameters such as <c>CollectInterval</c>.</description></item>
+        /// <item><description>For cross-account operations, specify <c>TargetUserId</c> or <c>TargetUserIdList</c> to import resources of other members into Hybrid Cloud Monitoring.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -2060,18 +2073,18 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CreateHybridMonitorTask operation to create a data import task for an Alibaba Cloud service or a metric for Simple Log Service (SLS) logs.</para>
+        /// <para>Creates a monitoring task for Alibaba Cloud services or Simple Log Service (SLS) logs in Hybrid Cloud Monitoring.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Before you begin</h2>
-        /// <list type="bullet">
-        /// <item><description>Make sure that you have activated Hybrid Cloud Monitoring. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</description></item>
-        /// <item><description>If you want to create a metric for SLS logs, make sure that you have activated SLS and created a project and a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/54604.html">Quick Start</a>.</description></item>
-        /// </list>
         /// <h2>Operation description</h2>
-        /// <para>This topic provides an example of how to create a data import task named <c>aliyun_task</c> for an Alibaba Cloud service to import the <c>cpu_total</c> metric of Elastic Compute Service (ECS) into the <c>aliyun</c> metric repository. The response shows that the data import task is created.</para>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, make sure that Hybrid Cloud Monitoring is activated.</description></item>
+        /// <item><description>To create a metric for SLS logs, make sure that SLS is activated and that you have created a project and a Logstore.</description></item>
+        /// <item><description>Depending on the value of <c>TaskType</c>, some parameters are required. For example, when <c>TaskType</c> is set to <c>aliyun_fc</c>, you must set <c>YARMConfig</c>. When <c>TaskType</c> is set to <c>aliyun_sls</c>, you must configure parameters such as <c>CollectInterval</c>.</description></item>
+        /// <item><description>For cross-account operations, specify <c>TargetUserId</c> or <c>TargetUserIdList</c> to import resources of other members into Hybrid Cloud Monitoring.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -2089,13 +2102,13 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the CreateInstantSiteMonitor operation to create a one-time detection task.</para>
+        /// <para>Creates a one-time synthetic monitoring task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only Alibaba Cloud accounts that have Network Analysis and Monitoring activated can create one-time detection tasks.
-        /// This topic provides an example of how to create a one-time detection task. The example creates a task named <c>task1</c> that detects the address <c>http://www.aliyun.com</c>. The detection type is <c>HTTP</c>, and the number of detection points is <c>1</c>.</para>
+        /// <para>Only Alibaba Cloud accounts that have activated Network Analysis and Monitoring can create one-time synthetic monitoring tasks.
+        /// This topic provides an example of how to create a one-time synthetic monitoring task. The task name is <c>task1</c>, the monitored address is <c>http://www.aliyun.com</c>, the task type is <c>HTTP</c>, and the number of detection points is <c>1</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2161,13 +2174,13 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the CreateInstantSiteMonitor operation to create a one-time detection task.</para>
+        /// <para>Creates a one-time synthetic monitoring task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only Alibaba Cloud accounts that have Network Analysis and Monitoring activated can create one-time detection tasks.
-        /// This topic provides an example of how to create a one-time detection task. The example creates a task named <c>task1</c> that detects the address <c>http://www.aliyun.com</c>. The detection type is <c>HTTP</c>, and the number of detection points is <c>1</c>.</para>
+        /// <para>Only Alibaba Cloud accounts that have activated Network Analysis and Monitoring can create one-time synthetic monitoring tasks.
+        /// This topic provides an example of how to create a one-time synthetic monitoring task. The task name is <c>task1</c>, the monitored address is <c>http://www.aliyun.com</c>, the task type is <c>HTTP</c>, and the number of detection points is <c>1</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2233,13 +2246,13 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the CreateInstantSiteMonitor operation to create a one-time detection task.</para>
+        /// <para>Creates a one-time synthetic monitoring task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only Alibaba Cloud accounts that have Network Analysis and Monitoring activated can create one-time detection tasks.
-        /// This topic provides an example of how to create a one-time detection task. The example creates a task named <c>task1</c> that detects the address <c>http://www.aliyun.com</c>. The detection type is <c>HTTP</c>, and the number of detection points is <c>1</c>.</para>
+        /// <para>Only Alibaba Cloud accounts that have activated Network Analysis and Monitoring can create one-time synthetic monitoring tasks.
+        /// This topic provides an example of how to create a one-time synthetic monitoring task. The task name is <c>task1</c>, the monitored address is <c>http://www.aliyun.com</c>, the task type is <c>HTTP</c>, and the number of detection points is <c>1</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2257,13 +2270,13 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the CreateInstantSiteMonitor operation to create a one-time detection task.</para>
+        /// <para>Creates a one-time synthetic monitoring task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only Alibaba Cloud accounts that have Network Analysis and Monitoring activated can create one-time detection tasks.
-        /// This topic provides an example of how to create a one-time detection task. The example creates a task named <c>task1</c> that detects the address <c>http://www.aliyun.com</c>. The detection type is <c>HTTP</c>, and the number of detection points is <c>1</c>.</para>
+        /// <para>Only Alibaba Cloud accounts that have activated Network Analysis and Monitoring can create one-time synthetic monitoring tasks.
+        /// This topic provides an example of how to create a one-time synthetic monitoring task. The task name is <c>task1</c>, the monitored address is <c>http://www.aliyun.com</c>, the task type is <c>HTTP</c>, and the number of detection points is <c>1</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2922,7 +2935,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In this example, an application group named <c>ECS_Group</c> is created.</para>
+        /// <para>This topic provides an example of creating an application group named <c>ECS_Group</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2942,6 +2955,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactGroups))
             {
                 query["ContactGroups"] = request.ContactGroups;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
             {
@@ -2973,7 +2990,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In this example, an application group named <c>ECS_Group</c> is created.</para>
+        /// <para>This topic provides an example of creating an application group named <c>ECS_Group</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2993,6 +3010,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactGroups))
             {
                 query["ContactGroups"] = request.ContactGroups;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
             {
@@ -3024,7 +3045,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In this example, an application group named <c>ECS_Group</c> is created.</para>
+        /// <para>This topic provides an example of creating an application group named <c>ECS_Group</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3047,7 +3068,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In this example, an application group named <c>ECS_Group</c> is created.</para>
+        /// <para>This topic provides an example of creating an application group named <c>ECS_Group</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3268,6 +3289,10 @@ namespace AlibabaCloud.SDK.Cms20190101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
                 query["GroupId"] = request.GroupId;
@@ -3320,6 +3345,10 @@ namespace AlibabaCloud.SDK.Cms20190101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
                 query["GroupId"] = request.GroupId;
@@ -3402,8 +3431,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>During the effective period of the policy, no alert notifications are sent for any alerts triggered within the application group.</para>
-        /// <para>This topic provides an example on how to create a pause alert notification policy named <c>PauseNotify</c> for the application group <c>7301****</c>. The application group pauses alert notifications during the period from <c>1622949300000</c> to <c>1623208500000</c> (UTC+8 <c>2021-06-06 11:15:00</c> to <c>2021-06-09 11:15:00</c>).</para>
+        /// <para>Creates a pause alert notification policy for a specified application group. After the policy is created, alert notifications for the application group are paused during the time period specified by StartTime and EndTime (unit: milliseconds). Currently, PolicyType supports only PauseNotify (pause notification).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3462,8 +3490,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>During the effective period of the policy, no alert notifications are sent for any alerts triggered within the application group.</para>
-        /// <para>This topic provides an example on how to create a pause alert notification policy named <c>PauseNotify</c> for the application group <c>7301****</c>. The application group pauses alert notifications during the period from <c>1622949300000</c> to <c>1623208500000</c> (UTC+8 <c>2021-06-06 11:15:00</c> to <c>2021-06-09 11:15:00</c>).</para>
+        /// <para>Creates a pause alert notification policy for a specified application group. After the policy is created, alert notifications for the application group are paused during the time period specified by StartTime and EndTime (unit: milliseconds). Currently, PolicyType supports only PauseNotify (pause notification).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3522,8 +3549,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>During the effective period of the policy, no alert notifications are sent for any alerts triggered within the application group.</para>
-        /// <para>This topic provides an example on how to create a pause alert notification policy named <c>PauseNotify</c> for the application group <c>7301****</c>. The application group pauses alert notifications during the period from <c>1622949300000</c> to <c>1623208500000</c> (UTC+8 <c>2021-06-06 11:15:00</c> to <c>2021-06-09 11:15:00</c>).</para>
+        /// <para>Creates a pause alert notification policy for a specified application group. After the policy is created, alert notifications for the application group are paused during the time period specified by StartTime and EndTime (unit: milliseconds). Currently, PolicyType supports only PauseNotify (pause notification).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3546,8 +3572,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>During the effective period of the policy, no alert notifications are sent for any alerts triggered within the application group.</para>
-        /// <para>This topic provides an example on how to create a pause alert notification policy named <c>PauseNotify</c> for the application group <c>7301****</c>. The application group pauses alert notifications during the period from <c>1622949300000</c> to <c>1623208500000</c> (UTC+8 <c>2021-06-06 11:15:00</c> to <c>2021-06-09 11:15:00</c>).</para>
+        /// <para>Creates a pause alert notification policy for a specified application group. After the policy is created, alert notifications for the application group are paused during the time period specified by StartTime and EndTime (unit: milliseconds). Currently, PolicyType supports only PauseNotify (pause notification).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3913,17 +3938,17 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the Cursor operation to define the scope of monitoring data to be exported, and returns the Cursor value used for the initial call to the BatchExport operation.</para>
+        /// <para>Defines the scope of monitoring data to be exported and returns a cursor value for the initial call to the BatchExport operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Make sure that Enterprise CloudMonitor is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Enterprise CloudMonitor</a>.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</para>
         /// <h3>Background information</h3>
-        /// <para>First, call this operation to obtain the initial Cursor. Then, call the <a href="https://help.aliyun.com/document_detail/2329847.html">BatchExport</a> operation to export monitoring data.</para>
+        /// <para>Call this operation to obtain an initial cursor, and then call the <a href="https://help.aliyun.com/document_detail/2329847.html">BatchExport</a> operation to export monitoring data.</para>
         /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example to describe how to define the scope to export data of the <c>cpu_idle</c> metric of the <c>acs_ecs_dashboard</c> cloud service every 60 seconds in the time range from <c>1641627000000</c> (2022-01-08 15:30:00) to <c>1641645000000</c> (2022-01-08 20:30:00). The returned result shows the <c>Cursor</c> information.</para>
+        /// <para>This topic provides an example to define the data export scope for the <c>cpu_idle</c> metric of the <c>acs_ecs_dashboard</c> cloud service at a 60-second interval from <c>1641627000000</c> (2022-01-08 15:30:00) to <c>1641645000000</c> (2022-01-08 20:30:00). The response displays the Cursor information.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -3991,17 +4016,17 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the Cursor operation to define the scope of monitoring data to be exported, and returns the Cursor value used for the initial call to the BatchExport operation.</para>
+        /// <para>Defines the scope of monitoring data to be exported and returns a cursor value for the initial call to the BatchExport operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Make sure that Enterprise CloudMonitor is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Enterprise CloudMonitor</a>.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</para>
         /// <h3>Background information</h3>
-        /// <para>First, call this operation to obtain the initial Cursor. Then, call the <a href="https://help.aliyun.com/document_detail/2329847.html">BatchExport</a> operation to export monitoring data.</para>
+        /// <para>Call this operation to obtain an initial cursor, and then call the <a href="https://help.aliyun.com/document_detail/2329847.html">BatchExport</a> operation to export monitoring data.</para>
         /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example to describe how to define the scope to export data of the <c>cpu_idle</c> metric of the <c>acs_ecs_dashboard</c> cloud service every 60 seconds in the time range from <c>1641627000000</c> (2022-01-08 15:30:00) to <c>1641645000000</c> (2022-01-08 20:30:00). The returned result shows the <c>Cursor</c> information.</para>
+        /// <para>This topic provides an example to define the data export scope for the <c>cpu_idle</c> metric of the <c>acs_ecs_dashboard</c> cloud service at a 60-second interval from <c>1641627000000</c> (2022-01-08 15:30:00) to <c>1641645000000</c> (2022-01-08 20:30:00). The response displays the Cursor information.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4069,17 +4094,17 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the Cursor operation to define the scope of monitoring data to be exported, and returns the Cursor value used for the initial call to the BatchExport operation.</para>
+        /// <para>Defines the scope of monitoring data to be exported and returns a cursor value for the initial call to the BatchExport operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Make sure that Enterprise CloudMonitor is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Enterprise CloudMonitor</a>.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</para>
         /// <h3>Background information</h3>
-        /// <para>First, call this operation to obtain the initial Cursor. Then, call the <a href="https://help.aliyun.com/document_detail/2329847.html">BatchExport</a> operation to export monitoring data.</para>
+        /// <para>Call this operation to obtain an initial cursor, and then call the <a href="https://help.aliyun.com/document_detail/2329847.html">BatchExport</a> operation to export monitoring data.</para>
         /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example to describe how to define the scope to export data of the <c>cpu_idle</c> metric of the <c>acs_ecs_dashboard</c> cloud service every 60 seconds in the time range from <c>1641627000000</c> (2022-01-08 15:30:00) to <c>1641645000000</c> (2022-01-08 20:30:00). The returned result shows the <c>Cursor</c> information.</para>
+        /// <para>This topic provides an example to define the data export scope for the <c>cpu_idle</c> metric of the <c>acs_ecs_dashboard</c> cloud service at a 60-second interval from <c>1641627000000</c> (2022-01-08 15:30:00) to <c>1641645000000</c> (2022-01-08 20:30:00). The response displays the Cursor information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4097,17 +4122,17 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the Cursor operation to define the scope of monitoring data to be exported, and returns the Cursor value used for the initial call to the BatchExport operation.</para>
+        /// <para>Defines the scope of monitoring data to be exported and returns a cursor value for the initial call to the BatchExport operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Make sure that Enterprise CloudMonitor is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Enterprise CloudMonitor</a>.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that Hybrid Cloud Monitoring is activated. For more information, see <a href="https://help.aliyun.com/document_detail/250773.html">Activate Hybrid Cloud Monitoring</a>.</para>
         /// <h3>Background information</h3>
-        /// <para>First, call this operation to obtain the initial Cursor. Then, call the <a href="https://help.aliyun.com/document_detail/2329847.html">BatchExport</a> operation to export monitoring data.</para>
+        /// <para>Call this operation to obtain an initial cursor, and then call the <a href="https://help.aliyun.com/document_detail/2329847.html">BatchExport</a> operation to export monitoring data.</para>
         /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example to describe how to define the scope to export data of the <c>cpu_idle</c> metric of the <c>acs_ecs_dashboard</c> cloud service every 60 seconds in the time range from <c>1641627000000</c> (2022-01-08 15:30:00) to <c>1641645000000</c> (2022-01-08 20:30:00). The returned result shows the <c>Cursor</c> information.</para>
+        /// <para>This topic provides an example to define the data export scope for the <c>cpu_idle</c> metric of the <c>acs_ecs_dashboard</c> cloud service at a 60-second interval from <c>1641627000000</c> (2022-01-08 15:30:00) to <c>1641645000000</c> (2022-01-08 20:30:00). The response displays the Cursor information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4245,7 +4270,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the DeleteContactGroup operation to delete an alert contact group.</para>
+        /// <para>Deletes an alert contact group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4287,7 +4312,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the DeleteContactGroup operation to delete an alert contact group.</para>
+        /// <para>Deletes an alert contact group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4329,7 +4354,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the DeleteContactGroup operation to delete an alert contact group.</para>
+        /// <para>Deletes an alert contact group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4347,7 +4372,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the DeleteContactGroup operation to delete an alert contact group.</para>
+        /// <para>Deletes an alert contact group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4757,7 +4782,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more event-triggered alert rules.</para>
+        /// <para>Deletes event-triggered alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4799,7 +4824,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more event-triggered alert rules.</para>
+        /// <para>Deletes event-triggered alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4841,7 +4866,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more event-triggered alert rules.</para>
+        /// <para>Deletes event-triggered alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4859,7 +4884,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more event-triggered alert rules.</para>
+        /// <para>Deletes event-triggered alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6429,7 +6454,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The DeleteMetricRules operation deletes one or more alert rules.</para>
+        /// <para>Deletes one or more alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6446,6 +6471,10 @@ namespace AlibabaCloud.SDK.Cms20190101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 query["Id"] = request.Id;
@@ -6471,7 +6500,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The DeleteMetricRules operation deletes one or more alert rules.</para>
+        /// <para>Deletes one or more alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6488,6 +6517,10 @@ namespace AlibabaCloud.SDK.Cms20190101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 query["Id"] = request.Id;
@@ -6513,7 +6546,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The DeleteMetricRules operation deletes one or more alert rules.</para>
+        /// <para>Deletes one or more alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6531,7 +6564,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The DeleteMetricRules operation deletes one or more alert rules.</para>
+        /// <para>Deletes one or more alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6549,7 +6582,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application group.</para>
+        /// <para>Deletes a specified application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6566,6 +6599,10 @@ namespace AlibabaCloud.SDK.Cms20190101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
                 query["GroupId"] = request.GroupId;
@@ -6591,7 +6628,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application group.</para>
+        /// <para>Deletes a specified application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6608,6 +6645,10 @@ namespace AlibabaCloud.SDK.Cms20190101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
                 query["GroupId"] = request.GroupId;
@@ -6633,7 +6674,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application group.</para>
+        /// <para>Deletes a specified application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6651,7 +6692,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application group.</para>
+        /// <para>Deletes a specified application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6797,7 +6838,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes instances from an application group.</para>
+        /// <para>Deletes resource instances from an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6817,6 +6858,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
             {
                 query["Category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
@@ -6847,7 +6892,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes instances from an application group.</para>
+        /// <para>Deletes resource instances from an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6867,6 +6912,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
             {
                 query["Category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
@@ -6897,7 +6946,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes instances from an application group.</para>
+        /// <para>Deletes resource instances from an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6915,7 +6964,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes instances from an application group.</para>
+        /// <para>Deletes resource instances from an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6933,7 +6982,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a policy that is used to pause alert notifications for an application group.</para>
+        /// <para>Calls the DeleteMonitorGroupNotifyPolicy operation to delete the pause alert notification policy for a specified application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6979,7 +7028,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a policy that is used to pause alert notifications for an application group.</para>
+        /// <para>Calls the DeleteMonitorGroupNotifyPolicy operation to delete the pause alert notification policy for a specified application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7025,7 +7074,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a policy that is used to pause alert notifications for an application group.</para>
+        /// <para>Calls the DeleteMonitorGroupNotifyPolicy operation to delete the pause alert notification policy for a specified application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7043,7 +7092,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a policy that is used to pause alert notifications for an application group.</para>
+        /// <para>Calls the DeleteMonitorGroupNotifyPolicy operation to delete the pause alert notification policy for a specified application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7197,7 +7246,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes site monitoring tasks by calling the DeleteSiteMonitors operation.</para>
+        /// <para>Deletes site monitoring tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7243,7 +7292,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes site monitoring tasks by calling the DeleteSiteMonitors operation.</para>
+        /// <para>Deletes site monitoring tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7289,7 +7338,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes site monitoring tasks by calling the DeleteSiteMonitors operation.</para>
+        /// <para>Deletes site monitoring tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7307,7 +7356,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes site monitoring tasks by calling the DeleteSiteMonitors operation.</para>
+        /// <para>Deletes site monitoring tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7697,13 +7746,13 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics of alert logs.</para>
+        /// <para>Calls the DescribeAlertLogCount operation to query alert history statistics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the statistics of alert logs.
-        /// This topic provides an example on how to query the statistics of alert logs for Elastic Compute Service (ECS) based on the <c>product</c> dimension.</para>
+        /// <para>This operation can query only the alert history within the last year.
+        /// This topic provides an example on how to query the alert history statistics of Elastic Compute Service (ECS) from the <c>product</c> dimension of Alibaba Cloud services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7813,13 +7862,13 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics of alert logs.</para>
+        /// <para>Calls the DescribeAlertLogCount operation to query alert history statistics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the statistics of alert logs.
-        /// This topic provides an example on how to query the statistics of alert logs for Elastic Compute Service (ECS) based on the <c>product</c> dimension.</para>
+        /// <para>This operation can query only the alert history within the last year.
+        /// This topic provides an example on how to query the alert history statistics of Elastic Compute Service (ECS) from the <c>product</c> dimension of Alibaba Cloud services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7929,13 +7978,13 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics of alert logs.</para>
+        /// <para>Calls the DescribeAlertLogCount operation to query alert history statistics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the statistics of alert logs.
-        /// This topic provides an example on how to query the statistics of alert logs for Elastic Compute Service (ECS) based on the <c>product</c> dimension.</para>
+        /// <para>This operation can query only the alert history within the last year.
+        /// This topic provides an example on how to query the alert history statistics of Elastic Compute Service (ECS) from the <c>product</c> dimension of Alibaba Cloud services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7953,13 +8002,13 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics of alert logs.</para>
+        /// <para>Calls the DescribeAlertLogCount operation to query alert history statistics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the statistics of alert logs.
-        /// This topic provides an example on how to query the statistics of alert logs for Elastic Compute Service (ECS) based on the <c>product</c> dimension.</para>
+        /// <para>This operation can query only the alert history within the last year.
+        /// This topic provides an example on how to query the alert history statistics of Elastic Compute Service (ECS) from the <c>product</c> dimension of Alibaba Cloud services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7977,12 +8026,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of alert logs that are generated during each interval within a period of time.</para>
+        /// <para>Queries the histogram list of alert history by calling the DescribeAlertLogHistogram operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the number of alert logs for Elastic Compute Service (ECS) based on the <c>product</c> dimension.</para>
+        /// <para>This topic provides an example of how to query the histogram list of ECS alert history from the Alibaba Cloud service <c>product</c> dimension.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8092,12 +8141,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of alert logs that are generated during each interval within a period of time.</para>
+        /// <para>Queries the histogram list of alert history by calling the DescribeAlertLogHistogram operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the number of alert logs for Elastic Compute Service (ECS) based on the <c>product</c> dimension.</para>
+        /// <para>This topic provides an example of how to query the histogram list of ECS alert history from the Alibaba Cloud service <c>product</c> dimension.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8207,12 +8256,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of alert logs that are generated during each interval within a period of time.</para>
+        /// <para>Queries the histogram list of alert history by calling the DescribeAlertLogHistogram operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the number of alert logs for Elastic Compute Service (ECS) based on the <c>product</c> dimension.</para>
+        /// <para>This topic provides an example of how to query the histogram list of ECS alert history from the Alibaba Cloud service <c>product</c> dimension.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8230,12 +8279,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of alert logs that are generated during each interval within a period of time.</para>
+        /// <para>Queries the histogram list of alert history by calling the DescribeAlertLogHistogram operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the number of alert logs for Elastic Compute Service (ECS) based on the <c>product</c> dimension.</para>
+        /// <para>This topic provides an example of how to query the histogram list of ECS alert history from the Alibaba Cloud service <c>product</c> dimension.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8533,8 +8582,16 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resources for which active alerts are triggered based on an alert rule.</para>
+        /// <para>Queries the list of resources that are triggering alerts for a specified alert rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example to show how to set a threshold-based alert rule for the metric <c>cpu_total</c> of the Elastic Compute Service (ECS) instance <c>i-uf6j91r34rnwawoo****</c> in the <c>acs_ecs_dashboard</c> namespace. The alert contact group is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the retry count for the Critical level is <c>3</c>.</para>
+        /// <remarks>
+        /// <para>On August 15, 2024, Statistics validation was increased. The statistical value must correspond to the Statistics of the metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAlertingMetricRuleResourcesRequest
@@ -8571,8 +8628,16 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resources for which active alerts are triggered based on an alert rule.</para>
+        /// <para>Queries the list of resources that are triggering alerts for a specified alert rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example to show how to set a threshold-based alert rule for the metric <c>cpu_total</c> of the Elastic Compute Service (ECS) instance <c>i-uf6j91r34rnwawoo****</c> in the <c>acs_ecs_dashboard</c> namespace. The alert contact group is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the retry count for the Critical level is <c>3</c>.</para>
+        /// <remarks>
+        /// <para>On August 15, 2024, Statistics validation was increased. The statistical value must correspond to the Statistics of the metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAlertingMetricRuleResourcesRequest
@@ -8609,8 +8674,16 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resources for which active alerts are triggered based on an alert rule.</para>
+        /// <para>Queries the list of resources that are triggering alerts for a specified alert rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example to show how to set a threshold-based alert rule for the metric <c>cpu_total</c> of the Elastic Compute Service (ECS) instance <c>i-uf6j91r34rnwawoo****</c> in the <c>acs_ecs_dashboard</c> namespace. The alert contact group is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the retry count for the Critical level is <c>3</c>.</para>
+        /// <remarks>
+        /// <para>On August 15, 2024, Statistics validation was increased. The statistical value must correspond to the Statistics of the metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAlertingMetricRuleResourcesRequest
@@ -8627,8 +8700,16 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resources for which active alerts are triggered based on an alert rule.</para>
+        /// <para>Queries the list of resources that are triggering alerts for a specified alert rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example to show how to set a threshold-based alert rule for the metric <c>cpu_total</c> of the Elastic Compute Service (ECS) instance <c>i-uf6j91r34rnwawoo****</c> in the <c>acs_ecs_dashboard</c> namespace. The alert contact group is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the retry count for the Critical level is <c>3</c>.</para>
+        /// <remarks>
+        /// <para>On August 15, 2024, Statistics validation was increased. The statistical value must correspond to the Statistics of the metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAlertingMetricRuleResourcesRequest
@@ -8645,7 +8726,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeContactGroupList interface to query the list of alarm contact groups.</para>
+        /// <para>Queries the list of alert contact groups by calling the DescribeContactGroupList operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8691,7 +8772,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeContactGroupList interface to query the list of alarm contact groups.</para>
+        /// <para>Queries the list of alert contact groups by calling the DescribeContactGroupList operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8737,7 +8818,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeContactGroupList interface to query the list of alarm contact groups.</para>
+        /// <para>Queries the list of alert contact groups by calling the DescribeContactGroupList operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8755,7 +8836,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeContactGroupList interface to query the list of alarm contact groups.</para>
+        /// <para>Queries the list of alert contact groups by calling the DescribeContactGroupList operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10513,8 +10594,13 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of data export rules by calling the DescribeExporterRuleList operation.</para>
+        /// <para>Queries the list of data export rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query all alert rules in the alert rule list of the current Alibaba Cloud account. The response shows that the alert rule list contains only one alert rule. The alert rule is named <c>Rule_01</c> and has an ID of <c>applyTemplate344cfd42-0f32-4fd6-805a-88d7908a****</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeExporterRuleListRequest
@@ -10559,8 +10645,13 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of data export rules by calling the DescribeExporterRuleList operation.</para>
+        /// <para>Queries the list of data export rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query all alert rules in the alert rule list of the current Alibaba Cloud account. The response shows that the alert rule list contains only one alert rule. The alert rule is named <c>Rule_01</c> and has an ID of <c>applyTemplate344cfd42-0f32-4fd6-805a-88d7908a****</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeExporterRuleListRequest
@@ -10605,8 +10696,13 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of data export rules by calling the DescribeExporterRuleList operation.</para>
+        /// <para>Queries the list of data export rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query all alert rules in the alert rule list of the current Alibaba Cloud account. The response shows that the alert rule list contains only one alert rule. The alert rule is named <c>Rule_01</c> and has an ID of <c>applyTemplate344cfd42-0f32-4fd6-805a-88d7908a****</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeExporterRuleListRequest
@@ -10623,8 +10719,13 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of data export rules by calling the DescribeExporterRuleList operation.</para>
+        /// <para>Queries the list of data export rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query all alert rules in the alert rule list of the current Alibaba Cloud account. The response shows that the alert rule list contains only one alert rule. The alert rule is named <c>Rule_01</c> and has an ID of <c>applyTemplate344cfd42-0f32-4fd6-805a-88d7908a****</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeExporterRuleListRequest
@@ -10805,12 +10906,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries availability monitoring tasks.</para>
+        /// <para>Queries the list of availability monitoring tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example to show how to query all the availability monitoring tasks of your Alibaba Cloud account. The sample responses indicate that the account has one availability monitoring task named <c>ecs_instance</c>.</para>
+        /// <para>This topic provides an example on how to query the list of availability monitoring tasks for the current account. The response shows that the current account has one availability monitoring task record <c>ecs_instance</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10872,12 +10973,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries availability monitoring tasks.</para>
+        /// <para>Queries the list of availability monitoring tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example to show how to query all the availability monitoring tasks of your Alibaba Cloud account. The sample responses indicate that the account has one availability monitoring task named <c>ecs_instance</c>.</para>
+        /// <para>This topic provides an example on how to query the list of availability monitoring tasks for the current account. The response shows that the current account has one availability monitoring task record <c>ecs_instance</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10939,12 +11040,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries availability monitoring tasks.</para>
+        /// <para>Queries the list of availability monitoring tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example to show how to query all the availability monitoring tasks of your Alibaba Cloud account. The sample responses indicate that the account has one availability monitoring task named <c>ecs_instance</c>.</para>
+        /// <para>This topic provides an example on how to query the list of availability monitoring tasks for the current account. The response shows that the current account has one availability monitoring task record <c>ecs_instance</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10962,12 +11063,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries availability monitoring tasks.</para>
+        /// <para>Queries the list of availability monitoring tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example to show how to query all the availability monitoring tasks of your Alibaba Cloud account. The sample responses indicate that the account has one availability monitoring task named <c>ecs_instance</c>.</para>
+        /// <para>This topic provides an example on how to query the list of availability monitoring tasks for the current account. The response shows that the current account has one availability monitoring task record <c>ecs_instance</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12205,28 +12306,28 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the latest monitoring data of a metric.</para>
+        /// <para>Queries the latest monitoring data of a specified metric.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Limits</h3>
+        /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>The total free quota is 1 million calls per month for the DescribeMetricLast, DescribeMetricList, DescribeMetricData, and DescribeMetricTop operations. If the free quota is used up and CloudMonitor Basic (pay-as-you-go) is not activated, these API operations can no longer be called as expected. If you have activated CloudMonitor Basic (pay-as-you-go), these API operations can still be called even if the free quota is used up. After the free quota is used up, you are charged for the excess usage based on the pay-as-you-go billing method. For more information about how to activate CloudMonitor Basic (pay-as-you-go), see <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.6c8f3481IbSHgG%5C&commodityCode=cms_basic_public_cn%5C&from_biz_channel=help_bill">Enable the pay-as-you-go billing method</a>.</description></item>
-        /// <item><description>Each API operation can be called up to 50 times per second. An Alibaba Cloud account and the Resource Access Management (RAM) users within the account share the quota.<remarks>
-        /// <para>If <c>Throttling.User</c> or <c>Request was denied due to user flow control</c> is returned when you call an API operation, the API operation is throttled. For more information about how to handle the issue, see <a href="https://help.aliyun.com/document_detail/2615031.html">How do I handle the throttling of a query API?</a></para>
+        /// <item><description>Invocations of DescribeMetricLast, DescribeMetricList, DescribeMetricData, and DescribeMetricTop share a combined free quota of 1,000,000 calls per month. After the free quota is exhausted, if you have not activated CloudMonitor Basic pay-as-you-go billing method, you cannot use this API normally. If you have activated CloudMonitor Basic pay-as-you-go billing method, the API continues to work after the free quota is exhausted, and usage beyond the free quota is automatically billed. For the method to activate pay-as-you-go billing, see <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.6c8f3481IbSHgG&commodityCode=cms_basic_public_cn&from_biz_channel=help_bill">Activate pay-as-you-go billing</a>.</description></item>
+        /// <item><description>The rate limit for a single API operation is 50 calls per second. This limit is shared by an Alibaba Cloud account and all Resource Access Management (RAM) users under the account.<remarks>
+        /// <para>When you invoke an API operation, if the response contains <c>Throttling.User</c> or <c>Request was denied due to user flow control</c>, the API is being throttled. For the handling method, see <a href="https://help.aliyun.com/document_detail/2615031.html">How do I handle query API throttling</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// <h3><a href="#"></a>Precautions</h3>
-        /// <para>The storage duration of the monitoring data of each cloud service is related to the <c>Period</c> parameter (statistical period). A larger value of the <c>Period</c> parameter indicates that the monitoring data is distributed in a larger time range and the storage duration of the monitoring data is longer. The following list describes the specific relationships:</para>
+        /// <h3>Notes</h3>
+        /// <para>The storage duration of cloud service monitoring data depends on the <c>Period</c> (statistical period). A larger <c>Period</c> value results in sparser monitoring data and a longer storage duration. The relationships are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>The storage duration is 7 days if the value of the <c>Period</c> parameter is less than 60 seconds.</description></item>
-        /// <item><description>The storage duration is 31 days if the value of the <c>Period</c> parameter is 60 seconds.</description></item>
-        /// <item><description>The storage duration is 91 days if the value of the <c>Period</c> parameter is greater than or equal to 300 seconds.</description></item>
+        /// <item><description>If <c>Period</c> is less than 60 seconds, the storage duration is 7 days.</description></item>
+        /// <item><description>If <c>Period</c> is equal to 60 seconds, the storage duration is 31 days.</description></item>
+        /// <item><description>If <c>Period</c> is greater than or equal to 300 seconds, the storage duration is 91 days.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Operation description</h3>
-        /// <para>This topic provides an example on how to query the latest monitoring data of the <c>CPUUtilization</c> metric for Elastic Compute Service (ECS). The namespace of ECS is <c>acs_ecs_dashboard</c>. The returned result indicates that the monitoring data for the instance <c>i-abcdefgh12****</c> of the account <c>123456789876****</c> is queried at an interval of 60 seconds. The maximum, minimum, and average values of the metric are 100, 93.1, and 99.52.</para>
+        /// <h3>Operation description</h3>
+        /// <para>This topic provides an example of how to query the latest monitoring data of the <c>CPUUtilization</c> metric for the cloud service <c>acs_ecs_dashboard</c>. The response shows that for instance <c>i-abcdefgh12****</c> under account <c>123456789876****</c>, the maximum value is 100, the minimum value is 93.1, and the average value is 99.52 at a 60-second interval.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12300,28 +12401,28 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the latest monitoring data of a metric.</para>
+        /// <para>Queries the latest monitoring data of a specified metric.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Limits</h3>
+        /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>The total free quota is 1 million calls per month for the DescribeMetricLast, DescribeMetricList, DescribeMetricData, and DescribeMetricTop operations. If the free quota is used up and CloudMonitor Basic (pay-as-you-go) is not activated, these API operations can no longer be called as expected. If you have activated CloudMonitor Basic (pay-as-you-go), these API operations can still be called even if the free quota is used up. After the free quota is used up, you are charged for the excess usage based on the pay-as-you-go billing method. For more information about how to activate CloudMonitor Basic (pay-as-you-go), see <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.6c8f3481IbSHgG%5C&commodityCode=cms_basic_public_cn%5C&from_biz_channel=help_bill">Enable the pay-as-you-go billing method</a>.</description></item>
-        /// <item><description>Each API operation can be called up to 50 times per second. An Alibaba Cloud account and the Resource Access Management (RAM) users within the account share the quota.<remarks>
-        /// <para>If <c>Throttling.User</c> or <c>Request was denied due to user flow control</c> is returned when you call an API operation, the API operation is throttled. For more information about how to handle the issue, see <a href="https://help.aliyun.com/document_detail/2615031.html">How do I handle the throttling of a query API?</a></para>
+        /// <item><description>Invocations of DescribeMetricLast, DescribeMetricList, DescribeMetricData, and DescribeMetricTop share a combined free quota of 1,000,000 calls per month. After the free quota is exhausted, if you have not activated CloudMonitor Basic pay-as-you-go billing method, you cannot use this API normally. If you have activated CloudMonitor Basic pay-as-you-go billing method, the API continues to work after the free quota is exhausted, and usage beyond the free quota is automatically billed. For the method to activate pay-as-you-go billing, see <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.6c8f3481IbSHgG&commodityCode=cms_basic_public_cn&from_biz_channel=help_bill">Activate pay-as-you-go billing</a>.</description></item>
+        /// <item><description>The rate limit for a single API operation is 50 calls per second. This limit is shared by an Alibaba Cloud account and all Resource Access Management (RAM) users under the account.<remarks>
+        /// <para>When you invoke an API operation, if the response contains <c>Throttling.User</c> or <c>Request was denied due to user flow control</c>, the API is being throttled. For the handling method, see <a href="https://help.aliyun.com/document_detail/2615031.html">How do I handle query API throttling</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// <h3><a href="#"></a>Precautions</h3>
-        /// <para>The storage duration of the monitoring data of each cloud service is related to the <c>Period</c> parameter (statistical period). A larger value of the <c>Period</c> parameter indicates that the monitoring data is distributed in a larger time range and the storage duration of the monitoring data is longer. The following list describes the specific relationships:</para>
+        /// <h3>Notes</h3>
+        /// <para>The storage duration of cloud service monitoring data depends on the <c>Period</c> (statistical period). A larger <c>Period</c> value results in sparser monitoring data and a longer storage duration. The relationships are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>The storage duration is 7 days if the value of the <c>Period</c> parameter is less than 60 seconds.</description></item>
-        /// <item><description>The storage duration is 31 days if the value of the <c>Period</c> parameter is 60 seconds.</description></item>
-        /// <item><description>The storage duration is 91 days if the value of the <c>Period</c> parameter is greater than or equal to 300 seconds.</description></item>
+        /// <item><description>If <c>Period</c> is less than 60 seconds, the storage duration is 7 days.</description></item>
+        /// <item><description>If <c>Period</c> is equal to 60 seconds, the storage duration is 31 days.</description></item>
+        /// <item><description>If <c>Period</c> is greater than or equal to 300 seconds, the storage duration is 91 days.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Operation description</h3>
-        /// <para>This topic provides an example on how to query the latest monitoring data of the <c>CPUUtilization</c> metric for Elastic Compute Service (ECS). The namespace of ECS is <c>acs_ecs_dashboard</c>. The returned result indicates that the monitoring data for the instance <c>i-abcdefgh12****</c> of the account <c>123456789876****</c> is queried at an interval of 60 seconds. The maximum, minimum, and average values of the metric are 100, 93.1, and 99.52.</para>
+        /// <h3>Operation description</h3>
+        /// <para>This topic provides an example of how to query the latest monitoring data of the <c>CPUUtilization</c> metric for the cloud service <c>acs_ecs_dashboard</c>. The response shows that for instance <c>i-abcdefgh12****</c> under account <c>123456789876****</c>, the maximum value is 100, the minimum value is 93.1, and the average value is 99.52 at a 60-second interval.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12395,28 +12496,28 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the latest monitoring data of a metric.</para>
+        /// <para>Queries the latest monitoring data of a specified metric.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Limits</h3>
+        /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>The total free quota is 1 million calls per month for the DescribeMetricLast, DescribeMetricList, DescribeMetricData, and DescribeMetricTop operations. If the free quota is used up and CloudMonitor Basic (pay-as-you-go) is not activated, these API operations can no longer be called as expected. If you have activated CloudMonitor Basic (pay-as-you-go), these API operations can still be called even if the free quota is used up. After the free quota is used up, you are charged for the excess usage based on the pay-as-you-go billing method. For more information about how to activate CloudMonitor Basic (pay-as-you-go), see <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.6c8f3481IbSHgG%5C&commodityCode=cms_basic_public_cn%5C&from_biz_channel=help_bill">Enable the pay-as-you-go billing method</a>.</description></item>
-        /// <item><description>Each API operation can be called up to 50 times per second. An Alibaba Cloud account and the Resource Access Management (RAM) users within the account share the quota.<remarks>
-        /// <para>If <c>Throttling.User</c> or <c>Request was denied due to user flow control</c> is returned when you call an API operation, the API operation is throttled. For more information about how to handle the issue, see <a href="https://help.aliyun.com/document_detail/2615031.html">How do I handle the throttling of a query API?</a></para>
+        /// <item><description>Invocations of DescribeMetricLast, DescribeMetricList, DescribeMetricData, and DescribeMetricTop share a combined free quota of 1,000,000 calls per month. After the free quota is exhausted, if you have not activated CloudMonitor Basic pay-as-you-go billing method, you cannot use this API normally. If you have activated CloudMonitor Basic pay-as-you-go billing method, the API continues to work after the free quota is exhausted, and usage beyond the free quota is automatically billed. For the method to activate pay-as-you-go billing, see <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.6c8f3481IbSHgG&commodityCode=cms_basic_public_cn&from_biz_channel=help_bill">Activate pay-as-you-go billing</a>.</description></item>
+        /// <item><description>The rate limit for a single API operation is 50 calls per second. This limit is shared by an Alibaba Cloud account and all Resource Access Management (RAM) users under the account.<remarks>
+        /// <para>When you invoke an API operation, if the response contains <c>Throttling.User</c> or <c>Request was denied due to user flow control</c>, the API is being throttled. For the handling method, see <a href="https://help.aliyun.com/document_detail/2615031.html">How do I handle query API throttling</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// <h3><a href="#"></a>Precautions</h3>
-        /// <para>The storage duration of the monitoring data of each cloud service is related to the <c>Period</c> parameter (statistical period). A larger value of the <c>Period</c> parameter indicates that the monitoring data is distributed in a larger time range and the storage duration of the monitoring data is longer. The following list describes the specific relationships:</para>
+        /// <h3>Notes</h3>
+        /// <para>The storage duration of cloud service monitoring data depends on the <c>Period</c> (statistical period). A larger <c>Period</c> value results in sparser monitoring data and a longer storage duration. The relationships are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>The storage duration is 7 days if the value of the <c>Period</c> parameter is less than 60 seconds.</description></item>
-        /// <item><description>The storage duration is 31 days if the value of the <c>Period</c> parameter is 60 seconds.</description></item>
-        /// <item><description>The storage duration is 91 days if the value of the <c>Period</c> parameter is greater than or equal to 300 seconds.</description></item>
+        /// <item><description>If <c>Period</c> is less than 60 seconds, the storage duration is 7 days.</description></item>
+        /// <item><description>If <c>Period</c> is equal to 60 seconds, the storage duration is 31 days.</description></item>
+        /// <item><description>If <c>Period</c> is greater than or equal to 300 seconds, the storage duration is 91 days.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Operation description</h3>
-        /// <para>This topic provides an example on how to query the latest monitoring data of the <c>CPUUtilization</c> metric for Elastic Compute Service (ECS). The namespace of ECS is <c>acs_ecs_dashboard</c>. The returned result indicates that the monitoring data for the instance <c>i-abcdefgh12****</c> of the account <c>123456789876****</c> is queried at an interval of 60 seconds. The maximum, minimum, and average values of the metric are 100, 93.1, and 99.52.</para>
+        /// <h3>Operation description</h3>
+        /// <para>This topic provides an example of how to query the latest monitoring data of the <c>CPUUtilization</c> metric for the cloud service <c>acs_ecs_dashboard</c>. The response shows that for instance <c>i-abcdefgh12****</c> under account <c>123456789876****</c>, the maximum value is 100, the minimum value is 93.1, and the average value is 99.52 at a 60-second interval.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12434,28 +12535,28 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the latest monitoring data of a metric.</para>
+        /// <para>Queries the latest monitoring data of a specified metric.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Limits</h3>
+        /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>The total free quota is 1 million calls per month for the DescribeMetricLast, DescribeMetricList, DescribeMetricData, and DescribeMetricTop operations. If the free quota is used up and CloudMonitor Basic (pay-as-you-go) is not activated, these API operations can no longer be called as expected. If you have activated CloudMonitor Basic (pay-as-you-go), these API operations can still be called even if the free quota is used up. After the free quota is used up, you are charged for the excess usage based on the pay-as-you-go billing method. For more information about how to activate CloudMonitor Basic (pay-as-you-go), see <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.6c8f3481IbSHgG%5C&commodityCode=cms_basic_public_cn%5C&from_biz_channel=help_bill">Enable the pay-as-you-go billing method</a>.</description></item>
-        /// <item><description>Each API operation can be called up to 50 times per second. An Alibaba Cloud account and the Resource Access Management (RAM) users within the account share the quota.<remarks>
-        /// <para>If <c>Throttling.User</c> or <c>Request was denied due to user flow control</c> is returned when you call an API operation, the API operation is throttled. For more information about how to handle the issue, see <a href="https://help.aliyun.com/document_detail/2615031.html">How do I handle the throttling of a query API?</a></para>
+        /// <item><description>Invocations of DescribeMetricLast, DescribeMetricList, DescribeMetricData, and DescribeMetricTop share a combined free quota of 1,000,000 calls per month. After the free quota is exhausted, if you have not activated CloudMonitor Basic pay-as-you-go billing method, you cannot use this API normally. If you have activated CloudMonitor Basic pay-as-you-go billing method, the API continues to work after the free quota is exhausted, and usage beyond the free quota is automatically billed. For the method to activate pay-as-you-go billing, see <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.6c8f3481IbSHgG&commodityCode=cms_basic_public_cn&from_biz_channel=help_bill">Activate pay-as-you-go billing</a>.</description></item>
+        /// <item><description>The rate limit for a single API operation is 50 calls per second. This limit is shared by an Alibaba Cloud account and all Resource Access Management (RAM) users under the account.<remarks>
+        /// <para>When you invoke an API operation, if the response contains <c>Throttling.User</c> or <c>Request was denied due to user flow control</c>, the API is being throttled. For the handling method, see <a href="https://help.aliyun.com/document_detail/2615031.html">How do I handle query API throttling</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// <h3><a href="#"></a>Precautions</h3>
-        /// <para>The storage duration of the monitoring data of each cloud service is related to the <c>Period</c> parameter (statistical period). A larger value of the <c>Period</c> parameter indicates that the monitoring data is distributed in a larger time range and the storage duration of the monitoring data is longer. The following list describes the specific relationships:</para>
+        /// <h3>Notes</h3>
+        /// <para>The storage duration of cloud service monitoring data depends on the <c>Period</c> (statistical period). A larger <c>Period</c> value results in sparser monitoring data and a longer storage duration. The relationships are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>The storage duration is 7 days if the value of the <c>Period</c> parameter is less than 60 seconds.</description></item>
-        /// <item><description>The storage duration is 31 days if the value of the <c>Period</c> parameter is 60 seconds.</description></item>
-        /// <item><description>The storage duration is 91 days if the value of the <c>Period</c> parameter is greater than or equal to 300 seconds.</description></item>
+        /// <item><description>If <c>Period</c> is less than 60 seconds, the storage duration is 7 days.</description></item>
+        /// <item><description>If <c>Period</c> is equal to 60 seconds, the storage duration is 31 days.</description></item>
+        /// <item><description>If <c>Period</c> is greater than or equal to 300 seconds, the storage duration is 91 days.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Operation description</h3>
-        /// <para>This topic provides an example on how to query the latest monitoring data of the <c>CPUUtilization</c> metric for Elastic Compute Service (ECS). The namespace of ECS is <c>acs_ecs_dashboard</c>. The returned result indicates that the monitoring data for the instance <c>i-abcdefgh12****</c> of the account <c>123456789876****</c> is queried at an interval of 60 seconds. The maximum, minimum, and average values of the metric are 100, 93.1, and 99.52.</para>
+        /// <h3>Operation description</h3>
+        /// <para>This topic provides an example of how to query the latest monitoring data of the <c>CPUUtilization</c> metric for the cloud service <c>acs_ecs_dashboard</c>. The response shows that for instance <c>i-abcdefgh12****</c> under account <c>123456789876****</c>, the maximum value is 100, the minimum value is 93.1, and the average value is 99.52 at a 60-second interval.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12913,7 +13014,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeMetricRuleBlackList operation to query blacklist policies.</para>
+        /// <para>Queries the list of alert blacklist policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12991,7 +13092,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeMetricRuleBlackList operation to query blacklist policies.</para>
+        /// <para>Queries the list of alert blacklist policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13069,7 +13170,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeMetricRuleBlackList operation to query blacklist policies.</para>
+        /// <para>Queries the list of alert blacklist policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13087,7 +13188,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeMetricRuleBlackList operation to query blacklist policies.</para>
+        /// <para>Queries the list of alert blacklist policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13217,12 +13318,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all alert rules in the alert rule list.</para>
+        /// <para>Query all rules in the alert rule list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query all alert rules in the alert rule list of the current Alibaba Cloud account. The response shows that the alert rule list contains only one alert rule. The alert rule is named <c>Rule_01</c> and has an ID of <c>applyTemplate344cfd42-0f32-4fd6-805a-88d7908a****</c>.</para>
+        /// <para>This topic provides an example on how to query all alert rules in the alert rule list under the current Alibaba Cloud account. The response shows that the alert rule list contains only one alert rule. The name of the alert rule is <c>Rule_01</c> and the ID is <c>applyTemplate344cfd42-0f32-4fd6-805a-88d7908a****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13300,12 +13401,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all alert rules in the alert rule list.</para>
+        /// <para>Query all rules in the alert rule list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query all alert rules in the alert rule list of the current Alibaba Cloud account. The response shows that the alert rule list contains only one alert rule. The alert rule is named <c>Rule_01</c> and has an ID of <c>applyTemplate344cfd42-0f32-4fd6-805a-88d7908a****</c>.</para>
+        /// <para>This topic provides an example on how to query all alert rules in the alert rule list under the current Alibaba Cloud account. The response shows that the alert rule list contains only one alert rule. The name of the alert rule is <c>Rule_01</c> and the ID is <c>applyTemplate344cfd42-0f32-4fd6-805a-88d7908a****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13383,12 +13484,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all alert rules in the alert rule list.</para>
+        /// <para>Query all rules in the alert rule list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query all alert rules in the alert rule list of the current Alibaba Cloud account. The response shows that the alert rule list contains only one alert rule. The alert rule is named <c>Rule_01</c> and has an ID of <c>applyTemplate344cfd42-0f32-4fd6-805a-88d7908a****</c>.</para>
+        /// <para>This topic provides an example on how to query all alert rules in the alert rule list under the current Alibaba Cloud account. The response shows that the alert rule list contains only one alert rule. The name of the alert rule is <c>Rule_01</c> and the ID is <c>applyTemplate344cfd42-0f32-4fd6-805a-88d7908a****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13406,12 +13507,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all alert rules in the alert rule list.</para>
+        /// <para>Query all rules in the alert rule list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query all alert rules in the alert rule list of the current Alibaba Cloud account. The response shows that the alert rule list contains only one alert rule. The alert rule is named <c>Rule_01</c> and has an ID of <c>applyTemplate344cfd42-0f32-4fd6-805a-88d7908a****</c>.</para>
+        /// <para>This topic provides an example on how to query all alert rules in the alert rule list under the current Alibaba Cloud account. The response shows that the alert rule list contains only one alert rule. The name of the alert rule is <c>Rule_01</c> and the ID is <c>applyTemplate344cfd42-0f32-4fd6-805a-88d7908a****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13721,12 +13822,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries alert templates.</para>
+        /// <para>Queries the list of alert templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query alert templates. In this example, the following alert templates are returned in the response: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of querying alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13796,12 +13897,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries alert templates.</para>
+        /// <para>Queries the list of alert templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query alert templates. In this example, the following alert templates are returned in the response: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of querying alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13871,12 +13972,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries alert templates.</para>
+        /// <para>Queries the list of alert templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query alert templates. In this example, the following alert templates are returned in the response: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of querying alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13894,12 +13995,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries alert templates.</para>
+        /// <para>Queries the list of alert templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query alert templates. In this example, the following alert templates are returned in the response: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of querying alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14749,7 +14850,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of alert notification pause policies for an application group by calling the DescribeMonitorGroupNotifyPolicyList operation.</para>
+        /// <para>Queries the list of alert notification pause policies for an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14803,7 +14904,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of alert notification pause policies for an application group by calling the DescribeMonitorGroupNotifyPolicyList operation.</para>
+        /// <para>Queries the list of alert notification pause policies for an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14857,7 +14958,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of alert notification pause policies for an application group by calling the DescribeMonitorGroupNotifyPolicyList operation.</para>
+        /// <para>Queries the list of alert notification pause policies for an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14875,7 +14976,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of alert notification pause policies for an application group by calling the DescribeMonitorGroupNotifyPolicyList operation.</para>
+        /// <para>Queries the list of alert notification pause policies for an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14893,12 +14994,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeMonitorGroups operation to query a list of application groups.</para>
+        /// <para>Queries the list of application groups by calling the DescribeMonitorGroups operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query a list of application groups. The response shows that two application groups are returned: <c>testGroup124</c> and <c>test123</c>.</para>
+        /// <para>This topic provides an example of how to query the list of application groups for the current account. The response shows that the current account has two application groups: <c>testGroup124</c> and <c>test123</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14992,12 +15093,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeMonitorGroups operation to query a list of application groups.</para>
+        /// <para>Queries the list of application groups by calling the DescribeMonitorGroups operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query a list of application groups. The response shows that two application groups are returned: <c>testGroup124</c> and <c>test123</c>.</para>
+        /// <para>This topic provides an example of how to query the list of application groups for the current account. The response shows that the current account has two application groups: <c>testGroup124</c> and <c>test123</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15091,12 +15192,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeMonitorGroups operation to query a list of application groups.</para>
+        /// <para>Queries the list of application groups by calling the DescribeMonitorGroups operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query a list of application groups. The response shows that two application groups are returned: <c>testGroup124</c> and <c>test123</c>.</para>
+        /// <para>This topic provides an example of how to query the list of application groups for the current account. The response shows that the current account has two application groups: <c>testGroup124</c> and <c>test123</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15114,12 +15215,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeMonitorGroups operation to query a list of application groups.</para>
+        /// <para>Queries the list of application groups by calling the DescribeMonitorGroups operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query a list of application groups. The response shows that two application groups are returned: <c>testGroup124</c> and <c>test123</c>.</para>
+        /// <para>This topic provides an example of how to query the list of application groups for the current account. The response shows that the current account has two application groups: <c>testGroup124</c> and <c>test123</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15137,7 +15238,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource quotas of CloudMonitor.</para>
+        /// <para>Queries the quotas of various CloudMonitor resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15179,7 +15280,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource quotas of CloudMonitor.</para>
+        /// <para>Queries the quotas of various CloudMonitor resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15221,7 +15322,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource quotas of CloudMonitor.</para>
+        /// <para>Queries the quotas of various CloudMonitor resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15239,7 +15340,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource quotas of CloudMonitor.</para>
+        /// <para>Queries the quotas of various CloudMonitor resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16441,12 +16542,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a site monitoring task by calling the DescribeSiteMonitorAttribute operation.</para>
+        /// <para>Queries the details of a site monitoring task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the details of the site monitoring task <c>cc641dff-c19d-45f3-ad0a-818a0c4f****</c>. The response shows that the task name is <c>test123</c>, the monitored address is <c>https://aliyun.com</c>, and the carrier is <c>Alibaba</c>.</para>
+        /// <para>This topic provides an example of querying the details of the site monitoring task <c>cc641dff-c19d-45f3-ad0a-818a0c4f****</c>. The response shows that the task name is <c>test123</c>, the monitored address is <c>https://aliyun.com</c>, and the carrier is <c>Alibaba</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16492,12 +16593,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a site monitoring task by calling the DescribeSiteMonitorAttribute operation.</para>
+        /// <para>Queries the details of a site monitoring task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the details of the site monitoring task <c>cc641dff-c19d-45f3-ad0a-818a0c4f****</c>. The response shows that the task name is <c>test123</c>, the monitored address is <c>https://aliyun.com</c>, and the carrier is <c>Alibaba</c>.</para>
+        /// <para>This topic provides an example of querying the details of the site monitoring task <c>cc641dff-c19d-45f3-ad0a-818a0c4f****</c>. The response shows that the task name is <c>test123</c>, the monitored address is <c>https://aliyun.com</c>, and the carrier is <c>Alibaba</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16543,12 +16644,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a site monitoring task by calling the DescribeSiteMonitorAttribute operation.</para>
+        /// <para>Queries the details of a site monitoring task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the details of the site monitoring task <c>cc641dff-c19d-45f3-ad0a-818a0c4f****</c>. The response shows that the task name is <c>test123</c>, the monitored address is <c>https://aliyun.com</c>, and the carrier is <c>Alibaba</c>.</para>
+        /// <para>This topic provides an example of querying the details of the site monitoring task <c>cc641dff-c19d-45f3-ad0a-818a0c4f****</c>. The response shows that the task name is <c>test123</c>, the monitored address is <c>https://aliyun.com</c>, and the carrier is <c>Alibaba</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16566,12 +16667,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a site monitoring task by calling the DescribeSiteMonitorAttribute operation.</para>
+        /// <para>Queries the details of a site monitoring task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the details of the site monitoring task <c>cc641dff-c19d-45f3-ad0a-818a0c4f****</c>. The response shows that the task name is <c>test123</c>, the monitored address is <c>https://aliyun.com</c>, and the carrier is <c>Alibaba</c>.</para>
+        /// <para>This topic provides an example of querying the details of the site monitoring task <c>cc641dff-c19d-45f3-ad0a-818a0c4f****</c>. The response shows that the task name is <c>test123</c>, the monitored address is <c>https://aliyun.com</c>, and the carrier is <c>Alibaba</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16942,7 +17043,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the list of site monitoring tasks for the current account. The response shows that the current account has one site monitoring task named <c>HanZhou_ECS2</c>.</para>
+        /// <para>This topic provides an example of how to query the list of site monitoring tasks for the current account. The response shows that the current account has one site monitoring record named <c>HanZhou_ECS2</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17013,7 +17114,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the list of site monitoring tasks for the current account. The response shows that the current account has one site monitoring task named <c>HanZhou_ECS2</c>.</para>
+        /// <para>This topic provides an example of how to query the list of site monitoring tasks for the current account. The response shows that the current account has one site monitoring record named <c>HanZhou_ECS2</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17084,7 +17185,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the list of site monitoring tasks for the current account. The response shows that the current account has one site monitoring task named <c>HanZhou_ECS2</c>.</para>
+        /// <para>This topic provides an example of how to query the list of site monitoring tasks for the current account. The response shows that the current account has one site monitoring record named <c>HanZhou_ECS2</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17107,7 +17208,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the list of site monitoring tasks for the current account. The response shows that the current account has one site monitoring task named <c>HanZhou_ECS2</c>.</para>
+        /// <para>This topic provides an example of how to query the list of site monitoring tasks for the current account. The response shows that the current account has one site monitoring record named <c>HanZhou_ECS2</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17625,12 +17726,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of detection points.</para>
+        /// <para>Queries the list of detection points.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to call the DescribeSyntheticProbeList operation to query detection point details for the China Unicom carrier in Beijing.</para>
+        /// <para>This topic provides an example to query the details of detection points for the carrier China Unicom in Beijing.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17700,12 +17801,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of detection points.</para>
+        /// <para>Queries the list of detection points.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to call the DescribeSyntheticProbeList operation to query detection point details for the China Unicom carrier in Beijing.</para>
+        /// <para>This topic provides an example to query the details of detection points for the carrier China Unicom in Beijing.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17775,12 +17876,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of detection points.</para>
+        /// <para>Queries the list of detection points.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to call the DescribeSyntheticProbeList operation to query detection point details for the China Unicom carrier in Beijing.</para>
+        /// <para>This topic provides an example to query the details of detection points for the carrier China Unicom in Beijing.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17798,12 +17899,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of detection points.</para>
+        /// <para>Queries the list of detection points.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to call the DescribeSyntheticProbeList operation to query detection point details for the China Unicom carrier in Beijing.</para>
+        /// <para>This topic provides an example to query the details of detection points for the carrier China Unicom in Beijing.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17821,7 +17922,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a system event.</para>
+        /// <para>Queries the details of system events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17903,7 +18004,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a system event.</para>
+        /// <para>Queries the details of system events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17985,7 +18086,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a system event.</para>
+        /// <para>Queries the details of system events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18003,7 +18104,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a system event.</para>
+        /// <para>Queries the details of system events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18525,7 +18626,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tag keys by calling the DescribeTagKeyList operation.</para>
+        /// <para>Calls the DescribeTagKeyList operation to query a list of tag keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18571,7 +18672,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tag keys by calling the DescribeTagKeyList operation.</para>
+        /// <para>Calls the DescribeTagKeyList operation to query a list of tag keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18617,7 +18718,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tag keys by calling the DescribeTagKeyList operation.</para>
+        /// <para>Calls the DescribeTagKeyList operation to query a list of tag keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18635,7 +18736,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tag keys by calling the DescribeTagKeyList operation.</para>
+        /// <para>Calls the DescribeTagKeyList operation to query a list of tag keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19269,7 +19370,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DisableMetricRules operation to disable alert rules.</para>
+        /// <para>Disables alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19286,6 +19387,10 @@ namespace AlibabaCloud.SDK.Cms20190101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
             {
                 query["RuleId"] = request.RuleId;
@@ -19311,7 +19416,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DisableMetricRules operation to disable alert rules.</para>
+        /// <para>Disables alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19328,6 +19433,10 @@ namespace AlibabaCloud.SDK.Cms20190101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
             {
                 query["RuleId"] = request.RuleId;
@@ -19353,7 +19462,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DisableMetricRules operation to disable alert rules.</para>
+        /// <para>Disables alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19371,7 +19480,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DisableMetricRules operation to disable alert rules.</para>
+        /// <para>Disables alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19509,8 +19618,16 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the initiative alert feature for a cloud service.</para>
+        /// <para>Enables one-click alert rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example of setting a threshold alert rule for the <c>cpu_total</c> metric of the instance <c>i-uf6j91r34rnwawoo****</c> in the <c>acs_ecs_dashboard</c> namespace of Elastic Compute Service (ECS). The alert contact group for the alert rule is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the alert retry count for the Critical level is <c>3</c>.</para>
+        /// <remarks>
+        /// <para>On August 15, 2024, Statistics validation was added. The statistical value must be the Statistics value corresponding to the metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableActiveMetricRuleRequest
@@ -19526,6 +19643,14 @@ namespace AlibabaCloud.SDK.Cms20190101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Product))
             {
                 query["Product"] = request.Product;
@@ -19551,8 +19676,16 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the initiative alert feature for a cloud service.</para>
+        /// <para>Enables one-click alert rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example of setting a threshold alert rule for the <c>cpu_total</c> metric of the instance <c>i-uf6j91r34rnwawoo****</c> in the <c>acs_ecs_dashboard</c> namespace of Elastic Compute Service (ECS). The alert contact group for the alert rule is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the alert retry count for the Critical level is <c>3</c>.</para>
+        /// <remarks>
+        /// <para>On August 15, 2024, Statistics validation was added. The statistical value must be the Statistics value corresponding to the metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableActiveMetricRuleRequest
@@ -19568,6 +19701,14 @@ namespace AlibabaCloud.SDK.Cms20190101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Product))
             {
                 query["Product"] = request.Product;
@@ -19593,8 +19734,16 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the initiative alert feature for a cloud service.</para>
+        /// <para>Enables one-click alert rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example of setting a threshold alert rule for the <c>cpu_total</c> metric of the instance <c>i-uf6j91r34rnwawoo****</c> in the <c>acs_ecs_dashboard</c> namespace of Elastic Compute Service (ECS). The alert contact group for the alert rule is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the alert retry count for the Critical level is <c>3</c>.</para>
+        /// <remarks>
+        /// <para>On August 15, 2024, Statistics validation was added. The statistical value must be the Statistics value corresponding to the metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableActiveMetricRuleRequest
@@ -19611,8 +19760,16 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the initiative alert feature for a cloud service.</para>
+        /// <para>Enables one-click alert rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example of setting a threshold alert rule for the <c>cpu_total</c> metric of the instance <c>i-uf6j91r34rnwawoo****</c> in the <c>acs_ecs_dashboard</c> namespace of Elastic Compute Service (ECS). The alert contact group for the alert rule is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the alert retry count for the Critical level is <c>3</c>.</para>
+        /// <remarks>
+        /// <para>On August 15, 2024, Statistics validation was added. The statistical value must be the Statistics value corresponding to the metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableActiveMetricRuleRequest
@@ -19629,7 +19786,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The EnableEventRules operation enables one or more event rules.</para>
+        /// <para>Enables one or more event monitoring alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19671,7 +19828,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The EnableEventRules operation enables one or more event rules.</para>
+        /// <para>Enables one or more event monitoring alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19713,7 +19870,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The EnableEventRules operation enables one or more event rules.</para>
+        /// <para>Enables one or more event monitoring alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19731,7 +19888,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The EnableEventRules operation enables one or more event rules.</para>
+        /// <para>Enables one or more event monitoring alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19997,7 +20154,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables alert rules.</para>
+        /// <para>Enables one or more alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20014,6 +20171,10 @@ namespace AlibabaCloud.SDK.Cms20190101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
             {
                 query["RuleId"] = request.RuleId;
@@ -20039,7 +20200,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables alert rules.</para>
+        /// <para>Enables one or more alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20056,6 +20217,10 @@ namespace AlibabaCloud.SDK.Cms20190101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleId))
             {
                 query["RuleId"] = request.RuleId;
@@ -20081,7 +20246,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables alert rules.</para>
+        /// <para>Enables one or more alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20099,7 +20264,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables alert rules.</para>
+        /// <para>Enables one or more alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20237,17 +20402,18 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the InstallMonitoringAgent operation to install the CloudMonitor agent on specified Alibaba Cloud hosts.</para>
+        /// <para>Installs the CloudMonitor agent on a specified Alibaba Cloud host.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Prerequisites</h2>
-        /// <para>Ensure that Cloud Assistant is installed on the Alibaba Cloud host. For more information, see <a href="https://help.aliyun.com/document_detail/64601.html">Cloud Assistant overview</a>.</para>
+        /// <h2>Before you begin</h2>
+        /// <para>Make sure that the Cloud Assistant agent is installed on the Alibaba Cloud host. For more information about how to install the Cloud Assistant agent, see <a href="https://help.aliyun.com/document_detail/64601.html">Cloud Assistant overview</a>.</para>
         /// <h2>Background information</h2>
-        /// <para>This API applies only to Alibaba Cloud hosts, which are Elastic Compute Service (ECS) instances. The success rate for installing the CloudMonitor agent using this API is approximately 95%. If the installation fails, you must manually install the agent. For more information about how to install the CloudMonitor agent, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the C++ agent</a>.</para>
-        /// <h2>Example</h2>
-        /// <para>This example shows how to forcibly install the latest version of the CloudMonitor agent on the ECS instance <c>i-m5e0k0bexac8tykr****</c>.</para>
+        /// <para>This operation applies only to Alibaba Cloud hosts, namely ECS instances.
+        /// The success rate of installing the CloudMonitor agent by calling this API operation is approximately 95%. If the installation fails, install the agent manually. For more information about how to install the CloudMonitor agent, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the CloudMonitor agent for C++</a>.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>This topic provides an example on how to forcibly install the latest version of the CloudMonitor agent on the Alibaba Cloud host i-m5e0k0bexac8tykr****.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20264,6 +20430,10 @@ namespace AlibabaCloud.SDK.Cms20190101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
             {
                 query["Force"] = request.Force;
@@ -20297,17 +20467,18 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the InstallMonitoringAgent operation to install the CloudMonitor agent on specified Alibaba Cloud hosts.</para>
+        /// <para>Installs the CloudMonitor agent on a specified Alibaba Cloud host.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Prerequisites</h2>
-        /// <para>Ensure that Cloud Assistant is installed on the Alibaba Cloud host. For more information, see <a href="https://help.aliyun.com/document_detail/64601.html">Cloud Assistant overview</a>.</para>
+        /// <h2>Before you begin</h2>
+        /// <para>Make sure that the Cloud Assistant agent is installed on the Alibaba Cloud host. For more information about how to install the Cloud Assistant agent, see <a href="https://help.aliyun.com/document_detail/64601.html">Cloud Assistant overview</a>.</para>
         /// <h2>Background information</h2>
-        /// <para>This API applies only to Alibaba Cloud hosts, which are Elastic Compute Service (ECS) instances. The success rate for installing the CloudMonitor agent using this API is approximately 95%. If the installation fails, you must manually install the agent. For more information about how to install the CloudMonitor agent, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the C++ agent</a>.</para>
-        /// <h2>Example</h2>
-        /// <para>This example shows how to forcibly install the latest version of the CloudMonitor agent on the ECS instance <c>i-m5e0k0bexac8tykr****</c>.</para>
+        /// <para>This operation applies only to Alibaba Cloud hosts, namely ECS instances.
+        /// The success rate of installing the CloudMonitor agent by calling this API operation is approximately 95%. If the installation fails, install the agent manually. For more information about how to install the CloudMonitor agent, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the CloudMonitor agent for C++</a>.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>This topic provides an example on how to forcibly install the latest version of the CloudMonitor agent on the Alibaba Cloud host i-m5e0k0bexac8tykr****.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20324,6 +20495,10 @@ namespace AlibabaCloud.SDK.Cms20190101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
             {
                 query["Force"] = request.Force;
@@ -20357,17 +20532,18 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the InstallMonitoringAgent operation to install the CloudMonitor agent on specified Alibaba Cloud hosts.</para>
+        /// <para>Installs the CloudMonitor agent on a specified Alibaba Cloud host.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Prerequisites</h2>
-        /// <para>Ensure that Cloud Assistant is installed on the Alibaba Cloud host. For more information, see <a href="https://help.aliyun.com/document_detail/64601.html">Cloud Assistant overview</a>.</para>
+        /// <h2>Before you begin</h2>
+        /// <para>Make sure that the Cloud Assistant agent is installed on the Alibaba Cloud host. For more information about how to install the Cloud Assistant agent, see <a href="https://help.aliyun.com/document_detail/64601.html">Cloud Assistant overview</a>.</para>
         /// <h2>Background information</h2>
-        /// <para>This API applies only to Alibaba Cloud hosts, which are Elastic Compute Service (ECS) instances. The success rate for installing the CloudMonitor agent using this API is approximately 95%. If the installation fails, you must manually install the agent. For more information about how to install the CloudMonitor agent, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the C++ agent</a>.</para>
-        /// <h2>Example</h2>
-        /// <para>This example shows how to forcibly install the latest version of the CloudMonitor agent on the ECS instance <c>i-m5e0k0bexac8tykr****</c>.</para>
+        /// <para>This operation applies only to Alibaba Cloud hosts, namely ECS instances.
+        /// The success rate of installing the CloudMonitor agent by calling this API operation is approximately 95%. If the installation fails, install the agent manually. For more information about how to install the CloudMonitor agent, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the CloudMonitor agent for C++</a>.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>This topic provides an example on how to forcibly install the latest version of the CloudMonitor agent on the Alibaba Cloud host i-m5e0k0bexac8tykr****.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20385,17 +20561,18 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the InstallMonitoringAgent operation to install the CloudMonitor agent on specified Alibaba Cloud hosts.</para>
+        /// <para>Installs the CloudMonitor agent on a specified Alibaba Cloud host.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Prerequisites</h2>
-        /// <para>Ensure that Cloud Assistant is installed on the Alibaba Cloud host. For more information, see <a href="https://help.aliyun.com/document_detail/64601.html">Cloud Assistant overview</a>.</para>
+        /// <h2>Before you begin</h2>
+        /// <para>Make sure that the Cloud Assistant agent is installed on the Alibaba Cloud host. For more information about how to install the Cloud Assistant agent, see <a href="https://help.aliyun.com/document_detail/64601.html">Cloud Assistant overview</a>.</para>
         /// <h2>Background information</h2>
-        /// <para>This API applies only to Alibaba Cloud hosts, which are Elastic Compute Service (ECS) instances. The success rate for installing the CloudMonitor agent using this API is approximately 95%. If the installation fails, you must manually install the agent. For more information about how to install the CloudMonitor agent, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the C++ agent</a>.</para>
-        /// <h2>Example</h2>
-        /// <para>This example shows how to forcibly install the latest version of the CloudMonitor agent on the ECS instance <c>i-m5e0k0bexac8tykr****</c>.</para>
+        /// <para>This operation applies only to Alibaba Cloud hosts, namely ECS instances.
+        /// The success rate of installing the CloudMonitor agent by calling this API operation is approximately 95%. If the installation fails, install the agent manually. For more information about how to install the CloudMonitor agent, see <a href="https://help.aliyun.com/document_detail/183482.html">Install and uninstall the CloudMonitor agent for C++</a>.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>This topic provides an example on how to forcibly install the latest version of the CloudMonitor agent on the Alibaba Cloud host i-m5e0k0bexac8tykr****.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20413,7 +20590,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyGroupMonitoringAgentProcess operation to modify the process monitoring settings for an application group.</para>
+        /// <para>Modifies process monitoring in an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20467,7 +20644,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyGroupMonitoringAgentProcess operation to modify the process monitoring settings for an application group.</para>
+        /// <para>Modifies process monitoring in an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20521,7 +20698,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyGroupMonitoringAgentProcess operation to modify the process monitoring settings for an application group.</para>
+        /// <para>Modifies process monitoring in an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20539,7 +20716,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyGroupMonitoringAgentProcess operation to modify the process monitoring settings for an application group.</para>
+        /// <para>Modifies process monitoring in an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20562,7 +20739,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to change the name of an availability monitoring task named <c>12345</c> in an application group named <c>123456</c> to <c>task2</c>.</para>
+        /// <para>This topic provides an example on how to change the name of availability monitoring task <c>12345</c> in application group <c>123456</c> to <c>task2</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20641,7 +20818,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to change the name of an availability monitoring task named <c>12345</c> in an application group named <c>123456</c> to <c>task2</c>.</para>
+        /// <para>This topic provides an example on how to change the name of availability monitoring task <c>12345</c> in application group <c>123456</c> to <c>task2</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20720,7 +20897,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to change the name of an availability monitoring task named <c>12345</c> in an application group named <c>123456</c> to <c>task2</c>.</para>
+        /// <para>This topic provides an example on how to change the name of availability monitoring task <c>12345</c> in application group <c>123456</c> to <c>task2</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20743,7 +20920,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to change the name of an availability monitoring task named <c>12345</c> in an application group named <c>123456</c> to <c>task2</c>.</para>
+        /// <para>This topic provides an example on how to change the name of availability monitoring task <c>12345</c> in application group <c>123456</c> to <c>task2</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21221,7 +21398,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the metrics of a Simple Log Service (SLS) log monitoring task by calling the ModifyHybridMonitorTask operation.</para>
+        /// <para>Modifies the metrics of a Simple Log Service (SLS) log monitoring task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21288,7 +21465,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the metrics of a Simple Log Service (SLS) log monitoring task by calling the ModifyHybridMonitorTask operation.</para>
+        /// <para>Modifies the metrics of a Simple Log Service (SLS) log monitoring task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21355,7 +21532,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the metrics of a Simple Log Service (SLS) log monitoring task by calling the ModifyHybridMonitorTask operation.</para>
+        /// <para>Modifies the metrics of a Simple Log Service (SLS) log monitoring task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21378,7 +21555,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the metrics of a Simple Log Service (SLS) log monitoring task by calling the ModifyHybridMonitorTask operation.</para>
+        /// <para>Modifies the metrics of a Simple Log Service (SLS) log monitoring task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21401,7 +21578,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a blacklist policy.</para>
+        /// <para>Modifies an alert blacklist policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21483,7 +21660,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a blacklist policy.</para>
+        /// <para>Modifies an alert blacklist policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21565,7 +21742,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a blacklist policy.</para>
+        /// <para>Modifies an alert blacklist policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21583,7 +21760,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a blacklist policy.</para>
+        /// <para>Modifies an alert blacklist policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22221,7 +22398,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies an alert contact by calling the PutContact operation.</para>
+        /// <para>Calls the PutContact operation to create or modify alert contact information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22275,7 +22452,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies an alert contact by calling the PutContact operation.</para>
+        /// <para>Calls the PutContact operation to create or modify alert contact information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22329,7 +22506,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies an alert contact by calling the PutContact operation.</para>
+        /// <para>Calls the PutContact operation to create or modify alert contact information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22347,7 +22524,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies an alert contact by calling the PutContact operation.</para>
+        /// <para>Calls the PutContact operation to create or modify alert contact information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22997,12 +23174,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom monitoring alert rule by calling the PutCustomMetricRule operation.</para>
+        /// <para>Creates an alert rule for custom monitoring.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用本接口前，请先调用PutCustomMetric接口上报自定义监控数据，详情请参见 <a href="https://help.aliyun.com/document_detail/115004.html">PutCustomMetric</a>。</para>
+        /// <para>Before calling this operation, call the PutCustomMetric operation to report custom monitoring data. For more information, see <a href="https://help.aliyun.com/document_detail/115004.html">PutCustomMetric</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23104,12 +23281,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom monitoring alert rule by calling the PutCustomMetricRule operation.</para>
+        /// <para>Creates an alert rule for custom monitoring.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用本接口前，请先调用PutCustomMetric接口上报自定义监控数据，详情请参见 <a href="https://help.aliyun.com/document_detail/115004.html">PutCustomMetric</a>。</para>
+        /// <para>Before calling this operation, call the PutCustomMetric operation to report custom monitoring data. For more information, see <a href="https://help.aliyun.com/document_detail/115004.html">PutCustomMetric</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23211,12 +23388,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom monitoring alert rule by calling the PutCustomMetricRule operation.</para>
+        /// <para>Creates an alert rule for custom monitoring.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用本接口前，请先调用PutCustomMetric接口上报自定义监控数据，详情请参见 <a href="https://help.aliyun.com/document_detail/115004.html">PutCustomMetric</a>。</para>
+        /// <para>Before calling this operation, call the PutCustomMetric operation to report custom monitoring data. For more information, see <a href="https://help.aliyun.com/document_detail/115004.html">PutCustomMetric</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23234,12 +23411,12 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom monitoring alert rule by calling the PutCustomMetricRule operation.</para>
+        /// <para>Creates an alert rule for custom monitoring.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>调用本接口前，请先调用PutCustomMetric接口上报自定义监控数据，详情请参见 <a href="https://help.aliyun.com/document_detail/115004.html">PutCustomMetric</a>。</para>
+        /// <para>Before calling this operation, call the PutCustomMetric operation to report custom monitoring data. For more information, see <a href="https://help.aliyun.com/document_detail/115004.html">PutCustomMetric</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23257,13 +23434,13 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies an event-based alert rule by calling the PutEventRule operation.</para>
+        /// <para>Creates or modifies an event-triggered alert rule by calling the PutEventRule operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If the Event-triggered Alert Rule name does not exist, a new alert rule is created. If the Event-triggered Alert Rule name already exists, the existing alert rule is modified.
-        /// This topic provides an example of how to create an event-based alert rule named <c>myRuleName</c> for the Alibaba Cloud service <c>ecs</c>.</para>
+        /// <para>If the specified alert rule name does not exist, a new alert rule is created. If the specified alert rule name already exists, the existing alert rule is modified.
+        /// This topic provides an example on how to create an event-triggered alert rule named <c>myRuleName</c> for the Alibaba Cloud service <c>ecs</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23329,13 +23506,13 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies an event-based alert rule by calling the PutEventRule operation.</para>
+        /// <para>Creates or modifies an event-triggered alert rule by calling the PutEventRule operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If the Event-triggered Alert Rule name does not exist, a new alert rule is created. If the Event-triggered Alert Rule name already exists, the existing alert rule is modified.
-        /// This topic provides an example of how to create an event-based alert rule named <c>myRuleName</c> for the Alibaba Cloud service <c>ecs</c>.</para>
+        /// <para>If the specified alert rule name does not exist, a new alert rule is created. If the specified alert rule name already exists, the existing alert rule is modified.
+        /// This topic provides an example on how to create an event-triggered alert rule named <c>myRuleName</c> for the Alibaba Cloud service <c>ecs</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23401,13 +23578,13 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies an event-based alert rule by calling the PutEventRule operation.</para>
+        /// <para>Creates or modifies an event-triggered alert rule by calling the PutEventRule operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If the Event-triggered Alert Rule name does not exist, a new alert rule is created. If the Event-triggered Alert Rule name already exists, the existing alert rule is modified.
-        /// This topic provides an example of how to create an event-based alert rule named <c>myRuleName</c> for the Alibaba Cloud service <c>ecs</c>.</para>
+        /// <para>If the specified alert rule name does not exist, a new alert rule is created. If the specified alert rule name already exists, the existing alert rule is modified.
+        /// This topic provides an example on how to create an event-triggered alert rule named <c>myRuleName</c> for the Alibaba Cloud service <c>ecs</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23425,13 +23602,13 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies an event-based alert rule by calling the PutEventRule operation.</para>
+        /// <para>Creates or modifies an event-triggered alert rule by calling the PutEventRule operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If the Event-triggered Alert Rule name does not exist, a new alert rule is created. If the Event-triggered Alert Rule name already exists, the existing alert rule is modified.
-        /// This topic provides an example of how to create an event-based alert rule named <c>myRuleName</c> for the Alibaba Cloud service <c>ecs</c>.</para>
+        /// <para>If the specified alert rule name does not exist, a new alert rule is created. If the specified alert rule name already exists, the existing alert rule is modified.
+        /// This topic provides an example on how to create an event-triggered alert rule named <c>myRuleName</c> for the Alibaba Cloud service <c>ecs</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23954,7 +24131,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to create an alert rule for the <c>cpu_total</c> metric of Elastic Compute Service (ECS) in the application group <c>17285****</c>. The alert rule ID is <c>123456</c>, the alert rule name is <c>Rule_test</c>, the alert severity is <c>Critical</c>, the statistical method is <c>Average</c>, the comparison operator is <c>GreaterThanOrEqualToThreshold</c>, the threshold is <c>90</c>, and the retry count is <c>3</c>. The response shows that the alert rule is created. The alert rule ID is <c>123456</c>.</para>
+        /// <para>This topic provides an example of creating an alert rule for the <c>cpu_total</c> monitoring metric of the Elastic Computing Service server (an Alibaba Cloud service) in the application group <c>17285****</c>. The alert rule ID is <c>123456</c>, the alert rule name is <c>Rule_test</c>, the alert level is <c>Critical</c>, the statistical method is <c>Average</c>, the threshold comparison operator is <c>GreaterThanOrEqualToThreshold</c>, the threshold is <c>90</c>, and the retry count is <c>3</c>. The response shows that the alert rule is created and the alert rule ID is <c>123456</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23982,6 +24159,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
             {
                 query["Dimensions"] = request.Dimensions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveInterval))
             {
@@ -24077,7 +24258,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to create an alert rule for the <c>cpu_total</c> metric of Elastic Compute Service (ECS) in the application group <c>17285****</c>. The alert rule ID is <c>123456</c>, the alert rule name is <c>Rule_test</c>, the alert severity is <c>Critical</c>, the statistical method is <c>Average</c>, the comparison operator is <c>GreaterThanOrEqualToThreshold</c>, the threshold is <c>90</c>, and the retry count is <c>3</c>. The response shows that the alert rule is created. The alert rule ID is <c>123456</c>.</para>
+        /// <para>This topic provides an example of creating an alert rule for the <c>cpu_total</c> monitoring metric of the Elastic Computing Service server (an Alibaba Cloud service) in the application group <c>17285****</c>. The alert rule ID is <c>123456</c>, the alert rule name is <c>Rule_test</c>, the alert level is <c>Critical</c>, the statistical method is <c>Average</c>, the threshold comparison operator is <c>GreaterThanOrEqualToThreshold</c>, the threshold is <c>90</c>, and the retry count is <c>3</c>. The response shows that the alert rule is created and the alert rule ID is <c>123456</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24105,6 +24286,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
             {
                 query["Dimensions"] = request.Dimensions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveInterval))
             {
@@ -24200,7 +24385,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to create an alert rule for the <c>cpu_total</c> metric of Elastic Compute Service (ECS) in the application group <c>17285****</c>. The alert rule ID is <c>123456</c>, the alert rule name is <c>Rule_test</c>, the alert severity is <c>Critical</c>, the statistical method is <c>Average</c>, the comparison operator is <c>GreaterThanOrEqualToThreshold</c>, the threshold is <c>90</c>, and the retry count is <c>3</c>. The response shows that the alert rule is created. The alert rule ID is <c>123456</c>.</para>
+        /// <para>This topic provides an example of creating an alert rule for the <c>cpu_total</c> monitoring metric of the Elastic Computing Service server (an Alibaba Cloud service) in the application group <c>17285****</c>. The alert rule ID is <c>123456</c>, the alert rule name is <c>Rule_test</c>, the alert level is <c>Critical</c>, the statistical method is <c>Average</c>, the threshold comparison operator is <c>GreaterThanOrEqualToThreshold</c>, the threshold is <c>90</c>, and the retry count is <c>3</c>. The response shows that the alert rule is created and the alert rule ID is <c>123456</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24223,7 +24408,7 @@ namespace AlibabaCloud.SDK.Cms20190101
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to create an alert rule for the <c>cpu_total</c> metric of Elastic Compute Service (ECS) in the application group <c>17285****</c>. The alert rule ID is <c>123456</c>, the alert rule name is <c>Rule_test</c>, the alert severity is <c>Critical</c>, the statistical method is <c>Average</c>, the comparison operator is <c>GreaterThanOrEqualToThreshold</c>, the threshold is <c>90</c>, and the retry count is <c>3</c>. The response shows that the alert rule is created. The alert rule ID is <c>123456</c>.</para>
+        /// <para>This topic provides an example of creating an alert rule for the <c>cpu_total</c> monitoring metric of the Elastic Computing Service server (an Alibaba Cloud service) in the application group <c>17285****</c>. The alert rule ID is <c>123456</c>, the alert rule name is <c>Rule_test</c>, the alert level is <c>Critical</c>, the statistical method is <c>Average</c>, the threshold comparison operator is <c>GreaterThanOrEqualToThreshold</c>, the threshold is <c>90</c>, and the retry count is <c>3</c>. The response shows that the alert rule is created and the alert rule ID is <c>123456</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24814,6 +24999,10 @@ namespace AlibabaCloud.SDK.Cms20190101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
                 query["GroupId"] = request.GroupId;
@@ -24864,6 +25053,10 @@ namespace AlibabaCloud.SDK.Cms20190101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
                 query["GroupId"] = request.GroupId;
@@ -24933,7 +25126,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures global settings for the CloudMonitor agent.</para>
+        /// <para>Calls the PutMonitoringConfig operation to set the global configuration of the CloudMonitor agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24953,6 +25146,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoInstall))
             {
                 query["AutoInstall"] = request.AutoInstall;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableInstallAgentNewECS))
             {
@@ -24979,7 +25176,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures global settings for the CloudMonitor agent.</para>
+        /// <para>Calls the PutMonitoringConfig operation to set the global configuration of the CloudMonitor agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24999,6 +25196,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoInstall))
             {
                 query["AutoInstall"] = request.AutoInstall;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableInstallAgentNewECS))
             {
@@ -25025,7 +25226,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures global settings for the CloudMonitor agent.</para>
+        /// <para>Calls the PutMonitoringConfig operation to set the global configuration of the CloudMonitor agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25043,7 +25244,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures global settings for the CloudMonitor agent.</para>
+        /// <para>Calls the PutMonitoringConfig operation to set the global configuration of the CloudMonitor agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25061,14 +25262,14 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a threshold alert rule.</para>
+        /// <para>Creates or modifies an alert rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to configure a threshold alert rule for the <c>cpu_total</c> metric of the Elastic Computing Service (ECS) instance <c>i-uf6j91r34rnwawoo****</c> in the <c>acs_ecs_dashboard</c> namespace. The alert contact group is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the retry count for the Critical level is <c>3</c>.</para>
+        /// <para>This topic provides an example on how to configure a threshold-based alert rule for the <c>cpu_total</c> metric of a cloud server (ECS) instance <c>i-uf6j91r34rnwawoo****</c> in the <c>acs_ecs_dashboard</c> namespace. The alert contact group for the alert rule is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the alert retry count for the Critical level is <c>3</c>.</para>
         /// <remarks>
-        /// <para>As of August 15, 2024, Statistics validation is increased. The statistical value must match the Statistics of the corresponding metric. For information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</para>
+        /// <para>On August 15, 2024, Statistics validation is increased. The statistical value must match the Statistics of the corresponding metric. For more information about how to obtain the valid values for this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service metrics</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -25103,6 +25304,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactGroups))
             {
                 query["ContactGroups"] = request.ContactGroups;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveInterval))
             {
@@ -25193,14 +25398,14 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a threshold alert rule.</para>
+        /// <para>Creates or modifies an alert rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to configure a threshold alert rule for the <c>cpu_total</c> metric of the Elastic Computing Service (ECS) instance <c>i-uf6j91r34rnwawoo****</c> in the <c>acs_ecs_dashboard</c> namespace. The alert contact group is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the retry count for the Critical level is <c>3</c>.</para>
+        /// <para>This topic provides an example on how to configure a threshold-based alert rule for the <c>cpu_total</c> metric of a cloud server (ECS) instance <c>i-uf6j91r34rnwawoo****</c> in the <c>acs_ecs_dashboard</c> namespace. The alert contact group for the alert rule is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the alert retry count for the Critical level is <c>3</c>.</para>
         /// <remarks>
-        /// <para>As of August 15, 2024, Statistics validation is increased. The statistical value must match the Statistics of the corresponding metric. For information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</para>
+        /// <para>On August 15, 2024, Statistics validation is increased. The statistical value must match the Statistics of the corresponding metric. For more information about how to obtain the valid values for this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service metrics</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -25235,6 +25440,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactGroups))
             {
                 query["ContactGroups"] = request.ContactGroups;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveInterval))
             {
@@ -25325,14 +25534,14 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a threshold alert rule.</para>
+        /// <para>Creates or modifies an alert rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to configure a threshold alert rule for the <c>cpu_total</c> metric of the Elastic Computing Service (ECS) instance <c>i-uf6j91r34rnwawoo****</c> in the <c>acs_ecs_dashboard</c> namespace. The alert contact group is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the retry count for the Critical level is <c>3</c>.</para>
+        /// <para>This topic provides an example on how to configure a threshold-based alert rule for the <c>cpu_total</c> metric of a cloud server (ECS) instance <c>i-uf6j91r34rnwawoo****</c> in the <c>acs_ecs_dashboard</c> namespace. The alert contact group for the alert rule is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the alert retry count for the Critical level is <c>3</c>.</para>
         /// <remarks>
-        /// <para>As of August 15, 2024, Statistics validation is increased. The statistical value must match the Statistics of the corresponding metric. For information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</para>
+        /// <para>On August 15, 2024, Statistics validation is increased. The statistical value must match the Statistics of the corresponding metric. For more information about how to obtain the valid values for this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service metrics</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -25351,14 +25560,14 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a threshold alert rule.</para>
+        /// <para>Creates or modifies an alert rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to configure a threshold alert rule for the <c>cpu_total</c> metric of the Elastic Computing Service (ECS) instance <c>i-uf6j91r34rnwawoo****</c> in the <c>acs_ecs_dashboard</c> namespace. The alert contact group is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the retry count for the Critical level is <c>3</c>.</para>
+        /// <para>This topic provides an example on how to configure a threshold-based alert rule for the <c>cpu_total</c> metric of a cloud server (ECS) instance <c>i-uf6j91r34rnwawoo****</c> in the <c>acs_ecs_dashboard</c> namespace. The alert contact group for the alert rule is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the alert retry count for the Critical level is <c>3</c>.</para>
         /// <remarks>
-        /// <para>As of August 15, 2024, Statistics validation is increased. The statistical value must match the Statistics of the corresponding metric. For information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</para>
+        /// <para>On August 15, 2024, Statistics validation is increased. The statistical value must match the Statistics of the corresponding metric. For more information about how to obtain the valid values for this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service metrics</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -25377,14 +25586,14 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple threshold alert rules for a specified metric of a specified resource by calling the PutResourceMetricRules operation.</para>
+        /// <para>Sets multiple threshold alert rules for a specified metric of a specified resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>本文将提供一个示例，为云服务器ECS <c>acs_ecs_dashboard</c>的实例<c>i-uf6j91r34rnwawoo****</c>中的监控项<c>cpu_total</c>设置阈值报警规则。该报警规则的报警联系组为<c>ECS_Group</c>、报警规则名称为<c>test123</c>、报警规则ID为<c>a151cd6023eacee2f0978e03863cc1697c89508****</c>、Critical级别的统计方法为<c>Average</c>、Critical级别的比较符为<c>GreaterThanOrEqualToThreshold</c>、Critical级别的阈值为<c>90</c>和Critical级别的报警重试次数为<c>3</c>。</para>
+        /// <para>This topic provides an example of the Settings for a threshold alert rule for the <c>cpu_total</c> monitoring metric of the ECS server <c>i-uf6j91r34rnwawoo****</c> in the <c>acs_ecs_dashboard</c> namespace. The alert contact group for the alert rule is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the alert retry count for the Critical level is <c>3</c>.</para>
         /// <remarks>
-        /// <para>2024-08-15 增加Statistics校验，统计值只能填对应指标的Statistics。关于如何获取该参数的取值，请参见<a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">云产品监控项</a>。</para>
+        /// <para>On August 15, 2024, Statistics validation was increased. The statistical value must match the Statistics value of the corresponding metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -25402,6 +25611,10 @@ namespace AlibabaCloud.SDK.Cms20190101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rules))
             {
                 query["Rules"] = request.Rules;
@@ -25427,14 +25640,14 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple threshold alert rules for a specified metric of a specified resource by calling the PutResourceMetricRules operation.</para>
+        /// <para>Sets multiple threshold alert rules for a specified metric of a specified resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>本文将提供一个示例，为云服务器ECS <c>acs_ecs_dashboard</c>的实例<c>i-uf6j91r34rnwawoo****</c>中的监控项<c>cpu_total</c>设置阈值报警规则。该报警规则的报警联系组为<c>ECS_Group</c>、报警规则名称为<c>test123</c>、报警规则ID为<c>a151cd6023eacee2f0978e03863cc1697c89508****</c>、Critical级别的统计方法为<c>Average</c>、Critical级别的比较符为<c>GreaterThanOrEqualToThreshold</c>、Critical级别的阈值为<c>90</c>和Critical级别的报警重试次数为<c>3</c>。</para>
+        /// <para>This topic provides an example of the Settings for a threshold alert rule for the <c>cpu_total</c> monitoring metric of the ECS server <c>i-uf6j91r34rnwawoo****</c> in the <c>acs_ecs_dashboard</c> namespace. The alert contact group for the alert rule is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the alert retry count for the Critical level is <c>3</c>.</para>
         /// <remarks>
-        /// <para>2024-08-15 增加Statistics校验，统计值只能填对应指标的Statistics。关于如何获取该参数的取值，请参见<a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">云产品监控项</a>。</para>
+        /// <para>On August 15, 2024, Statistics validation was increased. The statistical value must match the Statistics value of the corresponding metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -25452,6 +25665,10 @@ namespace AlibabaCloud.SDK.Cms20190101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rules))
             {
                 query["Rules"] = request.Rules;
@@ -25477,14 +25694,14 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple threshold alert rules for a specified metric of a specified resource by calling the PutResourceMetricRules operation.</para>
+        /// <para>Sets multiple threshold alert rules for a specified metric of a specified resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>本文将提供一个示例，为云服务器ECS <c>acs_ecs_dashboard</c>的实例<c>i-uf6j91r34rnwawoo****</c>中的监控项<c>cpu_total</c>设置阈值报警规则。该报警规则的报警联系组为<c>ECS_Group</c>、报警规则名称为<c>test123</c>、报警规则ID为<c>a151cd6023eacee2f0978e03863cc1697c89508****</c>、Critical级别的统计方法为<c>Average</c>、Critical级别的比较符为<c>GreaterThanOrEqualToThreshold</c>、Critical级别的阈值为<c>90</c>和Critical级别的报警重试次数为<c>3</c>。</para>
+        /// <para>This topic provides an example of the Settings for a threshold alert rule for the <c>cpu_total</c> monitoring metric of the ECS server <c>i-uf6j91r34rnwawoo****</c> in the <c>acs_ecs_dashboard</c> namespace. The alert contact group for the alert rule is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the alert retry count for the Critical level is <c>3</c>.</para>
         /// <remarks>
-        /// <para>2024-08-15 增加Statistics校验，统计值只能填对应指标的Statistics。关于如何获取该参数的取值，请参见<a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">云产品监控项</a>。</para>
+        /// <para>On August 15, 2024, Statistics validation was increased. The statistical value must match the Statistics value of the corresponding metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -25503,14 +25720,14 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple threshold alert rules for a specified metric of a specified resource by calling the PutResourceMetricRules operation.</para>
+        /// <para>Sets multiple threshold alert rules for a specified metric of a specified resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>本文将提供一个示例，为云服务器ECS <c>acs_ecs_dashboard</c>的实例<c>i-uf6j91r34rnwawoo****</c>中的监控项<c>cpu_total</c>设置阈值报警规则。该报警规则的报警联系组为<c>ECS_Group</c>、报警规则名称为<c>test123</c>、报警规则ID为<c>a151cd6023eacee2f0978e03863cc1697c89508****</c>、Critical级别的统计方法为<c>Average</c>、Critical级别的比较符为<c>GreaterThanOrEqualToThreshold</c>、Critical级别的阈值为<c>90</c>和Critical级别的报警重试次数为<c>3</c>。</para>
+        /// <para>This topic provides an example of the Settings for a threshold alert rule for the <c>cpu_total</c> monitoring metric of the ECS server <c>i-uf6j91r34rnwawoo****</c> in the <c>acs_ecs_dashboard</c> namespace. The alert contact group for the alert rule is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the alert retry count for the Critical level is <c>3</c>.</para>
         /// <remarks>
-        /// <para>2024-08-15 增加Statistics校验，统计值只能填对应指标的Statistics。关于如何获取该参数的取值，请参见<a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">云产品监控项</a>。</para>
+        /// <para>On August 15, 2024, Statistics validation was increased. The statistical value must match the Statistics value of the corresponding metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Alibaba Cloud service monitoring metrics</a>.</para>
         /// </remarks>
         /// </description>
         /// 
