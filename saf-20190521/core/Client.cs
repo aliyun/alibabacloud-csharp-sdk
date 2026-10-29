@@ -41,82 +41,36 @@ namespace AlibabaCloud.SDK.Saf20190521
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
-        public ExecuteExtendServiceResponse ExecuteExtendServiceWithOptions(ExecuteExtendServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["Region"] = request.Region;
-            query["Service"] = request.Service;
-            query["ServiceParameters"] = request.ServiceParameters;
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ExecuteExtendService",
-                Version = "2019-05-21",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ExecuteExtendServiceResponse>(CallApi(params_, req, runtime));
-        }
-
-        public async Task<ExecuteExtendServiceResponse> ExecuteExtendServiceWithOptionsAsync(ExecuteExtendServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["Region"] = request.Region;
-            query["Service"] = request.Service;
-            query["ServiceParameters"] = request.ServiceParameters;
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ExecuteExtendService",
-                Version = "2019-05-21",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ExecuteExtendServiceResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        public ExecuteExtendServiceResponse ExecuteExtendService(ExecuteExtendServiceRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ExecuteExtendServiceWithOptions(request, runtime);
-        }
-
-        public async Task<ExecuteExtendServiceResponse> ExecuteExtendServiceAsync(ExecuteExtendServiceRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ExecuteExtendServiceWithOptionsAsync(request, runtime);
-        }
-
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects risks. This API operation supports public service invocation and allows you to invoke custom events.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteRequestRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteRequestResponse
+        /// </returns>
         public ExecuteRequestResponse ExecuteRequestWithOptions(ExecuteRequestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["Service"] = request.Service;
-            query["ServiceParameters"] = request.ServiceParameters;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Service))
+            {
+                query["Service"] = request.Service;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                query["ServiceParameters"] = request.ServiceParameters;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -127,22 +81,42 @@ namespace AlibabaCloud.SDK.Saf20190521
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ExecuteRequestResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects risks. This API operation supports public service invocation and allows you to invoke custom events.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteRequestRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteRequestResponse
+        /// </returns>
         public async Task<ExecuteRequestResponse> ExecuteRequestWithOptionsAsync(ExecuteRequestRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["Service"] = request.Service;
-            query["ServiceParameters"] = request.ServiceParameters;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Service))
+            {
+                query["Service"] = request.Service;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                query["ServiceParameters"] = request.ServiceParameters;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -153,35 +127,82 @@ namespace AlibabaCloud.SDK.Saf20190521
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ExecuteRequestResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects risks. This API operation supports public service invocation and allows you to invoke custom events.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteRequestRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteRequestResponse
+        /// </returns>
         public ExecuteRequestResponse ExecuteRequest(ExecuteRequestRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ExecuteRequestWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects risks. This API operation supports public service invocation and allows you to invoke custom events.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteRequestRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteRequestResponse
+        /// </returns>
         public async Task<ExecuteRequestResponse> ExecuteRequestAsync(ExecuteRequestRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ExecuteRequestWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects risks. This operation supports only custom event calls and is available only in the Malaysia region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteRequestMLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteRequestMLResponse
+        /// </returns>
         public ExecuteRequestMLResponse ExecuteRequestMLWithOptions(ExecuteRequestMLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["Lang"] = request.Lang;
-            query["Service"] = request.Service;
-            query["ServiceParameters"] = request.ServiceParameters;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Service))
+            {
+                query["Service"] = request.Service;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                query["ServiceParameters"] = request.ServiceParameters;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -192,23 +213,46 @@ namespace AlibabaCloud.SDK.Saf20190521
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ExecuteRequestMLResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects risks. This operation supports only custom event calls and is available only in the Malaysia region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteRequestMLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteRequestMLResponse
+        /// </returns>
         public async Task<ExecuteRequestMLResponse> ExecuteRequestMLWithOptionsAsync(ExecuteRequestMLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["Lang"] = request.Lang;
-            query["Service"] = request.Service;
-            query["ServiceParameters"] = request.ServiceParameters;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Service))
+            {
+                query["Service"] = request.Service;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                query["ServiceParameters"] = request.ServiceParameters;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -219,35 +263,82 @@ namespace AlibabaCloud.SDK.Saf20190521
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ExecuteRequestMLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects risks. This operation supports only custom event calls and is available only in the Malaysia region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteRequestMLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteRequestMLResponse
+        /// </returns>
         public ExecuteRequestMLResponse ExecuteRequestML(ExecuteRequestMLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ExecuteRequestMLWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects risks. This operation supports only custom event calls and is available only in the Malaysia region.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteRequestMLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteRequestMLResponse
+        /// </returns>
         public async Task<ExecuteRequestMLResponse> ExecuteRequestMLAsync(ExecuteRequestMLRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ExecuteRequestMLWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects risks. This API allows you to invoke public services and custom events.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteRequestSGRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteRequestSGResponse
+        /// </returns>
         public ExecuteRequestSGResponse ExecuteRequestSGWithOptions(ExecuteRequestSGRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["Lang"] = request.Lang;
-            query["Service"] = request.Service;
-            query["ServiceParameters"] = request.ServiceParameters;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Service))
+            {
+                query["Service"] = request.Service;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                query["ServiceParameters"] = request.ServiceParameters;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -258,23 +349,46 @@ namespace AlibabaCloud.SDK.Saf20190521
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ExecuteRequestSGResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects risks. This API allows you to invoke public services and custom events.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteRequestSGRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteRequestSGResponse
+        /// </returns>
         public async Task<ExecuteRequestSGResponse> ExecuteRequestSGWithOptionsAsync(ExecuteRequestSGRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["Lang"] = request.Lang;
-            query["Service"] = request.Service;
-            query["ServiceParameters"] = request.ServiceParameters;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Service))
+            {
+                query["Service"] = request.Service;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                query["ServiceParameters"] = request.ServiceParameters;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -285,34 +399,78 @@ namespace AlibabaCloud.SDK.Saf20190521
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<ExecuteRequestSGResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects risks. This API allows you to invoke public services and custom events.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteRequestSGRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteRequestSGResponse
+        /// </returns>
         public ExecuteRequestSGResponse ExecuteRequestSG(ExecuteRequestSGRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ExecuteRequestSGWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects risks. This API allows you to invoke public services and custom events.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteRequestSGRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteRequestSGResponse
+        /// </returns>
         public async Task<ExecuteRequestSGResponse> ExecuteRequestSGAsync(ExecuteRequestSGRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ExecuteRequestSGWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects risks. This operation supports only custom event calls.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RequestDecisionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RequestDecisionResponse
+        /// </returns>
         public RequestDecisionResponse RequestDecisionWithOptions(RequestDecisionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["EventCode"] = request.EventCode;
-            query["ServiceParameters"] = request.ServiceParameters;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventCode))
+            {
+                query["EventCode"] = request.EventCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                query["ServiceParameters"] = request.ServiceParameters;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -323,22 +481,42 @@ namespace AlibabaCloud.SDK.Saf20190521
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<RequestDecisionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects risks. This operation supports only custom event calls.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RequestDecisionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RequestDecisionResponse
+        /// </returns>
         public async Task<RequestDecisionResponse> RequestDecisionWithOptionsAsync(RequestDecisionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            query["EventCode"] = request.EventCode;
-            query["ServiceParameters"] = request.ServiceParameters;
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventCode))
+            {
+                query["EventCode"] = request.EventCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                query["ServiceParameters"] = request.ServiceParameters;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-                Body = AlibabaCloud.TeaUtil.Common.ToMap(request),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -349,18 +527,42 @@ namespace AlibabaCloud.SDK.Saf20190521
                 Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
-                ReqBodyType = "json",
+                ReqBodyType = "formData",
                 BodyType = "json",
             };
             return TeaModel.ToObject<RequestDecisionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects risks. This operation supports only custom event calls.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RequestDecisionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RequestDecisionResponse
+        /// </returns>
         public RequestDecisionResponse RequestDecision(RequestDecisionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return RequestDecisionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects risks. This operation supports only custom event calls.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RequestDecisionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RequestDecisionResponse
+        /// </returns>
         public async Task<RequestDecisionResponse> RequestDecisionAsync(RequestDecisionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
