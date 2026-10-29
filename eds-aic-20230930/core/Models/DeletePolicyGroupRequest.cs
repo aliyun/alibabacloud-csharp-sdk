@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DeletePolicyGroupRequest : TeaModel {
         /// <summary>
-        /// <para>A list of policy group IDs. If any specified policy group is associated with an existing instance group, the entire operation fails.</para>
+        /// <para>The list of policy IDs. If any policy is associated with an undeleted instance group, the entire deletion operation fails.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PolicyGroupIds")]

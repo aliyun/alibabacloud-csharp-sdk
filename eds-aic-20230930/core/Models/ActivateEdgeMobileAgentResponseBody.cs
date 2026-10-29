@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public ActivateEdgeMobileAgentResponseBodyData Data { get; set; }
         public class ActivateEdgeMobileAgentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The assigned API key. The plaintext value is returned only upon the first activation.</para>
+            /// <para>The assigned API key. The plaintext is returned only upon the first activation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cpk-81vfd8t8zdfxdf*****</para>

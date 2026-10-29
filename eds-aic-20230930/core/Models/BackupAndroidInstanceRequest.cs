@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class BackupAndroidInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>A list of instance IDs.</para>
+        /// <para>The list of instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AndroidInstanceIdList")]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BackupFileName { get; set; }
 
         /// <summary>
-        /// <para>The upload URL for the backup file.</para>
+        /// <para>The upload URL of the backup file.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("BackupFilePath")]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BackupFilePath { get; set; }
 
         /// <summary>
-        /// <para>The description of the full instance backup.</para>
+        /// <para>The description of the full backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a backup android instance</para>
@@ -46,7 +46,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The region where the backup is stored.</para>
+        /// <para>The list of application package names to exclude from the full backup. For matched applications, only APK collection is skipped, and user data is backed up as usual. If this parameter is not specified, no applications are excluded.</para>
+        /// </summary>
+        [NameInMap("ExcludeAppList")]
+        [Validation(Required=false)]
+        public List<string> ExcludeAppList { get; set; }
+
+        /// <summary>
+        /// <para>The backup region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

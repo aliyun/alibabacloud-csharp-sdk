@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public long? Count { get; set; }
 
         /// <summary>
-        /// <para>The returned result objects.</para>
+        /// <para>The returned result object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

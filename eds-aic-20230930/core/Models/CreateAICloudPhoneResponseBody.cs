@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public CreateAICloudPhoneResponseBodyData Data { get; set; }
         public class CreateAICloudPhoneResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The order ID.</para>
+            /// <para>The ID of the order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20230930123456</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public long? OrderId { get; set; }
 
             /// <summary>
-            /// <para>The list of package IDs. After the payment is successful, instances are created based on these IDs through a callback.</para>
+            /// <para>The list of package IDs. After a successful payment, a callback creates instances based on these IDs.</para>
             /// </summary>
             [NameInMap("PackageIds")]
             [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9A51B1DF-96FF-3BCC-B08C-783161D3****</para>

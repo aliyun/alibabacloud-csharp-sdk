@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<BackupFileResponseBodyData> Data { get; set; }
         public class BackupFileResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The instance ID of the cloud phone.</para>
+            /// <para>The Cloud Phone instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acp-34pqe4r0kd9kn****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string BackupFileName { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The ID of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t-22ex666a653gq****</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</para>

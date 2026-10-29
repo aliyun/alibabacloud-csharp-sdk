@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DeleteAndroidInstanceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>A list of instance group IDs.</para>
+        /// <para>The list of instance group IDs.</para>
         /// </summary>
         [NameInMap("InstanceGroupIds")]
         [Validation(Required=false)]

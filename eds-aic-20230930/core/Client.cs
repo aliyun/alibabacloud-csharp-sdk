@@ -183,14 +183,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches an Android Debug Bridge (ADB) key pair to one or more cloud phone instances.</para>
+        /// <para>Attaches an ADB key pair to one or more cloud phone instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can attach to an ADB key pair only to cloud phone instances in the Running state.</description></item>
-        /// <item><description>After you attach an ADB key pair, make sure the private key of the ADB key pair is copied to the \~/.android directory (macOS or Linux operating systems) or the C:\Users\Username.android directory (Windows operating systems). In addition, you must run the adb kill-server command to restart the ADB process to ensure correct ADB connection. Otherwise, ADB connection may fail due to authentication exceptions.</description></item>
+        /// <item><description>The ADB key pair takes effect only when the instance is in the Running state.</description></item>
+        /// <item><description>After you attach the key pair, copy the private key of the key pair to the local folder where the key pair is stored (for macOS or Linux operating systems, the folder is ~/.android. For the Windows operating system, the folder is C:\Users\Username\.android.), and invoke the adb kill-server command to restart the ADB process. This ensures normal ADB connections. Otherwise, the ADB connection authentication may be failed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -237,14 +237,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches an Android Debug Bridge (ADB) key pair to one or more cloud phone instances.</para>
+        /// <para>Attaches an ADB key pair to one or more cloud phone instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can attach to an ADB key pair only to cloud phone instances in the Running state.</description></item>
-        /// <item><description>After you attach an ADB key pair, make sure the private key of the ADB key pair is copied to the \~/.android directory (macOS or Linux operating systems) or the C:\Users\Username.android directory (Windows operating systems). In addition, you must run the adb kill-server command to restart the ADB process to ensure correct ADB connection. Otherwise, ADB connection may fail due to authentication exceptions.</description></item>
+        /// <item><description>The ADB key pair takes effect only when the instance is in the Running state.</description></item>
+        /// <item><description>After you attach the key pair, copy the private key of the key pair to the local folder where the key pair is stored (for macOS or Linux operating systems, the folder is ~/.android. For the Windows operating system, the folder is C:\Users\Username\.android.), and invoke the adb kill-server command to restart the ADB process. This ensures normal ADB connections. Otherwise, the ADB connection authentication may be failed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -291,14 +291,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches an Android Debug Bridge (ADB) key pair to one or more cloud phone instances.</para>
+        /// <para>Attaches an ADB key pair to one or more cloud phone instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can attach to an ADB key pair only to cloud phone instances in the Running state.</description></item>
-        /// <item><description>After you attach an ADB key pair, make sure the private key of the ADB key pair is copied to the \~/.android directory (macOS or Linux operating systems) or the C:\Users\Username.android directory (Windows operating systems). In addition, you must run the adb kill-server command to restart the ADB process to ensure correct ADB connection. Otherwise, ADB connection may fail due to authentication exceptions.</description></item>
+        /// <item><description>The ADB key pair takes effect only when the instance is in the Running state.</description></item>
+        /// <item><description>After you attach the key pair, copy the private key of the key pair to the local folder where the key pair is stored (for macOS or Linux operating systems, the folder is ~/.android. For the Windows operating system, the folder is C:\Users\Username\.android.), and invoke the adb kill-server command to restart the ADB process. This ensures normal ADB connections. Otherwise, the ADB connection authentication may be failed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -317,14 +317,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches an Android Debug Bridge (ADB) key pair to one or more cloud phone instances.</para>
+        /// <para>Attaches an ADB key pair to one or more cloud phone instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can attach to an ADB key pair only to cloud phone instances in the Running state.</description></item>
-        /// <item><description>After you attach an ADB key pair, make sure the private key of the ADB key pair is copied to the \~/.android directory (macOS or Linux operating systems) or the C:\Users\Username.android directory (Windows operating systems). In addition, you must run the adb kill-server command to restart the ADB process to ensure correct ADB connection. Otherwise, ADB connection may fail due to authentication exceptions.</description></item>
+        /// <item><description>The ADB key pair takes effect only when the instance is in the Running state.</description></item>
+        /// <item><description>After you attach the key pair, copy the private key of the key pair to the local folder where the key pair is stored (for macOS or Linux operating systems, the folder is ~/.android. For the Windows operating system, the folder is C:\Users\Username\.android.), and invoke the adb kill-server command to restart the ADB process. This ensures normal ADB connections. Otherwise, the ADB connection authentication may be failed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -343,13 +343,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorize/unauthorize Android instances for users.</para>
+        /// <para>Assigns a user to or unassigns a user from a cloud phone instance. Currently, each cloud phone instance supports only one assigned user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Instance states that support user assignment: Available, Shutting Down, Stopped, Starting, Backing Up, Restoring, Backup Failed, Restore Failed.
-        /// Instance states that support unassignment: Available, Shutting Down, Stopped, Starting, Backing Up, Restoring, Backup Failed, Restore Failed, Expired, Overdue, Deleted.</para>
+        /// <para>Instance statuses that support user assignment: Available, Shutting down, Stopped, Starting, Backing up, Restoring, Backup failed, and Restoration failed.
+        /// Instance statuses that support user unassignment: Available, Shutting down, Stopped, Starting, Backing up, Restoring, Backup failed, Restoration failed, Expired, Overdue payment, and Deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -399,13 +399,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorize/unauthorize Android instances for users.</para>
+        /// <para>Assigns a user to or unassigns a user from a cloud phone instance. Currently, each cloud phone instance supports only one assigned user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Instance states that support user assignment: Available, Shutting Down, Stopped, Starting, Backing Up, Restoring, Backup Failed, Restore Failed.
-        /// Instance states that support unassignment: Available, Shutting Down, Stopped, Starting, Backing Up, Restoring, Backup Failed, Restore Failed, Expired, Overdue, Deleted.</para>
+        /// <para>Instance statuses that support user assignment: Available, Shutting down, Stopped, Starting, Backing up, Restoring, Backup failed, and Restoration failed.
+        /// Instance statuses that support user unassignment: Available, Shutting down, Stopped, Starting, Backing up, Restoring, Backup failed, Restoration failed, Expired, Overdue payment, and Deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -455,13 +455,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorize/unauthorize Android instances for users.</para>
+        /// <para>Assigns a user to or unassigns a user from a cloud phone instance. Currently, each cloud phone instance supports only one assigned user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Instance states that support user assignment: Available, Shutting Down, Stopped, Starting, Backing Up, Restoring, Backup Failed, Restore Failed.
-        /// Instance states that support unassignment: Available, Shutting Down, Stopped, Starting, Backing Up, Restoring, Backup Failed, Restore Failed, Expired, Overdue, Deleted.</para>
+        /// <para>Instance statuses that support user assignment: Available, Shutting down, Stopped, Starting, Backing up, Restoring, Backup failed, and Restoration failed.
+        /// Instance statuses that support user unassignment: Available, Shutting down, Stopped, Starting, Backing up, Restoring, Backup failed, Restoration failed, Expired, Overdue payment, and Deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -479,13 +479,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorize/unauthorize Android instances for users.</para>
+        /// <para>Assigns a user to or unassigns a user from a cloud phone instance. Currently, each cloud phone instance supports only one assigned user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Instance states that support user assignment: Available, Shutting Down, Stopped, Starting, Backing Up, Restoring, Backup Failed, Restore Failed.
-        /// Instance states that support unassignment: Available, Shutting Down, Stopped, Starting, Backing Up, Restoring, Backup Failed, Restore Failed, Expired, Overdue, Deleted.</para>
+        /// <para>Instance statuses that support user assignment: Available, Shutting down, Stopped, Starting, Backing up, Restoring, Backup failed, and Restoration failed.
+        /// Instance statuses that support user unassignment: Available, Shutting down, Stopped, Starting, Backing up, Restoring, Backup failed, Restoration failed, Expired, Overdue payment, and Deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -503,15 +503,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a full backup of a Cloud Phone instance. The backup includes installed applications and properties.</para>
+        /// <para>Creates a full backup of a cloud phone instance, including installed applications and properties.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>To ensure that the backup is successful, shut down the instance before you start the data backup. The operation may fail if the cloud phone instance is used during the backup process.</description></item>
-        /// <item><description>You should test the backup file to ensure that you can restore the instance from it. After the restoration is complete, verify that your data is complete and that all features function correctly. Do not delete the original backup file or reset the source instance until this verification is complete. Otherwise, you may lose your data.</description></item>
-        /// <item><description>You cannot back up and restore data between different image versions, between custom images and public images, or across different architectures, such as cpm.gx7.10xlarge and cpm.gx8.16xlarge.</description></item>
+        /// <item><description>To ensure a high success rate, back up data after the instance is shut down. Operating the cloud phone during the backup process may cause the backup to fail.</description></item>
+        /// <item><description>Ensure that the backup file can be restored properly. After the restoration is complete, check and verify that all data is intact and functions are working properly before deleting the original backup file and resetting the source instance. Otherwise, data loss may occur.</description></item>
+        /// <item><description>Backup and restoration across different image versions are not supported. Backup and restoration between custom images and public images are not supported. Backup and restoration across different architectures (cpm.gx7.10xlarge and cpm.gx8.16xlarge) are not supported.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -545,6 +545,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeAppList))
+            {
+                query["ExcludeAppList"] = request.ExcludeAppList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadEndpoint))
             {
                 query["UploadEndpoint"] = request.UploadEndpoint;
@@ -570,15 +574,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a full backup of a Cloud Phone instance. The backup includes installed applications and properties.</para>
+        /// <para>Creates a full backup of a cloud phone instance, including installed applications and properties.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>To ensure that the backup is successful, shut down the instance before you start the data backup. The operation may fail if the cloud phone instance is used during the backup process.</description></item>
-        /// <item><description>You should test the backup file to ensure that you can restore the instance from it. After the restoration is complete, verify that your data is complete and that all features function correctly. Do not delete the original backup file or reset the source instance until this verification is complete. Otherwise, you may lose your data.</description></item>
-        /// <item><description>You cannot back up and restore data between different image versions, between custom images and public images, or across different architectures, such as cpm.gx7.10xlarge and cpm.gx8.16xlarge.</description></item>
+        /// <item><description>To ensure a high success rate, back up data after the instance is shut down. Operating the cloud phone during the backup process may cause the backup to fail.</description></item>
+        /// <item><description>Ensure that the backup file can be restored properly. After the restoration is complete, check and verify that all data is intact and functions are working properly before deleting the original backup file and resetting the source instance. Otherwise, data loss may occur.</description></item>
+        /// <item><description>Backup and restoration across different image versions are not supported. Backup and restoration between custom images and public images are not supported. Backup and restoration across different architectures (cpm.gx7.10xlarge and cpm.gx8.16xlarge) are not supported.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -612,6 +616,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeAppList))
+            {
+                query["ExcludeAppList"] = request.ExcludeAppList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadEndpoint))
             {
                 query["UploadEndpoint"] = request.UploadEndpoint;
@@ -637,15 +645,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a full backup of a Cloud Phone instance. The backup includes installed applications and properties.</para>
+        /// <para>Creates a full backup of a cloud phone instance, including installed applications and properties.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>To ensure that the backup is successful, shut down the instance before you start the data backup. The operation may fail if the cloud phone instance is used during the backup process.</description></item>
-        /// <item><description>You should test the backup file to ensure that you can restore the instance from it. After the restoration is complete, verify that your data is complete and that all features function correctly. Do not delete the original backup file or reset the source instance until this verification is complete. Otherwise, you may lose your data.</description></item>
-        /// <item><description>You cannot back up and restore data between different image versions, between custom images and public images, or across different architectures, such as cpm.gx7.10xlarge and cpm.gx8.16xlarge.</description></item>
+        /// <item><description>To ensure a high success rate, back up data after the instance is shut down. Operating the cloud phone during the backup process may cause the backup to fail.</description></item>
+        /// <item><description>Ensure that the backup file can be restored properly. After the restoration is complete, check and verify that all data is intact and functions are working properly before deleting the original backup file and resetting the source instance. Otherwise, data loss may occur.</description></item>
+        /// <item><description>Backup and restoration across different image versions are not supported. Backup and restoration between custom images and public images are not supported. Backup and restoration across different architectures (cpm.gx7.10xlarge and cpm.gx8.16xlarge) are not supported.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -664,15 +672,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a full backup of a Cloud Phone instance. The backup includes installed applications and properties.</para>
+        /// <para>Creates a full backup of a cloud phone instance, including installed applications and properties.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>To ensure that the backup is successful, shut down the instance before you start the data backup. The operation may fail if the cloud phone instance is used during the backup process.</description></item>
-        /// <item><description>You should test the backup file to ensure that you can restore the instance from it. After the restoration is complete, verify that your data is complete and that all features function correctly. Do not delete the original backup file or reset the source instance until this verification is complete. Otherwise, you may lose your data.</description></item>
-        /// <item><description>You cannot back up and restore data between different image versions, between custom images and public images, or across different architectures, such as cpm.gx7.10xlarge and cpm.gx8.16xlarge.</description></item>
+        /// <item><description>To ensure a high success rate, back up data after the instance is shut down. Operating the cloud phone during the backup process may cause the backup to fail.</description></item>
+        /// <item><description>Ensure that the backup file can be restored properly. After the restoration is complete, check and verify that all data is intact and functions are working properly before deleting the original backup file and resetting the source instance. Otherwise, data loss may occur.</description></item>
+        /// <item><description>Backup and restoration across different image versions are not supported. Backup and restoration between custom images and public images are not supported. Backup and restoration across different architectures (cpm.gx7.10xlarge and cpm.gx8.16xlarge) are not supported.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -691,15 +699,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Backs up specified applications on a cloud phone instance. The backup includes the application and its cache.</para>
+        /// <para>Backs up specified applications on cloud phone instances, including the applications and application caches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>Shut down the cloud phone instance before you back up data to ensure that the operation succeeds. Using the cloud phone during a backup may cause the operation to fail.</description></item>
-        /// <item><description>Ensure that the backup file can be used to restore the instance successfully. After you restore from a backup, verify that your data is complete and that all features are working correctly. Do not delete the original backup file or reset the source instance until you complete this verification. Failure to do so may result in data loss.</description></item>
-        /// <item><description>Backup and restore operations are not suppported across different image versions, between custom images and public images, or across different architectures, such as cpm.gx7.10xlarge and cpm.gx8.16xlarge.</description></item>
+        /// <item><description>To ensure a high success rate, back up data after the cloud phone is shut down. Operating the cloud phone during the backup process may cause the backup to fail.</description></item>
+        /// <item><description>Make sure that your backup files can be restored properly. After the restoration is complete, check and verify that all your data is intact and all features work as expected before you delete the original backup files or reset the source instance. Otherwise, your data may be lost.</description></item>
+        /// <item><description>Backup and restoration are not supported across different image versions, between custom images and public images, or across different architectures (such as cpm.gx7.10xlarge and cpm.gx8.16xlarge).</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -762,15 +770,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Backs up specified applications on a cloud phone instance. The backup includes the application and its cache.</para>
+        /// <para>Backs up specified applications on cloud phone instances, including the applications and application caches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>Shut down the cloud phone instance before you back up data to ensure that the operation succeeds. Using the cloud phone during a backup may cause the operation to fail.</description></item>
-        /// <item><description>Ensure that the backup file can be used to restore the instance successfully. After you restore from a backup, verify that your data is complete and that all features are working correctly. Do not delete the original backup file or reset the source instance until you complete this verification. Failure to do so may result in data loss.</description></item>
-        /// <item><description>Backup and restore operations are not suppported across different image versions, between custom images and public images, or across different architectures, such as cpm.gx7.10xlarge and cpm.gx8.16xlarge.</description></item>
+        /// <item><description>To ensure a high success rate, back up data after the cloud phone is shut down. Operating the cloud phone during the backup process may cause the backup to fail.</description></item>
+        /// <item><description>Make sure that your backup files can be restored properly. After the restoration is complete, check and verify that all your data is intact and all features work as expected before you delete the original backup files or reset the source instance. Otherwise, your data may be lost.</description></item>
+        /// <item><description>Backup and restoration are not supported across different image versions, between custom images and public images, or across different architectures (such as cpm.gx7.10xlarge and cpm.gx8.16xlarge).</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -833,15 +841,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Backs up specified applications on a cloud phone instance. The backup includes the application and its cache.</para>
+        /// <para>Backs up specified applications on cloud phone instances, including the applications and application caches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>Shut down the cloud phone instance before you back up data to ensure that the operation succeeds. Using the cloud phone during a backup may cause the operation to fail.</description></item>
-        /// <item><description>Ensure that the backup file can be used to restore the instance successfully. After you restore from a backup, verify that your data is complete and that all features are working correctly. Do not delete the original backup file or reset the source instance until you complete this verification. Failure to do so may result in data loss.</description></item>
-        /// <item><description>Backup and restore operations are not suppported across different image versions, between custom images and public images, or across different architectures, such as cpm.gx7.10xlarge and cpm.gx8.16xlarge.</description></item>
+        /// <item><description>To ensure a high success rate, back up data after the cloud phone is shut down. Operating the cloud phone during the backup process may cause the backup to fail.</description></item>
+        /// <item><description>Make sure that your backup files can be restored properly. After the restoration is complete, check and verify that all your data is intact and all features work as expected before you delete the original backup files or reset the source instance. Otherwise, your data may be lost.</description></item>
+        /// <item><description>Backup and restoration are not supported across different image versions, between custom images and public images, or across different architectures (such as cpm.gx7.10xlarge and cpm.gx8.16xlarge).</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -860,15 +868,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Backs up specified applications on a cloud phone instance. The backup includes the application and its cache.</para>
+        /// <para>Backs up specified applications on cloud phone instances, including the applications and application caches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>Shut down the cloud phone instance before you back up data to ensure that the operation succeeds. Using the cloud phone during a backup may cause the operation to fail.</description></item>
-        /// <item><description>Ensure that the backup file can be used to restore the instance successfully. After you restore from a backup, verify that your data is complete and that all features are working correctly. Do not delete the original backup file or reset the source instance until you complete this verification. Failure to do so may result in data loss.</description></item>
-        /// <item><description>Backup and restore operations are not suppported across different image versions, between custom images and public images, or across different architectures, such as cpm.gx7.10xlarge and cpm.gx8.16xlarge.</description></item>
+        /// <item><description>To ensure a high success rate, back up data after the cloud phone is shut down. Operating the cloud phone during the backup process may cause the backup to fail.</description></item>
+        /// <item><description>Make sure that your backup files can be restored properly. After the restoration is complete, check and verify that all your data is intact and all features work as expected before you delete the original backup files or reset the source instance. Otherwise, your data may be lost.</description></item>
+        /// <item><description>Backup and restoration are not supported across different image versions, between custom images and public images, or across different architectures (such as cpm.gx7.10xlarge and cpm.gx8.16xlarge).</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -887,12 +895,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a backup file and uploads it to remote storage. Scenarios: You can perform regular backups for data security, or back up files from one instance and recover them to multiple instances to achieve replication and migration.</para>
+        /// <para>Generates a backup file and uploads it to remote storage. Scenarios: You can perform regular backups for data security, or back up files from a single instance and recover them to multiple instances to achieve an effect similar to replication and migration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, backup files generated by cloud phones can only be stored in Object Storage Service (OSS).</para>
+        /// <para>Currently, backup files generated by Cloud Phone can only be saved to Object Storage Service (OSS).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -928,6 +936,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeAppList))
+            {
+                query["ExcludeAppList"] = request.ExcludeAppList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeSourceFilePathList))
             {
@@ -970,12 +982,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a backup file and uploads it to remote storage. Scenarios: You can perform regular backups for data security, or back up files from one instance and recover them to multiple instances to achieve replication and migration.</para>
+        /// <para>Generates a backup file and uploads it to remote storage. Scenarios: You can perform regular backups for data security, or back up files from a single instance and recover them to multiple instances to achieve an effect similar to replication and migration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, backup files generated by cloud phones can only be stored in Object Storage Service (OSS).</para>
+        /// <para>Currently, backup files generated by Cloud Phone can only be saved to Object Storage Service (OSS).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1011,6 +1023,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeAppList))
+            {
+                query["ExcludeAppList"] = request.ExcludeAppList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeSourceFilePathList))
             {
@@ -1053,12 +1069,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a backup file and uploads it to remote storage. Scenarios: You can perform regular backups for data security, or back up files from one instance and recover them to multiple instances to achieve replication and migration.</para>
+        /// <para>Generates a backup file and uploads it to remote storage. Scenarios: You can perform regular backups for data security, or back up files from a single instance and recover them to multiple instances to achieve an effect similar to replication and migration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, backup files generated by cloud phones can only be stored in Object Storage Service (OSS).</para>
+        /// <para>Currently, backup files generated by Cloud Phone can only be saved to Object Storage Service (OSS).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1076,12 +1092,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a backup file and uploads it to remote storage. Scenarios: You can perform regular backups for data security, or back up files from one instance and recover them to multiple instances to achieve replication and migration.</para>
+        /// <para>Generates a backup file and uploads it to remote storage. Scenarios: You can perform regular backups for data security, or back up files from a single instance and recover them to multiple instances to achieve an effect similar to replication and migration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, backup files generated by cloud phones can only be stored in Object Storage Service (OSS).</para>
+        /// <para>Currently, backup files generated by Cloud Phone can only be saved to Object Storage Service (OSS).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1311,7 +1327,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels running agent tasks on a mobile node.</para>
+        /// <para>Cancels running agent tasks on Mobile nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1353,7 +1369,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels running agent tasks on a mobile node.</para>
+        /// <para>Cancels running agent tasks on Mobile nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1395,7 +1411,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels running agent tasks on a mobile node.</para>
+        /// <para>Cancels running agent tasks on Mobile nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1413,7 +1429,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels running agent tasks on a mobile node.</para>
+        /// <para>Cancels running agent tasks on Mobile nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1631,7 +1647,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the inventory status of cloud phone resources. Before creating an instance, you can use this operation to check whether the inventory in the target region is sufficient, and then proceed with creation after confirmation.</para>
+        /// <para>Checks the inventory status of cloud phone resources. Before creating an instance, you can call this operation to check whether the inventory in the target region is sufficient.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1689,7 +1705,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the inventory status of cloud phone resources. Before creating an instance, you can use this operation to check whether the inventory in the target region is sufficient, and then proceed with creation after confirmation.</para>
+        /// <para>Checks the inventory status of cloud phone resources. Before creating an instance, you can call this operation to check whether the inventory in the target region is sufficient.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1747,7 +1763,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the inventory status of cloud phone resources. Before creating an instance, you can use this operation to check whether the inventory in the target region is sufficient, and then proceed with creation after confirmation.</para>
+        /// <para>Checks the inventory status of cloud phone resources. Before creating an instance, you can call this operation to check whether the inventory in the target region is sufficient.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1765,7 +1781,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the inventory status of cloud phone resources. Before creating an instance, you can use this operation to check whether the inventory in the target region is sufficient, and then proceed with creation after confirmation.</para>
+        /// <para>Checks the inventory status of cloud phone resources. Before creating an instance, you can call this operation to check whether the inventory in the target region is sufficient.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3443,7 +3459,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom image from a cloud phone instance. Then, you can use the image to create more cloud phones with the same configuration.</para>
+        /// <para>Creates a custom image from a cloud phone instance. You can use the custom image to create more cloud phones with the same configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3497,7 +3513,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom image from a cloud phone instance. Then, you can use the image to create more cloud phones with the same configuration.</para>
+        /// <para>Creates a custom image from a cloud phone instance. You can use the custom image to create more cloud phones with the same configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3551,7 +3567,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom image from a cloud phone instance. Then, you can use the image to create more cloud phones with the same configuration.</para>
+        /// <para>Creates a custom image from a cloud phone instance. You can use the custom image to create more cloud phones with the same configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3569,7 +3585,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom image from a cloud phone instance. Then, you can use the image to create more cloud phones with the same configuration.</para>
+        /// <para>Creates a custom image from a cloud phone instance. You can use the custom image to create more cloud phones with the same configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3587,12 +3603,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Places an order to purchase an edge agent package.</para>
+        /// <para>Purchases an edge agent package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of WUYING Cloud Phone.</para>
+        /// <para>This operation involves billing. Make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of WUYING Cloud Phone before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3666,12 +3682,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Places an order to purchase an edge agent package.</para>
+        /// <para>Purchases an edge agent package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of WUYING Cloud Phone.</para>
+        /// <para>This operation involves billing. Make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of WUYING Cloud Phone before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3745,12 +3761,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Places an order to purchase an edge agent package.</para>
+        /// <para>Purchases an edge agent package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of WUYING Cloud Phone.</para>
+        /// <para>This operation involves billing. Make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of WUYING Cloud Phone before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3768,12 +3784,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Places an order to purchase an edge agent package.</para>
+        /// <para>Purchases an edge agent package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of WUYING Cloud Phone.</para>
+        /// <para>This operation involves billing. Make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of WUYING Cloud Phone before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3791,13 +3807,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can connect to Cloud Phones using the Android Debug Bridge (ADB). ADB lets you manage devices and applications, and transfer files. These operations require high permissions. Because Cloud Phones do not have physical interfaces, you cannot use a USB connection to trigger an authorization dialog box on the device. Therefore, you must configure a key pair before you connect to a Cloud Phone with ADB over a network. This key pair ensures that the device trusts the client and that all operations are secure. You can call the CreateKeyPair operation to create an ADB key pair. The system stores the public key and returns the private key. The private key is in PEM-encoded PKCS#8 format and complies with ADB connection standards. You must securely store the private key.</para>
+        /// <para>Creates an ADB key pair. You can use ADB to connect to a cloud phone for device management, application management, and file transfers. ADB operations require elevated permissions. Cloud phones lack physical interfaces, so you cannot trigger a device-side authorization dialog box over USB. Therefore, when ADB connects to a cloud phone over a network, you must configure a key pair in advance to establish trust between the device and the client and ensure secure operations. You can invoke the CreateKeyPair operation to create an ADB key pair. The system stores the public key and returns the private key in the PKCS#8 format with PEM encoding that complies with ADB connection specifications. You must securely store the private key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also use the Android Debug Bridge (ADB) tool to create a key pair and then upload it to the Cloud Phone console by calling the <a href="t2729840.xdita#"></a>operation. This key pair can be used in the same way as a key pair created by the system.
-        /// Each tenant can have a maximum of 500 key pairs.</para>
+        /// <para>In addition to calling CreateKeyPair, you can use the ADB tool to create a key pair and upload it to the Wuying Cloud Phone console by calling <a href="https://help.aliyun.com/document_detail/2807340.html">ImportKeyPair</a>. The uploaded key pair works the same way as a system-generated key pair. Each tenant can create a maximum of 500 key pairs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3839,13 +3854,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can connect to Cloud Phones using the Android Debug Bridge (ADB). ADB lets you manage devices and applications, and transfer files. These operations require high permissions. Because Cloud Phones do not have physical interfaces, you cannot use a USB connection to trigger an authorization dialog box on the device. Therefore, you must configure a key pair before you connect to a Cloud Phone with ADB over a network. This key pair ensures that the device trusts the client and that all operations are secure. You can call the CreateKeyPair operation to create an ADB key pair. The system stores the public key and returns the private key. The private key is in PEM-encoded PKCS#8 format and complies with ADB connection standards. You must securely store the private key.</para>
+        /// <para>Creates an ADB key pair. You can use ADB to connect to a cloud phone for device management, application management, and file transfers. ADB operations require elevated permissions. Cloud phones lack physical interfaces, so you cannot trigger a device-side authorization dialog box over USB. Therefore, when ADB connects to a cloud phone over a network, you must configure a key pair in advance to establish trust between the device and the client and ensure secure operations. You can invoke the CreateKeyPair operation to create an ADB key pair. The system stores the public key and returns the private key in the PKCS#8 format with PEM encoding that complies with ADB connection specifications. You must securely store the private key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also use the Android Debug Bridge (ADB) tool to create a key pair and then upload it to the Cloud Phone console by calling the <a href="t2729840.xdita#"></a>operation. This key pair can be used in the same way as a key pair created by the system.
-        /// Each tenant can have a maximum of 500 key pairs.</para>
+        /// <para>In addition to calling CreateKeyPair, you can use the ADB tool to create a key pair and upload it to the Wuying Cloud Phone console by calling <a href="https://help.aliyun.com/document_detail/2807340.html">ImportKeyPair</a>. The uploaded key pair works the same way as a system-generated key pair. Each tenant can create a maximum of 500 key pairs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3887,13 +3901,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can connect to Cloud Phones using the Android Debug Bridge (ADB). ADB lets you manage devices and applications, and transfer files. These operations require high permissions. Because Cloud Phones do not have physical interfaces, you cannot use a USB connection to trigger an authorization dialog box on the device. Therefore, you must configure a key pair before you connect to a Cloud Phone with ADB over a network. This key pair ensures that the device trusts the client and that all operations are secure. You can call the CreateKeyPair operation to create an ADB key pair. The system stores the public key and returns the private key. The private key is in PEM-encoded PKCS#8 format and complies with ADB connection standards. You must securely store the private key.</para>
+        /// <para>Creates an ADB key pair. You can use ADB to connect to a cloud phone for device management, application management, and file transfers. ADB operations require elevated permissions. Cloud phones lack physical interfaces, so you cannot trigger a device-side authorization dialog box over USB. Therefore, when ADB connects to a cloud phone over a network, you must configure a key pair in advance to establish trust between the device and the client and ensure secure operations. You can invoke the CreateKeyPair operation to create an ADB key pair. The system stores the public key and returns the private key in the PKCS#8 format with PEM encoding that complies with ADB connection specifications. You must securely store the private key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also use the Android Debug Bridge (ADB) tool to create a key pair and then upload it to the Cloud Phone console by calling the <a href="t2729840.xdita#"></a>operation. This key pair can be used in the same way as a key pair created by the system.
-        /// Each tenant can have a maximum of 500 key pairs.</para>
+        /// <para>In addition to calling CreateKeyPair, you can use the ADB tool to create a key pair and upload it to the Wuying Cloud Phone console by calling <a href="https://help.aliyun.com/document_detail/2807340.html">ImportKeyPair</a>. The uploaded key pair works the same way as a system-generated key pair. Each tenant can create a maximum of 500 key pairs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3911,13 +3924,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can connect to Cloud Phones using the Android Debug Bridge (ADB). ADB lets you manage devices and applications, and transfer files. These operations require high permissions. Because Cloud Phones do not have physical interfaces, you cannot use a USB connection to trigger an authorization dialog box on the device. Therefore, you must configure a key pair before you connect to a Cloud Phone with ADB over a network. This key pair ensures that the device trusts the client and that all operations are secure. You can call the CreateKeyPair operation to create an ADB key pair. The system stores the public key and returns the private key. The private key is in PEM-encoded PKCS#8 format and complies with ADB connection standards. You must securely store the private key.</para>
+        /// <para>Creates an ADB key pair. You can use ADB to connect to a cloud phone for device management, application management, and file transfers. ADB operations require elevated permissions. Cloud phones lack physical interfaces, so you cannot trigger a device-side authorization dialog box over USB. Therefore, when ADB connects to a cloud phone over a network, you must configure a key pair in advance to establish trust between the device and the client and ensure secure operations. You can invoke the CreateKeyPair operation to create an ADB key pair. The system stores the public key and returns the private key in the PKCS#8 format with PEM encoding that complies with ADB connection specifications. You must securely store the private key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can also use the Android Debug Bridge (ADB) tool to create a key pair and then upload it to the Cloud Phone console by calling the <a href="t2729840.xdita#"></a>operation. This key pair can be used in the same way as a key pair created by the system.
-        /// Each tenant can have a maximum of 500 key pairs.</para>
+        /// <para>In addition to calling CreateKeyPair, you can use the ADB tool to create a key pair and upload it to the Wuying Cloud Phone console by calling <a href="https://help.aliyun.com/document_detail/2807340.html">ImportKeyPair</a>. The uploaded key pair works the same way as a system-generated key pair. Each tenant can create a maximum of 500 key pairs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4363,7 +4375,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy that applies unified settings to cloud phones. These settings include features such as network redirection, watermarks, resolution, and the clipboard.</para>
+        /// <para>Creates a policy. Policies are used to configure unified settings for cloud phones, such as network redirection policies, watermarks, resolution, and clipboard settings.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4455,7 +4467,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy that applies unified settings to cloud phones. These settings include features such as network redirection, watermarks, resolution, and the clipboard.</para>
+        /// <para>Creates a policy. Policies are used to configure unified settings for cloud phones, such as network redirection policies, watermarks, resolution, and clipboard settings.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4547,7 +4559,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy that applies unified settings to cloud phones. These settings include features such as network redirection, watermarks, resolution, and the clipboard.</para>
+        /// <para>Creates a policy. Policies are used to configure unified settings for cloud phones, such as network redirection policies, watermarks, resolution, and clipboard settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4565,7 +4577,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy that applies unified settings to cloud phones. These settings include features such as network redirection, watermarks, resolution, and the clipboard.</para>
+        /// <para>Creates a policy. Policies are used to configure unified settings for cloud phones, such as network redirection policies, watermarks, resolution, and clipboard settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5195,13 +5207,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Android instance group. All instances in the group are also deleted. This operation cannot be undone. Proceed with caution.</para>
+        /// <para>Deletes a cloud phone instance group. All instances in the instance group are also deleted and cannot be recovered. Proceed with caution.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Pay-as-you-go instance groups can be deleted at any time.
-        /// Subscription instance groups can be deleted only after they expire.</para>
+        /// <para>Pay-as-you-go instance groups can be deleted directly.
+        /// Subscription instance groups can be deleted only after they expire. Only subscription instance groups in the Expired state can be deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5243,13 +5255,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Android instance group. All instances in the group are also deleted. This operation cannot be undone. Proceed with caution.</para>
+        /// <para>Deletes a cloud phone instance group. All instances in the instance group are also deleted and cannot be recovered. Proceed with caution.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Pay-as-you-go instance groups can be deleted at any time.
-        /// Subscription instance groups can be deleted only after they expire.</para>
+        /// <para>Pay-as-you-go instance groups can be deleted directly.
+        /// Subscription instance groups can be deleted only after they expire. Only subscription instance groups in the Expired state can be deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5291,13 +5303,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Android instance group. All instances in the group are also deleted. This operation cannot be undone. Proceed with caution.</para>
+        /// <para>Deletes a cloud phone instance group. All instances in the instance group are also deleted and cannot be recovered. Proceed with caution.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Pay-as-you-go instance groups can be deleted at any time.
-        /// Subscription instance groups can be deleted only after they expire.</para>
+        /// <para>Pay-as-you-go instance groups can be deleted directly.
+        /// Subscription instance groups can be deleted only after they expire. Only subscription instance groups in the Expired state can be deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5315,13 +5327,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Android instance group. All instances in the group are also deleted. This operation cannot be undone. Proceed with caution.</para>
+        /// <para>Deletes a cloud phone instance group. All instances in the instance group are also deleted and cannot be recovered. Proceed with caution.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Pay-as-you-go instance groups can be deleted at any time.
-        /// Subscription instance groups can be deleted only after they expire.</para>
+        /// <para>Pay-as-you-go instance groups can be deleted directly.
+        /// Subscription instance groups can be deleted only after they expire. Only subscription instance groups in the Expired state can be deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5339,7 +5351,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application. Before you delete an application, make sure that the application is not installed on any instances.</para>
+        /// <para>Deletes an application. Ensure that the application is not installed on any instance group before deletion.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5381,7 +5393,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application. Before you delete an application, make sure that the application is not installed on any instances.</para>
+        /// <para>Deletes an application. Ensure that the application is not installed on any instance group before deletion.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5423,7 +5435,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application. Before you delete an application, make sure that the application is not installed on any instances.</para>
+        /// <para>Deletes an application. Ensure that the application is not installed on any instance group before deletion.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5441,7 +5453,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application. Before you delete an application, make sure that the application is not installed on any instances.</para>
+        /// <para>Deletes an application. Ensure that the application is not installed on any instance group before deletion.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5871,14 +5883,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes Android Debug Bridge (ADB) key pairs.</para>
+        /// <para>Deletes a cloud phone key pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If a cloud phone instance is currently associated with the ADB key pair you intend to delete, the ADB key pair cannot be deleted.</para>
         /// <list type="bullet">
-        /// <item><description>Once an ADB key pair is deleted, it cannot be retrieved or queried by using the DescribeKeyPairs operation.</description></item>
+        /// <item><description>If an ADB key pair is already attached to a cloud phone instance, the key pair cannot be deleted.</description></item>
+        /// <item><description>After an ADB key pair is deleted, it can no longer be queried by calling DescribeKeyPairs.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5921,14 +5933,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes Android Debug Bridge (ADB) key pairs.</para>
+        /// <para>Deletes a cloud phone key pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If a cloud phone instance is currently associated with the ADB key pair you intend to delete, the ADB key pair cannot be deleted.</para>
         /// <list type="bullet">
-        /// <item><description>Once an ADB key pair is deleted, it cannot be retrieved or queried by using the DescribeKeyPairs operation.</description></item>
+        /// <item><description>If an ADB key pair is already attached to a cloud phone instance, the key pair cannot be deleted.</description></item>
+        /// <item><description>After an ADB key pair is deleted, it can no longer be queried by calling DescribeKeyPairs.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5971,14 +5983,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes Android Debug Bridge (ADB) key pairs.</para>
+        /// <para>Deletes a cloud phone key pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If a cloud phone instance is currently associated with the ADB key pair you intend to delete, the ADB key pair cannot be deleted.</para>
         /// <list type="bullet">
-        /// <item><description>Once an ADB key pair is deleted, it cannot be retrieved or queried by using the DescribeKeyPairs operation.</description></item>
+        /// <item><description>If an ADB key pair is already attached to a cloud phone instance, the key pair cannot be deleted.</description></item>
+        /// <item><description>After an ADB key pair is deleted, it can no longer be queried by calling DescribeKeyPairs.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5997,14 +6009,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes Android Debug Bridge (ADB) key pairs.</para>
+        /// <para>Deletes a cloud phone key pair.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If a cloud phone instance is currently associated with the ADB key pair you intend to delete, the ADB key pair cannot be deleted.</para>
         /// <list type="bullet">
-        /// <item><description>Once an ADB key pair is deleted, it cannot be retrieved or queried by using the DescribeKeyPairs operation.</description></item>
+        /// <item><description>If an ADB key pair is already attached to a cloud phone instance, the key pair cannot be deleted.</description></item>
+        /// <item><description>After an ADB key pair is deleted, it can no longer be queried by calling DescribeKeyPairs.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6143,12 +6155,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more policy groups.</para>
+        /// <para>Deletes one or more policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A policy group cannot be deleted if it is associated with an instance group.</para>
+        /// <para>You cannot delete a policy if it is associated with an undeleted instance group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6190,12 +6202,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more policy groups.</para>
+        /// <para>Deletes one or more policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A policy group cannot be deleted if it is associated with an instance group.</para>
+        /// <para>You cannot delete a policy if it is associated with an undeleted instance group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6237,12 +6249,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more policy groups.</para>
+        /// <para>Deletes one or more policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A policy group cannot be deleted if it is associated with an instance group.</para>
+        /// <para>You cannot delete a policy if it is associated with an undeleted instance group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6260,12 +6272,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more policy groups.</para>
+        /// <para>Deletes one or more policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A policy group cannot be deleted if it is associated with an instance group.</para>
+        /// <para>You cannot delete a policy if it is associated with an undeleted instance group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7611,7 +7623,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>带宽包询价</para>
+        /// <para>Queries the price of a cloud phone bandwidth plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7677,7 +7689,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>带宽包询价</para>
+        /// <para>Queries the price of a cloud phone bandwidth plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7743,7 +7755,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>带宽包询价</para>
+        /// <para>Queries the price of a cloud phone bandwidth plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7761,7 +7773,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>带宽包询价</para>
+        /// <para>Queries the price of a cloud phone bandwidth plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7919,7 +7931,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云手机节点询价</para>
+        /// <para>Queries the purchase price of a cloud phone matrix.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8005,7 +8017,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云手机节点询价</para>
+        /// <para>Queries the purchase price of a cloud phone matrix.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8091,7 +8103,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云手机节点询价</para>
+        /// <para>Queries the purchase price of a cloud phone matrix.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8109,7 +8121,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云手机节点询价</para>
+        /// <para>Queries the purchase price of a cloud phone matrix.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8127,7 +8139,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云手机节点续费询价</para>
+        /// <para>Queries the renewal price of a cloud phone matrix.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8181,7 +8193,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云手机节点续费询价</para>
+        /// <para>Queries the renewal price of a cloud phone matrix.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8235,7 +8247,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云手机节点续费询价</para>
+        /// <para>Queries the renewal price of a cloud phone matrix.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8253,7 +8265,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云手机节点续费询价</para>
+        /// <para>Queries the renewal price of a cloud phone matrix.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8807,7 +8819,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>积分包询价</para>
+        /// <para>Queries the prices of AI credit boost packages for Cloud Phone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8865,7 +8877,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>积分包询价</para>
+        /// <para>Queries the prices of AI credit boost packages for Cloud Phone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8923,7 +8935,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>积分包询价</para>
+        /// <para>Queries the prices of AI credit boost packages for Cloud Phone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8941,7 +8953,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>积分包询价</para>
+        /// <para>Queries the prices of AI credit boost packages for Cloud Phone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9435,7 +9447,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询安卓实例组价格</para>
+        /// <para>Queries the price of an instance group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9521,7 +9533,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询安卓实例组价格</para>
+        /// <para>Queries the price of an instance group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9607,7 +9619,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询安卓实例组价格</para>
+        /// <para>Queries the price of an instance group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9625,7 +9637,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询安卓实例组价格</para>
+        /// <para>Queries the price of an instance group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9935,7 +9947,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries JVS instance information.</para>
+        /// <para>Queries the details of JVS instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9985,7 +9997,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries JVS instance information.</para>
+        /// <para>Queries the details of JVS instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10035,7 +10047,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries JVS instance information.</para>
+        /// <para>Queries the details of JVS instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10053,7 +10065,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries JVS instance information.</para>
+        /// <para>Queries the details of JVS instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10915,7 +10927,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>mobileAgent套餐包询价</para>
+        /// <para>Queries the pricing of MobileAgent packages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10981,7 +10993,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>mobileAgent套餐包询价</para>
+        /// <para>Queries the pricing of MobileAgent packages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11047,7 +11059,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>mobileAgent套餐包询价</para>
+        /// <para>Queries the pricing of MobileAgent packages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11065,7 +11077,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>mobileAgent套餐包询价</para>
+        /// <para>Queries the pricing of MobileAgent packages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11083,7 +11095,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>MobileAgent套餐包续费询价</para>
+        /// <para>Queries the renewal price of MobileAgent resource plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11137,7 +11149,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>MobileAgent套餐包续费询价</para>
+        /// <para>Queries the renewal price of MobileAgent resource plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11191,7 +11203,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>MobileAgent套餐包续费询价</para>
+        /// <para>Queries the renewal price of MobileAgent resource plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11209,7 +11221,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>MobileAgent套餐包续费询价</para>
+        /// <para>Queries the renewal price of MobileAgent resource plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17595,12 +17607,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Operates apps in a cloud phone, such as opening, closing, and reopening apps.</para>
+        /// <para>Starts, stops, or restarts applications in a cloud phone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation runs asynchronously. To check the operation result, visit the Task Center. To retrieve task details, call the <a href="t2740507.xdita#"></a>operation.</para>
+        /// <para>This API operation is asynchronous. You can view the operation results in the task center. To query tasks, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17650,12 +17662,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Operates apps in a cloud phone, such as opening, closing, and reopening apps.</para>
+        /// <para>Starts, stops, or restarts applications in a cloud phone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation runs asynchronously. To check the operation result, visit the Task Center. To retrieve task details, call the <a href="t2740507.xdita#"></a>operation.</para>
+        /// <para>This API operation is asynchronous. You can view the operation results in the task center. To query tasks, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17705,12 +17717,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Operates apps in a cloud phone, such as opening, closing, and reopening apps.</para>
+        /// <para>Starts, stops, or restarts applications in a cloud phone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation runs asynchronously. To check the operation result, visit the Task Center. To retrieve task details, call the <a href="t2740507.xdita#"></a>operation.</para>
+        /// <para>This API operation is asynchronous. You can view the operation results in the task center. To query tasks, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17728,12 +17740,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Operates apps in a cloud phone, such as opening, closing, and reopening apps.</para>
+        /// <para>Starts, stops, or restarts applications in a cloud phone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation runs asynchronously. To check the operation result, visit the Task Center. To retrieve task details, call the <a href="t2740507.xdita#"></a>operation.</para>
+        /// <para>This API operation is asynchronous. You can view the operation results in the task center. To query tasks, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18035,7 +18047,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启矩阵</para>
+        /// <para>Restarts cloud phone matrices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18081,7 +18093,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启矩阵</para>
+        /// <para>Restarts cloud phone matrices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18127,7 +18139,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启矩阵</para>
+        /// <para>Restarts cloud phone matrices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18145,7 +18157,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启矩阵</para>
+        /// <para>Restarts cloud phone matrices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18163,14 +18175,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores a full instance backup to another cloud phone instance.</para>
+        /// <para>Restores a backup file of a cloud phone instance generated from a full-device backup to another cloud phone instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>When you restore a full instance, the system restarts the instance to ensure a successful restoration. A restart is not required if you restore only applications and data. Make sure the instance is in an active state. Do not perform any operations on the instance during the restoration process. Otherwise, the restoration may fail.</description></item>
-        /// <item><description>Ensure that the backup file can be used to restore the instance properly. After a restoration is complete, check that all your data is complete and all features are working properly. Do not delete the original backup file or reset the source instance until you have verified the restored data. Otherwise, you may lose your data.</description></item>
+        /// <item><description>To ensure a high success rate, the cloud phone is restarted during a full-device restore. App and data restoration does not require a restart. Make sure your cloud phone is available and do not operate it during the restoration process. Otherwise, the restoration may fail.</description></item>
+        /// <item><description>Make sure your backup file can be restored properly. After the restoration is complete, check and verify that all your data is intact and functions are working properly before you delete the original backup file or reset the source instance. Otherwise, your data may be lost.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -18199,6 +18211,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupFilePath))
             {
                 query["BackupFilePath"] = request.BackupFilePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeAppList))
+            {
+                query["ExcludeAppList"] = request.ExcludeAppList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadEndpoint))
             {
@@ -18229,14 +18245,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores a full instance backup to another cloud phone instance.</para>
+        /// <para>Restores a backup file of a cloud phone instance generated from a full-device backup to another cloud phone instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>When you restore a full instance, the system restarts the instance to ensure a successful restoration. A restart is not required if you restore only applications and data. Make sure the instance is in an active state. Do not perform any operations on the instance during the restoration process. Otherwise, the restoration may fail.</description></item>
-        /// <item><description>Ensure that the backup file can be used to restore the instance properly. After a restoration is complete, check that all your data is complete and all features are working properly. Do not delete the original backup file or reset the source instance until you have verified the restored data. Otherwise, you may lose your data.</description></item>
+        /// <item><description>To ensure a high success rate, the cloud phone is restarted during a full-device restore. App and data restoration does not require a restart. Make sure your cloud phone is available and do not operate it during the restoration process. Otherwise, the restoration may fail.</description></item>
+        /// <item><description>Make sure your backup file can be restored properly. After the restoration is complete, check and verify that all your data is intact and functions are working properly before you delete the original backup file or reset the source instance. Otherwise, your data may be lost.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -18265,6 +18281,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupFilePath))
             {
                 query["BackupFilePath"] = request.BackupFilePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeAppList))
+            {
+                query["ExcludeAppList"] = request.ExcludeAppList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadEndpoint))
             {
@@ -18295,14 +18315,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores a full instance backup to another cloud phone instance.</para>
+        /// <para>Restores a backup file of a cloud phone instance generated from a full-device backup to another cloud phone instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>When you restore a full instance, the system restarts the instance to ensure a successful restoration. A restart is not required if you restore only applications and data. Make sure the instance is in an active state. Do not perform any operations on the instance during the restoration process. Otherwise, the restoration may fail.</description></item>
-        /// <item><description>Ensure that the backup file can be used to restore the instance properly. After a restoration is complete, check that all your data is complete and all features are working properly. Do not delete the original backup file or reset the source instance until you have verified the restored data. Otherwise, you may lose your data.</description></item>
+        /// <item><description>To ensure a high success rate, the cloud phone is restarted during a full-device restore. App and data restoration does not require a restart. Make sure your cloud phone is available and do not operate it during the restoration process. Otherwise, the restoration may fail.</description></item>
+        /// <item><description>Make sure your backup file can be restored properly. After the restoration is complete, check and verify that all your data is intact and functions are working properly before you delete the original backup file or reset the source instance. Otherwise, your data may be lost.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -18321,14 +18341,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores a full instance backup to another cloud phone instance.</para>
+        /// <para>Restores a backup file of a cloud phone instance generated from a full-device backup to another cloud phone instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>When you restore a full instance, the system restarts the instance to ensure a successful restoration. A restart is not required if you restore only applications and data. Make sure the instance is in an active state. Do not perform any operations on the instance during the restoration process. Otherwise, the restoration may fail.</description></item>
-        /// <item><description>Ensure that the backup file can be used to restore the instance properly. After a restoration is complete, check that all your data is complete and all features are working properly. Do not delete the original backup file or reset the source instance until you have verified the restored data. Otherwise, you may lose your data.</description></item>
+        /// <item><description>To ensure a high success rate, the cloud phone is restarted during a full-device restore. App and data restoration does not require a restart. Make sure your cloud phone is available and do not operate it during the restoration process. Otherwise, the restoration may fail.</description></item>
+        /// <item><description>Make sure your backup file can be restored properly. After the restoration is complete, check and verify that all your data is intact and functions are working properly before you delete the original backup file or reset the source instance. Otherwise, your data may be lost.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -18535,12 +18555,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores backup files.</para>
+        /// <para>Restores a backup file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, this operation allows you to restore only backup files generated by cloud phones that are stored in Object Storage Service (OSS) buckets.</para>
+        /// <para>Currently, only backup files generated by cloud phones and saved in Object Storage Service (OSS) are supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18573,6 +18593,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["BackupFilePath"] = request.BackupFilePath;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeAppList))
+            {
+                query["ExcludeAppList"] = request.ExcludeAppList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadEndpoint))
             {
                 query["UploadEndpoint"] = request.UploadEndpoint;
@@ -18602,12 +18626,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores backup files.</para>
+        /// <para>Restores a backup file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, this operation allows you to restore only backup files generated by cloud phones that are stored in Object Storage Service (OSS) buckets.</para>
+        /// <para>Currently, only backup files generated by cloud phones and saved in Object Storage Service (OSS) are supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18640,6 +18664,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["BackupFilePath"] = request.BackupFilePath;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeAppList))
+            {
+                query["ExcludeAppList"] = request.ExcludeAppList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadEndpoint))
             {
                 query["UploadEndpoint"] = request.UploadEndpoint;
@@ -18669,12 +18697,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores backup files.</para>
+        /// <para>Restores a backup file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, this operation allows you to restore only backup files generated by cloud phones that are stored in Object Storage Service (OSS) buckets.</para>
+        /// <para>Currently, only backup files generated by cloud phones and saved in Object Storage Service (OSS) are supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18692,12 +18720,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restores backup files.</para>
+        /// <para>Restores a backup file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, this operation allows you to restore only backup files generated by cloud phones that are stored in Object Storage Service (OSS) buckets.</para>
+        /// <para>Currently, only backup files generated by cloud phones and saved in Object Storage Service (OSS) are supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18715,7 +18743,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refreshes model authentication tokens.</para>
+        /// <para>Refreshes the model authentication tokens.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18765,7 +18793,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refreshes model authentication tokens.</para>
+        /// <para>Refreshes the model authentication tokens.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18815,7 +18843,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refreshes model authentication tokens.</para>
+        /// <para>Refreshes the model authentication tokens.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18833,7 +18861,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refreshes model authentication tokens.</para>
+        /// <para>Refreshes the model authentication tokens.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20211,12 +20239,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pushes files from Object Storage Service (OSS) or a public download link to one or more cloud phones.</para>
+        /// <para>Pushes files from OSS or public download URLs to cloud phones.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Use this operation to send files or folders from Object Storage Service (OSS) to cloud phones.</para>
+        /// <para>Currently, only files or folders from Object Storage Service (OSS) can be sent to cloud phones.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20290,12 +20318,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pushes files from Object Storage Service (OSS) or a public download link to one or more cloud phones.</para>
+        /// <para>Pushes files from OSS or public download URLs to cloud phones.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Use this operation to send files or folders from Object Storage Service (OSS) to cloud phones.</para>
+        /// <para>Currently, only files or folders from Object Storage Service (OSS) can be sent to cloud phones.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20369,12 +20397,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pushes files from Object Storage Service (OSS) or a public download link to one or more cloud phones.</para>
+        /// <para>Pushes files from OSS or public download URLs to cloud phones.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Use this operation to send files or folders from Object Storage Service (OSS) to cloud phones.</para>
+        /// <para>Currently, only files or folders from Object Storage Service (OSS) can be sent to cloud phones.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20392,12 +20420,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pushes files from Object Storage Service (OSS) or a public download link to one or more cloud phones.</para>
+        /// <para>Pushes files from OSS or public download URLs to cloud phones.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Use this operation to send files or folders from Object Storage Service (OSS) to cloud phones.</para>
+        /// <para>Currently, only files or folders from Object Storage Service (OSS) can be sent to cloud phones.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20415,7 +20443,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a property template to cloud phone instances and, based on the template, sets properties in the Android system using the setprop command. An APK or a related program can read these property values. If you specify multiple template IDs, the property templates are randomly sent to the cloud phone instances.</para>
+        /// <para>Sends property templates. The templates are delivered to cloud phones and configured in the Android system of the cloud phones by using the setprop command. APKs or related applications can read these property values. If multiple template IDs are specified, the property templates and cloud phone instances are randomly matched.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20467,7 +20495,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a property template to cloud phone instances and, based on the template, sets properties in the Android system using the setprop command. An APK or a related program can read these property values. If you specify multiple template IDs, the property templates are randomly sent to the cloud phone instances.</para>
+        /// <para>Sends property templates. The templates are delivered to cloud phones and configured in the Android system of the cloud phones by using the setprop command. APKs or related applications can read these property values. If multiple template IDs are specified, the property templates and cloud phone instances are randomly matched.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20519,7 +20547,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a property template to cloud phone instances and, based on the template, sets properties in the Android system using the setprop command. An APK or a related program can read these property values. If you specify multiple template IDs, the property templates are randomly sent to the cloud phone instances.</para>
+        /// <para>Sends property templates. The templates are delivered to cloud phones and configured in the Android system of the cloud phones by using the setprop command. APKs or related applications can read these property values. If multiple template IDs are specified, the property templates and cloud phone instances are randomly matched.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20537,7 +20565,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a property template to cloud phone instances and, based on the template, sets properties in the Android system using the setprop command. An APK or a related program can read these property values. If you specify multiple template IDs, the property templates are randomly sent to the cloud phone instances.</para>
+        /// <para>Sends property templates. The templates are delivered to cloud phones and configured in the Android system of the cloud phones by using the setprop command. APKs or related applications can read these property values. If multiple template IDs are specified, the property templates and cloud phone instances are randomly matched.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20555,12 +20583,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the authentication status for cloud phone instances. If you enable Android Debug Bridge (ADB) authentication for cloud phone instances, the system will verify the validity of the ADB key pairs provided by end users when they connect to the instances over ADB. To ensure successful authentication and a proper connection, we recommend that you attach ADB key pairs to cloud phone instances. If you disable ADB authentication for cloud phone instances, the system will no longer verify the validity of any ADB key pairs. As a result, end users can connect to the cloud phone instances over ADB without authentication, provided the network connection is functioning properly.</para>
+        /// <para>Sets the ADB authentication status of an instance. If ADB authentication is enabled, the cloud phone instance verifies the validity of the ADB key pair when you connect to the instance over ADB. In this case, bind an ADB key pair before connecting to the cloud phone instance over ADB. If ADB authentication is disabled, the cloud phone instance does not verify the validity of the ADB key pair. You can connect to the cloud phone instance over ADB as long as network connectivity is available.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the desired cloud phone instance is in the Running state.</para>
+        /// <para>The ADB authentication settings take effect only when the instance is in the Running state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20606,12 +20634,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the authentication status for cloud phone instances. If you enable Android Debug Bridge (ADB) authentication for cloud phone instances, the system will verify the validity of the ADB key pairs provided by end users when they connect to the instances over ADB. To ensure successful authentication and a proper connection, we recommend that you attach ADB key pairs to cloud phone instances. If you disable ADB authentication for cloud phone instances, the system will no longer verify the validity of any ADB key pairs. As a result, end users can connect to the cloud phone instances over ADB without authentication, provided the network connection is functioning properly.</para>
+        /// <para>Sets the ADB authentication status of an instance. If ADB authentication is enabled, the cloud phone instance verifies the validity of the ADB key pair when you connect to the instance over ADB. In this case, bind an ADB key pair before connecting to the cloud phone instance over ADB. If ADB authentication is disabled, the cloud phone instance does not verify the validity of the ADB key pair. You can connect to the cloud phone instance over ADB as long as network connectivity is available.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the desired cloud phone instance is in the Running state.</para>
+        /// <para>The ADB authentication settings take effect only when the instance is in the Running state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20657,12 +20685,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the authentication status for cloud phone instances. If you enable Android Debug Bridge (ADB) authentication for cloud phone instances, the system will verify the validity of the ADB key pairs provided by end users when they connect to the instances over ADB. To ensure successful authentication and a proper connection, we recommend that you attach ADB key pairs to cloud phone instances. If you disable ADB authentication for cloud phone instances, the system will no longer verify the validity of any ADB key pairs. As a result, end users can connect to the cloud phone instances over ADB without authentication, provided the network connection is functioning properly.</para>
+        /// <para>Sets the ADB authentication status of an instance. If ADB authentication is enabled, the cloud phone instance verifies the validity of the ADB key pair when you connect to the instance over ADB. In this case, bind an ADB key pair before connecting to the cloud phone instance over ADB. If ADB authentication is disabled, the cloud phone instance does not verify the validity of the ADB key pair. You can connect to the cloud phone instance over ADB as long as network connectivity is available.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the desired cloud phone instance is in the Running state.</para>
+        /// <para>The ADB authentication settings take effect only when the instance is in the Running state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20680,12 +20708,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the authentication status for cloud phone instances. If you enable Android Debug Bridge (ADB) authentication for cloud phone instances, the system will verify the validity of the ADB key pairs provided by end users when they connect to the instances over ADB. To ensure successful authentication and a proper connection, we recommend that you attach ADB key pairs to cloud phone instances. If you disable ADB authentication for cloud phone instances, the system will no longer verify the validity of any ADB key pairs. As a result, end users can connect to the cloud phone instances over ADB without authentication, provided the network connection is functioning properly.</para>
+        /// <para>Sets the ADB authentication status of an instance. If ADB authentication is enabled, the cloud phone instance verifies the validity of the ADB key pair when you connect to the instance over ADB. In this case, bind an ADB key pair before connecting to the cloud phone instance over ADB. If ADB authentication is disabled, the cloud phone instance does not verify the validity of the ADB key pair. You can connect to the cloud phone instance over ADB as long as network connectivity is available.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the desired cloud phone instance is in the Running state.</para>
+        /// <para>The ADB authentication settings take effect only when the instance is in the Running state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20703,17 +20731,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds or purges IP addresses and domain names from the network access blacklist.</para>
+        /// <para>Updates the network access blacklist by adding or clearing IP addresses and domain names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation requires image version 26.01 or later.</description></item>
-        /// <item><description>This API call synchronously updates the IP address blacklist and the domain name blacklist.</description></item>
-        /// <item><description>The IP address blacklist supports individual IP addresses and IP address segments. The update overwrites the existing configuration. If you pass an empty string (&quot;&quot;), all configured IP blacklist entries are purged.</description></item>
-        /// <item><description>The domain name blacklist supports only exact matches and does not support regular expressions. If you pass an empty string (&quot;&quot;), all configured domain name blacklist entries are purged.</description></item>
-        /// <item><description>After you change the configuration, restart the cloud phone to apply the new blacklist rules. Note that these rules may not take effect if you use an agent.</description></item>
+        /// <item><description>The image version must be 26.01 or later.</description></item>
+        /// <item><description>This operation supports synchronous updates of the IP address blacklist and the domain name blacklist.</description></item>
+        /// <item><description>The IP address blacklist supports single IP addresses and CIDR blocks and uses an overwrite update method. If an empty string &quot;&quot; is specified, all configured IP blacklist entries are cleared.</description></item>
+        /// <item><description>The domain name blacklist supports only exact match and does not support regular expressions. If an empty string &quot;&quot; is specified, all configured domain name blacklist entries are cleared.</description></item>
+        /// <item><description>After the configuration is changed, you must restart the cloud phone for the new blacklist rules to take effect. Note that these rules may not take effect when a proxy is used.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20760,17 +20788,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds or purges IP addresses and domain names from the network access blacklist.</para>
+        /// <para>Updates the network access blacklist by adding or clearing IP addresses and domain names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation requires image version 26.01 or later.</description></item>
-        /// <item><description>This API call synchronously updates the IP address blacklist and the domain name blacklist.</description></item>
-        /// <item><description>The IP address blacklist supports individual IP addresses and IP address segments. The update overwrites the existing configuration. If you pass an empty string (&quot;&quot;), all configured IP blacklist entries are purged.</description></item>
-        /// <item><description>The domain name blacklist supports only exact matches and does not support regular expressions. If you pass an empty string (&quot;&quot;), all configured domain name blacklist entries are purged.</description></item>
-        /// <item><description>After you change the configuration, restart the cloud phone to apply the new blacklist rules. Note that these rules may not take effect if you use an agent.</description></item>
+        /// <item><description>The image version must be 26.01 or later.</description></item>
+        /// <item><description>This operation supports synchronous updates of the IP address blacklist and the domain name blacklist.</description></item>
+        /// <item><description>The IP address blacklist supports single IP addresses and CIDR blocks and uses an overwrite update method. If an empty string &quot;&quot; is specified, all configured IP blacklist entries are cleared.</description></item>
+        /// <item><description>The domain name blacklist supports only exact match and does not support regular expressions. If an empty string &quot;&quot; is specified, all configured domain name blacklist entries are cleared.</description></item>
+        /// <item><description>After the configuration is changed, you must restart the cloud phone for the new blacklist rules to take effect. Note that these rules may not take effect when a proxy is used.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20817,17 +20845,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds or purges IP addresses and domain names from the network access blacklist.</para>
+        /// <para>Updates the network access blacklist by adding or clearing IP addresses and domain names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation requires image version 26.01 or later.</description></item>
-        /// <item><description>This API call synchronously updates the IP address blacklist and the domain name blacklist.</description></item>
-        /// <item><description>The IP address blacklist supports individual IP addresses and IP address segments. The update overwrites the existing configuration. If you pass an empty string (&quot;&quot;), all configured IP blacklist entries are purged.</description></item>
-        /// <item><description>The domain name blacklist supports only exact matches and does not support regular expressions. If you pass an empty string (&quot;&quot;), all configured domain name blacklist entries are purged.</description></item>
-        /// <item><description>After you change the configuration, restart the cloud phone to apply the new blacklist rules. Note that these rules may not take effect if you use an agent.</description></item>
+        /// <item><description>The image version must be 26.01 or later.</description></item>
+        /// <item><description>This operation supports synchronous updates of the IP address blacklist and the domain name blacklist.</description></item>
+        /// <item><description>The IP address blacklist supports single IP addresses and CIDR blocks and uses an overwrite update method. If an empty string &quot;&quot; is specified, all configured IP blacklist entries are cleared.</description></item>
+        /// <item><description>The domain name blacklist supports only exact match and does not support regular expressions. If an empty string &quot;&quot; is specified, all configured domain name blacklist entries are cleared.</description></item>
+        /// <item><description>After the configuration is changed, you must restart the cloud phone for the new blacklist rules to take effect. Note that these rules may not take effect when a proxy is used.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20846,17 +20874,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds or purges IP addresses and domain names from the network access blacklist.</para>
+        /// <para>Updates the network access blacklist by adding or clearing IP addresses and domain names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation requires image version 26.01 or later.</description></item>
-        /// <item><description>This API call synchronously updates the IP address blacklist and the domain name blacklist.</description></item>
-        /// <item><description>The IP address blacklist supports individual IP addresses and IP address segments. The update overwrites the existing configuration. If you pass an empty string (&quot;&quot;), all configured IP blacklist entries are purged.</description></item>
-        /// <item><description>The domain name blacklist supports only exact matches and does not support regular expressions. If you pass an empty string (&quot;&quot;), all configured domain name blacklist entries are purged.</description></item>
-        /// <item><description>After you change the configuration, restart the cloud phone to apply the new blacklist rules. Note that these rules may not take effect if you use an agent.</description></item>
+        /// <item><description>The image version must be 26.01 or later.</description></item>
+        /// <item><description>This operation supports synchronous updates of the IP address blacklist and the domain name blacklist.</description></item>
+        /// <item><description>The IP address blacklist supports single IP addresses and CIDR blocks and uses an overwrite update method. If an empty string &quot;&quot; is specified, all configured IP blacklist entries are cleared.</description></item>
+        /// <item><description>The domain name blacklist supports only exact match and does not support regular expressions. If an empty string &quot;&quot; is specified, all configured domain name blacklist entries are cleared.</description></item>
+        /// <item><description>After the configuration is changed, you must restart the cloud phone for the new blacklist rules to take effect. Note that these rules may not take effect when a proxy is used.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20875,12 +20903,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start cloud phone instances.</para>
+        /// <para>Starts a cloud phone instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only supports starting when the instance is in the <b>Stopped, Backup Failed, or Recovery Failed</b> state.</para>
+        /// <para>You can start an instance only when it is in the <b>Stopped, Backup Failed, or Recovery Failed</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20926,12 +20954,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start cloud phone instances.</para>
+        /// <para>Starts a cloud phone instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only supports starting when the instance is in the <b>Stopped, Backup Failed, or Recovery Failed</b> state.</para>
+        /// <para>You can start an instance only when it is in the <b>Stopped, Backup Failed, or Recovery Failed</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20977,12 +21005,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start cloud phone instances.</para>
+        /// <para>Starts a cloud phone instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only supports starting when the instance is in the <b>Stopped, Backup Failed, or Recovery Failed</b> state.</para>
+        /// <para>You can start an instance only when it is in the <b>Stopped, Backup Failed, or Recovery Failed</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21000,12 +21028,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start cloud phone instances.</para>
+        /// <para>Starts a cloud phone instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only supports starting when the instance is in the <b>Stopped, Backup Failed, or Recovery Failed</b> state.</para>
+        /// <para>You can start an instance only when it is in the <b>Stopped, Backup Failed, or Recovery Failed</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21023,12 +21051,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Android Debug Bridge (ADB) connection for an instance and creates an Internet mapping rule for its ADB port. This feature is available only for standard networks.</para>
+        /// <para>Enables the ADB connection feature for instances and creates public network mapping rules for the ADB ports of the instances (standard network only).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This feature can be enabled when the instance is not in the <b>UNAVAILABLE</b> state and has a <b>private IP address</b> assigned.</para>
+        /// <para>This feature can be enabled only when the instance is in the <b>non-exception</b> (<b>UNAVAILABLE</b>) state and has been successfully assigned a <b>private IP address</b>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21070,12 +21098,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Android Debug Bridge (ADB) connection for an instance and creates an Internet mapping rule for its ADB port. This feature is available only for standard networks.</para>
+        /// <para>Enables the ADB connection feature for instances and creates public network mapping rules for the ADB ports of the instances (standard network only).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This feature can be enabled when the instance is not in the <b>UNAVAILABLE</b> state and has a <b>private IP address</b> assigned.</para>
+        /// <para>This feature can be enabled only when the instance is in the <b>non-exception</b> (<b>UNAVAILABLE</b>) state and has been successfully assigned a <b>private IP address</b>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21117,12 +21145,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Android Debug Bridge (ADB) connection for an instance and creates an Internet mapping rule for its ADB port. This feature is available only for standard networks.</para>
+        /// <para>Enables the ADB connection feature for instances and creates public network mapping rules for the ADB ports of the instances (standard network only).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This feature can be enabled when the instance is not in the <b>UNAVAILABLE</b> state and has a <b>private IP address</b> assigned.</para>
+        /// <para>This feature can be enabled only when the instance is in the <b>non-exception</b> (<b>UNAVAILABLE</b>) state and has been successfully assigned a <b>private IP address</b>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21140,12 +21168,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Android Debug Bridge (ADB) connection for an instance and creates an Internet mapping rule for its ADB port. This feature is available only for standard networks.</para>
+        /// <para>Enables the ADB connection feature for instances and creates public network mapping rules for the ADB ports of the instances (standard network only).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This feature can be enabled when the instance is not in the <b>UNAVAILABLE</b> state and has a <b>private IP address</b> assigned.</para>
+        /// <para>This feature can be enabled only when the instance is in the <b>non-exception</b> (<b>UNAVAILABLE</b>) state and has been successfully assigned a <b>private IP address</b>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21439,7 +21467,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to one or more cloud phones.</para>
+        /// <para>Adds tags to cloud phones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21489,7 +21517,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to one or more cloud phones.</para>
+        /// <para>Adds tags to cloud phones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21539,7 +21567,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to one or more cloud phones.</para>
+        /// <para>Adds tags to cloud phones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21557,7 +21585,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to one or more cloud phones.</para>
+        /// <para>Adds tags to cloud phones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21987,7 +22015,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from cloud phones. If a tag is no longer associated with any cloud phone after it is removed, the tag is automatically deleted.</para>
+        /// <para>Removes tags from cloud phones. After a tag is removed, if it is not added to any cloud phone, the tag is automatically deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22041,7 +22069,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from cloud phones. If a tag is no longer associated with any cloud phone after it is removed, the tag is automatically deleted.</para>
+        /// <para>Removes tags from cloud phones. After a tag is removed, if it is not added to any cloud phone, the tag is automatically deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22095,7 +22123,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from cloud phones. If a tag is no longer associated with any cloud phone after it is removed, the tag is automatically deleted.</para>
+        /// <para>Removes tags from cloud phones. After a tag is removed, if it is not added to any cloud phone, the tag is automatically deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22113,7 +22141,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from cloud phones. If a tag is no longer associated with any cloud phone after it is removed, the tag is automatically deleted.</para>
+        /// <para>Removes tags from cloud phones. After a tag is removed, if it is not added to any cloud phone, the tag is automatically deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22407,12 +22435,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the image of an instance group. This update affects all instances in the group.</para>
+        /// <para>Changes the image of an instance group. This change applies to all instances in the instance group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The image and the instance group must be in the active state. The image must be available in the same region as the instance group.</para>
+        /// <para>The image must be in the Available state and available in the region where the instance group is located. The instance group must be in the Available state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22458,12 +22486,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the image of an instance group. This update affects all instances in the group.</para>
+        /// <para>Changes the image of an instance group. This change applies to all instances in the instance group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The image and the instance group must be in the active state. The image must be available in the same region as the instance group.</para>
+        /// <para>The image must be in the Available state and available in the region where the instance group is located. The instance group must be in the Available state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22509,12 +22537,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the image of an instance group. This update affects all instances in the group.</para>
+        /// <para>Changes the image of an instance group. This change applies to all instances in the instance group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The image and the instance group must be in the active state. The image must be available in the same region as the instance group.</para>
+        /// <para>The image must be in the Available state and available in the region where the instance group is located. The instance group must be in the Available state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22532,12 +22560,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the image of an instance group. This update affects all instances in the group.</para>
+        /// <para>Changes the image of an instance group. This change applies to all instances in the instance group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The image and the instance group must be in the active state. The image must be available in the same region as the instance group.</para>
+        /// <para>The image must be in the Available state and available in the region where the instance group is located. The instance group must be in the Available state.</para>
         /// </description>
         /// 
         /// <param name="request">

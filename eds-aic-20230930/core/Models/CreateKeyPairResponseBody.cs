@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateKeyPairResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned result object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateKeyPairResponseBodyData Data { get; set; }
         public class CreateKeyPairResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the key pair was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-06-30 08:45:09.0</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The ID of the key pair.</para>
+            /// <para>The ID of the ADB key pair.</para>
             /// 
             /// <b>Example:</b>
             /// <para>kp-6v2q33ae4tw3*****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string KeyPairName { get; set; }
 
             /// <summary>
-            /// <para>The private key of the key pair. The private key is PEM-encoded in PKCS#8 format and is compatible with ADB.</para>
+            /// <para>The private key of the key pair. The private key is in the PEM-encoded PKCS#8 format that complies with ADB key pair specifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MIIEpAIBAAKCAQEAtReyMzLIcBH78EV2zj****</para>

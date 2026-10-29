@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class BackupAppResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of instances that are backed up.</para>
+        /// <para>The number of backed-up instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public long? Count { get; set; }
 
         /// <summary>
-        /// <para>The response elements.</para>
+        /// <para>The returned result object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<BackupAppResponseBodyData> Data { get; set; }
         public class BackupAppResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the cloud phone instance.</para>
+            /// <para>The instance ID of the cloud phone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acp-34pqe4r0kd9kn****</para>

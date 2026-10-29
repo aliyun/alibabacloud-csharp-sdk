@@ -10,13 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class ActivateEdgeMobileAgentRequest : TeaModel {
         /// <summary>
-        /// <para>The device form factor. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>BOX</description></item>
-        /// <item><description>PHONE</description></item>
-        /// <item><description>PAD</description></item>
-        /// <item><description>OTHER</description></item>
-        /// </list>
+        /// <para>The device class. Valid values: BOX, PHONE, PAD, and OTHER.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BOX</para>
@@ -37,7 +31,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string DeviceId { get; set; }
 
         /// <summary>
-        /// <para>The extended device metadata in JSON format. The string contains information such as fingerprint, deviceModel, and firmwareVersion.</para>
+        /// <para>The extended metadata of the device. The value is a JSON string that contains information such as fingerprint, deviceModel, and firmwareVersion.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;frmwareVersion&quot;: &quot;1.0.0&quot;}</para>

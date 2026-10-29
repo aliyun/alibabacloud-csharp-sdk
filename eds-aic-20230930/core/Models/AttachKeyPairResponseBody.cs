@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class AttachKeyPairResponseBody : TeaModel {
         /// <summary>
-        /// <para>The object that is returned.</para>
+        /// <para>The result object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AttachKeyPairResponseBodyData Data { get; set; }
         public class AttachKeyPairResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The IDs of the cloud phone instances to which the ADB key pair is successfully attached.</para>
+            /// <para>The cloud phone instance ID list to which the key pair was successfully attached.</para>
             /// </summary>
             [NameInMap("AttachedInstanceIds")]
             [Validation(Required=false)]
             public List<string> AttachedInstanceIds { get; set; }
 
             /// <summary>
-            /// <para>The number of the cloud phone instances to which the ADB key pair failed to be attached.</para>
+            /// <para>The number of instances to which the attachment failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string KeyPairId { get; set; }
 
             /// <summary>
-            /// <para>The total number of the cloud phone instances.</para>
+            /// <para>The total number of instances for which the attachment was attempted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>69BCBBE4-FCF2-59B8-AD9D-531EB422****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class ResumeAgentTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The additional prompt. This parameter takes effect only when the task is passively paused, such as pausing to wait for user confirmation.</para>
+        /// <para>The additional prompt. This parameter takes effect only when the task is passively paused, such as when waiting for user confirmation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The verification code is ***</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             /// <para>The custom input content in the clarification answer.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Simply ****</para>
+            /// <para>Return directly to the desktop</para>
             /// </summary>
             [NameInMap("CustomValue")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             /// <para>The ID of the clarification item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cl*****-1</para>
+            /// <para>clarify-1</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -64,10 +64,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> TaskIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the tool invoke to resume.</para>
+        /// <para>The ID of the tool invocation to be resumed.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ca*****01</para>
+        /// <para>call-0001</para>
         /// </summary>
         [NameInMap("ToolCallId")]
         [Validation(Required=false)]

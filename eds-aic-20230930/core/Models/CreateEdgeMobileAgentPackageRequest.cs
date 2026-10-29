@@ -12,11 +12,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enable automatic payment. Make sure that your account balance is sufficient.</description></item>
-        /// <item><description><b>false</b> (default): Generate the order without making a payment.</description></item>
+        /// <item><description><b>true</b>: Enables automatic payment. Make sure that your account balance is sufficient.</description></item>
+        /// <item><description><b>false</b>: Generates an unpaid order without deducting fees. This is the default value.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If your payment method has an insufficient balance, set this parameter to false. An unpaid order is generated, and you can log on to the WUYING Cloud Phone console to complete the payment.</para>
+        /// <para>If your payment method has an insufficient balance, you can set this parameter to false. An unpaid order is generated, and you can log on to the WUYING Cloud Phone console to complete the payment.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enable auto-renewal.</description></item>
-        /// <item><description><b>false</b> (default): Disable auto-renewal.</description></item>
+        /// <item><description><b>true</b>: Enables auto-renewal.</description></item>
+        /// <item><description><b>false</b>: Disables auto-renewal. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The device form factor.</para>
+        /// <para>The device type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string DeviceClass { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the resource. The unit is specified by <c>PeriodUnit</c>.</para>
+        /// <para>The subscription duration of the resource. The unit is specified by PeriodUnit.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,11 +84,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration.</para>
-        /// <para>Valid values:</para>
+        /// <para>The unit of the subscription duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Month</b>: month.</description></item>
-        /// <item><description><b>Year</b>: year.</description></item>
+        /// <item><description><b>Month</b>: month</description></item>
+        /// <item><description><b>Year</b>: year</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -100,7 +99,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The promotion ID.</para>
+        /// <para>The ID of the promotion.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50003308011****</para>

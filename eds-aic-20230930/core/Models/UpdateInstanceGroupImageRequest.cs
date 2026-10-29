@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>A list of instance group IDs.</para>
+        /// <para>The list of instance group IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceGroupIds")]

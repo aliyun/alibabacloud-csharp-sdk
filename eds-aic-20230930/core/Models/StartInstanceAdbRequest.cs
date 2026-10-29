@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class StartInstanceAdbRequest : TeaModel {
         /// <summary>
-        /// <para>A list of 1 to 100 cloud phone instance IDs.</para>
+        /// <para>The list of cloud phone instance IDs. You can specify 1 to 100 IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceIds")]

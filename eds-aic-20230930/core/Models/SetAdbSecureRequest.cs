@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class SetAdbSecureRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the cloud phone instances. You can specify a maximum of 50 cloud phone instances.</para>
+        /// <para>The list of cloud phone instance IDs. Up to 50 instances are supported.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The status of the ADB authentication feature.</para>
+        /// <para>The ADB authentication status.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

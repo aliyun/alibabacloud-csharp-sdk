@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class OperateAppRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the app.</para>
+        /// <para>The application ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? AppId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the cloud phone instances.</para>
+        /// <para>The list of instances.</para>
         /// </summary>
         [NameInMap("InstanceIdList")]
         [Validation(Required=false)]
         public List<string> InstanceIdList { get; set; }
 
         /// <summary>
-        /// <para>The type of the operation.</para>
+        /// <para>The operation type. Supported operations include starting, stopping, and restarting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>start</para>

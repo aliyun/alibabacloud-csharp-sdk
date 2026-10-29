@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class RecoverAndroidInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>A list of instance IDs.</para>
+        /// <para>The list of instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AndroidInstanceIdList")]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BackupFileId { get; set; }
 
         /// <summary>
-        /// <para>The OSS URL where the backup file is uploaded.</para>
+        /// <para>The OSS address to which the backup file is uploaded.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("BackupFilePath")]
@@ -36,7 +36,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BackupFilePath { get; set; }
 
         /// <summary>
-        /// <para>The region where the backup is located.</para>
+        /// <para>The list of app package names excluded from the full-device restore. Excluded apps are not uninstalled and their APKs are not installed, which is compatible with legacy backups that contain APKs. Only user data is replaced. Empty shells must be installed by the customer by using the pm install command. If this parameter is not specified, no apps are excluded.</para>
+        /// </summary>
+        [NameInMap("ExcludeAppList")]
+        [Validation(Required=false)]
+        public List<string> ExcludeAppList { get; set; }
+
+        /// <summary>
+        /// <para>The backup region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss-cn-hangzhou-internal.aliyuncs.com</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class RecoveryFileRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the instances.</para>
+        /// <para>The list of instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AndroidInstanceIdList")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> AndroidInstanceIdList { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to back up the whole instance.</para>
+        /// <para>Specifies whether to back up the entire device.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -38,20 +38,20 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BackupFileId { get; set; }
 
         /// <summary>
-        /// <para>The OSS path to which the backup file is uploaded.</para>
-        /// <remarks>
-        /// <para>When calling the describeBuckets operation to retrieve a bucket name, you must also call the ossObjectList operation to obtain the object key. Combine these to form the full path: oss\://${bucketName}/${key}.</para>
-        /// </remarks>
+        /// <para>The OSS URL to which the backup file is uploaded.
+        /// <notice>Call the describeBuckets operation to obtain the bucketName, and select ossObjectList to obtain the key. The key is the path of the backup file. Concatenate them into &quot;oss://${bucketName}/${key}&quot;.</notice></para>
         /// </summary>
         [NameInMap("BackupFilePath")]
         [Validation(Required=false)]
         public string BackupFilePath { get; set; }
 
+        [NameInMap("ExcludeAppList")]
+        [Validation(Required=false)]
+        public List<string> ExcludeAppList { get; set; }
+
         /// <summary>
-        /// <para>The endpoint of the OSS bucket that stores the backup file.</para>
-        /// <remarks>
-        /// <para>: When calling the DescribeBuckets operation to query buckets, retrieve the IntranetEndpoint value if the cloud phone and the OSS bucket are in the same region. If they are in different regions, retrieve the ExtranetEndpoint value instead.</para>
-        /// </remarks>
+        /// <para>The domain name of the backup address.
+        /// <notice>Call the DescribeBuckets operation to obtain the bucket. If the cloud phone and the bucket are in the same region, obtain the IntranetEndpoint field. If they are in different regions, obtain the ExtranetEndpoint field.</notice></para>
         /// 
         /// <b>Example:</b>
         /// <para>oss-cn-hangzhou-internal.aliyuncs.com</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string UploadEndpoint { get; set; }
 
         /// <summary>
-        /// <para>The type of the backup.</para>
+        /// <para>The backup type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OSS</para>

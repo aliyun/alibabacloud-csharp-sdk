@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateAICloudPhoneRequest : TeaModel {
         /// <summary>
-        /// <para>The quantity to purchase.</para>
+        /// <para>The quantity.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The bandwidth package ID.</para>
+        /// <para>The ID of the bandwidth plan.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BandwidthPackageId { get; set; }
 
         /// <summary>
-        /// <para>The region ID for the purchase.</para>
+        /// <para>The ID of the region for the purchase.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The image ID.</para>
+        /// <para>The ID of the image.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The instance group name.</para>
+        /// <para>The name of the instance group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,10 +75,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string InstanceGroupName { get; set; }
 
         /// <summary>
-        /// <para>The instance group specification. Valid values:</para>
+        /// <para>The specification of the instance group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>STANDARD: standard.</description></item>
-        /// <item><description>MEDIUM: advanced.</description></item>
+        /// <item><description>STANDARD: Standard.</description></item>
+        /// <item><description>MEDIUM: Advanced.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string InstanceGroupSpec { get; set; }
 
         /// <summary>
-        /// <para>The purchase duration.</para>
+        /// <para>The subscription duration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the purchase duration.</para>
+        /// <para>The unit of the subscription duration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The policy group ID.</para>
+        /// <para>The ID of the policy group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pg-0bjrh3oxk2q0xxxxx</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PolicyGroupId { get; set; }
 
         /// <summary>
-        /// <para>The coupon ID.</para>
+        /// <para>The ID of the coupon.</para>
         /// 
         /// <b>Example:</b>
         /// <para>youhuiquan_promotion_xxx</para>

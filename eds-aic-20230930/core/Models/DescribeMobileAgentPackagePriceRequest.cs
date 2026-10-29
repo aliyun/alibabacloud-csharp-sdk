@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeMobileAgentPackagePriceRequest : TeaModel {
         /// <summary>
+        /// <para>The number of MobileAgent packages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Amount { get; set; }
 
         /// <summary>
+        /// <para>The region ID for the purchase.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
+        /// <para>The number of credits.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? CreditAmount { get; set; }
 
         /// <summary>
+        /// <para>The specifications of the MobileAgent package.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>advanced</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string MobileAgentPackageSpec { get; set; }
 
         /// <summary>
+        /// <para>The subscription duration of the purchased resource. The unit is specified by PeriodUnit. Valid value: 1 month.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -50,6 +60,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Period { get; set; }
 
         /// <summary>
+        /// <para>The duration unit of the subscription billing method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Year</b>: Year.</description></item>
+        /// <item><description><b>Month</b> (default): Month.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Month</para>
         /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
+        /// <para>The ID of the promotion.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>50003308011****</para>
         /// </summary>

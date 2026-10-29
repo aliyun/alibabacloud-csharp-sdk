@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class BackupAndroidInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of instances that were backed up.</para>
+        /// <para>The number of backed-up instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public long? Count { get; set; }
 
         /// <summary>
-        /// <para>The returned result objects.</para>
+        /// <para>The returned result object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string AndroidInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the backup file.</para>
+            /// <para>The backup file ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bf-b0qbg3pbpjkn7****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string BackupFileName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t-bp67acfmxazb4p****</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>440D7342-5FC2-5E7C-B2DB-D0B4EAC2BDF1</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-14xwibw7pyrjd****</para>

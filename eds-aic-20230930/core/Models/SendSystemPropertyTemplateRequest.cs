@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class SendSystemPropertyTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>A list of instance IDs.</para>
+        /// <para>The list of instance IDs.</para>
         /// </summary>
         [NameInMap("AndroidInstanceIds")]
         [Validation(Required=false)]
         public List<string> AndroidInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the property template.</para>
+        /// <para>The property template ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ap-angyvganxlf****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>A list of property template IDs. If you provide multiple template IDs, the system randomly matches the specified instances with the provided templates.</para>
+        /// <para>The list of property template IDs. If multiple templates are provided, the specified instances are randomly matched with all the provided property templates.</para>
         /// </summary>
         [NameInMap("TemplateIds")]
         [Validation(Required=false)]

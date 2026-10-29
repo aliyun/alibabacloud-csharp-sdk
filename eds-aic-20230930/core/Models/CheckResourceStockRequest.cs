@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public bool? GpuAcceleration { get; set; }
 
         /// <summary>
-        /// <para>The zone to which the resource belongs.</para>
+        /// <para>The zone of the resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-i</para>

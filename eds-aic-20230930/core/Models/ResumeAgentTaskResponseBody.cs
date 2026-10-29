@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class ResumeAgentTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code of the API operation.</para>
+        /// <para>The API status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The message returned by the API operation.</para>
+        /// <para>The API response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success.</para>
@@ -49,20 +49,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             /// <summary>
             /// <para>The current status of the task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>PENDING: The task is being created.</para>
-            /// </description></item>
-            /// <item><description><para>RUNNING: The task is running.</para>
-            /// </description></item>
-            /// <item><description><para>COMPLETED: The task is completed.</para>
-            /// </description></item>
-            /// <item><description><para>FAILED: The task failed.</para>
-            /// </description></item>
-            /// <item><description><para>TIMEOUT: The task execution timed out.</para>
-            /// </description></item>
-            /// <item><description><para>PAUSING: The task is being paused.</para>
-            /// </description></item>
-            /// <item><description><para>PAUSED: The task is paused.</para>
-            /// </description></item>
+            /// <item><description>PENDING: The task is being created.</description></item>
+            /// <item><description>RUNNING: The task is running.</description></item>
+            /// <item><description>COMPLETED: The task is completed.</description></item>
+            /// <item><description>FAILED: The task failed.</description></item>
+            /// <item><description>TIMEOUT: The task execution timed out.</description></item>
+            /// <item><description>PAUSING: The task is being paused.</description></item>
+            /// <item><description>PAUSED: The task is paused.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -73,7 +66,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string CurrentStatus { get; set; }
 
             /// <summary>
-            /// <para>The reason why the task resumption failed.</para>
+            /// <para>The reason why the task failed to resume.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Task status [COMPLETED] does not support resume, only PAUSED tasks can be resumed.</para>
@@ -83,7 +76,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string FailedReason { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Mobile node.</para>
+            /// <para>The Mobile node ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acp-ek65k51zoxia3x8xz</para>

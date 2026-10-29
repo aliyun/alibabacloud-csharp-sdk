@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string CameraRedirect { get; set; }
 
         /// <summary>
-        /// <para>The clipboard permission.</para>
+        /// <para>The clipboard permissions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>readwrite</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Clipboard { get; set; }
 
         /// <summary>
-        /// <para>The file transfer policy for the web client.</para>
+        /// <para>The file transfer policy for the Wuying web client.</para>
         /// 
         /// <b>Example:</b>
         /// <para>off</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Html5FileTransfer { get; set; }
 
         /// <summary>
-        /// <para>The local disk mapping permission.</para>
+        /// <para>The local disk mapping permissions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>off</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string LockResolution { get; set; }
 
         /// <summary>
-        /// <para>Network redirection.</para>
+        /// <para>The network redirection settings.</para>
         /// </summary>
         [NameInMap("NetRedirectPolicy")]
         [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PolicyType { get; set; }
 
         /// <summary>
-        /// <para>The resolution height, in pixels.</para>
+        /// <para>The height of the resolution. Unit: pixels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1280</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? ResolutionHeight { get; set; }
 
         /// <summary>
-        /// <para>The resolution width, in pixels.</para>
+        /// <para>The width of the resolution. Unit: pixels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>720</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? ResolutionWidth { get; set; }
 
         /// <summary>
-        /// <para>Screen watermark.</para>
+        /// <para>The screen watermark settings.</para>
         /// </summary>
         [NameInMap("Watermark")]
         [Validation(Required=false)]

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string CameraRedirect { get; set; }
 
         /// <summary>
-        /// <para>The clipboard permission.</para>
+        /// <para>The clipboard permissions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>readwrite</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Clipboard { get; set; }
 
         /// <summary>
-        /// <para>The file transfer policy for the web client.</para>
+        /// <para>The file transfer policy for the Wuying web client.</para>
         /// 
         /// <b>Example:</b>
         /// <para>off</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Html5FileTransfer { get; set; }
 
         /// <summary>
-        /// <para>The local disk mapping permission.</para>
+        /// <para>The local disk mapping permissions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>off</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string LockResolution { get; set; }
 
         /// <summary>
-        /// <para>Network redirection.</para>
+        /// <para>The network redirection settings.</para>
         /// </summary>
         [NameInMap("NetRedirectPolicy")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string CustomProxy { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the transparent proxy. The IP address must be in IPv4 format.</para>
+            /// <para>The transparent proxy IP address. The format is an IPv4 address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>47.100.XX.XX</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>The proxy password. The password must be 1 to 256 characters in length. It cannot contain Chinese characters or whitespace characters.</para>
+            /// <para>The proxy password. The password must be 1 to 256 characters in length and cannot contain Chinese characters or whitespace characters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>password</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string ProxyType { get; set; }
 
             /// <summary>
-            /// <para>The proxy username. The username must be 1 to 256 characters in length. It cannot contain Chinese characters or whitespace characters.</para>
+            /// <para>The proxy username. The username must be 1 to 256 characters in length and cannot contain Chinese characters or whitespace characters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>username</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string ProxyUserName { get; set; }
 
             /// <summary>
-            /// <para>The list of proxy rules. You can specify up to 100 rules.</para>
+            /// <para>The list of proxy rules. A maximum of 100 rules can be configured.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PolicyType { get; set; }
 
         /// <summary>
-        /// <para>The resolution height, in pixels.</para>
+        /// <para>The height of the resolution. Unit: pixels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1280</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? ResolutionHeight { get; set; }
 
         /// <summary>
-        /// <para>The resolution width, in pixels.</para>
+        /// <para>The width of the resolution. Unit: pixels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>720</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? ResolutionWidth { get; set; }
 
         /// <summary>
-        /// <para>Screen watermark.</para>
+        /// <para>The screen watermark settings.</para>
         /// </summary>
         [NameInMap("Watermark")]
         [Validation(Required=false)]
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? WatermarkColor { get; set; }
 
             /// <summary>
-            /// <para>The custom text for the watermark. The text can be up to 10 characters long and cannot contain emojis.</para>
+            /// <para>The custom text for the watermark. The text must be up to 10 characters in length and cannot contain emoji.</para>
             /// 
             /// <b>Example:</b>
             /// <para>custom text</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? WatermarkFontSize { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the screen watermark.</para>
+            /// <para>The screen watermark switch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>

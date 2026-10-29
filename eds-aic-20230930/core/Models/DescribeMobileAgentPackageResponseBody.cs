@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<DescribeMobileAgentPackageResponseBodyPackageList> PackageList { get; set; }
         public class DescribeMobileAgentPackageResponseBodyPackageList : TeaModel {
             /// <summary>
-            /// <para>The expiration time. The time format is YYYY-MM-DD HH:mm:ss.</para>
+            /// <para>The expiration time. Format: YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-30 00:00:00</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public List<string> InstanceIds { get; set; }
 
             /// <summary>
-            /// <para>The package credit quota.</para>
+            /// <para>The credit quota of the package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8000</para>
@@ -85,6 +85,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
             /// <summary>
             /// <para>The name of the package specification.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Flagship Edition (Custom)</para>
             /// </summary>
             [NameInMap("PackageSpecName")]
             [Validation(Required=false)]
@@ -102,6 +105,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
             /// <summary>
             /// <para>The end time of the package period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-11-02T15:59Z</para>
             /// </summary>
             [NameInMap("PeriodEndTime")]
             [Validation(Required=false)]
@@ -109,6 +115,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
             /// <summary>
             /// <para>The start time of the package period.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-10-16T15:29Z</para>
             /// </summary>
             [NameInMap("PeriodStartTime")]
             [Validation(Required=false)]

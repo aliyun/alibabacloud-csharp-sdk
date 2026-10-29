@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class AuthorizeAndroidInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>List of instance IDs.</para>
+        /// <para>The list of instance IDs.</para>
         /// </summary>
         [NameInMap("AndroidInstanceIds")]
         [Validation(Required=false)]
         public List<string> AndroidInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>User ID to be assigned.</para>
+        /// <para>The ID of the user to assign.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string AuthorizeUserId { get; set; }
 
         /// <summary>
-        /// <para>User ID to be unassigned.</para>
+        /// <para>The ID of the user to unassign.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

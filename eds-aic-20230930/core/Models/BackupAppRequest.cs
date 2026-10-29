@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class BackupAppRequest : TeaModel {
         /// <summary>
-        /// <para>A list of instance IDs.</para>
+        /// <para>The list of instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AndroidInstanceIdList")]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BackupFileName { get; set; }
 
         /// <summary>
-        /// <para>The URL of the backup file.</para>
+        /// <para>The path to the backup file.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("BackupFilePath")]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>A list of package names for the applications to back up.</para>
+        /// <para>The list of package names of the applications to back up.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SourceAppList")]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> SourceAppList { get; set; }
 
         /// <summary>
-        /// <para>Specifies the region where the backup is created.</para>
+        /// <para>The backup region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

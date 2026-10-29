@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public List<RefreshAuthTokensResponseBodyDataTokens> Tokens { get; set; }
             public class RefreshAuthTokensResponseBodyDataTokens : TeaModel {
                 /// <summary>
-                /// <para>The authorization token value.</para>
+                /// <para>The value of the authorization token.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cp******lp</para>

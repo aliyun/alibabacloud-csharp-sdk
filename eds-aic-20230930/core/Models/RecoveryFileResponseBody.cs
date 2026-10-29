@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public long? Count { get; set; }
 
         /// <summary>
-        /// <para>The backup file that is restored.</para>
+        /// <para>The returned result object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6AD56E39-430B-5401-AB4A-7B086454****</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6AD56E39-430B-5401-AB4A-7B086454****</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the batch task.</para>
+        /// <para>The batch task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-3eourrxaoliqq****</para>

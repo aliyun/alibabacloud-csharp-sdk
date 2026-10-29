@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class SetAdbSecureResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned object.</para>
+        /// <para>The returned result object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SetAdbSecureResponseBodyData Data { get; set; }
         public class SetAdbSecureResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of the cloud phone instances for which the ADB authentication feature failed to be enabled.</para>
+            /// <para>The number of instances that failed to be configured.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? FailCount { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the cloud phone instances for which the ADB authentication feature is enabled.</para>
+            /// <para>The list of cloud phone instance IDs that were successfully configured.</para>
             /// </summary>
             [NameInMap("InstanceIds")]
             [Validation(Required=false)]
             public List<string> InstanceIds { get; set; }
 
             /// <summary>
-            /// <para>The total number of the cloud phone instances.</para>
+            /// <para>The total number of instances for which the configuration was attempted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>69BCBBE4-FCF2-59B8-AD9D-531EB422****</para>

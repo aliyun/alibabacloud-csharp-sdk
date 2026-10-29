@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CancelAgentTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The API status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned by the API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success.</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of task objects.</para>
+        /// <para>The list of tasks.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public List<CancelAgentTaskResponseBodyTasks> Tasks { get; set; }
         public class CancelAgentTaskResponseBodyTasks : TeaModel {
             /// <summary>
-            /// <para>The task\&quot;s cancellation time, in ISO 8601 format.</para>
+            /// <para>The time when the task was canceled, in ISO 8601 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-13T17:42:19Z</para>
@@ -57,9 +57,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string CancelAt { get; set; }
 
             /// <summary>
-            /// <para>The task status after the cancellation request. Possible values include:</para>
-            /// <para><c>CANCELLING</c> or <c>CANCELED</c>: The task is being or has been canceled.</para>
-            /// <para><c>COMPLETED</c>: The task was already complete and could not be canceled.</para>
+            /// <para>The current status of the task. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>CANCELLING: The task is being canceled.</description></item>
+            /// <item><description>CANCELED: The task is canceled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>COMPLETED</para>
@@ -69,7 +71,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string CurrentStatus { get; set; }
 
             /// <summary>
-            /// <para>The failure reason.</para>
+            /// <para>The reason why the task cancellation failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Task status [COMPLETED] does not support cancellation, only PENDING/RUNNING/CANCELLING tasks can be canceled.</para>
@@ -79,7 +81,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string FailedReason { get; set; }
 
             /// <summary>
-            /// <para>The mobile node ID.</para>
+            /// <para>The ID of the Mobile node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acp-ek65k51zoxia3x8xz</para>
@@ -89,9 +91,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The task status before cancellation. Valid values include:</para>
-            /// <para>PENDING: The task is being created.</para>
-            /// <para>RUNNING: The task is running.</para>
+            /// <para>The status of the task before cancellation. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PENDING: The task is being created.</description></item>
+            /// <item><description>RUNNING: The task is running.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>

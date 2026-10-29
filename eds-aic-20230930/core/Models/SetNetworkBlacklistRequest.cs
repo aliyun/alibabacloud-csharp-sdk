@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class SetNetworkBlacklistRequest : TeaModel {
         /// <summary>
-        /// <para>Domain name blacklist.</para>
+        /// <para>The domain name blacklist.</para>
         /// <remarks>
-        /// <para>Supports a maximum of 200 domain names.</para>
+        /// <para>A maximum of 200 domain names are supported.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("DomainBlacklist")]
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> DomainBlacklist { get; set; }
 
         /// <summary>
-        /// <para>IP address blacklist.</para>
+        /// <para>The IP address blacklist.</para>
         /// <remarks>
-        /// <para>Supports a maximum of 200 IP addresses or IP address segments.</para>
+        /// <para>A maximum of 200 IP addresses or CIDR blocks are supported.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("IpBlacklist")]

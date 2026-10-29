@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DeleteKeyPairsRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the ADB key pairs.</para>
+        /// <para>The list of key pair IDs.</para>
         /// </summary>
         [NameInMap("KeyPairIds")]
         [Validation(Required=false)]

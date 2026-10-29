@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class StartAndroidInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>List of instances.</para>
+        /// <para>The list of instances.</para>
         /// </summary>
         [NameInMap("AndroidInstanceIds")]
         [Validation(Required=false)]
         public List<string> AndroidInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The billing mode. This parameter is deprecated.</para>
+        /// <para>The sales mode. <b>[Deprecated]</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>Instance</para>
