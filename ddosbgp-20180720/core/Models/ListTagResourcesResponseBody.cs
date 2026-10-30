@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token.</para>
+        /// <para>The query token returned for this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RGuYpqDdKhzXb8C3.D1BwQgc1tMBsoxdGiEKHHUUCf****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C3F7E6AE-43B2-4730-B6A3-FD17552B8F65</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class MoveResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the resource group to which you want to move the resource.</para>
+        /// <para>The ID of the resource group to which you want to move the cloud resource instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The resource ID.</para>
+        /// <para>The ID of the cloud resource instance whose resource group you want to modify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the resource.</para>
+        /// <para>The region to which the resource belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string ResourceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Set the value to <b>instance</b>.</para>
+        /// <para>The type of the cloud resource whose resource group you want to modify. Valid values: <b>instance</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

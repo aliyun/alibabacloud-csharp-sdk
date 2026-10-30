@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeOpEntitiesRequest : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The paging Settings for the current page number in a paged query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end time. Operation logs that were generated before this time are queried.**** The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The end of the time range to query. The value is a UNIX timestamp in milliseconds. Operation logs generated before this time are queried.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance to query.</para>
+        /// <para>The ID of the Anti-DDoS Origin instance to query.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all instances.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -45,23 +45,23 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the operation. Valid values:</para>
+        /// <para>The operation type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>3</b>: Add an IP address to the instance.</description></item>
-        /// <item><description><b>4</b>: Remove an IP address from the instance.</description></item>
-        /// <item><description><b>5</b>: Downgrade the instance.</description></item>
-        /// <item><description><b>6</b>: Deactivate blackhole filtering.</description></item>
-        /// <item><description><b>7</b>: Reset the number of times that you can deactivate blackhole filtering.</description></item>
-        /// <item><description><b>8</b>: Restore the mitigation capability.</description></item>
-        /// <item><description><b>9</b>: Add an asset group.</description></item>
-        /// <item><description><b>10</b>: Remove an asset group.</description></item>
-        /// <item><description><b>11</b>: Enable the metering method of daily 95th percentile for the burstable clean bandwidth feature.</description></item>
-        /// <item><description><b>12</b>: Enable the metering method of monthly 95th percentile for the burstable clean bandwidth feature.</description></item>
-        /// <item><description><b>13</b>: Periodically switch between the metering methods of daily 95th percentile and monthly 95th percentile for the burstable clean bandwidth feature.</description></item>
-        /// <item><description><b>14</b>: Disable the metering method of daily 95th percentile for the burstable clean bandwidth feature.</description></item>
-        /// <item><description><b>15</b>: Disable the metering method of monthly 95th percentile for the burstable clean bandwidth feature.</description></item>
-        /// <item><description><b>16</b>: Disable burstable clean bandwidth due to overdue payments.</description></item>
-        /// <item><description><b>17</b>: Disable burstable clean bandwidth due to instance expiration.</description></item>
+        /// <item><description><b>3</b>: attach an IP address</description></item>
+        /// <item><description><b>4</b>: unbind an IP address</description></item>
+        /// <item><description><b>5</b>: decrease the quota</description></item>
+        /// <item><description><b>6</b>: deactivate blackhole filtering</description></item>
+        /// <item><description><b>7</b>: Reset quota on blackhole filtering deactivation</description></item>
+        /// <item><description><b>8</b>: recover burstable protection</description></item>
+        /// <item><description><b>9</b>: add an Asset group</description></item>
+        /// <item><description><b>10</b>: delete an Asset group</description></item>
+        /// <item><description><b>11</b>: enable daily 95th percentile bandwidth</description></item>
+        /// <item><description><b>12</b>: enable monthly 95th percentile bandwidth</description></item>
+        /// <item><description><b>13</b>: periodically switch between daily and monthly 95th percentile bandwidth patterns</description></item>
+        /// <item><description><b>14</b>: shutdown daily 95th percentile bandwidth</description></item>
+        /// <item><description><b>15</b>: shutdown monthly 95th percentile bandwidth</description></item>
+        /// <item><description><b>16</b>: shutdown burstable clean bandwidth due to overdue payments</description></item>
+        /// <item><description><b>17</b>: shutdown burstable clean bandwidth when they expire</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public int? OpAction { get; set; }
 
         /// <summary>
-        /// <para>The sorting method of operation logs. Set the value to <b>opdate</b>, which indicates sorting based on the operation time.</para>
+        /// <para>The field by which to sort the operation logs. Set the value to <b>opdate</b>, which indicates that the operation logs are sorted by operation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>opdate</para>
@@ -82,10 +82,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The sort order of operation logs. Valid values:</para>
+        /// <para>The sort order of the operation logs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ASC</b>: the ascending order.</description></item>
-        /// <item><description><b>DESC</b>: the descending order.</description></item>
+        /// <item><description><b>ASC</b>: ascending order</description></item>
+        /// <item><description><b>DESC</b>: descending order</description></item>
         /// </list>
         /// <para>Default value: <b>DESC</b>.</para>
         /// 
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string OrderDir { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 50.</para>
+        /// <para>The paging Settings for the number of Operation logs per page in a paged query. Maximum value: 50.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -108,9 +108,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance resides.</para>
+        /// <para>The region ID of the Anti-DDoS Origin instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the IDs of all regions supported by Anti-DDoS Origin.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -121,8 +121,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs in Resource Management.</para>
-        /// <para>If you do not specify this parameter, the instance belongs to the default resource group.</para>
+        /// <para>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</para>
+        /// <para>If you do not specify this parameter, the default resource group is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm2pz25js****</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The start time. Operation logs that were generated after this time are queried.**** The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The beginning of the time range to query. The value is a UNIX timestamp in milliseconds. Operation logs generated after this time are queried.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

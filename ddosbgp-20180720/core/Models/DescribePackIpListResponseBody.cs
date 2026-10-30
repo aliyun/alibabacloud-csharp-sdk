@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The list of IP addresses that are protected by the Anti-DDoS Origin instance.</para>
+        /// <para>The list of IP addresses protected by the Anti-DDoS Origin instance.</para>
         /// </summary>
         [NameInMap("IpList")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public string MemberUid { get; set; }
 
             /// <summary>
-            /// <para>The end time of cross-border traffic blocking.</para>
+            /// <para>The end time of near-origin traffic diversion.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1715658000</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public long? NsmExpireAt { get; set; }
 
             /// <summary>
-            /// <para>The start time of cross-border traffic blocking.</para>
+            /// <para>The start time of near-origin traffic diversion.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1715655000</para>
@@ -68,12 +68,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public long? NsmStartAt { get; set; }
 
             /// <summary>
-            /// <para>The status of cross-border traffic blocking. Valid values:</para>
+            /// <para>The status of near-origin traffic diversion. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: Cross-border traffic is being blocked.</para>
-            /// </description></item>
-            /// <item><description><para><b>0</b>: Cross-border traffic is not blocked.</para>
-            /// </description></item>
+            /// <item><description><b>1</b>: Near-origin traffic diversion is in progress.</description></item>
+            /// <item><description><b>0</b>: Near-origin traffic diversion is not in progress.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -84,16 +82,12 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public int? NsmStatus { get; set; }
 
             /// <summary>
-            /// <para>The type of the cloud asset to which the IP address belongs. Valid values:</para>
+            /// <para>The cloud asset type to which the IP address belongs. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>ECS</b>: an ECS instance.</para>
-            /// </description></item>
-            /// <item><description><para><b>SLB</b>: a CLB instance.</para>
-            /// </description></item>
-            /// <item><description><para><b>EIP</b>: an EIP instance. This includes the EIP used by an ALB instance.</para>
-            /// </description></item>
-            /// <item><description><para><b>WAF</b>: a WAF instance.</para>
-            /// </description></item>
+            /// <item><description><b>ECS</b>: ECS instance.</description></item>
+            /// <item><description><b>SLB</b>: Classic Load Balancer (CLB) instance.</description></item>
+            /// <item><description><b>EIP</b>: EIP, including the EIPs used by Application Load Balancer (ALB) instances.</description></item>
+            /// <item><description><b>WAF</b>: Web Application Firewall (WAF) instance.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -104,9 +98,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public string Product { get; set; }
 
             /// <summary>
-            /// <para>The region where the protected IP address is deployed.</para>
+            /// <para>The region of the protected IP address.</para>
             /// <remarks>
-            /// <para>This parameter is not returned if the protected IP address is deployed in the same region as the instance.</para>
+            /// <para>If the region of the protected IP address is the same as the region of the instance, this parameter is not returned.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -117,9 +111,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The remarks on the cloud asset to which the IP address belongs, such as an ECS instance or an SLB instance.</para>
+            /// <para>The description of the cloud asset to which the IP address belongs, such as an ECS instance or a CLB instance.</para>
             /// <remarks>
-            /// <para>This parameter is not returned if no remarks are specified for the cloud asset.</para>
+            /// <para>If the cloud asset has no description, this parameter is not returned.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -132,10 +126,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// <para>The current status of the IP address. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>normal</b>: The IP address is not under attack.</para>
-            /// </description></item>
-            /// <item><description><para><b>hole_begin</b>: The IP address is in blackhole filtering status.</para>
-            /// </description></item>
+            /// <item><description><b>normal</b>: The IP address is normal and not under attack.</description></item>
+            /// <item><description><b>hole_begin</b>: The IP address is under blackhole filtering.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -158,12 +150,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -174,7 +164,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The number of protected IP addresses that are returned.</para>
+        /// <para>The number of protected IP addresses queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

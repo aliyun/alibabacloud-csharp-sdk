@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class ListTagKeysRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number. Pages start from <b>1</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The paging Settings for the number of entries per page in a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region that you want to query.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Set the value to <b>INSTANCE</b>.</para>
+        /// <para>The resource type. Valid values: <b>INSTANCE</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

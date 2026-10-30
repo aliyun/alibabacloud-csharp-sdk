@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeExcpetionCountRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the region where the Anti-DDoS Origin instance resides.</para>
+        /// <para>The region ID of the Anti-DDoS Origin instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query all region IDs supported by Anti-DDoS Origin.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
         /// <summary>
         /// <para>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</para>
-        /// <para>If you do not specify this parameter, the instance belongs to the default resource group.</para>
+        /// <para>If you do not specify this parameter, the default resource group is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm2pz25js****</para>

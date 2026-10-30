@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>97935DF1-0289-4AA2-9DD1-72377838B16B</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the tags.</para>
+        /// <para>The tag information.</para>
         /// </summary>
         [NameInMap("TagKeys")]
         [Validation(Required=false)]
         public List<ListTagKeysResponseBodyTagKeys> TagKeys { get; set; }
         public class ListTagKeysResponseBodyTagKeys : TeaModel {
             /// <summary>
-            /// <para>The total number of tag values that correspond to each key.</para>
+            /// <para>The total number of tag values for the tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         }
 
         /// <summary>
-        /// <para>The total number of tags returned.</para>
+        /// <para>The total number of tags.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>

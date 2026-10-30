@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DeletePolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the policy.</para>
+        /// <para>The policy ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeInstanceSpecsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The specifications of the Anti-DDoS Origin instance, including whether best-effort protection is enabled, the number of available best-effort protection sessions, and the number of used best-effort protection sessions.</para>
+        /// <para>The specification information of the Anti-DDoS Origin instance, including the enabling status of best-effort protection, and the available and used best-effort protection times.</para>
         /// </summary>
         [NameInMap("InstanceSpecs")]
         [Validation(Required=false)]
         public List<DescribeInstanceSpecsResponseBodyInstanceSpecs> InstanceSpecs { get; set; }
         public class DescribeInstanceSpecsResponseBodyInstanceSpecs : TeaModel {
             /// <summary>
-            /// <para>The available best-effort protection sessions.</para>
+            /// <para>The available best-effort protection times.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public int? AvailableDefenseTimes { get; set; }
 
             /// <summary>
-            /// <para>The number of times that blackhole filtering can be deactivated.</para>
+            /// <para>The available quota for deactivating blackhole filtering.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public string AvailableDeleteBlackholeCount { get; set; }
 
             /// <summary>
-            /// <para>The percentage of the used best-effort protection sessions. Unit: %.</para>
+            /// <para>The usage percentage of best-effort protection times. Unit: %.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -47,9 +47,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public int? DefenseTimesPercent { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the instance is downgraded. Valid value:</para>
+            /// <para>The downgrade status of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>8</b>: The instance is downgraded due to excessive bandwidth usage.</description></item>
+            /// <item><description><b>8</b>: The instance is downgraded because the clean bandwidth exceeds the limit.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -70,10 +70,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether best-effort protection is enabled. Valid values:</para>
+            /// <para>Indicates whether best-effort protection mode is enabled for the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Best-effort protection is disabled.</description></item>
-            /// <item><description><b>1</b>: Best-effort protection is enabled.</description></item>
+            /// <item><description><b>0</b>: Best-effort protection mode is disabled.</description></item>
+            /// <item><description><b>1</b>: Best-effort protection mode is enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public int? IsFullDefenseMode { get; set; }
 
             /// <summary>
-            /// <para>The configurations of the Anti-DDoS Origin instance, including the number of protected IP addresses and protection bandwidth.</para>
+            /// <para>The configuration information of the Anti-DDoS Origin instance, including the number of protected IP addresses and protection bandwidth information.</para>
             /// </summary>
             [NameInMap("PackConfig")]
             [Validation(Required=false)]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 public long? Bandwidth { get; set; }
 
                 /// <summary>
-                /// <para>The number of IP addresses that are protected by the Anti-DDoS Origin Enterprise instance.</para>
+                /// <para>The number of protected IP addresses.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -121,10 +121,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 public int? ElasticBwMbps { get; set; }
 
                 /// <summary>
-                /// <para>The metering method of burstable clean bandwidth. Valid values:</para>
+                /// <para>The burstable clean bandwidth mode. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>month</b>: the monthly 95th percentile metering method.</description></item>
-                /// <item><description><b>day</b>: the daily 95th percentile metering method.</description></item>
+                /// <item><description><b>month</b>: Monthly 95th percentile metering method.</description></item>
+                /// <item><description><b>day</b>: Daily 95th percentile metering method.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 public string ElasticBwMode { get; set; }
 
                 /// <summary>
-                /// <para>The burstable protection bandwidth of each protected IP address. Unit: Gbit/s.</para>
+                /// <para>The burstable protection threshold for the protected IP address. Unit: Gbit/s.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>300</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 public int? IpAdvanceThre { get; set; }
 
                 /// <summary>
-                /// <para>The basic protection bandwidth of each protected IP address. Unit: Gbit/s.</para>
+                /// <para>The basic protection threshold for the protected IP address. Unit: Gbit/s.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 public int? IpBasicThre { get; set; }
 
                 /// <summary>
-                /// <para>The number of IP addresses that can be protected by the Anti-DDoS Origin Enterprise instance.</para>
+                /// <para>The number of IP addresses that can be added for protection.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 public int? IpSpec { get; set; }
 
                 /// <summary>
-                /// <para>The clean bandwidth. Unit: Mbit/s.</para>
+                /// <para>The normal clean bandwidth. Unit: Mbit/s.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>200</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// <para>The region ID of the Anti-DDoS Origin instance.</para>
             /// <remarks>
-            /// <para> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the name of the region.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the details of region IDs.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The total best-effort protection sessions.</para>
+            /// <para>The total available best-effort protection times.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>

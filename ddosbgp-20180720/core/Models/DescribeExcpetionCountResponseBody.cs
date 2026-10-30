@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeExcpetionCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of assets that are in an abnormal state.</para>
+        /// <para>The number of abnormal IP addresses (such as those in the Black Hole Activated state) among protected assets that are assigned public IP addresses (such as a cloud server ECS instance, a Server Load Balancer (SLB) instance, and an elastic IP address (EIP)).</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public int? ExceptionIpCount { get; set; }
 
         /// <summary>
-        /// <para>The number of Anti-DDoS Origin instances that are about to expire.</para>
+        /// <para>The number of Anti-DDoS Origin instances that are about to expire (with a remaining validity period of less than 7 days).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 {
     public class DescribeDdosEventResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the DDoS attack event.</para>
+        /// <para>The details of the DDoS attack events.</para>
         /// </summary>
         [NameInMap("Events")]
         [Validation(Required=false)]
         public List<DescribeDdosEventResponseBodyEvents> Events { get; set; }
         public class DescribeDdosEventResponseBodyEvents : TeaModel {
             /// <summary>
-            /// <para>The time when the DDoS attack stopped. This value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The end time of the attack. The time is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1637554335</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The volume of the request traffic at the start of the DDoS attack. Unit: Mbit/s.</para>
+            /// <para>The traffic volume at the start of the attack. Unit: Mbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public int? Mbps { get; set; }
 
             /// <summary>
-            /// <para>The number of packets at the start of the DDoS attack. Unit: packets per second (PPS).</para>
+            /// <para>The packet rate at the start of the attack. Unit: pps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>456</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public int? Pps { get; set; }
 
             /// <summary>
-            /// <para>The time when the DDoS attack started. This value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The end time of the attack. The time is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1637554034</para>
@@ -67,12 +67,12 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public int? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the DDoS attack event. Valid values:</para>
+            /// <para>The current status of the attack event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>hole_begin</b>: indicates that blackhole filtering is triggered for the attacked IP address.</description></item>
-            /// <item><description><b>hole_end</b>: indicates that blackhole filtering is deactivated for the attacked IP address.</description></item>
-            /// <item><description><b>defense_begin</b>: indicates that attack traffic is being scrubbed.</description></item>
-            /// <item><description><b>defense_end</b>: indicates that attack traffic is scrubbed.</description></item>
+            /// <item><description><b>hole_begin</b>: Indicates that the attacked IP address is in the blackhole filtering status.</description></item>
+            /// <item><description><b>hole_end</b>: Indicates that the attacked IP address is removed from the blackhole filtering status.</description></item>
+            /// <item><description><b>defense_begin</b>: Indicates that the system scrubs traffic.</description></item>
+            /// <item><description><b>defense_end</b>: Indicates that the attack ends and the system scrubs traffic no more.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F3B6C3F9-6B21-519D-B976-A1E14166F909</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of DDoS attack events that are returned.</para>
+        /// <para>The total number of DDoS attack events returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
