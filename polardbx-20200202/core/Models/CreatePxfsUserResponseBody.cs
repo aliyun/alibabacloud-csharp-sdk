@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The display name of the authentication principal.</para>
+            /// <para>The name of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The authentication principal type.</para>
+            /// <para>The description is as above.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encoded diagnostic message.</para>
+            /// <para>The diagnostic information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public CreatePxfsUserResponseBodyData Data { get; set; }
         public class CreatePxfsUserResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The identity name.</para>
+            /// <para>The name of the identity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent-runtime</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public long? PosixUid { get; set; }
 
             /// <summary>
-            /// <para>The identity role.</para>
+            /// <para>The role of the identity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MEMBER</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tenant ID.</para>
+            /// <para>The ID of the tenant.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tenant-001</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class MigrateDBInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Returns success if the request was successful, or an error code if the request failed.</para>
+        /// <para>The returned message. If the request is successful, &quot;success&quot; is returned. If the request fails, the corresponding error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

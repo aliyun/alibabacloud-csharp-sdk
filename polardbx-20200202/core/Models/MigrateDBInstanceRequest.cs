@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the primary zone for a multi-zone instance. <b>This parameter is required if you want to create a multi-zone instance.</b>.</para>
+        /// <para>The zone ID of the primary zone for a multi-zone instance. <b>This parameter is required if you want to create a multi-zone instance.</b></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>The secondary zone ID.</para>
         /// <remarks>
-        /// <para>This parameter cannot be set to the same value as ZoneId.</para>
+        /// <para>This parameter cannot be the same as the ZoneId property.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -56,10 +56,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SecondaryZoneId { get; set; }
 
         /// <summary>
-        /// <para>The switchover mode. Valid values:</para>
+        /// <para>The switch mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: immediately switches over.</description></item>
-        /// <item><description>1: switches over within the O&amp;M window.</description></item>
+        /// <item><description>0: Immediate switchover.</description></item>
+        /// <item><description>1: Switchover within the O&amp;M window.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SwitchMode { get; set; }
 
         /// <summary>
-        /// <para>The zone ID for Three-zone deployment.</para>
+        /// <para>The third active zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing-h</para>
@@ -82,8 +82,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <summary>
         /// <para>The topology type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>3azones</b>: three-zone deployment.</description></item>
-        /// <item><description><b>1azone</b>: single-zone deployment.</description></item>
+        /// <item><description><b>3azones</b>: Three-zone deployment.</description></item>
+        /// <item><description><b>1azone</b>: Single-zone deployment.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string TopologyType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) where the access endpoint resides.</para>
+        /// <para>The ID of the VPC where the access endpoint resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-****</para>

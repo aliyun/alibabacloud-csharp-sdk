@@ -13651,14 +13651,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a context service instance.</para>
+        /// <para>Queries the information about context service instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</description></item>
+        /// <item><description>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge, but Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -13706,14 +13706,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a context service instance.</para>
+        /// <para>Queries the information about context service instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</description></item>
+        /// <item><description>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge, but Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -13761,14 +13761,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a context service instance.</para>
+        /// <para>Queries the information about context service instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</description></item>
+        /// <item><description>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge, but Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -13788,14 +13788,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a context service instance.</para>
+        /// <para>Queries the information about context service instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</description></item>
+        /// <item><description>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge, but Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -14635,7 +14635,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of an instance.</para>
+        /// <para>Retrieves the attributes of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14690,7 +14690,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of an instance.</para>
+        /// <para>Retrieves the attributes of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14745,7 +14745,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of an instance.</para>
+        /// <para>Retrieves the attributes of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14768,7 +14768,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of an instance.</para>
+        /// <para>Retrieves the attributes of an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
