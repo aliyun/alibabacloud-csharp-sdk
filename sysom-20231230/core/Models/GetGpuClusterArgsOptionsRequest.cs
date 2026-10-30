@@ -11,26 +11,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
     public class GetGpuClusterArgsOptionsRequest : TeaModel {
         /// <summary>
         /// <ol>
-        /// <item><description><para>Query the machine list of a cluster
-        /// Set the retrieval type to comm_instance_id_list or instance_id_list.
-        /// comm_instance_id_list: retrieves only the machines that participate in collective communication in the specified cluster.
-        /// instance_id_list: retrieves all machines in the specified cluster.</para>
-        /// </description></item>
-        /// <item><description><para>Query the AI task list of a cluster
-        /// Set the retrieval type to comm_task_id_list or task_id_list.
-        /// comm_task_id_list: retrieves only the tasks that involve collective communication in the specified cluster.
-        /// task_id_list: retrieves all tasks in the specified cluster.</para>
-        /// </description></item>
-        /// <item><description><para>Query the AI job pod list of a cluster
-        /// Set the retrieval type to comm_pod_list or pod_list.
-        /// comm_pod_list: retrieves only the pods that participate in collective communication in the specified cluster.
-        /// pod_list: retrieves all pods in the specified cluster.</para>
-        /// </description></item>
-        /// <item><description><para>Query the collective communication topology
-        /// communication: retrieves all communication group IDs.
-        /// channel: retrieves the channel list under the specified communication group ID.
-        /// topoType: retrieves the topology type under the specified channel of the specified communication group ID.</para>
-        /// </description></item>
+        /// <item><description>Query cluster machine list scenario: Set the retrieval type to comm_instance_id_list or instance_id_list. comm_instance_id_list: Retrieves only the list of machines in the specified cluster that participate in collective communication. instance_id_list: Retrieves the list of all machines in the specified cluster.</description></item>
+        /// <item><description>Query cluster AI task list scenario: Set the retrieval type to comm_task_id_list or task_id_list. comm_task_id_list: Retrieves only the list of tasks in the specified cluster that involve collective communication. task_id_list: Retrieves the list of all tasks in the specified cluster.</description></item>
+        /// <item><description>Query cluster AI job pod list scenario: Set the retrieval type to comm_pod_list or pod_list. comm_pod_list: Retrieves only the list of pods in the specified cluster that participate in collective communication. pod_list: Retrieves the list of all pods in the specified cluster.</description></item>
+        /// <item><description>Query collective communication topology scenario: communication: Retrieves all communication group IDs. channel: Retrieves the channel list under the specified communication group ID. topoType: Retrieves the topology type under the specified channel of the specified communication group ID.</description></item>
         /// </ol>
         /// <para>This parameter is required.</para>
         /// 
@@ -42,7 +26,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string FilterType { get; set; }
 
         /// <summary>
-        /// <para>The filter conditions. The value is a JSON object. The cluster_id field is required. The following optional filter conditions are supported:</para>
+        /// <para>The filter conditions, which is a JSON object. The cluster_id field is required. Other filter conditions support the following values:</para>
         /// <list type="bullet">
         /// <item><description>instance_id_list</description></item>
         /// <item><description>comm_instance_id_list</description></item>

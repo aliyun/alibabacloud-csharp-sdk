@@ -1047,7 +1047,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an alert policy for push notifications.</para>
+        /// <para>Creates an alert push policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1105,7 +1105,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an alert policy for push notifications.</para>
+        /// <para>Creates an alert push policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1163,7 +1163,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an alert policy for push notifications.</para>
+        /// <para>Creates an alert push policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1182,7 +1182,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an alert policy for push notifications.</para>
+        /// <para>Creates an alert push policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1379,6 +1379,176 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateClusterVpcEndpointConnectionWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 Copilot 会话</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>本接口仅创建会话，不发送消息，也不触发 Agent 执行。</description></item>
+        /// <item><description>创建成功后，使用返回的 sessionId 调用 GenerateCopilotStreamResponse 发送消息。</description></item>
+        /// <item><description>会话 ID 由服务端生成，不支持调用方指定。</description></item>
+        /// <item><description>每次成功调用均创建一个独立会话。本接口不提供客户端幂等参数，重复调用可能创建多个会话。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateCopilotSessionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCopilotSessionResponse
+        /// </returns>
+        public CreateCopilotSessionResponse CreateCopilotSessionWithOptions(CreateCopilotSessionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCopilotSession",
+                Version = "2023-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/copilot/sessions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCopilotSessionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 Copilot 会话</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>本接口仅创建会话，不发送消息，也不触发 Agent 执行。</description></item>
+        /// <item><description>创建成功后，使用返回的 sessionId 调用 GenerateCopilotStreamResponse 发送消息。</description></item>
+        /// <item><description>会话 ID 由服务端生成，不支持调用方指定。</description></item>
+        /// <item><description>每次成功调用均创建一个独立会话。本接口不提供客户端幂等参数，重复调用可能创建多个会话。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateCopilotSessionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCopilotSessionResponse
+        /// </returns>
+        public async Task<CreateCopilotSessionResponse> CreateCopilotSessionWithOptionsAsync(CreateCopilotSessionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCopilotSession",
+                Version = "2023-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/copilot/sessions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCopilotSessionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 Copilot 会话</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>本接口仅创建会话，不发送消息，也不触发 Agent 执行。</description></item>
+        /// <item><description>创建成功后，使用返回的 sessionId 调用 GenerateCopilotStreamResponse 发送消息。</description></item>
+        /// <item><description>会话 ID 由服务端生成，不支持调用方指定。</description></item>
+        /// <item><description>每次成功调用均创建一个独立会话。本接口不提供客户端幂等参数，重复调用可能创建多个会话。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateCopilotSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCopilotSessionResponse
+        /// </returns>
+        public CreateCopilotSessionResponse CreateCopilotSession(CreateCopilotSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateCopilotSessionWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 Copilot 会话</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>本接口仅创建会话，不发送消息，也不触发 Agent 执行。</description></item>
+        /// <item><description>创建成功后，使用返回的 sessionId 调用 GenerateCopilotStreamResponse 发送消息。</description></item>
+        /// <item><description>会话 ID 由服务端生成，不支持调用方指定。</description></item>
+        /// <item><description>每次成功调用均创建一个独立会话。本接口不提供客户端幂等参数，重复调用可能创建多个会话。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateCopilotSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCopilotSessionResponse
+        /// </returns>
+        public async Task<CreateCopilotSessionResponse> CreateCopilotSessionAsync(CreateCopilotSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateCopilotSessionWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2101,6 +2271,188 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteAlertStrategyWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定的 Copilot 会话</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>仅支持删除当前用户的会话。</description></item>
+        /// <item><description>会话存在尚未结束的执行时，不允许删除。请先通过 GenerateCopilotStreamResponse 接口发送 action=stop，确认执行结束后再删除。</description></item>
+        /// <item><description>删除后，无法再通过会话查询接口获取该会话及其历史记录。</description></item>
+        /// <item><description>会话不存在或不属于当前用户时返回错误。重复删除同一个会话不保证成功。</description></item>
+        /// <item><description>删除会话不会撤销已经执行的操作，也不会删除产生该会话的定时任务。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteCopilotSessionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCopilotSessionResponse
+        /// </returns>
+        public DeleteCopilotSessionResponse DeleteCopilotSessionWithOptions(DeleteCopilotSessionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["agentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["sessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCopilotSession",
+                Version = "2023-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/copilot/delete-session",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCopilotSessionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定的 Copilot 会话</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>仅支持删除当前用户的会话。</description></item>
+        /// <item><description>会话存在尚未结束的执行时，不允许删除。请先通过 GenerateCopilotStreamResponse 接口发送 action=stop，确认执行结束后再删除。</description></item>
+        /// <item><description>删除后，无法再通过会话查询接口获取该会话及其历史记录。</description></item>
+        /// <item><description>会话不存在或不属于当前用户时返回错误。重复删除同一个会话不保证成功。</description></item>
+        /// <item><description>删除会话不会撤销已经执行的操作，也不会删除产生该会话的定时任务。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteCopilotSessionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCopilotSessionResponse
+        /// </returns>
+        public async Task<DeleteCopilotSessionResponse> DeleteCopilotSessionWithOptionsAsync(DeleteCopilotSessionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["agentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["sessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCopilotSession",
+                Version = "2023-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/copilot/delete-session",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCopilotSessionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定的 Copilot 会话</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>仅支持删除当前用户的会话。</description></item>
+        /// <item><description>会话存在尚未结束的执行时，不允许删除。请先通过 GenerateCopilotStreamResponse 接口发送 action=stop，确认执行结束后再删除。</description></item>
+        /// <item><description>删除后，无法再通过会话查询接口获取该会话及其历史记录。</description></item>
+        /// <item><description>会话不存在或不属于当前用户时返回错误。重复删除同一个会话不保证成功。</description></item>
+        /// <item><description>删除会话不会撤销已经执行的操作，也不会删除产生该会话的定时任务。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteCopilotSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCopilotSessionResponse
+        /// </returns>
+        public DeleteCopilotSessionResponse DeleteCopilotSession(DeleteCopilotSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteCopilotSessionWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定的 Copilot 会话</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>仅支持删除当前用户的会话。</description></item>
+        /// <item><description>会话存在尚未结束的执行时，不允许删除。请先通过 GenerateCopilotStreamResponse 接口发送 action=stop，确认执行结束后再删除。</description></item>
+        /// <item><description>删除后，无法再通过会话查询接口获取该会话及其历史记录。</description></item>
+        /// <item><description>会话不存在或不属于当前用户时返回错误。重复删除同一个会话不保证成功。</description></item>
+        /// <item><description>删除会话不会撤销已经执行的操作，也不会删除产生该会话的定时任务。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteCopilotSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCopilotSessionResponse
+        /// </returns>
+        public async Task<DeleteCopilotSessionResponse> DeleteCopilotSessionAsync(DeleteCopilotSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteCopilotSessionWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3053,7 +3405,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves component configurations.</para>
+        /// <para>Retrieves the component configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3119,7 +3471,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves component configurations.</para>
+        /// <para>Retrieves the component configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3185,7 +3537,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves component configurations.</para>
+        /// <para>Retrieves the component configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3204,7 +3556,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves component configurations.</para>
+        /// <para>Retrieves the component configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3223,7 +3575,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the execution status of an Agent installation task.</para>
+        /// <para>Retrieves the execution status of an agent installation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3269,7 +3621,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the execution status of an Agent installation task.</para>
+        /// <para>Retrieves the execution status of an agent installation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3315,7 +3667,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the execution status of an Agent installation task.</para>
+        /// <para>Retrieves the execution status of an agent installation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3334,7 +3686,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the execution status of an Agent installation task.</para>
+        /// <para>Retrieves the execution status of an agent installation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3353,12 +3705,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves diagnostic results.</para>
+        /// <para>Retrieves the diagnostic results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. Check the <c>data.status</c> field in the response to determine the current state. When <c>data.status == Success</c>, the diagnosis is complete and you can read the diagnostic results from <c>data.result</c>.</para>
+        /// <para>The diagnostic process is asynchronous. Therefore, when you call this operation, the diagnosis may still be in progress. You can check the <c>data.status</c> field in the response to determine the status. If <c>data.status</c> is <c>Success</c>, the diagnosis is successful, and you can read the diagnostic results from <c>data.result</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3404,12 +3756,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves diagnostic results.</para>
+        /// <para>Retrieves the diagnostic results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. Check the <c>data.status</c> field in the response to determine the current state. When <c>data.status == Success</c>, the diagnosis is complete and you can read the diagnostic results from <c>data.result</c>.</para>
+        /// <para>The diagnostic process is asynchronous. Therefore, when you call this operation, the diagnosis may still be in progress. You can check the <c>data.status</c> field in the response to determine the status. If <c>data.status</c> is <c>Success</c>, the diagnosis is successful, and you can read the diagnostic results from <c>data.result</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3455,12 +3807,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves diagnostic results.</para>
+        /// <para>Retrieves the diagnostic results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. Check the <c>data.status</c> field in the response to determine the current state. When <c>data.status == Success</c>, the diagnosis is complete and you can read the diagnostic results from <c>data.result</c>.</para>
+        /// <para>The diagnostic process is asynchronous. Therefore, when you call this operation, the diagnosis may still be in progress. You can check the <c>data.status</c> field in the response to determine the status. If <c>data.status</c> is <c>Success</c>, the diagnosis is successful, and you can read the diagnostic results from <c>data.result</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3479,12 +3831,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves diagnostic results.</para>
+        /// <para>Retrieves the diagnostic results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. Check the <c>data.status</c> field in the response to determine the current state. When <c>data.status == Success</c>, the diagnosis is complete and you can read the diagnostic results from <c>data.result</c>.</para>
+        /// <para>The diagnostic process is asynchronous. Therefore, when you call this operation, the diagnosis may still be in progress. You can check the <c>data.status</c> field in the response to determine the status. If <c>data.status</c> is <c>Success</c>, the diagnosis is successful, and you can read the diagnostic results from <c>data.result</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3503,12 +3855,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the URL link of a diagnostic result.</para>
+        /// <para>Retrieves the URL for diagnostic results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. You can check the <c>data.status</c> field in the response data to determine the current state. When <c>data.status == Success</c>, the diagnosis is complete and you can read the diagnostic result from <c>data.result</c>.</para>
+        /// <para>The diagnostic process is asynchronous. Therefore, when you call this operation, the diagnosis may still be in progress. You can check the <c>data.status</c> field in the response to determine the status. If <c>data.status</c> is <c>Success</c>, the diagnosis is successful, and you can read the diagnostic results from <c>data.result</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3554,12 +3906,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the URL link of a diagnostic result.</para>
+        /// <para>Retrieves the URL for diagnostic results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. You can check the <c>data.status</c> field in the response data to determine the current state. When <c>data.status == Success</c>, the diagnosis is complete and you can read the diagnostic result from <c>data.result</c>.</para>
+        /// <para>The diagnostic process is asynchronous. Therefore, when you call this operation, the diagnosis may still be in progress. You can check the <c>data.status</c> field in the response to determine the status. If <c>data.status</c> is <c>Success</c>, the diagnosis is successful, and you can read the diagnostic results from <c>data.result</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3605,12 +3957,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the URL link of a diagnostic result.</para>
+        /// <para>Retrieves the URL for diagnostic results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. You can check the <c>data.status</c> field in the response data to determine the current state. When <c>data.status == Success</c>, the diagnosis is complete and you can read the diagnostic result from <c>data.result</c>.</para>
+        /// <para>The diagnostic process is asynchronous. Therefore, when you call this operation, the diagnosis may still be in progress. You can check the <c>data.status</c> field in the response to determine the status. If <c>data.status</c> is <c>Success</c>, the diagnosis is successful, and you can read the diagnostic results from <c>data.result</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3629,12 +3981,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the URL link of a diagnostic result.</para>
+        /// <para>Retrieves the URL for diagnostic results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. You can check the <c>data.status</c> field in the response data to determine the current state. When <c>data.status == Success</c>, the diagnosis is complete and you can read the diagnostic result from <c>data.result</c>.</para>
+        /// <para>The diagnostic process is asynchronous. Therefore, when you call this operation, the diagnosis may still be in progress. You can check the <c>data.status</c> field in the response to determine the status. If <c>data.status</c> is <c>Success</c>, the diagnosis is successful, and you can read the diagnostic results from <c>data.result</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3783,7 +4135,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves an alert rule of a user by policy ID.</para>
+        /// <para>Retrieves an alert policy for a user based on the policy ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3829,7 +4181,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves an alert rule of a user by policy ID.</para>
+        /// <para>Retrieves an alert policy for a user based on the policy ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3875,7 +4227,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves an alert rule of a user by policy ID.</para>
+        /// <para>Retrieves an alert policy for a user based on the policy ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3894,7 +4246,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves an alert rule of a user by policy ID.</para>
+        /// <para>Retrieves an alert policy for a user based on the policy ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4201,6 +4553,168 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetCopilotHistoryWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取 Copilot 会话与执行状态</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>仅支持查询当前用户的会话，一次查询一个会话。</description></item>
+        /// <item><description>返回会话详情及执行摘要，不返回聊天内容。查询历史消息和事件，请调用 ListCopilotSessionMessages。</description></item>
+        /// <item><description>会话的 status 表示是否归档。判断是否正在执行，应读取 activeTurn。</description></item>
+        /// <item><description>lastTurn 表示最近一次执行，不一定已经结束；执行过程中，activeTurn 和 lastTurn 可以指向同一轮执行。</description></item>
+        /// <item><description>会话不存在、已删除或不属于当前用户时返回错误。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCopilotSessionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCopilotSessionResponse
+        /// </returns>
+        public GetCopilotSessionResponse GetCopilotSessionWithOptions(string sessionId, GetCopilotSessionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCopilotSession",
+                Version = "2023-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/copilot/sessions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sessionId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCopilotSessionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取 Copilot 会话与执行状态</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>仅支持查询当前用户的会话，一次查询一个会话。</description></item>
+        /// <item><description>返回会话详情及执行摘要，不返回聊天内容。查询历史消息和事件，请调用 ListCopilotSessionMessages。</description></item>
+        /// <item><description>会话的 status 表示是否归档。判断是否正在执行，应读取 activeTurn。</description></item>
+        /// <item><description>lastTurn 表示最近一次执行，不一定已经结束；执行过程中，activeTurn 和 lastTurn 可以指向同一轮执行。</description></item>
+        /// <item><description>会话不存在、已删除或不属于当前用户时返回错误。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCopilotSessionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCopilotSessionResponse
+        /// </returns>
+        public async Task<GetCopilotSessionResponse> GetCopilotSessionWithOptionsAsync(string sessionId, GetCopilotSessionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCopilotSession",
+                Version = "2023-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/copilot/sessions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sessionId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCopilotSessionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取 Copilot 会话与执行状态</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>仅支持查询当前用户的会话，一次查询一个会话。</description></item>
+        /// <item><description>返回会话详情及执行摘要，不返回聊天内容。查询历史消息和事件，请调用 ListCopilotSessionMessages。</description></item>
+        /// <item><description>会话的 status 表示是否归档。判断是否正在执行，应读取 activeTurn。</description></item>
+        /// <item><description>lastTurn 表示最近一次执行，不一定已经结束；执行过程中，activeTurn 和 lastTurn 可以指向同一轮执行。</description></item>
+        /// <item><description>会话不存在、已删除或不属于当前用户时返回错误。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCopilotSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCopilotSessionResponse
+        /// </returns>
+        public GetCopilotSessionResponse GetCopilotSession(string sessionId, GetCopilotSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetCopilotSessionWithOptions(sessionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取 Copilot 会话与执行状态</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>仅支持查询当前用户的会话，一次查询一个会话。</description></item>
+        /// <item><description>返回会话详情及执行摘要，不返回聊天内容。查询历史消息和事件，请调用 ListCopilotSessionMessages。</description></item>
+        /// <item><description>会话的 status 表示是否归档。判断是否正在执行，应读取 activeTurn。</description></item>
+        /// <item><description>lastTurn 表示最近一次执行，不一定已经结束；执行过程中，activeTurn 和 lastTurn 可以指向同一轮执行。</description></item>
+        /// <item><description>会话不存在、已删除或不属于当前用户时返回错误。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCopilotSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCopilotSessionResponse
+        /// </returns>
+        public async Task<GetCopilotSessionResponse> GetCopilotSessionAsync(string sessionId, GetCopilotSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetCopilotSessionWithOptionsAsync(sessionId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4513,15 +5027,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the GPU cluster parameter list.</para>
+        /// <para>Retrieves the list of parameters for a GPU cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After installing the component for the target ACK cluster:</para>
+        /// <para>After you install the component for the target ACK cluster:</para>
         /// <ol>
-        /// <item><description>First, when a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 instances are included in the first batch.</description></item>
-        /// <item><description>Then, the operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component without user intervention.</description></item>
+        /// <item><description>When the cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</description></item>
+        /// <item><description>The operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -4572,15 +5086,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the GPU cluster parameter list.</para>
+        /// <para>Retrieves the list of parameters for a GPU cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After installing the component for the target ACK cluster:</para>
+        /// <para>After you install the component for the target ACK cluster:</para>
         /// <ol>
-        /// <item><description>First, when a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 instances are included in the first batch.</description></item>
-        /// <item><description>Then, the operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component without user intervention.</description></item>
+        /// <item><description>When the cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</description></item>
+        /// <item><description>The operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -4631,15 +5145,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the GPU cluster parameter list.</para>
+        /// <para>Retrieves the list of parameters for a GPU cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After installing the component for the target ACK cluster:</para>
+        /// <para>After you install the component for the target ACK cluster:</para>
         /// <ol>
-        /// <item><description>First, when a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 instances are included in the first batch.</description></item>
-        /// <item><description>Then, the operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component without user intervention.</description></item>
+        /// <item><description>When the cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</description></item>
+        /// <item><description>The operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -4659,15 +5173,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the GPU cluster parameter list.</para>
+        /// <para>Retrieves the list of parameters for a GPU cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After installing the component for the target ACK cluster:</para>
+        /// <para>After you install the component for the target ACK cluster:</para>
         /// <ol>
-        /// <item><description>First, when a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 instances are included in the first batch.</description></item>
-        /// <item><description>Then, the operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component without user intervention.</description></item>
+        /// <item><description>When the cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</description></item>
+        /// <item><description>The operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -4692,10 +5206,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After installing the component on the target ACK cluster:</para>
+        /// <para>After you install the component for the target ACK cluster:</para>
         /// <ol>
-        /// <item><description>When a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only the first 50 nodes are processed in the first batch.</description></item>
-        /// <item><description>The operating system console periodically checks the scaling status of managed clusters. When a new ECS instance is added to a cluster, the console automatically installs the component on it without user intervention.</description></item>
+        /// <item><description>When the cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</description></item>
+        /// <item><description>The operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on it without user intervention.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -4775,10 +5289,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After installing the component on the target ACK cluster:</para>
+        /// <para>After you install the component for the target ACK cluster:</para>
         /// <ol>
-        /// <item><description>When a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only the first 50 nodes are processed in the first batch.</description></item>
-        /// <item><description>The operating system console periodically checks the scaling status of managed clusters. When a new ECS instance is added to a cluster, the console automatically installs the component on it without user intervention.</description></item>
+        /// <item><description>When the cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</description></item>
+        /// <item><description>The operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on it without user intervention.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -4858,10 +5372,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After installing the component on the target ACK cluster:</para>
+        /// <para>After you install the component for the target ACK cluster:</para>
         /// <ol>
-        /// <item><description>When a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only the first 50 nodes are processed in the first batch.</description></item>
-        /// <item><description>The operating system console periodically checks the scaling status of managed clusters. When a new ECS instance is added to a cluster, the console automatically installs the component on it without user intervention.</description></item>
+        /// <item><description>When the cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</description></item>
+        /// <item><description>The operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on it without user intervention.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -4886,10 +5400,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After installing the component on the target ACK cluster:</para>
+        /// <para>After you install the component for the target ACK cluster:</para>
         /// <ol>
-        /// <item><description>When a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only the first 50 nodes are processed in the first batch.</description></item>
-        /// <item><description>The operating system console periodically checks the scaling status of managed clusters. When a new ECS instance is added to a cluster, the console automatically installs the component on it without user intervention.</description></item>
+        /// <item><description>When the cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</description></item>
+        /// <item><description>The operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on it without user intervention.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -4909,15 +5423,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the GPU cluster topology.</para>
+        /// <para>Retrieves the topology of a GPU cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you install the component on the target ACK cluster:</para>
+        /// <para>After you install the component for the target ACK cluster:</para>
         /// <ol>
-        /// <item><description>When a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only the first 50 nodes are processed in the first batch.</description></item>
-        /// <item><description>The operating system console periodically checks the scaling status of managed clusters. When a new ECS instance is added to a cluster, the console automatically installs the component on it without requiring manual intervention.</description></item>
+        /// <item><description>When the cluster is initially managed, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</description></item>
+        /// <item><description>The operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -4992,15 +5506,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the GPU cluster topology.</para>
+        /// <para>Retrieves the topology of a GPU cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you install the component on the target ACK cluster:</para>
+        /// <para>After you install the component for the target ACK cluster:</para>
         /// <ol>
-        /// <item><description>When a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only the first 50 nodes are processed in the first batch.</description></item>
-        /// <item><description>The operating system console periodically checks the scaling status of managed clusters. When a new ECS instance is added to a cluster, the console automatically installs the component on it without requiring manual intervention.</description></item>
+        /// <item><description>When the cluster is initially managed, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</description></item>
+        /// <item><description>The operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -5075,15 +5589,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the GPU cluster topology.</para>
+        /// <para>Retrieves the topology of a GPU cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you install the component on the target ACK cluster:</para>
+        /// <para>After you install the component for the target ACK cluster:</para>
         /// <ol>
-        /// <item><description>When a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only the first 50 nodes are processed in the first batch.</description></item>
-        /// <item><description>The operating system console periodically checks the scaling status of managed clusters. When a new ECS instance is added to a cluster, the console automatically installs the component on it without requiring manual intervention.</description></item>
+        /// <item><description>When the cluster is initially managed, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</description></item>
+        /// <item><description>The operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -5103,15 +5617,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the GPU cluster topology.</para>
+        /// <para>Retrieves the topology of a GPU cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you install the component on the target ACK cluster:</para>
+        /// <para>After you install the component for the target ACK cluster:</para>
         /// <ol>
-        /// <item><description>When a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only the first 50 nodes are processed in the first batch.</description></item>
-        /// <item><description>The operating system console periodically checks the scaling status of managed clusters. When a new ECS instance is added to a cluster, the console automatically installs the component on it without requiring manual intervention.</description></item>
+        /// <item><description>When the cluster is initially managed, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</description></item>
+        /// <item><description>The operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -5609,7 +6123,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of an asynchronous task for CVE hotfixes on a node.</para>
+        /// <para>Queries the status of an asynchronous CVE hotfix task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5660,7 +6174,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of an asynchronous task for CVE hotfixes on a node.</para>
+        /// <para>Queries the status of an asynchronous CVE hotfix task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5711,7 +6225,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of an asynchronous task for CVE hotfixes on a node.</para>
+        /// <para>Queries the status of an asynchronous CVE hotfix task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5735,7 +6249,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of an asynchronous task for CVE hotfixes on a node.</para>
+        /// <para>Queries the status of an asynchronous CVE hotfix task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6869,15 +7383,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of GPU clusters.</para>
+        /// <para>Queries the list of GPU clusters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After installing the component for the target ACK cluster:</para>
+        /// <para>After you install components for the target ACK cluster:</para>
         /// <ol>
-        /// <item><description>First, when a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster contains more than 50 nodes, only 50 instances are included in the first batch.</description></item>
-        /// <item><description>Then, the operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on it without user intervention.</description></item>
+        /// <item><description>When the cluster is managed for the first time, the system installs components on all Elastic Compute Service (ECS) instances in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</description></item>
+        /// <item><description>The Operating System console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the Operating System console automatically installs components without user intervention.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -6928,15 +7442,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of GPU clusters.</para>
+        /// <para>Queries the list of GPU clusters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After installing the component for the target ACK cluster:</para>
+        /// <para>After you install components for the target ACK cluster:</para>
         /// <ol>
-        /// <item><description>First, when a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster contains more than 50 nodes, only 50 instances are included in the first batch.</description></item>
-        /// <item><description>Then, the operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on it without user intervention.</description></item>
+        /// <item><description>When the cluster is managed for the first time, the system installs components on all Elastic Compute Service (ECS) instances in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</description></item>
+        /// <item><description>The Operating System console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the Operating System console automatically installs components without user intervention.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -6987,15 +7501,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of GPU clusters.</para>
+        /// <para>Queries the list of GPU clusters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After installing the component for the target ACK cluster:</para>
+        /// <para>After you install components for the target ACK cluster:</para>
         /// <ol>
-        /// <item><description>First, when a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster contains more than 50 nodes, only 50 instances are included in the first batch.</description></item>
-        /// <item><description>Then, the operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on it without user intervention.</description></item>
+        /// <item><description>When the cluster is managed for the first time, the system installs components on all Elastic Compute Service (ECS) instances in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</description></item>
+        /// <item><description>The Operating System console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the Operating System console automatically installs components without user intervention.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -7015,15 +7529,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of GPU clusters.</para>
+        /// <para>Queries the list of GPU clusters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After installing the component for the target ACK cluster:</para>
+        /// <para>After you install components for the target ACK cluster:</para>
         /// <ol>
-        /// <item><description>First, when a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster contains more than 50 nodes, only 50 instances are included in the first batch.</description></item>
-        /// <item><description>Then, the operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on it without user intervention.</description></item>
+        /// <item><description>When the cluster is managed for the first time, the system installs components on all Elastic Compute Service (ECS) instances in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</description></item>
+        /// <item><description>The Operating System console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the Operating System console automatically installs components without user intervention.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -8711,12 +9225,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs CVE hotfixes asynchronously on specified instances.</para>
+        /// <para>Installs CVE hotfixes asynchronously on the specified instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation asynchronously installs the agent. After the operation is called, a task ID is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</para>
+        /// <para>Calling this operation to install hotfixes is asynchronous. After the operation is called, a task_id is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8766,12 +9280,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs CVE hotfixes asynchronously on specified instances.</para>
+        /// <para>Installs CVE hotfixes asynchronously on the specified instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation asynchronously installs the agent. After the operation is called, a task ID is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</para>
+        /// <para>Calling this operation to install hotfixes is asynchronous. After the operation is called, a task_id is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8821,12 +9335,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs CVE hotfixes asynchronously on specified instances.</para>
+        /// <para>Installs CVE hotfixes asynchronously on the specified instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation asynchronously installs the agent. After the operation is called, a task ID is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</para>
+        /// <para>Calling this operation to install hotfixes is asynchronous. After the operation is called, a task_id is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8845,12 +9359,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs CVE hotfixes asynchronously on specified instances.</para>
+        /// <para>Installs CVE hotfixes asynchronously on the specified instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation asynchronously installs the agent. After the operation is called, a task ID is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</para>
+        /// <para>Calling this operation to install hotfixes is asynchronous. After the operation is called, a task_id is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9731,12 +10245,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of diagnostic tasks.</para>
+        /// <para>Retrieves the list of diagnostic tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves the list of regions where the current user has machines managed by SysOM. If the user has ECS instances in a region but those instances are not managed by SysOM, that region does not appear in the results.</para>
+        /// <para>This operation retrieves the list of regions where the current user has machines managed by SysOM. If a user has ECS instances in a region but they are not managed by SysOM, the region will not appear in the API response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9802,12 +10316,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of diagnostic tasks.</para>
+        /// <para>Retrieves the list of diagnostic tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves the list of regions where the current user has machines managed by SysOM. If the user has ECS instances in a region but those instances are not managed by SysOM, that region does not appear in the results.</para>
+        /// <para>This operation retrieves the list of regions where the current user has machines managed by SysOM. If a user has ECS instances in a region but they are not managed by SysOM, the region will not appear in the API response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9873,12 +10387,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of diagnostic tasks.</para>
+        /// <para>Retrieves the list of diagnostic tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves the list of regions where the current user has machines managed by SysOM. If the user has ECS instances in a region but those instances are not managed by SysOM, that region does not appear in the results.</para>
+        /// <para>This operation retrieves the list of regions where the current user has machines managed by SysOM. If a user has ECS instances in a region but they are not managed by SysOM, the region will not appear in the API response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9897,12 +10411,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of diagnostic tasks.</para>
+        /// <para>Retrieves the list of diagnostic tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves the list of regions where the current user has machines managed by SysOM. If the user has ECS instances in a region but those instances are not managed by SysOM, that region does not appear in the results.</para>
+        /// <para>This operation retrieves the list of regions where the current user has machines managed by SysOM. If a user has ECS instances in a region but they are not managed by SysOM, the region will not appear in the API response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10185,7 +10699,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all alert policies configured by the user for push notifications.</para>
+        /// <para>Retrieves all alert notification policies for the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10247,7 +10761,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all alert policies configured by the user for push notifications.</para>
+        /// <para>Retrieves all alert notification policies for the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10309,7 +10823,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all alert policies configured by the user for push notifications.</para>
+        /// <para>Retrieves all alert notification policies for the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10328,7 +10842,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all alert policies configured by the user for push notifications.</para>
+        /// <para>Retrieves all alert notification policies for the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12579,12 +13093,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all regions that contain managed instances.</para>
+        /// <para>Lists all regions with managed instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves the list of regions where the current user has instances managed by SysOM. If a user has ECS instances in a region but none of them are managed by SysOM, that region is not included in the response.</para>
+        /// <para>This operation retrieves the list of regions where the current user has instances managed by SysOM. If you have ECS instances in a region but they are not managed by SysOM, the region is not included in the response.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -12620,12 +13134,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all regions that contain managed instances.</para>
+        /// <para>Lists all regions with managed instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves the list of regions where the current user has instances managed by SysOM. If a user has ECS instances in a region but none of them are managed by SysOM, that region is not included in the response.</para>
+        /// <para>This operation retrieves the list of regions where the current user has instances managed by SysOM. If you have ECS instances in a region but they are not managed by SysOM, the region is not included in the response.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -12661,12 +13175,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all regions that contain managed instances.</para>
+        /// <para>Lists all regions with managed instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves the list of regions where the current user has instances managed by SysOM. If a user has ECS instances in a region but none of them are managed by SysOM, that region is not included in the response.</para>
+        /// <para>This operation retrieves the list of regions where the current user has instances managed by SysOM. If you have ECS instances in a region but they are not managed by SysOM, the region is not included in the response.</para>
         /// </description>
         /// 
         /// <returns>
@@ -12681,12 +13195,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all regions that contain managed instances.</para>
+        /// <para>Lists all regions with managed instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves the list of regions where the current user has instances managed by SysOM. If a user has ECS instances in a region but none of them are managed by SysOM, that region is not included in the response.</para>
+        /// <para>This operation retrieves the list of regions where the current user has instances managed by SysOM. If you have ECS instances in a region but they are not managed by SysOM, the region is not included in the response.</para>
         /// </description>
         /// 
         /// <returns>
@@ -12831,12 +13345,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously queries the CVE hotfix status on specified instances.</para>
+        /// <para>Asynchronously queries the CVE hotfix status on the specified instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The call to this operation to install the agent is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetHotfixTask operation to obtain the execution status of the task.</para>
+        /// <para>Calling this API operation to install the agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12886,12 +13400,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously queries the CVE hotfix status on specified instances.</para>
+        /// <para>Asynchronously queries the CVE hotfix status on the specified instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The call to this operation to install the agent is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetHotfixTask operation to obtain the execution status of the task.</para>
+        /// <para>Calling this API operation to install the agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12941,12 +13455,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously queries the CVE hotfix status on specified instances.</para>
+        /// <para>Asynchronously queries the CVE hotfix status on the specified instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The call to this operation to install the agent is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetHotfixTask operation to obtain the execution status of the task.</para>
+        /// <para>Calling this API operation to install the agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12965,12 +13479,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously queries the CVE hotfix status on specified instances.</para>
+        /// <para>Asynchronously queries the CVE hotfix status on the specified instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The call to this operation to install the agent is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetHotfixTask operation to obtain the execution status of the task.</para>
+        /// <para>Calling this API operation to install the agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13386,7 +13900,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, only comparative analysis of the same PID across different steps within the same AI Infra analysis record is supported.</para>
+        /// <para>Currently, only comparative analysis of the same PID across different steps under the same AI Infra analysis record is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13449,7 +13963,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, only comparative analysis of the same PID across different steps within the same AI Infra analysis record is supported.</para>
+        /// <para>Currently, only comparative analysis of the same PID across different steps under the same AI Infra analysis record is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13512,7 +14026,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, only comparative analysis of the same PID across different steps within the same AI Infra analysis record is supported.</para>
+        /// <para>Currently, only comparative analysis of the same PID across different steps under the same AI Infra analysis record is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13536,7 +14050,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Currently, only comparative analysis of the same PID across different steps within the same AI Infra analysis record is supported.</para>
+        /// <para>Currently, only comparative analysis of the same PID across different steps under the same AI Infra analysis record is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14041,12 +14555,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously uninstalls CVE hotfixes from the specified instances.</para>
+        /// <para>Asynchronously uninstalls a CVE hotfix from a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</para>
+        /// <para>Calling this API to install the agent is asynchronous. After you call this API, a task_id is returned. You can use this ID to call the GetHotfixTask API to obtain the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14096,12 +14610,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously uninstalls CVE hotfixes from the specified instances.</para>
+        /// <para>Asynchronously uninstalls a CVE hotfix from a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</para>
+        /// <para>Calling this API to install the agent is asynchronous. After you call this API, a task_id is returned. You can use this ID to call the GetHotfixTask API to obtain the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14151,12 +14665,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously uninstalls CVE hotfixes from the specified instances.</para>
+        /// <para>Asynchronously uninstalls a CVE hotfix from a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</para>
+        /// <para>Calling this API to install the agent is asynchronous. After you call this API, a task_id is returned. You can use this ID to call the GetHotfixTask API to obtain the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14175,12 +14689,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously uninstalls CVE hotfixes from the specified instances.</para>
+        /// <para>Asynchronously uninstalls a CVE hotfix from a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</para>
+        /// <para>Calling this API to install the agent is asynchronous. After you call this API, a task_id is returned. You can use this ID to call the GetHotfixTask API to obtain the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14199,12 +14713,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the component configuration.</para>
+        /// <para>Updates the configuration of a component.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After the configuration is updated, the new configuration is delivered to all resources that use it.</para>
+        /// <para>After the configuration is updated, the new configuration is delivered to all resources to which the configuration is applied.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14258,12 +14772,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the component configuration.</para>
+        /// <para>Updates the configuration of a component.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After the configuration is updated, the new configuration is delivered to all resources that use it.</para>
+        /// <para>After the configuration is updated, the new configuration is delivered to all resources to which the configuration is applied.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14317,12 +14831,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the component configuration.</para>
+        /// <para>Updates the configuration of a component.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After the configuration is updated, the new configuration is delivered to all resources that use it.</para>
+        /// <para>After the configuration is updated, the new configuration is delivered to all resources to which the configuration is applied.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14341,12 +14855,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the component configuration.</para>
+        /// <para>Updates the configuration of a component.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After the configuration is updated, the new configuration is delivered to all resources that use it.</para>
+        /// <para>After the configuration is updated, the new configuration is delivered to all resources to which the configuration is applied.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14717,7 +15231,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a push alert policy.</para>
+        /// <para>Updates the alert push policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14779,7 +15293,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a push alert policy.</para>
+        /// <para>Updates the alert push policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14841,7 +15355,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a push alert policy.</para>
+        /// <para>Updates the alert push policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14860,7 +15374,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a push alert policy.</para>
+        /// <para>Updates the alert push policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14879,7 +15393,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a cluster component.</para>
+        /// <para>Updates the component configuration of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14933,7 +15447,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a cluster component.</para>
+        /// <para>Updates the component configuration of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14987,7 +15501,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a cluster component.</para>
+        /// <para>Updates the component configuration of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15006,7 +15520,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a cluster component.</para>
+        /// <para>Updates the component configuration of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15361,7 +15875,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the component configuration of an instance.</para>
+        /// <para>Updates the component configurations of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15415,7 +15929,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the component configuration of an instance.</para>
+        /// <para>Updates the component configurations of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15469,7 +15983,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the component configuration of an instance.</para>
+        /// <para>Updates the component configurations of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15488,7 +16002,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the component configuration of an instance.</para>
+        /// <para>Updates the component configurations of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

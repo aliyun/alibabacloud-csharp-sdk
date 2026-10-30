@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetGpuClusterListAlarmRecordResponseBody : TeaModel {
         /// <summary>
-        /// <para>The value is &quot;Success&quot; or &quot;Sysom.ServerError&quot;.</para>
+        /// <para>The response code. Valid values: Success and Sysom.ServerError.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success or Sysom.ServerError</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public List<GetGpuClusterListAlarmRecordResponseBodyData> Data { get; set; }
         public class GetGpuClusterListAlarmRecordResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The cluster where the alert was triggered.</para>
+            /// <para>The cluster where the alert is triggered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cluster1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string AlarmCluster { get; set; }
 
             /// <summary>
-            /// <para>The additional information about the alert.</para>
+            /// <para>The extended information of the alert.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string AlarmId { get; set; }
 
             /// <summary>
-            /// <para>The event log associated with the alert.</para>
+            /// <para>The alerting event log.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cuda OOM：xxxxx</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string AlarmTask { get; set; }
 
             /// <summary>
-            /// <para>The date and time when the alert was triggered.</para>
+            /// <para>The date and time when the alert is triggered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-08-22 18:16:25</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public object AlarmTopology { get; set; }
 
             /// <summary>
-            /// <para>The Alarm Metric for alerting.</para>
+            /// <para>The alerting type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cuda OOM</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string AlarmType { get; set; }
 
             /// <summary>
-            /// <para>The task status.</para>
+            /// <para>The status of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>running、blocking、restart、exited、failed</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>When code is not &quot;Success&quot;, message contains the error information.</para>
+        /// <para>The error message returned when the code is not Success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>server error</para>

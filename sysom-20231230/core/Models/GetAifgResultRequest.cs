@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetAifgResultRequest : TeaModel {
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The task identifier.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

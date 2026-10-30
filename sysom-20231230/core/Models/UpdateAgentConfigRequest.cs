@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class UpdateAgentConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the component whose configuration you want to update.</para>
+        /// <para>The ID of the component whose configuration is to be updated.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

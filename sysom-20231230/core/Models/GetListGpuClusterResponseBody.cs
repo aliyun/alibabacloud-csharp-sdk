@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetListGpuClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. Valid values: Success and Sysom.ACKClusterNotFound.</para>
+        /// <para>The code. Valid values: Success and Sysom.ACKClusterNotFound.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The list of clusters returned.</para>
+        /// <para>The list of clusters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;cluster1&quot;, &quot;cluster2&quot;]</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public object Data { get; set; }
 
         /// <summary>
-        /// <para>The error message returned when the code is not Success.</para>
+        /// <para>The error message. If the code is not success, the message is the error information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of clusters returned.</para>
+        /// <para>The total number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

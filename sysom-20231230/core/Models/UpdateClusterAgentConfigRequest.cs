@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class UpdateClusterAgentConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the component whose configuration is to be updated.</para>
+        /// <para>The ID of the component whose configuration you want to update.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the component configuration to install on the cluster.</para>
+        /// <para>The ID of the component configuration to be installed on the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -9,14 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class UpdateAlertDestinationRequest : TeaModel {
+        /// <summary>
+        /// <para>The app ID of the chatbot.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0ab724ba952448eab4b5ed7ebe1d51ab</para>
+        /// </summary>
         [NameInMap("app_id")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        /// <summary>
+        /// <para>The app secret of the chatbot.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ZzhtNzloZTY4ZzAwRE4rXFxMRCdNTmFCbV0mQUZIcEM</para>
+        /// </summary>
         [NameInMap("app_secret")]
         [Validation(Required=false)]
         public string AppSecret { get; set; }
 
+        /// <summary>
+        /// <para>The group ID.</para>
+        /// </summary>
         [NameInMap("group_id")]
         [Validation(Required=false)]
         public List<string> GroupId { get; set; }
@@ -31,6 +46,12 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public string Id { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether the contact is an IM chatbot.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("imbot")]
         [Validation(Required=false)]
         public bool? Imbot { get; set; }
@@ -73,7 +94,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Phone { get; set; }
 
             /// <summary>
-            /// <para>The chatbot secret key.</para>
+            /// <para>The secret of the chatbot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SECxxx</para>
@@ -83,7 +104,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Sec { get; set; }
 
             /// <summary>
-            /// <para>The webhook URL.</para>
+            /// <para>The webhook URL of the chatbot.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://oapi.dingtalk.com/robot/send?access_token=xxx">https://oapi.dingtalk.com/robot/send?access_token=xxx</a></para>

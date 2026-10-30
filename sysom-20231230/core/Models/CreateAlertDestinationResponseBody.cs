@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public CreateAlertDestinationResponseBodyData Data { get; set; }
         public class CreateAlertDestinationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the contact was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1753669116286</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string Phone { get; set; }
 
                 /// <summary>
-                /// <para>The chatbot secret key.</para>
+                /// <para>The secret key of the bot.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SECxxx</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string Sec { get; set; }
 
                 /// <summary>
-                /// <para>The webhook URL of the chatbot.</para>
+                /// <para>The webhook URL of the bot.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://oapi.dingtalk.com/robot/send?access_token=xxx">https://oapi.dingtalk.com/robot/send?access_token=xxx</a></para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The notification target. Currently, only DingTalk chatbots are supported.</para>
+            /// <para>The push target. Currently, only DingTalk bots are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dingtalk</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Uid { get; set; }
 
             /// <summary>
-            /// <para>The time when the contact was last updated.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1751254826285</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>The error message.</para>
         /// <list type="bullet">
         /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
-        /// <item><description>Otherwise, this field contains the error message of the request.</description></item>
+        /// <item><description>Otherwise, this field contains the request error message.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

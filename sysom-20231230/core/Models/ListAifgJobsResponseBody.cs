@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The sub-status of the data item.</para>
+            /// <para>The sub-status of data item 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>processing</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string SubmitTime { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The ID of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records to retrieve in a single request.</para>
+        /// <para>The maximum number of records to retrieve at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -139,21 +139,18 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Indicates the position read by the current call. An empty value indicates that all data has been read.</para>
+        /// <para>Indicates the read position returned by the current call. An empty value indicates that all data has been read.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Hello, World!</para>
+        /// <para>Hello, world!</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token.</para>
-        /// <remarks>
-        /// <para>A non-empty value indicates that more data is available.</para>
-        /// </remarks>
+        /// <para>The pagination cursor. A non-empty value indicates that more data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>U+w1wv2R4ZWR5oZLXD0+Dp4dD+2BRJj42DLT6GrZysw=</para>
@@ -173,7 +170,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

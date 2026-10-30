@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetGpuClusterTopologyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result code. Valid values: Success, Sysom.ServerError, Sysom.InvalidParameter.</para>
+        /// <para>The response code. Valid values: Success, Sysom.ServerError, and Sysom.InvalidParameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Fail/Success</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             }
 
             /// <summary>
-            /// <para>The number of GPU cards returned.</para>
+            /// <para>The total number of GPUs returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>36</para>

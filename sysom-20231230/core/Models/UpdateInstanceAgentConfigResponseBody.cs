@@ -20,14 +20,15 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned results.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public UpdateInstanceAgentConfigResponseBodyData Data { get; set; }
         public class UpdateInstanceAgentConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The task ID. You can use this task ID to call the GetAgentTask operation to check the task execution status.</para>
+            /// <para>The task ID.</para>
+            /// <para>You can use this task ID to call the GetAgentTask operation to check the task execution status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bbe94a98-4192-4172-b856-95777e0a55d7</para>
@@ -39,7 +40,11 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>The error message. If <c>code == Success</c>, this field is empty. Otherwise, this field contains the error message of the request.</para>
+        /// <para>The error message.</para>
+        /// <list type="bullet">
+        /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
+        /// <item><description>Otherwise, this field contains the request error message.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Analysis ID: 56dae746-ef55-4f77-8373-cb3594c41457

@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
-        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault message.</description></item>
+        /// <item><description>If <c>code == Success</c>, the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate authorization failure. If authorization fails, check the <c>message</c> field for detailed error messages.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,46 +24,46 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;NODE&quot;: {
-        ///       &quot;饱和度&quot;: [
-        ///         &quot;节点CPU使用率检测&quot;,
-        ///         &quot;节点内核态CPU使用检测&quot;,
-        ///         &quot;节点软中断CPU使用检测&quot;,
-        ///         &quot;节点内存使用检测&quot;,
-        ///         &quot;节点内核内存使用检测&quot;,
-        ///         &quot;节点文件描述符使用检测&quot;,
-        ///         &quot;节点根文件系统使用检测&quot;,
-        ///         &quot;节点cgroup泄漏检测&quot;,
-        ///         &quot;节点Sockets使用检测&quot;,
-        ///         &quot;节点TCP内存使用检测&quot;
+        ///       &quot;Saturation&quot;: [
+        ///         &quot;Node CPU utilization detection&quot;,
+        ///         &quot;Node kernel-mode CPU utilization detection&quot;,
+        ///         &quot;Node softirq CPU utilization detection&quot;,
+        ///         &quot;Node memory usage detection&quot;,
+        ///         &quot;Node kernel memory usage detection&quot;,
+        ///         &quot;Node file descriptor usage detection&quot;,
+        ///         &quot;Node root file system usage detection&quot;,
+        ///         &quot;Node cgroup leak detection&quot;,
+        ///         &quot;Node socket usage detection&quot;,
+        ///         &quot;Node TCP memory usage detection&quot;
         ///       ],
-        ///       &quot;延时&quot;: [
-        ///         &quot;节点调度延时检测&quot;,
-        ///         &quot;节点网络延时检测&quot;,
-        ///         &quot;节点磁盘写入延迟检测&quot;,
-        ///         &quot;节点磁盘读取延迟检测&quot;
+        ///       &quot;Latency&quot;: [
+        ///         &quot;Node scheduling latency detection&quot;,
+        ///         &quot;Node network latency detection&quot;,
+        ///         &quot;Node disk write latency detection&quot;,
+        ///         &quot;Node disk read latency detection&quot;
         ///       ],
-        ///       &quot;负载&quot;: [
-        ///         &quot;节点磁盘IO流量检测&quot;,
-        ///         &quot;节点load average检测&quot;
+        ///       &quot;Load&quot;: [
+        ///         &quot;Node disk I/O traffic detection&quot;,
+        ///         &quot;Node load average detection&quot;
         ///       ],
-        ///       &quot;错误&quot;: [
-        ///         &quot;节点网络丢包检测&quot;,
-        ///         &quot;节点OOM夯机预测及检测&quot;
+        ///       &quot;Errors&quot;: [
+        ///         &quot;Node network packet loss detection&quot;,
+        ///         &quot;Node OOM stall prediction and detection&quot;
         ///       ]
         ///     },
         ///     &quot;POD&quot;: {
-        ///       &quot;饱和度&quot;: [
-        ///         &quot;Pod内存使用检测&quot;,
-        ///         &quot;Pod CPU使用率检测&quot;
+        ///       &quot;Saturation&quot;: [
+        ///         &quot;Pod memory usage detection&quot;,
+        ///         &quot;Pod CPU utilization detection&quot;
         ///       ],
-        ///       &quot;错误&quot;: [
-        ///         &quot;Pod CPU限流检测&quot;,
-        ///         &quot;Pod OOM事件检测&quot;
+        ///       &quot;Errors&quot;: [
+        ///         &quot;Pod CPU throttling detection&quot;,
+        ///         &quot;Pod OOM event detection&quot;
         ///       ]
         ///     }
         /// }</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>The error message.</para>
         /// <list type="bullet">
         /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
-        /// <item><description>Otherwise, this field contains the request error information.</description></item>
+        /// <item><description>Otherwise, this field contains the request error message.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

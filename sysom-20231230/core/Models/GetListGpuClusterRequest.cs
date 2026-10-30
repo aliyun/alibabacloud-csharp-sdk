@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The query time range, in milliseconds, in the format of [start, end]. Example: [13254125000, 52451241000].</para>
+        /// <para>The time range to query. Unit: milliseconds. Format: [start,end]. Example: [13254125000, 52451241000].</para>
         /// 
         /// <b>Example:</b>
         /// <para>[1757820000, 1757823600]</para>

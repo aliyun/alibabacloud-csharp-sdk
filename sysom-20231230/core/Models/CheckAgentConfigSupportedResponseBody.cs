@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code</c> is <c>Success</c>, the authorization is successful.</description></item>
-        /// <item><description>Other status codes indicate that the authorization failed. If the authorization failed, check the <c>message</c> field for the detailed fault information.</description></item>
+        /// <item><description>If the value is <c>Success</c>, the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate that the authorization failed. If the authorization failed, check the <c>message</c> field for the detailed fault message.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Instance { get; set; }
 
             /// <summary>
-            /// <para>The reason why the instance is not supported for management. This field is not empty when success is false.</para>
+            /// <para>The reason why the instance is not supported for management. This field is not empty when the success field is false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>instance not found in ecs</para>
@@ -65,8 +65,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The error message.</para>
         /// <list type="bullet">
-        /// <item><description>If code is Success, this field is empty.</description></item>
-        /// <item><description>Otherwise, this field contains the error information of the request.</description></item>
+        /// <item><description>If the value of <c>code</c> is <c>Success</c>, this field is empty.</description></item>
+        /// <item><description>Otherwise, this field contains the error message of the request.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

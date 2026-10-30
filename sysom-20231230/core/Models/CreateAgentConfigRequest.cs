@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class CreateAgentConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the component for the configuration. You can obtain the component ID from ListAgents.</para>
+        /// <para>The ID of the agent associated with the configuration. You can obtain the agent ID from ListAgents.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

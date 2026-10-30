@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetGpuClusterArgsOptionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. Valid values: Success and Sysom.ServerError.</para>
+        /// <para>The response code, which is Success or Sysom.ServerError.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success  Fail</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned entries.</para>
+        /// <para>The total number of returned items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

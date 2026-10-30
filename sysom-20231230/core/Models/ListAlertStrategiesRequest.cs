@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListAlertStrategiesRequest : TeaModel {
         /// <summary>
-        /// <para>The current page number (starting from 1).</para>
+        /// <para>The current page number, starting from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? Current { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records to retrieve in a single request.</para>
+        /// <para>The maximum number of records to retrieve per request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

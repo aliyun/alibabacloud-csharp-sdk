@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetListRecordRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the analysis record to query the status for.</para>
+        /// <para>The ID of the specified analysis record.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxxxxxx-f37b-478d-87f6-2259ed8766bf</para>

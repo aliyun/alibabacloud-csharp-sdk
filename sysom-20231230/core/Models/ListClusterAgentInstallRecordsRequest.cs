@@ -9,14 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListClusterAgentInstallRecordsRequest : TeaModel {
+        /// <summary>
+        /// <para>The component configuration ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>f0078fbb-4213-11f0-a19b-00163e4ae208</para>
+        /// </summary>
         [NameInMap("agent_config_id")]
         [Validation(Required=false)]
         public string AgentConfigId { get; set; }
 
         /// <summary>
-        /// <para>Filters results by cluster ID.</para>
+        /// <para>Filters by cluster ID.</para>
         /// <remarks>
-        /// <para>This cluster ID is not the ACK cluster ID. It is the <c>cluster_id</c> field returned by this operation or the <c>id</c> field returned by the ListCluster operation.</para>
+        /// <para>This cluster ID is not the ACK cluster ID. It is the <c>cluster_id</c> field in the data returned by this operation, or the <c>id</c> field in the data returned by the ListCluster operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,7 +33,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The current page number (starting from 1).</para>
+        /// <para>The current page number, starting from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -47,7 +53,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies the agent ID to filter the installation list. You can use this parameter together with the plugin_version parameter.</para>
+        /// <para>Filters the installation list by the specified agent. You can use this parameter together with the plugin_version parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>74a86327-3170-412c-8e67-da3389ec56a9</para>
@@ -57,7 +63,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string PluginId { get; set; }
 
         /// <summary>
-        /// <para>Cannot be used alone. Use this parameter together with plugin_id to filter the installation list by a specific agent version.</para>
+        /// <para>This parameter cannot be used alone and must be used together with the plugin_id parameter to filter the installation list by the specified agent and version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3.4.0-1</para>

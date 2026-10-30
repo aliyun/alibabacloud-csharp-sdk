@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c>: The authorization succeeded.</description></item>
-        /// <item><description>Other status codes indicate that the authorization failed. If the authorization failed, check the <c>message</c> field for the detailed fault message.</description></item>
+        /// <item><description><c>code == Success</c>: Authorization succeeded.</description></item>
+        /// <item><description>Other status codes indicate that authorization failed. If authorization failed, check the <c>message</c> field for detailed error messages.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The ID of the currently executing task</para>
+            /// <para>The ID of the currently running task</para>
             /// </summary>
             [NameInMap("taskId")]
             [Validation(Required=false)]

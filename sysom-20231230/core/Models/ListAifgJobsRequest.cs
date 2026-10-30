@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Current { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records to retrieve in a single request.</para>
+        /// <para>The maximum number of records to retrieve at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -31,10 +31,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token.</para>
-        /// <remarks>
-        /// <para>A non-empty value indicates that more data is available.</para>
-        /// </remarks>
+        /// <para>The pagination cursor. A non-empty value indicates that more data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c2f78a783f49457caba6bace6f6f79e4</para>
@@ -65,7 +62,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The service name of the diagnostic service.</para>
+        /// <para>The diagnostic service name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

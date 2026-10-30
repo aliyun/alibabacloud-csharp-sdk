@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public bool? K8sLabel { get; set; }
 
         /// <summary>
-        /// <para>The name of the alerting policy.</para>
+        /// <para>The alert policy name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public List<int?> Destinations { get; set; }
 
             /// <summary>
-            /// <para>The collection of exception items that receive alerts.</para>
+            /// <para>The collection of exception items that trigger alerts.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]

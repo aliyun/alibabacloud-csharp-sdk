@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID, which can be used for end-to-end diagnostics.</para>
+        /// <para>The request ID. You can use it for end-to-end diagnostics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B149FD9C-ED5C-5765-B3AD-05AA4A4D64D7</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public List<string> Data { get; set; }
 
         /// <summary>
-        /// <para>The error code description. This value is empty if no error occurs.</para>
+        /// <para>The error message. This field is empty if no error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SysomOpenAPIAssumeRoleException: EntityNotExist.Role The role not exists: acs:ram::xxxxx:role/aliyunserviceroleforsysom</para>

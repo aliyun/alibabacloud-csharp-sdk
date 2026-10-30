@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public StartAifgAnalysisResponseBodyData Data { get; set; }
         public class StartAifgAnalysisResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9cd7aee5-d365-4d4e-8236-58a110a4ea09</para>

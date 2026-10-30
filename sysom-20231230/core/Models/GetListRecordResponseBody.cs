@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string AnalysisTime { get; set; }
 
             /// <summary>
-            /// <para>The analysis parameters of the AI job analysis.</para>
+            /// <para>The parameters for the AI job analysis.</para>
             /// 
             /// <b>Example:</b>
             /// <para>timeout=2000 ms</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             /// <para>The analysis failure log.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Analysis failed for instance i-wz9dej066kii4goqpnze. Failure reason: Not get GPU trace data for \&quot;e59ce870-dbd4-4c44-a814-174ac6ab5bcf\&quot; \&quot;[\&quot;118534\&quot;]\&quot;!</para>
+            /// <para>Analysis failed for instance i-wz9dej066kii4goqpnze. Cause: Not get GPU trace data for \&quot;e59ce870-dbd4-4c44-a814-174ac6ab5bcf\&quot; \&quot;[\&quot;118534\&quot;]\&quot;!</para>
             /// </summary>
             [NameInMap("failedLog")]
             [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             /// <para>The analysis status.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Completed/Analysis Failed</para>
+            /// <para>Completed/Failed</para>
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]

@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
-        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault message.</description></item>
+        /// <item><description>If <c>code == Success</c>, the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate that the authorization failed. If the authorization fails, check the <c>message</c> field for the detailed fault message.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public GetAlertStrategyResponseBodyDataStrategy Strategy { get; set; }
             public class GetAlertStrategyResponseBodyDataStrategy : TeaModel {
                 /// <summary>
-                /// <para>The collection of clusters that receive alerts.</para>
+                /// <para>The clusters that receive alerts.</para>
                 /// </summary>
                 [NameInMap("clusters")]
                 [Validation(Required=false)]
@@ -93,16 +93,19 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 
                 /// <summary>
                 /// <para>The alert contacts.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("destinations")]
                 [Validation(Required=false)]
                 public object Destinations { get; set; }
 
                 /// <summary>
-                /// <para>The list of exception items that receive alerts.</para>
+                /// <para>The list of anomaly items that trigger alerts.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Node CPU utilization check</para>
+                /// <para>Node CPU usage detection</para>
                 /// </summary>
                 [NameInMap("items")]
                 [Validation(Required=false)]

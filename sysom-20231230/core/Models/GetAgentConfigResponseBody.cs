@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of returned records.</para>
+        /// <para>The total number of returned records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

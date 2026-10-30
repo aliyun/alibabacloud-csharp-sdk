@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetAgentConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the component for which you want to retrieve configurations.</para>
+        /// <para>The ID of the component.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string ConfigName { get; set; }
 
         /// <summary>
-        /// <para>The current page number. This field is available when page-based pagination is used.</para>
+        /// <para>The current page number. This parameter is available only when pagination by page number is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

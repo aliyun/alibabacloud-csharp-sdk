@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public GetAifgResultResponseBodyData Data { get; set; }
         public class GetAifgResultResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The diagnostic result.</para>
+            /// <para>The diagnostic results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string ServiceName { get; set; }
 
             /// <summary>
-            /// <para>The status of the root data.</para>
+            /// <para>The root data status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the data was created.</para>
+            /// <para>The data creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-01-01T00:00:00Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string SubmitTime { get; set; }
 
             /// <summary>
-            /// <para>The unique task ID.</para>
+            /// <para>The unique identifier of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234567890</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The message content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;Execution succeeded&quot;</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique request ID.</para>
+        /// <para>The unique identifier of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>

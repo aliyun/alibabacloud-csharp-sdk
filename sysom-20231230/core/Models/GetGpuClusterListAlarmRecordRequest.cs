@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetGpuClusterListAlarmRecordRequest : TeaModel {
         /// <summary>
-        /// <para>Query by a specific cluster, such as &quot;cluster1&quot;. To query multiple clusters, separate them with commas: &quot;cluster1,cluster2,cluster3&quot;.</para>
+        /// <para>The cluster to query. Specify a cluster, such as &quot;cluster1&quot;. To query multiple clusters, separate them with commas, such as &quot;cluster1,cluster2,cluster3&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;cluster1&quot;</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string AlarmCluster { get; set; }
 
         /// <summary>
-        /// <para>Filter anomalies by instance ID or container.</para>
+        /// <para>The instance ID or container used to filter anomalies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>instance id</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string AlarmExtInfo { get; set; }
 
         /// <summary>
-        /// <para>Query by a specific task, such as &quot;task1&quot;. To query multiple tasks, separate them with commas: &quot;task1,task2,task3&quot;.</para>
+        /// <para>The task to query. Specify a task, such as &quot;task1&quot;. To query multiple tasks, separate them with commas, such as &quot;task1,task2,task3&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>task id</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string AlarmTask { get; set; }
 
         /// <summary>
-        /// <para>Query by a specific point in time, such as &quot;2025-08-22 18:16:25&quot;. Query by a time range using the &quot;start,end&quot; format, such as &quot;2025-08-22 18:16:25,2025-08-23 18:16:25&quot;.</para>
+        /// <para>The specific time or time range to query. Specify a specific time, such as &quot;2025-08-22 18:16:25&quot;. To specify a time range, use the &quot;start,end&quot; format, such as &quot;2025-08-22 18:16:25,2025-08-23 18:16:25&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;2025-08-22 18:16:25,2025-08-23 18:16:25&quot;</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string AlarmTime { get; set; }
 
         /// <summary>
-        /// <para>Filter by anomaly type, such as GPU memory access out-of-bounds or task hang.</para>
+        /// <para>The anomaly type used to filter results, such as GPU memory access out of bounds or task hang.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cuda error</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Filter by task status, such as blocking, running, exited, or restart.</para>
+        /// <para>The task status used to filter results. Valid values: blocking, running, exited, and restart.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>

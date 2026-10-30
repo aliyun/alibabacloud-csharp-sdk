@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public GetAifgUrlResponseBodyData Data { get; set; }
         public class GetAifgUrlResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The URL of the diagnostic details.</para>
+            /// <para>The URL for diagnostic details.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/diagnose/detail/qe3Z34sa</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>The description of the status code.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

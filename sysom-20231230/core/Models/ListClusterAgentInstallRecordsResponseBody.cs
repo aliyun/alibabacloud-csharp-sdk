@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
-        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
+        /// <item><description><c>code == Success</c>: The authorization succeeded.</description></item>
+        /// <item><description>Other status codes: The authorization failed. If the authorization fails, check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,10 +40,22 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public List<ListClusterAgentInstallRecordsResponseBodyData> Data { get; set; }
         public class ListClusterAgentInstallRecordsResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The component configuration ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>f0078fbb-4213-11f0-a19b-00163e4ae208</para>
+            /// </summary>
             [NameInMap("agent_config_id")]
             [Validation(Required=false)]
             public string AgentConfigId { get; set; }
 
+            /// <summary>
+            /// <para>The component configuration name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123</para>
+            /// </summary>
             [NameInMap("agent_config_name")]
             [Validation(Required=false)]
             public string AgentConfigName { get; set; }
@@ -117,7 +129,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>The error message.</para>
         /// <list type="bullet">
         /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
-        /// <item><description>Otherwise, this field contains the request error information.</description></item>
+        /// <item><description>Otherwise, this field contains the request error message.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
