@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
     public class CreateRenderingInstanceShrinkRequest : TeaModel {
         /// <summary>
         /// <remarks>
-        /// <para>Unless you have special requirements, keep the default value. If you have special requirements, consult and confirm before specifying this parameter.</para>
+        /// <para>Keep the default value unless you have special requirements. If you have special requirements, contact technical support to confirm and then specify the relevant parameters.</para>
         /// </remarks>
         /// <para>The attribute information.</para>
         /// </summary>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <remarks>
         /// <para>This parameter takes effect only when <c>InstanceChargeType</c> is set to <c>PrePaid</c> (subscription).</para>
         /// </remarks>
-        /// <para>The subscription duration. Valid values (note: if you select 12, it is calculated as one year, and other values are calculated in months):</para>
+        /// <para>The subscription duration. Valid values (Note: If you select 12, the duration is calculated as one year. For other values, the unit is months):</para>
         /// <list type="bullet">
         /// <item><description>1 (default)</description></item>
         /// <item><description>2</description></item>
@@ -125,10 +125,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The specifications of the cloud application service instance.</para>
+        /// <para>The specification of the cloud application service instance.</para>
         /// <list type="bullet">
-        /// <item><description>For the crs.cp.* series, the billing method can be subscription or pay-as-you-go.</description></item>
-        /// <item><description>For the crs.vm.* series, the billing method can be subscription or pay-as-you-go.</description></item>
+        /// <item><description>If the specification belongs to the crs.cp.* series, the billing method can be subscription or pay-as-you-go.</description></item>
+        /// <item><description>If the specification belongs to the crs.vm.* series, the billing method can be subscription or pay-as-you-go.</description></item>
         /// <item><description>For other series, only the subscription billing method is supported.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>

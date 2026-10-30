@@ -20,6 +20,13 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RenderingInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID list of the cloud application service.</para>
+        /// </summary>
+        [NameInMap("RenderingInstanceIds")]
+        [Validation(Required=false)]
+        public List<string> RenderingInstanceIds { get; set; }
+
+        /// <summary>
         /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
