@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterRouteTablePropagationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page for a paged query.</para>
+        /// <para>The maximum number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query in a paged query.</para>
+        /// <para>The token used to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dd20****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The list of route learning relationships.</para>
+        /// <para>The route propagations.</para>
         /// </summary>
         [NameInMap("TransitRouterPropagations")]
         [Validation(Required=false)]
@@ -67,11 +67,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The network instance type. Valid values:</para>
+            /// <para>The type of the network instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>VPC</b>: virtual private cloud (VPC) instance.</description></item>
-            /// <item><description><b>VBR</b>: virtual border router (VBR) instance.</description></item>
-            /// <item><description><b>TR</b>: transit router instance.</description></item>
+            /// <item><description><b>VPC</b>: VPC.</description></item>
+            /// <item><description><b>VBR</b>: VBR.</description></item>
+            /// <item><description><b>TR</b>: transit router.</description></item>
             /// <item><description><b>VPN</b>: VPN connection.</description></item>
             /// </list>
             /// 
@@ -83,11 +83,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The status of the route learning relationship. Valid values:</para>
+            /// <para>The status of the route propagation. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Enabling</b>: being enabled.</description></item>
-            /// <item><description><b>Disabling</b>: being disabled.</description></item>
-            /// <item><description><b>Active</b>: active.</description></item>
+            /// <item><description><b>Enabling</b>: Enabling.</description></item>
+            /// <item><description><b>Disabling</b>: Disabling.</description></item>
+            /// <item><description><b>Active</b>: Active.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The network instance connection ID.</para>
+            /// <para>The ID of the network instance connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tr-attach-vx6iwhjr1x1j78****</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterAttachmentId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Enterprise Edition transit router route table.</para>
+            /// <para>The ID of the route table in the Enterprise Edition transit router.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vtb-bp1dudbh2d5na6b50****</para>

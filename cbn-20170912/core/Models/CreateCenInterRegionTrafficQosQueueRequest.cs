@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateCenInterRegionTrafficQosQueueRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum inter-region bandwidth that the queue can use when bandwidth is allocated by absolute value. Unit: Mbit/s.</para>
+        /// <para>The maximum cross-region bandwidth that the queue can use when bandwidth is allocated in absolute value mode. Unit: Mbit/s.</para>
         /// <list type="bullet">
-        /// <item><description><para>The bandwidth value is calculated as an absolute value. For example, if you enter 20, the queue can use up to 20 Mbit/s of inter-region bandwidth.</para>
+        /// <item><description><para>The bandwidth value is calculated as an absolute value. For example, if you enter 20, the queue can use up to 20 Mbit/s of the cross-region bandwidth.</para>
         /// </description></item>
-        /// <item><description><para>The sum of the bandwidth values of all queues under an inter-region connection cannot exceed the inter-region bandwidth value.</para>
+        /// <item><description><para>The sum of the bandwidth of all queues under a cross-region connection instance cannot exceed the cross-region bandwidth.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -27,9 +27,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can generate a parameter value on your client to ensure that the value is unique across different requests. The client token only supports ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>RequestId</b> value as the <b>ClientToken</b> value. The <b>RequestId</b> value of each API request is different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to only precheck the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, the queue is created.</description></item>
+        /// <item><description><b>true</b>: sends a check request and does not create the queue. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the check, the system returns an error. If the request passes the check, the system returns the <c>DryRunOperation</c> error code.</description></item>
+        /// <item><description><b>false</b> (default): sends a regular request and creates the queue after the request passes the check.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,8 +54,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The DSCP values to be matched by the queue.</para>
-        /// <para>You can specify up to 20 DSCP values at a time. Separate multiple DSCP values with commas (,).</para>
+        /// <para>The Differentiated Services Code Point (DSCP) values to be matched by the queue.</para>
+        /// <para>You can enter up to 20 DSCP values at a time. Separate multiple DSCP values with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Dscps")]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The description of the queue.</para>
-        /// <para>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length. It cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The name of the queue.</para>
-        /// <para>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length. It cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>
@@ -93,11 +93,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string QosQueueName { get; set; }
 
         /// <summary>
-        /// <para>The maximum inter-region bandwidth that the queue can use when bandwidth is allocated by percentage.</para>
+        /// <para>The maximum cross-region bandwidth that the queue can use when bandwidth is allocated in percentage mode.</para>
         /// <list type="bullet">
-        /// <item><description><para>The bandwidth value is calculated as a percentage. For example, if you enter 20, the queue can use up to 20% of the inter-region bandwidth.</para>
+        /// <item><description><para>The bandwidth value is calculated as a percentage. For example, if you enter 20, the queue can use up to 20% of the cross-region bandwidth.</para>
         /// </description></item>
-        /// <item><description><para>The sum of the bandwidth percentages of all queues under an inter-region connection cannot exceed 100%.</para>
+        /// <item><description><para>The sum of the bandwidth percentages of all queues under a cross-region connection instance cannot exceed 100%.</para>
         /// </description></item>
         /// </list>
         /// 

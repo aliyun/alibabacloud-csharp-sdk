@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to only precheck the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, traffic classification rules are added to the traffic marking policy.</description></item>
+        /// <item><description><b>true</b>: prechecks the request without adding the traffic classification rule to the traffic marking policy. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the DryRunOperation error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends the request. After the request passes the precheck, the traffic classification rule is added to the traffic marking policy.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<AddTrafficMatchRuleToTrafficMarkingPolicyRequestTrafficMatchRules> TrafficMatchRules { get; set; }
         public class AddTrafficMatchRuleToTrafficMarkingPolicyRequestTrafficMatchRules : TeaModel {
             /// <summary>
-            /// <para>The address type. Valid values: IPv4, IPv6, or empty.</para>
+            /// <para>The address family. Valid values: IPv4, IPv6, or empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IPv4</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The destination CIDR block of the traffic packet.</para>
-            /// <para>The traffic classification rule matches traffic whose destination IP address falls within the destination CIDR block. If you do not specify this parameter, the traffic classification rule matches traffic with any destination IP address.</para>
+            /// <para>The traffic classification rule matches traffic whose destination IP address falls within the destination CIDR block. If you do not specify this parameter, the rule matches traffic with any destination IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.10.10.0/24</para>
@@ -95,12 +95,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The destination port of the traffic packet. Valid values: <b>-1</b> and <b>1</b> to <b>65535</b>.</para>
-            /// <para>The traffic classification rule matches traffic whose destination port falls within the destination port range. If you do not specify this parameter, the traffic classification rule matches traffic with any destination port.</para>
-            /// <para>You can specify up to 2 port numbers for this parameter. The input format is described as follows:</para>
+            /// <para>The traffic classification rule matches traffic whose destination port number falls within the destination port range. If you do not specify this parameter, the rule matches traffic with any destination port number.</para>
+            /// <para>You can enter up to two port numbers for this parameter. The input format is described as follows:</para>
             /// <list type="bullet">
-            /// <item><description>If you specify only one port number, for example, 1, the system matches traffic whose destination port is 1. If the value is -1, the system matches traffic with any destination port.</description></item>
-            /// <item><description>If you specify two port numbers, for example, 1 and 200, the system matches traffic whose destination port is in the range of 1 to 200.</description></item>
-            /// <item><description>If you specify two port numbers and one of them is -1, the other port number must also be -1, which indicates that traffic with any destination port is matched.</description></item>
+            /// <item><description>If you enter only one port number, such as 1, the system matches traffic whose destination port is 1 by default. If you enter -1, the system matches traffic with any destination port.</description></item>
+            /// <item><description>If you enter two port numbers, such as 1 and 200, the system matches traffic whose destination port is in the range of 1 to 200 by default.</description></item>
+            /// <item><description>If you enter two port numbers and one of them is -1, the other port number must also be -1, which indicates that traffic with any destination port is matched.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("DstPortRange")]
@@ -109,9 +109,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The Differentiated Services Code Point (DSCP) value of the traffic packet. Valid values: <b>0</b> to <b>63</b>.</para>
-            /// <para>The traffic classification rule matches traffic that contains the specified DSCP value. If you do not specify this parameter, the traffic classification rule matches traffic with any DSCP value.</para>
+            /// <para>The traffic classification rule matches traffic that contains the specified DSCP value. If you do not specify this parameter, the rule matches traffic with any DSCP value.</para>
             /// <remarks>
-            /// <para>The DSCP value refers to the DSCP value that the traffic packet already carries before it enters the inter-region connection.</para>
+            /// <para>The DSCP value refers to the DSCP value carried by the traffic packet before it enters the inter-region connection.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -123,23 +123,23 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The protocol type of the traffic packet.</para>
-            /// <para>The traffic classification rule supports matching traffic of multiple protocol types, such as <b>HTTP</b>, <b>HTTPS</b>, <b>TCP</b>, <b>UDP</b>, <b>SSH</b>, and <b>Telnet</b>. For more protocol types, log on to the <a href="https://cen.console.aliyun.com/cen/list">Cloud Enterprise Network (CEN) console</a>.</para>
+            /// <para>The traffic classification rule supports matching traffic of various protocol types, such as <b>HTTP</b>, <b>HTTPS</b>, <b>TCP</b>, <b>UDP</b>, <b>SSH</b>, and <b>Telnet</b>. For more protocol types, log on to the <a href="https://cen.console.aliyun.com/cen/list">Cloud Enterprise Network (CEN) console</a>.</para>
             /// <details>
-            /// <summary>Some protocols have fixed ports. Click to view port details.</summary>
+            /// <summary>Some protocols use fixed ports. Click to view port details.</summary>
             /// 
             /// <list type="bullet">
-            /// <item><description>If the protocol type is <b>ICMP</b>, the destination port must be set to <b>-1</b>.</description></item>
-            /// <item><description>If the protocol type is <b>GRE</b>, the destination port must be set to <b>-1</b>.</description></item>
-            /// <item><description>If the protocol type is <b>SSH</b>, the destination port must be set to <b>22</b>.</description></item>
-            /// <item><description>If the protocol type is <b>Telnet</b>, the destination port must be set to <b>23</b>.</description></item>
-            /// <item><description>If the protocol type is <b>HTTP</b>, the destination port must be set to <b>80</b>.</description></item>
-            /// <item><description>If the protocol type is <b>HTTPS</b>, the destination port must be set to <b>443</b>.</description></item>
-            /// <item><description>If the protocol type is <b>MS SQL</b>, the destination port must be set to <b>1443</b>.</description></item>
-            /// <item><description>If the protocol type is <b>Oracle</b>, the destination port must be set to <b>1521</b>.</description></item>
-            /// <item><description>If the protocol type is <b>Mysql</b>, the destination port must be set to <b>3306</b>.</description></item>
-            /// <item><description>If the protocol type is <b>RDP</b>, the destination port must be set to <b>3389</b>.</description></item>
-            /// <item><description>If the protocol type is <b>Postgre SQL</b>, the destination port must be set to <b>5432</b>.</description></item>
-            /// <item><description>If the protocol type is <b>Redis</b>, the destination port must be set to <b>6379</b>.</description></item>
+            /// <item><description>If the protocol type is <b>ICMP</b>, set the destination port number to <b>-1</b>.</description></item>
+            /// <item><description>If the protocol type is <b>GRE</b>, set the destination port number to <b>-1</b>.</description></item>
+            /// <item><description>If the protocol type is <b>SSH</b>, set the destination port number to <b>22</b>.</description></item>
+            /// <item><description>If the protocol type is <b>Telnet</b>, set the destination port number to <b>23</b>.</description></item>
+            /// <item><description>If the protocol type is <b>HTTP</b>, set the destination port number to <b>80</b>.</description></item>
+            /// <item><description>If the protocol type is <b>HTTPS</b>, set the destination port number to <b>443</b>.</description></item>
+            /// <item><description>If the protocol type is <b>MS SQL</b>, set the destination port number to <b>1443</b>.</description></item>
+            /// <item><description>If the protocol type is <b>Oracle</b>, set the destination port number to <b>1521</b>.</description></item>
+            /// <item><description>If the protocol type is <b>Mysql</b>, set the destination port number to <b>3306</b>.</description></item>
+            /// <item><description>If the protocol type is <b>RDP</b>, set the destination port number to <b>3389</b>.</description></item>
+            /// <item><description>If the protocol type is <b>Postgre SQL</b>, set the destination port number to <b>5432</b>.</description></item>
+            /// <item><description>If the protocol type is <b>Redis</b>, set the destination port number to <b>6379</b>.</description></item>
             /// </list>
             /// </details>
             /// 
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The source CIDR block of the traffic packet.</para>
-            /// <para>The traffic classification rule matches traffic whose source IP address falls within the source CIDR block. If you do not specify this parameter, the traffic classification rule matches traffic with any source IP address.</para>
+            /// <para>The traffic classification rule matches traffic whose source IP address falls within the source CIDR block. If you do not specify this parameter, the rule matches traffic with any source IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.10.0/24</para>
@@ -163,12 +163,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The source port of the traffic packet. Valid values: <b>-1</b> and <b>1</b> to <b>65535</b>.</para>
-            /// <para>The traffic classification rule matches traffic whose source port falls within the source port range. If you do not specify this parameter, the traffic classification rule matches traffic with any source port.</para>
-            /// <para>You can specify up to two port numbers for this parameter. The input format is described as follows:</para>
+            /// <para>The traffic classification rule matches traffic whose source port number falls within the source port range. If you do not specify this parameter, the rule matches traffic with any source port number.</para>
+            /// <para>You can enter up to two port numbers for this parameter. The input format is described as follows:</para>
             /// <list type="bullet">
-            /// <item><description>If you specify only one port number, for example, 1, the system matches traffic whose source port is 1. If the value is -1, the system matches traffic with any source port.</description></item>
-            /// <item><description>If you specify two port numbers, for example, 1 and 200, the system matches traffic whose source port is in the range of 1 to 200.</description></item>
-            /// <item><description>If you specify two port numbers and one of them is -1, the other port number must also be -1, which indicates that traffic with any source port is matched.</description></item>
+            /// <item><description>If you enter only one port number, such as 1, the system matches traffic whose source port is 1 by default. If you enter -1, the system matches traffic with any source port.</description></item>
+            /// <item><description>If you enter two port numbers, such as 1 and 200, the system matches traffic whose source port is in the range of 1 to 200 by default.</description></item>
+            /// <item><description>If you enter two port numbers and one of them is -1, the other port number must also be -1, which indicates that traffic with any source port is matched.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("SrcPortRange")]
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The description of the traffic classification rule.</para>
-            /// <para>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</para>
+            /// <para>The description can be empty or 1 to 256 characters in length. It cannot start with http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>desctest</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The name of the traffic classification rule.</para>
-            /// <para>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</para>
+            /// <para>The name can be empty or 1 to 128 characters in length. It cannot start with http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nametest</para>

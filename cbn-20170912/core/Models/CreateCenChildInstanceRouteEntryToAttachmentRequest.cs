@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can generate the parameter value on your client. Make sure that the token is unique among different requests. The client token only supports ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -46,13 +46,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string DestinationCidrBlock { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. The dry run checks parameter validity, user permissions, and instance status. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run on the request, including permission and instance status checks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): Sends a normal request. If the request passes the check, a route entry is added to the network instance.</description></item>
-        /// <item><description><b>true</b>: Sends a check request. No route entry is added to the network instance. The system checks the required parameters, request format, and other conditions. If the check fails, the corresponding error is returned. If the check passes, the error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a normal request. If the request passes the check, a route entry is added for the network instance.</description></item>
+        /// <item><description><b>true</b>: sends a dry run request. Only the check is performed, and no route entry is added for the network instance. Check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check is passed, the error code <c>DryRunOperation</c> is returned.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is not currently in effect.</para>
+        /// <para>This parameter does not take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

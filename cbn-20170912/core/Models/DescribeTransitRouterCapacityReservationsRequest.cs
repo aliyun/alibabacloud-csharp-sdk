@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeTransitRouterCapacityReservationsRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the Enterprise Edition transit router instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribePublishedRouteEntriesRequest : TeaModel {
         /// <summary>
-        /// <para>The CEN instance ID.</para>
+        /// <para>The instance ID of the Cloud Enterprise Network (CEN).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The network instance ID.</para>
+        /// <para>The instance ID of the network instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The region ID of the network instance.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The route table ID of the network instance.</para>
+        /// <para>The ID of the route table of the network instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vtb-bp174d1gje79u1g4****</para>
@@ -56,11 +56,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The type of the network instance. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><b>VPC</b>: virtual private cloud.</para>
+        /// <item><description><para><b>VPC</b>: VPC</para>
         /// </description></item>
-        /// <item><description><para><b>VBR</b>: virtual border router.</para>
+        /// <item><description><para><b>VBR</b>: VBR</para>
         /// </description></item>
-        /// <item><description><para><b>CCN</b>: Cloud Connect Network.</para>
+        /// <item><description><para><b>CCN</b>: Cloud Connect Network</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Default value: <b>10</b>. Valid values: <b>1</b> to <b>500</b>.</para>
+        /// <para>The number of entries to return per page in a paging query. Default value: <b>10</b>. Valid values: <b>1</b> to <b>500</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

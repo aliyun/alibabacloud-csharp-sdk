@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can generate the parameter value on your client. Make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,10 +35,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to execute a dry run, without performing the actual request. The dry run includes permission verification, instance status verification, and forwarding and routing checks. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run on the creation request. The dry run includes permission and instance status checks. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>false</b> (default): sends a normal request and creates the Enterprise Edition transit router instance after the request passes the check.</description></item>
-        /// <item><description><b>true</b>: sends a check request, without creating the Enterprise Edition transit router instance. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description><b>true</b>: sends a dry run request and performs only the check without creating the Enterprise Edition transit router instance. The system checks whether required parameters are specified and whether the request format is valid. If the request fails the check, the system returns an error. If the request passes the check, the system returns the error code <c>DryRunOperation</c>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The region ID of the Enterprise Edition transit router instance.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -79,10 +79,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>Specifies whether to enable the multicast feature for the Enterprise Edition transit router. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): disables the multicast feature.</description></item>
-        /// <item><description><b>true</b>: enables the multicast feature.</description></item>
+        /// <item><description><b>false</b> (default): disables the feature.</description></item>
+        /// <item><description><b>true</b>: enables the feature.</description></item>
         /// </list>
-        /// <para>Only Enterprise Edition transit routers in some regions support the multicast feature. You can call the <a href="https://help.aliyun.com/document_detail/261356.html">ListTransitRouterAvailableResource</a> operation to query the regions that support the multicast feature.</para>
+        /// <para>The multicast feature is supported only by Enterprise Edition transit routers in specific regions. You can call the <a href="https://help.aliyun.com/document_detail/261356.html">ListTransitRouterAvailableResource</a> operation to query the regions that support the multicast feature.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public class CreateTransitRouterRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the resource.</para>
-            /// <para>Once specified, the tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>, or contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// <para>You can specify up to 20 tag keys at a time.</para>
             /// 
             /// <b>Example:</b>
@@ -112,8 +112,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The tag value of the resource.</para>
-            /// <para>Once specified, the tag value cannot be empty. The tag value can be up to 128 characters in length, and cannot start with aliyun or acs:, or contain http:// or https://.</para>
-            /// <para>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</para>
+            /// <para>The tag value cannot be empty. The tag value can be up to 128 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. The tag value cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>Each tag key corresponds to a tag value. You can specify up to 20 tag values at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagValue</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// <para>The list of transit router CIDR blocks.</para>
+        /// <para>The transit router CIDR blocks.</para>
         /// </summary>
         [NameInMap("TransitRouterCidrList")]
         [Validation(Required=false)]
@@ -164,14 +164,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to allow the system to automatically add a route for the transit router CIDR block to the transit router route table.</para>
+            /// <para>Specifies whether to allow the system to automatically add a route for the transit router CIDR block to the transit router route table. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b> (default): allows the system.</para>
-            /// <para>   If you select true, after you create a VPN connection of the private gateway type and create a route learning relationship for the VPN connection, the system automatically adds the following route entry to the transit router route table that has a route learning relationship with the VPN connection:</para>
-            /// <para>  A blackhole route whose destination CIDR block is the transit router CIDR block from which gateway IP addresses are allocated for the IPsec connection.</para>
-            /// <para>   The blackhole route is propagated only to the route tables of virtual border router (VBR) instances connected to the transit router.</para>
+            /// <item><description><para><b>true</b> (default): allows the system to automatically add the route.</para>
+            /// <para>   If you select this value, after you create a VPN connection of the private network gateway type and create a route learning correlation for the VPN connection, the system automatically adds a route entry to the transit router route table that has a route learning correlation with the VPN connection:</para>
+            /// <para>  The destination CIDR block of the route is a blackhole route for the transit router CIDR block. The transit router CIDR block refers to the CIDR block to which a gateway IP address has been assigned for the IPsec connection.</para>
+            /// <para>   The blackhole route is propagated only to the route table of the Virtual Border Router (VBR) instance under the transit router.</para>
             /// </description></item>
-            /// <item><description><para><b>false</b>: does not allow the system.</para>
+            /// <item><description><para><b>false</b>: does not allow the system to automatically add the route.</para>
             /// </description></item>
             /// </list>
             /// 

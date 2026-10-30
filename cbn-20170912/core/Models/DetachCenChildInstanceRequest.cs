@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that owns the CEN instance.</para>
+        /// <para>The ID of the Alibaba Cloud account to which the CEN instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1688000000000000</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? CenOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the network instance to uninstall.</para>
+        /// <para>The instance ID of the network instance to be uninstalled.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that owns the network instance.</para>
+        /// <para>The ID of the Alibaba Cloud account to which the network instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1699000000000000</para>
@@ -52,8 +52,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ChildInstanceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the network instance.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>The region ID of the network instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,11 +65,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The type of the network instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>VPC</b>: virtual private cloud.</para>
+        /// <item><description><para><b>VPC</b>: virtual private cloud (VPC).</para>
         /// </description></item>
-        /// <item><description><para><b>VBR</b>: virtual border router.</para>
+        /// <item><description><para><b>VBR</b>: virtual border router (VBR).</para>
         /// </description></item>
-        /// <item><description><para><b>CCN</b>: Cloud Connect Network.</para>
+        /// <item><description><para><b>CCN</b>: Cloud Connect Network (CCN).</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

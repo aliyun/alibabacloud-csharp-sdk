@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the routing policy.</para>
+        /// <para>The ID of the route map.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cenrmap-w4yf7toozfol3q****</para>

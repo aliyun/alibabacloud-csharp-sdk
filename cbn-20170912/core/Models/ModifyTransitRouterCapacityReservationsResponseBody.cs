@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ModifyTransitRouterCapacityReservationsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>004E99FB-E996-5777-888E-BA1D8F215407</para>
         /// </summary>

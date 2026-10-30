@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class DescribeTransitRouteTableAggregationRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>You can generate the parameter value on your client to ensure that it is unique across different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request is different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return on each page. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token that is used for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter for the first request or if no next query exists.</description></item>
-        /// <item><description>If a next query exists, set the value to the <b>NextToken</b> value returned in the previous API call.</description></item>
+        /// <item><description>If this is your first query or no next query is to be sent, ignore this parameter.</description></item>
+        /// <item><description>If a next query is to be sent, set the value to the <b>NextToken</b> value returned from the last API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouteTableAggregationCidr { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Enterprise Edition transit router route table.</para>
+        /// <para>The ID of the route table of the Enterprise Edition transit router.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

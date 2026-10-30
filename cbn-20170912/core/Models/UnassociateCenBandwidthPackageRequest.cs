@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class UnassociateCenBandwidthPackageRequest : TeaModel {
         /// <summary>
-        /// <para>The bandwidth package instance ID.</para>
+        /// <para>The bandwidth plan instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

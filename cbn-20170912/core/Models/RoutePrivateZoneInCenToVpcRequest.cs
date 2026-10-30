@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class RoutePrivateZoneInCenToVpcRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the region that accesses the PrivateZone service.</para>
-        /// <para>The access region is the region from which the PrivateZone service is accessed.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</para>
+        /// <para>The ID of the region where the PrivateZone service is accessed.</para>
+        /// <para>The access region refers to the region where the PrivateZone service is accessed.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string AccessRegionId { get; set; }
 
         /// <summary>
-        /// <para>The CEN instance ID.</para>
+        /// <para>The Cloud Enterprise Network (CEN) instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

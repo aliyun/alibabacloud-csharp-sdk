@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the traffic scheduling policy.</para>
+        /// <para>The ID of the traffic QoS policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qos-eczzew0v1kzrb5****</para>

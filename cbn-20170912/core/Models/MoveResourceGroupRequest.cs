@@ -10,10 +10,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class MoveResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>The client generates the value of this parameter. Make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses <b>RequestId</b> as <b>ClientToken</b>. The value of <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,10 +23,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run without modifying the resource group of the CEN instance or bandwidth plan instance. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing required parameters, incorrect request formats, and service limits, but does not change the resource group of the CEN instance or bandwidth plan. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and then sends the actual request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,7 +78,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cen</b>: CEN instance.</description></item>
-        /// <item><description><b>bandwidthpackage</b>: bandwidth plan instance.</description></item>
+        /// <item><description><b>bandwidthpackage</b>: bandwidth plan.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

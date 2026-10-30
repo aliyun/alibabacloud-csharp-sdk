@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeTransitRouteTableAggregationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page for a paged query.</para>
+        /// <para>The number of entries returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The list of aggregate route information.</para>
+        /// <para>The list of aggregate routes.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -47,8 +47,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The routing type of the aggregation route.</para>
-            /// <para>The value is <b>Static</b> only, which indicates a static route. After the aggregation route is propagated to a VPC-connected instance, it becomes a custom route entry by default.</para>
+            /// <para>The route type of the aggregate route.</para>
+            /// <para>Valid value: <b>Static</b>, which indicates a static route. After the aggregate route is propagated to a VPC-connected instance, it becomes a custom route entry by default.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Static</para>
@@ -58,8 +58,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string RouteType { get; set; }
 
             /// <summary>
-            /// <para>The propagation scope of the aggregation route.</para>
-            /// <para>The value is <b>VPC</b> only, which indicates that the aggregation route is propagated to all VPC-connected instances that have established associated forwarding relationships with the current Enterprise Edition transit router route table and have the route synchronization feature enabled.</para>
+            /// <para>The propagation scope of the aggregate route.</para>
+            /// <para>Valid value: <b>VPC</b>, which indicates that the aggregate route is propagated to all VPC-connected instances that are associated with the route table of the current Enterprise Edition transit router and have route synchronization enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VPC</para>
@@ -69,9 +69,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Scope { get; set; }
 
             /// <summary>
-            /// <para>The propagation scope list of the aggregate route.</para>
+            /// <para>The list of propagation scopes for the aggregate route.</para>
             /// <remarks>
-            /// <para>You must specify at least one of the propagation scope or the propagation scope list for the aggregate route. We recommend that you use the propagation scope list. Elements in the propagation scope list cannot duplicate the value of the propagation scope.</para>
+            /// <para>You must specify at least one of the propagation scope and the propagation scope list. We recommend that you specify the propagation scope list. The elements in the propagation scope list cannot be the same as the value of the propagation scope.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("ScopeList")]
@@ -79,13 +79,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public List<string> ScopeList { get; set; }
 
             /// <summary>
-            /// <para>The propagation status of the aggregation route.</para>
+            /// <para>The propagation status of the aggregate route.</para>
             /// <list type="bullet">
-            /// <item><description><b>AllConfigured</b>: The aggregation routing has been propagated to all VPC-connected instances.</description></item>
-            /// <item><description><b>Configuring</b>: The aggregation routing is being propagated.</description></item>
-            /// <item><description><b>ConfigFailed</b>: The aggregation routing failed to be propagated.</description></item>
-            /// <item><description><b>PartialConfigured</b>: The aggregation routing failed to be propagated to some VPC-connected instances.</description></item>
-            /// <item><description><b>Deleting</b>: The aggregation routing is being deleted.</description></item>
+            /// <item><description><b>AllConfigured</b>: The aggregate route is delivered to all VPC-connected instances.</description></item>
+            /// <item><description><b>Configuring</b>: The aggregate route is being delivered.</description></item>
+            /// <item><description><b>ConfigFailed</b>: The aggregate route failed to be delivered.</description></item>
+            /// <item><description><b>PartialConfigured</b>: The aggregate route is not delivered to some VPC-connected instances.</description></item>
+            /// <item><description><b>Deleting</b>: The aggregate route is being deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Enterprise Edition transit router route table.</para>
+            /// <para>The ID of the route table of the Enterprise Edition transit router.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vtb-6ehgc262hr170qgyc****</para>
@@ -118,10 +118,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token that is used for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next query exists.</description></item>
-        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query is to be sent.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token that is used for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

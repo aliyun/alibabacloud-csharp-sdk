@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateFlowlogRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the Cloud Enterprise Network (CEN).</para>
+        /// <para>The Cloud Enterprise Network (CEN) instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>You can generate a parameter value on your client to ensure that the value is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The description of the flow log.</para>
-        /// <para>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length. It cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myFlowlog</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The name of the flow log.</para>
-        /// <para>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length. It cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myFlowlog</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string FlowLogName { get; set; }
 
         /// <summary>
-        /// <para>The capture window duration of the flow log. Unit: seconds. Valid values: <b>60</b> and <b>600</b>. Default value: <b>600</b>.</para>
+        /// <para>The capture window duration for the flow log to capture traffic. Unit: seconds. Valid values: <b>60</b> and <b>600</b>. Default value: <b>600</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>600</para>
@@ -67,12 +67,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? Interval { get; set; }
 
         /// <summary>
-        /// <para>The string that defines custom flow log record fields. </para>
+        /// <para>The custom string of flow log record fields. </para>
         /// <para>The format is defined as:
-        /// <c>${field 1}${field 2}${field 3}...${field n}</c></para>
+        /// <c>${Field 1}${Field 2}${Field 3}...${Field n}</c></para>
         /// <list type="bullet">
-        /// <item><description>If you leave this parameter empty, all default fields are recorded.</description></item>
-        /// <item><description>If you specify this parameter, because <c>${srcaddr}${dstaddr}${bytes}</c> are required fields, the string must start with <c>${srcaddr}${dstaddr}${bytes}</c>. For all supported flow log fields, see <a href="https://help.aliyun.com/document_detail/339822.html">Configure a flow log</a>.</description></item>
+        /// <item><description>If you do not specify this parameter, all default fields are recorded.</description></item>
+        /// <item><description>If you specify this parameter, the string must start with <c>${srcaddr}${dstaddr}${bytes}</c> because <c>${srcaddr}${dstaddr}${bytes}</c> is required. For more information about all supported flow log fields, see <a href="https://help.aliyun.com/document_detail/339822.html">Configure a flow log</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -83,16 +83,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string LogFormatString { get; set; }
 
         /// <summary>
-        /// <para>The Logstore that stores the caught traffic.</para>
+        /// <para>The Logstore that is used to store the captured traffic.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you have already created a Logstore in the current region, enter the name of the existing Logstore.</para>
+        /// <item><description><para>If you have already created a Logstore in the current region, you can enter the name of the existing Logstore.</para>
         /// </description></item>
-        /// <item><description><para>If you have not created a Logstore in the current region, specify a custom name for the Logstore. The system automatically creates the Logstore.
-        ///   The naming rules for the Logstore are as follows:</para>
+        /// <item><description><para>If you have not created a Logstore in the current region, you can specify a custom name for the Logstore, and the system automatically creates the Logstore.
+        ///   The naming rules for the Logstore name are as follows:</para>
         /// <list type="bullet">
         /// <item><description>The Logstore name must be unique within the same project.</description></item>
         /// <item><description>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</description></item>
-        /// <item><description>The name must start and end with a lowercase letter or digit.</description></item>
+        /// <item><description>The name must start and end with a lowercase letter or a digit.</description></item>
         /// <item><description>The name must be 3 to 63 characters in length.</description></item>
         /// </list>
         /// </description></item>
@@ -114,16 +114,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The project that stores the caught traffic.</para>
+        /// <para>The project that is used to store the captured traffic.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you have already created a project in the current region, enter the name of the existing project.</para>
+        /// <item><description><para>If you have already created a project in the current region, you can enter the name of the existing project.</para>
         /// </description></item>
-        /// <item><description><para>If you have not created a project in the current region, specify a custom name for the project. The system automatically creates the project.</para>
-        /// <para>  The project name must be globally unique within the Alibaba Cloud region and cannot be modified after creation. The naming rules are as follows:</para>
+        /// <item><description><para>If you have not created a project in the current region, you can specify a custom name for the project, and the system automatically creates the project.</para>
+        /// <para>  The project name must be globally unique within an Alibaba Cloud region and cannot be modified after creation. The naming rules are as follows:</para>
         /// <list type="bullet">
         /// <item><description>The project name must be globally unique.</description></item>
         /// <item><description>The name can contain only lowercase letters, digits, and hyphens (-).</description></item>
-        /// <item><description>The name must start and end with a lowercase letter or digit.</description></item>
+        /// <item><description>The name must start and end with a lowercase letter or a digit.</description></item>
         /// <item><description>The name must be 3 to 63 characters in length.</description></item>
         /// </list>
         /// </description></item>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The tag information.</para>
-        /// <para>You can specify up to 20 tags at a time.</para>
+        /// <para>You can enter up to 20 tags at a time.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -166,8 +166,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public class CreateFlowlogRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the resource.</para>
-            /// <para>Once specified, the tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>You can specify up to 20 tag keys at a time.</para>
+            /// <para>This parameter cannot be an empty string. The tag key can be up to 64 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can enter up to 20 tag keys at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagKey</para>
@@ -178,8 +178,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The tag value of the resource.</para>
-            /// <para>Once specified, the tag value cannot be empty. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</para>
-            /// <para>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</para>
+            /// <para>This parameter cannot be empty. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
+            /// <para>Each tag key corresponds to a tag value. You can enter up to 20 tag values at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagValue</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterAttachmentId { get; set; }
 
         /// <summary>
-        /// <para>The transit routing instance ID.</para>
+        /// <para>The transit router instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-bp1rmwxnk221e3fas****</para>

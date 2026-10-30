@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class UpdateCenInterRegionTrafficQosQueueAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The absolute value of cross-region bandwidth that the current queue can use when bandwidth is allocated by absolute value. Unit: Mbit/s.</para>
-        /// <para>Enter a number only. Do not include the unit.</para>
+        /// <para>The absolute value of the cross-region bandwidth that can be used by the current queue when bandwidth is allocated by absolute value. Unit: Mbit/s. Enter a number without the unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -21,8 +20,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can generate the token value on the client side. Ensure that the token is unique across different requests and does not exceed 64 ASCII characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655****</para>
@@ -32,10 +30,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run on the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run without modifying the queue configurations. The system checks the required parameters, request format, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and then modifies the queue configurations after the check succeeds.</description></item>
+        /// <item><description><b>true</b>: performs a dry run. The system checks the request for required parameters, request format, and service limits, but does not modify the queue configuration. If the request fails the check, an error is returned. If the request passes the check, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a standard request. If the request passes the check, the queue configuration is modified.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The DSCP values of traffic packets to be matched by the current queue.</para>
+        /// <para>The DSCP values of the traffic packets to be matched by the current queue.</para>
         /// </summary>
         [NameInMap("Dscps")]
         [Validation(Required=false)]
@@ -61,8 +59,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The new description of the queue.</para>
-        /// <para>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</para>
+        /// <para>The new description of the queue. The description can be empty or 1 to 256 characters in length. It cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -72,7 +69,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string QosQueueDescription { get; set; }
 
         /// <summary>
-        /// <para>The QoS queue ID.</para>
+        /// <para>The ID of the queue.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -83,8 +80,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string QosQueueId { get; set; }
 
         /// <summary>
-        /// <para>The new name of the queue.</para>
-        /// <para>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</para>
+        /// <para>The new name of the queue. The name can be empty or 1 to 128 characters in length. It cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>
@@ -94,8 +90,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string QosQueueName { get; set; }
 
         /// <summary>
-        /// <para>The percentage of cross-region bandwidth that the current queue can use when bandwidth is allocated by percentage.</para>
-        /// <para>Enter a number only. Do not include the percent sign (%).</para>
+        /// <para>The percentage of the cross-region bandwidth that can be used by the current queue when bandwidth is allocated by percentage. Enter a number without the percent sign (%).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
