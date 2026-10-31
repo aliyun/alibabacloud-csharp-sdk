@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -37,14 +39,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetStandardRequestStandardGetQuery StandardGetQuery { get; set; }
         public class GetStandardRequestStandardGetQuery : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to return associated standards and associated lookup tables. Default value: false.</para>
+            /// <para>Specifies whether to return related standards and lookup tables. Default value: false.</para>
             /// </summary>
             [NameInMap("NeedRelation")]
             [Validation(Required=false)]
             public bool? NeedRelation { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to return a null value when the standard does not exist. If set to false, an exception is thrown. Default value: true.</para>
+            /// <para>Specifies whether to allow a null value to be returned when the standard does not exist. If this parameter is set to false, an exception is thrown. Default value: true.</para>
             /// </summary>
             [NameInMap("Nullable")]
             [Validation(Required=false)]
@@ -62,12 +64,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? StandardId { get; set; }
 
             /// <summary>
-            /// <para>The stage to which the standard belongs. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>dev: development stage.</description></item>
-            /// <item><description>prod: production stage.</description></item>
-            /// </list>
-            /// <para>Default value: prod.</para>
+            /// <para>The stage to which the standard belongs. Valid values: dev and prod. Default value: prod.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev</para>
@@ -77,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string StandardStage { get; set; }
 
             /// <summary>
-            /// <para>The version number. If left empty, the latest version is used.</para>
+            /// <para>The version number. An empty value indicates the latest version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

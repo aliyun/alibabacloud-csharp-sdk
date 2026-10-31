@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend exception.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -94,11 +94,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Creator { get; set; }
 
                 /// <summary>
-                /// <para>The role of the current logon user relative to this record. Valid values:</para>
+                /// <para>The role of the current logged-on user for this record. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>SuperAdmin: the current user is a super administrator.</description></item>
-                /// <item><description>ProjMan: the current user is a project administrator for this record.</description></item>
-                /// <item><description>NormalUser: the current user is a regular user for this record, meaning the user is neither a super administrator nor a project administrator.</description></item>
+                /// <item><description>SuperAdmin: The current user is a super administrator.</description></item>
+                /// <item><description>ProjMan: The current user is a project manager for this record.</description></item>
+                /// <item><description>NormalUser: The current user is a regular user for this record, meaning the user is neither a super administrator nor a project manager.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string OwnerUserName { get; set; }
 
                 /// <summary>
-                /// <para>The user to whom the permission belongs.</para>
+                /// <para>The permission owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1121</para>
@@ -139,9 +139,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string PrivilegeBelongTo { get; set; }
 
                 /// <summary>
-                /// <para>The source of the authorization. Valid values:</para>
+                /// <para>The authorization source. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: owner.</description></item>
+                /// <item><description>0: Owner.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ProjectName { get; set; }
 
                 /// <summary>
-                /// <para>The description, used for troubleshooting.</para>
+                /// <para>The description used for troubleshooting.</para>
                 /// </summary>
                 [NameInMap("RemarkForDebugList")]
                 [Validation(Required=false)]
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The configuration item value.</para>
+                    /// <para>The value of the configuration item.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>v1</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <summary>
                 /// <para>The role. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: owner.</description></item>
+                /// <item><description>0: Owner.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

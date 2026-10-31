@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The edit command.</para>
+        /// <para>The update command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UpdateCommand")]
@@ -37,22 +39,18 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateResourceRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateResourceRequestUpdateCommand : TeaModel {
             /// <summary>
-            /// <para>The commit remarks.</para>
+            /// <para>The submission comment.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx 测试</para>
+            /// <para>xx test</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The compute engine type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>MAX_COMPUTE</description></item>
-            /// <item><description>HADOOP.</description></item>
-            /// </list>
+            /// <para>The compute engine type. Valid values: MAX_COMPUTE and HADOOP.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -67,7 +65,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx 测试</para>
+            /// <para>xx test</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -107,7 +105,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The storage address of the resource.</para>
+            /// <para>The resource storage address.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

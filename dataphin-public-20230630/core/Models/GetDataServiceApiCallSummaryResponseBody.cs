@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The aggregate statistics of API calls.</para>
+        /// <para>The call summary.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? CallCount { get; set; }
 
             /// <summary>
-            /// <para>The number of APIs with call errors.</para>
+            /// <para>The number of APIs that have call exceptions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ErrorApiCount { get; set; }
 
             /// <summary>
-            /// <para>The number of applications affected by errors.</para>
+            /// <para>The number of apps affected by exceptions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ErrorAppCount { get; set; }
 
             /// <summary>
-            /// <para>The number of failed calls.</para>
+            /// <para>The number of call exceptions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>102</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

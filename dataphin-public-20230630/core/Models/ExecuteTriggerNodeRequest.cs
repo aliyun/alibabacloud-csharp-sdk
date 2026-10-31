@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ExecuteTriggerNodeRequest : TeaModel {
         /// <summary>
-        /// <para>The business date.</para>
+        /// <para>The business date. The format is YYYY-MM-DD.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,12 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string BizDate { get; set; }
 
         /// <summary>
-        /// <para>The environment. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>DEV: development environment.</description></item>
-        /// <item><description>PROD: production environment.</description></item>
-        /// </list>
-        /// <para>Default value: PROD.</para>
+        /// <para>The environment. Valid values: DEV for the development environment, and PROD for the production environment. Default value: PROD.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DEV</para>
@@ -36,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Env { get; set; }
 
         /// <summary>
-        /// <para>If the node is an hourly or minutely node, multiple instances are generated per day. This parameter specifies the ordinal number of the instance.</para>
+        /// <para>The instance index. If the node is scheduled by hour or minute, multiple instances are generated per day. This parameter specifies the sequence number of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -68,6 +63,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

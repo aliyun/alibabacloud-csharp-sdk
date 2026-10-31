@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user who performs the operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -39,13 +41,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The purpose of the authorization. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>RESOURCE: creates resource files.</description></item>
-        /// <item><description>COMPUTE_SOURCE_SETTING: stores compute source configurations.</description></item>
-        /// <item><description>NONE: no specific purpose.</description></item>
-        /// </list>
-        /// <para>Default value: NONE.</para>
+        /// <para>The purpose of the authorization. Valid values: RESOURCE (creating resource files), COMPUTE_SOURCE_SETTING (configuring storage and compute sources), and NONE (no specific purpose). Default value: NONE.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RESOURCE</para>
@@ -55,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Purpose { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use an internal endpoint. Default value: false.</para>
+        /// <para>Specifies whether to use the internal endpoint. Default value: false.</para>
         /// </summary>
         [NameInMap("UseVpcEndpoint")]
         [Validation(Required=false)]

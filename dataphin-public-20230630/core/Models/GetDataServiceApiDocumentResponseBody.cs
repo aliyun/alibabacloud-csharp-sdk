@@ -44,12 +44,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public GetDataServiceApiDocumentResponseBodyDataApiRegisterInfo ApiRegisterInfo { get; set; }
             public class GetDataServiceApiDocumentResponseBodyDataApiRegisterInfo : TeaModel {
                 /// <summary>
-                /// <para>The authentication method for the API data source. Valid values:</para>
+                /// <para>The authentication method of the API data source. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1: BearToken</description></item>
-                /// <item><description>2: ApiKey</description></item>
-                /// <item><description>3: None</description></item>
-                /// <item><description>4: AppKeyAuth</description></item>
+                /// <item><description>1: BearToken.</description></item>
+                /// <item><description>2: ApiKey.</description></item>
+                /// <item><description>3: None.</description></item>
+                /// <item><description>4: AppKeyAuth.</description></item>
                 /// <item><description>5: BasicAuth.</description></item>
                 /// </list>
                 /// 
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string AuthType { get; set; }
 
                 /// <summary>
-                /// <para>The API data source ID.</para>
+                /// <para>The ID of the API data source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>102311</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string DatasourceId { get; set; }
 
                 /// <summary>
-                /// <para>The API data source name.</para>
+                /// <para>The name of the API data source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -81,9 +81,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string DatasourceName { get; set; }
 
                 /// <summary>
-                /// <para>The HTTP method for the registered API. Valid values:</para>
+                /// <para>The HTTP method of the registered API. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1: GET</description></item>
+                /// <item><description>1: GET.</description></item>
                 /// <item><description>2: POST.</description></item>
                 /// </list>
                 /// 
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The mode. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>0: basic</description></item>
-                /// <item><description>1: dev_prod.</description></item>
+                /// <item><description>1: dev_prod</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? Mode { get; set; }
 
                 /// <summary>
-                /// <para>The service path.</para>
+                /// <para>The path of the service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/api/test</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>The request protocol for the API data source.</para>
+                /// <para>The request protocol of the API data source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>https</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? Timeout { get; set; }
 
                 /// <summary>
-                /// <para>The API data source URL.</para>
+                /// <para>The URL of the API data source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://192.168.1.1:8080">http://192.168.1.1:8080</a></para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The timeout period of the direct API, in seconds.</para>
+            /// <para>The timeout period for the direct API, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? ApiTimeout { get; set; }
 
             /// <summary>
-            /// <para>The business unit name. This parameter has a value only for logical tables.</para>
+            /// <para>The business unit name. This value is available only for logical tables.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bizUnit_test</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <list type="bullet">
             /// <item><description>0: custom mode</description></item>
             /// <item><description>1: wizard mode</description></item>
-            /// <item><description>2: direct API.</description></item>
+            /// <item><description>2: direct API connection</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The environment. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>0: dev</description></item>
-            /// <item><description>1: prod.</description></item>
+            /// <item><description>1: prod</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -267,10 +267,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? IsLogicalTable { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the query is a paged query. Valid values:</para>
+            /// <para>Specifies whether the query is a paged query. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: Yes.</description></item>
-            /// <item><description>0: No.</description></item>
+            /// <item><description>1: yes.</description></item>
+            /// <item><description>0: no.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("IsPagedQuery")]
@@ -278,10 +278,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? IsPagedQuery { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the SQL is special. Valid values:</para>
+            /// <para>Indicates whether the SQL is special. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: No.</description></item>
-            /// <item><description>1: Yes.</description></item>
+            /// <item><description>0: no</description></item>
+            /// <item><description>1: yes</description></item>
             /// </list>
             /// </summary>
             [NameInMap("IsSpecialSql")]
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The mode. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>0: basic</description></item>
-            /// <item><description>1: dev_prod.</description></item>
+            /// <item><description>1: dev_prod</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -306,17 +306,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The API name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试</para>
+            /// <para>Test</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether caching is enabled. Valid values:</para>
+            /// <para>Specifies whether the cache is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: Disabled.</description></item>
-            /// <item><description>1: Enabled.</description></item>
+            /// <item><description>0: disabled.</description></item>
+            /// <item><description>1: enabled.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("OpenCache")]
@@ -324,7 +324,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? OpenCache { get; set; }
 
             /// <summary>
-            /// <para>The data service project ID.</para>
+            /// <para>The ID of the data service project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10201</para>
@@ -334,7 +334,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The data service project name.</para>
+            /// <para>The name of the data service project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -346,9 +346,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The protocol. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: HTTPS</description></item>
-            /// <item><description>2: HTTP</description></item>
-            /// <item><description>3: both HTTP and HTTPS.</description></item>
+            /// <item><description>1: https</description></item>
+            /// <item><description>2: http</description></item>
+            /// <item><description>3: http and https</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -359,7 +359,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? Protocol { get; set; }
 
             /// <summary>
-            /// <para>The list of common parameters.</para>
+            /// <para>The common parameter list.</para>
             /// </summary>
             [NameInMap("PublicParamList")]
             [Validation(Required=false)]
@@ -369,17 +369,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The parameter description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试</para>
+                /// <para>Test</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the request parameter is required. Valid values:</para>
+                /// <para>Indicates whether the request parameter is required. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1: Required.</description></item>
-                /// <item><description>0: Optional.</description></item>
+                /// <item><description>1: required</description></item>
+                /// <item><description>0: optional</description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("IsRequired")]
@@ -422,7 +422,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The request method. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>1: get</description></item>
-            /// <item><description>2: list.</description></item>
+            /// <item><description>2: list</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -433,7 +433,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? RequestMethod { get; set; }
 
             /// <summary>
-            /// <para>The list of request parameters.</para>
+            /// <para>The request parameter list.</para>
             /// </summary>
             [NameInMap("RequestParamList")]
             [Validation(Required=false)]
@@ -453,17 +453,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The parameter description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试</para>
+                /// <para>Test</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the request parameter is required. Valid values:</para>
+                /// <para>Indicates whether the request parameter is required. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1: Required.</description></item>
-                /// <item><description>0: Optional.</description></item>
+                /// <item><description>1: required</description></item>
+                /// <item><description>0: optional</description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("IsRequired")]
@@ -503,7 +503,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The resource group ID.</para>
+            /// <para>The ID of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10021</para>
@@ -513,7 +513,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The resource group name.</para>
+            /// <para>The name of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -523,7 +523,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ResourceGroupName { get; set; }
 
             /// <summary>
-            /// <para>The list of response parameters.</para>
+            /// <para>The response parameter list.</para>
             /// </summary>
             [NameInMap("ResponseParamList")]
             [Validation(Required=false)]
@@ -533,7 +533,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The parameter description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试</para>
+                /// <para>Test</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -572,7 +572,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The sample invocation result.</para>
+            /// <para>The call result sample.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;count&quot;: 88}</para>
@@ -594,7 +594,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The return data type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: JSON.</description></item>
+            /// <item><description>1: JSON</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -607,8 +607,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The script type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NORMAL_SQL: basic SQL</description></item>
-            /// <item><description>MYBATIS_SQL: advanced SQL</description></item>
+            /// <item><description>NORMAL_SQL: basic SQL.</description></item>
+            /// <item><description>MYBATIS_SQL: advanced SQL.</description></item>
             /// <item><description>AVIATOR: Aviator expression.</description></item>
             /// </list>
             /// 
@@ -630,7 +630,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Sql { get; set; }
 
             /// <summary>
-            /// <para>The logical table name. This parameter has a value only for logical tables.</para>
+            /// <para>The logical table name. This value is available only for logical tables.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t_logical_test1</para>
@@ -655,7 +655,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <item><description>0: custom</description></item>
             /// <item><description>1: daily</description></item>
             /// <item><description>2: hourly</description></item>
-            /// <item><description>3: every minute.</description></item>
+            /// <item><description>3: every minute</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -688,7 +688,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend exception.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -708,7 +708,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

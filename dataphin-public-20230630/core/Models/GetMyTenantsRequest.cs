@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetMyTenantsRequest : TeaModel {
         /// <summary>
-        /// <para>The feature codes owned by the tenant.</para>
+        /// <para>The feature codes of the tenant.</para>
         /// </summary>
         [NameInMap("FeatureCodeList")]
         [Validation(Required=false)]
@@ -28,6 +28,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

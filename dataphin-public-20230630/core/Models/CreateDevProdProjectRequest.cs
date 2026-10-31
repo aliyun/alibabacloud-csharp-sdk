@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateDevProdProjectRequest : TeaModel {
         /// <summary>
-        /// <para>The create command.</para>
+        /// <para>The creation command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreateCommand")]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DevDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the real-time compute source in the development environment.</para>
+            /// <para>The ID of the streaming compute source in the development environment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2002</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The display name of the project.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>My project.</para>
+            /// <para>My project</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The namespace identifier.</para>
+            /// <para>The namespace tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ProdDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the real-time compute source in the production environment.</para>
+            /// <para>The ID of the streaming compute source in the production environment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2004</para>
@@ -171,6 +171,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

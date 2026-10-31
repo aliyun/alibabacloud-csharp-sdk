@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend exception.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -50,25 +50,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the standard set.</para>
+        /// <para>The standard set details.</para>
         /// </summary>
         [NameInMap("StandardSetInfo")]
         [Validation(Required=false)]
         public GetStandardSetResponseBodyStandardSetInfo StandardSetInfo { get; set; }
         public class GetStandardSetResponseBodyStandardSetInfo : TeaModel {
             /// <summary>
-            /// <para>The approval configuration for going online.</para>
+            /// <para>The online approval configuration.</para>
             /// </summary>
             [NameInMap("ApprovalConfig")]
             [Validation(Required=false)]
             public GetStandardSetResponseBodyStandardSetInfoApprovalConfig ApprovalConfig { get; set; }
             public class GetStandardSetResponseBodyStandardSetInfoApprovalConfig : TeaModel {
                 /// <summary>
-                /// <para>The approval process type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>BY_DEFAULT: default approval type.</description></item>
-                /// <item><description>BY_TEMPLATE: approval based on an approval template.</description></item>
-                /// </list>
+                /// <para>The approval flow type. Valid values: BY_DEFAULT (default approval type) and BY_TEMPLATE (based on an approval template).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>BY_DEFAULT</para>
@@ -78,21 +74,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ApprovalType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether approval is enabled.</para>
+                /// <para>Specifies whether to enable approval.</para>
                 /// </summary>
                 [NameInMap("EnableApproval")]
                 [Validation(Required=false)]
                 public bool? EnableApproval { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether batch approval submission is enabled.</para>
+                /// <para>Specifies whether to submit approvals in batches.</para>
                 /// </summary>
                 [NameInMap("IsSubmitInBatch")]
                 [Validation(Required=false)]
                 public bool? IsSubmitInBatch { get; set; }
 
                 /// <summary>
-                /// <para>The approval template ID. This parameter takes effect only when the approval process type is set to BY_TEMPLATE.</para>
+                /// <para>The ID of the approval template. This parameter takes effect only when the approval flow type is set to BY_TEMPLATE.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1121</para>
@@ -114,7 +110,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The time when the standard set was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30 00:00:00</para>
@@ -131,7 +127,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public GetStandardSetResponseBodyStandardSetInfoCreator Creator { get; set; }
             public class GetStandardSetResponseBodyStandardSetInfoCreator : TeaModel {
                 /// <summary>
-                /// <para>The user ID.</para>
+                /// <para>The ID of the user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>300000913</para>
@@ -173,14 +169,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The directory to which the standard set belongs.</para>
+            /// <para>The parent folder.</para>
             /// </summary>
             [NameInMap("DirectoryReference")]
             [Validation(Required=false)]
             public GetStandardSetResponseBodyStandardSetInfoDirectoryReference DirectoryReference { get; set; }
             public class GetStandardSetResponseBodyStandardSetInfoDirectoryReference : TeaModel {
                 /// <summary>
-                /// <para>The parent directory.</para>
+                /// <para>The folder.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/dir1</para>
@@ -192,7 +188,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The standard set ID.</para>
+            /// <para>The ID of the standard set.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -202,14 +198,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The user who last modified the standard set.</para>
+            /// <para>The last modifier.</para>
             /// </summary>
             [NameInMap("LastModifier")]
             [Validation(Required=false)]
             public GetStandardSetResponseBodyStandardSetInfoLastModifier LastModifier { get; set; }
             public class GetStandardSetResponseBodyStandardSetInfoLastModifier : TeaModel {
                 /// <summary>
-                /// <para>The user ID.</para>
+                /// <para>The ID of the user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>300000913</para>
@@ -231,14 +227,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The list of maintainers.</para>
+            /// <para>The maintainers and owners.</para>
             /// </summary>
             [NameInMap("MaintainerList")]
             [Validation(Required=false)]
             public List<GetStandardSetResponseBodyStandardSetInfoMaintainerList> MaintainerList { get; set; }
             public class GetStandardSetResponseBodyStandardSetInfoMaintainerList : TeaModel {
                 /// <summary>
-                /// <para>The user ID.</para>
+                /// <para>The ID of the user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>300000913</para>
@@ -260,14 +256,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The list of member groups.</para>
+            /// <para>The member groups.</para>
             /// </summary>
             [NameInMap("MemberGroupList")]
             [Validation(Required=false)]
             public List<GetStandardSetResponseBodyStandardSetInfoMemberGroupList> MemberGroupList { get; set; }
             public class GetStandardSetResponseBodyStandardSetInfoMemberGroupList : TeaModel {
                 /// <summary>
-                /// <para>The user group ID.</para>
+                /// <para>The ID of the user group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1121</para>
@@ -277,7 +273,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The user group name.</para>
+                /// <para>The name of the user group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testGroup</para>
@@ -289,14 +285,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The list of members.</para>
+            /// <para>The members.</para>
             /// </summary>
             [NameInMap("MemberList")]
             [Validation(Required=false)]
             public List<GetStandardSetResponseBodyStandardSetInfoMemberList> MemberList { get; set; }
             public class GetStandardSetResponseBodyStandardSetInfoMemberList : TeaModel {
                 /// <summary>
-                /// <para>The user ID.</para>
+                /// <para>The ID of the user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>300000913</para>
@@ -318,7 +314,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The time when the standard set was last modified.</para>
+            /// <para>The last modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30 00:00:00</para>
@@ -338,18 +334,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The approval configuration for going offline.</para>
+            /// <para>The offline approval configuration.</para>
             /// </summary>
             [NameInMap("OfflineApprovalConfig")]
             [Validation(Required=false)]
             public GetStandardSetResponseBodyStandardSetInfoOfflineApprovalConfig OfflineApprovalConfig { get; set; }
             public class GetStandardSetResponseBodyStandardSetInfoOfflineApprovalConfig : TeaModel {
                 /// <summary>
-                /// <para>The approval process type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>BY_DEFAULT: default approval type.</description></item>
-                /// <item><description>BY_TEMPLATE: approval based on an approval template.</description></item>
-                /// </list>
+                /// <para>The approval flow type. Valid values: BY_DEFAULT (default approval type) and BY_TEMPLATE (based on an approval template).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>BY_DEFAULT</para>
@@ -359,21 +351,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ApprovalType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether approval is enabled.</para>
+                /// <para>Specifies whether to enable approval.</para>
                 /// </summary>
                 [NameInMap("EnableApproval")]
                 [Validation(Required=false)]
                 public bool? EnableApproval { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether batch approval submission is enabled.</para>
+                /// <para>Specifies whether to submit approvals in batches.</para>
                 /// </summary>
                 [NameInMap("IsSubmitInBatch")]
                 [Validation(Required=false)]
                 public bool? IsSubmitInBatch { get; set; }
 
                 /// <summary>
-                /// <para>The approval template ID. This parameter takes effect only when the approval process type is set to BY_TEMPLATE.</para>
+                /// <para>The ID of the approval template. This parameter takes effect only when the approval flow type is set to BY_TEMPLATE.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1121</para>
@@ -392,14 +384,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public GetStandardSetResponseBodyStandardSetInfoVisibilityConfig VisibilityConfig { get; set; }
             public class GetStandardSetResponseBodyStandardSetInfoVisibilityConfig : TeaModel {
                 /// <summary>
-                /// <para>The list of specified users who can view the standard set. This parameter takes effect only when the visibility type is set to SPECIFIED.</para>
+                /// <para>The list of specified users who have visibility. This parameter takes effect only when the visibility type is set to SPECIFIED.</para>
                 /// </summary>
                 [NameInMap("SpecifiedUserList")]
                 [Validation(Required=false)]
                 public List<GetStandardSetResponseBodyStandardSetInfoVisibilityConfigSpecifiedUserList> SpecifiedUserList { get; set; }
                 public class GetStandardSetResponseBodyStandardSetInfoVisibilityConfigSpecifiedUserList : TeaModel {
                     /// <summary>
-                    /// <para>The user ID.</para>
+                    /// <para>The ID of the user.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>300000913</para>
@@ -421,12 +413,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The visibility type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>PUBLIC: public.</description></item>
-                /// <item><description>PRIVATE: private. Only standard set members and administrators can view the standard set.</description></item>
-                /// <item><description>SPECIFIED: visible to specified users only.</description></item>
-                /// </list>
+                /// <para>The visibility type. Valid values: PUBLIC (public), PRIVATE (private, visible only to standard set members and administrators), and SPECIFIED (specified users).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PUBLIC</para>
@@ -440,7 +427,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

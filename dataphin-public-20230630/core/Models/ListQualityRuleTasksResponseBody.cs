@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListQualityRuleTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The backend response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error details.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListQualityRuleTasksResponseBodyPageResult PageResult { get; set; }
         public class ListQualityRuleTasksResponseBodyPageResult : TeaModel {
             /// <summary>
-            /// <para>The list of quality rule tasks.</para>
+            /// <para>The paged quality rule task list.</para>
             /// </summary>
             [NameInMap("QualityRuleTaskList")]
             [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the rule task.</para>
+                /// <para>The rule task ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ValidateObjectName { get; set; }
 
                 /// <summary>
-                /// <para>The object type of the validated object.</para>
+                /// <para>The validated object type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>column</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ValidateObjectType { get; set; }
 
                 /// <summary>
-                /// <para>The validation partition.</para>
+                /// <para>The validated partition.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20251011</para>
@@ -204,14 +204,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ValidatePartition { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the validation passed.</para>
+                /// <para>Indicates whether the validation is successful.</para>
                 /// </summary>
                 [NameInMap("ValidateSuccess")]
                 [Validation(Required=false)]
                 public bool? ValidateSuccess { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the associated quality watchtask.</para>
+                /// <para>The watch ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? WatchId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the quality watchtask. This ID is empty for trial-run rule tasks.</para>
+                /// <para>The watch task ID. This ID is empty for trial run tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

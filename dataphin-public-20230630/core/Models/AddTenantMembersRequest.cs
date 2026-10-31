@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public AddTenantMembersRequestAddCommand AddCommand { get; set; }
         public class AddTenantMembersRequestAddCommand : TeaModel {
             /// <summary>
-            /// <para>The list of members.</para>
+            /// <para>The member list.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("UserList")]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The list of roles. Valid values:</para>
+                /// <para>The role list. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>SYSTEM_ADMIN</description></item>
                 /// <item><description>DATASOURCE_MANAGER</description></item>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <item><description>EXPORT_ADMIN</description></item>
                 /// <item><description>DATA_STANDARD_MANAGER</description></item>
                 /// <item><description>LABELS_BUSINESS_PLANNER</description></item>
-                /// <item><description>BUSINESS_MEMBER.</description></item>
+                /// <item><description>BUSINESS_MEMBER</description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("RoleList")]
@@ -68,6 +68,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

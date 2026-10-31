@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public CreateBizMetricResponseBodyData Data { get; set; }
         public class CreateBizMetricResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The error message.</para>
+            /// <para>The exception message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the creation was successful. Valid values:</para>
+            /// <para>Indicates whether the creation is successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Succeeded.</description></item>
+            /// <item><description>true: Successful.</description></item>
             /// <item><description>false: Failed.</description></item>
             /// </list>
             /// 
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error details from the backend.</para>
+        /// <para>The details of the backend exception.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

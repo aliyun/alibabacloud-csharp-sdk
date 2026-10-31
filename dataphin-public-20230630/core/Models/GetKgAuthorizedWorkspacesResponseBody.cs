@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetKgAuthorizedWorkspacesResponseBodyData Data { get; set; }
         public class GetKgAuthorizedWorkspacesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The total number of knowledge graph workspaces that the user has permissions on.</para>
+            /// <para>The total number of authorized graph workspaces.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? TotalCount { get; set; }
 
             /// <summary>
-            /// <para>The list of knowledge graph workspaces that the user has permissions on.</para>
+            /// <para>The list of authorized graph workspaces.</para>
             /// </summary>
             [NameInMap("WorkspaceList")]
             [Validation(Required=false)]
             public List<GetKgAuthorizedWorkspacesResponseBodyDataWorkspaceList> WorkspaceList { get; set; }
             public class GetKgAuthorizedWorkspacesResponseBodyDataWorkspaceList : TeaModel {
                 /// <summary>
-                /// <para>The description of the knowledge graph workspace.</para>
+                /// <para>The description of the graph workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The creation time of the knowledge graph workspace.</para>
+                /// <para>The time when the graph workspace was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-08-25 12:34:56</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The latest publish time of the knowledge graph workspace. This value is empty if the workspace has never been published successfully.</para>
+                /// <para>The latest publish time of the graph workspace. This parameter is empty if the workspace has never been successfully published.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-08-25 12:34:56</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string LastPublishTime { get; set; }
 
                 /// <summary>
-                /// <para>The latest publish version number of the knowledge graph workspace. This value is empty if the workspace has never been published successfully.</para>
+                /// <para>The latest publish version of the graph workspace. This parameter is empty if the workspace has never been successfully published.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? LastPublishVersion { get; set; }
 
                 /// <summary>
-                /// <para>The name of the knowledge graph workspace.</para>
+                /// <para>The name of the graph workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The list of roles assigned to the specified user in the workspace. This is an empty list if the user is not a member of the workspace.</para>
+                /// <para>The list of roles of the specified user in the workspace. This list is empty if the user is not a member of the workspace.</para>
                 /// </summary>
                 [NameInMap("RoleList")]
                 [Validation(Required=false)]
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <para>The name of the workspace role.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Storage management</para>
+                    /// <para>Storage management administrator</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the knowledge graph workspace.</para>
+                /// <para>The ID of the graph workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abc1011</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

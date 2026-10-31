@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class DeleteStandardInValidMappingRequest : TeaModel {
         /// <summary>
-        /// <para>The delete instruction.</para>
+        /// <para>The delete command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeleteCommand")]
@@ -18,14 +18,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public DeleteStandardInValidMappingRequestDeleteCommand DeleteCommand { get; set; }
         public class DeleteStandardInValidMappingRequestDeleteCommand : TeaModel {
             /// <summary>
-            /// <para>The list of parent GUIDs. A maximum of 1000 GUIDs are supported.</para>
+            /// <para>The list of parent GUIDs. The maximum number of items is 1,000.</para>
             /// </summary>
             [NameInMap("BelongGuidList")]
             [Validation(Required=false)]
             public List<string> BelongGuidList { get; set; }
 
             /// <summary>
-            /// <para>The list of GUIDs. A maximum of 1000 GUIDs are supported.</para>
+            /// <para>The list of GUIDs. The maximum number of items is 1,000.</para>
             /// </summary>
             [NameInMap("GuidList")]
             [Validation(Required=false)]
@@ -56,6 +56,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

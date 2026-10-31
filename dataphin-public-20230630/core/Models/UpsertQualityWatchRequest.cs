@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The update instruction.</para>
+        /// <para>The upsert command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UpsertCommand")]
@@ -56,7 +58,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The monitored object ID. If this parameter is specified, the object is updated. If this parameter is not specified, a new object is created.</para>
+            /// <para>The monitored object ID. If you specify this parameter, the operation updates the object. If you do not specify this parameter, the operation creates a new object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -66,7 +68,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The monitoring metrics object.</para>
+            /// <para>The monitored metric object.</para>
             /// </summary>
             [NameInMap("IndexInfo")]
             [Validation(Required=false)]
@@ -83,7 +85,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? BizUnitId { get; set; }
 
                 /// <summary>
-                /// <para>The cell aggregate table name.</para>
+                /// <para>The name of the unit aggregate table.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dws_all</para>
@@ -93,13 +95,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string CellSumLogicTableName { get; set; }
 
                 /// <summary>
-                /// <para>The metric computation type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>AUTO</description></item>
-                /// <item><description>CUSTOM</description></item>
-                /// <item><description>MOUNT</description></item>
-                /// <item><description>COMBINE.</description></item>
-                /// </list>
+                /// <para>The computation type of the metric. Valid values: AUTO, CUSTOM, MOUNT, and COMBINE.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AUTO</para>
@@ -109,7 +105,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ComputeType { get; set; }
 
                 /// <summary>
-                /// <para>The metric data type.</para>
+                /// <para>The data type of the metric.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bigint</para>
@@ -129,7 +125,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The metric display name.</para>
+                /// <para>The display name of the metric.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>logic</para>
@@ -139,10 +135,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string DisplayName { get; set; }
 
                 /// <summary>
-                /// <para>The statistical granularity name.</para>
+                /// <para>The name of the statistical granularity.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>全站汇总表</para>
+                /// <para>Site-wide aggregate table</para>
                 /// </summary>
                 [NameInMap("GranularityDisplayName")]
                 [Validation(Required=false)]
@@ -189,10 +185,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The metric type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>INDEX.</description></item>
-                /// </list>
+                /// <para>The type of the metric. Valid value: INDEX.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>INDEX</para>
@@ -234,14 +227,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The monitored object type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>TABLE: Dataphin table.</description></item>
-            /// <item><description>DATASOURCE_TABLE: global table.</description></item>
-            /// <item><description>DATASOURCE: data source.</description></item>
-            /// <item><description>INDEX: metric.</description></item>
-            /// <item><description>REALTIME_LOGICAL_TABLE: real-time meta table.</description></item>
-            /// </list>
+            /// <para>The monitored object type. Valid values: TABLE (Dataphin table), DATASOURCE_TABLE (global table), DATASOURCE (data source), INDEX (metric), and REALTIME_LOGICAL_TABLE (real-time metatable).</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

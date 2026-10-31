@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The publish command and its details.</para>
+        /// <para>The publish command details.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PublishCommand")]
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<PublishKgSchemaRequestPublishCommandDataAdjustmentPolicies> DataAdjustmentPolicies { get; set; }
             public class PublishKgSchemaRequestPublishCommandDataAdjustmentPolicies : TeaModel {
                 /// <summary>
-                /// <para>The backfill property default value policy. This parameter takes effect only when PolicyType is set to BackFillDefault.</para>
+                /// <para>The default value backfill policy for properties. This policy takes effect only when the policy type is BackFillDefault.</para>
                 /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("BackFillDefaultValuePolicy")]
@@ -52,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public PublishKgSchemaRequestPublishCommandDataAdjustmentPoliciesBackFillDefaultValuePolicy BackFillDefaultValuePolicy { get; set; }
                 public class PublishKgSchemaRequestPublishCommandDataAdjustmentPoliciesBackFillDefaultValuePolicy : TeaModel {
                     /// <summary>
-                    /// <para>The default value to backfill for the property.</para>
+                    /// <para>The default value to be backfilled for the property.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -76,10 +78,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The policy type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>BackFillDefault: backfills default values when a property changes from optional to required.</description></item>
-                /// </list>
+                /// <para>The policy type. Valid value: BackFillDefault (backfills default values when a property changes from optional to required).</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -90,11 +89,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string PolicyType { get; set; }
 
                 /// <summary>
-                /// <para>The type to which the policy applies. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>ENTITY: applies to entity types.</description></item>
-                /// <item><description>RELATION: applies to relation types.</description></item>
-                /// </list>
+                /// <para>The policy scope. Valid values: ENTITY (applies to entity types) and RELATION (applies to relationship types).</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -105,7 +100,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The code of the entity type or relation type.</para>
+                /// <para>The code of the entity type or relationship type.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>

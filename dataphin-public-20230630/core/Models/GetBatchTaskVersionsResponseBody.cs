@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetBatchTaskVersionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The error code. OK indicates that the request is normal.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The request result.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetBatchTaskVersionsResponseBodyData Data { get; set; }
         public class GetBatchTaskVersionsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of batch task versions.</para>
+            /// <para>The list of batch taskfile versions.</para>
             /// </summary>
             [NameInMap("BatchTaskVersionList")]
             [Validation(Required=false)]
             public List<GetBatchTaskVersionsResponseBodyDataBatchTaskVersionList> BatchTaskVersionList { get; set; }
             public class GetBatchTaskVersionsResponseBodyDataBatchTaskVersionList : TeaModel {
                 /// <summary>
-                /// <para>The comment for the submission.</para>
+                /// <para>The submission comment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public bool? Published { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user who submitted the version.</para>
+                /// <para>The ID of the submitter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20110110</para>
@@ -101,10 +101,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string UserId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user who submitted the version.</para>
+                /// <para>The ID of the submitter.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>Zhang San</para>
                 /// </summary>
                 [NameInMap("UserName")]
                 [Validation(Required=false)]
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

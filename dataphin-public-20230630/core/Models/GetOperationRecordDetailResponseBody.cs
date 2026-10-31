@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The execution record detail response.</para>
+        /// <para>The operation record detail response.</para>
         /// </summary>
         [NameInMap("OperationRecordDetailResponse")]
         [Validation(Required=false)]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Result { get; set; }
 
                 /// <summary>
-                /// <para>The result SQL statement.</para>
+                /// <para>The result SQL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SELECT * FROM test_table</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The result title.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>查询结果</para>
+                /// <para>Query result</para>
                 /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

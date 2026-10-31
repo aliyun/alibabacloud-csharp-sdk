@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The list of asset table columns.</para>
+        /// <para>The list of columns in the asset table.</para>
         /// </summary>
         [NameInMap("ColumnList")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the field.</para>
+            /// <para>The creation time, in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30 00:00:00</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The creator of the field.</para>
+            /// <para>The creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30012011</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataSourceType { get; set; }
 
             /// <summary>
-            /// <para>The data type of the field.</para>
+            /// <para>The data type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>varchar</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataType { get; set; }
 
             /// <summary>
-            /// <para>The default value of the field.</para>
+            /// <para>The default value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The environment to which the column belongs. Valid values: dev and prod.</para>
+            /// <para>The environment to which the field belongs. Valid values: dev and prod.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? IsPrimaryKey { get; set; }
 
             /// <summary>
-            /// <para>The last modifier of the field.</para>
+            /// <para>The user who last modified the field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30012011</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LastModifier { get; set; }
 
             /// <summary>
-            /// <para>The abbreviation of the data level.</para>
+            /// <para>The abbreviation of the data security level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>L1</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LevelAbbreviation { get; set; }
 
             /// <summary>
-            /// <para>The modification time of the field.</para>
+            /// <para>The modification time, in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30 00:00:00</para>
@@ -208,14 +208,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the field allows null values.</para>
+            /// <para>Indicates whether the field can be null.</para>
             /// </summary>
             [NameInMap("Nullable")]
             [Validation(Required=false)]
             public bool? Nullable { get; set; }
 
             /// <summary>
-            /// <para>The sequence number of the column.</para>
+            /// <para>The sequence number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string TableGuid { get; set; }
 
             /// <summary>
-            /// <para>The table name.</para>
+            /// <para>The name of the table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t_test</para>
@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The backend exception details.</para>
+        /// <para>The details of the backend exception.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

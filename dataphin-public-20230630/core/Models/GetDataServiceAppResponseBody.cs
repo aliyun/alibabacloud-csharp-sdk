@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetDataServiceAppResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code returned by the backend.</para>
+        /// <para>The backend response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetDataServiceAppResponseBodyData Data { get; set; }
         public class GetDataServiceAppResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The application group name.</para>
+            /// <para>The name of the application group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>默认分组</para>
+            /// <para>Default group</para>
             /// </summary>
             [NameInMap("AppGroup")]
             [Validation(Required=false)]
@@ -50,17 +50,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The AppKey of the application.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>默认应用</para>
+            /// <para>Default application</para>
             /// </summary>
             [NameInMap("AppKey")]
             [Validation(Required=false)]
             public string AppKey { get; set; }
 
             /// <summary>
-            /// <para>The application name.</para>
+            /// <para>The name of the application.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>默认应用</para>
+            /// <para>Default application</para>
             /// </summary>
             [NameInMap("AppName")]
             [Validation(Required=false)]
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The AppSecret of the application.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>默认应用</para>
+            /// <para>Default application</para>
             /// </summary>
             [NameInMap("AppSecret")]
             [Validation(Required=false)]
             public string AppSecret { get; set; }
 
             /// <summary>
-            /// <para>The IP whitelist addresses. Specify IP addresses or CIDR blocks separated by semicolons (;). CIDR blocks end with a slash (/) followed by a number in the range of 1 to 32. Example: 192.168.3.12/24.</para>
+            /// <para>The IP address whitelist. Separate IP addresses or CIDR blocks with semicolons. For CIDR blocks, use a forward slash (/) to separate the IP address and the prefix length, which ranges from 1 to 32. Example: 192.168.3.12/24.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string IpWhitelist { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the IP whitelist is enabled. Valid values:</para>
+            /// <para>Indicates whether the IP address whitelist is enabled. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: Enabled.</description></item>
             /// <item><description>false: Disabled.</description></item>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The username.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>Zhang San</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The common scenarios.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>数据分析</para>
+            /// <para>Data analytics</para>
             /// </summary>
             [NameInMap("Scenarios")]
             [Validation(Required=false)]
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned by the backend.</para>
+        /// <para>The details of the backend exception.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

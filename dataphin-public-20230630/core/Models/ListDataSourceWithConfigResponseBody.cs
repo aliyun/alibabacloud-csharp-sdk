@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListDataSourceWithConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error code. OK indicates that the request was successful.</para>
+        /// <para>The error code. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The HTTP status code returned by the backend.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Error message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -40,35 +40,35 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Query result.</para>
+        /// <para>The query result.</para>
         /// </summary>
         [NameInMap("PageResult")]
         [Validation(Required=false)]
         public ListDataSourceWithConfigResponseBodyPageResult PageResult { get; set; }
         public class ListDataSourceWithConfigResponseBodyPageResult : TeaModel {
             /// <summary>
-            /// <para>Paginated list</para>
+            /// <para>The paginated list.</para>
             /// </summary>
             [NameInMap("DataSourceList")]
             [Validation(Required=false)]
             public List<ListDataSourceWithConfigResponseBodyPageResultDataSourceList> DataSourceList { get; set; }
             public class ListDataSourceWithConfigResponseBodyPageResultDataSourceList : TeaModel {
                 /// <summary>
-                /// <para>Development environment data source</para>
+                /// <para>The data source in the development environment.</para>
                 /// </summary>
                 [NameInMap("DevDataSourceInfo")]
                 [Validation(Required=false)]
                 public ListDataSourceWithConfigResponseBodyPageResultDataSourceListDevDataSourceInfo DevDataSourceInfo { get; set; }
                 public class ListDataSourceWithConfigResponseBodyPageResultDataSourceListDevDataSourceInfo : TeaModel {
                     /// <summary>
-                    /// <para>Connection configuration items</para>
+                    /// <para>The connection configuration items.</para>
                     /// </summary>
                     [NameInMap("ConfigItemList")]
                     [Validation(Required=false)]
                     public List<ListDataSourceWithConfigResponseBodyPageResultDataSourceListDevDataSourceInfoConfigItemList> ConfigItemList { get; set; }
                     public class ListDataSourceWithConfigResponseBodyPageResultDataSourceListDevDataSourceInfoConfigItemList : TeaModel {
                         /// <summary>
-                        /// <para>Configuration item ID</para>
+                        /// <para>The ID of the configuration item.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>param1</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// <para>Configuration item value</para>
+                        /// <para>The value of the configuration item.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>value1</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     }
 
                     /// <summary>
-                    /// <para>Creation time</para>
+                    /// <para>The creation time.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1710209552704</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public long? CreateTime { get; set; }
 
                     /// <summary>
-                    /// <para>Creator ID</para>
+                    /// <para>The ID of the creator.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>212211111</para>
@@ -110,27 +110,27 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Creator { get; set; }
 
                     /// <summary>
-                    /// <para>Creator name</para>
+                    /// <para>The name of the creator.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>张三</para>
+                    /// <para>Zhang San</para>
                     /// </summary>
                     [NameInMap("CreatorName")]
                     [Validation(Required=false)]
                     public string CreatorName { get; set; }
 
                     /// <summary>
-                    /// <para>Description</para>
+                    /// <para>The description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>xx 项目</para>
+                    /// <para>xx project</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>Environment of the data source</para>
+                    /// <para>The environment to which the data source belongs.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>DEV</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Env { get; set; }
 
                     /// <summary>
-                    /// <para>Data source ID</para>
+                    /// <para>The ID of the data source.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>12313123131</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public long? Id { get; set; }
 
                     /// <summary>
-                    /// <para>Modification time</para>
+                    /// <para>The modification time.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1710209552704</para>
@@ -160,17 +160,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public long? ModifyTime { get; set; }
 
                     /// <summary>
-                    /// <para>Data source name</para>
+                    /// <para>The name of the data source.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>xx测试</para>
+                    /// <para>xx test</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>Owner ID</para>
+                    /// <para>The ID of the owner.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>212211111</para>
@@ -180,17 +180,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Owner { get; set; }
 
                     /// <summary>
-                    /// <para>Owner name</para>
+                    /// <para>The name of the owner.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>张三</para>
+                    /// <para>Zhang San</para>
                     /// </summary>
                     [NameInMap("OwnerName")]
                     [Validation(Required=false)]
                     public string OwnerName { get; set; }
 
                     /// <summary>
-                    /// <para>Data source scope</para>
+                    /// <para>The usage scope of the data source.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ALL</para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Scope { get; set; }
 
                     /// <summary>
-                    /// <para>Data source type</para>
+                    /// <para>The data source types.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>MAX_COMPUTE</para>
@@ -212,21 +212,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>Production environment data source</para>
+                /// <para>The data source in the production environment.</para>
                 /// </summary>
                 [NameInMap("ProdDataSourceInfo")]
                 [Validation(Required=false)]
                 public ListDataSourceWithConfigResponseBodyPageResultDataSourceListProdDataSourceInfo ProdDataSourceInfo { get; set; }
                 public class ListDataSourceWithConfigResponseBodyPageResultDataSourceListProdDataSourceInfo : TeaModel {
                     /// <summary>
-                    /// <para>Connection configuration items</para>
+                    /// <para>The connection configuration items.</para>
                     /// </summary>
                     [NameInMap("ConfigItemList")]
                     [Validation(Required=false)]
                     public List<ListDataSourceWithConfigResponseBodyPageResultDataSourceListProdDataSourceInfoConfigItemList> ConfigItemList { get; set; }
                     public class ListDataSourceWithConfigResponseBodyPageResultDataSourceListProdDataSourceInfoConfigItemList : TeaModel {
                         /// <summary>
-                        /// <para>Configuration item ID</para>
+                        /// <para>The ID of the configuration item.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>param1</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// <para>Configuration item value</para>
+                        /// <para>The value of the configuration item.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>value1</para>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     }
 
                     /// <summary>
-                    /// <para>Creation time</para>
+                    /// <para>The creation time.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1708303959000</para>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public long? CreateTime { get; set; }
 
                     /// <summary>
-                    /// <para>Creator ID</para>
+                    /// <para>The ID of the creator.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>212211111</para>
@@ -268,27 +268,27 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Creator { get; set; }
 
                     /// <summary>
-                    /// <para>Creator name</para>
+                    /// <para>The name of the creator.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>张三</para>
+                    /// <para>Zhang San</para>
                     /// </summary>
                     [NameInMap("CreatorName")]
                     [Validation(Required=false)]
                     public string CreatorName { get; set; }
 
                     /// <summary>
-                    /// <para>Description</para>
+                    /// <para>The description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>xx 测试</para>
+                    /// <para>xx test</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>Environment of the data source</para>
+                    /// <para>The environment to which the data source belongs.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>PROD</para>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Env { get; set; }
 
                     /// <summary>
-                    /// <para>Data source ID</para>
+                    /// <para>The ID of the data source.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>300000028799</para>
@@ -308,7 +308,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public long? Id { get; set; }
 
                     /// <summary>
-                    /// <para>Modification time</para>
+                    /// <para>The modification time.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1708303959000</para>
@@ -318,17 +318,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public long? ModifyTime { get; set; }
 
                     /// <summary>
-                    /// <para>Data source name</para>
+                    /// <para>The name of the data source.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>xx测试</para>
+                    /// <para>xx test</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>Owner ID</para>
+                    /// <para>The ID of the owner.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>212211111</para>
@@ -338,17 +338,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Owner { get; set; }
 
                     /// <summary>
-                    /// <para>Owner name</para>
+                    /// <para>The name of the owner.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>张三</para>
+                    /// <para>Zhang San</para>
                     /// </summary>
                     [NameInMap("OwnerName")]
                     [Validation(Required=false)]
                     public string OwnerName { get; set; }
 
                     /// <summary>
-                    /// <para>Data source scope</para>
+                    /// <para>The usage scope of the data source.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ALL</para>
@@ -358,7 +358,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Scope { get; set; }
 
                     /// <summary>
-                    /// <para>Data source type</para>
+                    /// <para>The data source types.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>MAX_COMPUTE</para>
@@ -372,7 +372,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>Total number of records</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>39</para>
@@ -384,7 +384,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
@@ -394,7 +394,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the request was successful</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

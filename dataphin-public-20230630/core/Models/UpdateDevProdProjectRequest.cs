@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -47,7 +49,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? BizUnitId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the offline compute source in the development environment.</para>
+            /// <para>The ID of the offline compute source for the development environment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2001</para>
@@ -67,7 +69,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DevDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the real-time compute source in the development environment.</para>
+            /// <para>The ID of the real-time compute source for the development environment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2002</para>
@@ -77,10 +79,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? DevStreamComputeSourceId { get; set; }
 
             /// <summary>
-            /// <para>The display name of the project.</para>
+            /// <para>The project display name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>My project.</para>
+            /// <para>My project</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
@@ -108,7 +110,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The namespace identifier.</para>
+            /// <para>The namespace tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev</para>
@@ -118,7 +120,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NameSpaceTag { get; set; }
 
             /// <summary>
-            /// <para>The ID of the offline compute source in the production environment.</para>
+            /// <para>The ID of the offline compute source for the production environment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2003</para>
@@ -138,7 +140,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ProdDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the real-time compute source in the production environment.</para>
+            /// <para>The ID of the real-time compute source for the production environment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2004</para>
@@ -148,7 +150,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ProdStreamComputeSourceId { get; set; }
 
             /// <summary>
-            /// <para>The sandbox whitelist.</para>
+            /// <para>The sandbox whitelists.</para>
             /// </summary>
             [NameInMap("WhiteLists")]
             [Validation(Required=false)]

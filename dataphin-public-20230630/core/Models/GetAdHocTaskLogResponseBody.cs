@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetAdHocTaskLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The error code. A value of OK indicates that the request is normal.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetAdHocTaskLogResponseBodyLogInfo LogInfo { get; set; }
         public class GetAdHocTaskLogResponseBodyLogInfo : TeaModel {
             /// <summary>
-            /// <para>The runtime log content.</para>
+            /// <para>The execution log.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -47,21 +47,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the next log entry exists.</para>
+            /// <para>Indicates whether more log entries exist.</para>
             /// </summary>
             [NameInMap("HasNext")]
             [Validation(Required=false)]
             public bool? HasNext { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the current query produces a result.</para>
+            /// <para>Indicates whether the current query will generate results.</para>
             /// </summary>
             [NameInMap("HasResult")]
             [Validation(Required=false)]
             public bool? HasResult { get; set; }
 
             /// <summary>
-            /// <para>The start position of the next log entry.</para>
+            /// <para>The starting position of the next log entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The task running status. Example: WAIT_RESOURCE indicates that the task is waiting for resources.</para>
+            /// <para>The execution status of the task. Valid values: WAIT_RESOURCE (waiting for resources).</para>
             /// 
             /// <b>Example:</b>
             /// <para>WAIT_RESOURCE</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

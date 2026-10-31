@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class UpdateStandardMappingToInvalidRequest : TeaModel {
         /// <summary>
-        /// <para>Tenant ID</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>Update Command</para>
+        /// <para>The update instruction.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UpdateCommand")]
@@ -37,21 +39,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateStandardMappingToInvalidRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateStandardMappingToInvalidRequestUpdateCommand : TeaModel {
             /// <summary>
-            /// <para>Belonging GUID list, with an upper limit of 1000</para>
+            /// <para>The list of parent GUIDs. The maximum number of items is 1,000.</para>
             /// </summary>
             [NameInMap("BelongGuidList")]
             [Validation(Required=false)]
             public List<string> BelongGuidList { get; set; }
 
             /// <summary>
-            /// <para>GUID list, with an upper limit of 1000</para>
+            /// <para>The list of GUIDs. The maximum number of items is 1,000.</para>
             /// </summary>
             [NameInMap("GuidList")]
             [Validation(Required=false)]
             public List<string> GuidList { get; set; }
 
             /// <summary>
-            /// <para>Standard ID</para>
+            /// <para>The standard ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

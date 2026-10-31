@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend exception.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public List<GetDataServiceProjectAddableUsersResponseBodyUserList> UserList { get; set; }
         public class GetDataServiceProjectAddableUsersResponseBodyUserList : TeaModel {
             /// <summary>
-            /// <para>The username of the user.</para>
+            /// <para>The user account.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:xx@aliyuncs.com">xx@aliyuncs.com</a></para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string AccountName { get; set; }
 
             /// <summary>
-            /// <para>The nickname of the user.</para>
+            /// <para>The user nickname.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>

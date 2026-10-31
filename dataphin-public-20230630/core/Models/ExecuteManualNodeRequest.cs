@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         /// <summary>
         /// <para>The environment identifier. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DEV: development environment </description></item>
-        /// <item><description>PROD (default): production environment.</description></item>
+        /// <item><description>DEV: Development environment. </description></item>
+        /// <item><description>PROD: Production environment. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Env { get; set; }
 
         /// <summary>
-        /// <para>The request for running a manual task.</para>
+        /// <para>The request to run a manual task.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ExecuteCommand")]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ExecuteManualNodeRequestExecuteCommand ExecuteCommand { get; set; }
         public class ExecuteManualNodeRequestExecuteCommand : TeaModel {
             /// <summary>
-            /// <para>The end business date.</para>
+            /// <para>The end business date, in the YYYY-MM-DD format.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The workflow name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx测试</para>
+            /// <para>xx test</para>
             /// </summary>
             [NameInMap("FlowName")]
             [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>The runtime parameters.</para>
+            /// <para>The run parameters.</para>
             /// </summary>
             [NameInMap("ParamList")]
             [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The start business date.</para>
+            /// <para>The start business date, in the YYYY-MM-DD format.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -128,6 +128,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

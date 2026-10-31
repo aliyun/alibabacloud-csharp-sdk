@@ -10,47 +10,42 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListQualityWatchesRequest : TeaModel {
         /// <summary>
-        /// <para>The paged query conditions.</para>
+        /// <para>The paging query conditions.</para>
         /// </summary>
         [NameInMap("ListQuery")]
         [Validation(Required=false)]
         public ListQualityWatchesRequestListQuery ListQuery { get; set; }
         public class ListQualityWatchesRequestListQuery : TeaModel {
             /// <summary>
-            /// <para>The business unit names.</para>
+            /// <para>The name of the business unit.</para>
             /// </summary>
             [NameInMap("BizUnitNameList")]
             [Validation(Required=false)]
             public List<string> BizUnitNameList { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to query only monitored objects owned by the current user.</para>
+            /// <para>Specifies whether the monitoring object is owned by the current user.</para>
             /// </summary>
             [NameInMap("CurrentUserOwned")]
             [Validation(Required=false)]
             public bool? CurrentUserOwned { get; set; }
 
             /// <summary>
-            /// <para>The data source IDs.</para>
+            /// <para>The data source ID.</para>
             /// </summary>
             [NameInMap("DataSourceIdList")]
             [Validation(Required=false)]
             public List<long?> DataSourceIdList { get; set; }
 
             /// <summary>
-            /// <para>The data source owners.</para>
+            /// <para>The data source owner.</para>
             /// </summary>
             [NameInMap("DataSourceOwnerList")]
             [Validation(Required=false)]
             public List<string> DataSourceOwnerList { get; set; }
 
             /// <summary>
-            /// <para>The data source scope. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>STREAMING: real-time only</description></item>
-            /// <item><description>OFFLINE: offline only</description></item>
-            /// <item><description>ALL: real-time and offline.</description></item>
-            /// </list>
+            /// <para>The data source scope. Valid values: STREAMING (real-time only), OFFLINE (offline only), and ALL (real-time and offline).</para>
             /// </summary>
             [NameInMap("DataSourceScopeList")]
             [Validation(Required=false)]
@@ -64,27 +59,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> DataSourceTypeList { get; set; }
 
             /// <summary>
-            /// <para>The metric computation type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>AUTO: automated coding</description></item>
-            /// <item><description>CUSTOM: expert coding</description></item>
-            /// <item><description>MOUNT: external table registration</description></item>
-            /// <item><description>COMBINE: derived metric specific.</description></item>
-            /// </list>
+            /// <para>The metric compute type. Valid values: AUTO (automated coding), CUSTOM (expert coding), MOUNT (external table registration), and COMBINE (specific to derived metrics).</para>
             /// </summary>
             [NameInMap("IndexComputeTypeList")]
             [Validation(Required=false)]
             public List<string> IndexComputeTypeList { get; set; }
 
             /// <summary>
-            /// <para>The metric owners.</para>
+            /// <para>The metric owner.</para>
             /// </summary>
             [NameInMap("IndexOwnerList")]
             [Validation(Required=false)]
             public List<string> IndexOwnerList { get; set; }
 
             /// <summary>
-            /// <para>The search keyword. This is the name of the monitored table.</para>
+            /// <para>The search keyword, which is the name of the monitored table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -94,17 +83,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Keyword { get; set; }
 
             /// <summary>
-            /// <para>The task status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>NOT_RUN: not executed</description></item>
-            /// <item><description>WAITING: waiting</description></item>
-            /// <item><description>RUNNING: executing</description></item>
-            /// <item><description>SUCCESS: executed successfully</description></item>
-            /// <item><description>FAILED: execution failed</description></item>
-            /// <item><description>CANCEL: canceled</description></item>
-            /// <item><description>TIMEOUT: timed out</description></item>
-            /// <item><description>OFFLINE: offline.</description></item>
-            /// </list>
+            /// <para>The task status. Valid values: NOT_RUN (not run), WAITING (waiting), RUNNING (running), SUCCESS (successful), FAILED (failed), CANCEL (canceled), TIMEOUT (timed out), and OFFLINE (offline).</para>
             /// </summary>
             [NameInMap("LatestWatchTaskStatusList")]
             [Validation(Required=false)]
@@ -121,7 +100,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageNo { get; set; }
 
             /// <summary>
-            /// <para>The number of records per page. Default value: 20.</para>
+            /// <para>The number of entries per page. Default value: 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -131,61 +110,42 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The project names.</para>
+            /// <para>The name of the project.</para>
             /// </summary>
             [NameInMap("ProjectNameList")]
             [Validation(Required=false)]
             public List<string> ProjectNameList { get; set; }
 
             /// <summary>
-            /// <para>The quality owners.</para>
+            /// <para>The quality owner.</para>
             /// </summary>
             [NameInMap("QualityOwnerList")]
             [Validation(Required=false)]
             public List<string> QualityOwnerList { get; set; }
 
             /// <summary>
-            /// <para>The status of the monitored object. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>ENABLE: enabled</description></item>
-            /// <item><description>DISABLE: disabled.</description></item>
-            /// </list>
+            /// <para>The effective status of the monitoring object. Valid values: ENABLE (enabled) and DISABLE (disabled).</para>
             /// </summary>
             [NameInMap("StatusList")]
             [Validation(Required=false)]
             public List<string> StatusList { get; set; }
 
             /// <summary>
-            /// <para>The table owners.</para>
+            /// <para>The table owner.</para>
             /// </summary>
             [NameInMap("TableOwnerList")]
             [Validation(Required=false)]
             public List<string> TableOwnerList { get; set; }
 
             /// <summary>
-            /// <para>The table type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>LOGIC_DIM_TABLE: logical dimension table</description></item>
-            /// <item><description>LOGIC_FACT_TABLE: logical fact table</description></item>
-            /// <item><description>LOGIC_SUM_TABLE: logical aggregate table</description></item>
-            /// <item><description>LOGIC_LABEL_TABLE: logical label table</description></item>
-            /// <item><description>PHYSICAL_TABLE: physical table</description></item>
-            /// <item><description>REALTIME_LOGICAL_TABLE: real-time meta table.</description></item>
-            /// </list>
+            /// <para>The table type. Valid values: LOGIC_DIM_TABLE (logical dimension table), LOGIC_FACT_TABLE (logical fact table), LOGIC_SUM_TABLE (logical aggregate table), LOGIC_LABEL_TABLE (logical label table), PHYSICAL_TABLE (physical table), and REALTIME_LOGICAL_TABLE (real-time metadata table).</para>
             /// </summary>
             [NameInMap("TableTypeList")]
             [Validation(Required=false)]
             public List<string> TableTypeList { get; set; }
 
             /// <summary>
-            /// <para>The monitored object type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>TABLE: Dataphin table</description></item>
-            /// <item><description>DATASOURCE_TABLE: full-domain table</description></item>
-            /// <item><description>DATASOURCE: data source</description></item>
-            /// <item><description>INDEX: metric</description></item>
-            /// <item><description>REALTIME_LOGICAL_TABLE: real-time meta table.</description></item>
-            /// </list>
+            /// <para>The monitoring object type. Valid values: TABLE (Dataphin table), DATASOURCE_TABLE (global table), DATASOURCE (data source), INDEX (metric), and REALTIME_LOGICAL_TABLE (real-time metadata table).</para>
             /// </summary>
             [NameInMap("WatchTypeList")]
             [Validation(Required=false)]
@@ -205,6 +165,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operating user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

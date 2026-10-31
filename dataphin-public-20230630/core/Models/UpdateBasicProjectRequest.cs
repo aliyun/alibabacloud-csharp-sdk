@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -47,7 +49,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? BizUnitId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the offline compute source.</para>
+            /// <para>The offline compute source ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2001</para>
@@ -70,7 +72,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The display name of the project.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>MyProject.</para>
+            /// <para>My Project</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
@@ -88,7 +90,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The project name. This value cannot be modified. Pass in the current project name.</para>
+            /// <para>The project name. This parameter cannot be modified. Specify the current project name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -109,7 +111,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NameSpaceTag { get; set; }
 
             /// <summary>
-            /// <para>The ID of the real-time compute source.</para>
+            /// <para>The real-time compute source ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2002</para>

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The operation log code response.</para>
+        /// <para>The operation record code response.</para>
         /// </summary>
         [NameInMap("OperationLogCodeResponse")]
         [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The operator name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>SQL查询节点</para>
+            /// <para>SQL query node</para>
             /// </summary>
             [NameInMap("OperatorName")]
             [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetStandardStatisticsRequest : TeaModel {
         /// <summary>
-        /// <para>The tenant ID.</para>
+        /// <para>The ID of the tenant.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user who performs the operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The statistical query instruction.</para>
+        /// <para>The statistics query instruction.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("StatisticsQuery")]
@@ -37,14 +39,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetStandardStatisticsRequestStatisticsQuery StatisticsQuery { get; set; }
         public class GetStandardStatisticsRequestStatisticsQuery : TeaModel {
             /// <summary>
-            /// <para>The creation time period.</para>
+            /// <para>The time period during which the standards were created.</para>
             /// </summary>
             [NameInMap("CreateTimePeriod")]
             [Validation(Required=false)]
             public GetStandardStatisticsRequestStatisticsQueryCreateTimePeriod CreateTimePeriod { get; set; }
             public class GetStandardStatisticsRequestStatisticsQueryCreateTimePeriod : TeaModel {
                 /// <summary>
-                /// <para>The end time.</para>
+                /// <para>The end time, in the YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-30 00:00:00</para>
@@ -54,14 +56,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to include the end time. Default value: false.</para>
+                /// <para>Specifies whether to include the end time. Default: false.</para>
                 /// </summary>
                 [NameInMap("IncludeEndTime")]
                 [Validation(Required=false)]
                 public bool? IncludeEndTime { get; set; }
 
                 /// <summary>
-                /// <para>The start time.</para>
+                /// <para>The start time, in the YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-01 00:00:00</para>
@@ -73,7 +75,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The folder to which the standards belong. The search includes all subfolders under this folder.</para>
+            /// <para>The directory to query. Standards in this directory and all its subdirectories are included in the statistics.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -84,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Directory { get; set; }
 
             /// <summary>
-            /// <para>The stages to which the standards belong.</para>
+            /// <para>The list of stages to which the standards belong.</para>
             /// </summary>
             [NameInMap("StandardStageList")]
             [Validation(Required=false)]

@@ -37,7 +37,6 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 
         /// <summary>
         /// <para>Data service project ID.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>102102</para>

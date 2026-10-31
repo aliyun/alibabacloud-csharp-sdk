@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -37,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateStandardLookupTableRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateStandardLookupTableRequestUpdateCommand : TeaModel {
             /// <summary>
-            /// <para>The lookup table code.</para>
+            /// <para>The code of the lookup table.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The lookup table description.</para>
+            /// <para>The description of the lookup table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -58,14 +60,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The directory to which the lookup table belongs.</para>
+            /// <para>The parent folder.</para>
             /// </summary>
             [NameInMap("DirectoryReference")]
             [Validation(Required=false)]
             public UpdateStandardLookupTableRequestUpdateCommandDirectoryReference DirectoryReference { get; set; }
             public class UpdateStandardLookupTableRequestUpdateCommandDirectoryReference : TeaModel {
                 /// <summary>
-                /// <para>The directory to which the lookup table belongs.</para>
+                /// <para>The parent folder.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -78,7 +80,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The lookup table ID.</para>
+            /// <para>The ID of the lookup table.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -96,7 +98,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<UpdateStandardLookupTableRequestUpdateCommandLookupTableValueList> LookupTableValueList { get; set; }
             public class UpdateStandardLookupTableRequestUpdateCommandLookupTableValueList : TeaModel {
                 /// <summary>
-                /// <para>The code description.</para>
+                /// <para>The description of the code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -116,7 +118,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string EnglishName { get; set; }
 
                 /// <summary>
-                /// <para>The code name.</para>
+                /// <para>The name of the code.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -131,7 +133,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>杭州</para>
+                /// <para>Hangzhou</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -140,18 +142,18 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The lookup table name.</para>
+            /// <para>The name of the lookup table.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>城市码表</para>
+            /// <para>City lookup table</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the lookup table owner. Default value: the user ID of the caller.</para>
+            /// <para>The ID of the lookup table owner. Default value: the ID of the caller.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30012021</para>

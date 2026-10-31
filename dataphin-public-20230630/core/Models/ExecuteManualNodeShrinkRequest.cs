@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         /// <summary>
         /// <para>The environment identifier. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DEV: development environment </description></item>
-        /// <item><description>PROD (default): production environment.</description></item>
+        /// <item><description>DEV: Development environment. </description></item>
+        /// <item><description>PROD: Production environment. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Env { get; set; }
 
         /// <summary>
-        /// <para>The request for running a manual task.</para>
+        /// <para>The request to run a manual task.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ExecuteCommand")]
@@ -43,6 +43,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

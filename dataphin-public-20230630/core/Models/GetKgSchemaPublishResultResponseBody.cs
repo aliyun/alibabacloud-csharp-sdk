@@ -39,11 +39,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The publish status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Publishing: Publishing in progress.</description></item>
-            /// <item><description>Published: Published successfully.</description></item>
-            /// <item><description>Partial: Partially completed.</description></item>
-            /// <item><description>Failed: Failed.</description></item>
-            /// <item><description>RollbackFailed: Publish failed and rollback failed.</description></item>
+            /// <item><description>Publishing: The publish task is in progress.</description></item>
+            /// <item><description>Published: The publish task is successful.</description></item>
+            /// <item><description>Partial: The publish task is partially completed.</description></item>
+            /// <item><description>Failed: The publish task failed.</description></item>
+            /// <item><description>RollbackFailed: The publish task failed and the rollback failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The version number.</para>
+            /// <para>The version ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

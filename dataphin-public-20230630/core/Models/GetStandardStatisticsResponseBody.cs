@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The statistical results.</para>
+        /// <para>The statistics result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetStandardStatisticsResponseBodyData Data { get; set; }
         public class GetStandardStatisticsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The mapping between standard types and the number of standards for each type. If the standard type is empty, the key is EMPTY.</para>
+            /// <para>The mapping between each standard type and the number of standards of that type. If the standard type is empty, the key is EMPTY.</para>
             /// </summary>
             [NameInMap("StandardTypeCountList")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? Count { get; set; }
 
                 /// <summary>
-                /// <para>The standard type.</para>
+                /// <para>The type of the standard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend exception.</para>
+        /// <para>The exception details returned by the backend.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>

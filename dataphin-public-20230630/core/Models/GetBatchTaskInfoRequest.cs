@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Env { get; set; }
 
         /// <summary>
-        /// <para>The node ID in the task directory tree.</para>
+        /// <para>The ID of the node in the task directory tree.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

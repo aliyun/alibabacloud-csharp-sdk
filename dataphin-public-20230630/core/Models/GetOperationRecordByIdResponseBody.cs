@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The operation log details.</para>
+        /// <para>The execution record details.</para>
         /// </summary>
         [NameInMap("OperationLogDTO")]
         [Validation(Required=false)]
@@ -57,14 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string BeginTime { get; set; }
 
             /// <summary>
-            /// <para>The code type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>SQL0: SQL</description></item>
-            /// <item><description>shell1: Shell</description></item>
-            /// <item><description>Python2: Python</description></item>
-            /// <item><description>MR3: MR</description></item>
-            /// <item><description>Spark4: Spark</description></item>
-            /// </list>
+            /// <para>The code type. Valid values: SQL0, shell1, Python2, MR3, and Spark4.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -74,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? CodeType { get; set; }
 
             /// <summary>
-            /// <para>The execution duration, in milliseconds.</para>
+            /// <para>The execution duration in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -97,7 +90,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试任务</para>
+            /// <para>Test task</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -114,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ObjectType { get; set; }
 
             /// <summary>
-            /// <para>The operation log ID.</para>
+            /// <para>The operation record ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>987654321</para>
@@ -134,14 +127,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The list of related tables.</para>
+            /// <para>The associated tables.</para>
             /// </summary>
             [NameInMap("RelationTables")]
             [Validation(Required=false)]
             public List<string> RelationTables { get; set; }
 
             /// <summary>
-            /// <para>The ID of the runner.</para>
+            /// <para>The executor ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30231123</para>
@@ -151,22 +144,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Runner { get; set; }
 
             /// <summary>
-            /// <para>The name of the runner.</para>
+            /// <para>The executor name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>张三</para>
+            /// <para>Zhang San</para>
             /// </summary>
             [NameInMap("RunnerName")]
             [Validation(Required=false)]
             public string RunnerName { get; set; }
 
             /// <summary>
-            /// <para>The node status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>4: Running.</description></item>
-            /// <item><description>5: Succeeded.</description></item>
-            /// <item><description>6: Failed.</description></item>
-            /// </list>
+            /// <para>The task status. Valid values: 4 (Running), 5 (Successful), and 6 (Failed).</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -198,7 +186,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

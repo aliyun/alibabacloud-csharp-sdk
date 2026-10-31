@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? Page { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The number of records per page.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -40,25 +40,25 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The member roles:</para>
+            /// <para>The member roles. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SUPER_ADMIN: Dataphin super administrator</description></item>
-            /// <item><description>SYSTEM_ADMIN: system administrator</description></item>
-            /// <item><description>COMMON_USER: Dataphin user</description></item>
-            /// <item><description>DATA_ADMIN: Dataphin data administrator</description></item>
-            /// <item><description>EXPORT_ADMIN: export administrator</description></item>
-            /// <item><description>SECURITY_ADMIN: security administrator</description></item>
-            /// <item><description>DATASOURCE_MANAGER: data source administrator</description></item>
-            /// <item><description>QUALITY_MANAGER: asset quality manager</description></item>
-            /// <item><description>DATA_STANDARD_MANAGER: data standard administrator</description></item>
-            /// <item><description>LABELS_BUSINESS_PLANNER: tag business planner</description></item>
-            /// <item><description>BUSINESS_MEMBER: general business user</description></item>
-            /// <item><description>DATAPRO_OPERATE_SUPER_ADMIN: operations super administrator</description></item>
-            /// <item><description>DATAPRO_OPERATE_ADMIN: operations administrator</description></item>
-            /// <item><description>DATAPRO_OPERATE_MEMBER: operations member</description></item>
-            /// <item><description>DATAPRO_BUSINESS_ANALYST: business analyst</description></item>
-            /// <item><description>LABELS_BUSINESS_MEMBER: tag business member</description></item>
-            /// <item><description>DATAPRO_BUSINESS_MEMBER: DATAPRO general business user</description></item>
+            /// <item><description>SUPER_ADMIN: Dataphin super administrator.</description></item>
+            /// <item><description>SYSTEM_ADMIN: System administrator.</description></item>
+            /// <item><description>COMMON_USER: Dataphin user.</description></item>
+            /// <item><description>DATA_ADMIN: Dataphin data administrator.</description></item>
+            /// <item><description>EXPORT_ADMIN: Export administrator.</description></item>
+            /// <item><description>SECURITY_ADMIN: Security administrator.</description></item>
+            /// <item><description>DATASOURCE_MANAGER: Data source administrator.</description></item>
+            /// <item><description>QUALITY_MANAGER: Asset quality owner.</description></item>
+            /// <item><description>DATA_STANDARD_MANAGER: Data standard administrator.</description></item>
+            /// <item><description>LABELS_BUSINESS_PLANNER: Label business planner.</description></item>
+            /// <item><description>BUSINESS_MEMBER: Regular business user.</description></item>
+            /// <item><description>DATAPRO_OPERATE_SUPER_ADMIN: Operations super administrator.</description></item>
+            /// <item><description>DATAPRO_OPERATE_ADMIN: Operations administrator.</description></item>
+            /// <item><description>DATAPRO_OPERATE_MEMBER: Operations staff.</description></item>
+            /// <item><description>DATAPRO_BUSINESS_ANALYST: Business analyst.</description></item>
+            /// <item><description>LABELS_BUSINESS_MEMBER: Label business staff.</description></item>
+            /// <item><description>DATAPRO_BUSINESS_MEMBER: Datapro regular business user.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("RoleList")]
@@ -69,14 +69,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The search keyword.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试</para>
+            /// <para>Test</para>
             /// </summary>
             [NameInMap("SearchText")]
             [Validation(Required=false)]
             public string SearchText { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the user groups to which the member belongs.</para>
+            /// <para>The IDs of the user groups to which the members belong.</para>
             /// </summary>
             [NameInMap("UserGroupIdList")]
             [Validation(Required=false)]
@@ -96,6 +96,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

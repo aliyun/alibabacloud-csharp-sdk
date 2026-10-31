@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetPhysicalNodeByOutputNameResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error code. OK indicates a successful request.</para>
+        /// <para>The error code. A value of OK indicates that the request is normal.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code returned by the backend</para>
+        /// <para>The HTTP status code returned by the backend.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Error message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Node details</para>
+        /// <para>The node details.</para>
         /// </summary>
         [NameInMap("NodeInfo")]
         [Validation(Required=false)]
         public GetPhysicalNodeByOutputNameResponseBodyNodeInfo NodeInfo { get; set; }
         public class GetPhysicalNodeByOutputNameResponseBodyNodeInfo : TeaModel {
             /// <summary>
-            /// <para>Creation time</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1717343597000</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Node creator</para>
+            /// <para>The creator of the node.</para>
             /// </summary>
             [NameInMap("Creator")]
             [Validation(Required=false)]
             public GetPhysicalNodeByOutputNameResponseBodyNodeInfoCreator Creator { get; set; }
             public class GetPhysicalNodeByOutputNameResponseBodyNodeInfoCreator : TeaModel {
                 /// <summary>
-                /// <para>User ID</para>
+                /// <para>The user ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1311131</para>
@@ -74,10 +74,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>Username</para>
+                /// <para>The username.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx测试</para>
+                /// <para>xx test</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -86,22 +86,22 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>Description</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx测试</para>
+            /// <para>xx test</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Node source</para>
+            /// <para>The node source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>DATA_PROCESS: Code development</description></item>
-            /// <item><description>BLACK_BOX: Black box</description></item>
-            /// <item><description>ONE_ID: Extraction</description></item>
-            /// <item><description>PIPELINE: Pipeline</description></item>
+            /// <item><description>DATA_PROCESS: code development</description></item>
+            /// <item><description>BLACK_BOX: black box</description></item>
+            /// <item><description>ONE_ID: extraction</description></item>
+            /// <item><description>PIPELINE: pipeline</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string From { get; set; }
 
             /// <summary>
-            /// <para>Node ID</para>
+            /// <para>The node ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>n_2321</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>Last modified time</para>
+            /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1717343597000</para>
@@ -132,14 +132,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? LastModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>Node modifier</para>
+            /// <para>The modifier of the node.</para>
             /// </summary>
             [NameInMap("Modifier")]
             [Validation(Required=false)]
             public GetPhysicalNodeByOutputNameResponseBodyNodeInfoModifier Modifier { get; set; }
             public class GetPhysicalNodeByOutputNameResponseBodyNodeInfoModifier : TeaModel {
                 /// <summary>
-                /// <para>User ID</para>
+                /// <para>The user ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1311131</para>
@@ -149,10 +149,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>Username</para>
+                /// <para>The username.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx测试</para>
+                /// <para>xx test</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -161,24 +161,24 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>Name</para>
+            /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx测试</para>
+            /// <para>xx test</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Node subtype</para>
+            /// <para>The node subtype. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>MAX_COMPUTE_SQL</description></item>
             /// <item><description>HIVE_SQL</description></item>
             /// <item><description>SHELL</description></item>
             /// <item><description>PYTHON</description></item>
             /// <item><description>ONE_SERVICE_SQL</description></item>
-            /// <item><description>DATABASE_SQL, etc.</description></item>
+            /// <item><description>DATABASE_SQL</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -189,14 +189,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string OperatorType { get; set; }
 
             /// <summary>
-            /// <para>Node owner</para>
+            /// <para>The owner of the node.</para>
             /// </summary>
             [NameInMap("Owner")]
             [Validation(Required=false)]
             public GetPhysicalNodeByOutputNameResponseBodyNodeInfoOwner Owner { get; set; }
             public class GetPhysicalNodeByOutputNameResponseBodyNodeInfoOwner : TeaModel {
                 /// <summary>
-                /// <para>User ID</para>
+                /// <para>The user ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1311131</para>
@@ -206,10 +206,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>Username</para>
+                /// <para>The username.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx测试</para>
+                /// <para>xx test</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>Priority</para>
+            /// <para>The priority. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>HIGHEST</description></item>
             /// <item><description>HIGH</description></item>
@@ -235,14 +235,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Priority { get; set; }
 
             /// <summary>
-            /// <para>Project to which the node belongs</para>
+            /// <para>The project to which the node belongs.</para>
             /// </summary>
             [NameInMap("ProjectInfo")]
             [Validation(Required=false)]
             public GetPhysicalNodeByOutputNameResponseBodyNodeInfoProjectInfo ProjectInfo { get; set; }
             public class GetPhysicalNodeByOutputNameResponseBodyNodeInfoProjectInfo : TeaModel {
                 /// <summary>
-                /// <para>Project ID</para>
+                /// <para>The project ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1324211</para>
@@ -252,10 +252,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>Project name</para>
+                /// <para>The project name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx测试</para>
+                /// <para>xx test</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -264,7 +264,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>Scheduling period type</para>
+            /// <para>The scheduling cycle type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>MINUTELY</description></item>
             /// <item><description>HOURLY</description></item>
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ScheduleType { get; set; }
 
             /// <summary>
-            /// <para>Node scheduling status</para>
+            /// <para>The scheduling status of the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Trigger configuration, used to implement field dependencies on logical tables</para>
+            /// <para>The trigger configuration, which is used to implement field dependencies for logical tables.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;expression&quot;:&quot;any_success&quot;}</para>
@@ -304,7 +304,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
@@ -314,7 +314,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

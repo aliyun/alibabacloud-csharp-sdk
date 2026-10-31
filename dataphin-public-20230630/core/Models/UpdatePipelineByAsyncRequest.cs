@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The current operating environment. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>DEV: the development environment.</description></item>
-            /// <item><description>PROD: the production environment.</description></item>
+            /// <item><description>DEV: development environment.</description></item>
+            /// <item><description>PROD: production environment.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Env { get; set; }
 
             /// <summary>
-            /// <para>The ID of the project to which the integration pipeline node belongs.</para>
+            /// <para>The ID of the project to which the integration pipeline task belongs.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -57,6 +57,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user who performs the operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -65,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The pipeline node update configuration.</para>
+        /// <para>The update configuration for the pipeline task.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UpdateCommand")]
@@ -73,7 +75,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdatePipelineByAsyncRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdatePipelineByAsyncRequestUpdateCommand : TeaModel {
             /// <summary>
-            /// <para>The remarks.</para>
+            /// <para>The comment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>comment</para>
@@ -83,12 +85,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The integration pipeline configuration mode. Valid values:</para>
+            /// <para>The configuration mode of the integration pipeline. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>PIPELINE: pipeline mode (default).</description></item>
-            /// <item><description>JSON: script mode.</description></item>
+            /// <item><description>JSON: script mode.
+            /// Ignore this parameter for workflow tasks.</description></item>
             /// </list>
-            /// <para>This parameter is not applicable to workflow nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PIPELINE</para>
@@ -98,7 +100,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>The basic information of the integration pipeline node.</para>
+            /// <para>The basic information of the integration pipeline task.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("NodeInfo")]
@@ -106,7 +108,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public UpdatePipelineByAsyncRequestUpdateCommandNodeInfo NodeInfo { get; set; }
             public class UpdatePipelineByAsyncRequestUpdateCommandNodeInfo : TeaModel {
                 /// <summary>
-                /// <para>The folder of the integration pipeline node. Default value: root folder. The folder must exist. If it does not exist, call the relevant API operation to create a folder of the offlinePipeline type.</para>
+                /// <para>The directory of the integration pipeline task node. The default value is the root directory. The directory must exist. If it does not exist, call the relevant API to create a directory of the offlinePipeline type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/</para>
@@ -116,7 +118,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Directory { get; set; }
 
                 /// <summary>
-                /// <para>The pipeline file ID. Leave this parameter empty for initial creation. When updating a pipeline node, specify at least one of pipelineId, fileId, or nodeId.</para>
+                /// <para>The ID of the pipeline file. Leave this parameter empty when creating a task for the first time. When updating a pipeline task, you must specify at least one of pipelineId, fileId, or nodeId.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -126,7 +128,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? FileId { get; set; }
 
                 /// <summary>
-                /// <para>The scheduling node ID of the pipeline node. Leave this parameter empty for initial creation. When updating a pipeline node, specify at least one of pipelineId, fileId, or nodeId.</para>
+                /// <para>The ID of the scheduling node for the pipeline task. Leave this parameter empty when creating a task for the first time. When updating a pipeline task, you must specify at least one of pipelineId, fileId, or nodeId.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>n_123</para>
@@ -136,7 +138,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string NodeId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the integration pipeline node.</para>
+                /// <para>The name of the integration pipeline task.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -147,7 +149,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string NodeName { get; set; }
 
                 /// <summary>
-                /// <para>The pipeline node ID. Leave this parameter empty for initial creation. When updating a pipeline node, specify at least one of pipelineId, fileId, or nodeId.</para>
+                /// <para>The ID of the pipeline task. Leave this parameter empty when creating a task for the first time. When updating a pipeline task, you must specify at least one of pipelineId, fileId, or nodeId.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -159,7 +161,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The integration pipeline component configuration.</para>
+            /// <para>The component configuration for the integration pipeline.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("PipelineConfig")]
@@ -167,7 +169,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public UpdatePipelineByAsyncRequestUpdateCommandPipelineConfig PipelineConfig { get; set; }
             public class UpdatePipelineByAsyncRequestUpdateCommandPipelineConfig : TeaModel {
                 /// <summary>
-                /// <para>The DAG (directed acyclic graph) link configurations that describe the connections between all components.</para>
+                /// <para>The directed acyclic graph (DAG) hop configurations that describe the connection relationships among all components.</para>
                 /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("Hops")]
@@ -175,14 +177,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public List<UpdatePipelineByAsyncRequestUpdateCommandPipelineConfigHops> Hops { get; set; }
                 public class UpdatePipelineByAsyncRequestUpdateCommandPipelineConfigHops : TeaModel {
                     /// <summary>
-                    /// <para>For conditional distribution components, set this parameter to true when the downstream condition is true, and to false otherwise. This parameter is not applicable to workflow nodes.</para>
+                    /// <para>Specifies whether to connect to the downstream component when the condition is met for a conditional distribution component. Set to true if the downstream condition is true, and false otherwise. Ignore this parameter for workflow tasks.</para>
                     /// </summary>
                     [NameInMap("SendTo")]
                     [Validation(Required=false)]
                     public bool? SendTo { get; set; }
 
                     /// <summary>
-                    /// <para>The input step name, which corresponds to Steps[*].StepName.</para>
+                    /// <para>The name of the input step, which corresponds to Steps[*].StepName.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -193,7 +195,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Source { get; set; }
 
                     /// <summary>
-                    /// <para>The output step name, which corresponds to Steps[*].StepName.</para>
+                    /// <para>The name of the output step, which corresponds to Steps[*].StepName.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -206,7 +208,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The component configurations, including detailed configurations of all components used.</para>
+                /// <para>The step configurations, including the detailed configurations of all used components.</para>
                 /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("Steps")]
@@ -216,17 +218,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <summary>
                     /// <para>Specifies the data distribution method when the current component has multiple downstream components. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>true: the data of the current component is distributed to all downstream components in a round-robin manner. For example, if the current component has 100 records and two downstream components, each downstream component receives 50 records. Default value: true.</description></item>
-                    /// <item><description>false: the full data of the current component is sent to all downstream components. For example, if the current component has 100 records and two downstream components, both downstream components receive 100 records.</description></item>
+                    /// <item><description>true: distributes data to all downstream components in turn. For example, if the current component has 100 data records and two downstream components, each downstream component receives 50 records. This is the default value.</description></item>
+                    /// <item><description>false: sends all data to all downstream components. For example, if the current component has 100 data records and two downstream components, both downstream components receive all 100 records.
+                    /// Ignore this parameter for workflow tasks.</description></item>
                     /// </list>
-                    /// <para>This parameter is not applicable to workflow nodes.</para>
                     /// </summary>
                     [NameInMap("IsDistribute")]
                     [Validation(Required=false)]
                     public bool? IsDistribute { get; set; }
 
                     /// <summary>
-                    /// <para>The plugin ID. Each plugin or operator has a unique identifier. Refer to the stepKey field of the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig. Developers should inherit the component or operator configuration class and implement the corresponding configuration. Each component or operator configuration has the same structure as the configuration created on the Dataphin console.</para>
+                    /// <para>The plugin ID. Each plugin or operator has a unique identifier. Refer to com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig#stepKey. Developers must inherit the component or operator configuration class to implement the corresponding configuration. The structure of each configuration must be identical to the configuration structure created on the Dataphin page.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -237,7 +239,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The specific component configuration in JSON string format. Refer to the toJsonString method of the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig (or com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.unstructured.BaseOAUnstructuredNeuronConfig for workflow operators) and its subclasses. Developers should inherit the component or operator configuration class and implement the corresponding configuration. Each component or operator configuration has the same structure as the node configuration created on the Dataphin console.</para>
+                    /// <para>The specific component or operator configuration in JSON string format. Refer to the toJsonString method of the relevant subclasses of com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig (or com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.unstructured.BaseOAUnstructuredNeuronConfig for workflow operators). Developers must inherit this component or operator configuration class to implement the corresponding configuration. The structure of each component or operator configuration must be identical to the task configuration structure created on the Dataphin page.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -248,7 +250,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string PluginConfig { get; set; }
 
                     /// <summary>
-                    /// <para>The step name. Step names must be unique within the same pipeline node.</para>
+                    /// <para>The step name. Step names must be unique within the same pipeline task.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -259,14 +261,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string StepName { get; set; }
 
                     /// <summary>
-                    /// <para>The component type. Valid values:</para>
+                    /// <para>The step type. For pipeline tasks, valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>input: an input component.</description></item>
-                    /// <item><description>output: an output component.</description></item>
-                    /// <item><description>transfrom: a transform component.</description></item>
-                    /// <item><description>process: a flow control component.</description></item>
+                    /// <item><description>input: input component.</description></item>
+                    /// <item><description>output: output component.</description></item>
+                    /// <item><description>transfrom: transform component.</description></item>
+                    /// <item><description>process: flow control component.
+                    /// For workflow tasks, this indicates the operator type, such as image: image or text: text. Refer to com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig#stepType. Developers must inherit the component or operator configuration class to implement the corresponding configuration. The structure of each configuration must be identical to the configuration structure created on the Dataphin page.</description></item>
                     /// </list>
-                    /// <para>For workflow nodes, this parameter specifies the operator type, such as image for images and text for text. Refer to the stepType field of the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig. Developers should inherit the component or operator configuration class and implement the corresponding configuration. Each component or operator configuration has the same structure as the configuration created on the Dataphin console.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -281,7 +283,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The integration pipeline configuration in JSON string format for script mode. Workflow nodes do not support script mode.</para>
+            /// <para>The integration pipeline configuration in JSON string format for script mode. Workflow tasks do not support script mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -291,11 +293,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string PipelineJson { get; set; }
 
             /// <summary>
-            /// <para>The node type. Valid values:</para>
+            /// <para>The task type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: batch integration (default).</description></item>
+            /// <item><description>0: offline integration (default).</description></item>
             /// <item><description>1: real-time integration.</description></item>
-            /// <item><description>14: workflow node.</description></item>
+            /// <item><description>14: workflow task.</description></item>
+            /// <item><description>15: real-time workflow.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -306,7 +309,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PipelineType { get; set; }
 
             /// <summary>
-            /// <para>The scheduling configuration in JSON string format. Refer to the toJsonString method of the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAScheduleConfig.</para>
+            /// <para>The schedule configuration in JSON string format. Refer to the com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAScheduleConfig#toJsonString method in the utility class.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -317,7 +320,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ScheduleConfig { get; set; }
 
             /// <summary>
-            /// <para>The channel configuration in JSON string format. Refer to the toJsonString method of the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAPipelineSetting.</para>
+            /// <para>The channel settings in JSON string format. Refer to the com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAPipelineSetting#toJsonString method in the utility class.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -327,7 +330,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Settings { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to submit the node. Default value: true.</para>
+            /// <para>Specifies whether to submit the task. Default value: true.</para>
             /// </summary>
             [NameInMap("Submit")]
             [Validation(Required=false)]

@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetDirectoryTreeRequest : TeaModel {
         /// <summary>
-        /// <para>Directory type.</para>
+        /// <para>The directory type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Ad-hoc Query: tempCode</description></item>
-        /// <item><description>Code Task: codeManage</description></item>
-        /// <item><description>Offline Pipeline: offlinePipeline</description></item>
-        /// <item><description>Pipeline Custom Component: offlinePipelineCustomPlugin</description></item>
-        /// <item><description>Sync Task: dataX</description></item>
-        /// <item><description>Real-time Meta Table: streamMeta</description></item>
-        /// <item><description>Real-time Custom Source: streamCustomDataSource</description></item>
-        /// <item><description>Real-time Compute Template: streamTemplate</description></item>
-        /// <item><description>Resource Management: resourceManage</description></item>
-        /// <item><description>Offline Function: udfResource</description></item>
-        /// <item><description>Real-time Function: streamFunction</description></item>
+        /// <item><description>tempCode: Ad hoc query.</description></item>
+        /// <item><description>codeManage: Code task.</description></item>
+        /// <item><description>offlinePipeline: Offline pipeline.</description></item>
+        /// <item><description>offlinePipelineCustomPlugin: Custom pipeline component.</description></item>
+        /// <item><description>dataX: Synchronization task.</description></item>
+        /// <item><description>streamMeta: Real-time metadata table.</description></item>
+        /// <item><description>streamCustomDataSource: Real-time custom source.</description></item>
+        /// <item><description>streamTemplate: Real-time computing template.</description></item>
+        /// <item><description>resourceManage: Resource management.</description></item>
+        /// <item><description>udfResource: Offline function.</description></item>
+        /// <item><description>streamFunction: Real-time function.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>Tenant ID.</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,6 +45,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operating user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -53,7 +55,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>Project ID.</para>
+        /// <para>The project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

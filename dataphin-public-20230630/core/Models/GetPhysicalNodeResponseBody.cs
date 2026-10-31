@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetPhysicalNodeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The error code. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The node creator.</para>
+            /// <para>The creator of the node.</para>
             /// </summary>
             [NameInMap("Creator")]
             [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The user ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx测试</para>
+                /// <para>xx test</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The cron expression used to calculate the scheduling time.</para>
+            /// <para>The cron expression, which is used to calculate the trigger time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0 0 10 * * *</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? DataSourceId { get; set; }
 
             /// <summary>
-            /// <para>The data source schema. This parameter takes effect only for data source types that require a schema, such as Oracle. If set to &quot;default&quot;, the value is null.</para>
+            /// <para>The schema of the data source. This parameter takes effect only for data source types that require a schema, such as Oracle. If it is set to &quot;default&quot;, the value is null.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -119,18 +119,18 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The node description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx测试</para>
+            /// <para>xx test</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The node source. Valid values:</para>
+            /// <para>The source of the node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>DATA_PROCESS: code development.</description></item>
-            /// <item><description>BLACK_BOX: modeling development.</description></item>
-            /// <item><description>PIPELINE: pipeline.</description></item>
+            /// <item><description>DATA_PROCESS: code development</description></item>
+            /// <item><description>BLACK_BOX: modeling development</description></item>
+            /// <item><description>PIPELINE: PIPELINE</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The time of the last modification.</para>
+            /// <para>The last update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1717343597000</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? LastModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The user who last modified the node.</para>
+            /// <para>The user who last updated the node.</para>
             /// </summary>
             [NameInMap("Modifier")]
             [Validation(Required=false)]
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The username.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx测试</para>
+                /// <para>xx test</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The node name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>节点名称</para>
+            /// <para>Node name</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <item><description>SHELL</description></item>
             /// <item><description>PYTHON</description></item>
             /// <item><description>ONE_SERVICE_SQL</description></item>
-            /// <item><description>DATABASE_SQL and others.</description></item>
+            /// <item><description>DATABASE_SQL, etc.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> OutputNameList { get; set; }
 
             /// <summary>
-            /// <para>The node owner.</para>
+            /// <para>The owner of the node.</para>
             /// </summary>
             [NameInMap("Owner")]
             [Validation(Required=false)]
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The username.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx测试</para>
+                /// <para>xx test</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <item><description>HIGH</description></item>
             /// <item><description>MIDDLE</description></item>
             /// <item><description>LOW</description></item>
-            /// <item><description>LOWEST.</description></item>
+            /// <item><description>LOWEST</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -291,7 +291,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The project name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx测试</para>
+                /// <para>xx test</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -307,7 +307,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <item><description>DAILY</description></item>
             /// <item><description>WEEKLY</description></item>
             /// <item><description>MONTHLY</description></item>
-            /// <item><description>QUARTERLY.</description></item>
+            /// <item><description>QUARTERLY</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -328,7 +328,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The trigger configuration, which is used to implement field-level dependencies on logical tables.</para>
+            /// <para>The trigger configuration, which is used to implement field dependencies for logical tables.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;expression&quot;:&quot;any_success&quot;}</para>
@@ -350,7 +350,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

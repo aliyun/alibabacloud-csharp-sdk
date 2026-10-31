@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetBizMetricByNameResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The backend response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The details of the business metric.</para>
+        /// <para>The business metric details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string DisplayName { get; set; }
 
                 /// <summary>
-                /// <para>The GUID.</para>
+                /// <para>guid</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>table1.a.b</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The type of the technical metric. Valid values: INDEX (modeling metric) and CUSTOM_INDEX (custom metric).</para>
+                /// <para>The type of the technical metric. Valid values: INDEX: Modeling metric. CUSTOM_INDEX: Custom metric.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CUSTOM_INDEX</para>
@@ -96,14 +96,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string BizOwnerName { get; set; }
 
             /// <summary>
-            /// <para>The list of affiliated catalogs.</para>
+            /// <para>The list of associated folders.</para>
             /// </summary>
             [NameInMap("Catalogs")]
             [Validation(Required=false)]
             public List<GetBizMetricByNameResponseBodyDataCatalogs> Catalogs { get; set; }
             public class GetBizMetricByNameResponseBodyDataCatalogs : TeaModel {
                 /// <summary>
-                /// <para>The catalog description.</para>
+                /// <para>The description of the folder.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>catalog desc</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string CatalogDesc { get; set; }
 
                 /// <summary>
-                /// <para>The catalog ID.</para>
+                /// <para>The ID of the folder.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1561740764851842</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? CatalogId { get; set; }
 
                 /// <summary>
-                /// <para>The catalog name.</para>
+                /// <para>The name of the folder.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test catalog</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string CatalogName { get; set; }
 
                 /// <summary>
-                /// <para>The parent catalog ID.</para>
+                /// <para>The ID of the parent folder.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1561740764851841</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? ParentCatalogId { get; set; }
 
                 /// <summary>
-                /// <para>The parent path of the catalog.</para>
+                /// <para>The path of the parent folder.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/catalog1/</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ParentPath { get; set; }
 
                 /// <summary>
-                /// <para>The topic ID to which the catalog belongs.</para>
+                /// <para>The ID of the topic to which the folder belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>43297700</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? TopicId { get; set; }
 
                 /// <summary>
-                /// <para>The topic name to which the catalog belongs.</para>
+                /// <para>The name of the topic to which the folder belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test topic</para>
@@ -175,14 +175,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The list of custom attributes.</para>
+            /// <para>The custom attribute list.</para>
             /// </summary>
             [NameInMap("CustomAttribute")]
             [Validation(Required=false)]
             public List<GetBizMetricByNameResponseBodyDataCustomAttribute> CustomAttribute { get; set; }
             public class GetBizMetricByNameResponseBodyDataCustomAttribute : TeaModel {
                 /// <summary>
-                /// <para>The code of the custom attribute.</para>
+                /// <para>The custom attribute code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CustomAttributeCode</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The list of attribute values. 1. For custom input and single-select dropdown attributes, the first value in the list is used. 2. For multi-select dropdown attributes, all values in the list are used. 3. For hyperlink attributes, the first value is the display text and the second value is the link URL.</para>
+                /// <para>The attribute value list: 1. For custom input and drop-down single-select attributes, the first attribute value in the list is used. 2. For drop-down multi-select attributes, all attribute values in the list are used. 3. For hyperlink attributes, the first attribute value in the list is the display text, and the second attribute value is the redirect link.</para>
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> Labels { get; set; }
 
             /// <summary>
-            /// <para>The metric definition.</para>
+            /// <para>The definition of the metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[Metric1]+[Metric2]</para>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string MetricDefinition { get; set; }
 
             /// <summary>
-            /// <para>The expression of the metric relation diagram.</para>
+            /// <para>The expression of the metric relationship diagram.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[Metric2]*10</para>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string MetricRelationDiagramExpression { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the metric relation diagram is enabled. A value of true indicates that the diagram is enabled. A value of false indicates that the diagram is disabled.</para>
+            /// <para>Indicates whether the metric relationship diagram is enabled. Valid values: true: Enabled. false: Disabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The text content of the operation instruction.</para>
+            /// <para>The text content of the usage instructions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>content</para>
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string OperateInstructionContent { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the operation instruction is enabled. A value of true indicates that the operation instruction is enabled. A value of false indicates that the operation instruction is disabled.</para>
+            /// <para>Indicates whether the usage instructions are enabled. Valid values: true: Enabled. false: Disabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -325,7 +325,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string DisplayName { get; set; }
 
                 /// <summary>
-                /// <para>The GUID.</para>
+                /// <para>guid</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -345,7 +345,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The relation type. Valid values: POSITIVE (positive correlation), NEGATIVE (negative correlation), and OTHER (other).</para>
+                /// <para>The relationship type. Valid values: POSITIVE: Positive correlation. NEGATIVE: Negative correlation. OTHER: Other.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>POSITIVE</para>
@@ -367,14 +367,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? TenantId { get; set; }
 
             /// <summary>
-            /// <para>The view scope.</para>
+            /// <para>The visibility scope.</para>
             /// </summary>
             [NameInMap("ViewScope")]
             [Validation(Required=false)]
             public GetBizMetricByNameResponseBodyDataViewScope ViewScope { get; set; }
             public class GetBizMetricByNameResponseBodyDataViewScope : TeaModel {
                 /// <summary>
-                /// <para>The type of view scope. Valid values: ALL_USERS_CAN_VIEW (visible to all users), PART_USERS_CAN_VIEW (visible to specific users), and PART_USERS_CAN_NOT_VIEW (invisible to specific users).</para>
+                /// <para>The type of the visibility scope. Valid values: ALL_USERS_CAN_VIEW: Visible to all users. PART_USERS_CAN_VIEW: Visible to specific users. PART_USERS_CAN_NOT_VIEW: Invisible to specific users.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PART_USERS_CAN_NOT_VIEW</para>
@@ -384,14 +384,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ScopeType { get; set; }
 
                 /// <summary>
-                /// <para>The names of user groups. This parameter takes effect only when the view scope is set to PART_USERS_CAN_VIEW or PART_USERS_CAN_NOT_VIEW.</para>
+                /// <para>The names of the user groups. This parameter is valid only when the visibility scope of the asset is set to Visible to specific users or Invisible to specific users.</para>
                 /// </summary>
                 [NameInMap("UserGroupNames")]
                 [Validation(Required=false)]
                 public List<string> UserGroupNames { get; set; }
 
                 /// <summary>
-                /// <para>The usernames of individual accounts. This parameter is valid only when the view scope is set to PART_USERS_CAN_VIEW or PART_USERS_CAN_NOT_VIEW.</para>
+                /// <para>The usernames of individual accounts. This parameter is valid only when the visibility scope of the asset is set to Visible to specific users or Invisible to specific users.</para>
                 /// </summary>
                 [NameInMap("UserNames")]
                 [Validation(Required=false)]
@@ -412,7 +412,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The details of the backend exception.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -432,7 +432,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

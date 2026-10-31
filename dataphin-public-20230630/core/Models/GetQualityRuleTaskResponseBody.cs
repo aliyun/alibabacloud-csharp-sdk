@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend exception.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetQualityRuleTaskResponseBodyRuleTaskInfo RuleTaskInfo { get; set; }
         public class GetQualityRuleTaskResponseBodyRuleTaskInfo : TeaModel {
             /// <summary>
-            /// <para>The business date.</para>
+            /// <para>The business date. The format is YYYY-MM-DD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string BizDate { get; set; }
 
             /// <summary>
-            /// <para>The business date format.</para>
+            /// <para>The format of the business date.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yyyy-MM-dd</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string BizDateFormat { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30 00:00:00</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The end time.</para>
+            /// <para>The end time. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30 00:00:00</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user who last modified the task.</para>
+            /// <para>The ID of the user who last updated the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30012011</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Modifier { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The update time. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30 00:00:00</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? RuleId { get; set; }
 
             /// <summary>
-            /// <para>The start time.</para>
+            /// <para>The start time. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30 00:00:00</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? TemplateId { get; set; }
 
             /// <summary>
-            /// <para>The validation object name.</para>
+            /// <para>The name of the validated object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ValidateObjectName { get; set; }
 
             /// <summary>
-            /// <para>The validation object type.</para>
+            /// <para>The validated object type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>column</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ValidateObjectType { get; set; }
 
             /// <summary>
-            /// <para>The validation partition.</para>
+            /// <para>The validated partition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20251011</para>
@@ -207,14 +207,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ValidatePartition { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the validation passed.</para>
+            /// <para>Indicates whether the validation is successful.</para>
             /// </summary>
             [NameInMap("ValidateSuccess")]
             [Validation(Required=false)]
             public bool? ValidateSuccess { get; set; }
 
             /// <summary>
-            /// <para>The ID of the associated monitor.</para>
+            /// <para>The watch ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? WatchId { get; set; }
 
             /// <summary>
-            /// <para>The monitor task ID. This ID is empty for trial-run rule tasks.</para>
+            /// <para>The watch task ID. This ID is empty for rule tasks in a trial run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

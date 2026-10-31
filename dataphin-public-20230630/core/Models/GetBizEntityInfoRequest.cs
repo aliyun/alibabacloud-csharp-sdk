@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -40,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The business entity type. For more information, refer to the create business entity operation.</para>
+        /// <para>The business entity type. For more information, see the Create business entity operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

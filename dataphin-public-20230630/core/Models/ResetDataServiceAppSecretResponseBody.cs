@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ResetDataServiceAppSecretResponseBody : TeaModel {
         /// <summary>
-        /// <para>Backend response code</para>
+        /// <para>The backend response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Reset Data Service application key result</para>
+        /// <para>The update command to reset the application key of a data service.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ResetDataServiceAppSecretResponseBodyData Data { get; set; }
         public class ResetDataServiceAppSecretResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The new application key</para>
+            /// <para>The new application key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200000001</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string AppKey { get; set; }
 
             /// <summary>
-            /// <para>The new application secret</para>
+            /// <para>The new application secret.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc123456789</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Backend exception details</para>
+        /// <para>The exception details in the backend response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

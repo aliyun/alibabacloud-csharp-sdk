@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetComputeSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The error code. OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetComputeSourceResponseBodyComputeSourceInfo ComputeSourceInfo { get; set; }
         public class GetComputeSourceResponseBodyComputeSourceInfo : TeaModel {
             /// <summary>
-            /// <para>Indicates whether a project is associated.</para>
+            /// <para>Indicates whether the compute source is bound to a project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? BindProject { get; set; }
 
             /// <summary>
-            /// <para>The ID of the associated project.</para>
+            /// <para>The ID of the bound project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10101101</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? BindProjectId { get; set; }
 
             /// <summary>
-            /// <para>The name of the associated project.</para>
+            /// <para>The name of the bound project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dp_mctest</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The last modification timestamp.</para>
+            /// <para>The update timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1711881607000</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The error message of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

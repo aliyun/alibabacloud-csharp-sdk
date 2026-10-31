@@ -1,0 +1,51 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
+{
+    public class SubmitPipelineAsyncShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The request context information.</para>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("Context")]
+        [Validation(Required=false)]
+        public string ContextShrink { get; set; }
+
+        /// <summary>
+        /// <para>The tenant ID.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpTenantId")]
+        [Validation(Required=false)]
+        public long? OpTenantId { get; set; }
+
+        /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
+
+        /// <summary>
+        /// <para>The ID used to query the pipeline task.</para>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("QueryId")]
+        [Validation(Required=false)]
+        public string QueryIdShrink { get; set; }
+
+    }
+
+}

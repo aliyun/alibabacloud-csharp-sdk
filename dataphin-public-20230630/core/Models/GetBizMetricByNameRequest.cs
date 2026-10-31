@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetBizMetricByNameRequest : TeaModel {
         /// <summary>
-        /// <para>Query request.</para>
+        /// <para>The query request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("BizMetricByNameQuery")]
@@ -18,7 +18,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetBizMetricByNameRequestBizMetricByNameQuery BizMetricByNameQuery { get; set; }
         public class GetBizMetricByNameRequestBizMetricByNameQuery : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to query draft or published asset details. Set this parameter to True to query draft details, or False to query published details.</para>
+            /// <para>Specifies whether to query the details of a draft or published asset. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>True: Draft.</description></item>
+            /// <item><description>False: Published.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -42,7 +46,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>Tenant ID.</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,6 +57,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

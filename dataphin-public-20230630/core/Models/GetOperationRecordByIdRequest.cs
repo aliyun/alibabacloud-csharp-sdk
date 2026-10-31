@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetOperationRecordByIdRequestDetailCommand DetailCommand { get; set; }
         public class GetOperationRecordByIdRequestDetailCommand : TeaModel {
             /// <summary>
-            /// <para>The operation log ID.</para>
+            /// <para>The operation record ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -53,6 +53,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

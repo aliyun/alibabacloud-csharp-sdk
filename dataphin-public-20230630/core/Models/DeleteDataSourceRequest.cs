@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class DeleteDataSourceRequest : TeaModel {
         /// <summary>
-        /// <para>The request for deleting a data source.</para>
+        /// <para>The data source deletion request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeleteCommand")]
@@ -18,10 +18,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public DeleteDataSourceRequestDeleteCommand DeleteCommand { get; set; }
         public class DeleteDataSourceRequestDeleteCommand : TeaModel {
             /// <summary>
-            /// <para>The deletion mode selection. Valid values:</para>
+            /// <para>The deletion mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>DEV: deletes the data source only in the development environment.</description></item>
-            /// <item><description>DEV_PROD: deletes the data source in both the development and production environments.</description></item>
+            /// <item><description>DEV: Deletes only the data source in the development environment.</description></item>
+            /// <item><description>DEV_PROD: Deletes the data sources in both the development and production environments.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -57,6 +57,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

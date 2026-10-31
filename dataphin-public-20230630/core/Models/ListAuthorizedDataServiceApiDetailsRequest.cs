@@ -24,6 +24,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// 
             /// <summary>
             /// <para>The application key.</para>
+            /// <remarks>
+            /// <para>Notice: Deprecated. Use AppKeyStr.</notice></para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>200000000</para>
@@ -79,6 +82,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

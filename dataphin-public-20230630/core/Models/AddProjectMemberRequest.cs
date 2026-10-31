@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class AddProjectMemberRequest : TeaModel {
         /// <summary>
-        /// <para>The command for adding members.</para>
+        /// <para>The command to add members.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AddCommand")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public AddProjectMemberRequestAddCommand AddCommand { get; set; }
         public class AddProjectMemberRequestAddCommand : TeaModel {
             /// <summary>
-            /// <para>The environment identifier. Valid values: DEV, PROD.</para>
+            /// <para>The environment identifier. Valid values: DEV and PROD.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Env { get; set; }
 
             /// <summary>
-            /// <para>The list of user members.</para>
+            /// <para>The user members.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("UserList")]
@@ -37,8 +37,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<AddProjectMemberRequestAddCommandUserList> UserList { get; set; }
             public class AddProjectMemberRequestAddCommandUserList : TeaModel {
                 /// <summary>
-                /// <para>The member roles. Valid values: 1: project administrator. 2: developer. 3: visitor. 4: analyst. 5: O&amp;M engineer.</para>
-                /// <para>This parameter is required.</para>
+                /// <para>The list of role codes for members. System and custom project roles are supported and can be obtained from ListProjectRoles. Only one role is supported. If this parameter is not empty, it takes precedence over RoleList. You must specify at least one of RoleList and RoleCodeList.</para>
+                /// </summary>
+                [NameInMap("RoleCodeList")]
+                [Validation(Required=false)]
+                public List<string> RoleCodeList { get; set; }
+
+                /// <summary>
+                /// <para>The member role. Valid values: 1 (Project administrator), 2 (Developer), 3 (Guest), 4 (Analyst), and 5 (O&amp;M engineer).</para>
                 /// </summary>
                 [NameInMap("RoleList")]
                 [Validation(Required=false)]
@@ -82,7 +88,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the operator user.</para>
+        /// <para>The operator user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001011</para>

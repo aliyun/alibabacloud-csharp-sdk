@@ -111,6 +111,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>时区名称，例如 Asia/Shanghai。更新时不传则保留原值。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Asia/Shanghai</para>
+            /// </summary>
+            [NameInMap("TimeZone")]
+            [Validation(Required=false)]
+            public string TimeZone { get; set; }
+
+            /// <summary>
             /// <para>The cluster type.</para>
             /// <para>This parameter is required.</para>
             /// 

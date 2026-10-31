@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListBizEntitiesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The error code. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<ListBizEntitiesResponseBodyPageResultBizEntityList> BizEntityList { get; set; }
             public class ListBizEntitiesResponseBodyPageResultBizEntityList : TeaModel {
                 /// <summary>
-                /// <para>The list of parent business process IDs. This parameter is valid only when the entity type is business process.</para>
+                /// <para>The list of IDs of the business processes to which the business entity belongs. This parameter is valid only when the business entity type is business process.</para>
                 /// </summary>
                 [NameInMap("BelongToBizEntityIdList")]
                 [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? BizUnitId { get; set; }
 
                 /// <summary>
-                /// <para>The list of child business object IDs. This parameter is valid only when the entity type is business object.</para>
+                /// <para>The list of child business object IDs. This parameter is valid only when the business entity type is business object.</para>
                 /// </summary>
                 [NameInMap("ChildBizEntityIdList")]
                 [Validation(Required=false)]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The display name of the business entity.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>业务活动测试</para>
+                /// <para>Business process test</para>
                 /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The time when the business entity was last modified.</para>
+                /// <para>The time when the business entity was last updated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-10-10 10:00:00</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the entity is a child business object.</para>
+                /// <para>Indicates whether the business entity has child business objects.</para>
                 /// </summary>
                 [NameInMap("HasChildBizEntity")]
                 [Validation(Required=false)]
@@ -158,14 +158,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The name of the user who last modified the business entity.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>Zhang San</para>
                 /// </summary>
                 [NameInMap("LastModifierName")]
                 [Validation(Required=false)]
                 public string LastModifierName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the entity is a sublevel of a hierarchy dimension.</para>
+                /// <para>Indicates whether the business entity is a sub-level of a hierarchy dimension.</para>
                 /// </summary>
                 [NameInMap("LevelSubBizObject")]
                 [Validation(Required=false)]
@@ -185,9 +185,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The online status of the business entity. Valid values: </para>
                 /// <list type="bullet">
                 /// <item><description>SUBMITTED: not online.</description></item>
-                /// <item><description>APPROVING: pending approval.</description></item>
+                /// <item><description>APPROVING: under approval.</description></item>
                 /// <item><description>PUBLISHED: online.</description></item>
-                /// <item><description>REJECT: failed to go online.</description></item>
+                /// <item><description>REJECT: rejected.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The ID of the business entity owner.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>Zhang San</para>
                 /// </summary>
                 [NameInMap("OwnerName")]
                 [Validation(Required=false)]
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string OwnerUserId { get; set; }
 
                 /// <summary>
-                /// <para>The list of associated central business entity IDs.</para>
+                /// <para>The list of IDs of the associated central business entities.</para>
                 /// </summary>
                 [NameInMap("RefBizEntityIdList")]
                 [Validation(Required=false)]
@@ -238,10 +238,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The status of the business entity. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>DRAFT: draft or not online.</description></item>
-                /// <item><description>SUBMITTING: being submitted.</description></item>
+                /// <item><description>SUBMITTING: submitting.</description></item>
                 /// <item><description>SUBMITTED: submitted.</description></item>
-                /// <item><description>DEVELOPING: under development.</description></item>
-                /// <item><description>PUBLISHING: being published.</description></item>
+                /// <item><description>DEVELOPING: in development.</description></item>
+                /// <item><description>PUBLISHING: publishing.</description></item>
                 /// <item><description>PUBLISHED: published.</description></item>
                 /// </list>
                 /// 
@@ -263,7 +263,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string SubType { get; set; }
 
                 /// <summary>
-                /// <para>The list of subsequent business process IDs. This parameter is valid only when the entity type is business process.</para>
+                /// <para>The list of IDs of the subsequent business processes. This parameter is valid only when the business entity type is business process.</para>
                 /// </summary>
                 [NameInMap("SuffixBizEntityIdList")]
                 [Validation(Required=false)]
@@ -308,7 +308,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

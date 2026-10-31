@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListTenantMembersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. OK indicates a successful request.</para>
+        /// <para>The error code. OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The HTTP status code returned by the backend.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The paginated query result.</para>
+        /// <para>The paged query result.</para>
         /// </summary>
         [NameInMap("PageResult")]
         [Validation(Required=false)]
         public ListTenantMembersResponseBodyPageResult PageResult { get; set; }
         public class ListTenantMembersResponseBodyPageResult : TeaModel {
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>110</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? TotalCount { get; set; }
 
             /// <summary>
-            /// <para>The list of users.</para>
+            /// <para>The user list.</para>
             /// </summary>
             [NameInMap("UserList")]
             [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string AccountName { get; set; }
 
                 /// <summary>
-                /// <para>The DingTalk number.</para>
+                /// <para>The DingTalk ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dd123123</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string DisplayName { get; set; }
 
                 /// <summary>
-                /// <para>The display name of the user without status.</para>
+                /// <para>The display name of the user without the status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>zhangsan</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string DisplayNameWithoutStatus { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the IP address whitelist is enabled.</para>
+                /// <para>Indicates whether the IP whitelist is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string EnableWhiteIp { get; set; }
 
                 /// <summary>
-                /// <para>The time when the user was created.</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1730000000000</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The time when the user was last modified.</para>
+                /// <para>The modification time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1730000000000</para>
@@ -187,21 +187,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The real name of the user.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>Zhang San</para>
                 /// </summary>
                 [NameInMap("RealName")]
                 [Validation(Required=false)]
                 public string RealName { get; set; }
 
                 /// <summary>
-                /// <para>The list of member roles.</para>
+                /// <para>The member role.</para>
                 /// </summary>
                 [NameInMap("RoleList")]
                 [Validation(Required=false)]
                 public List<string> RoleList { get; set; }
 
                 /// <summary>
-                /// <para>The user source ID.</para>
+                /// <para>The ID of the user source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>213213232422222</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string SourceId { get; set; }
 
                 /// <summary>
-                /// <para>The user source.</para>
+                /// <para>The source of the user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aliyun</para>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The list of user groups to which the user belongs.</para>
+                /// <para>The resource groups to which the user belongs.</para>
                 /// </summary>
                 [NameInMap("UserGroupList")]
                 [Validation(Required=false)]
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <para>The description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>测试</para>
+                    /// <para>Test</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -261,7 +261,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <para>The name of the user group.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>xx测试</para>
+                    /// <para>xx test</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -294,7 +294,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

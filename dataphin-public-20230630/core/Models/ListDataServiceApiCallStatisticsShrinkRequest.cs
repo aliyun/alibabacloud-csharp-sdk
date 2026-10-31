@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListDataServiceApiCallStatisticsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Search conditions.</para>
+        /// <para>The search conditions.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ListQuery")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string ListQueryShrink { get; set; }
 
         /// <summary>
-        /// <para>Tenant ID.</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,6 +29,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -37,8 +39,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>Data service project ID.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The data service project ID.</para>
+        /// <remarks>
+        /// <para>If this parameter is not specified:</para>
+        /// <list type="bullet">
+        /// <item><description>Super administrators can query data of all service projects.</description></item>
+        /// <item><description>Users other than super administrators can query data of service projects where they have the service project administrator or O&amp;M user permissions.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>102102</para>

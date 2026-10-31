@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         /// <summary>
         /// <para>The environment identifier. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DEV: development environment. </description></item>
-        /// <item><description>PROD (default): production environment.</description></item>
+        /// <item><description>DEV: Development environment. </description></item>
+        /// <item><description>PROD: Production environment. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,6 +35,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public OperateInstanceRequestOperateCommand OperateCommand { get; set; }
         public class OperateInstanceRequestOperateCommand : TeaModel {
             /// <summary>
-            /// <para>The list of instances to operate on.</para>
+            /// <para>The O&amp;M instance list.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("InstanceIdList")]
@@ -79,13 +81,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The operation to perform. Valid values:	</para>
+            /// <para>The operation. Valid values:	</para>
             /// <list type="bullet">
-            /// <item><description>RERUN: Reruns the instance.</description></item>
-            /// <item><description>PAUSE: Pauses the instance.</description></item>
-            /// <item><description>RESUME: Resumes the instance.</description></item>
-            /// <item><description>TERMINATE: Stops the instance.</description></item>
-            /// <item><description>SET_SUCCESS: Sets the instance status to successful.</description></item>
+            /// <item><description>RERUN: Rerun.</description></item>
+            /// <item><description>PAUSE: Pause.</description></item>
+            /// <item><description>RESUME: Resume.</description></item>
+            /// <item><description>TERMINATE: Stop.</description></item>
+            /// <item><description>SET_SUCCESS: Set to success.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetSupplementDagrunInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The dagrun ID.</para>
+        /// <para>Dagrun ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,8 +23,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         /// <summary>
         /// <para>The environment identifier. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DEV: development environment. </description></item>
-        /// <item><description>PROD (default): production environment.</description></item>
+        /// <item><description>DEV: development environment</description></item>
+        /// <item><description>PROD: production environment
+        /// Default value: PROD.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,6 +47,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

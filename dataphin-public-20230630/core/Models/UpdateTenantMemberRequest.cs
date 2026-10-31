@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -37,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateTenantMemberRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateTenantMemberRequestUpdateCommand : TeaModel {
             /// <summary>
-            /// <para>The list of members.</para>
+            /// <para>The member list.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("MemberList")]
@@ -45,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<UpdateTenantMemberRequestUpdateCommandMemberList> MemberList { get; set; }
             public class UpdateTenantMemberRequestUpdateCommandMemberList : TeaModel {
                 /// <summary>
-                /// <para>The DingTalk number.</para>
+                /// <para>The DingTalk ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123@dingding</para>
@@ -53,6 +55,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 [NameInMap("DingNumber")]
                 [Validation(Required=false)]
                 public string DingNumber { get; set; }
+
+                /// <summary>
+                /// <para>The display name of the user.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
+                /// </summary>
+                [NameInMap("DisplayName")]
+                [Validation(Required=false)]
+                public string DisplayName { get; set; }
 
                 /// <summary>
                 /// <para>The email address.</para>
@@ -75,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string MobilePhone { get; set; }
 
                 /// <summary>
-                /// <para>The list of roles.</para>
+                /// <para>The role list.</para>
                 /// </summary>
                 [NameInMap("RoleList")]
                 [Validation(Required=false)]

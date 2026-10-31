@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListSecurityIdentifyResultsRequest : TeaModel {
         /// <summary>
-        /// <para>Query conditions.</para>
+        /// <para>The search criteria.</para>
         /// </summary>
         [NameInMap("ListQuery")]
         [Validation(Required=false)]
         public ListSecurityIdentifyResultsRequestListQuery ListQuery { get; set; }
         public class ListSecurityIdentifyResultsRequestListQuery : TeaModel {
             /// <summary>
-            /// <para>Business unit names.</para>
+            /// <para>The names of the business units.</para>
             /// </summary>
             [NameInMap("BizUnitNameList")]
             [Validation(Required=false)]
             public List<string> BizUnitNameList { get; set; }
 
             /// <summary>
-            /// <para>Data classification ID.</para>
+            /// <para>The data classification ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ClassifyId { get; set; }
 
             /// <summary>
-            /// <para>Data source names.</para>
+            /// <para>The names of the data sources.</para>
             /// </summary>
             [NameInMap("DatasourceNameList")]
             [Validation(Required=false)]
             public List<string> DatasourceNameList { get; set; }
 
             /// <summary>
-            /// <para>Environment identifier of the data source, project, or business unit.</para>
+            /// <para>The environment identifier of the associated data source, project, or business unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DEV</para>
@@ -51,14 +51,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Env { get; set; }
 
             /// <summary>
-            /// <para>Whether it is locked.</para>
+            /// <para>Specifies whether the item is locked.</para>
             /// </summary>
             [NameInMap("IsLocked")]
             [Validation(Required=false)]
             public bool? IsLocked { get; set; }
 
             /// <summary>
-            /// <para>Keyword filter. Supports matching by table catalog, table name, table display name, and field name.</para>
+            /// <para>The keyword filter. Supports matching by table catalog, table name, Chinese table name, or field name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Keyword { get; set; }
 
             /// <summary>
-            /// <para>Page number. Default value: 1.</para>
+            /// <para>The page number. Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageNo { get; set; }
 
             /// <summary>
-            /// <para>Number of records per page. Default value: 20.</para>
+            /// <para>The number of records per page. Default value: 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -88,14 +88,18 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Project names.</para>
+            /// <para>The names of the projects.</para>
             /// </summary>
             [NameInMap("ProjectNameList")]
             [Validation(Required=false)]
             public List<string> ProjectNameList { get; set; }
 
             /// <summary>
-            /// <para>Effective status filter: ENABLE or DISABLE.</para>
+            /// <para>The filter for the effective status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ENABLE: Enabled.</description></item>
+            /// <item><description>DISABLE: Disabled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>ENABLE</para>
@@ -107,7 +111,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>Tenant ID.</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -118,6 +122,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

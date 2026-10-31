@@ -10,9 +10,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetPhysicalInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Environment identifier.
-        /// DEV: Development environment.
-        /// PROD (default): Production environment.</para>
+        /// <para>The environment identifier. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>DEV: Development environment.</description></item>
+        /// <item><description>PROD: Production environment.
+        /// Default value: PROD.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>PROD</para>
@@ -22,7 +25,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Env { get; set; }
 
         /// <summary>
-        /// <para>Instance ID</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,7 +36,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Tenant ID</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +47,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -52,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>Project ID</para>
+        /// <para>The project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

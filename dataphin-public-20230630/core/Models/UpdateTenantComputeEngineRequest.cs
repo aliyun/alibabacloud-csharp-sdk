@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -37,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateTenantComputeEngineRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateTenantComputeEngineRequestUpdateCommand : TeaModel {
             /// <summary>
-            /// <para>The list of cluster node endpoints.</para>
+            /// <para>The cluster node connection list.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("ClusterUrlList")]

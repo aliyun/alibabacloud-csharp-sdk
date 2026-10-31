@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public BatchCreateKgEntityResponseBodyCreateResult CreateResult { get; set; }
         public class BatchCreateKgEntityResponseBodyCreateResult : TeaModel {
             /// <summary>
-            /// <para>The number of entity records that failed to be created.</para>
+            /// <para>The number of failed records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? FailCount { get; set; }
 
             /// <summary>
-            /// <para>The number of successfully created entity records.</para>
+            /// <para>The number of successfully created records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<BatchCreateKgEntityResponseBodyCreateResultSuccessEntityList> SuccessEntityList { get; set; }
             public class BatchCreateKgEntityResponseBodyCreateResultSuccessEntityList : TeaModel {
                 /// <summary>
-                /// <para>The entity record ID.</para>
+                /// <para>The ID of the entity record.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abc-xxx</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The backend exception details.</para>
+        /// <para>The details of the backend exception.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>

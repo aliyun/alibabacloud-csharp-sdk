@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the temporary read/write authorization.</para>
+        /// <para>The details of the temporary read and write authorization.</para>
         /// </summary>
         [NameInMap("StorageCredential")]
         [Validation(Required=false)]
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The temporary security token.</para>
+            /// <para>The security token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>temp.token</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string SecurityToken { get; set; }
 
             /// <summary>
-            /// <para>The storage cluster type. Valid values: oss and ceph.</para>
+            /// <para>The type of the storage cluster. Valid values: oss and ceph.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

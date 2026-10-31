@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -37,11 +39,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public PublishObjectListRequestPublishCommand PublishCommand { get; set; }
         public class PublishObjectListRequestPublishCommand : TeaModel {
             /// <summary>
-            /// <para>The publish comment. The string can be up to 1024 characters in length.</para>
+            /// <para>The publish comment. The maximum length is 1,024 characters.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>发布</para>
+            /// <para>Publish</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
@@ -59,7 +61,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The list of pending publish record IDs to be published. A maximum of 50 submit IDs can be specified.</para>
+            /// <para>The list of submit record IDs for the items to be published. A maximum of 50 submit IDs are supported.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("SubmitIdList")]

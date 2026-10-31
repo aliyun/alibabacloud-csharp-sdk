@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetBatchTaskVersionsRequest : TeaModel {
         /// <summary>
-        /// <para>The node ID in the node directory tree.</para>
+        /// <para>The node ID in the directory tree.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -40,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the project to which the node belongs.</para>
+        /// <para>The project to which the node belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user that performs the operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -37,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateBizUnitRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateBizUnitRequestUpdateCommand : TeaModel {
             /// <summary>
-            /// <para>The domain architects.</para>
+            /// <para>The business unit architects.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("BizUnitAccountList")]
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The data domain ID.</para>
+            /// <para>The business unit ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -79,18 +81,18 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The display name of the data domain.</para>
+            /// <para>The display name of the business unit.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试</para>
+            /// <para>Test</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The preset icon. For more information, refer to the create data domain operation.</para>
+            /// <para>The preset icon. For more information, refer to the Create business unit operation.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -101,7 +103,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Icon { get; set; }
 
             /// <summary>
-            /// <para>The data domain code.</para>
+            /// <para>The business unit code.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateBasicProjectRequest : TeaModel {
         /// <summary>
-        /// <para>The create command.</para>
+        /// <para>The creation command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreateCommand")]
@@ -48,10 +48,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The project display name.</para>
+            /// <para>The display name of the project.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>My project.</para>
+            /// <para>My project</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? StreamComputeSourceId { get; set; }
 
             /// <summary>
-            /// <para>The project type. If this parameter is left empty, the default value GENERAL is used.</para>
+            /// <para>The project type. Default value: GENERAL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GENERAL</para>
@@ -151,6 +151,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

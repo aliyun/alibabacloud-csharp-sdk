@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class UpdateBizMetricRequest : TeaModel {
         /// <summary>
-        /// <para>Tenant ID</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>Update request</para>
+        /// <para>The update request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UpdateBizMetricCommand")]
@@ -37,14 +39,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateBizMetricRequestUpdateBizMetricCommand UpdateBizMetricCommand { get; set; }
         public class UpdateBizMetricRequestUpdateBizMetricCommand : TeaModel {
             /// <summary>
-            /// <para>List of associated technical metrics. Enter the full name of the technical metric in the format of &quot;TableFullName.MetricName&quot;, where &quot;TableFullName&quot; equals &quot;AssetSource.TableName&quot;. A technical metric can only be associated with one business metric and cannot be associated repeatedly</para>
+            /// <para>The associated technical metrics. Enter the technical metric in the &quot;Full table name.Metric name&quot; format, where the &quot;Full table name&quot; is equal to &quot;Asset source.Table name&quot;. A technical metric can be associated with only one business metric and cannot be repeatedly associated.</para>
             /// </summary>
             [NameInMap("AssociatedTechMetricFullNames")]
             [Validation(Required=false)]
             public List<string> AssociatedTechMetricFullNames { get; set; }
 
             /// <summary>
-            /// <para>Business owner. Enter the username of the owner account</para>
+            /// <para>The business owner. Enter the username of the owner\&quot;s account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SuperAdmin</para>
@@ -54,21 +56,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string BizOwnerName { get; set; }
 
             /// <summary>
-            /// <para>List of catalog IDs</para>
+            /// <para>The IDs of the parent folders.</para>
             /// </summary>
             [NameInMap("CatalogIds")]
             [Validation(Required=false)]
             public List<long?> CatalogIds { get; set; }
 
             /// <summary>
-            /// <para>List of custom attributes. Enter the attribute code and attribute values for each</para>
+            /// <para>The custom attributes. Enter the attribute code and attribute value separately.</para>
             /// </summary>
             [NameInMap("CustomAttribute")]
             [Validation(Required=false)]
             public List<UpdateBizMetricRequestUpdateBizMetricCommandCustomAttribute> CustomAttribute { get; set; }
             public class UpdateBizMetricRequestUpdateBizMetricCommandCustomAttribute : TeaModel {
                 /// <summary>
-                /// <para>Custom attribute code</para>
+                /// <para>The code of the custom attribute.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CustomAttributeCode</para>
@@ -78,7 +80,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>List of attribute values. 1. For custom input and single-select dropdown attributes, only the first value in the list is read. 2. For multi-select dropdown attributes, all values in the list are read. 3. For hyperlink attributes, the first value is used as the display text and the second value is used as the link URL.</para>
+                /// <para>The attribute values. 1. For custom input and drop-down single-select attributes, only the first attribute value in the list is read. 2. For drop-down multi-select attributes, all attribute values in the list are read. 3. For hyperlink attributes, the first attribute value in the list is read as the display text, and the second attribute value is read as the redirect link.</para>
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
@@ -87,7 +89,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>Description</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Metric Desc</para>
@@ -97,7 +99,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Display name</para>
+            /// <para>The display name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Metric1_DisplayName</para>
@@ -107,14 +109,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>Asset labels</para>
+            /// <para>The asset labels.</para>
             /// </summary>
             [NameInMap("Labels")]
             [Validation(Required=false)]
             public List<string> Labels { get; set; }
 
             /// <summary>
-            /// <para>Metric definition. To reference other business metrics, enclose the metric name in square brackets [ ]</para>
+            /// <para>The metric definition. To reference other business metrics, enclose the metric names in half-width square brackets [].</para>
             /// 
             /// <b>Example:</b>
             /// <para>[Metric2]+[Metric3]</para>
@@ -124,7 +126,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string MetricDefinition { get; set; }
 
             /// <summary>
-            /// <para>This parameter is read only when the metric relationship diagram is enabled. Only a calculation expression composed of metric names selected from related business metrics is supported. Supported operators include +, -, *, /, (), %, and ∑. Each metric name must be enclosed in square brackets [ ]. If no operator is specified between two metrics, the system automatically fills in a placeholder. If no metric relationship expression is configured, the metric relationship diagram switch is automatically disabled</para>
+            /// <para>The expression for the metric relationship diagram. This parameter is read only when the metric relationship diagram is enabled. You can only enter a calculation expression composed of metric names selected from the related business metrics. The supported operators are +, -, *, /, (), %, and ∑. Each metric name must be enclosed in half-width square brackets []. If no operator is specified between two metrics, the system automatically adds padding as a placeholder. If the metric relational expression is not configured, a shutdown of the metric relationship diagram switch is automatically triggered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[Metric1]+[Metric2]</para>
@@ -134,7 +136,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string MetricRelationDiagramExpression { get; set; }
 
             /// <summary>
-            /// <para>Metric relationship diagram switch. Valid values: true (enabled) and false (disabled). This can be enabled only when at least one related business metric exists. Otherwise, it is automatically disabled</para>
+            /// <para>Specifies whether to enable the metric relationship diagram. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: Enabled.</description></item>
+            /// <item><description>false: Disabled.
+            /// This switch can be enabled only when at least one related business metric exists. Otherwise, it is automatically disabled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -144,7 +151,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? MetricRelationDiagramSwitchOpen { get; set; }
 
             /// <summary>
-            /// <para>Enter the name of the business metric to update</para>
+            /// <para>The name of the business metric to update.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -155,7 +162,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The new name. Enter this when you need to modify the metric name</para>
+            /// <para>The new name. Specify this parameter when you need to modify the metric name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Metric1_new</para>
@@ -165,7 +172,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NewName { get; set; }
 
             /// <summary>
-            /// <para>Content of the usage instructions. Only text format is supported</para>
+            /// <para>The content of the usage instructions. Only text format is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>content test</para>
@@ -175,7 +182,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string OperateInstructionContent { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the usage instructions are enabled. Valid values: true (enabled) and false (disabled)</para>
+            /// <para>Specifies whether to enable the usage instructions. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: Enabled.</description></item>
+            /// <item><description>false: Disabled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -185,14 +196,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? OperateInstructionEnabled { get; set; }
 
             /// <summary>
-            /// <para>List of related business metrics</para>
+            /// <para>The related business metrics.</para>
             /// </summary>
             [NameInMap("RelatedBizMetrics")]
             [Validation(Required=false)]
             public List<UpdateBizMetricRequestUpdateBizMetricCommandRelatedBizMetrics> RelatedBizMetrics { get; set; }
             public class UpdateBizMetricRequestUpdateBizMetricCommandRelatedBizMetrics : TeaModel {
                 /// <summary>
-                /// <para>Business metric name</para>
+                /// <para>The name of the business metric.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Metric2</para>
@@ -202,7 +213,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Correlation type. Valid values: POSITIVE (positive correlation), NEGATIVE (negative correlation), and OTHER (other)</para>
+                /// <para>The relationship type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>POSITIVE: Positive correlation.</description></item>
+                /// <item><description>NEGATIVE: Negative correlation.</description></item>
+                /// <item><description>OTHER: Other.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>POSITIVE</para>
@@ -214,14 +230,19 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>Visibility scope</para>
+            /// <para>The visibility scope.</para>
             /// </summary>
             [NameInMap("ViewScope")]
             [Validation(Required=false)]
             public UpdateBizMetricRequestUpdateBizMetricCommandViewScope ViewScope { get; set; }
             public class UpdateBizMetricRequestUpdateBizMetricCommandViewScope : TeaModel {
                 /// <summary>
-                /// <para>Visibility scope type. Valid values: ALL_USERS_CAN_VIEW (visible to all users), PART_USERS_CAN_VIEW (visible to specified users), and PART_USERS_CAN_NOT_VIEW (invisible to specified users)</para>
+                /// <para>The visibility scope type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>ALL_USERS_CAN_VIEW: Visible to all users.</description></item>
+                /// <item><description>PART_USERS_CAN_VIEW: Visible to specific users.</description></item>
+                /// <item><description>PART_USERS_CAN_NOT_VIEW: Invisible to specific users.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ALL_USERS_CAN_VIEW</para>
@@ -231,14 +252,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ScopeType { get; set; }
 
                 /// <summary>
-                /// <para>Enter user group names. This parameter is read only when the visibility scope is set to PART_USERS_CAN_VIEW or PART_USERS_CAN_NOT_VIEW</para>
+                /// <para>The user group names. This parameter is read only when the visibility scope of the asset is set to Visible to specific users or Invisible to specific users.</para>
                 /// </summary>
                 [NameInMap("UserGroupNames")]
                 [Validation(Required=false)]
                 public List<string> UserGroupNames { get; set; }
 
                 /// <summary>
-                /// <para>Enter the usernames of individual accounts. This parameter takes effect only when the visibility scope is set to PART_USERS_CAN_VIEW or PART_USERS_CAN_NOT_VIEW</para>
+                /// <para>The usernames of individual accounts. This parameter is valid only when the visibility scope of the asset is set to Visible to specific users or Invisible to specific users.</para>
                 /// </summary>
                 [NameInMap("UserNames")]
                 [Validation(Required=false)]

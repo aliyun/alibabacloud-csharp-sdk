@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class DeleteSecurityClassifyRequest : TeaModel {
         /// <summary>
-        /// <para>The delete instruction.</para>
+        /// <para>The update command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeleteCommand")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public DeleteSecurityClassifyRequestDeleteCommand DeleteCommand { get; set; }
         public class DeleteSecurityClassifyRequestDeleteCommand : TeaModel {
             /// <summary>
-            /// <para>The categorization ID. If this parameter is not specified, the categorization is matched and deleted based on the categorization name and parent path.</para>
+            /// <para>The category ID. If this parameter is not provided, the category is matched and deleted based on the category name and parent path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The categorization name.</para>
+            /// <para>The category name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The categorization path. Default value: /.</para>
+            /// <para>The category path. Default value: /.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/</para>
@@ -61,6 +61,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

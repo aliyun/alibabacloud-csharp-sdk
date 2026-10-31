@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class DeleteBatchTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The delete request.</para>
+        /// <para>The deletion request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeleteCommand")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public DeleteBatchTaskRequestDeleteCommand DeleteCommand { get; set; }
         public class DeleteBatchTaskRequestDeleteCommand : TeaModel {
             /// <summary>
-            /// <para>The description of the delete operation.</para>
+            /// <para>The description of the deletion operation.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The ID of the node in the folder.</para>
+            /// <para>The ID of the node in the task directory tree.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? FileId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the project to which the node belongs.</para>
+            /// <para>The ID of the project to which the task belongs.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -64,6 +64,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user who performs the operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

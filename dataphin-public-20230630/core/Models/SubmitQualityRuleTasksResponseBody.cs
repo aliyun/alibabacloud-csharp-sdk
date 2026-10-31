@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class SubmitQualityRuleTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>Backend response code</para>
+        /// <para>The backend response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>HTTP response code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Details of the backend response exception</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -50,21 +50,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Execution result</para>
+        /// <para>The execution result.</para>
         /// </summary>
         [NameInMap("SubmitResult")]
         [Validation(Required=false)]
         public SubmitQualityRuleTasksResponseBodySubmitResult SubmitResult { get; set; }
         public class SubmitQualityRuleTasksResponseBodySubmitResult : TeaModel {
             /// <summary>
-            /// <para>Rule task IDs, returned in the test run scenario</para>
+            /// <para>The rule task IDs. Returned in test run scenarios.</para>
             /// </summary>
             [NameInMap("RuleTaskIdList")]
             [Validation(Required=false)]
             public List<long?> RuleTaskIdList { get; set; }
 
             /// <summary>
-            /// <para>Monitoring object task IDs, returned in non-test run scenarios</para>
+            /// <para>The monitored object task IDs. Returned in non-test run scenarios.</para>
             /// </summary>
             [NameInMap("WatchTaskIdList")]
             [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>Whether the request was successful</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

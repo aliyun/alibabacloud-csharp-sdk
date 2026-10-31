@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListDataServiceApiCallsRequest : TeaModel {
         /// <summary>
-        /// <para>The query conditions.</para>
+        /// <para>The search conditions.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ListQuery")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListDataServiceApiCallsRequestListQuery ListQuery { get; set; }
         public class ListDataServiceApiCallsRequestListQuery : TeaModel {
             /// <summary>
-            /// <para>The ID of the API.</para>
+            /// <para>The code of the API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20122</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The application key.</para>
             /// <remarks>
-            /// <para>Notice: This parameter is deprecated. Use AppKeyStr instead.</para>
+            /// <para>Notice: Deprecated. Use AppKeyStr instead.</notice></para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageNo { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page. Default value: 20.</para>
+            /// <para>The number of records per page. Default value: 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the call was successful.</para>
+            /// <para>Specifies whether the call is successful.</para>
             /// </summary>
             [NameInMap("Successful")]
             [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>The ID of the tenant.</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -136,6 +136,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

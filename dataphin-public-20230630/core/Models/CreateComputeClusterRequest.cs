@@ -42,14 +42,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ClusterSafetyAuthType { get; set; }
 
                 /// <summary>
-                /// <para>The list of whitelist user group IDs.</para>
+                /// <para>The list of whitelisted user group IDs.</para>
                 /// </summary>
                 [NameInMap("UserGroupIds")]
                 [Validation(Required=false)]
                 public List<string> UserGroupIds { get; set; }
 
                 /// <summary>
-                /// <para>The list of whitelist user IDs.</para>
+                /// <para>The list of whitelisted user IDs.</para>
                 /// </summary>
                 [NameInMap("UserIds")]
                 [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<CreateComputeClusterRequestClusterConfigConfigList> ConfigList { get; set; }
             public class CreateComputeClusterRequestClusterConfigConfigList : TeaModel {
                 /// <summary>
-                /// <para>The configuration item.</para>
+                /// <para>The configuration key.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of the configuration item.</para>
+                /// <para>The configuration value.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -109,6 +109,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
+            /// <summary>
+            /// <para>The time zone name, such as Asia/Shanghai. If this parameter is not specified during an update, the original value is retained.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Asia/Shanghai</para>
+            /// </summary>
+            [NameInMap("TimeZone")]
+            [Validation(Required=false)]
+            public string TimeZone { get; set; }
 
             /// <summary>
             /// <para>The cluster type.</para>
@@ -145,7 +155,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the operator user.</para>
+        /// <para>The ID of the operator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001011</para>

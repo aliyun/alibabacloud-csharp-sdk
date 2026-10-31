@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateStandardLookupTableRequest : TeaModel {
         /// <summary>
-        /// <para>The create command.</para>
+        /// <para>The creation command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreateCommand")]
@@ -39,14 +39,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The directory to which the lookup table belongs.</para>
+            /// <para>The parent folder.</para>
             /// </summary>
             [NameInMap("DirectoryReference")]
             [Validation(Required=false)]
             public CreateStandardLookupTableRequestCreateCommandDirectoryReference DirectoryReference { get; set; }
             public class CreateStandardLookupTableRequestCreateCommandDirectoryReference : TeaModel {
                 /// <summary>
-                /// <para>The directory to which the lookup table belongs.</para>
+                /// <para>The parent folder.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>杭州</para>
+                /// <para>Hangzhou</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -114,14 +114,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>城市码表</para>
+            /// <para>City lookup table</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the lookup table owner. Default value: the user ID of the caller.</para>
+            /// <para>The ID of the lookup table owner. Default value: the ID of the caller.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30012021</para>
@@ -144,6 +144,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

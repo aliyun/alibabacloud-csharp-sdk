@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         /// <summary>
         /// <para>The environment identifier. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DEV: development environment.</description></item>
-        /// <item><description>PROD: production environment.</description></item>
+        /// <item><description>DEV: Development environment.</description></item>
+        /// <item><description>PROD: Production environment.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,6 +36,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

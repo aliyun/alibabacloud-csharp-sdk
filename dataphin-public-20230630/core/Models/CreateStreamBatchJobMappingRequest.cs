@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The stream-batch integrated node information.</para>
+        /// <para>The stream-batch integrated task information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("StreamBatchJobMappingCreateCommand")]
@@ -51,14 +53,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>这是一段任务的描述信息</para>
+            /// <para>This is a sample description for the task</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The folder in which the node is generated.</para>
+            /// <para>The directory where the task is generated.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -69,7 +71,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Directory { get; set; }
 
             /// <summary>
-            /// <para>The Flink DPI engine version.</para>
+            /// <para>The database engine version of the Flink DPI engine.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -135,7 +137,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string QueueName { get; set; }
 
             /// <summary>
-            /// <para>The VVP cluster type. Valid values: SESSION and PREJOB. This parameter is specific to VVP. If not applicable, leave this parameter empty or do not pass it.</para>
+            /// <para>The VVP cluster type. This parameter is specific to VVP. Valid values: SESSION and PREJOB. If it is not applicable, leave it empty or do not specify it.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

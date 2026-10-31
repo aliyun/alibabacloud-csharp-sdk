@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The paged query parameters.</para>
+        /// <para>The paging query parameters.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PageQuery")]
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The application key.</para>
             /// <remarks>
-            /// <para>Notice: Deprecated. Use AppKeyStr instead.</notice>.</para>
+            /// <para>Notice: Deprecated. Use AppKeyStr.</notice></para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

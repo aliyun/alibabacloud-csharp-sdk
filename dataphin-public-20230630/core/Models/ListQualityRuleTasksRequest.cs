@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListQualityRuleTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The paged query conditions.</para>
+        /// <para>The paging query conditions.</para>
         /// </summary>
         [NameInMap("ListQuery")]
         [Validation(Required=false)]
@@ -27,17 +27,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string BizDate { get; set; }
 
             /// <summary>
-            /// <para>The rule type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>CONSISTENT: consistency</description></item>
-            /// <item><description>EFFECTIVE: validity</description></item>
-            /// <item><description>TIMELINESE: timeliness</description></item>
-            /// <item><description>ACCURATE: accuracy</description></item>
-            /// <item><description>UNIQUENESS: uniqueness</description></item>
-            /// <item><description>COMPLETENESS: completeness</description></item>
-            /// <item><description>STABILITY: stability</description></item>
-            /// <item><description>CUSTOM: custom.</description></item>
-            /// </list>
+            /// <para>The rule types. Valid values: CONSISTENT (consistency), EFFECTIVE (effectiveness), TIMELINESE (timeliness), ACCURATE (accuracy), UNIQUENESS (uniqueness), COMPLETENESS (completeness), STABILITY (stability), and CUSTOM (custom).</para>
             /// </summary>
             [NameInMap("CatalogList")]
             [Validation(Required=false)]
@@ -74,67 +64,35 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The rule strength. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>STRONG: strong</description></item>
-            /// <item><description>WEAK: weak.</description></item>
-            /// </list>
+            /// <para>The rule strengths. Valid values: STRONG (strong) and WEAK (weak).</para>
             /// </summary>
             [NameInMap("RuleStrengthList")]
             [Validation(Required=false)]
             public List<string> RuleStrengthList { get; set; }
 
             /// <summary>
-            /// <para>The rule label. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>DEFAULT: default label</description></item>
-            /// <item><description>DATA_STANDARD_MANUAL: standard rule manually created</description></item>
-            /// <item><description>DATA_STANDARD_AUTO: quality rule created by automatic creation from a standard</description></item>
-            /// <item><description>PIPELINE: rule created by a pipeline</description></item>
-            /// <item><description>DATA_MODELING: data modeling diagnostics.</description></item>
-            /// </list>
+            /// <para>The rule labels. Valid values: DEFAULT (default label), DATA_STANDARD_MANUAL (manually created standard rules), DATA_STANDARD_AUTO (standard quality rules created by automatic creation), PIPELINE (rules created by pipelines), and DATA_MODELING (data modeling).</para>
             /// </summary>
             [NameInMap("RuleTagList")]
             [Validation(Required=false)]
             public List<string> RuleTagList { get; set; }
 
             /// <summary>
-            /// <para>The task status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>NOT_RUN: not executed</description></item>
-            /// <item><description>WAITING: waiting</description></item>
-            /// <item><description>RUNNING: running</description></item>
-            /// <item><description>SUCCESS: succeeded</description></item>
-            /// <item><description>FAILED: failed</description></item>
-            /// <item><description>CANCEL: canceled</description></item>
-            /// <item><description>TIMEOUT: timed out</description></item>
-            /// <item><description>OFFLINE: offline.</description></item>
-            /// </list>
+            /// <para>The task statuses. Valid values: NOT_RUN (not run), WAITING (waiting), RUNNING (running), SUCCESS (successful), FAILED (failed), CANCEL (canceled), TIMEOUT (timed out), and OFFLINE (offline).</para>
             /// </summary>
             [NameInMap("StatusList")]
             [Validation(Required=false)]
             public List<string> StatusList { get; set; }
 
             /// <summary>
-            /// <para>The validation result. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>NOT_RUN: not executed</description></item>
-            /// <item><description>WAITING: waiting for execution</description></item>
-            /// <item><description>RUNNING: running</description></item>
-            /// <item><description>PASS: passed</description></item>
-            /// <item><description>NOT_PASS: not passed</description></item>
-            /// <item><description>FAILED: execution failed</description></item>
-            /// <item><description>OFFLINE: offline and needs to be restarted</description></item>
-            /// <item><description>CANCEL: task canceled</description></item>
-            /// <item><description>TIMEOUT: task timed out.</description></item>
-            /// </list>
+            /// <para>The validation results. Valid values: NOT_RUN (not run), WAITING (waiting), RUNNING (running), PASS (passed), NOT_PASS (not passed), FAILED (failed), OFFLINE (offline and requires restart), CANCEL (canceled), and TIMEOUT (timed out).</para>
             /// </summary>
             [NameInMap("ValidateResultList")]
             [Validation(Required=false)]
             public List<string> ValidateResultList { get; set; }
 
             /// <summary>
-            /// <para>The ID of the quality watchtask.</para>
+            /// <para>The quality watchtask ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -157,6 +115,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

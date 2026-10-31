@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The alert frequency. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ONCE: Instant alert.</description></item>
-            /// <item><description>PERIOD: Periodic alert. Format: 1HOUR, 1MINUTE, 1SECOND.</description></item>
+            /// <item><description>ONCE: immediate alert</description></item>
+            /// <item><description>PERIOD: periodic alert. Format: 1HOUR, 1MINUTE, or 1SECOND</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -48,18 +48,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The source system type. Valid values:</para>
+                /// <para>The source system. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>ALL: all systems</description></item>
                 /// <item><description>DQE: data quality</description></item>
                 /// <item><description>OS: data service</description></item>
                 /// <item><description>STREAM: real-time computing</description></item>
-                /// <item><description>VDM_BATCH: batch computing</description></item>
+                /// <item><description>VDM_BATCH: offline computing</description></item>
                 /// <item><description>SOP: O&amp;M platform</description></item>
                 /// <item><description>REAL_TIME_PIPELINE: real-time integration</description></item>
                 /// <item><description>KGB: baseline monitoring</description></item>
                 /// </list>
-                /// <para>and more.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ALL</para>
@@ -69,7 +68,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string SourceSystemType { get; set; }
 
                 /// <summary>
-                /// <para>The alerting object type. Valid values:</para>
+                /// <para>The alert object type. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>OS_API: API operation</description></item>
                 /// <item><description>OS_APPLICATION_SERVICE: service application</description></item>
@@ -98,7 +97,6 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <item><description>QD_DECISION_INVOKE: QD decision invocation</description></item>
                 /// <item><description>BASELINE: baseline</description></item>
                 /// </list>
-                /// <para>and more.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>VDM_BATCH_PYTHON37</para>
@@ -110,21 +108,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The alert reason.</para>
+            /// <para>The cause of the alert.</para>
             /// </summary>
             [NameInMap("AlertReason")]
             [Validation(Required=false)]
             public GetAlertEventResponseBodyAlertEventInfoAlertReason AlertReason { get; set; }
             public class GetAlertEventResponseBodyAlertEventInfoAlertReason : TeaModel {
                 /// <summary>
-                /// <para>The list of alert reason parameters.</para>
+                /// <para>The list of alert cause parameters.</para>
                 /// </summary>
                 [NameInMap("AlertReasonParamList")]
                 [Validation(Required=false)]
                 public List<GetAlertEventResponseBodyAlertEventInfoAlertReasonAlertReasonParamList> AlertReasonParamList { get; set; }
                 public class GetAlertEventResponseBodyAlertEventInfoAlertReasonAlertReasonParamList : TeaModel {
                     /// <summary>
-                    /// <para>The name of the alert reason parameter.</para>
+                    /// <para>The name of the alert cause parameter.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>biz_date</para>
@@ -134,7 +132,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the alert reason parameter.</para>
+                    /// <para>The value of the alert cause parameter.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2024-11-04 00:00:00</para>
@@ -156,7 +154,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string BizDate { get; set; }
 
                 /// <summary>
-                /// <para>The type of the alert reason. Valid values:</para>
+                /// <para>The type of the alert cause. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>DQE_COLUMN: field rule exception</description></item>
                 /// <item><description>DQE_DATA_SOURCE: data source rule exception</description></item>
@@ -167,19 +165,19 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <item><description>OS_AVG_RESPONSE: average response time exception</description></item>
                 /// <item><description>OS_CALL_TIMES: call count exception</description></item>
                 /// <item><description>OS_ERROR_RATE: error rate exception</description></item>
-                /// <item><description>OS_OFFLINE: Offline percentage exception</description></item>
-                /// <item><description>STREAM_BIZ_DELAY: business delay too high</description></item>
-                /// <item><description>STREAM_DATA_RETENTION: data retention exceeds configuration</description></item>
-                /// <item><description>STREAM_MORE_THAN_FAILURE: failure frequency exceeds configuration</description></item>
+                /// <item><description>OS_OFFLINE: offline percentage exception</description></item>
+                /// <item><description>STREAM_BIZ_DELAY: high business latency</description></item>
+                /// <item><description>STREAM_DATA_RETENTION: data retention exceeds the configuration</description></item>
+                /// <item><description>STREAM_MORE_THAN_FAILURE: failure frequency exceeds the configuration</description></item>
                 /// <item><description>STREAM_TPS_OUT_RANGE: TPS out of range</description></item>
-                /// <item><description>STREAM_CHECKPOINT_FAILURE: checkpoint failures exceed configuration</description></item>
-                /// <item><description>STREAM_BACKPRESSURE: backpressure duration exceeds configuration</description></item>
-                /// <item><description>STREAM_JOB_FAILURE: job failure</description></item>
-                /// <item><description>VDM_BATCH_ERROR: error</description></item>
-                /// <item><description>VDM_BATCH_FINISH: completed</description></item>
-                /// <item><description>VDM_BATCH_TIME_OUT: execution timeout</description></item>
-                /// <item><description>VDM_BATCH_UNDONE: incomplete</description></item>
-                /// <item><description>VDM_BATCH_LOGIC_DATA_DELAY: data delay</description></item>
+                /// <item><description>STREAM_CHECKPOINT_FAILURE: checkpoint failures exceed the configuration</description></item>
+                /// <item><description>STREAM_BACKPRESSURE: backpressure duration exceeds the configuration</description></item>
+                /// <item><description>STREAM_JOB_FAILURE: job execution failed</description></item>
+                /// <item><description>VDM_BATCH_ERROR: batch task error</description></item>
+                /// <item><description>VDM_BATCH_FINISH: batch task completed</description></item>
+                /// <item><description>VDM_BATCH_TIME_OUT: batch task timed out</description></item>
+                /// <item><description>VDM_BATCH_UNDONE: batch task unfinished</description></item>
+                /// <item><description>VDM_BATCH_LOGIC_DATA_DELAY: data latency</description></item>
                 /// <item><description>QD_DECISION_CALL_TIMES: decision call count exception</description></item>
                 /// <item><description>QD_DECISION_MAX_RESPONSE: maximum response time exception</description></item>
                 /// <item><description>QD_DECISION_ERROR_RATE: error rate exception</description></item>
@@ -191,9 +189,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <item><description>KGB_TASK_ERROR: baseline task error</description></item>
                 /// <item><description>KGB_TASK_SLOW_DOWN: baseline task slowdown</description></item>
                 /// <item><description>KGB_EARLY_WARNING: baseline early warning</description></item>
-                /// <item><description>KGB_BROKEN_LINE: baseline breach</description></item>
+                /// <item><description>KGB_BROKEN_LINE: baseline broken</description></item>
                 /// </list>
-                /// <para>and more.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>VDM_BATCH_FINISH</para>
@@ -215,7 +212,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The list of alert receivers.</para>
+            /// <para>The list of alert recipients.</para>
             /// </summary>
             [NameInMap("AlertReceiverList")]
             [Validation(Required=false)]
@@ -246,11 +243,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string OnCallTableName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the alert receiver. Valid values:</para>
+                /// <para>The type of the alert recipient. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>ON_CALL_TABLE: on-call schedule</description></item>
                 /// <item><description>USER_DEFINED: custom user</description></item>
-                /// <item><description>OWNER: owner.</description></item>
+                /// <item><description>OWNER: owner</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -282,7 +279,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The project to which the alert event belongs.</para>
+            /// <para>The associated project.</para>
             /// </summary>
             [NameInMap("BelongProject")]
             [Validation(Required=false)]
@@ -299,7 +296,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string BizName { get; set; }
 
                 /// <summary>
-                /// <para>The name of the project.</para>
+                /// <para>The name of the associated project.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>project_1</para>
@@ -311,7 +308,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The expiration time of the do-not-disturb period.</para>
+            /// <para>The expiration time of the do not disturb mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-11-05 00:00:00</para>
@@ -321,7 +318,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DoNotDisturbEndTime { get; set; }
 
             /// <summary>
-            /// <para>The time of the first alert.</para>
+            /// <para>The time when the first alert was triggered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-11-05 16:19:33</para>
@@ -331,7 +328,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string FirstAlertTime { get; set; }
 
             /// <summary>
-            /// <para>The alert event ID.</para>
+            /// <para>The ID of the alert event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12345</para>
@@ -341,7 +338,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The time of the latest alert.</para>
+            /// <para>The time when the latest alert was triggered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-11-05 16:19:33</para>
@@ -353,10 +350,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The alert status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ALERTING: Alerting.</description></item>
-            /// <item><description>DO_NOT_DISTURB: Do not disturb.</description></item>
-            /// <item><description>SILENCING: Alerting (cool-down period).</description></item>
-            /// <item><description>FINISH: Alert completed.</description></item>
+            /// <item><description>ALERTING: alerting</description></item>
+            /// <item><description>DO_NOT_DISTURB: do not disturb</description></item>
+            /// <item><description>SILENCING: alerting (silence period)</description></item>
+            /// <item><description>FINISH: alert completed</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -377,7 +374,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? TotalAlertTimes { get; set; }
 
             /// <summary>
-            /// <para>The URL configuration.</para>
+            /// <para>The URL information.</para>
             /// </summary>
             [NameInMap("UrlConfig")]
             [Validation(Required=false)]
@@ -418,7 +415,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The error code. OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -458,7 +455,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

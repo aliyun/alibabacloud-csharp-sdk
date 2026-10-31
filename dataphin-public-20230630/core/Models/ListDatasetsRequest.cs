@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ContentType { get; set; }
 
             /// <summary>
-            /// <para>The data domain ID.</para>
+            /// <para>The subject domain ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>74280</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataUnit { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to include version details. Default value: FALSE.</para>
+            /// <para>Specifies whether to include version details. Default value: false.</para>
             /// </summary>
             [NameInMap("IncludeVersionList")]
             [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? Page { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The number of items per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -95,11 +95,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The dataset scenario. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>OFFLINE: offline.</description></item>
-            /// <item><description>REALTIME: real-time.</description></item>
-            /// </list>
+            /// <para>The dataset scenario. Valid values: OFFLINE (offline) and REALTIME (real-time).</para>
             /// 
             /// <b>Example:</b>
             /// <para>OFFLINE</para>
@@ -129,7 +125,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? TenantId { get; set; }
 
             /// <summary>
-            /// <para>The dataset type. If left empty, all types are queried.</para>
+            /// <para>The dataset types. If this parameter is left empty, all types are queried.</para>
             /// </summary>
             [NameInMap("TypeList")]
             [Validation(Required=false)]
@@ -149,6 +145,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

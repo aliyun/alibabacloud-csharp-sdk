@@ -22,8 +22,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         /// <summary>
         /// <para>The environment identifier. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DEV: development environment. </description></item>
-        /// <item><description>PROD (default): production environment.</description></item>
+        /// <item><description>DEV: Development environment.</description></item>
+        /// <item><description>PROD: Production environment.
+        /// Default value: PROD.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,7 +43,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetNodeUpDownStreamRequestNodeId NodeId { get; set; }
         public class GetNodeUpDownStreamRequestNodeId : TeaModel {
             /// <summary>
-            /// <para>This parameter can be specified when the node ID is a logical table node ID. If this parameter is not specified, the full table is used by default.</para>
+            /// <para>The list of field IDs. This parameter is applicable when the node is a logical table node. If you do not specify this parameter, all fields in the table are queried by default.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -76,6 +77,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

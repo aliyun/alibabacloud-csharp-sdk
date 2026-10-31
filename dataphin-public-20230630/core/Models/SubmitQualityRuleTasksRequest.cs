@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class SubmitQualityRuleTasksRequest : TeaModel {
         /// <summary>
-        /// <para>Tenant ID</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>Submit command</para>
+        /// <para>The submit command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SubmitCommand")]
@@ -37,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public SubmitQualityRuleTasksRequestSubmitCommand SubmitCommand { get; set; }
         public class SubmitQualityRuleTasksRequestSubmitCommand : TeaModel {
             /// <summary>
-            /// <para>Business date, format: yyyy-MM-dd</para>
+            /// <para>The business date. Format: yyyy-MM-dd.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30</para>
@@ -47,7 +49,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string BizDate { get; set; }
 
             /// <summary>
-            /// <para>Whether it is a test run: true for test run, false for formal run.</para>
+            /// <para>Specifies whether to perform a test run. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: performs a test run.</description></item>
+            /// <item><description>false: performs a formal run.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("IsTestRun")]
@@ -55,7 +61,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? IsTestRun { get; set; }
 
             /// <summary>
-            /// <para>Partition expression - custom expression</para>
+            /// <para>The custom partition expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ds=${yyyyMMdd}</para>
@@ -65,7 +71,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string PartitionExpression { get; set; }
 
             /// <summary>
-            /// <para>Source of the test run partition expression: SCHEDULE for existing schedule, CUSTOM for custom.</para>
+            /// <para>The source of the partition expression for the test run. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>SCHEDULE: existing schedule.</description></item>
+            /// <item><description>CUSTOM: custom expression.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>CUSTOM</para>
@@ -75,7 +85,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string PartitionExpressionFrom { get; set; }
 
             /// <summary>
-            /// <para>Existing schedule ID</para>
+            /// <para>The ID of the existing schedule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -85,7 +95,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ScheduleId { get; set; }
 
             /// <summary>
-            /// <para>Monitoring object and rule IDs</para>
+            /// <para>The monitored object and rule IDs.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("WatchRuleIdList")]
@@ -93,7 +103,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<SubmitQualityRuleTasksRequestSubmitCommandWatchRuleIdList> WatchRuleIdList { get; set; }
             public class SubmitQualityRuleTasksRequestSubmitCommandWatchRuleIdList : TeaModel {
                 /// <summary>
-                /// <para>Rule ID</para>
+                /// <para>The rule ID.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -104,7 +114,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? RuleId { get; set; }
 
                 /// <summary>
-                /// <para>Monitoring object ID</para>
+                /// <para>The monitored object ID.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>

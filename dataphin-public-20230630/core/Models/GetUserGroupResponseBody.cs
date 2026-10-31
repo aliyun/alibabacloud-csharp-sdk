@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetUserGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The error code. OK indicates that the request is normal.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<GetUserGroupResponseBodyUserGroupInfoAdminList> AdminList { get; set; }
             public class GetUserGroupResponseBodyUserGroupInfoAdminList : TeaModel {
                 /// <summary>
-                /// <para>The account name of the user.</para>
+                /// <para>The user account name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xx</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The username.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx测试</para>
+                /// <para>xx test</para>
                 /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The description of the user group.</para>
+            /// <para>The user group description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xx</para>
@@ -146,10 +146,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string MyRole { get; set; }
 
             /// <summary>
-            /// <para>The name of the user group.</para>
+            /// <para>The user group name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx测试</para>
+            /// <para>xx test</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

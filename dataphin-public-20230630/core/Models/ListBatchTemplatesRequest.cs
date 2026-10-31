@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Env { get; set; }
 
         /// <summary>
-        /// <para>The paged query conditions.</para>
+        /// <para>The paging query conditions.</para>
         /// </summary>
         [NameInMap("ListQuery")]
         [Validation(Required=false)]
         public ListBatchTemplatesRequestListQuery ListQuery { get; set; }
         public class ListBatchTemplatesRequestListQuery : TeaModel {
             /// <summary>
-            /// <para>The template name keyword.</para>
+            /// <para>The keyword in the template name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>数据处理模板</para>
+            /// <para>Data processing template</para>
             /// </summary>
             [NameInMap("Keyword")]
             [Validation(Required=false)]
@@ -56,6 +56,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
+            /// <summary>
+            /// <para>The template ID. The query is based on the template ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123456</para>
+            /// </summary>
+            [NameInMap("TemplateId")]
+            [Validation(Required=false)]
+            public long? TemplateId { get; set; }
+
         }
 
         /// <summary>
@@ -70,6 +80,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

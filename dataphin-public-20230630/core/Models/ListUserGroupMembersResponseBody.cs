@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListUserGroupMembersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The error code. OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned by the backend.</para>
+        /// <para>The HTTP status code of the backend response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,28 +40,28 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The paged query result.</para>
+        /// <para>The paging query result.</para>
         /// </summary>
         [NameInMap("PageResult")]
         [Validation(Required=false)]
         public ListUserGroupMembersResponseBodyPageResult PageResult { get; set; }
         public class ListUserGroupMembersResponseBodyPageResult : TeaModel {
             /// <summary>
-            /// <para>The paged list.</para>
+            /// <para>The paginated list.</para>
             /// </summary>
             [NameInMap("MemberList")]
             [Validation(Required=false)]
             public List<ListUserGroupMembersResponseBodyPageResultMemberList> MemberList { get; set; }
             public class ListUserGroupMembersResponseBodyPageResultMemberList : TeaModel {
                 /// <summary>
-                /// <para>The user who added the member.</para>
+                /// <para>The creator.</para>
                 /// </summary>
                 [NameInMap("Creator")]
                 [Validation(Required=false)]
                 public ListUserGroupMembersResponseBodyPageResultMemberListCreator Creator { get; set; }
                 public class ListUserGroupMembersResponseBodyPageResultMemberListCreator : TeaModel {
                     /// <summary>
-                    /// <para>The account name of the user.</para>
+                    /// <para>The user account name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>12121111</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string AccountName { get; set; }
 
                     /// <summary>
-                    /// <para>The username.</para>
+                    /// <para>The display name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>zhangsan</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string DisplayName { get; set; }
 
                     /// <summary>
-                    /// <para>The user ID.</para>
+                    /// <para>The user IDs.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>12121111</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The time when the member was added to the user group.</para>
+                /// <para>The time when the user group member was added.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>zhangsan</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public ListUserGroupMembersResponseBodyPageResultMemberListUserInfo UserInfo { get; set; }
                 public class ListUserGroupMembersResponseBodyPageResultMemberListUserInfo : TeaModel {
                     /// <summary>
-                    /// <para>The account name of the user.</para>
+                    /// <para>The user account name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>atest</para>
@@ -140,17 +140,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string AccountName { get; set; }
 
                     /// <summary>
-                    /// <para>The username.</para>
+                    /// <para>The display name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>xx测试</para>
+                    /// <para>xx Test</para>
                     /// </summary>
                     [NameInMap("DisplayName")]
                     [Validation(Required=false)]
                     public string DisplayName { get; set; }
 
                     /// <summary>
-                    /// <para>The user ID.</para>
+                    /// <para>The user IDs.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>13232</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The role of the member in the user group.</para>
+                /// <para>The role of the user group member in the user group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SECURITY_ADMIN</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

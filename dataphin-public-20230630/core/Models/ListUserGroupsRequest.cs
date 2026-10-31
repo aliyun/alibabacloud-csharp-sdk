@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListUserGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The paged query parameters.</para>
+        /// <para>The paging query.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ListQuery")]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> AdminIdList { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to filter user groups that the current user belongs to.</para>
+            /// <para>Specifies whether to filter out the user groups to which the current user belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The keyword for the user group name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx测试</para>
+            /// <para>xx test</para>
             /// </summary>
             [NameInMap("Keyword")]
             [Validation(Required=false)]
@@ -90,6 +90,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

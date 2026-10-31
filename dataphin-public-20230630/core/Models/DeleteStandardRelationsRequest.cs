@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class DeleteStandardRelationsRequest : TeaModel {
         /// <summary>
-        /// <para>The delete instruction.</para>
+        /// <para>The delete command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeleteCommand")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public DeleteStandardRelationsRequestDeleteCommand DeleteCommand { get; set; }
         public class DeleteStandardRelationsRequestDeleteCommand : TeaModel {
             /// <summary>
-            /// <para>The standard association type: RELATIVE.</para>
+            /// <para>The standard association type. Valid value: RELATIVE.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -74,6 +74,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

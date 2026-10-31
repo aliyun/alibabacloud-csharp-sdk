@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListPublishRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The error code. A value of OK indicates that the request is normal.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Backend response HTTP status code.</para>
+        /// <para>The HTTP status code returned by the backend.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,21 +30,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Query result.</para>
+        /// <para>The query result.</para>
         /// </summary>
         [NameInMap("ListResult")]
         [Validation(Required=false)]
         public ListPublishRecordsResponseBodyListResult ListResult { get; set; }
         public class ListPublishRecordsResponseBodyListResult : TeaModel {
             /// <summary>
-            /// <para>Publish record list.</para>
+            /// <para>The publish record list.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<ListPublishRecordsResponseBodyListResultData> Data { get; set; }
             public class ListPublishRecordsResponseBodyListResultData : TeaModel {
                 /// <summary>
-                /// <para>Change type. Valid values: 0: Create. 1: Update. 2: Delete.</para>
+                /// <para>The change type. Valid values: 0: create. 1: update. 2: delete.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? ChangeType { get; set; }
 
                 /// <summary>
-                /// <para>Publish error message.</para>
+                /// <para>The publish error message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>error</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// <para>Publish completion time in the yyyy-MM-dd HH:mm:ss format.</para>
+                /// <para>The publish completion time. Format: yyyy-MM-dd HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-10-10 10:10:10</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string FinishTime { get; set; }
 
                 /// <summary>
-                /// <para>Creation time in the yyyy-MM-dd HH:mm:ss format.</para>
+                /// <para>The creation time. Format: yyyy-MM-dd HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-10-10 10:00:00</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>Modification time in the yyyy-MM-dd HH:mm:ss format.</para>
+                /// <para>The update time. Format: yyyy-MM-dd HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-10-10 10:00:00</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string GmtModify { get; set; }
 
                 /// <summary>
-                /// <para>Publish record ID, which is not the object ID and is globally unique in the publish list.</para>
+                /// <para>The ID of the publish record. This is not the object ID and is globally unique in the publish list.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1241844456</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>Node ID.</para>
+                /// <para>The node ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>n_123456</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string NodeId { get; set; }
 
                 /// <summary>
-                /// <para>Object ID.</para>
+                /// <para>The object ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1234567</para>
@@ -124,17 +124,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ObjectId { get; set; }
 
                 /// <summary>
-                /// <para>Object name.</para>
+                /// <para>The object name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>对象A</para>
+                /// <para>Object A</para>
                 /// </summary>
                 [NameInMap("ObjectName")]
                 [Validation(Required=false)]
                 public string ObjectName { get; set; }
 
                 /// <summary>
-                /// <para>Object type.</para>
+                /// <para>The object type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-10-10 10:00:00</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ObjectType { get; set; }
 
                 /// <summary>
-                /// <para>Object version.</para>
+                /// <para>The object version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ObjectVersion { get; set; }
 
                 /// <summary>
-                /// <para>Project ID.</para>
+                /// <para>The project ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1241844456</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>Publish name.</para>
+                /// <para>The publish name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test_lc__20241118171502</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string PublishName { get; set; }
 
                 /// <summary>
-                /// <para>Publish status. Valid values: 0: Failed. 1: Succeeded. 2: Publishing.</para>
+                /// <para>The publish status. Valid values: 0: failed. 1: successful. 2: publishing.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? PublishStatus { get; set; }
 
                 /// <summary>
-                /// <para>Publisher ID.</para>
+                /// <para>The ID of the publisher.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>307999999</para>
@@ -194,10 +194,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Publisher { get; set; }
 
                 /// <summary>
-                /// <para>Publisher name.</para>
+                /// <para>The name of the publisher.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>Zhang San</para>
                 /// </summary>
                 [NameInMap("PublisherName")]
                 [Validation(Required=false)]
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>Total count.</para>
+            /// <para>The total count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>Error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

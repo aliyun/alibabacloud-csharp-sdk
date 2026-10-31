@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetBizUnitInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the data domain.</para>
+        /// <para>The business unit details.</para>
         /// </summary>
         [NameInMap("BizUnitInfo")]
         [Validation(Required=false)]
         public GetBizUnitInfoResponseBodyBizUnitInfo BizUnitInfo { get; set; }
         public class GetBizUnitInfoResponseBodyBizUnitInfo : TeaModel {
             /// <summary>
-            /// <para>The architects of the data domain.</para>
+            /// <para>The business unit architects.</para>
             /// </summary>
             [NameInMap("AccountList")]
             [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The number of subject domains.</para>
+            /// <para>The number of data domains.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -117,14 +117,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The display name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试</para>
+            /// <para>Test</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The English names of the data domain for the two environments: production and development.</para>
+            /// <para>The English names of the business unit in the production and development environments.</para>
             /// </summary>
             [NameInMap("EnvList")]
             [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The display name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试数据板块001_开发</para>
+                /// <para>Test business unit 001_Development</para>
                 /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The icon of the data domain.</para>
+            /// <para>The icon of the business unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>icon-e-commerce</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Icon { get; set; }
 
             /// <summary>
-            /// <para>The data domain ID.</para>
+            /// <para>The data sector ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>101001201</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user who last modified the data domain.</para>
+            /// <para>The ID of the last modifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30010010</para>
@@ -213,21 +213,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LastModifier { get; set; }
 
             /// <summary>
-            /// <para>The name of the user who last modified the data domain.</para>
+            /// <para>The name of the last modifier.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>张三</para>
+            /// <para>Zhang San</para>
             /// </summary>
             [NameInMap("LastModifierName")]
             [Validation(Required=false)]
             public string LastModifierName { get; set; }
 
             /// <summary>
-            /// <para>The production mode. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>BASIC: single-environment mode.</description></item>
-            /// <item><description>DEV_PROD: development/production dual-environment mode.</description></item>
-            /// </list>
+            /// <para>The production mode. Valid values: BASIC (single-environment mode) and DEV_PROD (development and production dual-environment mode).</para>
             /// 
             /// <b>Example:</b>
             /// <para>DEV_PROD</para>
@@ -247,17 +243,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The owner of the business object.</para>
+            /// <para>The ID of the business object owner.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>张三</para>
+            /// <para>Zhang San</para>
             /// </summary>
             [NameInMap("OwnerName")]
             [Validation(Required=false)]
             public string OwnerName { get; set; }
 
             /// <summary>
-            /// <para>The owner of the business object.</para>
+            /// <para>The ID of the business object owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30010010</para>
@@ -269,7 +265,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The error code. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -309,7 +305,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

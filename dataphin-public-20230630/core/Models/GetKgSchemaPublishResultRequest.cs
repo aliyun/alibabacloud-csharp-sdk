@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The version number. If this parameter is left empty, the most recent publish record is returned.</para>
+        /// <para>The version ID. If this parameter is left empty, the latest publish record is retrieved.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

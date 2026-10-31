@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetTableColumnsRequest : TeaModel {
         /// <summary>
-        /// <para>The asset table catalog, which is the name of the business unit or workspace.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The catalog of the asset table, which is the name of the business unit or project workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LD_test01_dev</para>
@@ -32,6 +31,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -40,8 +41,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The table name.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The GUID of the table. If this parameter is specified, it takes precedence in the query, and the Catalog and TableName parameters are ignored even if they are provided.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dp_ds_table_xxx</para>
+        /// </summary>
+        [NameInMap("TableGuid")]
+        [Validation(Required=false)]
+        public string TableGuid { get; set; }
+
+        /// <summary>
+        /// <para>The name of the table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t_test01</para>

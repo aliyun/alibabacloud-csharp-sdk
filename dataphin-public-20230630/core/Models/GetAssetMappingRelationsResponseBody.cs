@@ -37,11 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public List<GetAssetMappingRelationsResponseBodyMappingRelationList> MappingRelationList { get; set; }
         public class GetAssetMappingRelationsResponseBodyMappingRelationList : TeaModel {
             /// <summary>
-            /// <para>The Asset Type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>COLUMN: field.</description></item>
-            /// <item><description>INDEX: metric.</description></item>
-            /// </list>
+            /// <para>The asset type. Valid values: COLUMN (field) and INDEX (metric).</para>
             /// 
             /// <b>Example:</b>
             /// <para>COLUMN</para>
@@ -61,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Guid { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The update time. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30 00:00:00</para>
@@ -111,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string StandardName { get; set; }
 
             /// <summary>
-            /// <para>The folder in which the standard set resides.</para>
+            /// <para>The folder where the standard set is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/dir1</para>
@@ -153,7 +149,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>The error details from the backend response.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -173,7 +169,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

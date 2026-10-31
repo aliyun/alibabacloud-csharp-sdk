@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListRowPermissionByUserIdResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The error code. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -101,14 +101,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public List<ListRowPermissionByUserIdResponseBodyPageResultDataRules> Rules { get; set; }
                 public class ListRowPermissionByUserIdResponseBodyPageResultDataRules : TeaModel {
                     /// <summary>
-                    /// <para>The rule expressions.</para>
+                    /// <para>The expressions of the rule.</para>
                     /// </summary>
                     [NameInMap("Expressions")]
                     [Validation(Required=false)]
                     public List<ListRowPermissionByUserIdResponseBodyPageResultDataRulesExpressions> Expressions { get; set; }
                     public class ListRowPermissionByUserIdResponseBodyPageResultDataRulesExpressions : TeaModel {
                         /// <summary>
-                        /// <para>The mapping field name.</para>
+                        /// <para>The name of the mapped field.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>business_id</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public string MappingColumnName { get; set; }
 
                         /// <summary>
-                        /// <para>The expression operator.</para>
+                        /// <para>The operator of the expression.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>EQUAL</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public List<object> SubConditions { get; set; }
 
                         /// <summary>
-                        /// <para>The expression type.</para>
+                        /// <para>The type of the expression.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>EXPRESSION</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public string Type { get; set; }
 
                         /// <summary>
-                        /// <para>The expression operation values.</para>
+                        /// <para>The operand values of the expression.</para>
                         /// </summary>
                         [NameInMap("Values")]
                         [Validation(Required=false)]
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     }
 
                     /// <summary>
-                    /// <para>The rule ID.</para>
+                    /// <para>The ID of the rule.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123</para>
@@ -174,10 +174,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public bool? IsDelete { get; set; }
 
                     /// <summary>
-                    /// <para>The rule name.</para>
+                    /// <para>The name of the rule.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>业务管控</para>
+                    /// <para>Business control</para>
                     /// </summary>
                     [NameInMap("RuleName")]
                     [Validation(Required=false)]
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string ScopeType { get; set; }
 
                     /// <summary>
-                    /// <para>The rule status.</para>
+                    /// <para>The status of the rule.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public List<ListRowPermissionByUserIdResponseBodyPageResultDataTables> Tables { get; set; }
                 public class ListRowPermissionByUserIdResponseBodyPageResultDataTables : TeaModel {
                     /// <summary>
-                    /// <para>The table field.</para>
+                    /// <para>The field of the table.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>business_id</para>
@@ -261,17 +261,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string ColumnName { get; set; }
 
                     /// <summary>
-                    /// <para>The mapping field name.</para>
+                    /// <para>The name of the mapped field.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>拦截规则</para>
+                    /// <para>Interception rule</para>
                     /// </summary>
                     [NameInMap("MappingColumnName")]
                     [Validation(Required=false)]
                     public string MappingColumnName { get; set; }
 
                     /// <summary>
-                    /// <para>The table GUID.</para>
+                    /// <para>The GUID of the table.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>odps.300199897.project_name.table_name</para>
@@ -317,7 +317,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -18,7 +18,27 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public CreateBatchTaskRequestCreateCommand CreateCommand { get; set; }
         public class CreateBatchTaskRequestCreateCommand : TeaModel {
             /// <summary>
-            /// <para>The catalog for database SQL nodes. This parameter takes effect only for data source types that require a catalog, such as Presto.</para>
+            /// <para>The ID of the offline code template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>st_123456</para>
+            /// </summary>
+            [NameInMap("CodeTemplateId")]
+            [Validation(Required=false)]
+            public string CodeTemplateId { get; set; }
+
+            /// <summary>
+            /// <para>The version of the offline code template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("CodeTemplateVersion")]
+            [Validation(Required=false)]
+            public int? CodeTemplateVersion { get; set; }
+
+            /// <summary>
+            /// <para>The catalog for database SQL tasks. This parameter takes effect only for data source types that require a catalog, such as Presto.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mysql_catalog</para>
@@ -28,7 +48,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataSourceCatalog { get; set; }
 
             /// <summary>
-            /// <para>The data source ID for database SQL nodes.</para>
+            /// <para>The ID of the data source for database SQL tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12131111</para>
@@ -38,7 +58,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataSourceId { get; set; }
 
             /// <summary>
-            /// <para>The schema for database SQL nodes. This parameter takes effect only for data source types that require a schema, such as Oracle.</para>
+            /// <para>The schema for database SQL tasks. This parameter takes effect only for data source types that require a schema, such as Oracle.</para>
             /// 
             /// <b>Example:</b>
             /// <para>erp</para>
@@ -46,6 +66,45 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [NameInMap("DataSourceSchema")]
             [Validation(Required=false)]
             public string DataSourceSchema { get; set; }
+
+            /// <summary>
+            /// <para>The Python connection configuration.</para>
+            /// </summary>
+            [NameInMap("DatabricksPythonConnectInfo")]
+            [Validation(Required=false)]
+            public CreateBatchTaskRequestCreateCommandDatabricksPythonConnectInfo DatabricksPythonConnectInfo { get; set; }
+            public class CreateBatchTaskRequestCreateCommandDatabricksPythonConnectInfo : TeaModel {
+                /// <summary>
+                /// <para>The HTTP path for the development environment.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/sql/1.0/warehouses/dev</para>
+                /// </summary>
+                [NameInMap("DevHttpPath")]
+                [Validation(Required=false)]
+                public string DevHttpPath { get; set; }
+
+                /// <summary>
+                /// <para>Specifies whether to enable Databricks Python connect.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("EnableDatabricksPythonConnect")]
+                [Validation(Required=false)]
+                public bool? EnableDatabricksPythonConnect { get; set; }
+
+                /// <summary>
+                /// <para>The HTTP path for the production environment.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/sql/1.0/warehouses/prod</para>
+                /// </summary>
+                [NameInMap("ProdHttpPath")]
+                [Validation(Required=false)]
+                public string ProdHttpPath { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The description.</para>
@@ -59,14 +118,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The list of development owner IDs.</para>
+            /// <para>The IDs of the development owners.</para>
             /// </summary>
             [NameInMap("DevelopOwnerIdList")]
             [Validation(Required=false)]
             public List<string> DevelopOwnerIdList { get; set; }
 
             /// <summary>
-            /// <para>The folder path in the menu tree to which the node belongs.</para>
+            /// <para>The directory in the menu tree to which the task belongs.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -77,20 +136,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Directory { get; set; }
 
             /// <summary>
-            /// <para>The execution engine for the node, such as for Python nodes. Valid values:</para>
+            /// <para>The task execution engine, such as Python tasks. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><ol>
             /// <item><description>PYTHON2_7</description></item>
-            /// </ol>
-            /// </description></item>
-            /// <item><description><ol start="2">
             /// <item><description>PYTHON3_7</description></item>
-            /// </ol>
-            /// </description></item>
-            /// <item><description><ol start="3">
             /// <item><description>PYTHON3_11</description></item>
-            /// </ol>
-            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,7 +151,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>The name of the batch task.</para>
+            /// <para>The name of the offline task.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -112,14 +162,53 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The list of O&amp;M owner IDs.</para>
+            /// <para>The IDs of the O&amp;M owners.</para>
             /// </summary>
             [NameInMap("OpsOwnerIdList")]
             [Validation(Required=false)]
             public List<string> OpsOwnerIdList { get; set; }
 
             /// <summary>
-            /// <para>The ID of the project to which the node belongs.</para>
+            /// <para>The PAI configuration.</para>
+            /// </summary>
+            [NameInMap("PaiConfig")]
+            [Validation(Required=false)]
+            public CreateBatchTaskRequestCreateCommandPaiConfig PaiConfig { get; set; }
+            public class CreateBatchTaskRequestCreateCommandPaiConfig : TeaModel {
+                /// <summary>
+                /// <para>The ID of the PAI experiment.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>789012</para>
+                /// </summary>
+                [NameInMap("ExperimentId")]
+                [Validation(Required=false)]
+                public string ExperimentId { get; set; }
+
+                /// <summary>
+                /// <para>The PAI region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-shanghai</para>
+                /// </summary>
+                [NameInMap("Region")]
+                [Validation(Required=false)]
+                public string Region { get; set; }
+
+                /// <summary>
+                /// <para>The ID of the PAI workspace.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>123456</para>
+                /// </summary>
+                [NameInMap("WorkSpaceId")]
+                [Validation(Required=false)]
+                public string WorkSpaceId { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The ID of the project to which the task belongs.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -130,18 +219,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The list of Python third-party packages that the node depends on.</para>
+            /// <para>The third-party Python packages that the task depends on.</para>
             /// </summary>
             [NameInMap("PythonModuleList")]
             [Validation(Required=false)]
             public List<string> PythonModuleList { get; set; }
 
             /// <summary>
-            /// <para>The schedule type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>1: periodic node.</description></item>
-            /// <item><description>3: manual node.</description></item>
-            /// </list>
+            /// <para>The scheduling type. Valid values: 1 (periodic task) and 3 (manual task).</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -152,52 +237,92 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? ScheduleType { get; set; }
 
             /// <summary>
-            /// <para>The node type. Valid values:</para>
+            /// <para>Specifies whether to enable dynamic resource configuration for Spark. This parameter takes effect only for Spark SQL tasks. If you do not specify this parameter, dynamic resource configuration is enabled by default for Spark SQL tasks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("SparkDynamicResourceSwitch")]
+            [Validation(Required=false)]
+            public bool? SparkDynamicResourceSwitch { get; set; }
+
+            /// <summary>
+            /// <para>The effective scope of Spark resources. Valid values: ONLY_PROD and PROD_AND_DEV. If you do not specify this parameter, the default value ONLY_PROD is used for Spark SQL tasks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ONLY_PROD</para>
+            /// </summary>
+            [NameInMap("SparkResourceEffectScope")]
+            [Validation(Required=false)]
+            public string SparkResourceEffectScope { get; set; }
+
+            /// <summary>
+            /// <para>The resource configuration for the Spark task. The value is a JSON string, such as {&quot;spark.executor.memory&quot;:&quot;2g&quot;}.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;spark.executor.memory&quot;:&quot;2g&quot;}</para>
+            /// </summary>
+            [NameInMap("SparkSqlResourceConfigMap")]
+            [Validation(Required=false)]
+            public string SparkSqlResourceConfigMap { get; set; }
+
+            /// <summary>
+            /// <para>The MaxCompute Spark version. Valid values: MAX_COMPUTE_23X, MAX_COMPUTE_245X, and MAX_COMPUTE_311X. For Apsara Stack, only MAX_COMPUTE_APSARA is supported. Display names such as Spark 2.3.0, Spark 2.4.5, and Spark 3.1.1 are also accepted.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Spark 3.1.1</para>
+            /// </summary>
+            [NameInMap("SparkVersion")]
+            [Validation(Required=false)]
+            public string SparkVersion { get; set; }
+
+            /// <summary>
+            /// <para>The task type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Hive_SQL: 1</description></item>
-            /// <item><description>Hive_SQL_23X: 101</description></item>
-            /// <item><description>HIVE_SQL_FUSION_INSIGHT_80X: 111</description></item>
-            /// <item><description>COMMON_HIVE_SQL: 131</description></item>
-            /// <item><description>HADOOP_MR: 2</description></item>
-            /// <item><description>MaxCompute_SQL: 5</description></item>
-            /// <item><description>MaxCompute_MR: 6</description></item>
-            /// <item><description>SPARK_SQL_ON_MAX_COMPUTE: 7</description></item>
-            /// <item><description>SPARK_JAR_ON_MAX_COMPUTE: 8</description></item>
-            /// <item><description>SPARK_SQL_ON_HIVE: 17</description></item>
-            /// <item><description>Spark_JAR_ON_HIVE: 18</description></item>
-            /// <item><description>Shell: 10</description></item>
-            /// <item><description>PAI_DESIGNER: 71</description></item>
-            /// <item><description>DataX: 15</description></item>
-            /// <item><description>Merge: 16</description></item>
-            /// <item><description>Python: 21</description></item>
-            /// <item><description>Python37x: 22</description></item>
-            /// <item><description>Perl: 23</description></item>
-            /// <item><description>Python311x: 24</description></item>
-            /// <item><description>OneService_SQL: 25</description></item>
-            /// <item><description>ONE_SERVICE_SQL_ADB_FOR_PG: 26</description></item>
-            /// <item><description>OneService_SQL_Hive11x: 27</description></item>
-            /// <item><description>OneService_SQL_Hive23x: 29</description></item>
-            /// <item><description>ONE_SERVICE_SQL_TDH_INCEPTOR: 75</description></item>
-            /// <item><description>ONE_SERVICE_SQL_HIVE_CDP: 91</description></item>
-            /// <item><description>ONE_SERVICE_SQL_HIVE_ASIA_INFO_DP_53X: 92</description></item>
-            /// <item><description>Dlink: 30</description></item>
-            /// <item><description>ONE_SERVICE_SQL_ADB_FOR_MYSQL: 33</description></item>
-            /// <item><description>Logical: 31</description></item>
-            /// <item><description>Flink_Streaming: 41</description></item>
-            /// <item><description>Flink_Batch: 42</description></item>
-            /// <item><description>ADB_FOR_PG: 51</description></item>
-            /// <item><description>DryRun: 100</description></item>
-            /// <item><description>CHECK: 902</description></item>
-            /// <item><description>VIRTUAL: 999</description></item>
-            /// <item><description>INCEPTOR_SQL: 10000</description></item>
-            /// <item><description>HOLOGRES_SQL: 28</description></item>
-            /// <item><description>ARGODB_SQL: 76</description></item>
-            /// <item><description>IMPALA_SQL: 78</description></item>
-            /// <item><description>STARROCKS_SQL: 79</description></item>
-            /// <item><description>SPARK_SQL: 80</description></item>
-            /// <item><description>GAUSS_SQL: 81</description></item>
-            /// <item><description>DATABASE_SQL: 998</description></item>
-            /// <item><description>EXTERNAL_TRIGGER: 997</description></item>
+            /// <item><description>1: Hive_SQL.</description></item>
+            /// <item><description>101: Hive_SQL_23X.</description></item>
+            /// <item><description>111: HIVE_SQL_FUSION_INSIGHT_80X.</description></item>
+            /// <item><description>131: COMMON_HIVE_SQL.</description></item>
+            /// <item><description>2: HADOOP_MR.</description></item>
+            /// <item><description>5: MaxCompute_SQL.</description></item>
+            /// <item><description>6: MaxCompute_MR.</description></item>
+            /// <item><description>7: SPARK_SQL_ON_MAX_COMPUTE.</description></item>
+            /// <item><description>8: SPARK_JAR_ON_MAX_COMPUTE.</description></item>
+            /// <item><description>17: SPARK_SQL_ON_HIVE.</description></item>
+            /// <item><description>18: Spark_JAR_ON_HIVE.</description></item>
+            /// <item><description>10: Shell.</description></item>
+            /// <item><description>71: PAI_DESIGNER.</description></item>
+            /// <item><description>15: DataX.</description></item>
+            /// <item><description>16: Merge.</description></item>
+            /// <item><description>21: Python.</description></item>
+            /// <item><description>22: Python37x.</description></item>
+            /// <item><description>23: Perl.</description></item>
+            /// <item><description>24: Python311x.</description></item>
+            /// <item><description>25: OneService_SQL.</description></item>
+            /// <item><description>26: ONE_SERVICE_SQL_ADB_FOR_PG.</description></item>
+            /// <item><description>27: OneService_SQL_Hive11x.</description></item>
+            /// <item><description>29: OneService_SQL_Hive23x.</description></item>
+            /// <item><description>75: ONE_SERVICE_SQL_TDH_INCEPTOR.</description></item>
+            /// <item><description>91: ONE_SERVICE_SQL_HIVE_CDP.</description></item>
+            /// <item><description>92: ONE_SERVICE_SQL_HIVE_ASIA_INFO_DP_53X.</description></item>
+            /// <item><description>30: Dlink.</description></item>
+            /// <item><description>33: ONE_SERVICE_SQL_ADB_FOR_MYSQL.</description></item>
+            /// <item><description>31: Logical.</description></item>
+            /// <item><description>41: Flink_Streaming.</description></item>
+            /// <item><description>42: Flink_Batch.</description></item>
+            /// <item><description>51: ADB_FOR_PG.</description></item>
+            /// <item><description>100: DryRun.</description></item>
+            /// <item><description>902: CHECK.</description></item>
+            /// <item><description>999: VIRTUAL.</description></item>
+            /// <item><description>10000: INCEPTOR_SQL.</description></item>
+            /// <item><description>28: HOLOGRES_SQL.</description></item>
+            /// <item><description>76: ARGODB_SQL.</description></item>
+            /// <item><description>78: IMPALA_SQL.</description></item>
+            /// <item><description>79: STARROCKS_SQL.</description></item>
+            /// <item><description>80: SPARK_SQL.</description></item>
+            /// <item><description>81: GAUSS_SQL.</description></item>
+            /// <item><description>998: DATABASE_SQL.</description></item>
+            /// <item><description>997: EXTERNAL_TRIGGER.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

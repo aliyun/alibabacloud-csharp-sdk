@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CheckDataSourceConnectivityShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The object to check.</para>
+        /// <para>The check target.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CheckCommand")]
@@ -29,6 +29,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

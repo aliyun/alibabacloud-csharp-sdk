@@ -18,11 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public OfflinePipelineByAsyncRequestContext Context { get; set; }
         public class OfflinePipelineByAsyncRequestContext : TeaModel {
             /// <summary>
-            /// <para>The environment for the current operation. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>DEV: the development environment.</description></item>
-            /// <item><description>PROD: the production environment.</description></item>
-            /// </list>
+            /// <para>The current operation environment. Valid values: DEV: development environment. PROD: production environment.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -33,7 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Env { get; set; }
 
             /// <summary>
-            /// <para>The ID of the project to which the integration pipeline node belongs.</para>
+            /// <para>The ID of the project to which the integration pipeline task belongs.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -46,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>The offline pipeline node command.</para>
+        /// <para>The command to take the pipeline task offline.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OfflineCommand")]
@@ -54,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public OfflinePipelineByAsyncRequestOfflineCommand OfflineCommand { get; set; }
         public class OfflinePipelineByAsyncRequestOfflineCommand : TeaModel {
             /// <summary>
-            /// <para>The remarks.</para>
+            /// <para>The comment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>comment</para>
@@ -64,7 +60,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to delete the node.</para>
+            /// <para>Specifies whether to delete the task.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Delete")]
@@ -72,7 +68,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? Delete { get; set; }
 
             /// <summary>
-            /// <para>The file ID of the integration node. You can use this parameter to query the node.</para>
+            /// <para>The ID of the integration task file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -82,7 +78,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? FileId { get; set; }
 
             /// <summary>
-            /// <para>The schedule node ID of the integration node. You can use this parameter to query the node.</para>
+            /// <para>The ID of the scheduling node for the integration task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>n_123</para>
@@ -92,7 +88,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>The primary key ID of the integration pipeline. You can use this parameter to query the node.</para>
+            /// <para>The primary key of the integration pipeline.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -115,6 +111,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user who performs the operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

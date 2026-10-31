@@ -12,8 +12,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         /// <summary>
         /// <para>The environment identifier. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DEV: Development environment. </description></item>
-        /// <item><description>PROD (default): Production environment.</description></item>
+        /// <item><description>DEV: development environment</description></item>
+        /// <item><description>PROD: production environment
+        /// Default value: PROD.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +25,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Env { get; set; }
 
         /// <summary>
-        /// <para>The job ID returned after submission in batch mode.</para>
+        /// <para>The job ID returned after submission in massive mode.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +47,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

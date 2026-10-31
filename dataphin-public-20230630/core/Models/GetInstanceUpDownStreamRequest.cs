@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetInstanceUpDownStreamRequest : TeaModel {
         /// <summary>
-        /// <para>The number of downstream node levels. Default value: 1.</para>
+        /// <para>The depth of downstream nodes. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -22,8 +22,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         /// <summary>
         /// <para>The environment identifier. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DEV: development environment. </description></item>
-        /// <item><description>PROD (default): production environment.</description></item>
+        /// <item><description>DEV: development environment</description></item>
+        /// <item><description>PROD: production environment
+        /// Default value: PROD.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +35,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Env { get; set; }
 
         /// <summary>
-        /// <para>The center node.</para>
+        /// <para>The central node.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceId")]
@@ -42,7 +43,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetInstanceUpDownStreamRequestInstanceId InstanceId { get; set; }
         public class GetInstanceUpDownStreamRequestInstanceId : TeaModel {
             /// <summary>
-            /// <para>The list of field IDs. This parameter can be specified when the node is a logical table instance ID. If this parameter is not specified, the full table is used by default.</para>
+            /// <para>The list of field IDs. You can specify this parameter when the node is a logical table instance ID. If you do not specify this parameter, the entire table is used by default.</para>
             /// </summary>
             [NameInMap("FieldInstanceIdList")]
             [Validation(Required=false)]
@@ -73,6 +74,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -92,7 +95,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The number of upstream node levels. Default value: 1.</para>
+        /// <para>The depth of upstream nodes. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

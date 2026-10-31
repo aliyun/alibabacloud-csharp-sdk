@@ -37,7 +37,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? AsyncId { get; set; }
 
             /// <summary>
-            /// <para>The error code returned when the execution fails.</para>
+            /// <para>The check result of the commit details. The value is a JSON character string and is returned only for asynchronous commit links. The structure is consistent with the commit details on the product page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;success&quot;:true}</para>
+            /// </summary>
+            [NameInMap("CheckDetail")]
+            [Validation(Required=false)]
+            public string CheckDetail { get; set; }
+
+            /// <summary>
+            /// <para>The error code returned when an execution exception occurs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DPN.Pipeline.InnerError</para>
@@ -47,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error message returned when the execution fails.</para>
+            /// <para>The error message returned when an execution exception occurs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NullPointException</para>
@@ -57,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The information about the server host that processes the execution request.</para>
+            /// <para>The server host information for request execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hostName:hostIp</para>
@@ -67,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string HostMachine { get; set; }
 
             /// <summary>
-            /// <para>The scheduling node ID of the pipeline task.</para>
+            /// <para>The ID of the scheduling node for the pipeline task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>n_123</para>
@@ -87,12 +97,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? PipelineId { get; set; }
 
             /// <summary>
-            /// <para>The current execution status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>SUCCESS: execution succeeded.</description></item>
-            /// <item><description>FAILED: execution failed.</description></item>
-            /// <item><description>RUNNING: execution in progress.</description></item>
-            /// </list>
+            /// <para>The current execution status. Valid values: SUCCESS: The execution is successful. FAILED: The execution fails. RUNNING: The execution is in progress.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
@@ -112,7 +117,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? SubmitId { get; set; }
 
             /// <summary>
-            /// <para>The version number generated when the pipeline task is submitted.</para>
+            /// <para>The version number generated after the pipeline task is submitted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -134,7 +139,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error details returned by the backend.</para>
+        /// <para>The details of the backend response exception.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>

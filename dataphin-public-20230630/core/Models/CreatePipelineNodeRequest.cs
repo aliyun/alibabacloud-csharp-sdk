@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreatePipelineNodeRequest : TeaModel {
         /// <summary>
-        /// <para>The command to create a pipeline. Both offline and real-time pipelines are supported.</para>
+        /// <para>Creates a pipeline, which supports offline and real-time pipelines.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreatePipelineNodeCommand")]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The full path of the parent directory of the file. If this parameter is left empty, the root path (/) is used.</para>
+                /// <para>The full path of the parent directory of the file. If this parameter is left empty, the root directory \&quot;/\&quot; is used.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The node type. Valid values: NORMAL, MANUAL, and REAL_TIME.</para>
+            /// <para>The node type.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string PipelineName { get; set; }
 
             /// <summary>
-            /// <para>The pipeline type. Valid values: OFFLINE_PIPELINE and REAL_TIME_PIPELINE.</para>
+            /// <para>The pipeline type.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -116,6 +116,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

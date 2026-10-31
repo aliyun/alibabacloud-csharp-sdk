@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetStandardStatisticsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The tenant ID.</para>
+        /// <para>The ID of the tenant.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user who performs the operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The statistical query instruction.</para>
+        /// <para>The statistics query instruction.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("StatisticsQuery")]

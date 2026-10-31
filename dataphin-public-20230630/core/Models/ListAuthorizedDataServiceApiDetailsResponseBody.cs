@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListAuthorizedDataServiceApiDetailsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The error code. OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Invalid parameter.</para>
+        /// <para>Invalid parameter</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which uniquely identifies the request.</para>
+        /// <para>The unique identifier of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? ApiId { get; set; }
 
                 /// <summary>
-                /// <para>The API name.</para>
+                /// <para>The name of the API.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>GetData</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ApiName { get; set; }
 
                 /// <summary>
-                /// <para>The application ID.</para>
+                /// <para>The ID of the application.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12345</para>
@@ -94,17 +94,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? AppId { get; set; }
 
                 /// <summary>
-                /// <para>The permission type.</para>
+                /// <para>The type of the permission.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Usage permission.</para>
+                /// <para>Usage permission</para>
                 /// </summary>
                 [NameInMap("AuthType")]
                 [Validation(Required=false)]
                 public string AuthType { get; set; }
 
                 /// <summary>
-                /// <para>The list of fields authorized for the API in the development environment.</para>
+                /// <para>The list of authorized fields for the API in the development environment.</para>
                 /// </summary>
                 [NameInMap("AuthorizedDevReturnParameters")]
                 [Validation(Required=false)]
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string ExampleValue { get; set; }
 
                     /// <summary>
-                    /// <para>The field authorization status.</para>
+                    /// <para>The authorization status of the field.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public int? IsAuthorized { get; set; }
 
                     /// <summary>
-                    /// <para>The parameter type.</para>
+                    /// <para>The data type of the parameter.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public int? ParameterDataType { get; set; }
 
                     /// <summary>
-                    /// <para>The description.</para>
+                    /// <para>The description of the parameter.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>description1</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string ParameterDescription { get; set; }
 
                     /// <summary>
-                    /// <para>The parameter name.</para>
+                    /// <para>The name of the parameter.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>param1</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The list of fields authorized for the API in the production environment.</para>
+                /// <para>The list of authorized fields for the API in the production environment.</para>
                 /// </summary>
                 [NameInMap("AuthorizedProdReturnParameters")]
                 [Validation(Required=false)]
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string ExampleValue { get; set; }
 
                     /// <summary>
-                    /// <para>The field authorization status.</para>
+                    /// <para>The authorization status of the field.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public int? IsAuthorized { get; set; }
 
                     /// <summary>
-                    /// <para>The parameter type.</para>
+                    /// <para>The data type of the parameter.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public int? ParameterDataType { get; set; }
 
                     /// <summary>
-                    /// <para>The description.</para>
+                    /// <para>The description of the parameter.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>description1</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string ParameterDescription { get; set; }
 
                     /// <summary>
-                    /// <para>The parameter name.</para>
+                    /// <para>The name of the parameter.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>param1</para>
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The API description.</para>
+                /// <para>The description of the API.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Description1</para>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The validity period of the API permission in the development environment.</para>
+                /// <para>The validity period of API permissions in the development environment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2035-12-31</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string DevAuthPeriod { get; set; }
 
                 /// <summary>
-                /// <para>The validity period of the API permission in the production environment.</para>
+                /// <para>The validity period of API permissions in the production environment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2035-12-31</para>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ProdAuthPeriod { get; set; }
 
                 /// <summary>
-                /// <para>The data service project ID.</para>
+                /// <para>The ID of the data service project.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10000</para>
@@ -264,7 +264,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of returned entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

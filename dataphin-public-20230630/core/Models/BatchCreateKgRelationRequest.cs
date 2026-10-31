@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public BatchCreateKgRelationRequestCreateCommand CreateCommand { get; set; }
         public class BatchCreateKgRelationRequestCreateCommand : TeaModel {
             /// <summary>
-            /// <para>The list of relationships.</para>
+            /// <para>The relationship list.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("RelationList")]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<BatchCreateKgRelationRequestCreateCommandRelationList> RelationList { get; set; }
             public class BatchCreateKgRelationRequestCreateCommandRelationList : TeaModel {
                 /// <summary>
-                /// <para>The list of relationship record properties.</para>
+                /// <para>The relationship record property list.</para>
                 /// </summary>
                 [NameInMap("PropertyList")]
                 [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string RelationType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the source entity record.</para>
+                /// <para>The source entity record ID.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string SourceEntityId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the target entity record.</para>
+                /// <para>The target entity record ID.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -105,6 +105,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

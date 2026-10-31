@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ApplyDataServiceApiRequest : TeaModel {
         /// <summary>
-        /// <para>The apply command.</para>
+        /// <para>The application command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ApplyCommand")]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? AppId { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to apply for permissions on operation-type APIs in the development environment.</para>
+            /// <para>Specifies whether to apply for permissions in the development environment for operation APIs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? ApplyDev { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to apply for permissions on operation-type APIs in the production environment.</para>
+            /// <para>Specifies whether to apply for permissions in the production environment for operation APIs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -61,8 +61,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The application type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>APP: application.</description></item>
-            /// <item><description>USER: individual account.</description></item>
+            /// <item><description>APP: application</description></item>
+            /// <item><description>USER: individual account</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,16 +75,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The list of permission types.</para>
             /// <list type="bullet">
-            /// <item><description><para>When the principal is an application, the following permission types are supported. To apply for delegation permissions, you must also apply for usage permissions.</para>
-            /// <list type="bullet">
-            /// <item><description>USE: usage permission.</description></item>
-            /// <item><description>DELEGATION: delegation permission.</description></item>
+            /// <item><description>If the applicant is an application, the following permission types are supported. When applying for the delegation permission, you must also apply for the use permission:<list type="bullet">
+            /// <item><description>USE: use permission</description></item>
+            /// <item><description>DELEGATION: delegation permission</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>When the principal is an individual, only USE (usage) permission is supported.</para>
-            /// </description></item>
-            /// <item><description><para>If this parameter is not specified, the default value is USE (usage) permission.</para>
-            /// </description></item>
+            /// <item><description>If the applicant is an individual, only the USE permission is supported.</description></item>
+            /// <item><description>If this parameter is not specified, the default value is USE.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("AuthTypes")]
@@ -92,14 +89,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> AuthTypes { get; set; }
 
             /// <summary>
-            /// <para>The list of permission fields for query-type APIs in the development environment. This parameter is required in dev-prod mode. DevFieldList and ProdFieldList cannot both be empty.</para>
+            /// <para>The list of permission fields in the development environment for query APIs. This parameter is required in dev-prod mode. Either devFieldList or prodFieldList must be specified.</para>
             /// </summary>
             [NameInMap("DevFieldList")]
             [Validation(Required=false)]
             public List<ApplyDataServiceApiRequestApplyCommandDevFieldList> DevFieldList { get; set; }
             public class ApplyDataServiceApiRequestApplyCommandDevFieldList : TeaModel {
                 /// <summary>
-                /// <para>The API permission field ID.</para>
+                /// <para>The ID of the API permission field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>22</para>
@@ -111,7 +108,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The expiration date in the format of yyyy-MM-dd.</para>
+            /// <para>The expiration date. Format: yyyy-MM-dd.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -122,14 +119,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ExpireDate { get; set; }
 
             /// <summary>
-            /// <para>The list of permission fields for query-type APIs in the production environment. This parameter is required in basic mode.</para>
+            /// <para>The list of permission fields in the production environment for query APIs. This parameter is required in basic mode.</para>
             /// </summary>
             [NameInMap("ProdFieldList")]
             [Validation(Required=false)]
             public List<ApplyDataServiceApiRequestApplyCommandProdFieldList> ProdFieldList { get; set; }
             public class ApplyDataServiceApiRequestApplyCommandProdFieldList : TeaModel {
                 /// <summary>
-                /// <para>The API permission field ID.</para>
+                /// <para>The ID of the API permission field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>22</para>
@@ -165,6 +162,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

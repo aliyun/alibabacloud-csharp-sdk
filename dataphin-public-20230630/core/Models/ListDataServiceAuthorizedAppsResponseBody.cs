@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The paging query result.</para>
+        /// <para>The paging query results.</para>
         /// </summary>
         [NameInMap("PageResult")]
         [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? AppId { get; set; }
 
                 /// <summary>
-                /// <para>The application name.</para>
+                /// <para>The name of the application.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the permission account, which is the applicant ID.</para>
+                /// <para>The ID of the authorized account, which is the ID of the applicant.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30012101</para>
@@ -84,17 +84,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ApplyUserId { get; set; }
 
                 /// <summary>
-                /// <para>The permission account, which is the applicant.</para>
+                /// <para>The name of the authorized account, which is the name of the applicant.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试</para>
+                /// <para>Test</para>
                 /// </summary>
                 [NameInMap("ApplyUserName")]
                 [Validation(Required=false)]
                 public string ApplyUserName { get; set; }
 
                 /// <summary>
-                /// <para>The expiration date in the format of yyyy-MM-dd.</para>
+                /// <para>The expiration date. Format: yyyy-MM-dd.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-30</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ExpireDate { get; set; }
 
                 /// <summary>
-                /// <para>The application ID.</para>
+                /// <para>The ID of the authorization request.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1121</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? Id { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the current user is a project administrator.</para>
+                /// <para>Indicates whether the current user is a project manager.</para>
                 /// </summary>
                 [NameInMap("IsProjectManager")]
                 [Validation(Required=false)]
@@ -141,7 +141,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string OwnerUserName { get; set; }
 
                 /// <summary>
-                /// <para>The permission account. Valid values: 0: individual account.</para>
+                /// <para>The authorized account type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: Individual account.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -151,7 +154,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? PrivilegeAccount { get; set; }
 
                 /// <summary>
-                /// <para>The permission type. Valid values: 0: usage permission. 1: development permission.</para>
+                /// <para>The permission type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: Usage permissions.</description></item>
+                /// <item><description>1: Development permissions.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -181,21 +188,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ProjectName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the user actually has owner permissions on this application. The user may lack permissions because of expiration or other reasons.</para>
+                /// <para>Indicates whether the user actually has the owner permissions for the application. The user may not have the permissions due to expiration or other reasons.</para>
                 /// </summary>
                 [NameInMap("RealHasOwnerPrivilege")]
                 [Validation(Required=false)]
                 public bool? RealHasOwnerPrivilege { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the user actually has permissions.</para>
+                /// <para>Indicates whether the user actually has the permissions.</para>
                 /// </summary>
                 [NameInMap("RealHasPrivilege")]
                 [Validation(Required=false)]
                 public bool? RealHasPrivilege { get; set; }
 
                 /// <summary>
-                /// <para>The descriptions used for troubleshooting.</para>
+                /// <para>The description used for troubleshooting.</para>
                 /// </summary>
                 [NameInMap("RemarkForDebugList")]
                 [Validation(Required=false)]
@@ -224,14 +231,22 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>Indicates whether the permissions can be returned or revoked.</para>
+                /// <para>Indicates whether the permission can be returned or revoked.</para>
                 /// </summary>
                 [NameInMap("Revocable")]
                 [Validation(Required=false)]
                 public bool? Revocable { get; set; }
 
                 /// <summary>
-                /// <para>The detailed status of the revoke button. Valid values: -1: super administrators cannot revoke. -2: owners cannot revoke. -3: project administrators without actual permissions are grayed out. -4: regular users without permissions cannot revoke. 1: project administrators with actual permissions can revoke. 2: regular users with permissions can revoke.</para>
+                /// <para>The detailed status of the revocation button. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>-1: Super administrators cannot relinquish the permission.</description></item>
+                /// <item><description>-2: Owners cannot relinquish the permission.</description></item>
+                /// <item><description>-3: Project managers without actual permissions (grayed out).</description></item>
+                /// <item><description>-4: Regular users without permissions cannot relinquish the permission.</description></item>
+                /// <item><description>1: Project managers with actual permissions can relinquish the permission.</description></item>
+                /// <item><description>2: Regular users with permissions can relinquish the permission.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>-1</para>
@@ -265,7 +280,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

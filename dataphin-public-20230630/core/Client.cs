@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds users to a data service project and assigns roles to them.</para>
+        /// <para>Adds a user to a Data Service project and assigns a role.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds users to a data service project and assigns roles to them.</para>
+        /// <para>Adds a user to a Data Service project and assigns a role.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -319,7 +319,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds users to a data service project and assigns roles to them.</para>
+        /// <para>Adds a user to a Data Service project and assigns a role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -337,7 +337,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds users to a data service project and assigns roles to them.</para>
+        /// <para>Adds a user to a Data Service project and assigns a role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -355,7 +355,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds members to a project.</para>
+        /// <para>Adds project members.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -417,7 +417,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds members to a project.</para>
+        /// <para>Adds project members.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -479,7 +479,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds members to a project.</para>
+        /// <para>Adds project members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -497,7 +497,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds members to a project.</para>
+        /// <para>Adds project members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -515,7 +515,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers data lineage. Available since version v5.4.0.</para>
+        /// <para>Registers data lineage. Released in version 5.4.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -573,7 +573,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers data lineage. Available since version v5.4.0.</para>
+        /// <para>Registers data lineage. Released in version 5.4.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -631,7 +631,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers data lineage. Available since version v5.4.0.</para>
+        /// <para>Registers data lineage. Released in version 5.4.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -649,7 +649,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers data lineage. Available since version v5.4.0.</para>
+        /// <para>Registers data lineage. Released in version 5.4.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -667,7 +667,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds users to a tenant in batches. Only super administrators (SuperAdmin) and system administrators can invoke this API operation.</para>
+        /// <para>Adds users to a tenant in batches. This API operation can be invoked only by super administrators and system administration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -725,7 +725,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds users to a tenant in batches. Only super administrators (SuperAdmin) and system administrators can invoke this API operation.</para>
+        /// <para>Adds users to a tenant in batches. This API operation can be invoked only by super administrators and system administration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -783,7 +783,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds users to a tenant in batches. Only super administrators (SuperAdmin) and system administrators can invoke this API operation.</para>
+        /// <para>Adds users to a tenant in batches. This API operation can be invoked only by super administrators and system administration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -801,7 +801,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds users to a tenant in batches. Only super administrators (SuperAdmin) and system administrators can invoke this API operation.</para>
+        /// <para>Adds users to a tenant in batches. This API operation can be invoked only by super administrators and system administration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1435,6 +1435,158 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Applies for resource permissions at the table or column level. Available since version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ApplyResourcePermissionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyResourcePermissionResponse
+        /// </returns>
+        public ApplyResourcePermissionResponse ApplyResourcePermissionWithOptions(ApplyResourcePermissionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ApplyResourcePermissionShrinkRequest request = new ApplyResourcePermissionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ApplyCommand))
+            {
+                request.ApplyCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ApplyCommand, "ApplyCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyCommandShrink))
+            {
+                body["ApplyCommand"] = request.ApplyCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ApplyResourcePermission",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ApplyResourcePermissionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies for resource permissions at the table or column level. Available since version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ApplyResourcePermissionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyResourcePermissionResponse
+        /// </returns>
+        public async Task<ApplyResourcePermissionResponse> ApplyResourcePermissionWithOptionsAsync(ApplyResourcePermissionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ApplyResourcePermissionShrinkRequest request = new ApplyResourcePermissionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ApplyCommand))
+            {
+                request.ApplyCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ApplyCommand, "ApplyCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplyCommandShrink))
+            {
+                body["ApplyCommand"] = request.ApplyCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ApplyResourcePermission",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ApplyResourcePermissionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies for resource permissions at the table or column level. Available since version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApplyResourcePermissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyResourcePermissionResponse
+        /// </returns>
+        public ApplyResourcePermissionResponse ApplyResourcePermission(ApplyResourcePermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ApplyResourcePermissionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies for resource permissions at the table or column level. Available since version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApplyResourcePermissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApplyResourcePermissionResponse
+        /// </returns>
+        public async Task<ApplyResourcePermissionResponse> ApplyResourcePermissionAsync(ApplyResourcePermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ApplyResourcePermissionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Binds specified quality rules to schedule settings.
         /// Release version: v5.4.2.</para>
         /// </summary>
@@ -1591,7 +1743,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates knowledge graph entity records in batches. Available since version v6.1.1.</para>
+        /// <para>Creates knowledge graph entity records in batches. Released in version v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1653,7 +1805,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates knowledge graph entity records in batches. Available since version v6.1.1.</para>
+        /// <para>Creates knowledge graph entity records in batches. Released in version v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1715,7 +1867,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates knowledge graph entity records in batches. Available since version v6.1.1.</para>
+        /// <para>Creates knowledge graph entity records in batches. Released in version v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1733,7 +1885,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates knowledge graph entity records in batches. Available since version v6.1.1.</para>
+        /// <para>Creates knowledge graph entity records in batches. Released in version v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1751,7 +1903,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates knowledge graph relationship records in batches. Online version: v6.1.1.</para>
+        /// <para>Creates knowledge graph relationship records in batches. Released in version v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1813,7 +1965,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates knowledge graph relationship records in batches. Online version: v6.1.1.</para>
+        /// <para>Creates knowledge graph relationship records in batches. Released in version v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1875,7 +2027,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates knowledge graph relationship records in batches. Online version: v6.1.1.</para>
+        /// <para>Creates knowledge graph relationship records in batches. Released in version v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1893,7 +2045,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates knowledge graph relationship records in batches. Online version: v6.1.1.</para>
+        /// <para>Creates knowledge graph relationship records in batches. Released in version v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2063,7 +2215,143 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the connectivity of a compute source.</para>
+        /// <para>Checks the connectivity of a saved cluster. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckComputeClusterConnectivityByIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckComputeClusterConnectivityByIdResponse
+        /// </returns>
+        public CheckComputeClusterConnectivityByIdResponse CheckComputeClusterConnectivityByIdWithOptions(CheckComputeClusterConnectivityByIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckComputeClusterConnectivityById",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckComputeClusterConnectivityByIdResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks the connectivity of a saved cluster. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckComputeClusterConnectivityByIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckComputeClusterConnectivityByIdResponse
+        /// </returns>
+        public async Task<CheckComputeClusterConnectivityByIdResponse> CheckComputeClusterConnectivityByIdWithOptionsAsync(CheckComputeClusterConnectivityByIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckComputeClusterConnectivityById",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckComputeClusterConnectivityByIdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks the connectivity of a saved cluster. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckComputeClusterConnectivityByIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckComputeClusterConnectivityByIdResponse
+        /// </returns>
+        public CheckComputeClusterConnectivityByIdResponse CheckComputeClusterConnectivityById(CheckComputeClusterConnectivityByIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CheckComputeClusterConnectivityByIdWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks the connectivity of a saved cluster. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckComputeClusterConnectivityByIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckComputeClusterConnectivityByIdResponse
+        /// </returns>
+        public async Task<CheckComputeClusterConnectivityByIdResponse> CheckComputeClusterConnectivityByIdAsync(CheckComputeClusterConnectivityByIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CheckComputeClusterConnectivityByIdWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates the connectivity.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2121,7 +2409,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the connectivity of a compute source.</para>
+        /// <para>Validates the connectivity.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2179,7 +2467,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the connectivity of a compute source.</para>
+        /// <para>Validates the connectivity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2197,7 +2485,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the connectivity of a compute source.</para>
+        /// <para>Validates the connectivity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2215,7 +2503,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the connectivity of an existing compute source by compute source ID.</para>
+        /// <para>Verifies the connectivity of an existing compute source by using the compute source ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2265,7 +2553,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the connectivity of an existing compute source by compute source ID.</para>
+        /// <para>Verifies the connectivity of an existing compute source by using the compute source ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2315,7 +2603,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the connectivity of an existing compute source by compute source ID.</para>
+        /// <para>Verifies the connectivity of an existing compute source by using the compute source ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2333,7 +2621,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the connectivity of an existing compute source by compute source ID.</para>
+        /// <para>Verifies the connectivity of an existing compute source by using the compute source ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2351,7 +2639,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the connectivity of a data source.</para>
+        /// <para>Checks the connectivity of a datasource.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2409,7 +2697,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the connectivity of a data source.</para>
+        /// <para>Checks the connectivity of a datasource.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2467,7 +2755,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the connectivity of a data source.</para>
+        /// <para>Checks the connectivity of a datasource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2485,7 +2773,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the connectivity of a data source.</para>
+        /// <para>Checks the connectivity of a datasource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2811,7 +3099,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a project has data dependencies such as tasks.</para>
+        /// <para>Checks whether the project is depended on by data dependencies such as nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2861,7 +3149,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a project has data dependencies such as tasks.</para>
+        /// <para>Checks whether the project is depended on by data dependencies such as nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2911,7 +3199,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a project has data dependencies such as tasks.</para>
+        /// <para>Checks whether the project is depended on by data dependencies such as nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2929,7 +3217,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a project has data dependencies such as tasks.</para>
+        /// <para>Checks whether the project is depended on by data dependencies such as nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2947,7 +3235,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a user has the permission on a specified resource.</para>
+        /// <para>Checks whether a user has the specified resource permissions.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3005,7 +3293,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a user has the permission on a specified resource.</para>
+        /// <para>Checks whether a user has the specified resource permissions.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3063,7 +3351,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a user has the permission on a specified resource.</para>
+        /// <para>Checks whether a user has the specified resource permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3081,7 +3369,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a user has the permission on a specified resource.</para>
+        /// <para>Checks whether a user has the specified resource permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3403,7 +3691,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a batch task.</para>
+        /// <para>Creates an offline computing task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3461,7 +3749,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a batch task.</para>
+        /// <para>Creates an offline computing task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3519,7 +3807,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a batch task.</para>
+        /// <para>Creates an offline computing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3537,7 +3825,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a batch task.</para>
+        /// <para>Creates an offline computing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3551,6 +3839,166 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateBatchTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an offline computing template. Available since version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateBatchTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBatchTemplateResponse
+        /// </returns>
+        public CreateBatchTemplateResponse CreateBatchTemplateWithOptions(CreateBatchTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateBatchTemplateShrinkRequest request = new CreateBatchTemplateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateCommand))
+            {
+                request.CreateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateCommand, "CreateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateCommandShrink))
+            {
+                body["CreateCommand"] = request.CreateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateBatchTemplate",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateBatchTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an offline computing template. Available since version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateBatchTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBatchTemplateResponse
+        /// </returns>
+        public async Task<CreateBatchTemplateResponse> CreateBatchTemplateWithOptionsAsync(CreateBatchTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateBatchTemplateShrinkRequest request = new CreateBatchTemplateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateCommand))
+            {
+                request.CreateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateCommand, "CreateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateCommandShrink))
+            {
+                body["CreateCommand"] = request.CreateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateBatchTemplate",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateBatchTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an offline computing template. Available since version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBatchTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBatchTemplateResponse
+        /// </returns>
+        public CreateBatchTemplateResponse CreateBatchTemplate(CreateBatchTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateBatchTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an offline computing template. Available since version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBatchTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBatchTemplateResponse
+        /// </returns>
+        public async Task<CreateBatchTemplateResponse> CreateBatchTemplateAsync(CreateBatchTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateBatchTemplateWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3707,8 +4155,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a business metric.
-        /// Release version: v5.5.0.</para>
+        /// <para>Creates a business metric. Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3766,8 +4213,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a business metric.
-        /// Release version: v5.5.0.</para>
+        /// <para>Creates a business metric. Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3825,8 +4271,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a business metric.
-        /// Release version: v5.5.0.</para>
+        /// <para>Creates a business metric. Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3844,8 +4289,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a business metric.
-        /// Release version: v5.5.0.</para>
+        /// <para>Creates a business metric. Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4015,7 +4459,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cluster. Online since version v6.3.0.</para>
+        /// <para>Creates a cluster. Release version: v6.3.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4073,7 +4517,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cluster. Online since version v6.3.0.</para>
+        /// <para>Creates a cluster. Release version: v6.3.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4131,7 +4575,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cluster. Online since version v6.3.0.</para>
+        /// <para>Creates a cluster. Release version: v6.3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4149,7 +4593,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cluster. Online since version v6.3.0.</para>
+        /// <para>Creates a cluster. Release version: v6.3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4167,7 +4611,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a compute source. Business unit administrators and project administrators have permissions to perform this operation.</para>
+        /// <para>Creates a compute source. Only business unit administrators and project administrators are authorized to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4225,7 +4669,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a compute source. Business unit administrators and project administrators have permissions to perform this operation.</para>
+        /// <para>Creates a compute source. Only business unit administrators and project administrators are authorized to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4283,7 +4727,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a compute source. Business unit administrators and project administrators have permissions to perform this operation.</para>
+        /// <para>Creates a compute source. Only business unit administrators and project administrators are authorized to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4301,7 +4745,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a compute source. Business unit administrators and project administrators have permissions to perform this operation.</para>
+        /// <para>Creates a compute source. Only business unit administrators and project administrators are authorized to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5071,20 +5515,20 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new dataset in the specified project. Available since v6.2.0.</para>
+        /// <para>Creates a dataset in a specified project. Available since v6.2.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API creates a new dataset in the specified project.</description></item>
-        /// <item><description><c>ProjectId</c> is a required parameter that specifies the ID of the project in which to create the dataset.</description></item>
-        /// <item><description><c>CreateCommand</c> is a complex object that contains the configuration information required to create the dataset.</description></item>
-        /// <item><description><c>Name</c>, <c>Type</c>, <c>ContentType</c>, and <c>Scenario</c> are required fields that specify the dataset name, type, content type, and scenarios.</description></item>
-        /// <item><description><c>FileStorageConfig</c> and <c>MetadataStorageConfig</c> in <c>VersionConfig</c> can be configured as needed.</description></item>
-        /// <item><description>If you need real-time meta-table configuration, provide the <c>RealtimeMetaTableConfig</c> information.</description></item>
-        /// <item><description>Make sure all required fields are correctly filled in. Otherwise, the request failed.</description></item>
+        /// <item><description>This API operation creates a dataset in a specified project.</description></item>
+        /// <item><description>ProjectId is a required parameter that specifies the ID of the project in which to create the dataset.</description></item>
+        /// <item><description>CreateCommand is a complex object that contains various configuration information required to create the dataset.</description></item>
+        /// <item><description>Name, Type, ContentType, and Scenario are required fields that specify the dataset name, type, content type, and Scenarios, respectively.</description></item>
+        /// <item><description>You can configure FileStorageConfig and MetadataStorageConfig in VersionConfig as needed.</description></item>
+        /// <item><description>If real-time metatable configuration is required, provide the RealtimeMetaTableConfig information.</description></item>
+        /// <item><description>Make sure that all required fields are correctly filled in. Otherwise, the request will be failed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5147,20 +5591,20 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new dataset in the specified project. Available since v6.2.0.</para>
+        /// <para>Creates a dataset in a specified project. Available since v6.2.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API creates a new dataset in the specified project.</description></item>
-        /// <item><description><c>ProjectId</c> is a required parameter that specifies the ID of the project in which to create the dataset.</description></item>
-        /// <item><description><c>CreateCommand</c> is a complex object that contains the configuration information required to create the dataset.</description></item>
-        /// <item><description><c>Name</c>, <c>Type</c>, <c>ContentType</c>, and <c>Scenario</c> are required fields that specify the dataset name, type, content type, and scenarios.</description></item>
-        /// <item><description><c>FileStorageConfig</c> and <c>MetadataStorageConfig</c> in <c>VersionConfig</c> can be configured as needed.</description></item>
-        /// <item><description>If you need real-time meta-table configuration, provide the <c>RealtimeMetaTableConfig</c> information.</description></item>
-        /// <item><description>Make sure all required fields are correctly filled in. Otherwise, the request failed.</description></item>
+        /// <item><description>This API operation creates a dataset in a specified project.</description></item>
+        /// <item><description>ProjectId is a required parameter that specifies the ID of the project in which to create the dataset.</description></item>
+        /// <item><description>CreateCommand is a complex object that contains various configuration information required to create the dataset.</description></item>
+        /// <item><description>Name, Type, ContentType, and Scenario are required fields that specify the dataset name, type, content type, and Scenarios, respectively.</description></item>
+        /// <item><description>You can configure FileStorageConfig and MetadataStorageConfig in VersionConfig as needed.</description></item>
+        /// <item><description>If real-time metatable configuration is required, provide the RealtimeMetaTableConfig information.</description></item>
+        /// <item><description>Make sure that all required fields are correctly filled in. Otherwise, the request will be failed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5223,20 +5667,20 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new dataset in the specified project. Available since v6.2.0.</para>
+        /// <para>Creates a dataset in a specified project. Available since v6.2.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API creates a new dataset in the specified project.</description></item>
-        /// <item><description><c>ProjectId</c> is a required parameter that specifies the ID of the project in which to create the dataset.</description></item>
-        /// <item><description><c>CreateCommand</c> is a complex object that contains the configuration information required to create the dataset.</description></item>
-        /// <item><description><c>Name</c>, <c>Type</c>, <c>ContentType</c>, and <c>Scenario</c> are required fields that specify the dataset name, type, content type, and scenarios.</description></item>
-        /// <item><description><c>FileStorageConfig</c> and <c>MetadataStorageConfig</c> in <c>VersionConfig</c> can be configured as needed.</description></item>
-        /// <item><description>If you need real-time meta-table configuration, provide the <c>RealtimeMetaTableConfig</c> information.</description></item>
-        /// <item><description>Make sure all required fields are correctly filled in. Otherwise, the request failed.</description></item>
+        /// <item><description>This API operation creates a dataset in a specified project.</description></item>
+        /// <item><description>ProjectId is a required parameter that specifies the ID of the project in which to create the dataset.</description></item>
+        /// <item><description>CreateCommand is a complex object that contains various configuration information required to create the dataset.</description></item>
+        /// <item><description>Name, Type, ContentType, and Scenario are required fields that specify the dataset name, type, content type, and Scenarios, respectively.</description></item>
+        /// <item><description>You can configure FileStorageConfig and MetadataStorageConfig in VersionConfig as needed.</description></item>
+        /// <item><description>If real-time metatable configuration is required, provide the RealtimeMetaTableConfig information.</description></item>
+        /// <item><description>Make sure that all required fields are correctly filled in. Otherwise, the request will be failed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5255,20 +5699,20 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new dataset in the specified project. Available since v6.2.0.</para>
+        /// <para>Creates a dataset in a specified project. Available since v6.2.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API creates a new dataset in the specified project.</description></item>
-        /// <item><description><c>ProjectId</c> is a required parameter that specifies the ID of the project in which to create the dataset.</description></item>
-        /// <item><description><c>CreateCommand</c> is a complex object that contains the configuration information required to create the dataset.</description></item>
-        /// <item><description><c>Name</c>, <c>Type</c>, <c>ContentType</c>, and <c>Scenario</c> are required fields that specify the dataset name, type, content type, and scenarios.</description></item>
-        /// <item><description><c>FileStorageConfig</c> and <c>MetadataStorageConfig</c> in <c>VersionConfig</c> can be configured as needed.</description></item>
-        /// <item><description>If you need real-time meta-table configuration, provide the <c>RealtimeMetaTableConfig</c> information.</description></item>
-        /// <item><description>Make sure all required fields are correctly filled in. Otherwise, the request failed.</description></item>
+        /// <item><description>This API operation creates a dataset in a specified project.</description></item>
+        /// <item><description>ProjectId is a required parameter that specifies the ID of the project in which to create the dataset.</description></item>
+        /// <item><description>CreateCommand is a complex object that contains various configuration information required to create the dataset.</description></item>
+        /// <item><description>Name, Type, ContentType, and Scenario are required fields that specify the dataset name, type, content type, and Scenarios, respectively.</description></item>
+        /// <item><description>You can configure FileStorageConfig and MetadataStorageConfig in VersionConfig as needed.</description></item>
+        /// <item><description>If real-time metatable configuration is required, provide the RealtimeMetaTableConfig information.</description></item>
+        /// <item><description>Make sure that all required fields are correctly filled in. Otherwise, the request will be failed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5911,11 +6355,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>General-purpose data backfill operation that supports both list mode and batch mode data backfill:</para>
-        /// <ol>
-        /// <item><description>Generates data backfill instances that run and affect data output of related tables.</description></item>
-        /// <item><description>Triggers node execution, which incurs compute and storage costs.</description></item>
-        /// </ol>
+        /// <para>Backfills data in list mode or massive mode. Take note of the following items: 1. Data backfill instances are generated and run, which affects the data output of related tables. 2. Nodes are run, which incurs computing and storage costs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5977,11 +6417,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>General-purpose data backfill operation that supports both list mode and batch mode data backfill:</para>
-        /// <ol>
-        /// <item><description>Generates data backfill instances that run and affect data output of related tables.</description></item>
-        /// <item><description>Triggers node execution, which incurs compute and storage costs.</description></item>
-        /// </ol>
+        /// <para>Backfills data in list mode or massive mode. Take note of the following items: 1. Data backfill instances are generated and run, which affects the data output of related tables. 2. Nodes are run, which incurs computing and storage costs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6043,11 +6479,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>General-purpose data backfill operation that supports both list mode and batch mode data backfill:</para>
-        /// <ol>
-        /// <item><description>Generates data backfill instances that run and affect data output of related tables.</description></item>
-        /// <item><description>Triggers node execution, which incurs compute and storage costs.</description></item>
-        /// </ol>
+        /// <para>Backfills data in list mode or massive mode. Take note of the following items: 1. Data backfill instances are generated and run, which affects the data output of related tables. 2. Nodes are run, which incurs computing and storage costs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6065,11 +6497,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>General-purpose data backfill operation that supports both list mode and batch mode data backfill:</para>
-        /// <ol>
-        /// <item><description>Generates data backfill instances that run and affect data output of related tables.</description></item>
-        /// <item><description>Triggers node execution, which incurs compute and storage costs.</description></item>
-        /// </ol>
+        /// <para>Backfills data in list mode or massive mode. Take note of the following items: 1. Data backfill instances are generated and run, which affects the data output of related tables. 2. Nodes are run, which incurs computing and storage costs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6575,6 +7003,158 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a quality rectification process. Released in version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateRectifyFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRectifyFlowResponse
+        /// </returns>
+        public CreateRectifyFlowResponse CreateRectifyFlowWithOptions(CreateRectifyFlowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateRectifyFlowShrinkRequest request = new CreateRectifyFlowShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateCommand))
+            {
+                request.CreateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateCommand, "CreateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateCommandShrink))
+            {
+                body["CreateCommand"] = request.CreateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRectifyFlow",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRectifyFlowResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a quality rectification process. Released in version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateRectifyFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRectifyFlowResponse
+        /// </returns>
+        public async Task<CreateRectifyFlowResponse> CreateRectifyFlowWithOptionsAsync(CreateRectifyFlowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateRectifyFlowShrinkRequest request = new CreateRectifyFlowShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateCommand))
+            {
+                request.CreateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateCommand, "CreateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateCommandShrink))
+            {
+                body["CreateCommand"] = request.CreateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRectifyFlow",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRectifyFlowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a quality rectification process. Released in version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRectifyFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRectifyFlowResponse
+        /// </returns>
+        public CreateRectifyFlowResponse CreateRectifyFlow(CreateRectifyFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateRectifyFlowWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a quality rectification process. Released in version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRectifyFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRectifyFlowResponse
+        /// </returns>
+        public async Task<CreateRectifyFlowResponse> CreateRectifyFlowAsync(CreateRectifyFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateRectifyFlowWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a resource file.</para>
         /// </summary>
         /// 
@@ -6895,6 +7475,158 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateRowPermissionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a scheduling monitoring alerting configuration by specifying a monitored object and one or more alerting rules. Online version: v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateScheduleMonitorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateScheduleMonitorResponse
+        /// </returns>
+        public CreateScheduleMonitorResponse CreateScheduleMonitorWithOptions(CreateScheduleMonitorRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateScheduleMonitorShrinkRequest request = new CreateScheduleMonitorShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateCommand))
+            {
+                request.CreateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateCommand, "CreateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateCommandShrink))
+            {
+                body["CreateCommand"] = request.CreateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateScheduleMonitor",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateScheduleMonitorResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a scheduling monitoring alerting configuration by specifying a monitored object and one or more alerting rules. Online version: v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateScheduleMonitorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateScheduleMonitorResponse
+        /// </returns>
+        public async Task<CreateScheduleMonitorResponse> CreateScheduleMonitorWithOptionsAsync(CreateScheduleMonitorRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateScheduleMonitorShrinkRequest request = new CreateScheduleMonitorShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateCommand))
+            {
+                request.CreateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateCommand, "CreateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateCommandShrink))
+            {
+                body["CreateCommand"] = request.CreateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateScheduleMonitor",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateScheduleMonitorResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a scheduling monitoring alerting configuration by specifying a monitored object and one or more alerting rules. Online version: v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateScheduleMonitorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateScheduleMonitorResponse
+        /// </returns>
+        public CreateScheduleMonitorResponse CreateScheduleMonitor(CreateScheduleMonitorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateScheduleMonitorWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a scheduling monitoring alerting configuration by specifying a monitored object and one or more alerting rules. Online version: v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateScheduleMonitorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateScheduleMonitorResponse
+        /// </returns>
+        public async Task<CreateScheduleMonitorResponse> CreateScheduleMonitorAsync(CreateScheduleMonitorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateScheduleMonitorWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7511,8 +8243,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a standard.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates a standard. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7570,8 +8301,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a standard.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates a standard. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7629,8 +8359,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a standard.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates a standard. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7648,8 +8377,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a standard.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates a standard. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7667,8 +8395,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data standard lookup table.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates a data standard lookup table. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7726,8 +8453,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data standard lookup table.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates a data standard lookup table. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7785,8 +8511,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data standard lookup table.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates a data standard lookup table. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7804,8 +8529,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data standard lookup table.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates a data standard lookup table. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8291,8 +9015,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a data standard template.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates a data standard template. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8350,8 +9073,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a data standard template.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates a data standard template. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8409,8 +9131,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a data standard template.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates a data standard template. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8428,8 +9149,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a data standard template.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates a data standard template. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8447,8 +9167,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data standard root word.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates a data standard root word. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8506,8 +9225,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data standard root word.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates a data standard root word. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8565,8 +9283,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data standard root word.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates a data standard root word. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8584,8 +9301,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data standard root word.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates a data standard root word. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8603,7 +9319,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a stream-batch integrated node.</para>
+        /// <para>Creates a stream-batch integrated task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8661,7 +9377,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a stream-batch integrated node.</para>
+        /// <para>Creates a stream-batch integrated task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8719,7 +9435,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a stream-batch integrated node.</para>
+        /// <para>Creates a stream-batch integrated task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8737,7 +9453,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a stream-batch integrated node.</para>
+        /// <para>Creates a stream-batch integrated task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9371,7 +10087,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a batch task. If the node has not been offlined, you must offline it before deleting it.</para>
+        /// <para>Deletes an offline computing task. If the task is not offline, you must take it offline before deleting it.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9429,7 +10145,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a batch task. If the node has not been offlined, you must offline it before deleting it.</para>
+        /// <para>Deletes an offline computing task. If the task is not offline, you must take it offline before deleting it.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9487,7 +10203,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a batch task. If the node has not been offlined, you must offline it before deleting it.</para>
+        /// <para>Deletes an offline computing task. If the task is not offline, you must take it offline before deleting it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9505,7 +10221,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a batch task. If the node has not been offlined, you must offline it before deleting it.</para>
+        /// <para>Deletes an offline computing task. If the task is not offline, you must take it offline before deleting it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11407,7 +12123,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a project (applicable to both Basic and Dev-Prod projects).</para>
+        /// <para>Deletes a project. This applies to both Basic and Dev-Prod projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11457,7 +12173,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a project (applicable to both Basic and Dev-Prod projects).</para>
+        /// <para>Deletes a project. This applies to both Basic and Dev-Prod projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11507,7 +12223,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a project (applicable to both Basic and Dev-Prod projects).</para>
+        /// <para>Deletes a project. This applies to both Basic and Dev-Prod projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11525,7 +12241,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a project (applicable to both Basic and Dev-Prod projects).</para>
+        /// <para>Deletes a project. This applies to both Basic and Dev-Prod projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11543,8 +12259,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes quality rule objects in batches.
-        /// Release version: v5.4.2.</para>
+        /// <para>Deletes quality rule objects in batches. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11602,8 +12317,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes quality rule objects in batches.
-        /// Release version: v5.4.2.</para>
+        /// <para>Deletes quality rule objects in batches. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11661,8 +12375,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes quality rule objects in batches.
-        /// Release version: v5.4.2.</para>
+        /// <para>Deletes quality rule objects in batches. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11680,8 +12393,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes quality rule objects in batches.
-        /// Release version: v5.4.2.</para>
+        /// <para>Deletes quality rule objects in batches. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11699,8 +12411,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes quality scheduling objects in batches.
-        /// Release version: v5.4.2.</para>
+        /// <para>Deletes multiple quality scheduling objects. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11758,8 +12469,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes quality scheduling objects in batches.
-        /// Release version: v5.4.2.</para>
+        /// <para>Deletes multiple quality scheduling objects. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11817,8 +12527,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes quality scheduling objects in batches.
-        /// Release version: v5.4.2.</para>
+        /// <para>Deletes multiple quality scheduling objects. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11836,8 +12545,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes quality scheduling objects in batches.
-        /// Release version: v5.4.2.</para>
+        /// <para>Deletes multiple quality scheduling objects. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11855,8 +12563,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes quality template objects in batches.
-        /// Online version: v5.4.2.</para>
+        /// <para>Deletes quality template objects in batches. Available since version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11914,8 +12621,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes quality template objects in batches.
-        /// Online version: v5.4.2.</para>
+        /// <para>Deletes quality template objects in batches. Available since version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11973,8 +12679,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes quality template objects in batches.
-        /// Online version: v5.4.2.</para>
+        /// <para>Deletes quality template objects in batches. Available since version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11992,8 +12697,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes quality template objects in batches.
-        /// Online version: v5.4.2.</para>
+        /// <para>Deletes quality template objects in batches. Available since version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12011,8 +12715,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes monitored objects in batches.
-        /// Release version: v5.4.2.</para>
+        /// <para>Deletes quality monitored objects in batches. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12070,8 +12773,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes monitored objects in batches.
-        /// Release version: v5.4.2.</para>
+        /// <para>Deletes quality monitored objects in batches. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12129,8 +12831,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes monitored objects in batches.
-        /// Release version: v5.4.2.</para>
+        /// <para>Deletes quality monitored objects in batches. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12148,8 +12849,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes monitored objects in batches.
-        /// Release version: v5.4.2.</para>
+        /// <para>Deletes quality monitored objects in batches. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12319,7 +13019,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a resource file.</para>
+        /// <para>Deletes a resource file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12377,7 +13077,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a resource file.</para>
+        /// <para>Deletes a resource file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12435,7 +13135,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a resource file.</para>
+        /// <para>Deletes a resource file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12453,7 +13153,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a resource file.</para>
+        /// <para>Deletes a resource file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12471,7 +13171,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a row-level permission.</para>
+        /// <para>Deletes row-level permissions.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12529,7 +13229,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a row-level permission.</para>
+        /// <para>Deletes row-level permissions.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12587,7 +13287,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a row-level permission.</para>
+        /// <para>Deletes row-level permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12605,7 +13305,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a row-level permission.</para>
+        /// <para>Deletes row-level permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12623,7 +13323,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a data categorization. Available since v5.4.2.</para>
+        /// <para>Deletes a data category. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12681,7 +13381,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a data categorization. Available since v5.4.2.</para>
+        /// <para>Deletes a data category. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12739,7 +13439,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a data categorization. Available since v5.4.2.</para>
+        /// <para>Deletes a data category. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12757,7 +13457,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a data categorization. Available since v5.4.2.</para>
+        /// <para>Deletes a data category. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12775,7 +13475,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a data classification catalog. Available since v5.4.2.</para>
+        /// <para>Deletes a data classification catalog. Available since version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12833,7 +13533,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a data classification catalog. Available since v5.4.2.</para>
+        /// <para>Deletes a data classification catalog. Available since version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12891,7 +13591,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a data classification catalog. Available since v5.4.2.</para>
+        /// <para>Deletes a data classification catalog. Available since version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12909,7 +13609,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a data classification catalog. Available since v5.4.2.</para>
+        /// <para>Deletes a data classification catalog. Available since version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12927,7 +13627,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes security identification results in batches. Release version: v5.4.2.</para>
+        /// <para>Deletes security identification results in batches. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12985,7 +13685,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes security identification results in batches. Release version: v5.4.2.</para>
+        /// <para>Deletes security identification results in batches. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13043,7 +13743,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes security identification results in batches. Release version: v5.4.2.</para>
+        /// <para>Deletes security identification results in batches. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13061,7 +13761,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes security identification results in batches. Release version: v5.4.2.</para>
+        /// <para>Deletes security identification results in batches. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13231,8 +13931,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a standard.
-        /// Online version: v5.4.2.</para>
+        /// <para>Deletes a standard. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13290,8 +13989,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a standard.
-        /// Online version: v5.4.2.</para>
+        /// <para>Deletes a standard. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13349,8 +14047,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a standard.
-        /// Online version: v5.4.2.</para>
+        /// <para>Deletes a standard. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13368,8 +14065,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a standard.
-        /// Online version: v5.4.2.</para>
+        /// <para>Deletes a standard. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13387,8 +14083,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes invalid mapping relationships.
-        /// Online version: v5.4.2.</para>
+        /// <para>Deletes invalid mapping relationships. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13446,8 +14141,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes invalid mapping relationships.
-        /// Online version: v5.4.2.</para>
+        /// <para>Deletes invalid mapping relationships. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13505,8 +14199,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes invalid mapping relationships.
-        /// Online version: v5.4.2.</para>
+        /// <para>Deletes invalid mapping relationships. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13524,8 +14217,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes invalid mapping relationships.
-        /// Online version: v5.4.2.</para>
+        /// <para>Deletes invalid mapping relationships. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13543,7 +14235,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a data standard lookup table. Release version: v5.4.2.</para>
+        /// <para>Deletes a data standard lookup table. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13593,7 +14285,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a data standard lookup table. Release version: v5.4.2.</para>
+        /// <para>Deletes a data standard lookup table. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13643,7 +14335,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a data standard lookup table. Release version: v5.4.2.</para>
+        /// <para>Deletes a data standard lookup table. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13661,7 +14353,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a data standard lookup table. Release version: v5.4.2.</para>
+        /// <para>Deletes a data standard lookup table. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13679,8 +14371,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes standard associations in batches.
-        /// Release version: v5.4.2.</para>
+        /// <para>Deletes standard associations in batches. Available since version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13738,8 +14429,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes standard associations in batches.
-        /// Release version: v5.4.2.</para>
+        /// <para>Deletes standard associations in batches. Available since version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13797,8 +14487,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes standard associations in batches.
-        /// Release version: v5.4.2.</para>
+        /// <para>Deletes standard associations in batches. Available since version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13816,8 +14505,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes standard associations in batches.
-        /// Release version: v5.4.2.</para>
+        /// <para>Deletes standard associations in batches. Available since version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13975,8 +14663,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes valid mapping relationships.
-        /// Release version: v5.4.2.</para>
+        /// <para>Deletes valid mapping relationships. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14034,8 +14721,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes valid mapping relationships.
-        /// Release version: v5.4.2.</para>
+        /// <para>Deletes valid mapping relationships. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14093,8 +14779,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes valid mapping relationships.
-        /// Release version: v5.4.2.</para>
+        /// <para>Deletes valid mapping relationships. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14112,8 +14797,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes valid mapping relationships.
-        /// Release version: v5.4.2.</para>
+        /// <para>Deletes valid mapping relationships. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14271,7 +14955,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a user-defined function.</para>
+        /// <para>Deletes a custom function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14329,7 +15013,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a user-defined function.</para>
+        /// <para>Deletes a custom function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14387,7 +15071,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a user-defined function.</para>
+        /// <para>Deletes a custom function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14405,7 +15089,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a user-defined function.</para>
+        /// <para>Deletes a custom function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15351,7 +16035,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a trigger-based node.</para>
+        /// <para>Runs a trigger node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15417,7 +16101,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a trigger-based node.</para>
+        /// <para>Runs a trigger node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15483,7 +16167,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a trigger-based node.</para>
+        /// <para>Runs a trigger node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15501,7 +16185,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a trigger-based node.</para>
+        /// <para>Runs a trigger node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15831,7 +16515,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all authorized accounts under a specific row-level permission by row-level permission ID.</para>
+        /// <para>Retrieves all authorized accounts for a row-level permission by using the row-level permission ID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15889,7 +16573,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all authorized accounts under a specific row-level permission by row-level permission ID.</para>
+        /// <para>Retrieves all authorized accounts for a row-level permission by using the row-level permission ID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15947,7 +16631,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all authorized accounts under a specific row-level permission by row-level permission ID.</para>
+        /// <para>Retrieves all authorized accounts for a row-level permission by using the row-level permission ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15965,7 +16649,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all authorized accounts under a specific row-level permission by row-level permission ID.</para>
+        /// <para>Retrieves all authorized accounts for a row-level permission by using the row-level permission ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16127,7 +16811,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the runtime logs of an ad hoc query task.</para>
+        /// <para>Retrieves the execution logs of an ad-hoc query task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16189,7 +16873,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the runtime logs of an ad hoc query task.</para>
+        /// <para>Retrieves the execution logs of an ad-hoc query task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16251,7 +16935,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the runtime logs of an ad hoc query task.</para>
+        /// <para>Retrieves the execution logs of an ad-hoc query task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16269,7 +16953,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the runtime logs of an ad hoc query task.</para>
+        /// <para>Retrieves the execution logs of an ad-hoc query task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16287,7 +16971,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the task execution result of an ad hoc query.</para>
+        /// <para>Retrieves the execution results of an ad hoc query task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16345,7 +17029,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the task execution result of an ad hoc query.</para>
+        /// <para>Retrieves the execution results of an ad hoc query task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16403,7 +17087,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the task execution result of an ad hoc query.</para>
+        /// <para>Retrieves the execution results of an ad hoc query task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16421,7 +17105,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the task execution result of an ad hoc query.</para>
+        /// <para>Retrieves the execution results of an ad hoc query task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16571,6 +17255,142 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAlertEventWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an approval task based on the approval flow ID, including the approval process steps. Available from version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApprovalTaskDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApprovalTaskDetailResponse
+        /// </returns>
+        public GetApprovalTaskDetailResponse GetApprovalTaskDetailWithOptions(GetApprovalTaskDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowId))
+            {
+                query["FlowId"] = request.FlowId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetApprovalTaskDetail",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetApprovalTaskDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an approval task based on the approval flow ID, including the approval process steps. Available from version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApprovalTaskDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApprovalTaskDetailResponse
+        /// </returns>
+        public async Task<GetApprovalTaskDetailResponse> GetApprovalTaskDetailWithOptionsAsync(GetApprovalTaskDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowId))
+            {
+                query["FlowId"] = request.FlowId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetApprovalTaskDetail",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetApprovalTaskDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an approval task based on the approval flow ID, including the approval process steps. Available from version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApprovalTaskDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApprovalTaskDetailResponse
+        /// </returns>
+        public GetApprovalTaskDetailResponse GetApprovalTaskDetail(GetApprovalTaskDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetApprovalTaskDetailWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an approval task based on the approval flow ID, including the approval process steps. Available from version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApprovalTaskDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApprovalTaskDetailResponse
+        /// </returns>
+        public async Task<GetApprovalTaskDetailResponse> GetApprovalTaskDetailAsync(GetApprovalTaskDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetApprovalTaskDetailWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -16727,8 +17547,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries mapping relationships by asset object GUID.
-        /// Available since: v5.4.2.</para>
+        /// <para>Queries the mapping relationships based on the asset object GUID. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -16786,8 +17605,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries mapping relationships by asset object GUID.
-        /// Available since: v5.4.2.</para>
+        /// <para>Queries the mapping relationships based on the asset object GUID. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -16845,8 +17663,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries mapping relationships by asset object GUID.
-        /// Available since: v5.4.2.</para>
+        /// <para>Queries the mapping relationships based on the asset object GUID. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16864,8 +17681,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries mapping relationships by asset object GUID.
-        /// Available since: v5.4.2.</para>
+        /// <para>Queries the mapping relationships based on the asset object GUID. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17331,7 +18147,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the custom lineage of an offline task.</para>
+        /// <para>Retrieves the custom lineage of an offline task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17385,7 +18201,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the custom lineage of an offline task.</para>
+        /// <para>Retrieves the custom lineage of an offline task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17439,7 +18255,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the custom lineage of an offline task.</para>
+        /// <para>Retrieves the custom lineage of an offline task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17457,7 +18273,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the custom lineage of an offline task.</para>
+        /// <para>Retrieves the custom lineage of an offline task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17475,7 +18291,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the version list of a batch task.</para>
+        /// <para>Queries a list of batch taskfile versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17529,7 +18345,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the version list of a batch task.</para>
+        /// <para>Queries a list of batch taskfile versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17583,7 +18399,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the version list of a batch task.</para>
+        /// <para>Queries a list of batch taskfile versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17601,7 +18417,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the version list of a batch task.</para>
+        /// <para>Queries a list of batch taskfile versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17619,7 +18435,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the version list of a specified offline template ID. Online version: v6.2.0.</para>
+        /// <para>Retrieves the versions of a specified offline template. Available since v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17677,7 +18493,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the version list of a specified offline template ID. Online version: v6.2.0.</para>
+        /// <para>Retrieves the versions of a specified offline template. Available since v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17735,7 +18551,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the version list of a specified offline template ID. Online version: v6.2.0.</para>
+        /// <para>Retrieves the versions of a specified offline template. Available since v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17753,7 +18569,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the version list of a specified offline template ID. Online version: v6.2.0.</para>
+        /// <para>Retrieves the versions of a specified offline template. Available since v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17771,8 +18587,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query mapping relationships by belonging asset GUID.
-        /// Release version: v5.4.2.</para>
+        /// <para>Queries the mapping relationships based on the GUID of the owning asset. Released in v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17830,8 +18645,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query mapping relationships by belonging asset GUID.
-        /// Release version: v5.4.2.</para>
+        /// <para>Queries the mapping relationships based on the GUID of the owning asset. Released in v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17889,8 +18703,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query mapping relationships by belonging asset GUID.
-        /// Release version: v5.4.2.</para>
+        /// <para>Queries the mapping relationships based on the GUID of the owning asset. Released in v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17908,8 +18721,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query mapping relationships by belonging asset GUID.
-        /// Release version: v5.4.2.</para>
+        /// <para>Queries the mapping relationships based on the GUID of the owning asset. Released in v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18223,8 +19035,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query business metric details by name.
-        /// Release version: v5.5.0.</para>
+        /// <para>Queries the details of a business metric by name. Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18282,8 +19093,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query business metric details by name.
-        /// Release version: v5.5.0.</para>
+        /// <para>Queries the details of a business metric by name. Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18341,8 +19151,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query business metric details by name.
-        /// Release version: v5.5.0.</para>
+        /// <para>Queries the details of a business metric by name. Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18360,8 +19169,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query business metric details by name.
-        /// Release version: v5.5.0.</para>
+        /// <para>Queries the details of a business metric by name. Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18379,7 +19187,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a data domain.</para>
+        /// <para>Retrieves the details of a data sector.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18429,7 +19237,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a data domain.</para>
+        /// <para>Retrieves the details of a data sector.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18479,7 +19287,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a data domain.</para>
+        /// <para>Retrieves the details of a data sector.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18497,7 +19305,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a data domain.</para>
+        /// <para>Retrieves the details of a data sector.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18823,13 +19631,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of connectivity check tasks for a specified data source ID. This operation includes null value validation and tenant permission verification to prevent cross-tenant access.
-        /// Release version: v5.5.0.</para>
+        /// <para>Queries a list of connectivity check tasks based on the specified data source ID, including null value validation and tenant permission verification to prevent cross-tenant access. Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of connectivity tasks that have been tested for a specified data source ID.</para>
+        /// <para>Queries the details of tested connectivity tasks based on the data source ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18879,13 +19686,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of connectivity check tasks for a specified data source ID. This operation includes null value validation and tenant permission verification to prevent cross-tenant access.
-        /// Release version: v5.5.0.</para>
+        /// <para>Queries a list of connectivity check tasks based on the specified data source ID, including null value validation and tenant permission verification to prevent cross-tenant access. Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of connectivity tasks that have been tested for a specified data source ID.</para>
+        /// <para>Queries the details of tested connectivity tasks based on the data source ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18935,13 +19741,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of connectivity check tasks for a specified data source ID. This operation includes null value validation and tenant permission verification to prevent cross-tenant access.
-        /// Release version: v5.5.0.</para>
+        /// <para>Queries a list of connectivity check tasks based on the specified data source ID, including null value validation and tenant permission verification to prevent cross-tenant access. Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of connectivity tasks that have been tested for a specified data source ID.</para>
+        /// <para>Queries the details of tested connectivity tasks based on the data source ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18959,13 +19764,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of connectivity check tasks for a specified data source ID. This operation includes null value validation and tenant permission verification to prevent cross-tenant access.
-        /// Release version: v5.5.0.</para>
+        /// <para>Queries a list of connectivity check tasks based on the specified data source ID, including null value validation and tenant permission verification to prevent cross-tenant access. Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of connectivity tasks that have been tested for a specified data source ID.</para>
+        /// <para>Queries the details of tested connectivity tasks based on the data source ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19291,7 +20095,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a compute source by compute source ID.</para>
+        /// <para>Retrieves the details of a compute source by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19341,7 +20145,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a compute source by compute source ID.</para>
+        /// <para>Retrieves the details of a compute source by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19391,7 +20195,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a compute source by compute source ID.</para>
+        /// <para>Retrieves the details of a compute source by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19409,7 +20213,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a compute source by compute source ID.</para>
+        /// <para>Retrieves the details of a compute source by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19735,7 +20539,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Service Monitoring: Retrieves the aggregate statistics of API calls.</para>
+        /// <para>Retrieves the summary statistics of API calls for Service Monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19793,7 +20597,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Service Monitoring: Retrieves the aggregate statistics of API calls.</para>
+        /// <para>Retrieves the summary statistics of API calls for Service Monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19851,7 +20655,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Service Monitoring: Retrieves the aggregate statistics of API calls.</para>
+        /// <para>Retrieves the summary statistics of API calls for Service Monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19869,7 +20673,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Service Monitoring: Retrieves the aggregate statistics of API calls.</para>
+        /// <para>Retrieves the summary statistics of API calls for Service Monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20039,7 +20843,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves API documentation.</para>
+        /// <para>Retrieves the API documentation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20093,7 +20897,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves API documentation.</para>
+        /// <para>Retrieves the API documentation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20147,7 +20951,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves API documentation.</para>
+        /// <para>Retrieves the API documentation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20165,7 +20969,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves API documentation.</para>
+        /// <para>Retrieves the API documentation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20471,8 +21275,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a data service application, including the project, application name, authentication information, and IP whitelist. Only application members can view the details.
-        /// Release version: v6.0.0.</para>
+        /// <para>Queries the details of a data service application, including the project, application name, authentication information, and IP address whitelist. Only application members can view this information. Released in v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20522,8 +21325,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a data service application, including the project, application name, authentication information, and IP whitelist. Only application members can view the details.
-        /// Release version: v6.0.0.</para>
+        /// <para>Queries the details of a data service application, including the project, application name, authentication information, and IP address whitelist. Only application members can view this information. Released in v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20573,8 +21375,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a data service application, including the project, application name, authentication information, and IP whitelist. Only application members can view the details.
-        /// Release version: v6.0.0.</para>
+        /// <para>Queries the details of a data service application, including the project, application name, authentication information, and IP address whitelist. Only application members can view this information. Released in v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20592,8 +21393,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a data service application, including the project, application name, authentication information, and IP whitelist. Only application members can view the details.
-        /// Release version: v6.0.0.</para>
+        /// <para>Queries the details of a data service application, including the project, application name, authentication information, and IP address whitelist. Only application members can view this information. Released in v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20611,7 +21411,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of users who have permissions on an application.</para>
+        /// <para>Retrieves the list of users who have permissions for the application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20665,7 +21465,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of users who have permissions on an application.</para>
+        /// <para>Retrieves the list of users who have permissions for the application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20719,7 +21519,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of users who have permissions on an application.</para>
+        /// <para>Retrieves the list of users who have permissions for the application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20737,7 +21537,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of users who have permissions on an application.</para>
+        /// <para>Retrieves the list of users who have permissions for the application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21031,7 +21831,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of applications in a group.</para>
+        /// <para>Queries the applications in a group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21085,7 +21885,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of applications in a group.</para>
+        /// <para>Queries the applications in a group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21139,7 +21939,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of applications in a group.</para>
+        /// <para>Queries the applications in a group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21157,7 +21957,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of applications in a group.</para>
+        /// <para>Queries the applications in a group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21319,7 +22119,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of projects that the current user has permissions to access.</para>
+        /// <para>Queries the list of projects that the user has access to.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21365,7 +22165,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of projects that the current user has permissions to access.</para>
+        /// <para>Queries the list of projects that the user has access to.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21411,7 +22211,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of projects that the current user has permissions to access.</para>
+        /// <para>Queries the list of projects that the user has access to.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21429,7 +22229,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of projects that the current user has permissions to access.</para>
+        /// <para>Queries the list of projects that the user has access to.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21575,7 +22375,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of users who can be added as project members.</para>
+        /// <para>Retrieves a list of users that can be added as project members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21625,7 +22425,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of users who can be added as project members.</para>
+        /// <para>Retrieves a list of users that can be added as project members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21675,7 +22475,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of users who can be added as project members.</para>
+        /// <para>Retrieves a list of users that can be added as project members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21693,7 +22493,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of users who can be added as project members.</para>
+        /// <para>Retrieves a list of users that can be added as project members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22011,7 +22811,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query upstream dependencies of development objects.</para>
+        /// <para>Queries the upstream dependencies of a development object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22073,7 +22873,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query upstream dependencies of development objects.</para>
+        /// <para>Queries the upstream dependencies of a development object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22135,7 +22935,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query upstream dependencies of development objects.</para>
+        /// <para>Queries the upstream dependencies of a development object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22153,7 +22953,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query upstream dependencies of development objects.</para>
+        /// <para>Queries the upstream dependencies of a development object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22315,7 +23115,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains temporary read/write authorization for file storage.</para>
+        /// <para>Retrieves temporary read and write authorization for file storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22373,7 +23173,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains temporary read/write authorization for file storage.</para>
+        /// <para>Retrieves temporary read and write authorization for file storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22431,7 +23231,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains temporary read/write authorization for file storage.</para>
+        /// <para>Retrieves temporary read and write authorization for file storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22449,7 +23249,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains temporary read/write authorization for file storage.</para>
+        /// <para>Retrieves temporary read and write authorization for file storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22463,6 +23263,186 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetFileStorageCredentialWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the statistical granularity information of an aggregate logical table. Available from version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the statistical granularity of an aggregate logical table. Recursive objects are referenced by ID. Logical tree node IDs are valid only within the currently returned tree.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGranularityBySummaryIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGranularityBySummaryIdResponse
+        /// </returns>
+        public GetGranularityBySummaryIdResponse GetGranularityBySummaryIdWithOptions(GetGranularityBySummaryIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Env))
+            {
+                query["Env"] = request.Env;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                query["ModelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryDraft))
+            {
+                query["QueryDraft"] = request.QueryDraft;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetGranularityBySummaryId",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetGranularityBySummaryIdResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the statistical granularity information of an aggregate logical table. Available from version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the statistical granularity of an aggregate logical table. Recursive objects are referenced by ID. Logical tree node IDs are valid only within the currently returned tree.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGranularityBySummaryIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGranularityBySummaryIdResponse
+        /// </returns>
+        public async Task<GetGranularityBySummaryIdResponse> GetGranularityBySummaryIdWithOptionsAsync(GetGranularityBySummaryIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Env))
+            {
+                query["Env"] = request.Env;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                query["ModelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryDraft))
+            {
+                query["QueryDraft"] = request.QueryDraft;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetGranularityBySummaryId",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetGranularityBySummaryIdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the statistical granularity information of an aggregate logical table. Available from version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the statistical granularity of an aggregate logical table. Recursive objects are referenced by ID. Logical tree node IDs are valid only within the currently returned tree.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGranularityBySummaryIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGranularityBySummaryIdResponse
+        /// </returns>
+        public GetGranularityBySummaryIdResponse GetGranularityBySummaryId(GetGranularityBySummaryIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetGranularityBySummaryIdWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the statistical granularity information of an aggregate logical table. Available from version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the statistical granularity of an aggregate logical table. Recursive objects are referenced by ID. Logical tree node IDs are valid only within the currently returned tree.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGranularityBySummaryIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGranularityBySummaryIdResponse
+        /// </returns>
+        public async Task<GetGranularityBySummaryIdResponse> GetGranularityBySummaryIdAsync(GetGranularityBySummaryIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetGranularityBySummaryIdWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -22643,7 +23623,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dag of an instance. Logical tables and code nodes are supported.</para>
+        /// <para>Queries the upstream and downstream nodes of an instance. Supports logical tables and code nodes.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -22717,7 +23697,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dag of an instance. Logical tables and code nodes are supported.</para>
+        /// <para>Queries the upstream and downstream nodes of an instance. Supports logical tables and code nodes.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -22791,7 +23771,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dag of an instance. Logical tables and code nodes are supported.</para>
+        /// <para>Queries the upstream and downstream nodes of an instance. Supports logical tables and code nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22809,7 +23789,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dag of an instance. Logical tables and code nodes are supported.</para>
+        /// <para>Queries the upstream and downstream nodes of an instance. Supports logical tables and code nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22827,7 +23807,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of workspaces with authorized knowledge graphs. Online version: v6.3.0.</para>
+        /// <para>Retrieves a list of workspaces with authorized knowledge graphs. Release version: v6.3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22873,7 +23853,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of workspaces with authorized knowledge graphs. Online version: v6.3.0.</para>
+        /// <para>Retrieves a list of workspaces with authorized knowledge graphs. Release version: v6.3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22919,7 +23899,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of workspaces with authorized knowledge graphs. Online version: v6.3.0.</para>
+        /// <para>Retrieves a list of workspaces with authorized knowledge graphs. Release version: v6.3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22937,7 +23917,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of workspaces with authorized knowledge graphs. Online version: v6.3.0.</para>
+        /// <para>Retrieves a list of workspaces with authorized knowledge graphs. Release version: v6.3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22955,7 +23935,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a knowledge graph entity record. Online version: v6.1.1.</para>
+        /// <para>Retrieves the details of a knowledge graph entity record. Available since version 6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23013,7 +23993,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a knowledge graph entity record. Online version: v6.1.1.</para>
+        /// <para>Retrieves the details of a knowledge graph entity record. Available since version 6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23071,7 +24051,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a knowledge graph entity record. Online version: v6.1.1.</para>
+        /// <para>Retrieves the details of a knowledge graph entity record. Available since version 6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23089,7 +24069,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a knowledge graph entity record. Online version: v6.1.1.</para>
+        /// <para>Retrieves the details of a knowledge graph entity record. Available since version 6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23283,7 +24263,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a knowledge graph relationship record. Online version: v6.1.1.</para>
+        /// <para>Retrieves the details of a knowledge graph relation record. Released in version v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23341,7 +24321,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a knowledge graph relationship record. Online version: v6.1.1.</para>
+        /// <para>Retrieves the details of a knowledge graph relation record. Released in version v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23399,7 +24379,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a knowledge graph relationship record. Online version: v6.1.1.</para>
+        /// <para>Retrieves the details of a knowledge graph relation record. Released in version v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23417,7 +24397,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a knowledge graph relationship record. Online version: v6.1.1.</para>
+        /// <para>Retrieves the details of a knowledge graph relation record. Released in version v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23435,7 +24415,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the publish result of a knowledge graph model. Online version: v6.2.0.</para>
+        /// <para>Retrieves the publish result of a graph model. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23489,7 +24469,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the publish result of a knowledge graph model. Online version: v6.2.0.</para>
+        /// <para>Retrieves the publish result of a graph model. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23543,7 +24523,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the publish result of a knowledge graph model. Online version: v6.2.0.</para>
+        /// <para>Retrieves the publish result of a graph model. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23561,7 +24541,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the publish result of a knowledge graph model. Online version: v6.2.0.</para>
+        /// <para>Retrieves the publish result of a graph model. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23579,7 +24559,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of the latest pending submit record.</para>
+        /// <para>Retrieves the details of the latest pending release record.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -23637,7 +24617,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of the latest pending submit record.</para>
+        /// <para>Retrieves the details of the latest pending release record.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -23695,7 +24675,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of the latest pending submit record.</para>
+        /// <para>Retrieves the details of the latest pending release record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23713,7 +24693,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of the latest pending submit record.</para>
+        /// <para>Retrieves the details of the latest pending release record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23995,7 +24975,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of roles for the current user.</para>
+        /// <para>Retrieves the list of user roles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24041,7 +25021,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of roles for the current user.</para>
+        /// <para>Retrieves the list of user roles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24087,7 +25067,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of roles for the current user.</para>
+        /// <para>Retrieves the list of user roles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24105,7 +25085,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of roles for the current user.</para>
+        /// <para>Retrieves the list of user roles.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24275,7 +25255,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dag of a node. This is a general-purpose operation.</para>
+        /// <para>Queries the upstream and downstream nodes of a node.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24349,7 +25329,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dag of a node. This is a general-purpose operation.</para>
+        /// <para>Queries the upstream and downstream nodes of a node.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24423,7 +25403,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dag of a node. This is a general-purpose operation.</para>
+        /// <para>Queries the upstream and downstream nodes of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24441,7 +25421,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the dag of a node. This is a general-purpose operation.</para>
+        /// <para>Queries the upstream and downstream nodes of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24459,7 +25439,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an operation log by ID. Available since v6.2.0.</para>
+        /// <para>Queries an execution record by ID. Available since version 6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24517,7 +25497,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an operation log by ID. Available since v6.2.0.</para>
+        /// <para>Queries an execution record by ID. Available since version 6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24575,7 +25555,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an operation log by ID. Available since v6.2.0.</para>
+        /// <para>Queries an execution record by ID. Available since version 6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24593,7 +25573,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an operation log by ID. Available since v6.2.0.</para>
+        /// <para>Queries an execution record by ID. Available since version 6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24611,7 +25591,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an execution record. Released in version v6.2.0.</para>
+        /// <para>Queries the details of an operation record. Available since version 6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24669,7 +25649,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an execution record. Released in version v6.2.0.</para>
+        /// <para>Queries the details of an operation record. Available since version 6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24727,7 +25707,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an execution record. Released in version v6.2.0.</para>
+        /// <para>Queries the details of an operation record. Available since version 6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24745,7 +25725,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an execution record. Released in version v6.2.0.</para>
+        /// <para>Queries the details of an operation record. Available since version 6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24763,7 +25743,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution code of an operation log. Online version: v6.2.0.</para>
+        /// <para>Queries the executed code of operation records. Release version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24821,7 +25801,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution code of an operation log. Online version: v6.2.0.</para>
+        /// <para>Queries the executed code of operation records. Release version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24879,7 +25859,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution code of an operation log. Online version: v6.2.0.</para>
+        /// <para>Queries the executed code of operation records. Release version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24897,7 +25877,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution code of an operation log. Online version: v6.2.0.</para>
+        /// <para>Queries the executed code of operation records. Release version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24915,7 +25895,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the submit status of a data backfill request.</para>
+        /// <para>Queries the submit status of data backfill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24969,7 +25949,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the submit status of a data backfill request.</para>
+        /// <para>Queries the submit status of data backfill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25023,7 +26003,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the submit status of a data backfill request.</para>
+        /// <para>Queries the submit status of data backfill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25041,7 +26021,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the submit status of a data backfill request.</para>
+        /// <para>Queries the submit status of data backfill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25059,7 +26039,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets instance information.</para>
+        /// <para>Retrieves instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25117,7 +26097,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets instance information.</para>
+        /// <para>Retrieves instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25175,7 +26155,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets instance information.</para>
+        /// <para>Retrieves instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25193,7 +26173,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets instance information.</para>
+        /// <para>Retrieves instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25363,7 +26343,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a physical schedule resource.</para>
+        /// <para>Queries physical scheduling nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25417,7 +26397,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a physical schedule resource.</para>
+        /// <para>Queries physical scheduling nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25471,7 +26451,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a physical schedule resource.</para>
+        /// <para>Queries physical scheduling nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25489,7 +26469,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a physical schedule resource.</para>
+        /// <para>Queries physical scheduling nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25507,7 +26487,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a physical node by output name. Only offline code nodes and integration task nodes are supported.</para>
+        /// <para>Queries physical nodes by output name. Only offline code nodes and integration task nodes are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25561,7 +26541,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a physical node by output name. Only offline code nodes and integration task nodes are supported.</para>
+        /// <para>Queries physical nodes by output name. Only offline code nodes and integration task nodes are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25615,7 +26595,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a physical node by output name. Only offline code nodes and integration task nodes are supported.</para>
+        /// <para>Queries physical nodes by output name. Only offline code nodes and integration task nodes are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25633,7 +26613,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a physical node by output name. Only offline code nodes and integration task nodes are supported.</para>
+        /// <para>Queries physical nodes by output name. Only offline code nodes and integration task nodes are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25651,7 +26631,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the code content of a schedule resource node.</para>
+        /// <para>Queries the code content of a scheduling node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25705,7 +26685,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the code content of a schedule resource node.</para>
+        /// <para>Queries the code content of a scheduling node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25759,7 +26739,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the code content of a schedule resource node.</para>
+        /// <para>Queries the code content of a scheduling node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25777,7 +26757,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the code content of a schedule resource node.</para>
+        /// <para>Queries the code content of a scheduling node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25795,7 +26775,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the operation logs of a node.</para>
+        /// <para>Queries the node operation logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25849,7 +26829,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the operation logs of a node.</para>
+        /// <para>Queries the node operation logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25903,7 +26883,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the operation logs of a node.</para>
+        /// <para>Queries the node operation logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25921,7 +26901,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the operation logs of a node.</para>
+        /// <para>Queries the node operation logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26267,7 +27247,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get project details by project ID.</para>
+        /// <para>Retrieves the details of a project by project ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26321,7 +27301,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get project details by project ID.</para>
+        /// <para>Retrieves the details of a project by project ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26375,7 +27355,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get project details by project ID.</para>
+        /// <para>Retrieves the details of a project by project ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26393,7 +27373,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get project details by project ID.</para>
+        /// <para>Retrieves the details of a project by project ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26547,7 +27527,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the production account of a project. Only a super administrator (SuperAdmin) can call this API operation.</para>
+        /// <para>Retrieves the production account for a project. Only super administrators can call this API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26597,7 +27577,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the production account of a project. Only a super administrator (SuperAdmin) can call this API operation.</para>
+        /// <para>Retrieves the production account for a project. Only super administrators can call this API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26647,7 +27627,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the production account of a project. Only a super administrator (SuperAdmin) can call this API operation.</para>
+        /// <para>Retrieves the production account for a project. Only super administrators can call this API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26665,7 +27645,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the production account of a project. Only a super administrator (SuperAdmin) can call this API operation.</para>
+        /// <para>Retrieves the production account for a project. Only super administrators can call this API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26683,7 +27663,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the whitelist of a project.</para>
+        /// <para>Retrieves the project whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26733,7 +27713,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the whitelist of a project.</para>
+        /// <para>Retrieves the project whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26783,7 +27763,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the whitelist of a project.</para>
+        /// <para>Retrieves the project whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26801,7 +27781,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the whitelist of a project.</para>
+        /// <para>Retrieves the project whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27091,8 +28071,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a quality rule object.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves the quality rule object. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27142,8 +28121,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a quality rule object.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves the quality rule object. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27193,8 +28171,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a quality rule object.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves the quality rule object. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27212,8 +28189,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a quality rule object.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves the quality rule object. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27231,7 +28207,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a quality node task object. Online version: v5.4.2.</para>
+        /// <para>Retrieves the details of a quality task object. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27281,7 +28257,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a quality node task object. Online version: v5.4.2.</para>
+        /// <para>Retrieves the details of a quality task object. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27331,7 +28307,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a quality node task object. Online version: v5.4.2.</para>
+        /// <para>Retrieves the details of a quality task object. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27349,7 +28325,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a quality node task object. Online version: v5.4.2.</para>
+        /// <para>Retrieves the details of a quality task object. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27507,8 +28483,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a quality schedule object.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves the quality scheduling object. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27558,8 +28533,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a quality schedule object.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves the quality scheduling object. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27609,8 +28583,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a quality schedule object.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves the quality scheduling object. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27628,8 +28601,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a quality schedule object.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves the quality scheduling object. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27647,8 +28619,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of schedule settings by monitored object ID.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves a list of scheduling settings by monitored object ID. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27698,8 +28669,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of schedule settings by monitored object ID.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves a list of scheduling settings by monitored object ID. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27749,8 +28719,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of schedule settings by monitored object ID.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves a list of scheduling settings by monitored object ID. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27768,8 +28737,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of schedule settings by monitored object ID.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves a list of scheduling settings by monitored object ID. Available since v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27787,8 +28755,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a quality template object.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves a quality template object. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27838,8 +28805,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a quality template object.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves a quality template object. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27889,8 +28855,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a quality template object.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves a quality template object. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27908,8 +28873,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a quality template object.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves a quality template object. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28067,8 +29031,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a quality watchtask record by the original ID of the monitored object, such as the ID of a datasource, table, or metric.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves a quality watchtask record by the original ID of the monitored object, such as the ID of a data source, table, or metric. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28122,8 +29085,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a quality watchtask record by the original ID of the monitored object, such as the ID of a datasource, table, or metric.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves a quality watchtask record by the original ID of the monitored object, such as the ID of a data source, table, or metric. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28177,8 +29139,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a quality watchtask record by the original ID of the monitored object, such as the ID of a datasource, table, or metric.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves a quality watchtask record by the original ID of the monitored object, such as the ID of a data source, table, or metric. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28196,8 +29157,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a quality watchtask record by the original ID of the monitored object, such as the ID of a datasource, table, or metric.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves a quality watchtask record by the original ID of the monitored object, such as the ID of a data source, table, or metric. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28215,8 +29175,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a monitoring node task object.
-        /// Online version: v5.4.2.</para>
+        /// <para>Retrieves a monitoring node object. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28266,8 +29225,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a monitoring node task object.
-        /// Online version: v5.4.2.</para>
+        /// <para>Retrieves a monitoring node object. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28317,8 +29275,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a monitoring node task object.
-        /// Online version: v5.4.2.</para>
+        /// <para>Retrieves a monitoring node object. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28336,8 +29293,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a monitoring node task object.
-        /// Online version: v5.4.2.</para>
+        /// <para>Retrieves a monitoring node object. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28663,6 +29619,158 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves the quality rectification process. Released in version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetRectifyFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRectifyFlowResponse
+        /// </returns>
+        public GetRectifyFlowResponse GetRectifyFlowWithOptions(GetRectifyFlowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetRectifyFlowShrinkRequest request = new GetRectifyFlowShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GetQuery))
+            {
+                request.GetQueryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GetQuery, "GetQuery", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GetQueryShrink))
+            {
+                body["GetQuery"] = request.GetQueryShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRectifyFlow",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRectifyFlowResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the quality rectification process. Released in version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetRectifyFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRectifyFlowResponse
+        /// </returns>
+        public async Task<GetRectifyFlowResponse> GetRectifyFlowWithOptionsAsync(GetRectifyFlowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetRectifyFlowShrinkRequest request = new GetRectifyFlowShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GetQuery))
+            {
+                request.GetQueryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GetQuery, "GetQuery", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GetQueryShrink))
+            {
+                body["GetQuery"] = request.GetQueryShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRectifyFlow",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRectifyFlowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the quality rectification process. Released in version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRectifyFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRectifyFlowResponse
+        /// </returns>
+        public GetRectifyFlowResponse GetRectifyFlow(GetRectifyFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetRectifyFlowWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the quality rectification process. Released in version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRectifyFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRectifyFlowResponse
+        /// </returns>
+        public async Task<GetRectifyFlowResponse> GetRectifyFlowAsync(GetRectifyFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetRectifyFlowWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the details of a resource file.</para>
         /// </summary>
         /// 
@@ -28959,7 +30067,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves row permissions by table GUIDs. Online version: v5.4.2.</para>
+        /// <para>Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29017,7 +30125,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves row permissions by table GUIDs. Online version: v5.4.2.</para>
+        /// <para>Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29075,7 +30183,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves row permissions by table GUIDs. Online version: v5.4.2.</para>
+        /// <para>Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29093,7 +30201,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves row permissions by table GUIDs. Online version: v5.4.2.</para>
+        /// <para>Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29247,8 +30355,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an identification result.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves the details of a recognition result. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29298,8 +30405,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an identification result.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves the details of a recognition result. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29349,8 +30455,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an identification result.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves the details of a recognition result. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29368,8 +30473,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an identification result.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves the details of a recognition result. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29664,7 +30768,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a published API based on the AppKey.</para>
+        /// <para>Queries the details of published APIs based on the appKey.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29719,7 +30823,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a published API based on the AppKey.</para>
+        /// <para>Queries the details of published APIs based on the appKey.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29774,7 +30878,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a published API based on the AppKey.</para>
+        /// <para>Queries the details of published APIs based on the appKey.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29797,7 +30901,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a published API based on the AppKey.</para>
+        /// <para>Queries the details of published APIs based on the appKey.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29983,7 +31087,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the Spark client information of the cluster associated with a compute source.</para>
+        /// <para>Retrieves the Spark client information for the cluster associated with the compute source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30037,7 +31141,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the Spark client information of the cluster associated with a compute source.</para>
+        /// <para>Retrieves the Spark client information for the cluster associated with the compute source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30091,7 +31195,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the Spark client information of the cluster associated with a compute source.</para>
+        /// <para>Retrieves the Spark client information for the cluster associated with the compute source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30109,7 +31213,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the Spark client information of the cluster associated with a compute source.</para>
+        /// <para>Retrieves the Spark client information for the cluster associated with the compute source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30127,8 +31231,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a standard.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves the details of a standard. Released in v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30186,8 +31289,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a standard.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves the details of a standard. Released in v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30245,8 +31347,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a standard.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves the details of a standard. Released in v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30264,8 +31365,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a standard.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves the details of a standard. Released in v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30283,8 +31383,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a data standard lookup table.
-        /// Online version: v5.4.2.</para>
+        /// <para>Retrieves the details of a data standard lookup table. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30338,8 +31437,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a data standard lookup table.
-        /// Online version: v5.4.2.</para>
+        /// <para>Retrieves the details of a data standard lookup table. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30393,8 +31491,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a data standard lookup table.
-        /// Online version: v5.4.2.</para>
+        /// <para>Retrieves the details of a data standard lookup table. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30412,8 +31509,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a data standard lookup table.
-        /// Online version: v5.4.2.</para>
+        /// <para>Retrieves the details of a data standard lookup table. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30431,8 +31527,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a standard set.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves the details of a standard set. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30486,8 +31581,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a standard set.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves the details of a standard set. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30541,8 +31635,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a standard set.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves the details of a standard set. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30560,8 +31653,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a standard set.
-        /// Release version: v5.4.2.</para>
+        /// <para>Retrieves the details of a standard set. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30579,8 +31671,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of standards grouped by standard type under a specified folder.
-        /// Online version: v5.4.2.</para>
+        /// <para>Queries the statistics of standards by standard type under a directory.
+        /// Available since: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30638,8 +31730,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of standards grouped by standard type under a specified folder.
-        /// Online version: v5.4.2.</para>
+        /// <para>Queries the statistics of standards by standard type under a directory.
+        /// Available since: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30697,8 +31789,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of standards grouped by standard type under a specified folder.
-        /// Online version: v5.4.2.</para>
+        /// <para>Queries the statistics of standards by standard type under a directory.
+        /// Available since: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30716,8 +31808,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of standards grouped by standard type under a specified folder.
-        /// Online version: v5.4.2.</para>
+        /// <para>Queries the statistics of standards by standard type under a directory.
+        /// Available since: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30735,8 +31827,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a data standard template.
-        /// Online version: v5.4.2.</para>
+        /// <para>Retrieves the details of a data standard template. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30802,8 +31893,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a data standard template.
-        /// Online version: v5.4.2.</para>
+        /// <para>Retrieves the details of a data standard template. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -30869,8 +31959,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a data standard template.
-        /// Online version: v5.4.2.</para>
+        /// <para>Retrieves the details of a data standard template. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30888,8 +31977,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a data standard template.
-        /// Online version: v5.4.2.</para>
+        /// <para>Retrieves the details of a data standard template. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30907,8 +31995,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a data standard word root.
-        /// Online version: v5.4.2.</para>
+        /// <para>Queries the details of a data standard word root. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30962,8 +32049,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a data standard word root.
-        /// Online version: v5.4.2.</para>
+        /// <para>Queries the details of a data standard word root. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31017,8 +32103,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a data standard word root.
-        /// Online version: v5.4.2.</para>
+        /// <para>Queries the details of a data standard word root. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31036,8 +32121,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a data standard word root.
-        /// Online version: v5.4.2.</para>
+        /// <para>Queries the details of a data standard word root. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31199,6 +32283,522 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves the full text of JobManager or TaskManager logs. Available since version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the full text of JobManager or TaskManager logs in the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetStreamLogContentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStreamLogContentResponse
+        /// </returns>
+        public GetStreamLogContentResponse GetStreamLogContentWithOptions(GetStreamLogContentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentInstanceId))
+            {
+                query["DeploymentInstanceId"] = request.DeploymentInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogName))
+            {
+                query["LogName"] = request.LogName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskmanagerId))
+            {
+                query["TaskmanagerId"] = request.TaskmanagerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetStreamLogContent",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetStreamLogContentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the full text of JobManager or TaskManager logs. Available since version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the full text of JobManager or TaskManager logs in the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetStreamLogContentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStreamLogContentResponse
+        /// </returns>
+        public async Task<GetStreamLogContentResponse> GetStreamLogContentWithOptionsAsync(GetStreamLogContentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentInstanceId))
+            {
+                query["DeploymentInstanceId"] = request.DeploymentInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogName))
+            {
+                query["LogName"] = request.LogName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskmanagerId))
+            {
+                query["TaskmanagerId"] = request.TaskmanagerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetStreamLogContent",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetStreamLogContentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the full text of JobManager or TaskManager logs. Available since version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the full text of JobManager or TaskManager logs in the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetStreamLogContentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStreamLogContentResponse
+        /// </returns>
+        public GetStreamLogContentResponse GetStreamLogContent(GetStreamLogContentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetStreamLogContentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the full text of JobManager or TaskManager logs. Available since version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the full text of JobManager or TaskManager logs in the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetStreamLogContentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStreamLogContentResponse
+        /// </returns>
+        public async Task<GetStreamLogContentResponse> GetStreamLogContentAsync(GetStreamLogContentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetStreamLogContentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a single start or stop operation record and the log content. Available since version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a single start or stop operation record and the log content by querying the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetStreamOpsRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStreamOpsRecordResponse
+        /// </returns>
+        public GetStreamOpsRecordResponse GetStreamOpsRecordWithOptions(GetStreamOpsRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsRecordId))
+            {
+                query["OpsRecordId"] = request.OpsRecordId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetStreamOpsRecord",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetStreamOpsRecordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a single start or stop operation record and the log content. Available since version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a single start or stop operation record and the log content by querying the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetStreamOpsRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStreamOpsRecordResponse
+        /// </returns>
+        public async Task<GetStreamOpsRecordResponse> GetStreamOpsRecordWithOptionsAsync(GetStreamOpsRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsRecordId))
+            {
+                query["OpsRecordId"] = request.OpsRecordId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetStreamOpsRecord",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetStreamOpsRecordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a single start or stop operation record and the log content. Available since version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a single start or stop operation record and the log content by querying the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetStreamOpsRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStreamOpsRecordResponse
+        /// </returns>
+        public GetStreamOpsRecordResponse GetStreamOpsRecord(GetStreamOpsRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetStreamOpsRecordWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a single start or stop operation record and the log content. Available since version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a single start or stop operation record and the log content by querying the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetStreamOpsRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStreamOpsRecordResponse
+        /// </returns>
+        public async Task<GetStreamOpsRecordResponse> GetStreamOpsRecordAsync(GetStreamOpsRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetStreamOpsRecordWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the basic information and running status of a real-time task. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the basic information and running status of a real-time task. The DEV and PROD environments are supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetStreamTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStreamTaskResponse
+        /// </returns>
+        public GetStreamTaskResponse GetStreamTaskWithOptions(GetStreamTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Env))
+            {
+                query["Env"] = request.Env;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetStreamTask",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetStreamTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the basic information and running status of a real-time task. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the basic information and running status of a real-time task. The DEV and PROD environments are supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetStreamTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStreamTaskResponse
+        /// </returns>
+        public async Task<GetStreamTaskResponse> GetStreamTaskWithOptionsAsync(GetStreamTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Env))
+            {
+                query["Env"] = request.Env;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetStreamTask",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetStreamTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the basic information and running status of a real-time task. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the basic information and running status of a real-time task. The DEV and PROD environments are supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetStreamTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStreamTaskResponse
+        /// </returns>
+        public GetStreamTaskResponse GetStreamTask(GetStreamTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetStreamTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the basic information and running status of a real-time task. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the basic information and running status of a real-time task. The DEV and PROD environments are supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetStreamTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStreamTaskResponse
+        /// </returns>
+        public async Task<GetStreamTaskResponse> GetStreamTaskAsync(GetStreamTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetStreamTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves dagrun information for all business dates of a data backfill instance workflow.</para>
         /// </summary>
         /// 
@@ -31343,7 +32943,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the instances of all nodes for a specific business date in a data backfill workflow.</para>
+        /// <para>Lists all node instances for a specific business date in a data backfill workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31397,7 +32997,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the instances of all nodes for a specific business date in a data backfill workflow.</para>
+        /// <para>Lists all node instances for a specific business date in a data backfill workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31451,7 +33051,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the instances of all nodes for a specific business date in a data backfill workflow.</para>
+        /// <para>Lists all node instances for a specific business date in a data backfill workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31469,7 +33069,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the instances of all nodes for a specific business date in a data backfill workflow.</para>
+        /// <para>Lists all node instances for a specific business date in a data backfill workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31939,7 +33539,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the columns of a Dataphin table in the asset inventory. Supported table types: logical dimension table, fact logical table, aggregate logical table, tag logical table, logical table view, physical table, physical view, and materialized view table. Release version: v5.4.2.</para>
+        /// <para>Queries the fields of Dataphin tables in the asset inventory. Supported table types include logical dimension tables, logical fact tables, logical aggregate tables, logical tag tables, logical table views, physical tables, physical views, and materialized views. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31968,6 +33568,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
             {
                 query["OpUserId"] = request.OpUserId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableGuid))
+            {
+                query["TableGuid"] = request.TableGuid;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
             {
                 query["TableName"] = request.TableName;
@@ -31993,7 +33597,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the columns of a Dataphin table in the asset inventory. Supported table types: logical dimension table, fact logical table, aggregate logical table, tag logical table, logical table view, physical table, physical view, and materialized view table. Release version: v5.4.2.</para>
+        /// <para>Queries the fields of Dataphin tables in the asset inventory. Supported table types include logical dimension tables, logical fact tables, logical aggregate tables, logical tag tables, logical table views, physical tables, physical views, and materialized views. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32022,6 +33626,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
             {
                 query["OpUserId"] = request.OpUserId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableGuid))
+            {
+                query["TableGuid"] = request.TableGuid;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
             {
                 query["TableName"] = request.TableName;
@@ -32047,7 +33655,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the columns of a Dataphin table in the asset inventory. Supported table types: logical dimension table, fact logical table, aggregate logical table, tag logical table, logical table view, physical table, physical view, and materialized view table. Release version: v5.4.2.</para>
+        /// <para>Queries the fields of Dataphin tables in the asset inventory. Supported table types include logical dimension tables, logical fact tables, logical aggregate tables, logical tag tables, logical table views, physical tables, physical views, and materialized views. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32065,7 +33673,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the columns of a Dataphin table in the asset inventory. Supported table types: logical dimension table, fact logical table, aggregate logical table, tag logical table, logical table view, physical table, physical view, and materialized view table. Release version: v5.4.2.</para>
+        /// <para>Queries the fields of Dataphin tables in the asset inventory. Supported table types include logical dimension tables, logical fact tables, logical aggregate tables, logical tag tables, logical table views, physical tables, physical views, and materialized views. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32679,7 +34287,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific version of a user-defined function.</para>
+        /// <para>Queries the details of a custom function version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32737,7 +34345,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific version of a user-defined function.</para>
+        /// <para>Queries the details of a custom function version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32795,7 +34403,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific version of a user-defined function.</para>
+        /// <para>Queries the details of a custom function version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32813,7 +34421,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific version of a user-defined function.</para>
+        /// <para>Queries the details of a custom function version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33391,7 +34999,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants API authorization.</para>
+        /// <para>Grants permissions for an API.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33453,7 +35061,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants API authorization.</para>
+        /// <para>Grants permissions for an API.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33515,7 +35123,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants API authorization.</para>
+        /// <para>Grants permissions for an API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33533,7 +35141,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants API authorization.</para>
+        /// <para>Grants permissions for an API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33551,7 +35159,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions on resources to users by resource point.</para>
+        /// <para>Grants resource permissions to users.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33609,7 +35217,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions on resources to users by resource point.</para>
+        /// <para>Grants resource permissions to users.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33667,7 +35275,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions on resources to users by resource point.</para>
+        /// <para>Grants resource permissions to users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33685,7 +35293,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions on resources to users by resource point.</para>
+        /// <para>Grants resource permissions to users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33703,7 +35311,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a knowledge graph model definition. Online version: v6.1.1.</para>
+        /// <para>Imports the knowledge graph model definition. Release version: v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33765,7 +35373,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a knowledge graph model definition. Online version: v6.1.1.</para>
+        /// <para>Imports the knowledge graph model definition. Release version: v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -33827,7 +35435,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a knowledge graph model definition. Online version: v6.1.1.</para>
+        /// <para>Imports the knowledge graph model definition. Release version: v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33845,7 +35453,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a knowledge graph model definition. Online version: v6.1.1.</para>
+        /// <para>Imports the knowledge graph model definition. Release version: v6.1.1.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33991,7 +35599,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries users that can be added to a tenant. Only the super administrator (SuperAdmin) and system administrator can call this operation. The users must already exist in the Dataphin instance member list but have not yet been added to the tenant member list.</para>
+        /// <para>Queries the users that can be added to a tenant. Only super administrators and system administrators can invoke this operation. The users must be added to the member list of the Dataphin instance but have not yet been added to the tenant member list.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -34049,7 +35657,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries users that can be added to a tenant. Only the super administrator (SuperAdmin) and system administrator can call this operation. The users must already exist in the Dataphin instance member list but have not yet been added to the tenant member list.</para>
+        /// <para>Queries the users that can be added to a tenant. Only super administrators and system administrators can invoke this operation. The users must be added to the member list of the Dataphin instance but have not yet been added to the tenant member list.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -34107,7 +35715,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries users that can be added to a tenant. Only the super administrator (SuperAdmin) and system administrator can call this operation. The users must already exist in the Dataphin instance member list but have not yet been added to the tenant member list.</para>
+        /// <para>Queries the users that can be added to a tenant. Only super administrators and system administrators can invoke this operation. The users must be added to the member list of the Dataphin instance but have not yet been added to the tenant member list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34125,7 +35733,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries users that can be added to a tenant. Only the super administrator (SuperAdmin) and system administrator can call this operation. The users must already exist in the Dataphin instance member list but have not yet been added to the tenant member list.</para>
+        /// <para>Queries the users that can be added to a tenant. Only super administrators and system administrators can invoke this operation. The users must be added to the member list of the Dataphin instance but have not yet been added to the tenant member list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34447,12 +36055,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of APIs by application.</para>
+        /// <para>Queries the API list for an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the detailed information of published APIs by appKey.</para>
+        /// <para>Queries the details of published APIs by AppKey.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -34510,12 +36118,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of APIs by application.</para>
+        /// <para>Queries the API list for an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the detailed information of published APIs by appKey.</para>
+        /// <para>Queries the details of published APIs by AppKey.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -34573,12 +36181,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of APIs by application.</para>
+        /// <para>Queries the API list for an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the detailed information of published APIs by appKey.</para>
+        /// <para>Queries the details of published APIs by AppKey.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34596,12 +36204,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of APIs by application.</para>
+        /// <para>Queries the API list for an application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the detailed information of published APIs by appKey.</para>
+        /// <para>Queries the details of published APIs by AppKey.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35075,12 +36683,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the specific field list of APIs that an application has requested.</para>
+        /// <para>Queries the specific field list of the APIs that an application has applied for.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description.</h2>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to query the APIs authorized to an application by providing the tenant ID, the AppKey of the data service application, or a keyword of the application name. Pagination is supported. The returned data includes the API ID, name, project, authorization validity period (for development and production environments), permission type, and field lists for production and development environments (including field or parameter name, parameter type, description, example value, and authorization status). Note that pagination parameters are required.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -35138,12 +36747,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the specific field list of APIs that an application has requested.</para>
+        /// <para>Queries the specific field list of the APIs that an application has applied for.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description.</h2>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to query the APIs authorized to an application by providing the tenant ID, the AppKey of the data service application, or a keyword of the application name. Pagination is supported. The returned data includes the API ID, name, project, authorization validity period (for development and production environments), permission type, and field lists for production and development environments (including field or parameter name, parameter type, description, example value, and authorization status). Note that pagination parameters are required.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -35201,12 +36811,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the specific field list of APIs that an application has requested.</para>
+        /// <para>Queries the specific field list of the APIs that an application has applied for.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description.</h2>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to query the APIs authorized to an application by providing the tenant ID, the AppKey of the data service application, or a keyword of the application name. Pagination is supported. The returned data includes the API ID, name, project, authorization validity period (for development and production environments), permission type, and field lists for production and development environments (including field or parameter name, parameter type, description, example value, and authorization status). Note that pagination parameters are required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35224,12 +36835,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the specific field list of APIs that an application has requested.</para>
+        /// <para>Queries the specific field list of the APIs that an application has applied for.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description.</h2>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to query the APIs authorized to an application by providing the tenant ID, the AppKey of the data service application, or a keyword of the application name. Pagination is supported. The returned data includes the API ID, name, project, authorization validity period (for development and production environments), permission type, and field lists for production and development environments (including field or parameter name, parameter type, description, example value, and authorization status). Note that pagination parameters are required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35247,7 +36859,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询离线计算任务列表，支持按任务名称模糊检索、按产出表名精确定位构建该表的任务并获取其文件ID</para>
+        /// <para>Queries a list of offline computing tasks. Supports fuzzy search by task name and exact matching by output table name to locate the task that generates the table and retrieve its file ID. Available since version 6.3.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -35305,7 +36917,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询离线计算任务列表，支持按任务名称模糊检索、按产出表名精确定位构建该表的任务并获取其文件ID</para>
+        /// <para>Queries a list of offline computing tasks. Supports fuzzy search by task name and exact matching by output table name to locate the task that generates the table and retrieve its file ID. Available since version 6.3.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -35363,7 +36975,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询离线计算任务列表，支持按任务名称模糊检索、按产出表名精确定位构建该表的任务并获取其文件ID</para>
+        /// <para>Queries a list of offline computing tasks. Supports fuzzy search by task name and exact matching by output table name to locate the task that generates the table and retrieve its file ID. Available since version 6.3.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35381,7 +36993,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询离线计算任务列表，支持按任务名称模糊检索、按产出表名精确定位构建该表的任务并获取其文件ID</para>
+        /// <para>Queries a list of offline computing tasks. Supports fuzzy search by task name and exact matching by output table name to locate the task that generates the table and retrieve its file ID. Available since version 6.3.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35399,7 +37011,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries offline computing templates by paging. Online version: v6.2.0.</para>
+        /// <para>Performs a paging query on offline computing templates. Released in version v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -35465,7 +37077,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries offline computing templates by paging. Online version: v6.2.0.</para>
+        /// <para>Performs a paging query on offline computing templates. Released in version v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -35531,7 +37143,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries offline computing templates by paging. Online version: v6.2.0.</para>
+        /// <para>Performs a paging query on offline computing templates. Released in version v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35549,7 +37161,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries offline computing templates by paging. Online version: v6.2.0.</para>
+        /// <para>Performs a paging query on offline computing templates. Released in version v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35719,7 +37331,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all business units under the current tenant.</para>
+        /// <para>Queries all business units under the current tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35765,7 +37377,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all business units under the current tenant.</para>
+        /// <para>Queries all business units under the current tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35811,7 +37423,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all business units under the current tenant.</para>
+        /// <para>Queries all business units under the current tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35829,7 +37441,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all business units under the current tenant.</para>
+        /// <para>Queries all business units under the current tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36491,7 +38103,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>O&amp;M analysis: API call statistics.</para>
+        /// <para>Queries API invoke statistics information for O&amp;M analysis.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36553,7 +38165,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>O&amp;M analysis: API call statistics.</para>
+        /// <para>Queries API invoke statistics information for O&amp;M analysis.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36615,7 +38227,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>O&amp;M analysis: API call statistics.</para>
+        /// <para>Queries API invoke statistics information for O&amp;M analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36633,7 +38245,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>O&amp;M analysis: API call statistics.</para>
+        /// <para>Queries API invoke statistics information for O&amp;M analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36651,7 +38263,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data service call logs with pagination.</para>
+        /// <para>Performs a paging query on data service invoke logs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36713,7 +38325,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data service call logs with pagination.</para>
+        /// <para>Performs a paging query on data service invoke logs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -36775,7 +38387,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data service call logs with pagination.</para>
+        /// <para>Performs a paging query on data service invoke logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36793,7 +38405,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data service call logs with pagination.</para>
+        /// <para>Performs a paging query on data service invoke logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37767,7 +39379,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search for data sources. The results include data source configuration items.</para>
+        /// <para>Searches for data sources and returns results that include datasource config items.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -37825,7 +39437,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search for data sources. The results include data source configuration items.</para>
+        /// <para>Searches for data sources and returns results that include datasource config items.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -37883,7 +39495,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search for data sources. The results include data source configuration items.</para>
+        /// <para>Searches for data sources and returns results that include datasource config items.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37901,7 +39513,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search for data sources. The results include data source configuration items.</para>
+        /// <para>Searches for data sources and returns results that include datasource config items.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37919,13 +39531,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists datasets in a project based on specified conditional query criteria. Online version: v6.2.0.</para>
+        /// <para>Performs a conditional query to retrieve a list of datasets in a project. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API allows you to retrieve dataset information for a specific project by providing a tenant ID, project ID, and other optional parameters such as keywords and type lists. Paging is supported. The returned data includes basic dataset information and version details. ProjectId is required. Other parameters are optional and can be configured as needed to filter results.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to retrieve dataset information for a specific project by providing the tenant ID, project ID, and other optional parameters such as keywords and type lists. Paging is supported for paged query, and the returned packet includes the basic information of the datasets and their version details. Note that ProjectId is required, while other parameters are options that you can configure in Settings as needed to filter the results.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -37983,13 +39595,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists datasets in a project based on specified conditional query criteria. Online version: v6.2.0.</para>
+        /// <para>Performs a conditional query to retrieve a list of datasets in a project. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API allows you to retrieve dataset information for a specific project by providing a tenant ID, project ID, and other optional parameters such as keywords and type lists. Paging is supported. The returned data includes basic dataset information and version details. ProjectId is required. Other parameters are optional and can be configured as needed to filter results.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to retrieve dataset information for a specific project by providing the tenant ID, project ID, and other optional parameters such as keywords and type lists. Paging is supported for paged query, and the returned packet includes the basic information of the datasets and their version details. Note that ProjectId is required, while other parameters are options that you can configure in Settings as needed to filter the results.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -38047,13 +39659,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists datasets in a project based on specified conditional query criteria. Online version: v6.2.0.</para>
+        /// <para>Performs a conditional query to retrieve a list of datasets in a project. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API allows you to retrieve dataset information for a specific project by providing a tenant ID, project ID, and other optional parameters such as keywords and type lists. Paging is supported. The returned data includes basic dataset information and version details. ProjectId is required. Other parameters are optional and can be configured as needed to filter results.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to retrieve dataset information for a specific project by providing the tenant ID, project ID, and other optional parameters such as keywords and type lists. Paging is supported for paged query, and the returned packet includes the basic information of the datasets and their version details. Note that ProjectId is required, while other parameters are options that you can configure in Settings as needed to filter the results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38071,13 +39683,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists datasets in a project based on specified conditional query criteria. Online version: v6.2.0.</para>
+        /// <para>Performs a conditional query to retrieve a list of datasets in a project. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API allows you to retrieve dataset information for a specific project by providing a tenant ID, project ID, and other optional parameters such as keywords and type lists. Paging is supported. The returned data includes basic dataset information and version details. ProjectId is required. Other parameters are optional and can be configured as needed to filter results.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to retrieve dataset information for a specific project by providing the tenant ID, project ID, and other optional parameters such as keywords and type lists. Paging is supported for paged query, and the returned packet includes the basic information of the datasets and their version details. Note that ProjectId is required, while other parameters are options that you can configure in Settings as needed to filter the results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38579,6 +40191,134 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of custom Kubernetes resource groups under a tenant. Released in version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListK8SResourceGroupIdsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListK8SResourceGroupIdsResponse
+        /// </returns>
+        public ListK8SResourceGroupIdsResponse ListK8SResourceGroupIdsWithOptions(ListK8SResourceGroupIdsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListK8SResourceGroupIds",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListK8SResourceGroupIdsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of custom Kubernetes resource groups under a tenant. Released in version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListK8SResourceGroupIdsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListK8SResourceGroupIdsResponse
+        /// </returns>
+        public async Task<ListK8SResourceGroupIdsResponse> ListK8SResourceGroupIdsWithOptionsAsync(ListK8SResourceGroupIdsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListK8SResourceGroupIds",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListK8SResourceGroupIdsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of custom Kubernetes resource groups under a tenant. Released in version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListK8SResourceGroupIdsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListK8SResourceGroupIdsResponse
+        /// </returns>
+        public ListK8SResourceGroupIdsResponse ListK8SResourceGroupIds(ListK8SResourceGroupIdsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListK8SResourceGroupIdsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of custom Kubernetes resource groups under a tenant. Released in version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListK8SResourceGroupIdsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListK8SResourceGroupIdsResponse
+        /// </returns>
+        public async Task<ListK8SResourceGroupIdsResponse> ListK8SResourceGroupIdsAsync(ListK8SResourceGroupIdsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListK8SResourceGroupIdsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -39239,7 +40979,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query on the list of operation records. Online version: v6.2.0.</para>
+        /// <para>Performs a paging query on the list of execution records. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -39297,7 +41037,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query on the list of operation records. Online version: v6.2.0.</para>
+        /// <para>Performs a paging query on the list of execution records. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -39355,7 +41095,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query on the list of operation records. Online version: v6.2.0.</para>
+        /// <para>Performs a paging query on the list of execution records. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39373,7 +41113,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query on the list of operation records. Online version: v6.2.0.</para>
+        /// <para>Performs a paging query on the list of execution records. Online version: v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39719,16 +41459,20 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目角色列表</para>
+        /// <para>Retrieves a list of project roles. Release version: v6.3.2.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取租户指定项目类型下的项目角色列表。返回角色列表中 roleType 字段标识角色类型：</para>
+        /// <para>Retrieves the list of project roles for a specified project type under a tenant. The roleType field in the returned role list indicates the role type:</para>
         /// <list type="bullet">
-        /// <item><description>BUILD_IN：内置角色</description></item>
-        /// <item><description>CUSTOM：自定义角色
-        /// 请求参数 ProjectType 必填，可选值为：BASIC（基础模式项目）、DEV（开发环境项目）、PROD（生产环境项目）、TAG（标签平台项目）。</description></item>
+        /// <item><description>BUILD_IN: built-in role.</description></item>
+        /// <item><description>CUSTOM: custom role.
+        /// The ProjectType request parameter is required. Valid values:</description></item>
+        /// <item><description>BASIC: basic mode project.</description></item>
+        /// <item><description>DEV: development environment project.</description></item>
+        /// <item><description>PROD: production environment project.</description></item>
+        /// <item><description>TAG: tag platform project.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -39779,16 +41523,20 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目角色列表</para>
+        /// <para>Retrieves a list of project roles. Release version: v6.3.2.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取租户指定项目类型下的项目角色列表。返回角色列表中 roleType 字段标识角色类型：</para>
+        /// <para>Retrieves the list of project roles for a specified project type under a tenant. The roleType field in the returned role list indicates the role type:</para>
         /// <list type="bullet">
-        /// <item><description>BUILD_IN：内置角色</description></item>
-        /// <item><description>CUSTOM：自定义角色
-        /// 请求参数 ProjectType 必填，可选值为：BASIC（基础模式项目）、DEV（开发环境项目）、PROD（生产环境项目）、TAG（标签平台项目）。</description></item>
+        /// <item><description>BUILD_IN: built-in role.</description></item>
+        /// <item><description>CUSTOM: custom role.
+        /// The ProjectType request parameter is required. Valid values:</description></item>
+        /// <item><description>BASIC: basic mode project.</description></item>
+        /// <item><description>DEV: development environment project.</description></item>
+        /// <item><description>PROD: production environment project.</description></item>
+        /// <item><description>TAG: tag platform project.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -39839,16 +41587,20 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目角色列表</para>
+        /// <para>Retrieves a list of project roles. Release version: v6.3.2.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取租户指定项目类型下的项目角色列表。返回角色列表中 roleType 字段标识角色类型：</para>
+        /// <para>Retrieves the list of project roles for a specified project type under a tenant. The roleType field in the returned role list indicates the role type:</para>
         /// <list type="bullet">
-        /// <item><description>BUILD_IN：内置角色</description></item>
-        /// <item><description>CUSTOM：自定义角色
-        /// 请求参数 ProjectType 必填，可选值为：BASIC（基础模式项目）、DEV（开发环境项目）、PROD（生产环境项目）、TAG（标签平台项目）。</description></item>
+        /// <item><description>BUILD_IN: built-in role.</description></item>
+        /// <item><description>CUSTOM: custom role.
+        /// The ProjectType request parameter is required. Valid values:</description></item>
+        /// <item><description>BASIC: basic mode project.</description></item>
+        /// <item><description>DEV: development environment project.</description></item>
+        /// <item><description>PROD: production environment project.</description></item>
+        /// <item><description>TAG: tag platform project.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -39867,16 +41619,20 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目角色列表</para>
+        /// <para>Retrieves a list of project roles. Release version: v6.3.2.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取租户指定项目类型下的项目角色列表。返回角色列表中 roleType 字段标识角色类型：</para>
+        /// <para>Retrieves the list of project roles for a specified project type under a tenant. The roleType field in the returned role list indicates the role type:</para>
         /// <list type="bullet">
-        /// <item><description>BUILD_IN：内置角色</description></item>
-        /// <item><description>CUSTOM：自定义角色
-        /// 请求参数 ProjectType 必填，可选值为：BASIC（基础模式项目）、DEV（开发环境项目）、PROD（生产环境项目）、TAG（标签平台项目）。</description></item>
+        /// <item><description>BUILD_IN: built-in role.</description></item>
+        /// <item><description>CUSTOM: custom role.
+        /// The ProjectType request parameter is required. Valid values:</description></item>
+        /// <item><description>BASIC: basic mode project.</description></item>
+        /// <item><description>DEV: development environment project.</description></item>
+        /// <item><description>PROD: production environment project.</description></item>
+        /// <item><description>TAG: tag platform project.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -40199,6 +41955,158 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Performs a paged query on Python third-party packages with paging. Online version: v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListPythonModulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPythonModulesResponse
+        /// </returns>
+        public ListPythonModulesResponse ListPythonModulesWithOptions(ListPythonModulesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListPythonModulesShrinkRequest request = new ListPythonModulesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ListQuery))
+            {
+                request.ListQueryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ListQuery, "ListQuery", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListQueryShrink))
+            {
+                body["ListQuery"] = request.ListQueryShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPythonModules",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPythonModulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query on Python third-party packages with paging. Online version: v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListPythonModulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPythonModulesResponse
+        /// </returns>
+        public async Task<ListPythonModulesResponse> ListPythonModulesWithOptionsAsync(ListPythonModulesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListPythonModulesShrinkRequest request = new ListPythonModulesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ListQuery))
+            {
+                request.ListQueryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ListQuery, "ListQuery", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListQueryShrink))
+            {
+                body["ListQuery"] = request.ListQueryShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPythonModules",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPythonModulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query on Python third-party packages with paging. Online version: v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPythonModulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPythonModulesResponse
+        /// </returns>
+        public ListPythonModulesResponse ListPythonModules(ListPythonModulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListPythonModulesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query on Python third-party packages with paging. Online version: v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPythonModulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPythonModulesResponse
+        /// </returns>
+        public async Task<ListPythonModulesResponse> ListPythonModulesAsync(ListPythonModulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListPythonModulesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the list of anomaly archived tables under a specified monitored object. Online version: v6.3.0.</para>
         /// </summary>
         /// 
@@ -40351,8 +42259,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries quality rule tasks by paging.
-        /// Online version: v5.4.2.</para>
+        /// <para>Performs a paging query of quality rule nodes. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40410,8 +42317,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries quality rule tasks by paging.
-        /// Online version: v5.4.2.</para>
+        /// <para>Performs a paging query of quality rule nodes. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40469,8 +42375,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries quality rule tasks by paging.
-        /// Online version: v5.4.2.</para>
+        /// <para>Performs a paging query of quality rule nodes. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40488,8 +42393,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries quality rule tasks by paging.
-        /// Online version: v5.4.2.</para>
+        /// <para>Performs a paging query of quality rule nodes. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40507,8 +42411,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries quality rules by paging.
-        /// Online version: v5.4.2.</para>
+        /// <para>Performs a paged query of quality rules. Supports paging. Available online in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40566,8 +42469,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries quality rules by paging.
-        /// Online version: v5.4.2.</para>
+        /// <para>Performs a paged query of quality rules. Supports paging. Available online in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40625,8 +42527,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries quality rules by paging.
-        /// Online version: v5.4.2.</para>
+        /// <para>Performs a paged query of quality rules. Supports paging. Available online in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40644,8 +42545,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries quality rules by paging.
-        /// Online version: v5.4.2.</para>
+        /// <para>Performs a paged query of quality rules. Supports paging. Available online in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40663,8 +42563,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries quality templates by paging.
-        /// Online version: v5.4.2.</para>
+        /// <para>Performs a paging query on quality templates. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40722,8 +42621,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries quality templates by paging.
-        /// Online version: v5.4.2.</para>
+        /// <para>Performs a paging query on quality templates. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40781,8 +42679,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries quality templates by paging.
-        /// Online version: v5.4.2.</para>
+        /// <para>Performs a paging query on quality templates. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40800,8 +42697,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries quality templates by paging.
-        /// Online version: v5.4.2.</para>
+        /// <para>Performs a paging query on quality templates. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40975,8 +42871,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query of quality monitored objects.
-        /// Online version: v5.4.2.</para>
+        /// <para>Queries quality monitoring objects by using a paging query. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -41034,8 +42929,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query of quality monitored objects.
-        /// Online version: v5.4.2.</para>
+        /// <para>Queries quality monitoring objects by using a paging query. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -41093,8 +42987,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query of quality monitored objects.
-        /// Online version: v5.4.2.</para>
+        /// <para>Queries quality monitoring objects by using a paging query. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41112,8 +43005,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query of quality monitored objects.
-        /// Online version: v5.4.2.</para>
+        /// <para>Queries quality monitoring objects by using a paging query. Online version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41127,6 +43019,158 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListQualityWatchesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries quality rectification processes. Released in version v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListRectifyFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRectifyFlowResponse
+        /// </returns>
+        public ListRectifyFlowResponse ListRectifyFlowWithOptions(ListRectifyFlowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListRectifyFlowShrinkRequest request = new ListRectifyFlowShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ListQuery))
+            {
+                request.ListQueryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ListQuery, "ListQuery", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListQueryShrink))
+            {
+                body["ListQuery"] = request.ListQueryShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRectifyFlow",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRectifyFlowResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries quality rectification processes. Released in version v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListRectifyFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRectifyFlowResponse
+        /// </returns>
+        public async Task<ListRectifyFlowResponse> ListRectifyFlowWithOptionsAsync(ListRectifyFlowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListRectifyFlowShrinkRequest request = new ListRectifyFlowShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ListQuery))
+            {
+                request.ListQueryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ListQuery, "ListQuery", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListQueryShrink))
+            {
+                body["ListQuery"] = request.ListQueryShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRectifyFlow",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRectifyFlowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries quality rectification processes. Released in version v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRectifyFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRectifyFlowResponse
+        /// </returns>
+        public ListRectifyFlowResponse ListRectifyFlow(ListRectifyFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListRectifyFlowWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries quality rectification processes. Released in version v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRectifyFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRectifyFlowResponse
+        /// </returns>
+        public async Task<ListRectifyFlowResponse> ListRectifyFlowAsync(ListRectifyFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListRectifyFlowWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -41419,7 +43463,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query of row-level permissions.</para>
+        /// <para>Performs a paging query on row-level permissions.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -41477,7 +43521,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query of row-level permissions.</para>
+        /// <para>Performs a paging query on row-level permissions.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -41535,7 +43579,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query of row-level permissions.</para>
+        /// <para>Performs a paging query on row-level permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41553,7 +43597,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query of row-level permissions.</para>
+        /// <para>Performs a paging query on row-level permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41571,7 +43615,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries row-level permissions of a specified user by paging.</para>
+        /// <para>Performs a paging query on the row-level permissions of a specified user.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -41629,7 +43673,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries row-level permissions of a specified user by paging.</para>
+        /// <para>Performs a paging query on the row-level permissions of a specified user.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -41687,7 +43731,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries row-level permissions of a specified user by paging.</para>
+        /// <para>Performs a paging query on the row-level permissions of a specified user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41705,7 +43749,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries row-level permissions of a specified user by paging.</para>
+        /// <para>Performs a paging query on the row-level permissions of a specified user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41719,6 +43763,158 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListRowPermissionByUserIdWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query on the scheduling monitoring and alerting configuration list. Supports filtering by project, monitored object type, alerting cause, notification method, recipient, creator, on-call schedule, logical table or field, and keyword. Online version: v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListScheduleMonitorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListScheduleMonitorResponse
+        /// </returns>
+        public ListScheduleMonitorResponse ListScheduleMonitorWithOptions(ListScheduleMonitorRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListScheduleMonitorShrinkRequest request = new ListScheduleMonitorShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ListQuery))
+            {
+                request.ListQueryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ListQuery, "ListQuery", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListQueryShrink))
+            {
+                body["ListQuery"] = request.ListQueryShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListScheduleMonitor",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListScheduleMonitorResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query on the scheduling monitoring and alerting configuration list. Supports filtering by project, monitored object type, alerting cause, notification method, recipient, creator, on-call schedule, logical table or field, and keyword. Online version: v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListScheduleMonitorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListScheduleMonitorResponse
+        /// </returns>
+        public async Task<ListScheduleMonitorResponse> ListScheduleMonitorWithOptionsAsync(ListScheduleMonitorRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListScheduleMonitorShrinkRequest request = new ListScheduleMonitorShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ListQuery))
+            {
+                request.ListQueryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ListQuery, "ListQuery", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListQueryShrink))
+            {
+                body["ListQuery"] = request.ListQueryShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListScheduleMonitor",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListScheduleMonitorResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query on the scheduling monitoring and alerting configuration list. Supports filtering by project, monitored object type, alerting cause, notification method, recipient, creator, on-call schedule, logical table or field, and keyword. Online version: v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListScheduleMonitorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListScheduleMonitorResponse
+        /// </returns>
+        public ListScheduleMonitorResponse ListScheduleMonitor(ListScheduleMonitorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListScheduleMonitorWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query on the scheduling monitoring and alerting configuration list. Supports filtering by project, monitored object type, alerting cause, notification method, recipient, creator, on-call schedule, logical table or field, and keyword. Online version: v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListScheduleMonitorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListScheduleMonitorResponse
+        /// </returns>
+        public async Task<ListScheduleMonitorResponse> ListScheduleMonitorAsync(ListScheduleMonitorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListScheduleMonitorWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -42175,8 +44371,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query security identification results by page.
-        /// Release version: v5.4.2.</para>
+        /// <para>Performs a paged query on security identification results with paging. The online version is v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -42234,8 +44429,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query security identification results by page.
-        /// Release version: v5.4.2.</para>
+        /// <para>Performs a paged query on security identification results with paging. The online version is v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -42293,8 +44487,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query security identification results by page.
-        /// Release version: v5.4.2.</para>
+        /// <para>Performs a paged query on security identification results with paging. The online version is v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42312,8 +44505,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query security identification results by page.
-        /// Release version: v5.4.2.</para>
+        /// <para>Performs a paged query on security identification results with paging. The online version is v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42331,8 +44523,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the standard list by page.
-        /// Release version: v5.4.2.</para>
+        /// <para>Performs a paging query on the standard list. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -42390,8 +44581,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the standard list by page.
-        /// Release version: v5.4.2.</para>
+        /// <para>Performs a paging query on the standard list. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -42449,8 +44639,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the standard list by page.
-        /// Release version: v5.4.2.</para>
+        /// <para>Performs a paging query on the standard list. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42468,8 +44657,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the standard list by page.
-        /// Release version: v5.4.2.</para>
+        /// <para>Performs a paging query on the standard list. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42487,7 +44675,835 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paginate and retrieve the list of pending deployment records.</para>
+        /// <para>Retrieves a list of historical running instances for a real-time task. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the list of historical running instances for a real-time task in the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListStreamInstanceRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListStreamInstanceRecordsResponse
+        /// </returns>
+        public ListStreamInstanceRecordsResponse ListStreamInstanceRecordsWithOptions(ListStreamInstanceRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListStreamInstanceRecords",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListStreamInstanceRecordsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of historical running instances for a real-time task. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the list of historical running instances for a real-time task in the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListStreamInstanceRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListStreamInstanceRecordsResponse
+        /// </returns>
+        public async Task<ListStreamInstanceRecordsResponse> ListStreamInstanceRecordsWithOptionsAsync(ListStreamInstanceRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListStreamInstanceRecords",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListStreamInstanceRecordsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of historical running instances for a real-time task. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the list of historical running instances for a real-time task in the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListStreamInstanceRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListStreamInstanceRecordsResponse
+        /// </returns>
+        public ListStreamInstanceRecordsResponse ListStreamInstanceRecords(ListStreamInstanceRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListStreamInstanceRecordsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of historical running instances for a real-time task. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the list of historical running instances for a real-time task in the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListStreamInstanceRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListStreamInstanceRecordsResponse
+        /// </returns>
+        public async Task<ListStreamInstanceRecordsResponse> ListStreamInstanceRecordsAsync(ListStreamInstanceRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListStreamInstanceRecordsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of JobManager log files for a real-time task. Available since version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the list of JobManager log files for a real-time task in the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListStreamJobManagerLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListStreamJobManagerLogsResponse
+        /// </returns>
+        public ListStreamJobManagerLogsResponse ListStreamJobManagerLogsWithOptions(ListStreamJobManagerLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentInstanceId))
+            {
+                query["DeploymentInstanceId"] = request.DeploymentInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListStreamJobManagerLogs",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListStreamJobManagerLogsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of JobManager log files for a real-time task. Available since version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the list of JobManager log files for a real-time task in the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListStreamJobManagerLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListStreamJobManagerLogsResponse
+        /// </returns>
+        public async Task<ListStreamJobManagerLogsResponse> ListStreamJobManagerLogsWithOptionsAsync(ListStreamJobManagerLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentInstanceId))
+            {
+                query["DeploymentInstanceId"] = request.DeploymentInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListStreamJobManagerLogs",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListStreamJobManagerLogsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of JobManager log files for a real-time task. Available since version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the list of JobManager log files for a real-time task in the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListStreamJobManagerLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListStreamJobManagerLogsResponse
+        /// </returns>
+        public ListStreamJobManagerLogsResponse ListStreamJobManagerLogs(ListStreamJobManagerLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListStreamJobManagerLogsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of JobManager log files for a real-time task. Available since version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the list of JobManager log files for a real-time task in the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListStreamJobManagerLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListStreamJobManagerLogsResponse
+        /// </returns>
+        public async Task<ListStreamJobManagerLogsResponse> ListStreamJobManagerLogsAsync(ListStreamJobManagerLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListStreamJobManagerLogsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the start and stop operation records of real-time tasks. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the start and stop operation records of real-time tasks in the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListStreamOpsRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListStreamOpsRecordsResponse
+        /// </returns>
+        public ListStreamOpsRecordsResponse ListStreamOpsRecordsWithOptions(ListStreamOpsRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListStreamOpsRecords",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListStreamOpsRecordsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the start and stop operation records of real-time tasks. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the start and stop operation records of real-time tasks in the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListStreamOpsRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListStreamOpsRecordsResponse
+        /// </returns>
+        public async Task<ListStreamOpsRecordsResponse> ListStreamOpsRecordsWithOptionsAsync(ListStreamOpsRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListStreamOpsRecords",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListStreamOpsRecordsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the start and stop operation records of real-time tasks. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the start and stop operation records of real-time tasks in the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListStreamOpsRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListStreamOpsRecordsResponse
+        /// </returns>
+        public ListStreamOpsRecordsResponse ListStreamOpsRecords(ListStreamOpsRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListStreamOpsRecordsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the start and stop operation records of real-time tasks. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the start and stop operation records of real-time tasks in the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListStreamOpsRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListStreamOpsRecordsResponse
+        /// </returns>
+        public async Task<ListStreamOpsRecordsResponse> ListStreamOpsRecordsAsync(ListStreamOpsRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListStreamOpsRecordsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of log files for a specified TaskManager. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the list of log files for a specified TaskManager in the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListStreamTaskManagerLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListStreamTaskManagerLogsResponse
+        /// </returns>
+        public ListStreamTaskManagerLogsResponse ListStreamTaskManagerLogsWithOptions(ListStreamTaskManagerLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentInstanceId))
+            {
+                query["DeploymentInstanceId"] = request.DeploymentInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskmanagerId))
+            {
+                query["TaskmanagerId"] = request.TaskmanagerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListStreamTaskManagerLogs",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListStreamTaskManagerLogsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of log files for a specified TaskManager. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the list of log files for a specified TaskManager in the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListStreamTaskManagerLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListStreamTaskManagerLogsResponse
+        /// </returns>
+        public async Task<ListStreamTaskManagerLogsResponse> ListStreamTaskManagerLogsWithOptionsAsync(ListStreamTaskManagerLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentInstanceId))
+            {
+                query["DeploymentInstanceId"] = request.DeploymentInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskmanagerId))
+            {
+                query["TaskmanagerId"] = request.TaskmanagerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListStreamTaskManagerLogs",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListStreamTaskManagerLogsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of log files for a specified TaskManager. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the list of log files for a specified TaskManager in the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListStreamTaskManagerLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListStreamTaskManagerLogsResponse
+        /// </returns>
+        public ListStreamTaskManagerLogsResponse ListStreamTaskManagerLogs(ListStreamTaskManagerLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListStreamTaskManagerLogsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of log files for a specified TaskManager. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the list of log files for a specified TaskManager in the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListStreamTaskManagerLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListStreamTaskManagerLogsResponse
+        /// </returns>
+        public async Task<ListStreamTaskManagerLogsResponse> ListStreamTaskManagerLogsAsync(ListStreamTaskManagerLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListStreamTaskManagerLogsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of TaskManagers for a real-time task. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the list of TaskManagers for a real-time task in the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListStreamTaskManagersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListStreamTaskManagersResponse
+        /// </returns>
+        public ListStreamTaskManagersResponse ListStreamTaskManagersWithOptions(ListStreamTaskManagersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentInstanceId))
+            {
+                query["DeploymentInstanceId"] = request.DeploymentInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListStreamTaskManagers",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListStreamTaskManagersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of TaskManagers for a real-time task. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the list of TaskManagers for a real-time task in the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListStreamTaskManagersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListStreamTaskManagersResponse
+        /// </returns>
+        public async Task<ListStreamTaskManagersResponse> ListStreamTaskManagersWithOptionsAsync(ListStreamTaskManagersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentInstanceId))
+            {
+                query["DeploymentInstanceId"] = request.DeploymentInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListStreamTaskManagers",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListStreamTaskManagersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of TaskManagers for a real-time task. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the list of TaskManagers for a real-time task in the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListStreamTaskManagersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListStreamTaskManagersResponse
+        /// </returns>
+        public ListStreamTaskManagersResponse ListStreamTaskManagers(ListStreamTaskManagersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListStreamTaskManagersWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of TaskManagers for a real-time task. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the list of TaskManagers for a real-time task in the production environment.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListStreamTaskManagersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListStreamTaskManagersResponse
+        /// </returns>
+        public async Task<ListStreamTaskManagersResponse> ListStreamTaskManagersAsync(ListStreamTaskManagersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListStreamTaskManagersWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a paginated list of pending release records.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -42545,7 +45561,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paginate and retrieve the list of pending deployment records.</para>
+        /// <para>Retrieves a paginated list of pending release records.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -42603,7 +45619,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paginate and retrieve the list of pending deployment records.</para>
+        /// <para>Retrieves a paginated list of pending release records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42621,7 +45637,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paginate and retrieve the list of pending deployment records.</para>
+        /// <para>Retrieves a paginated list of pending release records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42795,7 +45811,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of tenant members.</para>
+        /// <para>Retrieves a list of tenant members.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -42853,7 +45869,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of tenant members.</para>
+        /// <para>Retrieves a list of tenant members.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -42911,7 +45927,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of tenant members.</para>
+        /// <para>Retrieves a list of tenant members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42929,7 +45945,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of tenant members.</para>
+        /// <para>Retrieves a list of tenant members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43115,7 +46131,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query of user group members.</para>
+        /// <para>Performs a paging query on the members of a user group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -43173,7 +46189,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query of user group members.</para>
+        /// <para>Performs a paging query on the members of a user group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -43231,7 +46247,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query of user group members.</para>
+        /// <para>Performs a paging query on the members of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43249,7 +46265,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query of user group members.</para>
+        /// <para>Performs a paging query on the members of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43267,7 +46283,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user groups by paging.</para>
+        /// <para>Performs a paging query on the user group list.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -43325,7 +46341,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user groups by paging.</para>
+        /// <para>Performs a paging query on the user group list.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -43383,7 +46399,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user groups by paging.</para>
+        /// <para>Performs a paging query on the user group list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43401,7 +46417,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user groups by paging.</para>
+        /// <para>Performs a paging query on the user group list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43419,7 +46435,311 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Offlines a batch task.</para>
+        /// <para>Queries the list of projects that a specified user participates in. Released in version v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListUserProjectsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserProjectsResponse
+        /// </returns>
+        public ListUserProjectsResponse ListUserProjectsWithOptions(ListUserProjectsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListUserProjectsShrinkRequest request = new ListUserProjectsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ListQuery))
+            {
+                request.ListQueryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ListQuery, "ListQuery", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListQueryShrink))
+            {
+                body["ListQuery"] = request.ListQueryShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUserProjects",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUserProjectsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of projects that a specified user participates in. Released in version v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListUserProjectsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserProjectsResponse
+        /// </returns>
+        public async Task<ListUserProjectsResponse> ListUserProjectsWithOptionsAsync(ListUserProjectsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListUserProjectsShrinkRequest request = new ListUserProjectsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ListQuery))
+            {
+                request.ListQueryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ListQuery, "ListQuery", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListQueryShrink))
+            {
+                body["ListQuery"] = request.ListQueryShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUserProjects",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUserProjectsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of projects that a specified user participates in. Released in version v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserProjectsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserProjectsResponse
+        /// </returns>
+        public ListUserProjectsResponse ListUserProjects(ListUserProjectsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListUserProjectsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of projects that a specified user participates in. Released in version v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUserProjectsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserProjectsResponse
+        /// </returns>
+        public async Task<ListUserProjectsResponse> ListUserProjectsAsync(ListUserProjectsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListUserProjectsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query for paging the user list. Online version: v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUsersResponse
+        /// </returns>
+        public ListUsersResponse ListUsersWithOptions(ListUsersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListUsersShrinkRequest request = new ListUsersShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ListQuery))
+            {
+                request.ListQueryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ListQuery, "ListQuery", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListQueryShrink))
+            {
+                body["ListQuery"] = request.ListQueryShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUsers",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUsersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query for paging the user list. Online version: v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUsersResponse
+        /// </returns>
+        public async Task<ListUsersResponse> ListUsersWithOptionsAsync(ListUsersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListUsersShrinkRequest request = new ListUsersShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ListQuery))
+            {
+                request.ListQueryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ListQuery, "ListQuery", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListQueryShrink))
+            {
+                body["ListQuery"] = request.ListQueryShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUsers",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUsersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query for paging the user list. Online version: v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUsersResponse
+        /// </returns>
+        public ListUsersResponse ListUsers(ListUsersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListUsersWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query for paging the user list. Online version: v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUsersResponse
+        /// </returns>
+        public async Task<ListUsersResponse> ListUsersAsync(ListUsersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListUsersWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Takes an offline computing task offline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43477,7 +46797,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Offlines a batch task.</para>
+        /// <para>Takes an offline computing task offline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43535,7 +46855,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Offlines a batch task.</para>
+        /// <para>Takes an offline computing task offline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43553,7 +46873,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Offlines a batch task.</para>
+        /// <para>Takes an offline computing task offline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43723,7 +47043,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Offlines an integration pipeline node.</para>
+        /// <para>Takes an integration pipeline task offline.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -43789,7 +47109,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Offlines an integration pipeline node.</para>
+        /// <para>Takes an integration pipeline task offline.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -43855,7 +47175,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Offlines an integration pipeline node.</para>
+        /// <para>Takes an integration pipeline task offline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43873,7 +47193,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Offlines an integration pipeline node.</para>
+        /// <para>Takes an integration pipeline task offline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43891,7 +47211,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously offlines an integration pipeline node.</para>
+        /// <para>Asynchronously takes an integration pipeline task offline.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -43957,7 +47277,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously offlines an integration pipeline node.</para>
+        /// <para>Asynchronously takes an integration pipeline task offline.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -44023,7 +47343,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously offlines an integration pipeline node.</para>
+        /// <para>Asynchronously takes an integration pipeline task offline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44041,7 +47361,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously offlines an integration pipeline node.</para>
+        /// <para>Asynchronously takes an integration pipeline task offline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44059,8 +47379,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Offlines a standard.
-        /// Online version: v5.4.2.</para>
+        /// <para>Takes a standard offline. Introduced in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -44118,8 +47437,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Offlines a standard.
-        /// Online version: v5.4.2.</para>
+        /// <para>Takes a standard offline. Introduced in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -44177,8 +47495,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Offlines a standard.
-        /// Online version: v5.4.2.</para>
+        /// <para>Takes a standard offline. Introduced in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44196,8 +47513,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Offlines a standard.
-        /// Online version: v5.4.2.</para>
+        /// <para>Takes a standard offline. Introduced in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44367,7 +47683,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs batch O&amp;M operations on instances. Both physical instances and logical table instances are supported.</para>
+        /// <para>Performs batch O&amp;M operations on instances, supporting physical instances and logical table instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -44429,7 +47745,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs batch O&amp;M operations on instances. Both physical instances and logical table instances are supported.</para>
+        /// <para>Performs batch O&amp;M operations on instances, supporting physical instances and logical table instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -44491,7 +47807,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs batch O&amp;M operations on instances. Both physical instances and logical table instances are supported.</para>
+        /// <para>Performs batch O&amp;M operations on instances, supporting physical instances and logical table instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44509,7 +47825,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs batch O&amp;M operations on instances. Both physical instances and logical table instances are supported.</para>
+        /// <para>Performs batch O&amp;M operations on instances, supporting physical instances and logical table instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44991,7 +48307,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a knowledge graph model. Online version: v6.2.0.</para>
+        /// <para>Publishes a graph model. The online version is v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -45053,7 +48369,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a knowledge graph model. Online version: v6.2.0.</para>
+        /// <para>Publishes a graph model. The online version is v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -45115,7 +48431,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a knowledge graph model. Online version: v6.2.0.</para>
+        /// <para>Publishes a graph model. The online version is v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45133,7 +48449,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a knowledge graph model. Online version: v6.2.0.</para>
+        /// <para>Publishes a graph model. The online version is v6.2.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45459,6 +48775,166 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the submit result of a real-time integration task based on the submit detail ID. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// QueryPipelineSubmitResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryPipelineSubmitResultResponse
+        /// </returns>
+        public QueryPipelineSubmitResultResponse QueryPipelineSubmitResultWithOptions(QueryPipelineSubmitResultRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryPipelineSubmitResultShrinkRequest request = new QueryPipelineSubmitResultShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Context))
+            {
+                request.ContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Context, "Context", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubmitId))
+            {
+                query["SubmitId"] = request.SubmitId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContextShrink))
+            {
+                body["Context"] = request.ContextShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryPipelineSubmitResult",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryPipelineSubmitResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the submit result of a real-time integration task based on the submit detail ID. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// QueryPipelineSubmitResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryPipelineSubmitResultResponse
+        /// </returns>
+        public async Task<QueryPipelineSubmitResultResponse> QueryPipelineSubmitResultWithOptionsAsync(QueryPipelineSubmitResultRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryPipelineSubmitResultShrinkRequest request = new QueryPipelineSubmitResultShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Context))
+            {
+                request.ContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Context, "Context", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubmitId))
+            {
+                query["SubmitId"] = request.SubmitId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContextShrink))
+            {
+                body["Context"] = request.ContextShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryPipelineSubmitResult",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryPipelineSubmitResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the submit result of a real-time integration task based on the submit detail ID. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryPipelineSubmitResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryPipelineSubmitResultResponse
+        /// </returns>
+        public QueryPipelineSubmitResultResponse QueryPipelineSubmitResult(QueryPipelineSubmitResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryPipelineSubmitResultWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the submit result of a real-time integration task based on the submit detail ID. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryPipelineSubmitResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryPipelineSubmitResultResponse
+        /// </returns>
+        public async Task<QueryPipelineSubmitResultResponse> QueryPipelineSubmitResultAsync(QueryPipelineSubmitResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryPipelineSubmitResultWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Remove regular members from a data service application. Only the application owner can perform this operation.
         /// Released version: v6.0.0.</para>
         /// </summary>
@@ -45615,7 +49091,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a project member.</para>
+        /// <para>Removes a project member.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -45677,7 +49153,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a project member.</para>
+        /// <para>Removes a project member.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -45739,7 +49215,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a project member.</para>
+        /// <para>Removes a project member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45757,7 +49233,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a project member.</para>
+        /// <para>Removes a project member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45927,6 +49403,158 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveQualityRuleSchedulesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes one or more scheduling monitoring alert configurations. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RemoveScheduleMonitorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveScheduleMonitorResponse
+        /// </returns>
+        public RemoveScheduleMonitorResponse RemoveScheduleMonitorWithOptions(RemoveScheduleMonitorRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RemoveScheduleMonitorShrinkRequest request = new RemoveScheduleMonitorShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RemoveCommand))
+            {
+                request.RemoveCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RemoveCommand, "RemoveCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoveCommandShrink))
+            {
+                body["RemoveCommand"] = request.RemoveCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveScheduleMonitor",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveScheduleMonitorResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes one or more scheduling monitoring alert configurations. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RemoveScheduleMonitorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveScheduleMonitorResponse
+        /// </returns>
+        public async Task<RemoveScheduleMonitorResponse> RemoveScheduleMonitorWithOptionsAsync(RemoveScheduleMonitorRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RemoveScheduleMonitorShrinkRequest request = new RemoveScheduleMonitorShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RemoveCommand))
+            {
+                request.RemoveCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RemoveCommand, "RemoveCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoveCommandShrink))
+            {
+                body["RemoveCommand"] = request.RemoveCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveScheduleMonitor",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveScheduleMonitorResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes one or more scheduling monitoring alert configurations. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveScheduleMonitorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveScheduleMonitorResponse
+        /// </returns>
+        public RemoveScheduleMonitorResponse RemoveScheduleMonitor(RemoveScheduleMonitorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RemoveScheduleMonitorWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes one or more scheduling monitoring alert configurations. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveScheduleMonitorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveScheduleMonitorResponse
+        /// </returns>
+        public async Task<RemoveScheduleMonitorResponse> RemoveScheduleMonitorAsync(RemoveScheduleMonitorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RemoveScheduleMonitorWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -46395,8 +50023,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reset the Data Service application key. Only the application owner can perform this operation.
-        /// Release version: v6.0.0.</para>
+        /// <para>Resets the application key of a data service. Only the application owner can perform this operation. Released in v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -46454,8 +50081,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reset the Data Service application key. Only the application owner can perform this operation.
-        /// Release version: v6.0.0.</para>
+        /// <para>Resets the application key of a data service. Only the application owner can perform this operation. Released in v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -46513,8 +50139,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reset the Data Service application key. Only the application owner can perform this operation.
-        /// Release version: v6.0.0.</para>
+        /// <para>Resets the application key of a data service. Only the application owner can perform this operation. Released in v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46532,8 +50157,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reset the Data Service application key. Only the application owner can perform this operation.
-        /// Release version: v6.0.0.</para>
+        /// <para>Resets the application key of a data service. Only the application owner can perform this operation. Released in v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46551,7 +50175,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resume physical node scheduling.</para>
+        /// <para>Resumes the scheduling of physical nodes.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -46613,7 +50237,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resume physical node scheduling.</para>
+        /// <para>Resumes the scheduling of physical nodes.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -46675,7 +50299,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resume physical node scheduling.</para>
+        /// <para>Resumes the scheduling of physical nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46693,7 +50317,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resume physical node scheduling.</para>
+        /// <para>Resumes the scheduling of physical nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46859,6 +50483,158 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RetryTransferOwnershipWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reviews the quality rectification process. Release version: v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ReviewRectifyFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReviewRectifyFlowResponse
+        /// </returns>
+        public ReviewRectifyFlowResponse ReviewRectifyFlowWithOptions(ReviewRectifyFlowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ReviewRectifyFlowShrinkRequest request = new ReviewRectifyFlowShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ReviewCommand))
+            {
+                request.ReviewCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ReviewCommand, "ReviewCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReviewCommandShrink))
+            {
+                body["ReviewCommand"] = request.ReviewCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReviewRectifyFlow",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReviewRectifyFlowResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reviews the quality rectification process. Release version: v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ReviewRectifyFlowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReviewRectifyFlowResponse
+        /// </returns>
+        public async Task<ReviewRectifyFlowResponse> ReviewRectifyFlowWithOptionsAsync(ReviewRectifyFlowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ReviewRectifyFlowShrinkRequest request = new ReviewRectifyFlowShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ReviewCommand))
+            {
+                request.ReviewCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ReviewCommand, "ReviewCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReviewCommandShrink))
+            {
+                body["ReviewCommand"] = request.ReviewCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReviewRectifyFlow",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReviewRectifyFlowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reviews the quality rectification process. Release version: v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReviewRectifyFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReviewRectifyFlowResponse
+        /// </returns>
+        public ReviewRectifyFlowResponse ReviewRectifyFlow(ReviewRectifyFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ReviewRectifyFlowWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reviews the quality rectification process. Release version: v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReviewRectifyFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReviewRectifyFlowResponse
+        /// </returns>
+        public async Task<ReviewRectifyFlowResponse> ReviewRectifyFlowAsync(ReviewRectifyFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ReviewRectifyFlowWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -48111,7 +51887,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a batch task.</para>
+        /// <para>Submits an offline computing task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -48169,7 +51945,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a batch task.</para>
+        /// <para>Submits an offline computing task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -48227,7 +52003,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a batch task.</para>
+        /// <para>Submits an offline computing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48245,7 +52021,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a batch task.</para>
+        /// <para>Submits an offline computing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48259,6 +52035,334 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitBatchTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits an offline computing template. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitBatchTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitBatchTemplateResponse
+        /// </returns>
+        public SubmitBatchTemplateResponse SubmitBatchTemplateWithOptions(SubmitBatchTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitBatchTemplateShrinkRequest request = new SubmitBatchTemplateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SubmitCommand))
+            {
+                request.SubmitCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SubmitCommand, "SubmitCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubmitCommandShrink))
+            {
+                body["SubmitCommand"] = request.SubmitCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitBatchTemplate",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitBatchTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits an offline computing template. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitBatchTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitBatchTemplateResponse
+        /// </returns>
+        public async Task<SubmitBatchTemplateResponse> SubmitBatchTemplateWithOptionsAsync(SubmitBatchTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitBatchTemplateShrinkRequest request = new SubmitBatchTemplateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SubmitCommand))
+            {
+                request.SubmitCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SubmitCommand, "SubmitCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubmitCommandShrink))
+            {
+                body["SubmitCommand"] = request.SubmitCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitBatchTemplate",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitBatchTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits an offline computing template. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitBatchTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitBatchTemplateResponse
+        /// </returns>
+        public SubmitBatchTemplateResponse SubmitBatchTemplate(SubmitBatchTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitBatchTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits an offline computing template. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitBatchTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitBatchTemplateResponse
+        /// </returns>
+        public async Task<SubmitBatchTemplateResponse> SubmitBatchTemplateAsync(SubmitBatchTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitBatchTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs an asynchronous commit of a real-time integration pipeline task based on the OAQueryId. Online version: v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitPipelineAsyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitPipelineAsyncResponse
+        /// </returns>
+        public SubmitPipelineAsyncResponse SubmitPipelineAsyncWithOptions(SubmitPipelineAsyncRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitPipelineAsyncShrinkRequest request = new SubmitPipelineAsyncShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Context))
+            {
+                request.ContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Context, "Context", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.QueryId))
+            {
+                request.QueryIdShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryId, "QueryId", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContextShrink))
+            {
+                body["Context"] = request.ContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryIdShrink))
+            {
+                body["QueryId"] = request.QueryIdShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitPipelineAsync",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitPipelineAsyncResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs an asynchronous commit of a real-time integration pipeline task based on the OAQueryId. Online version: v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitPipelineAsyncRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitPipelineAsyncResponse
+        /// </returns>
+        public async Task<SubmitPipelineAsyncResponse> SubmitPipelineAsyncWithOptionsAsync(SubmitPipelineAsyncRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitPipelineAsyncShrinkRequest request = new SubmitPipelineAsyncShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Context))
+            {
+                request.ContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Context, "Context", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.QueryId))
+            {
+                request.QueryIdShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryId, "QueryId", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContextShrink))
+            {
+                body["Context"] = request.ContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryIdShrink))
+            {
+                body["QueryId"] = request.QueryIdShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitPipelineAsync",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitPipelineAsyncResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs an asynchronous commit of a real-time integration pipeline task based on the OAQueryId. Online version: v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitPipelineAsyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitPipelineAsyncResponse
+        /// </returns>
+        public SubmitPipelineAsyncResponse SubmitPipelineAsync(SubmitPipelineAsyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitPipelineAsyncWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs an asynchronous commit of a real-time integration pipeline task based on the OAQueryId. Online version: v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitPipelineAsyncRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitPipelineAsyncResponse
+        /// </returns>
+        public async Task<SubmitPipelineAsyncResponse> SubmitPipelineAsyncAsync(SubmitPipelineAsyncRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitPipelineAsyncWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -48423,8 +52527,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch submit rule tasks with support for test runs.
-        /// Release version: v5.4.2.</para>
+        /// <para>Submits rule tasks in batches and supports test runs. Available since version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -48482,8 +52585,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch submit rule tasks with support for test runs.
-        /// Release version: v5.4.2.</para>
+        /// <para>Submits rule tasks in batches and supports test runs. Available since version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -48541,8 +52643,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch submit rule tasks with support for test runs.
-        /// Release version: v5.4.2.</para>
+        /// <para>Submits rule tasks in batches and supports test runs. Available since version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48560,8 +52661,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch submit rule tasks with support for test runs.
-        /// Release version: v5.4.2.</para>
+        /// <para>Submits rule tasks in batches and supports test runs. Available since version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48579,8 +52679,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits quality watchtask check tasks in batches.
-        /// Online version: v5.4.2.</para>
+        /// <para>Submits multiple monitoring object check nodes in batches. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -48638,8 +52737,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits quality watchtask check tasks in batches.
-        /// Online version: v5.4.2.</para>
+        /// <para>Submits multiple monitoring object check nodes in batches. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -48697,8 +52795,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits quality watchtask check tasks in batches.
-        /// Online version: v5.4.2.</para>
+        /// <para>Submits multiple monitoring object check nodes in batches. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48716,8 +52813,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits quality watchtask check tasks in batches.
-        /// Online version: v5.4.2.</para>
+        /// <para>Submits multiple monitoring object check nodes in batches. Released in version v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48731,6 +52827,158 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitQualityWatchTasksWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a quality rectification process for review. Released in v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitRectifyFlowForReviewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitRectifyFlowForReviewResponse
+        /// </returns>
+        public SubmitRectifyFlowForReviewResponse SubmitRectifyFlowForReviewWithOptions(SubmitRectifyFlowForReviewRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitRectifyFlowForReviewShrinkRequest request = new SubmitRectifyFlowForReviewShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SubmitCommand))
+            {
+                request.SubmitCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SubmitCommand, "SubmitCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubmitCommandShrink))
+            {
+                body["SubmitCommand"] = request.SubmitCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitRectifyFlowForReview",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitRectifyFlowForReviewResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a quality rectification process for review. Released in v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitRectifyFlowForReviewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitRectifyFlowForReviewResponse
+        /// </returns>
+        public async Task<SubmitRectifyFlowForReviewResponse> SubmitRectifyFlowForReviewWithOptionsAsync(SubmitRectifyFlowForReviewRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitRectifyFlowForReviewShrinkRequest request = new SubmitRectifyFlowForReviewShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SubmitCommand))
+            {
+                request.SubmitCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SubmitCommand, "SubmitCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubmitCommandShrink))
+            {
+                body["SubmitCommand"] = request.SubmitCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitRectifyFlowForReview",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitRectifyFlowForReviewResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a quality rectification process for review. Released in v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitRectifyFlowForReviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitRectifyFlowForReviewResponse
+        /// </returns>
+        public SubmitRectifyFlowForReviewResponse SubmitRectifyFlowForReview(SubmitRectifyFlowForReviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitRectifyFlowForReviewWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a quality rectification process for review. Released in v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitRectifyFlowForReviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitRectifyFlowForReviewResponse
+        /// </returns>
+        public async Task<SubmitRectifyFlowForReviewResponse> SubmitRectifyFlowForReviewAsync(SubmitRectifyFlowForReviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitRectifyFlowForReviewWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -49103,7 +53351,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transfers ownership to a new owner in one click.</para>
+        /// <para>Transfers the ownership with one click.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -49161,7 +53409,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transfers ownership to a new owner in one click.</para>
+        /// <para>Transfers the ownership with one click.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -49219,7 +53467,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transfers ownership to a new owner in one click.</para>
+        /// <para>Transfers the ownership with one click.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49237,7 +53485,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transfers ownership to a new owner in one click.</para>
+        /// <para>Transfers the ownership with one click.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49559,7 +53807,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a Basic (single-environment) project. The project name cannot be modified. You must pass in the current project name.</para>
+        /// <para>Updates a Basic (single-environment) project. The project name cannot be modified. You must specify the current project name.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -49617,7 +53865,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a Basic (single-environment) project. The project name cannot be modified. You must pass in the current project name.</para>
+        /// <para>Updates a Basic (single-environment) project. The project name cannot be modified. You must specify the current project name.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -49675,7 +53923,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a Basic (single-environment) project. The project name cannot be modified. You must pass in the current project name.</para>
+        /// <para>Updates a Basic (single-environment) project. The project name cannot be modified. You must specify the current project name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49693,7 +53941,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a Basic (single-environment) project. The project name cannot be modified. You must pass in the current project name.</para>
+        /// <para>Updates a Basic (single-environment) project. The project name cannot be modified. You must specify the current project name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50015,6 +54263,166 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Modifies an offline computing template. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateBatchTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBatchTemplateResponse
+        /// </returns>
+        public UpdateBatchTemplateResponse UpdateBatchTemplateWithOptions(UpdateBatchTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateBatchTemplateShrinkRequest request = new UpdateBatchTemplateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateCommand))
+            {
+                request.UpdateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateCommand, "UpdateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateCommandShrink))
+            {
+                body["UpdateCommand"] = request.UpdateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateBatchTemplate",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateBatchTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an offline computing template. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateBatchTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBatchTemplateResponse
+        /// </returns>
+        public async Task<UpdateBatchTemplateResponse> UpdateBatchTemplateWithOptionsAsync(UpdateBatchTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateBatchTemplateShrinkRequest request = new UpdateBatchTemplateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateCommand))
+            {
+                request.UpdateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateCommand, "UpdateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateCommandShrink))
+            {
+                body["UpdateCommand"] = request.UpdateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateBatchTemplate",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateBatchTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an offline computing template. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateBatchTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBatchTemplateResponse
+        /// </returns>
+        public UpdateBatchTemplateResponse UpdateBatchTemplate(UpdateBatchTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateBatchTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an offline computing template. Available since v6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateBatchTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBatchTemplateResponse
+        /// </returns>
+        public async Task<UpdateBatchTemplateResponse> UpdateBatchTemplateAsync(UpdateBatchTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateBatchTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Updates a business entity.</para>
         /// </summary>
         /// 
@@ -50167,8 +54575,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a business metric.
-        /// Release version: v5.5.0.</para>
+        /// <para>Updates a business metric. Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -50226,8 +54633,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a business metric.
-        /// Release version: v5.5.0.</para>
+        /// <para>Updates a business metric. Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -50285,8 +54691,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a business metric.
-        /// Release version: v5.5.0.</para>
+        /// <para>Updates a business metric. Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50304,8 +54709,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a business metric.
-        /// Release version: v5.5.0.</para>
+        /// <para>Updates a business metric. Release version: v5.5.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50323,7 +54727,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a data domain.</para>
+        /// <para>Updates a business unit.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -50381,7 +54785,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a data domain.</para>
+        /// <para>Updates a business unit.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -50439,7 +54843,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a data domain.</para>
+        /// <para>Updates a business unit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50457,7 +54861,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a data domain.</para>
+        /// <para>Updates a business unit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50635,7 +55039,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a compute source. Business unit administrators and project administrators have permissions to perform this operation.</para>
+        /// <para>Updates a compute source. Only business unit administrators and project administrators have the permissions to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -50693,7 +55097,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a compute source. Business unit administrators and project administrators have permissions to perform this operation.</para>
+        /// <para>Updates a compute source. Only business unit administrators and project administrators have the permissions to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -50751,7 +55155,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a compute source. Business unit administrators and project administrators have permissions to perform this operation.</para>
+        /// <para>Updates a compute source. Only business unit administrators and project administrators have the permissions to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50769,7 +55173,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a compute source. Business unit administrators and project administrators have permissions to perform this operation.</para>
+        /// <para>Updates a compute source. Only business unit administrators and project administrators have the permissions to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51279,8 +55683,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a data service application group. Only superusers and system administrators can perform this operation.
-        /// Online version: v6.0.0.</para>
+        /// <para>Updates an application group for the data service. Only super administrators and system administrators can perform this operation. Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -51338,8 +55741,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a data service application group. Only superusers and system administrators can perform this operation.
-        /// Online version: v6.0.0.</para>
+        /// <para>Updates an application group for the data service. Only super administrators and system administrators can perform this operation. Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -51397,8 +55799,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a data service application group. Only superusers and system administrators can perform this operation.
-        /// Online version: v6.0.0.</para>
+        /// <para>Updates an application group for the data service. Only super administrators and system administrators can perform this operation. Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51416,8 +55817,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a data service application group. Only superusers and system administrators can perform this operation.
-        /// Online version: v6.0.0.</para>
+        /// <para>Updates an application group for the data service. Only super administrators and system administrators can perform this operation. Online version: v6.0.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51743,7 +56143,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits the connection configuration items of a data source. Tenant administrators, data administrators, business unit administrators, project administrators, and operations administrators have permissions to perform this operation.</para>
+        /// <para>Modifies the connection configuration items of a datasource. Only tenant administrators, data administrators, business unit administrators, project administrators, and operations administrators are authorized to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -51801,7 +56201,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits the connection configuration items of a data source. Tenant administrators, data administrators, business unit administrators, project administrators, and operations administrators have permissions to perform this operation.</para>
+        /// <para>Modifies the connection configuration items of a datasource. Only tenant administrators, data administrators, business unit administrators, project administrators, and operations administrators are authorized to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -51859,7 +56259,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits the connection configuration items of a data source. Tenant administrators, data administrators, business unit administrators, project administrators, and operations administrators have permissions to perform this operation.</para>
+        /// <para>Modifies the connection configuration items of a datasource. Only tenant administrators, data administrators, business unit administrators, project administrators, and operations administrators are authorized to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51877,7 +56277,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits the connection configuration items of a data source. Tenant administrators, data administrators, business unit administrators, project administrators, and operations administrators have permissions to perform this operation.</para>
+        /// <para>Modifies the connection configuration items of a datasource. Only tenant administrators, data administrators, business unit administrators, project administrators, and operations administrators are authorized to perform this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51895,12 +56295,20 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a dataset in a specified project. Available since v6.2.0.</para>
+        /// <para>Updates the information of a dataset in a specified project. Available since version 6.2.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description.</h2>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation updates the details of an existing dataset in a specific project.</description></item>
+        /// <item><description>You must specify the <c>ProjectId</c> and <c>UpdateCommand</c> parameters. The <c>UpdateCommand</c> parameter contains the specific fields of the dataset to be updated.</description></item>
+        /// <item><description>The <c>Id</c> field in <c>UpdateCommand</c> is required to identify the dataset to be updated.</description></item>
+        /// <item><description>Other fields such as <c>Name</c>, <c>Type</c>, and <c>DataCellId</c> are optional. Specify them based on your actual requirements.</description></item>
+        /// <item><description>Version configuration (<c>VersionConfig</c>) and real-time metatable configuration (<c>RealtimeMetaTableConfig</c>) provide more detailed setting options, including storage paths and table schemas. These are also optional.</description></item>
+        /// <item><description>Make sure that all provided ID values, such as <c>ProjectId</c>, <c>Id</c>, and <c>DataSourceId</c>, are valid and correctly associated in the system.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -51962,12 +56370,20 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a dataset in a specified project. Available since v6.2.0.</para>
+        /// <para>Updates the information of a dataset in a specified project. Available since version 6.2.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description.</h2>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation updates the details of an existing dataset in a specific project.</description></item>
+        /// <item><description>You must specify the <c>ProjectId</c> and <c>UpdateCommand</c> parameters. The <c>UpdateCommand</c> parameter contains the specific fields of the dataset to be updated.</description></item>
+        /// <item><description>The <c>Id</c> field in <c>UpdateCommand</c> is required to identify the dataset to be updated.</description></item>
+        /// <item><description>Other fields such as <c>Name</c>, <c>Type</c>, and <c>DataCellId</c> are optional. Specify them based on your actual requirements.</description></item>
+        /// <item><description>Version configuration (<c>VersionConfig</c>) and real-time metatable configuration (<c>RealtimeMetaTableConfig</c>) provide more detailed setting options, including storage paths and table schemas. These are also optional.</description></item>
+        /// <item><description>Make sure that all provided ID values, such as <c>ProjectId</c>, <c>Id</c>, and <c>DataSourceId</c>, are valid and correctly associated in the system.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -52029,12 +56445,20 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a dataset in a specified project. Available since v6.2.0.</para>
+        /// <para>Updates the information of a dataset in a specified project. Available since version 6.2.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description.</h2>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation updates the details of an existing dataset in a specific project.</description></item>
+        /// <item><description>You must specify the <c>ProjectId</c> and <c>UpdateCommand</c> parameters. The <c>UpdateCommand</c> parameter contains the specific fields of the dataset to be updated.</description></item>
+        /// <item><description>The <c>Id</c> field in <c>UpdateCommand</c> is required to identify the dataset to be updated.</description></item>
+        /// <item><description>Other fields such as <c>Name</c>, <c>Type</c>, and <c>DataCellId</c> are optional. Specify them based on your actual requirements.</description></item>
+        /// <item><description>Version configuration (<c>VersionConfig</c>) and real-time metatable configuration (<c>RealtimeMetaTableConfig</c>) provide more detailed setting options, including storage paths and table schemas. These are also optional.</description></item>
+        /// <item><description>Make sure that all provided ID values, such as <c>ProjectId</c>, <c>Id</c>, and <c>DataSourceId</c>, are valid and correctly associated in the system.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -52052,12 +56476,20 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a dataset in a specified project. Available since v6.2.0.</para>
+        /// <para>Updates the information of a dataset in a specified project. Available since version 6.2.0.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description.</h2>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation updates the details of an existing dataset in a specific project.</description></item>
+        /// <item><description>You must specify the <c>ProjectId</c> and <c>UpdateCommand</c> parameters. The <c>UpdateCommand</c> parameter contains the specific fields of the dataset to be updated.</description></item>
+        /// <item><description>The <c>Id</c> field in <c>UpdateCommand</c> is required to identify the dataset to be updated.</description></item>
+        /// <item><description>Other fields such as <c>Name</c>, <c>Type</c>, and <c>DataCellId</c> are optional. Specify them based on your actual requirements.</description></item>
+        /// <item><description>Version configuration (<c>VersionConfig</c>) and real-time metatable configuration (<c>RealtimeMetaTableConfig</c>) provide more detailed setting options, including storage paths and table schemas. These are also optional.</description></item>
+        /// <item><description>Make sure that all provided ID values, such as <c>ProjectId</c>, <c>Id</c>, and <c>DataSourceId</c>, are valid and correctly associated in the system.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -52075,7 +56507,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a Dev-Prod (dual-environment) project.</para>
+        /// <para>Modifies a Dev-Prod (dual-environment) project.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -52133,7 +56565,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a Dev-Prod (dual-environment) project.</para>
+        /// <para>Modifies a Dev-Prod (dual-environment) project.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -52191,7 +56623,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a Dev-Prod (dual-environment) project.</para>
+        /// <para>Modifies a Dev-Prod (dual-environment) project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -52209,7 +56641,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a Dev-Prod (dual-environment) project.</para>
+        /// <para>Modifies a Dev-Prod (dual-environment) project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53171,7 +57603,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously updates a pipeline or unstructured workflow node.</para>
+        /// <para>Asynchronously updates a pipeline or unstructured workflow task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -53237,7 +57669,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously updates a pipeline or unstructured workflow node.</para>
+        /// <para>Asynchronously updates a pipeline or unstructured workflow task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -53303,7 +57735,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously updates a pipeline or unstructured workflow node.</para>
+        /// <para>Asynchronously updates a pipeline or unstructured workflow task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53321,7 +57753,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously updates a pipeline or unstructured workflow node.</para>
+        /// <para>Asynchronously updates a pipeline or unstructured workflow task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53339,7 +57771,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits project members.</para>
+        /// <para>Modifies the members of a project.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -53401,7 +57833,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits project members.</para>
+        /// <para>Modifies the members of a project.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -53463,7 +57895,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits project members.</para>
+        /// <para>Modifies the members of a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53481,7 +57913,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits project members.</para>
+        /// <para>Modifies the members of a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53499,8 +57931,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables quality rules in batches.
-        /// Release version: v5.4.2.</para>
+        /// <para>Enables or disables quality rules in batches. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -53558,8 +57989,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables quality rules in batches.
-        /// Release version: v5.4.2.</para>
+        /// <para>Enables or disables quality rules in batches. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -53617,8 +58047,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables quality rules in batches.
-        /// Release version: v5.4.2.</para>
+        /// <para>Enables or disables quality rules in batches. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53636,8 +58065,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables quality rules in batches.
-        /// Release version: v5.4.2.</para>
+        /// <para>Enables or disables quality rules in batches. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53655,8 +58083,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts or stops quality monitored objects in batches.
-        /// Release version: v5.4.2.</para>
+        /// <para>Enables or disables quality monitored objects in batches. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -53714,8 +58141,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts or stops quality monitored objects in batches.
-        /// Release version: v5.4.2.</para>
+        /// <para>Enables or disables quality monitored objects in batches. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -53773,8 +58199,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts or stops quality monitored objects in batches.
-        /// Release version: v5.4.2.</para>
+        /// <para>Enables or disables quality monitored objects in batches. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53792,8 +58217,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts or stops quality monitored objects in batches.
-        /// Release version: v5.4.2.</para>
+        /// <para>Enables or disables quality monitored objects in batches. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53811,7 +58235,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a resource file.</para>
+        /// <para>Updates a resource file.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -53869,7 +58293,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a resource file.</para>
+        /// <para>Updates a resource file.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -53927,7 +58351,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a resource file.</para>
+        /// <para>Updates a resource file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53945,7 +58369,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a resource file.</para>
+        /// <para>Updates a resource file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -54111,6 +58535,158 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateRowPermissionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates existing scheduling monitoring and alert configurations by modifying monitored objects or alert rules. Available since version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateScheduleMonitorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateScheduleMonitorResponse
+        /// </returns>
+        public UpdateScheduleMonitorResponse UpdateScheduleMonitorWithOptions(UpdateScheduleMonitorRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateScheduleMonitorShrinkRequest request = new UpdateScheduleMonitorShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateCommand))
+            {
+                request.UpdateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateCommand, "UpdateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateCommandShrink))
+            {
+                body["UpdateCommand"] = request.UpdateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateScheduleMonitor",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateScheduleMonitorResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates existing scheduling monitoring and alert configurations by modifying monitored objects or alert rules. Available since version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateScheduleMonitorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateScheduleMonitorResponse
+        /// </returns>
+        public async Task<UpdateScheduleMonitorResponse> UpdateScheduleMonitorWithOptionsAsync(UpdateScheduleMonitorRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateScheduleMonitorShrinkRequest request = new UpdateScheduleMonitorShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateCommand))
+            {
+                request.UpdateCommandShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateCommand, "UpdateCommand", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpUserId))
+            {
+                query["OpUserId"] = request.OpUserId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateCommandShrink))
+            {
+                body["UpdateCommand"] = request.UpdateCommandShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateScheduleMonitor",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateScheduleMonitorResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates existing scheduling monitoring and alert configurations by modifying monitored objects or alert rules. Available since version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateScheduleMonitorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateScheduleMonitorResponse
+        /// </returns>
+        public UpdateScheduleMonitorResponse UpdateScheduleMonitor(UpdateScheduleMonitorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateScheduleMonitorWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates existing scheduling monitoring and alert configurations by modifying monitored objects or alert rules. Available since version 6.4.0.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateScheduleMonitorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateScheduleMonitorResponse
+        /// </returns>
+        public async Task<UpdateScheduleMonitorResponse> UpdateScheduleMonitorAsync(UpdateScheduleMonitorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateScheduleMonitorWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -54423,8 +58999,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the effective status of security identification results.
-        /// Release version: v5.4.2.</para>
+        /// <para>Updates the effective status of security identification results. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -54482,8 +59057,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the effective status of security identification results.
-        /// Release version: v5.4.2.</para>
+        /// <para>Updates the effective status of security identification results. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -54541,8 +59115,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the effective status of security identification results.
-        /// Release version: v5.4.2.</para>
+        /// <para>Updates the effective status of security identification results. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -54560,8 +59133,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the effective status of security identification results.
-        /// Release version: v5.4.2.</para>
+        /// <para>Updates the effective status of security identification results. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -54735,8 +59307,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a standard.
-        /// Release version: v5.4.2.</para>
+        /// <para>Updates a standard. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -54794,8 +59365,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a standard.
-        /// Release version: v5.4.2.</para>
+        /// <para>Updates a standard. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -54853,8 +59423,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a standard.
-        /// Release version: v5.4.2.</para>
+        /// <para>Updates a standard. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -54872,8 +59441,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a standard.
-        /// Release version: v5.4.2.</para>
+        /// <para>Updates a standard. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -54891,8 +59459,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a data standard lookup table.
-        /// Release version: v5.4.2.</para>
+        /// <para>Updates a data standard lookup table. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -54950,8 +59517,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a data standard lookup table.
-        /// Release version: v5.4.2.</para>
+        /// <para>Updates a data standard lookup table. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -55009,8 +59575,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a data standard lookup table.
-        /// Release version: v5.4.2.</para>
+        /// <para>Updates a data standard lookup table. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -55028,8 +59593,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a data standard lookup table.
-        /// Release version: v5.4.2.</para>
+        /// <para>Updates a data standard lookup table. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -55047,8 +59611,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the standard mapping relationship to invalid mapping.
-        /// Release version: v5.4.2.</para>
+        /// <para>Invalidates standard mapping relationships. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -55106,8 +59669,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the standard mapping relationship to invalid mapping.
-        /// Release version: v5.4.2.</para>
+        /// <para>Invalidates standard mapping relationships. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -55165,8 +59727,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the standard mapping relationship to invalid mapping.
-        /// Release version: v5.4.2.</para>
+        /// <para>Invalidates standard mapping relationships. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -55184,8 +59745,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the standard mapping relationship to invalid mapping.
-        /// Release version: v5.4.2.</para>
+        /// <para>Invalidates standard mapping relationships. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -55671,7 +60231,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the compute settings of a tenant.</para>
+        /// <para>Modifies the computing settings of a tenant.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -55729,7 +60289,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the compute settings of a tenant.</para>
+        /// <para>Modifies the computing settings of a tenant.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -55787,7 +60347,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the compute settings of a tenant.</para>
+        /// <para>Modifies the computing settings of a tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -55805,7 +60365,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the compute settings of a tenant.</para>
+        /// <para>Modifies the computing settings of a tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -55823,7 +60383,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits tenant members.</para>
+        /// <para>Modifies tenant members.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -55881,7 +60441,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits tenant members.</para>
+        /// <para>Modifies tenant members.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -55939,7 +60499,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits tenant members.</para>
+        /// <para>Modifies tenant members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -55957,7 +60517,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits tenant members.</para>
+        /// <para>Modifies tenant members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56279,7 +60839,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the enabled status of a user group.</para>
+        /// <para>Updates the enabled status of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56333,7 +60893,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the enabled status of a user group.</para>
+        /// <para>Updates the enabled status of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56387,7 +60947,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the enabled status of a user group.</para>
+        /// <para>Updates the enabled status of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56405,7 +60965,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the enabled status of a user group.</para>
+        /// <para>Updates the enabled status of a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56883,8 +61443,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates a schedule setting.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates or modifies scheduling settings. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -56942,8 +61501,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates a schedule setting.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates or modifies scheduling settings. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -57001,8 +61559,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates a schedule setting.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates or modifies scheduling settings. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -57020,8 +61577,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates a schedule setting.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates or modifies scheduling settings. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -57039,8 +61595,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates a quality template.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates or updates a quality template. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -57098,8 +61653,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates a quality template.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates or updates a quality template. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -57157,8 +61711,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates a quality template.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates or updates a quality template. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -57176,8 +61729,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates a quality template.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates or updates a quality template. Released in version 5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -57195,8 +61747,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates a quality monitored object. You can add multiple types of quality monitored objects, including Dataphin tables, global tables, data sources, metrics, and real-time meta tables.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates or updates a quality monitored object. You can add multiple types of quality monitored objects, including Dataphin tables, global tables, data sources, metrics, and real-time metatables. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -57254,8 +61805,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates a quality monitored object. You can add multiple types of quality monitored objects, including Dataphin tables, global tables, data sources, metrics, and real-time meta tables.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates or updates a quality monitored object. You can add multiple types of quality monitored objects, including Dataphin tables, global tables, data sources, metrics, and real-time metatables. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -57313,8 +61863,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates a quality monitored object. You can add multiple types of quality monitored objects, including Dataphin tables, global tables, data sources, metrics, and real-time meta tables.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates or updates a quality monitored object. You can add multiple types of quality monitored objects, including Dataphin tables, global tables, data sources, metrics, and real-time metatables. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -57332,8 +61881,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates a quality monitored object. You can add multiple types of quality monitored objects, including Dataphin tables, global tables, data sources, metrics, and real-time meta tables.
-        /// Release version: v5.4.2.</para>
+        /// <para>Creates or updates a quality monitored object. You can add multiple types of quality monitored objects, including Dataphin tables, global tables, data sources, metrics, and real-time metatables. Release version: v5.4.2.</para>
         /// </summary>
         /// 
         /// <param name="request">

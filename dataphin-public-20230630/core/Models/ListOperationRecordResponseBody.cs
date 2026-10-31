@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The list of operation logs.</para>
+            /// <para>The operation log list.</para>
             /// </summary>
             [NameInMap("ResultData")]
             [Validation(Required=false)]
             public List<ListOperationRecordResponseBodyOperationLogListResponseResultData> ResultData { get; set; }
             public class ListOperationRecordResponseBodyOperationLogListResponseResultData : TeaModel {
                 /// <summary>
-                /// <para>The start time.</para>
+                /// <para>The start time in the YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-01-15 10:30:00</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? CodeType { get; set; }
 
                 /// <summary>
-                /// <para>The execution duration, in milliseconds.</para>
+                /// <para>The execution duration in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>120</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试任务</para>
+                /// <para>Test task</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -144,14 +144,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The list of related tables.</para>
+                /// <para>The list of associated tables.</para>
                 /// </summary>
                 [NameInMap("RelationTables")]
                 [Validation(Required=false)]
                 public List<string> RelationTables { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the executor.</para>
+                /// <para>The executor ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30231123</para>
@@ -161,17 +161,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Runner { get; set; }
 
                 /// <summary>
-                /// <para>The name of the executor.</para>
+                /// <para>The runner name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>John Doe</para>
                 /// </summary>
                 [NameInMap("RunnerName")]
                 [Validation(Required=false)]
                 public string RunnerName { get; set; }
 
                 /// <summary>
-                /// <para>The task status.</para>
+                /// <para>The node status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

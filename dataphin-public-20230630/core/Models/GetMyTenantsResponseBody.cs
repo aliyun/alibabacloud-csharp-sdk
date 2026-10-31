@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetMyTenantsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The error code. OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public List<GetMyTenantsResponseBodyTenantList> TenantList { get; set; }
         public class GetMyTenantsResponseBodyTenantList : TeaModel {
             /// <summary>
-            /// <para>The time when the tenant was deleted.</para>
+            /// <para>The deletion time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1717343597000</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The tenant description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx 测试</para>
+            /// <para>xx test</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The tenant name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx测试</para>
+            /// <para>xx test</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? OpsTenant { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user to whom the tenant belongs.</para>
+            /// <para>The ID of the tenant owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>21323231</para>

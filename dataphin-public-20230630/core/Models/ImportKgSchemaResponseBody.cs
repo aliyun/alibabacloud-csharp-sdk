@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ImportKgSchemaResponseBodyImportResult ImportResult { get; set; }
         public class ImportKgSchemaResponseBodyImportResult : TeaModel {
             /// <summary>
-            /// <para>The number of entity types that were changed.</para>
+            /// <para>The number of changed entity types.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1032591</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? EntityTypeCount { get; set; }
 
             /// <summary>
-            /// <para>The number of relation types that were changed.</para>
+            /// <para>The number of changed relation types.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3380766</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

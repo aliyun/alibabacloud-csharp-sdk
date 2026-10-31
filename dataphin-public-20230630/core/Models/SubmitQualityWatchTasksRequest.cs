@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -37,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public SubmitQualityWatchTasksRequestSubmitCommand SubmitCommand { get; set; }
         public class SubmitQualityWatchTasksRequestSubmitCommand : TeaModel {
             /// <summary>
-            /// <para>The business date, in the yyyy-MM-dd format.</para>
+            /// <para>The business date. Format: yyyy-MM-dd.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30</para>
@@ -47,7 +49,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string BizDate { get; set; }
 
             /// <summary>
-            /// <para>The partition expression. This is a custom expression.</para>
+            /// <para>The custom partition expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ds=${yyyyMMdd}</para>
@@ -57,7 +59,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string PartitionExpression { get; set; }
 
             /// <summary>
-            /// <para>The monitored object IDs.</para>
+            /// <para>The IDs of the monitored objects.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("WatchIdList")]

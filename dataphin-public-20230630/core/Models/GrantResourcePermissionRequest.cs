@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GrantResourcePermissionRequestGrantCommand GrantCommand { get; set; }
         public class GrantResourcePermissionRequestGrantCommand : TeaModel {
             /// <summary>
-            /// <para>The expiration timestamp, in milliseconds.</para>
+            /// <para>The timestamp for the end of the validity period, in milliseconds.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> OperateList { get; set; }
 
             /// <summary>
-            /// <para>The reason for the authorization.</para>
+            /// <para>The reason for authorization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Reason { get; set; }
 
             /// <summary>
-            /// <para>The list of resources.</para>
+            /// <para>The resources.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("ResourceList")]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The authorized users pending authorization.</para>
+            /// <para>The users pending authorization.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("UserIdList")]
@@ -99,6 +99,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

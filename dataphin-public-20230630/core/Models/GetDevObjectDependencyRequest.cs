@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetDevObjectDependencyRequest : TeaModel {
         /// <summary>
-        /// <para>Development object source.</para>
+        /// <para>The object source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>BLACK_BOX: Logical table</description></item>
-        /// <item><description>DATA_PROCESS: Compute task</description></item>
-        /// <item><description>PIPELINE: Integration task</description></item>
+        /// <item><description>BLACK_BOX: logical table</description></item>
+        /// <item><description>DATA_PROCESS: computing node</description></item>
+        /// <item><description>PIPELINE: integration node</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string ObjectFrom { get; set; }
 
         /// <summary>
-        /// <para>Object ID.</para>
+        /// <para>The object ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string ObjectId { get; set; }
 
         /// <summary>
-        /// <para>Development object type.</para>
+        /// <para>The object type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>FILE_ID: Task FileId</description></item>
-        /// <item><description>MODEL_ID: Logical table</description></item>
+        /// <item><description>FILE_ID: file ID of a node</description></item>
+        /// <item><description>MODEL_ID: logical table</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string ObjectType { get; set; }
 
         /// <summary>
-        /// <para>Tenant ID.</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,6 +63,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -71,7 +73,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>Project ID.</para>
+        /// <para>The project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

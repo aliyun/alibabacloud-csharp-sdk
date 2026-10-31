@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30 00:00:00</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The user ID of the creator.</para>
+            /// <para>The ID of the user who created the lookup table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30012021</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The username of the creator.</para>
+            /// <para>The username of the user who created the lookup table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -87,14 +87,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The directory to which the lookup table belongs.</para>
+            /// <para>The parent folder.</para>
             /// </summary>
             [NameInMap("DirectoryReference")]
             [Validation(Required=false)]
             public GetStandardLookupTableResponseBodyLookupTableInfoDirectoryReference DirectoryReference { get; set; }
             public class GetStandardLookupTableResponseBodyLookupTableInfoDirectoryReference : TeaModel {
                 /// <summary>
-                /// <para>The directory to which the lookup table belongs.</para>
+                /// <para>The parent folder.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/dir1/dir2</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The lookup table ID.</para>
+            /// <para>The ID of the lookup table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The user ID of the last modifier.</para>
+            /// <para>The ID of the user who last modified the lookup table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30012021</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LastModifier { get; set; }
 
             /// <summary>
-            /// <para>The username of the last modifier.</para>
+            /// <para>The username of the user who last modified the lookup table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<GetStandardLookupTableResponseBodyLookupTableInfoLookupTableValueList> LookupTableValueList { get; set; }
             public class GetStandardLookupTableResponseBodyLookupTableInfoLookupTableValueList : TeaModel {
                 /// <summary>
-                /// <para>The code description.</para>
+                /// <para>The description of the code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The code value.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>杭州</para>
+                /// <para>Hangzhou</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The update time. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30 00:00:00</para>
@@ -198,14 +198,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The name of the lookup table.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>城市码表</para>
+            /// <para>City lookup table</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The user ID of the owner.</para>
+            /// <para>The ID of the owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30012021</para>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

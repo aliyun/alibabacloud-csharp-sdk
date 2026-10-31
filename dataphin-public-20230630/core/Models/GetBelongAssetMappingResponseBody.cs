@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP response code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public List<GetBelongAssetMappingResponseBodyMappingRelationList> MappingRelationList { get; set; }
         public class GetBelongAssetMappingResponseBodyMappingRelationList : TeaModel {
             /// <summary>
-            /// <para>The type of the asset. Valid values: COLUMN (field) and INDEX (metric).</para>
+            /// <para>The asset type. Valid values: COLUMN (field) and INDEX (metric).</para>
             /// 
             /// <b>Example:</b>
             /// <para>COLUMN</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Guid { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The update time. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30 00:00:00</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string StandardName { get; set; }
 
             /// <summary>
-            /// <para>The directory where the standard set is located.</para>
+            /// <para>The folder where the standard set is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/dir1</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>The details of the backend response exception.</para>
+        /// <para>The details of the backend exception.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

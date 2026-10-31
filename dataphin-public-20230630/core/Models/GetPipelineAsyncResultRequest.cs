@@ -29,11 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetPipelineAsyncResultRequestContext Context { get; set; }
         public class GetPipelineAsyncResultRequestContext : TeaModel {
             /// <summary>
-            /// <para>The current operation environment. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>DEV: development environment.</description></item>
-            /// <item><description>PROD: production environment.</description></item>
-            /// </list>
+            /// <para>The current operation environment. Valid values: DEV: development environment. PROD: production environment.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -68,6 +64,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user who performs the operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

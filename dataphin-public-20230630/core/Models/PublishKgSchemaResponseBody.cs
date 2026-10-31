@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public PublishKgSchemaResponseBodyData Data { get; set; }
         public class PublishKgSchemaResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The expected latest model version number after the publish operation.</para>
+            /// <para>The expected latest model version number after publishing.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The node details.</para>
+        /// <para>The task details.</para>
         /// </summary>
         [NameInMap("TaskInfo")]
         [Validation(Required=false)]
         public GetBatchTaskInfoResponseBodyTaskInfo TaskInfo { get; set; }
         public class GetBatchTaskInfoResponseBodyTaskInfo : TeaModel {
             /// <summary>
-            /// <para>The ID of the basic schedule template. This parameter is returned when the configuration method is set to schedule template.</para>
+            /// <para>The ID of the base schedule template. This parameter is returned when the configuration method is set to schedule template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7305621095333696</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? BaseScheduleTemplateId { get; set; }
 
             /// <summary>
-            /// <para>The name of the basic schedule template.</para>
+            /// <para>The name of the base schedule template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Daily schedule template</para>
@@ -94,7 +94,27 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether conditional scheduling is enabled.</para>
+            /// <para>The ID of the offline code template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>st_123456</para>
+            /// </summary>
+            [NameInMap("CodeTemplateId")]
+            [Validation(Required=false)]
+            public string CodeTemplateId { get; set; }
+
+            /// <summary>
+            /// <para>The version of the offline code template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("CodeTemplateVersion")]
+            [Validation(Required=false)]
+            public int? CodeTemplateVersion { get; set; }
+
+            /// <summary>
+            /// <para>Specifies whether conditional scheduling is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -133,7 +153,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string CronExpression { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable the condition.</para>
+                /// <para>Specifies whether the condition is enabled.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -144,7 +164,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public bool? Enable { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to follow the primary schedule parameter.</para>
+                /// <para>Specifies whether to follow the main scheduling parameter.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -155,7 +175,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public bool? FollowScheduleParam { get; set; }
 
                 /// <summary>
-                /// <para>The scheduling status of the node after the condition is met. Valid values: 1: Normal. 2: Paused. 3: Dry run.</para>
+                /// <para>The scheduling status of the node after the condition is met. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>1: Normal.</description></item>
+                /// <item><description>2: Paused.</description></item>
+                /// <item><description>3: Dry run.</description></item>
+                /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -166,7 +191,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? NodeStatus { get; set; }
 
                 /// <summary>
-                /// <para>The conditional expression tree in JSON string format. The keys are named in lower camel case characters and must be parsed by the invoker.</para>
+                /// <para>The conditional expression tree in JSON string format. The key names are lower camel case characters and must be parsed by the invoker.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -177,7 +202,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ScheduleConditionJson { get; set; }
 
                 /// <summary>
-                /// <para>The schedule time used after the condition is met.</para>
+                /// <para>The scheduling time used after the condition is met.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -210,7 +235,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ConditionScheduleTemplateName { get; set; }
 
             /// <summary>
-            /// <para>The cross-node parameters, which are the output parameters declared by the current node for downstream nodes to reference in the ${#n_NodeID:ParameterName} format.</para>
+            /// <para>The cross-node parameters. These are the output parameters declared by the current node for downstream nodes to reference in the format of ${#n_NodeID:ParameterName}.</para>
             /// </summary>
             [NameInMap("ContextParamList")]
             [Validation(Required=false)]
@@ -250,6 +275,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ParamKey { get; set; }
 
             }
+
+            /// <summary>
+            /// <para>The current configuration of the node. When queried by version, this parameter returns the configuration of the corresponding version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.5</para>
+            /// </summary>
+            [NameInMap("CpuResource")]
+            [Validation(Required=false)]
+            public string CpuResource { get; set; }
 
             /// <summary>
             /// <para>The cron expression for automatic scheduling. You can refer to Linux cron expressions.</para>
@@ -299,7 +334,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string IntervalUnit { get; set; }
 
                 /// <summary>
-                /// <para>The schedule cycle.</para>
+                /// <para>The scheduling cycle.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DAILY</para>
@@ -331,7 +366,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DagId { get; set; }
 
             /// <summary>
-            /// <para>The catalog of the data source. This parameter applies only to database SQL nodes and data source types that require a catalog, such as Presto.</para>
+            /// <para>The data source catalog for database SQL tasks. This parameter takes effect only for data source types that require a catalog, such as Presto.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mysql_catalog</para>
@@ -341,7 +376,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataSourceCatalog { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data source for the database SQL node.</para>
+            /// <para>The data source ID for database SQL tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12131111</para>
@@ -351,7 +386,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataSourceId { get; set; }
 
             /// <summary>
-            /// <para>The schema of the data source. This parameter applies only to database SQL nodes and data source types that require a schema, such as Oracle.</para>
+            /// <para>The data source schema for database SQL tasks. This parameter takes effect only for data source types that require a schema, such as Oracle.</para>
             /// 
             /// <b>Example:</b>
             /// <para>erp</para>
@@ -361,7 +396,46 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataSourceSchema { get; set; }
 
             /// <summary>
-            /// <para>The HTTP path in the development environment, used for Databricks tasks.</para>
+            /// <para>The Python connection information.</para>
+            /// </summary>
+            [NameInMap("DatabricksPythonConnectInfo")]
+            [Validation(Required=false)]
+            public GetBatchTaskInfoResponseBodyTaskInfoDatabricksPythonConnectInfo DatabricksPythonConnectInfo { get; set; }
+            public class GetBatchTaskInfoResponseBodyTaskInfoDatabricksPythonConnectInfo : TeaModel {
+                /// <summary>
+                /// <para>The HTTP path for the development environment.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/sql/1.0/warehouses/dev</para>
+                /// </summary>
+                [NameInMap("DevHttpPath")]
+                [Validation(Required=false)]
+                public string DevHttpPath { get; set; }
+
+                /// <summary>
+                /// <para>Specifies whether Databricks Python Connect is enabled.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("EnableDatabricksPythonConnect")]
+                [Validation(Required=false)]
+                public bool? EnableDatabricksPythonConnect { get; set; }
+
+                /// <summary>
+                /// <para>The HTTP path for the production environment.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/sql/1.0/warehouses/prod</para>
+                /// </summary>
+                [NameInMap("ProdHttpPath")]
+                [Validation(Required=false)]
+                public string ProdHttpPath { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The HTTP path for the development environment, used for Databricks tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/sql/protocolv1/o/xxx</para>
@@ -371,7 +445,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DevHttpPath { get; set; }
 
             /// <summary>
-            /// <para>The ID of the schedule resource group for the development task.</para>
+            /// <para>The ID of the scheduling resource group for the development task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-def456</para>
@@ -381,7 +455,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DevResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the schedule resource group for the development task.</para>
+            /// <para>The name of the scheduling resource group for the development task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Default resource group</para>
@@ -401,7 +475,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DevelopOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The list of development owner IDs.</para>
+            /// <para>The list of user IDs of the development owners.</para>
             /// </summary>
             [NameInMap("DevelopOwnerIdList")]
             [Validation(Required=false)]
@@ -418,14 +492,82 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DevelopOwnerName { get; set; }
 
             /// <summary>
-            /// <para>The list of development owner names.</para>
+            /// <para>The list of names of the development owners.</para>
             /// </summary>
             [NameInMap("DevelopOwnerNameList")]
             [Validation(Required=false)]
             public List<string> DevelopOwnerNameList { get; set; }
 
             /// <summary>
-            /// <para>The node ID in the task directory tree.</para>
+            /// <para>The failure retry configuration. This is the current configuration of the task. If queried by version, this is the configuration of the corresponding version.</para>
+            /// </summary>
+            [NameInMap("ExecuteRerunConfig")]
+            [Validation(Required=false)]
+            public GetBatchTaskInfoResponseBodyTaskInfoExecuteRerunConfig ExecuteRerunConfig { get; set; }
+            public class GetBatchTaskInfoResponseBodyTaskInfoExecuteRerunConfig : TeaModel {
+                /// <summary>
+                /// <para>The custom failure retry interval.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>60</para>
+                /// </summary>
+                [NameInMap("CustomRerunInterval")]
+                [Validation(Required=false)]
+                public string CustomRerunInterval { get; set; }
+
+                /// <summary>
+                /// <para>The custom number of failure retries.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
+                /// </summary>
+                [NameInMap("CustomRerunTimes")]
+                [Validation(Required=false)]
+                public string CustomRerunTimes { get; set; }
+
+                /// <summary>
+                /// <para>Specifies whether to inherit the system configuration.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
+                [NameInMap("FollowSystem")]
+                [Validation(Required=false)]
+                public bool? FollowSystem { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The execution timeout configuration. This is the current configuration of the task. If queried by version, this is the configuration of the corresponding version.</para>
+            /// </summary>
+            [NameInMap("ExecuteTimeOutConfig")]
+            [Validation(Required=false)]
+            public GetBatchTaskInfoResponseBodyTaskInfoExecuteTimeOutConfig ExecuteTimeOutConfig { get; set; }
+            public class GetBatchTaskInfoResponseBodyTaskInfoExecuteTimeOutConfig : TeaModel {
+                /// <summary>
+                /// <para>The custom timeout period.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1800</para>
+                /// </summary>
+                [NameInMap("CustomValues")]
+                [Validation(Required=false)]
+                public string CustomValues { get; set; }
+
+                /// <summary>
+                /// <para>Specifies whether to inherit the system configuration.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
+                [NameInMap("FollowSystem")]
+                [Validation(Required=false)]
+                public bool? FollowSystem { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The ID of the node in the task directory tree.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12113111</para>
@@ -442,24 +584,34 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? HasDevNode { get; set; }
 
             /// <summary>
-            /// <para>The name of the node.</para>
+            /// <para>The current configuration of the node. When queried by version, this parameter returns the configuration of the corresponding version.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test node 1</para>
+            /// <para>1024</para>
+            /// </summary>
+            [NameInMap("MemoryResource")]
+            [Validation(Required=false)]
+            public string MemoryResource { get; set; }
+
+            /// <summary>
+            /// <para>The name of the task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Test task 1</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the node needs to be published.</para>
+            /// <para>Indicates whether the task needs to be published.</para>
             /// </summary>
             [NameInMap("NeedPublish")]
             [Validation(Required=false)]
             public bool? NeedPublish { get; set; }
 
             /// <summary>
-            /// <para>The description of the node.</para>
+            /// <para>The description of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xx test</para>
@@ -469,7 +621,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NodeDescription { get; set; }
 
             /// <summary>
-            /// <para>The source of the node, which indicates the organization or application that created the node.</para>
+            /// <para>The source of the node. This indicates the organization or application that created the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>openapi</para>
@@ -492,7 +644,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The name of the node.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test node 1</para>
+            /// <para>Test task 1</para>
             /// </summary>
             [NameInMap("NodeName")]
             [Validation(Required=false)]
@@ -506,12 +658,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> NodeOutputNameList { get; set; }
 
             /// <summary>
-            /// <para>The status of the node. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>1: Normal.</description></item>
-            /// <item><description>2: Paused.</description></item>
-            /// <item><description>3: Dry run.</description></item>
-            /// </list>
+            /// <para>The status of the node. Valid values: 1 (Normal), 2 (Paused), and 3 (Dry run).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -541,14 +688,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string OpsOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The list of O&amp;M owner IDs.</para>
+            /// <para>The list of user IDs of the O&amp;M owners.</para>
             /// </summary>
             [NameInMap("OpsOwnerIdList")]
             [Validation(Required=false)]
             public List<string> OpsOwnerIdList { get; set; }
 
             /// <summary>
-            /// <para>The name of the O&amp;M owner.</para>
+            /// <para>The O&amp;M owner name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Zhang San</para>
@@ -583,6 +730,45 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [NameInMap("OwnerUserId")]
             [Validation(Required=false)]
             public string OwnerUserId { get; set; }
+
+            /// <summary>
+            /// <para>The PAI configuration information.</para>
+            /// </summary>
+            [NameInMap("PaiConfig")]
+            [Validation(Required=false)]
+            public GetBatchTaskInfoResponseBodyTaskInfoPaiConfig PaiConfig { get; set; }
+            public class GetBatchTaskInfoResponseBodyTaskInfoPaiConfig : TeaModel {
+                /// <summary>
+                /// <para>The ID of the PAI experiment.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>789012</para>
+                /// </summary>
+                [NameInMap("ExperimentId")]
+                [Validation(Required=false)]
+                public string ExperimentId { get; set; }
+
+                /// <summary>
+                /// <para>The PAI region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-shanghai</para>
+                /// </summary>
+                [NameInMap("Region")]
+                [Validation(Required=false)]
+                public string Region { get; set; }
+
+                /// <summary>
+                /// <para>The ID of the PAI workspace.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>123456</para>
+                /// </summary>
+                [NameInMap("WorkSpaceId")]
+                [Validation(Required=false)]
+                public string WorkSpaceId { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The list of custom parameters for the node.</para>
@@ -621,7 +807,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? Paused { get; set; }
 
             /// <summary>
-            /// <para>The scheduling priority of the node. Valid values: 1 to 9. A larger value indicates a lower priority.</para>
+            /// <para>The scheduling priority of the task. Valid values: 1 to 9. A larger value indicates a lower priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -631,7 +817,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The HTTP path in the production environment, used for Databricks tasks.</para>
+            /// <para>The HTTP path in the production environment. This parameter is used for Databricks tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/sql/protocolv1/o/yyy</para>
@@ -641,7 +827,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ProdHttpPath { get; set; }
 
             /// <summary>
-            /// <para>The project ID.</para>
+            /// <para>The ID of the project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>131211211</para>
@@ -707,7 +893,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The Python version of the Python task, such as Python 3.7.</para>
+            /// <para>The Python version for the Python task, such as Python 3.7.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Python 3.7</para>
@@ -717,7 +903,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string PythonVersion { get; set; }
 
             /// <summary>
-            /// <para>The remarks.</para>
+            /// <para>The remark.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test xx</para>
@@ -754,7 +940,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ResourceGroupName { get; set; }
 
             /// <summary>
-            /// <para>The schedule period. Valid values:</para>
+            /// <para>Specifies whether to retry the task upon timeout. This is the current configuration of the task. If you query by version, this is the configuration of the corresponding version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
+            [NameInMap("RetryOnTimeoutEnable")]
+            [Validation(Required=false)]
+            public bool? RetryOnTimeoutEnable { get; set; }
+
+            /// <summary>
+            /// <para>The scheduling period. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>YEARLY: Yearly.</description></item>
             /// <item><description>MONTHLY: Monthly.</description></item>
@@ -772,10 +968,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string SchedulePeriod { get; set; }
 
             /// <summary>
-            /// <para>The node type. Valid values: </para>
+            /// <para>The type of the node. Valid values: </para>
             /// <list type="bullet">
-            /// <item><description>1: Periodic node.</description></item>
-            /// <item><description>3: Manual node.</description></item>
+            /// <item><description>1: Periodic task.</description></item>
+            /// <item><description>3: Manual task.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -805,22 +1001,57 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The publish status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>0: Draft.</description></item>
-            /// <item><description>1: Submitted.</description></item>
-            /// <item><description>100: In development.</description></item>
-            /// </list>
+            /// <para>The current configuration of the node. When queried by version, this parameter returns the configuration of the corresponding version.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test node 1</para>
+            /// <para>false</para>
+            /// </summary>
+            [NameInMap("SparkDynamicResourceSwitch")]
+            [Validation(Required=false)]
+            public bool? SparkDynamicResourceSwitch { get; set; }
+
+            /// <summary>
+            /// <para>The effective scope of the Spark resource configuration. A value of ONLY_PROD indicates the production environment only, and a value of PROD_AND_DEV indicates the production and development environments. This is the current configuration of the task. If you query by version, this is the configuration of the corresponding version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ONLY_PROD</para>
+            /// </summary>
+            [NameInMap("SparkResourceEffectScope")]
+            [Validation(Required=false)]
+            public string SparkResourceEffectScope { get; set; }
+
+            /// <summary>
+            /// <para>The Spark SQL resource configuration. The key is the configuration item name, and the value is a string. The entire configuration is returned as a JSON string. This is the current configuration of the task. If you query by version, this is the configuration of the corresponding version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;spark.executor.memory&quot;:&quot;2g&quot;}</para>
+            /// </summary>
+            [NameInMap("SparkSqlResourceConfigMap")]
+            [Validation(Required=false)]
+            public string SparkSqlResourceConfigMap { get; set; }
+
+            /// <summary>
+            /// <para>The MaxCompute Spark version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Spark 3.1.1</para>
+            /// </summary>
+            [NameInMap("SparkVersion")]
+            [Validation(Required=false)]
+            public string SparkVersion { get; set; }
+
+            /// <summary>
+            /// <para>The publish status. Valid values: 0 (Draft), 1 (Submitted), and 100 (In development).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Test task 1</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The list of task tag names.</para>
+            /// <para>The list of node tag names.</para>
             /// </summary>
             [NameInMap("TaskTagList")]
             [Validation(Required=false)]
@@ -851,7 +1082,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public GetBatchTaskInfoResponseBodyTaskInfoUpStreamListDependPeriod DependPeriod { get; set; }
                 public class GetBatchTaskInfoResponseBodyTaskInfoUpStreamListDependPeriod : TeaModel {
                     /// <summary>
-                    /// <para>The period offset. This parameter is required when PeriodType is set to LAST_N_PERIOD.</para>
+                    /// <para>The period offset. This parameter is required when the period type is LAST_N_PERIOD.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -879,13 +1110,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The dependency strategy. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>ALL</description></item>
-                /// <item><description>FIRST</description></item>
-                /// <item><description>LAST</description></item>
-                /// <item><description>NEAR</description></item>
-                /// </list>
+                /// <para>The dependency strategy. Valid values: ALL, FIRST, LAST, and NEAR.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>LAST</para>
@@ -904,8 +1129,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <summary>
                 /// <para>The upstream dependency node type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>PHYSICAL: Physical node.</description></item>
-                /// <item><description>LOGICAL: Logical table dependency.</description></item>
+                /// <item><description>PHYSICAL: physical node.</description></item>
+                /// <item><description>LOGICAL: logical table dependency.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -916,7 +1141,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string NodeType { get; set; }
 
                 /// <summary>
-                /// <para>The period difference. A value of 0 indicates a same-period dependency. A positive integer indicates a dependency on the previous N periods.</para>
+                /// <para>The period difference. A value of 0 indicates a same-period dependency. A positive number indicates a dependency on the previous N periods.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -985,7 +1210,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The end date of the validity period. Format: yyyy-MM-dd.</para>
+            /// <para>The effective end date. Format: yyyy-MM-dd.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9999-12-31</para>
@@ -995,7 +1220,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ValidEndDate { get; set; }
 
             /// <summary>
-            /// <para>The effective start date in the yyyy-MM-dd format.</para>
+            /// <para>The effective start date. Format: yyyy-MM-dd.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-01</para>

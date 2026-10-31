@@ -10,18 +10,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetAssetMappingRelationsRequest : TeaModel {
         /// <summary>
-        /// <para>The query instruction.</para>
+        /// <para>The query command.</para>
         /// </summary>
         [NameInMap("AssetMappingQuery")]
         [Validation(Required=false)]
         public GetAssetMappingRelationsRequestAssetMappingQuery AssetMappingQuery { get; set; }
         public class GetAssetMappingRelationsRequestAssetMappingQuery : TeaModel {
             /// <summary>
-            /// <para>The object type of the asset. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>COLUMN: field.</description></item>
-            /// <item><description>INDEX: metric.</description></item>
-            /// </list>
+            /// <para>The asset object type. Valid values: COLUMN (field) and INDEX (metric).</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -43,11 +39,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Guid { get; set; }
 
             /// <summary>
-            /// <para>The type of the mapping relationship. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>VALID: mapped.</description></item>
-            /// <item><description>INVALID: invalid mapping.</description></item>
-            /// </list>
+            /// <para>The mapping relationship type. Valid values: VALID (mapped) and INVALID (invalid mapping).</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -71,6 +63,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

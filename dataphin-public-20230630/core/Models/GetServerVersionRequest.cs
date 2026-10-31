@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetServerVersionRequest : TeaModel {
         /// <summary>
-        /// <para><b>[Deprecated]</b> The environment identifier. Valid values:</para>
+        /// <para>The environment identifier. <b>[Deprecated]</b> Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DEV: Development environment. </description></item>
-        /// <item><description>PROD (default): Production environment.</description></item>
+        /// <item><description>DEV: development environment. </description></item>
+        /// <item><description>PROD: production environment. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the operation user.</para>
+        /// <para>The ID of the operating user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30010012</para>

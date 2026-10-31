@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend exception.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -40,24 +40,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The details of the template object.</para>
+        /// <para>The template object details.</para>
         /// </summary>
         [NameInMap("QualityTemplateInfo")]
         [Validation(Required=false)]
         public GetQualityTemplateResponseBodyQualityTemplateInfo QualityTemplateInfo { get; set; }
         public class GetQualityTemplateResponseBodyQualityTemplateInfo : TeaModel {
             /// <summary>
-            /// <para>The template category. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>CONSISTENT: consistency.</description></item>
-            /// <item><description>EFFECTIVE: validity.</description></item>
-            /// <item><description>TIMELINESE: timeliness.</description></item>
-            /// <item><description>ACCURATE: accuracy.</description></item>
-            /// <item><description>UNIQUENESS: uniqueness.</description></item>
-            /// <item><description>COMPLETENESS: completeness.</description></item>
-            /// <item><description>STABILITY: stability.</description></item>
-            /// <item><description>CUSTOM: custom.</description></item>
-            /// </list>
+            /// <para>The template category. Valid values: CONSISTENT: consistency, EFFECTIVE: effectiveness, TIMELINESE: timeliness, ACCURATE: accuracy, UNIQUENESS: uniqueness, COMPLETENESS: completeness, STABILITY: stability, and CUSTOM: custom.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CONSISTENT</para>
@@ -70,14 +60,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The display name of the template category.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>一致性</para>
+            /// <para>Consistency</para>
             /// </summary>
             [NameInMap("CatalogName")]
             [Validation(Required=false)]
             public string CatalogName { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30 00:00:00</para>
@@ -117,14 +107,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The key-value pairs of the rule configuration.</para>
+            /// <para>The rule configuration key-value pairs.</para>
             /// </summary>
             [NameInMap("FormPropertyList")]
             [Validation(Required=false)]
             public List<GetQualityTemplateResponseBodyQualityTemplateInfoFormPropertyList> FormPropertyList { get; set; }
             public class GetQualityTemplateResponseBodyQualityTemplateInfoFormPropertyList : TeaModel {
                 /// <summary>
-                /// <para>The control type.</para>
+                /// <para>The component type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>expression</para>
@@ -193,7 +183,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ModifierName { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The update time. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30 00:00:00</para>
@@ -240,47 +230,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? SupportAllDataSourceType { get; set; }
 
             /// <summary>
-            /// <para>The list of supported data source types, such as MySQL, Oracle, Microsoft SQL Server, MaxCompute, and Hive.</para>
+            /// <para>The supported specific data source types, such as MySQL, Oracle, Microsoft SQL Server, MaxCompute, and Hive.</para>
             /// </summary>
             [NameInMap("SupportDataSourceTypeList")]
             [Validation(Required=false)]
             public List<string> SupportDataSourceTypeList { get; set; }
 
             /// <summary>
-            /// <para>The templatetype. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>FIELD_NULL_VALUE_VALIDATE: field null value check.</description></item>
-            /// <item><description>FIELD_EMPTY_STRING_VALIDATE: field empty character string check.</description></item>
-            /// <item><description>FIELD_UNIQUE_VALIDATE: field uniqueness check.</description></item>
-            /// <item><description>FIELD_GROUP_COUNT_VALIDATE: field unique value count check.</description></item>
-            /// <item><description>FIELD_DUPLICATE_VALUE_COUNT_VALIDATE: field duplicate value count check.</description></item>
-            /// <item><description>FUNCTION_TIME_COMPARE: time function comparison.</description></item>
-            /// <item><description>SINGLE_TABLE_TIME_COMPARE: non-partitioned table time field comparison.</description></item>
-            /// <item><description>DOUBLE_TABLE_TIME_COMPARE: two-table time field comparison.</description></item>
-            /// <item><description>FIELD_FORMAT_VALIDATE: field format check.</description></item>
-            /// <item><description>FIELD_LENGTH_VALIDATE: field length check.</description></item>
-            /// <item><description>FIELD_VALUE_RANGE_VALIDATE: field value range check.</description></item>
-            /// <item><description>CODE_TABLE_COMPARE: lookup table reference comparison.</description></item>
-            /// <item><description>STANDARD_CODE_TABLE_COMPARE: data standard lookup table reference comparison.</description></item>
-            /// <item><description>SINGLE_TABLE_FIELD_VALUE_COMPARE: non-partitioned table field value consistency comparison.</description></item>
-            /// <item><description>SINGLE_TABLE_FIELD_STATISTICAL_COMPARE: non-partitioned table field statistical value consistency comparison.</description></item>
-            /// <item><description>SINGLE_TABLE_FIELD_EXP_COMPARE: non-partitioned table field business logic consistency comparison.</description></item>
-            /// <item><description>DOUBLE_TABLE_FIELD_VALUE_COMPARE: two-table field value consistency comparison.</description></item>
-            /// <item><description>DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: two-table field statistical value consistency comparison.</description></item>
-            /// <item><description>CROSS_DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: cross-source two-table field statistical value consistency comparison.</description></item>
-            /// <item><description>DOUBLE_TABLE_FIELD_EXP_COMPARE: two-table field business logic consistency comparison.</description></item>
-            /// <item><description>TABLE_STABILITY_VALIDATE: table stability check.</description></item>
-            /// <item><description>TABLE_FLUCTUATION_VALIDATE: table fluctuation check.</description></item>
-            /// <item><description>FIELD_STABILITY_VALIDATE: field stability check.</description></item>
-            /// <item><description>FIELD_FLUCTUATION_VALIDATE: field fluctuation check.</description></item>
-            /// <item><description>CUSTOM_STATISTICAL_VALIDATE: custom statistical metric check.</description></item>
-            /// <item><description>CUSTOM_DATA_DETAILS_VALIDATE: custom data details check.</description></item>
-            /// <item><description>DATASOURCE_AVAILABLE_CHECK: data source connectivity monitoring.</description></item>
-            /// <item><description>TABLE_SCHEMA_CHECK: table schema change monitoring.</description></item>
-            /// <item><description>REAL_TIME_OFFLINE_COMPARE: real-time and offline comparison.</description></item>
-            /// <item><description>REAL_TIME_STATISTICAL_VALIDATE: real-time statistical value monitoring.</description></item>
-            /// <item><description>REAL_TIME_MULTI_CHAIN_COMPARE: real-time multi-link comparison.</description></item>
-            /// </list>
+            /// <para>The templatetype. Valid values: FIELD_NULL_VALUE_VALIDATE: field null value check, FIELD_EMPTY_STRING_VALIDATE: field empty character string check, FIELD_UNIQUE_VALIDATE: field uniqueness check, FIELD_GROUP_COUNT_VALIDATE: field unique value count check, FIELD_DUPLICATE_VALUE_COUNT_VALIDATE: field duplicate value count check, FUNCTION_TIME_COMPARE: time function comparison, SINGLE_TABLE_TIME_COMPARE: non-partitioned table time field comparison, DOUBLE_TABLE_TIME_COMPARE: double-table time field comparison, FIELD_FORMAT_VALIDATE: field format check, FIELD_LENGTH_VALIDATE: field length check, FIELD_VALUE_RANGE_VALIDATE: field value range check, CODE_TABLE_COMPARE: lookup table reference comparison, STANDARD_CODE_TABLE_COMPARE: data standard lookup table reference comparison, SINGLE_TABLE_FIELD_VALUE_COMPARE: non-partitioned table field value consistency comparison, SINGLE_TABLE_FIELD_STATISTICAL_COMPARE: non-partitioned table field statistical value consistency comparison, SINGLE_TABLE_FIELD_EXP_COMPARE: non-partitioned table field business logic consistency comparison, DOUBLE_TABLE_FIELD_VALUE_COMPARE: double-table field value consistency comparison, DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: double-table field statistical value consistency comparison, CROSS_DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: cross-source double-table field statistical value consistency comparison, DOUBLE_TABLE_FIELD_EXP_COMPARE: double-table field business logic consistency comparison, TABLE_STABILITY_VALIDATE: table stability check, TABLE_FLUCTUATION_VALIDATE: table fluctuation check, FIELD_STABILITY_VALIDATE: field stability check, FIELD_FLUCTUATION_VALIDATE: field fluctuation check, CUSTOM_STATISTICAL_VALIDATE: custom statistical metric check, CUSTOM_DATA_DETAILS_VALIDATE: custom data details check, DATASOURCE_AVAILABLE_CHECK: data source connectivity check, TABLE_SCHEMA_CHECK: table schema change check, REAL_TIME_OFFLINE_COMPARE: real-time and offline comparison, REAL_TIME_STATISTICAL_VALIDATE: real-time statistical value check, and REAL_TIME_MULTI_CHAIN_COMPARE: real-time multi-link comparison.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FIELD_NULL_VALUE_VALIDATE</para>
@@ -293,7 +250,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The display name of the templatetype.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>字段空值校验</para>
+            /// <para>Field null value check</para>
             /// </summary>
             [NameInMap("TypeName")]
             [Validation(Required=false)]
@@ -312,7 +269,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

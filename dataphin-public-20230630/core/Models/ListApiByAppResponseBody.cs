@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string CacheSwitch { get; set; }
 
                 /// <summary>
-                /// <para>The cache duration, in seconds.</para>
+                /// <para>The cache duration in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>60</para>
@@ -111,12 +111,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string CacheTime { get; set; }
 
                 /// <summary>
-                /// <para>The creation type. Valid values:
-                /// SQL_MODE(0, &quot;Logical table API - SQL mode&quot;),
-                /// WIZARD_MODE(1, &quot;Logical table API - wizard mode&quot;),
-                /// DIRECT_API_MODE(2, &quot;Direct datasource - SQL mode&quot;),
-                /// REGISTER_API_MODE(3, &quot;Registered API mode&quot;),
-                /// COMPOSITE_API_MODE(4, &quot;Composite API mode&quot;).</para>
+                /// <para>The creation type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>SQL_MODE: Logical table API - SQL mode.</description></item>
+                /// <item><description>WIZARD_MODE: Logical table API - wizard mode.</description></item>
+                /// <item><description>DIRECT_API_MODE: Direct connection data source - SQL mode.</description></item>
+                /// <item><description>REGISTER_API_MODE: Registered API mode.</description></item>
+                /// <item><description>COMPOSITE_API_MODE: Composite API mode.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -139,14 +141,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>这是一个示例API</para>
+                /// <para>This is a sample API</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The datasource ID of the direct API.</para>
+                /// <para>The data source ID of the direct connection API.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>54321</para>
@@ -156,7 +158,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? DirectDatasourceId { get; set; }
 
                 /// <summary>
-                /// <para>The datasource name of the direct API.</para>
+                /// <para>The data source name of the direct connection API.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>directDatasource</para>
@@ -196,14 +198,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the table is a logical table.</para>
+                /// <para>Indicates whether it is a logical table.</para>
                 /// </summary>
                 [NameInMap("IsLogicalTable")]
                 [Validation(Required=false)]
                 public bool? IsLogicalTable { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the query is a paged query.</para>
+                /// <para>Indicates whether it is a paging query.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -223,7 +225,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? MaxReturnNum { get; set; }
 
                 /// <summary>
-                /// <para>The model type.</para>
+                /// <para>The mode.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -276,7 +278,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The protocol name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>HTTP和HTTPS</para>
+                /// <para>HTTP and HTTPS</para>
                 /// </summary>
                 [NameInMap("ProtocolName")]
                 [Validation(Required=false)]
@@ -302,7 +304,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string DateFormat { get; set; }
 
                     /// <summary>
-                    /// <para>The default value for registered APIs.</para>
+                    /// <para>The default value for the registered API.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>default_public_value</para>
@@ -315,7 +317,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <para>The parameter description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>这是一个示例公共参数</para>
+                    /// <para>This is a sample common parameter</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -422,7 +424,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string ParamType { get; set; }
 
                     /// <summary>
-                    /// <para>The request parameter location for registered APIs or the value path for response parameters.</para>
+                    /// <para>The request parameter location or response parameter value path for the registered API.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>/path/to/public_param</para>
@@ -522,7 +524,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public long? ApiId { get; set; }
 
                     /// <summary>
-                    /// <para>The API datasource authentication mode.</para>
+                    /// <para>The API data source authentication method.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>OAuth2</para>
@@ -532,7 +534,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string AuthenticationMode { get; set; }
 
                     /// <summary>
-                    /// <para>The API datasource ID.</para>
+                    /// <para>The API data source ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ds67890</para>
@@ -542,7 +544,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string DatasourceId { get; set; }
 
                     /// <summary>
-                    /// <para>The API datasource name.</para>
+                    /// <para>The API data source name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>registerDatasource</para>
@@ -562,7 +564,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string FailExample { get; set; }
 
                     /// <summary>
-                    /// <para>The HTTP method of the registered API.</para>
+                    /// <para>The request method of the registered API.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -572,7 +574,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public long? HttpMethod { get; set; }
 
                     /// <summary>
-                    /// <para>The model type.</para>
+                    /// <para>The mode.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -592,7 +594,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Path { get; set; }
 
                     /// <summary>
-                    /// <para>The API datasource request protocol.</para>
+                    /// <para>The API data source request protocol.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>HTTPS</para>
@@ -622,7 +624,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public long? Timeout { get; set; }
 
                     /// <summary>
-                    /// <para>The API datasource URL.</para>
+                    /// <para>The URL of the API data source.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="https://example.com/register_api">https://example.com/register_api</a></para>
@@ -673,7 +675,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string DateFormat { get; set; }
 
                     /// <summary>
-                    /// <para>The default value for registered APIs.</para>
+                    /// <para>The default value for the registered API.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>default_value</para>
@@ -686,7 +688,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <para>The parameter description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>这是一个示例参数</para>
+                    /// <para>This is a sample parameter</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -793,7 +795,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string ParamType { get; set; }
 
                     /// <summary>
-                    /// <para>The request parameter location for registered APIs or the value path for response parameters.</para>
+                    /// <para>The request parameter location or response parameter value path for the registered API.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>/path/to/param</para>
@@ -905,7 +907,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string DateFormat { get; set; }
 
                     /// <summary>
-                    /// <para>The default value for registered APIs.</para>
+                    /// <para>The default value for the registered API.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>default_response_value</para>
@@ -918,7 +920,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <para>The parameter description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>这是一个示例响应参数</para>
+                    /// <para>This is a sample response parameter</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -1025,7 +1027,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string ParamType { get; set; }
 
                     /// <summary>
-                    /// <para>The request parameter location for registered APIs or the value path for response parameters.</para>
+                    /// <para>The request parameter location or response parameter value path for the registered API.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>/path/to/response_param</para>
@@ -1108,7 +1110,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The sample call result.</para>
+                /// <para>The call result sample.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;status&quot;:&quot;success&quot;,&quot;data&quot;:[]}</para>
@@ -1188,7 +1190,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string TableName { get; set; }
 
                 /// <summary>
-                /// <para>The timeout duration, in seconds.</para>
+                /// <para>The timeout duration in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -1211,7 +1213,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The update frequency name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>每日更新</para>
+                /// <para>Daily update</para>
                 /// </summary>
                 [NameInMap("UpdateRateName")]
                 [Validation(Required=false)]
@@ -1230,7 +1232,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The total number of records.</para>
+            /// <para>The total count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -1242,7 +1244,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>The details of the backend exception.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -1262,7 +1264,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

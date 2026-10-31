@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public CreateComputeSourceRequestCreateCommand CreateCommand { get; set; }
         public class CreateComputeSourceRequestCreateCommand : TeaModel {
             /// <summary>
-            /// <para>The ID of the associated cluster. This parameter takes effect only when CreateType is not specified or is set to COMPUTE_SOURCE, which creates a compute source that references a cluster. This parameter is mutually exclusive with CreateType=CLUSTER.</para>
+            /// <para>The ID of the associated cluster. This parameter takes effect only when CreateType is left empty or set to COMPUTE_SOURCE, which indicates that a compute source referencing a cluster is created. This parameter is mutually exclusive with CreateType set to CLUSTER.</para>
             /// 
             /// <b>Example:</b>
             /// <para>102311</para>
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The type of entity to create. Valid values:</para>
+            /// <para>The type of the entity to create. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CLUSTER: Creates a cluster. ClusterId cannot be specified.</description></item>
-            /// <item><description>COMPUTE_SOURCE: Creates a compute source. This is the default value.</description></item>
+            /// <item><description>CLUSTER: creates a cluster. You cannot specify ClusterId.</description></item>
+            /// <item><description>COMPUTE_SOURCE: creates a compute source. This is the default value.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,6 +93,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
+            /// <summary>
+            /// <para>The name of the time zone, such as Asia/Shanghai. If this parameter is not specified during an update, the original value is retained.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Asia/Shanghai</para>
+            /// </summary>
+            [NameInMap("TimeZone")]
+            [Validation(Required=false)]
+            public string TimeZone { get; set; }
 
             /// <summary>
             /// <para>The type of the compute source.</para>
@@ -129,7 +139,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the operator.</para>
+        /// <para>The ID of the operating user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001011</para>

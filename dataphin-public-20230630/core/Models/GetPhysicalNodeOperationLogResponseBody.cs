@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetPhysicalNodeOperationLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The error code. OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Context { get; set; }
 
             /// <summary>
-            /// <para>The operation time.</para>
+            /// <para>The operation time. The format is YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-05-30 16:47:13</para>
@@ -69,14 +69,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The operation type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>TASK_UPDATE_PRIORITY: updates the node priority.</description></item>
-            /// <item><description>PAUSE_TASK: pauses scheduling.</description></item>
-            /// <item><description>RESUME_TASK: resumes scheduling.</description></item>
-            /// <item><description>CREATE_NODE: creates a node.</description></item>
-            /// <item><description>FORCE_DELETE_NODE: force deletes a node.</description></item>
-            /// <item><description>UPDATE_NODE: updates a node.</description></item>
-            /// <item><description>DELETE_NODE: deletes a node.</description></item>
-            /// <item><description>CHANGE_NODE_OWNER: changes the node owner.</description></item>
+            /// <item><description>TASK_UPDATE_PRIORITY: modifies the node priority</description></item>
+            /// <item><description>PAUSE_TASK: pauses scheduling</description></item>
+            /// <item><description>RESUME_TASK: resumes scheduling</description></item>
+            /// <item><description>CREATE_NODE: creates a node</description></item>
+            /// <item><description>FORCE_DELETE_NODE: force deletes a node</description></item>
+            /// <item><description>UPDATE_NODE: updates a node</description></item>
+            /// <item><description>DELETE_NODE: deletes a node</description></item>
+            /// <item><description>CHANGE_NODE_OWNER: changes the node owner</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string OperationType { get; set; }
 
             /// <summary>
-            /// <para>The operator ID.</para>
+            /// <para>The ID of the operator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>132222</para>
@@ -97,10 +97,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Operator { get; set; }
 
             /// <summary>
-            /// <para>The operator name.</para>
+            /// <para>The name of the operator.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx测试</para>
+            /// <para>xxTest</para>
             /// </summary>
             [NameInMap("OperatorName")]
             [Validation(Required=false)]
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The object ID, such as a table ID, datasource ID, or metric ID.</para>
+        /// <para>The ID of the object, such as the table ID, data source ID, or metric ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,10 +45,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         /// <para>The monitored object type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>TABLE: Dataphin table.</description></item>
-        /// <item><description>DATASOURCE_TABLE: global table.</description></item>
-        /// <item><description>DATASOURCE: datasource.</description></item>
-        /// <item><description>INDEX: metric.</description></item>
-        /// <item><description>REALTIME_LOGICAL_TABLE: real-time meta table.</description></item>
+        /// <item><description>DATASOURCE_TABLE: Global table.</description></item>
+        /// <item><description>DATASOURCE: Data source.</description></item>
+        /// <item><description>INDEX: Metric.</description></item>
+        /// <item><description>REALTIME_LOGICAL_TABLE: Real-time metatable.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

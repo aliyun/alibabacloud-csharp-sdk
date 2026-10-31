@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -59,7 +61,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Env { get; set; }
 
             /// <summary>
-            /// <para>The list of user members.</para>
+            /// <para>The user members.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("UserList")]
@@ -67,8 +69,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<UpdateProjectMemberRequestUpdateCommandUserList> UserList { get; set; }
             public class UpdateProjectMemberRequestUpdateCommandUserList : TeaModel {
                 /// <summary>
-                /// <para>The member role. Valid values: 1: project administrator. 2: developer. 3: visitor. 4: analyst. 5: O&amp;M engineer.</para>
-                /// <para>This parameter is required.</para>
+                /// <para>The list of role codes for the member. Supports system and custom project roles obtained from ListProjectRoles. Only one role is supported. If this list is not empty, it takes precedence over RoleList. You must specify at least one of RoleList and RoleCodeList.</para>
+                /// </summary>
+                [NameInMap("RoleCodeList")]
+                [Validation(Required=false)]
+                public List<string> RoleCodeList { get; set; }
+
+                /// <summary>
+                /// <para>The member role. Valid values: 1: project administrator. 2: developer. 3: guest. 4: analyst. 5: O&amp;M engineer.</para>
                 /// </summary>
                 [NameInMap("RoleList")]
                 [Validation(Required=false)]

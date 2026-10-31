@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The operator user ID.</para>
+        /// <para>The operator ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The version number.</para>
+        /// <para>The version ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

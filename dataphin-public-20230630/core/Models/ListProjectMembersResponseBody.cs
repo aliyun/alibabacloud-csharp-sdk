@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListProjectMembersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The request error code. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The request error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The last modified timestamp.</para>
+                /// <para>The update timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1721720955000</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user who last modified the record.</para>
+                /// <para>The ID of the editor.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>101111</para>
@@ -94,14 +94,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string LastModifier { get; set; }
 
                 /// <summary>
-                /// <para>The name of the user who last modified the record.</para>
+                /// <para>The name of the editor.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试用户</para>
+                /// <para>Test User</para>
                 /// </summary>
                 [NameInMap("LastModifierName")]
                 [Validation(Required=false)]
                 public string LastModifierName { get; set; }
+
+                /// <summary>
+                /// <para>The list of role codes bound to the member, including system and custom project roles. This list can be used to add or edit project members.</para>
+                /// </summary>
+                [NameInMap("RoleCodeList")]
+                [Validation(Required=false)]
+                public List<string> RoleCodeList { get; set; }
 
                 /// <summary>
                 /// <para>The roles.</para>
@@ -124,7 +131,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The username of the member.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试用户</para>
+                /// <para>Test User</para>
                 /// </summary>
                 [NameInMap("UserName")]
                 [Validation(Required=false)]
@@ -155,7 +162,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

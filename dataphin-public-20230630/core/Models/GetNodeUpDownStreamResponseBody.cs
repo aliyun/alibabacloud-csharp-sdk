@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetNodeUpDownStreamResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The error code. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The dag data of the node.</para>
+        /// <para>The dag information of the node.</para>
         /// </summary>
         [NameInMap("NodeDagInfo")]
         [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The node name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx测试</para>
+                /// <para>xx test</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -83,9 +83,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <summary>
                 /// <para>The node type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>DATA_PROCESS: code task.</description></item>
-                /// <item><description>BBOX_LOGIC_TABLE_NODE: logical table node.</description></item>
-                /// <item><description>PIPELINE_NODE: pipeline node.</description></item>
+                /// <item><description>DATA_PROCESS: Code task.</description></item>
+                /// <item><description>BBOX_LOGIC_TABLE_NODE: Logical table node.</description></item>
+                /// <item><description>PIPELINE_NODE: Pipeline node.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The center nodes.</para>
+            /// <para>The central nodes.</para>
             /// </summary>
             [NameInMap("StartNodeList")]
             [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The node name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx测试</para>
+                /// <para>xx test</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -134,9 +134,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <summary>
                 /// <para>The node type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>DATA_PROCESS: code task.</description></item>
-                /// <item><description>BBOX_LOGIC_TABLE_NODE: logical table node.</description></item>
-                /// <item><description>PIPELINE_NODE: pipeline node.</description></item>
+                /// <item><description>DATA_PROCESS: Code task.</description></item>
+                /// <item><description>BBOX_LOGIC_TABLE_NODE: Logical table node.</description></item>
+                /// <item><description>PIPELINE_NODE: Pipeline node.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The node name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx测试</para>
+                /// <para>xx test</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -185,9 +185,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <summary>
                 /// <para>The node type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>DATA_PROCESS: code task.</description></item>
-                /// <item><description>BBOX_LOGIC_TABLE_NODE: black box logical table node.</description></item>
-                /// <item><description>PIPELINE_NODE: pipeline node.</description></item>
+                /// <item><description>DATA_PROCESS: Code task.</description></item>
+                /// <item><description>BBOX_LOGIC_TABLE_NODE: Black box logical table node.</description></item>
+                /// <item><description>PIPELINE_NODE: Pipeline node.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -27,21 +27,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public DeleteSecurityClassifyCatalogResponseBodyData Data { get; set; }
         public class DeleteSecurityClassifyCatalogResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of full paths of child catalogs that were deleted as a result of the cascading deletion.</para>
+            /// <para>The list of full paths of the subdirectories that are cascade-deleted.</para>
             /// </summary>
             [NameInMap("ChildCatalogFullPathList")]
             [Validation(Required=false)]
             public List<string> ChildCatalogFullPathList { get; set; }
 
             /// <summary>
-            /// <para>The list of classification IDs that were deleted as a result of the cascading deletion.</para>
+            /// <para>The list of IDs of the classifications that are cascade-deleted.</para>
             /// </summary>
             [NameInMap("ClassifyIdList")]
             [Validation(Required=false)]
             public List<long?> ClassifyIdList { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the deletion was successful.</para>
+            /// <para>Indicates whether the deletion is successful.</para>
             /// </summary>
             [NameInMap("Success")]
             [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

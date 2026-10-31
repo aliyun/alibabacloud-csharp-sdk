@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ExecuteAdHocTaskRequestExecuteCommand ExecuteCommand { get; set; }
         public class ExecuteAdHocTaskRequestExecuteCommand : TeaModel {
             /// <summary>
-            /// <para>The node script.</para>
+            /// <para>The task script.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The catalog for a database SQL task. This parameter takes effect only for data source types that require a catalog, such as Presto.</para>
+            /// <para>The data source catalog for database SQL tasks. This parameter takes effect only for data source types that require a catalog, such as Presto.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mysql_catalog</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataSourceCatalog { get; set; }
 
             /// <summary>
-            /// <para>The data source ID for a database SQL task.</para>
+            /// <para>The data source ID for database SQL tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12131111</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? DataSourceId { get; set; }
 
             /// <summary>
-            /// <para>The schema for a database SQL task. This parameter takes effect only for data source types that require a schema, such as Oracle.</para>
+            /// <para>The data source schema for database SQL tasks. This parameter takes effect only for data source types that require a schema, such as Oracle.</para>
             /// 
             /// <b>Example:</b>
             /// <para>erp</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataSourceSchema { get; set; }
 
             /// <summary>
-            /// <para>The node type.</para>
+            /// <para>The task type.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -125,6 +125,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

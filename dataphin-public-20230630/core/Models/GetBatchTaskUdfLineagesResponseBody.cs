@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetBatchTaskUdfLineagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. The value OK indicates that the request was successful.</para>
+        /// <para>The error code. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The request result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public List<GetBatchTaskUdfLineagesResponseBodyDataLineageGroupListInputLineageList> InputLineageList { get; set; }
                 public class GetBatchTaskUdfLineagesResponseBodyDataLineageGroupListInputLineageList : TeaModel {
                     /// <summary>
-                    /// <para>The business unit ID.</para>
+                    /// <para>The ID of the business unit.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>103111231</para>
@@ -51,17 +51,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string BizUnitId { get; set; }
 
                     /// <summary>
-                    /// <para>The business unit name.</para>
+                    /// <para>The name of the business unit.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>xx测试</para>
+                    /// <para>xx test</para>
                     /// </summary>
                     [NameInMap("BizUnitName")]
                     [Validation(Required=false)]
                     public string BizUnitName { get; set; }
 
                     /// <summary>
-                    /// <para>The list of lineage columns.</para>
+                    /// <para>The list of lineage fields.</para>
                     /// </summary>
                     [NameInMap("ColumnList")]
                     [Validation(Required=false)]
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public string Description { get; set; }
 
                         /// <summary>
-                        /// <para>The column ID.</para>
+                        /// <para>The ID of the field.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>c011</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public string Id { get; set; }
 
                         /// <summary>
-                        /// <para>The column name.</para>
+                        /// <para>The name of the field.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>c011</para>
@@ -108,14 +108,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public string Name { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether the column is a partition key.</para>
+                        /// <para>Indicates whether the field is a partition key.</para>
                         /// </summary>
                         [NameInMap("PartitionKey")]
                         [Validation(Required=false)]
                         public bool? PartitionKey { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether the column is a primary key.</para>
+                        /// <para>Indicates whether the field is a primary key.</para>
                         /// </summary>
                         [NameInMap("PrimaryKey")]
                         [Validation(Required=false)]
@@ -154,14 +154,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Env { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the full table is selected.</para>
+                    /// <para>Indicates whether the entire table is selected.</para>
                     /// </summary>
                     [NameInMap("FullTable")]
                     [Validation(Required=false)]
                     public bool? FullTable { get; set; }
 
                     /// <summary>
-                    /// <para>The globally unique ID.</para>
+                    /// <para>The global ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Guid_101121</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Guid { get; set; }
 
                     /// <summary>
-                    /// <para>The table name.</para>
+                    /// <para>The name of the table.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>t_input</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <para>The owner of the table.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>张三</para>
+                    /// <para>Zhang San</para>
                     /// </summary>
                     [NameInMap("OwnerName")]
                     [Validation(Required=false)]
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string ProjectName { get; set; }
 
                     /// <summary>
-                    /// <para>The table subtype. For example, dim indicates a dimension logical table.</para>
+                    /// <para>The subtype of the table. For example, dim indicates a logical dimension table.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>dim</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public List<GetBatchTaskUdfLineagesResponseBodyDataLineageGroupListOutputLineageList> OutputLineageList { get; set; }
                 public class GetBatchTaskUdfLineagesResponseBodyDataLineageGroupListOutputLineageList : TeaModel {
                     /// <summary>
-                    /// <para>The business unit ID.</para>
+                    /// <para>The ID of the business unit.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>103111231</para>
@@ -250,17 +250,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string BizUnitId { get; set; }
 
                     /// <summary>
-                    /// <para>The business unit name.</para>
+                    /// <para>The name of the business unit.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>xx测试</para>
+                    /// <para>xx test</para>
                     /// </summary>
                     [NameInMap("BizUnitName")]
                     [Validation(Required=false)]
                     public string BizUnitName { get; set; }
 
                     /// <summary>
-                    /// <para>The list of lineage columns.</para>
+                    /// <para>The list of lineage fields.</para>
                     /// </summary>
                     [NameInMap("ColumnList")]
                     [Validation(Required=false)]
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public string Description { get; set; }
 
                         /// <summary>
-                        /// <para>The column ID.</para>
+                        /// <para>The ID of the field.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>c011</para>
@@ -297,7 +297,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public string Id { get; set; }
 
                         /// <summary>
-                        /// <para>The column name.</para>
+                        /// <para>The name of the field.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>c011</para>
@@ -307,14 +307,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public string Name { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether the column is a partition key.</para>
+                        /// <para>Indicates whether the field is a partition key.</para>
                         /// </summary>
                         [NameInMap("PartitionKey")]
                         [Validation(Required=false)]
                         public bool? PartitionKey { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether the column is a primary key.</para>
+                        /// <para>Indicates whether the field is a primary key.</para>
                         /// </summary>
                         [NameInMap("PrimaryKey")]
                         [Validation(Required=false)]
@@ -353,14 +353,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Env { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the full table is selected.</para>
+                    /// <para>Indicates whether the entire table is selected.</para>
                     /// </summary>
                     [NameInMap("FullTable")]
                     [Validation(Required=false)]
                     public bool? FullTable { get; set; }
 
                     /// <summary>
-                    /// <para>The globally unique ID.</para>
+                    /// <para>The global ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Guid_101121</para>
@@ -370,7 +370,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Guid { get; set; }
 
                     /// <summary>
-                    /// <para>The table name.</para>
+                    /// <para>The name of the table.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>t_input</para>
@@ -383,7 +383,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <para>The owner of the table.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>张三</para>
+                    /// <para>Zhang San</para>
                     /// </summary>
                     [NameInMap("OwnerName")]
                     [Validation(Required=false)]
@@ -420,7 +420,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string ProjectName { get; set; }
 
                     /// <summary>
-                    /// <para>The table subtype. For example, dim indicates a dimension logical table.</para>
+                    /// <para>The subtype of the table. For example, dim indicates a logical dimension table.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>dim</para>
@@ -436,7 +436,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The HTTP status code returned by the backend.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -466,7 +466,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

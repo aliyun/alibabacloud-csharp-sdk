@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The operator user ID.</para>
+        /// <para>The ID of the operator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The edit command.</para>
+        /// <para>The update command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UpdateCommand")]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateComputeSourceRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateComputeSourceRequestUpdateCommand : TeaModel {
             /// <summary>
-            /// <para>The associated cluster ID. This parameter takes effect only when CreateType is left empty or set to COMPUTE_SOURCE (to create a compute source that references a cluster). This parameter is mutually exclusive with CreateType=CLUSTER.</para>
+            /// <para>The ID of the associated cluster. This parameter takes effect only when CreateType is left empty or set to COMPUTE_SOURCE, which means creating a compute source that references a cluster. This parameter is mutually exclusive with CreateType=CLUSTER.</para>
             /// 
             /// <b>Example:</b>
             /// <para>102311</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The connection configuration items.</para>
+            /// <para>The connection configurations.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("ConfigList")]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The configuration item value.</para>
+                /// <para>The value of the configuration item.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -81,10 +81,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The creation entity type. Valid values:</para>
+            /// <para>The type of the entity to create. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CLUSTER: Creates the entity as a cluster. ClusterId cannot be specified.</description></item>
-            /// <item><description>COMPUTE_SOURCE: Creates the entity as a compute source. This is the default value.</description></item>
+            /// <item><description>CLUSTER: creates a cluster. You cannot specify ClusterId.</description></item>
+            /// <item><description>COMPUTE_SOURCE: creates a compute source. This is the default value.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The compute source ID.</para>
+            /// <para>The ID of the compute source.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The compute source name.</para>
+            /// <para>The name of the compute source.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -128,7 +128,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The compute source type.</para>
+            /// <para>The name of the time zone, such as Asia/Shanghai. If you do not specify this parameter when you update the compute source, the original value is retained.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Asia/Shanghai</para>
+            /// </summary>
+            [NameInMap("TimeZone")]
+            [Validation(Required=false)]
+            public string TimeZone { get; set; }
+
+            /// <summary>
+            /// <para>The type of the compute source.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -139,7 +149,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The compute source type version.</para>
+            /// <para>The version of the compute source type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CDH6</para>

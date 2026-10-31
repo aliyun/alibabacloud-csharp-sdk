@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetStandardTemplateShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The filter condition.</para>
+        /// <para>The filter conditions.</para>
         /// </summary>
         [NameInMap("FilterQuery")]
         [Validation(Required=false)]
         public string FilterQueryShrink { get; set; }
 
         /// <summary>
-        /// <para>The standard template ID.</para>
+        /// <para>The ID of the standard template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allow a null value to be returned when the template does not exist. If set to false, an exception is thrown. Default value: true.</para>
+        /// <para>Specifies whether to allow a null value to be returned when the template does not exist. If this parameter is set to false, an exception is thrown. Default value: true.</para>
         /// </summary>
         [NameInMap("Nullable")]
         [Validation(Required=false)]
@@ -46,6 +46,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

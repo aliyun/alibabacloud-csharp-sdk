@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CheckDataSourceConnectivityRequest : TeaModel {
         /// <summary>
-        /// <para>The object to check.</para>
+        /// <para>The check target.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CheckCommand")]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The data source type. For supported data source types, see the documentation for creating a data source.</para>
+            /// <para>The datasource type. For supported datasources, see Create a datasource.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -74,6 +74,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

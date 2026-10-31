@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetAdHocTaskResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The error code. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetAdHocTaskResultResponseBodyExecuteResult ExecuteResult { get; set; }
         public class GetAdHocTaskResultResponseBodyExecuteResult : TeaModel {
             /// <summary>
-            /// <para>The task execution result.</para>
+            /// <para>The execution result of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Result { get; set; }
 
             /// <summary>
-            /// <para>The ID of the corresponding scheduling task.</para>
+            /// <para>The ID of the corresponding scheduled task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t_2242892326444990464_20210125_2242892326444990465</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

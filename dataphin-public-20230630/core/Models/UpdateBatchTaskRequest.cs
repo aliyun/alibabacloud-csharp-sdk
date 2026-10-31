@@ -203,6 +203,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
+            /// <para>不传时保留任务当前配置。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.5</para>
+            /// </summary>
+            [NameInMap("CpuResource")]
+            [Validation(Required=false)]
+            public string CpuResource { get; set; }
+
+            /// <summary>
             /// <para>The cron expression for automatic scheduling. You can refer to Linux cron expressions.</para>
             /// 
             /// <b>Example:</b>
@@ -361,6 +371,74 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Engine { get; set; }
 
             /// <summary>
+            /// <para>失败重试配置。不传时保留任务当前配置。传入时整体替换该配置对象。</para>
+            /// </summary>
+            [NameInMap("ExecuteRerunConfig")]
+            [Validation(Required=false)]
+            public UpdateBatchTaskRequestUpdateCommandExecuteRerunConfig ExecuteRerunConfig { get; set; }
+            public class UpdateBatchTaskRequestUpdateCommandExecuteRerunConfig : TeaModel {
+                /// <summary>
+                /// <para>自定义失败重试间隔。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>60</para>
+                /// </summary>
+                [NameInMap("CustomRerunInterval")]
+                [Validation(Required=false)]
+                public string CustomRerunInterval { get; set; }
+
+                /// <summary>
+                /// <para>自定义失败重试次数。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
+                /// </summary>
+                [NameInMap("CustomRerunTimes")]
+                [Validation(Required=false)]
+                public string CustomRerunTimes { get; set; }
+
+                /// <summary>
+                /// <para>是否跟随系统配置。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
+                [NameInMap("FollowSystem")]
+                [Validation(Required=false)]
+                public bool? FollowSystem { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>执行超时配置。不传时保留任务当前配置。传入时整体替换该配置对象。</para>
+            /// </summary>
+            [NameInMap("ExecuteTimeOutConfig")]
+            [Validation(Required=false)]
+            public UpdateBatchTaskRequestUpdateCommandExecuteTimeOutConfig ExecuteTimeOutConfig { get; set; }
+            public class UpdateBatchTaskRequestUpdateCommandExecuteTimeOutConfig : TeaModel {
+                /// <summary>
+                /// <para>自定义超时时间。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1800</para>
+                /// </summary>
+                [NameInMap("CustomValues")]
+                [Validation(Required=false)]
+                public string CustomValues { get; set; }
+
+                /// <summary>
+                /// <para>是否跟随系统配置。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
+                [NameInMap("FollowSystem")]
+                [Validation(Required=false)]
+                public bool? FollowSystem { get; set; }
+
+            }
+
+            /// <summary>
             /// <para>The ID of the task directory tree node.</para>
             /// <para>This parameter is required.</para>
             /// 
@@ -370,6 +448,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [NameInMap("FileId")]
             [Validation(Required=false)]
             public long? FileId { get; set; }
+
+            /// <summary>
+            /// <para>不传时保留任务当前配置。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1024</para>
+            /// </summary>
+            [NameInMap("MemoryResource")]
+            [Validation(Required=false)]
+            public string MemoryResource { get; set; }
 
             /// <summary>
             /// <para>The name of the offline task.</para>
@@ -500,6 +588,20 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            [NameInMap("ResourceReferenceList")]
+            [Validation(Required=false)]
+            public List<string> ResourceReferenceList { get; set; }
+
+            /// <summary>
+            /// <para>超时重试开关。不传时保留任务当前配置。显式传入false时关闭。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
+            [NameInMap("RetryOnTimeoutEnable")]
+            [Validation(Required=false)]
+            public bool? RetryOnTimeoutEnable { get; set; }
+
             /// <summary>
             /// <para>The scheduling cycle. Valid values:</para>
             /// <list type="bullet">
@@ -537,6 +639,36 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string SparkClientVersion { get; set; }
 
             }
+
+            /// <summary>
+            /// <para>不传时保留任务当前配置。显式传入false时关闭。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
+            [NameInMap("SparkDynamicResourceSwitch")]
+            [Validation(Required=false)]
+            public bool? SparkDynamicResourceSwitch { get; set; }
+
+            /// <summary>
+            /// <para>ONLY_PROD表示仅生产环境，PROD_AND_DEV表示生产和开发环境。不传时保留任务当前配置。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ONLY_PROD</para>
+            /// </summary>
+            [NameInMap("SparkResourceEffectScope")]
+            [Validation(Required=false)]
+            public string SparkResourceEffectScope { get; set; }
+
+            /// <summary>
+            /// <para>Spark SQL资源配置，键为配置项名称，值为字符串。不传时保留任务当前配置；传入空JSON对象{}时清空配置。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;spark.executor.memory&quot;:&quot;2g&quot;}</para>
+            /// </summary>
+            [NameInMap("SparkSqlResourceConfigMap")]
+            [Validation(Required=false)]
+            public string SparkSqlResourceConfigMap { get; set; }
 
             /// <summary>
             /// <para>The list of node tags. This parameter overwrites all existing tags. If you do not specify this parameter, the original tags remain unchanged.</para>

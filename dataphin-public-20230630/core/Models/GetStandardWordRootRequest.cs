@@ -14,14 +14,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>平均值</para>
+        /// <para>Average</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allow a null value to be returned when the word root does not exist. If set to false, an exception is thrown. Default value: true.</para>
+        /// <para>Specifies whether to allow a null value to be returned when the word root does not exist. If this parameter is set to false, an exception is thrown. Default value: true.</para>
         /// </summary>
         [NameInMap("Nullable")]
         [Validation(Required=false)]
@@ -39,6 +39,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

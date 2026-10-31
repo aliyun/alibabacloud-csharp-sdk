@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListUserGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The error code. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The paged query result.</para>
+        /// <para>The paging query result.</para>
         /// </summary>
         [NameInMap("PageResult")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? TotalCount { get; set; }
 
             /// <summary>
-            /// <para>The paged list.</para>
+            /// <para>The paginated list.</para>
             /// </summary>
             [NameInMap("UserGroupList")]
             [Validation(Required=false)]
@@ -91,17 +91,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string AccountName { get; set; }
 
                     /// <summary>
-                    /// <para>The username.</para>
+                    /// <para>The display name of the user.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>张三</para>
+                    /// <para>Zhang San</para>
                     /// </summary>
                     [NameInMap("DisplayName")]
                     [Validation(Required=false)]
                     public string DisplayName { get; set; }
 
                     /// <summary>
-                    /// <para>The user ID.</para>
+                    /// <para>The ID of the user.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>32313131</para>
@@ -116,14 +116,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The description of the user group.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx 测试</para>
+                /// <para>xx test</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The user group ID.</para>
+                /// <para>The ID of the user group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>31313232</para>
@@ -143,10 +143,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string MyRole { get; set; }
 
                 /// <summary>
-                /// <para>The user group name.</para>
+                /// <para>The name of the user group.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx测试</para>
+                /// <para>xx test</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

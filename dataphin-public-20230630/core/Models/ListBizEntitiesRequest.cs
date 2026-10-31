@@ -25,28 +25,28 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public ListBizEntitiesRequestListQueryFilterCriteria FilterCriteria { get; set; }
             public class ListBizEntitiesRequestListQueryFilterCriteria : TeaModel {
                 /// <summary>
-                /// <para>The list of business unit IDs.</para>
+                /// <para>The IDs of the business units.</para>
                 /// </summary>
                 [NameInMap("BizUnitIdList")]
                 [Validation(Required=false)]
                 public List<long?> BizUnitIdList { get; set; }
 
                 /// <summary>
-                /// <para>The list of business unit IDs.</para>
+                /// <para>The IDs of the business units.</para>
                 /// </summary>
                 [NameInMap("BizUnitNameList")]
                 [Validation(Required=false)]
                 public List<string> BizUnitNameList { get; set; }
 
                 /// <summary>
-                /// <para>The list of data domain IDs.</para>
+                /// <para>The IDs of the data domains.</para>
                 /// </summary>
                 [NameInMap("DataDomainIdList")]
                 [Validation(Required=false)]
                 public List<long?> DataDomainIdList { get; set; }
 
                 /// <summary>
-                /// <para>The list of data domain IDs.</para>
+                /// <para>The IDs of the data domains.</para>
                 /// </summary>
                 [NameInMap("DataDomainNameList")]
                 [Validation(Required=false)]
@@ -60,21 +60,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public bool? HasTableRef { get; set; }
 
                 /// <summary>
-                /// <para>The list of owner user IDs.</para>
+                /// <para>The IDs of the owners.</para>
                 /// </summary>
                 [NameInMap("OwnerUserIdList")]
                 [Validation(Required=false)]
                 public List<string> OwnerUserIdList { get; set; }
 
                 /// <summary>
-                /// <para>The list of business entity statuses. For more information, refer to the API operation for querying business entity details.</para>
+                /// <para>The status of the business entity. For more information, refer to the &quot;Get business entity details&quot; API operation.</para>
                 /// </summary>
                 [NameInMap("StatusList")]
                 [Validation(Required=false)]
                 public List<string> StatusList { get; set; }
 
                 /// <summary>
-                /// <para>The list of business entity subtypes. For more information, refer to the API operation for querying business entity details.</para>
+                /// <para>The subtypes of the business entity. For more information, refer to the &quot;Get business entity details&quot; API operation.</para>
                 /// </summary>
                 [NameInMap("SubTypeList")]
                 [Validation(Required=false)]
@@ -126,6 +126,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

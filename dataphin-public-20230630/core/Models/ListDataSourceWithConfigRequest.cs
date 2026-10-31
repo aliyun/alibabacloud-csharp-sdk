@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListDataSourceWithConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Paginated query</para>
+        /// <para>The paged query parameters.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ListQuery")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListDataSourceWithConfigRequestListQuery ListQuery { get; set; }
         public class ListDataSourceWithConfigRequestListQuery : TeaModel {
             /// <summary>
-            /// <para>Data source name</para>
+            /// <para>The name of the data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vcns-test</para>
@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Data source owner</para>
+            /// <para>The owners of the data sources.</para>
             /// </summary>
             [NameInMap("OwnerList")]
             [Validation(Required=false)]
             public List<string> OwnerList { get; set; }
 
             /// <summary>
-            /// <para>Page number. The value starts from 1.</para>
+            /// <para>The page number. The starting page is 1.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? Page { get; set; }
 
             /// <summary>
-            /// <para>Number of records per page</para>
+            /// <para>The number of records per page.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -57,15 +57,15 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Data source scope. Valid values:</para>
+            /// <para>The usage scopes of the data sources. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>STREAMING: Real-time</description></item>
-            /// <item><description>OFFLINE: Offline</description></item>
-            /// <item><description>DIP_META_SYNC: Meta warehouse initialization</description></item>
-            /// <item><description>DATA_DISTILL: Data distillation</description></item>
-            /// <item><description>CUMPUTE_SOURCE_SHADOW: Shadow compute source</description></item>
-            /// <item><description>LABEL: Label</description></item>
-            /// <item><description>ALL: Offline + Real-time</description></item>
+            /// <item><description>STREAMING: Real-time.</description></item>
+            /// <item><description>OFFLINE: Offline.</description></item>
+            /// <item><description>DIP_META_SYNC: Metadata warehouse initialization.</description></item>
+            /// <item><description>DATA_DISTILL: Data distillation.</description></item>
+            /// <item><description>CUMPUTE_SOURCE_SHADOW: Shadow compute source.</description></item>
+            /// <item><description>LABEL: Label.</description></item>
+            /// <item><description>ALL: Offline and real-time.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("ScopeList")]
@@ -73,17 +73,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> ScopeList { get; set; }
 
             /// <summary>
-            /// <para>Tag marked when creating the data source</para>
+            /// <para>The tag specified during data source creation.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx测试</para>
+            /// <para>xx test</para>
             /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public string Tag { get; set; }
 
             /// <summary>
-            /// <para>Data source type</para>
+            /// <para>The data source types.</para>
             /// </summary>
             [NameInMap("TypeList")]
             [Validation(Required=false)]
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>Tenant ID</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -103,6 +103,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>

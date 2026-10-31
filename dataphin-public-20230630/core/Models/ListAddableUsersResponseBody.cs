@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListAddableUsersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. A value of OK indicates that the request was successful.</para>
+        /// <para>The error code. A value of OK indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The paging query result.</para>
+        /// <para>The paged query result.</para>
         /// </summary>
         [NameInMap("PageResult")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? TotalCount { get; set; }
 
             /// <summary>
-            /// <para>The list of users.</para>
+            /// <para>The user list.</para>
             /// </summary>
             [NameInMap("UserList")]
             [Validation(Required=false)]
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string EnableWhiteIp { get; set; }
 
                 /// <summary>
-                /// <para>The Lark chatbot.</para>
+                /// <para>The Lark bot.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xx</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The time when the user was last modified.</para>
+                /// <para>The time when the user was modified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1717343597000</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string RealName { get; set; }
 
                 /// <summary>
-                /// <para>The source ID of the user.</para>
+                /// <para>The ID of the user source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="mailto:123@xx.com">123@xx.com</a></para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string SourceId { get; set; }
 
                 /// <summary>
-                /// <para>The source type of the user.</para>
+                /// <para>The source of the user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aliyun</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The WeCom chatbot.</para>
+                /// <para>The WeCom bot.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xx</para>
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string WeChatRobot { get; set; }
 
                 /// <summary>
-                /// <para>The IP whitelist.</para>
+                /// <para>The IP address whitelist.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <list type="bullet">
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

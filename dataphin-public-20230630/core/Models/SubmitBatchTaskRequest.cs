@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001011</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string OpUserId { get; set; }
 
         /// <summary>
-        /// <para>The submit request.</para>
+        /// <para>The edit request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SubmitCommand")]
@@ -37,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public SubmitBatchTaskRequestSubmitCommand SubmitCommand { get; set; }
         public class SubmitBatchTaskRequestSubmitCommand : TeaModel {
             /// <summary>
-            /// <para>The code of the node.</para>
+            /// <para>The code of the task.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -48,6 +50,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Code { get; set; }
 
             /// <summary>
+            /// <para>The version number of the code template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -67,7 +71,125 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The cron expression for automatic scheduling. Refer to the Linux cron expression syntax.</para>
+            /// <para>条件调度；不传保留，Enable=false关闭并清除原条件，仅周期任务支持</para>
+            /// </summary>
+            [NameInMap("ConditionScheduleConfig")]
+            [Validation(Required=false)]
+            public SubmitBatchTaskRequestSubmitCommandConditionScheduleConfig ConditionScheduleConfig { get; set; }
+            public class SubmitBatchTaskRequestSubmitCommandConditionScheduleConfig : TeaModel {
+                /// <summary>
+                /// <para>是否启用条件调度。传入ConditionScheduleConfig对象时必须提供，由后端校验；false关闭并清除旧配置。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("Enable")]
+                [Validation(Required=false)]
+                public bool? Enable { get; set; }
+
+                /// <summary>
+                /// <para>自定义条件列表；与TemplateId互斥，空列表清除旧条件</para>
+                /// </summary>
+                [NameInMap("ParamList")]
+                [Validation(Required=false)]
+                public List<SubmitBatchTaskRequestSubmitCommandConditionScheduleConfigParamList> ParamList { get; set; }
+                public class SubmitBatchTaskRequestSubmitCommandConditionScheduleConfigParamList : TeaModel {
+                    /// <summary>
+                    /// <para>条件名称</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>workday</para>
+                    /// </summary>
+                    [NameInMap("ConditionName")]
+                    [Validation(Required=false)]
+                    public string ConditionName { get; set; }
+
+                    /// <summary>
+                    /// <para>命中后的cron表达式</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0 0 5 * * ?</para>
+                    /// </summary>
+                    [NameInMap("CronExpression")]
+                    [Validation(Required=false)]
+                    public string CronExpression { get; set; }
+
+                    /// <summary>
+                    /// <para>是否启用该条件</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
+                    [NameInMap("Enable")]
+                    [Validation(Required=false)]
+                    public bool? Enable { get; set; }
+
+                    /// <summary>
+                    /// <para>是否跟随主调度参数</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
+                    [NameInMap("FollowScheduleParam")]
+                    [Validation(Required=false)]
+                    public bool? FollowScheduleParam { get; set; }
+
+                    /// <summary>
+                    /// <para>命中后的调度状态：1正常，2暂停，3空跑</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
+                    /// </summary>
+                    [NameInMap("NodeStatus")]
+                    [Validation(Required=false)]
+                    public int? NodeStatus { get; set; }
+
+                    /// <summary>
+                    /// <para>条件表达式树JSON字符串，内部键名使用小驼峰</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>{}</para>
+                    /// </summary>
+                    [NameInMap("ScheduleConditionJson")]
+                    [Validation(Required=false)]
+                    public string ScheduleConditionJson { get; set; }
+
+                    /// <summary>
+                    /// <para>命中后的调度时间</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>05:00</para>
+                    /// </summary>
+                    [NameInMap("ScheduleTime")]
+                    [Validation(Required=false)]
+                    public string ScheduleTime { get; set; }
+
+                }
+
+                /// <summary>
+                /// <para>条件调度模板ID，与ParamList互斥</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1002</para>
+                /// </summary>
+                [NameInMap("TemplateId")]
+                [Validation(Required=false)]
+                public long? TemplateId { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>不传时保留任务当前配置。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0.5</para>
+            /// </summary>
+            [NameInMap("CpuResource")]
+            [Validation(Required=false)]
+            public string CpuResource { get; set; }
+
+            /// <summary>
+            /// <para>The cron expression for automatic scheduling. You can refer to Linux cron expressions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0 0 1 * * ?</para>
@@ -84,7 +206,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public SubmitBatchTaskRequestSubmitCommandCustomScheduleConfig CustomScheduleConfig { get; set; }
             public class SubmitBatchTaskRequestSubmitCommandCustomScheduleConfig : TeaModel {
                 /// <summary>
-                /// <para>The end time in the format of HH:mm.</para>
+                /// <para>The end time in the HH:mm format.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -108,8 +230,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <summary>
                 /// <para>The interval unit. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>MINUTE: minute</description></item>
-                /// <item><description>HOUR: hour</description></item>
+                /// <item><description>MINUTE: Minute.</description></item>
+                /// <item><description>HOUR: Hour.</description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -123,12 +245,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <summary>
                 /// <para>The schedule period. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>YEARLY</description></item>
-                /// <item><description>MONTHLY</description></item>
-                /// <item><description>WEEKLY</description></item>
-                /// <item><description>DAILY</description></item>
-                /// <item><description>HOURLY</description></item>
-                /// <item><description>MINUTELY</description></item>
+                /// <item><description>YEARLY: Yearly.</description></item>
+                /// <item><description>MONTHLY: Monthly.</description></item>
+                /// <item><description>WEEKLY: Weekly.</description></item>
+                /// <item><description>DAILY: Daily.</description></item>
+                /// <item><description>HOURLY: Hourly.</description></item>
+                /// <item><description>MINUTELY: Minutely.</description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -140,7 +262,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string SchedulePeriod { get; set; }
 
                 /// <summary>
-                /// <para>The start time in the format of HH:mm.</para>
+                /// <para>The start time in the HH:mm format.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -153,7 +275,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The execution engine for the node, such as for Python tasks. Valid values:</para>
+            /// <para>The execution engine of the task. Valid values for Python tasks:</para>
             /// <list type="bullet">
             /// <item><description>PYTHON2_7</description></item>
             /// <item><description>PYTHON3_7</description></item>
@@ -168,7 +290,75 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>The node ID in the directory tree.</para>
+            /// <para>失败重试配置。不传时保留任务当前配置。传入时整体替换该配置对象。</para>
+            /// </summary>
+            [NameInMap("ExecuteRerunConfig")]
+            [Validation(Required=false)]
+            public SubmitBatchTaskRequestSubmitCommandExecuteRerunConfig ExecuteRerunConfig { get; set; }
+            public class SubmitBatchTaskRequestSubmitCommandExecuteRerunConfig : TeaModel {
+                /// <summary>
+                /// <para>自定义失败重试间隔。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>60</para>
+                /// </summary>
+                [NameInMap("CustomRerunInterval")]
+                [Validation(Required=false)]
+                public string CustomRerunInterval { get; set; }
+
+                /// <summary>
+                /// <para>自定义失败重试次数。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
+                /// </summary>
+                [NameInMap("CustomRerunTimes")]
+                [Validation(Required=false)]
+                public string CustomRerunTimes { get; set; }
+
+                /// <summary>
+                /// <para>是否跟随系统配置。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
+                [NameInMap("FollowSystem")]
+                [Validation(Required=false)]
+                public bool? FollowSystem { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>执行超时配置。不传时保留任务当前配置。传入时整体替换该配置对象。</para>
+            /// </summary>
+            [NameInMap("ExecuteTimeOutConfig")]
+            [Validation(Required=false)]
+            public SubmitBatchTaskRequestSubmitCommandExecuteTimeOutConfig ExecuteTimeOutConfig { get; set; }
+            public class SubmitBatchTaskRequestSubmitCommandExecuteTimeOutConfig : TeaModel {
+                /// <summary>
+                /// <para>自定义超时时间。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1800</para>
+                /// </summary>
+                [NameInMap("CustomValues")]
+                [Validation(Required=false)]
+                public string CustomValues { get; set; }
+
+                /// <summary>
+                /// <para>是否跟随系统配置。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
+                [NameInMap("FollowSystem")]
+                [Validation(Required=false)]
+                public bool? FollowSystem { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The ID of the node in the task directory tree.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -179,7 +369,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? FileId { get; set; }
 
             /// <summary>
-            /// <para>The name of the batch task.</para>
+            /// <para>不传时保留任务当前配置。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1024</para>
+            /// </summary>
+            [NameInMap("MemoryResource")]
+            [Validation(Required=false)]
+            public string MemoryResource { get; set; }
+
+            /// <summary>
+            /// <para>The name of the offline task.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -190,10 +390,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The description of the node.</para>
+            /// <para>The description of the task.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx测试</para>
+            /// <para>xx test</para>
             /// </summary>
             [NameInMap("NodeDescription")]
             [Validation(Required=false)]
@@ -207,7 +407,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> NodeOutputNameList { get; set; }
 
             /// <summary>
-            /// <para>The node status. Valid values:</para>
+            /// <para>The status of the node. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>1: Normal.</description></item>
             /// <item><description>2: Paused.</description></item>
@@ -222,6 +422,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? NodeStatus { get; set; }
 
             /// <summary>
+            /// <para>The ID of the offline code template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>template_123456</para>
             /// </summary>
@@ -229,23 +431,33 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public string OfflineCodeTemplateId { get; set; }
 
+            /// <summary>
+            /// <para>The list of parameters for the offline code template.</para>
+            /// </summary>
             [NameInMap("OfflineCodeTemplateParams")]
             [Validation(Required=false)]
             public List<SubmitBatchTaskRequestSubmitCommandOfflineCodeTemplateParams> OfflineCodeTemplateParams { get; set; }
             public class SubmitBatchTaskRequestSubmitCommandOfflineCodeTemplateParams : TeaModel {
                 /// <summary>
+                /// <para>The description of the parameter.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>参数说明</para>
+                /// <para>Parameter description</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// <para>Specifies whether encryption is enabled.</para>
+                /// </summary>
                 [NameInMap("EncryptEnabled")]
                 [Validation(Required=false)]
                 public bool? EncryptEnabled { get; set; }
 
                 /// <summary>
+                /// <para>The key of the parameter.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>paramKey</para>
                 /// </summary>
@@ -254,6 +466,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>The value of the parameter.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>paramValue</para>
                 /// </summary>
@@ -271,7 +485,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<SubmitBatchTaskRequestSubmitCommandParamList> ParamList { get; set; }
             public class SubmitBatchTaskRequestSubmitCommandParamList : TeaModel {
                 /// <summary>
-                /// <para>The parameter name.</para>
+                /// <para>The name of the parameter.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -282,7 +496,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The parameter value.</para>
+                /// <para>The value of the parameter.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -295,7 +509,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The scheduling priority of the node. Valid values: 1 to 9. A larger value indicates a lower priority.</para>
+            /// <para>The scheduling priority of the task. Valid values: 1 to 9. A larger value indicates a lower priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -305,7 +519,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The ID of the project to which the node belongs.</para>
+            /// <para>The ID of the project to which the task belongs.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -316,21 +530,38 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The Python third-party packages that the node depends on.</para>
+            /// <para>The Python third-party packages required by the task.</para>
             /// </summary>
             [NameInMap("PythonModuleList")]
             [Validation(Required=false)]
             public List<string> PythonModuleList { get; set; }
 
             /// <summary>
+            /// <para>资源引用列表，元素为资源名称。不传时使用原有任务的资源引用；传入列表时整体替换，空列表表示清空引用。</para>
+            /// </summary>
+            [NameInMap("ResourceReferenceList")]
+            [Validation(Required=false)]
+            public List<string> ResourceReferenceList { get; set; }
+
+            /// <summary>
+            /// <para>超时重试开关。不传时保留任务当前配置。显式传入false时关闭。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
+            [NameInMap("RetryOnTimeoutEnable")]
+            [Validation(Required=false)]
+            public bool? RetryOnTimeoutEnable { get; set; }
+
+            /// <summary>
             /// <para>The schedule period. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>YEARLY</description></item>
-            /// <item><description>MONTHLY</description></item>
-            /// <item><description>WEEKLY</description></item>
-            /// <item><description>DAILY</description></item>
-            /// <item><description>HOURLY</description></item>
-            /// <item><description>MINUTELY</description></item>
+            /// <item><description>YEARLY: Yearly.</description></item>
+            /// <item><description>MONTHLY: Monthly.</description></item>
+            /// <item><description>WEEKLY: Weekly.</description></item>
+            /// <item><description>DAILY: Daily.</description></item>
+            /// <item><description>HOURLY: Hourly.</description></item>
+            /// <item><description>MINUTELY: Minutely.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -341,7 +572,26 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string SchedulePeriod { get; set; }
 
             /// <summary>
-            /// <para>The Spark client information.</para>
+            /// <para>基础调度模板；不传保留，空对象解除绑定，仅周期任务支持</para>
+            /// </summary>
+            [NameInMap("ScheduleTemplate")]
+            [Validation(Required=false)]
+            public SubmitBatchTaskRequestSubmitCommandScheduleTemplate ScheduleTemplate { get; set; }
+            public class SubmitBatchTaskRequestSubmitCommandScheduleTemplate : TeaModel {
+                /// <summary>
+                /// <para>基础调度模板ID，必须为正数</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1001</para>
+                /// </summary>
+                [NameInMap("TemplateId")]
+                [Validation(Required=false)]
+                public long? TemplateId { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The Spark client.</para>
             /// </summary>
             [NameInMap("SparkClientInfo")]
             [Validation(Required=false)]
@@ -359,6 +609,33 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string SparkClientVersion { get; set; }
 
             }
+
+            /// <summary>
+            /// <para>不传时保留任务当前配置。显式传入false时关闭。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
+            [NameInMap("SparkDynamicResourceSwitch")]
+            [Validation(Required=false)]
+            public bool? SparkDynamicResourceSwitch { get; set; }
+
+            /// <summary>
+            /// <para>ONLY_PROD表示仅生产环境，PROD_AND_DEV表示生产和开发环境。不传时保留任务当前配置。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ONLY_PROD</para>
+            /// </summary>
+            [NameInMap("SparkResourceEffectScope")]
+            [Validation(Required=false)]
+            public string SparkResourceEffectScope { get; set; }
+
+            /// <summary>
+            /// <para>Spark SQL资源配置，键为配置项名称，值为字符串。不传时保留任务当前配置。传入空Map时清空配置。</para>
+            /// </summary>
+            [NameInMap("SparkSqlResourceConfigMap")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> SparkSqlResourceConfigMap { get; set; }
 
             /// <summary>
             /// <para>The upstream dependencies.</para>
@@ -387,10 +664,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <summary>
                     /// <para>The dependency period type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>CURRENT_PERIOD: current period</description></item>
-                    /// <item><description>LAST_PERIOD: previous period</description></item>
-                    /// <item><description>LAST_N_PERIOD: last N days</description></item>
-                    /// <item><description>LAST_24_HOUR: last 24 hours</description></item>
+                    /// <item><description>CURRENT_PERIOD: Current period.</description></item>
+                    /// <item><description>LAST_PERIOD: Last period.</description></item>
+                    /// <item><description>LAST_N_PERIOD: Last N days.</description></item>
+                    /// <item><description>LAST_24_HOUR: Last 24 hours.</description></item>
                     /// </list>
                     /// <para>This parameter is required.</para>
                     /// 
@@ -406,10 +683,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <summary>
                 /// <para>The dependency strategy. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ALL: all</description></item>
-                /// <item><description>FIRST: first</description></item>
-                /// <item><description>LAST: last</description></item>
-                /// <item><description>NEAR: nearest</description></item>
+                /// <item><description>ALL: All.</description></item>
+                /// <item><description>FIRST: First.</description></item>
+                /// <item><description>LAST: Last.</description></item>
+                /// <item><description>NEAR: Nearest.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -427,10 +704,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public List<string> FieldList { get; set; }
 
                 /// <summary>
-                /// <para>The type of the upstream dependency node. Valid values:</para>
+                /// <para>The upstream dependency node type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>PHYSICAL: physical node</description></item>
-                /// <item><description>LOGICAL: logical table dependency</description></item>
+                /// <item><description>PHYSICAL: Physical node.</description></item>
+                /// <item><description>LOGICAL: Logical table dependency.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -441,7 +718,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string NodeType { get; set; }
 
                 /// <summary>
-                /// <para>The period difference. A value of 0 indicates a same-period dependency. A positive number indicates a dependency on the previous N periods.</para>
+                /// <para>The period difference. A value of 0 indicates a dependency on the same period. A positive number indicates a dependency on the previous N periods.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -452,7 +729,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? PeriodDiff { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the upstream node is enabled.</para>
+                /// <para>Specifies whether the upstream node is enabled.</para>
                 /// </summary>
                 [NameInMap("SourceNodeEnabled")]
                 [Validation(Required=false)]
@@ -470,7 +747,6 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 
                 /// <summary>
                 /// <para>The output name of the upstream node.</para>
-                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>t_input1</para>
