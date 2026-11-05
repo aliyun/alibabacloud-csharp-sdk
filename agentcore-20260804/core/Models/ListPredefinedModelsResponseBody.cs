@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListPredefinedModelsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value is SUCCESS if the request is successful.</para>
+        /// <para>The business status code. The value is SUCCESS if the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? Document { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the model is able to invoke multiple tool calling in a single response.</para>
+                /// <para>Specifies whether the model is able to invoke multiple tool calling operations in a single response.</para>
                 /// </summary>
                 [NameInMap("multiToolCall")]
                 [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? ContextSize { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of output tokens supported by the model in a single generation.</para>
+            /// <para>The maximum number of output tokens supported by the model per generation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>131072</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ModelName { get; set; }
 
             /// <summary>
-            /// <para>The release date of the model. The format is YYYY-MM-DD.</para>
+            /// <para>The release date of the model, in the YYYY-MM-DD format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-02-01</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. The value is 200 if the request is successful.</para>
+        /// <para>The HTTP status code. The value is 200 if the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message indicating the request processing result.</para>
+        /// <para>The message about the request processing result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

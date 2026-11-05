@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class UpdateAgentIMChannelResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value is SUCCESS if the request is successful.</para>
+        /// <para>The business status code. The value is SUCCESS when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The public network access URL of the attached ServiceEndpoint.</para>
+            /// <para>The public network access URL of the bound ServiceEndpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://agent.example.com">https://agent.example.com</a></para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ServiceEndpointId { get; set; }
 
             /// <summary>
-            /// <para>The IM channel status. Valid values: CREATING (Creating), READY (Ready), UPDATING (Updating), FAILED (Failed), DELETING (Deleting), and DELETE_FAILED (Deletion failed).</para>
+            /// <para>The IM channel status. Valid values: CREATING (Creating), READY (Ready), UPDATING (Updating), FAILED (Failed), DELETING (Deleting), and DELETE_FAILED (Delete failed).</para>
             /// 
             /// <b>Example:</b>
             /// <para>READY</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. The value is 200 if the request is successful.</para>
+        /// <para>The HTTP status code. The value is 200 when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

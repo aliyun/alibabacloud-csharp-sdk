@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class DeleteExternalAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value is SUCCESS if the request is successful.</para>
+        /// <para>The business status code. The value is SUCCESS when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,14 +20,34 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The summary information of the deleted external agent.</para>
+        /// <para>The summary information of the deleted managed agent.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public DeleteExternalAgentResponseBodyData Data { get; set; }
         public class DeleteExternalAgentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The external agent ID.</para>
+            /// <para>The inbound access mode.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>API_KEY</para>
+            /// </summary>
+            [NameInMap("accessMode")]
+            [Validation(Required=false)]
+            public string AccessMode { get; set; }
+
+            /// <summary>
+            /// <para>The user access scope.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ALL</para>
+            /// </summary>
+            [NameInMap("accessScope")]
+            [Validation(Required=false)]
+            public string AccessScope { get; set; }
+
+            /// <summary>
+            /// <para>The managed agent ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent-1</para>
@@ -67,7 +87,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string DeployType { get; set; }
 
             /// <summary>
-            /// <para>The description of the external agent.</para>
+            /// <para>The description of the managed agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Code review agent running in the user environment</para>
@@ -87,7 +107,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? LatestSpecVersion { get; set; }
 
             /// <summary>
-            /// <para>The name of the external agent.</para>
+            /// <para>The name of the managed agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-external-agent</para>
@@ -97,7 +117,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The runtime type reported by the external agent.</para>
+            /// <para>The runtime type reported by the managed agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qwenpaw</para>
@@ -107,7 +127,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Runtime { get; set; }
 
             /// <summary>
-            /// <para>The status of the external agent. Valid values: Creating, Running, Failed, Updating, Deleting, and Deleted.</para>
+            /// <para>The status of the managed agent. Valid values: Creating, Running, Failed, Updating, Deleting, and Deleted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -139,7 +159,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. The value is 200 if the request is successful.</para>
+        /// <para>The HTTP status code. The value is 200 when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

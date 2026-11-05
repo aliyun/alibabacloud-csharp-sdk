@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class PrecheckSkillUploadViaOssResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<PrecheckSkillUploadViaOssResponseBodyData> Data { get; set; }
         public class PrecheckSkillUploadViaOssResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The draft mode: HEAD or VERSIONED, determined by the server.</para>
+            /// <para>The draft mode. Valid values: HEAD and VERSIONED. The value is determined by the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HEAD</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string EditingVersion { get; set; }
 
             /// <summary>
-            /// <para>The entry path of the Skill package.</para>
+            /// <para>The entry path of the skill package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SKILL.md</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string EntryPath { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Skill already exists.</para>
+            /// <para>Indicates whether the skill already exists.</para>
             /// </summary>
             [NameInMap("exists")]
             [Validation(Required=false)]
             public bool? Exists { get; set; }
 
             /// <summary>
-            /// <para>The content revision identifier of the persistent draft, used to determine whether the local cache has expired. Returned only in HEAD draft mode.</para>
+            /// <para>The content revision identifier of the persistent draft, which is used to determine whether the local cache has expired. This parameter is returned only in HEAD draft mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rev-1a2b3c4d</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string HeadRevision { get; set; }
 
             /// <summary>
-            /// <para>The status of the persistent draft: draft, reviewing, or reviewed. Returned only in HEAD draft mode.</para>
+            /// <para>The status of the persistent draft. Valid values: draft, reviewing, and reviewed. This parameter is returned only in HEAD draft mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>draft</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ParsedVersion { get; set; }
 
             /// <summary>
-            /// <para>The dry run result code.</para>
+            /// <para>The precheck result code. HEAD_EXISTS indicates that the upload will overwrite the existing persistent draft and requires secondary confirmation. HEAD_LOCKED indicates that the draft is under review and cannot be overwritten. You must withdraw the review first.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VALIDATION_FAILED</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ReviewingVersion { get; set; }
 
             /// <summary>
-            /// <para>The Skill name.</para>
+            /// <para>The skill name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>skill-example</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The Connector details.</para>
+        /// <para>The connector details.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? BoundAgentCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the Connector was enabled.</para>
+            /// <para>The time when the connector was enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-01T08:00:00Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string EnabledAt { get; set; }
 
             /// <summary>
-            /// <para>The Connector configuration JSON string. This is sensitive information.</para>
+            /// <para>The JSON string for the connector configuration. This is sensitive information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;site&quot;:&quot;global&quot;,&quot;organizationId&quot;:&quot;org-xxxx&quot;}</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Metadata { get; set; }
 
             /// <summary>
-            /// <para>The Connector name. The current value is qodercli.</para>
+            /// <para>The connector name. Currently, the value is qodercli.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qodercli</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The Connector status.</para>
+            /// <para>The connector status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ENABLED</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

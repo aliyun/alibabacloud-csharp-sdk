@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class AddMemoriesRequest : TeaModel {
         /// <summary>
-        /// <para>The request body for writing to memory.</para>
+        /// <para>The write memory request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]
@@ -18,14 +18,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public AddMemoriesRequestBody Body { get; set; }
         public class AddMemoriesRequestBody : TeaModel {
             /// <summary>
-            /// <para>The list of messages. You must provide either this parameter or Text, but not both. The list must contain 1 to 20 messages, and the total size of the content must not exceed 32,000 UTF-8 bytes.</para>
+            /// <para>The message list. You must provide either this parameter or Text, but not both. You can specify 1 to 20 messages, and the total size of the content cannot exceed 32,000 UTF-8 bytes.</para>
             /// </summary>
             [NameInMap("messages")]
             [Validation(Required=false)]
             public List<AddMemoriesRequestBodyMessages> Messages { get; set; }
             public class AddMemoriesRequestBodyMessages : TeaModel {
                 /// <summary>
-                /// <para>The content of the message.</para>
+                /// <para>The message content.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Content { get; set; }
 
                 /// <summary>
-                /// <para>The role of the message.</para>
+                /// <para>The message role.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -66,14 +66,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ReferenceTime { get; set; }
 
             /// <summary>
-            /// <para>The scope of the write operation. UserId, AgentId, and SessionId are all optional.</para>
+            /// <para>The write scope. UserId, AgentId, and SessionId are all optional.</para>
             /// </summary>
             [NameInMap("scope")]
             [Validation(Required=false)]
             public AddMemoriesRequestBodyScope Scope { get; set; }
             public class AddMemoriesRequestBodyScope : TeaModel {
                 /// <summary>
-                /// <para>The ID of the agent. The length is limited to 1 to 128 UTF-8 bytes. The ID cannot contain a forward slash (/) or an asterisk (*).</para>
+                /// <para>The agent ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>agent-001</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AgentId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the session. The length is limited to 1 to 128 UTF-8 bytes. The ID cannot contain a forward slash (/) or an asterisk (*).</para>
+                /// <para>The session ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>session-001</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string SessionId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user. The length is limited to 1 to 128 UTF-8 bytes. The ID cannot contain a forward slash (/) or an asterisk (*).</para>
+                /// <para>The user ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user-001</para>
@@ -105,14 +105,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to synchronously wait for memory extraction to complete. Default value: true.</para>
+            /// <para>Specifies whether to synchronously wait for the memory extraction to complete. Default value: true.</para>
             /// </summary>
             [NameInMap("sync")]
             [Validation(Required=false)]
             public bool? Sync { get; set; }
 
             /// <summary>
-            /// <para>The text to be written directly. You must provide either this parameter or Messages, but not both. The size of the text must not exceed 32,000 UTF-8 bytes.</para>
+            /// <para>The text to be written directly. You must provide either this parameter or Messages, but not both. The size cannot exceed 32,000 UTF-8 bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The user likes hiking</para>

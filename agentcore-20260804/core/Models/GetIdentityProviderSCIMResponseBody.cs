@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class GetIdentityProviderSCIMResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business result code. Use this code along with the HTTP status code and message for error handling.</para>
+        /// <para>The business result code. If the request fails, handle the issue based on the HTTP status code and the message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The SCIM actual configuration, expected synchronization switch, and independent operation status. For the result structure, see the response fields of this operation. The response of an asynchronous write operation indicates that the request is accepted, but does not guarantee that the background task is complete.</para>
+        /// <para>The result structure. For details, see the response fields of this operation. The response of an asynchronous write operation indicates that the request is accepted, but does not guarantee that the background task is completed.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetIdentityProviderSCIMResponseBodyData Data { get; set; }
         public class GetIdentityProviderSCIMResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The actual receiving status and URL. The actual SAML configuration is read back on demand only in GetIdentityProvider. SCIM queries and preparations return the actual receiving status and URL.</para>
+            /// <para>The actual SAML configuration is read back on demand only in GetIdentityProvider. SCIM queries and preparations return the actual receiving status and URL.</para>
             /// </summary>
             [NameInMap("configuration")]
             [Validation(Required=false)]
             public GetIdentityProviderSCIMResponseBodyDataConfiguration Configuration { get; set; }
             public class GetIdentityProviderSCIMResponseBodyDataConfiguration : TeaModel {
                 /// <summary>
-                /// <para>The URL configured for the external provisioning system. The presence of a URL does not indicate that external configuration is complete or that AC synchronization is enabled.</para>
+                /// <para>The URL configured for the external provisioning system. The presence of a URL does not mean that the external configuration is completed or AgentCore synchronization is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.com/scim/v2">https://example.com/scim/v2</a></para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string BaseUrl { get; set; }
 
                 /// <summary>
-                /// <para>The AgentIdentity receiving status. Enabled indicates that SCIM receiving is enabled. Disabled indicates that it is disabled. This is not equivalent to the expected value of syncEnabled for AC.</para>
+                /// <para>A value of Enabled indicates that SCIM receiving is enabled, and Disabled indicates that it is disabled. This is not equivalent to the expected value of syncEnabled in AgentCore.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Enabled</para>
@@ -56,16 +56,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The status of the most recent SCIM operation task. This status is independent of the SAML logon binding status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>PENDING: Waiting for execution.</description></item>
-            /// <item><description>RUNNING: Executing.</description></item>
-            /// <item><description>PAUSED: Paused.</description></item>
-            /// <item><description>SUCCESS: Succeeded.</description></item>
-            /// <item><description>FAILED: Failed.</description></item>
-            /// <item><description>CANCELED: Canceled.
-            /// If there are no tasks, it returns null or is not returned. This status only represents the most recent SCIM switch and the initial full import task when enabled. It does not indicate credential issuance, external provisioning connection tests, or continuous incremental synchronization health. Clients poll this operation when the status is PENDING or RUNNING.</description></item>
-            /// </list>
+            /// <para>The original status of the most recent independent SCIM operation task. An empty string (&quot;&quot;) is returned if no historical tasks exist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
@@ -75,16 +66,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string OperationStatus { get; set; }
 
             /// <summary>
-            /// <para>The independent SCIM configuration status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>UNCONFIGURED: Preparation is not complete.</description></item>
-            /// <item><description>WAITING_CONFIGURATION: Receiving is enabled, a valid HTTPS URL and at least one valid token are available, waiting for external configuration and enablement confirmation.</description></item>
-            /// <item><description>UPDATING: The enablement or disablement task is PENDING or RUNNING.</description></item>
-            /// <item><description>READY: Synchronization is enabled and the current enablement task succeeded, and the receiving end, URL, and token are still available.</description></item>
-            /// <item><description>DISABLED: The disablement task succeeded, and the configuration, credentials, and users are retained.</description></item>
-            /// <item><description>UPDATE_FAILED: The operation failed, was paused, was canceled, or the configuration and credentials are unavailable when enablement is expected.
-            /// This status is independent of the SAML or OIDC status. READY does not prove that Matrix execution or the continuous incremental link has been accepted.</description></item>
-            /// </list>
+            /// <para>The SCIM independent configuration status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>READY</para>
@@ -94,7 +76,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether local synchronization is expected. You must determine whether it takes effect based on the actual configuration and task records. Do not set this parameter to true during CustomSSO initialization. You can only update it later by calling UpdateIdentityProviderSCIM, and determine the result based on operationStatus.</para>
+            /// <para>Do not pass true during CustomSSO initialization. It can only be updated later through UpdateIdentityProviderSCIM. Determine the result in combination with operationStatus.</para>
             /// </summary>
             [NameInMap("syncEnabled")]
             [Validation(Required=false)]
@@ -103,7 +85,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code of the current request. This code indicates the processing status of the request and is not equivalent to the final result of the background task.</para>
+        /// <para>The processing status of the current request, which is not equivalent to the final result of the background task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -113,7 +95,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Task result message. It indicates that the request is accepted or provides an error message. For asynchronous tasks, you must check task results by calling the corresponding query operation.</para>
+        /// <para>The request acceptance or error message. For asynchronous tasks, check the task result by using the corresponding query operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -123,7 +105,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID. It is used to associate the current call with troubleshooting. Retain this ID when a failure occurs.</para>
+        /// <para>The request ID. Used to associate this call with troubleshooting. Keep the ID if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request-example</para>
@@ -133,7 +115,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current request is successful. A value of true indicates that the request is processed successfully. For asynchronous write operations, you must continue to query the task results.</para>
+        /// <para>Indicates whether the current request is successful. A value of true indicates that the request is processed successfully. For asynchronous writes, you must continue to query the task results.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

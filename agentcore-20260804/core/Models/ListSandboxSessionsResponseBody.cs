@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListSandboxSessionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value SUCCESS is returned if the request was successful.</para>
+        /// <para>The business status code. The value is SUCCESS if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code. The value 200 is returned if the request was successful.</para>
+        /// <para>The HTTP status code. The value is 200 if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public List<ListSandboxSessionsResponseBodyItems> Items { get; set; }
         public class ListSandboxSessionsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The external channel type, such as DINGTALK, FEISHU, or WECOM. This parameter is empty for non-external channels.</para>
+            /// <para>The type of the external channel, such as DINGTALK, FEISHU, or WECOM. This parameter is empty for non-external channels.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DINGTALK</para>
@@ -57,13 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string SessionId { get; set; }
 
             /// <summary>
-            /// <para>The session source type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>API: API call.</description></item>
-            /// <item><description>CONSOLE_DEBUG: Console debugging.</description></item>
-            /// <item><description>EXTERNAL_CHANNEL: External channel.</description></item>
-            /// <item><description>UNKNOWN: Unknown source.</description></item>
-            /// </list>
+            /// <para>The source type of the session. A value of API indicates an API call. A value of CONSOLE_DEBUG indicates console debugging. A value of EXTERNAL_CHANNEL indicates an external channel. A value of UNKNOWN indicates an unknown source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>EXTERNAL_CHANNEL</para>
@@ -75,7 +69,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records per page for this query.</para>
+        /// <para>The maximum number of records per page for the current query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -85,7 +79,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The response message. The value success is returned if the request was successful.</para>
+        /// <para>The response message. The value is success if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -115,18 +109,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
-        /// </list>
+        /// <para>Indicates whether the request is successful. A value of true indicates that the request is successful. A value of false indicates that the request fails.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of records that match the query conditions.</para>
+        /// <para>The total number of records that meet the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>27</para>

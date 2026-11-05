@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class GetSkillVersionDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>A sample description that explains the purpose of the resource</para>
+            /// <para>Sample description to illustrate the purpose of the resource</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -37,18 +37,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The resource mapping in which the key is the resource name.</para>
+            /// <para>The resource mapping, where the key is the resource name.</para>
             /// </summary>
             [NameInMap("resource")]
             [Validation(Required=false)]
             public Dictionary<string, DataResourceValue> Resource { get; set; }
 
             /// <summary>
-            /// <para>The Skill card content (SKILL.md).</para>
+            /// <para>The skill card content (SKILL.md).</para>
             /// 
             /// <b>Example:</b>
-            /// <h1>Sample Skill</h1>
-            /// <para>Used to demonstrate Skill document content</para>
+            /// <h1>Sample skill</h1>
+            /// <para>Used to demonstrate skill document content</para>
             /// </summary>
             [NameInMap("skillMd")]
             [Validation(Required=false)]

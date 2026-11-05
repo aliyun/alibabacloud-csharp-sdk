@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string BodyShrink { get; set; }
 
         /// <summary>
-        /// <para>The client token.</para>
+        /// <para>The client request token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>memory-store-create-20260909-001</para>

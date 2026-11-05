@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListSkillsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries per page.</para>
+        /// <para>The maximum number of items to return per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page.</para>
+        /// <para>The token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>next-page-token</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort results. The value download_count is supported. Default value: gmt_modified.</para>
+        /// <para>The sort field. Valid value: download_count. Default value: gmt_modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>download_count</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>Filters results by owner.</para>
+        /// <para>Filters the skills by owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user123</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10. Maximum value: 50.</para>
+        /// <para>The number of items per page. Default value: 10. Maximum value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -70,11 +70,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Filters results by visibility. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PUBLIC</description></item>
-        /// <item><description>PRIVATE</description></item>
-        /// </list>
+        /// <para>Filters the skills by visibility. Valid values: PUBLIC and PRIVATE.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PUBLIC</para>
@@ -84,11 +80,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The search mode. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>accurate: exact match.</description></item>
-        /// <item><description>blur: fuzzy match.</description></item>
-        /// </list>
+        /// <para>The search mode. Valid values: accurate (exact match) and blur (fuzzy match).</para>
         /// 
         /// <b>Example:</b>
         /// <para>blur</para>

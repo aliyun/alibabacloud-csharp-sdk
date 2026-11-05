@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class VerifyWorkspaceAgenticFsMountRamAuthorizationRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name of the target AccessPoint, obtained from the DomainName field of NAS ListAccessPoints. Do not include the protocol, port, or path.</para>
+        /// <para>The domain name of the target access point. Obtain the value from the DomainName parameter of the NAS ListAccessPoints operation. Do not include the protocol, port, or path.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

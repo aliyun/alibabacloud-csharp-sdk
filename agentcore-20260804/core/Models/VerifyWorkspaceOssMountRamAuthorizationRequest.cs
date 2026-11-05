@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class VerifyWorkspaceOssMountRamAuthorizationRequest : TeaModel {
         /// <summary>
-        /// <para>The OSS bucket name.</para>
+        /// <para>The name of the OSS bucket.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bucket-001</para>

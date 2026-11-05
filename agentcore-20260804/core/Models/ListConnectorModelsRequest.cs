@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListConnectorModelsRequest : TeaModel {
         /// <summary>
-        /// <para>The Connector Key ID. This parameter is not supported in the current version.</para>
+        /// <para>The connector key ID. This parameter is not supported in the current version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ckey-xxxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The next page token. This parameter is not supported in the current version.</para>
+        /// <para>The next token. This parameter is not supported in the current version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dGVzdA==</para>

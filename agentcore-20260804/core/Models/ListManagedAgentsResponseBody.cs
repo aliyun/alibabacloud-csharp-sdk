@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListManagedAgentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. A value of SUCCESS indicates success.</para>
+        /// <para>The business status code. The value is SUCCESS when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code. A value of 200 indicates success.</para>
+        /// <para>The HTTP status code. The value is 200 when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The list of managed agents.</para>
+        /// <para>The list of managed Harness agents.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;agentId&quot;:&quot;agent-xxxxxx&quot;,&quot;workspaceId&quot;:&quot;ws-xxxxxx&quot;,&quot;agentName&quot;:&quot;demo-agent&quot;,&quot;status&quot;:&quot;Running&quot;,&quot;template&quot;:{&quot;templateId&quot;:&quot;tpl-xxxxxx&quot;,&quot;templateVersion&quot;:&quot;v1.0.0&quot;},&quot;spec&quot;:{&quot;replicas&quot;:1,&quot;cpu&quot;:&quot;2&quot;,&quot;memory&quot;:&quot;4Gi&quot;},&quot;createTime&quot;:&quot;2026-01-01T00:00:00Z&quot;,&quot;updateTime&quot;:&quot;2026-01-01T00:00:00Z&quot;}]</para>
@@ -40,7 +40,27 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public List<ListManagedAgentsResponseBodyItems> Items { get; set; }
         public class ListManagedAgentsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The managed agent ID.</para>
+            /// <para>The inbound access method.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>API_KEY</para>
+            /// </summary>
+            [NameInMap("accessMode")]
+            [Validation(Required=false)]
+            public string AccessMode { get; set; }
+
+            /// <summary>
+            /// <para>The user access scope.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ALL</para>
+            /// </summary>
+            [NameInMap("accessScope")]
+            [Validation(Required=false)]
+            public string AccessScope { get; set; }
+
+            /// <summary>
+            /// <para>The ID of the managed Harness agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent-1</para>
@@ -80,10 +100,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string DeployType { get; set; }
 
             /// <summary>
-            /// <para>The description of the managed agent.</para>
+            /// <para>The description of the managed Harness agent.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>An agent for code review</para>
+            /// <para>Agent for code review</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -97,14 +117,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public ListManagedAgentsResponseBodyItemsHarness Harness { get; set; }
             public class ListManagedAgentsResponseBodyItemsHarness : TeaModel {
                 /// <summary>
-                /// <para>The Connector binding configuration for the qodercli framework.</para>
+                /// <para>The runtime framework configuration.</para>
                 /// </summary>
                 [NameInMap("configuration")]
                 [Validation(Required=false)]
                 public ListManagedAgentsResponseBodyItemsHarnessConfiguration Configuration { get; set; }
                 public class ListManagedAgentsResponseBodyItemsHarnessConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>Binds a Service Account Key of the QoderCLI Connector by Key ID. This parameter can be omitted when only one key exists, but is required when multiple keys exist.</para>
+                    /// <para>The ID of the connector account key record bound to qodercli, not the original service account key.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>key-xxxx</para>
@@ -114,7 +134,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string ConnectorServiceAccountKey { get; set; }
 
                     /// <summary>
-                    /// <para>The Connector Key name populated during queries. This value is not used as a binding reference during writes.</para>
+                    /// <para>The name of the connector account bound to qodercli.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>my-connector-key</para>
@@ -126,7 +146,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The runtime framework type. Valid values: qwenpaw and qodercli. The qodercli type binds by configuration.connectorServiceAccountKey, and the name is also populated during queries.</para>
+                /// <para>The runtime framework type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qodercli</para>
@@ -148,7 +168,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? LatestSpecVersion { get; set; }
 
             /// <summary>
-            /// <para>The name of the managed agent.</para>
+            /// <para>The name of the managed Harness agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-agent</para>
@@ -168,7 +188,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Runtime { get; set; }
 
             /// <summary>
-            /// <para>The status of the managed agent.</para>
+            /// <para>The status of the managed Harness agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -200,7 +220,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of results returned for this request.</para>
+        /// <para>The maximum number of results returned for the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -210,7 +230,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The result message of the request.</para>
+        /// <para>The message about the request processing result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -220,7 +240,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page. An empty value indicates the last page.</para>
+        /// <para>The token for the next page. An empty value indicates that the end of the list is reached.</para>
         /// 
         /// <b>Example:</b>
         /// <para>next-token-1</para>
@@ -240,7 +260,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

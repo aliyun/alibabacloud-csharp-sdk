@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The result of deleting the image cache.</para>
+        /// <para>The image cache deletion result.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("data")]
@@ -29,18 +29,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public DeleteImageCacheResponseBodyData Data { get; set; }
         public class DeleteImageCacheResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the deletion is still in progress. A value of true indicates that the deletion is accepted but not yet complete, and a Get request returns DELETING until ImageCacheNotFound is explicitly returned. A value of false indicates that the current workspace is deleted or no longer exists.</para>
+            /// <para>Indicates whether the deletion is in progress. The current implementation always returns false. To confirm the visibility of the cache, call GetImageCache or ListImageCaches.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>true</para>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("deletionPending")]
             [Validation(Required=false)]
             public bool? DeletionPending { get; set; }
 
             /// <summary>
-            /// <para>The image cache ID, which matches the request. The requested ID is still returned even if the current workspace no longer exists.</para>
+            /// <para>The image cache ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. This does not mean that the cache creation is complete.</para>
+        /// <para>Indicates whether the request is successful. A successful request does not mean that the cache creation is complete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

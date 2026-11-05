@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The latest submitted configuration and status of the custom agent. A successful response indicates that the request is accepted, but the configuration may not have taken effect yet.</para>
+        /// <para>The latest submitted configuration and status of the custom code or image agent. A successful response indicates that the request is accepted, but the configuration may not have taken effect yet.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("data")]
@@ -29,7 +29,27 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateCustomAgentResponseBodyData Data { get; set; }
         public class CreateCustomAgentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The unique identifier of the custom agent. You can obtain this ID from the response of CreateCustomAgent or ListCustomAgents.</para>
+            /// <para>The inbound access method.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>API_KEY</para>
+            /// </summary>
+            [NameInMap("accessMode")]
+            [Validation(Required=false)]
+            public string AccessMode { get; set; }
+
+            /// <summary>
+            /// <para>The user access scope.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ALL</para>
+            /// </summary>
+            [NameInMap("accessScope")]
+            [Validation(Required=false)]
+            public string AccessScope { get; set; }
+
+            /// <summary>
+            /// <para>The unique identifier of the custom code or image agent. You can obtain this ID from the response of CreateCustomAgent or ListCustomAgents.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -40,14 +60,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AgentId { get; set; }
 
             /// <summary>
-            /// <para>The latest submitted list of additional AgenticFS mounts.</para>
+            /// <para>The NAS storage mount configuration. Currently, only the AgenticFS type is supported, which is used to mount file directories in access points to agent runtime instances. This represents the latest submitted NAS mounts.</para>
             /// </summary>
             [NameInMap("agenticFsMounts")]
             [Validation(Required=false)]
             public List<CreateCustomAgentResponseBodyDataAgenticFsMounts> AgenticFsMounts { get; set; }
             public class CreateCustomAgentResponseBodyDataAgenticFsMounts : TeaModel {
                 /// <summary>
-                /// <para>The AgenticFS mount directory in the container, located under /mnt/agenticfs/.</para>
+                /// <para>The absolute mount path in the container, such as /data/train. Mount targets cannot be duplicated or form parent-child overrides, and must avoid platform reserved directories.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/mnt/agenticfs/data</para>
@@ -57,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string MountPath { get; set; }
 
                 /// <summary>
-                /// <para>The relative directory in the mounted access point.</para>
+                /// <para>The relative directory within the mounted access point.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>workspace/data</para>
@@ -67,11 +87,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the mount is read-only. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>true: Read-only.</description></item>
-                /// <item><description>false: Read and write.</description></item>
-                /// </list>
+                /// <para>Specifies whether the mount is read-only. A value of true indicates read-only. A value of false indicates read and write.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -93,21 +109,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The latest submitted deployment artifact configuration, including the service listening port and the ACR container image. To check whether the configuration has taken effect, refer to latestVersionStatus.</para>
+            /// <para>The latest submitted deployment artifact configuration, including the service listening port and ACR container image. To check whether the configuration has taken effect, refer to latestVersionStatus.</para>
             /// </summary>
             [NameInMap("artifact")]
             [Validation(Required=false)]
             public CreateCustomAgentResponseBodyDataArtifact Artifact { get; set; }
             public class CreateCustomAgentResponseBodyDataArtifact : TeaModel {
                 /// <summary>
-                /// <para>The code package deployment configuration. This parameter is mutually exclusive with container. Code packages use the ZIP or TAR.GZ format. Dependencies must be packaged by the user. The platform does not install dependencies or perform online builds.</para>
+                /// <para>The code package deployment configuration. This parameter is mutually exclusive with container. The code package uses the ZIP or TAR.GZ format. Dependencies must be packaged by the user. The platform does not install dependencies or perform online builds.</para>
                 /// </summary>
                 [NameInMap("code")]
                 [Validation(Required=false)]
                 public CreateCustomAgentResponseBodyDataArtifactCode Code { get; set; }
                 public class CreateCustomAgentResponseBodyDataArtifactCode : TeaModel {
                     /// <summary>
-                    /// <para>The startup command for the code package. This parameter is required in code package mode. The working directory is the extracted code root directory /code, such as python main.py. Quotes and escapes are supported. Environment variables, pipes, and logical operations are not automatically expanded. Use scripts within the package for complex commands.</para>
+                    /// <para>The startup command for the code package. This parameter is required in code package mode. The working directory is the root directory of the decompressed code, /code, such as python main.py. Quotes and escapes are supported. Environment variables, pipelines, and logical operations are not automatically expanded. For complex commands, use a script in the package.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -118,7 +134,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Entrypoint { get; set; }
 
                     /// <summary>
-                    /// <para>The identifier of the code runtime environment in the currently saved configuration. The runtime image uses the saved snapshot. Adding a new version to the directory does not automatically change the existing configuration.</para>
+                    /// <para>The identifier of the code runtime environment for the currently saved configuration. The runtime image uses the saved snapshot. Adding a new version to the directory does not automatically change the existing configuration.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -129,7 +145,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string LanguageRuntime { get; set; }
 
                     /// <summary>
-                    /// <para>The oss:// address of the platform-fixed code package referenced by the currently saved configuration. This address does not include the signature parameters of the source HTTPS link. You can use this address to reuse an existing code package. To download the content, call GetAgentCodePackageDownloadUrl.</para>
+                    /// <para>The fixed oss:// address of the code package referenced by the currently saved configuration on the platform. This address does not include the signature parameters of the source HTTPS link. You can use this address to reuse an existing code package. To download the content, call GetAgentCodePackageDownloadUrl.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -199,7 +215,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Tag { get; set; }
 
                     /// <summary>
-                    /// <para>The image source type. A value of acr indicates Alibaba Cloud Container Registry (ACR).</para>
+                    /// <para>The image source type. A value of acr indicates an ACR image, and a value of custom indicates a custom image source. For the corresponding source configurations, refer to the descriptions of artifact.container and customImage.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -232,7 +248,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public CreateCustomAgentResponseBodyDataCodePackageInfo CodePackageInfo { get; set; }
             public class CreateCustomAgentResponseBodyDataCodePackageInfo : TeaModel {
                 /// <summary>
-                /// <para>The CRC64 value of the code package object.</para>
+                /// <para>The CRC64 checksum of the code package object.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>456</para>
@@ -284,7 +300,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The creation method of the agent. The value is CUSTOM for custom agents.</para>
+            /// <para>The creation method of the agent. For custom code or image agents, the value is CUSTOM.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CUSTOM</para>
@@ -304,7 +320,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The image source snapshot of the current active configuration version. The value is null before the first configuration takes effect. This field does not indicate the health status.</para>
+            /// <para>The image source snapshot of the current effective configuration version. This value is null before the initial configuration takes effect and does not represent the health status.</para>
             /// </summary>
             [NameInMap("currentImage")]
             [Validation(Required=false)]
@@ -341,14 +357,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// <para>The dedicated pull network for the custom source.</para>
+                /// <para>The independent pull network for the custom source.</para>
                 /// </summary>
                 [NameInMap("pullNetwork")]
                 [Validation(Required=false)]
                 public CreateCustomAgentResponseBodyDataCurrentImagePullNetwork PullNetwork { get; set; }
                 public class CreateCustomAgentResponseBodyDataCurrentImagePullNetwork : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the security group. This parameter is required when type is set to vpc. The security group must belong to the selected VPC.</para>
+                    /// <para>The security group ID. This parameter is required when type is set to vpc, and must belong to the selected VPC.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>sg-example</para>
@@ -358,7 +374,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string SecurityGroupId { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the pull network. This parameter is required when you submit pullNetwork and is verified by the backend. The default value is public network, which is independent of the agent runtime network.</para>
+                    /// <para>The pull network type. This parameter is required and verified by the backend when pullNetwork is submitted. The default value for new creations is public, which is independent of the agent runtime network.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>public</para>
@@ -368,7 +384,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the security group. This parameter is required when type is set to vpc. The security group must belong to the selected VPC.</para>
+                    /// <para>The security group ID. This parameter is required when type is set to vpc, and must belong to the selected VPC.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vsw-example</para>
@@ -378,7 +394,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string VSwitchId { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the VPC. This parameter is required when type is set to vpc. The account and region to which the VPC belongs are verified by the backend.</para>
+                    /// <para>The VPC ID. This parameter is required when type is set to vpc. The associated account and region are verified by the backend.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vpc-example</para>
@@ -390,7 +406,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The repository name for the ACR source.</para>
+                /// <para>The repository name from the ACR source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>agent</para>
@@ -400,7 +416,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Repo { get; set; }
 
                 /// <summary>
-                /// <para>The certificate exception option for the custom source.</para>
+                /// <para>The TLS verification exception option for the custom source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -430,7 +446,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Tag { get; set; }
 
                 /// <summary>
-                /// <para>The source snapshot from the current active configuration version. Omitted for anonymous sources. A new source failure does not overwrite this username, and the password is not returned.</para>
+                /// <para>The source username of the active image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>reader</para>
@@ -442,7 +458,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The recently saved source and the verified username for this source. The source may be in preparation or failed, and the password is not returned.</para>
+            /// <para>The recently saved source and the verified username for the source. The source may be in preparation or failed. The password is not returned.</para>
             /// </summary>
             [NameInMap("customImage")]
             [Validation(Required=false)]
@@ -466,7 +482,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public CreateCustomAgentResponseBodyDataCustomImagePullNetwork PullNetwork { get; set; }
                 public class CreateCustomAgentResponseBodyDataCustomImagePullNetwork : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the security group. This parameter is required when type is set to vpc. The security group must belong to the selected VPC.</para>
+                    /// <para>The security group ID. This parameter is required when type is set to vpc, and must belong to the selected VPC.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>sg-example</para>
@@ -476,7 +492,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string SecurityGroupId { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the pull network. This parameter is required when you submit pullNetwork and is verified by the backend. The default value is public network, which is independent of the agent runtime network.</para>
+                    /// <para>The pull network type. This parameter is required and verified by the backend when pullNetwork is submitted. The default value for new creations is public, which is independent of the agent runtime network.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>public</para>
@@ -486,7 +502,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the security group. This parameter is required when type is set to vpc. The security group must belong to the selected VPC.</para>
+                    /// <para>The security group ID. This parameter is required when type is set to vpc, and must belong to the selected VPC.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vsw-example</para>
@@ -496,7 +512,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string VSwitchId { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the VPC. This parameter is required when type is set to vpc. The account and region to which the VPC belongs are verified by the backend.</para>
+                    /// <para>The VPC ID. This parameter is required when type is set to vpc. The associated account and region are verified by the backend.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vpc-example</para>
@@ -518,7 +534,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? SkipTlsVerify { get; set; }
 
                 /// <summary>
-                /// <para>The username saved after the source is successfully prepared. Omitted for anonymous or unverified sources. This does not indicate the existence of a reusable password.</para>
+                /// <para>The verified source username.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>reader</para>
@@ -530,7 +546,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The deployment method of the agent. Custom agents are deployed and managed by the platform, and MANAGED is returned.</para>
+            /// <para>The deployment method of the agent. For custom code or image agents deployed and managed by the platform, MANAGED is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MANAGED</para>
@@ -571,7 +587,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public CreateCustomAgentResponseBodyDataEnvironment Environment { get; set; }
             public class CreateCustomAgentResponseBodyDataEnvironment : TeaModel {
                 /// <summary>
-                /// <para>The list of recently submitted environment variables.</para>
+                /// <para>The list of latest submitted environment variables.</para>
                 /// </summary>
                 [NameInMap("variables")]
                 [Validation(Required=false)]
@@ -604,7 +620,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The HTTP health check configuration for the agent. Empty if not configured.</para>
+            /// <para>The HTTP health check configuration for the agent. This field is empty if not configured.</para>
             /// </summary>
             [NameInMap("healthCheck")]
             [Validation(Required=false)]
@@ -690,14 +706,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ImageCacheId { get; set; }
 
             /// <summary>
-            /// <para>The acceptance summary for the current cache preparation.</para>
+            /// <para>The acceptance summary of the current cache preparation.</para>
             /// </summary>
             [NameInMap("imageCachePreparation")]
             [Validation(Required=false)]
             public CreateCustomAgentResponseBodyDataImageCachePreparation ImageCachePreparation { get; set; }
             public class CreateCustomAgentResponseBodyDataImageCachePreparation : TeaModel {
                 /// <summary>
-                /// <para>The ID of the cache associated with this request.</para>
+                /// <para>The ID of the currently associated cache.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -732,14 +748,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The currently associated image preparation task. The phase indicates acceptance. Query the preparation API for real-time progress. A regular save does not create an image preparation task.</para>
+            /// <para>The currently associated image preparation task. The phase serves as an acceptance prompt. Query the preparation interface for real-time progress. A normal save does not create an image preparation task.</para>
             /// </summary>
             [NameInMap("imagePreparation")]
             [Validation(Required=false)]
             public CreateCustomAgentResponseBodyDataImagePreparation ImagePreparation { get; set; }
             public class CreateCustomAgentResponseBodyDataImagePreparation : TeaModel {
                 /// <summary>
-                /// <para>The image preparation phase for this request. Configuration acceptance does not mean successful deployment.</para>
+                /// <para>The current image preparation phase. Configuration acceptance does not indicate successful deployment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>QUEUED</para>
@@ -761,14 +777,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The wait or execution error of the latest configuration version. Returned only when this version is waiting for a retry or has failed to execute.</para>
+            /// <para>The waiting or execution error of the latest configuration version. This is returned only when the version is waiting for a retry or fails to execute.</para>
             /// </summary>
             [NameInMap("latestExecutionError")]
             [Validation(Required=false)]
             public CreateCustomAgentResponseBodyDataLatestExecutionError LatestExecutionError { get; set; }
             public class CreateCustomAgentResponseBodyDataLatestExecutionError : TeaModel {
                 /// <summary>
-                /// <para>The reason code for the wait or execution failure of the latest configuration, used to determine subsequent processing methods.</para>
+                /// <para>The reason code for the waiting or execution failure of the latest configuration. Use this code to determine the subsequent processing method.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -779,7 +795,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The description of the reason why the latest configuration is waiting or failed to execute. Refer to the code and retryable fields to determine what to do next.</para>
+                /// <para>The description of the reason why the latest configuration is waiting or failed to execute. Refer to the code and retryable fields to determine What to do next.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -790,7 +806,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the system automatically retries the operation. If the value is true, you can query again later. If the value is false, check and fix the configuration based on the reason, and then resubmit.</para>
+                /// <para>Specifies whether the operation is automatically retried. If the value is true, you can query again later. If the value is false, check and fix the configuration based on the reason and resubmit.</para>
                 /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("retryable")]
@@ -811,7 +827,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? LatestSpecVersion { get; set; }
 
             /// <summary>
-            /// <para>The execution status corresponding to latestSpecVersion. pending indicates waiting for execution. processing indicates executing. waiting_retry indicates waiting for a retry. succeeded indicates execution succeeded. failed indicates execution failed. superseded indicates replaced by a subsequent version.</para>
+            /// <para>The execution status corresponding to the latestSpecVersion. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>pending: Waiting for execution.</description></item>
+            /// <item><description>processing: Executing.</description></item>
+            /// <item><description>waiting_retry: Waiting for a retry.</description></item>
+            /// <item><description>succeeded: Execution succeeded.</description></item>
+            /// <item><description>failed: Execution failed.</description></item>
+            /// <item><description>superseded: Superseded by a subsequent version.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>succeeded</para>
@@ -824,7 +848,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string LatestVersionStatus { get; set; }
 
             /// <summary>
-            /// <para>The recently submitted log delivery configuration.</para>
+            /// <para>The latest submitted log delivery configuration.</para>
             /// </summary>
             [NameInMap("logging")]
             [Validation(Required=false)]
@@ -862,7 +886,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The name of the custom agent.</para>
+            /// <para>The name of the custom code or image agent.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -873,21 +897,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The network access configuration of the agent. The actual access scope is also restricted by the network configuration of the workspace.</para>
+            /// <para>The network access configuration of the agent. The actual access scope is also limited by the network configuration of the workspace.</para>
             /// </summary>
             [NameInMap("network")]
             [Validation(Required=false)]
             public CreateCustomAgentResponseBodyDataNetwork Network { get; set; }
             public class CreateCustomAgentResponseBodyDataNetwork : TeaModel {
                 /// <summary>
-                /// <para>The Internet access configuration of the agent. If this parameter is not configured, Internet access is allowed on the agent side but is still restricted by the workspace.</para>
+                /// <para>The Internet access configuration of the agent. If this item is not configured, the agent is allowed to access the Internet, but the access is still limited by the workspace.</para>
                 /// </summary>
                 [NameInMap("accessInternet")]
                 [Validation(Required=false)]
                 public CreateCustomAgentResponseBodyDataNetworkAccessInternet AccessInternet { get; set; }
                 public class CreateCustomAgentResponseBodyDataNetworkAccessInternet : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether Internet access is allowed on the agent side. The actual access is still restricted by the workspace.</para>
+                    /// <para>Specifies whether the agent is allowed to access the Internet. The actual access is still limited by the workspace.</para>
                     /// </summary>
                     [NameInMap("enabled")]
                     [Validation(Required=false)]
@@ -896,14 +920,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The user VPC access configuration of the agent. If this parameter is not configured, user VPC access is allowed on the agent side but is still restricted by the workspace.</para>
+                /// <para>The user VPC access configuration of the agent. If this item is not configured, the agent is allowed to access the user VPC, but the access is still limited by the workspace.</para>
                 /// </summary>
                 [NameInMap("accessVpc")]
                 [Validation(Required=false)]
                 public CreateCustomAgentResponseBodyDataNetworkAccessVpc AccessVpc { get; set; }
                 public class CreateCustomAgentResponseBodyDataNetworkAccessVpc : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether access to the user VPC configured for the workspace is allowed on the agent side. The actual access is still restricted by the workspace.</para>
+                    /// <para>Specifies whether the agent is allowed to access the user VPC configured for the workspace. The actual access is still limited by the workspace.</para>
                     /// </summary>
                     [NameInMap("enabled")]
                     [Validation(Required=false)]
@@ -914,7 +938,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The high-code agent observability configuration.</para>
+            /// <para>The observability configuration for the high-code agent.</para>
             /// </summary>
             [NameInMap("observability")]
             [Validation(Required=false)]
@@ -930,7 +954,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The list of OSS directory mounts in the latest submission.</para>
+            /// <para>The latest submitted list of OSS directory mounts.</para>
             /// </summary>
             [NameInMap("ossMounts")]
             [Validation(Required=false)]
@@ -947,7 +971,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string BucketName { get; set; }
 
                 /// <summary>
-                /// <para>The OSS mount directory in the container, which is located under /mnt/oss/.</para>
+                /// <para>The absolute mount path in the container, such as /data/train. Mount targets cannot be duplicated or form parent-child overrides, and must avoid platform reserved directories.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/mnt/oss/train</para>
@@ -957,7 +981,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string MountPath { get; set; }
 
                 /// <summary>
-                /// <para>The object directory prefix in the mounted bucket.</para>
+                /// <para>The non-empty relative directory prefix in the currently configured bucket.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>datasets/train</para>
@@ -967,11 +991,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the mount is read-only. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>true: Read-only.</description></item>
-                /// <item><description>false: Read and write.</description></item>
-                /// </list>
+                /// <para>Specifies whether the mount is read-only. A value of true indicates read-only. A value of false indicates read and write.</para>
                 /// </summary>
                 [NameInMap("readOnly")]
                 [Validation(Required=false)]
@@ -987,7 +1007,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<CreateCustomAgentResponseBodyDataProtocol> Protocol { get; set; }
             public class CreateCustomAgentResponseBodyDataProtocol : TeaModel {
                 /// <summary>
-                /// <para>The request header configuration for the current protocol. The key is the header name and the value is a string.</para>
+                /// <para>The request header configuration for the current protocol. The key is the name and the value is a string.</para>
                 /// </summary>
                 [NameInMap("headers")]
                 [Validation(Required=false)]
@@ -1011,7 +1031,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>The API path corresponding to the current protocol.</para>
+                    /// <para>The interface path corresponding to the current protocol.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -1062,7 +1082,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string RoleArn { get; set; }
 
             /// <summary>
-            /// <para>The runtime configuration in the latest commit, including compute specifications, session policy, and elastic policy.</para>
+            /// <para>The latest committed runtime configuration, including compute specifications, session policy, and elastic policy.</para>
             /// </summary>
             [NameInMap("runtime")]
             [Validation(Required=false)]
@@ -1102,11 +1122,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public CreateCustomAgentResponseBodyDataRuntimeHpa Hpa { get; set; }
                 public class CreateCustomAgentResponseBodyDataRuntimeHpa : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether elastic scaling is enabled. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>true: Enabled.</description></item>
-                    /// <item><description>false: Disabled.</description></item>
-                    /// </list>
+                    /// <para>Specifies whether elastic scaling is enabled in the current configuration.</para>
                     /// <para>This parameter is required.</para>
                     /// </summary>
                     [NameInMap("enabled")]
@@ -1114,17 +1130,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of concurrent sessions configured for a single running instance.</para>
+                    /// <para>The maximum number of concurrent sessions per instance in the current configuration.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>100</para>
+                    /// <para>20</para>
                     /// </summary>
                     [NameInMap("maxConcurrentSessionsPerSandbox")]
                     [Validation(Required=false)]
                     public int? MaxConcurrentSessionsPerSandbox { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of running instances configured.</para>
+                    /// <para>The maximum number of instances in the current configuration.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -1134,7 +1150,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? MaxSandboxCount { get; set; }
 
                     /// <summary>
-                    /// <para>The minimum number of running instances configured.</para>
+                    /// <para>The minimum number of instances in the current configuration.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -1144,7 +1160,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? MinSandboxCount { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum idle time configured for a session, in seconds.</para>
+                    /// <para>The maximum idle time for a session in the current configuration, in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>600</para>
@@ -1164,7 +1180,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public CreateCustomAgentResponseBodyDataRuntimeSessionPolicy SessionPolicy { get; set; }
                 public class CreateCustomAgentResponseBodyDataRuntimeSessionPolicy : TeaModel {
                     /// <summary>
-                    /// <para>The name of the HTTP request header used by the session policy. This parameter applies to ISOLATED_HEADER_FIELD.</para>
+                    /// <para>The name of the HTTP request header used by the session policy. This applies to ISOLATED_HEADER_FIELD.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>X-Session-Id</para>
@@ -1174,7 +1190,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string HeaderName { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the session policy. Valid values:</para>
+                    /// <para>The session policy type. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>AFFINITY: Session affinity.</description></item>
                     /// <item><description>ISOLATED_HEADER_FIELD: Uses the request header specified by headerName to associate sessions.
@@ -1194,23 +1210,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The number of instances counted by running instance phase. Keys include PENDING (creating or initializing), RUNNING (running), HIBERNATING (hibernating), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (terminating), and FAILED (failed). Only phases that actually occur are returned. Missing keys are treated as 0.</para>
+            /// <para>The number of instances by sandbox phase. Keys include PENDING (creating or initializing), RUNNING (running), HIBERNATING (hibernating), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (terminating), and FAILED (failed). Only phases that actually occur are returned, and missing keys are treated as 0.</para>
             /// </summary>
             [NameInMap("sandboxPhaseCounts")]
             [Validation(Required=false)]
             public Dictionary<string, long?> SandboxPhaseCounts { get; set; }
 
             /// <summary>
-            /// <para>The overall status of the agent. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Creating: The agent is being created.</description></item>
-            /// <item><description>Running: The agent is running.</description></item>
-            /// <item><description>Failed: The agent failed.</description></item>
-            /// <item><description>Updating: The agent is being updated.</description></item>
-            /// <item><description>Deleting: The agent is being deleted.</description></item>
-            /// <item><description>Deleted: The agent is deleted.
-            /// To check the execution progress of the latest configuration, query latestVersionStatus.</description></item>
-            /// </list>
+            /// <para>The overall status of the agent. Valid values: Creating (the agent is being created), Running (the agent is running), Failed (the agent failed), Updating (the agent is being updated), Deleting (the agent is being deleted), and Deleted (the agent is deleted). To check the execution progress of the latest configuration, query latestVersionStatus.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -1221,7 +1228,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the agent was last updated. The time is in ISO 8601 format. A trailing Z indicates the UTC time zone. Fractional seconds may be included.</para>
+            /// <para>The time when the agent was last updated, in ISO 8601 format. The trailing Z indicates the UTC time zone, and fractional seconds may be included.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-10T06:05:00Z</para>
@@ -1231,7 +1238,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string UpdatedAt { get; set; }
 
             /// <summary>
-            /// <para>The image cache toggle.</para>
+            /// <para>Specifies whether the image cache is enabled.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -1242,7 +1249,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? UseImageCache { get; set; }
 
             /// <summary>
-            /// <para>The ID of the workspace to which the custom agent belongs.</para>
+            /// <para>The ID of the workspace to which the custom code or image agent belongs.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -1266,7 +1273,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The description of the processing result for the request. The value is success if the request is successful.</para>
+        /// <para>The result message of the request. The value is success if the request is successful.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -1288,7 +1295,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. A successful creation, update, or deletion does not mean that the background operation is complete.</para>
+        /// <para>Indicates whether the request was successful. A value of true indicates success. A successful creation, update, or deletion does not mean that the background operation is complete.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("success")]

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public VerifyWorkspaceAgenticFsMountRamAuthorizationResponseBodyData Data { get; set; }
         public class VerifyWorkspaceAgenticFsMountRamAuthorizationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The authorization status. A value of AUTHORIZED does not indicate that the actual mount was successful.</para>
+            /// <para>The authorization status. A value of AUTHORIZED does not indicate that the actual mount is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AUTHORIZED</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

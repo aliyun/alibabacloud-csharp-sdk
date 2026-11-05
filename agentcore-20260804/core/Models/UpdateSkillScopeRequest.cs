@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public UpdateSkillScopeRequestBody Body { get; set; }
         public class UpdateSkillScopeRequestBody : TeaModel {
             /// <summary>
-            /// <para>The visibility.</para>
+            /// <para>The visibility scope.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

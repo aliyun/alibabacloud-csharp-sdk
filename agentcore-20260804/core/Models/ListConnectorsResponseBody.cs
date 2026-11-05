@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The list of connectors.</para>
+        /// <para>The connector list.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? BoundAgentCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the connector was enabled.</para>
+            /// <para>The activation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-01T08:00:00Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string EnabledAt { get; set; }
 
             /// <summary>
-            /// <para>The connector configuration JSON string. After the connector is enabled, this string may contain sensitive credentials.</para>
+            /// <para>The JSON string of the connector configuration. It may contain sensitive credentials after being enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;site&quot;:&quot;global&quot;,&quot;organizationId&quot;:&quot;org-xxxx&quot;}</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The next page token. The current version does not return this field.</para>
+        /// <para>The next token. This field is not returned in the current version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dGVzdA==</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

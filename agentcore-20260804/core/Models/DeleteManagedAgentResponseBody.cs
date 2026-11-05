@@ -20,14 +20,34 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The summary information of the deleted managed agent.</para>
+        /// <para>The summary information of the managed Harness agent after deletion.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public DeleteManagedAgentResponseBodyData Data { get; set; }
         public class DeleteManagedAgentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The managed agent ID.</para>
+            /// <para>The inbound access mode.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>API_KEY</para>
+            /// </summary>
+            [NameInMap("accessMode")]
+            [Validation(Required=false)]
+            public string AccessMode { get; set; }
+
+            /// <summary>
+            /// <para>The user access scope.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SPECIFIED</para>
+            /// </summary>
+            [NameInMap("accessScope")]
+            [Validation(Required=false)]
+            public string AccessScope { get; set; }
+
+            /// <summary>
+            /// <para>The ID of the managed Harness agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent-1</para>
@@ -67,7 +87,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string DeployType { get; set; }
 
             /// <summary>
-            /// <para>The description of the managed agent.</para>
+            /// <para>The description of the managed Harness agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Agent for code review</para>
@@ -77,7 +97,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The latest specification version.</para>
+            /// <para>The latest specification version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -87,7 +107,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? LatestSpecVersion { get; set; }
 
             /// <summary>
-            /// <para>The name of the managed agent.</para>
+            /// <para>The name of the managed Harness agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-agent</para>
@@ -107,7 +127,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Runtime { get; set; }
 
             /// <summary>
-            /// <para>The status of the managed agent.</para>
+            /// <para>The status of the managed Harness agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -149,7 +169,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request processing result message.</para>
+        /// <para>The message about the request processing result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

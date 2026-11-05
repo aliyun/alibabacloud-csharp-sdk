@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The associated Connector Key ID. This field is not returned in the current version.</para>
+            /// <para>The associated connector key ID. This field is not returned in the current version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ckey-xxxx</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string KeyId { get; set; }
 
             /// <summary>
-            /// <para>The associated Connector Key name. This field is not returned in the current version.</para>
+            /// <para>The name of the associated connector key. This field is not returned in the current version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The number of models returned in this request.</para>
+        /// <para>The number of models returned in this response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The next page token. This field is not returned in the current version.</para>
+        /// <para>The next token. This field is not returned in the current version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dGVzdA==</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

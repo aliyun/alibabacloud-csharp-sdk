@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The validation result.</para>
+        /// <para>The verification result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public VerifyConnectorResponseBodyData Data { get; set; }
         public class VerifyConnectorResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of Service Account Key labels that failed validation or returned indeterminate results.</para>
+            /// <para>The list of service account key labels that failed the verification or have uncertain verification results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<string> InvalidServiceAccountKeys { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether all validated Service Account Keys are valid.</para>
+            /// <para>Indicates whether all verified service account keys are valid.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The list of sessions.</para>
+        /// <para>The session list.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AgentId { get; set; }
 
             /// <summary>
-            /// <para>Session ID</para>
+            /// <para>The session ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>session-001</para>

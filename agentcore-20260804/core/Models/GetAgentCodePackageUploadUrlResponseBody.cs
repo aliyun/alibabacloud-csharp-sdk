@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ExpiresAt { get; set; }
 
             /// <summary>
-            /// <para>The HTTP headers that must be included in the direct upload request.</para>
+            /// <para>The required HTTP request headers for direct upload.</para>
             /// </summary>
             [NameInMap("headers")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? MaxSize { get; set; }
 
             /// <summary>
-            /// <para>The temporary Object Storage Service (OSS) URI of the code package.</para>
+            /// <para>The OSS URI of the temporary code package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss://agentcore-platform-example/code-package-uploads/workspaces/ws-a1b2c3d4e5f6/550e8400-e29b-41d4-a716-446655440000/package.zip</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The preparation query result. Refer to the phase for the asynchronous execution status.</para>
+        /// <para>The preparation query result. For the asynchronous execution status, see phase.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AgentId { get; set; }
 
             /// <summary>
-            /// <para>The error information. This field is returned only when the task fails. Otherwise, the value is null.</para>
+            /// <para>The error. This parameter is returned only when the task fails. Otherwise, the value is null.</para>
             /// </summary>
             [NameInMap("error")]
             [Validation(Required=false)]
             public GetCustomAgentImagePreparationResponseBodyDataError Error { get; set; }
             public class GetCustomAgentImagePreparationResponseBodyDataError : TeaModel {
                 /// <summary>
-                /// <para>The business error code for image preparation. This code is used to identify the failure type. For the specific cause, refer to the message.</para>
+                /// <para>The business error code for image preparation. It is used to identify the failure type. For the specific cause, see message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ImageSyncFailed</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The specific cause of the failure. This may include underlying errors such as image not found, authentication failure, network timeout, or certificate verification error. Passwords, tokens, or authentication headers are not returned. If the underlying system does not provide a cause, a general description is returned.</para>
+                /// <para>The specific cause of the failure. It may include underlying errors such as image not found, authentication failure, network timeout, or certificate verification error. Passwords, tokens, or authentication headers are not returned. If the underlying system does not provide a cause, a general description is returned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tls: failed to verify certificate: x509: certificate signed by unknown authority</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The failed phase. This field is returned only when the status is FAILED. Otherwise, the value is null.</para>
+            /// <para>The phase where the failure occurred. This parameter is returned only when the phase is FAILED. Otherwise, the value is null.</para>
             /// 
             /// <b>Example:</b>
             /// <para>COPYING</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string FailedPhase { get; set; }
 
             /// <summary>
-            /// <para>The current phase. Only SUCCEEDED indicates that the deployment of the target version is successful.</para>
+            /// <para>The current phase. Only SUCCEEDED indicates that the target version is deployed successfully.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FAILED</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Phase { get; set; }
 
             /// <summary>
-            /// <para>The console submission task ID.</para>
+            /// <para>The Console task ID for the current submission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent-example:1</para>

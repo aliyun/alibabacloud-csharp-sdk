@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public List<ListModelConnectionsResponseBodyItems> Items { get; set; }
         public class ListModelConnectionsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The number of API keys configured for the model connection.</para>
+            /// <para>The number of API keys configured in the model connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ConnectionId { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource was created, in RFC 3339 UTC format.</para>
+            /// <para>The time when the resource was created. The time is displayed in the RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-09T00:00:00Z</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether access credentials have been configured for the model connection.</para>
+            /// <para>Indicates whether access credentials are configured for the model connection.</para>
             /// </summary>
             [NameInMap("credentialConfigured")]
             [Validation(Required=false)]
             public bool? CredentialConfigured { get; set; }
 
             /// <summary>
-            /// <para>The description of the model connection. Maximum length: 255 characters.</para>
+            /// <para>The description of the model connection. The description can be up to 255 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>description</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The absolute HTTP or HTTPS address of the upstream model service. Maximum length: 1024 characters.</para>
+            /// <para>The absolute HTTP or HTTPS URL of the upstream model service. The URL can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// <para>The list of model summaries associated with the model connection.</para>
+            /// <para>The list of summaries of models associated with the model connection.</para>
             /// </summary>
             [NameInMap("models")]
             [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string ModelId { get; set; }
 
                 /// <summary>
-                /// <para>The upstream model name.</para>
+                /// <para>The name of the upstream model.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qwen-max</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The model connection name. The name must be 1 to 128 non-whitespace characters in length.</para>
+            /// <para>The name of the model connection. The name must be 1 to 128 characters in length and cannot contain whitespace characters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The model invocation protocol. Currently only OpenAI/v1 is supported. If not configured in Settings when the model connection is created, this default value is used.</para>
+            /// <para>The model invocation protocol. Currently, only OpenAI/v1 is supported. If this parameter is not specified during model connection creation, this default value is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OpenAI/v1</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The failure summary returned when the model connection fails to be published or fails to be deleted but remains in the Deleting state. This value is empty for other states.</para>
+            /// <para>The failure summary returned when the model connection fails to be published, or when deletion fails but the connection remains in the deleting state. This field is empty in other states.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GatewayOperationException</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string StatusReason { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource was last updated, in RFC 3339 UTC format.</para>
+            /// <para>The time when the resource was last updated. The time is displayed in the RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-09T00:00:00Z</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The number of records per page. Valid values: 0 to 100. If this parameter is not set or is set to 0, the default value 10 is used.</para>
+        /// <para>The maximum number of entries to return on each page. Valid values: 0 to 100. Default value: 10. If this parameter is not specified or is set to 0, the default value is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The request processing result message.</para>
+        /// <para>The message about the request processing result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Pass the token returned in the previous query. An empty response indicates that no more pages are available.</para>
+        /// <para>The pagination token. Pass the token returned in the previous query for the current request. An empty response indicates that no more pages are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bW9kZWwtbWFuYWdlbWVudC1vZmZzZXQ6bW9kZWwtY29ubmVjdGlvbjoxMA</para>
@@ -235,14 +235,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of resources that match the query conditions.</para>
+        /// <para>The total number of resources that meet the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

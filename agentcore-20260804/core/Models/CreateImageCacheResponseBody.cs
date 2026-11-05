@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateImageCacheResponseBodyData Data { get; set; }
         public class CreateImageCacheResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the source ACR Enterprise instance.</para>
+            /// <para>The ID of the source ACR instance.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AcrInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The deduplicated number of agents that have useImageCache set to true and are associated with this logical resource in the current workspace. The value is greater than or equal to 0. This set is the same as the set filtered by imageCacheId in ListAllAgents. Agents with the feature disabled are not counted, and this value is independent of the number of occupied instances.</para>
+            /// <para>The number of agents that use the cache.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? AgentCount { get; set; }
 
             /// <summary>
-            /// <para>The actual cache size in bytes. The known value is greater than or equal to 0. If the value is unknown, it is null. The compressed size of the source image cannot be used as a substitute.</para>
+            /// <para>The size of the cache in bytes.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? CacheSizeBytes { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether deletion is allowed. The value is true when there are no configuration references with the switch enabled, no valid instances occupying the resource, and the resource is not being deleted in the current workspace. If the reference status is unknown, the query should fail, and deletion cannot be allowed by default.</para>
+            /// <para>Indicates whether deletion is allowed.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? CanDelete { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the logical resource in the current workspace, in RFC3339 format with time zone. The time is not refreshed when the content of the latest tag is updated.</para>
+            /// <para>The time when the resource was created. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The reason why deletion is blocked. The value is null when canDelete is true. Otherwise, the value is returned based on the priority of DELETING, AGENT_ENABLED, and INSTANCES_RELEASING. Even if the number of agents is 0, old instances may still occupy the resource.</para>
+            /// <para>The reason why deletion is blocked.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string DeleteBlockReason { get; set; }
 
             /// <summary>
-            /// <para>The current content digest in the format of sha256: followed by a 64-character lowercase hexadecimal string. It only describes the currently registered content and does not prove that old instances have been switched.</para>
+            /// <para>The current content digest.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Digest { get; set; }
 
             /// <summary>
-            /// <para>The reason for the cache failure. This is a non-null object when the status is FAILED, and null for other statuses. It only describes the current content and the current creation round.</para>
+            /// <para>The reason for the cache failure.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>if can be null:</b>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public CreateImageCacheResponseBodyDataError Error { get; set; }
             public class CreateImageCacheResponseBodyDataError : TeaModel {
                 /// <summary>
-                /// <para>The secure and non-null error code for the current creation failure.</para>
+                /// <para>The error code for the creation failure.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -134,11 +134,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The secure and non-null display reason for the creation failure, excluding credentials, internal addresses, or stack traces.</para>
+                /// <para>The description of the creation failure.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Failed to create the image cache. Please try again</para>
+                /// <para>Image cache creation failed. Try again</para>
                 /// </summary>
                 [NameInMap("message")]
                 [Validation(Required=false)]
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The logical resource ID manageable by the current workspace, which is not a shared physical cache ID.</para>
+            /// <para>The ID of the image cache.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The domain name of the source image, excluding the protocol, path, and credentials.</para>
+            /// <para>The domain name of the source image.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Registry { get; set; }
 
             /// <summary>
-            /// <para>The path of the source image repository in the namespace/repository format, which already includes the namespace.</para>
+            /// <para>The repository path of the source image.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Repository { get; set; }
 
             /// <summary>
-            /// <para>The status of the image cache. Valid values: PENDING: creating, READY: available, FAILED: abnormal, DELETING: deleting in the current workspace.</para>
+            /// <para>The image cache status.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tag of the source image. Case is preserved. Regular tags cannot be registered with different digests, with the exact lowercase latest tag being the only exception.</para>
+            /// <para>The tag of the source image.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Tag { get; set; }
 
             /// <summary>
-            /// <para>The workspace ID, which is consistent with the requested workspace. Resources with the same content from other workspaces are not returned.</para>
+            /// <para>The workspace ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. This does not indicate that the cache creation is complete.</para>
+        /// <para>Indicates whether the request is successful. A successful request does not mean that the cache creation is complete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

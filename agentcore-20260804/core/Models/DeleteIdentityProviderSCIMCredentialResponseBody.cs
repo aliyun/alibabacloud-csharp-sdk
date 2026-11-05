@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class DeleteIdentityProviderSCIMCredentialResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result code. Handle failures based on the HTTP status code and message.</para>
+        /// <para>The business result code. If the call fails, use this code in combination with the HTTP status code and message for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code of the request. This does not indicate the final result of the background task.</para>
+        /// <para>The processing status of this request. This does not indicate the final result of the background task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned for the request. For asynchronous tasks, query the task result by calling the corresponding API operation.</para>
+        /// <para>The request acceptance or error message. Check the asynchronous task result by calling the corresponding query operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can use this ID to troubleshoot issues. Keep the ID if the request fails.</para>
+        /// <para>The request ID. Used to associate this call with troubleshooting. Retain this ID if the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request-example</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. A value of true indicates that the request was successful. For asynchronous write operations, you must still query the task result.</para>
+        /// <para>Indicates whether the request was successful. A value of true indicates that the request was processed successfully. For asynchronous writes, you must continue to query the task result.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

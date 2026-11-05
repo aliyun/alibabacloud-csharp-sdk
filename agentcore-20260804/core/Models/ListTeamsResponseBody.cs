@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AgentName { get; set; }
 
                 /// <summary>
-                /// <para>The role of the agent in the team. Valid values: LEADER, WORKER.</para>
+                /// <para>The role of the agent in the team. Valid values: LEADER and WORKER.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>WORKER</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The creation time in RFC 3339 UTC format.</para>
+            /// <para>The creation time in UTC format compliant with RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The team name. It can contain only lowercase letters, digits, and hyphens. It must start and end with a lowercase letter or a digit, and must be 1 to 128 characters in length.</para>
+            /// <para>The team name. It can contain only lowercase letters, digits, and hyphens, must start and end with a lowercase letter or a digit, and must be 1 to 128 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>team-01</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string TeamId { get; set; }
 
             /// <summary>
-            /// <para>The time of the last modification in RFC 3339 UTC format.</para>
+            /// <para>The time of the last modification in UTC format compliant with RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<ListTeamsResponseBodyItemsUsers> Users { get; set; }
             public class ListTeamsResponseBodyItemsUsers : TeaModel {
                 /// <summary>
-                /// <para>The role of the user in the team. Valid values: ADMIN, MEMBER. Each team must have exactly one ADMIN.</para>
+                /// <para>The role of the user in the team. Valid values: ADMIN and MEMBER. Each team must have exactly one ADMIN.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ADMIN</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records per page applied to this query.</para>
+        /// <para>The maximum number of records per page that takes effect for this query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The response message. An error description is returned if the request fails.</para>
+        /// <para>The response message. An error description is returned when the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. This parameter is empty if no next page exists.</para>
+        /// <para>The cursor for the next page. This parameter is empty if there is no next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dGVhbS1vZmZzZXQ6MTA</para>

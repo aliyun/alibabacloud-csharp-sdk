@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListSkillReferencesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The skill reference relationship data returned by the paging query.</para>
+        /// <para>The skill reference data returned in the paging query.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<ListSkillReferencesResponseBodyDataPageItems> PageItems { get; set; }
             public class ListSkillReferencesResponseBodyDataPageItems : TeaModel {
                 /// <summary>
-                /// <para>The ID of the referencing entity, which is the identifier of the agent or agent spec.</para>
+                /// <para>The ID of the referencing entity, which is the identifier of the agent or AgentSpec.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>agent-1234567890abcdef</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The current page number, starting from 1.</para>
+            /// <para>The current page number. Pages start from 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The total number of available pages.</para>
+            /// <para>The total number of pages.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public int? PagesAvailable { get; set; }
 
             /// <summary>
-            /// <para>The total number of reference relationships that meet the conditions.</para>
+            /// <para>The total number of reference relationships that meet the specified conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

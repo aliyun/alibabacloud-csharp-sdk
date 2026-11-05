@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The description of the MCP service.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>An MCP service for querying knowledge bases</para>
+            /// <para>MCP service for querying knowledge bases</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public Dictionary<string, object> DisplayMetadata { get; set; }
 
             /// <summary>
-            /// <para>The multilingual display content organized by BCP-47 language tags. Falls back to default fields if the specified language is not matched.</para>
+            /// <para>The multilingual display content organized by BCP-47 language tags. If a language is not matched, the system falls back to the default fields.</para>
             /// </summary>
             [NameInMap("i18n")]
             [Validation(Required=false)]
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string SchemaVersion { get; set; }
 
             /// <summary>
-            /// <para>The template input schema, represented as a JSON Schema string.</para>
+            /// <para>The input schema of the template, represented as a JSON Schema string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;addresses&quot;:{&quot;type&quot;:&quot;array&quot;,&quot;items&quot;:{&quot;type&quot;:&quot;string&quot;}}}}</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records to return in this query.</para>
+        /// <para>The maximum number of records to return for this query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token used to retrieve the next page of results.</para>
+        /// <para>The pagination token used to query the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID used to locate and troubleshoot the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request-123456</para>
@@ -223,14 +223,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of records that match the specified conditions.</para>
+        /// <para>The total number of records that meet the conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>

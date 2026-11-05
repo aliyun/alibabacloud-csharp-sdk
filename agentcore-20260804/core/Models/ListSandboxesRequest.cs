@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListSandboxesRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of records per page. Default value: 20.</para>
+        /// <para>The maximum number of entries to return per page. Default value: 20. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for querying the next page. When paginating, keep workspaceId, agentId, searchText, sessionId, and maxResults unchanged.</para>
+        /// <para>The cursor for querying the next page. When paginating, keep <c>workspaceId</c>, <c>agentId</c>, <c>searchText</c>, <c>sessionId</c>, and <c>maxResults</c> unchanged.</para>
         /// 
         /// <b>Example:</b>
         /// <para>next-token-1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Performs a case-insensitive fuzzy search by sandbox ID fragment.</para>
+        /// <para>The fragment of the Sandbox ID for a case-insensitive fuzzy search.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2f360</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string SearchText { get; set; }
 
         /// <summary>
-        /// <para>Performs a case-insensitive fuzzy search by active session ID fragment.</para>
+        /// <para>The fragment of the current valid session ID for a case-insensitive fuzzy search.</para>
         /// 
         /// <b>Example:</b>
         /// <para>session-a</para>

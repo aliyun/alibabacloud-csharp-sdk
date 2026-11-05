@@ -30,14 +30,34 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The list of custom agent summaries on the current page. To query the complete configuration and the execution result of the latest version, call the GetCustomAgent operation.</para>
+        /// <para>The list of summaries for custom code or image agents on the current page. To query the complete configuration and the execution results of the latest version, call the GetCustomAgent operation.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ListCustomAgentsResponseBodyItems> Items { get; set; }
         public class ListCustomAgentsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The unique identifier of the custom agent. You can obtain this ID from the response of the CreateCustomAgent or ListCustomAgents operation.</para>
+            /// <para>The inbound access method.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>API_KEY</para>
+            /// </summary>
+            [NameInMap("accessMode")]
+            [Validation(Required=false)]
+            public string AccessMode { get; set; }
+
+            /// <summary>
+            /// <para>The user access scope.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ALL</para>
+            /// </summary>
+            [NameInMap("accessScope")]
+            [Validation(Required=false)]
+            public string AccessScope { get; set; }
+
+            /// <summary>
+            /// <para>The unique identifier of the custom code or image agent. You can obtain this ID from the response of the CreateCustomAgent or ListCustomAgents operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent-550e8400e29b41d4a716446655440000</para>
@@ -61,7 +81,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public ListCustomAgentsResponseBodyItemsArtifactCode Code { get; set; }
                 public class ListCustomAgentsResponseBodyItemsArtifactCode : TeaModel {
                     /// <summary>
-                    /// <para>The startup command for the code package. This parameter is required in code package mode. The working directory is the root directory of the extracted code, which is /code. Example: python main.py. Quotes and escape characters are supported. Environment variables, pipes, and logical operations are not automatically expanded. For complex commands, use a script within the package.</para>
+                    /// <para>The startup command for the code package. This parameter is required in code package mode. The working directory is the root directory of the extracted code, which is /code. Example: python main.py. Quotes and escapes are supported. Environment variables, pipes, and logical operations are not automatically expanded. For complex commands, use a script within the package.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -72,7 +92,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Entrypoint { get; set; }
 
                     /// <summary>
-                    /// <para>The identifier of the code runtime environment in the currently saved configuration. The runtime image uses the saved snapshot. Adding a new version to the directory does not automatically change the existing configuration.</para>
+                    /// <para>The identifier of the code runtime environment in the currently saved configuration. The runtime image uses the saved snapshot. Adding a new version to the catalog does not automatically change the existing configuration.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -113,7 +133,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Entrypoint { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the ACR Enterprise instance.</para>
+                    /// <para>The ID of the ACR Enterprise Edition instance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cri-example</para>
@@ -123,7 +143,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string InstanceId { get; set; }
 
                     /// <summary>
-                    /// <para>The ACR namespace.</para>
+                    /// <para>The Container Registry namespace.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>team</para>
@@ -133,7 +153,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Namespace { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the ACR image repository.</para>
+                    /// <para>The name of the Container Registry image repository.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>app</para>
@@ -153,7 +173,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Tag { get; set; }
 
                     /// <summary>
-                    /// <para>The source type of the container image.</para>
+                    /// <para>The image source type. A value of acr indicates a Container Registry image. A value of custom indicates a custom image source. For the corresponding source configurations, refer to the descriptions of artifact.container and customImage.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -238,7 +258,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The creation method of the agent. The value is CUSTOM for custom agents.</para>
+            /// <para>The creation method of the agent. The value is CUSTOM for custom code or image agents.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CUSTOM</para>
@@ -258,7 +278,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The deployment method of the agent. Custom agents are deployed and managed by the platform. The value is MANAGED for custom agents.</para>
+            /// <para>The deployment method of the agent. Custom code or image agents are deployed and managed by the platform. The value is MANAGED.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MANAGED</para>
@@ -288,7 +308,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? LatestSpecVersion { get; set; }
 
             /// <summary>
-            /// <para>The name of the custom agent.</para>
+            /// <para>The name of the custom code or image agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-custom-agent</para>
@@ -305,7 +325,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<ListCustomAgentsResponseBodyItemsProtocol> Protocol { get; set; }
             public class ListCustomAgentsResponseBodyItemsProtocol : TeaModel {
                 /// <summary>
-                /// <para>The request header configuration of the current protocol. The key is the header name and the value is a string.</para>
+                /// <para>The request header configuration for the current protocol. The key is the header name and the value is a string.</para>
                 /// </summary>
                 [NameInMap("headers")]
                 [Validation(Required=false)]
@@ -342,12 +362,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The invoke Protocol Type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>agui: AG-UI protocol.</description></item>
-                /// <item><description>openai-chat-completion: OpenAI Chat Completions compatible protocol.</description></item>
-                /// <item><description>custom: Custom protocol.</description></item>
-                /// </list>
+                /// <para>The invocation protocol type. agui indicates the AG-UI protocol. openai-chat-completion indicates the OpenAI Chat Completions compatible protocol. custom indicates a custom protocol.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -370,16 +385,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Runtime { get; set; }
 
             /// <summary>
-            /// <para>The overall status of the agent. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Creating: The agent is being created.</description></item>
-            /// <item><description>Running: The agent is running.</description></item>
-            /// <item><description>Failed: The agent failed.</description></item>
-            /// <item><description>Updating: The agent is being updated.</description></item>
-            /// <item><description>Deleting: The agent is being deleted.</description></item>
-            /// <item><description>Deleted: The agent is deleted.
-            /// To query the execution progress of the latest configuration, call the GetCustomAgent operation.</description></item>
-            /// </list>
+            /// <para>The overall status of the agent. Valid values: Creating, Running, Failed, Updating, Deleting, and Deleted. To query the latest configuration execution progress, call GetCustomAgent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -389,7 +395,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the agent was last updated. The time is in ISO 8601 format. The trailing Z indicates the UTC time zone. Fractional seconds may be included.</para>
+            /// <para>The time when the agent was last updated. The time is in the ISO 8601 format, with a trailing Z indicating the UTC time zone. Fractional seconds are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-10T06:05:00Z</para>
@@ -399,7 +405,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string UpdatedAt { get; set; }
 
             /// <summary>
-            /// <para>The ID of the workspace to which the custom agent belongs.</para>
+            /// <para>The ID of the workspace to which the custom code or image agents belong.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ws-a1b2c3d4e5f6</para>
@@ -411,7 +417,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of results returned per page for the current query.</para>
+        /// <para>The maximum number of results to return per page for the current query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -421,7 +427,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The message that describes the result of the request. The value is success if the request is successful.</para>
+        /// <para>The message that describes the processing result of the request. The value is success if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -431,7 +437,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The opaque token used to query the next page. An empty value indicates that no more pages are available. Pass this token as-is in subsequent requests.</para>
+        /// <para>The opaque token used to retrieve the next page of results. An empty value indicates that there are no more pages. Pass this token as-is in subsequent requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>djE6YWdlbnRjb3JlLmFnZW50Lmxpc3QuY3VzdG9tOjIw</para>
@@ -441,7 +447,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request. You can use this ID to locate and troubleshoot issues.</para>
+        /// <para>The unique identifier of the request, which is used to locate and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>550E8400-E29B-41D4-A716-446655440000</para>
@@ -451,14 +457,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was processed successfully. A value of true indicates that the request was successful. A successful creation, update, or deletion response does not mean that the background operation is complete.</para>
+        /// <para>Indicates whether the request was processed successfully. true indicates that the request was successful. A successful creation, update, or deletion response does not mean that the background operation is complete.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of custom agents that meet the query conditions in the specified workspace.</para>
+        /// <para>The total number of custom code or image agents that match the query conditions in the specified workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>40</para>

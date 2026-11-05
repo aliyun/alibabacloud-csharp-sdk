@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AcrInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The current attachment status of the policy for the target repository.</para>
+            /// <para>The mount status of the policy for the current target repository.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AuthorizationStatus { get; set; }
 
             /// <summary>
-            /// <para>The access prerequisite status, which does not indicate Secret Ready.</para>
+            /// <para>The onboarding prerequisite, which is not Secret Ready.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string EligibilityStatus { get; set; }
 
             /// <summary>
-            /// <para>The stable reason code for unauthorized or unmet conditions. This field is omitted if no reason exists.</para>
+            /// <para>The stable reason code for unauthorized or unmet conditions. This field is omitted when no reason is available.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AcrRamUnauthorized</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ReasonCode { get; set; }
 
             /// <summary>
-            /// <para>The user-readable reason. This field is omitted if no reason exists.</para>
+            /// <para>The user-readable reason. This field is omitted when no reason is available.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Authorize the Workspace role for this ACR instance.</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string RoleName { get; set; }
 
             /// <summary>
-            /// <para>The source of the shared role. This does not indicate that authorization is complete.</para>
+            /// <para>The source of the shared role. This does not indicate that the authorization is complete.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

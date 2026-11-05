@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>A sample description that explains the purpose of the resource</para>
+            /// <para>A sample description used to explain the purpose of the resource</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? DownloadCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the AgentSpec is enabled.</para>
+            /// <para>Indicates whether it is enabled.</para>
             /// </summary>
             [NameInMap("enable")]
             [Validation(Required=false)]
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The list of MCP server references.</para>
+            /// <para>The list of MCP service references.</para>
             /// </summary>
             [NameInMap("mcpServers")]
             [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Scope { get; set; }
 
             /// <summary>
-            /// <para>The list of Skill references.</para>
+            /// <para>The list of skill references.</para>
             /// </summary>
             [NameInMap("skills")]
             [Validation(Required=false)]
@@ -127,11 +127,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The Skill source type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>REFERENCE: references AI Registry.</description></item>
-                /// <item><description>STATIC: statically bundled with the package.</description></item>
-                /// </list>
+                /// <para>The source type of the skill.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>REFERENCE</para>
@@ -141,18 +137,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The version selector for the reference. Defaults to LABEL/latest if omitted.</para>
+                /// <para>The referenced version selector. If omitted, the default is LABEL/latest.</para>
                 /// </summary>
                 [NameInMap("versionSelector")]
                 [Validation(Required=false)]
                 public GetAgentSpecLatestResponseBodyDataSkillsVersionSelector VersionSelector { get; set; }
                 public class GetAgentSpecLatestResponseBodyDataSkillsVersionSelector : TeaModel {
                     /// <summary>
-                    /// <para>The version selector type. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>LABEL: selects by label.</description></item>
-                    /// <item><description>VERSION: selects by specific version.</description></item>
-                    /// </list>
+                    /// <para>The type of the version selector.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>LABEL</para>
@@ -162,7 +154,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The selector value. If the type is LABEL, this value is a label name such as latest. If the type is VERSION, this value is a specific version number.</para>
+                    /// <para>The value of the selector. If the type is LABEL, the value is the label name, such as latest. If the type is VERSION, the value is the specific version number.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>latest</para>
@@ -176,7 +168,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The update time. This value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The update time. It is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1787671022000</para>

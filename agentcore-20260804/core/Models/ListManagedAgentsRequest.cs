@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListManagedAgentsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return per page. Default value: 20. Valid values: 1 to 100.</para>
+        /// <para>The maximum number of entries to return per page. Valid values: 0 to 100. If this parameter is omitted or set to 0, the default value is 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Leave this parameter empty for the first request. For subsequent requests, use the nextToken value returned in the previous response.</para>
+        /// <para>The pagination token. Leave this parameter empty for the first call. For subsequent calls, use the <c>nextToken</c> value returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>next-token-1</para>

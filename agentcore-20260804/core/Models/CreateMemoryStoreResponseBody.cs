@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateMemoryStoreResponseBodyData Data { get; set; }
         public class CreateMemoryStoreResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-23T10:00:00Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The MemoryStore description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Used to store long-term user preferences</para>
+            /// <para>Used to save long-term user preferences</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The last update time.</para>
+            /// <para>The last update time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-23T10:05:00Z</para>

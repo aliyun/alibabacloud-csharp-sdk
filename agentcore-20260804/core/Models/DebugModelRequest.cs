@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public DebugModelRequestBody Body { get; set; }
         public class DebugModelRequestBody : TeaModel {
             /// <summary>
-            /// <para>The prompt used to verify the model call chain.</para>
+            /// <para>The prompt used to verify the model invocation pipeline.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

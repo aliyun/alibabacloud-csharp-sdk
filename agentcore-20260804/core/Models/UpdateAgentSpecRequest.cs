@@ -37,11 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Labels { get; set; }
 
             /// <summary>
-            /// <para>The visibility scope. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>PUBLIC</description></item>
-            /// <item><description>PRIVATE</description></item>
-            /// </list>
+            /// <para>The visibility scope. Valid values: PUBLIC and PRIVATE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PUBLIC</para>

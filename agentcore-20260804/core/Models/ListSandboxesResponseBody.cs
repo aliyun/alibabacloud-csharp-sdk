@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListSandboxesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value SUCCESS is returned if the request was successful.</para>
+        /// <para>The business status code. The value is SUCCESS when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code. The value 200 is returned if the request was successful.</para>
+        /// <para>The HTTP status code. The value is 200 when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The list of sandboxes that match the filter conditions.</para>
+        /// <para>The list of sandboxes that meet the filter conditions.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ListSandboxesResponseBodyItems> Items { get; set; }
         public class ListSandboxesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The number of active sessions for this sandbox.</para>
+            /// <para>The number of active sessions in the sandbox.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public int? ActiveSessionCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the sandbox was created, in RFC 3339 UTC format.</para>
+            /// <para>The time when the sandbox was created. The time is in the RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-29T00:00:00Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The time of the last activity on the sandbox, in RFC 3339 UTC format.</para>
+            /// <para>The time of the last activity of the sandbox. The time is in the RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-29T00:02:00Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string LastActiveAt { get; set; }
 
             /// <summary>
-            /// <para>The time of the last heartbeat from the sandbox, in RFC 3339 UTC format.</para>
+            /// <para>The time of the last heartbeat of the sandbox. The time is in the RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-29T00:01:00Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string LastHeartbeatAt { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of concurrent sessions allowed for this sandbox, derived from the auto scaling configuration in effect at runtime. This value is empty if auto scaling is not enabled or the configuration is unavailable.</para>
+            /// <para>The maximum number of concurrent sessions allowed for the sandbox. This value is obtained from the auto-scaling configuration that takes effect at runtime. If auto-scaling is disabled or the configuration is unavailable, this value is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Phase { get; set; }
 
             /// <summary>
-            /// <para>The sandbox ID. You can call the ListSandboxes operation to query sandbox IDs.</para>
+            /// <para>The sandbox ID, which can be queried by calling ListSandboxes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sbx-2</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The response message. The value success is returned if the request was successful.</para>
+        /// <para>The response message. The value is success when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -149,18 +149,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
-        /// </list>
+        /// <para>Indicates whether the request is successful. A value of true indicates success, and a value of false indicates failure.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of records that match the query conditions.</para>
+        /// <para>The total number of records that meet the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>27</para>

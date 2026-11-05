@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CommitMsg { get; set; }
 
             /// <summary>
-            /// <para>The OSS object name (path).</para>
+            /// <para>The name or path of the OSS object.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string OssObjectName { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to overwrite an existing Skill. Default value: false.</para>
+            /// <para>Specifies whether to overwrite an existing skill. Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? Overwrite { get; set; }
 
             /// <summary>
-            /// <para>The target upload version number. This parameter is optional and serves as a fallback when the ZIP package does not contain version information.</para>
+            /// <para>The target version to upload. This parameter is optional and serves as a fallback when no version information is included in the ZIP package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>

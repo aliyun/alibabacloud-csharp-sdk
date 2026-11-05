@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public GetSkillDetailResponseBodyData Data { get; set; }
         public class GetSkillDetailResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The business label JSON array string.</para>
+            /// <para>The JSON array string of business tags.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Sample property value</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>A sample description that explains the purpose of the resource</para>
+            /// <para>Sample description to illustrate the purpose of the resource</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? DownloadCount { get; set; }
 
             /// <summary>
-            /// <para>The draft pattern. HEAD indicates that the Skill has a persistent draft. VERSIONED indicates that each edit creates a draft with a version number. The server determines the pattern, and the invoker uses it for routing what to do next.</para>
+            /// <para>The draft pattern. A value of HEAD indicates that the skill has a persistent draft, and a value of VERSIONED indicates that a draft with a version number is created for each edit. This is determined by the server, and the client uses this value to invoke routing for What to do next.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HEAD</para>
@@ -55,6 +55,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             [NameInMap("draftMode")]
             [Validation(Required=false)]
             public string DraftMode { get; set; }
+
+            /// <summary>
+            /// <para>Specifies whether the root data is editable.</para>
+            /// </summary>
+            [NameInMap("editable")]
+            [Validation(Required=false)]
+            public bool? Editable { get; set; }
 
             /// <summary>
             /// <para>The version being edited.</para>
@@ -67,7 +74,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string EditingVersion { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Skill is enabled.</para>
+            /// <para>Specifies whether the skill is enabled.</para>
             /// </summary>
             [NameInMap("enable")]
             [Validation(Required=false)]
@@ -141,7 +148,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Scope { get; set; }
 
             /// <summary>
-            /// <para>The update time. This value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The update time. It is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1787671022000</para>
@@ -178,7 +185,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string CommitMsg { get; set; }
 
                 /// <summary>
-                /// <para>The MD5 checksum of the Skill content package for this version, used to verify content consistency.</para>
+                /// <para>The MD5 checksum of the skill content package for this version, which is used to verify content consistency.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9e107d9d372bb6826bd81d3542a419d6</para>
@@ -188,7 +195,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string ContentMd5 { get; set; }
 
                 /// <summary>
-                /// <para>The creation time. This value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The creation time. It is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1787671022000</para>
@@ -201,7 +208,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>A sample description that explains the purpose of the resource</para>
+                /// <para>Sample description to illustrate the purpose of the resource</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
@@ -238,7 +245,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The update time. This value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The update time. It is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1787671022000</para>
@@ -270,7 +277,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string WorkspaceId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the current user has write permissions.</para>
+            /// <para>Specifies whether the current user has write permissions.</para>
             /// </summary>
             [NameInMap("writeable")]
             [Validation(Required=false)]

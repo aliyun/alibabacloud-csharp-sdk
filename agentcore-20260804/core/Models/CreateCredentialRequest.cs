@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateCredentialRequestBody Body { get; set; }
         public class CreateCredentialRequestBody : TeaModel {
             /// <summary>
-            /// <para>The credential content, which is a JSON string. If credentialType is apiKey, this parameter can only contain the apiKey field, and the value cannot be empty. After the credential is written, only desensitized queries are supported.</para>
+            /// <para>The credential content, submitted as a JSON string. For the apiKey type, it contains only a non-empty apiKey. For the mcpHeader type, it contains a non-empty headers array, where each item includes a name and a value.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CredentialMetadata { get; set; }
 
             /// <summary>
-            /// <para>The credential type. Currently, only apiKey is supported.</para>
+            /// <para>The credential type. Valid values: apiKey (API key) and mcpHeader (MCP request header).</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The name of the credential. The name must be unique within the workspace, can only contain letters, digits, periods, underscores, and hyphens, and must be 3 to 128 characters in length. Runtime reserved names cannot be used.</para>
+            /// <para>The name of the credential. The name must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 99 characters in length. Runtime reserved names cannot be used.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -60,17 +60,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>If resourceScope is SPECIFIED, this parameter must be a non-empty array. Each item must contain resourceType and resourceId. resourceName is optional.</para>
+            /// <para>The list of applicable resources for an mcpHeader credential. This parameter must be non-empty when resourceScope is set to SPECIFIED, and must be omitted when resourceScope is set to ALL.</para>
             /// </summary>
             [NameInMap("resourceRefs")]
             [Validation(Required=false)]
             public List<CreateCredentialRequestBodyResourceRefs> ResourceRefs { get; set; }
             public class CreateCredentialRequestBodyResourceRefs : TeaModel {
                 /// <summary>
-                /// <para>The unique identifier of the resource.</para>
+                /// <para>The ID of the applicable MCP service.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>agent-xxxx</para>
+                /// <para>mcp-example</para>
                 /// </summary>
                 [NameInMap("resourceId")]
                 [Validation(Required=false)]
@@ -80,17 +80,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 /// <para>The name of the resource. This parameter is empty if the resource is deleted.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>my-agent</para>
+                /// <para>my-mcp-service</para>
                 /// </summary>
                 [NameInMap("resourceName")]
                 [Validation(Required=false)]
                 public string ResourceName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the resource, such as agent.</para>
+                /// <para>The type of the resource. Set the value to mcpServer, which indicates an MCP service.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>agent</para>
+                /// <para>mcpServer</para>
                 /// </summary>
                 [NameInMap("resourceType")]
                 [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The application scope of the credential resource. A value of ALL indicates all resources. A value of SPECIFIED indicates that the credential is applied only to the resources specified by resourceRefs.</para>
+            /// <para>The application scope of an mcpHeader credential. This parameter is supported only for the mcpHeader type. ALL indicates all MCP services, and SPECIFIED indicates the MCP services specified in resourceRefs. Do not submit this field for the apiKey type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>

@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The result of the write operation.</para>
+        /// <para>The write result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public AddMemoriesResponseBodyData Data { get; set; }
         public class AddMemoriesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The memory references returned only when sync is set to true. An empty array is allowed. This parameter is not returned together with taskId.</para>
+            /// <para>The memory references. This parameter is returned only when sync is set to true. An empty array is allowed. This parameter is not returned together with taskId.</para>
             /// </summary>
             [NameInMap("memories")]
             [Validation(Required=false)]
             public List<AddMemoriesResponseBodyDataMemories> Memories { get; set; }
             public class AddMemoriesResponseBodyDataMemories : TeaModel {
                 /// <summary>
-                /// <para>The ID of the long-term memory.</para>
+                /// <para>The long-term memory ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mem-2f5f9c5a8d0e4c3b</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The ID of the task returned only when sync is set to false. This parameter is not returned together with memories.</para>
+            /// <para>The task ID. This parameter is returned only when sync is set to false. This parameter is not returned together with memories.</para>
             /// 
             /// <b>Example:</b>
             /// <para>task-2f5f9c5a8d0e4c3b</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>01A00000-0000-0000-0000-000000000001</para>

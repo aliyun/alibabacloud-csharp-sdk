@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class GetExternalAgentBootstrapOptionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value is SUCCESS when the request is successful.</para>
+        /// <para>The business status code. The value is SUCCESS if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The access network information available for the external agent.</para>
+        /// <para>The available access network information for the managed agent.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetExternalAgentBootstrapOptionsResponseBodyData Data { get; set; }
         public class GetExternalAgentBootstrapOptionsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The external agent ID.</para>
+            /// <para>The ID of the managed agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent-1</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. The value is 200 when the request is successful.</para>
+        /// <para>The HTTP status code. The value is 200 if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

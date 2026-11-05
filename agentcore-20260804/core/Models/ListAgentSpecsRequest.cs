@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListAgentSpecsRequest : TeaModel {
         /// <summary>
-        /// <para>The AgentSpec name used as a search keyword. This parameter is used together with the search parameter.</para>
+        /// <para>The name of the AgentSpec, used as a search keyword in combination with the search parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-worker</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string BizTag { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the results. Set the value to download_count to sort by download count. By default, results are sorted by update time.</para>
+        /// <para>The field by which to sort the results. Supports download_count. By default, the results are sorted by update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>download_count</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The owner used to filter the results.</para>
+        /// <para>The owner filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user1</para>
@@ -70,11 +70,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The visibility scope used to filter the results. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PUBLIC</description></item>
-        /// <item><description>PRIVATE</description></item>
-        /// </list>
+        /// <para>The visibility scope filter. Valid values: PUBLIC and PRIVATE.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PUBLIC</para>
@@ -84,12 +80,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The search mode. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>accurate: exact match.</description></item>
-        /// <item><description>blur: fuzzy match.</description></item>
-        /// </list>
-        /// <para>Default value: blur.</para>
+        /// <para>The search mode. Valid values: accurate (exact match) and blur (fuzzy match). Default value: blur.</para>
         /// 
         /// <b>Example:</b>
         /// <para>blur</para>
@@ -99,7 +90,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Search { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the Skills and McpServers lists. Default value: false.</para>
+        /// <para>Specifies whether to return the lists of skills and MCP servers. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

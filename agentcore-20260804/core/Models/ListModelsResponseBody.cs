@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListModelsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. A value of SUCCESS indicates success.</para>
+        /// <para>The business status code. The value is SUCCESS if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code. A value of 200 indicates success.</para>
+        /// <para>The HTTP status code. The value is 200 if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -37,63 +37,63 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public List<ListModelsResponseBodyItems> Items { get; set; }
         public class ListModelsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The model capability configuration.</para>
+            /// <para>The model capability configurations.</para>
             /// </summary>
             [NameInMap("capabilities")]
             [Validation(Required=false)]
             public ListModelsResponseBodyItemsCapabilities Capabilities { get; set; }
             public class ListModelsResponseBodyItemsCapabilities : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the model supports audio input or output.</para>
+                /// <para>Specifies whether the model supports audio input or output.</para>
                 /// </summary>
                 [NameInMap("audio")]
                 [Validation(Required=false)]
                 public bool? Audio { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the model supports document input.</para>
+                /// <para>Specifies whether the model supports document input.</para>
                 /// </summary>
                 [NameInMap("document")]
                 [Validation(Required=false)]
                 public bool? Document { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the model supports invoking multiple tools in a single response.</para>
+                /// <para>Specifies whether the model supports multiple tool calls in a single response.</para>
                 /// </summary>
                 [NameInMap("multiToolCall")]
                 [Validation(Required=false)]
                 public bool? MultiToolCall { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the model supports reasoning capabilities.</para>
+                /// <para>Specifies whether the model supports reasoning capabilities.</para>
                 /// </summary>
                 [NameInMap("reasoning")]
                 [Validation(Required=false)]
                 public bool? Reasoning { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the model supports streaming tool calling.</para>
+                /// <para>Specifies whether the model supports streaming tool calling.</para>
                 /// </summary>
                 [NameInMap("streamToolCall")]
                 [Validation(Required=false)]
                 public bool? StreamToolCall { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the model supports tool calling.</para>
+                /// <para>Specifies whether the model supports tool calling.</para>
                 /// </summary>
                 [NameInMap("toolCall")]
                 [Validation(Required=false)]
                 public bool? ToolCall { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the model supports video input.</para>
+                /// <para>Specifies whether the model supports video input.</para>
                 /// </summary>
                 [NameInMap("video")]
                 [Validation(Required=false)]
                 public bool? Video { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the model supports image input.</para>
+                /// <para>Specifies whether the model supports image input.</para>
                 /// </summary>
                 [NameInMap("vision")]
                 [Validation(Required=false)]
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ConnectionId { get; set; }
 
             /// <summary>
-            /// <para>The model context window size, in tokens. The value must be a positive integer.</para>
+            /// <para>The context window size of the model, in tokens. The value must be a positive integer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>128000</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? ContextSize { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource was created, in RFC 3339 UTC format.</para>
+            /// <para>The time when the resource was created. The time is in the RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-09T00:00:00Z</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The model description. Maximum length: 255 characters.</para>
+            /// <para>The model description. The description can be up to 255 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>description</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of output tokens supported by the model in a single generation.</para>
+            /// <para>The maximum number of output tokens supported by the model per generation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>131072</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ModelName { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource was last updated, in RFC 3339 UTC format.</para>
+            /// <para>The time when the resource was last updated. The time is in the RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-09T00:00:00Z</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The number of results per page. Valid values: 0 to 100. If this parameter is not set or set to 0, the default value 10 is used.</para>
+        /// <para>The number of entries to return on each page. Valid values: 0 to 100. If this parameter is not specified or is set to 0, the default value is 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The message of the request processing result.</para>
+        /// <para>The message about the request processing result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Pass the token returned from the previous query. An empty response indicates that no more pages are available.</para>
+        /// <para>The pagination token. Specify the token returned from the previous request to retrieve the next page. An empty response indicates that no more pages are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bW9kZWwtbWFuYWdlbWVudC1vZmZzZXQ6bW9kZWw6MTA</para>
@@ -234,14 +234,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of resources that match the query conditions.</para>
+        /// <para>The total number of resources that meet the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class InstallMcpMarketItemShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The MCP configuration submitted during template installation. The configuration must conform to the input schema of the template.</para>
+        /// <para>The MCP configuration submitted when installing the template. The configuration must comply with the input schema of the template.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public string BodyShrink { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>The reserved query request identifier. The console backend does not read this parameter and does not provide idempotency guarantees, such as deduplication or recovery of the original processing result, based on this identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The template version to install. You can call GetMcpMarketItem to query available versions.</para>
+        /// <para>The template version to install. You can query available versions by calling GetMcpMarketItem.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

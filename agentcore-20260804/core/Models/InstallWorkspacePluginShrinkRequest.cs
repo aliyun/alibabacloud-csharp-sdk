@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class InstallWorkspacePluginShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The request body for installing a plugin.</para>
+        /// <para>The request body for installing the component.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The response message. Returns an error description when the request fails.</para>
+        /// <para>The response message. Returns an error description if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The cursor used to retrieve the next page. An empty value indicates that no more data is available.</para>
+        /// <para>The cursor used to obtain the next page. An empty value indicates that no more data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dXNlci1vZmZzZXQ6MTA</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of records that match the query conditions.</para>
+        /// <para>The total number of records that meet the conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

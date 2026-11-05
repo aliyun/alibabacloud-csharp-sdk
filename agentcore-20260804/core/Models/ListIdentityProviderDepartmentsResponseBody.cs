@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListIdentityProviderDepartmentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code of the API request. SUCCESS indicates that the request is successful, but does not indicate that the asynchronous synchronization task is completed.</para>
+        /// <para>The business status code of the API request. SUCCESS indicates that the current request is successful, but does not indicate that the asynchronous synchronization task is completed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code of the API request, which does not indicate the execution result of the asynchronous task.</para>
+        /// <para>The HTTP status code of the API request. This does not indicate the execution result of an asynchronous task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The direct child departments on the current page under the current parent department. You must make another query to obtain the details of the child departments.</para>
+        /// <para>The direct child departments on the current page under the current parent department. For details about the child departments, query them separately.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;id&quot;:&quot;10001&quot;,&quot;name&quot;:&quot;R&amp;D Department&quot;,&quot;parentId&quot;:&quot;1&quot;,&quot;memberCount&quot;:12,&quot;hasChildren&quot;:true}]</para>
+        /// <para>[{&quot;id&quot;:&quot;10001&quot;,&quot;name&quot;:&quot;研发部&quot;,&quot;parentId&quot;:&quot;1&quot;,&quot;memberCount&quot;:12,&quot;hasChildren&quot;:true}]</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ListIdentityProviderDepartmentsResponseBodyItems> Items { get; set; }
         public class ListIdentityProviderDepartmentsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the department has child departments. A value of true indicates that the department has child departments and an expansion entry can be displayed accordingly. A value of false indicates a leaf node. If this field is not returned, the status is unknown. You must use the ID of the current node to make another query to obtain the details of the child departments.</para>
+            /// <para>Indicates whether the department has child departments. A value of true indicates that the department has child departments, and an expansion entry can be displayed based on this value. A value of false indicates a leaf node. If this parameter is not returned, the value is unknown. To obtain details about the child departments, use the ID of the current node to query them separately.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? HasChildren { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the department returned by the identity provider. When querying the child departments of this node, use this value as the parentDepartmentId.</para>
+            /// <para>The unique identifier of the department returned by the identity provider. When querying the child departments of this node, use this value as parentDepartmentId.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10001</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The number of members in the department returned by the identity provider. This field is not returned when the number is unknown. Do not treat a missing value as 0.</para>
+            /// <para>The number of department members returned by the identity provider. This parameter is not returned when the value is unknown. Do not treat a missing value as 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The number of items per page used for this query.</para>
+        /// <para>The number of entries per page used for the current query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page. An empty or missing value indicates that there are no subsequent pages at the current hierarchy level of the parent department, but does not indicate that the entire department tree has been returned.</para>
+        /// <para>The token for the next page. An empty value or no return value indicates that there are no subsequent pages at the current level of the parent department, which does not mean that the entire department tree has been returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example-next-page-token</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of departments. This operation does not provide this statistic and may not return this field. Do not treat a missing value as 0.</para>
+        /// <para>The total number of departments. This operation does not calculate the total number of departments. Currently, JSON null is actually returned. To determine whether pagination has ended, check whether nextToken is an empty string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class EnableConnectorRequest : TeaModel {
         /// <summary>
-        /// <para>The enable request body.</para>
+        /// <para>The request body for enabling the connector.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public EnableConnectorRequestBody Body { get; set; }
         public class EnableConnectorRequestBody : TeaModel {
             /// <summary>
-            /// <para>The Connector configuration JSON string. Set site to global or cn. apiKey is required. serviceAccountKeys must contain at least one named service account key. organizationId is optional.</para>
+            /// <para>The JSON string for the connector configuration. The site parameter must be global or cn. The apiKey parameter is required. The serviceAccountKeys parameter must contain at least one named service account key. The organizationId parameter is optional.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

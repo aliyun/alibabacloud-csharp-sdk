@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string BucketName { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-06T03:56:56Z</para>
@@ -74,7 +74,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public GetWorkspaceResponseBodyDataNetworkConfiguration NetworkConfiguration { get; set; }
             public class GetWorkspaceResponseBodyDataNetworkConfiguration : TeaModel {
                 /// <summary>
-                /// <para>Returns the target configuration value. Updating indicates that the change is still being executed, and UpdateFailed indicates that the current change failed. This setting only controls the use of the platform public egress for the latest versions of managed and custom agents. It does not control fixed historical versions, model or MCP proxy egress, or the public egress of the user VPC.</para>
+                /// <para>Specifies whether private network ingress access is enabled for the workspace. A value of true indicates that it is enabled, and a value of false indicates that it is disabled. This setting is independent of the enabled field in the user VPC network configuration.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("privateIngressEnabled")]
+                [Validation(Required=false)]
+                public bool? PrivateIngressEnabled { get; set; }
+
+                /// <summary>
+                /// <para>Returns the target configuration value. Updating indicates that the change is still in progress, and UpdateFailed indicates that the current change failed. This setting only controls whether the latest versions of managed and custom agents use the platform\&quot;s public network egress. It does not control fixed historical versions, model or MCP proxy egress, or the user VPC\&quot;s own public network egress.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -84,7 +94,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? PublicEgressEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The public egress IP address of the workspace.</para>
+                /// <para>The public network egress IP address of the workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>203.0.113.10</para>
@@ -94,7 +104,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string PublicEgressIp { get; set; }
 
                 /// <summary>
-                /// <para>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. When disabled, the public ingress for all agent endpoints in the workspace is closed. When re-enabled, the original public ingress is restored. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this setting.</para>
+                /// <para>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. When disabled, the public network ingress for all agent endpoints in the workspace is closed, and the original public network ingress is restored when re-enabled. INNER_DIRECT and user VPC ingress are not affected, and collaboration and Element Web ingress are not controlled by this setting.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -111,7 +121,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public GetWorkspaceResponseBodyDataNetworkConfigurationVpc Vpc { get; set; }
                 public class GetWorkspaceResponseBodyDataNetworkConfigurationVpc : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether the VPC network is enabled.</para>
+                    /// <para>Specifies whether the VPC network is enabled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>

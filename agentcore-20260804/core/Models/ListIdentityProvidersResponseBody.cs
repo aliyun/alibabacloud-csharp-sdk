@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public List<ListIdentityProvidersResponseBodyItems> Items { get; set; }
         public class ListIdentityProvidersResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The actual SAML configuration is read on demand only by GetIdentityProvider. SCIM queries and preparations return the actual received status and URLs.</para>
+            /// <para>The actual SAML configuration is retrieved on demand only by GetIdentityProvider. SCIM queries and preparations return the actual receiving status and URL.</para>
             /// </summary>
             [NameInMap("configuration")]
             [Validation(Required=false)]
             public ListIdentityProvidersResponseBodyItemsConfiguration Configuration { get; set; }
             public class ListIdentityProvidersResponseBodyItemsConfiguration : TeaModel {
                 /// <summary>
-                /// <para>HTTP-Redirect or HTTP-POST. Required for manual entry. Queries return the short name.</para>
+                /// <para>The SAML binding type, which can be HTTP-Redirect or HTTP-POST. This parameter is required for manual entry. Queries return the short name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HTTP-Redirect</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string BindingType { get; set; }
 
                 /// <summary>
-                /// <para>Required for manual entry. It must be non-empty and contain a maximum of 2,048 characters. Existing configurations cannot be changed. This is different from the local entity ID returned in SP queries.</para>
+                /// <para>Required for manual entry. The value must be non-empty and up to 2048 characters in length. Existing configurations cannot be changed. This value is different from the local entity ID returned by SP queries.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string EntityId { get; set; }
 
                 /// <summary>
-                /// <para>Required for manual entry. It must be an absolute HTTPS URL without user credentials or fragments.</para>
+                /// <para>Required for manual entry. The value must be an absolute HTTPS URL that does not contain user credentials or fragments.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string LoginUrl { get; set; }
 
                 /// <summary>
-                /// <para>The actual switch value is Enabled or Disabled. This is not equivalent to the expected loginEnabled value saved in AC.</para>
+                /// <para>The actual switch value, which is Enabled or Disabled. This value is different from the expected loginEnabled value saved in AC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Enabled</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The creation time in UTC format based on RFC 3339.</para>
+            /// <para>The creation time in RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string EventSubscriptionCallbackUrl { get; set; }
 
             /// <summary>
-            /// <para>The type of the external identity provider. Valid values: DingTalk, Feishu.</para>
+            /// <para>The type of the external identity provider. Valid values: DingTalk and Feishu.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DingTalk</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public ListIdentityProvidersResponseBodyItemsMetadata Metadata { get; set; }
             public class ListIdentityProvidersResponseBodyItemsMetadata : TeaModel {
                 /// <summary>
-                /// <para>The App ID of the Lark application. Required when the binding type is Feishu.</para>
+                /// <para>The app ID of the Lark application. This parameter is required when the binding type is Feishu.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cli_exampleappid01</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// <para>The AppKey of the DingTalk application. Required when the binding type is DingTalk.</para>
+                /// <para>The AppKey of the DingTalk application. This parameter is required when the binding type is DingTalk.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dingexampleappkey01</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AppKey { get; set; }
 
                 /// <summary>
-                /// <para>The SAML binding URI in the historical metadata snapshot. Use saml.bindingType for CustomSSO updates.</para>
+                /// <para>The SAML binding URI in the historical metadata snapshot. To update CustomSSO, use saml.bindingType.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Binding { get; set; }
 
                 /// <summary>
-                /// <para>The certificate string in the historical metadata snapshot. Use saml.x509Certificates to edit the configuration. Do not submit the old metadata.</para>
+                /// <para>The certificate string in the historical metadata snapshot. To edit the configuration, use saml.x509Certificates and do not submit the old metadata.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MIICwDCCAaigAwIBAgIULlsHLfcADyBax5ZtFlj+YGzZVo0wDQYJKoZIhvcNAQELBQAwGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMB4XDTI2MDEwMTAwMDAwMFoXDTM2MDEwMTAwMDAwMFowGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAto0DN0W1CrPRzK9QZ9A1aApb4Lg8oGlp2c0PbN3LokXe/HzwxCMXx65IDnrenttxzTwp9BgUnUN/3LRzWaOL2UQ/vNYNW9LFLkI1T64UPyI7eyi28YlALhb41xkYhEp7rz+MjqifBzVZeTDUxBYtbK2hAhbYEL1+udwsXEx0KB7xuQ/rbI2OKeqAEAD1tfYg7T/SM2wrXNYhx+o1HtchM4/0I8Okkk27JQ4y3ofzC5sTySmFF1Y7XcpSd+5WSyazedhkAieo8AB01DkJV6nnKfH8sH0EBsnH3FP8FhqCLrIeEkjX9B9OcIRLGjiZqx4u/ryW1QhMldnv+pFfNjWy/wIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQC1hSQG8AwtGOoX2gKBK4Hi5XBrBreij8WlLTUWld0FINQ0Rg84f/27CjDthywj6wgxCesCuOVFhpxQa1UacsP/Gcai1aKABtLWImcaWECRYK5gDkwhTMFKM9mXA26hH1l4v/UR2iTpEK9H78egC4W7bs2LDTpPryuaNKTqP2O0tMbNkAHB8yecz5LxHXnxadL9Egow25g2RClvpifWqDnuS9TSbKkIWLcPLjocJj2K9ILpBwhXiXi/BiSgyYTLiYvVvih9vX4s+hKGZNJc0j92YLiOHDF0XH1oxgdVjfTmRiedeb2VZJZElptD92z0AqFR7z2d5B+OqpPA2gjuMLV5</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Certificates { get; set; }
 
                 /// <summary>
-                /// <para>The CorpId of the DingTalk enterprise. Required when the binding type is DingTalk.</para>
+                /// <para>The CorpId of the DingTalk enterprise. This parameter is required when the binding type is DingTalk.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dingexamplecorpid01</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string CorpId { get; set; }
 
                 /// <summary>
-                /// <para>Required for manual entry. It must be non-empty and contain a maximum of 2,048 characters. Existing configurations cannot be changed. This is different from the local entity ID returned in SP queries.</para>
+                /// <para>Required for manual entry. The value must be non-empty and up to 2048 characters in length. Existing configurations cannot be changed. This value is different from the local entity ID returned by SP queries.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string EntityId { get; set; }
 
                 /// <summary>
-                /// <para>Required for manual entry. It must be an absolute HTTPS URL without user credentials or fragments.</para>
+                /// <para>Required for manual entry. The value must be an absolute HTTPS URL that does not contain user credentials or fragments.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>Only SAML is currently supported. This field may not be returned if no valid configuration is saved. OIDC placeholder initialization is not supported.</para>
+            /// <para>Currently, only SAML is supported. This parameter may not be returned if no valid configuration is saved. OIDC placeholder initialization is not supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SAML</para>
@@ -222,14 +222,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The input supports either XML or complete manual entry. Queries return the standardized configuration and do not echo the original XML. This field can be omitted if it is not configured.</para>
+            /// <para>The input supports either XML or complete manual entry. Queries return the standardized configuration and do not echo the original XML. This parameter can be omitted if it is not configured.</para>
             /// </summary>
             [NameInMap("saml")]
             [Validation(Required=false)]
             public ListIdentityProvidersResponseBodyItemsSaml Saml { get; set; }
             public class ListIdentityProvidersResponseBodyItemsSaml : TeaModel {
                 /// <summary>
-                /// <para>HTTP-Redirect or HTTP-POST. Required for manual entry. Queries return the short name.</para>
+                /// <para>The SAML binding type, which can be HTTP-Redirect or HTTP-POST. This parameter is required for manual entry. Queries return the short name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HTTP-Redirect</para>
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string BindingType { get; set; }
 
                 /// <summary>
-                /// <para>Required for manual entry. It must be non-empty and contain a maximum of 2,048 characters. Existing configurations cannot be changed. This is different from the local entity ID returned in SP queries.</para>
+                /// <para>Required for manual entry. The value must be non-empty and up to 2048 characters in length. Existing configurations cannot be changed. This value is different from the local entity ID returned by SP queries.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></para>
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string EntityId { get; set; }
 
                 /// <summary>
-                /// <para>Required for manual entry. It must be an absolute HTTPS URL without user credentials or fragments.</para>
+                /// <para>Required for manual entry. The value must be an absolute HTTPS URL that does not contain user credentials or fragments.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></para>
@@ -271,18 +271,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The binding status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>CONFIGURED: The configuration is accepted and waiting for user pool activation.</description></item>
-            /// <item><description>SYNCING: Organization members are being synchronized.</description></item>
-            /// <item><description>SYNCED: Organization member synchronization is complete.</description></item>
-            /// <item><description>READY: The binding is in effect.</description></item>
-            /// <item><description>SYNC_FAILED: Organization member synchronization failed.</description></item>
-            /// <item><description>UPDATING: The configuration is being updated.</description></item>
-            /// <item><description>UPDATE_FAILED: Configuration update failed.</description></item>
-            /// <item><description>DISCONNECTING: The binding is being disconnected.</description></item>
-            /// <item><description>DISCONNECT_FAILED: Disconnection failed.</description></item>
-            /// </list>
+            /// <para>The binding status. Valid values: CONFIGURED (the configuration is accepted and waiting for the user pool to be activated), SYNCING (organization members are being synchronized), SYNCED (organization member synchronization is complete), READY (the binding is in effect), SYNC_FAILED (organization member synchronization failed), UPDATING (the configuration is being updated), UPDATE_FAILED (configuration update failed), DISCONNECTING (the binding is being disconnected), and DISCONNECT_FAILED (disconnection failed).</para>
             /// 
             /// <b>Example:</b>
             /// <para>READY</para>
@@ -292,21 +281,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable organization member synchronization. If enabled, organization members are synchronized as workspace users by this external identity provider.</para>
+            /// <para>Specifies whether to enable organization member synchronization. After this feature is enabled, organization members are synchronized as workspace users by this external identity provider.</para>
             /// </summary>
             [NameInMap("syncEnabled")]
             [Validation(Required=false)]
             public bool? SyncEnabled { get; set; }
 
             /// <summary>
-            /// <para>Follows the department-based synchronization scope definition. If omitted during creation, the default value is AllAuthorized, and the first provider synchronization is determined by syncOnBind. If omitted or set to null during an update, the original value is retained. Updating the saved scope does not automatically trigger full synchronization.</para>
+            /// <para>Follows the synchronization scope definition by department. If omitted during creation, the default value is AllAuthorized, and the first vendor synchronization is determined by syncOnBind. If omitted or set to null during an update, the original value is retained. Updating and saving the scope does not automatically trigger full synchronization.</para>
             /// </summary>
             [NameInMap("syncScope")]
             [Validation(Required=false)]
             public ListIdentityProvidersResponseBodyItemsSyncScope SyncScope { get; set; }
             public class ListIdentityProvidersResponseBodyItemsSyncScope : TeaModel {
                 /// <summary>
-                /// <para>When the mode is SelectedDepartments, it must contain at least one non-empty department ID obtained from ListIdentityProviderDepartments. When the mode is AllAuthorized, pass an empty array or omit this field.</para>
+                /// <para>When the mode is SelectedDepartments, at least one non-empty department ID must be included, which should be obtained from ListIdentityProviderDepartments. When the mode is AllAuthorized, pass an empty array or omit this parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;10001&quot;]</para>
@@ -316,12 +305,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public List<string> DepartmentIds { get; set; }
 
                 /// <summary>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>AllAuthorized: The full authorization scope, limited by the application address book authorization.</description></item>
-                /// <item><description>SelectedDepartments: The selected departments and all their sub-departments.
-                /// You must provide a valid mode when explicitly submitting syncScope. The backend verifies the mode.</description></item>
-                /// </list>
+                /// <para>The scope mode. Valid values: AllAuthorized (all authorized scopes, subject to the application address book authorization limits) and SelectedDepartments (the selected departments and all their sub-departments). When explicitly submitting syncScope, you must provide a valid mode, which is verified by the backend.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SelectedDepartments</para>
@@ -333,7 +317,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The time of the last modification in UTC format based on RFC 3339.</para>
+            /// <para>The time of the last modification in UTC format as defined by RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -355,7 +339,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records per page that takes effect in this query.</para>
+        /// <para>The maximum number of records returned per page for the current query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -375,7 +359,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The cursor for the next page. Empty if there is no next page.</para>
+        /// <para>The cursor for the next page. It is empty if no next page exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aWRlbnRpdHktcHJvdmlkZXItb2Zmc2V0OjEw</para>
@@ -402,7 +386,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of external identity providers that match the query conditions.</para>
+        /// <para>The total number of external identity providers that meet the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>42</para>

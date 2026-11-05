@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateWorkspaceResponseBodyData Data { get; set; }
         public class CreateWorkspaceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The AI Registry namespace ID. This value is returned after related resources are bound and may be empty during initialization.</para>
+            /// <para>The AI Registry namespace ID. This value is returned after the related resources are bound and may be empty during initialization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>namespace-0123456789abcdef</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string BucketName { get; set; }
 
             /// <summary>
-            /// <para>The CloudMonitor workspace ID. This value is returned after related resources are bound and may be empty during initialization.</para>
+            /// <para>The CloudMonitor workspace ID. This value is returned after the related resources are bound and may be empty during initialization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cms-ws-0123456789abcdef</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CmsWorkspaceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the workspace was created. The time follows the ISO 8601 standard.</para>
+            /// <para>The time when the workspace was created. The time is displayed in the ISO 8601 format.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public CreateWorkspaceResponseBodyDataNetworkConfiguration NetworkConfiguration { get; set; }
             public class CreateWorkspaceResponseBodyDataNetworkConfiguration : TeaModel {
                 /// <summary>
-                /// <para>Returns the target configuration value. Updating indicates that the change is still in progress, and UpdateFailed indicates that the current change failed. This parameter only controls whether the latest versions of managed and custom agents use the public egress of the platform. It does not control fixed historical versions, model or MCP proxy egress, or the public egress of the user VPC.</para>
+                /// <para>Returns the target configuration value. Updating indicates that the change is still being executed, and UpdateFailed indicates that the current change failed. This parameter only controls whether the latest versions of managed and custom agents use the public egress of the platform. It does not control fixed historical versions, model or MCP proxy egress, or the public egress of the user VPC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The ID of the region where the workspace resides.</para>
+            /// <para>The ID of the region where the workspace is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string TenantId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the workspace.</para>
+            /// <para>The workspace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ws-123456</para>

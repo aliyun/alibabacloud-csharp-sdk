@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class GetIdentityProviderSyncJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code of the API request. SUCCESS indicates that the request is successful, but does not indicate that the asynchronous synchronization task is completed.</para>
+        /// <para>The business status code of the API request. SUCCESS indicates that the request is successful, but does not indicate that the asynchronous synchronization task is complete.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CurrentStep { get; set; }
 
             /// <summary>
-            /// <para>The failure summary of the asynchronous task. This field is not returned if there is no failure information. You can use the taskId and requestId for troubleshooting.</para>
+            /// <para>The failure summary of the asynchronous task. This field is not returned when no failure information is available. You can use it in combination with taskId and requestId for troubleshooting.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The identity provider synchronization job failed.</para>
@@ -50,16 +50,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string FailureReason { get; set; }
 
             /// <summary>
-            /// <para>The status of the synchronization task. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>PENDING: The task is pending execution.</description></item>
-            /// <item><description>RUNNING: The task is running.</description></item>
-            /// <item><description>PAUSED: The task is paused.</description></item>
-            /// <item><description>SUCCESS: The task is successful.</description></item>
-            /// <item><description>FAILED: The task failed.</description></item>
-            /// <item><description>CANCELED: The task is canceled.
-            /// The first three values are non-terminal states, and the last three values are terminal states. Query the task until it reaches a terminal state to determine the result.</description></item>
-            /// </list>
+            /// <para>The status of the synchronization task. Valid values: PENDING (to be executed), RUNNING (executing), PAUSED (paused), SUCCESS (successful), FAILED (failed), and CANCELED (canceled). The first three are non-terminal states, and the last three are terminal states. Query until a terminal state is reached to determine the result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
@@ -69,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The number of user entries that have been locally read and written or updated, including existing users. This value does not represent the number of newly added users or the synchronization percentage. This field is not returned when no statistics are available.</para>
+            /// <para>The number of user entries that have been locally read and written or updated, including existing users. It does not represent the number of newly added users or the synchronization percentage. This field is not returned when no statistics are available.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -79,7 +70,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public int? SyncedUserCount { get; set; }
 
             /// <summary>
-            /// <para>The downstream synchronization task ID of AgentIdentity. This field is not returned if the task has not been created. It cannot replace the taskId to call GetIdentityProviderSyncJob.</para>
+            /// <para>The downstream AgentIdentity synchronization task ID. This field is not returned if the task is not yet created. It cannot be used in place of taskId to call GetIdentityProviderSyncJob.</para>
             /// 
             /// <b>Example:</b>
             /// <para>syncjob_0123456789abcdef0123456789abcdef</para>
@@ -89,7 +80,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string SynchronizationJobId { get; set; }
 
             /// <summary>
-            /// <para>The local task ID of AgentCore returned by CreateIdentityProviderSyncJob. It is not the synchronizationJobId of AgentIdentity. The same workspace and identity provider must be used for the query.</para>
+            /// <para>The local AgentCore task ID returned by CreateIdentityProviderSyncJob, not the synchronizationJobId of AgentIdentity. You must use the same workspace and identity provider when querying.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12345678-1234-4234-8234-123456789abc</para>
@@ -121,7 +112,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request. Provide this value when you troubleshoot issues.</para>
+        /// <para>The unique identifier of the request. Provide this value when troubleshooting issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>01234567-89AB-CDEF-0123-456789ABCDEF</para>
@@ -131,7 +122,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API request is successful. To determine whether the asynchronous task is completed, query the task status.</para>
+        /// <para>Indicates whether the API request is successful. To check whether the asynchronous task is complete, query the task status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class UpdateTeamRequest : TeaModel {
         /// <summary>
-        /// <para>The request body for updating a team.</para>
+        /// <para>The request body for updating the team.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public UpdateTeamRequestBody Body { get; set; }
         public class UpdateTeamRequestBody : TeaModel {
             /// <summary>
-            /// <para>The new list of agent members. The existing agent members are replaced based on full overwrite semantics. If this parameter is not specified, the existing agent members remain unchanged.</para>
+            /// <para>The new list of agent members. This list replaces the existing agent members based on full overwrite semantics. If not specified, the existing list remains unchanged.</para>
             /// </summary>
             [NameInMap("agents")]
             [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The new team description. If this parameter is not specified, the existing description remains unchanged.</para>
+            /// <para>The new team description. If not specified, the existing description remains unchanged.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Team responsible for intelligent customer service</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The new list of user members. The existing user members are replaced based on full overwrite semantics. If this parameter is specified, it must contain exactly one member with the ADMIN role. If this parameter is not specified, the existing user members remain unchanged.</para>
+            /// <para>The new list of user members. This list replaces the existing user members based on full overwrite semantics. If this parameter is specified, it must contain exactly one member with the ADMIN role. If not specified, the existing list remains unchanged.</para>
             /// </summary>
             [NameInMap("users")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class CreateExternalAgentBootstrapTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value is SUCCESS when the operation is successful.</para>
+        /// <para>The business status code. The value is SUCCESS if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The Bootstrap token and CMS configuration required to onboard the external agent.</para>
+        /// <para>The bootstrap token and CMS configuration required for the managed agent onboarding.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateExternalAgentBootstrapTokenResponseBodyData Data { get; set; }
         public class CreateExternalAgentBootstrapTokenResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The external agent ID.</para>
+            /// <para>The ID of the managed agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent-1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AgentId { get; set; }
 
             /// <summary>
-            /// <para>The Bootstrap token used to onboard the external agent.</para>
+            /// <para>The bootstrap token used for the managed agent onboarding.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bootstrap-token</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string BootstrapToken { get; set; }
 
             /// <summary>
-            /// <para>The CMS configuration used to onboard the external agent.</para>
+            /// <para>The CMS configuration used for the managed agent onboarding.</para>
             /// </summary>
             [NameInMap("cms")]
             [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Endpoint { get; set; }
 
                 /// <summary>
-                /// <para>The license key used for CMS connection.</para>
+                /// <para>The license key used for CMS access.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>license-key</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string LicenseKey { get; set; }
 
                 /// <summary>
-                /// <para>The CMS workspace name.</para>
+                /// <para>The name of the CMS workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cms-workspace</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The network type for onboarding. Valid values: INTRANET (internal network) and INTERNET (Internet).</para>
+            /// <para>The access network type. Valid values: INTRANET (internal network) and INTERNET (Internet).</para>
             /// 
             /// <b>Example:</b>
             /// <para>INTERNET</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string NetworkType { get; set; }
 
             /// <summary>
-            /// <para>The fingerprint of the Bootstrap token.</para>
+            /// <para>The fingerprint of the bootstrap token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fingerprint</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. The value is 200 when the operation is successful.</para>
+        /// <para>The HTTP status code. The value is 200 if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The result message of the request.</para>
+        /// <para>The request processing result message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

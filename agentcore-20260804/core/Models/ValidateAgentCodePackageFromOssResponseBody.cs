@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public ValidateAgentCodePackageFromOssResponseBodyData Data { get; set; }
         public class ValidateAgentCodePackageFromOssResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The original file name of the code package.</para>
+            /// <para>The file name of the original code package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>main.zip</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The compressed size of the code package.</para>
+            /// <para>The compressed file size of the code package, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>

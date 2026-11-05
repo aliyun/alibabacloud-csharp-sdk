@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public GetAgentCodePackageUploadUrlRequestBody Body { get; set; }
         public class GetAgentCodePackageUploadUrlRequestBody : TeaModel {
             /// <summary>
-            /// <para>The filename of the code package.</para>
+            /// <para>The name of the code package file.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

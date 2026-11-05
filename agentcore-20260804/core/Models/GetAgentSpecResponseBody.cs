@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>A sample description used to explain the purpose of the resource</para>
+            /// <para>A sample description used to illustrate the purpose of the resource</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Scope { get; set; }
 
             /// <summary>
-            /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The update time. It is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1787671022000</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Author { get; set; }
 
                 /// <summary>
-                /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The creation time. It is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1787671022000</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>A sample description used to explain the purpose of the resource</para>
+                /// <para>A sample description used to illustrate the purpose of the resource</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The update time. It is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1787671022000</para>

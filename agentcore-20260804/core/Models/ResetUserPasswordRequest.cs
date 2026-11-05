@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ResetUserPasswordRequest : TeaModel {
         /// <summary>
-        /// <para>The request body for resetting the user password.</para>
+        /// <para>The request body for resetting a user password.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

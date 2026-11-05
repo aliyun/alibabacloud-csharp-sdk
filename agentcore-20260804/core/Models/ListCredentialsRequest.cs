@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListCredentialsRequest : TeaModel {
         /// <summary>
-        /// <para>Filters by credential type. Currently, only apiKey is supported.</para>
+        /// <para>The credential type used for filtering. Valid values: apiKey and mcpHeader.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apiKey</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Filters by credential name.</para>
+        /// <para>The credential name used for filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>credentialxxx</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NameLike { get; set; }
 
         /// <summary>
-        /// <para>The cursor used to query the next page. Do not specify this parameter in the first call. For subsequent calls, specify the nextToken returned in the previous response.</para>
+        /// <para>The cursor for querying the next page. Do not specify this parameter for the first call. For subsequent calls, specify the nextToken value returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

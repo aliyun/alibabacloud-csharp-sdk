@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateModelConnectionResponseBodyData Data { get; set; }
         public class CreateModelConnectionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of API keys configured for the model connection.</para>
+            /// <para>The number of API keys configured in the model connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ConnectionId { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource was created. The time is in RFC 3339 UTC format.</para>
+            /// <para>The time when the resource was created. The time is in the RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-09T00:00:00Z</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// <para>The name of the model connection. The name must be 1 to 128 non-whitespace characters in length.</para>
+            /// <para>The name of the model connection. It must be 1 to 128 non-whitespace characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The model invoke protocol. Currently, only OpenAI/v1 is supported. If the Settings are not specified during model creation, this default value is used.</para>
+            /// <para>The model invoke protocol. Currently, only OpenAI/v1 is supported. If this parameter is not specified in Settings during model creation, this default value is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OpenAI/v1</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The failure summary returned when the model connection fails to be published, or when deletion fails but the connection remains in the Deleting state. This field is empty in other states.</para>
+            /// <para>The failure summary returned when the model connection fails to be published, or when the deletion fails but the connection remains in the Deleting state. This field is empty in other states.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GatewayOperationException</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string StatusReason { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource was last updated. The time is in RFC 3339 UTC format.</para>
+            /// <para>The time when the resource was last updated. The time is in the RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-09T00:00:00Z</para>

@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string RoleName { get; set; }
 
             /// <summary>
-            /// <para>The source of the shared role. This does not indicate that authorization is complete.</para>
+            /// <para>The source of the shared role. This does not indicate that the authorization is complete.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

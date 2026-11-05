@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CredentialId { get; set; }
 
             /// <summary>
-            /// <para>The desensitized result of the credential content. If credentialType is apiKey, the value of apiKey is returned as asterisks (*) of the same length.</para>
+            /// <para>The masked result of the credential content. For the apiKey type, a key mask is returned. For the mcpHeader type, only the header names are returned, and the values are not returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;apiKey&quot;:&quot;****************&quot;}</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CredentialMetadata { get; set; }
 
             /// <summary>
-            /// <para>The credential type. Currently, only apiKey is supported.</para>
+            /// <para>The credential type. Valid values: apiKey (API key) and mcpHeader (MCP request header).</para>
             /// 
             /// <b>Example:</b>
             /// <para>apiKey</para>
@@ -67,17 +67,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CredentialType { get; set; }
 
             /// <summary>
-            /// <para>The credential description, which can be up to 256 characters in length.</para>
+            /// <para>The credential description. The description can be up to 256 characters in length.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>API key used to call model services in the production environment</para>
+            /// <para>API key used to call the model service in the production environment</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The credential name. The name must be unique within the workspace, can only contain letters, digits, periods (.), underscores (_), and hyphens (-), must be 3 to 128 characters in length, and cannot be a runtime reserved name.</para>
+            /// <para>The credential name. The name must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 99 characters in length. Runtime reserved names cannot be used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>model-api-key</para>
@@ -97,37 +97,37 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>Each item includes resourceType, resourceId, and resourceName. resourceName is empty if the resource is deleted.</para>
+            /// <para>The list of MCP services to which the credential applies.</para>
             /// </summary>
             [NameInMap("resourceRefs")]
             [Validation(Required=false)]
             public List<UpdateCredentialResponseBodyDataResourceRefs> ResourceRefs { get; set; }
             public class UpdateCredentialResponseBodyDataResourceRefs : TeaModel {
                 /// <summary>
-                /// <para>The unique identifier of the resource.</para>
+                /// <para>The ID of the applicable MCP service.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>agent-xxxx</para>
+                /// <para>mcp-example</para>
                 /// </summary>
                 [NameInMap("resourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The resource name. This parameter is empty if the resource is deleted.</para>
+                /// <para>The resource name. This field is empty if the resource has been deleted.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>my-agent</para>
+                /// <para>my-mcp-service</para>
                 /// </summary>
                 [NameInMap("resourceName")]
                 [Validation(Required=false)]
                 public string ResourceName { get; set; }
 
                 /// <summary>
-                /// <para>The resource type, such as agent.</para>
+                /// <para>The resource type. Currently, the value is mcpServer, which indicates an MCP service.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>agent</para>
+                /// <para>mcpServer</para>
                 /// </summary>
                 [NameInMap("resourceType")]
                 [Validation(Required=false)]
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The application scope of the credential resources.</para>
+            /// <para>The application scope of the credential. ALL indicates all scopes, and SPECIFIED indicates the specified MCP services.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>

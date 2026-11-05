@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>The username. The username must be unique within the workspace, can contain only lowercase letters, digits, and hyphens, must start and end with a lowercase letter or a digit, and must be 1 to 32 characters in length. Reserved names such as manager, admin, or names starting with worker- are not allowed.</para>
+            /// <para>The username. The username must be unique within the workspace, can contain only lowercase letters, digits, and hyphens, must start and end with a lowercase letter or a digit, and must be 1 to 32 characters in length. Reserved names such as manager, admin, or any name starting with worker- are not allowed.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -49,10 +49,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The note for the user. The note can be up to 1,024 characters in length.</para>
+            /// <para>The remarks for the user. The remarks can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Agent operations team member</para>
+            /// <para>Agent operation team member</para>
             /// </summary>
             [NameInMap("note")]
             [Validation(Required=false)]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateSkillDraftRequestBody Body { get; set; }
         public class CreateSkillDraftRequestBody : TeaModel {
             /// <summary>
-            /// <para>The version from which to fork the draft. If not specified, a new Skill is created.</para>
+            /// <para>The version to fork from. If you do not specify this parameter, a new skill is created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CommitMsg { get; set; }
 
             /// <summary>
-            /// <para>The Skill card JSON string that contains the complete Skill information.</para>
+            /// <para>The JSON string of the skill card, which contains the complete skill information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;name&quot;:&quot;customer-service-skill&quot;,&quot;description&quot;:&quot;...&quot;}</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string SkillCard { get; set; }
 
             /// <summary>
-            /// <para>The Skill name.</para>
+            /// <para>The skill name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string SkillName { get; set; }
 
             /// <summary>
-            /// <para>The draft version number. If not specified, the version number is automatically incremented.</para>
+            /// <para>Specifies the draft version number. If not specified, the version number automatically increments.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.2</para>

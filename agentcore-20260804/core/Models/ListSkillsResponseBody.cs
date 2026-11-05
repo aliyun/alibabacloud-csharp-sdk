@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<ListSkillsResponseBodyDataPageItems> PageItems { get; set; }
             public class ListSkillsResponseBodyDataPageItems : TeaModel {
                 /// <summary>
-                /// <para>The business tags as a JSON array string.</para>
+                /// <para>The business tags in a JSON array string.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Sample property value</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>A sample description that explains the purpose of the resource</para>
+                /// <para>Sample description used to illustrate the purpose of the resource</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
@@ -54,12 +54,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public long? DownloadCount { get; set; }
 
                 /// <summary>
-                /// <para>The draft mode. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>HEAD: The Skill has a persistent draft.</description></item>
-                /// <item><description>VERSIONED: Each edit creates a versioned draft.</description></item>
-                /// </list>
-                /// <para>The value is determined by the server. The caller uses this value to render the status column.</para>
+                /// <para>The draft mode. Valid values: HEAD (the skill has a persistent draft) and VERSIONED (each edit creates a versioned draft). This is determined by the server and used by the caller to render the status column.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HEAD</para>
@@ -69,7 +64,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string DraftMode { get; set; }
 
                 /// <summary>
-                /// <para>The version that is being edited. In HEAD draft mode, the value is HEAD.</para>
+                /// <para>Indicates whether the page item is editable.</para>
+                /// </summary>
+                [NameInMap("editable")]
+                [Validation(Required=false)]
+                public bool? Editable { get; set; }
+
+                /// <summary>
+                /// <para>The version being edited. The value is HEAD in HEAD draft mode.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0.0</para>
@@ -79,7 +81,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string EditingVersion { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the Skill is enabled.</para>
+                /// <para>Indicates whether the skill is enabled.</para>
                 /// </summary>
                 [NameInMap("enable")]
                 [Validation(Required=false)]
@@ -133,7 +135,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>The version that is under review. In HEAD draft mode, the value is HEAD.</para>
+                /// <para>The version under review. The value is HEAD in HEAD draft mode.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0.0</para>
@@ -153,7 +155,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Scope { get; set; }
 
                 /// <summary>
-                /// <para>The update time. This value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The update time. It is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1787671022000</para>
@@ -214,7 +216,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries per page.</para>
+        /// <para>The maximum number of items to return per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -224,7 +226,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page.</para>
+        /// <para>The token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>next-page-token</para>

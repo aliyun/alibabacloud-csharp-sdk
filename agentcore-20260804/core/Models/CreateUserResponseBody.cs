@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AgentCoreUserId { get; set; }
 
             /// <summary>
-            /// <para>The authentication method of the user. A value of password indicates that local password authentication in the workspace is used. A value of dingtalk or feishu indicates that the user is synchronized and authenticated by the corresponding external identity provider.</para>
+            /// <para>The authentication method of the user. A value of password indicates that local password authentication in the workspace is used. A value of dingtalk or feishu indicates that the user is synchronized and authenticated by the corresponding external identity provider (IdP).</para>
             /// 
             /// <b>Example:</b>
             /// <para>password</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AuthMethod { get; set; }
 
             /// <summary>
-            /// <para>The time when the user was created. The time is displayed in UTC and follows the RFC 3339 format.</para>
+            /// <para>The creation time. The time is displayed in UTC and follows the RFC 3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -97,10 +97,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The note for the user. The note can be up to 1,024 characters in length.</para>
+            /// <para>The remarks for the user. The remarks can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Agent operations team member</para>
+            /// <para>Agent operation team member</para>
             /// </summary>
             [NameInMap("note")]
             [Validation(Required=false)]
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the user was last modified. The time is displayed in UTC and follows the RFC 3339 format.</para>
+            /// <para>The time of the last update. The time is displayed in UTC and follows the RFC 3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>

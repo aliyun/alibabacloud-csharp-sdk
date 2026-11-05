@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public List<ListMemoryStoresResponseBodyItems> Items { get; set; }
         public class ListMemoryStoresResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-23T10:00:00Z</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The MemoryStore description.</para>
+            /// <para>The description of the MemoryStore.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Used to store long-term user preferences</para>
+            /// <para>Used to store the long-term preferences of users</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The custom extraction instructions.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Extract only long-term preferences explicitly expressed by the user</para>
+            /// <para>Extract only the long-term preferences explicitly expressed by the user</para>
             /// </summary>
             [NameInMap("extractInstructions")]
             [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string MemoryStoreId { get; set; }
 
             /// <summary>
-            /// <para>The MemoryStore name. It cannot be modified after creation.</para>
+            /// <para>The name of the MemoryStore. It cannot be modified after creation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>customer-memory</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The last update time.</para>
+            /// <para>The last update time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-23T10:05:00Z</para>

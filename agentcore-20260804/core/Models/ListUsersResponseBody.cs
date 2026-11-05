@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The list of users.</para>
+        /// <para>The user list.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AuthMethod { get; set; }
 
             /// <summary>
-            /// <para>The creation time in UTC format based on RFC 3339.</para>
+            /// <para>The creation time. The time is displayed in UTC and follows the RFC 3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The display name of the user. The name must be 1 to 32 characters in length.</para>
+            /// <para>The display name of the user. The value must be 1 to 32 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Zhang San</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The email address of the user. The email address can be up to 256 characters in length.</para>
+            /// <para>The email address of the user. The value can be up to 256 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:user-01@example.com">user-01@example.com</a></para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>The user name. The name must be unique within the workspace, contain only lowercase letters, digits, and hyphens, start and end with a lowercase letter or a digit, and be 1 to 32 characters in length.</para>
+            /// <para>The username. The username must be unique within the workspace and can contain only lowercase letters, digits, and hyphens. It must start and end with a lowercase letter or a digit, and must be 1 to 32 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user-01</para>
@@ -97,10 +97,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The user remarks. The remarks can be up to 1,024 characters in length.</para>
+            /// <para>The remarks of the user. The value can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Member of the agent operations team</para>
+            /// <para>Agent operations team member</para>
             /// </summary>
             [NameInMap("note")]
             [Validation(Required=false)]
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The last modification time in UTC format based on RFC 3339.</para>
+            /// <para>The time of the last modification. The time is displayed in UTC and follows the RFC 3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>

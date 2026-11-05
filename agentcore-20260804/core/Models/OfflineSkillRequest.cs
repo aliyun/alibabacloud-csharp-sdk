@@ -17,11 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public OfflineSkillRequestBody Body { get; set; }
         public class OfflineSkillRequestBody : TeaModel {
             /// <summary>
-            /// <para>The operation scope. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>skill: the entire Skill.</description></item>
-            /// <item><description>version: a specified version.</description></item>
-            /// </list>
+            /// <para>The scope of the operation. Valid values: skill (the entire skill) and version (a specified version).</para>
             /// 
             /// <b>Example:</b>
             /// <para>version</para>
@@ -31,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Scope { get; set; }
 
             /// <summary>
-            /// <para>The Skill version number.</para>
+            /// <para>The skill version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.1</para>

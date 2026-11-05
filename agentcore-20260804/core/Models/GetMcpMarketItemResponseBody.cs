@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The MCP service description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>An MCP service for querying knowledge bases</para>
+            /// <para>MCP service for querying knowledge bases</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public Dictionary<string, object> DisplayMetadata { get; set; }
 
             /// <summary>
-            /// <para>The multilingual display content, organized by BCP-47 language tags. Falls back to default fields when the specified language is not matched.</para>
+            /// <para>The multilingual display content organized by BCP-47 language tags. If a language is not matched, the default fields are used.</para>
             /// </summary>
             [NameInMap("i18n")]
             [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string IconUrl { get; set; }
 
             /// <summary>
-            /// <para>The number of times the template has been installed.</para>
+            /// <para>The template installation count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The usage instructions for the MCP marketplace template.</para>
+            /// <para>The MCP marketplace template instructions.</para>
             /// 
             /// <b>Example:</b>
             /// <h1>Knowledge\nKnowledge base query service</h1>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID used to locate and troubleshoot the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request-123456</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

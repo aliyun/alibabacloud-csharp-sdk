@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class CreateImageCacheRequest : TeaModel {
         /// <summary>
-        /// <para>The business parameters for creating an image cache.</para>
+        /// <para>The request body for creating an image cache.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateImageCacheRequestBody Body { get; set; }
         public class CreateImageCacheRequestBody : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to allow the current source reading and transfer to use the public network. At least one of this parameter and accessVpc must be set to true. The server verifies the access conditions of the current workspace.</para>
+            /// <para>Specifies whether to allow public network access for the current source reading and transfer. At least one of this parameter and <c>accessVpc</c> must be set to true. The server validates the access conditions of the current workspace.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? AccessInternet { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to allow the current source reading and transfer to use a VPC. At least one of this parameter and accessInternet must be set to true. The server parses the trusted network of the current workspace and does not modify the agent runtime network.</para>
+            /// <para>Specifies whether to allow the use of a VPC for the current source reading and transfer. At least one of this parameter and <c>accessInternet</c> must be set to true. The server resolves the trusted network of the current workspace and does not modify the runtime network of the agent.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The name of the repository under the namespace. Do not include the namespace repeatedly.</para>
+            /// <para>The name of the repository under the namespace. Do not include the namespace in the repository name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>This parameter is required and cannot be empty. It is reserved to be compatible with the API. Currently, it does not provide the ability to deduplicate requests or recover the original result based on this field. If a timeout occurs or the result is unconfirmed, query the query cache status first before deciding whether to recommit.</para>
+        /// <para>The non-empty request token passed as a query parameter. The current implementation does not guarantee deduplication by this token or recovery of the original acceptance result.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The product entry region, which is determined by the selected region endpoint.</para>
+        /// <para>The product entry region, passed as a query parameter. It must match the selected region endpoint and the workspace region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The current routed workspace. The server verifies the account, region, and resource ownership. This parameter cannot be omitted or used to access other workspaces.</para>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

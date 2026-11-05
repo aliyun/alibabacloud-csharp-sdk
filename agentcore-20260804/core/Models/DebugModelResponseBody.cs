@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class DebugModelResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value SUCCESS indicates success.</para>
+        /// <para>The business status code. The value is SUCCESS if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ConnectionId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the model debugging was successful.</para>
+            /// <para>Indicates whether the model debugging is successful.</para>
             /// </summary>
             [NameInMap("debugSuccess")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error message returned when debugging fails.</para>
+            /// <para>The error description returned when debugging fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The model endpoint rejected the debug request.</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? InputTokens { get; set; }
 
             /// <summary>
-            /// <para>The time consumed by this model debugging call, in milliseconds.</para>
+            /// <para>The duration of this model debugging invocation, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? OutputTokens { get; set; }
 
             /// <summary>
-            /// <para>The text response returned by the model when debugging succeeds. This value is empty when debugging fails.</para>
+            /// <para>The text response returned by the model when model debugging succeeds. This field is empty if debugging fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ok</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Response { get; set; }
 
             /// <summary>
-            /// <para>The debug result status.</para>
+            /// <para>The debugging result status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NORMAL</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. The value 200 indicates success.</para>
+        /// <para>The HTTP status code. The value is 200 if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request processing result message.</para>
+        /// <para>The message about the request processing result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

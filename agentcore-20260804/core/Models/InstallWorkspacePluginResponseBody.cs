@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The details of the plugin installation operation.</para>
+        /// <para>The details of the component installation operation.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public InstallWorkspacePluginResponseBodyData Data { get; set; }
         public class InstallWorkspacePluginResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the plugin is enabled.</para>
+            /// <para>Indicates whether the component is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The plugin name.</para>
+            /// <para>The component name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>collaboration</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string PluginName { get; set; }
 
             /// <summary>
-            /// <para>The plugin status. Valid values: DISABLED, ENABLING, ENABLED, ENABLE_FAILED, DISABLING, and DISABLE_FAILED.</para>
+            /// <para>The component status. Valid values: DISABLED, ENABLING, ENABLED, ENABLE_FAILED, DISABLING, and DISABLE_FAILED.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ENABLING</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message. Returns an error description when the request fails.</para>
+        /// <para>The response message. An error description is returned if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

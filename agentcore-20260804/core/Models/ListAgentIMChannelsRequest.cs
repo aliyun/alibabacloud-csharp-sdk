@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListAgentIMChannelsRequest : TeaModel {
         /// <summary>
-        /// <para>The IM channel type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>DINGTALK: DingTalk.</description></item>
-        /// <item><description>FEISHU: Lark.</description></item>
-        /// <item><description>WECOM: WeCom.</description></item>
-        /// </list>
+        /// <para>The IM channel type. Valid values: DINGTALK (DingTalk), FEISHU (Lark), and WECOM (WeCom).</para>
         /// 
         /// <b>Example:</b>
         /// <para>DINGTALK</para>
@@ -35,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. You do not need to specify this parameter for the first request. For subsequent requests, use the nextToken value returned in the previous response.</para>
+        /// <para>The pagination token. This parameter is not required for the first call. For subsequent calls, use the nextToken value returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>next-token-1</para>
@@ -45,15 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The IM channel status. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>CREATING: The channel is being created.</description></item>
-        /// <item><description>READY: The channel is ready.</description></item>
-        /// <item><description>UPDATING: The channel is being updated.</description></item>
-        /// <item><description>FAILED: The channel creation or update failed.</description></item>
-        /// <item><description>DELETING: The channel is being deleted.</description></item>
-        /// <item><description>DELETE_FAILED: The channel deletion failed.</description></item>
-        /// </list>
+        /// <para>The IM channel status. Valid values: CREATING (Creating), READY (Ready), UPDATING (Updating), FAILED (Failed), DELETING (Deleting), and DELETE_FAILED (Delete failed).</para>
         /// 
         /// <b>Example:</b>
         /// <para>READY</para>

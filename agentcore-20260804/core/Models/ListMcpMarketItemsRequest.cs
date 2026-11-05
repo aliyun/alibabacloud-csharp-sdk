@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records to return in this query.</para>
+        /// <para>The maximum number of records to return for this query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string McpType { get; set; }
 
         /// <summary>
-        /// <para>The pagination token used to retrieve the next page of results.</para>
+        /// <para>The pagination token used to query the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
