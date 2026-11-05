@@ -1,0 +1,77 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Appstream_center20210901.Models
+{
+    public class UpdateAdaptorShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The ID of the application adapter to be modified. This parameter is required and must belong to an application adapter manageable by the current account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>adt-bp1example****</para>
+        /// </summary>
+        [NameInMap("AdaptorId")]
+        [Validation(Required=false)]
+        public string AdaptorId { get; set; }
+
+        /// <summary>
+        /// <para><b>Not enabled. Do not pass this parameter.</b> This parameter does not support modifying application scripts.</para>
+        /// <para>The example &quot;Not applicable (not enabled)&quot; is only a description of the field status and is not a valid parameter value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Not applicable (not enabled)</para>
+        /// </summary>
+        [NameInMap("AppScript")]
+        [Validation(Required=false)]
+        public string AppScript { get; set; }
+
+        /// <summary>
+        /// <para><b>Not enabled. Do not pass this parameter.</b> This parameter does not support modifying executable file paths.</para>
+        /// <para>The example &quot;Not applicable (not enabled)&quot; is only a description of the field status and is not a valid parameter value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Not applicable (not enabled)</para>
+        /// </summary>
+        [NameInMap("ExecuteFileAddress")]
+        [Validation(Required=false)]
+        public string ExecuteFileAddress { get; set; }
+
+        /// <summary>
+        /// <para>The application optimization configuration, represented as a JSON object string. Pass this parameter only when specific optimization configuration requirements exist. The content must be a valid JSON object.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
+        [NameInMap("OptimizeParam")]
+        [Validation(Required=false)]
+        public string OptimizeParam { get; set; }
+
+        /// <summary>
+        /// <para>The command-line parameters used when the application starts. If this parameter is not empty, it is used to update the startup parameters of the application adapter. Specify the parameters based on the startup requirements of the application.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>--lang=zh-CN</para>
+        /// </summary>
+        [NameInMap("SilenceParam")]
+        [Validation(Required=false)]
+        public string SilenceParam { get; set; }
+
+        /// <summary>
+        /// <para>The application runtime configuration object. If this parameter is omitted, the existing user configuration is not modified.</para>
+        /// <para><b>If this parameter is passed, the original UserConfig is completely replaced and not merged item by item.</b> Submit the complete configuration and include the configuration items that need to be retained. Subfields that are not provided do not automatically inherit the original values.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;FixedResolution&quot;:&quot;1440x2560&quot;,&quot;DisconnectAction&quot;:&quot;KEEP_CURRENT&quot;,&quot;ShowWindow&quot;:&quot;HIDE&quot;}</para>
+        /// </summary>
+        [NameInMap("UserConfig")]
+        [Validation(Required=false)]
+        public string UserConfigShrink { get; set; }
+
+    }
+
+}

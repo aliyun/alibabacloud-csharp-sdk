@@ -1,3 +1,35 @@
+2026-11-05 Version: 5.11.0
+- Support API BuilderImageByParent.
+- Support API CreateAndBindApp.
+- Support API DeleteAdaptor.
+- Support API DeleteApp.
+- Support API DescribeEvents.
+- Support API GetAuthCode.
+- Support API GetResourceModifyPrice.
+- Support API GetResourceQuota.
+- Support API GetTask.
+- Support API ListApp.
+- Support API ListAppInstanceType.
+- Support API ListRegionId.
+- Support API ListTaskStep.
+- Support API ListWuyingServerWorkloadTemplate.
+- Support API ModifyAppInstanceGroupChargeType.
+- Support API QueryAppInstanceGroupReportList.
+- Support API QueryConnectionReport.
+- Support API QueryDauReportData.
+- Support API QueryMauReportData.
+- Support API QueryNetworkRttReport.
+- Support API QueryNodeReportData.
+- Support API QuerySessionReportData.
+- Support API QueryUserAppUsageAggregateByHour.
+- Support API QueryUserAppUsageTimeRank.
+- Support API QueryUserUsageReport.
+- Support API UnbindApp.
+- Support API UpdateAdaptor.
+- Support API UpdateImage.
+- Support API UpdateImageTask.
+
+
 2026-10-29 Version: 5.10.1
 - Update API ListAuthorizedAppInstanceGroupByUser: add request parameters OfficeSiteId.
 - Update API ListAuthorizedAppInstanceGroupByUser: add response parameters Body.AppInstanceGroupModels.$.SupportUserGroupMixedAuth.

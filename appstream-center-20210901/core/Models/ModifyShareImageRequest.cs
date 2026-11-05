@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ModifyShareImageRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the Alibaba Cloud accounts to share the image with.</para>
+        /// <para>The Alibaba Cloud account IDs to add for sharing.</para>
         /// </summary>
         [NameInMap("AddAccount")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? BizType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source image.</para>
+        /// <para>The source image ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>img-bp13mu****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The product type, such as Cloud Desktop, cloud application, or workstation.</para>
+        /// <para>The product type, such as cloud desktop, cloud application, or workstation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CloudDesktop</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the Alibaba Cloud accounts to remove from the image sharing list.</para>
+        /// <para>The Alibaba Cloud account IDs to remove from the share list.</para>
         /// </summary>
         [NameInMap("RemoveAccount")]
         [Validation(Required=false)]

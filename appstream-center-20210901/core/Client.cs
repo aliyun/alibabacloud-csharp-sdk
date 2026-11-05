@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "appstream-center";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("appstream-center", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1007,6 +1010,342 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a custom image based on an existing image and starts an image creation task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the parent image is available and that an available image distribution record exists in the region where the image is to be created.</para>
+        /// <ol>
+        /// <item><description>Call ListImage to obtain the parent image ID.</description></item>
+        /// <item><description>Specify the creation mode, disk capacity, and resource type, and then call this operation.</description></item>
+        /// <item><description>Save the returned ImageId, VersionId, and TaskId.</description></item>
+        /// <item><description>Call GetTask to query the creation progress. <b>A successful request does not indicate that the image creation is complete.</b></description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// BuilderImageByParentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BuilderImageByParentResponse
+        /// </returns>
+        public BuilderImageByParentResponse BuilderImageByParentWithOptions(BuilderImageByParentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BuilderImageByParentShrinkRequest request = new BuilderImageByParentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PropertyMap))
+            {
+                request.PropertyMapShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PropertyMap, "PropertyMap", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                body["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDiskSize))
+            {
+                body["DataDiskSize"] = request.DataDiskSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Distro))
+            {
+                body["Distro"] = request.Distro;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DriverIdList))
+            {
+                body["DriverIdList"] = request.DriverIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageCreateMode))
+            {
+                body["ImageCreateMode"] = request.ImageCreateMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageName))
+            {
+                body["ImageName"] = request.ImageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                body["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeInstanceType))
+            {
+                body["NodeInstanceType"] = request.NodeInstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                body["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageType))
+            {
+                body["PackageType"] = request.PackageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentImageId))
+            {
+                body["ParentImageId"] = request.ParentImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PerformanceType))
+            {
+                body["PerformanceType"] = request.PerformanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PropertyMapShrink))
+            {
+                body["PropertyMap"] = request.PropertyMapShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceList))
+            {
+                body["ResourceList"] = request.ResourceList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunMode))
+            {
+                body["RunMode"] = request.RunMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegion))
+            {
+                body["SourceRegion"] = request.SourceRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskSize))
+            {
+                body["SystemDiskSize"] = request.SystemDiskSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchIdList))
+            {
+                body["VSwitchIdList"] = request.VSwitchIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionName))
+            {
+                body["VersionName"] = request.VersionName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BuilderImageByParent",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BuilderImageByParentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom image based on an existing image and starts an image creation task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the parent image is available and that an available image distribution record exists in the region where the image is to be created.</para>
+        /// <ol>
+        /// <item><description>Call ListImage to obtain the parent image ID.</description></item>
+        /// <item><description>Specify the creation mode, disk capacity, and resource type, and then call this operation.</description></item>
+        /// <item><description>Save the returned ImageId, VersionId, and TaskId.</description></item>
+        /// <item><description>Call GetTask to query the creation progress. <b>A successful request does not indicate that the image creation is complete.</b></description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// BuilderImageByParentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BuilderImageByParentResponse
+        /// </returns>
+        public async Task<BuilderImageByParentResponse> BuilderImageByParentWithOptionsAsync(BuilderImageByParentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BuilderImageByParentShrinkRequest request = new BuilderImageByParentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PropertyMap))
+            {
+                request.PropertyMapShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PropertyMap, "PropertyMap", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                body["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDiskSize))
+            {
+                body["DataDiskSize"] = request.DataDiskSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Distro))
+            {
+                body["Distro"] = request.Distro;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DriverIdList))
+            {
+                body["DriverIdList"] = request.DriverIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageCreateMode))
+            {
+                body["ImageCreateMode"] = request.ImageCreateMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageName))
+            {
+                body["ImageName"] = request.ImageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                body["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeInstanceType))
+            {
+                body["NodeInstanceType"] = request.NodeInstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                body["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageType))
+            {
+                body["PackageType"] = request.PackageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentImageId))
+            {
+                body["ParentImageId"] = request.ParentImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PerformanceType))
+            {
+                body["PerformanceType"] = request.PerformanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PropertyMapShrink))
+            {
+                body["PropertyMap"] = request.PropertyMapShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceList))
+            {
+                body["ResourceList"] = request.ResourceList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunMode))
+            {
+                body["RunMode"] = request.RunMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRegion))
+            {
+                body["SourceRegion"] = request.SourceRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskSize))
+            {
+                body["SystemDiskSize"] = request.SystemDiskSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchIdList))
+            {
+                body["VSwitchIdList"] = request.VSwitchIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionName))
+            {
+                body["VersionName"] = request.VersionName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BuilderImageByParent",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BuilderImageByParentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom image based on an existing image and starts an image creation task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the parent image is available and that an available image distribution record exists in the region where the image is to be created.</para>
+        /// <ol>
+        /// <item><description>Call ListImage to obtain the parent image ID.</description></item>
+        /// <item><description>Specify the creation mode, disk capacity, and resource type, and then call this operation.</description></item>
+        /// <item><description>Save the returned ImageId, VersionId, and TaskId.</description></item>
+        /// <item><description>Call GetTask to query the creation progress. <b>A successful request does not indicate that the image creation is complete.</b></description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BuilderImageByParentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BuilderImageByParentResponse
+        /// </returns>
+        public BuilderImageByParentResponse BuilderImageByParent(BuilderImageByParentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BuilderImageByParentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom image based on an existing image and starts an image creation task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the parent image is available and that an available image distribution record exists in the region where the image is to be created.</para>
+        /// <ol>
+        /// <item><description>Call ListImage to obtain the parent image ID.</description></item>
+        /// <item><description>Specify the creation mode, disk capacity, and resource type, and then call this operation.</description></item>
+        /// <item><description>Save the returned ImageId, VersionId, and TaskId.</description></item>
+        /// <item><description>Call GetTask to query the creation progress. <b>A successful request does not indicate that the image creation is complete.</b></description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BuilderImageByParentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BuilderImageByParentResponse
+        /// </returns>
+        public async Task<BuilderImageByParentResponse> BuilderImageByParentAsync(BuilderImageByParentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BuilderImageByParentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Configures the model group for a resource group.</para>
         /// </summary>
         /// 
@@ -1519,6 +1858,198 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ConfigRuntimeModelTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an application and binds it to a specified image version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only custom images and community images that can be managed by the current account are supported. If VersionId is omitted, the current active version of the image is used. If specified, the version must belong to the image specified by ImageId.
+        /// Call ListImage first to select an image. After the application is created, save the returned AppId, AppVersionId, ImageId, and VersionId. To dissociate the application, call UnbindApp.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAndBindAppRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAndBindAppResponse
+        /// </returns>
+        public CreateAndBindAppResponse CreateAndBindAppWithOptions(CreateAndBindAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIconUrl))
+            {
+                body["AppIconUrl"] = request.AppIconUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginAppType))
+            {
+                body["OriginAppType"] = request.OriginAppType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
+            {
+                body["Port"] = request.Port;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UrlSuffix))
+            {
+                body["UrlSuffix"] = request.UrlSuffix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                body["VersionId"] = request.VersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAndBindApp",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAndBindAppResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an application and binds it to a specified image version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only custom images and community images that can be managed by the current account are supported. If VersionId is omitted, the current active version of the image is used. If specified, the version must belong to the image specified by ImageId.
+        /// Call ListImage first to select an image. After the application is created, save the returned AppId, AppVersionId, ImageId, and VersionId. To dissociate the application, call UnbindApp.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAndBindAppRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAndBindAppResponse
+        /// </returns>
+        public async Task<CreateAndBindAppResponse> CreateAndBindAppWithOptionsAsync(CreateAndBindAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIconUrl))
+            {
+                body["AppIconUrl"] = request.AppIconUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginAppType))
+            {
+                body["OriginAppType"] = request.OriginAppType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
+            {
+                body["Port"] = request.Port;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UrlSuffix))
+            {
+                body["UrlSuffix"] = request.UrlSuffix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                body["VersionId"] = request.VersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAndBindApp",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAndBindAppResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an application and binds it to a specified image version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only custom images and community images that can be managed by the current account are supported. If VersionId is omitted, the current active version of the image is used. If specified, the version must belong to the image specified by ImageId.
+        /// Call ListImage first to select an image. After the application is created, save the returned AppId, AppVersionId, ImageId, and VersionId. To dissociate the application, call UnbindApp.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAndBindAppRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAndBindAppResponse
+        /// </returns>
+        public CreateAndBindAppResponse CreateAndBindApp(CreateAndBindAppRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateAndBindAppWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an application and binds it to a specified image version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only custom images and community images that can be managed by the current account are supported. If VersionId is omitted, the current active version of the image is used. If specified, the version must belong to the image specified by ImageId.
+        /// Call ListImage first to select an image. After the application is created, save the returned AppId, AppVersionId, ImageId, and VersionId. To dissociate the application, call UnbindApp.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAndBindAppRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAndBindAppResponse
+        /// </returns>
+        public async Task<CreateAndBindAppResponse> CreateAndBindAppAsync(CreateAndBindAppRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateAndBindAppWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3595,6 +4126,370 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes a specified application adapter, or dissociates the adapter from a specified image version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Confirm the deletion scope.</em>*</para>
+        /// <list type="bullet">
+        /// <item><description>If both ImageId and VersionId are specified: The adapter is only dissociated from the specified image version.</description></item>
+        /// <item><description>If ImageId and VersionId are not both specified: The adapter deletion process is initiated. An adapter cannot be deleted if it is still referenced by multiple images. If the application has other adapters, the application cannot be deleted along with the adapter.
+        /// <b>AdaptorId, AppVersionId, and AppId must be provided together and correspond to the same application adapter.</b> Verify these identifiers by checking the application and image query results first.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAdaptorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAdaptorResponse
+        /// </returns>
+        public DeleteAdaptorResponse DeleteAdaptorWithOptions(DeleteAdaptorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdaptorId))
+            {
+                body["AdaptorId"] = request.AdaptorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppVersionId))
+            {
+                body["AppVersionId"] = request.AppVersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                body["VersionId"] = request.VersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAdaptor",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAdaptorResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified application adapter, or dissociates the adapter from a specified image version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Confirm the deletion scope.</em>*</para>
+        /// <list type="bullet">
+        /// <item><description>If both ImageId and VersionId are specified: The adapter is only dissociated from the specified image version.</description></item>
+        /// <item><description>If ImageId and VersionId are not both specified: The adapter deletion process is initiated. An adapter cannot be deleted if it is still referenced by multiple images. If the application has other adapters, the application cannot be deleted along with the adapter.
+        /// <b>AdaptorId, AppVersionId, and AppId must be provided together and correspond to the same application adapter.</b> Verify these identifiers by checking the application and image query results first.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAdaptorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAdaptorResponse
+        /// </returns>
+        public async Task<DeleteAdaptorResponse> DeleteAdaptorWithOptionsAsync(DeleteAdaptorRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdaptorId))
+            {
+                body["AdaptorId"] = request.AdaptorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppVersionId))
+            {
+                body["AppVersionId"] = request.AppVersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                body["VersionId"] = request.VersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAdaptor",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAdaptorResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified application adapter, or dissociates the adapter from a specified image version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Confirm the deletion scope.</em>*</para>
+        /// <list type="bullet">
+        /// <item><description>If both ImageId and VersionId are specified: The adapter is only dissociated from the specified image version.</description></item>
+        /// <item><description>If ImageId and VersionId are not both specified: The adapter deletion process is initiated. An adapter cannot be deleted if it is still referenced by multiple images. If the application has other adapters, the application cannot be deleted along with the adapter.
+        /// <b>AdaptorId, AppVersionId, and AppId must be provided together and correspond to the same application adapter.</b> Verify these identifiers by checking the application and image query results first.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAdaptorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAdaptorResponse
+        /// </returns>
+        public DeleteAdaptorResponse DeleteAdaptor(DeleteAdaptorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteAdaptorWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified application adapter, or dissociates the adapter from a specified image version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Confirm the deletion scope.</em>*</para>
+        /// <list type="bullet">
+        /// <item><description>If both ImageId and VersionId are specified: The adapter is only dissociated from the specified image version.</description></item>
+        /// <item><description>If ImageId and VersionId are not both specified: The adapter deletion process is initiated. An adapter cannot be deleted if it is still referenced by multiple images. If the application has other adapters, the application cannot be deleted along with the adapter.
+        /// <b>AdaptorId, AppVersionId, and AppId must be provided together and correspond to the same application adapter.</b> Verify these identifiers by checking the application and image query results first.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAdaptorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAdaptorResponse
+        /// </returns>
+        public async Task<DeleteAdaptorResponse> DeleteAdaptorAsync(DeleteAdaptorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteAdaptorWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified application version, or deletes the entire application and its adapters if the version ID is omitted.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>You must dissociate all image associations from the target application or version before deletion.</em>*</para>
+        /// <ol>
+        /// <item><description>Call ListApp to obtain the AppId and confirm whether the application can be deleted.</description></item>
+        /// <item><description>Use UnbindApp or DeleteAdaptor to dissociate related image associations.</description></item>
+        /// <item><description>Specify AppVersionId to delete a single application version, or omit this parameter to delete the entire application.
+        /// After an application version is deleted, if the application has no other valid adapters, the application record is also deleted.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAppRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAppResponse
+        /// </returns>
+        public DeleteAppResponse DeleteAppWithOptions(DeleteAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppVersionId))
+            {
+                body["AppVersionId"] = request.AppVersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteApp",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAppResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified application version, or deletes the entire application and its adapters if the version ID is omitted.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>You must dissociate all image associations from the target application or version before deletion.</em>*</para>
+        /// <ol>
+        /// <item><description>Call ListApp to obtain the AppId and confirm whether the application can be deleted.</description></item>
+        /// <item><description>Use UnbindApp or DeleteAdaptor to dissociate related image associations.</description></item>
+        /// <item><description>Specify AppVersionId to delete a single application version, or omit this parameter to delete the entire application.
+        /// After an application version is deleted, if the application has no other valid adapters, the application record is also deleted.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAppRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAppResponse
+        /// </returns>
+        public async Task<DeleteAppResponse> DeleteAppWithOptionsAsync(DeleteAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppVersionId))
+            {
+                body["AppVersionId"] = request.AppVersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteApp",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAppResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified application version, or deletes the entire application and its adapters if the version ID is omitted.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>You must dissociate all image associations from the target application or version before deletion.</em>*</para>
+        /// <ol>
+        /// <item><description>Call ListApp to obtain the AppId and confirm whether the application can be deleted.</description></item>
+        /// <item><description>Use UnbindApp or DeleteAdaptor to dissociate related image associations.</description></item>
+        /// <item><description>Specify AppVersionId to delete a single application version, or omit this parameter to delete the entire application.
+        /// After an application version is deleted, if the application has no other valid adapters, the application record is also deleted.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAppRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAppResponse
+        /// </returns>
+        public DeleteAppResponse DeleteApp(DeleteAppRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteAppWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified application version, or deletes the entire application and its adapters if the version ID is omitted.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>You must dissociate all image associations from the target application or version before deletion.</em>*</para>
+        /// <ol>
+        /// <item><description>Call ListApp to obtain the AppId and confirm whether the application can be deleted.</description></item>
+        /// <item><description>Use UnbindApp or DeleteAdaptor to dissociate related image associations.</description></item>
+        /// <item><description>Specify AppVersionId to delete a single application version, or omit this parameter to delete the entire application.
+        /// After an application version is deleted, if the application has no other valid adapters, the application record is also deleted.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAppRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAppResponse
+        /// </returns>
+        public async Task<DeleteAppResponse> DeleteAppAsync(DeleteAppRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteAppWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a resource-based pay-as-you-go delivery group.</para>
         /// </summary>
         /// 
@@ -4807,6 +5702,266 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Performs a paged query for the resource and session events of the current account within the last 30 days. Paging is supported.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the resource and session events of the current account. Both StartTime and EndTime must be specified, and the time range is inclusive. The service only retrieves logs from 30 days before the call time to the current time, so events outside this window are not returned. If multiple filter parameters are specified, the intersection of the conditions is applied. The results are returned in descending order of the event log time. For pagination, specify PageSize and PageNumber. The current version does not use MaxResults and NextToken.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEventsResponse
+        /// </returns>
+        public DescribeEventsResponse DescribeEventsWithOptions(DescribeEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupName))
+            {
+                body["AppInstanceGroupName"] = request.AppInstanceGroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceId))
+            {
+                body["AppInstanceId"] = request.AppInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
+            {
+                body["EventId"] = request.EventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventType))
+            {
+                body["EventType"] = request.EventType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberEniIp))
+            {
+                body["MemberEniIp"] = request.MemberEniIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                body["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeEvents",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeEventsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query for the resource and session events of the current account within the last 30 days. Paging is supported.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the resource and session events of the current account. Both StartTime and EndTime must be specified, and the time range is inclusive. The service only retrieves logs from 30 days before the call time to the current time, so events outside this window are not returned. If multiple filter parameters are specified, the intersection of the conditions is applied. The results are returned in descending order of the event log time. For pagination, specify PageSize and PageNumber. The current version does not use MaxResults and NextToken.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEventsResponse
+        /// </returns>
+        public async Task<DescribeEventsResponse> DescribeEventsWithOptionsAsync(DescribeEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupName))
+            {
+                body["AppInstanceGroupName"] = request.AppInstanceGroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceId))
+            {
+                body["AppInstanceId"] = request.AppInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
+            {
+                body["EventId"] = request.EventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventType))
+            {
+                body["EventType"] = request.EventType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemberEniIp))
+            {
+                body["MemberEniIp"] = request.MemberEniIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                body["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeEvents",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeEventsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query for the resource and session events of the current account within the last 30 days. Paging is supported.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the resource and session events of the current account. Both StartTime and EndTime must be specified, and the time range is inclusive. The service only retrieves logs from 30 days before the call time to the current time, so events outside this window are not returned. If multiple filter parameters are specified, the intersection of the conditions is applied. The results are returned in descending order of the event log time. For pagination, specify PageSize and PageNumber. The current version does not use MaxResults and NextToken.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEventsResponse
+        /// </returns>
+        public DescribeEventsResponse DescribeEvents(DescribeEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeEventsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query for the resource and session events of the current account within the last 30 days. Paging is supported.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the resource and session events of the current account. Both StartTime and EndTime must be specified, and the time range is inclusive. The service only retrieves logs from 30 days before the call time to the current time, so events outside this window are not returned. If multiple filter parameters are specified, the intersection of the conditions is applied. The results are returned in descending order of the event log time. For pagination, specify PageSize and PageNumber. The current version does not use MaxResults and NextToken.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEventsResponse
+        /// </returns>
+        public async Task<DescribeEventsResponse> DescribeEventsAsync(DescribeEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeEventsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the details of a development host.</para>
         /// </summary>
         /// 
@@ -5179,6 +6334,210 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAppInstanceGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the connection authorization code and required resource information for an existing image or application building task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, you must create a task, and the building or validation resources corresponding to the task must be available.</para>
+        /// <ol>
+        /// <item><description>Obtain TaskId and the actual TaskType from the response of the task creation operation or GetTask.</description></item>
+        /// <item><description>Specify ResourceType to obtain the connection information for the building or validation environment.</description></item>
+        /// <item><description>Use the returned authorization code along with the user, resource group, and application identifiers in the same response for connection.
+        /// The authorization code is a sensitive connection credential. Do not record it in public documents or logs. When specifying AppId, you must also specify the matching AppVersionId.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAuthCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAuthCodeResponse
+        /// </returns>
+        public GetAuthCodeResponse GetAuthCodeWithOptions(GetAuthCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppVersionId))
+            {
+                body["AppVersionId"] = request.AppVersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                body["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                body["TaskType"] = request.TaskType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAuthCode",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAuthCodeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the connection authorization code and required resource information for an existing image or application building task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, you must create a task, and the building or validation resources corresponding to the task must be available.</para>
+        /// <ol>
+        /// <item><description>Obtain TaskId and the actual TaskType from the response of the task creation operation or GetTask.</description></item>
+        /// <item><description>Specify ResourceType to obtain the connection information for the building or validation environment.</description></item>
+        /// <item><description>Use the returned authorization code along with the user, resource group, and application identifiers in the same response for connection.
+        /// The authorization code is a sensitive connection credential. Do not record it in public documents or logs. When specifying AppId, you must also specify the matching AppVersionId.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAuthCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAuthCodeResponse
+        /// </returns>
+        public async Task<GetAuthCodeResponse> GetAuthCodeWithOptionsAsync(GetAuthCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppVersionId))
+            {
+                body["AppVersionId"] = request.AppVersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                body["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                body["TaskType"] = request.TaskType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAuthCode",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAuthCodeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the connection authorization code and required resource information for an existing image or application building task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, you must create a task, and the building or validation resources corresponding to the task must be available.</para>
+        /// <ol>
+        /// <item><description>Obtain TaskId and the actual TaskType from the response of the task creation operation or GetTask.</description></item>
+        /// <item><description>Specify ResourceType to obtain the connection information for the building or validation environment.</description></item>
+        /// <item><description>Use the returned authorization code along with the user, resource group, and application identifiers in the same response for connection.
+        /// The authorization code is a sensitive connection credential. Do not record it in public documents or logs. When specifying AppId, you must also specify the matching AppVersionId.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAuthCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAuthCodeResponse
+        /// </returns>
+        public GetAuthCodeResponse GetAuthCode(GetAuthCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAuthCodeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the connection authorization code and required resource information for an existing image or application building task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, you must create a task, and the building or validation resources corresponding to the task must be available.</para>
+        /// <ol>
+        /// <item><description>Obtain TaskId and the actual TaskType from the response of the task creation operation or GetTask.</description></item>
+        /// <item><description>Specify ResourceType to obtain the connection information for the building or validation environment.</description></item>
+        /// <item><description>Use the returned authorization code along with the user, resource group, and application identifiers in the same response for connection.
+        /// The authorization code is a sensitive connection credential. Do not record it in public documents or logs. When specifying AppId, you must also specify the matching AppVersionId.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAuthCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAuthCodeResponse
+        /// </returns>
+        public async Task<GetAuthCodeResponse> GetAuthCodeAsync(GetAuthCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAuthCodeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6207,6 +7566,238 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the pricing and discount information for scaling out a subscription delivery group to a specified total number of nodes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries the resource scale-out pricing for an existing delivery group. A successful call returns only a quote and does not create an order or add nodes.
+        /// <b>Before you call this operation, verify the following conditions:</b></para>
+        /// <list type="bullet">
+        /// <item><description>The delivery group belongs to the current account and is located in a supported region in the Chinese mainland.</description></item>
+        /// <item><description>The product type is Wuying Cloud App or Cloud Browser, and the billing method is subscription and purchased by node. This operation does not apply to browser groups that use the pay-as-you-go billing method or are billed by monthly active users (MAU).</description></item>
+        /// <item><description>The order status of the delivery group is normal, a resource node pool is associated, and no paid but ineffective renewal or scale-in orders exist.</description></item>
+        /// <item><description>The target total number of nodes is greater than the current number of purchased nodes and does not exceed the node quota for the corresponding region, product, and billing method under the account.
+        /// <b>Parameter relationships:</b></description></item>
+        /// <item><description>ProductType, AppInstanceGroupId, and Amount are all required parameters and must be specified together.</description></item>
+        /// <item><description>ProductType must match the product corresponding to AppInstanceGroupId.</description></item>
+        /// <item><description><b>Amount is the total number of nodes after the scale-out, not the number of nodes added in this operation.</b> The region, node specifications, and billing method are determined by the existing delivery group and do not need to be passed separately.
+        /// <b>Call sequence:</b></description></item>
+        /// </list>
+        /// <ol>
+        /// <item><description>First, confirm the target delivery group and the current number of purchased nodes. For Cloud App Common scenarios, you can first invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListAppInstanceGroup">ListAppInstanceGroup</a> to obtain the identity, and then invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query the configuration and NodePool.NodeAmount.</description></item>
+        /// <item><description>Invoke this operation with the same product type, delivery group identity, and target total number of nodes to read the pricing, coupons, and pricing calculation rules.</description></item>
+        /// <item><description>After confirming the quote, if you need to execute the scale-out, you can invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ModifyNodePoolAmount">ModifyNodePoolAmount</a> and fill in the target total number in NodePool.NodeAmount as required by the operation. <b>A successful pricing query does not mean that an order has been created or the scale-out has been completed.</b>
+        /// <b>Example scenario:</b>
+        /// If a cloud app delivery group currently has 1 purchased subscription node and the target is to scale out to 2 nodes, set ProductType to CloudApp, AppInstanceGroupId to the ID of the delivery group, and Amount to 2. Replace the masked resource IDs with the actual values under the current account. The example quantities do not represent default values or quota limits. The pricing examples only illustrate the relationship among the original price, discount amount, and discounted price, and do not represent the fixed selling price of the specifications.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetResourceModifyPriceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourceModifyPriceResponse
+        /// </returns>
+        public GetResourceModifyPriceResponse GetResourceModifyPriceWithOptions(GetResourceModifyPriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
+            {
+                query["Amount"] = request.Amount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                query["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetResourceModifyPrice",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetResourceModifyPriceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the pricing and discount information for scaling out a subscription delivery group to a specified total number of nodes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries the resource scale-out pricing for an existing delivery group. A successful call returns only a quote and does not create an order or add nodes.
+        /// <b>Before you call this operation, verify the following conditions:</b></para>
+        /// <list type="bullet">
+        /// <item><description>The delivery group belongs to the current account and is located in a supported region in the Chinese mainland.</description></item>
+        /// <item><description>The product type is Wuying Cloud App or Cloud Browser, and the billing method is subscription and purchased by node. This operation does not apply to browser groups that use the pay-as-you-go billing method or are billed by monthly active users (MAU).</description></item>
+        /// <item><description>The order status of the delivery group is normal, a resource node pool is associated, and no paid but ineffective renewal or scale-in orders exist.</description></item>
+        /// <item><description>The target total number of nodes is greater than the current number of purchased nodes and does not exceed the node quota for the corresponding region, product, and billing method under the account.
+        /// <b>Parameter relationships:</b></description></item>
+        /// <item><description>ProductType, AppInstanceGroupId, and Amount are all required parameters and must be specified together.</description></item>
+        /// <item><description>ProductType must match the product corresponding to AppInstanceGroupId.</description></item>
+        /// <item><description><b>Amount is the total number of nodes after the scale-out, not the number of nodes added in this operation.</b> The region, node specifications, and billing method are determined by the existing delivery group and do not need to be passed separately.
+        /// <b>Call sequence:</b></description></item>
+        /// </list>
+        /// <ol>
+        /// <item><description>First, confirm the target delivery group and the current number of purchased nodes. For Cloud App Common scenarios, you can first invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListAppInstanceGroup">ListAppInstanceGroup</a> to obtain the identity, and then invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query the configuration and NodePool.NodeAmount.</description></item>
+        /// <item><description>Invoke this operation with the same product type, delivery group identity, and target total number of nodes to read the pricing, coupons, and pricing calculation rules.</description></item>
+        /// <item><description>After confirming the quote, if you need to execute the scale-out, you can invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ModifyNodePoolAmount">ModifyNodePoolAmount</a> and fill in the target total number in NodePool.NodeAmount as required by the operation. <b>A successful pricing query does not mean that an order has been created or the scale-out has been completed.</b>
+        /// <b>Example scenario:</b>
+        /// If a cloud app delivery group currently has 1 purchased subscription node and the target is to scale out to 2 nodes, set ProductType to CloudApp, AppInstanceGroupId to the ID of the delivery group, and Amount to 2. Replace the masked resource IDs with the actual values under the current account. The example quantities do not represent default values or quota limits. The pricing examples only illustrate the relationship among the original price, discount amount, and discounted price, and do not represent the fixed selling price of the specifications.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetResourceModifyPriceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourceModifyPriceResponse
+        /// </returns>
+        public async Task<GetResourceModifyPriceResponse> GetResourceModifyPriceWithOptionsAsync(GetResourceModifyPriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
+            {
+                query["Amount"] = request.Amount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                query["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetResourceModifyPrice",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetResourceModifyPriceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the pricing and discount information for scaling out a subscription delivery group to a specified total number of nodes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries the resource scale-out pricing for an existing delivery group. A successful call returns only a quote and does not create an order or add nodes.
+        /// <b>Before you call this operation, verify the following conditions:</b></para>
+        /// <list type="bullet">
+        /// <item><description>The delivery group belongs to the current account and is located in a supported region in the Chinese mainland.</description></item>
+        /// <item><description>The product type is Wuying Cloud App or Cloud Browser, and the billing method is subscription and purchased by node. This operation does not apply to browser groups that use the pay-as-you-go billing method or are billed by monthly active users (MAU).</description></item>
+        /// <item><description>The order status of the delivery group is normal, a resource node pool is associated, and no paid but ineffective renewal or scale-in orders exist.</description></item>
+        /// <item><description>The target total number of nodes is greater than the current number of purchased nodes and does not exceed the node quota for the corresponding region, product, and billing method under the account.
+        /// <b>Parameter relationships:</b></description></item>
+        /// <item><description>ProductType, AppInstanceGroupId, and Amount are all required parameters and must be specified together.</description></item>
+        /// <item><description>ProductType must match the product corresponding to AppInstanceGroupId.</description></item>
+        /// <item><description><b>Amount is the total number of nodes after the scale-out, not the number of nodes added in this operation.</b> The region, node specifications, and billing method are determined by the existing delivery group and do not need to be passed separately.
+        /// <b>Call sequence:</b></description></item>
+        /// </list>
+        /// <ol>
+        /// <item><description>First, confirm the target delivery group and the current number of purchased nodes. For Cloud App Common scenarios, you can first invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListAppInstanceGroup">ListAppInstanceGroup</a> to obtain the identity, and then invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query the configuration and NodePool.NodeAmount.</description></item>
+        /// <item><description>Invoke this operation with the same product type, delivery group identity, and target total number of nodes to read the pricing, coupons, and pricing calculation rules.</description></item>
+        /// <item><description>After confirming the quote, if you need to execute the scale-out, you can invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ModifyNodePoolAmount">ModifyNodePoolAmount</a> and fill in the target total number in NodePool.NodeAmount as required by the operation. <b>A successful pricing query does not mean that an order has been created or the scale-out has been completed.</b>
+        /// <b>Example scenario:</b>
+        /// If a cloud app delivery group currently has 1 purchased subscription node and the target is to scale out to 2 nodes, set ProductType to CloudApp, AppInstanceGroupId to the ID of the delivery group, and Amount to 2. Replace the masked resource IDs with the actual values under the current account. The example quantities do not represent default values or quota limits. The pricing examples only illustrate the relationship among the original price, discount amount, and discounted price, and do not represent the fixed selling price of the specifications.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetResourceModifyPriceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourceModifyPriceResponse
+        /// </returns>
+        public GetResourceModifyPriceResponse GetResourceModifyPrice(GetResourceModifyPriceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetResourceModifyPriceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the pricing and discount information for scaling out a subscription delivery group to a specified total number of nodes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries the resource scale-out pricing for an existing delivery group. A successful call returns only a quote and does not create an order or add nodes.
+        /// <b>Before you call this operation, verify the following conditions:</b></para>
+        /// <list type="bullet">
+        /// <item><description>The delivery group belongs to the current account and is located in a supported region in the Chinese mainland.</description></item>
+        /// <item><description>The product type is Wuying Cloud App or Cloud Browser, and the billing method is subscription and purchased by node. This operation does not apply to browser groups that use the pay-as-you-go billing method or are billed by monthly active users (MAU).</description></item>
+        /// <item><description>The order status of the delivery group is normal, a resource node pool is associated, and no paid but ineffective renewal or scale-in orders exist.</description></item>
+        /// <item><description>The target total number of nodes is greater than the current number of purchased nodes and does not exceed the node quota for the corresponding region, product, and billing method under the account.
+        /// <b>Parameter relationships:</b></description></item>
+        /// <item><description>ProductType, AppInstanceGroupId, and Amount are all required parameters and must be specified together.</description></item>
+        /// <item><description>ProductType must match the product corresponding to AppInstanceGroupId.</description></item>
+        /// <item><description><b>Amount is the total number of nodes after the scale-out, not the number of nodes added in this operation.</b> The region, node specifications, and billing method are determined by the existing delivery group and do not need to be passed separately.
+        /// <b>Call sequence:</b></description></item>
+        /// </list>
+        /// <ol>
+        /// <item><description>First, confirm the target delivery group and the current number of purchased nodes. For Cloud App Common scenarios, you can first invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListAppInstanceGroup">ListAppInstanceGroup</a> to obtain the identity, and then invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query the configuration and NodePool.NodeAmount.</description></item>
+        /// <item><description>Invoke this operation with the same product type, delivery group identity, and target total number of nodes to read the pricing, coupons, and pricing calculation rules.</description></item>
+        /// <item><description>After confirming the quote, if you need to execute the scale-out, you can invoke <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ModifyNodePoolAmount">ModifyNodePoolAmount</a> and fill in the target total number in NodePool.NodeAmount as required by the operation. <b>A successful pricing query does not mean that an order has been created or the scale-out has been completed.</b>
+        /// <b>Example scenario:</b>
+        /// If a cloud app delivery group currently has 1 purchased subscription node and the target is to scale out to 2 nodes, set ProductType to CloudApp, AppInstanceGroupId to the ID of the delivery group, and Amount to 2. Replace the masked resource IDs with the actual values under the current account. The example quantities do not represent default values or quota limits. The pricing examples only illustrate the relationship among the original price, discount amount, and discounted price, and do not represent the fixed selling price of the specifications.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetResourceModifyPriceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourceModifyPriceResponse
+        /// </returns>
+        public async Task<GetResourceModifyPriceResponse> GetResourceModifyPriceAsync(GetResourceModifyPriceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetResourceModifyPriceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the price information of a resource.</para>
         /// </summary>
         /// 
@@ -6379,6 +7970,226 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetResourcePriceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the maximum quantity quota applicable to the current account for a specified product, resource type, business region, and billing method.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries the maximum quantity quota. It does not query the used quota, remaining quota, or real-time resource inventory.
+        /// <b>Parameter relationships:</b></para>
+        /// <list type="bullet">
+        /// <item><description><c>ResourceType</c> and <c>ProductType</c> are required.</description></item>
+        /// <item><description><c>BizRegionId</c> and <c>ChargeType</c> are optional query conditions and can be specified at the same time. They must be consistent with subsequent purchase or authorization operations.</description></item>
+        /// <item><description>If the region or billing method is omitted, the general quota for the corresponding dimension is queried. The quotas of different regions or billing methods are not added together.</description></item>
+        /// <item><description>If multiple quotas apply at the same time, the larger limit is returned.
+        /// <b>Call sequence:</b></description></item>
+        /// </list>
+        /// <ol>
+        /// <item><description>Select the resource type, product, business region, and billing method of the payer based on subsequent business needs.</description></item>
+        /// <item><description>Invoke this operation to read <c>Data</c>. Query <c>AppInstanceGroup</c> before creating a delivery group, query <c>AppAuthUser</c> before adding an authorized user, and query <c>PoolNodeAmount</c> before purchasing or scaling out nodes.</description></item>
+        /// <item><description>Query the current usage in combination with the resources, and then verify the current operation by using subsequent creation, authorization, or scale-out operations. <b>This query does not reserve quotas or guarantee the success of subsequent purchases.</b>
+        /// <c>Data=2147483647</c> indicates that no smaller quota limit is obtained in this query. It does not mean that the physical inventory is unlimited.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetResourceQuotaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourceQuotaResponse
+        /// </returns>
+        public GetResourceQuotaResponse GetResourceQuotaWithOptions(GetResourceQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                query["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
+            {
+                query["ChargeType"] = request.ChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetResourceQuota",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetResourceQuotaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the maximum quantity quota applicable to the current account for a specified product, resource type, business region, and billing method.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries the maximum quantity quota. It does not query the used quota, remaining quota, or real-time resource inventory.
+        /// <b>Parameter relationships:</b></para>
+        /// <list type="bullet">
+        /// <item><description><c>ResourceType</c> and <c>ProductType</c> are required.</description></item>
+        /// <item><description><c>BizRegionId</c> and <c>ChargeType</c> are optional query conditions and can be specified at the same time. They must be consistent with subsequent purchase or authorization operations.</description></item>
+        /// <item><description>If the region or billing method is omitted, the general quota for the corresponding dimension is queried. The quotas of different regions or billing methods are not added together.</description></item>
+        /// <item><description>If multiple quotas apply at the same time, the larger limit is returned.
+        /// <b>Call sequence:</b></description></item>
+        /// </list>
+        /// <ol>
+        /// <item><description>Select the resource type, product, business region, and billing method of the payer based on subsequent business needs.</description></item>
+        /// <item><description>Invoke this operation to read <c>Data</c>. Query <c>AppInstanceGroup</c> before creating a delivery group, query <c>AppAuthUser</c> before adding an authorized user, and query <c>PoolNodeAmount</c> before purchasing or scaling out nodes.</description></item>
+        /// <item><description>Query the current usage in combination with the resources, and then verify the current operation by using subsequent creation, authorization, or scale-out operations. <b>This query does not reserve quotas or guarantee the success of subsequent purchases.</b>
+        /// <c>Data=2147483647</c> indicates that no smaller quota limit is obtained in this query. It does not mean that the physical inventory is unlimited.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetResourceQuotaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourceQuotaResponse
+        /// </returns>
+        public async Task<GetResourceQuotaResponse> GetResourceQuotaWithOptionsAsync(GetResourceQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                query["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
+            {
+                query["ChargeType"] = request.ChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetResourceQuota",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetResourceQuotaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the maximum quantity quota applicable to the current account for a specified product, resource type, business region, and billing method.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries the maximum quantity quota. It does not query the used quota, remaining quota, or real-time resource inventory.
+        /// <b>Parameter relationships:</b></para>
+        /// <list type="bullet">
+        /// <item><description><c>ResourceType</c> and <c>ProductType</c> are required.</description></item>
+        /// <item><description><c>BizRegionId</c> and <c>ChargeType</c> are optional query conditions and can be specified at the same time. They must be consistent with subsequent purchase or authorization operations.</description></item>
+        /// <item><description>If the region or billing method is omitted, the general quota for the corresponding dimension is queried. The quotas of different regions or billing methods are not added together.</description></item>
+        /// <item><description>If multiple quotas apply at the same time, the larger limit is returned.
+        /// <b>Call sequence:</b></description></item>
+        /// </list>
+        /// <ol>
+        /// <item><description>Select the resource type, product, business region, and billing method of the payer based on subsequent business needs.</description></item>
+        /// <item><description>Invoke this operation to read <c>Data</c>. Query <c>AppInstanceGroup</c> before creating a delivery group, query <c>AppAuthUser</c> before adding an authorized user, and query <c>PoolNodeAmount</c> before purchasing or scaling out nodes.</description></item>
+        /// <item><description>Query the current usage in combination with the resources, and then verify the current operation by using subsequent creation, authorization, or scale-out operations. <b>This query does not reserve quotas or guarantee the success of subsequent purchases.</b>
+        /// <c>Data=2147483647</c> indicates that no smaller quota limit is obtained in this query. It does not mean that the physical inventory is unlimited.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetResourceQuotaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourceQuotaResponse
+        /// </returns>
+        public GetResourceQuotaResponse GetResourceQuota(GetResourceQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetResourceQuotaWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the maximum quantity quota applicable to the current account for a specified product, resource type, business region, and billing method.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries the maximum quantity quota. It does not query the used quota, remaining quota, or real-time resource inventory.
+        /// <b>Parameter relationships:</b></para>
+        /// <list type="bullet">
+        /// <item><description><c>ResourceType</c> and <c>ProductType</c> are required.</description></item>
+        /// <item><description><c>BizRegionId</c> and <c>ChargeType</c> are optional query conditions and can be specified at the same time. They must be consistent with subsequent purchase or authorization operations.</description></item>
+        /// <item><description>If the region or billing method is omitted, the general quota for the corresponding dimension is queried. The quotas of different regions or billing methods are not added together.</description></item>
+        /// <item><description>If multiple quotas apply at the same time, the larger limit is returned.
+        /// <b>Call sequence:</b></description></item>
+        /// </list>
+        /// <ol>
+        /// <item><description>Select the resource type, product, business region, and billing method of the payer based on subsequent business needs.</description></item>
+        /// <item><description>Invoke this operation to read <c>Data</c>. Query <c>AppInstanceGroup</c> before creating a delivery group, query <c>AppAuthUser</c> before adding an authorized user, and query <c>PoolNodeAmount</c> before purchasing or scaling out nodes.</description></item>
+        /// <item><description>Query the current usage in combination with the resources, and then verify the current operation by using subsequent creation, authorization, or scale-out operations. <b>This query does not reserve quotas or guarantee the success of subsequent purchases.</b>
+        /// <c>Data=2147483647</c> indicates that no smaller quota limit is obtained in this query. It does not mean that the physical inventory is unlimited.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetResourceQuotaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourceQuotaResponse
+        /// </returns>
+        public async Task<GetResourceQuotaResponse> GetResourceQuotaAsync(GetResourceQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetResourceQuotaWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6883,6 +8694,458 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the details of a task by task ID, or by resource information and task category.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Supports two query methods:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Query by task ID</b>: Pass the TaskId parameter. This method takes precedence over querying by resource information.</description></item>
+        /// <item><description><b>Query by resource</b>: Omit the TaskId parameter, and pass the EntityId, EntityType, and TaskCategory parameters. You can use the EntityVersionId parameter to specify the resource version.
+        /// The API returns the current task status and recorded step information. Determine the overall task result based on the Status parameter. The success of a single step does not indicate the success of the entire task. You can call the ListTaskStep operation to query the names and categories of image creation and application adaptation steps.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskResponse
+        /// </returns>
+        public GetTaskResponse GetTaskWithOptions(GetTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityId))
+            {
+                body["EntityId"] = request.EntityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityType))
+            {
+                body["EntityType"] = request.EntityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityVersionId))
+            {
+                body["EntityVersionId"] = request.EntityVersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskCategory))
+            {
+                body["TaskCategory"] = request.TaskCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                body["TaskType"] = request.TaskType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTask",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a task by task ID, or by resource information and task category.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Supports two query methods:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Query by task ID</b>: Pass the TaskId parameter. This method takes precedence over querying by resource information.</description></item>
+        /// <item><description><b>Query by resource</b>: Omit the TaskId parameter, and pass the EntityId, EntityType, and TaskCategory parameters. You can use the EntityVersionId parameter to specify the resource version.
+        /// The API returns the current task status and recorded step information. Determine the overall task result based on the Status parameter. The success of a single step does not indicate the success of the entire task. You can call the ListTaskStep operation to query the names and categories of image creation and application adaptation steps.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskResponse
+        /// </returns>
+        public async Task<GetTaskResponse> GetTaskWithOptionsAsync(GetTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityId))
+            {
+                body["EntityId"] = request.EntityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityType))
+            {
+                body["EntityType"] = request.EntityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityVersionId))
+            {
+                body["EntityVersionId"] = request.EntityVersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskCategory))
+            {
+                body["TaskCategory"] = request.TaskCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                body["TaskType"] = request.TaskType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTask",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a task by task ID, or by resource information and task category.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Supports two query methods:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Query by task ID</b>: Pass the TaskId parameter. This method takes precedence over querying by resource information.</description></item>
+        /// <item><description><b>Query by resource</b>: Omit the TaskId parameter, and pass the EntityId, EntityType, and TaskCategory parameters. You can use the EntityVersionId parameter to specify the resource version.
+        /// The API returns the current task status and recorded step information. Determine the overall task result based on the Status parameter. The success of a single step does not indicate the success of the entire task. You can call the ListTaskStep operation to query the names and categories of image creation and application adaptation steps.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskResponse
+        /// </returns>
+        public GetTaskResponse GetTask(GetTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a task by task ID, or by resource information and task category.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Supports two query methods:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Query by task ID</b>: Pass the TaskId parameter. This method takes precedence over querying by resource information.</description></item>
+        /// <item><description><b>Query by resource</b>: Omit the TaskId parameter, and pass the EntityId, EntityType, and TaskCategory parameters. You can use the EntityVersionId parameter to specify the resource version.
+        /// The API returns the current task status and recorded step information. Determine the overall task result based on the Status parameter. The success of a single step does not indicate the success of the entire task. You can call the ListTaskStep operation to query the names and categories of image creation and application adaptation steps.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskResponse
+        /// </returns>
+        public async Task<GetTaskResponse> GetTaskAsync(GetTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query on the valid applications of the current account based on conditions such as the application ID, name, type, and associated product.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When multiple filter conditions are specified simultaneously, they take effect together. AppName supports partial match. When a single-value filter and the corresponding list filter are specified simultaneously, the intersection is used. To avoid empty results, select only one of the formats.
+        /// If PageSize is omitted, the value is 10. Query pages sequentially starting from PageNumber 1 until the number of retrieved records reaches Count. Before deleting an application, check Deletable.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListAppRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAppResponse
+        /// </returns>
+        public ListAppResponse ListAppWithOptions(ListAppRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListAppShrinkRequest request = new ListAppShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizTypeList))
+            {
+                request.BizTypeListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizTypeList, "BizTypeList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ProductTypeList))
+            {
+                request.ProductTypeListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ProductTypeList, "ProductTypeList", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppType))
+            {
+                body["AppType"] = request.AppType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                body["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizTypeListShrink))
+            {
+                body["BizTypeList"] = request.BizTypeListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginAppType))
+            {
+                body["OriginAppType"] = request.OriginAppType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
+            {
+                body["OsType"] = request.OsType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductTypeListShrink))
+            {
+                body["ProductTypeList"] = request.ProductTypeListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubAppType))
+            {
+                body["SubAppType"] = request.SubAppType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListApp",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAppResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query on the valid applications of the current account based on conditions such as the application ID, name, type, and associated product.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When multiple filter conditions are specified simultaneously, they take effect together. AppName supports partial match. When a single-value filter and the corresponding list filter are specified simultaneously, the intersection is used. To avoid empty results, select only one of the formats.
+        /// If PageSize is omitted, the value is 10. Query pages sequentially starting from PageNumber 1 until the number of retrieved records reaches Count. Before deleting an application, check Deletable.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListAppRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAppResponse
+        /// </returns>
+        public async Task<ListAppResponse> ListAppWithOptionsAsync(ListAppRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListAppShrinkRequest request = new ListAppShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizTypeList))
+            {
+                request.BizTypeListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizTypeList, "BizTypeList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ProductTypeList))
+            {
+                request.ProductTypeListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ProductTypeList, "ProductTypeList", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppType))
+            {
+                body["AppType"] = request.AppType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                body["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizTypeListShrink))
+            {
+                body["BizTypeList"] = request.BizTypeListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginAppType))
+            {
+                body["OriginAppType"] = request.OriginAppType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
+            {
+                body["OsType"] = request.OsType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductTypeListShrink))
+            {
+                body["ProductTypeList"] = request.ProductTypeListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubAppType))
+            {
+                body["SubAppType"] = request.SubAppType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListApp",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAppResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query on the valid applications of the current account based on conditions such as the application ID, name, type, and associated product.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When multiple filter conditions are specified simultaneously, they take effect together. AppName supports partial match. When a single-value filter and the corresponding list filter are specified simultaneously, the intersection is used. To avoid empty results, select only one of the formats.
+        /// If PageSize is omitted, the value is 10. Query pages sequentially starting from PageNumber 1 until the number of retrieved records reaches Count. Before deleting an application, check Deletable.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAppRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAppResponse
+        /// </returns>
+        public ListAppResponse ListApp(ListAppRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAppWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query on the valid applications of the current account based on conditions such as the application ID, name, type, and associated product.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When multiple filter conditions are specified simultaneously, they take effect together. AppName supports partial match. When a single-value filter and the corresponding list filter are specified simultaneously, the intersection is used. To avoid empty results, select only one of the formats.
+        /// If PageSize is omitted, the value is 10. Query pages sequentially starting from PageNumber 1 until the number of retrieved records reaches Count. Before deleting an application, check Deletable.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAppRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAppResponse
+        /// </returns>
+        public async Task<ListAppResponse> ListAppAsync(ListAppRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAppWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the details of multiple delivery groups. This operation queries all delivery groups that meet the specified conditions instead of a specific delivery group.</para>
         /// </summary>
         /// 
@@ -7107,6 +9370,322 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAppInstanceGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available session instance types for the current account by paging based on the product, region, operating system, and instance type conditions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to select session instance types and does not create resources. The returned results are affected by the available instance types of the account and the business region. An empty result does not indicate a request failure.
+        /// <b>Filtering and pagination:</b></para>
+        /// <list type="bullet">
+        /// <item><description>ProductType is required. Explicitly specify BizRegionId, PageNumber, and PageSize.</description></item>
+        /// <item><description>If BizRegionId is not provided, the region of the current request is used. You can call <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListRegions">ListRegions</a> to obtain the business region.</description></item>
+        /// <item><description>AppInstanceType and AppInstanceTypeList can be specified at the same time. In this case, only the instance types that meet both conditions are returned. Neither parameter overrides the other. The list can contain up to 100 items.</description></item>
+        /// <item><description>Instance type family, CPU, memory, GPU memory, operating system, and category conditions are filtered by intersection. The union is not automatically applied.</description></item>
+        /// <item><description>PageNumber starts from 1. Use TotalCount, PageSize, and PageNumber to continue pagination until all matching results are read.
+        /// <b>Inventory and subsequent calls:</b></description></item>
+        /// <item><description>Inventory is queried only when QueryInventory is set to true. If inventory information is not obtained, do not assume that the inventory is 0.</description></item>
+        /// <item><description>The inventory reflects the current query result and does not indicate a successful reservation.</description></item>
+        /// <item><description>After obtaining the AppInstanceType, you can query the price based on the session instance type parameter requirements of <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetResourcePrice">GetResourcePrice</a>.</description></item>
+        /// <item><description>The current query does not use AppCenterImageId to filter instance types. Do not use this parameter to determine the compatibility between images and instance types.
+        /// Field examples are used to demonstrate how to specify parameters and do not guarantee that the example instance types exist in the selected region or account. The GPU count field does not currently provide values. Use the GPU memory field to understand the instance type.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAppInstanceTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAppInstanceTypeResponse
+        /// </returns>
+        public ListAppInstanceTypeResponse ListAppInstanceTypeWithOptions(ListAppInstanceTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppCenterImageId))
+            {
+                query["AppCenterImageId"] = request.AppCenterImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceType))
+            {
+                query["AppInstanceType"] = request.AppInstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceTypeFamily))
+            {
+                query["AppInstanceTypeFamily"] = request.AppInstanceTypeFamily;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceTypeList))
+            {
+                query["AppInstanceTypeList"] = request.AppInstanceTypeList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                query["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["Category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
+            {
+                query["ChargeType"] = request.ChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
+            {
+                query["Cpu"] = request.Cpu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuMemory))
+            {
+                query["GpuMemory"] = request.GpuMemory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Memory))
+            {
+                query["Memory"] = request.Memory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
+            {
+                query["OsType"] = request.OsType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryInventory))
+            {
+                query["QueryInventory"] = request.QueryInventory;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAppInstanceType",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAppInstanceTypeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available session instance types for the current account by paging based on the product, region, operating system, and instance type conditions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to select session instance types and does not create resources. The returned results are affected by the available instance types of the account and the business region. An empty result does not indicate a request failure.
+        /// <b>Filtering and pagination:</b></para>
+        /// <list type="bullet">
+        /// <item><description>ProductType is required. Explicitly specify BizRegionId, PageNumber, and PageSize.</description></item>
+        /// <item><description>If BizRegionId is not provided, the region of the current request is used. You can call <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListRegions">ListRegions</a> to obtain the business region.</description></item>
+        /// <item><description>AppInstanceType and AppInstanceTypeList can be specified at the same time. In this case, only the instance types that meet both conditions are returned. Neither parameter overrides the other. The list can contain up to 100 items.</description></item>
+        /// <item><description>Instance type family, CPU, memory, GPU memory, operating system, and category conditions are filtered by intersection. The union is not automatically applied.</description></item>
+        /// <item><description>PageNumber starts from 1. Use TotalCount, PageSize, and PageNumber to continue pagination until all matching results are read.
+        /// <b>Inventory and subsequent calls:</b></description></item>
+        /// <item><description>Inventory is queried only when QueryInventory is set to true. If inventory information is not obtained, do not assume that the inventory is 0.</description></item>
+        /// <item><description>The inventory reflects the current query result and does not indicate a successful reservation.</description></item>
+        /// <item><description>After obtaining the AppInstanceType, you can query the price based on the session instance type parameter requirements of <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetResourcePrice">GetResourcePrice</a>.</description></item>
+        /// <item><description>The current query does not use AppCenterImageId to filter instance types. Do not use this parameter to determine the compatibility between images and instance types.
+        /// Field examples are used to demonstrate how to specify parameters and do not guarantee that the example instance types exist in the selected region or account. The GPU count field does not currently provide values. Use the GPU memory field to understand the instance type.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAppInstanceTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAppInstanceTypeResponse
+        /// </returns>
+        public async Task<ListAppInstanceTypeResponse> ListAppInstanceTypeWithOptionsAsync(ListAppInstanceTypeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppCenterImageId))
+            {
+                query["AppCenterImageId"] = request.AppCenterImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceType))
+            {
+                query["AppInstanceType"] = request.AppInstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceTypeFamily))
+            {
+                query["AppInstanceTypeFamily"] = request.AppInstanceTypeFamily;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceTypeList))
+            {
+                query["AppInstanceTypeList"] = request.AppInstanceTypeList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                query["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["Category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
+            {
+                query["ChargeType"] = request.ChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cpu))
+            {
+                query["Cpu"] = request.Cpu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuMemory))
+            {
+                query["GpuMemory"] = request.GpuMemory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Memory))
+            {
+                query["Memory"] = request.Memory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsType))
+            {
+                query["OsType"] = request.OsType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                query["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryInventory))
+            {
+                query["QueryInventory"] = request.QueryInventory;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAppInstanceType",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAppInstanceTypeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available session instance types for the current account by paging based on the product, region, operating system, and instance type conditions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to select session instance types and does not create resources. The returned results are affected by the available instance types of the account and the business region. An empty result does not indicate a request failure.
+        /// <b>Filtering and pagination:</b></para>
+        /// <list type="bullet">
+        /// <item><description>ProductType is required. Explicitly specify BizRegionId, PageNumber, and PageSize.</description></item>
+        /// <item><description>If BizRegionId is not provided, the region of the current request is used. You can call <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListRegions">ListRegions</a> to obtain the business region.</description></item>
+        /// <item><description>AppInstanceType and AppInstanceTypeList can be specified at the same time. In this case, only the instance types that meet both conditions are returned. Neither parameter overrides the other. The list can contain up to 100 items.</description></item>
+        /// <item><description>Instance type family, CPU, memory, GPU memory, operating system, and category conditions are filtered by intersection. The union is not automatically applied.</description></item>
+        /// <item><description>PageNumber starts from 1. Use TotalCount, PageSize, and PageNumber to continue pagination until all matching results are read.
+        /// <b>Inventory and subsequent calls:</b></description></item>
+        /// <item><description>Inventory is queried only when QueryInventory is set to true. If inventory information is not obtained, do not assume that the inventory is 0.</description></item>
+        /// <item><description>The inventory reflects the current query result and does not indicate a successful reservation.</description></item>
+        /// <item><description>After obtaining the AppInstanceType, you can query the price based on the session instance type parameter requirements of <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetResourcePrice">GetResourcePrice</a>.</description></item>
+        /// <item><description>The current query does not use AppCenterImageId to filter instance types. Do not use this parameter to determine the compatibility between images and instance types.
+        /// Field examples are used to demonstrate how to specify parameters and do not guarantee that the example instance types exist in the selected region or account. The GPU count field does not currently provide values. Use the GPU memory field to understand the instance type.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAppInstanceTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAppInstanceTypeResponse
+        /// </returns>
+        public ListAppInstanceTypeResponse ListAppInstanceType(ListAppInstanceTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAppInstanceTypeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available session instance types for the current account by paging based on the product, region, operating system, and instance type conditions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is used to select session instance types and does not create resources. The returned results are affected by the available instance types of the account and the business region. An empty result does not indicate a request failure.
+        /// <b>Filtering and pagination:</b></para>
+        /// <list type="bullet">
+        /// <item><description>ProductType is required. Explicitly specify BizRegionId, PageNumber, and PageSize.</description></item>
+        /// <item><description>If BizRegionId is not provided, the region of the current request is used. You can call <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListRegions">ListRegions</a> to obtain the business region.</description></item>
+        /// <item><description>AppInstanceType and AppInstanceTypeList can be specified at the same time. In this case, only the instance types that meet both conditions are returned. Neither parameter overrides the other. The list can contain up to 100 items.</description></item>
+        /// <item><description>Instance type family, CPU, memory, GPU memory, operating system, and category conditions are filtered by intersection. The union is not automatically applied.</description></item>
+        /// <item><description>PageNumber starts from 1. Use TotalCount, PageSize, and PageNumber to continue pagination until all matching results are read.
+        /// <b>Inventory and subsequent calls:</b></description></item>
+        /// <item><description>Inventory is queried only when QueryInventory is set to true. If inventory information is not obtained, do not assume that the inventory is 0.</description></item>
+        /// <item><description>The inventory reflects the current query result and does not indicate a successful reservation.</description></item>
+        /// <item><description>After obtaining the AppInstanceType, you can query the price based on the session instance type parameter requirements of <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetResourcePrice">GetResourcePrice</a>.</description></item>
+        /// <item><description>The current query does not use AppCenterImageId to filter instance types. Do not use this parameter to determine the compatibility between images and instance types.
+        /// Field examples are used to demonstrate how to specify parameters and do not guarantee that the example instance types exist in the selected region or account. The GPU count field does not currently provide values. Use the GPU memory field to understand the instance type.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAppInstanceTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAppInstanceTypeResponse
+        /// </returns>
+        public async Task<ListAppInstanceTypeResponse> ListAppInstanceTypeAsync(ListAppInstanceTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAppInstanceTypeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11927,6 +14506,150 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the list of region IDs available for image services under a specified product for the current account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The returned results are affected by the available region configurations of the account and the product type. If ProductType is omitted, the query defaults to CloudApp.
+        /// This operation returns the regions available for image services. You cannot use this information to determine whether a specific image has been distributed to these regions. Before you create or distribute an image based on a parent image, you must also check the region information of the destination image.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRegionIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRegionIdResponse
+        /// </returns>
+        public ListRegionIdResponse ListRegionIdWithOptions(ListRegionIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRegionId",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRegionIdResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of region IDs available for image services under a specified product for the current account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The returned results are affected by the available region configurations of the account and the product type. If ProductType is omitted, the query defaults to CloudApp.
+        /// This operation returns the regions available for image services. You cannot use this information to determine whether a specific image has been distributed to these regions. Before you create or distribute an image based on a parent image, you must also check the region information of the destination image.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRegionIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRegionIdResponse
+        /// </returns>
+        public async Task<ListRegionIdResponse> ListRegionIdWithOptionsAsync(ListRegionIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRegionId",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRegionIdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of region IDs available for image services under a specified product for the current account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The returned results are affected by the available region configurations of the account and the product type. If ProductType is omitted, the query defaults to CloudApp.
+        /// This operation returns the regions available for image services. You cannot use this information to determine whether a specific image has been distributed to these regions. Before you create or distribute an image based on a parent image, you must also check the region information of the destination image.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRegionIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRegionIdResponse
+        /// </returns>
+        public ListRegionIdResponse ListRegionId(ListRegionIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListRegionIdWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of region IDs available for image services under a specified product for the current account.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The returned results are affected by the available region configurations of the account and the product type. If ProductType is omitted, the query defaults to CloudApp.
+        /// This operation returns the regions available for image services. You cannot use this information to determine whether a specific image has been distributed to these regions. Before you create or distribute an image based on a parent image, you must also check the region information of the destination image.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRegionIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRegionIdResponse
+        /// </returns>
+        public async Task<ListRegionIdResponse> ListRegionIdAsync(ListRegionIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListRegionIdWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the regions supported by WUYING Cloud Application.</para>
         /// </summary>
         /// 
@@ -12535,6 +15258,150 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the step identifiers, step categories, and interaction methods for application adaptation or image creation tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns application adaptation steps when Type is set to ADAPTOR, and image creation steps when Type is set to IMAGE.
+        /// This operation returns step definitions, not the actual progress of a specific task. Read the step definitions first, and then combine them with the current step and step status returned by GetTask to display the task progress. The step sets vary across different task types. Do not treat the step index as a completion percentage.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTaskStepRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTaskStepResponse
+        /// </returns>
+        public ListTaskStepResponse ListTaskStepWithOptions(ListTaskStepRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTaskStep",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTaskStepResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the step identifiers, step categories, and interaction methods for application adaptation or image creation tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns application adaptation steps when Type is set to ADAPTOR, and image creation steps when Type is set to IMAGE.
+        /// This operation returns step definitions, not the actual progress of a specific task. Read the step definitions first, and then combine them with the current step and step status returned by GetTask to display the task progress. The step sets vary across different task types. Do not treat the step index as a completion percentage.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTaskStepRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTaskStepResponse
+        /// </returns>
+        public async Task<ListTaskStepResponse> ListTaskStepWithOptionsAsync(ListTaskStepRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTaskStep",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTaskStepResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the step identifiers, step categories, and interaction methods for application adaptation or image creation tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns application adaptation steps when Type is set to ADAPTOR, and image creation steps when Type is set to IMAGE.
+        /// This operation returns step definitions, not the actual progress of a specific task. Read the step definitions first, and then combine them with the current step and step status returned by GetTask to display the task progress. The step sets vary across different task types. Do not treat the step index as a completion percentage.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTaskStepRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTaskStepResponse
+        /// </returns>
+        public ListTaskStepResponse ListTaskStep(ListTaskStepRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListTaskStepWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the step identifiers, step categories, and interaction methods for application adaptation or image creation tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns application adaptation steps when Type is set to ADAPTOR, and image creation steps when Type is set to IMAGE.
+        /// This operation returns step definitions, not the actual progress of a specific task. Read the step definitions first, and then combine them with the current step and step status returned by GetTask to display the task progress. The step sets vary across different task types. Do not treat the step index as a completion percentage.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTaskStepRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTaskStepResponse
+        /// </returns>
+        public async Task<ListTaskStepResponse> ListTaskStepAsync(ListTaskStepRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListTaskStepWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the configuration information of an administrator account, such as whether resource expiration reminders are enabled.</para>
         /// </summary>
         /// 
@@ -12931,6 +15798,162 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListWuyingServerWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Wuying Workstation workload templates available for a specified virtual node pool.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the workload templates available for a specified virtual node pool. Before calling this operation, call <a href="~~ListWuyingServer~~">ListWuyingServer</a> to obtain the <c>VirtualNodePoolId</c> of the current account. The operation verifies the ownership of the node pool and returns up to 100 records sorted by template configuration order. The template content is Base64-encoded after being encoded in UTF-8. You must decode the Base64 string before use. The current version does not use <c>MaxResults</c> and <c>NextToken</c> for pagination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListWuyingServerWorkloadTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWuyingServerWorkloadTemplateResponse
+        /// </returns>
+        public ListWuyingServerWorkloadTemplateResponse ListWuyingServerWorkloadTemplateWithOptions(ListWuyingServerWorkloadTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirtualNodePoolId))
+            {
+                query["VirtualNodePoolId"] = request.VirtualNodePoolId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWuyingServerWorkloadTemplate",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWuyingServerWorkloadTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Wuying Workstation workload templates available for a specified virtual node pool.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the workload templates available for a specified virtual node pool. Before calling this operation, call <a href="~~ListWuyingServer~~">ListWuyingServer</a> to obtain the <c>VirtualNodePoolId</c> of the current account. The operation verifies the ownership of the node pool and returns up to 100 records sorted by template configuration order. The template content is Base64-encoded after being encoded in UTF-8. You must decode the Base64 string before use. The current version does not use <c>MaxResults</c> and <c>NextToken</c> for pagination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListWuyingServerWorkloadTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWuyingServerWorkloadTemplateResponse
+        /// </returns>
+        public async Task<ListWuyingServerWorkloadTemplateResponse> ListWuyingServerWorkloadTemplateWithOptionsAsync(ListWuyingServerWorkloadTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirtualNodePoolId))
+            {
+                query["VirtualNodePoolId"] = request.VirtualNodePoolId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWuyingServerWorkloadTemplate",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWuyingServerWorkloadTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Wuying Workstation workload templates available for a specified virtual node pool.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the workload templates available for a specified virtual node pool. Before calling this operation, call <a href="~~ListWuyingServer~~">ListWuyingServer</a> to obtain the <c>VirtualNodePoolId</c> of the current account. The operation verifies the ownership of the node pool and returns up to 100 records sorted by template configuration order. The template content is Base64-encoded after being encoded in UTF-8. You must decode the Base64 string before use. The current version does not use <c>MaxResults</c> and <c>NextToken</c> for pagination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListWuyingServerWorkloadTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWuyingServerWorkloadTemplateResponse
+        /// </returns>
+        public ListWuyingServerWorkloadTemplateResponse ListWuyingServerWorkloadTemplate(ListWuyingServerWorkloadTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListWuyingServerWorkloadTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Wuying Workstation workload templates available for a specified virtual node pool.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the workload templates available for a specified virtual node pool. Before calling this operation, call <a href="~~ListWuyingServer~~">ListWuyingServer</a> to obtain the <c>VirtualNodePoolId</c> of the current account. The operation verifies the ownership of the node pool and returns up to 100 records sorted by template configuration order. The template content is Base64-encoded after being encoded in UTF-8. You must decode the Base64 string before use. The current version does not use <c>MaxResults</c> and <c>NextToken</c> for pagination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListWuyingServerWorkloadTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWuyingServerWorkloadTemplateResponse
+        /// </returns>
+        public async Task<ListWuyingServerWorkloadTemplateResponse> ListWuyingServerWorkloadTemplateAsync(ListWuyingServerWorkloadTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListWuyingServerWorkloadTemplateWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -13543,6 +16566,282 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyAppInstanceGroupAttributeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the billing method of a specified delivery group to the target billing method and returns the ID of the billing conversion task to be created.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation performs billing method conversion, which may create orders and trigger subsequent billing changes. <b>A successful response or a returned task ID does not indicate that the new billing method has taken effect.</b>
+        /// <b>Before you begin:</b></para>
+        /// <list type="bullet">
+        /// <item><description>The resources belong to the current account, and the product and business region match those in the request. Only one delivery group can be specified per request.</description></item>
+        /// <item><description>The target billing method must be different from the current one, and the target resource specifications must support the corresponding sales and Billable methods.</description></item>
+        /// <item><description>Delivery groups that have been added to a valid collection cannot be converted to a different billing method individually.</description></item>
+        /// <item><description>Multiple delivery groups created in the same batch of orders cannot be converted to different Billable methods separately.
+        /// <b>Parameter relationships and call sequence:</b></description></item>
+        /// </list>
+        /// <ol>
+        /// <item><description>Query the resource details first to confirm the product, business region, and current <c>ChargeType</c>. You can use <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query cloud application delivery groups.</description></item>
+        /// <item><description>Explicitly specify the target <c>ChargeType</c>. If you need to purchase a subscription, specify the purchase duration by combining <c>Period</c> and <c>PeriodUnit</c>. The period combination must comply with the sales rules currently supported by the resource.</description></item>
+        /// <item><description>Set <c>AutoPay</c> based on whether automatic payment is allowed. If auto-renewal is involved, explicitly set <c>AutoRenew</c>.</description></item>
+        /// <item><description>After the call, save the returned <c>AppInstanceGroupModel.TaskId</c>. If there are unpaid orders, complete the payment first, and then query the resource details again to confirm that the billing method has been changed.
+        /// This operation does not accept an expiration time parameter. Do not pass the expiration time from other operations into this request. The task examples only illustrate the purpose of the ID and do not define a fixed prefix or length for actual task IDs.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyAppInstanceGroupChargeTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAppInstanceGroupChargeTypeResponse
+        /// </returns>
+        public ModifyAppInstanceGroupChargeTypeResponse ModifyAppInstanceGroupChargeTypeWithOptions(ModifyAppInstanceGroupChargeTypeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyAppInstanceGroupChargeTypeShrinkRequest request = new ModifyAppInstanceGroupChargeTypeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AppInstanceGroupIds))
+            {
+                request.AppInstanceGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AppInstanceGroupIds, "AppInstanceGroupIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupIdsShrink))
+            {
+                body["AppInstanceGroupIds"] = request.AppInstanceGroupIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                body["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                body["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
+            {
+                body["ChargeType"] = request.ChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                body["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                body["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                body["PromotionId"] = request.PromotionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAppInstanceGroupChargeType",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAppInstanceGroupChargeTypeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the billing method of a specified delivery group to the target billing method and returns the ID of the billing conversion task to be created.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation performs billing method conversion, which may create orders and trigger subsequent billing changes. <b>A successful response or a returned task ID does not indicate that the new billing method has taken effect.</b>
+        /// <b>Before you begin:</b></para>
+        /// <list type="bullet">
+        /// <item><description>The resources belong to the current account, and the product and business region match those in the request. Only one delivery group can be specified per request.</description></item>
+        /// <item><description>The target billing method must be different from the current one, and the target resource specifications must support the corresponding sales and Billable methods.</description></item>
+        /// <item><description>Delivery groups that have been added to a valid collection cannot be converted to a different billing method individually.</description></item>
+        /// <item><description>Multiple delivery groups created in the same batch of orders cannot be converted to different Billable methods separately.
+        /// <b>Parameter relationships and call sequence:</b></description></item>
+        /// </list>
+        /// <ol>
+        /// <item><description>Query the resource details first to confirm the product, business region, and current <c>ChargeType</c>. You can use <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query cloud application delivery groups.</description></item>
+        /// <item><description>Explicitly specify the target <c>ChargeType</c>. If you need to purchase a subscription, specify the purchase duration by combining <c>Period</c> and <c>PeriodUnit</c>. The period combination must comply with the sales rules currently supported by the resource.</description></item>
+        /// <item><description>Set <c>AutoPay</c> based on whether automatic payment is allowed. If auto-renewal is involved, explicitly set <c>AutoRenew</c>.</description></item>
+        /// <item><description>After the call, save the returned <c>AppInstanceGroupModel.TaskId</c>. If there are unpaid orders, complete the payment first, and then query the resource details again to confirm that the billing method has been changed.
+        /// This operation does not accept an expiration time parameter. Do not pass the expiration time from other operations into this request. The task examples only illustrate the purpose of the ID and do not define a fixed prefix or length for actual task IDs.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ModifyAppInstanceGroupChargeTypeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAppInstanceGroupChargeTypeResponse
+        /// </returns>
+        public async Task<ModifyAppInstanceGroupChargeTypeResponse> ModifyAppInstanceGroupChargeTypeWithOptionsAsync(ModifyAppInstanceGroupChargeTypeRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyAppInstanceGroupChargeTypeShrinkRequest request = new ModifyAppInstanceGroupChargeTypeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AppInstanceGroupIds))
+            {
+                request.AppInstanceGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AppInstanceGroupIds, "AppInstanceGroupIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupIdsShrink))
+            {
+                body["AppInstanceGroupIds"] = request.AppInstanceGroupIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                body["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                body["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
+            {
+                body["ChargeType"] = request.ChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                body["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                body["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                body["PromotionId"] = request.PromotionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAppInstanceGroupChargeType",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAppInstanceGroupChargeTypeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the billing method of a specified delivery group to the target billing method and returns the ID of the billing conversion task to be created.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation performs billing method conversion, which may create orders and trigger subsequent billing changes. <b>A successful response or a returned task ID does not indicate that the new billing method has taken effect.</b>
+        /// <b>Before you begin:</b></para>
+        /// <list type="bullet">
+        /// <item><description>The resources belong to the current account, and the product and business region match those in the request. Only one delivery group can be specified per request.</description></item>
+        /// <item><description>The target billing method must be different from the current one, and the target resource specifications must support the corresponding sales and Billable methods.</description></item>
+        /// <item><description>Delivery groups that have been added to a valid collection cannot be converted to a different billing method individually.</description></item>
+        /// <item><description>Multiple delivery groups created in the same batch of orders cannot be converted to different Billable methods separately.
+        /// <b>Parameter relationships and call sequence:</b></description></item>
+        /// </list>
+        /// <ol>
+        /// <item><description>Query the resource details first to confirm the product, business region, and current <c>ChargeType</c>. You can use <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query cloud application delivery groups.</description></item>
+        /// <item><description>Explicitly specify the target <c>ChargeType</c>. If you need to purchase a subscription, specify the purchase duration by combining <c>Period</c> and <c>PeriodUnit</c>. The period combination must comply with the sales rules currently supported by the resource.</description></item>
+        /// <item><description>Set <c>AutoPay</c> based on whether automatic payment is allowed. If auto-renewal is involved, explicitly set <c>AutoRenew</c>.</description></item>
+        /// <item><description>After the call, save the returned <c>AppInstanceGroupModel.TaskId</c>. If there are unpaid orders, complete the payment first, and then query the resource details again to confirm that the billing method has been changed.
+        /// This operation does not accept an expiration time parameter. Do not pass the expiration time from other operations into this request. The task examples only illustrate the purpose of the ID and do not define a fixed prefix or length for actual task IDs.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAppInstanceGroupChargeTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAppInstanceGroupChargeTypeResponse
+        /// </returns>
+        public ModifyAppInstanceGroupChargeTypeResponse ModifyAppInstanceGroupChargeType(ModifyAppInstanceGroupChargeTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyAppInstanceGroupChargeTypeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the billing method of a specified delivery group to the target billing method and returns the ID of the billing conversion task to be created.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation performs billing method conversion, which may create orders and trigger subsequent billing changes. <b>A successful response or a returned task ID does not indicate that the new billing method has taken effect.</b>
+        /// <b>Before you begin:</b></para>
+        /// <list type="bullet">
+        /// <item><description>The resources belong to the current account, and the product and business region match those in the request. Only one delivery group can be specified per request.</description></item>
+        /// <item><description>The target billing method must be different from the current one, and the target resource specifications must support the corresponding sales and Billable methods.</description></item>
+        /// <item><description>Delivery groups that have been added to a valid collection cannot be converted to a different billing method individually.</description></item>
+        /// <item><description>Multiple delivery groups created in the same batch of orders cannot be converted to different Billable methods separately.
+        /// <b>Parameter relationships and call sequence:</b></description></item>
+        /// </list>
+        /// <ol>
+        /// <item><description>Query the resource details first to confirm the product, business region, and current <c>ChargeType</c>. You can use <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/GetAppInstanceGroup">GetAppInstanceGroup</a> to query cloud application delivery groups.</description></item>
+        /// <item><description>Explicitly specify the target <c>ChargeType</c>. If you need to purchase a subscription, specify the purchase duration by combining <c>Period</c> and <c>PeriodUnit</c>. The period combination must comply with the sales rules currently supported by the resource.</description></item>
+        /// <item><description>Set <c>AutoPay</c> based on whether automatic payment is allowed. If auto-renewal is involved, explicitly set <c>AutoRenew</c>.</description></item>
+        /// <item><description>After the call, save the returned <c>AppInstanceGroupModel.TaskId</c>. If there are unpaid orders, complete the payment first, and then query the resource details again to confirm that the billing method has been changed.
+        /// This operation does not accept an expiration time parameter. Do not pass the expiration time from other operations into this request. The task examples only illustrate the purpose of the ID and do not define a fixed prefix or length for actual task IDs.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyAppInstanceGroupChargeTypeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAppInstanceGroupChargeTypeResponse
+        /// </returns>
+        public async Task<ModifyAppInstanceGroupChargeTypeResponse> ModifyAppInstanceGroupChargeTypeAsync(ModifyAppInstanceGroupChargeTypeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyAppInstanceGroupChargeTypeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -14303,7 +17602,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shares an image with other WUYING users or cancels the sharing of a shared image.</para>
+        /// <para>Shares an image with other WUYING users or unshares a shared image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14361,7 +17660,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shares an image with other WUYING users or cancels the sharing of a shared image.</para>
+        /// <para>Shares an image with other WUYING users or unshares a shared image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14419,7 +17718,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shares an image with other WUYING users or cancels the sharing of a shared image.</para>
+        /// <para>Shares an image with other WUYING users or unshares a shared image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14437,7 +17736,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shares an image with other WUYING users or cancels the sharing of a shared image.</para>
+        /// <para>Shares an image with other WUYING users or unshares a shared image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14867,6 +18166,1934 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await PageListAppInstanceGroupUserWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries app instance group reports by region, app instance group, status, user authorization relationship, or statistical date.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the IDs, names, and statuses of app instance groups in app instance group reports. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the business regions and then call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the app instance groups. <c>AppInstanceGroupId</c> matches the exact ID, and <c>AppInstanceGroupName</c> filters by inclusion. If multiple filter conditions are specified at the same time, the intersection is used. When filtering by date, <c>StatDate</c> specifies a single day, and <c>StartDate</c> and <c>EndDate</c> must be specified in pairs to represent a closed interval. If both a single day and an interval are specified, the results must meet both conditions. Before using <c>EndUserId</c>, make sure that the user has a valid authorization relationship.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryAppInstanceGroupReportListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAppInstanceGroupReportListResponse
+        /// </returns>
+        public QueryAppInstanceGroupReportListResponse QueryAppInstanceGroupReportListWithOptions(QueryAppInstanceGroupReportListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupName))
+            {
+                body["AppInstanceGroupName"] = request.AppInstanceGroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                body["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatDate))
+            {
+                body["StatDate"] = request.StatDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryAppInstanceGroupReportList",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryAppInstanceGroupReportListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries app instance group reports by region, app instance group, status, user authorization relationship, or statistical date.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the IDs, names, and statuses of app instance groups in app instance group reports. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the business regions and then call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the app instance groups. <c>AppInstanceGroupId</c> matches the exact ID, and <c>AppInstanceGroupName</c> filters by inclusion. If multiple filter conditions are specified at the same time, the intersection is used. When filtering by date, <c>StatDate</c> specifies a single day, and <c>StartDate</c> and <c>EndDate</c> must be specified in pairs to represent a closed interval. If both a single day and an interval are specified, the results must meet both conditions. Before using <c>EndUserId</c>, make sure that the user has a valid authorization relationship.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryAppInstanceGroupReportListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAppInstanceGroupReportListResponse
+        /// </returns>
+        public async Task<QueryAppInstanceGroupReportListResponse> QueryAppInstanceGroupReportListWithOptionsAsync(QueryAppInstanceGroupReportListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupName))
+            {
+                body["AppInstanceGroupName"] = request.AppInstanceGroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                body["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatDate))
+            {
+                body["StatDate"] = request.StatDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryAppInstanceGroupReportList",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryAppInstanceGroupReportListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries app instance group reports by region, app instance group, status, user authorization relationship, or statistical date.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the IDs, names, and statuses of app instance groups in app instance group reports. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the business regions and then call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the app instance groups. <c>AppInstanceGroupId</c> matches the exact ID, and <c>AppInstanceGroupName</c> filters by inclusion. If multiple filter conditions are specified at the same time, the intersection is used. When filtering by date, <c>StatDate</c> specifies a single day, and <c>StartDate</c> and <c>EndDate</c> must be specified in pairs to represent a closed interval. If both a single day and an interval are specified, the results must meet both conditions. Before using <c>EndUserId</c>, make sure that the user has a valid authorization relationship.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryAppInstanceGroupReportListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAppInstanceGroupReportListResponse
+        /// </returns>
+        public QueryAppInstanceGroupReportListResponse QueryAppInstanceGroupReportList(QueryAppInstanceGroupReportListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryAppInstanceGroupReportListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries app instance group reports by region, app instance group, status, user authorization relationship, or statistical date.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the IDs, names, and statuses of app instance groups in app instance group reports. You can call <a href="~~ListRegions~~">ListRegions</a> to obtain the business regions and then call <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the app instance groups. <c>AppInstanceGroupId</c> matches the exact ID, and <c>AppInstanceGroupName</c> filters by inclusion. If multiple filter conditions are specified at the same time, the intersection is used. When filtering by date, <c>StatDate</c> specifies a single day, and <c>StartDate</c> and <c>EndDate</c> must be specified in pairs to represent a closed interval. If both a single day and an interval are specified, the results must meet both conditions. Before using <c>EndUserId</c>, make sure that the user has a valid authorization relationship.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryAppInstanceGroupReportListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAppInstanceGroupReportListResponse
+        /// </returns>
+        public async Task<QueryAppInstanceGroupReportListResponse> QueryAppInstanceGroupReportListAsync(QueryAppInstanceGroupReportListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryAppInstanceGroupReportListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of successful connections, the number of failed connections, the success rate, and the average connection duration within a specified time range.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries connection statistical reports. Before you invoke this operation, you can invoke <a href="~~ListRegions~~">ListRegions</a> and <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the <c>BizRegionId</c> and <c>AppInstanceGroupId</c> parameters. The <c>ProductType</c>, <c>StartDate</c>, and <c>EndDate</c> parameters are required for server-side validation. The statistical interval is <c>[StartDate, EndDate)</c>, which includes the start time but excludes the end time. Results are returned by page, with a maximum of 1,500 entries per page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryConnectionReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryConnectionReportResponse
+        /// </returns>
+        public QueryConnectionReportResponse QueryConnectionReportWithOptions(QueryConnectionReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryConnectionReport",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryConnectionReportResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of successful connections, the number of failed connections, the success rate, and the average connection duration within a specified time range.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries connection statistical reports. Before you invoke this operation, you can invoke <a href="~~ListRegions~~">ListRegions</a> and <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the <c>BizRegionId</c> and <c>AppInstanceGroupId</c> parameters. The <c>ProductType</c>, <c>StartDate</c>, and <c>EndDate</c> parameters are required for server-side validation. The statistical interval is <c>[StartDate, EndDate)</c>, which includes the start time but excludes the end time. Results are returned by page, with a maximum of 1,500 entries per page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryConnectionReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryConnectionReportResponse
+        /// </returns>
+        public async Task<QueryConnectionReportResponse> QueryConnectionReportWithOptionsAsync(QueryConnectionReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryConnectionReport",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryConnectionReportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of successful connections, the number of failed connections, the success rate, and the average connection duration within a specified time range.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries connection statistical reports. Before you invoke this operation, you can invoke <a href="~~ListRegions~~">ListRegions</a> and <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the <c>BizRegionId</c> and <c>AppInstanceGroupId</c> parameters. The <c>ProductType</c>, <c>StartDate</c>, and <c>EndDate</c> parameters are required for server-side validation. The statistical interval is <c>[StartDate, EndDate)</c>, which includes the start time but excludes the end time. Results are returned by page, with a maximum of 1,500 entries per page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryConnectionReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryConnectionReportResponse
+        /// </returns>
+        public QueryConnectionReportResponse QueryConnectionReport(QueryConnectionReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryConnectionReportWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of successful connections, the number of failed connections, the success rate, and the average connection duration within a specified time range.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries connection statistical reports. Before you invoke this operation, you can invoke <a href="~~ListRegions~~">ListRegions</a> and <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> to obtain the <c>BizRegionId</c> and <c>AppInstanceGroupId</c> parameters. The <c>ProductType</c>, <c>StartDate</c>, and <c>EndDate</c> parameters are required for server-side validation. The statistical interval is <c>[StartDate, EndDate)</c>, which includes the start time but excludes the end time. Results are returned by page, with a maximum of 1,500 entries per page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryConnectionReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryConnectionReportResponse
+        /// </returns>
+        public async Task<QueryConnectionReportResponse> QueryConnectionReportAsync(QueryConnectionReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryConnectionReportWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of daily active users and streaming daily active users by date.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the daily active user (DAU) report. StartDate and EndDate are required. The date range is inclusive and cannot exceed 180 days. If ProductType is not specified or is unrecognized, the query defaults to CloudApp. You can use BizRegionId and AppInstanceGroupId to narrow down the scope. If neither is specified, the query returns aggregated data for all business regions. Results are returned in pages, with a maximum of 1,500 records per page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryDauReportDataRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDauReportDataResponse
+        /// </returns>
+        public QueryDauReportDataResponse QueryDauReportDataWithOptions(QueryDauReportDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryDauReportData",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryDauReportDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of daily active users and streaming daily active users by date.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the daily active user (DAU) report. StartDate and EndDate are required. The date range is inclusive and cannot exceed 180 days. If ProductType is not specified or is unrecognized, the query defaults to CloudApp. You can use BizRegionId and AppInstanceGroupId to narrow down the scope. If neither is specified, the query returns aggregated data for all business regions. Results are returned in pages, with a maximum of 1,500 records per page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryDauReportDataRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDauReportDataResponse
+        /// </returns>
+        public async Task<QueryDauReportDataResponse> QueryDauReportDataWithOptionsAsync(QueryDauReportDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryDauReportData",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryDauReportDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of daily active users and streaming daily active users by date.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the daily active user (DAU) report. StartDate and EndDate are required. The date range is inclusive and cannot exceed 180 days. If ProductType is not specified or is unrecognized, the query defaults to CloudApp. You can use BizRegionId and AppInstanceGroupId to narrow down the scope. If neither is specified, the query returns aggregated data for all business regions. Results are returned in pages, with a maximum of 1,500 records per page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryDauReportDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDauReportDataResponse
+        /// </returns>
+        public QueryDauReportDataResponse QueryDauReportData(QueryDauReportDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryDauReportDataWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of daily active users and streaming daily active users by date.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the daily active user (DAU) report. StartDate and EndDate are required. The date range is inclusive and cannot exceed 180 days. If ProductType is not specified or is unrecognized, the query defaults to CloudApp. You can use BizRegionId and AppInstanceGroupId to narrow down the scope. If neither is specified, the query returns aggregated data for all business regions. Results are returned in pages, with a maximum of 1,500 records per page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryDauReportDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryDauReportDataResponse
+        /// </returns>
+        public async Task<QueryDauReportDataResponse> QueryDauReportDataAsync(QueryDauReportDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryDauReportDataWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of monthly active users for each month within a specified time range.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the monthly active user (MAU) report. <c>ProductType</c>, <c>StartDate</c>, and <c>EndDate</c> are required for server-side validation, and the time span cannot exceed 60 months. The API returns statistical values by month. To adapt to offline data generated on the next day, the last month in the query range uses the day before <c>EndDate</c> as the statistical cutoff date. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryMauReportDataRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMauReportDataResponse
+        /// </returns>
+        public QueryMauReportDataResponse QueryMauReportDataWithOptions(QueryMauReportDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryMauReportData",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryMauReportDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of monthly active users for each month within a specified time range.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the monthly active user (MAU) report. <c>ProductType</c>, <c>StartDate</c>, and <c>EndDate</c> are required for server-side validation, and the time span cannot exceed 60 months. The API returns statistical values by month. To adapt to offline data generated on the next day, the last month in the query range uses the day before <c>EndDate</c> as the statistical cutoff date. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryMauReportDataRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMauReportDataResponse
+        /// </returns>
+        public async Task<QueryMauReportDataResponse> QueryMauReportDataWithOptionsAsync(QueryMauReportDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryMauReportData",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryMauReportDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of monthly active users for each month within a specified time range.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the monthly active user (MAU) report. <c>ProductType</c>, <c>StartDate</c>, and <c>EndDate</c> are required for server-side validation, and the time span cannot exceed 60 months. The API returns statistical values by month. To adapt to offline data generated on the next day, the last month in the query range uses the day before <c>EndDate</c> as the statistical cutoff date. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryMauReportDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMauReportDataResponse
+        /// </returns>
+        public QueryMauReportDataResponse QueryMauReportData(QueryMauReportDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryMauReportDataWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of monthly active users for each month within a specified time range.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the monthly active user (MAU) report. <c>ProductType</c>, <c>StartDate</c>, and <c>EndDate</c> are required for server-side validation, and the time span cannot exceed 60 months. The API returns statistical values by month. To adapt to offline data generated on the next day, the last month in the query range uses the day before <c>EndDate</c> as the statistical cutoff date. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryMauReportDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMauReportDataResponse
+        /// </returns>
+        public async Task<QueryMauReportDataResponse> QueryMauReportDataAsync(QueryMauReportDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryMauReportDataWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the network RTT and low-RTT user statistics within a specified time range.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries network round-trip time (RTT) reports. <c>ProductType</c>, <c>StartDate</c>, and <c>EndDate</c> are required for server-side validation. The statistical interval is <c>[StartDate, EndDate)</c>. The minimum, maximum, and average RTT values are measured in milliseconds. The low-RTT threshold is determined by the report statistical caliber, and the current API operation does not return this threshold. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryNetworkRttReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryNetworkRttReportResponse
+        /// </returns>
+        public QueryNetworkRttReportResponse QueryNetworkRttReportWithOptions(QueryNetworkRttReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryNetworkRttReport",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryNetworkRttReportResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the network RTT and low-RTT user statistics within a specified time range.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries network round-trip time (RTT) reports. <c>ProductType</c>, <c>StartDate</c>, and <c>EndDate</c> are required for server-side validation. The statistical interval is <c>[StartDate, EndDate)</c>. The minimum, maximum, and average RTT values are measured in milliseconds. The low-RTT threshold is determined by the report statistical caliber, and the current API operation does not return this threshold. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryNetworkRttReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryNetworkRttReportResponse
+        /// </returns>
+        public async Task<QueryNetworkRttReportResponse> QueryNetworkRttReportWithOptionsAsync(QueryNetworkRttReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryNetworkRttReport",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryNetworkRttReportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the network RTT and low-RTT user statistics within a specified time range.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries network round-trip time (RTT) reports. <c>ProductType</c>, <c>StartDate</c>, and <c>EndDate</c> are required for server-side validation. The statistical interval is <c>[StartDate, EndDate)</c>. The minimum, maximum, and average RTT values are measured in milliseconds. The low-RTT threshold is determined by the report statistical caliber, and the current API operation does not return this threshold. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryNetworkRttReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryNetworkRttReportResponse
+        /// </returns>
+        public QueryNetworkRttReportResponse QueryNetworkRttReport(QueryNetworkRttReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryNetworkRttReportWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the network RTT and low-RTT user statistics within a specified time range.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries network round-trip time (RTT) reports. <c>ProductType</c>, <c>StartDate</c>, and <c>EndDate</c> are required for server-side validation. The statistical interval is <c>[StartDate, EndDate)</c>. The minimum, maximum, and average RTT values are measured in milliseconds. The low-RTT threshold is determined by the report statistical caliber, and the current API operation does not return this threshold. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryNetworkRttReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryNetworkRttReportResponse
+        /// </returns>
+        public async Task<QueryNetworkRttReportResponse> QueryNetworkRttReportAsync(QueryNetworkRttReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryNetworkRttReportWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the total number of nodes, the number of subscription nodes, and the number of pay-as-you-go nodes by statistical granularity.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries node quantity reports. StartDate, EndDate, and StatDateType are required. The query span limit is determined by the statistical granularity: up to 1 day for 1m and 30m, up to 15 days for 6h, and up to 180 days for 1d. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryNodeReportDataRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryNodeReportDataResponse
+        /// </returns>
+        public QueryNodeReportDataResponse QueryNodeReportDataWithOptions(QueryNodeReportDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatDateType))
+            {
+                body["StatDateType"] = request.StatDateType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryNodeReportData",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryNodeReportDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the total number of nodes, the number of subscription nodes, and the number of pay-as-you-go nodes by statistical granularity.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries node quantity reports. StartDate, EndDate, and StatDateType are required. The query span limit is determined by the statistical granularity: up to 1 day for 1m and 30m, up to 15 days for 6h, and up to 180 days for 1d. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryNodeReportDataRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryNodeReportDataResponse
+        /// </returns>
+        public async Task<QueryNodeReportDataResponse> QueryNodeReportDataWithOptionsAsync(QueryNodeReportDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatDateType))
+            {
+                body["StatDateType"] = request.StatDateType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryNodeReportData",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryNodeReportDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the total number of nodes, the number of subscription nodes, and the number of pay-as-you-go nodes by statistical granularity.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries node quantity reports. StartDate, EndDate, and StatDateType are required. The query span limit is determined by the statistical granularity: up to 1 day for 1m and 30m, up to 15 days for 6h, and up to 180 days for 1d. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryNodeReportDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryNodeReportDataResponse
+        /// </returns>
+        public QueryNodeReportDataResponse QueryNodeReportData(QueryNodeReportDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryNodeReportDataWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the total number of nodes, the number of subscription nodes, and the number of pay-as-you-go nodes by statistical granularity.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries node quantity reports. StartDate, EndDate, and StatDateType are required. The query span limit is determined by the statistical granularity: up to 1 day for 1m and 30m, up to 15 days for 6h, and up to 180 days for 1d. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 entries per page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryNodeReportDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryNodeReportDataResponse
+        /// </returns>
+        public async Task<QueryNodeReportDataResponse> QueryNodeReportDataAsync(QueryNodeReportDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryNodeReportDataWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the total number of sessions, connected sessions, and streaming sessions by statistical granularity.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries session quantity reports. <c>StartDate</c>, <c>EndDate</c>, and <c>StatDateType</c> are required. The query span limit is determined by the statistical granularity: up to 1 day for <c>1m</c> and <c>30m</c>, up to 15 days for <c>6h</c>, and up to 180 days for <c>1d</c>. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 records per page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QuerySessionReportDataRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySessionReportDataResponse
+        /// </returns>
+        public QuerySessionReportDataResponse QuerySessionReportDataWithOptions(QuerySessionReportDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatDateType))
+            {
+                body["StatDateType"] = request.StatDateType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuerySessionReportData",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuerySessionReportDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the total number of sessions, connected sessions, and streaming sessions by statistical granularity.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries session quantity reports. <c>StartDate</c>, <c>EndDate</c>, and <c>StatDateType</c> are required. The query span limit is determined by the statistical granularity: up to 1 day for <c>1m</c> and <c>30m</c>, up to 15 days for <c>6h</c>, and up to 180 days for <c>1d</c>. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 records per page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QuerySessionReportDataRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySessionReportDataResponse
+        /// </returns>
+        public async Task<QuerySessionReportDataResponse> QuerySessionReportDataWithOptionsAsync(QuerySessionReportDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatDateType))
+            {
+                body["StatDateType"] = request.StatDateType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QuerySessionReportData",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QuerySessionReportDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the total number of sessions, connected sessions, and streaming sessions by statistical granularity.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries session quantity reports. <c>StartDate</c>, <c>EndDate</c>, and <c>StatDateType</c> are required. The query span limit is determined by the statistical granularity: up to 1 day for <c>1m</c> and <c>30m</c>, up to 15 days for <c>6h</c>, and up to 180 days for <c>1d</c>. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 records per page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QuerySessionReportDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySessionReportDataResponse
+        /// </returns>
+        public QuerySessionReportDataResponse QuerySessionReportData(QuerySessionReportDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QuerySessionReportDataWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the total number of sessions, connected sessions, and streaming sessions by statistical granularity.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries session quantity reports. <c>StartDate</c>, <c>EndDate</c>, and <c>StatDateType</c> are required. The query span limit is determined by the statistical granularity: up to 1 day for <c>1m</c> and <c>30m</c>, up to 15 days for <c>6h</c>, and up to 180 days for <c>1d</c>. Both the start and end boundaries are included in the query range. Results are returned in pages, with a maximum of 1,500 records per page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QuerySessionReportDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QuerySessionReportDataResponse
+        /// </returns>
+        public async Task<QuerySessionReportDataResponse> QuerySessionReportDataAsync(QuerySessionReportDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QuerySessionReportDataWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the cumulative duration of application usage by a specified user on an hourly basis and returns the top five applications for each hour.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the application usage of a specified user on an hourly basis. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to query. A maximum of the top five applications by usage duration are returned for each hour.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryUserAppUsageAggregateByHourRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserAppUsageAggregateByHourResponse
+        /// </returns>
+        public QueryUserAppUsageAggregateByHourResponse QueryUserAppUsageAggregateByHourWithOptions(QueryUserAppUsageAggregateByHourRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryUserAppUsageAggregateByHour",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryUserAppUsageAggregateByHourResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the cumulative duration of application usage by a specified user on an hourly basis and returns the top five applications for each hour.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the application usage of a specified user on an hourly basis. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to query. A maximum of the top five applications by usage duration are returned for each hour.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryUserAppUsageAggregateByHourRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserAppUsageAggregateByHourResponse
+        /// </returns>
+        public async Task<QueryUserAppUsageAggregateByHourResponse> QueryUserAppUsageAggregateByHourWithOptionsAsync(QueryUserAppUsageAggregateByHourRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryUserAppUsageAggregateByHour",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryUserAppUsageAggregateByHourResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the cumulative duration of application usage by a specified user on an hourly basis and returns the top five applications for each hour.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the application usage of a specified user on an hourly basis. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to query. A maximum of the top five applications by usage duration are returned for each hour.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryUserAppUsageAggregateByHourRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserAppUsageAggregateByHourResponse
+        /// </returns>
+        public QueryUserAppUsageAggregateByHourResponse QueryUserAppUsageAggregateByHour(QueryUserAppUsageAggregateByHourRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryUserAppUsageAggregateByHourWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the cumulative duration of application usage by a specified user on an hourly basis and returns the top five applications for each hour.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the application usage of a specified user on an hourly basis. StartDate and EndDate use the yyyyMMdd format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. UserId must be set to the ID of the user to query. A maximum of the top five applications by usage duration are returned for each hour.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryUserAppUsageAggregateByHourRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserAppUsageAggregateByHourResponse
+        /// </returns>
+        public async Task<QueryUserAppUsageAggregateByHourResponse> QueryUserAppUsageAggregateByHourAsync(QueryUserAppUsageAggregateByHourRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryUserAppUsageAggregateByHourWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ranking of cumulative application usage duration for a specified user within a date range.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the ranking of application usage duration for a specified user within a statistical range. <c>StartDate</c> and <c>EndDate</c> use the <c>yyyyMMdd</c> format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. <c>UserId</c> must be set to the ID of the user to be queried. The results are sorted in descending order of cumulative application usage duration.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryUserAppUsageTimeRankRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserAppUsageTimeRankResponse
+        /// </returns>
+        public QueryUserAppUsageTimeRankResponse QueryUserAppUsageTimeRankWithOptions(QueryUserAppUsageTimeRankRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryUserAppUsageTimeRank",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryUserAppUsageTimeRankResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ranking of cumulative application usage duration for a specified user within a date range.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the ranking of application usage duration for a specified user within a statistical range. <c>StartDate</c> and <c>EndDate</c> use the <c>yyyyMMdd</c> format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. <c>UserId</c> must be set to the ID of the user to be queried. The results are sorted in descending order of cumulative application usage duration.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryUserAppUsageTimeRankRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserAppUsageTimeRankResponse
+        /// </returns>
+        public async Task<QueryUserAppUsageTimeRankResponse> QueryUserAppUsageTimeRankWithOptionsAsync(QueryUserAppUsageTimeRankRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryUserAppUsageTimeRank",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryUserAppUsageTimeRankResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ranking of cumulative application usage duration for a specified user within a date range.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the ranking of application usage duration for a specified user within a statistical range. <c>StartDate</c> and <c>EndDate</c> use the <c>yyyyMMdd</c> format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. <c>UserId</c> must be set to the ID of the user to be queried. The results are sorted in descending order of cumulative application usage duration.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryUserAppUsageTimeRankRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserAppUsageTimeRankResponse
+        /// </returns>
+        public QueryUserAppUsageTimeRankResponse QueryUserAppUsageTimeRank(QueryUserAppUsageTimeRankRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryUserAppUsageTimeRankWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ranking of cumulative application usage duration for a specified user within a date range.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the ranking of application usage duration for a specified user within a statistical range. <c>StartDate</c> and <c>EndDate</c> use the <c>yyyyMMdd</c> format. If either parameter is not provided, it defaults to yesterday. Both dates must be within the last 90 days, and the start date cannot be later than the end date. The query range includes the start and end dates. <c>UserId</c> must be set to the ID of the user to be queried. The results are sorted in descending order of cumulative application usage duration.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryUserAppUsageTimeRankRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserAppUsageTimeRankResponse
+        /// </returns>
+        public async Task<QueryUserAppUsageTimeRankResponse> QueryUserAppUsageTimeRankAsync(QueryUserAppUsageTimeRankRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryUserAppUsageTimeRankWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the connection status, last connection time, cumulative usage duration, and session persistence duration of users.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries user usage reports. ProductType, StartDate, and EndDate are required for server-side validation, and the time span cannot exceed 60 months. During the query, the start and end times are converted to <c>yyyyMMdd</c> and aggregated by natural days in a closed interval. The results are paginated in descending order of cumulative usage duration, with a maximum of 1,500 records per page. You can combine ConnectionStatus, UserId, BizRegionId, and AppInstanceGroupId for filtering.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryUserUsageReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserUsageReportResponse
+        /// </returns>
+        public QueryUserUsageReportResponse QueryUserUsageReportWithOptions(QueryUserUsageReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionStatus))
+            {
+                body["ConnectionStatus"] = request.ConnectionStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryUserUsageReport",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryUserUsageReportResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the connection status, last connection time, cumulative usage duration, and session persistence duration of users.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries user usage reports. ProductType, StartDate, and EndDate are required for server-side validation, and the time span cannot exceed 60 months. During the query, the start and end times are converted to <c>yyyyMMdd</c> and aggregated by natural days in a closed interval. The results are paginated in descending order of cumulative usage duration, with a maximum of 1,500 records per page. You can combine ConnectionStatus, UserId, BizRegionId, and AppInstanceGroupId for filtering.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryUserUsageReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserUsageReportResponse
+        /// </returns>
+        public async Task<QueryUserUsageReportResponse> QueryUserUsageReportWithOptionsAsync(QueryUserUsageReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppInstanceGroupId))
+            {
+                body["AppInstanceGroupId"] = request.AppInstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionStatus))
+            {
+                body["ConnectionStatus"] = request.ConnectionStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
+            {
+                body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                body["UserId"] = request.UserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryUserUsageReport",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryUserUsageReportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the connection status, last connection time, cumulative usage duration, and session persistence duration of users.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries user usage reports. ProductType, StartDate, and EndDate are required for server-side validation, and the time span cannot exceed 60 months. During the query, the start and end times are converted to <c>yyyyMMdd</c> and aggregated by natural days in a closed interval. The results are paginated in descending order of cumulative usage duration, with a maximum of 1,500 records per page. You can combine ConnectionStatus, UserId, BizRegionId, and AppInstanceGroupId for filtering.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryUserUsageReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserUsageReportResponse
+        /// </returns>
+        public QueryUserUsageReportResponse QueryUserUsageReport(QueryUserUsageReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryUserUsageReportWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the connection status, last connection time, cumulative usage duration, and session persistence duration of users.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries user usage reports. ProductType, StartDate, and EndDate are required for server-side validation, and the time span cannot exceed 60 months. During the query, the start and end times are converted to <c>yyyyMMdd</c> and aggregated by natural days in a closed interval. The results are paginated in descending order of cumulative usage duration, with a maximum of 1,500 records per page. You can combine ConnectionStatus, UserId, BizRegionId, and AppInstanceGroupId for filtering.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryUserUsageReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryUserUsageReportResponse
+        /// </returns>
+        public async Task<QueryUserUsageReportResponse> QueryUserUsageReportAsync(QueryUserUsageReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryUserUsageReportWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -17023,6 +22250,174 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Dissociates multiple applications from a specified image version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports only custom images and community images that the current account can manage. If you omit VersionId, the current effective version is used. If you specify VersionId, it must belong to the image specified by ImageId. Verify the associations between the applications and the version by querying the image before you submit AppIdList. <b>Dissociating applications does not directly delete the application records.</b> To delete an application, call DeleteApp.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UnbindAppRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindAppResponse
+        /// </returns>
+        public UnbindAppResponse UnbindAppWithOptions(UnbindAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIdList))
+            {
+                bodyFlat["AppIdList"] = request.AppIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                body["VersionId"] = request.VersionId;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UnbindApp",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UnbindAppResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Dissociates multiple applications from a specified image version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports only custom images and community images that the current account can manage. If you omit VersionId, the current effective version is used. If you specify VersionId, it must belong to the image specified by ImageId. Verify the associations between the applications and the version by querying the image before you submit AppIdList. <b>Dissociating applications does not directly delete the application records.</b> To delete an application, call DeleteApp.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UnbindAppRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindAppResponse
+        /// </returns>
+        public async Task<UnbindAppResponse> UnbindAppWithOptionsAsync(UnbindAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppIdList))
+            {
+                bodyFlat["AppIdList"] = request.AppIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                body["VersionId"] = request.VersionId;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UnbindApp",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UnbindAppResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Dissociates multiple applications from a specified image version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports only custom images and community images that the current account can manage. If you omit VersionId, the current effective version is used. If you specify VersionId, it must belong to the image specified by ImageId. Verify the associations between the applications and the version by querying the image before you submit AppIdList. <b>Dissociating applications does not directly delete the application records.</b> To delete an application, call DeleteApp.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UnbindAppRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindAppResponse
+        /// </returns>
+        public UnbindAppResponse UnbindApp(UnbindAppRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UnbindAppWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Dissociates multiple applications from a specified image version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports only custom images and community images that the current account can manage. If you omit VersionId, the current effective version is used. If you specify VersionId, it must belong to the image specified by ImageId. Verify the associations between the applications and the version by querying the image before you submit AppIdList. <b>Dissociating applications does not directly delete the application records.</b> To delete an application, call DeleteApp.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UnbindAppRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindAppResponse
+        /// </returns>
+        public async Task<UnbindAppResponse> UnbindAppAsync(UnbindAppRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UnbindAppWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Unbinds tags from cloud resources in a unified manner.</para>
         /// </summary>
         /// 
@@ -17435,6 +22830,202 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Modifies the runtime parameters, optimization configurations, and user configurations of a specified application adapter.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The AdaptorId must correspond to a valid application adapter manageable by the current account. Pass only the configurations that need to be modified in this request.
+        /// SilenceParam is used for application startup parameters. UserConfig is used for application runtime configurations. <b>This operation does not support modifying application scripts or executable file paths through AppScript or ExecuteFileAddress. Do not pass these two parameters.</b></para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateAdaptorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAdaptorResponse
+        /// </returns>
+        public UpdateAdaptorResponse UpdateAdaptorWithOptions(UpdateAdaptorRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateAdaptorShrinkRequest request = new UpdateAdaptorShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserConfig))
+            {
+                request.UserConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserConfig, "UserConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdaptorId))
+            {
+                body["AdaptorId"] = request.AdaptorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppScript))
+            {
+                body["AppScript"] = request.AppScript;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecuteFileAddress))
+            {
+                body["ExecuteFileAddress"] = request.ExecuteFileAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OptimizeParam))
+            {
+                body["OptimizeParam"] = request.OptimizeParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SilenceParam))
+            {
+                body["SilenceParam"] = request.SilenceParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserConfigShrink))
+            {
+                body["UserConfig"] = request.UserConfigShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAdaptor",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAdaptorResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the runtime parameters, optimization configurations, and user configurations of a specified application adapter.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The AdaptorId must correspond to a valid application adapter manageable by the current account. Pass only the configurations that need to be modified in this request.
+        /// SilenceParam is used for application startup parameters. UserConfig is used for application runtime configurations. <b>This operation does not support modifying application scripts or executable file paths through AppScript or ExecuteFileAddress. Do not pass these two parameters.</b></para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateAdaptorRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAdaptorResponse
+        /// </returns>
+        public async Task<UpdateAdaptorResponse> UpdateAdaptorWithOptionsAsync(UpdateAdaptorRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateAdaptorShrinkRequest request = new UpdateAdaptorShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserConfig))
+            {
+                request.UserConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserConfig, "UserConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdaptorId))
+            {
+                body["AdaptorId"] = request.AdaptorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppScript))
+            {
+                body["AppScript"] = request.AppScript;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecuteFileAddress))
+            {
+                body["ExecuteFileAddress"] = request.ExecuteFileAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OptimizeParam))
+            {
+                body["OptimizeParam"] = request.OptimizeParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SilenceParam))
+            {
+                body["SilenceParam"] = request.SilenceParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserConfigShrink))
+            {
+                body["UserConfig"] = request.UserConfigShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAdaptor",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAdaptorResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the runtime parameters, optimization configurations, and user configurations of a specified application adapter.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The AdaptorId must correspond to a valid application adapter manageable by the current account. Pass only the configurations that need to be modified in this request.
+        /// SilenceParam is used for application startup parameters. UserConfig is used for application runtime configurations. <b>This operation does not support modifying application scripts or executable file paths through AppScript or ExecuteFileAddress. Do not pass these two parameters.</b></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAdaptorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAdaptorResponse
+        /// </returns>
+        public UpdateAdaptorResponse UpdateAdaptor(UpdateAdaptorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateAdaptorWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the runtime parameters, optimization configurations, and user configurations of a specified application adapter.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The AdaptorId must correspond to a valid application adapter manageable by the current account. Pass only the configurations that need to be modified in this request.
+        /// SilenceParam is used for application startup parameters. UserConfig is used for application runtime configurations. <b>This operation does not support modifying application scripts or executable file paths through AppScript or ExecuteFileAddress. Do not pass these two parameters.</b></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAdaptorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAdaptorResponse
+        /// </returns>
+        public async Task<UpdateAdaptorResponse> UpdateAdaptorAsync(UpdateAdaptorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateAdaptorWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Updates the image of a delivery group.</para>
         /// </summary>
         /// 
@@ -17611,6 +23202,394 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateAppInstanceGroupImageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name, description, version information, and associated application adaptations of an image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can only modify images that are owned by the current account and allow modifications. Modifying images shared with the current account is not supported.
+        /// You must provide at least one of ImageId and VersionId. If both are provided, they must point to the same image. If VersionId is omitted, the current effective version of the image is used. Passing a non-empty AdaptorIdList updates the application adaptation relationships of the selected version based on the complete list. Make sure to include the adaptations that you still want to retain.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateImageResponse
+        /// </returns>
+        public UpdateImageResponse UpdateImageWithOptions(UpdateImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdaptorIdList))
+            {
+                body["AdaptorIdList"] = request.AdaptorIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Distro))
+            {
+                body["Distro"] = request.Distro;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageName))
+            {
+                body["ImageName"] = request.ImageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                body["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                body["VersionId"] = request.VersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionName))
+            {
+                body["VersionName"] = request.VersionName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateImage",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateImageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name, description, version information, and associated application adaptations of an image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can only modify images that are owned by the current account and allow modifications. Modifying images shared with the current account is not supported.
+        /// You must provide at least one of ImageId and VersionId. If both are provided, they must point to the same image. If VersionId is omitted, the current effective version of the image is used. Passing a non-empty AdaptorIdList updates the application adaptation relationships of the selected version based on the complete list. Make sure to include the adaptations that you still want to retain.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateImageResponse
+        /// </returns>
+        public async Task<UpdateImageResponse> UpdateImageWithOptionsAsync(UpdateImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdaptorIdList))
+            {
+                body["AdaptorIdList"] = request.AdaptorIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Distro))
+            {
+                body["Distro"] = request.Distro;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                body["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageName))
+            {
+                body["ImageName"] = request.ImageName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                body["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                body["VersionId"] = request.VersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionName))
+            {
+                body["VersionName"] = request.VersionName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateImage",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateImageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name, description, version information, and associated application adaptations of an image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can only modify images that are owned by the current account and allow modifications. Modifying images shared with the current account is not supported.
+        /// You must provide at least one of ImageId and VersionId. If both are provided, they must point to the same image. If VersionId is omitted, the current effective version of the image is used. Passing a non-empty AdaptorIdList updates the application adaptation relationships of the selected version based on the complete list. Make sure to include the adaptations that you still want to retain.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateImageResponse
+        /// </returns>
+        public UpdateImageResponse UpdateImage(UpdateImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateImageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name, description, version information, and associated application adaptations of an image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can only modify images that are owned by the current account and allow modifications. Modifying images shared with the current account is not supported.
+        /// You must provide at least one of ImageId and VersionId. If both are provided, they must point to the same image. If VersionId is omitted, the current effective version of the image is used. Passing a non-empty AdaptorIdList updates the application adaptation relationships of the selected version based on the complete list. Make sure to include the adaptations that you still want to retain.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateImageResponse
+        /// </returns>
+        public async Task<UpdateImageResponse> UpdateImageAsync(UpdateImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateImageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a status update request for an existing image creation task to the corresponding creation resource.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The task must exist before you call this operation, and the corresponding creation resource and resource node must be available. TaskType must match the actual type of the task. <b>This operation does not support modifying the task step, image version, or destination region by using TaskStep, VersionId, or BizRegionId. Do not pass these three parameters.</b> A successful request only indicates that this status update call is completed. To query the final status of the task, call GetTask.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateImageTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateImageTaskResponse
+        /// </returns>
+        public UpdateImageTaskResponse UpdateImageTaskWithOptions(UpdateImageTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code))
+            {
+                body["Code"] = request.Code;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskStep))
+            {
+                body["TaskStep"] = request.TaskStep;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                body["TaskType"] = request.TaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                body["VersionId"] = request.VersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateImageTask",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateImageTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a status update request for an existing image creation task to the corresponding creation resource.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The task must exist before you call this operation, and the corresponding creation resource and resource node must be available. TaskType must match the actual type of the task. <b>This operation does not support modifying the task step, image version, or destination region by using TaskStep, VersionId, or BizRegionId. Do not pass these three parameters.</b> A successful request only indicates that this status update call is completed. To query the final status of the task, call GetTask.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateImageTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateImageTaskResponse
+        /// </returns>
+        public async Task<UpdateImageTaskResponse> UpdateImageTaskWithOptionsAsync(UpdateImageTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                body["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code))
+            {
+                body["Code"] = request.Code;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskStep))
+            {
+                body["TaskStep"] = request.TaskStep;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                body["TaskType"] = request.TaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                body["VersionId"] = request.VersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateImageTask",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateImageTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a status update request for an existing image creation task to the corresponding creation resource.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The task must exist before you call this operation, and the corresponding creation resource and resource node must be available. TaskType must match the actual type of the task. <b>This operation does not support modifying the task step, image version, or destination region by using TaskStep, VersionId, or BizRegionId. Do not pass these three parameters.</b> A successful request only indicates that this status update call is completed. To query the final status of the task, call GetTask.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateImageTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateImageTaskResponse
+        /// </returns>
+        public UpdateImageTaskResponse UpdateImageTask(UpdateImageTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateImageTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a status update request for an existing image creation task to the corresponding creation resource.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The task must exist before you call this operation, and the corresponding creation resource and resource node must be available. TaskType must match the actual type of the task. <b>This operation does not support modifying the task step, image version, or destination region by using TaskStep, VersionId, or BizRegionId. Do not pass these three parameters.</b> A successful request only indicates that this status update call is completed. To query the final status of the task, call GetTask.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateImageTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateImageTaskResponse
+        /// </returns>
+        public async Task<UpdateImageTaskResponse> UpdateImageTaskAsync(UpdateImageTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateImageTaskWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

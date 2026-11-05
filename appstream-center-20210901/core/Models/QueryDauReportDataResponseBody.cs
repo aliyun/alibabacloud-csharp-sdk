@@ -1,0 +1,113 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Appstream_center20210901.Models
+{
+    public class QueryDauReportDataResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The business status code. A value of 200 indicates that the request is processed successfully. Other values indicate that the processing failed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
+        [NameInMap("Code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        /// <summary>
+        /// <para>The total number of records that meet the query conditions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
+        [NameInMap("Count")]
+        [Validation(Required=false)]
+        public int? Count { get; set; }
+
+        /// <summary>
+        /// <para>The list of daily active user report data.</para>
+        /// </summary>
+        [NameInMap("DauReportDataModel")]
+        [Validation(Required=false)]
+        public List<QueryDauReportDataResponseBodyDauReportDataModel> DauReportDataModel { get; set; }
+        public class QueryDauReportDataResponseBodyDauReportDataModel : TeaModel {
+            /// <summary>
+            /// <para>The number of active users within the statistical epoch. Unit: users.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>128</para>
+            /// </summary>
+            [NameInMap("Dau")]
+            [Validation(Required=false)]
+            public long? Dau { get; set; }
+
+            /// <summary>
+            /// <para>The statistics date. Format: yyyy-MM-dd. The string does not contain a time zone and is interpreted as a natural date in the Asia/Shanghai (UTC+8) time zone.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-09-01</para>
+            /// </summary>
+            [NameInMap("StatDate")]
+            [Validation(Required=false)]
+            public string StatDate { get; set; }
+
+            /// <summary>
+            /// <para>The number of active users who generated sessions through streaming access within the statistical epoch. Unit: users.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>96</para>
+            /// </summary>
+            [NameInMap("StreamingDau")]
+            [Validation(Required=false)]
+            public long? StreamingDau { get; set; }
+
+        }
+
+        /// <summary>
+        /// <para>The description of the request processing result. Typically, success is returned if the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
+        /// </summary>
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        /// <summary>
+        /// <para>The page number corresponding to the current response.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        /// <summary>
+        /// <para>The number of records per page used in the current response.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        /// <summary>
+        /// <para>The unique identifier of the request, which can be used to troubleshoot request issues.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+    }
+
+}

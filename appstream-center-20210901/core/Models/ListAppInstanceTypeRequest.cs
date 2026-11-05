@@ -1,0 +1,199 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Appstream_center20210901.Models
+{
+    public class ListAppInstanceTypeRequest : TeaModel {
+        /// <summary>
+        /// <para>The application image ID. The current session instance type query does not filter based on this parameter. Omit this parameter. Do not infer image compatibility based on whether this parameter is specified.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>img-8z4nztpaqvay4****</para>
+        /// </summary>
+        [NameInMap("AppCenterImageId")]
+        [Validation(Required=false)]
+        public string AppCenterImageId { get; set; }
+
+        /// <summary>
+        /// <para>The session instance type code. An exact match is performed based on the complete code. If this parameter and AppInstanceTypeList are specified at the same time, the results are filtered by intersection. You can first call this operation without this condition, and then select a returned code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>appstreaming.vgpu.4c8g</para>
+        /// </summary>
+        [NameInMap("AppInstanceType")]
+        [Validation(Required=false)]
+        public string AppInstanceType { get; set; }
+
+        /// <summary>
+        /// <para>The instance type family code. Exact match is performed based on the complete code. Use the instance type family value from the query results. Do not extract it from the instance type name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ecs.g6</para>
+        /// </summary>
+        [NameInMap("AppInstanceTypeFamily")]
+        [Validation(Required=false)]
+        public string AppInstanceTypeFamily { get; set; }
+
+        /// <summary>
+        /// <para>The list of session instance type codes. A maximum of 100 items can be specified. This parameter takes effect by intersection with other filtering conditions. If this parameter and AppInstanceType are specified at the same time, the results must also match the single code.</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("AppInstanceTypeList")]
+        [Validation(Required=false)]
+        public List<string> AppInstanceTypeList { get; set; }
+
+        /// <summary>
+        /// <para>The business region ID. If this parameter is omitted, the region of the current request is used. The available instance types may vary by region and account. You can call <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListRegions">ListRegions</a> to obtain the business region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
+        [NameInMap("BizRegionId")]
+        [Validation(Required=false)]
+        public string BizRegionId { get; set; }
+
+        /// <summary>
+        /// <para>The instance type category filtering condition. If this parameter is omitted, no category filtering condition is added. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Cpu: CPU instance type.</description></item>
+        /// <item><description>Gpu: GPU instance type.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Gpu</para>
+        /// </summary>
+        [NameInMap("Category")]
+        [Validation(Required=false)]
+        public string Category { get; set; }
+
+        /// <summary>
+        /// <para>The billing method for filtering available instance types. If this parameter is omitted, no billing method condition is added. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PrePaid: subscription.</description></item>
+        /// <item><description>PostPaid: pay-as-you-go.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PrePaid</para>
+        /// </summary>
+        [NameInMap("ChargeType")]
+        [Validation(Required=false)]
+        public string ChargeType { get; set; }
+
+        /// <summary>
+        /// <para>The number of CPU cores for exact filtering. Use a decimal numeric string. Unit: cores. If this parameter is omitted, the number of CPU cores is not limited.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4</para>
+        /// </summary>
+        [NameInMap("Cpu")]
+        [Validation(Required=false)]
+        public string Cpu { get; set; }
+
+        /// <summary>
+        /// <para>The GPU memory capacity for exact filtering. Unit: MB. If this parameter is omitted, the GPU memory capacity is not limited.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4096</para>
+        /// </summary>
+        [NameInMap("GpuMemory")]
+        [Validation(Required=false)]
+        public int? GpuMemory { get; set; }
+
+        /// <summary>
+        /// <para>The language of the instance type name.</para>
+        /// <list type="bullet">
+        /// <item><description>zh-CN: The Chinese name of the instance type.</description></item>
+        /// <item><description>Other values or omitted: The instance type code is used as the name.</description></item>
+        /// </list>
+        /// <para>This parameter only affects the display of InstanceTypeName and does not change the instance type code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh-CN</para>
+        /// </summary>
+        [NameInMap("Language")]
+        [Validation(Required=false)]
+        public string Language { get; set; }
+
+        /// <summary>
+        /// <para>The memory capacity for exact filtering. Unit: MB. If this parameter is omitted, the memory capacity is not limited.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8192</para>
+        /// </summary>
+        [NameInMap("Memory")]
+        [Validation(Required=false)]
+        public int? Memory { get; set; }
+
+        /// <summary>
+        /// <para>The operating system type. For the Wuying Cloud App (CloudApp) scenario, use the following values:</para>
+        /// <list type="bullet">
+        /// <item><description>Windows: Windows operating system.</description></item>
+        /// </list>
+        /// <para>If this parameter is omitted, no operating system filtering condition is added.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Windows</para>
+        /// </summary>
+        [NameInMap("OsType")]
+        [Validation(Required=false)]
+        public string OsType { get; set; }
+
+        /// <summary>
+        /// <para>The page number. Explicitly specify a page number starting from 1. If this parameter is omitted, the default value 0 is used to query the first batch of results. For subsequent pages, request in the order of 1, 2, and 3.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        /// <summary>
+        /// <para>The number of instance types to return on each page. Unit: entries. Default value: 200. Explicitly set a positive integer that meets your business requirements. The default value here does not indicate the maximum value allowed by the service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        /// <summary>
+        /// <para>The product type. Set the value to the following fixed value when you call this operation:</para>
+        /// <list type="bullet">
+        /// <item><description>CloudApp: Wuying Cloud App.</description></item>
+        /// </list>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CloudApp</para>
+        /// </summary>
+        [NameInMap("ProductType")]
+        [Validation(Required=false)]
+        public string ProductType { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to query the instance type inventory at the same time. Default value: false.</para>
+        /// <list type="bullet">
+        /// <item><description>true: Queries the inventory and returns InventoryInfo if the inventory information is available.</description></item>
+        /// <item><description>false: Queries only the instance types and does not query the inventory.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("QueryInventory")]
+        [Validation(Required=false)]
+        public bool? QueryInventory { get; set; }
+
+    }
+
+}
