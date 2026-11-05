@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.AgenticBAS20260630
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "AgenticBAS";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("agenticbas", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -39,8 +42,55 @@ namespace AlibabaCloud.SDK.AgenticBAS20260630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建渗透测试任务</para>
+        /// <para>Creates penetration testing tasks for authorized assets of the current account and returns the task IDs. You can specify up to five targets at a time, and one task is created for each target.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates penetration testing tasks for authorized assets of the current account and returns the task IDs. You can specify up to five targets at a time, and one task is created for each target.
+        /// Before you call this operation, you must activate the AgenticBAS service or meet the validity period and quota conditions of the trial service. The target assets must meet the ownership verification requirements of the selected asset source. Business parameters are passed in OperationInput. VulnCheckItems and PentestRequirement cannot be empty at the same time. Currently, only IMMEDIATE execution is supported, and scheduled execution is not supported.
+        /// A successful creation response only indicates that the tasks are created and does not wait for the scan to complete. Save the TaskId in TaskList, query the status and usage by calling DescribePentestTaskList, and then use the same TaskId to query vulnerabilities or reports. Tasks may enter a queue. If a report is not generated, the query response may not contain a download link.
+        /// Credentials use an object structure of &quot;identity name -&gt; credential configuration&quot;. The following are synthetic examples. Replace them with authorized test identities in actual calls.</para>
+        /// <pre><code class="language-json">{
+        ///   &quot;Credentials&quot;: {
+        ///     &quot;accountUser&quot;: {
+        ///       &quot;account&quot;: {
+        ///         &quot;username&quot;: &quot;example-user&quot;,
+        ///         &quot;password&quot;: &quot;example-password&quot;
+        ///       }
+        ///     },
+        ///     &quot;cookieUser&quot;: {
+        ///       &quot;cookies&quot;: [
+        ///         {
+        ///           &quot;name&quot;: &quot;session&quot;,
+        ///           &quot;value&quot;: &quot;example-session&quot;,
+        ///           &quot;domain&quot;: &quot;example.com&quot;,
+        ///           &quot;path&quot;: &quot;/&quot;,
+        ///           &quot;secure&quot;: true,
+        ///           &quot;httpOnly&quot;: true,
+        ///           &quot;sameSite&quot;: &quot;Lax&quot;
+        ///         }
+        ///       ]
+        ///     },
+        ///     &quot;localUser&quot;: {
+        ///       &quot;localStorage&quot;: {
+        ///         &quot;access_token&quot;: &quot;example-local-token&quot;
+        ///       }
+        ///     },
+        ///     &quot;sessionUser&quot;: {
+        ///       &quot;sessionStorage&quot;: {
+        ///         &quot;session_token&quot;: &quot;example-session-token&quot;
+        ///       }
+        ///     },
+        ///     &quot;headerUser&quot;: {
+        ///       &quot;extraHeaders&quot;: {
+        ///         &quot;Authorization&quot;: &quot;Bearer example-token&quot;
+        ///       }
+        ///     }
+        ///   }
+        /// }
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreatePentestTaskRequest
@@ -91,8 +141,55 @@ namespace AlibabaCloud.SDK.AgenticBAS20260630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建渗透测试任务</para>
+        /// <para>Creates penetration testing tasks for authorized assets of the current account and returns the task IDs. You can specify up to five targets at a time, and one task is created for each target.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates penetration testing tasks for authorized assets of the current account and returns the task IDs. You can specify up to five targets at a time, and one task is created for each target.
+        /// Before you call this operation, you must activate the AgenticBAS service or meet the validity period and quota conditions of the trial service. The target assets must meet the ownership verification requirements of the selected asset source. Business parameters are passed in OperationInput. VulnCheckItems and PentestRequirement cannot be empty at the same time. Currently, only IMMEDIATE execution is supported, and scheduled execution is not supported.
+        /// A successful creation response only indicates that the tasks are created and does not wait for the scan to complete. Save the TaskId in TaskList, query the status and usage by calling DescribePentestTaskList, and then use the same TaskId to query vulnerabilities or reports. Tasks may enter a queue. If a report is not generated, the query response may not contain a download link.
+        /// Credentials use an object structure of &quot;identity name -&gt; credential configuration&quot;. The following are synthetic examples. Replace them with authorized test identities in actual calls.</para>
+        /// <pre><code class="language-json">{
+        ///   &quot;Credentials&quot;: {
+        ///     &quot;accountUser&quot;: {
+        ///       &quot;account&quot;: {
+        ///         &quot;username&quot;: &quot;example-user&quot;,
+        ///         &quot;password&quot;: &quot;example-password&quot;
+        ///       }
+        ///     },
+        ///     &quot;cookieUser&quot;: {
+        ///       &quot;cookies&quot;: [
+        ///         {
+        ///           &quot;name&quot;: &quot;session&quot;,
+        ///           &quot;value&quot;: &quot;example-session&quot;,
+        ///           &quot;domain&quot;: &quot;example.com&quot;,
+        ///           &quot;path&quot;: &quot;/&quot;,
+        ///           &quot;secure&quot;: true,
+        ///           &quot;httpOnly&quot;: true,
+        ///           &quot;sameSite&quot;: &quot;Lax&quot;
+        ///         }
+        ///       ]
+        ///     },
+        ///     &quot;localUser&quot;: {
+        ///       &quot;localStorage&quot;: {
+        ///         &quot;access_token&quot;: &quot;example-local-token&quot;
+        ///       }
+        ///     },
+        ///     &quot;sessionUser&quot;: {
+        ///       &quot;sessionStorage&quot;: {
+        ///         &quot;session_token&quot;: &quot;example-session-token&quot;
+        ///       }
+        ///     },
+        ///     &quot;headerUser&quot;: {
+        ///       &quot;extraHeaders&quot;: {
+        ///         &quot;Authorization&quot;: &quot;Bearer example-token&quot;
+        ///       }
+        ///     }
+        ///   }
+        /// }
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreatePentestTaskRequest
@@ -143,8 +240,55 @@ namespace AlibabaCloud.SDK.AgenticBAS20260630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建渗透测试任务</para>
+        /// <para>Creates penetration testing tasks for authorized assets of the current account and returns the task IDs. You can specify up to five targets at a time, and one task is created for each target.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates penetration testing tasks for authorized assets of the current account and returns the task IDs. You can specify up to five targets at a time, and one task is created for each target.
+        /// Before you call this operation, you must activate the AgenticBAS service or meet the validity period and quota conditions of the trial service. The target assets must meet the ownership verification requirements of the selected asset source. Business parameters are passed in OperationInput. VulnCheckItems and PentestRequirement cannot be empty at the same time. Currently, only IMMEDIATE execution is supported, and scheduled execution is not supported.
+        /// A successful creation response only indicates that the tasks are created and does not wait for the scan to complete. Save the TaskId in TaskList, query the status and usage by calling DescribePentestTaskList, and then use the same TaskId to query vulnerabilities or reports. Tasks may enter a queue. If a report is not generated, the query response may not contain a download link.
+        /// Credentials use an object structure of &quot;identity name -&gt; credential configuration&quot;. The following are synthetic examples. Replace them with authorized test identities in actual calls.</para>
+        /// <pre><code class="language-json">{
+        ///   &quot;Credentials&quot;: {
+        ///     &quot;accountUser&quot;: {
+        ///       &quot;account&quot;: {
+        ///         &quot;username&quot;: &quot;example-user&quot;,
+        ///         &quot;password&quot;: &quot;example-password&quot;
+        ///       }
+        ///     },
+        ///     &quot;cookieUser&quot;: {
+        ///       &quot;cookies&quot;: [
+        ///         {
+        ///           &quot;name&quot;: &quot;session&quot;,
+        ///           &quot;value&quot;: &quot;example-session&quot;,
+        ///           &quot;domain&quot;: &quot;example.com&quot;,
+        ///           &quot;path&quot;: &quot;/&quot;,
+        ///           &quot;secure&quot;: true,
+        ///           &quot;httpOnly&quot;: true,
+        ///           &quot;sameSite&quot;: &quot;Lax&quot;
+        ///         }
+        ///       ]
+        ///     },
+        ///     &quot;localUser&quot;: {
+        ///       &quot;localStorage&quot;: {
+        ///         &quot;access_token&quot;: &quot;example-local-token&quot;
+        ///       }
+        ///     },
+        ///     &quot;sessionUser&quot;: {
+        ///       &quot;sessionStorage&quot;: {
+        ///         &quot;session_token&quot;: &quot;example-session-token&quot;
+        ///       }
+        ///     },
+        ///     &quot;headerUser&quot;: {
+        ///       &quot;extraHeaders&quot;: {
+        ///         &quot;Authorization&quot;: &quot;Bearer example-token&quot;
+        ///       }
+        ///     }
+        ///   }
+        /// }
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePentestTaskRequest
@@ -161,8 +305,55 @@ namespace AlibabaCloud.SDK.AgenticBAS20260630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建渗透测试任务</para>
+        /// <para>Creates penetration testing tasks for authorized assets of the current account and returns the task IDs. You can specify up to five targets at a time, and one task is created for each target.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates penetration testing tasks for authorized assets of the current account and returns the task IDs. You can specify up to five targets at a time, and one task is created for each target.
+        /// Before you call this operation, you must activate the AgenticBAS service or meet the validity period and quota conditions of the trial service. The target assets must meet the ownership verification requirements of the selected asset source. Business parameters are passed in OperationInput. VulnCheckItems and PentestRequirement cannot be empty at the same time. Currently, only IMMEDIATE execution is supported, and scheduled execution is not supported.
+        /// A successful creation response only indicates that the tasks are created and does not wait for the scan to complete. Save the TaskId in TaskList, query the status and usage by calling DescribePentestTaskList, and then use the same TaskId to query vulnerabilities or reports. Tasks may enter a queue. If a report is not generated, the query response may not contain a download link.
+        /// Credentials use an object structure of &quot;identity name -&gt; credential configuration&quot;. The following are synthetic examples. Replace them with authorized test identities in actual calls.</para>
+        /// <pre><code class="language-json">{
+        ///   &quot;Credentials&quot;: {
+        ///     &quot;accountUser&quot;: {
+        ///       &quot;account&quot;: {
+        ///         &quot;username&quot;: &quot;example-user&quot;,
+        ///         &quot;password&quot;: &quot;example-password&quot;
+        ///       }
+        ///     },
+        ///     &quot;cookieUser&quot;: {
+        ///       &quot;cookies&quot;: [
+        ///         {
+        ///           &quot;name&quot;: &quot;session&quot;,
+        ///           &quot;value&quot;: &quot;example-session&quot;,
+        ///           &quot;domain&quot;: &quot;example.com&quot;,
+        ///           &quot;path&quot;: &quot;/&quot;,
+        ///           &quot;secure&quot;: true,
+        ///           &quot;httpOnly&quot;: true,
+        ///           &quot;sameSite&quot;: &quot;Lax&quot;
+        ///         }
+        ///       ]
+        ///     },
+        ///     &quot;localUser&quot;: {
+        ///       &quot;localStorage&quot;: {
+        ///         &quot;access_token&quot;: &quot;example-local-token&quot;
+        ///       }
+        ///     },
+        ///     &quot;sessionUser&quot;: {
+        ///       &quot;sessionStorage&quot;: {
+        ///         &quot;session_token&quot;: &quot;example-session-token&quot;
+        ///       }
+        ///     },
+        ///     &quot;headerUser&quot;: {
+        ///       &quot;extraHeaders&quot;: {
+        ///         &quot;Authorization&quot;: &quot;Bearer example-token&quot;
+        ///       }
+        ///     }
+        ///   }
+        /// }
+        /// </c></pre>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePentestTaskRequest
@@ -179,7 +370,7 @@ namespace AlibabaCloud.SDK.AgenticBAS20260630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询渗透测试报告内容</para>
+        /// <para>Queries the PDF report of a specified penetration test task under the current account and returns a temporary OSS download URL and its expiration time. The report content is not returned.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -231,7 +422,7 @@ namespace AlibabaCloud.SDK.AgenticBAS20260630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询渗透测试报告内容</para>
+        /// <para>Queries the PDF report of a specified penetration test task under the current account and returns a temporary OSS download URL and its expiration time. The report content is not returned.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -283,7 +474,7 @@ namespace AlibabaCloud.SDK.AgenticBAS20260630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询渗透测试报告内容</para>
+        /// <para>Queries the PDF report of a specified penetration test task under the current account and returns a temporary OSS download URL and its expiration time. The report content is not returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -301,7 +492,7 @@ namespace AlibabaCloud.SDK.AgenticBAS20260630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询渗透测试报告内容</para>
+        /// <para>Queries the PDF report of a specified penetration test task under the current account and returns a temporary OSS download URL and its expiration time. The report content is not returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -319,8 +510,15 @@ namespace AlibabaCloud.SDK.AgenticBAS20260630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询渗透测试任务列表</para>
+        /// <para>Queries the penetration testing tasks of the current account by using paging and returns the task status, execution duration, Credits usage, time, and vulnerability statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the penetration testing tasks of the current account by using paging and returns the task status, execution duration, Credits usage, time, and vulnerability statistics.
+        /// Use OperationInput to specify query conditions. Paging is implemented by using CurrentPage and PageSize. By default, the first page is queried and each page contains 10 entries. You can filter tasks by task name keyword and task status.
+        /// The response includes TaskList and PageInfo. Duration indicates the execution duration in seconds. CreditsUsed indicates the used Credits. Tasks that have not started may not have a start time or execution duration, and unfinished tasks may not have a completion time. UNIX timestamps uniformly use UNIX seconds. When displaying, you can convert them to the time zone of the caller.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribePentestTaskListRequest
@@ -371,8 +569,15 @@ namespace AlibabaCloud.SDK.AgenticBAS20260630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询渗透测试任务列表</para>
+        /// <para>Queries the penetration testing tasks of the current account by using paging and returns the task status, execution duration, Credits usage, time, and vulnerability statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the penetration testing tasks of the current account by using paging and returns the task status, execution duration, Credits usage, time, and vulnerability statistics.
+        /// Use OperationInput to specify query conditions. Paging is implemented by using CurrentPage and PageSize. By default, the first page is queried and each page contains 10 entries. You can filter tasks by task name keyword and task status.
+        /// The response includes TaskList and PageInfo. Duration indicates the execution duration in seconds. CreditsUsed indicates the used Credits. Tasks that have not started may not have a start time or execution duration, and unfinished tasks may not have a completion time. UNIX timestamps uniformly use UNIX seconds. When displaying, you can convert them to the time zone of the caller.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribePentestTaskListRequest
@@ -423,8 +628,15 @@ namespace AlibabaCloud.SDK.AgenticBAS20260630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询渗透测试任务列表</para>
+        /// <para>Queries the penetration testing tasks of the current account by using paging and returns the task status, execution duration, Credits usage, time, and vulnerability statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the penetration testing tasks of the current account by using paging and returns the task status, execution duration, Credits usage, time, and vulnerability statistics.
+        /// Use OperationInput to specify query conditions. Paging is implemented by using CurrentPage and PageSize. By default, the first page is queried and each page contains 10 entries. You can filter tasks by task name keyword and task status.
+        /// The response includes TaskList and PageInfo. Duration indicates the execution duration in seconds. CreditsUsed indicates the used Credits. Tasks that have not started may not have a start time or execution duration, and unfinished tasks may not have a completion time. UNIX timestamps uniformly use UNIX seconds. When displaying, you can convert them to the time zone of the caller.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePentestTaskListRequest
@@ -441,8 +653,15 @@ namespace AlibabaCloud.SDK.AgenticBAS20260630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询渗透测试任务列表</para>
+        /// <para>Queries the penetration testing tasks of the current account by using paging and returns the task status, execution duration, Credits usage, time, and vulnerability statistics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the penetration testing tasks of the current account by using paging and returns the task status, execution duration, Credits usage, time, and vulnerability statistics.
+        /// Use OperationInput to specify query conditions. Paging is implemented by using CurrentPage and PageSize. By default, the first page is queried and each page contains 10 entries. You can filter tasks by task name keyword and task status.
+        /// The response includes TaskList and PageInfo. Duration indicates the execution duration in seconds. CreditsUsed indicates the used Credits. Tasks that have not started may not have a start time or execution duration, and unfinished tasks may not have a completion time. UNIX timestamps uniformly use UNIX seconds. When displaying, you can convert them to the time zone of the caller.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePentestTaskListRequest
@@ -459,7 +678,7 @@ namespace AlibabaCloud.SDK.AgenticBAS20260630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询渗透测试漏洞列表</para>
+        /// <para>Queries penetration test vulnerabilities for the current account by task ID with paging. Returns vulnerability titles, severity levels, authentication statuses, affected URLs, and discovery times. Supports filtering by severity level.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -511,7 +730,7 @@ namespace AlibabaCloud.SDK.AgenticBAS20260630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询渗透测试漏洞列表</para>
+        /// <para>Queries penetration test vulnerabilities for the current account by task ID with paging. Returns vulnerability titles, severity levels, authentication statuses, affected URLs, and discovery times. Supports filtering by severity level.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -563,7 +782,7 @@ namespace AlibabaCloud.SDK.AgenticBAS20260630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询渗透测试漏洞列表</para>
+        /// <para>Queries penetration test vulnerabilities for the current account by task ID with paging. Returns vulnerability titles, severity levels, authentication statuses, affected URLs, and discovery times. Supports filtering by severity level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -581,7 +800,7 @@ namespace AlibabaCloud.SDK.AgenticBAS20260630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询渗透测试漏洞列表</para>
+        /// <para>Queries penetration test vulnerabilities for the current account by task ID with paging. Returns vulnerability titles, severity levels, authentication statuses, affected URLs, and discovery times. Supports filtering by severity level.</para>
         /// </summary>
         /// 
         /// <param name="request">
