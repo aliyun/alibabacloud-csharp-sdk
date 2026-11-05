@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The name of the whitelist template.</para>
+        /// <para>The whitelist template ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>98a6d3db05984dca</para>

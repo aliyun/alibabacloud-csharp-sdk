@@ -32,10 +32,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string Email { get; set; }
 
         /// <summary>
-        /// <para>The new user password. The password must meet the following rules:</para>
-        /// <para>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</para>
-        /// <para>The supported special characters are !@#$%^&amp;*()_+-=.</para>
-        /// <para>The password must be 8 to 32 characters in length.</para>
+        /// <para>The new password of the user. The password must meet the following requirements:</para>
+        /// <para>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</para>
+        /// <para>Special characters include !@#$%^&amp;*()_+-=.</para>
+        /// <para>It must be 8 to 32 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

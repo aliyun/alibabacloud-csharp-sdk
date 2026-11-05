@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeAccountAuthorityResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string Account { get; set; }
 
             /// <summary>
-            /// <para>A list of authorized databases.</para>
+            /// <para>The list of authorized databases.</para>
             /// </summary>
             [NameInMap("AllowDatabases")]
             [Validation(Required=false)]
             public List<string> AllowDatabases { get; set; }
 
             /// <summary>
-            /// <para>A list of authorized dictionaries.</para>
+            /// <para>The list of authorized dictionaries.</para>
             /// </summary>
             [NameInMap("AllowDictionaries")]
             [Validation(Required=false)]
@@ -51,12 +51,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string DBInstanceId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether DDL permissions are granted to the database account. Valid values:</para>
+            /// <para>Indicates whether Data Definition Language (DDL) permissions are granted to the database account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: DDL operations are allowed.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: DDL operations are prohibited.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: DDL is allowed.</description></item>
+            /// <item><description><b>false</b>: DDL is not allowed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -67,14 +65,11 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public bool? DdlAuthority { get; set; }
 
             /// <summary>
-            /// <para>The DML permissions that are granted to the database account. Valid values:</para>
+            /// <para>Indicates whether Data Manipulation Language (DML) permissions are granted to the database account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>0: Read, write, and change settings queries are allowed.</para>
-            /// </description></item>
-            /// <item><description><para>1: Only read data queries are allowed.</para>
-            /// </description></item>
-            /// <item><description><para>2: Read data and change settings queries are allowed.</para>
-            /// </description></item>
+            /// <item><description>0: Read, write, and change settings queries are allowed.</description></item>
+            /// <item><description>1: Only read data queries are allowed.</description></item>
+            /// <item><description>2: Read data and change settings queries are allowed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,14 +80,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public int? DmlAuthority { get; set; }
 
             /// <summary>
-            /// <para>A list of all databases.</para>
+            /// <para>The list of all databases.</para>
             /// </summary>
             [NameInMap("TotalDatabases")]
             [Validation(Required=false)]
             public List<string> TotalDatabases { get; set; }
 
             /// <summary>
-            /// <para>The database.</para>
+            /// <para>The dictionaries.</para>
             /// </summary>
             [NameInMap("TotalDictionaries")]
             [Validation(Required=false)]

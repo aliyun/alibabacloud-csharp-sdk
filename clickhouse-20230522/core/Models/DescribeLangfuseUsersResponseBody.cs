@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeLangfuseUsersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The number of entries to return on each page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of records.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -54,7 +54,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public List<DescribeLangfuseUsersResponseBodyDataUsers> Users { get; set; }
             public class DescribeLangfuseUsersResponseBodyDataUsers : TeaModel {
                 /// <summary>
-                /// <para>The time when the user was created.</para>
+                /// <para>Indicates whether the user is allowed to create an organization.</para>
+                /// </summary>
+                [NameInMap("AllowOrgCreation")]
+                [Validation(Required=false)]
+                public bool? AllowOrgCreation { get; set; }
+
+                /// <summary>
+                /// <para>The time when the user was created. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format and is displayed in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-06-01T10:03:05Z</para>
@@ -74,7 +81,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string Email { get; set; }
 
                 /// <summary>
-                /// <para>The username.</para>
+                /// <para>The name of the user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>john</para>

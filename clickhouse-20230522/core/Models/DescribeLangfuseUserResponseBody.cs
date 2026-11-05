@@ -10,14 +10,21 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeLangfuseUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeLangfuseUserResponseBodyData Data { get; set; }
         public class DescribeLangfuseUserResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the user was created.</para>
+            /// <para>Indicates whether the user is allowed to create an organization.</para>
+            /// </summary>
+            [NameInMap("AllowOrgCreation")]
+            [Validation(Required=false)]
+            public bool? AllowOrgCreation { get; set; }
+
+            /// <summary>
+            /// <para>The time when the user was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-01T10:03:05Z</para>
@@ -44,7 +51,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public List<DescribeLangfuseUserResponseBodyDataMemberships> Memberships { get; set; }
             public class DescribeLangfuseUserResponseBodyDataMemberships : TeaModel {
                 /// <summary>
-                /// <para>The role of the user within the organization.</para>
+                /// <para>The role in the organization.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ADMIN</para>
@@ -54,7 +61,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string OrgRole { get; set; }
 
                 /// <summary>
-                /// <para>The Langfuse organization ID.</para>
+                /// <para>The ID of the Langfuse organization.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cmrbhzx930005jw2q****</para>
@@ -64,7 +71,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string OrganizationId { get; set; }
 
                 /// <summary>
-                /// <para>The Langfuse organization name.</para>
+                /// <para>The name of the Langfuse organization.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>org_name</para>
@@ -81,7 +88,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public List<DescribeLangfuseUserResponseBodyDataMembershipsProjects> Projects { get; set; }
                 public class DescribeLangfuseUserResponseBodyDataMembershipsProjects : TeaModel {
                     /// <summary>
-                    /// <para>The Langfuse project ID.</para>
+                    /// <para>The ID of the Langfuse project.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cmrbhzx930005jw2q****</para>
@@ -91,7 +98,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                     public string ProjectId { get; set; }
 
                     /// <summary>
-                    /// <para>The Langfuse project name.</para>
+                    /// <para>The name of the Langfuse project.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>project_name</para>
@@ -101,7 +108,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                     public string ProjectName { get; set; }
 
                     /// <summary>
-                    /// <para>The role of the user within the project.</para>
+                    /// <para>The role in the project.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>VIEWER</para>
@@ -115,7 +122,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             }
 
             /// <summary>
-            /// <para>The username.</para>
+            /// <para>The name of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>john</para>
@@ -125,7 +132,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The time when the user was last updated.</para>
+            /// <para>The time when the user was updated. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-01T10:03:05Z</para>

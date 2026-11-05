@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. Format: yyyy-MM-dd hh:mm:ss.</para>
+        /// <para>The end of the time range to query. Format: yyyy-MM-dd hh:mm:ss.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The page number to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page. Default value: 30. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>30</b> (default)</description></item>
         /// <item><description><b>50</b></description></item>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Format: yyyy-MM-dd hh:mm:ss.</para>
+        /// <para>The beginning of the time range to query. Format: yyyy-MM-dd hh:mm:ss.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

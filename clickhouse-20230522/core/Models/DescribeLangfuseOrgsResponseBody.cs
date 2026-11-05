@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeLangfuseOrgsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeLangfuseOrgsResponseBodyData Data { get; set; }
         public class DescribeLangfuseOrgsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The Langfuse organization information.</para>
+            /// <para>The Langfuse organizations.</para>
             /// </summary>
             [NameInMap("Organizations")]
             [Validation(Required=false)]
             public List<DescribeLangfuseOrgsResponseBodyDataOrganizations> Organizations { get; set; }
             public class DescribeLangfuseOrgsResponseBodyDataOrganizations : TeaModel {
                 /// <summary>
-                /// <para>The time when the Langfuse organization was created.</para>
+                /// <para>The time when the Langfuse organization was created. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-06-11T10:27:23Z</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string CreatedAt { get; set; }
 
                 /// <summary>
-                /// <para>The Langfuse organization name.</para>
+                /// <para>The name of the Langfuse organization.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>org_name</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The Langfuse organization ID.</para>
+                /// <para>The ID of the Langfuse organization.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cmrbhzx930005jw2q****</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string OrganizationId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the Langfuse organization was last updated.</para>
+                /// <para>The time when the Langfuse organization was updated. The time follows the YYYY-MM-DDTHH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-06-09T10:27:55</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of records per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of records.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17</para>

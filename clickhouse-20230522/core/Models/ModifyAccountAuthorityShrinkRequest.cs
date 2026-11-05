@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class ModifyAccountAuthorityShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the database account.</para>
+        /// <para>The database account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The information about permissions.</para>
+        /// <para>The authorization information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DmlAuthSetting")]

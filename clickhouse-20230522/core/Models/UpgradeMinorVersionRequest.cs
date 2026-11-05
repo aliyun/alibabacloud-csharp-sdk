@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         /// <summary>
         /// <para>The specified upgrade time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
         /// <remarks>
-        /// <para>This parameter is required when SwitchTimeMode is set to SpecifyTime.</para>
+        /// <para>If SwitchTimeMode is set to SpecifyTime, you must use this parameter to specify the upgrade time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -45,11 +45,11 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string SwitchTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies when to upgrade. Valid values:</para>
+        /// <para>Specifies whether to upgrade the minor engine version immediately. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediate</b>: upgrades immediately.</description></item>
-        /// <item><description><b>MaintainTime</b>: upgrades during the O&amp;M window.</description></item>
-        /// <item><description><b>SpecifyTime</b>: upgrades at a specified time.</description></item>
+        /// <item><description><b>Immediate</b>: Upgrades immediately.</description></item>
+        /// <item><description><b>MaintainTime</b>: Upgrades within the O&amp;M window.</description></item>
+        /// <item><description><b>SpecifyTime</b>: Upgrades at a specified time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         /// <summary>
         /// <para>The target minor engine version.</para>
         /// <remarks>
-        /// <para>By default, leave this parameter empty to upgrade to the latest minor engine version.</para>
+        /// <para>By default, this parameter is left empty, and the minor engine version is upgraded to the latest version.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

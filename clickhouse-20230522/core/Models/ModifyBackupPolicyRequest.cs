@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string PreferredBackupPeriod { get; set; }
 
         /// <summary>
-        /// <para>The backup time.</para>
+        /// <para>The backup time in UTC. The format is HH:mmZ-HH:mmZ.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

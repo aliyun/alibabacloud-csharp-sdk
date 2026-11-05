@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public List<DescribeLangfuseOrgMembershipsResponseBodyDataMemberships> Memberships { get; set; }
             public class DescribeLangfuseOrgMembershipsResponseBodyDataMemberships : TeaModel {
                 /// <summary>
-                /// <para>The time when the user was created.</para>
+                /// <para>The time when the user was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-06-24T10:14:33Z</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string Email { get; set; }
 
                 /// <summary>
-                /// <para>The username.</para>
+                /// <para>The name of the user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>john</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of records.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>

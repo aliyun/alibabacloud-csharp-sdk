@@ -17,7 +17,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public CreateLangfuseUserResponseBodyData Data { get; set; }
         public class CreateLangfuseUserResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the user was created.</para>
+            /// <para>Indicates whether the user is allowed to create organizations.</para>
+            /// </summary>
+            [NameInMap("AllowOrgCreation")]
+            [Validation(Required=false)]
+            public bool? AllowOrgCreation { get; set; }
+
+            /// <summary>
+            /// <para>The time when the user was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-03-04T10:20:33Z</para>
@@ -37,7 +44,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>The role of the user.</para>
+            /// <para>The user role.</para>
             /// </summary>
             [NameInMap("Membership")]
             [Validation(Required=false)]

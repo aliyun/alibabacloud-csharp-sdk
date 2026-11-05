@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public CreateLangfuseOrgResponseBodyData Data { get; set; }
         public class CreateLangfuseOrgResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the Langfuse organization was created.</para>
+            /// <para>The creation time of the Langfuse organization. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ss.SSSZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-25T09:28:30.949Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The Langfuse organization ID.</para>
+            /// <para>The ID of the Langfuse organization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cmrbhzx930005jw****</para>

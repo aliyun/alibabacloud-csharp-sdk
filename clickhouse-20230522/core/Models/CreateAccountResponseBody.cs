@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class CreateAccountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateAccountResponseBodyData Data { get; set; }
         public class CreateAccountResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The name of the database account.</para>
+            /// <para>The database account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test1</para>

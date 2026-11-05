@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class CreateDBRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the database.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -31,19 +31,15 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database. The name must meet the following requirements:</para>
+        /// <para>The database name. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>Consist of lowercase letters, digits, underscores (_), and hyphens (-).</para>
-        /// </description></item>
-        /// <item><description><para>Start with a lowercase letter and end with a lowercase letter or a digit.</para>
-        /// </description></item>
-        /// <item><description><para>Be up to 64 characters in length.</para>
-        /// </description></item>
+        /// <item><description>It can contain lowercase letters, digits, underscores (_), and hyphens (-).</description></item>
+        /// <item><description>It must start with a lowercase letter and end with a lowercase letter or a digit.</description></item>
+        /// <item><description>It can be up to 64 characters in length.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Notice: </para>
+        /// <para>Notice: An underscore (_) is counted as two characters.</para>
         /// </remarks>
-        /// <para>An underscore (_) is counted as two characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

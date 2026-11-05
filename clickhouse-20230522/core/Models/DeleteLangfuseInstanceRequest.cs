@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DeleteLangfuseInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The confirmation flag for deleting the AiGateway instance associated with the Langfuse instance.</para>
+        /// <para>The confirmation mark for deleting the AI gateway instance associated with the Langfuse instance.</para>
         /// </summary>
         [NameInMap("ConfirmDeleteAiGateway")]
         [Validation(Required=false)]

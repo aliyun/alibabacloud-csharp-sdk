@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string Email { get; set; }
 
         /// <summary>
-        /// <para>The Langfuse organization ID.</para>
+        /// <para>The ID of the Langfuse organization.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

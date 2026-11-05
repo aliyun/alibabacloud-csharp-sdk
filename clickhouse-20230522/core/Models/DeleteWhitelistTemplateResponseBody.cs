@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DeleteWhitelistTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned from the call.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public List<DeleteWhitelistTemplateResponseBodyDataTemplates> Templates { get; set; }
             public class DeleteWhitelistTemplateResponseBodyDataTemplates : TeaModel {
                 /// <summary>
-                /// <para>The instances associated with the template.</para>
+                /// <para>The associated instances.</para>
                 /// </summary>
                 [NameInMap("DbInstances")]
                 [Validation(Required=false)]
                 public List<DeleteWhitelistTemplateResponseBodyDataTemplatesDbInstances> DbInstances { get; set; }
                 public class DeleteWhitelistTemplateResponseBodyDataTemplatesDbInstances : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the instance.</para>
+                    /// <para>The instance ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>asdfwef</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 }
 
                 /// <summary>
-                /// <para>The IP whitelist.</para>
+                /// <para>The IP whitelists.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.168.1.1,10.0.0.1</para>

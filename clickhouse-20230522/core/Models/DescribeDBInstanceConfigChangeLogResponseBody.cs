@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeDBInstanceConfigChangeLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result set.</para>
+        /// <para>The query result set.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -34,10 +34,12 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public List<DescribeDBInstanceConfigChangeLogResponseBodyDataParamChangeLogs> ParamChangeLogs { get; set; }
             public class DescribeDBInstanceConfigChangeLogResponseBodyDataParamChangeLogs : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the configuration takes effect:</para>
+                /// <para>Indicates whether the configuration has taken effect. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: The execution plan takes effect.</description></item>
-                /// <item><description>false: The execution plan does not take effect.</description></item>
+                /// <item><description><para>true: The configuration has taken effect.</para>
+                /// </description></item>
+                /// <item><description><para>false: The configuration has not taken effect.</para>
+                /// </description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("Applied")]
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string GmtCreated { get; set; }
 
                 /// <summary>
-                /// <para>The time when the change was modified.</para>
+                /// <para>The time when the change was last modified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-25 13:46:06</para>
@@ -75,7 +77,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public long? ID { get; set; }
 
                 /// <summary>
-                /// <para>The name of the parameter.</para>
+                /// <para>The parameter name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>max_concurrent_queries</para>

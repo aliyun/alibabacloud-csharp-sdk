@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class ModifyAccountAuthorityResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result returned.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifyAccountAuthorityResponseBodyData Data { get; set; }
         public class ModifyAccountAuthorityResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The name of the database account.</para>
+            /// <para>The database account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test1</para>

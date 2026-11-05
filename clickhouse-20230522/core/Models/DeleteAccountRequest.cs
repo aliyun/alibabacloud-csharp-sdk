@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DeleteAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The destination database account.</para>
+        /// <para>The target database account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The code of the cloud service.</para>
+        /// <para>The product code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>clickhouse</para>

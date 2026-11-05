@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class ModifyDBInstanceClassRequest : TeaModel {
         /// <summary>
-        /// <para>The automatic horizontal scaling configuration.</para>
+        /// <para>The automatic horizontal elastic configuration.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public ModifyDBInstanceClassRequestAutoScaleConfig AutoScaleConfig { get; set; }
         public class ModifyDBInstanceClassRequestAutoScaleConfig : TeaModel {
             /// <summary>
-            /// <para>The number of nodes available for burstable horizontal scaling.</para>
+            /// <para>The number of burstable nodes for horizontal elastic scaling.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -32,8 +32,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             /// <summary>
             /// <para>The configuration status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>disable: disabled.</description></item>
-            /// <item><description>enable: enabled.</description></item>
+            /// <item><description>disable: Disabled.</description></item>
+            /// <item><description>enable: Enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public List<ModifyDBInstanceClassRequestAutoScaleConfigVSwitchInfos> VSwitchInfos { get; set; }
             public class ModifyDBInstanceClassRequestAutoScaleConfigVSwitchInfos : TeaModel {
                 /// <summary>
-                /// <para>The vSwitch IDs in the zone.</para>
+                /// <para>The vSwitch ID in the zone.</para>
                 /// </summary>
                 [NameInMap("VSwitchIds")]
                 [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The maximum value for serverless elastic scaling.</para>
+        /// <para><b>[Deprecated]</b> The maximum value for serverless elastic scaling.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public long? ScaleMax { get; set; }
 
         /// <summary>
-        /// <para>The minimum value for serverless elastic scaling.</para>
+        /// <para><b>[Deprecated]</b> The minimum value for serverless elastic scaling.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public long? ScaleMin { get; set; }
 
         /// <summary>
-        /// <para>The pre-purchased storage quota, in GB.</para>
+        /// <para>The purchased storage quota. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

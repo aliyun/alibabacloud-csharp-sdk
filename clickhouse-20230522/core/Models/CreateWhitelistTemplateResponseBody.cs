@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public List<CreateWhitelistTemplateResponseBodyDataTemplates> Templates { get; set; }
             public class CreateWhitelistTemplateResponseBodyDataTemplates : TeaModel {
                 /// <summary>
-                /// <para>The list of IP addresses in the whitelist.</para>
+                /// <para>The IP whitelist.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.168.1.1,10.0.0.1</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>

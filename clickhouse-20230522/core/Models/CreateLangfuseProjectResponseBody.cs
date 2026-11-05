@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public CreateLangfuseProjectResponseBodyData Data { get; set; }
         public class CreateLangfuseProjectResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the Langfuse project was created.</para>
+            /// <para>The creation time of the Langfuse project. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-24T10:14:33Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The Langfuse project name.</para>
+            /// <para>The name of the Langfuse project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>project_name</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The Langfuse organization ID.</para>
+            /// <para>The ID of the Langfuse organization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cmrbhzx930005jw2q****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string OrganizationId { get; set; }
 
             /// <summary>
-            /// <para>The Langfuse project ID.</para>
+            /// <para>The ID of the Langfuse project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cmrbhzx930005jw2q****</para>

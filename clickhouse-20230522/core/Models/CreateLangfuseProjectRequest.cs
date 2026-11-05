@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The Langfuse project name.</para>
+        /// <para>The name of the Langfuse project.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The organization ID to which the Langfuse project belongs.</para>
+        /// <para>The ID of the organization to which the Langfuse project belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

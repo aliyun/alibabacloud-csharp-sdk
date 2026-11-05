@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DeleteAccountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeleteAccountResponseBodyData Data { get; set; }
         public class DeleteAccountResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The name of the account.</para>
+            /// <para>The database account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test1</para>

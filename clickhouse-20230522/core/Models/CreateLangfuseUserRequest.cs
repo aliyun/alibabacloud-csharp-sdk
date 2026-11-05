@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class CreateLangfuseUserRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether the user is allowed to create organizations. Default value: false.</para>
+        /// </summary>
+        [NameInMap("AllowOrgCreation")]
+        [Validation(Required=false)]
+        public bool? AllowOrgCreation { get; set; }
+
+        /// <summary>
         /// <para>The Langfuse instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -65,11 +72,11 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         /// <summary>
         /// <para>The password of the user account. The password must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>Contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</para>
+        /// <item><description><para>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</para>
         /// </description></item>
-        /// <item><description><para>The following special characters are supported: !@#$%^&amp;*()_+-=</para>
+        /// <item><description><para>Special characters include !@#$%^&amp;*()_+-=.</para>
         /// </description></item>
-        /// <item><description><para>The password must be 8 to 32 characters in length.</para>
+        /// <item><description><para>It must be 8 to 32 characters in length.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

@@ -1,3 +1,10 @@
+2026-11-05 Version: 3.0.4
+- Update API CreateLangfuseUser: add request parameters AllowOrgCreation.
+- Update API CreateLangfuseUser: add response parameters Body.Data.AllowOrgCreation.
+- Update API DescribeLangfuseUser: add response parameters Body.Data.AllowOrgCreation.
+- Update API DescribeLangfuseUsers: add response parameters Body.Data.Users.$.AllowOrgCreation.
+
+
 2026-09-03 Version: 3.0.3
 - Update API DeleteLangfuseInstance: add request parameters ConfirmDeleteAiGateway.
 

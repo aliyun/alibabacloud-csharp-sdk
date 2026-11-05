@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class CreateBackupPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The number of days to retain backups.</para>
+        /// <para>The number of days for which backups are retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The backup cycle. Specify the days of the week for backups. Separate multiple days with commas (<c>,</c>).</para>
+        /// <para>The backup cycle. Specify the days of the week on which backups are performed. Separate multiple days with commas (<c>,</c>).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string PreferredBackupPeriod { get; set; }
 
         /// <summary>
-        /// <para>The UTC time range to perform the backup. For example, <c>12:00Z-13:00Z</c> means that the backup starts between 12:00 and 13:00 UTC.</para>
+        /// <para>The UTC time range during which backups are performed. For example, <c>12:00Z-13:00Z</c> indicates that the backup starts between 12:00 and 13:00 UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

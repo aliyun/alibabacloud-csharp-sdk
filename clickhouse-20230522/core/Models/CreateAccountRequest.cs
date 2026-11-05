@@ -10,7 +10,13 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class CreateAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the account.</para>
+        /// <para>The database account. The account name must meet the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description>The name must be unique.</description></item>
+        /// <item><description>The name can contain lowercase letters, digits, and underscores (_).</description></item>
+        /// <item><description>The name must start with a lowercase letter and end with a lowercase letter or a digit.</description></item>
+        /// <item><description>The name must be 2 to 64 characters in length.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,10 +29,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         /// <summary>
         /// <para>The type of the database account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>NormalAccount</b>: standard account</para>
-        /// </description></item>
-        /// <item><description><para><b>SuperAccount</b>: privileged account</para>
-        /// </description></item>
+        /// <item><description><b>NormalAccount</b>: Standard account.</description></item>
+        /// <item><description><b>SuperAccount</b>: Privileged account.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -49,43 +53,41 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The description of the account.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>For testing</para>
+        /// <para>For testing purposes</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The information about permissions.</para>
+        /// <para>The authorization information.</para>
         /// </summary>
         [NameInMap("DmlAuthSetting")]
         [Validation(Required=false)]
         public CreateAccountRequestDmlAuthSetting DmlAuthSetting { get; set; }
         public class CreateAccountRequestDmlAuthSetting : TeaModel {
             /// <summary>
-            /// <para>The databases on which you want to grant permissions. Separate multiple databases with commas (,).</para>
+            /// <para>The list of databases to be authorized. Separate multiple databases with commas (,).</para>
             /// </summary>
             [NameInMap("AllowDatabases")]
             [Validation(Required=false)]
             public List<string> AllowDatabases { get; set; }
 
             /// <summary>
-            /// <para>The dictionaries on which you want to grant permissions. Separate multiple dictionaries with commas (,).</para>
+            /// <para>The list of dictionaries to be authorized. Separate multiple dictionaries with commas (,).</para>
             /// </summary>
             [NameInMap("AllowDictionaries")]
             [Validation(Required=false)]
             public List<string> AllowDictionaries { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to grant the DDL permissions to the database account. Valid values:</para>
+            /// <para>Specifies whether to grant DDL permissions to the database account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: The account has the permissions to execute DDL statements.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: The account does not have the permissions to execute DDL statements.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Allows DDL operations.</description></item>
+            /// <item><description><b>false</b>: Prohibits DDL operations.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -96,14 +98,11 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public bool? DdlAuthority { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to grant the DML permissions to the database account. Valid values:</para>
+            /// <para>Specifies whether to grant DML permissions to the database account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: The account has the permissions to read data from the database, write data to the database, and modify the settings of the database.</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: The account only has the permissions to read data from the database.</para>
-            /// </description></item>
-            /// <item><description><para><b>2</b>: The account only has the permissions to read data from the database and modify the settings of the database.</para>
-            /// </description></item>
+            /// <item><description><b>0</b>: Allows queries for reading, writing, and changing settings.</description></item>
+            /// <item><description><b>1</b>: Allows only queries for reading data.</description></item>
+            /// <item><description><b>2</b>: Allows queries for reading data and changing settings.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -120,7 +119,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         /// <list type="bullet">
         /// <item><description><para>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</para>
         /// </description></item>
-        /// <item><description><para>The following special characters are supported: ! @ # $ % ^ &amp; \* ( ) _ + - =</para>
+        /// <item><description><para>Special characters include !@#$%^&amp;*()_+-=.</para>
         /// </description></item>
         /// <item><description><para>The password must be 8 to 32 characters in length.</para>
         /// </description></item>
@@ -135,7 +134,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The code of the cloud service.</para>
+        /// <para>The product code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>clickhouse</para>
