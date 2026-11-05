@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>cert</b></description></item>
         /// <item><description><b>prefer</b></description></item>
         /// <item><description><b>verify-ca</b></description></item>
-        /// <item><description><b>verify-full</b>: supported by ApsaraDB RDS for PostgreSQL 12 and later</description></item>
+        /// <item><description><b>verify-full</b>: supported by ApsaraDB RDS for PostgreSQL 12 and later.</description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter can be configured only when ClientCAEnabled is set to <b>1</b>.</para>
@@ -29,10 +29,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ACL { get; set; }
 
         /// <summary>
-        /// <para>The type of the certificate for ApsaraDB RDS for MySQL and ApsaraDB RDS for PostgreSQL instances that use cloud disks. Valid values:</para>
+        /// <para>The certificate type for ApsaraDB RDS for MySQL and ApsaraDB RDS for PostgreSQL instances that use cloud disks. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>aliyun</b>: Alibaba Cloud certificate. This is the default value.</description></item>
-        /// <item><description><b>custom</b>: custom certificate<remarks>
+        /// <item><description><b>custom</b>: custom certificate.<remarks>
         /// <para>This parameter is required when SSLEnabled is set to <b>1</b>.</para>
         /// </remarks>
         /// </description></item>
@@ -46,10 +46,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CAType { get; set; }
 
         /// <summary>
-        /// <para>The content of the custom certificate for ApsaraDB RDS for SQL Server instances. Only the pfx format is supported.</para>
+        /// <para>The content of the custom certificate for ApsaraDB RDS for SQL Server instances. Only the <c>pfx</c> format is supported.</para>
         /// <list type="bullet">
-        /// <item><description>Public endpoint: <c>oss-&lt;Region ID&gt;.aliyuncs.com:&lt;Bucket name&gt;:&lt;Certificate file name (with extension)&gt;</c></description></item>
-        /// <item><description>Internal endpoint: <c>oss-&lt;Region ID&gt;-internal.aliyuncs.com:&lt;Bucket name&gt;:&lt;Certificate file name (with extension)&gt;</c></description></item>
+        /// <item><description>Public endpoint: <c>oss-&lt;region ID&gt;.aliyuncs.com:&lt;bucket name&gt;:&lt;certificate file name (with extension)&gt;</c></description></item>
+        /// <item><description>Internal endpoint: <c>oss-&lt;region ID&gt;-internal.aliyuncs.com:&lt;bucket name&gt;:&lt;certificate file name (with extension)&gt;</c></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Certificate { get; set; }
 
         /// <summary>
-        /// <para>The client certificate authority (CA) public key for ApsaraDB RDS for PostgreSQL instances that use cloud disks.</para>
+        /// <para>The public key of the client certificate authorization authority for ApsaraDB RDS for PostgreSQL instances that use cloud disks.</para>
         /// <remarks>
         /// <para>This parameter is required when ClientCAEnabled is set to <b>1</b>.</para>
         /// </remarks>
@@ -75,8 +75,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to enable the client certificate authority (CA) public key for ApsaraDB RDS for PostgreSQL instances that use cloud disks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: enabled</description></item>
-        /// <item><description><b>0</b>: disabled</description></item>
+        /// <item><description><b>1</b>: Enabled.</description></item>
+        /// <item><description><b>0</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -102,8 +102,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to enable the client certificate revocation list (CRL) for ApsaraDB RDS for PostgreSQL instances that use cloud disks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: enabled</description></item>
-        /// <item><description><b>0</b>: disabled</description></item>
+        /// <item><description><b>1</b>: Enabled.</description></item>
+        /// <item><description><b>0</b>: Disabled.</description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter can be configured only when ClientCAEnabled is set to <b>1</b>.</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -139,10 +139,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The <a href="https://help.aliyun.com/document_detail/95715.html">SSL forced encryption switch</a> for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and ApsaraDB RDS for SQL Server instances. Valid values:</para>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/95715.html">forced SSL encryption switch</a> for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and ApsaraDB RDS for SQL Server instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: enabled</description></item>
-        /// <item><description><b>0</b>: disabled</description></item>
+        /// <item><description><b>1</b>: Enabled.</description></item>
+        /// <item><description><b>0</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><b>cert</b></description></item>
         /// <item><description><b>prefer</b></description></item>
         /// <item><description><b>verify-ca</b></description></item>
-        /// <item><description><b>verify-full</b>: supported by ApsaraDB RDS for PostgreSQL 12 and later<remarks>
+        /// <item><description><b>verify-full</b>: supported by ApsaraDB RDS for PostgreSQL 12 and later.<remarks>
         /// <para>This parameter can be configured only when ClientCAEnabled is set to <b>1</b>.</para>
         /// </remarks>
         /// </description></item>
@@ -200,8 +200,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to enable SSL encryption. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: enabled</description></item>
-        /// <item><description><b>0</b>: disabled</description></item>
+        /// <item><description><b>1</b>: Enabled.</description></item>
+        /// <item><description><b>0</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public int? SSLEnabled { get; set; }
 
         /// <summary>
-        /// <para>The content of the custom server certificate for ApsaraDB RDS for MySQL and ApsaraDB RDS for PostgreSQL instances that use cloud disks.</para>
+        /// <para>The content of the custom certificate for the server of ApsaraDB RDS for MySQL and ApsaraDB RDS for PostgreSQL instances that use cloud disks.</para>
         /// <remarks>
         /// <para>This parameter is required when CAType is set to <b>custom</b>.</para>
         /// </remarks>
@@ -238,8 +238,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ServerKey { get; set; }
 
         /// <summary>
-        /// <para>The <a href="https://help.aliyun.com/document_detail/95715.html">minimum TLS version</a> for ApsaraDB RDS for SQL Server instances. Client connections that use a TLS version lower than the specified version are rejected. Valid values: 1.0, 1.1, and 1.2.</para>
-        /// <para>For example, if you set this parameter to 1.1, the server accepts only client connection requests that use TLS 1.1 or TLS 1.2. Clients that attempt to establish connections by using TLS 1.0 are rejected.</para>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/95715.html">minimum TLS version</a> for ApsaraDB RDS for SQL Server instances. Connections that use a version lower than the specified version are rejected. Valid values: 1.0, 1.1, and 1.2.</para>
+        /// <para>For example, if you set this parameter to 1.1, the server accepts only client connection requests that use TLS 1.1 and TLS 1.2. Clients that attempt to establish connections by using TLS 1.0 are rejected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.1</para>

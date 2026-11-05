@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCElasticScalingRequest : TeaModel {
+        [NameInMap("AcuType")]
+        [Validation(Required=false)]
+        public string AcuType { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>Prepaid</para>

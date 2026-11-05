@@ -20,20 +20,20 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string CausalConsistReadTimeout { get; set; }
 
         /// <summary>
-        /// <para>Specifies the proxy features to be enabled for the proxy endpoint. Separate multiple features with semicolons (;). Format: <c>Feature 1:Status;Feature 2:Status;...</c>. Do not add a semicolon (;) at the end.</para>
+        /// <para>The proxy features to be enabled for the proxy endpoint. Separate multiple features with semicolons (;). Format: <c>Feature 1:Status;Feature 2:Status;...</c>. Do not add a semicolon (;) at the end.</para>
         /// <para>Valid values for features:</para>
         /// <list type="bullet">
-        /// <item><description><b>ReadWriteSpliting</b>: Read/write splitting.</description></item>
-        /// <item><description><b>ConnectionPersist</b>: Connection pool.</description></item>
-        /// <item><description><b>TransactionReadSqlRouteOptimizeStatus</b>: Transaction splitting.</description></item>
-        /// <item><description><b>AZProximityAccess</b>: Nearest access.</description></item>
-        /// <item><description><b>CausalConsistRead</b>: Read consistency.</description></item>
-        /// <item><description><b>HtapFilter</b>: Automatic request distribution among row store and column store nodes for HTAP.</description></item>
+        /// <item><description><b>ReadWriteSpliting</b>: read/write splitting</description></item>
+        /// <item><description><b>ConnectionPersist</b>: connection pool</description></item>
+        /// <item><description><b>TransactionReadSqlRouteOptimizeStatus</b>: transaction splitting</description></item>
+        /// <item><description><b>AZProximityAccess</b>: nearest access</description></item>
+        /// <item><description><b>CausalConsistRead</b>: read consistency</description></item>
+        /// <item><description><b>HtapFilter</b>: HTAP automatic request distribution among row store and column store nodes</description></item>
         /// </list>
-        /// <para>Valid values for the status:</para>
+        /// <para>Valid values for status:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: The feature is enabled.</description></item>
-        /// <item><description><b>0</b>: The feature is disabled.</description></item>
+        /// <item><description><b>1</b>: enabled</description></item>
+        /// <item><description><b>0</b>: disabled</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ConfigDBProxyFeatures { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the ID.</para>
+        /// <para>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyEndpointId { get; set; }
 
         /// <summary>
-        /// <para><b>[Deprecated]</b> This parameter is deprecated and does not need to be configured.</para>
+        /// <para>The database proxy engine type. This parameter is deprecated and does not need to be specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>normal</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyEngineType { get; set; }
 
         /// <summary>
-        /// <para>The description of the proxy endpoint.</para>
+        /// <para>The description of the proxy terminal.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-proxy</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DbEndpointAliases { get; set; }
 
         /// <summary>
-        /// <para>The execution cost threshold for SQL statements in automatic request distribution among row store and column store nodes for HTAP.</para>
+        /// <para>The execution cost threshold to execute SQL in HTAP automatic request distribution among row store and column store nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30000</para>
@@ -119,9 +119,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The operation type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Modify</b>: Modifies the proxy endpoint. This is the default value.</description></item>
-        /// <item><description><b>Create</b>: Creates a proxy endpoint.</description></item>
-        /// <item><description><b>Delete</b>: Deletes a proxy endpoint.</description></item>
+        /// <item><description><b>Modify</b>: Modifies the proxy terminal. This is the default value.</description></item>
+        /// <item><description><b>Create</b>: Creates a proxy terminal.</description></item>
+        /// <item><description><b>Delete</b>: Deletes a proxy terminal.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The read/write mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ReadWrite</b>: Connects to the primary instance and can accept write requests.</description></item>
+        /// <item><description><b>ReadWrite</b>: Connects to the primary instance and accepts write requests.</description></item>
         /// <item><description><b>ReadOnly</b>: Does not connect to the primary instance and cannot accept write requests. This is the default value.</description></item>
         /// </list>
         /// <remarks>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DbEndpointReadWriteMode { get; set; }
 
         /// <summary>
-        /// <para>The type of the proxy endpoint. This parameter is reserved and does not need to be specified.</para>
+        /// <para>The type of the proxy terminal. This parameter is reserved and does not need to be specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RWSplit</para>
@@ -177,9 +177,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The effective period. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediate</b>: The modification immediately takes effect.</description></item>
-        /// <item><description><b>MaintainTime</b>: The modification takes effect within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</description></item>
-        /// <item><description><b>SpecificTime</b>: The modification takes effect at a specified time.</description></item>
+        /// <item><description><b>Immediate</b>: Takes effect immediately.</description></item>
+        /// <item><description><b>MaintainTime</b>: Takes effect within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</description></item>
+        /// <item><description><b>SpecificTime</b>: Takes effect at a specified time.</description></item>
         /// </list>
         /// <para>Default value: <b>MaintainTime</b>.</para>
         /// 
@@ -197,11 +197,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The read weight allocation pattern. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Standard</b>: Automatically allocates read weights based on instance specifications. This is the default value.</description></item>
-        /// <item><description><b>Custom</b>: Custom allocated weights.</description></item>
+        /// <item><description><b>Standard</b>: Automatically allocates weights based on instance specifications. This is the default value.</description></item>
+        /// <item><description><b>Custom</b>: custom weight allocation</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required only when read/write splitting is enabled. For more information about the read weight allocation pattern, see <a href="https://help.aliyun.com/document_detail/96076.html">Read weight distribution</a> for MySQL and <a href="https://help.aliyun.com/document_detail/418272.html">Enable and configure the database proxy service</a> for PostgreSQL.</para>
+        /// <para>This parameter is required only when read/write splitting is enabled. For more information about the weight allocation pattern, see <a href="https://help.aliyun.com/document_detail/96076.html">Read weight allocation</a> for MySQL and <a href="https://help.aliyun.com/document_detail/418272.html">Enable and configure the database proxy service</a> for PostgreSQL.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This parameter is required only when read/write splitting is enabled.</description></item>
-        /// <item><description>Default value: <b>30</b> when the read/write attribute is set to Read/Write (read/write splitting), and <b>-1</b> (disabled) when the read/write attribute is set to Read-only.</description></item>
+        /// <item><description>Default value: <b>30</b> when the read/write property is set to read/write (read/write splitting), and <b>-1</b> (shutdown) when the read/write property is set to read-only.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ReadOnlyInstanceMaxDelayTime { get; set; }
 
         /// <summary>
-        /// <para>The custom read weights of the primary and read-only instances. The weight must be a multiple of 100 and cannot exceed 10000. Format:</para>
+        /// <para>The custom read weight distribution. You can specify the read request weights for the primary instance and read-only instances. The weight must be a multiple of 100, and the maximum value is 10000. Format:</para>
         /// <list type="bullet">
         /// <item><description><para>Standard instance: <c>{&quot;Primary instance ID&quot;:&quot;Weight&quot;,&quot;Read-only instance ID&quot;:&quot;Weight&quot;...}</c></para>
         /// <para>  Example: <c>{&quot;rm-uf6wjk5****&quot;:&quot;500&quot;,&quot;rr-tfhfgk5xxx&quot;:&quot;200&quot;...}</c></para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <item><description><para>ApsaraDB RDS for MySQL Cluster Edition instance: <c>{&quot;Read-only instance ID&quot;:&quot;Weight&quot;,&quot;DBClusterNode&quot;:{&quot;Primary node ID&quot;:&quot;Weight&quot;,&quot;Secondary node ID&quot;:&quot;Weight&quot;,&quot;Secondary node ID&quot;:&quot;Weight&quot;...}}</c></para>
         /// <para>  Example: <c>{&quot;rr-tfhfgk5****&quot;:&quot;200&quot;,&quot;DBClusterNode&quot;:{&quot;rn-2z****&quot;:&quot;0&quot;,&quot;rn-2z****&quot;:&quot;400&quot;,&quot;rn-2z****&quot;:&quot;400&quot;...}}</c></para>
         /// <remarks>
-        /// <para><b>DBClusterNode</b> is a request parameter specific to Cluster Edition instances. It contains the <b>NodeID</b> and <b>Weight</b> of the primary and secondary nodes.</para>
+        /// <para><b>DBClusterNode</b> is a request parameter specific to Cluster Edition instances and contains the <b>NodeID</b> and <b>Weight</b> of the primary and secondary nodes.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ReadOnlyInstanceWeight { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the DescribeRegions operation to query the ID.</para>
+        /// <para>The region ID. You can call the DescribeRegions operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch in the zone of the database proxy endpoint. Default value: the ID of the vSwitch that corresponds to the default endpoint of the proxy instance. You can call the DescribeVSwitches operation to query created vSwitches.</para>
+        /// <para>The ID of the vSwitch in the zone of the proxy endpoint. The default value is the ID of the vSwitch associated with the default terminal of the proxy instance. You can call the DescribeVSwitches operation to query existing vSwitches.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-uf6adz52c2p****</para>
@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC in the zone of the database proxy endpoint. Default value: the ID of the VPC that corresponds to the default endpoint of the proxy instance. You can call the DescribeDBInstanceAttribute operation to query the default VPC of the instance.</para>
+        /// <para>The ID of the VPC in the zone of the proxy endpoint. The default value is the ID of the VPC associated with the default terminal of the proxy instance. You can call the DescribeDBInstanceAttribute operation to query the default VPC of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-2zeusejj******</para>

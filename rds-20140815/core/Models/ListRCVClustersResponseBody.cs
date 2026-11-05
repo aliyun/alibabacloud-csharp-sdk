@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 [Validation(Required=false)]
                 public string DashboardPublicEndpoint { get; set; }
 
+                [NameInMap("DashboardPublicEndpointExpireTime")]
+                [Validation(Required=false)]
+                public string DashboardPublicEndpointExpireTime { get; set; }
+
                 [NameInMap("DashboardUsername")]
                 [Validation(Required=false)]
                 public string DashboardUsername { get; set; }

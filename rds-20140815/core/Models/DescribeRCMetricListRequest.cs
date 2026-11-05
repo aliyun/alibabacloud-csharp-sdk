@@ -50,8 +50,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of records to return on each page for paging in a paged query.</para>
-        /// <para>Default value: 1000.</para>
+        /// <para>The number of records to return on each page for paging in a paged query. Default value: 1000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -61,7 +60,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Length { get; set; }
 
         /// <summary>
-        /// <para>The <a href="https://cms.console.aliyun.com/metric-meta/acs_ecs_dashboard/ecs">monitored metrics</a>.</para>
+        /// <para>The <a href="https://cms.console.aliyun.com/metric-meta/acs_ecs_dashboard/ecs">monitored metric</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "Rds";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -419,12 +422,12 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds instances to a deployment set.</para>
+        /// <para>Adds an instance to a deployment set.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, instances with local disks are not allowed to be added to a deployment set, and the UNSUPPORTED_DBINSTANCE_OPERATEION error is returned. To add such an instance, contact the administrator to add your UID to the whitelist. This restriction does not apply to cloud disk instances. Forcibly adding an instance to a deployment set may cause the instance to restart. Proceed with caution.</para>
+        /// <para>By default, instances with local disks cannot be added to a deployment set, and the UNSUPPORTED_DBINSTANCE_OPERATEION error is returned. To add such an instance, contact the development team and ask the administrator to add the UID to the whitelist. This restriction does not apply to cloud disk instances. Forcibly adding an instance to a deployment set may cause the instance to restart. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -482,12 +485,12 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds instances to a deployment set.</para>
+        /// <para>Adds an instance to a deployment set.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, instances with local disks are not allowed to be added to a deployment set, and the UNSUPPORTED_DBINSTANCE_OPERATEION error is returned. To add such an instance, contact the administrator to add your UID to the whitelist. This restriction does not apply to cloud disk instances. Forcibly adding an instance to a deployment set may cause the instance to restart. Proceed with caution.</para>
+        /// <para>By default, instances with local disks cannot be added to a deployment set, and the UNSUPPORTED_DBINSTANCE_OPERATEION error is returned. To add such an instance, contact the development team and ask the administrator to add the UID to the whitelist. This restriction does not apply to cloud disk instances. Forcibly adding an instance to a deployment set may cause the instance to restart. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -545,12 +548,12 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds instances to a deployment set.</para>
+        /// <para>Adds an instance to a deployment set.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, instances with local disks are not allowed to be added to a deployment set, and the UNSUPPORTED_DBINSTANCE_OPERATEION error is returned. To add such an instance, contact the administrator to add your UID to the whitelist. This restriction does not apply to cloud disk instances. Forcibly adding an instance to a deployment set may cause the instance to restart. Proceed with caution.</para>
+        /// <para>By default, instances with local disks cannot be added to a deployment set, and the UNSUPPORTED_DBINSTANCE_OPERATEION error is returned. To add such an instance, contact the development team and ask the administrator to add the UID to the whitelist. This restriction does not apply to cloud disk instances. Forcibly adding an instance to a deployment set may cause the instance to restart. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -568,12 +571,12 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds instances to a deployment set.</para>
+        /// <para>Adds an instance to a deployment set.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, instances with local disks are not allowed to be added to a deployment set, and the UNSUPPORTED_DBINSTANCE_OPERATEION error is returned. To add such an instance, contact the administrator to add your UID to the whitelist. This restriction does not apply to cloud disk instances. Forcibly adding an instance to a deployment set may cause the instance to restart. Proceed with caution.</para>
+        /// <para>By default, instances with local disks cannot be added to a deployment set, and the UNSUPPORTED_DBINSTANCE_OPERATEION error is returned. To add such an instance, contact the development team and ask the administrator to add the UID to the whitelist. This restriction does not apply to cloud disk instances. Forcibly adding an instance to a deployment set may cause the instance to restart. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9420,14 +9423,14 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported database engines</h3>
+        /// <h3>Supported DPI engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></para>
+        /// <para>Notice: Before you invoke this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and impacts of the operation.</notice></para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/184921.html">Create internal and public database proxy endpoints for an ApsaraDB RDS for MySQL instance</a></description></item>
@@ -9519,14 +9522,14 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported database engines</h3>
+        /// <h3>Supported DPI engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></para>
+        /// <para>Notice: Before you invoke this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and impacts of the operation.</notice></para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/184921.html">Create internal and public database proxy endpoints for an ApsaraDB RDS for MySQL instance</a></description></item>
@@ -9618,14 +9621,14 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported database engines</h3>
+        /// <h3>Supported DPI engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></para>
+        /// <para>Notice: Before you invoke this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and impacts of the operation.</notice></para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/184921.html">Create internal and public database proxy endpoints for an ApsaraDB RDS for MySQL instance</a></description></item>
@@ -9653,14 +9656,14 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported database engines</h3>
+        /// <h3>Supported DPI engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></para>
+        /// <para>Notice: Before you invoke this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and impacts of the operation.</notice></para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/184921.html">Create internal and public database proxy endpoints for an ApsaraDB RDS for MySQL instance</a></description></item>
@@ -12918,9 +12921,9 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <description>
         /// <list type="bullet">
         /// <item><description>Supported cloud disk types: ultra disk, standard SSD, ESSD, and premium performance disk (default).</description></item>
-        /// <item><description>When the billing method of the cloud disk is subscription (<b>Prepaid</b>), you must specify the instance ID of a subscription instance (<b>InstanceId</b>) to which the cloud disk is mounted. The expiration time of the cloud disk is the same as that of the mounted instance.</description></item>
-        /// <item><description>You can create a pay-as-you-go (<b>Postpaid</b>) cloud disk separately without mounting it to an instance. You can also mount it to an instance of any billing method when you create it as needed.</description></item>
-        /// <item><description>The types and number of cloud disks that can be mounted vary based on the instance type.</description></item>
+        /// <item><description>When the billing method of the cloud disk is subscription (<b>Prepaid</b>), you must specify the instance ID (<b>InstanceId</b>) of a subscription instance to which this cloud disk is mounted. The expiration time of the cloud disk is the same as that of the mounted instance.</description></item>
+        /// <item><description>You can create a pay-as-you-go (<b>Postpaid</b>) cloud disk separately without mounting it to an instance. You can also mount it to an instance of any billing method during creation as needed.</description></item>
+        /// <item><description>The supported cloud disk types and the maximum number of cloud disks that can be mounted vary based on the instance type.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13030,9 +13033,9 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <description>
         /// <list type="bullet">
         /// <item><description>Supported cloud disk types: ultra disk, standard SSD, ESSD, and premium performance disk (default).</description></item>
-        /// <item><description>When the billing method of the cloud disk is subscription (<b>Prepaid</b>), you must specify the instance ID of a subscription instance (<b>InstanceId</b>) to which the cloud disk is mounted. The expiration time of the cloud disk is the same as that of the mounted instance.</description></item>
-        /// <item><description>You can create a pay-as-you-go (<b>Postpaid</b>) cloud disk separately without mounting it to an instance. You can also mount it to an instance of any billing method when you create it as needed.</description></item>
-        /// <item><description>The types and number of cloud disks that can be mounted vary based on the instance type.</description></item>
+        /// <item><description>When the billing method of the cloud disk is subscription (<b>Prepaid</b>), you must specify the instance ID (<b>InstanceId</b>) of a subscription instance to which this cloud disk is mounted. The expiration time of the cloud disk is the same as that of the mounted instance.</description></item>
+        /// <item><description>You can create a pay-as-you-go (<b>Postpaid</b>) cloud disk separately without mounting it to an instance. You can also mount it to an instance of any billing method during creation as needed.</description></item>
+        /// <item><description>The supported cloud disk types and the maximum number of cloud disks that can be mounted vary based on the instance type.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13142,9 +13145,9 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <description>
         /// <list type="bullet">
         /// <item><description>Supported cloud disk types: ultra disk, standard SSD, ESSD, and premium performance disk (default).</description></item>
-        /// <item><description>When the billing method of the cloud disk is subscription (<b>Prepaid</b>), you must specify the instance ID of a subscription instance (<b>InstanceId</b>) to which the cloud disk is mounted. The expiration time of the cloud disk is the same as that of the mounted instance.</description></item>
-        /// <item><description>You can create a pay-as-you-go (<b>Postpaid</b>) cloud disk separately without mounting it to an instance. You can also mount it to an instance of any billing method when you create it as needed.</description></item>
-        /// <item><description>The types and number of cloud disks that can be mounted vary based on the instance type.</description></item>
+        /// <item><description>When the billing method of the cloud disk is subscription (<b>Prepaid</b>), you must specify the instance ID (<b>InstanceId</b>) of a subscription instance to which this cloud disk is mounted. The expiration time of the cloud disk is the same as that of the mounted instance.</description></item>
+        /// <item><description>You can create a pay-as-you-go (<b>Postpaid</b>) cloud disk separately without mounting it to an instance. You can also mount it to an instance of any billing method during creation as needed.</description></item>
+        /// <item><description>The supported cloud disk types and the maximum number of cloud disks that can be mounted vary based on the instance type.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13170,9 +13173,9 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// <description>
         /// <list type="bullet">
         /// <item><description>Supported cloud disk types: ultra disk, standard SSD, ESSD, and premium performance disk (default).</description></item>
-        /// <item><description>When the billing method of the cloud disk is subscription (<b>Prepaid</b>), you must specify the instance ID of a subscription instance (<b>InstanceId</b>) to which the cloud disk is mounted. The expiration time of the cloud disk is the same as that of the mounted instance.</description></item>
-        /// <item><description>You can create a pay-as-you-go (<b>Postpaid</b>) cloud disk separately without mounting it to an instance. You can also mount it to an instance of any billing method when you create it as needed.</description></item>
-        /// <item><description>The types and number of cloud disks that can be mounted vary based on the instance type.</description></item>
+        /// <item><description>When the billing method of the cloud disk is subscription (<b>Prepaid</b>), you must specify the instance ID (<b>InstanceId</b>) of a subscription instance to which this cloud disk is mounted. The expiration time of the cloud disk is the same as that of the mounted instance.</description></item>
+        /// <item><description>You can create a pay-as-you-go (<b>Postpaid</b>) cloud disk separately without mounting it to an instance. You can also mount it to an instance of any billing method during creation as needed.</description></item>
+        /// <item><description>The supported cloud disk types and the maximum number of cloud disks that can be mounted vary based on the instance type.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24572,7 +24575,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Applicable engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
@@ -24653,7 +24656,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Applicable engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
@@ -24734,7 +24737,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Applicable engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
@@ -24763,7 +24766,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Applicable engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
@@ -41827,8 +41830,27 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询操作权限</para>
+        /// <para>Queries the authorization information of a service account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Supported engines</h3>
+        /// <list type="bullet">
+        /// <item><description>ApsaraDB RDS for MySQL</description></item>
+        /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
+        /// <item><description>ApsaraDB RDS for SQL Server</description></item>
+        /// </list>
+        /// <h3>Related documentation</h3>
+        /// <remarks>
+        /// <para>Notice: Before you call this operation, read the related documentation carefully to fully understand the prerequisites and impacts of this operation.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/96102.html">Grant permissions to a service account for ApsaraDB RDS for MySQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/146887.html">Grant permissions to a service account for ApsaraDB RDS for PostgreSQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/95693.html">Grant permissions to a service account for ApsaraDB RDS for SQL Server</a></description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeOperatorPermissionRequest
@@ -41885,8 +41907,27 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询操作权限</para>
+        /// <para>Queries the authorization information of a service account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Supported engines</h3>
+        /// <list type="bullet">
+        /// <item><description>ApsaraDB RDS for MySQL</description></item>
+        /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
+        /// <item><description>ApsaraDB RDS for SQL Server</description></item>
+        /// </list>
+        /// <h3>Related documentation</h3>
+        /// <remarks>
+        /// <para>Notice: Before you call this operation, read the related documentation carefully to fully understand the prerequisites and impacts of this operation.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/96102.html">Grant permissions to a service account for ApsaraDB RDS for MySQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/146887.html">Grant permissions to a service account for ApsaraDB RDS for PostgreSQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/95693.html">Grant permissions to a service account for ApsaraDB RDS for SQL Server</a></description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeOperatorPermissionRequest
@@ -41943,8 +41984,27 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询操作权限</para>
+        /// <para>Queries the authorization information of a service account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Supported engines</h3>
+        /// <list type="bullet">
+        /// <item><description>ApsaraDB RDS for MySQL</description></item>
+        /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
+        /// <item><description>ApsaraDB RDS for SQL Server</description></item>
+        /// </list>
+        /// <h3>Related documentation</h3>
+        /// <remarks>
+        /// <para>Notice: Before you call this operation, read the related documentation carefully to fully understand the prerequisites and impacts of this operation.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/96102.html">Grant permissions to a service account for ApsaraDB RDS for MySQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/146887.html">Grant permissions to a service account for ApsaraDB RDS for PostgreSQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/95693.html">Grant permissions to a service account for ApsaraDB RDS for SQL Server</a></description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeOperatorPermissionRequest
@@ -41961,8 +42021,27 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询操作权限</para>
+        /// <para>Queries the authorization information of a service account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Supported engines</h3>
+        /// <list type="bullet">
+        /// <item><description>ApsaraDB RDS for MySQL</description></item>
+        /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
+        /// <item><description>ApsaraDB RDS for SQL Server</description></item>
+        /// </list>
+        /// <h3>Related documentation</h3>
+        /// <remarks>
+        /// <para>Notice: Before you call this operation, read the related documentation carefully to fully understand the prerequisites and impacts of this operation.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description><a href="https://help.aliyun.com/document_detail/96102.html">Grant permissions to a service account for ApsaraDB RDS for MySQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/146887.html">Grant permissions to a service account for ApsaraDB RDS for PostgreSQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/95693.html">Grant permissions to a service account for ApsaraDB RDS for SQL Server</a></description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeOperatorPermissionRequest
@@ -45248,6 +45327,10 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcuType))
+            {
+                query["AcuType"] = request.AcuType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeType))
             {
                 query["InstanceChargeType"] = request.InstanceChargeType;
@@ -45306,6 +45389,10 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcuType))
+            {
+                query["AcuType"] = request.AcuType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceChargeType))
             {
                 query["InstanceChargeType"] = request.InstanceChargeType;
@@ -45495,7 +45582,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a single RDS Custom instance by calling the DescribeRCInstanceAttribute operation.</para>
+        /// <para>Queries the details of a single RDS Custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45553,7 +45640,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a single RDS Custom instance by calling the DescribeRCInstanceAttribute operation.</para>
+        /// <para>Queries the details of a single RDS Custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45611,7 +45698,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a single RDS Custom instance by calling the DescribeRCInstanceAttribute operation.</para>
+        /// <para>Queries the details of a single RDS Custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45629,7 +45716,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a single RDS Custom instance by calling the DescribeRCInstanceAttribute operation.</para>
+        /// <para>Queries the details of a single RDS Custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -60840,16 +60927,16 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Applicable engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
         /// <item><description>ApsaraDB RDS for SQL Server</description></item>
         /// <item><description>ApsaraDB RDS for MariaDB</description></item>
         /// </list>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the documentation to understand the prerequisites and impacts.</notice></para>
+        /// <para>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/98818.html">Configure an automatic backup policy for an ApsaraDB RDS for MySQL instance</a></description></item>
@@ -60936,6 +61023,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableBackupLog))
             {
                 query["EnableBackupLog"] = request.EnableBackupLog;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableImmutableBackup))
+            {
+                query["EnableImmutableBackup"] = request.EnableImmutableBackup;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIncrementDataBackup))
             {
@@ -61027,16 +61118,16 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Applicable engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
         /// <item><description>ApsaraDB RDS for SQL Server</description></item>
         /// <item><description>ApsaraDB RDS for MariaDB</description></item>
         /// </list>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the documentation to understand the prerequisites and impacts.</notice></para>
+        /// <para>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/98818.html">Configure an automatic backup policy for an ApsaraDB RDS for MySQL instance</a></description></item>
@@ -61123,6 +61214,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableBackupLog))
             {
                 query["EnableBackupLog"] = request.EnableBackupLog;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableImmutableBackup))
+            {
+                query["EnableImmutableBackup"] = request.EnableImmutableBackup;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableIncrementDataBackup))
             {
@@ -61214,16 +61309,16 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Applicable engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
         /// <item><description>ApsaraDB RDS for SQL Server</description></item>
         /// <item><description>ApsaraDB RDS for MariaDB</description></item>
         /// </list>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the documentation to understand the prerequisites and impacts.</notice></para>
+        /// <para>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/98818.html">Configure an automatic backup policy for an ApsaraDB RDS for MySQL instance</a></description></item>
@@ -61253,16 +61348,16 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Applicable engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
         /// <item><description>ApsaraDB RDS for SQL Server</description></item>
         /// <item><description>ApsaraDB RDS for MariaDB</description></item>
         /// </list>
-        /// <h3>Related documentation</h3>
+        /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the documentation to understand the prerequisites and impacts.</notice></para>
+        /// <para>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/98818.html">Configure an automatic backup policy for an ApsaraDB RDS for MySQL instance</a></description></item>
@@ -62668,18 +62763,20 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
+        /// <h3>Supported engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
+        /// <item><description>ApsaraDB RDS for SQL Server</description></item>
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</para>
+        /// <para>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.</notice></para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/96059.html">Modify the automatic upgrade settings for ApsaraDB RDS for MySQL</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/146895.html">Modify the automatic upgrade settings for ApsaraDB RDS for PostgreSQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/213582.html">Modify the automatic upgrade settings for ApsaraDB RDS for SQL Server</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -62747,18 +62844,20 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
+        /// <h3>Supported engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
+        /// <item><description>ApsaraDB RDS for SQL Server</description></item>
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</para>
+        /// <para>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.</notice></para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/96059.html">Modify the automatic upgrade settings for ApsaraDB RDS for MySQL</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/146895.html">Modify the automatic upgrade settings for ApsaraDB RDS for PostgreSQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/213582.html">Modify the automatic upgrade settings for ApsaraDB RDS for SQL Server</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -62826,18 +62925,20 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
+        /// <h3>Supported engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
+        /// <item><description>ApsaraDB RDS for SQL Server</description></item>
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</para>
+        /// <para>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.</notice></para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/96059.html">Modify the automatic upgrade settings for ApsaraDB RDS for MySQL</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/146895.html">Modify the automatic upgrade settings for ApsaraDB RDS for PostgreSQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/213582.html">Modify the automatic upgrade settings for ApsaraDB RDS for SQL Server</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -62861,18 +62962,20 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
+        /// <h3>Supported engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
+        /// <item><description>ApsaraDB RDS for SQL Server</description></item>
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</para>
+        /// <para>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.</notice></para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/96059.html">Modify the automatic upgrade settings for ApsaraDB RDS for MySQL</a></description></item>
         /// <item><description><a href="https://help.aliyun.com/document_detail/146895.html">Modify the automatic upgrade settings for ApsaraDB RDS for PostgreSQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/213582.html">Modify the automatic upgrade settings for ApsaraDB RDS for SQL Server</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -66716,12 +66819,12 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></para>
+        /// <para>Notice: Before you call this operation, read the feature documentation to understand the prerequisites and impacts.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/96120.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for MySQL</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/229517.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for PostgreSQL</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/95715.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for SQL Server</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/96120.html">Settings for Secure Sockets Layer (SSL) encryption in ApsaraDB RDS for MySQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/229517.html">Settings for Secure Sockets Layer (SSL) encryption in ApsaraDB RDS for PostgreSQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/95715.html">Settings for Secure Sockets Layer (SSL) encryption in ApsaraDB RDS for SQL Server</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -66853,12 +66956,12 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></para>
+        /// <para>Notice: Before you call this operation, read the feature documentation to understand the prerequisites and impacts.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/96120.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for MySQL</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/229517.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for PostgreSQL</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/95715.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for SQL Server</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/96120.html">Settings for Secure Sockets Layer (SSL) encryption in ApsaraDB RDS for MySQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/229517.html">Settings for Secure Sockets Layer (SSL) encryption in ApsaraDB RDS for PostgreSQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/95715.html">Settings for Secure Sockets Layer (SSL) encryption in ApsaraDB RDS for SQL Server</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -66990,12 +67093,12 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></para>
+        /// <para>Notice: Before you call this operation, read the feature documentation to understand the prerequisites and impacts.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/96120.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for MySQL</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/229517.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for PostgreSQL</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/95715.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for SQL Server</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/96120.html">Settings for Secure Sockets Layer (SSL) encryption in ApsaraDB RDS for MySQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/229517.html">Settings for Secure Sockets Layer (SSL) encryption in ApsaraDB RDS for PostgreSQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/95715.html">Settings for Secure Sockets Layer (SSL) encryption in ApsaraDB RDS for SQL Server</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -67027,12 +67130,12 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></para>
+        /// <para>Notice: Before you call this operation, read the feature documentation to understand the prerequisites and impacts.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/96120.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for MySQL</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/229517.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for PostgreSQL</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/95715.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for SQL Server</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/96120.html">Settings for Secure Sockets Layer (SSL) encryption in ApsaraDB RDS for MySQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/229517.html">Settings for Secure Sockets Layer (SSL) encryption in ApsaraDB RDS for PostgreSQL</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/95715.html">Settings for Secure Sockets Layer (SSL) encryption in ApsaraDB RDS for SQL Server</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -68508,17 +68611,17 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Supported database engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL<remarks>
-        /// <para>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition gradually provides a free dedicated proxy service with one proxy instance across all units. For details, see <a href="https://help.aliyun.com/document_detail/2555466.html">Promotion: ApsaraDB RDS for MySQL Cluster Edition provides a free dedicated proxy service with one proxy instance</a>.</para>
+        /// <para>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition gradually provides a free dedicated proxy service with one proxy node in each unit. For details, see <a href="https://help.aliyun.com/document_detail/2555466.html">Promotion: Free dedicated proxy service with one proxy node for ApsaraDB RDS for MySQL Cluster Edition</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you use this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</para>
+        /// <para>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and the impacts of this operation.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/197456.html">Enable the database proxy for ApsaraDB RDS for MySQL</a></description></item>
@@ -68636,17 +68739,17 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Supported database engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL<remarks>
-        /// <para>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition gradually provides a free dedicated proxy service with one proxy instance across all units. For details, see <a href="https://help.aliyun.com/document_detail/2555466.html">Promotion: ApsaraDB RDS for MySQL Cluster Edition provides a free dedicated proxy service with one proxy instance</a>.</para>
+        /// <para>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition gradually provides a free dedicated proxy service with one proxy node in each unit. For details, see <a href="https://help.aliyun.com/document_detail/2555466.html">Promotion: Free dedicated proxy service with one proxy node for ApsaraDB RDS for MySQL Cluster Edition</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you use this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</para>
+        /// <para>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and the impacts of this operation.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/197456.html">Enable the database proxy for ApsaraDB RDS for MySQL</a></description></item>
@@ -68764,17 +68867,17 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Supported database engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL<remarks>
-        /// <para>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition gradually provides a free dedicated proxy service with one proxy instance across all units. For details, see <a href="https://help.aliyun.com/document_detail/2555466.html">Promotion: ApsaraDB RDS for MySQL Cluster Edition provides a free dedicated proxy service with one proxy instance</a>.</para>
+        /// <para>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition gradually provides a free dedicated proxy service with one proxy node in each unit. For details, see <a href="https://help.aliyun.com/document_detail/2555466.html">Promotion: Free dedicated proxy service with one proxy node for ApsaraDB RDS for MySQL Cluster Edition</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you use this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</para>
+        /// <para>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and the impacts of this operation.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/197456.html">Enable the database proxy for ApsaraDB RDS for MySQL</a></description></item>
@@ -68802,17 +68905,17 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
+        /// <h3>Supported database engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL<remarks>
-        /// <para>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition gradually provides a free dedicated proxy service with one proxy instance across all units. For details, see <a href="https://help.aliyun.com/document_detail/2555466.html">Promotion: ApsaraDB RDS for MySQL Cluster Edition provides a free dedicated proxy service with one proxy instance</a>.</para>
+        /// <para>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition gradually provides a free dedicated proxy service with one proxy node in each unit. For details, see <a href="https://help.aliyun.com/document_detail/2555466.html">Promotion: Free dedicated proxy service with one proxy node for ApsaraDB RDS for MySQL Cluster Edition</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you use this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</para>
+        /// <para>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and the impacts of this operation.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/197456.html">Enable the database proxy for ApsaraDB RDS for MySQL</a></description></item>
@@ -68840,14 +68943,14 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported database engines</h3>
+        /// <h3>Supported DPI engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and the impacts of this operation.</para>
+        /// <para>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/2621331.html">Configure the access policy for a database proxy endpoint of an ApsaraDB RDS for MySQL instance</a></description></item>
@@ -68987,14 +69090,14 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported database engines</h3>
+        /// <h3>Supported DPI engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and the impacts of this operation.</para>
+        /// <para>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/2621331.html">Configure the access policy for a database proxy endpoint of an ApsaraDB RDS for MySQL instance</a></description></item>
@@ -69134,14 +69237,14 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported database engines</h3>
+        /// <h3>Supported DPI engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and the impacts of this operation.</para>
+        /// <para>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/2621331.html">Configure the access policy for a database proxy endpoint of an ApsaraDB RDS for MySQL instance</a></description></item>
@@ -69169,14 +69272,14 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported database engines</h3>
+        /// <h3>Supported DPI engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and the impacts of this operation.</para>
+        /// <para>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><a href="https://help.aliyun.com/document_detail/2621331.html">Configure the access policy for a database proxy endpoint of an ApsaraDB RDS for MySQL instance</a></description></item>
@@ -80931,12 +81034,12 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes an RDS custom instance from a deployment set.</para>
+        /// <para>Removes ApsaraDB RDS Custom instances from a deployment set.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Removing an RDS custom instance from a deployment set is a non-disruptive operation and does not cause the instance to restart.</para>
+        /// <para>Removing an instance from a deployment set is a lossless operation and does not cause the instance to restart.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -80986,12 +81089,12 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes an RDS custom instance from a deployment set.</para>
+        /// <para>Removes ApsaraDB RDS Custom instances from a deployment set.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Removing an RDS custom instance from a deployment set is a non-disruptive operation and does not cause the instance to restart.</para>
+        /// <para>Removing an instance from a deployment set is a lossless operation and does not cause the instance to restart.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -81041,12 +81144,12 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes an RDS custom instance from a deployment set.</para>
+        /// <para>Removes ApsaraDB RDS Custom instances from a deployment set.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Removing an RDS custom instance from a deployment set is a non-disruptive operation and does not cause the instance to restart.</para>
+        /// <para>Removing an instance from a deployment set is a lossless operation and does not cause the instance to restart.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -81064,12 +81167,12 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes an RDS custom instance from a deployment set.</para>
+        /// <para>Removes ApsaraDB RDS Custom instances from a deployment set.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Removing an RDS custom instance from a deployment set is a non-disruptive operation and does not cause the instance to restart.</para>
+        /// <para>Removing an instance from a deployment set is a lossless operation and does not cause the instance to restart.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -84511,15 +84614,15 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates one or more RDS Custom instances by calling the RunRCInstances operation. You can specify parameters such as ImageId, InstanceType, VSwitchId, and SecurityGroupId.</para>
+        /// <para>Creates one or more RDS Custom instances by specifying parameters such as ImageId, InstanceType, VSwitchId, and SecurityGroupId.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before creating an RDS Custom instance, submit a ticket to request that your Alibaba Cloud account be added to the whitelist.</description></item>
-        /// <item><description>Only subscription RDS Custom instances can be created.</description></item>
-        /// <item><description>Supported regions are Beijing, Shanghai, Shenzhen, and Hangzhou.</description></item>
+        /// <item><description>Before you create an RDS Custom instance, submit a ticket to apply for adding your Alibaba Cloud account to the whitelist.</description></item>
+        /// <item><description>Only subscription RDS Custom instances are supported.</description></item>
+        /// <item><description>Supported regions include Beijing, Shanghai, Shenzhen, and Hangzhou.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -84760,15 +84863,15 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates one or more RDS Custom instances by calling the RunRCInstances operation. You can specify parameters such as ImageId, InstanceType, VSwitchId, and SecurityGroupId.</para>
+        /// <para>Creates one or more RDS Custom instances by specifying parameters such as ImageId, InstanceType, VSwitchId, and SecurityGroupId.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before creating an RDS Custom instance, submit a ticket to request that your Alibaba Cloud account be added to the whitelist.</description></item>
-        /// <item><description>Only subscription RDS Custom instances can be created.</description></item>
-        /// <item><description>Supported regions are Beijing, Shanghai, Shenzhen, and Hangzhou.</description></item>
+        /// <item><description>Before you create an RDS Custom instance, submit a ticket to apply for adding your Alibaba Cloud account to the whitelist.</description></item>
+        /// <item><description>Only subscription RDS Custom instances are supported.</description></item>
+        /// <item><description>Supported regions include Beijing, Shanghai, Shenzhen, and Hangzhou.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -85009,15 +85112,15 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates one or more RDS Custom instances by calling the RunRCInstances operation. You can specify parameters such as ImageId, InstanceType, VSwitchId, and SecurityGroupId.</para>
+        /// <para>Creates one or more RDS Custom instances by specifying parameters such as ImageId, InstanceType, VSwitchId, and SecurityGroupId.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before creating an RDS Custom instance, submit a ticket to request that your Alibaba Cloud account be added to the whitelist.</description></item>
-        /// <item><description>Only subscription RDS Custom instances can be created.</description></item>
-        /// <item><description>Supported regions are Beijing, Shanghai, Shenzhen, and Hangzhou.</description></item>
+        /// <item><description>Before you create an RDS Custom instance, submit a ticket to apply for adding your Alibaba Cloud account to the whitelist.</description></item>
+        /// <item><description>Only subscription RDS Custom instances are supported.</description></item>
+        /// <item><description>Supported regions include Beijing, Shanghai, Shenzhen, and Hangzhou.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -85036,15 +85139,15 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates one or more RDS Custom instances by calling the RunRCInstances operation. You can specify parameters such as ImageId, InstanceType, VSwitchId, and SecurityGroupId.</para>
+        /// <para>Creates one or more RDS Custom instances by specifying parameters such as ImageId, InstanceType, VSwitchId, and SecurityGroupId.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before creating an RDS Custom instance, submit a ticket to request that your Alibaba Cloud account be added to the whitelist.</description></item>
-        /// <item><description>Only subscription RDS Custom instances can be created.</description></item>
-        /// <item><description>Supported regions are Beijing, Shanghai, Shenzhen, and Hangzhou.</description></item>
+        /// <item><description>Before you create an RDS Custom instance, submit a ticket to apply for adding your Alibaba Cloud account to the whitelist.</description></item>
+        /// <item><description>Only subscription RDS Custom instances are supported.</description></item>
+        /// <item><description>Supported regions include Beijing, Shanghai, Shenzhen, and Hangzhou.</description></item>
         /// </list>
         /// </description>
         /// 

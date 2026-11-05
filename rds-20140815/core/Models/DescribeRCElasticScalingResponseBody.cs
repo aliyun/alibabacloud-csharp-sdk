@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("MaxAcu")]
+        [Validation(Required=false)]
+        public int? MaxAcu { get; set; }
+
+        [NameInMap("MinAcu")]
+        [Validation(Required=false)]
+        public int? MinAcu { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1F7B8B09-36F3-1165-BADB-13E376FE9BD7</para>

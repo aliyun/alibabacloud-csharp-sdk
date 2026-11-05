@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to enable or disable the database proxy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Startup</b>: Enables the proxy service.</description></item>
-        /// <item><description><b>Shutdown</b>: Disables the proxy service.</description></item>
-        /// <item><description><b>Modify</b>: Modifies the proxy service.</description></item>
+        /// <item><description><b>Startup</b>: enables the proxy service.</description></item>
+        /// <item><description><b>Shutdown</b>: disables the proxy service.</description></item>
+        /// <item><description><b>Modify</b>: modifies the proxy service.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -62,8 +62,8 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>The type of the database proxy instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>common</b>: General-purpose database proxy.</description></item>
-        /// <item><description><b>exclusive</b>: Dedicated proxy (default).</description></item>
+        /// <item><description><b>common</b>: general-purpose database proxy</description></item>
+        /// <item><description><b>exclusive</b>: dedicated proxy (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBProxyInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The list of proxy nodes.</para>
+        /// <para>The proxy nodes.</para>
         /// </summary>
         [NameInMap("DBProxyNodes")]
         [Validation(Required=false)]
@@ -141,12 +141,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <summary>
         /// <para>Specifies whether to enable connection keep-alive. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enabled</b>: Enables connection keep-alive.</description></item>
-        /// <item><description><b>Disabled</b>: Disables connection keep-alive.</description></item>
+        /// <item><description><b>Enabled</b>: enables connection keep-alive.</description></item>
+        /// <item><description><b>Disabled</b>: disables connection keep-alive.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Only ApsaraDB RDS for MySQL supports this parameter.</description></item>
+        /// <item><description>This parameter is supported only for ApsaraDB RDS for MySQL.</description></item>
         /// <item><description>When you modify the connection keep-alive status, set <b>ConfigDBProxyService</b> to <b>Modify</b>.</description></item>
         /// </list>
         /// </remarks>
