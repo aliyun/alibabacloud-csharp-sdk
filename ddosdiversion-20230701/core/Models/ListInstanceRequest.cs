@@ -10,40 +10,56 @@ namespace AlibabaCloud.SDK.DdosDiversion20230701.Models
 {
     public class ListInstanceRequest : TeaModel {
         /// <summary>
-        /// The name of the instance.
+        /// <para>The name of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Test instance.</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// The number of entries per page. Default value: 100.
+        /// <para>The number of entries per page. Default value: 100.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("Num")]
         [Validation(Required=false)]
         public long? Num { get; set; }
 
         /// <summary>
-        /// The page number. Default value: 1
+        /// <para>The page number. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
         public long? Page { get; set; }
 
         /// <summary>
-        /// The ID of the anti-DDoS diversion instance.
+        /// <para>The ID of the diversion instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ddos_diversion_public_cn-xxxxxxxxxxxxx</para>
         /// </summary>
         [NameInMap("SaleId")]
         [Validation(Required=false)]
         public string SaleId { get; set; }
 
         /// <summary>
-        /// The status of the instance. Valid values:
+        /// <para>The instance status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>normal: The instance is running normally.</description></item>
+        /// <item><description>expired: The instance has expired.</description></item>
+        /// <item><description>deleting: The instance is being deleted.</description></item>
+        /// <item><description>stopped: The instance is stopped.</description></item>
+        /// </list>
         /// 
-        /// - normal
-        /// - expired
-        /// - deleting
-        /// - stopped
+        /// <b>Example:</b>
+        /// <para>normal</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

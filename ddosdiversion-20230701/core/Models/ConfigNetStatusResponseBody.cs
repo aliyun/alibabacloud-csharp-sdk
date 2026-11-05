@@ -10,24 +10,36 @@ namespace AlibabaCloud.SDK.DdosDiversion20230701.Models
 {
     public class ConfigNetStatusResponseBody : TeaModel {
         /// <summary>
-        /// The status code.
+        /// <para>The status code.</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>200</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>Other codes: The request failed.</para>
+        /// </description></item>
+        /// </list>
         /// 
-        /// *   **200**: The request was successful.
-        /// *   Other codes: The request failed.
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public long? Code { get; set; }
 
         /// <summary>
-        /// The response parameters.
+        /// <para>The response parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// The request ID.
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>B0949F09-B9C1-1D5E-8F27-0A5BF3CD5D95</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

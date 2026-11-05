@@ -1,3 +1,7 @@
+2026-11-05 Version: 2.0.1
+- Update API QueryNetList: add response parameters Body.Data.Nets.$.DDoSDefense.CustomNetPolicy.
+
+
 2024-09-18 Version: 2.0.0
 - Update API QueryNetList: update response param.
 
