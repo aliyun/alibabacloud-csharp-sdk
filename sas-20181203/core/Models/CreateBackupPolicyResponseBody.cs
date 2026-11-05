@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The status of the policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>enabled</b>: Protection is enabled.</description></item>
-            /// <item><description><b>disabled</b>: Protection is disabled.</description></item>
+            /// <item><description><b>enabled</b>: The protection is enabled.</description></item>
+            /// <item><description><b>disabled</b>: The protection is disabled.</description></item>
             /// </list>
             /// <remarks>
             /// <para>By default, the protection is enabled after the policy is created.</para>

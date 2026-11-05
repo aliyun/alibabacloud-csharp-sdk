@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<ListUnknownThreatDetectMachineResponseBodyData> Data { get; set; }
         public class ListUnknownThreatDetectMachineResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of days the policy has been in effect.</para>
+            /// <para>The duration for which the policy has been in effect, in days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? EffectDays { get; set; }
 
             /// <summary>
-            /// <para>The instance name.</para>
+            /// <para>The name of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? NormalEventCount { get; set; }
 
             /// <summary>
-            /// <para>The plug-in status.</para>
+            /// <para>The running status of the intelligent behavior analytics plugin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>online</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ProcessCount { get; set; }
 
             /// <summary>
-            /// <para>The number of recent deviation behaviors.</para>
+            /// <para>The number of recent behavioral deviations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -110,11 +110,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? RecentDeviationBehaviorCount { get; set; }
 
             /// <summary>
-            /// <para>The machine running status. Valid values:</para>
+            /// <para>The running status of the server. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>monitoring</b>: warning in progress</description></item>
-            /// <item><description><b>blocking</b>: under control</description></item>
-            /// <item><description><b>studying</b>: learning in progress</description></item>
+            /// <item><description><b>monitoring</b>: alerting</description></item>
+            /// <item><description><b>blocking</b>: blocking</description></item>
+            /// <item><description><b>studying</b>: learning</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -127,8 +127,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The whitelist mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>hash</b>: process hash</description></item>
-            /// <item><description><b>path</b>: process path</description></item>
+            /// <item><description><b>hash</b>: the hash of the process</description></item>
+            /// <item><description><b>path</b>: the path of the process</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string StudyMode { get; set; }
 
             /// <summary>
-            /// <para>The number of remaining learning days.</para>
+            /// <para>The remaining learning time, in days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? StudyRemainDays { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when learning started.</para>
+            /// <para>The timestamp when the learning started.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1766988192</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListUnknownThreatDetectMachineResponseBodyPageInfo PageInfo { get; set; }
         public class ListUnknownThreatDetectMachineResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries displayed on the current page in a paged query.</para>
+            /// <para>The number of entries returned on the current page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the current page in a paged query.</para>
+            /// <para>The page number of the current page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of entries to display per page in a paged query.</para>
+            /// <para>The maximum number of entries to return on each page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

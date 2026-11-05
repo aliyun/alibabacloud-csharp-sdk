@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVersionConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The Alibaba Cloud account ID that uses the Security Center service.  </para>
+        /// <para>The Alibaba Cloud account ID that uses Security Center.  </para>
         /// <remarks>
         /// <para>Invoke the <a href="https://help.aliyun.com/document_detail/28681.html">GetUser</a> operation to obtain this parameter.</para>
         /// </remarks>

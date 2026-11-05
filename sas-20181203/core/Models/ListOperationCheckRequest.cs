@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListOperationCheckRequest : TeaModel {
         /// <summary>
-        /// <para>The check item ID.</para>
+        /// <para>The ID of the check item.</para>
         /// <remarks>
-        /// <para>Call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain this parameter.
-        /// This parameter is required. If you do not specify this parameter, the API returns a 400 error.</para>
+        /// <para>Call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to retrieve this parameter.
+        /// This parameter is required. If this parameter is not provided, the operation returns the CspmParamIllegal (invalid parameter) error.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CheckId { get; set; }
 
         /// <summary>
-        /// <para>The timestamp of the task end time to query. Unit: milliseconds.</para>
+        /// <para>The timestamp of the end time of the queried task. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1719923175001</para>
@@ -48,7 +48,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The information about the instances on which the operation is performed.</para>
+        /// <para>The information about the instances to be operated.</para>
+        /// <remarks>
+        /// <para>The information about each instance must include Vendor, RegionId, and InstanceId. You must provide at least one instance. If no instance is provided or the value is empty, the operation returns the CspmParamIllegal (invalid parameter) error.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OperationTaskInstances")]
@@ -56,7 +59,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<ListOperationCheckRequestOperationTaskInstances> OperationTaskInstances { get; set; }
         public class ListOperationCheckRequestOperationTaskInstances : TeaModel {
             /// <summary>
-            /// <para>The cloud asset instance ID.</para>
+            /// <para>The instance ID of the cloud asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>r-bp1642ib4bg2bm****</para>
@@ -76,7 +79,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The asset vendor. Valid values:</para>
+            /// <para>The vendor of the asset. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>ALIYUN</b>: Alibaba Cloud</description></item>
             /// </list>
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The timestamp of the task start time to query. Unit: milliseconds.</para>
+        /// <para>The timestamp of the start time of the queried task. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1719923175000</para>
@@ -101,11 +104,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The task type. Valid values:</para>
+        /// <para>The type of the task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>REPAIR</b>: fix task</description></item>
+        /// <item><description><b>REPAIR</b>: repair task</description></item>
         /// <item><description><b>ROLLBACK</b>: rollback task</description></item>
         /// </list>
+        /// <remarks>
+        /// <para>If the value is invalid, the default value REPAIR is used.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

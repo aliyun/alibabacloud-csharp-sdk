@@ -10,10 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageBaselineDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The baseline data information.</para>
+        /// <para>The key of the baseline sub-item.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeImageBaselineItemList~~">DescribeImageBaselineItemList</a> operation to obtain this parameter from the BaselineItemInfos[].BaselineItemKey field in the response.
+        /// This parameter is required. If it is not provided, the API returns HTTP 400 and the error code -101.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>取值包括但不限于以下内容：ak_leak, duplicate_uid,duplicate_pwd_hash,non_pwd_user</para>
+        /// <para>Values include but are not limited to: ak_leak, duplicate_uid, duplicate_pwd_hash, and non_pwd_user</para>
         /// </summary>
         [NameInMap("BaselineItemKey")]
         [Validation(Required=false)]
@@ -30,10 +34,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ImageUuid { get; set; }
 
         /// <summary>
-        /// <para>The language type for the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -1,3 +1,29 @@
+2026-11-05 Version: 11.0.0
+- Update API AddCloudVendorAccountAK: add request parameters VendorUserName.
+- Update API ChangeCheckConfig: add request parameters ConfigId.
+- Update API ChangeCheckConfig: add request parameters DaysOfMonth.
+- Update API ChangeCheckConfig: add request parameters EndTimeSeconds.
+- Update API ChangeCheckConfig: add request parameters Frequency.
+- Update API ChangeCheckConfig: add request parameters StartTimeSeconds.
+- Update API ChangeCheckConfig: add request parameters StrategyName.
+- Update API ChangeCheckConfig: add response parameters Body.ConfigId.
+- Update API DescribeVersionConfig: update response parameters Body.HybridPaidGrayStatus' type has changed.
+- Update API DescribeVersionConfig: update response parameters Body.HybridPaidModuleSwitchMap' type has changed.
+- Update API DescribeVersionConfig: update response parameters Body.HybridPaidModuleSwitchMap' format has changed.
+- Update API GetCheckConfig: add request parameters ConfigId.
+- Update API GetCheckConfig: add response parameters Body.ConfigId.
+- Update API GetCheckConfig: add response parameters Body.DaysOfMonth.
+- Update API GetCheckConfig: add response parameters Body.EndTimeSeconds.
+- Update API GetCheckConfig: add response parameters Body.Exists.
+- Update API GetCheckConfig: add response parameters Body.Frequency.
+- Update API GetCheckConfig: add response parameters Body.IsDefault.
+- Update API GetCheckConfig: add response parameters Body.StartTimeSeconds.
+- Update API GetCheckConfig: add response parameters Body.StrategyName.
+- Update API ModifyCloudVendorAccountAK: add request parameters VendorUserName.
+- Update API ModifyPostPayModuleSwitch: add request parameters FreeTrial.
+- Update API SubmitCheck: add request parameters ConfigId.
+
+
 2026-10-27 Version: 10.3.3
 - Update API ListAgentlessRiskUuid: add request parameters Lang.
 

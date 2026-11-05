@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to only precheck the request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run on the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Only prechecks the request and does not perform the actual operation.</description></item>
-        /// <item><description>false: Performs the actual operation.</description></item>
+        /// <item><description><b>true</b>: Performs a dry run only and does not perform the actual operation.</description></item>
+        /// <item><description><b>false</b>: Performs the actual operation.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("DryRun")]
@@ -31,11 +31,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The switch configuration for the EDR module.</para>
+        /// <para>The switch configuration of the EDR module.</para>
         /// </summary>
         [NameInMap("EdrModuleSwitch")]
         [Validation(Required=false)]
         public string EdrModuleSwitchShrink { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to enable the free trial. Default value: false. You cannot modify this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("FreeTrial")]
+        [Validation(Required=false)]
+        public bool? FreeTrial { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to automatically bind new assets to the host and container protection feature. Valid values:</para>
@@ -82,19 +92,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PostPayInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The switch status of the pay-as-you-go modules. The value is a JSON string. Valid values:</para>
+        /// <para>The switch status of pay-as-you-go modules. The value is a JSON string. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Key:<list type="bullet">
-        /// <item><description><b>VUL</b>: Vulnerability fixing module</description></item>
-        /// <item><description><b>CSPM</b>: Cloud Security Posture Management module</description></item>
+        /// <item><description><b>VUL</b>: Vulnerability remediation module</description></item>
+        /// <item><description><b>CSPM</b>: Cloud Security Posture Management (CSPM) module</description></item>
         /// <item><description><b>AGENTLESS</b>: Agentless detection module</description></item>
         /// <item><description><b>SERVERLESS</b>: Serverless security module</description></item>
-        /// <item><description><b>CTDR</b>: Cloud Threat Detection and Response module</description></item>
+        /// <item><description><b>CTDR</b>: Cloud Threat Detection and Response (CTDR) module</description></item>
         /// <item><description><b>POST_HOST</b>: Host and container security module</description></item>
         /// <item><description><b>SDK</b>: Malicious file detection SDK module</description></item>
         /// <item><description><b>RASP</b>: Application protection module</description></item>
         /// <item><description><b>CTDR_STORAGE</b>: Log management module</description></item>
-        /// <item><description><b>ANTI_RANSOMWARE</b>: Anti-ransomware management</description></item>
+        /// <item><description><b>ANTI_RANSOMWARE</b>: Anti-ransomware module</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Value: 0 indicates disabled, and 1 indicates enabled.</description></item>
@@ -102,7 +112,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <remarks>
         /// <para>The values of modules that are not specified remain unchanged.</para>
         /// </remarks>
-        /// <para><notice>This parameter has the same meaning as the PostPayModuleSwitchObj parameter. If both parameters are specified, the value of PostPayModuleSwitch takes precedence.</notice></para>
+        /// <para><notice>This parameter has the same meaning as the PostPayModuleSwitchObj parameter. If both parameters are specified, the value of PostPayModuleSwitch takes precedence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;VUL&quot;:1,&quot;CSPM&quot;:0}</para>
@@ -112,9 +122,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PostPayModuleSwitch { get; set; }
 
         /// <summary>
-        /// <para>The switch status of the pay-as-you-go modules.</para>
+        /// <para>The switch status of pay-as-you-go modules.</para>
         /// <remarks>
-        /// <para>Notice: This parameter has the same meaning as the PostPayModuleSwitch parameter. If both parameters are specified, the value of PostPayModuleSwitch takes precedence.</notice></para>
+        /// <para>Notice: This parameter has the same meaning as the PostPayModuleSwitch parameter. If both parameters are specified, the value of PostPayModuleSwitch takes precedence.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("PostPayModuleSwitchObj")]

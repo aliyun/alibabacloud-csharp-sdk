@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageBaselineDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The image baseline details.</para>
+        /// <para>The list of image baseline details.</para>
         /// </summary>
         [NameInMap("BaselineDetail")]
         [Validation(Required=false)]
         public DescribeImageBaselineDetailResponseBodyBaselineDetail BaselineDetail { get; set; }
         public class DescribeImageBaselineDetailResponseBodyBaselineDetail : TeaModel {
             /// <summary>
-            /// <para>The remediation suggestion for the baseline check risk item.</para>
+            /// <para>The hardening suggestions for the baseline check risk items.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>删除泄漏的AK信息。</para>
+            /// <para>Delete the leaked AccessKey information</para>
             /// </summary>
             [NameInMap("Advice")]
             [Validation(Required=false)]
             public string Advice { get; set; }
 
             /// <summary>
-            /// <para>The alias of the baseline classification.</para>
+            /// <para>The alias of the baseline main item category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ak_leak</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The alias of the baseline sub-item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Access Key泄露</para>
+            /// <para>AccessKey leak</para>
             /// </summary>
             [NameInMap("BaselineItemAlias")]
             [Validation(Required=false)]
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string BaselineItemKey { get; set; }
 
             /// <summary>
-            /// <para>The alias of the baseline name.</para>
+            /// <para>The alias of the baseline main item name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Access Key泄露</para>
+            /// <para>AccessKey leak</para>
             /// </summary>
             [NameInMap("BaselineNameAlias")]
             [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The description of the baseline risk item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Access Key泄露，会导致Access Key被冒用的风险。</para>
+            /// <para>An AccessKey leak may result in the unauthorized use of the AccessKey</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -79,11 +79,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The risk level of the check item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>high</b>: High risk level.</para>
+            /// <item><description><para><b>high</b>: High. Indicates a high risk level.</para>
             /// </description></item>
-            /// <item><description><para><b>medium</b>: Medium risk level.</para>
+            /// <item><description><para><b>medium</b>: Medium. Indicates a medium risk level.</para>
             /// </description></item>
-            /// <item><description><para><b>low</b>: Low risk level.</para>
+            /// <item><description><para><b>low</b>: Low. Indicates a low risk level.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>The baseline issue prompt.</para>
+            /// <para>The prompt for the baseline issue.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/usr/aksk.txt:yourAccessKeyID</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Prompt { get; set; }
 
             /// <summary>
-            /// <para>The asynchronous request ID.</para>
+            /// <para>The ID of the asynchronous request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>async__c6f3b0b54613383b40bdce593ffe****</para>

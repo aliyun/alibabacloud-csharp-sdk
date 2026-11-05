@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAgentlessRiskUuidRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the current page when using paging.</para>
+        /// <para>The page number of the current page for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +60,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string IntranetIp { get; set; }
 
         /// <summary>
-        /// <para>报告语言。取值：zh（中文）、en（英文）。不传或为空时使用 zh。</para>
+        /// <para>The language of the report. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>zh</c>: Chinese.</description></item>
+        /// <item><description><c>en</c>: English.</description></item>
+        /// </list>
+        /// <para>If this parameter is not specified or is left empty, a Chinese report is returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -70,7 +75,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The instance name.</para>
+        /// <para>The name of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oracle-win-001****</para>
@@ -80,7 +85,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string MachineName { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page when using paging.</para>
+        /// <para>The maximum number of entries to return on each page for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -90,10 +95,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether risks exist. Valid values:</para>
+        /// <para>Specifies whether a risk exists. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Risks exist.</description></item>
-        /// <item><description><b>false</b>: Risks do not exist.</description></item>
+        /// <item><description><b>true</b>: A risk exists.</description></item>
+        /// <item><description><b>false</b>: No risk exists.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -104,7 +109,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? Risk { get; set; }
 
         /// <summary>
-        /// <para>The name of the detection target.</para>
+        /// <para>The name of the scan target.</para>
         /// 
         /// <b>Example:</b>
         /// <para>source-test-obj-0****</para>
@@ -114,12 +119,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TargetName { get; set; }
 
         /// <summary>
-        /// <para>The object type of the detection target. Valid values:</para>
+        /// <para>The object type of the scan target. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: host snapshot</description></item>
-        /// <item><description><b>2</b>: host image</description></item>
+        /// <item><description><b>1</b>: server snapshot</description></item>
+        /// <item><description><b>2</b>: server image</description></item>
         /// <item><description><b>3</b>: user snapshot</description></item>
-        /// <item><description><b>4</b>: user custom image</description></item>
+        /// <item><description><b>4</b>: custom image</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

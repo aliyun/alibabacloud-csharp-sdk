@@ -40,14 +40,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run of the request. Valid values: true: checks the request without performing the actual operation. false: performs the actual operation after the request passes the check. Default value: false.</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Performs a dry run without executing the actual operation.</description></item>
+        /// <item><description>false: Executes the actual operation.</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The list of instance IDs of the affected assets for the check item.
+        /// <para>The list of instance IDs of the assets affected by the check item.
         /// Note: This parameter is actually required. If it is not provided, the API returns a 400 error (Code: -101).</para>
         /// </summary>
         [NameInMap("InstanceIds")]
@@ -55,7 +59,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The task source. Valid values:</para>
+        /// <para>The source of the task. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>YAO_CHI</b>: ApsaraDB console.</description></item>
         /// </list>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeOnceTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the page to return. Default value: <b>1</b>, which indicates the first page.</para>
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EndTimeQuery { get; set; }
 
         /// <summary>
-        /// <para>Settings for the number of client tasks on each page in a paged query. Default value: <b>20</b>, which indicates that each page contains 20 client tasks.</para>
+        /// <para>The number of client tasks per page for paging. Default value: <b>20</b>, which indicates that each page contains 20 client tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -42,7 +42,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The root task ID.</para>
         /// <remarks>
-        /// <para><b>TaskType</b> and <b>RootTaskId</b> cannot both be empty.</para>
+        /// <para>You can call the <a href="~~DescribeOnceTask~~">DescribeOnceTask</a> operation and specify TaskType to query the root task list. You can obtain this parameter from TaskManageResponseList[].TaskId in the response.
+        /// <b>TaskType</b> and <b>RootTaskId</b> cannot be empty at the same time. If neither is provided, the API returns HTTP 400 with the error code -101.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,10 +54,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RootTaskId { get; set; }
 
         /// <summary>
-        /// <para>The node source. Valid values include but are not limited to:</para>
+        /// <para>The source of the task. Valid values include but are not limited to:</para>
         /// <list type="bullet">
         /// <item><description><b>schedule</b>: automatic scheduling of vulnerability scanning</description></item>
-        /// <item><description><b>console</b>: one-click detection from the vulnerability scanning console</description></item>
+        /// <item><description><b>console</b>: one-click detection in the vulnerability scanning console</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -87,14 +88,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The node type. Valid values:</para>
+        /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VUL_CHECK_TASK</b>: vulnerability scanning node</description></item>
-        /// <item><description><b>CLIENT_PROBLEM_CHECK</b>: client node</description></item>
-        /// <item><description><b>CLIENT_DEV_OPS</b>: cloud O&amp;M node</description></item>
-        /// <item><description><b>ASSET_SECURITY_CHECK</b>: asset information collection node</description></item>
-        /// <item><description><b>ASSET_REFRESH_HOST</b>: host asset synchronization node<remarks>
-        /// <para><b>TaskType</b> and <b>RootTaskId</b> cannot both be empty.</para>
+        /// <item><description><b>VUL_CHECK_TASK</b>: vulnerability scanning task</description></item>
+        /// <item><description><b>CLIENT_PROBLEM_CHECK</b>: client task</description></item>
+        /// <item><description><b>CLIENT_DEV_OPS</b>: cloud O&amp;M task</description></item>
+        /// <item><description><b>ASSET_SECURITY_CHECK</b>: asset collection task</description></item>
+        /// <item><description><b>ASSET_REFRESH_HOST</b>: host asset synchronization task<remarks>
+        /// <para><b>TaskType</b> and <b>RootTaskId</b> cannot be empty at the same time. If neither is provided, the API returns HTTP 400 with the error code -101.</para>
         /// </remarks>
         /// </description></item>
         /// </list>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListUniBackupRecordRequest : TeaModel {
         /// <summary>
-        /// <para>The region where the anti-ransomware backup service is located.</para>
+        /// <para>The region where the anti-ransomware backup service is deployed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string BackupRegionId { get; set; }
 
         /// <summary>
-        /// <para>When performing a paginated query, set the page number for the current page. The default value is <b>1</b>.</para>
+        /// <para>The Settings of the paging page number for the paged query. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The identification information of the server protected by the anti-ransomware policy. You can enter the IP address or instance ID of the server.</para>
+        /// <para>The identification information of the server protected by the anti-ransomware policy that you want to query. You can enter the IP address or instance ID of the server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.1.XX.XX</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string MachineRemark { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of data entries to display per page in a paginated query.</para>
+        /// <para>The maximum number of entries to return on each page for the paged query. This paging parameter defines the page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -51,11 +51,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Backup status. Values:</para>
+        /// <para>The backup status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>completed</b>: Success</description></item>
-        /// <item><description><b>error</b>: Failure</description></item>
-        /// <item><description><b>canceled</b>: Closed</description></item>
+        /// <item><description><b>completed</b>: Successful.</description></item>
+        /// <item><description><b>error</b>: Failed.</description></item>
+        /// <item><description><b>canceled</b>: Canceled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

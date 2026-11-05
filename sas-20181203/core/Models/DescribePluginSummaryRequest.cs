@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePluginSummaryRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the content within the request and response.**** Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default)</description></item>
-        /// <item><description><b>en</b></description></item>
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,10 +26,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The name of the plug-in. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>alinet: AliNet.</description></item>
-        /// <item><description>alisecguard: client protection.</description></item>
-        /// <item><description>alihips: AliHips.</description></item>
+        /// <item><description><para>alinet: AliNet.</para>
+        /// </description></item>
+        /// <item><description><para>alisecguard: Self-protection.</para>
+        /// </description></item>
+        /// <item><description><para>alihips: AliHips.</para>
+        /// </description></item>
+        /// <item><description><para>alidetect: AliDetect.</para>
+        /// </description></item>
+        /// <item><description><para>yundunmonitor: YundunMonitor.</para>
+        /// </description></item>
         /// </list>
+        /// <remarks>
+        /// <para>This parameter is required. If this parameter is not specified, the API returns HTTP 400 and the error code -101.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>alihips</para>

@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateCommonSwitchConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to turn on the switch for newly added servers. Valid values:</para>
+        /// <para>Specifies whether the switch takes effect by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>add</b>: yes</para>
-        /// </description></item>
-        /// <item><description><para><b>del</b>: no</para>
-        /// </description></item>
+        /// <item><description><b>add</b>: Takes effect by default for newly added servers.</description></item>
+        /// <item><description><b>del</b>: Does not take effect by default for newly added servers.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,9 +24,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TargetDefault { get; set; }
 
         /// <summary>
-        /// <para>The type of the switch.</para>
+        /// <para>The general switch type.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> or <a href="~~ListSystemClientRules~~">ListSystemClientRules</a> operation to obtain the type from the response parameter SwitchId.</para>
+        /// <para>You can obtain this parameter from the SwitchId response parameter of the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> and <a href="~~ListSystemClientRules~~">ListSystemClientRules</a> operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

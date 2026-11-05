@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AssetSelectionType { get; set; }
 
         /// <summary>
-        /// <para>The image retention period, in days. This parameter takes effect only for host detection. It does not take effect for user snapshot detection or user custom image detection.</para>
+        /// <para>The retention period of the image, in days. This parameter takes effect only for host detection and does not take effect for user snapshot detection or custom image detection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The source of the API call, which is used to collect statistics on scan task volume and scan data volume by source. If this parameter is not specified, the value is empty.</para>
+        /// <para>The source of the API call. This parameter is used to collect statistics on the number of scan tasks and the amount of scanned data by source. If this parameter is not specified, it is left empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>image-console</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string From { get; set; }
 
         /// <summary>
-        /// <para>The region ID, which is usually automatically populated by the gateway.</para>
+        /// <para>The region ID. This parameter is usually automatically populated by the gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -62,8 +62,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Specifies whether to enable the cost-saving mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enabled.</description></item>
-        /// <item><description><b>false</b>: Disabled.</description></item>
+        /// <item><description><b>true</b>: Enable.</description></item>
+        /// <item><description><b>false</b>: Disable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -86,8 +86,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Specifies whether to detect data cloud disks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Detected.</description></item>
-        /// <item><description><b>false</b>: Not detected.</description></item>
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -100,10 +100,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The target type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Host detection - detection by snapshot.</description></item>
-        /// <item><description><b>2</b>: Host detection - detection by image.</description></item>
+        /// <item><description><b>1</b>: Host detection by using snapshots.</description></item>
+        /// <item><description><b>2</b>: Host detection by using images.</description></item>
         /// <item><description><b>3</b>: User snapshot detection.</description></item>
-        /// <item><description><b>2</b>: User custom image detection.</description></item>
+        /// <item><description><b>2</b>: Custom image detection.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -115,14 +115,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? TargetType { get; set; }
 
         /// <summary>
-        /// <para>The list of targets for image security remediation. Each target specifies the source image, the region, the name of the remediated image, and the vulnerability identifiers to be fixed.</para>
+        /// <para>The list of targets for image security remediation. Each target specifies the source image, the region, the name of the remediated image, and the identifiers of the vulnerabilities to be remediated.</para>
         /// </summary>
         [NameInMap("Targets")]
         [Validation(Required=false)]
         public List<CreateAgentlessScanTaskRequestTargets> Targets { get; set; }
         public class CreateAgentlessScanTaskRequestTargets : TeaModel {
             /// <summary>
-            /// <para>The ID of the source ECS custom image to be remediated. The image must be located in the region specified by RegionId of this target.</para>
+            /// <para>The ID of the source ECS custom image to be remediated. The image must be located in the region specified by the RegionId parameter of the target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>m-bp1example123456789</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OriginImageName { get; set; }
 
             /// <summary>
-            /// <para>The name of the ECS image generated after remediation.</para>
+            /// <para>The name of the ECS image generated after the remediation is completed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>patched-image-20260909</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The list of vulnerability identifiers to be fixed. At least one vulnerability identifier must be specified, and each identifier must be unique and non-empty.</para>
+            /// <para>The list of vulnerability identifiers to be remediated in this task. You must specify at least one vulnerability identifier. The identifiers cannot be empty or duplicate.</para>
             /// </summary>
             [NameInMap("VulnerabilityIds")]
             [Validation(Required=false)]
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The UUIDs of the assets to be detected.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain the UUIDs of servers.</para>
+        /// <para>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain the UUID of the server.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("UuidList")]

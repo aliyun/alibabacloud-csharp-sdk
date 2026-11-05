@@ -33,42 +33,37 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CheckId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: performs only a dry run without executing the actual operation.</description></item>
-        /// <item><description>false: performs the actual operation.</description></item>
-        /// </list>
-        /// <para>Default value: false.</para>
+        /// <para>Specifies whether to perform only a dry run. A value of true indicates that only a dry run is performed and the actual operation is not performed. A value of false indicates that the actual operation is performed. Default value: false.</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The collection of asset instance IDs.</para>
+        /// <para>The instance IDs of the assets.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The collection of asset instance information.</para>
+        /// <para>The information about the asset instances.</para>
         /// </summary>
         [NameInMap("InstanceList")]
         [Validation(Required=false)]
         public List<AddCheckInstanceResultWhiteListRequestInstanceList> InstanceList { get; set; }
         public class AddCheckInstanceResultWhiteListRequestInstanceList : TeaModel {
             /// <summary>
-            /// <para>The asset instance ID.</para>
+            /// <para>The instance ID of the asset.</para>
             /// <remarks>
-            /// <para>Call the <a href="~~ListCheckInstanceResult~~">ListCheckInstanceResult</a> operation to obtain this parameter.</para>
+            /// <para>Invoke the <a href="~~ListCheckInstanceResult~~">ListCheckInstanceResult</a> operation to obtain this parameter.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -94,7 +89,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The remarks. Maximum length: 65,535 bytes.</para>
+        /// <para>The remarks. The value can be up to 65,535 bytes in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -104,9 +99,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The rule type. Default value: <b>WHITE</b>. Valid values:</para>
+        /// <para>The type of the rule. Default value: <b>WHITE</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>WHITE: whitelist</description></item>
+        /// <item><description>WHITE: Adds the instances to the whitelist.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

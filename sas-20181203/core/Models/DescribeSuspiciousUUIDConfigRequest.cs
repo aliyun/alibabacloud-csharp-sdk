@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSuspiciousUUIDConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The type of proactive defense. Valid values:</para>
+        /// <para>The defense type of the proactive defense to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>auto_breaking</b>: virus defense</description></item>
-        /// <item><description><b>ransomware_breaking</b>: ransomware capture</description></item>
-        /// <item><description><b>webshell_cloud_breaking</b>: webshell defense</description></item>
-        /// <item><description><b>alinet</b>: malicious behavior defense</description></item>
-        /// <item><description><b>alisecguard</b>: client protection</description></item>
+        /// <item><description><b>auto_breaking</b>: Anti-virus.</description></item>
+        /// <item><description><b>ransomware_breaking</b>: Anti-ransomware (bait capture).</description></item>
+        /// <item><description><b>webshell_cloud_breaking</b>: Web shell connection defense.</description></item>
+        /// <item><description><b>alinet</b>: Malicious network behavior defense.</description></item>
+        /// <item><description><b>alisecguard</b>: Client self-protection.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

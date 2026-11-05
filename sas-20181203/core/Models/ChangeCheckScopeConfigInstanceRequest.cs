@@ -10,17 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ChangeCheckScopeConfigInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The list of unique IDs of cloud assets to add.</para>
+        /// <para>The UUIDs of the cloud assets to add.</para>
         /// </summary>
         [NameInMap("AddAssetUuids")]
         [Validation(Required=false)]
         public List<string> AddAssetUuids { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scan scope configuration.</para>
-        /// <remarks>
-        /// <para>Call the <a href="~~GetCheckScopeConfig~~">GetCheckScopeConfig</a> operation to obtain this parameter.</para>
-        /// </remarks>
+        /// <para>The ID of the scan scope configuration. You can call the <a href="~~GetCheckScopeConfig~~">GetCheckScopeConfig</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,14 +28,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ConfigId { get; set; }
 
         /// <summary>
-        /// <para>The list of unique IDs of cloud assets to delete.</para>
+        /// <para>The UUIDs of the cloud assets to delete.</para>
         /// </summary>
         [NameInMap("DeleteAssetUuids")]
         [Validation(Required=false)]
         public List<string> DeleteAssetUuids { get; set; }
 
         /// <summary>
-        /// <para>The key for cross-page select-all.</para>
+        /// <para>The cross-page select-all key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b6d1a39a-f020-4782-af2c-c4b6522*****</para>

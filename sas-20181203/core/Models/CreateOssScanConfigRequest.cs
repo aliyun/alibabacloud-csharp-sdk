@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? AllKeyPrefix { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether OSS buckets are automatically added to this policy. Valid values:</para>
+        /// <para>Specifies whether to add new OSS buckets to this policy by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enabled.</description></item>
-        /// <item><description><b>false</b>: Disabled.</description></item>
+        /// <item><description><b>true</b>: yes.</description></item>
+        /// <item><description><b>false</b>: no.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> BucketNameList { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of files to decompress. Minimum value: 1. Maximum value: 1000. When the maximum number of decompressed files is exceeded, the decompression operation stops immediately. The scanning of files that have already been decompressed is not affected.</para>
+        /// <para>The maximum number of files to decompress. Minimum value: 1. Maximum value: 1000. If the number of files exceeds this value, decompression stops, but the scan of already decompressed files is not affected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? DecompressMaxFileCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of decompression layers when nested compressed files exist. Minimum value: 1. Maximum value: 5. When the maximum number of decompression layers is exceeded, the decompression operation stops immediately. The scanning of files that have already been decompressed is not affected.</para>
+        /// <para>The maximum number of decompression layers for nested archives. Minimum value: 1. Maximum value: 5. If the nesting depth exceeds this value, decompression stops, but the scan of already decompressed files is not affected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -78,7 +78,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> DecryptionList { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values: true: performs only a dry run without performing the actual request. false: performs the actual request. Default value: false.</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: performs a dry run without executing the actual operation.</description></item>
+        /// <item><description><b>false</b>: executes the actual operation.
+        /// Default value: false.</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -87,8 +92,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Specifies whether to enable the policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Enable.</description></item>
-        /// <item><description><b>0</b>: Disable.</description></item>
+        /// <item><description><b>1</b>: enabled.</description></item>
+        /// <item><description><b>0</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -99,7 +104,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Enable { get; set; }
 
         /// <summary>
-        /// <para>The scan stop time, in the HH:mm:ss format.</para>
+        /// <para>The end time of the scan, in the HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>01:01:00</para>
@@ -116,14 +121,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> KeyPrefixList { get; set; }
 
         /// <summary>
-        /// <para>The list of file suffixes to scan.</para>
+        /// <para>The list of file name extensions to scan.</para>
         /// </summary>
         [NameInMap("KeySuffixList")]
         [Validation(Required=false)]
         public List<string> KeySuffixList { get; set; }
 
         /// <summary>
-        /// <para>Scans files whose last modification time is after the specified timestamp. Unit: milliseconds.</para>
+        /// <para>The timestamp after which the files to be scanned were last modified. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1724301769834</para>
@@ -153,14 +158,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? RealTimeIncr { get; set; }
 
         /// <summary>
-        /// <para>The scan schedule. The number indicates the day of the week.</para>
+        /// <para>The days of the week when the scan is performed, represented by numbers.</para>
         /// </summary>
         [NameInMap("ScanDayList")]
         [Validation(Required=false)]
         public List<int?> ScanDayList { get; set; }
 
         /// <summary>
-        /// <para>The business source. Valid values:</para>
+        /// <para>The source service. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>OSS</b>: OSS.</description></item>
         /// <item><description><b>NAS</b>: NAS.</description></item>
@@ -174,7 +179,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The scan start time, in the HH:mm:ss format.</para>
+        /// <para>The start time of the scan, in the HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00:00:00</para>

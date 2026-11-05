@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateUnknownThreatDetectStrategyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The policy ID.</para>
+        /// <para>The ID of the policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

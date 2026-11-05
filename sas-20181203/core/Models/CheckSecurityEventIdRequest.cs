@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CheckSecurityEventIdRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of alert events. You can specify up to 100 IDs. If you do not specify this parameter, the value of the response parameter <b>Data</b> is <b>false</b>. The value false indicates that no alert events are generated on the server.</para>
+        /// <para>The IDs of the alert events to be verified. You can specify up to 100 alert event IDs. If this parameter is left empty, the verification result <b>Data</b> defaults to <b>false</b>, indicating that the events do not belong to the specified server.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query the IDs of alert events.</para>
+        /// <para>Call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to retrieve this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> SecurityEventIds { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the server.</para>
+        /// <para>The UUID of the server to be verified.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</para>
+        /// <para>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to retrieve this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

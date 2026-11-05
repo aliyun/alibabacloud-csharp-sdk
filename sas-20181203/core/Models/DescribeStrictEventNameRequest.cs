@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeStrictEventNameRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies the language for requests and response messages. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>Specifies the language type for requests and responses. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<GetAppNetworkResponseBodyAppNetworkEdge> Edge { get; set; }
             public class GetAppNetworkResponseBodyAppNetworkEdge : TeaModel {
                 /// <summary>
-                /// <para>The destination node ID.</para>
+                /// <para>The ID of the destination node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>102</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string DstNodeId { get; set; }
 
                 /// <summary>
-                /// <para>The destination node type. Valid values:</para>
+                /// <para>The type of the destination node. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>app</b>: application</description></item>
                 /// <item><description><b>internet</b>: external network node</description></item>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string DstNodeType { get; set; }
 
                 /// <summary>
-                /// <para>The edge ID.</para>
+                /// <para>The ID of the edge.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3534</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Port { get; set; }
 
                 /// <summary>
-                /// <para>The source node ID.</para>
+                /// <para>The ID of the source node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>101</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string SrcNodeId { get; set; }
 
                 /// <summary>
-                /// <para>The source node type. Valid values:</para>
+                /// <para>The type of the source node. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>app</b>: application</description></item>
                 /// <item><description><b>internet</b>: external network node</description></item>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<GetAppNetworkResponseBodyAppNetworkNamespace> Namespace { get; set; }
             public class GetAppNetworkResponseBodyAppNetworkNamespace : TeaModel {
                 /// <summary>
-                /// <para>The namespace ID.</para>
+                /// <para>The ID of the namespace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The namespace name.</para>
+                /// <para>The name of the namespace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public List<string> ContainerIds { get; set; }
 
                 /// <summary>
-                /// <para>The node ID.</para>
+                /// <para>The ID of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1274</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The node name.</para>
+                /// <para>The name of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>console</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The namespace ID.</para>
+                /// <para>The ID of the namespace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -169,9 +169,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The risk level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>3</b>: high risk</description></item>
-                /// <item><description><b>2</b>: medium risk</description></item>
-                /// <item><description><b>1</b>: low risk</description></item>
+                /// <item><description><b>3</b>: high-risk</description></item>
+                /// <item><description><b>2</b>: medium-risk</description></item>
+                /// <item><description><b>1</b>: low-risk</description></item>
                 /// <item><description><b>0</b>: secure</description></item>
                 /// <item><description><b>-1</b>: unknown</description></item>
                 /// </list>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RiskLevel { get; set; }
 
                 /// <summary>
-                /// <para>The node type. Valid values:</para>
+                /// <para>The type of the node. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>app</b>: application</description></item>
                 /// <item><description><b>internet</b>: external network node</description></item>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request. It is a unique identifier generated by Alibaba Cloud for the request and can be used to troubleshoot and locate issues.</para>
+        /// <para>The ID of the request. It is a unique identifier generated by Alibaba Cloud for the request and can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7D46EDB0-xxx</para>

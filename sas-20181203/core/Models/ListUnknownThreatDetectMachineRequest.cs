@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListUnknownThreatDetectMachineRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the current page in a paged query.</para>
+        /// <para>The page number of the current page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,6 +20,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>The status of the alert event. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: pending</description></item>
+        /// <item><description><b>2</b>: ignored</description></item>
+        /// <item><description><b>4</b>: confirmed</description></item>
+        /// <item><description><b>8</b>: marked as false positive</description></item>
+        /// <item><description><b>16</b>: processing</description></item>
+        /// <item><description><b>32</b>: handled</description></item>
+        /// <item><description><b>64</b>: expired</description></item>
+        /// <item><description><b>604</b>: marked as false positive by the system</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -28,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? EventStatus { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to display per page in a paged query.</para>
+        /// <para>The maximum number of entries to return on each page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -38,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The server name or IP address.</para>
+        /// <para>The name or IP address of the server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-ecs</para>
@@ -48,11 +60,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The machine running status. Valid values:</para>
+        /// <para>The running status of the server. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>monitoring</b>: warning in progress</description></item>
-        /// <item><description><b>blocking</b>: under control</description></item>
-        /// <item><description><b>studying</b>: learning in progress</description></item>
+        /// <item><description><b>monitoring</b>: alerting</description></item>
+        /// <item><description><b>blocking</b>: blocking</description></item>
+        /// <item><description><b>studying</b>: learning</description></item>
         /// <item><description><b>study_finish</b>: learning completed</description></item>
         /// </list>
         /// 
@@ -66,8 +78,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The whitelist mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>hash</b>: process hash</description></item>
-        /// <item><description><b>path</b>: process path</description></item>
+        /// <item><description><b>hash</b>: the hash of the process</description></item>
+        /// <item><description><b>path</b>: the path of the process</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,7 +90,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string StudyMode { get; set; }
 
         /// <summary>
-        /// <para>The end of the model creation time range. The value is a timestamp in milliseconds.</para>
+        /// <para>The end time of the time range when the model was created. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1768891966346</para>
@@ -88,7 +100,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StudyTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The start of the model creation time range. The value is a timestamp in milliseconds.</para>
+        /// <para>The start time of the time range when the model was created. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1768891966344</para>

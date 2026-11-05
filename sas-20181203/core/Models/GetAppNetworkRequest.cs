@@ -12,7 +12,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the container cluster to query.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</para>
+        /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.
+        /// This parameter is required. If it is not provided, the API returns HTTP 400 with the error code -101.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,7 +26,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The timestamp of the end time. Unit: milliseconds.</para>
         /// <remarks>
-        /// <para>The interval between the start timestamp and the end timestamp cannot exceed <b>7</b> days.</para>
+        /// <para>Both <b>StartTime</b> and <b>EndTime</b> are required. <b>StartTime</b> must be earlier than <b>EndTime</b>, and the interval between them cannot exceed 7 days. If either parameter is not provided or the requirements are not met, the API returns HTTP 400 with the error code -101.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,7 +39,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The timestamp of the start time. Unit: milliseconds.</para>
         /// <remarks>
-        /// <para>The interval between the start timestamp and the end timestamp cannot exceed <b>7</b> days.</para>
+        /// <para>Both <b>StartTime</b> and <b>EndTime</b> are required. <b>StartTime</b> must be earlier than <b>EndTime</b>, and the interval between them cannot exceed 7 days. If either parameter is not provided or the requirements are not met, the API returns HTTP 400 with the error code -101.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

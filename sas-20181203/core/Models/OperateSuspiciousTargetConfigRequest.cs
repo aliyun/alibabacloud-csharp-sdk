@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class OperateSuspiciousTargetConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>Specifies the language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The source IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.2.XX.XX</para>
@@ -34,11 +34,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The configuration of proactive defense for your server. The value includes the following fields:</para>
+        /// <para>Specifies the proactive defense parameters for servers. The following parameters are included:</para>
         /// <list type="bullet">
-        /// <item><description><b>targetType</b>: specifies the dimension from which you manage proactive defense. UUIDs are supported. Set the value to <b>uuid</b>.</description></item>
-        /// <item><description><b>target</b>: specifies the UUID of the server for which you want to configure proactive defense.</description></item>
-        /// <item><description><b>flag</b>: specifies whether to enable or disable proactive defense for your server. Valid values are <b>add</b> and <b>del</b>. The value add indicates that proactive defense will be enabled for your server. The value del indicates that proactive defense will be disabled for your server.</description></item>
+        /// <item><description><b>targetType</b>: the dimension of the defense configuration. Currently, only the UUID dimension is supported. Fixed value: <b>uuid</b>.</description></item>
+        /// <item><description><b>target</b>: the UUID of the server for which you want to configure defense settings.</description></item>
+        /// <item><description><b>flag</b>: specifies whether to enable or disable proactive defense for the server. Valid values: <b>add</b> (enable) and <b>del</b> (disable).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -50,8 +50,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TargetOperations { get; set; }
 
         /// <summary>
-        /// <para>The dimension from which you manage proactive defense. Only the server UUID dimension is supported.</para>
-        /// <para>Set the value to <b>uuid</b>.</para>
+        /// <para>Specifies the dimension for managing proactive defense. Currently, only the server UUID dimension is supported.</para>
+        /// <para>Valid value: <b>uuid</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,13 +62,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TargetType { get; set; }
 
         /// <summary>
-        /// <para>The type of proactive defense. Valid Values:</para>
+        /// <para>Specifies the type of proactive defense. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>auto_breaking</b>: automatic blocking</description></item>
-        /// <item><description><b>webshell_cloud_breaking</b>: webshell defense</description></item>
-        /// <item><description><b>alinet</b>: malicious behavior defense</description></item>
-        /// <item><description><b>ransomware_breaking</b>: ransomware capture</description></item>
-        /// <item><description><b>alisecguard</b>: client protection</description></item>
+        /// <item><description><b>auto_breaking</b>: automatic interception</description></item>
+        /// <item><description><b>webshell_cloud_breaking</b>: web shell connection defense</description></item>
+        /// <item><description><b>alinet</b>: malicious network behavior defense</description></item>
+        /// <item><description><b>ransomware_breaking</b>: anti-ransomware (bait capture)</description></item>
+        /// <item><description><b>alisecguard</b>: client self-protection</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

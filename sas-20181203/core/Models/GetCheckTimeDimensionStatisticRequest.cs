@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCheckTimeDimensionStatisticRequest : TeaModel {
         /// <summary>
-        /// <para>The end time in timestamp format.</para>
+        /// <para>The end time in UNIX timestamp format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1672285044000</para>
@@ -20,6 +20,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EndTimeStamp { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Alibaba Cloud account to which the member accounts in the resource folder belong.</para>
+        /// <remarks>
+        /// <para>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>1234567890123456</para>
         /// </summary>
@@ -28,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>The start time in timestamp format.</para>
+        /// <para>The start time in UNIX timestamp format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1672385044000</para>
@@ -38,10 +43,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StartTimeStamp { get; set; }
 
         /// <summary>
-        /// <para>The type of data statistics. Valid values:</para>
+        /// <para>The data statistics type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CheckPassRate</b>: Check item pass rate.</description></item>
-        /// <item><description><b>AssetPassRate</b>: Asset pass rate.</description></item>
+        /// <item><description><b>CheckPassRate</b>: The pass rate of check items.</description></item>
+        /// <item><description><b>AssetPassRate</b>: The pass rate of assets.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string StatisticType { get; set; }
 
         /// <summary>
-        /// <para>The list of cloud service providers.</para>
+        /// <para>The list of cloud providers.</para>
         /// </summary>
         [NameInMap("Vendors")]
         [Validation(Required=false)]

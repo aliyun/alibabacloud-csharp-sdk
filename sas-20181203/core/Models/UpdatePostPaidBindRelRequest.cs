@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic binding for newly added assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Disabled.</description></item>
-        /// <item><description><b>1</b>: Enabled.</description></item>
+        /// <item><description><b>0</b>: Disable.</description></item>
+        /// <item><description><b>1</b>: Enable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AutoBind { get; set; }
 
         /// <summary>
-        /// <para>The edition to automatically bind to newly added assets. Valid values:</para>
+        /// <para>Specifies the protection edition to automatically bind to newly added assets. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: Free Edition </description></item>
         /// <item><description><b>3</b>: Enterprise Edition</description></item>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AutoBindVersion { get; set; }
 
         /// <summary>
-        /// <para>The action parameters for the binding operation.</para>
+        /// <para>Specifies the action parameters for the binding operation.</para>
         /// </summary>
         [NameInMap("BindAction")]
         [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? BindAll { get; set; }
 
             /// <summary>
-            /// <para>The type of free quota used for the binding operation.</para>
+            /// <para>Specifies the type of free quota used for the binding action.</para>
             /// 
             /// <b>Example:</b>
             /// <para>freeEnterprise</para>
@@ -72,14 +72,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string FreeType { get; set; }
 
             /// <summary>
-            /// <para>The UUIDs of the specified servers.</para>
+            /// <para>Specifies the list of server UUIDs.</para>
             /// </summary>
             [NameInMap("UuidList")]
             [Validation(Required=false)]
             public List<string> UuidList { get; set; }
 
             /// <summary>
-            /// <para>The Security Center protection edition to bind. Valid values:  </para>
+            /// <para>Specifies the Security Center protection edition to bind. Valid values:  </para>
             /// <list type="bullet">
             /// <item><description><b>1</b>: Free Edition </description></item>
             /// <item><description><b>3</b>: Enterprise Edition</description></item>
@@ -108,14 +108,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run for the request. A value of true indicates that only a dry run is performed and no actual operation is executed. A value of false indicates that the request is normally executed. Default value: false.</para>
+        /// <para>Specifies whether to perform a dry run on the request. true: performs a dry run and does not perform the actual operation. false: performs the actual operation. Default value: false.</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The abbreviation of the cloud service. Valid values:</para>
+        /// <para>Specifies the abbreviated name of the cloud service. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>sas</b>: Security Center</description></item>
         /// </list>

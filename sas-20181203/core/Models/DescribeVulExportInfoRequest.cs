@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ExportId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the resource directory account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

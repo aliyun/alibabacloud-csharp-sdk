@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateSimilarSecurityEventsQueryTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use different tokens for different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run of the request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run of the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs only a dry run without executing the actual operation.</description></item>
-        /// <item><description>false: performs the actual operation.</description></item>
+        /// <item><description>true: performs a dry run without performing the actual operation.</description></item>
+        /// <item><description>false: performs the actual operation.
+        /// Default value: false.</description></item>
         /// </list>
-        /// <para>Default value: false.</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? SecurityEventId { get; set; }
 
         /// <summary>
-        /// <para>The code of the alerting event that has the same type or rule hits.</para>
+        /// <para>The code value of alerting events of the same type or rule hits.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SimilarEventScenarioCode { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the access source.</para>
+        /// <para>The source IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.2.XX.XX</para>

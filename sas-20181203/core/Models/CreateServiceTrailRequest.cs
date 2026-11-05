@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateServiceTrailRequest : TeaModel {
         /// <summary>
-        /// <para>The region ID of the instance to query. Valid values:</para>
+        /// <para>The ID of the region where the instance to be queried resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou</b> (default): Chinese mainland.</description></item>
-        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
+        /// <item><description><b>cn-hangzhou</b> (default): China.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: Global (excluding China).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

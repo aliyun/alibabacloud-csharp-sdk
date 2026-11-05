@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCheckInstanceResultRequest : TeaModel {
         /// <summary>
-        /// <para>The check item ID.</para>
+        /// <para>The ID of the check item.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CheckId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page in a paged query. This parameter is used for paging.</para>
+        /// <para>The page number of the current page for a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the check item.</para>
+        /// <para>The instance ID for the check item.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-uf64w4q6p9jti5gl****</para>
@@ -41,14 +41,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InstanceIdKey { get; set; }
 
         /// <summary>
-        /// <para>The collection of cloud service instance IDs to query.</para>
+        /// <para>The instance IDs of the cloud services to query.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The instance name of the check item.</para>
+        /// <para>The instance name for the check item.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-uf64w4q6p9jti5gl****</para>
@@ -58,10 +58,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InstanceNameKey { get; set; }
 
         /// <summary>
-        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page in a paged query. Maximum value: 100. This parameter is used for paging.</para>
+        /// <para>The maximum number of entries to return on each page for a paging query. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -92,14 +92,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RegionIdKey { get; set; }
 
         /// <summary>
-        /// <para>The list of sort types for the check item.</para>
+        /// <para>The sort types for the check items.</para>
         /// </summary>
         [NameInMap("SortTypes")]
         [Validation(Required=false)]
         public List<string> SortTypes { get; set; }
 
         /// <summary>
-        /// <para>The collection of check item statuses.</para>
+        /// <para>The statuses of the check items.</para>
         /// </summary>
         [NameInMap("Statuses")]
         [Validation(Required=false)]

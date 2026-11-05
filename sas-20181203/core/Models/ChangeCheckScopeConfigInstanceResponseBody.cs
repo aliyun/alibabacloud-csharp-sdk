@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ChangeCheckScopeConfigInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned by the request.</para>
+        /// <para>The status code returned by the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

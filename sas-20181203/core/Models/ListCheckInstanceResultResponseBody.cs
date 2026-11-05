@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCheckInstanceResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of basic information about affected instances.</para>
+        /// <para>The list of basic information about the affected instances.</para>
         /// </summary>
         [NameInMap("BasicData")]
         [Validation(Required=false)]
         public List<ListCheckInstanceResultResponseBodyBasicData> BasicData { get; set; }
         public class ListCheckInstanceResultResponseBodyBasicData : TeaModel {
             /// <summary>
-            /// <para>The check result ID of the instance.</para>
+            /// <para>The ID of the check result for the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>300054</para>
@@ -37,21 +37,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The instance information displayed for the corresponding check item.</para>
+            /// <para>The instance information displayed for the check item.</para>
             /// </summary>
             [NameInMap("InstanceInfo")]
             [Validation(Required=false)]
             public ListCheckInstanceResultResponseBodyBasicDataInstanceInfo InstanceInfo { get; set; }
             public class ListCheckInstanceResultResponseBodyBasicDataInstanceInfo : TeaModel {
                 /// <summary>
-                /// <para>The current instance information displayed for the corresponding remediation configuration.</para>
+                /// <para>The current instance information displayed for the remediation configuration.</para>
                 /// </summary>
                 [NameInMap("Config")]
                 [Validation(Required=false)]
                 public List<ListCheckInstanceResultResponseBodyBasicDataInstanceInfoConfig> Config { get; set; }
                 public class ListCheckInstanceResultResponseBodyBasicDataInstanceInfoConfig : TeaModel {
                     /// <summary>
-                    /// <para>The unique name of the corresponding configuration.</para>
+                    /// <para>The unique name of the configuration.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>prot</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The internationalized name of the corresponding configuration item.</para>
+                    /// <para>The localized name of the configuration item.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>prot</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string ShowName { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the corresponding configuration for the current asset.</para>
+                    /// <para>The value of the configuration for the current asset.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>8080</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// <para>The time of the first check. The value is a UNIX timestamp. Unit: milliseconds.</para>
+                /// <para>The time of the first check. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1716447535531</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? FirstUpdateTime { get; set; }
 
                 /// <summary>
-                /// <para>The time of the latest check. The value is a UNIX timestamp. Unit: milliseconds.</para>
+                /// <para>The time of the latest check. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1716447535531</para>
@@ -125,11 +125,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The status list of the check item. Multiple statuses are separated by commas (,). Valid values:</para>
+            /// <para>The statuses of the check item. Multiple statuses are separated by commas (,). Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>PASS</b>: Passed.</description></item>
-            /// <item><description><b>NOT_PASS</b>: Failed.</description></item>
-            /// <item><description><b>CHECKING</b>: Being checked.</description></item>
+            /// <item><description><b>NOT_PASS</b>: Not passed.</description></item>
+            /// <item><description><b>CHECKING</b>: Checking.</description></item>
             /// <item><description><b>NOT_CHECK</b>: Not checked.</description></item>
             /// <item><description><b>WHITELIST</b>: Whitelisted.</description></item>
             /// <item><description><b>FAILED</b>: Failed.</description></item>
@@ -143,10 +143,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The exception status message of the check item.</para>
+            /// <para>The status exception message for the check item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Check task failed</para>
+            /// <para>The check task failed</para>
             /// </summary>
             [NameInMap("StatusMessage")]
             [Validation(Required=false)]
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The list of extended information about affected instances.</para>
+        /// <para>The list of extended information about the affected instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{
@@ -183,14 +183,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<Dictionary<string, object>> Checks { get; set; }
 
         /// <summary>
-        /// <para>The metadata of the affected instance information display list.</para>
+        /// <para>The metadata for the affected instances display list.</para>
         /// </summary>
         [NameInMap("Columns")]
         [Validation(Required=false)]
         public List<ListCheckInstanceResultResponseBodyColumns> Columns { get; set; }
         public class ListCheckInstanceResultResponseBodyColumns : TeaModel {
             /// <summary>
-            /// <para>The list of list-type metadata.</para>
+            /// <para>The metadata list for the list type.</para>
             /// </summary>
             [NameInMap("Grids")]
             [Validation(Required=false)]
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The search display name.</para>
+                /// <para>The display name for search.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Region</para>
@@ -217,10 +217,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ShowName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the check instance result. Valid values:</para>
+                /// <para>The type of the check result for the instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>text</b>: text</description></item>
-                /// <item><description><b>link</b>: link</description></item>
+                /// <item><description><b>text</b>: Text.</description></item>
+                /// <item><description><b>link</b>: Link.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether search is supported. Valid values:</para>
+            /// <para>Specifies whether search is supported. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b>: Supported.</description></item>
             /// <item><description><b>false</b>: Not supported.</description></item>
@@ -277,10 +277,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ShowName { get; set; }
 
             /// <summary>
-            /// <para>The property type of the check instance result. Valid values:</para>
+            /// <para>The property type of the check result for the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>text</b>: text</description></item>
-            /// <item><description><b>link</b>: link</description></item>
+            /// <item><description><b>text</b>: Text.</description></item>
+            /// <item><description><b>link</b>: Link.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -293,7 +293,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The paging information displayed on the page in a paged query.</para>
+        /// <para>The paging information displayed for a paging query.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
@@ -310,7 +310,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the current page in a paged query. This parameter is used for paging.</para>
+            /// <para>The page number of the current page for a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -320,7 +320,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of entries per page in a paged query. This parameter is used for paging.</para>
+            /// <para>The maximum number of entries returned per page for a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for this request. You can use it to troubleshoot issues.</para>
+        /// <para>The ID of the request. The ID is a unique identifier generated by Alibaba Cloud for the request and can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3AB18264-8A1B-52A6-A9AF-A886556E0F2E</para>

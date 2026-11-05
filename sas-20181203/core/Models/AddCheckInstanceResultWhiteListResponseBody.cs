@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddCheckInstanceResultWhiteListResponseBody : TeaModel {
         /// <summary>
-        /// <para><b>[Deprecated]</b> The result of adding instances to the whitelist. This field is deprecated and can be ignored.</para>
+        /// <para><b>[Deprecated]</b> The result of adding the instances to the whitelist. This field is deprecated and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public Dictionary<string, object> Data { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ADE57832-9666-511C-9A80-B87DE2E8****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The rule ID of the whitelist.</para>
+        /// <para>The ID of the whitelist rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>381049</para>

@@ -12,9 +12,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The query type of the element to query. Valid values:</para>
         /// <list type="bullet">
+        /// <item><description><b>NODE</b>: node information.</description></item>
         /// <item><description><b>EDGE</b>: connection information.</description></item>
         /// </list>
-        /// <para>This parameter is required. If this parameter is not specified, the service returns error code -101.</para>
+        /// <remarks>
+        /// <para>This parameter is required. If this parameter is not provided, the API returns HTTP 400 with the error code -101.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>EDGE</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CriteriaType { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return in a paginated query. Default value: <b>1</b>, which indicates the first page.</para>
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -35,7 +38,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The destination node information, which is used to filter destination nodes.</para>
-        /// <para>This parameter is required. If this parameter is not specified, the service returns error code -101.</para>
+        /// <remarks>
+        /// <para>Both <b>SrcNode</b> and <b>DstNode</b> are required. If either parameter is not provided, the API returns HTTP 400 with the error code -101.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("DstNode")]
         [Validation(Required=false)]
@@ -84,7 +89,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The node type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>app</b>: application. The node type is application.</description></item>
+            /// <item><description><b>app</b>: application. This value indicates that the node type is application.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -107,8 +112,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The end time of the network connectivity. Specify a UNIX timestamp in milliseconds.</para>
-        /// <para>This parameter is required. If this parameter is not specified, the service returns error code -101.</para>
+        /// <para>The end time of the network connectivity. The value is a UNIX timestamp in milliseconds.</para>
+        /// <remarks>
+        /// <para>Both <b>StartTime</b> and <b>EndTime</b> are required, and <b>StartTime</b> must be earlier than <b>EndTime</b>. The interval between the two cannot exceed 7 days. If either parameter is not provided or the requirements are not met, the API returns HTTP 400 with the error code -101.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1649260799999</para>
@@ -118,9 +125,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page when paging is used. Default value: 20. If this parameter is left empty, 20 entries are returned.</para>
+        /// <para>The maximum number of entries to return on each page in a paged query. Default value: 20. If this parameter is left empty, 20 entries are returned by default.</para>
         /// <remarks>
-        /// <para>Do not leave PageSize empty.</para>
+        /// <para>Do not leave this parameter empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -132,7 +139,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The source node information, which is used to filter source nodes.</para>
-        /// <para>This parameter is required. If this parameter is not specified, the service returns error code -101.</para>
+        /// <remarks>
+        /// <para>Both <b>SrcNode</b> and <b>DstNode</b> are required. If either parameter is not provided, the API returns HTTP 400 with the error code -101.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("SrcNode")]
         [Validation(Required=false)]
@@ -181,7 +190,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The node type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>app</b>: application. The node type is application.</description></item>
+            /// <item><description><b>app</b>: application. This value indicates that the node type is application.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -204,8 +213,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The start time of the network connectivity. Specify a UNIX timestamp in milliseconds.</para>
-        /// <para>This parameter is required. If this parameter is not specified, the service returns error code -101.</para>
+        /// <para>The start time of the network connectivity. The value is a UNIX timestamp in milliseconds.</para>
+        /// <remarks>
+        /// <para>Both <b>StartTime</b> and <b>EndTime</b> are required, and <b>StartTime</b> must be earlier than <b>EndTime</b>. The interval between the two cannot exceed 7 days. If either parameter is not provided or the requirements are not met, the API returns HTTP 400 with the error code -101.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1666886400000</para>

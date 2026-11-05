@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetOpaStrategyDetailNewResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result code. A value of <b>200</b> indicates success, whereas any other value indicates failure. You can use this field to determine the cause of the failure.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success, whereas other values indicate failure. You can use this field to identify the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// <para>The information about risky image build commands.</para>
+                /// <para>The risky image build command information.</para>
                 /// </summary>
                 [NameInMap("BuildRisk")]
                 [Validation(Required=false)]
@@ -130,21 +130,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// <para>The configuration information for malicious samples.</para>
+                /// <para>The malicious sample configuration information.</para>
                 /// </summary>
                 [NameInMap("MaliciousFile")]
                 [Validation(Required=false)]
                 public GetOpaStrategyDetailNewResponseBodyDataAlarmDetailMaliciousFile MaliciousFile { get; set; }
                 public class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailMaliciousFile : TeaModel {
                     /// <summary>
-                    /// <para>The information about malicious sample items.</para>
+                    /// <para>The malicious sample item information.</para>
                     /// </summary>
                     [NameInMap("Item")]
                     [Validation(Required=false)]
                     public List<GetOpaStrategyDetailNewResponseBodyDataAlarmDetailMaliciousFileItem> Item { get; set; }
                     public class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailMaliciousFileItem : TeaModel {
                         /// <summary>
-                        /// <para>The ID of the malicious sample.</para>
+                        /// <para>The malicious sample ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1811</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                         public string Id { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the malicious sample.</para>
+                        /// <para>The malicious sample name.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>abnormal binary file</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// <para>The information about sensitive files.</para>
+                /// <para>The sensitive file information.</para>
                 /// </summary>
                 [NameInMap("SensitiveFile")]
                 [Validation(Required=false)]
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVul Vul { get; set; }
                 public class GetOpaStrategyDetailNewResponseBodyDataAlarmDetailVul : TeaModel {
                     /// <summary>
-                    /// <para>The information about vulnerability items.</para>
+                    /// <para>The vulnerability item information.</para>
                     /// </summary>
                     [NameInMap("Item")]
                     [Validation(Required=false)]
@@ -330,7 +330,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>The page number from which to display the query results. Default value: <b>1</b>.</para>
+            /// <para>The page number of the returned results. Default value: <b>1</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -357,7 +357,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<string> ImageName { get; set; }
 
             /// <summary>
-            /// <para>The image label.</para>
+            /// <para>The image tag.</para>
             /// </summary>
             [NameInMap("Label")]
             [Validation(Required=false)]
@@ -378,7 +378,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Lang { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the policy supports malicious images from the Internet. Valid values:</para>
+            /// <para>Indicates whether the policy supports malicious images from the Internet. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b>: Supported.</description></item>
             /// <item><description><b>false</b>: Not supported.</description></item>
@@ -392,7 +392,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? MaliciousImage { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of entries to return per page in a paging query.</para>
+            /// <para>The maximum number of entries to return on each page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -424,7 +424,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<GetOpaStrategyDetailNewResponseBodyDataScopes> Scopes { get; set; }
             public class GetOpaStrategyDetailNewResponseBodyDataScopes : TeaModel {
                 /// <summary>
-                /// <para>The policy instance ID in the cluster.</para>
+                /// <para>The instance ID of the policy in the cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ack-0</para>
@@ -434,7 +434,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string AckPolicyInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether all namespaces are included. Valid values:</para>
+                /// <para>Indicates whether all namespaces are included. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>1</b>: Yes.</description></item>
                 /// <item><description><b>0</b>: No.</description></item>
@@ -448,7 +448,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? AllNamespace { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the cluster.</para>
+                /// <para>The cluster ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c1fdb5fd8d**7163</para>
@@ -487,7 +487,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string StrategyName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the policy template.</para>
+            /// <para>The policy template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1204</para>
@@ -497,7 +497,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? StrategyTemplateId { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the policy supports unscanned images. Valid values:</para>
+            /// <para>Indicates whether the policy supports unscanned images. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b>: Supported.</description></item>
             /// <item><description><b>false</b>: Not supported.</description></item>
@@ -530,7 +530,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned by the request.</para>
+        /// <para>The message returned by the API request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -540,7 +540,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. The ID is a unique identifier generated by Alibaba Cloud for the request and can be used for troubleshooting.</para>
+        /// <para>The ID of the request. It is a unique identifier generated by Alibaba Cloud for the request and can be used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E819FD71-D240-5E54-AA7F-20FED2ECBEB6</para>
@@ -550,10 +550,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request is successful.</description></item>
-        /// <item><description><b>false</b>: The request fails.</description></item>
+        /// <item><description><b>true</b>: The API call is successful.</description></item>
+        /// <item><description><b>false</b>: The API call fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetAegisContainerPluginRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the container anti-escape rule. You can call <a href="~~ListAegisContainerPluginRule~~">ListAegisContainerPluginRule</a> to obtain the ID. This parameter is required. If this parameter is not specified, the API returns HTTP 400 with error code -101.</para>
+        /// <para>The ID of the container escape prevention rule. You can call the <a href="~~ListAegisContainerPluginRule~~">ListAegisContainerPluginRule</a> operation to obtain the ID. This parameter is required. If this parameter is not specified, the API returns HTTP 400 and the error code -101.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1141****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>Specifies the language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -36,8 +36,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The rule type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: user-defined</description></item>
-        /// <item><description><b>1</b>: system built-in</description></item>
+        /// <item><description><b>0</b>: Custom</description></item>
+        /// <item><description><b>1</b>: Built-in</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

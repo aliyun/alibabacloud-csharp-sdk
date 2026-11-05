@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyUserDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination information of the query result.</para>
+        /// <para>The pagination information of the query results.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribePropertyUserDetailResponseBodyPageInfo PageInfo { get; set; }
         public class DescribePropertyUserDetailResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of account asset fingerprint entries on the current page.</para>
+            /// <para>The number of account asset fingerprint entries returned on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the current page in a paging query.</para>
+            /// <para>The page number of the current page during paging for a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The number of account asset fingerprint entries per page in a paging query. Default value: <b>10</b>, which indicates 10 account asset fingerprint entries per page.</para>
+            /// <para>The number of account Asset fingerprint entries to return on each page during paging for a paged query. Default value: <b>10</b>, which indicates that 10 account Asset fingerprint entries are returned on each page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -69,14 +69,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The details of the account asset fingerprint entries returned.</para>
+        /// <para>The list of details about the queried account asset fingerprints.</para>
         /// </summary>
         [NameInMap("Propertys")]
         [Validation(Required=false)]
         public List<DescribePropertyUserDetailResponseBodyPropertys> Propertys { get; set; }
         public class DescribePropertyUserDetailResponseBodyPropertys : TeaModel {
             /// <summary>
-            /// <para>The expiration time of the account.</para>
+            /// <para>The expiration time of the account. A value of <b>never</b> indicates that the account never expires.</para>
             /// 
             /// <b>Example:</b>
             /// <para>never</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AccountsExpirationDate { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the latest Asset Fingerprints scan. Unit: milliseconds.</para>
+            /// <para>The timestamp of the latest scan for the asset fingerprints. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649149566000</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CreateTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The details of the user groups to which the account belongs.</para>
+            /// <para>The details of the user groups to which the queried account belongs.</para>
             /// </summary>
             [NameInMap("GroupNames")]
             [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the account is an interactive logon account. Valid values:</para>
+            /// <para>Specifies whether the account is an interactive logon account. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: No.</description></item>
             /// <item><description><b>1</b>: Yes.</description></item>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? IsCouldLogin { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the password has expired. Valid values:</para>
+            /// <para>Specifies whether the password has expired. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: Expired.</description></item>
             /// <item><description><b>1</b>: Not expired.</description></item>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? IsPasswdExpired { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the password is locked. Valid values:</para>
+            /// <para>Specifies whether the password is locked. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: Locked.</description></item>
             /// <item><description><b>1</b>: Not locked.</description></item>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? IsPasswdLocked { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the account has ROOT permissions. Valid values:</para>
+            /// <para>Specifies whether the account has root permissions. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: No.</description></item>
             /// <item><description><b>1</b>: Yes.</description></item>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IsRoot { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the account is a sudo account. Valid values:</para>
+            /// <para>Specifies whether the account is a sudo account. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: No.</description></item>
             /// <item><description><b>1</b>: Yes.</description></item>
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? IsSudoer { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the user has expired. Valid values:</para>
+            /// <para>Specifies whether the user has expired. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: Expired.</description></item>
             /// <item><description><b>1</b>: Not expired.</description></item>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? IsUserExpired { get; set; }
 
             /// <summary>
-            /// <para>The source IP address of the last logon of the account.</para>
+            /// <para>The source IP address of the last logon to the account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.XX.XX</para>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string LastLoginIp { get; set; }
 
             /// <summary>
-            /// <para>The time of the last logon of the account.</para>
+            /// <para>The last logon time of the account. The time is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-04-04 18:07:06</para>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string LastLoginTime { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the last logon of the account. Unit: milliseconds.</para>
+            /// <para>The timestamp of the last logon to the account. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649066826000</para>
@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LastLoginTimeDt { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the last logon of the account. Unit: milliseconds.</para>
+            /// <para>The timestamp of the last logon to the account. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649066826000</para>
@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LastLoginTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the account password.</para>
+            /// <para>The expiration time of the account password. A value of <b>never</b> indicates that the password never expires.</para>
             /// 
             /// <b>Example:</b>
             /// <para>never</para>
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PasswordExpirationDate { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated and can be ignored.</para>
+            /// <para><b>[Deprecated]</b> This parameter is deprecated and can be ignored.</para>
             /// 
             /// <b>Example:</b>
             /// <para>**</para>
@@ -319,7 +319,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for the request. You can use the ID to troubleshoot issues.</para>
+        /// <para>The ID of the request. The ID is a unique identifier generated by Alibaba Cloud for the request and can be used to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>33A71BE3-2CC2-14CB-B460-33A1DD82953A</para>

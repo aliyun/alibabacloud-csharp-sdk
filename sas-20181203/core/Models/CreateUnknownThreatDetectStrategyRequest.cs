@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AssetSelectionType { get; set; }
 
         /// <summary>
-        /// <para>The number of days after the model is initially created before the learning phase ends.</para>
+        /// <para>The number of days to continue learning after the model is initially created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? DurationDaysAfterInit { get; set; }
 
         /// <summary>
-        /// <para>The number of days after which the model ends when no new processes are added.</para>
+        /// <para>The number of days without new processes before the model stops.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? DurationDaysAfterStop { get; set; }
 
         /// <summary>
-        /// <para>The policy name.</para>
+        /// <para>The Policy Name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>strategy****</para>
@@ -52,8 +52,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The whitelist mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>hash</b>: process hash</description></item>
-        /// <item><description><b>path</b>: process path</description></item>
+        /// <item><description><b>hash</b>: The process hash.</description></item>
+        /// <item><description><b>path</b>: The process path.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

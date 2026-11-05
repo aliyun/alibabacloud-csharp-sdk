@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateBackupPolicyShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Sets the name of the anti-ransomware policy to create.</para>
+        /// <para>The name of the anti-ransomware policy to create.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>Include</b>: The file types to protect. To protect all file types, set this parameter to [].</description></item>
         /// <item><description><b>Source</b>: The server directories to protect. To protect all directories, set this parameter to [].</description></item>
         /// <item><description><b>ExcludeSystemPath</b>: Specifies whether to exclude the specified directories. To exclude the directories, set this parameter to <b>true</b>. If you do not want to exclude the directories, you do not need to set this parameter.</description></item>
-        /// <item><description><b>Exclude</b>: Sets the specified protection directory addresses. If you do not want to specify protection directory addresses, set this parameter to [].</description></item>
-        /// <item><description><b>Schedule</b>: Sets the execution time and execution interval of the data backup task. We recommend that you specify a non-integer hour during off-peak hours. Examples:<list type="bullet">
-        /// <item><description>Example 1: I|1583216092|P21D indicates that the data backup starts at 14:14:52 on March 3, 2020, and the backup policy execution interval is 3 weeks.</description></item>
-        /// <item><description>Example 2: I|1583216092|PT24H indicates that the data backup starts at 14:14:52 on March 3, 2020, and the backup policy execution interval is 24 hours.</description></item>
+        /// <item><description><b>Exclude</b>: The specified directories for protection. If you do not specify directories, set this parameter to [].</description></item>
+        /// <item><description><b>Schedule</b>: The execution time and interval of the data backup task. We recommend that you specify a time during off-peak hours and avoid exact hours. Examples:<list type="bullet">
+        /// <item><description>Example 1: I|1583216092|P21D indicates that the data backup starts at 14:14:52 on March 3, 2020, and the execution interval of the backup policy is 3 weeks.</description></item>
+        /// <item><description>Example 2: I|1583216092|PT24H indicates that the data backup starts at 14:14:52 on March 3, 2020, and the execution interval of the backup policy is 24 hours.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><b>Retention</b>: The retention period of the backup data. Unit: days. A value of 7 indicates 1 week, 365 indicates 1 year, and -1 indicates permanent retention.</description></item>
-        /// <item><description><b>SpeedLimiter</b>: Sets the backup network bandwidth limit. Example: 0:24:30720 indicates that the network bandwidth limit for the backup network is 30 MByte/s from 00:00 to 24:00.</description></item>
+        /// <item><description><b>SpeedLimiter</b>: The bandwidth limit for the backup network. Example: 0:24:30720 indicates that the bandwidth limit for the backup network is 30 MByte/s from 00:00 to 24:00.</description></item>
         /// <item><description><b>UseVss</b>: Specifies whether to enable the Volume Shadow Copy Service (VSS) feature for Windows. Valid values:<list type="bullet">
         /// <item><description><b>true</b>: enabled</description></item>
         /// <item><description><b>false</b>: disabled</description></item>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>The VSS feature is available only for Windows systems. Enabling this feature effectively reduces the issue of individual file backup failures caused by process occupation. We recommend that you enable this feature. After this feature is enabled, file backup for exFAT and FAT32 disk formats is not supported.</para>
+        /// <para>The VSS feature is available only for Windows. Enabling this feature effectively reduces backup failures caused by file occupation by processes. We recommend that you enable this feature. After you enable this feature, file backup is not supported for disks in exFAT or FAT32 format.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The region ID of the server that is not deployed on Alibaba Cloud.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeSupportRegion~~">DescribeSupportRegion</a> operation to query the regions supported by the anti-ransomware feature, and then select a supported region that is closest to the region of your server that is not deployed on Alibaba Cloud.</para>
+        /// <para>You can call the <a href="~~DescribeSupportRegion~~">DescribeSupportRegion</a> operation to query the regions supported by the anti-ransomware feature, and then select a supported region that is closest to the region where your non-Alibaba Cloud server is deployed.</para>
         /// </remarks>
         /// <para>This parameter is required when the ServerType parameter is set to OUT_CLOUD.</para>
         /// 
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PolicyRegionId { get; set; }
 
         /// <summary>
-        /// <para>The version of the anti-ransomware policy. Fixed value: <b>2.0.0</b>.</para>
+        /// <para>The version of the anti-ransomware policy. Set the value to <b>2.0.0</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,10 +82,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PolicyVersion { get; set; }
 
         /// <summary>
-        /// <para>The method to cover assets. Valid values:</para>
+        /// <para>The asset selection method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>ALL_MACHINE</b>: all assets<remarks>
-        /// <para>To cover all assets of the specified type, set this parameter to <b>ALL_MACHINE</b>. In this case, the <b>UuidList</b> parameter is invalid. Only one policy that covers all assets can be created for each server type.</para>
+        /// <para>If you want to protect all assets of the specified server type, set this parameter to <b>ALL_MACHINE</b>. In this case, the <b>UuidList</b> parameter does not take effect. You can create only one policy that covers all assets of the same server type.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ServerType { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of the servers to protect.</para>
+        /// <para>Specifies the UUIDs of the servers to protect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;3bb30859-b3b5-4f28-868f-b0892c98****&quot;, &quot;3bb30859-b3b5-4f28-868f-b0892c98****&quot;]</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSuspiciousOverallConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The source IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>39.161.XX.XX</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The type of the feature. Valid values:</para>
+        /// <para>The switch type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>auto_breaking</b>: Anti-Virus</description></item>
-        /// <item><description><b>ransomware_breaking</b>: Anti-ransomware (Bait Capture)</description></item>
-        /// <item><description><b>webshell_cloud_breaking</b>: Webshell Protection</description></item>
-        /// <item><description><b>alinet</b>: Behavior prevention</description></item>
-        /// <item><description><b>k8s_log_analysis</b>: K8s Threat Detection</description></item>
-        /// <item><description><b>alisecguard</b>: Defense mode for Client Protection</description></item>
+        /// <item><description><b>auto_breaking</b>: anti-virus</description></item>
+        /// <item><description><b>ransomware_breaking</b>: anti-ransomware (decoy capture)</description></item>
+        /// <item><description><b>webshell_cloud_breaking</b>: web shell connection defense</description></item>
+        /// <item><description><b>alinet</b>: malicious network behavior defense</description></item>
+        /// <item><description><b>k8s_log_analysis</b>: container Kubernetes threat detection</description></item>
+        /// <item><description><b>alisecguard</b>: client self-protection mode</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

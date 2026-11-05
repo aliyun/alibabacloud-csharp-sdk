@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyUserDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the page to return in a paginated query. Default value: <b>1</b>, which indicates the first page.</para>
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether fuzzy match is supported for account names. Set this parameter to <b>1</b> to enable fuzzy match. Any other value or an empty value indicates that fuzzy match is not supported.</para>
+        /// <para>Specifies whether fuzzy match is supported for the account name. To enable fuzzy match, set this parameter to <b>1</b>. Other values or an empty value indicate that fuzzy match is not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Extend { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the account to query has ROOT permissions. Valid values:</para>
+        /// <para>Specifies whether the account to query has root permissions. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: No.</description></item>
         /// <item><description><b>1</b>: Yes.</description></item>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string IsRoot { get; set; }
 
         /// <summary>
-        /// <para>The end timestamp for querying the last logon time of the account. Unit: milliseconds.</para>
+        /// <para>The end timestamp for retrieving the last logon time of the account. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1651298836000</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? LastLoginTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The start timestamp for querying the last logon time of the account. Unit: milliseconds.</para>
+        /// <para>The start timestamp for retrieving the last logon time of the account. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>164922523600</para>
@@ -64,9 +64,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? LastLoginTimeStart { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the current position from which to start reading. Leave this parameter empty to start from the beginning.</para>
+        /// <para>The token that specifies the position from which to start reading. If this parameter is left empty, the reading starts from the beginning.</para>
         /// <remarks>
-        /// <para>Do not specify this parameter for the first call. The response includes the NextToken value for the second call. Each subsequent response contains the NextToken value for the next call.</para>
+        /// <para>You do not need to specify this parameter for the first call. The response will contain the NextToken for the second call, and each subsequent response will contain the NextToken for the next call.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The number of account asset fingerprint entries per page in a paging query. Default value: <b>10</b>, which indicates 10 account asset fingerprint entries per page.</para>
+        /// <para>The Settings for the number of account Asset fingerprint entries to return on each page during paging for a paged query. Default value: <b>10</b>, which indicates that 10 account Asset fingerprint entries are returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -97,6 +97,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
+        /// <para>The ID of the management account for the member accounts in the resource folder.</para>
+        /// <remarks>
+        /// <para>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>1234567890123456</para>
         /// </summary>
@@ -105,10 +110,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the NextToken method to retrieve the vulnerability list data. If this parameter is used, TotalCount is no longer returned. Valid values:</para>
+        /// <para>Specifies whether to use the NextToken method to retrieve vulnerability list data. If this parameter is used, TotalCount is no longer returned. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Uses the NextToken method.</description></item>
-        /// <item><description><b>false</b>: Does not use the NextToken method.</description></item>
+        /// <item><description><b>true</b>: Use the NextToken method.</description></item>
+        /// <item><description><b>false</b>: Do not use the NextToken method.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -119,7 +124,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? UseNextToken { get; set; }
 
         /// <summary>
-        /// <para>The account name on the server to query.</para>
+        /// <para>The name of the account on the server to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bin</para>
