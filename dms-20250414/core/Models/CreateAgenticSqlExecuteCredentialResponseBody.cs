@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AccessKey { get; set; }
 
             /// <summary>
-            /// <para>The AccessKey secret of the credential. This value is returned only once when the credential is created. Keep it secure.</para>
+            /// <para>The AccessSecret of the credential. This value is returned only once when the credential is created. Keep it secure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxxxxxx</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>34E01EDD-6A16-4CF0-9541-C644D1BE01AA</para>

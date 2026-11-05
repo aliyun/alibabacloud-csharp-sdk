@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public AgenticDatabase Data { get; set; }
 
         /// <summary>
-        /// <para>The error code returned when an exception occurs.</para>
+        /// <para>The error code returned when an exception occurs during the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned when the call fails.</para>
+        /// <para>The error message returned when the API call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>67E910F2-4B62-5B0C-ACA3-7547695C****</para>

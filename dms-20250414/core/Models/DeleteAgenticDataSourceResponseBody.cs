@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DeleteAgenticDataSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the deletion was successful.</para>
+        /// <para>Indicates whether the deletion is successful.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The error code returned when the call fails. This field is empty when the call succeeds.</para>
+        /// <para>The error code returned if the call fails. This parameter is empty if the call succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidParameter</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned when the call fails. This field is empty when the call succeeds.</para>
+        /// <para>The error message returned if the call fails. This parameter is empty if the call succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The parameter is invalid</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. You can use this ID to trace the call.</para>
+        /// <para>The request ID used to trace the call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request-1234567890</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the call is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

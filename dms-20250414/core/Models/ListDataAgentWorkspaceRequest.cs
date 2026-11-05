@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DMSUnit { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>no use</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of records per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string WorkspaceName { get; set; }
 
         /// <summary>
-        /// <para>The workspace type to query.</para>
+        /// <para>The workspace type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

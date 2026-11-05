@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DMSUnit { get; set; }
 
         /// <summary>
-        /// <para>The data source information. This parameter can be left empty. You can specify only one data source for this parameter. Use the DataSources parameter instead.</para>
+        /// <para>The data source information. This parameter can be left empty. You can specify only one data source for this parameter. We recommend that you use the DataSources parameter instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string DataSourceId { get; set; }
 
             /// <summary>
-            /// <para>The data source type. Valid values: <c>remote_data_center</c> and <c>database</c>. <c>remote_data_center</c> indicates a file, and <c>database</c> indicates a database.</para>
+            /// <para>The data source type. Valid values: remote_data_center and database, which indicate that the analysis target is a file or a database, respectively.</para>
             /// 
             /// <b>Example:</b>
             /// <para>remote_data_center</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string DmsInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The database engine type.</para>
+            /// <para>The type of the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mysql</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>The ID of the file.</para>
+            /// <para>The file ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>35****</para>
@@ -144,23 +144,23 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public List<SendChatMessageRequestDataSourcePermissionTables> Tables { get; set; }
                 public class SendChatMessageRequestDataSourcePermissionTables : TeaModel {
                     /// <summary>
-                    /// <para>The list of columns that are allowed to be queried in the current table. If you leave this field empty, all columns can be queried. If you specify this field, SQL statements that query columns beyond the allowed scope, such as <c>SELECT *</c>, will be blocked. To ensure the analysis performance of DataAgent, make sure that the prompts, knowledge, and instructions modules of DataAgent do not include columns beyond the allowed scope. Otherwise, unauthorized SQL statements may be generated and blocked, which degrades the analysis speed and performance of DataAgent.</para>
+                    /// <para>The list of fields that are allowed to be queried in the current table. If you do not specify this parameter, all fields can be queried. If you specify this parameter, SQL statements that query fields outside the allowed range, such as the <c>SELECT *</c> syntax, will be blocked. To ensure the analysis performance of DataAgent, make sure that the prompts, knowledge, and instructions modules of DataAgent do not include fields outside the allowed range. Otherwise, unauthorized SQL statements may be generated and blocked, which degrades the analysis speed and performance of DataAgent.</para>
                     /// </summary>
                     [NameInMap("AllowedColumns")]
                     [Validation(Required=false)]
                     public List<string> AllowedColumns { get; set; }
 
                     /// <summary>
-                    /// <para>The list of columns that are not allowed to be queried in the current table. If you leave this field empty, all columns <b>can be queried</b>. If you specify this field, SQL statements that query columns beyond the allowed scope, such as <c>SELECT *</c>, will be blocked.  </para>
-                    /// <para>If both the disallowed list and the allowed list are configured, the disallowed list takes precedence. For example, if Table 1 has columns A, B, C, and D, and you configure columns A and B as not allowed, while configuring columns B and C as allowed, only column C is ultimately allowed to be queried.</para>
-                    /// <para>To ensure the analysis performance of DataAgent, make sure that the prompts, knowledge, and instructions modules of DataAgent do not include columns beyond the allowed scope. Otherwise, unauthorized SQL statements may be generated and blocked, which degrades the analysis speed and performance of DataAgent.</para>
+                    /// <para>The list of fields that are prohibited from being queried in the current table. If you do not specify this parameter, all fields <b>can be queried</b>. If you specify this parameter, SQL statements that query fields outside the allowed range, such as the <c>SELECT *</c> syntax, will be blocked.  </para>
+                    /// <para>If both the prohibited list and the allowed list are configured, the prohibited list takes precedence. For example, if Table 1 has columns A, B, C, and D, and you configure columns A and B as non-queryable while configuring columns B and C as queryable, only column C is ultimately queryable.</para>
+                    /// <para>To ensure the analysis performance of DataAgent, make sure that the prompts, knowledge, and instructions modules of DataAgent do not include fields outside the allowed range. Otherwise, unauthorized SQL statements may be generated and blocked, which degrades the analysis speed and performance of DataAgent.</para>
                     /// </summary>
                     [NameInMap("DisallowedColumns")]
                     [Validation(Required=false)]
                     public List<string> DisallowedColumns { get; set; }
 
                     /// <summary>
-                    /// <para>The row filter condition that must be included for the current table. If you leave this field empty, it is ignored. If you specify this field, the system checks whether all SQL statements involving this table include the filter column and whether the WHERE clause meets the constraints. SQL statements that do not meet the constraints will be rejected. Pay attention to the format of the validation condition.</para>
+                    /// <para>The row filter condition that must be included for the current table. If you do not specify this parameter, it is ignored. If you specify this parameter, the system checks whether all SQL statements involving this table include the filter field and whether the WHERE condition meets the constraints. SQL statements that do not meet the constraints will be rejected. Pay attention to the format of the validation condition.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>region = \&quot;east\&quot;</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The list of names of the tables to be analyzed.</para>
+            /// <para>The list of table names to be analyzed.</para>
             /// </summary>
             [NameInMap("Tables")]
             [Validation(Required=false)]
@@ -230,7 +230,11 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string DataSourceId { get; set; }
 
             /// <summary>
-            /// <para>The data source type. Valid values: remote_data_center and database, which indicate that the analysis is based on a file or a database, respectively.</para>
+            /// <para>The data source type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>remote_data_center: The analysis is performed on a file.</description></item>
+            /// <item><description>database: The analysis is performed on a database.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>remote_data_center</para>
@@ -280,7 +284,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string DmsInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The database engine type.</para>
+            /// <para>The type of the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mysql</para>
@@ -324,23 +328,23 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public List<SendChatMessageRequestDataSourcesPermissionTables> Tables { get; set; }
                 public class SendChatMessageRequestDataSourcesPermissionTables : TeaModel {
                     /// <summary>
-                    /// <para>The list of columns that are allowed to be queried in the current table. If this parameter is left empty, all columns can be queried. If this parameter is specified, SQL statements that query columns beyond the allowed scope, such as SELECT *, are prohibited. To ensure the analysis performance of DataAgent, make sure that the prompts, knowledge, and instructions of DataAgent do not include columns beyond the allowed scope. Otherwise, unauthorized SQL statements may be generated and blocked, which degrades the analysis speed and performance of DataAgent.</para>
+                    /// <para>The list of columns that are allowed to be queried in the current table. If you do not specify this parameter, all columns can be queried. If you specify this parameter, SQL statements that query columns beyond the allowed scope are blocked. For example, syntax such as SELECT * is blocked. To ensure the analysis performance of DataAgent, make sure that the prompts, knowledge, and instructions of DataAgent do not include columns beyond the allowed scope. Otherwise, unauthorized SQL statements are generated and blocked, which reduces the analysis speed and performance of DataAgent.</para>
                     /// </summary>
                     [NameInMap("AllowedColumns")]
                     [Validation(Required=false)]
                     public List<string> AllowedColumns { get; set; }
 
                     /// <summary>
-                    /// <para>The list of columns that are not allowed to be queried in the current table. If you leave this field empty, all columns <b>can be queried</b>. If you specify this field, SQL statements that query columns beyond the allowed scope, such as <c>SELECT *</c>, will be blocked.  </para>
-                    /// <para>If both the disallowed list and the allowed list are configured, the disallowed list takes precedence. For example, if Table 1 has columns A, B, C, and D, and you configure columns A and B as not allowed, while configuring columns B and C as allowed, only column C is ultimately allowed to be queried.</para>
-                    /// <para>To ensure the analysis performance of DataAgent, make sure that the prompts, knowledge, and instructions modules of DataAgent do not include columns beyond the allowed scope. Otherwise, unauthorized SQL statements may be generated and blocked, which degrades the analysis speed and performance of DataAgent.</para>
+                    /// <para>The list of fields that are prohibited from being queried in the current table. If you do not specify this parameter, all fields <b>can be queried</b>. If you specify this parameter, SQL statements that query fields outside the allowed range, such as the <c>SELECT *</c> syntax, will be blocked.  </para>
+                    /// <para>If both the prohibited list and the allowed list are configured, the prohibited list takes precedence. For example, if Table 1 has columns A, B, C, and D, and you configure columns A and B as non-queryable while configuring columns B and C as queryable, only column C is ultimately queryable.</para>
+                    /// <para>To ensure the analysis performance of DataAgent, make sure that the prompts, knowledge, and instructions modules of DataAgent do not include fields outside the allowed range. Otherwise, unauthorized SQL statements may be generated and blocked, which degrades the analysis speed and performance of DataAgent.</para>
                     /// </summary>
                     [NameInMap("DisallowedColumns")]
                     [Validation(Required=false)]
                     public List<string> DisallowedColumns { get; set; }
 
                     /// <summary>
-                    /// <para>The row filter condition that must be included for the current table. If you leave this field empty, it is ignored. If you specify this field, the system checks whether all SQL statements involving this table include the filter column and whether the WHERE clause meets the constraints. SQL statements that do not meet the constraints will be rejected. Pay attention to the format of the validation condition.</para>
+                    /// <para>The row filter condition that must be included for the current table. If you do not specify this parameter, it is ignored. If you specify this parameter, the system checks whether all SQL statements involving this table include the filter field and whether the WHERE condition meets the constraints. SQL statements that do not meet the constraints will be rejected. Pay attention to the format of the validation condition.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>region = \&quot;east\&quot;</para>
@@ -374,7 +378,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The list of names of the tables to be analyzed.</para>
+            /// <para>The list of table names to be analyzed.</para>
             /// </summary>
             [NameInMap("Tables")]
             [Validation(Required=false)]
@@ -404,16 +408,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The message type. Default value: <c>primary</c>.  </para>
+        /// <para>The message type. Default value: primary.</para>
         /// <list type="bullet">
-        /// <item><description><para>In normal interactions with the agent, the message type is <c>primary</c>.</para>
-        /// </description></item>
-        /// <item><description><para>When the message is a response to a human-in-the-loop question from the agent, the type must be <c>additional</c>.</para>
-        /// </description></item>
-        /// <item><description><para>When the message is intended to trigger report generation, the type must be <c>report</c>.</para>
-        /// </description></item>
-        /// <item><description><para>When the message is intended to cancel the current session, the type must be <c>cancel</c>.</para>
-        /// </description></item>
+        /// <item><description>In normal interactions with the agent, the message type is primary.</description></item>
+        /// <item><description>When the message is a response to a human-in-the-loop question from the agent, the type must be additional.</description></item>
+        /// <item><description>When the message is intended to trigger report generation, the type must be report.</description></item>
+        /// <item><description>When the message is intended to cancel the current session, the type must be cancel.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -424,7 +424,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string MessageType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parent session.</para>
+        /// <para>The parent session ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20qrliuoo7p2vlsfg*****</para>
@@ -434,7 +434,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ParentSessionId { get; set; }
 
         /// <summary>
-        /// <para>Required when the message type is <c>additional</c>. Specifies the specific question asked by the agent to the user through human-in-the-loop.</para>
+        /// <para>Required when the message type is additional. Specifies the specific question asked by the agent to the user through human-in-the-loop.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Provide the calculation criteria for GMV</para>
@@ -444,7 +444,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Question { get; set; }
 
         /// <summary>
-        /// <para>The quoted content. This is typically used when interacting with the agent.</para>
+        /// <para>The current quoted content. This is typically used during interactions with the agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;version&quot;:&quot;v0&quot;}</para>
@@ -455,7 +455,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 
         /// <summary>
         /// <para><b>Important</b></para>
-        /// <para>When this message is a reply to an agent message, such as an agent asking for clarification through ASK_HUMAN, <c>reply_to</c> must exactly match the checkpoint sequence number carried by that agent message. If this message is not a targeted reply, such as requesting the agent to perform further in-depth analysis after the initial analysis is complete, you can leave <c>reply_to</c> empty or set it to &quot;0&quot;.  </para>
+        /// <para>When this message is a reply to an agent message (such as the agent asking for clarification through ASK_HUMAN), reply_to must exactly match the Checkpoint sequence number carried by that agent message. If this message is not a targeted reply, such as requesting the agent to perform further in-depth analysis after the initial analysis is complete, you can leave reply_to empty or set it to 0.  </para>
         /// <para>This field affects how the agent decides to process the message. Passing an incorrect value may lead to suboptimal analysis results.</para>
         /// 
         /// <b>Example:</b>
@@ -466,7 +466,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ReplyTo { get; set; }
 
         /// <summary>
-        /// <para>The special configurations for the current session. For the same session, only the configurations specified in the first SendMessage call take effect.</para>
+        /// <para>The special configurations for the current session. For the same session, only the configurations passed during the first SendMessage call take effect.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -476,7 +476,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public SendChatMessageRequestSessionConfig SessionConfig { get; set; }
         public class SendChatMessageRequestSessionConfig : TeaModel {
             /// <summary>
-            /// <para>The ID of the custom agent. A custom agent is an entity used to customize the analysis process. You can create a custom agent in the DataAgent console or by calling the CreateCustomAgent operation. The ID of a custom agent must start with <c>ca-</c>.</para>
+            /// <para>The custom agent ID. A custom agent is an entity used to customize the analysis process. You can create it in the DataAgent console or by calling the CreateCustomAgent operation. A custom agent ID must be a string starting with ca-.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ca-asfkjhqwe***aesrfqa</para>
@@ -538,9 +538,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <summary>
             /// <para>The mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ASK_DATA</b>: the data query mode.</description></item>
-            /// <item><description><b>ANALYSIS</b>: the analysis mode.</description></item>
-            /// <item><description><b>INSIGHT</b>: the insight mode.</description></item>
+            /// <item><description><b>ASK_DATA</b>: Data query mode.</description></item>
+            /// <item><description><b>ANALYSIS</b>: Analysis mode.</description></item>
+            /// <item><description><b>INSIGHT</b>: Insight mode.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -551,19 +551,17 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>The data permission settings at the session level. If you configure this parameter multiple times in multi-turn conversations within the same session, the last configuration prevails.</para>
+            /// <para>The data permission settings at the session level. If configured multiple times in multi-turn conversations within the same session, the last configuration prevails.</para>
             /// </summary>
             [NameInMap("PermissionConfig")]
             [Validation(Required=false)]
             public SendChatMessageRequestSessionConfigPermissionConfig PermissionConfig { get; set; }
             public class SendChatMessageRequestSessionConfigPermissionConfig : TeaModel {
                 /// <summary>
-                /// <para>The default behavior for table-level permissions. This parameter controls whether tables that are not configured in DataSources.[item].Permission can be queried. Valid values: <c>allow</c> and <c>deny</c>.</para>
+                /// <para>The default behavior for table-level permissions. This parameter controls whether tables not configured in DataSources.[item].Permission can be queried. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><c>allow</c>: the default value. This value indicates that the blacklist mode is used. By default, all tables can be queried, and the actual permissions are subject to the permissions configured in DMS. Only when you configure <b>row-level and column-level</b> permissions in DataSources.[item].Permission, the row-level and column-level permissions are used for access control.</para>
-                /// </description></item>
-                /// <item><description><para><c>deny</c>: This value indicates that the whitelist mode is used. You must manually specify this value. By default, no tables can be queried. A table can be queried only when you configure permissions for the table in DataSources.[item].Permission. You can grant full access to a table by not configuring any row-level or column-level restrictions.</para>
-                /// </description></item>
+                /// <item><description>allow: Works in blacklist mode. This is the default value. By default, all tables can be queried, and the actual permissions are subject to the permissions configured in DMS. Only when you configure <b>row- and column-level</b> permissions in DataSources.[item].Permission will row- and column-level permissions be enforced.</description></item>
+                /// <item><description>deny: Works in whitelist mode. You must manually specify this value. By default, no tables can be queried. A table can be queried only when you configure permissions for it in DataSources.[item].Permission. You can grant full access to a table by not configuring any row- or column-level restrictions.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -576,7 +574,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to enable the plan feature. Valid values: <c>disable</c>, <c>enable</c>, and <c>force</c>. Default value: <c>enable</c>.</para>
+            /// <para>Specifies whether to enable the plan feature. Valid values: disable, enable, and force. Default value: enable.</para>
             /// 
             /// <b>Example:</b>
             /// <para>disable</para>
@@ -586,7 +584,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string PlanMode { get; set; }
 
             /// <summary>
-            /// <para>The watermark text. You can enter up to 64 characters. The text is used to add a watermark to the generated PDF report.</para>
+            /// <para>The text to be added as a watermark to the generated PDF report. The text can be up to 64 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sample-watermark</para>
@@ -642,14 +640,24 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public List<string> UserSpecifiedSkillList { get; set; }
 
+            /// <summary>
+            /// <para>The default report theme ID for the current session.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>default</para>
+            /// </summary>
+            [NameInMap("WebReportTheme")]
+            [Validation(Required=false)]
+            public string WebReportTheme { get; set; }
+
         }
 
         /// <summary>
-        /// <para>The session ID. This optional field is used for multi-turn sessions.</para>
+        /// <para>The session ID. This is an optional field used for multi-turn sessions.</para>
         /// <list type="bullet">
-        /// <item><description>You can start a session without specifying this field. The response will include the session ID for the current session.</description></item>
-        /// <item><description>You can also manually create a session ID by calling the CreateDataAgentSession operation and include the ID when initiating a session.</description></item>
-        /// <item><description>If you need multi-turn conversations, such as follow-up questions or confirming execution plans, specify the session ID returned by the previous SendChatMessage operation in this operation.</description></item>
+        /// <item><description>You can start a session without specifying this field, and the response will include the SessionID for the current session.</description></item>
+        /// <item><description>You can also manually create a session ID by calling the CreateDataAgentSession operation and include the ID when initiating the session.</description></item>
+        /// <item><description>If you need multi-turn conversations (such as follow-up questions or confirming execution plans), include the SessionID returned by the previous SendChatMessage operation in this API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -674,7 +682,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public SendChatMessageRequestTaskConfigReportConfig ReportConfig { get; set; }
             public class SendChatMessageRequestTaskConfigReportConfig : TeaModel {
                 /// <summary>
-                /// <para>The prompt that must be followed for the current report.</para>
+                /// <para>The prompt that the current report must follow.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>generate a report</para>
@@ -684,7 +692,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string ReportPrompt { get; set; }
 
                 /// <summary>
-                /// <para>The report theme. Valid values: default, journal, legacy, and neobrutalism.</para>
+                /// <para>The report theme. System themes include default, journal, legacy, and neobrutalism, which are globally available theme IDs. You can call the ListDataAgentTheme operation to obtain other available theme IDs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default</para>
@@ -694,7 +702,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string ReportTheme { get; set; }
 
                 /// <summary>
-                /// <para>The service type. Valid values: TextReport and WebReport, which indicate that the current task generates a text report or a web report, respectively. Only WebReport is supported.</para>
+                /// <para>The service type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>TextReport: The task generates a text report.</description></item>
+                /// <item><description>WebReport: The task generates a web report.
+                /// Currently, only WebReport is supported.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>WebReport</para>
@@ -708,7 +721,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The Object Storage Service (OSS) bucket of the user. If this parameter is left empty, the analysis process is securely stored in the built-in storage.</para>
+        /// <para>The Object Storage Service (OSS) bucket of the user. If you do not specify this parameter, the analysis process is securely stored in the built-in storage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-bucket</para>

@@ -17,6 +17,16 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public AddAgenticDataSourceResponseBodyData Data { get; set; }
         public class AddAgenticDataSourceResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The name of the ADB MySQL Spark resource group. This field is returned only for data sources whose DbType is ADB_MYSQL_SPARK. It is independent of the Schema (database name).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>resourceGroup1</para>
+            /// </summary>
+            [NameInMap("AdbSparkResourceGroup")]
+            [Validation(Required=false)]
+            public string AdbSparkResourceGroup { get; set; }
+
+            /// <summary>
             /// <para>The display name of the data source.</para>
             /// 
             /// <b>Example:</b>
@@ -27,7 +37,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Alias { get; set; }
 
             /// <summary>
-            /// <para>The logon username for the data source. This parameter is empty if username authentication is not used.</para>
+            /// <para>The logon username for the data source. This field is empty if username authentication is not used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>db_user</para>
@@ -117,7 +127,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string EnvType { get; set; }
 
             /// <summary>
-            /// <para>The time when the data source was created. The time is in the yyyy-MM-dd HH:mm:ss format.</para>
+            /// <para>The time when the data source was created. The format is yyyy-MM-dd HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-13 14:30:00</para>
@@ -127,7 +137,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the data source was last modified. The time is in the yyyy-MM-dd HH:mm:ss format.</para>
+            /// <para>The time when the data source was last modified. The format is yyyy-MM-dd HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-13 14:35:00</para>
@@ -147,7 +157,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Host { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud resource instance. This parameter may be empty for data sources registered by endpoint.</para>
+            /// <para>The ID of the cloud resource instance. This field may be empty for data sources registered by endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rm-bp1234567890</para>
@@ -157,14 +167,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string InstanceResourceId { get; set; }
 
             /// <summary>
-            /// <para>The source of the data source. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>RDS: An ApsaraDB instance.</description></item>
-            /// <item><description>PUBLIC_OWN: A self-managed database on the Internet.</description></item>
-            /// <item><description>ECS_OWN: A self-managed database on an ECS instance.</description></item>
-            /// <item><description>GATEWAY: A database accessed through Database Gateway.</description></item>
-            /// <item><description>VPC_IDC: A database accessed through a VPC or data center.</description></item>
-            /// </list>
+            /// <para>The source of the data source. Valid values: RDS: ApsaraDB instance, PUBLIC_OWN: self-managed database connected over the Internet, ECS_OWN: self-managed database hosted on an ECS instance, GATEWAY: database connected through Database Gateway, and VPC_IDC: database connected through a VPC or IDC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RDS</para>
@@ -174,7 +177,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string InstanceSource { get; set; }
 
             /// <summary>
-            /// <para>The name of the KMS-managed credential. This parameter is empty if KMS is not used. This is sensitive information.</para>
+            /// <para>The name of the Key Management Service (KMS) managed credential. This field is empty if KMS is not used and is considered sensitive information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>datasource-secret</para>
@@ -184,7 +187,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string KmsSecret { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data access security policy in use. This parameter is empty if no policy is configured.</para>
+            /// <para>The ID of the data access security policy currently in use. This field is empty if no policy is configured.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sp-usr-example</para>
@@ -204,7 +207,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The region where the data source resides.</para>
+            /// <para>The region where the data source is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -224,7 +227,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string ResourceAccountId { get; set; }
 
             /// <summary>
-            /// <para>The ARN of the RAM role used to access the data source. This parameter is empty if role authorization is not used.</para>
+            /// <para>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role used to access the data source. This field is empty if role-based authorization is not used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:ram::123456789012****:role/DataSourceRole</para>
@@ -234,7 +237,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string RoleArn { get; set; }
 
             /// <summary>
-            /// <para>The name of the connection target. For ADB_POSTGRESQL, DRDS, POSTGRESQL, and POLARDB_POSTGRESQL, this indicates the database name. For ORACLE, this indicates the SID or service name. For POLARDB_ORACLE, this indicates the SID. For MAXCOMPUTE, this indicates the project. For other types, this parameter is usually empty.</para>
+            /// <para>The name of the connection target. For ADB_POSTGRESQL, DRDS, POSTGRESQL, and POLARDB_POSTGRESQL, this indicates the database name. For ORACLE, this indicates the SID or service name. For POLARDB_ORACLE, this indicates the SID. For MAXCOMPUTE, this indicates the project. For other types, this field is usually empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>postgres</para>
@@ -259,7 +262,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public int? State { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the cloud instance name is used as the data source name. Valid values:</para>
+            /// <para>Specifies whether to use the cloud instance name as the data source name. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>1: yes</description></item>
             /// <item><description>0: no</description></item>
@@ -290,7 +293,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The error code returned when the call fails. This parameter is empty if the call is successful.</para>
+        /// <para>The error code returned when the call fails. This field is empty when the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidParameter</para>
@@ -300,7 +303,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned when the call fails. This parameter is empty if the call is successful.</para>
+        /// <para>The error message returned when the call fails. This field is empty when the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The parameter is invalid</para>
@@ -310,7 +313,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used to trace the call.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request-1234567890</para>
@@ -320,7 +323,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the call is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

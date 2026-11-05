@@ -1,3 +1,25 @@
+2026-11-05 Version: 4.5.0
+- Support API DeleteAgenticVpcEndpoint.
+- Update API AddAgenticDataSource: add request parameters AdbSparkResourceGroup.
+- Update API AddAgenticDataSource: add response parameters Body.Data.AdbSparkResourceGroup.
+- Update API CreateCustomAgent: add request parameters CreateFrom.
+- Update API CreateDataAgentWorkspace: add request parameters Config.
+- Update API CreateDataAgentWorkspace: add response parameters Body.Data.Config.
+- Update API DescribeDataAgentSession: add response parameters Body.Data.PreviewCustomAgent.
+- Update API GetAgenticDataSource: add response parameters Body.Data.AdbSparkResourceGroup.
+- Update API GetDataAgentWorkspaceInfo: add response parameters Body.Data.Config.
+- Update API ListDataAgentWorkspace: add response parameters Body.Data.Content.$.Config.
+- Update API SendChatMessage: add request parameters SessionConfig.WebReportTheme.
+- Update API TestAgenticDataSourceConnection: add request parameters AdbSparkResourceGroup.
+- Update API UpdateAgenticDataSource: add request parameters AdbSparkResourceGroup.
+- Update API UpdateAgenticDataSource: add request parameters VSwitchId.
+- Update API UpdateAgenticDataSource: add request parameters VpcId.
+- Update API UpdateAgenticDataSource: add request parameters ZoneId.
+- Update API UpdateAgenticDataSource: add response parameters Body.Data.AdbSparkResourceGroup.
+- Update API UpdateDataAgentSpaceInfo: add request parameters Config.
+- Update API UpdateDataAgentSpaceInfo: add response parameters Body.Data.Config.
+
+
 2026-10-29 Version: 4.4.0
 - Support API ListAgenticSecurityPolicies.
 

@@ -17,7 +17,17 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public GetDataAgentWorkspaceInfoResponseBodyData Data { get; set; }
         public class GetDataAgentWorkspaceInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The creation time of the workspace. The value is a UNIX timestamp in seconds.</para>
+            /// <para>The configuration items of the workspace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{sql_config:null}</para>
+            /// </summary>
+            [NameInMap("Config")]
+            [Validation(Required=false)]
+            public string Config { get; set; }
+
+            /// <summary>
+            /// <para>The creation time of the session. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1765960516</para>
@@ -37,7 +47,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether sessions are shared within the workspace.</para>
+            /// <para>Indicates whether sessions in the workspace are shared.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -87,7 +97,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The description of the workspace.</para>
+            /// <para>The description of the collaborative workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>space for test</para>
@@ -97,7 +107,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string WorkspaceDesc { get; set; }
 
             /// <summary>
-            /// <para>The ID of the workspace.</para>
+            /// <para>The ID of the collaborative workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20923*****7291</para>
@@ -149,7 +159,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E0D2-*****-A63B6</para>

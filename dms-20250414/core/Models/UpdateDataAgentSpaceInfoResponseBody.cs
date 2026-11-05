@@ -10,14 +10,24 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class UpdateDataAgentSpaceInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response struct.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpdateDataAgentSpaceInfoResponseBodyData Data { get; set; }
         public class UpdateDataAgentSpaceInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the workspace was created, specified as a UNIX timestamp in seconds.</para>
+            /// <para>The workspace configuration items.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{sql_config:null}</para>
+            /// </summary>
+            [NameInMap("Config")]
+            [Validation(Required=false)]
+            public string Config { get; set; }
+
+            /// <summary>
+            /// <para>The creation time of the session (UNIX timestamp in seconds).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1765960516</para>
@@ -27,7 +37,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The user ID (UID) of the workspace creator.</para>
+            /// <para>The UID of the workspace creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20282*****7591</para>
@@ -37,7 +47,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The description of the workspace.</para>
+            /// <para>The description of the table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>space for test new</para>
@@ -47,7 +57,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether session sharing is enabled in the workspace.</para>
+            /// <para>Indicates whether session sharing within the workspace is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -57,7 +67,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public bool? IsSessionShareEnabled { get; set; }
 
             /// <summary>
-            /// <para>The time when the workspace was last modified, specified as a UNIX timestamp in seconds.</para>
+            /// <para>The last modification time of the workspace (UNIX timestamp in seconds).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1765962516</para>
@@ -67,7 +77,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The user role in the workspace.</para>
+            /// <para>The name of the removed user role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>active</para>
@@ -87,7 +97,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string TotalMember { get; set; }
 
             /// <summary>
-            /// <para>The ID of the workspace.</para>
+            /// <para>The workspace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20923*****7291</para>
@@ -119,7 +129,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The error code returned if the request fails.</para>
+        /// <para>The error code returned when a request exception occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DMS-DA-40114</para>
@@ -129,7 +139,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request fails.</para>
+        /// <para>The error message returned when the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Specified parameter is not valid.</para>
@@ -149,7 +159,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

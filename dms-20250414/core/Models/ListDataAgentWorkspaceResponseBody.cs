@@ -24,7 +24,17 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public List<ListDataAgentWorkspaceResponseBodyDataContent> Content { get; set; }
             public class ListDataAgentWorkspaceResponseBodyDataContent : TeaModel {
                 /// <summary>
-                /// <para>The creation time of the workspace. The value is a timestamp in milliseconds.</para>
+                /// <para>The workspace configuration items.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{sql_config:null}</para>
+                /// </summary>
+                [NameInMap("Config")]
+                [Validation(Required=false)]
+                public string Config { get; set; }
+
+                /// <summary>
+                /// <para>The time when the workspace was created. The value is a timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1765960516000</para>
@@ -74,7 +84,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether session sharing is enabled for the workspace.</para>
+                /// <para>Indicates whether workspace sessions are shared.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -84,7 +94,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public bool? IsSessionShareEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The last modification time of the workspace. The value is a timestamp in milliseconds.</para>
+                /// <para>The time when the workspace was last modified. The value is a timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1765961516000</para>
@@ -94,7 +104,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public long? ModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>The role name of the user in the workspace.</para>
+                /// <para>The name of the user\&quot;s role in the workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>admin</para>
@@ -238,7 +248,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nu use</para>
@@ -258,7 +268,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E0D2-*****-A63B6</para>

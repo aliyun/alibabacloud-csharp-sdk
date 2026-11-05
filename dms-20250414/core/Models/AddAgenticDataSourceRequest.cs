@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class AddAgenticDataSourceRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the ADB MySQL Spark resource group. This parameter takes effect only when DbType is set to ADB_MYSQL_SPARK. You must specify a resource group for this connection type. This parameter is independent of Schema (database name) and they cannot replace each other.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>resourceGroup1</para>
+        /// </summary>
+        [NameInMap("AdbSparkResourceGroup")]
+        [Validation(Required=false)]
+        public string AdbSparkResourceGroup { get; set; }
+
+        /// <summary>
         /// <para>The display name of the data source. If you do not specify this parameter, the server generates a name.</para>
         /// 
         /// <b>Example:</b>
@@ -20,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Alias { get; set; }
 
         /// <summary>
-        /// <para>The logon username. You can leave this parameter empty for authentication methods that do not require a username.</para>
+        /// <para>The logon username. You can leave this parameter empty if the authentication method does not require a username.</para>
         /// 
         /// <b>Example:</b>
         /// <para>db_user</para>
@@ -40,13 +50,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AuthPassword { get; set; }
 
         /// <summary>
-        /// <para>Optional. The authentication type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>-1: No authentication required.</description></item>
-        /// <item><description>0: Username and password.</description></item>
-        /// <item><description>1: Password only.</description></item>
-        /// <item><description>2: Password-free.</description></item>
-        /// </list>
+        /// <para>Optional. The authentication type. Valid values: -1: no authentication required, 0: username and password, 1: password only, and 2: password-free.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -56,7 +60,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? AuthType { get; set; }
 
         /// <summary>
-        /// <para>The name of the metadata catalog. If you do not specify this parameter, the name is automatically generated. The name can be up to 128 characters in length. It must start with a Chinese character, a letter, or an underscore, and can contain digits and hyphens. It cannot contain only digits.</para>
+        /// <para>The name of the metadata catalog. If you do not specify this parameter, the name is automatically generated. The name can be up to 128 characters in length. It must start with a letter, Chinese character, or underscore, and can contain digits and hyphens. It cannot contain only digits.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo_catalog</para>
@@ -66,12 +70,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string CatalogName { get; set; }
 
         /// <summary>
-        /// <para>The entry method. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>INSTANCE_ID: Select an existing cloud instance.</description></item>
-        /// <item><description>HOST_PORT: Enter the endpoint and port.
-        /// If you do not specify this parameter, HOST_PORT is used.</description></item>
-        /// </list>
+        /// <para>The entry method. Valid values: INSTANCE_ID: select an existing cloud instance, and HOST_PORT: enter an endpoint and port. If you do not specify this parameter, HOST_PORT is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HOST_PORT</para>
@@ -122,14 +121,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string InstanceResourceId { get; set; }
 
         /// <summary>
-        /// <para>The source of the data source. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>RDS: An ApsaraDB instance.</description></item>
-        /// <item><description>PUBLIC_OWN: A self-managed database on the Internet.</description></item>
-        /// <item><description>ECS_OWN: A self-managed database on an ECS instance.</description></item>
-        /// <item><description>GATEWAY: A database accessed through Database Gateway.</description></item>
-        /// <item><description>VPC_IDC: A database accessed through a VPC or data center.</description></item>
-        /// </list>
+        /// <para>The source of the data source. Valid values: RDS: ApsaraDB instance, PUBLIC_OWN: self-managed database connected over the Internet, ECS_OWN: self-managed database hosted on an ECS instance, GATEWAY: database connected through Database Gateway, and VPC_IDC: database connected through a VPC or IDC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -150,7 +142,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string KmsSecret { get; set; }
 
         /// <summary>
-        /// <para>Optional. The ID of the data access security policy. This policy is used to control the access and protection rules for the data source.</para>
+        /// <para>Optional. The ID of the data access security policy. This policy is used to control access and protection rules for the data source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sp-usr-example</para>
@@ -210,12 +202,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string SnowflakeWarehouse { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the cloud instance name as the data source name. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>1: Yes.</description></item>
-        /// <item><description>0: No.
-        /// This parameter takes effect only when you select a cloud database instance.</description></item>
-        /// </list>
+        /// <para>Specifies whether to use the cloud instance name as the data source name. Valid values: 1: yes, and 0: no. This parameter takes effect only when you select a cloud database instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -225,13 +212,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? SyncAlias { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use SSL. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>1: Enable.</description></item>
-        /// <item><description>0: Disable.</description></item>
-        /// <item><description>-1: Use the default setting.
-        /// Only ADB_MYSQL, CLICKHOUSE, MARIADB, MYSQL, OCEANBASEX, POLARDB, SELECTDB, and STARROCKS support SSL. Leave this parameter empty for other types.</description></item>
-        /// </list>
+        /// <para>Specifies whether to use SSL. Valid values: 1: enabled, 0: disabled, and -1: default settings. Only ADB_MYSQL, CLICKHOUSE, MARIADB, MYSQL, OCEANBASEX, POLARDB, SELECTDB, and STARROCKS support SSL. Leave this parameter empty for other types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

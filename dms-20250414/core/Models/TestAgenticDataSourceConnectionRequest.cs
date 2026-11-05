@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class TestAgenticDataSourceConnectionRequest : TeaModel {
         /// <summary>
-        /// <para>The alias. You can leave this parameter empty when testing a connection. This parameter does not create or modify a data source.</para>
+        /// <para>The name of the AnalyticDB for MySQL Spark resource group. This parameter takes effect only when DbType is set to ADB_MYSQL_SPARK. You must specify a resource group when connecting to this type of data source. This parameter is independent of Schema (database name) and they cannot replace each other.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>resourceGroup1</para>
+        /// </summary>
+        [NameInMap("AdbSparkResourceGroup")]
+        [Validation(Required=false)]
+        public string AdbSparkResourceGroup { get; set; }
+
+        /// <summary>
+        /// <para>The alias. You can leave this parameter empty when testing a connection. This operation does not create or modify a data source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo_mysql</para>
@@ -40,7 +50,13 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AuthPassword { get; set; }
 
         /// <summary>
-        /// <para>The authentication type. This parameter is optional. Valid values: -1 (no authentication required), 0 (username and password), 1 (password only), and 2 (password-free).</para>
+        /// <para>The authentication type. This parameter is optional. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>-1: No authentication required.</description></item>
+        /// <item><description>0: Username and password.</description></item>
+        /// <item><description>1: Password only.</description></item>
+        /// <item><description>2: Password-free.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -50,7 +66,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? AuthType { get; set; }
 
         /// <summary>
-        /// <para>The catalog name. You can leave this parameter empty when testing a connection. This parameter does not create a metadata catalog.</para>
+        /// <para>The catalog name. You can leave this parameter empty when testing a connection. This operation does not create a metadata catalog.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo_catalog</para>
@@ -60,7 +76,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string CatalogName { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the data source. This parameter is required when testing an existing data source. If no new password is passed, the saved password is reused. Leave this parameter empty when testing a new data source.</para>
+        /// <para>The UUID of the data source. Specify this parameter when testing an existing data source. If no new password is passed, the saved password is reused. Leave this parameter empty when testing a new data source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou_a1b2c3d4e5f6</para>
@@ -70,7 +86,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DataSourceUuid { get; set; }
 
         /// <summary>
-        /// <para>The type of the data source. Use uppercase letters. Do not pass numbers. Valid values: MYSQL, POSTGRESQL, ORACLE, SQLSERVER, MARIADB, POLARDB, POLARDB_POSTGRESQL, POLARDB_ORACLE, OCEANBASEX, DRDS, ADB_MYSQL, ADB_POSTGRESQL, CLICKHOUSE, SELECTDB, STARROCKS, HOLOGRES, MAXCOMPUTE, ES_REST, and TRINO.</para>
+        /// <para>The type of the data source. Use uppercase letters for the identifier. Do not pass numbers. Valid values: MYSQL, POSTGRESQL, ORACLE, SQLSERVER, MARIADB, POLARDB, POLARDB_POSTGRESQL, POLARDB_ORACLE, OCEANBASEX, DRDS, ADB_MYSQL, ADB_POSTGRESQL, CLICKHOUSE, SELECTDB, STARROCKS, HOLOGRES, MAXCOMPUTE, ES_REST, and TRINO.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -91,7 +107,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string EnvType { get; set; }
 
         /// <summary>
-        /// <para>The domain name or IP address of the database. Do not include the protocol, path, or port. This parameter is optional. You can leave this parameter empty when you select an existing cloud instance and the endpoint is automatically populated.</para>
+        /// <para>The domain name or IP address of the database. Do not include the protocol, path, or port. This parameter is optional. You can leave this parameter empty if you select an existing cloud instance and the address is automatically populated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mysql.example.com</para>
@@ -101,7 +117,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Host { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud resource instance. This parameter is required when you select an existing cloud instance. You can leave this parameter empty when you enter a connection endpoint.</para>
+        /// <para>The ID of the cloud resource instance. Specify this parameter when you select an existing cloud instance. You can leave this parameter empty when you enter an endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-bp1234567890</para>
@@ -114,10 +130,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <para>The source of the data source. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>RDS: ApsaraDB instance.</description></item>
-        /// <item><description>PUBLIC_OWN: self-managed database connected over the Internet.</description></item>
-        /// <item><description>ECS_OWN: self-managed database hosted on an ECS instance.</description></item>
-        /// <item><description>GATEWAY: database connected through Database Gateway.</description></item>
-        /// <item><description>VPC_IDC: database connected over a VPC or data center.</description></item>
+        /// <item><description>PUBLIC_OWN: Self-managed database connected over the Internet.</description></item>
+        /// <item><description>ECS_OWN: Self-managed database hosted on an ECS instance.</description></item>
+        /// <item><description>GATEWAY: Database connected through Database Gateway.</description></item>
+        /// <item><description>VPC_IDC: Database connected through a VPC or data center.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -129,7 +145,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string InstanceSource { get; set; }
 
         /// <summary>
-        /// <para>The name of the KMS secret. This parameter is required when you use KMS to manage database credentials. Leave this parameter empty in other scenarios.</para>
+        /// <para>The name of the credential managed by Key Management Service (KMS). Specify this parameter when you use KMS to manage database credentials. Leave this parameter empty in other scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>datasource-secret</para>
@@ -139,7 +155,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string KmsSecret { get; set; }
 
         /// <summary>
-        /// <para>The service port of the database. This parameter is optional. You can leave this parameter empty when you select an existing cloud instance and the port is automatically populated.</para>
+        /// <para>The service port of the database. This parameter is optional. You can leave this parameter empty if you select an existing cloud instance and the port is automatically populated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3306</para>
@@ -149,7 +165,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? Port { get; set; }
 
         /// <summary>
-        /// <para>The complete ARN of the RAM role. This parameter is required when you use an Alibaba Cloud RAM role to access the data source. Leave this parameter empty in other scenarios.</para>
+        /// <para>The complete ARN of the Resource Access Management (RAM) role. Specify this parameter when you use an Alibaba Cloud RAM role to access the data source. Leave this parameter empty in other scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::123456789012****:role/DataSourceRole</para>
@@ -159,7 +175,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RoleArn { get; set; }
 
         /// <summary>
-        /// <para>The schema name. This parameter is optional. For ADB_POSTGRESQL, DRDS, POSTGRESQL, and POLARDB_POSTGRESQL, enter the database name. For ORACLE, enter the SID or service name, and prefix the service name with a forward slash (/). For POLARDB_ORACLE, enter the SID. For MAXCOMPUTE, enter the project name. Leave this parameter empty for other types.</para>
+        /// <para>The schema name. This parameter is optional. For ADB_POSTGRESQL, DRDS, POSTGRESQL, and POLARDB_POSTGRESQL, specify the database name. For ORACLE, specify the SID or service name, and prefix the service name with a forward slash (/). For POLARDB_ORACLE, specify the SID. For MAXCOMPUTE, specify the project name. Leave this parameter empty for other types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>postgres</para>
@@ -189,7 +205,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string SnowflakeWarehouse { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to synchronize the alias. This parameter is optional when testing a connection. This parameter does not modify the data source name.</para>
+        /// <para>Specifies whether to synchronize the alias. This parameter is optional when testing a connection. This operation does not modify the data source name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -203,7 +219,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <list type="bullet">
         /// <item><description>1: Enable.</description></item>
         /// <item><description>0: Disable.</description></item>
-        /// <item><description>-1: Use the default setting.
+        /// <item><description>-1: Use default settings.
         /// SSL is supported only for ADB_MYSQL, CLICKHOUSE, MARIADB, MYSQL, OCEANBASEX, POLARDB, SELECTDB, and STARROCKS. Leave this parameter empty for other types.</description></item>
         /// </list>
         /// 
@@ -215,7 +231,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? UseSsl { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch. This parameter is required when you access MaxCompute over a VPC. Leave this parameter empty in other scenarios.</para>
+        /// <para>The ID of the vSwitch. Specify this parameter when you access MaxCompute through a VPC. Leave this parameter empty in other scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-bp1234567890</para>
@@ -225,7 +241,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC. This parameter is required when you access MaxCompute over a VPC. Leave this parameter empty in other scenarios.</para>
+        /// <para>The ID of the VPC. Specify this parameter when you access MaxCompute through a VPC. Leave this parameter empty in other scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1234567890</para>
@@ -235,7 +251,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID. This parameter is required when you access MaxCompute over a VPC. Leave this parameter empty in other scenarios.</para>
+        /// <para>The ID of the zone. Specify this parameter when you access MaxCompute through a VPC. Leave this parameter empty in other scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-h</para>

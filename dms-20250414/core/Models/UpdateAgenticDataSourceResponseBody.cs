@@ -17,6 +17,16 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public UpdateAgenticDataSourceResponseBodyData Data { get; set; }
         public class UpdateAgenticDataSourceResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The name of the ADB MySQL Spark resource group. This parameter is returned only for data source details where DbType is ADB_MYSQL_SPARK. It is independent of the schema (database name).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>resourceGroup1</para>
+            /// </summary>
+            [NameInMap("AdbSparkResourceGroup")]
+            [Validation(Required=false)]
+            public string AdbSparkResourceGroup { get; set; }
+
+            /// <summary>
             /// <para>The display name of the data source.</para>
             /// 
             /// <b>Example:</b>
@@ -37,7 +47,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AuthAccount { get; set; }
 
             /// <summary>
-            /// <para>The masked value of the password or token. The actual value is not returned.</para>
+            /// <para>The masked value of the password or token. The actual content is not returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>P@ss****</para>
@@ -97,7 +107,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string DataSourceUuid { get; set; }
 
             /// <summary>
-            /// <para>The type of the data source. Valid values: MYSQL, POSTGRESQL, ORACLE, SQLSERVER, MARIADB, POLARDB, POLARDB_POSTGRESQL, POLARDB_ORACLE, OCEANBASEX, DRDS, ADB_MYSQL, ADB_POSTGRESQL, CLICKHOUSE, SELECTDB, STARROCKS, HOLOGRES, MAXCOMPUTE, ES_REST, and TRINO.</para>
+            /// <para>The data source type. Valid values: MYSQL, POSTGRESQL, ORACLE, SQLSERVER, MARIADB, POLARDB, POLARDB_POSTGRESQL, POLARDB_ORACLE, OCEANBASEX, DRDS, ADB_MYSQL, ADB_POSTGRESQL, CLICKHOUSE, SELECTDB, STARROCKS, HOLOGRES, MAXCOMPUTE, ES_REST, and TRINO.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MYSQL</para>
@@ -160,10 +170,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The source of the data source. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>RDS: ApsaraDB instance</description></item>
-            /// <item><description>PUBLIC_OWN: self-managed database on the Internet</description></item>
-            /// <item><description>ECS_OWN: self-managed database on an ECS instance</description></item>
-            /// <item><description>GATEWAY: connected through Database Gateway</description></item>
-            /// <item><description>VPC_IDC: connected through a VPC or IDC</description></item>
+            /// <item><description>PUBLIC_OWN: self-managed database connected over the Internet</description></item>
+            /// <item><description>ECS_OWN: self-managed database hosted on an ECS instance</description></item>
+            /// <item><description>GATEWAY: database connected through Database Gateway</description></item>
+            /// <item><description>VPC_IDC: database connected through a VPC or data center</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -184,7 +194,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string KmsSecret { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data access security policy in use. This parameter is empty if no policy is configured.</para>
+            /// <para>The ID of the data access security policy currently in use. This parameter is empty if no policy is set.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sp-usr-example</para>
@@ -224,7 +234,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string ResourceAccountId { get; set; }
 
             /// <summary>
-            /// <para>The ARN of the RAM role used to access the data source. This parameter is empty if role authorization is not used.</para>
+            /// <para>The ARN of the RAM role used to access the data source. This parameter is empty if role-based authorization is not used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:ram::123456789012****:role/DataSourceRole</para>
@@ -275,9 +285,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <summary>
             /// <para>The SSL settings. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: enabled</description></item>
-            /// <item><description>0: disabled</description></item>
-            /// <item><description>-1: default settings</description></item>
+            /// <item><description>1: enable</description></item>
+            /// <item><description>0: disable</description></item>
+            /// <item><description>-1: use default settings</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -290,7 +300,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The error code returned if the call fails. This parameter is empty if the call is successful.</para>
+        /// <para>The error code returned when the call fails. This parameter is empty when the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidParameter</para>
@@ -300,7 +310,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the call fails. This parameter is empty if the call is successful.</para>
+        /// <para>The error message returned when the call fails. This parameter is empty when the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The parameter is invalid</para>
@@ -310,7 +320,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID used to trace the call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request-1234567890</para>

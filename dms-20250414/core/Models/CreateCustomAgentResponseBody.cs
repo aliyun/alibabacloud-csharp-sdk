@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AgentType { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud main account ID.</para>
+            /// <para>The ID of the Alibaba Cloud main account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16738266********</para>
@@ -51,14 +51,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AliyunUid { get; set; }
 
             /// <summary>
-            /// <para>The callback feature configuration.</para>
+            /// <para>The callback feature configuration items.</para>
             /// </summary>
             [NameInMap("CallbackConfig")]
             [Validation(Required=false)]
             public CreateCustomAgentResponseBodyDataCallbackConfig CallbackConfig { get; set; }
             public class CreateCustomAgentResponseBodyDataCallbackConfig : TeaModel {
                 /// <summary>
-                /// <para>The callback tool invocation parameters.</para>
+                /// <para>The parameters to invoke the callback tool.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;ID&quot;:&quot;test&quot;}</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string CallbackArgs { get; set; }
 
                 /// <summary>
-                /// <para>The prompt for generating callback tool invocation parameters.</para>
+                /// <para>The prompt for generating parameters to invoke the callback tool.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>send web report to <a href="mailto:123456@163.com">123456@163.com</a></para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string CallbackPrompt { get; set; }
 
                 /// <summary>
-                /// <para>The callback tool invocation timing.</para>
+                /// <para>The timing to invoke the callback tool.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string CreatorUserName { get; set; }
 
             /// <summary>
-            /// <para>The custom agent ID.</para>
+            /// <para>The ID of the custom agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ca-4y3ca4khkcu**********ysf</para>
@@ -260,14 +260,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The instructions.</para>
+            /// <para>The instruction.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Analysis framework:</para>
             /// <ol>
-            /// <item><description>Monitor core metrics (GMV, order volume, UV, and conversion rate) on a daily, weekly, and monthly basis to analyze trend changes and year-over-year or month-over-month fluctuations.</description></item>
-            /// <item><description>Segment data by new and existing customers, channels, and regions to identify growth drivers and shortcomings.</description></item>
-            /// <item><description>Conduct funnel analysis based on user behavior paths (browse &gt; add to cart &gt; checkout) to identify churn stages</description></item>
+            /// <item><description>Monitor core metrics (GMV, order volume, UV, and conversion rate) on a daily, weekly, and monthly basis, and analyze trend changes and year-over-year or month-over-month fluctuations.</description></item>
+            /// <item><description>Segment data by new and returning customers, channels, and regions to identify growth sources and shortcomings.</description></item>
+            /// <item><description>Conduct funnel analysis based on user behavior paths (browse -&gt; add to cart -&gt; pay) to identify drop-off stages</description></item>
             /// </ol>
             /// </summary>
             [NameInMap("Instruction")]
@@ -275,7 +275,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Instruction { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a scheduled task is configured.</para>
+            /// <para>Indicates whether a periodic task is configured.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -291,9 +291,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>Core metric definitions:</para>
             /// <ol>
             /// <item><description>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</description></item>
-            /// <item><description>Order volume refers to the number of valid daily orders.</description></item>
-            /// <item><description>UV (Unique Visitors) refers to the number of deduplicated users visiting the website or app.</description></item>
-            /// <item><description>Conversion rate = Paid orders / UV, reflecting the traffic conversion efficiency</description></item>
+            /// <item><description>Order volume refers to the number of valid orders placed per day.</description></item>
+            /// <item><description>UV (Unique Visitors) refers to the number of deduplicated users who visit the website or app.</description></item>
+            /// <item><description>Conversion rate = Number of paid orders / UV, reflecting the traffic conversion efficiency</description></item>
             /// </ol>
             /// </summary>
             [NameInMap("Knowledge")]
@@ -310,8 +310,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <summary>
                 /// <para>The access type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>mcp: MCP access.</description></item>
-                /// <item><description>dms_kb: DMS knowledge base access.</description></item>
+                /// <item><description>mcp: Accessed through MCP.</description></item>
+                /// <item><description>dms_kb: Accessed through the DMS knowledge base.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -332,7 +332,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string KbUuid { get; set; }
 
                 /// <summary>
-                /// <para>The MCP server ID.</para>
+                /// <para>The ID of the MCP server.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>nhdpt9adf6ac**********ca</para>
@@ -427,7 +427,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The next run time of the scheduled task.</para>
+            /// <para>The next execution time of the periodic task.</para>
             /// <list type="bullet">
             /// <item><description>Timestamp format.</description></item>
             /// </list>
@@ -490,7 +490,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string ReleaseTime { get; set; }
 
             /// <summary>
-            /// <para>The scheduled task configuration.</para>
+            /// <para>The periodic task configuration.</para>
             /// </summary>
             [NameInMap("ScheduleTaskConfig")]
             [Validation(Required=false)]
@@ -507,7 +507,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string CronExpression { get; set; }
 
                 /// <summary>
-                /// <para>The query for the scheduled task.</para>
+                /// <para>The question for the scheduled task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Analyze this data and provide a brief report</para>
@@ -542,7 +542,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The text report format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The text report requires that all numbers be written as Chinese numerals instead of Arabic numerals</para>
+            /// <para>The text report requires that all numbers be converted to Chinese numerals instead of Arabic numerals</para>
             /// </summary>
             [NameInMap("TextReportConfig")]
             [Validation(Required=false)]
@@ -559,7 +559,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The web report format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The web report requires that all numbers be written as Chinese numerals instead of Arabic numerals</para>
+            /// <para>The web report requires that all numbers be converted to Chinese numerals instead of Arabic numerals</para>
             /// </summary>
             [NameInMap("WebReportConfig")]
             [Validation(Required=false)]
@@ -570,7 +570,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <list type="bullet">
             /// <item><description>default: Default.</description></item>
             /// <item><description>journal: Journal.</description></item>
-            /// <item><description>legacy: Classic.</description></item>
+            /// <item><description>legacy: Legacy.</description></item>
             /// <item><description>neobrutalism: Neobrutalism.</description></item>
             /// <item><description>infographic: Infographic.</description></item>
             /// </list>

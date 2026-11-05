@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The description of the connection test result. This parameter is usually empty when the connection is successful, and returns the cause when the connection fails.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Connection timed out. Check the connection endpoint</para>
+            /// <para>Connection timed out. Check the endpoint.</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the data source is connected.</para>
+            /// <para>Indicates whether the data source is connected successfully.</para>
             /// </summary>
             [NameInMap("Success")]
             [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate the current call.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request-1234567890</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current call is successful.</para>
+        /// <para>Indicates whether the call is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-11T14:04:32.000+00:00</para>
@@ -87,7 +87,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The error message for skill parsing. This message is returned when the skill status is INVALID.</para>
+            /// <para>The skill parsing error message.</para>
+            /// <list type="bullet">
+            /// <item><description>This error message is returned when the skill status is INVALID.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>SKILL.md file not exist.</para>
@@ -139,9 +142,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <summary>
             /// <para>The skill status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>INIT: The skill is not ready.</description></item>
-            /// <item><description>ACTIVE: The skill is active.</description></item>
-            /// <item><description>INVALID: The skill is invalid.</description></item>
+            /// <item><description>INIT: Not ready.</description></item>
+            /// <item><description>ACTIVE: Active.</description></item>
+            /// <item><description>INVALID: Invalid.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -196,7 +199,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <summary>
         /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request is successful.                                 </description></item>
+        /// <item><description><b>true</b>: The request is successful.</description></item>
         /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// 

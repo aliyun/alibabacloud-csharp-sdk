@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ListAgenticSecurityPoliciesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of security policies returned by this query. Enabled system default policies are placed at the beginning, followed by the user policies on the current page. You can use Readonly to distinguish between the two types of policies.</para>
+        /// <para>The list of security policies returned by the current query. Enabled system default policies are placed at the beginning, followed by the user policies on the current page. You can use Readonly to distinguish between the two types of policies.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AliyunAccountUid { get; set; }
 
             /// <summary>
-            /// <para>The ID of the system default policy inherited by the user policy. This value is empty if no inheritance relationship is configured. This value is not returned for system default policies.</para>
+            /// <para>The ID of the system default policy inherited by the user policy. This parameter is empty when no inheritance relationship is configured. This value is not returned for system default policies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sp-sys-default</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string BasePolicyId { get; set; }
 
             /// <summary>
-            /// <para>The description of the security policy. The description of a system default policy is returned in the language of the request context.</para>
+            /// <para>The description of the security policy. The description of a system default policy is returned in the language of the call context.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Read-only access policy for analytics</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The time when the security policy was created. The time is in the yyyy-MM-dd HH:mm:ss format and does not contain a time zone offset.</para>
+            /// <para>The time when the security policy was created. The time is in the yyyy-MM-dd HH:mm:ss format and does not include a time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-13 14:30:00</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the security policy was last modified. The time is in the yyyy-MM-dd HH:mm:ss format and does not contain a time zone offset.</para>
+            /// <para>The time when the security policy was last modified. The time is in the yyyy-MM-dd HH:mm:ss format and does not include a time zone offset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-13 14:35:00</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The business ID of the security policy. A system default policy ID starts with sp-sys-, and a user policy ID starts with sp-usr-.</para>
+            /// <para>The business ID of the security policy. The ID of a system default policy starts with sp-sys-, and the ID of a user policy starts with sp-usr-.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sp-sys-default</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string PolicyId { get; set; }
 
             /// <summary>
-            /// <para>The Policy Name of the security policy. The Policy Name of a system default policy is returned in the language of the request context.</para>
+            /// <para>The policy name. The name of a system default policy is returned in the language of the call context.</para>
             /// 
             /// <b>Example:</b>
             /// <para>team-readonly-policy</para>
@@ -89,9 +89,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <summary>
             /// <para>The current state of the security policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ON: Enabled.</description></item>
-            /// <item><description>OFF: Disabled.</description></item>
-            /// <item><description>ARCHIVED: Archived.
+            /// <item><description>ON: The policy is enabled.</description></item>
+            /// <item><description>OFF: The policy is disabled.</description></item>
+            /// <item><description>ARCHIVED: The policy is archived.
             /// All system default policies returned by this operation are in the ON state.</description></item>
             /// </list>
             /// 
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string PolicyStatus { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the policy is read-only. Valid values:</para>
+            /// <para>Indicates whether the policy is read-only. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: The policy is a system default policy.</description></item>
             /// <item><description>false: The policy is a user policy of the current account.</description></item>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Tags { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the operator that last modified the policy. For a user policy, the operator ID is recorded first. If no operator ID is available, the UID of the current Alibaba Cloud account is recorded.</para>
+            /// <para>The identifier of the operator who last modified the policy. For user policies, the operator ID is recorded first. If no operator ID is available, the UID of the current Alibaba Cloud account is recorded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>system</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate and trace this call.</para>
+        /// <para>The request ID, which is used to locate and trace the call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request-1234567890</para>

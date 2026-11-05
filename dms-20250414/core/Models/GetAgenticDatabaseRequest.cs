@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class GetAgenticDatabaseRequest : TeaModel {
         /// <summary>
-        /// <para>The UUID of the database. You can obtain this value by calling ListAgenticDatabase or SearchAgenticDatabase.</para>
+        /// <para>The UUID of the database. You can obtain the UUID by calling ListAgenticDatabase or SearchAgenticDatabase.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class UpdateDataAgentSpaceInfoRequest : TeaModel {
         /// <summary>
+        /// <para>The workspace configuration items.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{sql_config:null}</para>
+        /// </summary>
+        [NameInMap("Config")]
+        [Validation(Required=false)]
+        public string Config { get; set; }
+
+        /// <summary>
         /// <para>The current DMS unit.</para>
         /// 
         /// <b>Example:</b>
@@ -20,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DMSUnit { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable session sharing for the workspace. Valid values: true and false.</para>
+        /// <para>Specifies whether to enable the session sharing feature for the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +40,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public bool? IsSessionShareEnabled { get; set; }
 
         /// <summary>
-        /// <para>The new description for the workspace.</para>
+        /// <para>The new description of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>space for test new</para>
@@ -40,7 +50,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string WorkspaceDesc { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace.</para>
+        /// <para>The workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20923*****7291</para>
@@ -50,7 +60,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string WorkspaceId { get; set; }
 
         /// <summary>
-        /// <para>The new name for the workspace.</para>
+        /// <para>The new name of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yunqitest_v2</para>

@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "Dms";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("dms", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -39,7 +42,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data source accessible by the Agent data gateway.</para>
+        /// <para>Creates a data source that can be accessed by the Agent data gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -61,6 +64,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdbSparkResourceGroup))
+            {
+                query["AdbSparkResourceGroup"] = request.AdbSparkResourceGroup;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Alias))
             {
                 query["Alias"] = request.Alias;
@@ -174,7 +181,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data source accessible by the Agent data gateway.</para>
+        /// <para>Creates a data source that can be accessed by the Agent data gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -196,6 +203,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdbSparkResourceGroup))
+            {
+                query["AdbSparkResourceGroup"] = request.AdbSparkResourceGroup;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Alias))
             {
                 query["Alias"] = request.Alias;
@@ -309,7 +320,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data source accessible by the Agent data gateway.</para>
+        /// <para>Creates a data source that can be accessed by the Agent data gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -332,7 +343,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data source accessible by the Agent data gateway.</para>
+        /// <para>Creates a data source that can be accessed by the Agent data gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1890,6 +1901,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["CallbackConfig"] = request.CallbackConfigShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateFrom))
+            {
+                query["CreateFrom"] = request.CreateFrom;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
             {
                 query["DMSUnit"] = request.DMSUnit;
@@ -2033,6 +2048,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackConfigShrink))
             {
                 query["CallbackConfig"] = request.CallbackConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateFrom))
+            {
+                query["CreateFrom"] = request.CreateFrom;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
             {
@@ -3195,7 +3214,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a DataAgent workspace.</para>
+        /// <para>Creates a DataAgent collaborative workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3212,6 +3231,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                query["Config"] = request.Config;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
             {
                 query["DMSUnit"] = request.DMSUnit;
@@ -3249,7 +3272,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a DataAgent workspace.</para>
+        /// <para>Creates a DataAgent collaborative workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3266,6 +3289,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                query["Config"] = request.Config;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
             {
                 query["DMSUnit"] = request.DMSUnit;
@@ -3303,7 +3330,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a DataAgent workspace.</para>
+        /// <para>Creates a DataAgent collaborative workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3321,7 +3348,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a DataAgent workspace.</para>
+        /// <para>Creates a DataAgent collaborative workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3520,7 +3547,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After deletion, the data source cannot establish connections and cannot be restored by calling the enable API operation.</para>
+        /// <para>After deletion, the data source can no longer establish connections and cannot be recovered by calling the enable API operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3567,7 +3594,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After deletion, the data source cannot establish connections and cannot be restored by calling the enable API operation.</para>
+        /// <para>After deletion, the data source can no longer establish connections and cannot be recovered by calling the enable API operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3614,7 +3641,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After deletion, the data source cannot establish connections and cannot be restored by calling the enable API operation.</para>
+        /// <para>After deletion, the data source can no longer establish connections and cannot be recovered by calling the enable API operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3637,7 +3664,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After deletion, the data source cannot establish connections and cannot be restored by calling the enable API operation.</para>
+        /// <para>After deletion, the data source can no longer establish connections and cannot be recovered by calling the enable API operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3651,6 +3678,146 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteAgenticDataSourceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits an asynchronous deletion request for a VPC endpoint and returns the acceptance result.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After the reverse endpoint is deleted, the data source can no longer establish connections and cannot be restored by calling the enable API.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgenticVpcEndpointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgenticVpcEndpointResponse
+        /// </returns>
+        public DeleteAgenticVpcEndpointResponse DeleteAgenticVpcEndpointWithOptions(DeleteAgenticVpcEndpointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointId))
+            {
+                query["EndpointId"] = request.EndpointId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgenticVpcEndpoint",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgenticVpcEndpointResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits an asynchronous deletion request for a VPC endpoint and returns the acceptance result.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After the reverse endpoint is deleted, the data source can no longer establish connections and cannot be restored by calling the enable API.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgenticVpcEndpointRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgenticVpcEndpointResponse
+        /// </returns>
+        public async Task<DeleteAgenticVpcEndpointResponse> DeleteAgenticVpcEndpointWithOptionsAsync(DeleteAgenticVpcEndpointRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointId))
+            {
+                query["EndpointId"] = request.EndpointId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgenticVpcEndpoint",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgenticVpcEndpointResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits an asynchronous deletion request for a VPC endpoint and returns the acceptance result.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After the reverse endpoint is deleted, the data source can no longer establish connections and cannot be restored by calling the enable API.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgenticVpcEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgenticVpcEndpointResponse
+        /// </returns>
+        public DeleteAgenticVpcEndpointResponse DeleteAgenticVpcEndpoint(DeleteAgenticVpcEndpointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteAgenticVpcEndpointWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits an asynchronous deletion request for a VPC endpoint and returns the acceptance result.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After the reverse endpoint is deleted, the data source can no longer establish connections and cannot be restored by calling the enable API.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgenticVpcEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgenticVpcEndpointResponse
+        /// </returns>
+        public async Task<DeleteAgenticVpcEndpointResponse> DeleteAgenticVpcEndpointAsync(DeleteAgenticVpcEndpointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteAgenticVpcEndpointWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7419,7 +7586,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a data source by its UUID.</para>
+        /// <para>Queries the details of a data source by UUID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7466,7 +7633,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a data source by its UUID.</para>
+        /// <para>Queries the details of a data source by UUID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7513,7 +7680,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a data source by its UUID.</para>
+        /// <para>Queries the details of a data source by UUID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7536,7 +7703,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a data source by its UUID.</para>
+        /// <para>Queries the details of a data source by UUID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9007,7 +9174,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a workspace.</para>
+        /// <para>Retrieves the details of a collaborative workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9053,7 +9220,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a workspace.</para>
+        /// <para>Retrieves the details of a collaborative workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9099,7 +9266,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a workspace.</para>
+        /// <para>Retrieves the details of a collaborative workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9117,7 +9284,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a workspace.</para>
+        /// <para>Retrieves the details of a collaborative workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9135,7 +9302,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the MCP Server connectivity and tool list results by the Session ID returned when the detection was started.</para>
+        /// <para>Queries the connectivity and tool list results of an MCP server based on the session ID returned when the detection was started.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9185,7 +9352,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the MCP Server connectivity and tool list results by the Session ID returned when the detection was started.</para>
+        /// <para>Queries the connectivity and tool list results of an MCP server based on the session ID returned when the detection was started.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9235,7 +9402,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the MCP Server connectivity and tool list results by the Session ID returned when the detection was started.</para>
+        /// <para>Queries the connectivity and tool list results of an MCP server based on the session ID returned when the detection was started.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9253,7 +9420,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the MCP Server connectivity and tool list results by the Session ID returned when the detection was started.</para>
+        /// <para>Queries the connectivity and tool list results of an MCP server based on the session ID returned when the detection was started.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11347,7 +11514,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SQL execution history within the current tenant and returns the results in descending order of execution start time. Only AGENT_QUERY and WORKFLOW_QUERY are included.</para>
+        /// <para>Queries the SQL execution history within the current tenant, sorted in descending order by execution start time. Only includes AGENT_QUERY and WORKFLOW_QUERY.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11433,7 +11600,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SQL execution history within the current tenant and returns the results in descending order of execution start time. Only AGENT_QUERY and WORKFLOW_QUERY are included.</para>
+        /// <para>Queries the SQL execution history within the current tenant, sorted in descending order by execution start time. Only includes AGENT_QUERY and WORKFLOW_QUERY.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11519,7 +11686,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SQL execution history within the current tenant and returns the results in descending order of execution start time. Only AGENT_QUERY and WORKFLOW_QUERY are included.</para>
+        /// <para>Queries the SQL execution history within the current tenant, sorted in descending order by execution start time. Only includes AGENT_QUERY and WORKFLOW_QUERY.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11537,7 +11704,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SQL execution history within the current tenant and returns the results in descending order of execution start time. Only AGENT_QUERY and WORKFLOW_QUERY are included.</para>
+        /// <para>Queries the SQL execution history within the current tenant, sorted in descending order by execution start time. Only includes AGENT_QUERY and WORKFLOW_QUERY.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11555,15 +11722,15 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the user security policy of the current Alibaba Cloud account by page and returns the enabled system default security policy.</para>
+        /// <para>Queries the user security policy of the current Alibaba Cloud account by using paging and returns the enabled system default security policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation returns the enabled system default policies and the user policies of the current Alibaba Cloud account.</para>
         /// <list type="bullet">
-        /// <item><description>System default policies are placed at the beginning of the list. Only policies in the ON (enabled) state are returned. They are not filtered by PolicyStatus or IncludeArchived.</description></item>
-        /// <item><description>Page and Size are used to paginate user policies. Each call also returns up to Size enabled system default policies. Therefore, the number of items in Data may be greater than Size, and the same system default policies may be repeatedly returned during pagination.</description></item>
+        /// <item><description>System default policies are placed at the beginning of the list. Only policies in the ON (enabled) state are returned, and they are not filtered by PolicyStatus or IncludeArchived.</description></item>
+        /// <item><description>Page and Size are used to paginate user policies. Each call also returns up to Size enabled system default policies. Therefore, the number of entries in Data may be greater than Size, and the same system default policies may be repeatedly returned during pagination.</description></item>
         /// <item><description>TotalCount is the sum of the number of all enabled system default policies and the number of user policies that meet the filter conditions.</description></item>
         /// <item><description>You can use Readonly to distinguish between the two types of policies: true indicates a system default policy, and false indicates a user policy.</description></item>
         /// </list>
@@ -11620,15 +11787,15 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the user security policy of the current Alibaba Cloud account by page and returns the enabled system default security policy.</para>
+        /// <para>Queries the user security policy of the current Alibaba Cloud account by using paging and returns the enabled system default security policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation returns the enabled system default policies and the user policies of the current Alibaba Cloud account.</para>
         /// <list type="bullet">
-        /// <item><description>System default policies are placed at the beginning of the list. Only policies in the ON (enabled) state are returned. They are not filtered by PolicyStatus or IncludeArchived.</description></item>
-        /// <item><description>Page and Size are used to paginate user policies. Each call also returns up to Size enabled system default policies. Therefore, the number of items in Data may be greater than Size, and the same system default policies may be repeatedly returned during pagination.</description></item>
+        /// <item><description>System default policies are placed at the beginning of the list. Only policies in the ON (enabled) state are returned, and they are not filtered by PolicyStatus or IncludeArchived.</description></item>
+        /// <item><description>Page and Size are used to paginate user policies. Each call also returns up to Size enabled system default policies. Therefore, the number of entries in Data may be greater than Size, and the same system default policies may be repeatedly returned during pagination.</description></item>
         /// <item><description>TotalCount is the sum of the number of all enabled system default policies and the number of user policies that meet the filter conditions.</description></item>
         /// <item><description>You can use Readonly to distinguish between the two types of policies: true indicates a system default policy, and false indicates a user policy.</description></item>
         /// </list>
@@ -11685,15 +11852,15 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the user security policy of the current Alibaba Cloud account by page and returns the enabled system default security policy.</para>
+        /// <para>Queries the user security policy of the current Alibaba Cloud account by using paging and returns the enabled system default security policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation returns the enabled system default policies and the user policies of the current Alibaba Cloud account.</para>
         /// <list type="bullet">
-        /// <item><description>System default policies are placed at the beginning of the list. Only policies in the ON (enabled) state are returned. They are not filtered by PolicyStatus or IncludeArchived.</description></item>
-        /// <item><description>Page and Size are used to paginate user policies. Each call also returns up to Size enabled system default policies. Therefore, the number of items in Data may be greater than Size, and the same system default policies may be repeatedly returned during pagination.</description></item>
+        /// <item><description>System default policies are placed at the beginning of the list. Only policies in the ON (enabled) state are returned, and they are not filtered by PolicyStatus or IncludeArchived.</description></item>
+        /// <item><description>Page and Size are used to paginate user policies. Each call also returns up to Size enabled system default policies. Therefore, the number of entries in Data may be greater than Size, and the same system default policies may be repeatedly returned during pagination.</description></item>
         /// <item><description>TotalCount is the sum of the number of all enabled system default policies and the number of user policies that meet the filter conditions.</description></item>
         /// <item><description>You can use Readonly to distinguish between the two types of policies: true indicates a system default policy, and false indicates a user policy.</description></item>
         /// </list>
@@ -11714,15 +11881,15 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the user security policy of the current Alibaba Cloud account by page and returns the enabled system default security policy.</para>
+        /// <para>Queries the user security policy of the current Alibaba Cloud account by using paging and returns the enabled system default security policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation returns the enabled system default policies and the user policies of the current Alibaba Cloud account.</para>
         /// <list type="bullet">
-        /// <item><description>System default policies are placed at the beginning of the list. Only policies in the ON (enabled) state are returned. They are not filtered by PolicyStatus or IncludeArchived.</description></item>
-        /// <item><description>Page and Size are used to paginate user policies. Each call also returns up to Size enabled system default policies. Therefore, the number of items in Data may be greater than Size, and the same system default policies may be repeatedly returned during pagination.</description></item>
+        /// <item><description>System default policies are placed at the beginning of the list. Only policies in the ON (enabled) state are returned, and they are not filtered by PolicyStatus or IncludeArchived.</description></item>
+        /// <item><description>Page and Size are used to paginate user policies. Each call also returns up to Size enabled system default policies. Therefore, the number of entries in Data may be greater than Size, and the same system default policies may be repeatedly returned during pagination.</description></item>
         /// <item><description>TotalCount is the sum of the number of all enabled system default policies and the number of user policies that meet the filter conditions.</description></item>
         /// <item><description>You can use Readonly to distinguish between the two types of policies: true indicates a system default policy, and false indicates a user policy.</description></item>
         /// </list>
@@ -11743,7 +11910,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SQL execution history visible to the current caller, sorted in descending order by execution start time. Only AGENT_QUERY and WORKFLOW_QUERY are included.</para>
+        /// <para>Queries the SQL execution history visible to the current caller, sorted in descending order by execution start time. Only includes AGENT_QUERY and WORKFLOW_QUERY.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11829,7 +11996,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SQL execution history visible to the current caller, sorted in descending order by execution start time. Only AGENT_QUERY and WORKFLOW_QUERY are included.</para>
+        /// <para>Queries the SQL execution history visible to the current caller, sorted in descending order by execution start time. Only includes AGENT_QUERY and WORKFLOW_QUERY.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11915,7 +12082,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SQL execution history visible to the current caller, sorted in descending order by execution start time. Only AGENT_QUERY and WORKFLOW_QUERY are included.</para>
+        /// <para>Queries the SQL execution history visible to the current caller, sorted in descending order by execution start time. Only includes AGENT_QUERY and WORKFLOW_QUERY.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11933,7 +12100,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SQL execution history visible to the current caller, sorted in descending order by execution start time. Only AGENT_QUERY and WORKFLOW_QUERY are included.</para>
+        /// <para>Queries the SQL execution history visible to the current caller, sorted in descending order by execution start time. Only includes AGENT_QUERY and WORKFLOW_QUERY.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18094,10 +18261,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>message_type</c> defaults to <c>primary</c>. When you need to append information or cancel a session, set it to <c>additional</c> or <c>cancel</c>.</description></item>
-        /// <item><description>The <c>reply_to</c> field indicates which agent message this message is responding to. The default value is <c>0</c>.</description></item>
-        /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
-        /// <item><description><c>quoted_message</c> can be used to quote previous user messages.</description></item>
+        /// <item><description>The default value of message_type is primary. Set this parameter to additional or cancel when you need to append information or cancel the session.</description></item>
+        /// <item><description>The reply_to field specifies the agent message to which this message responds. The default value is 0.</description></item>
+        /// <item><description>When message_type is set to additional, the question field is required.</description></item>
+        /// <item><description>You can use quoted_message to quote previous user messages.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18221,10 +18388,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>message_type</c> defaults to <c>primary</c>. When you need to append information or cancel a session, set it to <c>additional</c> or <c>cancel</c>.</description></item>
-        /// <item><description>The <c>reply_to</c> field indicates which agent message this message is responding to. The default value is <c>0</c>.</description></item>
-        /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
-        /// <item><description><c>quoted_message</c> can be used to quote previous user messages.</description></item>
+        /// <item><description>The default value of message_type is primary. Set this parameter to additional or cancel when you need to append information or cancel the session.</description></item>
+        /// <item><description>The reply_to field specifies the agent message to which this message responds. The default value is 0.</description></item>
+        /// <item><description>When message_type is set to additional, the question field is required.</description></item>
+        /// <item><description>You can use quoted_message to quote previous user messages.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18348,10 +18515,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>message_type</c> defaults to <c>primary</c>. When you need to append information or cancel a session, set it to <c>additional</c> or <c>cancel</c>.</description></item>
-        /// <item><description>The <c>reply_to</c> field indicates which agent message this message is responding to. The default value is <c>0</c>.</description></item>
-        /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
-        /// <item><description><c>quoted_message</c> can be used to quote previous user messages.</description></item>
+        /// <item><description>The default value of message_type is primary. Set this parameter to additional or cancel when you need to append information or cancel the session.</description></item>
+        /// <item><description>The reply_to field specifies the agent message to which this message responds. The default value is 0.</description></item>
+        /// <item><description>When message_type is set to additional, the question field is required.</description></item>
+        /// <item><description>You can use quoted_message to quote previous user messages.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18377,10 +18544,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>message_type</c> defaults to <c>primary</c>. When you need to append information or cancel a session, set it to <c>additional</c> or <c>cancel</c>.</description></item>
-        /// <item><description>The <c>reply_to</c> field indicates which agent message this message is responding to. The default value is <c>0</c>.</description></item>
-        /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
-        /// <item><description><c>quoted_message</c> can be used to quote previous user messages.</description></item>
+        /// <item><description>The default value of message_type is primary. Set this parameter to additional or cancel when you need to append information or cancel the session.</description></item>
+        /// <item><description>The reply_to field specifies the agent message to which this message responds. The default value is 0.</description></item>
+        /// <item><description>When message_type is set to additional, the question field is required.</description></item>
+        /// <item><description>You can use quoted_message to quote previous user messages.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19209,6 +19376,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdbSparkResourceGroup))
+            {
+                query["AdbSparkResourceGroup"] = request.AdbSparkResourceGroup;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Alias))
             {
                 query["Alias"] = request.Alias;
@@ -19340,6 +19511,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdbSparkResourceGroup))
+            {
+                query["AdbSparkResourceGroup"] = request.AdbSparkResourceGroup;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Alias))
             {
                 query["Alias"] = request.Alias;
@@ -19500,7 +19675,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only the parameters passed in the current request are modified. Unspecified parameters remain unchanged. The data source type cannot be modified.</para>
+        /// <para>Only the parameters passed in the current request are modified. Unpassed parameters remain unchanged. The data source type cannot be modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19517,6 +19692,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdbSparkResourceGroup))
+            {
+                query["AdbSparkResourceGroup"] = request.AdbSparkResourceGroup;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Alias))
             {
                 query["Alias"] = request.Alias;
@@ -19596,6 +19775,18 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseSsl))
             {
                 query["UseSsl"] = request.UseSsl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -19623,7 +19814,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only the parameters passed in the current request are modified. Unspecified parameters remain unchanged. The data source type cannot be modified.</para>
+        /// <para>Only the parameters passed in the current request are modified. Unpassed parameters remain unchanged. The data source type cannot be modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19640,6 +19831,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdbSparkResourceGroup))
+            {
+                query["AdbSparkResourceGroup"] = request.AdbSparkResourceGroup;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Alias))
             {
                 query["Alias"] = request.Alias;
@@ -19720,6 +19915,18 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["UseSsl"] = request.UseSsl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -19746,7 +19953,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only the parameters passed in the current request are modified. Unspecified parameters remain unchanged. The data source type cannot be modified.</para>
+        /// <para>Only the parameters passed in the current request are modified. Unpassed parameters remain unchanged. The data source type cannot be modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19769,7 +19976,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only the parameters passed in the current request are modified. Unspecified parameters remain unchanged. The data source type cannot be modified.</para>
+        /// <para>Only the parameters passed in the current request are modified. Unpassed parameters remain unchanged. The data source type cannot be modified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20439,7 +20646,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates workspace information.</para>
+        /// <para>Updates the information of a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20456,6 +20663,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                query["Config"] = request.Config;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
             {
                 query["DMSUnit"] = request.DMSUnit;
@@ -20497,7 +20708,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates workspace information.</para>
+        /// <para>Updates the information of a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20514,6 +20725,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                query["Config"] = request.Config;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
             {
                 query["DMSUnit"] = request.DMSUnit;
@@ -20555,7 +20770,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates workspace information.</para>
+        /// <para>Updates the information of a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20573,7 +20788,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates workspace information.</para>
+        /// <para>Updates the information of a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">

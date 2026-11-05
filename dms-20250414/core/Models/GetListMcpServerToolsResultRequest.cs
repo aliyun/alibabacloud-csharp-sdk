@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class GetListMcpServerToolsResultRequest : TeaModel {
         /// <summary>
-        /// <para>The DMS unit identifier. This value is typically the same as the DMSUnit used in the request that started the tool detection.</para>
+        /// <para>The DMS unit identifier. This is typically the same as the DMSUnit used in the request to start tool detection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DMSUnit { get; set; }
 
         /// <summary>
-        /// <para>The MCP Server ID used when the detection was started. This value must match the detection record associated with the SessionId.</para>
+        /// <para>The MCP server ID used when starting the detection. It must match the detection record corresponding to SessionId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>44lg***z65</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string McpServerUuid { get; set; }
 
         /// <summary>
-        /// <para>The temporary session ID returned by StartListMcpServerTools. This ID is used to locate the connectivity detection task.</para>
+        /// <para>The temporary session ID returned by StartListMcpServerTools, which is used to locate this connectivity detection task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1vwe***6wr</para>

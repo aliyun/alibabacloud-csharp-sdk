@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DeleteAgenticDataSourceRequest : TeaModel {
         /// <summary>
-        /// <para>The UUID of the data source to delete. Ensure that no workloads are using the data source before deletion.</para>
+        /// <para>The UUID of the data source to delete. Ensure that the data source is no longer in use before deletion.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

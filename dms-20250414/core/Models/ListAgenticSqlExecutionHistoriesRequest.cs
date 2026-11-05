@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ListAgenticSqlExecutionHistoriesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the actor. User IDs start with usr_, and agent IDs start with agt_. If you do not specify this parameter, a user queries their own execution history and the execution history of their agents, while an agent queries only its own execution history. If you specify this parameter, exact matching is performed, and the value must be the ID of the current user or an agent owned by the current user.</para>
+        /// <para>The ID of the actor. User IDs start with usr_, and agent IDs start with agt_. If not specified, a user queries their own history and the history of their agents, while an agent queries only its own history. If specified, exact matching is applied, and the value must be the ID of the current user or an agent owned by the current user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>usr_10001</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ActorName { get; set; }
 
         /// <summary>
-        /// <para>The type of the actor for exact matching. Valid values: HUMAN and AGENT.</para>
+        /// <para>The type of the actor for exact matching. Valid values: HUMAN, AGENT.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HUMAN</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DatabaseUuid { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. Specify the time in the yyyy-MM-dd HH:mm:ss format. If you do not specify this parameter, the default value is the current time. If the format cannot be parsed or the end time is earlier than the start time, the request fails.</para>
+        /// <para>The end time of the query, in the yyyy-MM-dd HH:mm:ss format. If not specified, the default is the current time. If the format cannot be parsed or the end time is earlier than the start time, the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-06-01 00:00:00</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from 1. Default value: 1.</para>
+        /// <para>The page number, starting from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -80,11 +80,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>The execution scenario for exact matching. Valid values:</para>
+        /// <para>The execution scenario for exact matching. If not specified, both scenarios are queried. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>AGENT_QUERY: The agent directly executes the SQL statement.</description></item>
-        /// <item><description>WORKFLOW_QUERY: The SQL statement is asynchronously executed through a workflow.
-        /// If you do not specify this parameter, both scenarios are queried.</description></item>
+        /// <item><description>WORKFLOW_QUERY: The SQL statement is executed asynchronously through a workflow.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -125,7 +124,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string SqlType { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Specify the time in the yyyy-MM-dd HH:mm:ss format. If you do not specify this parameter, the default time range is the last 7 days. If the specified time is more than 730 days ago or the format cannot be parsed, the query is performed for the last 730 days.</para>
+        /// <para>The start time of the query, in the yyyy-MM-dd HH:mm:ss format. If not specified, the default is the last 7 days. If the time is earlier than 730 days ago or the format cannot be parsed, the query starts from 730 days ago.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-01-01 00:00:00</para>

@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class CreateDataAgentWorkspaceRequest : TeaModel {
         /// <summary>
+        /// <para>The workspace configurations.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{sql_config:null}</para>
+        /// </summary>
+        [NameInMap("Config")]
+        [Validation(Required=false)]
+        public string Config { get; set; }
+
+        /// <summary>
         /// <para>The current DMS unit.</para>
         /// 
         /// <b>Example:</b>
@@ -20,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DMSUnit { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether session sharing is enabled within the workspace.</para>
+        /// <para>Specifies whether sessions within the workspace are shared.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +40,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public bool? IsSessionShareEnabled { get; set; }
 
         /// <summary>
-        /// <para>The description of the workspace.</para>
+        /// <para>The description of the collaborative workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Space for test</para>
@@ -40,7 +50,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string WorkspaceDesc { get; set; }
 
         /// <summary>
-        /// <para>The name of the workspace.</para>
+        /// <para>The name of the collaborative workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspaceTest</para>

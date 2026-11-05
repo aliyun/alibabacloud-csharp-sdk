@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public List<ListAgenticGlobalSqlExecutionHistoriesResponseBodyData> Data { get; set; }
         public class ListAgenticGlobalSqlExecutionHistoriesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the actor. A user ID starts with usr_, and an agent ID starts with agt_.</para>
+            /// <para>The ID of the executor. User IDs start with usr_, and agent IDs start with agt_.</para>
             /// 
             /// <b>Example:</b>
             /// <para>usr_10001</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string ActorId { get; set; }
 
             /// <summary>
-            /// <para>The name of the actor.</para>
+            /// <para>The name of the executor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>demo-user</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string ActorName { get; set; }
 
             /// <summary>
-            /// <para>The type of the actor. A value of HUMAN indicates a user, and a value of AGENT indicates an agent.</para>
+            /// <para>The type of the executor. Valid values: HUMAN (user) and AGENT (agent).</para>
             /// 
             /// <b>Example:</b>
             /// <para>HUMAN</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AgentOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The catalog UUID to which the execution belongs.</para>
+            /// <para>The Catalog UUID to which the current execution belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mc-HZ-OfjcNc2z***</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string CatalogUuid { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the client that initiates the execution, excluding the port. This parameter is empty in workflow scenarios or when the IP address is not recorded.</para>
+            /// <para>The IP address of the client that initiates the execution, excluding the port. This parameter is empty in workflow scenarios or when not recorded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>203.0.113.10</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string DatabaseSearchName { get; set; }
 
             /// <summary>
-            /// <para>The database UUID to which the execution belongs.</para>
+            /// <para>The Database UUID to which the current execution belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>md-HZ-fp9K7r***</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string DatabaseUuid { get; set; }
 
             /// <summary>
-            /// <para>The error message returned when the execution fails.</para>
+            /// <para>The error message when the execution fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>syntax error</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Error { get; set; }
 
             /// <summary>
-            /// <para>The actual SQL statement that is executed.</para>
+            /// <para>The actually executed SQL statement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SELECT 1</para>
@@ -137,12 +137,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string ExecutedSql { get; set; }
 
             /// <summary>
-            /// <para>The execution status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>SUCCESS: The execution is successful.</description></item>
-            /// <item><description>FAILED: The execution fails.</description></item>
-            /// <item><description>BLOCKED: The execution is blocked or not actually executed.</description></item>
-            /// </list>
+            /// <para>The execution status. Valid values: SUCCESS, FAILED, and BLOCKED (intercepted or not actually executed).</para>
             /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
@@ -162,7 +157,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string OriginalSql { get; set; }
 
             /// <summary>
-            /// <para>The query ID of the execution.</para>
+            /// <para>The query ID of the current execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>trace-10001</para>
@@ -182,11 +177,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public long? ReturnedRows { get; set; }
 
             /// <summary>
-            /// <para>The execution scenario. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>AGENT_QUERY: The agent directly executes the SQL statement.</description></item>
-            /// <item><description>WORKFLOW_QUERY: The SQL statement is asynchronously executed through a workflow.</description></item>
-            /// </list>
+            /// <para>The execution scenario. Valid values: AGENT_QUERY (the agent directly executes the SQL statement) and WORKFLOW_QUERY (the SQL statement is asynchronously executed through a workflow).</para>
             /// 
             /// <b>Example:</b>
             /// <para>AGENT_QUERY</para>
@@ -206,7 +197,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string SqlType { get; set; }
 
             /// <summary>
-            /// <para>The start time of the execution. The time is in the yyyy-MM-dd HH:mm:ss format.</para>
+            /// <para>The execution start time. Format: yyyy-MM-dd HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-01 00:00:00</para>
@@ -258,11 +249,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The request is successful.</description></item>
-        /// <item><description>false: The request fails.</description></item>
-        /// </list>
+        /// <para>Indicates whether the request is successful. Valid values: true and false.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

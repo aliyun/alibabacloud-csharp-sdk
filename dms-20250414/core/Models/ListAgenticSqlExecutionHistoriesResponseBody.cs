@@ -37,7 +37,11 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string ActorName { get; set; }
 
             /// <summary>
-            /// <para>The type of the actor. HUMAN indicates a user, and AGENT indicates an agent.</para>
+            /// <para>The type of the actor. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>HUMAN: User.</description></item>
+            /// <item><description>AGENT: Agent.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>HUMAN</para>
@@ -57,7 +61,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public long? AffectedRows { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user to which the agent belongs. The ID starts with usr_.</para>
+            /// <para>The ID of the user to whom the agent belongs, starting with usr_.</para>
             /// 
             /// <b>Example:</b>
             /// <para>usr_10001</para>
@@ -67,7 +71,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AgentOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The catalog UUID to which the execution belongs.</para>
+            /// <para>The catalog UUID to which this execution belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mc-HZ-OfjcNc2z***</para>
@@ -77,7 +81,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string CatalogUuid { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the client that initiated the execution, excluding the port. This parameter is empty in workflow scenarios or when the IP address is not recorded.</para>
+            /// <para>The IP address of the client that initiated the execution, excluding the port. This field is empty in workflow scenarios or when not recorded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>203.0.113.10</para>
@@ -107,7 +111,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string DatabaseSearchName { get; set; }
 
             /// <summary>
-            /// <para>The database UUID to which the execution belongs.</para>
+            /// <para>The database UUID to which this execution belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>md-HZ-fp9K7r***</para>
@@ -117,7 +121,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string DatabaseUuid { get; set; }
 
             /// <summary>
-            /// <para>The error message returned when the execution fails.</para>
+            /// <para>The error message when the execution fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>syntax error</para>
@@ -127,7 +131,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Error { get; set; }
 
             /// <summary>
-            /// <para>The actual SQL statement that was executed.</para>
+            /// <para>The actually executed SQL statement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SELECT 1</para>
@@ -162,7 +166,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string OriginalSql { get; set; }
 
             /// <summary>
-            /// <para>The query ID of the execution.</para>
+            /// <para>The query ID of this execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>trace-10001</para>
@@ -185,7 +189,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The execution scenario. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>AGENT_QUERY: The agent directly executes the SQL statement.</description></item>
-            /// <item><description>WORKFLOW_QUERY: The SQL statement is asynchronously executed through a workflow.</description></item>
+            /// <item><description>WORKFLOW_QUERY: The SQL statement is executed asynchronously through a workflow.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -206,7 +210,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string SqlType { get; set; }
 
             /// <summary>
-            /// <para>The start time of the execution. The time is in the yyyy-MM-dd HH:mm:ss format.</para>
+            /// <para>The execution start time, in the yyyy-MM-dd HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-01 00:00:00</para>
@@ -216,7 +220,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The workflow ID. This parameter may be empty in non-workflow scenarios.</para>
+            /// <para>The workflow ID. This field may be empty in non-workflow scenarios.</para>
             /// 
             /// <b>Example:</b>
             /// <para>wf-10001</para>
@@ -228,7 +232,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The error code. This parameter is empty when the request is successful.</para>
+        /// <para>The error code. This field is empty when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>INVALID_PARAMETER</para>
@@ -258,10 +262,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("Success")]
@@ -269,7 +273,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries that meet the query conditions.</para>
+        /// <para>The total number of entries that meet the conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

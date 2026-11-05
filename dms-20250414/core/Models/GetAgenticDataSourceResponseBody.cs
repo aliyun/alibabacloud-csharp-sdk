@@ -10,12 +10,22 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class GetAgenticDataSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data source details. This parameter is empty if the data source does not exist.</para>
+        /// <para>The data source details. This field is empty if the data source does not exist.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetAgenticDataSourceResponseBodyData Data { get; set; }
         public class GetAgenticDataSourceResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The name of the ADB MySQL Spark resource group. This field is returned only for data sources whose DbType is ADB_MYSQL_SPARK and is independent of the Schema (database name).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>resourceGroup1</para>
+            /// </summary>
+            [NameInMap("AdbSparkResourceGroup")]
+            [Validation(Required=false)]
+            public string AdbSparkResourceGroup { get; set; }
+
             /// <summary>
             /// <para>The display name of the data source.</para>
             /// 
@@ -27,7 +37,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Alias { get; set; }
 
             /// <summary>
-            /// <para>The logon username for the data source. This parameter is empty if username authentication is not used.</para>
+            /// <para>The logon username for the data source. This field is empty if username authentication is not used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>db_user</para>
@@ -37,7 +47,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AuthAccount { get; set; }
 
             /// <summary>
-            /// <para>The masked value of the password or token. The actual value is not returned.</para>
+            /// <para>The masked value of the password or token. The actual content is not returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>P@ss****</para>
@@ -49,10 +59,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <summary>
             /// <para>The authentication method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>-1: no authentication required</description></item>
-            /// <item><description>0: username and password</description></item>
-            /// <item><description>1: password only</description></item>
-            /// <item><description>2: password-free</description></item>
+            /// <item><description>-1: No authentication required.</description></item>
+            /// <item><description>0: Username and password.</description></item>
+            /// <item><description>1: Password only.</description></item>
+            /// <item><description>2: Password-free.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,8 +95,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <summary>
             /// <para>The method used to register the data source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>INSTANCE_ID: select an existing cloud instance</description></item>
-            /// <item><description>HOST_PORT: register by endpoint and port</description></item>
+            /// <item><description>INSTANCE_ID: Select an existing cloud instance.</description></item>
+            /// <item><description>HOST_PORT: Register by endpoint and port.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -157,7 +167,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Host { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud resource instance. This parameter may be empty for data sources registered by endpoint.</para>
+            /// <para>The ID of the cloud resource instance. This field may be empty for data sources registered by endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rm-bp1234567890</para>
@@ -169,11 +179,11 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <summary>
             /// <para>The source of the data source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>RDS: ApsaraDB instance</description></item>
-            /// <item><description>PUBLIC_OWN: self-managed database on the Internet</description></item>
-            /// <item><description>ECS_OWN: self-managed database on an ECS instance</description></item>
-            /// <item><description>GATEWAY: connected through Database Gateway</description></item>
-            /// <item><description>VPC_IDC: connected through a VPC or IDC</description></item>
+            /// <item><description>RDS: ApsaraDB instance.</description></item>
+            /// <item><description>PUBLIC_OWN: Self-managed database on the Internet.</description></item>
+            /// <item><description>ECS_OWN: Self-managed database on an ECS instance.</description></item>
+            /// <item><description>GATEWAY: Connected through Database Gateway.</description></item>
+            /// <item><description>VPC_IDC: Connected through a VPC or IDC.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -184,7 +194,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string InstanceSource { get; set; }
 
             /// <summary>
-            /// <para>The name of the KMS-managed credential. This parameter is empty if KMS is not used. This field contains sensitive information.</para>
+            /// <para>The name of the KMS-managed credential. This field is empty if KMS is not used and is considered sensitive information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>datasource-secret</para>
@@ -194,7 +204,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string KmsSecret { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data access security policy currently in use. This parameter is empty if no policy is configured.</para>
+            /// <para>The ID of the data access security policy currently in use. This field is empty if no policy is configured.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sp-usr-example</para>
@@ -234,7 +244,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string ResourceAccountId { get; set; }
 
             /// <summary>
-            /// <para>The ARN of the RAM role used to access the data source. This parameter is empty if role-based authorization is not used.</para>
+            /// <para>The ARN of the Alibaba Cloud RAM role used to access the data source. This field is empty if role-based authorization is not used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:ram::123456789012****:role/DataSourceRole</para>
@@ -244,7 +254,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string RoleArn { get; set; }
 
             /// <summary>
-            /// <para>The name of the connection target. For ADB_POSTGRESQL, DRDS, POSTGRESQL, and POLARDB_POSTGRESQL, this indicates the database name. For ORACLE, this indicates the SID or service name. For POLARDB_ORACLE, this indicates the SID. For MAXCOMPUTE, this indicates the project. For other types, this parameter is usually empty.</para>
+            /// <para>The name of the connection target. For ADB_POSTGRESQL, DRDS, POSTGRESQL, and POLARDB_POSTGRESQL, this indicates the database name. For ORACLE, this indicates the SID or service name. For POLARDB_ORACLE, this indicates the SID. For MAXCOMPUTE, this indicates the project. For other types, this field is usually empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>postgres</para>
@@ -254,7 +264,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Schema { get; set; }
 
             /// <summary>
-            /// <para>The name of the Snowflake role. This parameter takes effect only when DbType is set to SNOWFLAKE.</para>
+            /// <para>The name of the Snowflake role. This field takes effect only when DbType is SNOWFLAKE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WAREHOUSE</para>
@@ -264,7 +274,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string SnowflakeRole { get; set; }
 
             /// <summary>
-            /// <para>The name of the Snowflake compute warehouse. This parameter takes effect only when DbType is set to SNOWFLAKE.</para>
+            /// <para>The name of the Snowflake compute warehouse. This field takes effect only when DbType is SNOWFLAKE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ROLE</para>
@@ -276,9 +286,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <summary>
             /// <para>The status of the data source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: normal</description></item>
-            /// <item><description>-1: deleted</description></item>
-            /// <item><description>-2: disabled</description></item>
+            /// <item><description>0: Normal.</description></item>
+            /// <item><description>-1: Deleted.</description></item>
+            /// <item><description>-2: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -291,8 +301,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <summary>
             /// <para>Specifies whether to use the cloud instance name as the data source name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: yes</description></item>
-            /// <item><description>0: no</description></item>
+            /// <item><description>1: Yes.</description></item>
+            /// <item><description>0: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -305,9 +315,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <summary>
             /// <para>The SSL settings. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: enabled</description></item>
-            /// <item><description>0: disabled</description></item>
-            /// <item><description>-1: use default settings</description></item>
+            /// <item><description>1: Enabled.</description></item>
+            /// <item><description>0: Disabled.</description></item>
+            /// <item><description>-1: Use default settings.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -318,7 +328,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public int? UseSsl { get; set; }
 
             /// <summary>
-            /// <para>The ID of the destination vSwitch used when accessing MaxCompute. This parameter is empty in other scenarios.</para>
+            /// <para>The ID of the destination vSwitch used when accessing MaxCompute. This field is empty in other scenarios.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-bp1234567890</para>
@@ -328,7 +338,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the destination VPC used when accessing MaxCompute. This parameter is empty in other scenarios.</para>
+            /// <para>The ID of the destination VPC used when accessing MaxCompute. This field is empty in other scenarios.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1234567890</para>
@@ -338,7 +348,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the destination zone used when accessing MaxCompute. This parameter is empty in other scenarios.</para>
+            /// <para>The ID of the destination zone used when accessing MaxCompute. This field is empty in other scenarios.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-h</para>
@@ -350,7 +360,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The error code returned when the call fails. This parameter is empty if the call is successful.</para>
+        /// <para>The error code returned when the call fails. This field is empty when the call succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidParameter</para>
@@ -360,7 +370,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned when the call fails. This parameter is empty if the call is successful.</para>
+        /// <para>The error message returned when the call fails. This field is empty when the call succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The parameter is invalid</para>
@@ -370,7 +380,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID, which is used to locate the call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request-1234567890</para>
