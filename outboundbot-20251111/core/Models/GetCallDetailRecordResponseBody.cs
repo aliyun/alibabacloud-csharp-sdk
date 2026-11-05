@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string AccessChannelType { get; set; }
 
             /// <summary>
-            /// <para>The callee number.</para>
+            /// <para>The called number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>13612617599</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string Callee { get; set; }
 
             /// <summary>
-            /// <para>The caller number.</para>
+            /// <para>The calling number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>02867871030</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string DispositionReason { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether this is a draft version.</para>
+            /// <para>Indicates whether it is a draft version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public long? Duration { get; set; }
 
             /// <summary>
-            /// <para>The end time of the call.</para>
+            /// <para>The call end time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1786960840667</para>
@@ -127,21 +127,21 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The list of labels.</para>
+            /// <para>The label list.</para>
             /// </summary>
             [NameInMap("Labels")]
             [Validation(Required=false)]
             public List<GetCallDetailRecordResponseBodyDataLabels> Labels { get; set; }
             public class GetCallDetailRecordResponseBodyDataLabels : TeaModel {
                 /// <summary>
-                /// <para>The set of preset values for the label.</para>
+                /// <para>The candidate values for the label.</para>
                 /// </summary>
                 [NameInMap("CandidateValues")]
                 [Validation(Required=false)]
                 public List<string> CandidateValues { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the label has been collected.</para>
+                /// <para>Indicates whether the label is collected.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the label is a system label.</para>
+                /// <para>The system label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             }
 
             /// <summary>
-            /// <para>The party that initiated the hang-up.</para>
+            /// <para>The hang-up initiator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Customer</para>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string SessionId { get; set; }
 
             /// <summary>
-            /// <para>The start time of the call.</para>
+            /// <para>The call start time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1786960840667</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public long? TalkTurns { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the task was completed.</para>
+            /// <para>Indicates whether the task is completed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public List<GetCallDetailRecordResponseBodyDataTranscripts> Transcripts { get; set; }
             public class GetCallDetailRecordResponseBodyDataTranscripts : TeaModel {
                 /// <summary>
-                /// <para>The assistant answer.</para>
+                /// <para>The assistant response.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Sorry, I cannot find your phone bill</para>
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string Answer { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the transcript is a backchannel response.</para>
+                /// <para>Indicates whether it is a backchannel.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -280,7 +280,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public bool? Backchannels { get; set; }
 
                 /// <summary>
-                /// <para>The begin time.</para>
+                /// <para>The start time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1760667651655</para>
@@ -290,7 +290,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public long? BeginTime { get; set; }
 
                 /// <summary>
-                /// <para>The list of control parameters.</para>
+                /// <para>The control parameter list.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;transferCode&quot;:&quot;Transfer02&quot;,&quot;type&quot;:&quot;Transfer&quot;}]</para>
@@ -300,7 +300,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string ControlParamsList { get; set; }
 
                 /// <summary>
-                /// <para>The end time of the call.</para>
+                /// <para>The call end time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1760667651655</para>
@@ -340,7 +340,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public int? InputTokens { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the response was interrupted.</para>
+                /// <para>Indicates whether it was interrupted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -350,7 +350,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public bool? Interrupted { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the transcript is from the legacy version.</para>
+                /// <para>Indicates whether it is a legacy version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -380,6 +380,8 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public int? OutputTokens { get; set; }
 
                 /// <summary>
+                /// <para>The playback status.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>INTERRUPTED</para>
                 /// </summary>
@@ -388,8 +390,10 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 public string PlaybackStatus { get; set; }
 
                 /// <summary>
+                /// <para>The played content.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>好的</para>
+                /// <para>Okay</para>
                 /// </summary>
                 [NameInMap("PlayedAnswer")]
                 [Validation(Required=false)]
@@ -399,7 +403,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
                 /// <para>The played text.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Sorry, check</para>
+                /// <para>Sorry, checking</para>
                 /// </summary>
                 [NameInMap("PlayedWords")]
                 [Validation(Required=false)]
@@ -527,7 +531,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

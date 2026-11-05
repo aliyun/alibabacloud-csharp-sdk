@@ -1,3 +1,19 @@
+2026-11-05 Version: 1.7.0
+- Support API CreateLlmAccessProfile.
+- Support API DeleteCorpNumber.
+- Support API DeleteLlmAccessProfile.
+- Support API DeleteNumbers.
+- Support API ListAsrModels.
+- Support API ListCorpNumbers.
+- Support API ListInstanceBindingsOfNumber.
+- Support API ListLlmAccessProfiles.
+- Support API ListNumberBindingsOfInstance.
+- Support API ListNumbers.
+- Support API UpdateInstanceBindingsOfNumber.
+- Support API UpdateLlmAccessProfile.
+- Support API UpdateNumberBindingsOfInstance.
+
+
 2026-10-27 Version: 1.6.3
 - Update API GetCallDetailRecord: add response parameters Body.Data.Transcripts.$.PlaybackStatus.
 - Update API GetCallDetailRecord: add response parameters Body.Data.Transcripts.$.PlayedAnswer.
