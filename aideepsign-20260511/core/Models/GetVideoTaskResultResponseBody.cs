@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The cause of the failure. This field is returned only when the task status is failed.</para>
+        /// <para>The cause of the failure. This parameter is returned only when the task status is failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task status. Valid values: running, succeeded, and failed. Set the polling interval to at least 5 seconds.</para>
+        /// <para>The task status. Valid values: <c>running</c>, <c>succeeded</c>, and <c>failed</c>. Set the polling interval to at least 5 seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>succeeded</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
             public string ObjectKey { get; set; }
 
             /// <summary>
-            /// <para>The presigned download URL of the video stored in OSS after C2PA signing.</para>
+            /// <para>The presigned download URL of the C2PA-signed object stored in OSS.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://duguang-database-public.oss-cn-hangzhou.aliyuncs.com/cosmetic_plicense_init/024d6974-1b14-4741-8919-9d02b7e3901b.mp4">http://duguang-database-public.oss-cn-hangzhou.aliyuncs.com/cosmetic_plicense_init/024d6974-1b14-4741-8919-9d02b7e3901b.mp4</a></para>

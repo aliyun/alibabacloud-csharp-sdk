@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The <b>HTTP status code</b>. A value of 200 indicates that the request is successful.</para>
+        /// <para>The <b>HTTP status code</b>. A value of 200 is returned if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The additional information. A value of success indicates that the request is successful.</para>
+        /// <para>The additional information. A value of success is returned if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string BucketName { get; set; }
 
         /// <summary>
-        /// <para>The region of the user OSS bucket. It must be consistent with the actual region of the bucket.</para>
+        /// <para>The region of the user OSS bucket. It must match the actual region of the bucket.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +30,16 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         [NameInMap("BucketRegionId")]
         [Validation(Required=false)]
         public string BucketRegionId { get; set; }
+
+        /// <summary>
+        /// <para>The JSON string of the custom assertion list.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;label&quot;:&quot;com.shein.internal&quot;,&quot;data&quot;:{&quot;meta_id&quot;:&quot;emp001&quot;,&quot;generation&quot;:{&quot;modelVersion&quot;:&quot;2.1&quot;,&quot;count&quot;:3},&quot;tags&quot;:[&quot;AI-generated&quot;,&quot;E-commerce&quot;],&quot;enabled&quot;:true,&quot;optional&quot;:null}}]</para>
+        /// </summary>
+        [NameInMap("CustomAssertions")]
+        [Validation(Required=false)]
+        public string CustomAssertions { get; set; }
 
         /// <summary>
         /// <para>The optional name of the software that generated the content. This parameter is not supported in the current version.</para>
@@ -42,7 +52,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string SoftwareAgent { get; set; }
 
         /// <summary>
-        /// <para>The source object prefix. It must be <c>ai-deepsign/</c> or its subdirectory. The service recursively processes objects under this prefix.</para>
+        /// <para>The source object prefix. It must be ai-deepsign/ or its subdirectories. The service recursively processes objects under this prefix.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "AIDeepSign";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("aideepsign", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -199,21 +202,19 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a batch C2PA content credential signing task for objects in a specified OSS bucket.</para>
+        /// <para>Creates a batch C2PA content credential signing task for files in a specified OSS bucket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation creates a batch C2PA content credential signing task for files under a specified source prefix in an OSS bucket. It supports JPEG, JPG, PNG, MP4, FLAC, M4A, MP3, and WAV formats, and allows mixed processing under the same prefix.</description></item>
-        /// <item><description><c>SourcePrefix</c> must be <c>ai-deepsign/</c> or its subdirectory, and must not overlap with the output prefix <c>ai-deepsign-signed/</c>.</description></item>
-        /// <item><description>By default, a single task processes up to 20,000 non-directory objects. The size of a single file must not exceed 800 MiB.</description></item>
-        /// <item><description>The RAM identity of the caller must have permissions to call this operation. The service-linked role <c>AliyunServiceRoleForAIDeepSign</c> must have access permissions to the specified bucket and associated paths.</description></item>
-        /// <item><description>File name extensions are case-insensitive. Files in unsupported formats are recorded as failed, but this does not abort the processing of other files.</description></item>
-        /// <item><description>The signing results are written to the <c>ai-deepsign-signed/&lt;TaskId&gt;/</c> directory in the same bucket. The subdirectories relative to <c>SourcePrefix</c> and the source file name extensions are preserved, and <c>_signed</c> is added before the file name extension. The processing report is <c>c2pa_report.json</c> in the task directory.</description></item>
-        /// <item><description>For example, if <c>SourcePrefix=ai-deepsign/images/</c>, the signing result for the source file <c>ai-deepsign/images/audio/demo.m4a</c> is <c>ai-deepsign-signed/&lt;TaskId&gt;/audio/demo_signed.m4a</c>.</description></item>
-        /// <item><description>A successful creation only indicates that the task has been accepted. Call <c>GetC2paSignResult</c> to query the results. A <c>SUCCEEDED</c> status for a batch task does not mean that every file was signed successfully. Check the final statistics and processing report for file-by-file results.</description></item>
+        /// <item><description><b>BucketRegionId</b> and <b>BucketName</b> must match the actual OSS bucket information.</description></item>
+        /// <item><description><b>SourcePrefix</b> must be located in <c>ai-deepsign/</c> or its subdirectories, and cannot overlap with the reserved output prefix <c>ai-deepsign-signed/</c>.</description></item>
+        /// <item><description>Supports processing JPEG/JPG, PNG, MP4, and audio files in FLAC, M4A, MP3, and WAV formats.</description></item>
+        /// <item><description>A single task includes up to 20,000 non-directory objects by default, and each file size cannot exceed 800 MiB.</description></item>
+        /// <item><description>Make sure that the service-linked role <c>AliyunServiceRoleForAIDeepSign</c> has been granted access permissions to the specified bucket and related paths.</description></item>
+        /// <item><description>The optional parameters <c>SourceType</c> and <c>SoftwareAgent</c> are used to declare the content source and software name. <c>CustomAssertions</c> is used to add custom assertions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -238,6 +239,10 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketRegionId))
             {
                 query["BucketRegionId"] = request.BucketRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAssertions))
+            {
+                query["CustomAssertions"] = request.CustomAssertions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareAgent))
             {
@@ -272,21 +277,19 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a batch C2PA content credential signing task for objects in a specified OSS bucket.</para>
+        /// <para>Creates a batch C2PA content credential signing task for files in a specified OSS bucket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation creates a batch C2PA content credential signing task for files under a specified source prefix in an OSS bucket. It supports JPEG, JPG, PNG, MP4, FLAC, M4A, MP3, and WAV formats, and allows mixed processing under the same prefix.</description></item>
-        /// <item><description><c>SourcePrefix</c> must be <c>ai-deepsign/</c> or its subdirectory, and must not overlap with the output prefix <c>ai-deepsign-signed/</c>.</description></item>
-        /// <item><description>By default, a single task processes up to 20,000 non-directory objects. The size of a single file must not exceed 800 MiB.</description></item>
-        /// <item><description>The RAM identity of the caller must have permissions to call this operation. The service-linked role <c>AliyunServiceRoleForAIDeepSign</c> must have access permissions to the specified bucket and associated paths.</description></item>
-        /// <item><description>File name extensions are case-insensitive. Files in unsupported formats are recorded as failed, but this does not abort the processing of other files.</description></item>
-        /// <item><description>The signing results are written to the <c>ai-deepsign-signed/&lt;TaskId&gt;/</c> directory in the same bucket. The subdirectories relative to <c>SourcePrefix</c> and the source file name extensions are preserved, and <c>_signed</c> is added before the file name extension. The processing report is <c>c2pa_report.json</c> in the task directory.</description></item>
-        /// <item><description>For example, if <c>SourcePrefix=ai-deepsign/images/</c>, the signing result for the source file <c>ai-deepsign/images/audio/demo.m4a</c> is <c>ai-deepsign-signed/&lt;TaskId&gt;/audio/demo_signed.m4a</c>.</description></item>
-        /// <item><description>A successful creation only indicates that the task has been accepted. Call <c>GetC2paSignResult</c> to query the results. A <c>SUCCEEDED</c> status for a batch task does not mean that every file was signed successfully. Check the final statistics and processing report for file-by-file results.</description></item>
+        /// <item><description><b>BucketRegionId</b> and <b>BucketName</b> must match the actual OSS bucket information.</description></item>
+        /// <item><description><b>SourcePrefix</b> must be located in <c>ai-deepsign/</c> or its subdirectories, and cannot overlap with the reserved output prefix <c>ai-deepsign-signed/</c>.</description></item>
+        /// <item><description>Supports processing JPEG/JPG, PNG, MP4, and audio files in FLAC, M4A, MP3, and WAV formats.</description></item>
+        /// <item><description>A single task includes up to 20,000 non-directory objects by default, and each file size cannot exceed 800 MiB.</description></item>
+        /// <item><description>Make sure that the service-linked role <c>AliyunServiceRoleForAIDeepSign</c> has been granted access permissions to the specified bucket and related paths.</description></item>
+        /// <item><description>The optional parameters <c>SourceType</c> and <c>SoftwareAgent</c> are used to declare the content source and software name. <c>CustomAssertions</c> is used to add custom assertions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -311,6 +314,10 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketRegionId))
             {
                 query["BucketRegionId"] = request.BucketRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAssertions))
+            {
+                query["CustomAssertions"] = request.CustomAssertions;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareAgent))
             {
@@ -345,21 +352,19 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a batch C2PA content credential signing task for objects in a specified OSS bucket.</para>
+        /// <para>Creates a batch C2PA content credential signing task for files in a specified OSS bucket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation creates a batch C2PA content credential signing task for files under a specified source prefix in an OSS bucket. It supports JPEG, JPG, PNG, MP4, FLAC, M4A, MP3, and WAV formats, and allows mixed processing under the same prefix.</description></item>
-        /// <item><description><c>SourcePrefix</c> must be <c>ai-deepsign/</c> or its subdirectory, and must not overlap with the output prefix <c>ai-deepsign-signed/</c>.</description></item>
-        /// <item><description>By default, a single task processes up to 20,000 non-directory objects. The size of a single file must not exceed 800 MiB.</description></item>
-        /// <item><description>The RAM identity of the caller must have permissions to call this operation. The service-linked role <c>AliyunServiceRoleForAIDeepSign</c> must have access permissions to the specified bucket and associated paths.</description></item>
-        /// <item><description>File name extensions are case-insensitive. Files in unsupported formats are recorded as failed, but this does not abort the processing of other files.</description></item>
-        /// <item><description>The signing results are written to the <c>ai-deepsign-signed/&lt;TaskId&gt;/</c> directory in the same bucket. The subdirectories relative to <c>SourcePrefix</c> and the source file name extensions are preserved, and <c>_signed</c> is added before the file name extension. The processing report is <c>c2pa_report.json</c> in the task directory.</description></item>
-        /// <item><description>For example, if <c>SourcePrefix=ai-deepsign/images/</c>, the signing result for the source file <c>ai-deepsign/images/audio/demo.m4a</c> is <c>ai-deepsign-signed/&lt;TaskId&gt;/audio/demo_signed.m4a</c>.</description></item>
-        /// <item><description>A successful creation only indicates that the task has been accepted. Call <c>GetC2paSignResult</c> to query the results. A <c>SUCCEEDED</c> status for a batch task does not mean that every file was signed successfully. Check the final statistics and processing report for file-by-file results.</description></item>
+        /// <item><description><b>BucketRegionId</b> and <b>BucketName</b> must match the actual OSS bucket information.</description></item>
+        /// <item><description><b>SourcePrefix</b> must be located in <c>ai-deepsign/</c> or its subdirectories, and cannot overlap with the reserved output prefix <c>ai-deepsign-signed/</c>.</description></item>
+        /// <item><description>Supports processing JPEG/JPG, PNG, MP4, and audio files in FLAC, M4A, MP3, and WAV formats.</description></item>
+        /// <item><description>A single task includes up to 20,000 non-directory objects by default, and each file size cannot exceed 800 MiB.</description></item>
+        /// <item><description>Make sure that the service-linked role <c>AliyunServiceRoleForAIDeepSign</c> has been granted access permissions to the specified bucket and related paths.</description></item>
+        /// <item><description>The optional parameters <c>SourceType</c> and <c>SoftwareAgent</c> are used to declare the content source and software name. <c>CustomAssertions</c> is used to add custom assertions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -378,21 +383,19 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a batch C2PA content credential signing task for objects in a specified OSS bucket.</para>
+        /// <para>Creates a batch C2PA content credential signing task for files in a specified OSS bucket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation creates a batch C2PA content credential signing task for files under a specified source prefix in an OSS bucket. It supports JPEG, JPG, PNG, MP4, FLAC, M4A, MP3, and WAV formats, and allows mixed processing under the same prefix.</description></item>
-        /// <item><description><c>SourcePrefix</c> must be <c>ai-deepsign/</c> or its subdirectory, and must not overlap with the output prefix <c>ai-deepsign-signed/</c>.</description></item>
-        /// <item><description>By default, a single task processes up to 20,000 non-directory objects. The size of a single file must not exceed 800 MiB.</description></item>
-        /// <item><description>The RAM identity of the caller must have permissions to call this operation. The service-linked role <c>AliyunServiceRoleForAIDeepSign</c> must have access permissions to the specified bucket and associated paths.</description></item>
-        /// <item><description>File name extensions are case-insensitive. Files in unsupported formats are recorded as failed, but this does not abort the processing of other files.</description></item>
-        /// <item><description>The signing results are written to the <c>ai-deepsign-signed/&lt;TaskId&gt;/</c> directory in the same bucket. The subdirectories relative to <c>SourcePrefix</c> and the source file name extensions are preserved, and <c>_signed</c> is added before the file name extension. The processing report is <c>c2pa_report.json</c> in the task directory.</description></item>
-        /// <item><description>For example, if <c>SourcePrefix=ai-deepsign/images/</c>, the signing result for the source file <c>ai-deepsign/images/audio/demo.m4a</c> is <c>ai-deepsign-signed/&lt;TaskId&gt;/audio/demo_signed.m4a</c>.</description></item>
-        /// <item><description>A successful creation only indicates that the task has been accepted. Call <c>GetC2paSignResult</c> to query the results. A <c>SUCCEEDED</c> status for a batch task does not mean that every file was signed successfully. Check the final statistics and processing report for file-by-file results.</description></item>
+        /// <item><description><b>BucketRegionId</b> and <b>BucketName</b> must match the actual OSS bucket information.</description></item>
+        /// <item><description><b>SourcePrefix</b> must be located in <c>ai-deepsign/</c> or its subdirectories, and cannot overlap with the reserved output prefix <c>ai-deepsign-signed/</c>.</description></item>
+        /// <item><description>Supports processing JPEG/JPG, PNG, MP4, and audio files in FLAC, M4A, MP3, and WAV formats.</description></item>
+        /// <item><description>A single task includes up to 20,000 non-directory objects by default, and each file size cannot exceed 800 MiB.</description></item>
+        /// <item><description>Make sure that the service-linked role <c>AliyunServiceRoleForAIDeepSign</c> has been granted access permissions to the specified bucket and related paths.</description></item>
+        /// <item><description>The optional parameters <c>SourceType</c> and <c>SoftwareAgent</c> are used to declare the content source and software name. <c>CustomAssertions</c> is used to add custom assertions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -418,14 +421,12 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation adds standard C2PA content credentials to a single JPEG/JPG, PNG, MP4, FLAC, M4A, MP3, or WAV file.</description></item>
-        /// <item><description><c>FileUrl</c> must be an absolute HTTP or HTTPS URL accessible by the service and cannot contain a username or password.</description></item>
-        /// <item><description>File name extensions are case-insensitive, and URL query parameters are not used for file name identification. For example, the file name for <c>https://example.com/media/demo.m4a?token=xxx</c> is <c>demo.m4a</c>.</description></item>
-        /// <item><description>The source URL must directly return an HTTP 200 status code. Redirect URLs are not supported.</description></item>
-        /// <item><description>The size of a single file cannot exceed 800 MiB. Provide a valid file in a supported format. Changing only the file name extension does not transform the file format.</description></item>
-        /// <item><description>The signing result retains the source file name extension and adds <c>_signed</c> before the extension. For example, <c>demo.m4a</c> becomes <c>demo_signed.m4a</c>.</description></item>
-        /// <item><description>Unsupported file name extensions return <c>InvalidParam</c>, and the error message is <c>FileUrl only supports files with .jpg, .jpeg, .png, .mp4, .flac, .m4a, .mp3, or .wav extensions</c>.</description></item>
-        /// <item><description>A successful creation only indicates that the task has been accepted. Save the returned <c>TaskId</c> and invoke <c>GetC2paSignResult</c> to query the task status and final result.</description></item>
+        /// <item><description>This operation adds standard C2PA content credentials to a single JPEG, JPG, PNG, MP4, FLAC, M4A, MP3, or WAV file.</description></item>
+        /// <item><description>The operation receives the HTTP or HTTPS URL of the file, asynchronously retrieves the file and signs the content credentials, and returns a TaskId for subsequent queries.</description></item>
+        /// <item><description>The FileUrl must be an accessible absolute URL and cannot contain a userinfo component.</description></item>
+        /// <item><description>You can provide additional content source, software information, and custom assertions by using the SourceType, SoftwareAgent, and CustomAssertions parameters.</description></item>
+        /// <item><description>The size of a single file cannot exceed 800 MiB, and only specific file formats are supported.</description></item>
+        /// <item><description>Do not repeatedly create tasks before confirming the task results to avoid duplicate signing and metering.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -443,6 +444,10 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAssertions))
+            {
+                query["CustomAssertions"] = request.CustomAssertions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
             {
                 query["FileUrl"] = request.FileUrl;
@@ -483,14 +488,12 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation adds standard C2PA content credentials to a single JPEG/JPG, PNG, MP4, FLAC, M4A, MP3, or WAV file.</description></item>
-        /// <item><description><c>FileUrl</c> must be an absolute HTTP or HTTPS URL accessible by the service and cannot contain a username or password.</description></item>
-        /// <item><description>File name extensions are case-insensitive, and URL query parameters are not used for file name identification. For example, the file name for <c>https://example.com/media/demo.m4a?token=xxx</c> is <c>demo.m4a</c>.</description></item>
-        /// <item><description>The source URL must directly return an HTTP 200 status code. Redirect URLs are not supported.</description></item>
-        /// <item><description>The size of a single file cannot exceed 800 MiB. Provide a valid file in a supported format. Changing only the file name extension does not transform the file format.</description></item>
-        /// <item><description>The signing result retains the source file name extension and adds <c>_signed</c> before the extension. For example, <c>demo.m4a</c> becomes <c>demo_signed.m4a</c>.</description></item>
-        /// <item><description>Unsupported file name extensions return <c>InvalidParam</c>, and the error message is <c>FileUrl only supports files with .jpg, .jpeg, .png, .mp4, .flac, .m4a, .mp3, or .wav extensions</c>.</description></item>
-        /// <item><description>A successful creation only indicates that the task has been accepted. Save the returned <c>TaskId</c> and invoke <c>GetC2paSignResult</c> to query the task status and final result.</description></item>
+        /// <item><description>This operation adds standard C2PA content credentials to a single JPEG, JPG, PNG, MP4, FLAC, M4A, MP3, or WAV file.</description></item>
+        /// <item><description>The operation receives the HTTP or HTTPS URL of the file, asynchronously retrieves the file and signs the content credentials, and returns a TaskId for subsequent queries.</description></item>
+        /// <item><description>The FileUrl must be an accessible absolute URL and cannot contain a userinfo component.</description></item>
+        /// <item><description>You can provide additional content source, software information, and custom assertions by using the SourceType, SoftwareAgent, and CustomAssertions parameters.</description></item>
+        /// <item><description>The size of a single file cannot exceed 800 MiB, and only specific file formats are supported.</description></item>
+        /// <item><description>Do not repeatedly create tasks before confirming the task results to avoid duplicate signing and metering.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -508,6 +511,10 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomAssertions))
+            {
+                query["CustomAssertions"] = request.CustomAssertions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileUrl))
             {
                 query["FileUrl"] = request.FileUrl;
@@ -548,14 +555,12 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation adds standard C2PA content credentials to a single JPEG/JPG, PNG, MP4, FLAC, M4A, MP3, or WAV file.</description></item>
-        /// <item><description><c>FileUrl</c> must be an absolute HTTP or HTTPS URL accessible by the service and cannot contain a username or password.</description></item>
-        /// <item><description>File name extensions are case-insensitive, and URL query parameters are not used for file name identification. For example, the file name for <c>https://example.com/media/demo.m4a?token=xxx</c> is <c>demo.m4a</c>.</description></item>
-        /// <item><description>The source URL must directly return an HTTP 200 status code. Redirect URLs are not supported.</description></item>
-        /// <item><description>The size of a single file cannot exceed 800 MiB. Provide a valid file in a supported format. Changing only the file name extension does not transform the file format.</description></item>
-        /// <item><description>The signing result retains the source file name extension and adds <c>_signed</c> before the extension. For example, <c>demo.m4a</c> becomes <c>demo_signed.m4a</c>.</description></item>
-        /// <item><description>Unsupported file name extensions return <c>InvalidParam</c>, and the error message is <c>FileUrl only supports files with .jpg, .jpeg, .png, .mp4, .flac, .m4a, .mp3, or .wav extensions</c>.</description></item>
-        /// <item><description>A successful creation only indicates that the task has been accepted. Save the returned <c>TaskId</c> and invoke <c>GetC2paSignResult</c> to query the task status and final result.</description></item>
+        /// <item><description>This operation adds standard C2PA content credentials to a single JPEG, JPG, PNG, MP4, FLAC, M4A, MP3, or WAV file.</description></item>
+        /// <item><description>The operation receives the HTTP or HTTPS URL of the file, asynchronously retrieves the file and signs the content credentials, and returns a TaskId for subsequent queries.</description></item>
+        /// <item><description>The FileUrl must be an accessible absolute URL and cannot contain a userinfo component.</description></item>
+        /// <item><description>You can provide additional content source, software information, and custom assertions by using the SourceType, SoftwareAgent, and CustomAssertions parameters.</description></item>
+        /// <item><description>The size of a single file cannot exceed 800 MiB, and only specific file formats are supported.</description></item>
+        /// <item><description>Do not repeatedly create tasks before confirming the task results to avoid duplicate signing and metering.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -581,14 +586,12 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation adds standard C2PA content credentials to a single JPEG/JPG, PNG, MP4, FLAC, M4A, MP3, or WAV file.</description></item>
-        /// <item><description><c>FileUrl</c> must be an absolute HTTP or HTTPS URL accessible by the service and cannot contain a username or password.</description></item>
-        /// <item><description>File name extensions are case-insensitive, and URL query parameters are not used for file name identification. For example, the file name for <c>https://example.com/media/demo.m4a?token=xxx</c> is <c>demo.m4a</c>.</description></item>
-        /// <item><description>The source URL must directly return an HTTP 200 status code. Redirect URLs are not supported.</description></item>
-        /// <item><description>The size of a single file cannot exceed 800 MiB. Provide a valid file in a supported format. Changing only the file name extension does not transform the file format.</description></item>
-        /// <item><description>The signing result retains the source file name extension and adds <c>_signed</c> before the extension. For example, <c>demo.m4a</c> becomes <c>demo_signed.m4a</c>.</description></item>
-        /// <item><description>Unsupported file name extensions return <c>InvalidParam</c>, and the error message is <c>FileUrl only supports files with .jpg, .jpeg, .png, .mp4, .flac, .m4a, .mp3, or .wav extensions</c>.</description></item>
-        /// <item><description>A successful creation only indicates that the task has been accepted. Save the returned <c>TaskId</c> and invoke <c>GetC2paSignResult</c> to query the task status and final result.</description></item>
+        /// <item><description>This operation adds standard C2PA content credentials to a single JPEG, JPG, PNG, MP4, FLAC, M4A, MP3, or WAV file.</description></item>
+        /// <item><description>The operation receives the HTTP or HTTPS URL of the file, asynchronously retrieves the file and signs the content credentials, and returns a TaskId for subsequent queries.</description></item>
+        /// <item><description>The FileUrl must be an accessible absolute URL and cannot contain a userinfo component.</description></item>
+        /// <item><description>You can provide additional content source, software information, and custom assertions by using the SourceType, SoftwareAgent, and CustomAssertions parameters.</description></item>
+        /// <item><description>The size of a single file cannot exceed 800 MiB, and only specific file formats are supported.</description></item>
+        /// <item><description>Do not repeatedly create tasks before confirming the task results to avoid duplicate signing and metering.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3532,10 +3535,10 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Call this operation to query the execution status and result of an asynchronous video generation task created by calling <c>CreateVideoTask</c>.</description></item>
-        /// <item><description>Poll the task status at an interval of 2 to 5 seconds until the task status changes to <c>succeeded</c> or <c>failed</c>.</description></item>
+        /// <item><description>You can call this operation to query the execution status and result of an asynchronous video generation task created by calling <c>CreateVideoTask</c>.</description></item>
+        /// <item><description>Poll the task at an interval of 2 to 5 seconds until the task status changes to <c>succeeded</c> or <c>failed</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3583,10 +3586,10 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Call this operation to query the execution status and result of an asynchronous video generation task created by calling <c>CreateVideoTask</c>.</description></item>
-        /// <item><description>Poll the task status at an interval of 2 to 5 seconds until the task status changes to <c>succeeded</c> or <c>failed</c>.</description></item>
+        /// <item><description>You can call this operation to query the execution status and result of an asynchronous video generation task created by calling <c>CreateVideoTask</c>.</description></item>
+        /// <item><description>Poll the task at an interval of 2 to 5 seconds until the task status changes to <c>succeeded</c> or <c>failed</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3634,10 +3637,10 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Call this operation to query the execution status and result of an asynchronous video generation task created by calling <c>CreateVideoTask</c>.</description></item>
-        /// <item><description>Poll the task status at an interval of 2 to 5 seconds until the task status changes to <c>succeeded</c> or <c>failed</c>.</description></item>
+        /// <item><description>You can call this operation to query the execution status and result of an asynchronous video generation task created by calling <c>CreateVideoTask</c>.</description></item>
+        /// <item><description>Poll the task at an interval of 2 to 5 seconds until the task status changes to <c>succeeded</c> or <c>failed</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3661,10 +3664,10 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Call this operation to query the execution status and result of an asynchronous video generation task created by calling <c>CreateVideoTask</c>.</description></item>
-        /// <item><description>Poll the task status at an interval of 2 to 5 seconds until the task status changes to <c>succeeded</c> or <c>failed</c>.</description></item>
+        /// <item><description>You can call this operation to query the execution status and result of an asynchronous video generation task created by calling <c>CreateVideoTask</c>.</description></item>
+        /// <item><description>Poll the task at an interval of 2 to 5 seconds until the task status changes to <c>succeeded</c> or <c>failed</c>.</description></item>
         /// </list>
         /// </description>
         /// 

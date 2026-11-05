@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public List<CreateVideoTaskRequestMedia> Media { get; set; }
         public class CreateVideoTaskRequestMedia : TeaModel {
             /// <summary>
-            /// <para>The media type for the first item. Valid values: first_frame, last_frame, reference_image, reference_video, reference_audio, file, and link.</para>
+            /// <para>The material type for the first item. Valid values: first_frame, last_frame, reference_image, reference_video, reference_audio, file, and link.</para>
             /// 
             /// <b>Example:</b>
             /// <para>JPEG</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The media URL for the first item. You can specify a public HTTP or HTTPS URL, a temporary oss:// URL, or inline data in the format of data:{mime};base64,....</para>
+            /// <para>The material URL for the first item. The value can be a public HTTP or HTTPS URL, a temporary oss:// URL, or inline data in the data:{mime};base64,... format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Image URL</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The video duration in seconds. Valid values: an integer from 2 to 30, -1 (intelligent duration), and 0 (server default of 5 seconds).</para>
+        /// <para>The duration of the video in seconds. Valid values: an integer from 2 to 30, -1 for intelligent duration, and 0 for the server default of 5 seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string Model { get; set; }
 
         /// <summary>
-        /// <para>The video description prompt. You must specify either this parameter or Media. For text-to-video generation, only Prompt is required.</para>
+        /// <para>The video description prompt. Either this parameter or Media is required. For text-to-video generation, only Prompt is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A meeting room full of cats</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string Prompt { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable intelligent rewriting (prompt_extend). Default value: true.</para>
+        /// <para>Specifies whether to enable intelligent prompt rewriting. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public bool? PromptExtend { get; set; }
 
         /// <summary>
-        /// <para>The aspect ratio. Valid values: adaptive (default), 16:9, 4:3, 1:1, 3:4, and 9:16.</para>
+        /// <para>The aspect ratio of the video. Valid values: adaptive, 16:9, 4:3, 1:1, 3:4, and 9:16. Default value: adaptive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>adaptive</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string Ratio { get; set; }
 
         /// <summary>
-        /// <para>The resolution. Valid values: 1080P (default), 720P, and 480P.</para>
+        /// <para>The video resolution. Valid values: 1080P, 720P, and 480P. Default value: 1080P.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1080P</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.AIDeepSign20260511.Models
         public string Resolution { get; set; }
 
         /// <summary>
-        /// <para>The random seed. Valid values: -1 (random), an integer from 0 to 2147483647, and 0 (server default of random).</para>
+        /// <para>The random seed. Valid values: -1 (random) or an integer from 0 to 2147483647. A value of 0 is a valid reproducible seed. If not specified, the server uses a random seed by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>42</para>
