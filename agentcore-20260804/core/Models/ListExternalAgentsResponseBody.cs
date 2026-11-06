@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The latest specification version.</para>
+            /// <para>The latest specification version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of records that meet the filter conditions.</para>
+        /// <para>The total number of records that meet the conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

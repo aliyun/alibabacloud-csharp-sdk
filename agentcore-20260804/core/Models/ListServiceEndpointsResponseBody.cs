@@ -115,6 +115,52 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
+            /// <para>publicAccessEnabled 与工作空间公网入向上限叠加后的结果：二者均允许时为 true。仅表示策略目标，不代表公网入口已发布完成，实际状态以 accessUrls 与 status 为准。</para>
+            /// </summary>
+            [NameInMap("effectivePublicAccessEnabled")]
+            [Validation(Required=false)]
+            public bool? EffectivePublicAccessEnabled { get; set; }
+
+            /// <summary>
+            /// <para>仅在服务端点设置过弹性覆盖值时返回，可设置的为 Router 类型服务端点与 GATEWAY_API_WITH_VPC_INGRESS 类型的 DEFAULT 服务端点；未设置覆盖值时不返回该对象，表示继承智能体源配置，不得当作空对象或默认策略。返回时三个字段必全。</para>
+            /// </summary>
+            [NameInMap("elasticityPolicy")]
+            [Validation(Required=false)]
+            public ListServiceEndpointsResponseBodyItemsElasticityPolicy ElasticityPolicy { get; set; }
+            public class ListServiceEndpointsResponseBodyItemsElasticityPolicy : TeaModel {
+                /// <summary>
+                /// <para>是否开启弹性。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+
+                /// <summary>
+                /// <para>最大实例数，不小于 1。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5</para>
+                /// </summary>
+                [NameInMap("maxSandboxCount")]
+                [Validation(Required=false)]
+                public int? MaxSandboxCount { get; set; }
+
+                /// <summary>
+                /// <para>最小实例数，不小于 0 且不大于 maxSandboxCount。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("minSandboxCount")]
+                [Validation(Required=false)]
+                public int? MinSandboxCount { get; set; }
+
+            }
+
+            /// <summary>
             /// <para>The type of the service endpoint. DEFAULT indicates a default endpoint created and maintained by the platform. NAMED indicates a named endpoint explicitly created by the user.</para>
             /// 
             /// <b>Example:</b>
@@ -133,6 +179,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
+            /// <summary>
+            /// <para>用户在服务端点上设置的公网入向期望；未设置过的历史服务端点按 true 返回。仅表示配置期望，实际公网地址是否可用以 accessUrls 与 status 为准。</para>
+            /// </summary>
+            [NameInMap("publicAccessEnabled")]
+            [Validation(Required=false)]
+            public bool? PublicAccessEnabled { get; set; }
 
             /// <summary>
             /// <para>The ID of the region where the service endpoint resides.</para>
