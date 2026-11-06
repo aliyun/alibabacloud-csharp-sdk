@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>Specifies whether to disable the cluster audit log feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false: enables the audit log feature or updates the audit log configurations.</description></item>
-        /// <item><description>true: disables the audit log feature.</description></item>
+        /// <item><description><para>false: enables the audit log feature or updates the audit log configuration.</para>
+        /// </description></item>
+        /// <item><description><para>true: disables the audit log feature.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,9 +26,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? Disable { get; set; }
 
         /// <summary>
-        /// <para>The <a href="https://help.aliyun.com/document_detail/48873.html">SLS project</a> where the <a href="https://help.aliyun.com/document_detail/48874.html">Logstore</a> for cluster audit logs is located.</para>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/48873.html">SLS project</a> where the <a href="https://help.aliyun.com/document_detail/48874.html">Logstore</a> for cluster audit logs is stored.</para>
         /// <list type="bullet">
-        /// <item><description><para>The default value is k8s-log-{clusterid}.</para>
+        /// <item><description><para>Default value: k8s-log-{clusterid}.</para>
         /// </description></item>
         /// <item><description><para>After you enable the cluster audit log feature, a Logstore for cluster audit logs is created in the specified SLS project.</para>
         /// </description></item>

@@ -35,6 +35,36 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public Dictionary<string, object> Capabilities { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the Kubernetes version can be created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("creatable")]
+            [Validation(Required=false)]
+            public bool? Creatable { get; set; }
+
+            /// <summary>
+            /// <para>The expiration time of the Kubernetes version, in ISO 8601 format with time zone information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-01-30T00:00:00Z</para>
+            /// </summary>
+            [NameInMap("expiration_date")]
+            [Validation(Required=false)]
+            public string ExpirationDate { get; set; }
+
+            /// <summary>
+            /// <para>The expiration time of the extended support for the Kubernetes version. An empty value indicates that extended support is not provided for this version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-04-30T00:00:00Z</para>
+            /// </summary>
+            [NameInMap("extended_expiration_date")]
+            [Validation(Required=false)]
+            public string ExtendedExpirationDate { get; set; }
+
+            /// <summary>
             /// <para>The list of system images.</para>
             /// </summary>
             [NameInMap("images")]
@@ -42,7 +72,33 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<DescribeKubernetesVersionMetadataResponseBodyImages> Images { get; set; }
             public class DescribeKubernetesVersionMetadataResponseBodyImages : TeaModel {
                 /// <summary>
-                /// <para>The image ID.</para>
+                /// <para>The architecture of the image.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>x86_64</para>
+                /// </summary>
+                [NameInMap("architecture")]
+                [Validation(Required=false)]
+                public string Architecture { get; set; }
+
+                /// <summary>
+                /// <para>The category of the image. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><c>system</c>: public images</description></item>
+                /// <item><description><c>self</c>: custom images</description></item>
+                /// <item><description><c>others</c>: public images from other users</description></item>
+                /// <item><description><c>marketplace</c>: marketplace images</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>system</para>
+                /// </summary>
+                [NameInMap("image_category")]
+                [Validation(Required=false)]
+                public string ImageCategory { get; set; }
+
+                /// <summary>
+                /// <para>The ID of the image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aliyun_3_x64_20G_alibase_20241218.vhd</para>
@@ -52,7 +108,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ImageId { get; set; }
 
                 /// <summary>
-                /// <para>The image name.</para>
+                /// <para>The name of the image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Alibaba Cloud Linux 3.2104</para>
@@ -62,33 +118,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ImageName { get; set; }
 
                 /// <summary>
-                /// <para>The operating system platform. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><c>AliyunLinux</c></description></item>
-                /// <item><description><c>CentOS</c></description></item>
-                /// <item><description><c>Windows</c></description></item>
-                /// <item><description><c>WindowsCore</c></description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>AliyunLinux</para>
-                /// </summary>
-                [NameInMap("platform")]
-                [Validation(Required=false)]
-                public string Platform { get; set; }
-
-                /// <summary>
-                /// <para>The image version.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3.2104</para>
-                /// </summary>
-                [NameInMap("os_version")]
-                [Validation(Required=false)]
-                public string OsVersion { get; set; }
-
-                /// <summary>
-                /// <para>The operating system distribution type. Use this field to specify the operating system for nodes. Valid values:</para>
+                /// <para>The operating system distribution type. Use this field to specify the node operating system. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><c>CentOS</c></description></item>
                 /// <item><description><c>AliyunLinux</c></description></item>
@@ -109,7 +139,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ImageType { get; set; }
 
                 /// <summary>
-                /// <para>The operating system type. Examples:</para>
+                /// <para>The operating system type. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><c>Windows</c></description></item>
                 /// <item><description><c>Linux</c></description></item>
@@ -123,35 +153,35 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string OsType { get; set; }
 
                 /// <summary>
-                /// <para>The image category. Some valid values:</para>
+                /// <para>The image version.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3.2104</para>
+                /// </summary>
+                [NameInMap("os_version")]
+                [Validation(Required=false)]
+                public string OsVersion { get; set; }
+
+                /// <summary>
+                /// <para>The operating system platform. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>system</c>: public images.</description></item>
-                /// <item><description><c>self</c>: your custom images.</description></item>
-                /// <item><description><c>others</c>: public images from other users.</description></item>
-                /// <item><description><c>marketplace</c>: Alibaba Cloud Marketplace images.</description></item>
+                /// <item><description><c>AliyunLinux</c></description></item>
+                /// <item><description><c>CentOS</c></description></item>
+                /// <item><description><c>Windows</c></description></item>
+                /// <item><description><c>WindowsCore</c></description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>system</para>
+                /// <para>AliyunLinux</para>
                 /// </summary>
-                [NameInMap("image_category")]
+                [NameInMap("platform")]
                 [Validation(Required=false)]
-                public string ImageCategory { get; set; }
-
-                /// <summary>
-                /// <para>The image architecture.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>x86_64</para>
-                /// </summary>
-                [NameInMap("architecture")]
-                [Validation(Required=false)]
-                public string Architecture { get; set; }
+                public string Platform { get; set; }
 
             }
 
             /// <summary>
-            /// <para>The metadata of the Kubernetes version.</para>
+            /// <para>The metadata information of the Kubernetes version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -165,24 +195,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public Dictionary<string, object> MetaData { get; set; }
 
             /// <summary>
-            /// <para>The container runtime configurations.</para>
-            /// </summary>
-            [NameInMap("runtimes")]
-            [Validation(Required=false)]
-            public List<Runtime> Runtimes { get; set; }
-
-            /// <summary>
-            /// <para>The Kubernetes version released by ACK. For more information about versions, see <a href="https://help.aliyun.com/document_detail/185269.html">Overview of Kubernetes version releases</a>.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1.31.1-aliyun.1</para>
-            /// </summary>
-            [NameInMap("version")]
-            [Validation(Required=false)]
-            public string Version { get; set; }
-
-            /// <summary>
-            /// <para>The release time of the Kubernetes version. The time is in ISO 8601 format and includes time zone information.</para>
+            /// <para>The release time of the Kubernetes version, in ISO 8601 format with time zone information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-30T00:00:00Z</para>
@@ -192,24 +205,26 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ReleaseDate { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the Kubernetes version. The time is in ISO 8601 format and includes time zone information.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2026-01-30T00:00:00Z</para>
+            /// <para>The container runtime configurations.</para>
             /// </summary>
-            [NameInMap("expiration_date")]
+            [NameInMap("runtimes")]
             [Validation(Required=false)]
-            public string ExpirationDate { get; set; }
+            public List<Runtime> Runtimes { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Kubernetes version can be created.</para>
+            /// <para>The support policy required to obtain this patch version. The value is case-sensitive. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Standard: regular patch versions</description></item>
+            /// <item><description>Extended: patch versions exclusive to the extended support period, which include backported CVE and critical bug fixes. Only clusters with extended support enabled can be upgraded to these versions.
+            /// This field always has a value. It shares the same name and value range as the support_policy of the cluster. You can directly compare the policy enabled for the cluster with the policy required for this version.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>true</para>
+            /// <para>Extended</para>
             /// </summary>
-            [NameInMap("creatable")]
+            [NameInMap("support_policy")]
             [Validation(Required=false)]
-            public bool? Creatable { get; set; }
+            public string SupportPolicy { get; set; }
 
             /// <summary>
             /// <para>The list of upgradable versions.</para>
@@ -217,6 +232,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("upgradable_versions")]
             [Validation(Required=false)]
             public List<string> UpgradableVersions { get; set; }
+
+            /// <summary>
+            /// <para>The Kubernetes version released by ACK. For more version information, see <a href="https://help.aliyun.com/document_detail/185269.html">Kubernetes version release overview</a>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.31.1-aliyun.1</para>
+            /// </summary>
+            [NameInMap("version")]
+            [Validation(Required=false)]
+            public string Version { get; set; }
 
         }
 

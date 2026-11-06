@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<ListNodePoolComponentInstanceNodesResponseBodyNodeList> NodeList { get; set; }
         public class ListNodePoolComponentInstanceNodesResponseBodyNodeList : TeaModel {
             /// <summary>
-            /// <para>The details of the component on the node.</para>
+            /// <para>The detailed information about the component on the node.</para>
             /// </summary>
             [NameInMap("component")]
             [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 }
 
                 /// <summary>
-                /// <para>The custom configuration version number of the component on the node.</para>
+                /// <para>The custom configuration revision of the component on the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>

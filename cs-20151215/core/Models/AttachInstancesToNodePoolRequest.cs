@@ -10,21 +10,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class AttachInstancesToNodePoolRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to store container data and images on data cloud disks. Valid values:</para>
+        /// <para><b>[Deprecated]</b> Use <c>format_disk_option</c> instead.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: Stores container data and images on data cloud disks.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: Does not store container data and images on data cloud disks.</para>
-        /// </description></item>
-        /// </list>
-        /// <para>Default value: <c>false</c>.</para>
-        /// <para>Data cloud disk mounting rules:</para>
-        /// <list type="bullet">
-        /// <item><description>If the ECS instance has data cloud disks mounted and the file system of the last data cloud disk is not initialized, the system automatically formats the data cloud disk to EXT4 to store the /var/lib/docker and /var/lib/kubelet directories.</description></item>
-        /// <item><description>If the ECS instance does not have data cloud disks mounted, no new data cloud disks are mounted.<remarks>
-        /// <para>If you choose to store data on data cloud disks and the ECS instance already has data cloud disks mounted, the existing data on the data cloud disks will be lost. Back up your data in advance.</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description><c>true</c>: Equivalent to setting <c>format_disk_option</c> to <c>DataDisk</c>.</description></item>
+        /// <item><description><c>false</c>: Equivalent to setting <c>format_disk_option</c> to <c>SystemDisk</c>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

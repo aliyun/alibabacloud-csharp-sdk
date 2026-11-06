@@ -43,9 +43,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <item><description><c>ack.pro.small</c>: Pro Edition.</description></item>
             /// <item><description><c>ack.pro.xlarge</c>: Pro XL.</description></item>
             /// <item><description><c>ack.pro.2xlarge</c>: Pro 2XL.</description></item>
-            /// <item><description><c>ack.pro.4xlarge</c>: Pro 4XL. To use this specification, submit a ticket to contact customer service and apply for whitelist access.</description></item>
+            /// <item><description><c>ack.pro.4xlarge</c>: Pro 4XL. To use this specification, you must contact customer service to apply for whitelist access.</description></item>
             /// </list>
-            /// <para>Pro XL, Pro 2XL, and Pro 4XL are the three tiers provided by the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>. By pre-allocating and reserving control plane resources, these tiers ensure that API concurrency and pod scheduling capabilities remain consistently at a high level. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</para>
+            /// <para>Pro XL, Pro 2XL, and Pro 4XL are the three tiers provided by the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>. These tiers pre-allocate and reserve control plane resources to ensure that API concurrency and pod scheduling capabilities remain consistently high. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</para>
             /// <para>For more information about the cluster management fees for the Pro Edition and provisioned control plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</para>
             /// 
             /// <b>Example:</b>
@@ -56,10 +56,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterSpec { get; set; }
 
             /// <summary>
-            /// <para>The cluster type. Valid values:</para>
+            /// <para>The type of the cluster. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Kubernetes: ACK dedicated cluster.</description></item>
-            /// <item><description>ManagedKubernetes: ACK managed clusters, including ACK managed clusters (ACK Pro and ACK Basic), ACK Serverless clusters (Pro and Basic), ACK Edge clusters (Pro and Basic), and ACK Lingjun clusters (Pro).</description></item>
+            /// <item><description>ManagedKubernetes: ACK managed cluster, including ACK managed clusters (Pro Edition and Basic Edition), ACK Serverless clusters (Pro Edition and Basic Edition), ACK Edge clusters (Pro Edition and Basic Edition), and ACK Lingjun clusters (Pro Edition).</description></item>
             /// <item><description>ExternalKubernetes: registered cluster.</description></item>
             /// </list>
             /// 
@@ -157,10 +157,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The subtype of the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Default: ACK managed clusters, including ACK Pro and ACK Basic.</description></item>
-            /// <item><description>Edge: ACK Edge clusters, including ACK Edge Pro and ACK Edge Basic.</description></item>
-            /// <item><description>Serverless: ACK Serverless clusters, including ACK Serverless Pro and ACK Serverless Basic.</description></item>
-            /// <item><description>LingJun: ACK Lingjun clusters, which provide the Pro edition.</description></item>
+            /// <item><description>Default: ACK managed cluster, including ACK managed cluster Pro Edition and Basic Edition.</description></item>
+            /// <item><description>Edge: ACK Edge cluster, including ACK Edge cluster Pro Edition and Basic Edition.</description></item>
+            /// <item><description>Serverless: ACK Serverless cluster, including ACK Serverless cluster Pro Edition and Basic Edition.</description></item>
+            /// <item><description>LingJun: ACK Lingjun cluster, which provides only the Pro Edition.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Profile { get; set; }
 
             /// <summary>
-            /// <para>The proxy mode of kube-proxy in the cluster.</para>
+            /// <para>The kube-proxy mode of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ipvs</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The CIDR block for services.</para>
+            /// <para>The CIDR block for services in the cluster.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <item><description><c>running</c>: The cluster is running.</description></item>
             /// <item><description><c>updating</c>: The cluster is being updated.</description></item>
             /// <item><description><c>upgrading</c>: The cluster is being upgraded.</description></item>
-            /// <item><description><c>removing</c>: Nodes are being removed.</description></item>
+            /// <item><description><c>removing</c>: Nodes are being removed from the cluster.</description></item>
             /// <item><description><c>draining</c>: Nodes are being drained.</description></item>
             /// <item><description><c>scaling</c>: The cluster is being scaled.</description></item>
             /// <item><description><c>inactive</c>: The cluster is inactive.</description></item>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <item><description><c>deleting</c>: The cluster is being deleted.</description></item>
             /// <item><description><c>deleted</c>: The cluster is deleted.</description></item>
             /// <item><description><c>delete_failed</c>: The cluster failed to be deleted.</description></item>
-            /// <item><description><c>waiting</c>: The cluster is waiting to be accessed.</description></item>
+            /// <item><description><c>waiting</c>: The cluster is waiting for the accessed state.</description></item>
             /// <item><description><c>disconnected</c>: The cluster is disconnected.</description></item>
             /// </list>
             /// 
@@ -257,6 +257,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [NameInMap("state")]
             [Validation(Required=false)]
             public string State { get; set; }
+
+            /// <summary>
+            /// <para>The version support policy of the cluster. The values are case-sensitive. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Standard: standard support.</description></item>
+            /// <item><description>Extended: extended support. After the standard support period ends, the cluster enters the extended support period and continues to receive CVE patch updates.
+            /// If this policy is not configured for an existing cluster, Standard is returned.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Extended</para>
+            /// </summary>
+            [NameInMap("support_policy")]
+            [Validation(Required=false)]
+            public string SupportPolicy { get; set; }
 
             /// <summary>
             /// <para>The list of tags for the cluster.</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ListNodePoolComponentInstanceNodesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Filters nodes by the specified configuration version number of the node component.</para>
+        /// <para>Filters nodes by the specified configuration revision of the node component.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

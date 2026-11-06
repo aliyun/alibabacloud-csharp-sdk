@@ -1,3 +1,15 @@
+2026-11-06 Version: 7.2.6
+- Update API CreateCluster: add request parameters body.support_policy.
+- Update API DeleteClusterNodes: add request parameters body.drain_timeout_seconds.
+- Update API DescribeClusterDetail: add response parameters Body.support_policy.
+- Update API DescribeClustersForRegion: add response parameters Body.clusters.$.support_policy.
+- Update API DescribeKubernetesVersionMetadata: add request parameters SupportPolicy.
+- Update API DescribeKubernetesVersionMetadata: add response parameters Body.$.extended_expiration_date.
+- Update API DescribeKubernetesVersionMetadata: add response parameters Body.$.support_policy.
+- Update API ModifyCluster: add request parameters body.support_policy.
+- Update API RemoveNodePoolNodes: add request parameters drain_timeout_seconds.
+
+
 2026-10-29 Version: 7.2.5
 - Update API CreateClusterNodePool: add request parameters body.management.auto_repair_policy.auto_repair_policy_id.
 - Update API DescribeAutoRepairPolicy: add response parameters Body.type.

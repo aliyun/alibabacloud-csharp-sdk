@@ -34,16 +34,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? Expired { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to mount a data cloud disk to the instance when manually adding an existing instance to the cluster, and store containers and images on the data cloud disk. Valid values:</para>
+        /// <para><b>[Deprecated]</b> Use <c>format_disk_option</c> instead.</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: Mounts a data cloud disk to the instance. The existing data on the data cloud disk will be lost. Back up your data first.</description></item>
-        /// <item><description><c>false</c>: Does not mount a data cloud disk to the instance.</description></item>
-        /// </list>
-        /// <para>Default value: <c>false</c>.</para>
-        /// <para>Data mounting rules:</para>
-        /// <list type="bullet">
-        /// <item><description>If the ECS instance has a data cloud disk mounted and the file system of the last data cloud disk is not initialized, the system automatically formats the data cloud disk to ext4 to store the /var/lib/docker and /var/lib/kubelet directories.</description></item>
-        /// <item><description>If the ECS instance does not have a data cloud disk mounted, no new data cloud disk is mounted.</description></item>
+        /// <item><description><c>true</c>: equivalent to setting <c>format_disk_option</c> to <c>DataDisk</c>.</description></item>
+        /// <item><description><c>false</c>: equivalent to setting <c>format_disk_option</c> to <c>SystemDisk</c>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,10 +48,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? FormatDisk { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to retain the instance name when adding an existing instance to the cluster. If you do not retain the instance name, the instance name format is <c>worker-k8s-for-cs-&lt;clusterid&gt;</c>. Valid values:</para>
+        /// <para>Specifies whether to retain the instance name when adding an existing instance to the cluster. If the instance name is not retained, the instance name format is <c>worker-k8s-for-cs-&lt;clusterid&gt;</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: Retains the instance name.</description></item>
-        /// <item><description><c>false</c>: Does not retain the instance name. The instance name is replaced based on system rules.</description></item>
+        /// <item><description><c>true</c>: retains the instance name.</description></item>
+        /// <item><description><c>false</c>: does not retain the instance name. The instance name is replaced based on system rules.</description></item>
         /// </list>
         /// <para>Default value: <c>true</c>.</para>
         /// 
@@ -69,9 +63,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? KeepInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The node pool ID. You can add the node to a specified node pool when adding nodes.</para>
+        /// <para>The node pool ID. When you add a node, you can add the node to a specified node pool.</para>
         /// <remarks>
-        /// <para>If you do not specify a node pool ID, the node is added to the default node pool.</para>
+        /// <para>If you do not specify a node pool ID, the node is added to the default node pool by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -86,7 +80,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? OneTimeToken { get; set; }
 
         /// <summary>
-        /// <para>The access configuration parameters for the node.</para>
+        /// <para>The onboarding configuration parameters for the node.</para>
         /// <remarks>
         /// <para>This parameter is required when the cluster type is ACK Edge.</para>
         /// </remarks>

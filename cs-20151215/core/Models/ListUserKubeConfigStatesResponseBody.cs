@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total number of results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The KubeConfig status details of the user.</para>
+        /// <para>The KubeConfig status details for the user.</para>
         /// </summary>
         [NameInMap("states")]
         [Validation(Required=false)]
         public List<ListUserKubeConfigStatesResponseBodyStates> States { get; set; }
         public class ListUserKubeConfigStatesResponseBodyStates : TeaModel {
             /// <summary>
-            /// <para>The expiration time of the KubeConfig certificate. The time is displayed in UTC and follows the RFC 3339 standard.</para>
+            /// <para>The expiration time of the KubeConfig certificate. The time is in UTC and follows the RFC 3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2028-04-09T06:20:47Z</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <item><description>Unexpired: The certificate has not expired.</description></item>
             /// <item><description>Unissued: The certificate has not been issued.</description></item>
             /// <item><description>Unknown: The status is unknown.</description></item>
-            /// <item><description>Removed: The certificate has been removed (the certificate has an issuance record).</description></item>
+            /// <item><description>Removed: The certificate has been removed, but an issuance record exists.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
