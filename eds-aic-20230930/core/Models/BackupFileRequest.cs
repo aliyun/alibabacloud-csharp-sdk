@@ -49,6 +49,56 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BackupFilePath { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>[{&quot;OssBucket&quot;:&quot;my-bucket&quot;,&quot;OssObjectKey&quot;:&quot;script/backup.sh&quot;,&quot;OssEndpoint&quot;:&quot;oss-cn-hangzhou-internal.aliyuncs.com&quot;,&quot;OssRegion&quot;:&quot;cn-hangzhou&quot;}]</para>
+        /// </summary>
+        [NameInMap("CustomScripts")]
+        [Validation(Required=false)]
+        public List<BackupFileRequestCustomScripts> CustomScripts { get; set; }
+        public class BackupFileRequestCustomScripts : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>my-bucket</para>
+            /// </summary>
+            [NameInMap("OssBucket")]
+            [Validation(Required=false)]
+            public string OssBucket { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>oss-cn-hangzhou-internal.aliyuncs.com</para>
+            /// </summary>
+            [NameInMap("OssEndpoint")]
+            [Validation(Required=false)]
+            public string OssEndpoint { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>script/backup.sh</para>
+            /// </summary>
+            [NameInMap("OssObjectKey")]
+            [Validation(Required=false)]
+            public string OssObjectKey { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
+            /// </summary>
+            [NameInMap("OssRegion")]
+            [Validation(Required=false)]
+            public string OssRegion { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>[&quot;acp-0n4k52uiyon472rq0&quot;]</para>
+            /// </summary>
+            [NameInMap("TestInstanceIds")]
+            [Validation(Required=false)]
+            public List<string> TestInstanceIds { get; set; }
+
+        }
+
+        /// <summary>
         /// <para>The description of the backup file.</para>
         /// 
         /// <b>Example:</b>

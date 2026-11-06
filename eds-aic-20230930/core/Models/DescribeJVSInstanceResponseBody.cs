@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeJVSInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result object.</para>
+        /// <para>The response object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             }
 
             /// <summary>
-            /// <para>The creation time. The time is displayed in UTC and follows the ISO 8601 standard.</para>
+            /// <para>The creation time. The time is in UTC and follows the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-10T01:31:32Z</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The credit limit configuration. Subsequent quota configurations overwrite previous configurations.</para>
+            /// <para>The credit limit configuration. Subsequent quota configurations overwrite previous ones.</para>
             /// </summary>
             [NameInMap("CreditConfig")]
             [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public long? CreditLimit { get; set; }
 
                 /// <summary>
-                /// <para>The credit limit period.</para>
+                /// <para>The limit period.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>day</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             }
 
             /// <summary>
-            /// <para>The expiration time. The time is displayed in UTC and follows the ISO 8601 standard.</para>
+            /// <para>The expiration time. The time is in UTC and follows the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-10T01:31:32Z</para>
@@ -174,6 +174,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The instance name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>InstanceName</para>
+            /// </summary>
+            [NameInMap("InstanceName")]
+            [Validation(Required=false)]
+            public string InstanceName { get; set; }
+
+            /// <summary>
             /// <para>This parameter is not supported.</para>
             /// 
             /// <b>Example:</b>
@@ -184,7 +194,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string JvsPackageId { get; set; }
 
             /// <summary>
-            /// <para>The modification time. The time is displayed in UTC and follows the ISO 8601 standard.</para>
+            /// <para>The modification time. The time is in UTC and follows the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-10T01:31:32Z</para>
@@ -221,7 +231,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public long? Credit { get; set; }
 
                 /// <summary>
-                /// <para>The dimension of the current credit.</para>
+                /// <para>The period of the current credit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>day</para>
@@ -235,7 +245,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of results returned in the current request.</para>
+        /// <para>The maximum number of data entries returned in the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -245,7 +255,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that specifies the starting position for the query. An empty value indicates that the query starts from the beginning.</para>
+        /// <para>The token that specifies the starting position for the current query. If this parameter is left empty, the query starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</para>
