@@ -74,8 +74,6 @@ namespace AlibabaCloud.SDK.PAIModelGallery20250630.Models
         }
 
         /// <summary>
-        /// <para>The distillation template ID used when creating the task plan. An empty value indicates that this is not a scenario-specific distillation task.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>advanced_cot_distill</para>
         /// </summary>
@@ -84,10 +82,8 @@ namespace AlibabaCloud.SDK.PAIModelGallery20250630.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The display name of the distillation template used, localized based on the language specified in the request.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>Chain-of-Thought Reasoning Distillation</para>
+        /// <para>思维链推理蒸馏</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

@@ -9,12 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.PAIModelGallery20250630.Models
 {
     public class DeleteJobPlanResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>40325405-579C-4D82-9624-EC2B1779848E</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
