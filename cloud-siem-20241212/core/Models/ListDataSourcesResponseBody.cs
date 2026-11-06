@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListDataSourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The alert source products associated with events.</para>
+        /// <para>The products from which event-associated alerts originate.</para>
         /// </summary>
         [NameInMap("DataSources")]
         [Validation(Required=false)]
         public List<ListDataSourcesResponseBodyDataSources> DataSources { get; set; }
         public class ListDataSourcesResponseBodyDataSources : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1733269771123</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The data source origin. Valid values:</para>
+            /// <para>The source of the data source. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>center</description></item>
             /// <item><description>custom</description></item>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataSourceFrom { get; set; }
 
             /// <summary>
-            /// <para>The data source ID.</para>
+            /// <para>The ID of the data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ds-scpfegri73oyoknbc90c</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataSourceId { get; set; }
 
             /// <summary>
-            /// <para>The data source name.</para>
+            /// <para>The name of the data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AD_LOG</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataSourceName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether automatic discovery of new Logstores is enabled.</para>
+            /// <para>Specifies whether to automatically discover new Logstores.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             }
 
             /// <summary>
-            /// <para>The data source status. Valid values:</para>
+            /// <para>The status of the data source. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>unconfigured</description></item>
             /// <item><description>normal</description></item>
@@ -115,14 +115,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataSourceStatus { get; set; }
 
             /// <summary>
-            /// <para>The list of log services.</para>
+            /// <para>The list of Simple Log Service resources.</para>
             /// </summary>
             [NameInMap("DataSourceStores")]
             [Validation(Required=false)]
             public List<ListDataSourcesResponseBodyDataSourcesDataSourceStores> DataSourceStores { get; set; }
             public class ListDataSourcesResponseBodyDataSourcesDataSourceStores : TeaModel {
                 /// <summary>
-                /// <para>The check time.</para>
+                /// <para>The check time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1733269771123</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public long? CheckTime { get; set; }
 
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1733269771123</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The data source origin. Valid values:</para>
+                /// <para>The source of the data source. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>center</description></item>
                 /// <item><description>custom</description></item>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string DataSourceStoreFrom { get; set; }
 
                 /// <summary>
-                /// <para>The log store ID.</para>
+                /// <para>The ID of the log storage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>di_xxxx_source_1</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string DataSourceStoreId { get; set; }
 
                 /// <summary>
-                /// <para>The log store status. Valid values:</para>
+                /// <para>The status of the Logstore. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>normal</description></item>
                 /// <item><description>abnormal</description></item>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string DataSourceStoreStatus { get; set; }
 
                 /// <summary>
-                /// <para>The log store status code.</para>
+                /// <para>The status code of the Logstore.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>LogStoreNotExist</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string DataSourceStoreStatusCode { get; set; }
 
                 /// <summary>
-                /// <para>The Simple Log Service project name.</para>
+                /// <para>The name of the Simple Log Service project.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aliyun-cloudsiem-data-173326*******-cn-hangzhou</para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string LogProjectName { get; set; }
 
                 /// <summary>
-                /// <para>The log storage region ID.</para>
+                /// <para>The ID of the log storage region.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string LogRegionId { get; set; }
 
                 /// <summary>
-                /// <para>The Simple Log Service Logstore name.</para>
+                /// <para>The name of the Simple Log Service Logstore.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>audit-activity</para>
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string LogStoreName { get; set; }
 
                 /// <summary>
-                /// <para>The update time.</para>
+                /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1733269771123</para>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             }
 
             /// <summary>
-            /// <para>The data source template ID.</para>
+            /// <para>The ID of the data source template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alibaba_cloud_sas_account_snapshot_log_173326*******</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataSourceTemplateId { get; set; }
 
             /// <summary>
-            /// <para>The data source type. Valid values:</para>
+            /// <para>The type of the data source. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>preset</description></item>
             /// <item><description>custom</description></item>
@@ -256,7 +256,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataSourceType { get; set; }
 
             /// <summary>
-            /// <para>The Simple Log Service project name.</para>
+            /// <para>The name of the Simple Log Service project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyun-cloudsiem-data-173326*******-cn-hangzhou</para>
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string LogProjectName { get; set; }
 
             /// <summary>
-            /// <para>The log storage region ID.</para>
+            /// <para>The ID of the log storage region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string LogRegionId { get; set; }
 
             /// <summary>
-            /// <para>The Simple Log Service Logstore name.</para>
+            /// <para>The name of the Simple Log Service Logstore.</para>
             /// 
             /// <b>Example:</b>
             /// <para>audit-activity</para>
@@ -286,7 +286,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string LogStoreName { get; set; }
 
             /// <summary>
-            /// <para>The data ingestion user ID.</para>
+            /// <para>The user ID for data ingestion.</para>
             /// 
             /// <b>Example:</b>
             /// <para>173326*******</para>
@@ -296,7 +296,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? LogUserId { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1733269771123</para>
@@ -308,7 +308,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries to return in this request.</para>
+        /// <para>The maximum number of results to return in the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -318,7 +318,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</para>
+        /// <para>The token used to retrieve the next page of results. If this is the first request or no subsequent requests are required, leave this parameter empty. If a subsequent request is required, set this parameter to the value of NextToken returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -328,7 +328,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -348,7 +348,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>
@@ -358,7 +358,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

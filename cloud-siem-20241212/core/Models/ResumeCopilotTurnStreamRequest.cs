@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ResumeCopilotTurnStreamRequest : TeaModel {
         /// <summary>
-        /// <para>The conversation ID. This parameter is required for the second and subsequent turns in a multi-turn conversation.</para>
+        /// <para>The conversation ID. This parameter is required for the second and subsequent turns in a multi-turn conversation scenario.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public Dictionary<string, long?> CursorByRun { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned message. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
@@ -43,10 +43,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The region where the data management center for threat analysis is located. You need to select the management center based on the region of your assets. Valid values:</para>
+        /// <para>The region where the data management center for threat analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: The asset belongs to the Chinese mainland and China (Hong Kong).</description></item>
-        /// <item><description>ap-southeast-1: The asset belongs to a region outside the Chinese mainland.</description></item>
+        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland and Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: Assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

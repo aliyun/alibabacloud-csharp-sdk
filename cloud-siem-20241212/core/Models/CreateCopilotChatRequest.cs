@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class CreateCopilotChatRequest : TeaModel {
         /// <summary>
-        /// <para>The client conversation ID.</para>
+        /// <para>The client session ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>54b6c969-4b75-47be-9f43-71f88aeb****</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ClientMessageId { get; set; }
 
         /// <summary>
-        /// <para>The conversation ID.</para>
+        /// <para>The session ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>54b6c969-4b75-47be-9f43-71f88aeb****</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>The conversation creation configuration.</para>
+        /// <para>The session creation configuration.</para>
         /// </summary>
         [NameInMap("CreateConversation")]
         [Validation(Required=false)]
@@ -88,10 +88,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string ThinkingMode { get; set; }
 
             /// <summary>
-            /// <para>The conversation title.</para>
+            /// <para>The session title.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Security incident investigation</para>
+            /// <para>Security event investigation</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         }
 
         /// <summary>
-        /// <para>The language of the returned messages. Valid values:</para>
+        /// <para>The language of the returned message. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
@@ -122,17 +122,17 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public List<CreateCopilotChatRequestMessages> Messages { get; set; }
         public class CreateCopilotChatRequestMessages : TeaModel {
             /// <summary>
-            /// <para>The message content.</para>
+            /// <para>The content of the message.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Investigate abnormal login activities in the last hour</para>
+            /// <para>Investigate the abnormal logon activities in the past hour</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The message role.</para>
+            /// <para>The role of the message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user</para>
@@ -174,10 +174,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The region of the data management center for threat analysis. Specify the management center based on the region where your assets reside. Valid values:</para>
+        /// <para>The region of the data management center for threat analysis. Select the region of the management center based on the region where your assets reside. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Your assets reside in the Chinese mainland.</description></item>
-        /// <item><description>ap-southeast-1: Your assets reside in regions outside the Chinese mainland.</description></item>
+        /// <item><description>cn-hangzhou: Assets reside in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: Assets reside outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the conversation turn to replace.</para>
+        /// <para>The ID of the replaced conversation turn.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dc18b894-19a3-45ee-8768-a59478e0****</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ReplaceTurnId { get; set; }
 
         /// <summary>
-        /// <para>The route target identifier.</para>
+        /// <para>The target route identifier for execution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>security-agent-route-****</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RouteTarget { get; set; }
 
         /// <summary>
-        /// <para>The request source.</para>
+        /// <para>The source of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>console</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ThinkingMode { get; set; }
 
         /// <summary>
-        /// <para>The trace ID, which is used to query specific call information.</para>
+        /// <para>The trace ID used to accurately query call information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>550e8400e29b41d4a71644665544****</para>

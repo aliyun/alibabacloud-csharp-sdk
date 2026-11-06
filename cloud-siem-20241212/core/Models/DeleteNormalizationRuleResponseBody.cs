@@ -9,12 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class DeleteNormalizationRuleResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

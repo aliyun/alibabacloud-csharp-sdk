@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class UpdateResponseRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response messages. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of data records to read in this request.</para>
+        /// <para>The maximum number of data records to read in the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the start position of the current read. Leave this parameter empty to start from the beginning.</para>
+        /// <para>The token that specifies the position from which to start reading. If this parameter is left empty, the reading starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region where the data management center of Cloud Threat Detection and Response (CTDR) is located. Select the management center region based on the region where your assets reside. Valid values:</para>
+        /// <para>The region where the data management center of Threat Analysis is located. You must select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Your assets reside in the Chinese mainland.</description></item>
-        /// <item><description>ap-southeast-1: Your assets reside outside China.</description></item>
+        /// <item><description>cn-hangzhou: The assets are located in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: The assets are located outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,12 +70,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The action type of the automated response rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>doPlaybook: runs a playbook.</description></item>
-        /// <item><description>changeEventStatus: updates the event status.</description></item>
-        /// <item><description>changeThreatLevel: updates the threat level of an event.</description></item>
-        /// <item><description>addEventTag: adds a label to an event.</description></item>
-        /// <item><description>deleteEventTag: deletes a label from an event.</description></item>
-        /// <item><description>alertWhitelist: adds an alert to the whitelist.</description></item>
+        /// <item><description>doPlaybook: Executes a playbook.</description></item>
+        /// <item><description>changeEventStatus: Updates the event status.</description></item>
+        /// <item><description>changeThreatLevel: Updates the threat level of the event.</description></item>
+        /// <item><description>addEventTag: Adds an event tag.</description></item>
+        /// <item><description>deleteEventTag: Deletes an event tag.</description></item>
+        /// <item><description>alertWhitelist: Adds an alert to the whitelist.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ResponseActionType { get; set; }
 
         /// <summary>
-        /// <para>The trigger condition configuration of the rule.</para>
+        /// <para>The rule trigger condition configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;left&quot;:{&quot;value&quot;:&quot;threat_level&quot;},&quot;operator&quot;:&quot;equals&quot;,&quot;right&quot;:{&quot;value&quot;:&quot;suspicious&quot;}}]</para>
@@ -126,7 +126,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? ResponseRulePriority { get; set; }
 
         /// <summary>
-        /// <para>The remarks for the response rule.</para>
+        /// <para>The remarks of the response rule.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Verified as a low-risk alert and scheduled for regular cleanup</para>
         /// </summary>
         [NameInMap("ResponseRuleRemark")]
         [Validation(Required=false)]
@@ -135,8 +138,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The status of the automated response rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: disabled.</description></item>
-        /// <item><description>100: enabled.</description></item>
+        /// <item><description>0: Disabled.</description></item>
+        /// <item><description>100: Enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -149,9 +152,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The trigger type of the automated response rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>event: an event occurs.</description></item>
-        /// <item><description>event_update: an event is updated.</description></item>
-        /// <item><description>alert: an alert occurs.</description></item>
+        /// <item><description>event: An event occurs.</description></item>
+        /// <item><description>event_update: An event is updated.</description></item>
+        /// <item><description>alert: An alert is triggered.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

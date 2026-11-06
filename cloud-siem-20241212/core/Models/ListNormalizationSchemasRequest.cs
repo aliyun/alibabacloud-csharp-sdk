@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListNormalizationSchemasRequest : TeaModel {
         /// <summary>
-        /// <para>The language type for the request and response messages. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
-        /// <para>Note: This parameter is required in actual calls. If this parameter is not specified, the service returns a 400 error &quot;The specified Lang can not be empty.&quot; Explicitly pass in the language code.</para>
+        /// <para>Note: This parameter is required in actual API calls. If it is not provided, the service returns a 400 error &quot;The specified Lang can not be empty.&quot;. Explicitly specify the language code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return in this request.</para>
+        /// <para>The maximum number of entries to return in the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</para>
+        /// <para>The token used to retrieve the next page of results. Leave this parameter empty for the first request or when no more results are available. For subsequent requests, set this parameter to the NextToken value returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The normalization rule category ID.</para>
+        /// <para>The ID of the normalization rule category.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NETWORK_CATEGORY</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationCategoryId { get; set; }
 
         /// <summary>
-        /// <para>The field source filter. Valid values: normalized / native.</para>
+        /// <para>The filter for the field source. Valid values: normalized and native.</para>
         /// 
         /// <b>Example:</b>
         /// <para>normalized</para>
@@ -68,10 +68,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationFieldSource { get; set; }
 
         /// <summary>
-        /// <para>The normalization schema type. Valid values:</para>
+        /// <para>The type of the normalization schema. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>log: log.</description></item>
-        /// <item><description>entity: entity.</description></item>
+        /// <item><description>log: Log.</description></item>
+        /// <item><description>entity: Entity.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationSchemaType { get; set; }
 
         /// <summary>
-        /// <para>The security domain ID.</para>
+        /// <para>The ID of the security domain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NETWORK_AND_WEB_SECURITY</para>
@@ -92,10 +92,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NormalizationSecurityDomainId { get; set; }
 
         /// <summary>
-        /// <para>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</para>
+        /// <para>The region where the data management center of Threat Analysis is located. You must select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: The assets are located in the Chinese mainland.</description></item>
-        /// <item><description>ap-southeast-1: The assets are located outside China.</description></item>
+        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: Assets are located outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID used when an administrator switches to the perspective of another member.</para>
+        /// <para>The ID of the user whose perspective the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>

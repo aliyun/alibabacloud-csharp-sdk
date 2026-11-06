@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListLogRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of log storage region IDs.</para>
+        /// <para>The list of log storage region IDs.</para>
         /// </summary>
         [NameInMap("LogRegions")]
         [Validation(Required=false)]

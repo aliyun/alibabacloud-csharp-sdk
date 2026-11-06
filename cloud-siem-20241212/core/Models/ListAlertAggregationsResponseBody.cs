@@ -17,21 +17,21 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public List<ListAlertAggregationsResponseBodyAlertAggregations> AlertAggregations { get; set; }
         public class ListAlertAggregationsResponseBodyAlertAggregations : TeaModel {
             /// <summary>
-            /// <para>The list of account display values associated with the aggregation group, in one-to-one correspondence with AccountIds. When the username is valid and differs from the account ID, the format is &quot;username/account ID&quot;. Otherwise, only the account ID is returned.</para>
+            /// <para>The list of account display values involved in the aggregation group, which corresponds one-to-one with the order of AccountIds. If the username is valid and different from the account ID, the format is &quot;Username/Account ID&quot;. Otherwise, only the account ID is returned.</para>
             /// </summary>
             [NameInMap("AccountDisplayValues")]
             [Validation(Required=false)]
             public List<string> AccountDisplayValues { get; set; }
 
             /// <summary>
-            /// <para>The list of member accounts IDs for which the report is generated. You need to specify this parameter only when you generate a multi-account report and want to limit the report to specific member accounts.</para>
+            /// <para>The list of IDs of the member accounts for which the report is generated. Note: You only need to specify this parameter when you generate a multi-account report and want to generate a report for a specified range of accounts.</para>
             /// </summary>
             [NameInMap("AccountIds")]
             [Validation(Required=false)]
             public List<string> AccountIds { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the aggregation group, which is a concatenation of AggregationType, PrimaryValue, and SecondaryValue joined by colons (:). The last segment is empty if no secondary aggregation value exists.</para>
+            /// <para>The unique identifier of the aggregation group. It is concatenated by AggregationType, PrimaryValue, and SecondaryValue with colons (:). If there is no secondary aggregation value, the last segment is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vendor_product:alibaba_cloud:sas</para>
@@ -61,21 +61,21 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? AlertCount { get; set; }
 
             /// <summary>
-            /// <para>The collection of MITRE ATT&amp;CK attack techniques associated with alerts in the aggregation group. Each element is a JSON array string.</para>
+            /// <para>The collection of MITRE ATT&amp;CK attack techniques associated with the alerts in the aggregation group. Each element is a JSON array string.</para>
             /// </summary>
             [NameInMap("AttackStages")]
             [Validation(Required=false)]
             public List<string> AttackStages { get; set; }
 
             /// <summary>
-            /// <para>The quantity distribution by defense action within the aggregation group. Name is the action field value, and Value is the corresponding alert count.</para>
+            /// <para>The distribution of alert counts by defense action in the aggregation group. Name is the value of the action field, and Value is the corresponding alert count.</para>
             /// </summary>
             [NameInMap("DefenseActionCounts")]
             [Validation(Required=false)]
             public List<ListAlertAggregationsResponseBodyAlertAggregationsDefenseActionCounts> DefenseActionCounts { get; set; }
             public class ListAlertAggregationsResponseBodyAlertAggregationsDefenseActionCounts : TeaModel {
                 /// <summary>
-                /// <para>The display name of the entity attribute field that can be added to the whitelist.</para>
+                /// <para>The display name of the entity property field that can be added to the whitelist.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>accesstoken</para>
@@ -85,10 +85,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The default right-hand value displayed for the whitelist rule.</para>
+                /// <para>The default right value displayed for the whitelist rule.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test-FutureSystemAI</para>
+                /// <para>Test-Qiantu System AI</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             }
 
             /// <summary>
-            /// <para>The time of the first access, represented as a UNIX timestamp in seconds.</para>
+            /// <para>The time of the first access. The value is a UNIX timestamp accurate to seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1785290308</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? FirstTime { get; set; }
 
             /// <summary>
-            /// <para>The most recent time when the attack event occurred.</para>
+            /// <para>The time when the attack event last occurred.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1785293908000</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? LatestTime { get; set; }
 
             /// <summary>
-            /// <para>The display text of the primary aggregation value. For account aggregation, the format is &quot;username/account ID&quot;. If no valid username exists, only the account ID is returned. For event summaries, the event name is returned based on the Lang parameter. If the name is missing, the event UUID is returned.</para>
+            /// <para>The display text of the primary aggregation value. For account aggregation, it returns &quot;Username/Account ID&quot;. If there is no valid username, only the account ID is returned. For event summaries, it returns the event name based on Lang. If the name is missing, the event UUID is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test incident</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <summary>
             /// <para>The collection of event source codes.</para>
             /// <remarks>
-            /// <para>Example: [\\\&quot;MRM\\\&quot;]</para>
+            /// <para>Example: [\&quot;MRM\&quot;]</para>
             /// </remarks>
             /// </summary>
             [NameInMap("SourceCodes")]
@@ -157,14 +157,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public List<string> SourceCodes { get; set; }
 
             /// <summary>
-            /// <para>The quantity distribution by alert status within the aggregation group. Name is the alert status value, and Value is the corresponding alert count.</para>
+            /// <para>The distribution of alert counts by alert status in the aggregation group. Name is the alert status value, and Value is the corresponding alert count.</para>
             /// </summary>
             [NameInMap("StatusCounts")]
             [Validation(Required=false)]
             public List<ListAlertAggregationsResponseBodyAlertAggregationsStatusCounts> StatusCounts { get; set; }
             public class ListAlertAggregationsResponseBodyAlertAggregationsStatusCounts : TeaModel {
                 /// <summary>
-                /// <para>The display name of the entity attribute field that can be added to the whitelist.</para>
+                /// <para>The display name of the entity property field that can be added to the whitelist.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://domain.com/">http://domain.com/</a></para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The right-hand value.</para>
+                /// <para>The right value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123.123.123.123</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9AAA9ED9-78F4-5021-86DC-D51C7511****</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>57</para>

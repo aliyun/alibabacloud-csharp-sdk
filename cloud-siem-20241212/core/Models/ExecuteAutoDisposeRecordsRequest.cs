@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ExecuteAutoDisposeRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public List<ExecuteAutoDisposeRecordsRequestSelectedEntityList> SelectedEntityList { get; set; }
         public class ExecuteAutoDisposeRecordsRequestSelectedEntityList : TeaModel {
             /// <summary>
-            /// <para>The unique ID of the investigation record.</para>
+            /// <para>The unique ID of the analysis record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0000089b040b8935fed2e24ca2ec8335</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public List<ExecuteAutoDisposeRecordsRequestUnSelectedEntityList> UnSelectedEntityList { get; set; }
         public class ExecuteAutoDisposeRecordsRequestUnSelectedEntityList : TeaModel {
             /// <summary>
-            /// <para>The unique ID of the investigation record.</para>
+            /// <para>The unique ID of the analysis record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0000089b040b8935fed2e24ca2ec8335</para>

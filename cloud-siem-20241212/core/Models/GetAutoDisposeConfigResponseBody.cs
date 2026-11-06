@@ -10,19 +10,17 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class GetAutoDisposeConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The automatic response configuration.</para>
+        /// <para>The automatic disposal configuration for users.</para>
         /// </summary>
         [NameInMap("AutoDisposeConfig")]
         [Validation(Required=false)]
         public GetAutoDisposeConfigResponseBodyAutoDisposeConfig AutoDisposeConfig { get; set; }
         public class GetAutoDisposeConfigResponseBodyAutoDisposeConfig : TeaModel {
             /// <summary>
-            /// <para>Indicates whether automatic response is enabled. Valid values:</para>
+            /// <para>The automatic disposal switch. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>enabled: Enabled.</para>
-            /// </description></item>
-            /// <item><description><para>disabled: Disabled.</para>
-            /// </description></item>
+            /// <item><description>enabled: Enabled.</description></item>
+            /// <item><description>disabled: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,7 +31,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string AutoDecisionStatus { get; set; }
 
             /// <summary>
-            /// <para>The code for the cloud product.</para>
+            /// <para>The code of the cloud service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alibaba_cloud_sas</para>
@@ -45,7 +43,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>9AAA9ED9-78F4-5021-86DC-D51C7511****</para>

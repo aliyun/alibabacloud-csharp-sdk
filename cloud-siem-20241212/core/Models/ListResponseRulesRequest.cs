@@ -10,11 +10,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListResponseRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
+        /// <para>Note: This parameter is required in actual API calls. If it is not provided, the service returns a 400 error &quot;The specified Lang can not be empty.&quot;. Explicitly pass the language code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -24,7 +25,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of data records to read in this request.</para>
+        /// <para>The maximum number of data records to return for the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -34,7 +35,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that marks the current reading position. Leave this parameter empty to read from the beginning.</para>
+        /// <para>The position from which to start reading. If you leave this parameter empty, the reading starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAASLVeIxed4466E0LVmGkzwS6hJKd9DGVGMDRM6Lu****</para>
@@ -44,7 +45,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the current page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +56,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,10 +67,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region where the threat analysis data management center resides. Select the management center based on the region of your assets. Valid values:</para>
+        /// <para>The region where the data management center for threat analysis is located. You must select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: Your assets belong to the Chinese mainland or Hong Kong (China).</description></item>
-        /// <item><description>ap-southeast-1: Your assets belong to regions outside China.</description></item>
+        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland and Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: Assets are located outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,12 +83,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The action type of the automatic response rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>doPlaybook: execute a playbook</description></item>
-        /// <item><description>changeEventStatus: update event status</description></item>
-        /// <item><description>changeThreatLevel: update event threat level</description></item>
-        /// <item><description>addEventTag: add an event label</description></item>
-        /// <item><description>deleteEventTag: delete an event label</description></item>
-        /// <item><description>alertWhitelist: add alert to whitelist</description></item>
+        /// <item><description>doPlaybook: Execute a playbook.</description></item>
+        /// <item><description>changeEventStatus: Update the event status.</description></item>
+        /// <item><description>changeThreatLevel: Update the event threat level.</description></item>
+        /// <item><description>addEventTag: Add an event tag.</description></item>
+        /// <item><description>deleteEventTag: Delete an event tag.</description></item>
+        /// <item><description>alertWhitelist: Add an alert to the whitelist.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -110,8 +111,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The status of the automatic response rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: disabled</description></item>
-        /// <item><description>100: enabled</description></item>
+        /// <item><description>0: Disabled.</description></item>
+        /// <item><description>100: Enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -124,8 +125,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The type of the response rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>preset: predefined</description></item>
-        /// <item><description>custom: custom</description></item>
+        /// <item><description>preset: Preset.</description></item>
+        /// <item><description>custom: Custom.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -138,9 +139,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The trigger type of the automatic response rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>event: event occurred</description></item>
-        /// <item><description>event_update: event updated</description></item>
-        /// <item><description>alert: alert occurred</description></item>
+        /// <item><description>event: Event occurrence.</description></item>
+        /// <item><description>event_update: Event update.</description></item>
+        /// <item><description>alert: Alert occurrence.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -151,7 +152,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string ResponseTriggerType { get; set; }
 
         /// <summary>
-        /// <para>The user ID that the administrator switches to when viewing from another member\&quot;s perspective.</para>
+        /// <para>The ID of the user whose perspective the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>
@@ -163,8 +164,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The view type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: the current Alibaba Cloud account view.</description></item>
-        /// <item><description>1: the view of all accounts in the enterprise.</description></item>
+        /// <item><description>0: The view of the current Alibaba Cloud account.</description></item>
+        /// <item><description>1: The view of all accounts in the enterprise.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

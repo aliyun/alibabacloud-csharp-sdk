@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The source of the data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>center</para>
-        /// </description></item>
-        /// <item><description><para>custom</para>
-        /// </description></item>
+        /// <item><description>center</description></item>
+        /// <item><description>custom</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string DataSourceFrom { get; set; }
 
         /// <summary>
-        /// <para>A list of data source IDs.</para>
+        /// <para>The list of data source IDs.</para>
         /// </summary>
         [NameInMap("DataSourceIds")]
         [Validation(Required=false)]
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string DataSourceRecognizer { get; set; }
 
         /// <summary>
-        /// <para>The IDs of associated data access instances.</para>
+        /// <para>The data ingestion IDs associated with the data source.</para>
         /// </summary>
         [NameInMap("DataSourceReferences")]
         [Validation(Required=false)]
@@ -79,10 +77,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             /// <summary>
             /// <para>The source of the data. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>center</para>
-            /// </description></item>
-            /// <item><description><para>custom</para>
-            /// </description></item>
+            /// <item><description>center</description></item>
+            /// <item><description>custom</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -103,12 +99,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string DataSourceStoreId { get; set; }
 
             /// <summary>
-            /// <para>The status of the log storage. Valid values:</para>
+            /// <para>The log storage status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>normal</para>
-            /// </description></item>
-            /// <item><description><para>abnormal</para>
-            /// </description></item>
+            /// <item><description>normal</description></item>
+            /// <item><description>abnormal</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -163,10 +157,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The type of the data source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>preset</para>
-        /// </description></item>
-        /// <item><description><para>custom</para>
-        /// </description></item>
+        /// <item><description>preset</description></item>
+        /// <item><description>custom</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -177,12 +169,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string DataSourceType { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -223,7 +213,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string LogStoreName { get; set; }
 
         /// <summary>
-        /// <para>The user ID for data ingestion.</para>
+        /// <para>The ID of the user for data ingestion.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>
@@ -235,10 +225,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>desc: descending.</para>
-        /// </description></item>
-        /// <item><description><para>asc: ascending.</para>
-        /// </description></item>
+        /// <item><description>desc: Descending order.</description></item>
+        /// <item><description>asc: Ascending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -249,12 +237,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The region of the Management Hub. Select a region based on the location of your assets. Valid values:</para>
+        /// <para>The region where the data management center of Threat Analysis is located. You must select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Assets are in the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Assets are outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: The assets are located in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: The assets are located outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -265,7 +251,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the member whose perspective the administrator assumes.</para>
+        /// <para>The ID of the user whose perspective the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>

@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         /// <summary>
         /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page.</para>
+        /// <para>The maximum number of data records to return in the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to retrieve the next page of results. If you do not specify this parameter, the service returns the first page of results.</para>
+        /// <para>The token that specifies the position to start reading. If this parameter is left empty, the reading starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -46,12 +44,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the data management center for threat analysis. This must be the region where your assets are located. Valid values:</para>
+        /// <para>The region where the data management center for threat analysis is located. You must select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>cn-hangzhou</c>: for assets in the Chinese mainland or Hong Kong (China).</para>
-        /// </description></item>
-        /// <item><description><para><c>ap-southeast-1</c>: for assets in international regions.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland and Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: Assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,7 +58,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the automatic response rule to delete.</para>
+        /// <para>The ID of the automated response rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>403235</para>

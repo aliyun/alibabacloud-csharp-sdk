@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class GetDetectionStatisticResponseBody : TeaModel {
         /// <summary>
-        /// <para>The count results of detection rules.</para>
+        /// <para>The detection rule counts.</para>
         /// </summary>
         [NameInMap("DetectionStatistic")]
         [Validation(Required=false)]
@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public class GetDetectionStatisticResponseBodyDetectionStatistic : TeaModel {
             /// <summary>
             /// <para>The number of AI-powered aggregation rules.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("AiPoweredAggregationRuleCount")]
             [Validation(Required=false)]

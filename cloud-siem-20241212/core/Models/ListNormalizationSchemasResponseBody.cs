@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListNormalizationSchemasResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return in this request.</para>
+        /// <para>The maximum number of entries to return in the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. You do not need to specify this parameter for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</para>
+        /// <para>The token used to retrieve the next page of results. Leave this parameter empty for the first request or when no more results are available. For subsequent requests, set this parameter to the NextToken value returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public List<ListNormalizationSchemasResponseBodyNormalizationSchemas> NormalizationSchemas { get; set; }
         public class ListNormalizationSchemasResponseBodyNormalizationSchemas : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the normalization schema was created. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1736386610000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The normalization rule category ID.</para>
+            /// <para>The ID of the normalization rule category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NETWORK_CATEGORY</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationCategoryId { get; set; }
 
             /// <summary>
-            /// <para>The field source. Valid values:</para>
+            /// <para>The source of the field. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>normalized: normalized field.</description></item>
-            /// <item><description>native: native field.</description></item>
+            /// <item><description>normalized: Normalized field.</description></item>
+            /// <item><description>native: Native field.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationFieldSource { get; set; }
 
             /// <summary>
-            /// <para>The normalization schema description.</para>
+            /// <para>The description of the normalization schema.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Network flow log</para>
@@ -81,11 +81,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationSchemaDescription { get; set; }
 
             /// <summary>
-            /// <para>The normalization schema source. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>preset: predefined.</description></item>
-            /// <item><description>custom: custom.</description></item>
-            /// </list>
+            /// <para>The source of the normalization schema. Valid values: preset and custom.</para>
             /// 
             /// <b>Example:</b>
             /// <para>preset</para>
@@ -95,7 +91,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationSchemaFrom { get; set; }
 
             /// <summary>
-            /// <para>The normalization schema ID.</para>
+            /// <para>The ID of the normalization schema.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HTTP_ACTIVITY</para>
@@ -105,7 +101,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationSchemaId { get; set; }
 
             /// <summary>
-            /// <para>The normalization schema name.</para>
+            /// <para>The name of the normalization schema.</para>
             /// 
             /// <b>Example:</b>
             /// <para>normalization_rule_Z57np</para>
@@ -115,7 +111,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationSchemaName { get; set; }
 
             /// <summary>
-            /// <para>The LogStore to which the normalization output is written.</para>
+            /// <para>The Logstore for normalized output.</para>
             /// 
             /// <b>Example:</b>
             /// <para>network-activity</para>
@@ -125,7 +121,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationSchemaTargetLogStore { get; set; }
 
             /// <summary>
-            /// <para>The normalization schema type.</para>
+            /// <para>The type of the normalization schema.</para>
             /// 
             /// <b>Example:</b>
             /// <para>log</para>
@@ -135,7 +131,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationSchemaType { get; set; }
 
             /// <summary>
-            /// <para>The security domain ID.</para>
+            /// <para>The ID of the security domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NETWORK_AND_WEB_SECURITY</para>
@@ -145,7 +141,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string NormalizationSecurityDomainId { get; set; }
 
             /// <summary>
-            /// <para>The product ID.</para>
+            /// <para>The ID of the product.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sas</para>
@@ -154,12 +150,15 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             [Validation(Required=false)]
             public string ProductId { get; set; }
 
+            /// <summary>
+            /// <para>The list of recommended entities.</para>
+            /// </summary>
             [NameInMap("RecommendEntities")]
             [Validation(Required=false)]
             public List<string> RecommendEntities { get; set; }
 
             /// <summary>
-            /// <para>The Simple Log Service LogStore.</para>
+            /// <para>The Logstore of Simple Log Service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>network-activity</para>
@@ -169,7 +168,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string TargetLogStore { get; set; }
 
             /// <summary>
-            /// <para>The Simple Log Service StoreView.</para>
+            /// <para>The StoreView of Simple Log Service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>network-activity</para>
@@ -179,7 +178,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string TargetStoreView { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The time when the normalization schema was updated. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1736386610000</para>
@@ -189,7 +188,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The vendor ID.</para>
+            /// <para>The ID of the vendor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alibaba</para>
@@ -201,7 +200,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6276D891-*****-55B2-87B9-74D413F7****</para>

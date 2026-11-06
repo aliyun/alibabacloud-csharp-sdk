@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 {
     public class ListDataSourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The data source origin. Valid values:</para>
+        /// <para>The source of the data source. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>center</description></item>
         /// <item><description>custom</description></item>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public List<string> DataSourceIds { get; set; }
 
         /// <summary>
-        /// <para>The data source name.</para>
+        /// <para>The name of the data source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alibaba_cloud_waf_alert_log</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string DataSourceName { get; set; }
 
         /// <summary>
-        /// <para>The data source status. Valid values:</para>
+        /// <para>The status of the data source. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>unconfigured</description></item>
         /// <item><description>normal</description></item>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string DataSourceStatus { get; set; }
 
         /// <summary>
-        /// <para>The Logstore status. Valid values:</para>
+        /// <para>The status of the Logstore. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>normal</description></item>
         /// <item><description>abnormal</description></item>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public List<string> DataSourceTemplateIds { get; set; }
 
         /// <summary>
-        /// <para>The data source type. Valid values:</para>
+        /// <para>The type of the data source. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>preset</description></item>
         /// <item><description>custom</description></item>
@@ -91,12 +91,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string DataSourceType { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
-        /// <para>Note: This parameter is required. If you do not specify this parameter, the service returns a 400 error: &quot;The specified Lang can not be empty.&quot; Explicitly pass a language code.</para>
+        /// <para>Note: This parameter is required in actual API calls. If you do not specify this parameter, the service returns a 400 error &quot;The specified Lang can not be empty.&quot;. Explicitly specify the language code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The Simple Log Service project name.</para>
+        /// <para>The name of the Simple Log Service project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliyun-cloudsiem-data-173326*******-cn-hangzhou</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string LogProjectName { get; set; }
 
         /// <summary>
-        /// <para>The log storage region ID.</para>
+        /// <para>The ID of the log storage region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string LogRegionId { get; set; }
 
         /// <summary>
-        /// <para>The Simple Log Service Logstore name.</para>
+        /// <para>The name of the Simple Log Service Logstore.</para>
         /// 
         /// <b>Example:</b>
         /// <para>audit-activity</para>
@@ -136,14 +136,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string LogStoreName { get; set; }
 
         /// <summary>
-        /// <para>The list of data ingestion user IDs.</para>
+        /// <para>The list of user IDs for data ingestion.</para>
         /// </summary>
         [NameInMap("LogUserIds")]
         [Validation(Required=false)]
         public List<long?> LogUserIds { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return in this request.</para>
+        /// <para>The maximum number of results to return in the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</para>
+        /// <para>The token used to retrieve the next page of results. If this is the first request or no subsequent requests are required, leave this parameter empty. If a subsequent request is required, set this parameter to the value of NextToken returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string OrderField { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -210,10 +210,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</para>
+        /// <para>The region where the data management center for threat analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: The assets are located in the Chinese mainland.</description></item>
-        /// <item><description>ap-southeast-1: The assets are located outside China.</description></item>
+        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: Assets are located outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the member to which the administrator switches the view.</para>
+        /// <para>The ID of the user whose perspective the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173326*******</para>

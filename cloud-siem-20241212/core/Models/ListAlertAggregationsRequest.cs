@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string AggregationType { get; set; }
 
         /// <summary>
-        /// <para>The end time of the alert.</para>
+        /// <para>The time when the alert ended.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1773936020000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return in this request.</para>
+        /// <para>The maximum number of entries to return for this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If a next page exists, set this parameter to the NextToken value returned in the previous API call.</para>
+        /// <para>The token for the next query. If this is the first query or no subsequent query is required, you do not need to specify this parameter. If a subsequent query is required, set the value to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAUqcj6VO4E3ECWIrFczs****</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,15 +86,15 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The query filter condition in JSON format. Valid values:</para>
+        /// <para>The query filter conditions in JSON format. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>{&quot;Type&quot;:&quot;maxCost&quot;, &quot;Value&quot;:&quot;100&quot;}</c>: The 100 queries with the longest execution duration.</description></item>
+        /// <item><description><c>{&quot;Type&quot;:&quot;maxCost&quot;, &quot;Value&quot;:&quot;100&quot;}</c>: The top 100 queries that take the longest time.</description></item>
         /// <item><description><c>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</c>: Completed queries.</description></item>
         /// <item><description><c>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;running&quot;}</c>: Running queries.</description></item>
-        /// <item><description><c>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;30&quot;,&quot;Max&quot;:&quot;50&quot;}</c>: Custom execution duration queries. You can set the minimum and maximum execution duration. <b>Min</b> specifies the minimum execution duration. <b>Max</b> specifies the maximum execution duration. Unit: milliseconds (ms).<list type="bullet">
-        /// <item><description>If only <b>Min</b> is set, queries with an execution duration greater than this value are returned.</description></item>
-        /// <item><description>If only <b>Max</b> is set, queries with an execution duration less than this value are returned.</description></item>
-        /// <item><description>If both <b>Min</b> and <b>Max</b> are set, queries with an execution duration greater than or equal to <b>Min</b> and less than or equal to <b>Max</b> are returned.</description></item>
+        /// <item><description><c>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;30&quot;,&quot;Max&quot;:&quot;50&quot;}</c>: Custom duration queries. You can specify the minimum and maximum query durations. <b>Min</b> specifies the minimum duration, and <b>Max</b> specifies the maximum duration. Unit: milliseconds.<list type="bullet">
+        /// <item><description>If only <b>Min</b> is specified, the query returns queries whose execution duration is greater than the specified value.</description></item>
+        /// <item><description>If only <b>Max</b> is specified, the query returns queries whose execution duration is less than the specified value.</description></item>
+        /// <item><description>If both <b>Min</b> and <b>Max</b> are specified, the query returns queries whose execution duration is greater than or equal to the value of <b>Min</b> and less than or equal to the value of <b>Max</b>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -117,10 +117,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string QueryViewId { get; set; }
 
         /// <summary>
-        /// <para>The region where the threat analysis data management center is located. Specify the management center based on the region of your assets. Valid values:</para>
+        /// <para>The region where the data management center of Threat Analysis is located. Select the region of the management center based on the region where your assets are located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: The assets are located in the Chinese mainland.</description></item>
-        /// <item><description>ap-southeast-1: The assets are located outside China.</description></item>
+        /// <item><description>cn-hangzhou: Assets are located in the Chinese mainland.</description></item>
+        /// <item><description>ap-southeast-1: Assets are located outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the member to which the administrator switches the view.</para>
+        /// <para>The ID of the member whose view the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
