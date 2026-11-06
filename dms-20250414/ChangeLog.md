@@ -1,3 +1,7 @@
+2026-11-06 Version: 4.6.0
+- Support API DescribeDataAgentSkillDownload.
+
+
 2026-11-05 Version: 4.5.0
 - Support API DeleteAgenticVpcEndpoint.
 - Update API AddAgenticDataSource: add request parameters AdbSparkResourceGroup.
