@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateDomainRequest : TeaModel {
         /// <summary>
-        /// <para>The CA certificate identifier. This parameter is optional for Dedicated with HTTPS. This parameter is not allowed for Serverless and is not validated for Dedicated with HTTP.</para>
+        /// <para>The CA certificate identifier. This parameter is optional for Dedicated+HTTPS, not allowed for Serverless, and not verified for Dedicated+HTTP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1ef1da5f-38ed-69b3-****-037781890265</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string CaCertIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The certificate identifier. This parameter is required for Dedicated with HTTPS and must pass validation. This parameter is not allowed for Serverless and is not validated for Dedicated with HTTP.</para>
+        /// <para>The certificate identifier. This parameter is required for Dedicated+HTTPS and must pass the submittable verification. This parameter is not allowed for Serverless and is not verified for Dedicated+HTTP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1ef1da5f-38ed-69b3-****-037781890265</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string CertIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The client CA certificate. This parameter is conditionally required for Dedicated with HTTPS (required when MTLSEnabled is set to true). This parameter is not allowed for Serverless and is not validated for Dedicated with HTTP.</para>
+        /// <para>The client CA certificate. This parameter is conditionally required for Dedicated+HTTPS when MTLSEnabled is set to true. This parameter is not allowed for Serverless and is not verified for Dedicated+HTTP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ClientCACert { get; set; }
 
         /// <summary>
-        /// <para>The domain name scope. Valid values: Dedicated (dedicated gateway domain name), Serverless (Serverless gateway domain name). Default value: Dedicated.</para>
+        /// <para>The scope of the domain name. Valid values: Dedicated (dedicated gateway domain name) and Serverless (serverless gateway domain name). Default value: Dedicated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Dedicated</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string DomainScope { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable forced HTTPS redirect when the protocol type is HTTPS. This parameter is required for Serverless and for Dedicated with HTTPS. This parameter is not validated for Dedicated with HTTP.</para>
+        /// <para>Specifies whether to enable forced HTTPS redirection when the HTTPS protocol type is set. This parameter is required for Serverless and Dedicated+HTTPS, and is not verified for Dedicated+HTTP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? ForceHttps { get; set; }
 
         /// <summary>
-        /// <para>The gateway type. If not specified, the default value is API.</para>
+        /// <para>The gateway type. This parameter is optional. If not specified, the default value is API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>API</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayType { get; set; }
 
         /// <summary>
-        /// <para>The HTTP/2 setting. Valid values: GlobalConfig (follows the global configuration), Open (enabled), Close (disabled). Default value: GlobalConfig. This setting is supported only for HTTPS domain names in the Dedicated scope.</para>
+        /// <para>The HTTP/2 settings. Valid values: GlobalConfig (follows the global configuration), Open (enabled), and Close (disabled). Default value: GlobalConfig. This setting is supported only for HTTPS domain names in the Dedicated scope.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Open</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Http2Option { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable mTLS mutual authentication. This parameter is optional for Dedicated with HTTPS. If set to true, ClientCACert is required. This parameter is not allowed for Serverless.</para>
+        /// <para>Specifies whether to enable mTLS mutual authentication. This parameter is optional for Dedicated+HTTPS. If this parameter is set to true, ClientCACert is required. This parameter is not allowed for Serverless and is not verified for Dedicated+HTTP.</para>
         /// </summary>
         [NameInMap("mTLSEnabled")]
         [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The protocol type used by the domain name. Valid values: HTTP, HTTPS. This parameter is required for the Dedicated scope and is not allowed for the Serverless scope.</para>
+        /// <para>The protocol type used by the domain name. Valid values: HTTP and HTTPS. This parameter is required for the Dedicated scope and is not allowed for the Serverless scope.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HTTP</para>
@@ -122,14 +122,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The TLS cipher suite configuration, including the configuration type, cipher suite names, and supported TLS versions. This configuration is supported only for HTTPS domain names in the Dedicated scope.</para>
+        /// <para>The TLS cipher suite configuration, which includes the configuration type, cipher suite name, and supported TLS versions. This configuration is supported only for HTTPS domain names in the Dedicated scope.</para>
         /// </summary>
         [NameInMap("tlsCipherSuitesConfig")]
         [Validation(Required=false)]
         public TlsCipherSuitesConfig TlsCipherSuitesConfig { get; set; }
 
         /// <summary>
-        /// <para>The maximum TLS protocol version. This parameter is optional for Dedicated with HTTPS. If not specified, the value is derived from TlsMin. The value must be greater than or equal to TlsMin. This parameter is not allowed for Serverless.</para>
+        /// <para>The maximum TLS protocol version. This parameter is optional for Dedicated+HTTPS. If not specified, it is derived from TlsMin and must be greater than or equal to TlsMin. This parameter is not allowed for Serverless.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TLS1.3</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string TlsMax { get; set; }
 
         /// <summary>
-        /// <para>The minimum TLS protocol version. This parameter is optional for Dedicated with HTTPS. If not specified, the default value is TLS 1.0. Valid values range from TLS 1.0 to TLS 1.3, compatible with TLSv1.x. This parameter is not allowed for Serverless.</para>
+        /// <para>The minimum TLS protocol version. This parameter is optional for Dedicated+HTTPS. If not specified, the default value is TLS 1.0. TLS 1.0 to 1.3 are allowed, compatible with TLSv1.x. This parameter is not allowed for Serverless.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TLS1.0</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string TlsMin { get; set; }
 
         /// <summary>
-        /// <para>The idempotency token, a globally unique value generated by the caller (UUID recommended). The value can be up to 64 characters in length. Within approximately 24 hours after the first successful request, a duplicate request that carries the same ClientToken and identical request parameters directly returns the domainId created by the first request without creating a duplicate domain name. If the same ClientToken is carried but the request parameters differ, an IdempotentParameterMismatch error is returned. If the first request is still being processed, an IdempotentProcessing error is returned. If this parameter is not specified, idempotency control is not enabled and the behavior is consistent with the existing version.</para>
+        /// <para>The idempotency token. The caller generates a globally unique value (UUID is recommended) with a length of up to 64 characters. Within about 24 hours after the first request succeeds, a repeated request with the same ClientToken and identical request parameters directly returns the domainId created in the first request without creating the domain name again. If the same ClientToken is used but the request parameters are different, IdempotentParameterMismatch is returned. If the first request is still being processed, IdempotentProcessing is returned. If this parameter is not specified, idempotency control is not enabled, and the behavior is consistent with the existing version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5f7a2c1e-9b3d-4e8f-a1c6-0d2b8e4f7a13</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run. If set to true, all synchronous validations identical to those of an actual creation are performed, including idempotency checks for existing test domain names, but no domain name is created and no side effects are produced. If not specified or set to false, the behavior is consistent with the existing version.</para>
+        /// <para>Specifies whether to perform only a dry run. If this parameter is set to true, all synchronous validations consistent with actual creation (including idempotency checks for existing test domain names) are executed, but no domain name is created and no side effects are generated. If this parameter is not specified or is set to false, the behavior is consistent with the existing version.</para>
         /// </summary>
         [NameInMap("dryRun")]
         [Validation(Required=false)]

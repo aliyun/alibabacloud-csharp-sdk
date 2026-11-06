@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetGatewayQuotaRuleSubjectUsageResponseBodyData Data { get; set; }
         public class GetGatewayQuotaRuleSubjectUsageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The total consumption of cached tokens.</para>
+            /// <para>The total cached token consumption.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? CachedAmount { get; set; }
 
             /// <summary>
-            /// <para>The exact value of the total cached consumption. Decimals are supported in credit scenarios.</para>
+            /// <para>The exact total cached consumption. Decimals are supported in credit scenarios.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20.5</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems> Items { get; set; }
                 public class GetGatewayQuotaRuleSubjectUsageResponseBodyDataDetailsItems : TeaModel {
                     /// <summary>
-                    /// <para>The consumption of cached tokens.</para>
+                    /// <para>The cached token consumption.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public long? CachedAmount { get; set; }
 
                     /// <summary>
-                    /// <para>The exact value of the cached consumption. Decimals are supported in credit scenarios.</para>
+                    /// <para>The exact cached consumption. Decimals are supported in credit scenarios.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10.5</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Consumer { get; set; }
 
                     /// <summary>
-                    /// <para>The consumption of input tokens.</para>
+                    /// <para>The input token consumption.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>120</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public long? InputAmount { get; set; }
 
                     /// <summary>
-                    /// <para>The exact value of the input consumption. Decimals are supported in credit scenarios.</para>
+                    /// <para>The exact input consumption. Decimals are supported in credit scenarios.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>120.5</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Model { get; set; }
 
                     /// <summary>
-                    /// <para>The consumption of output tokens.</para>
+                    /// <para>The output token consumption.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>80</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public long? OutputAmount { get; set; }
 
                     /// <summary>
-                    /// <para>The exact value of the output consumption. Decimals are supported in credit scenarios.</para>
+                    /// <para>The exact output consumption. Decimals are supported in credit scenarios.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>80.5</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string RequestId { get; set; }
 
                     /// <summary>
-                    /// <para>The consumption or request time in YYYY-MM-DD format.</para>
+                    /// <para>The consumption or request time in the YYYY-MM-DD format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2026-06-05</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public long? UsedAmount { get; set; }
 
                     /// <summary>
-                    /// <para>The exact value of the total consumption. Decimals are supported in credit scenarios.</para>
+                    /// <para>The exact total consumption. Decimals are supported in credit scenarios.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>210.5</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The total consumption of input tokens.</para>
+            /// <para>The total input token consumption.</para>
             /// 
             /// <b>Example:</b>
             /// <para>300</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? InputAmount { get; set; }
 
             /// <summary>
-            /// <para>The exact value of the total input consumption. Decimals are supported in credit scenarios.</para>
+            /// <para>The exact total input consumption. Decimals are supported in credit scenarios.</para>
             /// 
             /// <b>Example:</b>
             /// <para>300.5</para>
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public double? InputAmountDecimal { get; set; }
 
             /// <summary>
-            /// <para>The total consumption of output tokens.</para>
+            /// <para>The total output token consumption.</para>
             /// 
             /// <b>Example:</b>
             /// <para>180</para>
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? OutputAmount { get; set; }
 
             /// <summary>
-            /// <para>The exact value of the total output consumption. Decimals are supported in credit scenarios.</para>
+            /// <para>The exact total output consumption. Decimals are supported in credit scenarios.</para>
             /// 
             /// <b>Example:</b>
             /// <para>180.5</para>
@@ -264,7 +264,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public double? OutputAmountDecimal { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the limit is exceeded.</para>
+            /// <para>Indicates whether the quota is exceeded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -314,7 +314,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? UsedAmount { get; set; }
 
             /// <summary>
-            /// <para>The exact value of the total used quota of the subject. Decimals are supported in credit scenarios.</para>
+            /// <para>The exact total used quota of the subject. Decimals are supported in credit scenarios.</para>
             /// 
             /// <b>Example:</b>
             /// <para>500.5</para>

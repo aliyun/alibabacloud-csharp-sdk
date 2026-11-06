@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<ListModelCardsResponseBodyData> Data { get; set; }
         public class ListModelCardsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of available paths for the model card. Each element consists of a path and a type member. The API definition does not specify the criteria for determining availability.</para>
+            /// <para>The list of available paths for the model card. Each element consists of the path and type members. The criteria for availability are not specified in the API definition.</para>
             /// </summary>
             [NameInMap("availablePaths")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>The type identifier of the available path record. The valid values are not specified in the API definition.</para>
+                /// <para>The type identifier of the available path record. The set of valid values is not declared in the API definition.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>type-xxxxxxxx</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The feature configuration of the model card in a key-value pair map structure. The set of keys is not specified in the API definition.</para>
+            /// <para>The feature configuration of the model card, structured as a key-value pair mapping. The set of keys is not declared in the API definition.</para>
             /// </summary>
             [NameInMap("features")]
             [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The name of the model.</para>
+            /// <para>The model name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qwen-plus</para>
@@ -92,14 +92,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ModelName { get; set; }
 
             /// <summary>
-            /// <para>The pricing information of the model card in a key-value pair map structure. The set of keys and billing criteria are not specified in the API definition.</para>
+            /// <para>The pricing information of the model card, structured as a key-value pair mapping. The set of keys and billing metrics are not declared in the API definition.</para>
             /// </summary>
             [NameInMap("pricing")]
             [Validation(Required=false)]
             public Dictionary<string, object> Pricing { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the model provider for the model card.</para>
+            /// <para>The model provider identifier corresponding to the model card.</para>
             /// 
             /// <b>Example:</b>
             /// <para>provider-xxxxxxxx</para>
@@ -109,14 +109,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Provider { get; set; }
 
             /// <summary>
-            /// <para>The list of snapshots for the model card. Array items are map structures with unspecified members. The API definition does not specify the snapshot content or generation rules.</para>
+            /// <para>The list of snapshots for the model card. Array items are mapping structures with undeclared members. The snapshot content and generation rules are not specified in the API definition.</para>
             /// </summary>
             [NameInMap("snapshots")]
             [Validation(Required=false)]
             public List<Dictionary<string, object>> Snapshots { get; set; }
 
             /// <summary>
-            /// <para>The source identifier of the model card. The valid values are not specified in the API definition.</para>
+            /// <para>The source identifier of the model card. The set of valid values is not declared in the API definition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>source-xxxxxxxx</para>

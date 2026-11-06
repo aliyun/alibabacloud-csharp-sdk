@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateHttpApiRouteRequest : TeaModel {
         /// <summary>
-        /// <para>The backend service configuration of the route.</para>
+        /// <para>The backend service configuration for the route.</para>
         /// </summary>
         [NameInMap("backendConfig")]
         [Validation(Required=false)]
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The backend service scenario. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>SingleService: Single service.</description></item>
-            /// <item><description>MultiServiceByRatio: Multi-service canary release by ratio.</description></item>
+            /// <item><description>MultiServiceByRatio: Multiple services with ratio-based canary release.</description></item>
             /// <item><description>Mock: Mock service.</description></item>
             /// <item><description>Redirect: Redirect service.</description></item>
             /// </list>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<CreateHttpApiRouteRequestBackendConfigServices> Services { get; set; }
             public class CreateHttpApiRouteRequestBackendConfigServices : TeaModel {
                 /// <summary>
-                /// <para>The service group. Used in HTTP-to-Dubbo transcoding scenarios.</para>
+                /// <para>The service group. Used for HTTP-to-Dubbo conversion scenarios.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DEFAULT_GROUP</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// <para>The HTTP-to-Dubbo protocol transcoding configuration. Only supported for SingleService MSE_NACOS DUBBO backends of HTTP APIs.</para>
+                /// <para>The HTTP-to-Dubbo protocol conversion configuration. This configuration only supports SingleService MSE_NACOS DUBBO backends for HTTP APIs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;dubboServiceName&quot;:&quot;com.alibaba.nacos.example.dubbo.service.DemoService&quot;,&quot;dubboServiceVersion&quot;:&quot;1.0.0&quot;,&quot;dubboServiceGroup&quot;:&quot;DEV&quot;,&quot;methodMapList&quot;:[{&quot;dubboMethodName&quot;:&quot;sayName&quot;,&quot;httpMethod&quot;:&quot;ALL_GET&quot;,&quot;methodPath&quot;:&quot;/dubbo/sayName&quot;,&quot;passThroughAllHeaders&quot;:&quot;PASS_ALL&quot;}]}</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public HttpDubboTranscoder HttpDubboTranscoder { get; set; }
 
                 /// <summary>
-                /// <para>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewrite semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If not specified in the AiAutoRouter scenario, the default model of the AI service is used.</para>
+                /// <para>The target model name. This field is shared by multiple existing model backend scenarios, and the specific routing or model rewriting semantics are determined by backendConfig.scene. It is required for the SemanticRouter scenario. If not configured for the AiAutoRouter scenario, the default model of the AI service is used.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qwen-plus</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ModelName { get; set; }
 
                 /// <summary>
-                /// <para>The service namespace. Used in HTTP-to-Dubbo transcoding scenarios.</para>
+                /// <para>The service namespace. Used for HTTP-to-Dubbo conversion scenarios.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>public</para>
@@ -92,8 +92,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <summary>
                 /// <para>The service protocol. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>HTTP</description></item>
-                /// <item><description>HTTPS</description></item>
+                /// <item><description>HTTP.</description></item>
+                /// <item><description>HTTPS.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ServiceId { get; set; }
 
                 /// <summary>
-                /// <para>The service source type. Used in HTTP-to-Dubbo transcoding scenarios.</para>
+                /// <para>The service source type. Used for HTTP-to-Dubbo conversion scenarios.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MSE_NACOS</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The service version. This parameter takes effect only in the by-tag scenario.</para>
+                /// <para>The service version. This parameter is valid only in the tag-based scenario.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>v1</para>
@@ -166,6 +166,25 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        /// <summary>
+        /// <para>The fixed dynamic forwarding and ExtProc combination configuration. When you use this configuration, specify only serviceId, and do not specify environmentId or backendConfig.</para>
+        /// </summary>
+        [NameInMap("dfpConfig")]
+        [Validation(Required=false)]
+        public CreateHttpApiRouteRequestDfpConfig DfpConfig { get; set; }
+        public class CreateHttpApiRouteRequestDfpConfig : TeaModel {
+            /// <summary>
+            /// <para>The ID of the imported ExtProc gRPC service.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>svc-cr8k0udlhtgt80sh7png</para>
+            /// </summary>
+            [NameInMap("serviceId")]
+            [Validation(Required=false)]
+            public string ServiceId { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The domain name IDs.</para>
@@ -221,9 +240,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <summary>
             /// <para>The service protocol. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>TCP</description></item>
-            /// <item><description>HTTP</description></item>
-            /// <item><description>DUBBO</description></item>
+            /// <item><description>TCP.</description></item>
+            /// <item><description>HTTP.</description></item>
+            /// <item><description>DUBBO.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -246,7 +265,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The policy type.</para>
+        /// <para>The policy types.</para>
         /// </summary>
         [NameInMap("policyConfigs")]
         [Validation(Required=false)]

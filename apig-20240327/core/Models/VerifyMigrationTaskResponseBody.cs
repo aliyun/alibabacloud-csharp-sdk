@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? IsSupported { get; set; }
 
             /// <summary>
-            /// <para>The description of the check result, such as the failure reason or incompatibility summary. This value is from the Istio validation Reason.</para>
+            /// <para>The description of the check result, such as the failure cause or incompatibility summary, which is derived from the Istio validation reason.</para>
             /// 
             /// <b>Example:</b>
             /// <para>all routes supported</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the check is successful, which means whether the Istiod query link is working properly.</para>
+            /// <para>Indicates whether the check is successfully executed, which reflects whether the Istiod query link is functioning properly.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The summary of the incompatible rule, in the format of request URI → destination service.</para>
+                /// <para>The summary of the incompatible rule, including the request URI and the destination service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/api/v1/pets -&gt; pet-service</para>

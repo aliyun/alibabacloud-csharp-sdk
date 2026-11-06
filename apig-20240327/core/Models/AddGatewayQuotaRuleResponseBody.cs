@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AddGatewayQuotaRuleResponseBodyData Data { get; set; }
         public class AddGatewayQuotaRuleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the write request is accepted by the system. A value of false typically indicates a retryable scenario, such as an unconfirmed conflict overwrite.</para>
+            /// <para>Indicates whether the semantics of the write request can be accepted by the system. A value of false typically occurs in retryable scenarios, such as when conflicts are not confirmed for overwriting.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public AddGatewayQuotaRuleResponseBodyDataConflictPreview ConflictPreview { get; set; }
             public class AddGatewayQuotaRuleResponseBodyDataConflictPreview : TeaModel {
                 /// <summary>
-                /// <para>The conflict hash.</para>
+                /// <para>The hash of the conflicts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</para>
@@ -63,18 +63,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 [Validation(Required=false)]
                 public List<AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems> Items { get; set; }
                 public class AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems : TeaModel {
+                    /// <term><b>Obsolete</b></term>
+                    /// 
                     /// <summary>
-                    /// <para>The period type of the existing conflicting rule on the consumer subject. A value of day, week, or month indicates that the period of the existing conflicting rule is day, week, or month respectively.</para>
+                    /// <para>The period type of the existing conflicting rule on the subject. This is a legacy field. Use periodType in the actual response instead. This field is not guaranteed to be returned. A value of day, week, or month indicates that the period of the existing conflicting rule is day, week, or month.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>week</para>
                     /// </summary>
                     [NameInMap("conflictPeriodType")]
                     [Validation(Required=false)]
+                    [Obsolete]
                     public string ConflictPeriodType { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the existing conflicting rule on the consumer subject. A value of calendar indicates that the existing conflicting rule uses a calendar period. A value of epoch indicates that the existing conflicting rule uses a custom period.</para>
+                    /// <para>The type of the existing conflicting rule on the subject. A value of calendar indicates that the existing conflicting rule uses a natural period. A value of epoch indicates that the existing conflicting rule uses a custom period.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>calendar</para>
@@ -84,7 +87,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConflictType { get; set; }
 
                     /// <summary>
-                    /// <para>The conflicting consumer ID. Use subjectId instead.</para>
+                    /// <para>The ID of the conflicting consumer. You can use subjectId instead.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cs-xxxxxx</para>
@@ -94,7 +97,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConsumerId { get; set; }
 
                     /// <summary>
-                    /// <para>The conflicting consumer name. Use subjectName instead.</para>
+                    /// <para>The name of the conflicting consumer. You can use subjectName instead.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>consumer-a</para>
@@ -102,6 +105,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     [NameInMap("consumerName")]
                     [Validation(Required=false)]
                     public string ConsumerName { get; set; }
+
+                    /// <summary>
+                    /// <para>The period type of the existing conflicting rule. Valid values: day, week, and month.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>day</para>
+                    /// </summary>
+                    [NameInMap("periodType")]
+                    [Validation(Required=false)]
+                    public string PeriodType { get; set; }
 
                     /// <summary>
                     /// <para>The ID of the conflicting subject.</para>
@@ -148,7 +161,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the request is a dry run.</para>
+            /// <para>Indicates whether a dry run is performed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -158,7 +171,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? DryRun { get; set; }
 
             /// <summary>
-            /// <para>The rule ID.</para>
+            /// <para>The ID of the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qr-xxxxx</para>
@@ -170,7 +183,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -180,7 +193,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique identifier of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>

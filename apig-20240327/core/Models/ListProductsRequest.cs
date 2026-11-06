@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The name of the API product, which is the Name property of the API product resource. This is the same field as name in the response list items.</para>
+        /// <para>The name of the API product, which corresponds to the Name property of the API product resource. This is the same field as name in the response list items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>weather-query-api</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The cursor token for the next page.</para>
+        /// <para>The pagination token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>next-token-xxxxxxxx</para>

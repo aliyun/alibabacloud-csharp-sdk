@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The service name for exact match query.</para>
+        /// <para>The exact name of the service to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user-service</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxxe5rc6cvla</para>
@@ -62,11 +62,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The source type of the service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MSE_NACOS: The service originates from MSE Nacos.</description></item>
-        /// <item><description>K8S: The service originates from a Kubernetes cluster in Container Service.</description></item>
-        /// <item><description>FC3: The service originates from Function Compute.</description></item>
-        /// <item><description>VIP: The service originates from a fixed address.</description></item>
-        /// <item><description>DNS: The service originates from a domain name.</description></item>
+        /// <item><description>MSE_NACOS: Services from MSE Nacos.</description></item>
+        /// <item><description>K8S: Services from Kubernetes clusters in Container Service.</description></item>
+        /// <item><description>FC3: Services from Function Compute.</description></item>
+        /// <item><description>VIP: Services from fixed addresses.</description></item>
+        /// <item><description>DNS: Services from domain names.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The list of service source types.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;K8S&quot;, &quot;FC3&quot;]</para>
+        /// <para>K8S, FC3</para>
         /// </summary>
         [NameInMap("sourceTypes")]
         [Validation(Required=false)]

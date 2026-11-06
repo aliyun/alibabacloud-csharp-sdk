@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<ListDevelopersResponseBodyDataContent> Content { get; set; }
             public class ListDevelopersResponseBodyDataContent : TeaModel {
                 /// <summary>
-                /// <para>The developer ID. You can use this ID to locate the developer in API operations such as SetHiMarketDeveloperStatus and DeleteHiMarketDeveloper.</para>
+                /// <para>The ID of the developer. You can use this ID to identify the developer in API operations such as SetHiMarketDeveloperStatus and DeleteHiMarketDeveloper.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dev-xxxxxxxx</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string DeveloperId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the portal to which the developer belongs. You can use this ID to locate the portal in API operations such as GetPortal, UpdatePortal, and DeletePortal.</para>
+                /// <para>The ID of the portal to which the developer belongs. You can use this ID to identify the portal in API operations such as GetPortal, UpdatePortal, and DeletePortal.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>portal-xxxxxxxx</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The cursor for the next page. An empty value indicates that the last page has been reached.</para>
+        /// <para>The pagination token for the next page. An empty value indicates that the last page has been reached.</para>
         /// 
         /// <b>Example:</b>
         /// <para>token-xxxxxxxx</para>

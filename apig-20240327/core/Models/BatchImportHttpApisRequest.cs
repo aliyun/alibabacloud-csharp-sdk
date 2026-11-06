@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class BatchImportHttpApisRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to overwrite existing APIs. If set to true, gatewayId is required.</para>
+        /// <para>Specifies whether to allow overwriting existing APIs. The gatewayId parameter is required when this parameter is set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ApiType { get; set; }
 
         /// <summary>
-        /// <para>Enables the dry run feature, which validates the definition without performing the actual import.</para>
+        /// <para>The dry run feature that checks definitions without importing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The gateway instance ID. For REST APIs, this parameter is required when withGatewayExtension is set to true or allowUpdate is set to true. For batch import of HTTP APIs, this parameter is always required.</para>
+        /// <para>The gateway instance ID. This parameter is required for REST APIs when withGatewayExtension or allowUpdate is set to true. This parameter is required for batch importing HTTP APIs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-xxx</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-xxx</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The standard Base64 encoding of the raw bytes of the OAS ZIP package. The decoded size cannot exceed 10 MiB. This parameter cannot be specified together with specFileUrl or specOssConfig. Dry run is supported and returns validation results, but the dry run task result does not return a replayable importRequest.</para>
+        /// <para>The standard Base64 encoding of the raw bytes of the OAS ZIP package. The maximum size after decoding is 10 MiB. This parameter cannot be specified together with specFileUrl or specOssConfig. Dry runs are supported and return check results, but the Base64 dry run task result does not return a replayable importRequest.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b3BlbmFwaTogMy4wLjAKaW5mbzoKICAgIHRpdGxlOiBkZW1vCiAgICBkZXNjcmlwdGlvbjogdGhpc2lzZGVtbwogICAgdmVyc2lvbjogIiIKcGF0aHM6CiAgICAvdXNlci97dXNlcklkfToKICAgICAgICBnZXQ6CiAgICAgICAgICAgIHN1bW1hcnk6IOiOt+WPlueUqOaIt+S/oeaBrwogICAgICAgICAgICBkZXNjcmlwdGlvbjog6I635Y+W55So5oi35L+h5oGvCiAgICAgICAgICAgIG9wZXJhdGlvbklkOiBHZXRVc2VySW5mbwogICAgICAgICAgICByZXNwb25zZXM6CiAgICAgICAgICAgICAgICAiMjAwIjoKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbjog5oiQ5YqfCiAgICAgICAgICAgICAgICAgICAgY29udGVudDoKICAgICAgICAgICAgICAgICAgICAgICAgYXBwbGljYXRpb24vanNvbjtjaGFyc2V0PXV0Zi04OgogICAgICAgICAgICAgICAgICAgICAgICAgICAgc2NoZW1hOiBudWxsCnNlcnZlcnM6CiAgICAtIHVybDogaHR0cDovL2FwaS5leGFtcGxlLmNvbS92MQo=</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string SpecContentBase64 { get; set; }
 
         /// <summary>
-        /// <para>The download URL of the OAS ZIP file. The URL must support unauthenticated downloads. OSS URLs and whitelisted backend domain names are supported. At least one of specFileUrl and specOssConfig must be specified.</para>
+        /// <para>The download URL of the OAS ZIP file. The URL must support unauthenticated downloads. OSS URLs or backend whitelisted domains are supported. At least one of specFileUrl and specOssConfig must be specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://oss-cn-hangzhou.aliyuncs.com/my-bucket/imports/batch.zip">https://oss-cn-hangzhou.aliyuncs.com/my-bucket/imports/batch.zip</a></para>
@@ -81,14 +81,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string SpecFileUrl { get; set; }
 
         /// <summary>
-        /// <para>The OSS configuration for the OAS file in ZIP format. At least one of specFileUrl and specOssConfig must be specified.</para>
+        /// <para>The OSS configuration of the OAS file. The file must be in ZIP format. At least one of specFileUrl and specOssConfig must be specified.</para>
         /// </summary>
         [NameInMap("specOssConfig")]
         [Validation(Required=false)]
         public BatchImportHttpApisRequestSpecOssConfig SpecOssConfig { get; set; }
         public class BatchImportHttpApisRequestSpecOssConfig : TeaModel {
             /// <summary>
-            /// <para>The OSS bucket name.</para>
+            /// <para>The name of the OSS bucket.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string BucketName { get; set; }
 
             /// <summary>
-            /// <para>OSS Object Key。</para>
+            /// <para>The OSS object key.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The conflict merge strategy during import. Default value: ExistFirst.</para>
+        /// <para>The conflict merging strategy during import. Default value: ExistFirst.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ExistFirst</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Strategy { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to import with gateway extension configurations. This parameter must be set to true for batch import of HTTP APIs.</para>
+        /// <para>Specifies whether to import with gateway extension configurations. This parameter must be set to true for batch importing HTTP APIs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public HttpApiApiInfo ApiInfo { get; set; }
 
                 /// <summary>
-                /// <para>The consumer authorization rule ID.</para>
+                /// <para>The ID of the consumer authorization rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>car-csgeka5lhtggrjcprok0</para>
@@ -88,11 +88,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public EnvironmentInfo EnvironmentInfo { get; set; }
 
                 /// <summary>
-                /// <para>The expiration mode. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>LongTerm: long-term</description></item>
-                /// <item><description>ShortTerm: short-term</description></item>
-                /// </list>
+                /// <para>The expiration mode. Valid values: LongTerm and ShortTerm.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ShortTerm</para>
@@ -171,7 +167,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

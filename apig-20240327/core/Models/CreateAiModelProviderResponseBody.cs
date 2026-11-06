@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response struct.</para>
+        /// <para>The response structure.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -90,14 +90,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The credits consumption configuration of the model.</para>
+                /// <para>The credits consumption configuration for the model.</para>
                 /// </summary>
                 [NameInMap("credit")]
                 [Validation(Required=false)]
                 public CreateAiModelProviderResponseBodyDataModelCardsCredit Credit { get; set; }
                 public class CreateAiModelProviderResponseBodyDataModelCardsCredit : TeaModel {
                     /// <summary>
-                    /// <para>The credits consumption coefficient for cached tokens.</para>
+                    /// <para>The credit consumption coefficient for cached tokens.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.015</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public float? CacheCost { get; set; }
 
                     /// <summary>
-                    /// <para>The credits consumption coefficient for input tokens.</para>
+                    /// <para>The credit consumption coefficient for input tokens.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.03</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public float? InputCost { get; set; }
 
                     /// <summary>
-                    /// <para>The credits consumption coefficient for output tokens.</para>
+                    /// <para>The credit consumption coefficient for output tokens.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.06</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public float? OutputCost { get; set; }
 
                     /// <summary>
-                    /// <para>The credits billing type.</para>
+                    /// <para>The billing type for credits.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>token</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public Dictionary<string, object> Features { get; set; }
 
                 /// <summary>
-                /// <para>The instance ID of the gateway to which the model card belongs.</para>
+                /// <para>The associated gateway instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>gw-ucbx3s2m****</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayId { get; set; }
 
                 /// <summary>
-                /// <para>The model metadata.</para>
+                /// <para>The metadata of the model.</para>
                 /// </summary>
                 [NameInMap("meta")]
                 [Validation(Required=false)]
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The model card ID.</para>
+                /// <para>The ID of the model card.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mc-xxx****</para>
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ModelCardId { get; set; }
 
                 /// <summary>
-                /// <para>The model name.</para>
+                /// <para>The name of the model.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>gpt-4</para>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ModelName { get; set; }
 
                 /// <summary>
-                /// <para>The identifier of the model provider to which the model card belongs.</para>
+                /// <para>The identifier of the associated model provider.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>openai</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ModelProvider { get; set; }
 
                 /// <summary>
-                /// <para>The model source.</para>
+                /// <para>The source of the model.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>custom</para>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Source { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the model metadata.</para>
+                /// <para>The URL for the model metadata.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://dashscope-intl.aliyuncs.com">https://dashscope-intl.aliyuncs.com</a></para>
@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? ModelCount { get; set; }
 
             /// <summary>
-            /// <para>The model provider ID.</para>
+            /// <para>The ID of the model provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mp-xxx****</para>

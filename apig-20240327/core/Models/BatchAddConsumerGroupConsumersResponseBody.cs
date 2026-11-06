@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class BatchAddConsumerGroupConsumersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response status code. Ok is returned if the request is successful.</para>
+        /// <para>The response status code. The value is Ok if the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<string> FailedConsumerIds { get; set; }
 
             /// <summary>
-            /// <para>The list of consumer IDs that already exist in the consumer group and were skipped.</para>
+            /// <para>The list of consumer IDs that are already in the consumer group and are skipped in this operation.</para>
             /// </summary>
             [NameInMap("skippedConsumerIds")]
             [Validation(Required=false)]
             public List<string> SkippedConsumerIds { get; set; }
 
             /// <summary>
-            /// <para>The list of consumer IDs that were successfully added to the consumer group.</para>
+            /// <para>The list of consumer IDs successfully added to the consumer group.</para>
             /// </summary>
             [NameInMap("successConsumerIds")]
             [Validation(Required=false)]

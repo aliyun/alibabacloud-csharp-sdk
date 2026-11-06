@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ConsumerId { get; set; }
 
             /// <summary>
-            /// <para>The description of the consumer.</para>
+            /// <para>The consumer description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Dedicated test consumer</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the consumer is the primary consumer.</para>
+            /// <para>Indicates whether the consumer is a primary consumer.</para>
             /// </summary>
             [NameInMap("isPrimary")]
             [Validation(Required=false)]
             public bool? IsPrimary { get; set; }
 
             /// <summary>
-            /// <para>The name of the consumer.</para>
+            /// <para>The consumer name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>consumer-1</para>

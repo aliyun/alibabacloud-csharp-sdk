@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> ServiceIds { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>The client token that ensures the idempotence of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>

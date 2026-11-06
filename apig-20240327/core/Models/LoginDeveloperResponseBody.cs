@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public LoginDeveloperResponseBodyData Data { get; set; }
         public class LoginDeveloperResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The access token returned for the current developer logon. This field is marked as sensitive in the API definition.</para>
+            /// <para>The access token returned for the developer logon. This field is marked as sensitive in the API definition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>access-token-xxxxxxxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string AccessToken { get; set; }
 
             /// <summary>
-            /// <para>The int64 numeric field associated with the access token. The unit and exact meaning are not declared in the API definition.</para>
+            /// <para>The int64 numeric value associated with the access token. The unit and exact meaning are not specified in the API definition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3600</para>

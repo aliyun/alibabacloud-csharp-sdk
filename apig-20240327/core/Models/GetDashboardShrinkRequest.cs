@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetDashboardShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>zh: Chinese.</description></item>
         /// <item><description>en: English.</description></item>
@@ -43,12 +43,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The name of the dashboard. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>LOG: access log.</description></item>
-        /// <item><description>PLUGIN: plugin log.</description></item>
+        /// <item><description>LOG: Access log.</description></item>
+        /// <item><description>PLUGIN: Plugin log.
+        /// Note: This parameter is required. If it is not specified, the API returns the InvalidParameter.IsEmpty(400) error.</description></item>
         /// </list>
-        /// <remarks>
-        /// <para>Note: This parameter is required. If this parameter is not specified, the API returns InvalidParameter.IsEmpty (400).</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>PLUGIN</para>
@@ -58,7 +56,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The plugin type ID.</para>
+        /// <para>The plugin class ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pls-dn82a9djd8z****</para>
@@ -90,11 +88,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The source of the dashboard. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SLS: log dashboard.</description></item>
+        /// <item><description>SLS: Log dashboard.
+        /// Note: This parameter is required. If it is not specified, the API returns the InvalidParameter.IsEmpty(400) error.</description></item>
         /// </list>
-        /// <remarks>
-        /// <para>Note: This parameter is required. If this parameter is not specified, the API returns InvalidParameter.IsEmpty (400).</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>SLS</para>

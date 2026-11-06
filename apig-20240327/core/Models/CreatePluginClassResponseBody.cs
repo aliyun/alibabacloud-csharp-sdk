@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public CreatePluginClassResponseBodyData Data { get; set; }
         public class CreatePluginClassResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The plugin class ID.</para>
+            /// <para>The ID of the plug-in class.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pls-csqmjxxxxxxx</para>

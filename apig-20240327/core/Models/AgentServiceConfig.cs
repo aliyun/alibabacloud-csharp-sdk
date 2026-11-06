@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Address { get; set; }
 
         /// <summary>
-        /// <para>The custom configuration. This parameter is required when provider is set to custom.</para>
+        /// <para>The custom configuration. Specify this parameter when provider is set to custom.</para>
         /// </summary>
         [NameInMap("customConfig")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The DashScope service configuration. This parameter is required when provider is set to qwen. The appCredentials parameter cannot be empty, and each entry must have non-empty appId and apiKey values.</para>
+        /// <para>The DashScope service configuration. Specify this parameter when provider is set to qwen. The appCredentials parameter cannot be empty, and both appId and apiKey must be specified for each item.</para>
         /// </summary>
         [NameInMap("dashScopeConfig")]
         [Validation(Required=false)]
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The Dify service configuration. This parameter is required when provider is set to dify. The botType and apiKey parameters cannot be empty.</para>
+        /// <para>The Dify service configuration. Specify this parameter when provider is set to dify. Both botType and apiKey must be specified.</para>
         /// </summary>
         [NameInMap("difyConfig")]
         [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to enable health check.</para>
+        /// <para>Specifies whether to enable the health check.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -153,6 +153,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("provider")]
         [Validation(Required=false)]
         public string Provider { get; set; }
+
+        /// <summary>
+        /// <para>Supported only for custom agents. The value api-key indicates a managed API key, and downstream-auth indicates passing through the complete client Authorization header. If this parameter is omitted or left empty during creation, the historical rule applies. If this parameter is omitted or left empty during an update, the existing mode is retained. When passing through the authorization, you can omit customConfig, and you cannot submit a non-empty key.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>api-key</para>
+        /// </summary>
+        [NameInMap("upstreamAuthMode")]
+        [Validation(Required=false)]
+        public string UpstreamAuthMode { get; set; }
 
     }
 

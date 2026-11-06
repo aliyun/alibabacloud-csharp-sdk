@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the gateway. Falls back to the gateway ID if the name is unavailable.</para>
+                /// <para>The name of the gateway. If the name is unavailable, the gateway ID is returned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>prod-gateway</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayName { get; set; }
 
                 /// <summary>
-                /// <para>The period multiplier, which specifies the number of days before the quota resets. A positive integer is returned for custom periods. This field is not returned for calendar-based periods.</para>
+                /// <para>The period multiplier, which indicates the interval in days for quota reset. A positive integer is returned for a custom period. This field is not returned for a natural period.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30</para>
@@ -120,11 +120,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The status of the rule. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>enabled</description></item>
-                /// <item><description>disabled</description></item>
-                /// </list>
+                /// <para>The status of the rule. Valid values: enabled and disabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>enabled</para>
@@ -144,11 +140,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Timezone { get; set; }
 
                 /// <summary>
-                /// <para>The window alignment type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>calendar: calendar-based period.</description></item>
-                /// <item><description>epoch: custom period.</description></item>
-                /// </list>
+                /// <para>The period type. A value of calendar indicates a natural period. A value of epoch indicates a custom period.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>calendar</para>

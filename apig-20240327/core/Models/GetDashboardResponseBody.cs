@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetDashboardResponseBodyData Data { get; set; }
         public class GetDashboardResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The unique ID of the gateway.</para>
+            /// <para>The unique identifier of the gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gw-co370icmjeu****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string GatewayId { get; set; }
 
             /// <summary>
-            /// <para>The name of the dashboard.</para>
+            /// <para>The dashboard name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PLUGIN</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The title of the dashboard.</para>
+            /// <para>The dashboard title.</para>
             /// 
             /// <b>Example:</b>
             /// <para>APIG Plugin</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>The URL of the dashboard.</para>
+            /// <para>The dashboard URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://sls.console.aliyun.com/lognext/project/xxxxx">https://sls.console.aliyun.com/lognext/project/xxxxx</a></para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

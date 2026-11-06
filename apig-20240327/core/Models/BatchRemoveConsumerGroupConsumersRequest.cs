@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class BatchRemoveConsumerGroupConsumersRequest : TeaModel {
         /// <summary>
-        /// <para>The list of consumer IDs to remove from the consumer group.</para>
+        /// <para>The list of consumer IDs to be removed from the consumer group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;cs-8c13d2b4f8a1&quot;]</para>

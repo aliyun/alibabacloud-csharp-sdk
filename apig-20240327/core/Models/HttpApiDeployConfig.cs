@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiDeployConfig : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically deploy the API.</para>
+        /// <para>Specifies whether to enable automatic deployment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> CustomDomainIds { get; set; }
 
         /// <summary>
-        /// <para>The list of custom domain name information.</para>
+        /// <para>The list of custom domain name details.</para>
         /// </summary>
         [NameInMap("customDomainInfos")]
         [Validation(Required=false)]
@@ -83,7 +83,26 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to enable gateway system models. This parameter takes effect only when the publishing scenario is AiAutoRouter. Default value: false. This parameter is used for backward compatibility with earlier clients. If systemModelTiers is not submitted, true indicates that all three tiers of system models are enabled, and false indicates that all are disabled.</para>
+        /// <para>The fixed dynamic forwarding and ExtProc combination. For REST APIs, submit in the deployConfigs of the operation. For ModelAPIs, submit in the deployConfigs of the API. When creating either, you must submit both gatewayId and dfpConfig.serviceId in the same configuration item. The server verifies that the gateway and service belong to the same entity and determines the default environment and backend. GetHttpApiOperation, ListHttpApiOperations, GetHttpApi, and ListHttpApis return the entire object only when the corresponding resource is precisely mounted with the current gateway-bound plugin. This field is not supported for API-level configurations of standard HTTP APIs.</para>
+        /// </summary>
+        [NameInMap("dfpConfig")]
+        [Validation(Required=false)]
+        public HttpApiDeployConfigDfpConfig DfpConfig { get; set; }
+        public class HttpApiDeployConfigDfpConfig : TeaModel {
+            /// <summary>
+            /// <para>The imported ExtProc gRPC service ID. Required when creating a REST operation or ModelAPI. Must match the service currently bound to the resource during updates.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>svc-cr8k0udlhtgt80sh7png</para>
+            /// </summary>
+            [NameInMap("serviceId")]
+            [Validation(Required=false)]
+            public string ServiceId { get; set; }
+
+        }
+
+        /// <summary>
+        /// <para>Specifies whether to enable gateway system models. This takes effect only when the publishing scenario is AiAutoRouter. The default value is false. This field is used for compatibility with legacy clients. If systemModelTiers is not submitted, true indicates that all three tiers of system models are enabled, and false indicates that none are enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -100,7 +119,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> EnvDomainIds { get; set; }
 
         /// <summary>
-        /// <para>The list of environment domain name information.</para>
+        /// <para>The list of environment domain names.</para>
         /// </summary>
         [NameInMap("envDomainInfos")]
         [Validation(Required=false)]
@@ -196,7 +215,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<HttpApiPolicyConfigs> PolicyConfigs { get; set; }
 
         /// <summary>
-        /// <para>The current online routing mode of the REST API. ordinary indicates per-operation routing, and compressed indicates single-prefix routing for the API. This parameter is not returned for non-REST APIs.</para>
+        /// <para>The current online routing mode for REST APIs. ordinary indicates per-operation routing, and compressed indicates single-prefix routing for the API. This field is not returned for non-REST APIs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ordinary</para>
@@ -223,7 +242,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<HttpApiDeployConfigServiceConfigs> ServiceConfigs { get; set; }
         public class HttpApiDeployConfigServiceConfigs : TeaModel {
             /// <summary>
-            /// <para>The capability tier of the intelligent routing candidate. Specify this parameter only when the publishing scenario is AiAutoRouter. Valid values: economy, standard, and premium.</para>
+            /// <para>The capability tier for intelligent routing candidates. Fill in only when the publishing scenario is AiAutoRouter. Valid values: economy, standard, and premium.</para>
             /// 
             /// <b>Example:</b>
             /// <para>standard</para>
@@ -253,7 +272,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string IntentCode { get; set; }
 
             /// <summary>
-            /// <para>The matching condition.</para>
+            /// <para>The matching conditions.</para>
             /// </summary>
             [NameInMap("match")]
             [Validation(Required=false)]
@@ -290,7 +309,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string MultiServiceRouteStrategy { get; set; }
 
             /// <summary>
-            /// <para>The display name of the service.</para>
+            /// <para>The service display name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Qwen-Max-Service</para>
@@ -300,7 +319,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The observability metric-based routing configuration.</para>
+            /// <para>The observability metric routing configuration.</para>
             /// 
             /// <b>if can be null:</b>
             /// <c>true</c>
@@ -330,7 +349,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public int? QueueSize { get; set; }
 
                 /// <summary>
-                /// <para>The maximum traffic ratio for a single service.</para>
+                /// <para>The maximum traffic proportion for a single service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.8</para>
@@ -372,7 +391,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ServiceId { get; set; }
 
             /// <summary>
-            /// <para>The service version label.</para>
+            /// <para>The service version tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>V2</para>
@@ -394,7 +413,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The list of second-level domain name content.</para>
+        /// <para>The list of subdomains.</para>
         /// </summary>
         [NameInMap("subDomains")]
         [Validation(Required=false)]
@@ -443,7 +462,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The set of explicitly enabled gateway system model capability tiers. Takes effect only when the publishing scenario is AiAutoRouter. Valid values: economy, standard, and premium. An explicitly empty array indicates that no system models are enabled.</para>
+        /// <para>The set of explicitly enabled gateway system model capability tiers. This takes effect only when the publishing scenario is AiAutoRouter. Valid values: economy, standard, and premium. An explicit empty array indicates that no system models are enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;economy&quot;,&quot;standard&quot;,&quot;premium&quot;]</para>

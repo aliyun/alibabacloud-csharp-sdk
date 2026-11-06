@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public CreatePortalResponseBodyData Data { get; set; }
         public class CreatePortalResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The portal ID. It can be used to locate the portal in API operations such as GetPortal, UpdatePortal, and DeletePortal.</para>
+            /// <para>The portal ID. You can use this ID to locate the portal in API operations such as GetPortal, UpdatePortal, and DeletePortal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>portal-xxxxxxxx</para>

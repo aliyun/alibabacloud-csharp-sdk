@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetProductResponseBodyData Data { get; set; }
         public class GetProductResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The Agent-related configurations of the API product. The agentAPIConfig member includes agentProtocols, which is a list of protocols supported by the agent, and routes, which is a list of routes.</para>
+            /// <para>The agent-related configurations of the API product. The agentAPIConfig member includes agentProtocols (the list of protocols supported by the agent) and routes (the list of routes).</para>
             /// </summary>
             [NameInMap("agentConfig")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The description of the API product.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>An API product that provides weather query capabilities</para>
+            /// <para>API product that provides weather query capabilities</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -54,35 +54,35 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The documentation content of the API product.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The invocation methods, parameters, and billing instructions for this product</para>
+            /// <para>Invocation methods, parameters, and billing instructions for this product</para>
             /// </summary>
             [NameInMap("document")]
             [Validation(Required=false)]
             public string Document { get; set; }
 
             /// <summary>
-            /// <para>The capability configurations of the API product. Currently, this includes only the modelFeature member for model capabilities, which contains model, maxTokens, temperature, streaming, webSearch, enableThinking, and enableMultiModal.</para>
+            /// <para>The capability configurations of the API product. Currently, this includes only the modelFeature (model capabilities) member, which contains model, maxTokens, temperature, streaming, webSearch, enableThinking, and enableMultiModal.</para>
             /// </summary>
             [NameInMap("feature")]
             [Validation(Required=false)]
             public HiMarketProductFeature Feature { get; set; }
 
             /// <summary>
-            /// <para>The icon configurations of the API product, which consist of two fields: type for the icon type and value for the icon information.</para>
+            /// <para>The icon configuration of the API product, which consists of two fields: icon type (type) and icon information (value).</para>
             /// </summary>
             [NameInMap("icon")]
             [Validation(Required=false)]
             public HiMarketIcon Icon { get; set; }
 
             /// <summary>
-            /// <para>The MCP-related configurations of the API product. The members include mcpServerName for the MCP server name, tools, mcpServerConfig for the path and domains, and meta for the protocol.</para>
+            /// <para>The MCP-related configurations of the API product. The members include mcpServerName (the name of the MCP server), tools, mcpServerConfig (path and domains), and meta (protocol).</para>
             /// </summary>
             [NameInMap("mcpConfig")]
             [Validation(Required=false)]
             public HiMarketMcpConfig McpConfig { get; set; }
 
             /// <summary>
-            /// <para>The model API-related configurations of the API product. The modelAPIConfig member includes modelCategory for the AI model category, aiProtocols for the list of AI API protocols, and routes for the list of routes.</para>
+            /// <para>The model API-related configurations of the API product. The modelAPIConfig member includes modelCategory (the AI model category), aiProtocols (the list of AI API protocols), and routes (the list of routes).</para>
             /// </summary>
             [NameInMap("modelConfig")]
             [Validation(Required=false)]
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the API product. The set of valid values is not declared in the API definition. Refer to the types displayed in the console.</para>
+            /// <para>The type of the API product. The valid values are not declared in the API definition. Refer to the types displayed in the console.</para>
             /// 
             /// <b>Example:</b>
             /// <para>API</para>

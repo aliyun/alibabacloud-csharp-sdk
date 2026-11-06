@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<ListPortalPublicationsResponseBodyDataContent> Content { get; set; }
             public class ListPortalPublicationsResponseBodyDataContent : TeaModel {
                 /// <summary>
-                /// <para>The creation time in ISO 8601 (RFC 3339) format in the UTC time zone, such as 2026-05-15T10:00:00Z.</para>
+                /// <para>The creation time. The time is in ISO 8601 (RFC 3339) format in the UTC time zone, such as 2026-05-15T10:00:00Z.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-05-15T10:00:00Z</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The description of the API product.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>API product for model services available to internal developers</para>
+                /// <para>A model service API product available to internal developers</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The API product ID. This is the primary ID of the Product resource, which identifies the API product associated with this publication record.</para>
+                /// <para>The API product ID. This is the primary ID of the API product resource and identifies the API product corresponding to this publication record.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>product-xxxxxxxx</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ProductId { get; set; }
 
                 /// <summary>
-                /// <para>The API product name. This is the Name property of the Product resource.</para>
+                /// <para>The API product name. This is the Name property of the API product resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>model-service</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ProductType { get; set; }
 
                 /// <summary>
-                /// <para>The publication record ID of the API product. This ID is returned when the PublishProduct operation publishes the API product to the portal. You can use it in the /himarket/v1/products/{productId}/publications/{publicationId} path to locate the publication record for the UnpublishProduct operation.</para>
+                /// <para>The publication record ID of the API product. This ID is returned when an API product is published to a portal by using the PublishProduct operation. You can use this ID in the /himarket/v1/products/{productId}/publications/{publicationId} path to locate the publication record for the UnpublishProduct operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>publication-xxxxxxxx</para>

@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateSourceRequest : TeaModel {
         /// <summary>
-        /// <para>The gateway ID.</para>
-        /// <remarks>
-        /// <para>Note: This parameter is required. If this parameter is not specified, the API returns a 400 InvalidParameter.IsEmpty error.</para>
-        /// </remarks>
+        /// <para>The gateway ID. Note: This parameter is required. If it is not provided, the API returns a 400 InvalidParameter.IsEmpty error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-cq7l5s5lhtgi6q***</para>
@@ -23,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The container service source configuration.</para>
+        /// <para>The Container Service source configuration.</para>
         /// </summary>
         [NameInMap("k8sSourceConfig")]
         [Validation(Required=false)]
@@ -66,7 +63,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The container service cluster ID.</para>
+            /// <para>The Container Service cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c3fbe6caaaece4062b*****</para>
@@ -110,7 +107,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The source type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>MSE_NACOS: MSE Nacos.</description></item>
-        /// <item><description>K8S: container service.</description></item>
+        /// <item><description>K8S: Container Service.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

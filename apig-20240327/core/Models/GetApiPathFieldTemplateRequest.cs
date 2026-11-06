@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetApiPathFieldTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The gateway type.</para>
+        /// <para>The URI of the request, used to query the field template corresponding to the URI.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/v1/chat/completions</para>

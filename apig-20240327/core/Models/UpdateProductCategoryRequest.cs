@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The description of the product category. The description can be up to 500 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Product category that includes AI-related capabilities</para>
+        /// <para>Product category for AI-related capabilities</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The icon of the product category. The icon consists of two fields: icon type (type) and icon information (value).</para>
+        /// <para>The icon of the product category. It consists of two fields: icon type (type) and icon information (value).</para>
         /// </summary>
         [NameInMap("icon")]
         [Validation(Required=false)]

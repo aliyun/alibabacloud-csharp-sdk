@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<ListPublishableProductsResponseBodyDataContent> Content { get; set; }
             public class ListPublishableProductsResponseBodyDataContent : TeaModel {
                 /// <summary>
-                /// <para>The description of the API product. This corresponds to the Description property of the Product resource.</para>
+                /// <para>The description of the API product, which is the Description property of the Product resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>An API product that provides weather query capabilities</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The name of the API product. This corresponds to the Name property of the Product resource.</para>
+                /// <para>The name of the API product, which is the Name property of the Product resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>weather-query-api</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the API product. This is the primary ID of the Product resource. You can use this ID in the PublishProduct operation at /himarket/v1/products/{productId}/publications to publish the product to the portal. You can also use it to locate the product in operations such as GetProduct and ListProductPublications.</para>
+                /// <para>The ID of the API product, which is the primary ID of the Product resource. You can use this ID in the PublishProduct operation at /himarket/v1/products/{productId}/publications to publish the product to the portal. You can also use it to locate the product in operations such as GetProduct and ListProductPublications.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>product-xxxxxxxx</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

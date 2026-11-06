@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> AttachResourceIds { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the plugin mount.</para>
+        /// <para>Specifies whether the plugin mount is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

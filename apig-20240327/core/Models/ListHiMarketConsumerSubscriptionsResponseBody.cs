@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListHiMarketConsumerSubscriptionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response status code.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ListHiMarketConsumerSubscriptionsResponseBodyData Data { get; set; }
         public class ListHiMarketConsumerSubscriptionsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of API product subscriptions for the consumer. The list element is named subscription, and each element represents an API product subscription record.</para>
+            /// <para>The API product subscriptions of the consumer. Each element in the list is named subscription and represents an API product subscription record.</para>
             /// </summary>
             [NameInMap("content")]
             [Validation(Required=false)]
             public List<ListHiMarketConsumerSubscriptionsResponseBodyDataContent> Content { get; set; }
             public class ListHiMarketConsumerSubscriptionsResponseBodyDataContent : TeaModel {
                 /// <summary>
-                /// <para>The ID of the consumer to which the subscription belongs. This is the same identifier as the consumerId path parameter of this API operation.</para>
+                /// <para>The ID of the consumer to which the subscription belongs. This is the same as the consumerId path parameter of this operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cs-xxxxxxxxxxxx</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ConsumerName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the subscribed API product, which is the primary ID of the API product resource.</para>
+                /// <para>The ID of the subscribed API product. This is the primary ID of the API product resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>product-xxxxxxxx</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ProductName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the subscribed API product. This response parameter does not declare enums. The related ListProductSubscriptions API operation declares the following valid values for the parameter with the same name: REST_API, HTTP_API, MCP_SERVER, AGENT_API, and MODEL_API.</para>
+                /// <para>The type of the subscribed API product. This response parameter does not have an enum annotation. For the response parameter with the same name in the related ListProductSubscriptions operation, the valid values are REST_API, HTTP_API, MCP_SERVER, AGENT_API, and MODEL_API.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MCP_SERVER</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ProductType { get; set; }
 
                 /// <summary>
-                /// <para>The subscription status. Valid values: PENDING and APPROVED. This set of valid values is declared in the enums of the status request parameter in this API operation, and this response parameter does not declare enums.</para>
+                /// <para>The subscription status. Valid values: PENDING and APPROVED. These valid values are declared in the enum of the status request parameter. This response parameter does not have an enum annotation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>APPROVED</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The subscription ID. You can use this ID to unsubscribe from the product by calling UnsubscribeHiMarketProduct or approve the subscription by calling ApproveProductSubscription. Both operations locate the subscription by using the /himarket/v1/consumers/{consumerId}/subscriptions/{subscriptionId} path.</para>
+                /// <para>The subscription ID. You can use this ID to cancel a subscription by calling UnsubscribeHiMarketProduct or approve a subscription by calling ApproveProductSubscription. Both operations use the /himarket/v1/consumers/{consumerId}/subscriptions/{subscriptionId} path to locate the subscription.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sub-xxxxxxxx</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries on the current page.</para>
+        /// <para>The maximum number of entries returned on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The cursor for the next page. An empty value indicates that the last page is reached.</para>
+        /// <para>The pagination token for the next page. An empty value indicates that the last page has been reached.</para>
         /// 
         /// <b>Example:</b>
         /// <para>token-xxxxxxxx</para>

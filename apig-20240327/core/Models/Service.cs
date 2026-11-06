@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class Service : TeaModel {
         /// <summary>
-        /// <para>The address information, which is a list of IP addresses or domain names.</para>
+        /// <para>The address information, such as IP addresses or domain names.</para>
         /// </summary>
         [NameInMap("addresses")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AiServiceConfig AiServiceConfig { get; set; }
 
         /// <summary>
-        /// <para>The time when the service was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1725617840096</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> DnsServers { get; set; }
 
         /// <summary>
-        /// <para>The execution mode of CloudFlow.</para>
+        /// <para>The execution method of CloudFlow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>StartExecution</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ExpressType { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the gateway.</para>
+        /// <para>The gateway instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-xxxx</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ServiceHealthCheck HealthCheck { get; set; }
 
         /// <summary>
-        /// <para>The health check status. Valid values: Healthy and Unhealthy.</para>
+        /// <para>The monitoring check status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Healthy</para>
@@ -142,14 +142,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The outlier detection configuration for removing abnormal instances.</para>
+        /// <para>The outlier detection configuration.</para>
         /// </summary>
         [NameInMap("outlierDetection")]
         [Validation(Required=false)]
         public ServiceOutlierDetection OutlierDetection { get; set; }
         public class ServiceOutlierDetection : TeaModel {
             /// <summary>
-            /// <para>The base ejection duration in seconds. Valid values: 1 to 3600.</para>
+            /// <para>The base ejection time in seconds. Valid values: 1 to 3600.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? BaseEjectionTime { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable outlier detection.</para>
+            /// <para>Specifies whether to enable the feature.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of hosts. The value must be greater than or equal to 0.</para>
+            /// <para>The minimum number of hosts. Valid values: 0 or greater.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? FailurePercentageMinimumHosts { get; set; }
 
             /// <summary>
-            /// <para>The failure rate threshold in percentage. Valid values: 1 to 100.</para>
+            /// <para>The failure percentage threshold. Valid values: 1 to 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The circuit-broken endpoints.</para>
+        /// <para>The ejected endpoints.</para>
         /// </summary>
         [NameInMap("outlierEndpoints")]
         [Validation(Required=false)]
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The protocol. Valid values: TCP and UDP.</para>
+            /// <para>The protocol.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TCP</para>
@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The masked error code of the runtime details.</para>
+        /// <para>The masked error code in the runtime details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RuntimeEndpointTimeout</para>
@@ -307,6 +307,29 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ServiceId { get; set; }
 
         /// <summary>
+        /// <para>The ExtProc reference status in the service list. This field is not returned if the relationship read fails.</para>
+        /// </summary>
+        [NameInMap("serviceMetaData")]
+        [Validation(Required=false)]
+        public ServiceServiceMetaData ServiceMetaData { get; set; }
+        public class ServiceServiceMetaData : TeaModel {
+            /// <summary>
+            /// <para>Specifies whether the current service is referenced by an explicit DFP ExtProc binding of the gateway.</para>
+            /// </summary>
+            [NameInMap("dfpReferenced")]
+            [Validation(Required=false)]
+            public bool? DfpReferenced { get; set; }
+
+            /// <summary>
+            /// <para>Specifies whether the current service is referenced by an ExtProc configuration of the same user and gateway.</para>
+            /// </summary>
+            [NameInMap("extProc")]
+            [Validation(Required=false)]
+            public bool? ExtProc { get; set; }
+
+        }
+
+        /// <summary>
         /// <para>The source type of the service.</para>
         /// 
         /// <b>Example:</b>
@@ -324,7 +347,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> UnhealthyEndpoints { get; set; }
 
         /// <summary>
-        /// <para>The time when the service was updated.</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1725868548440</para>

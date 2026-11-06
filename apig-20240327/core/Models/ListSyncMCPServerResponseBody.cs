@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ListSyncMCPServerResponseBodyData Data { get; set; }
         public class ListSyncMCPServerResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of domain name IDs bound to the Nacos MCP export of the gateway, excluding the default domain name. If no configuration exists, an empty array [] is returned.</para>
+            /// <para>The list of domain IDs bound to the Nacos MCP export for this gateway, excluding the default domain name. If not configured, the value is [].</para>
             /// </summary>
             [NameInMap("domainIds")]
             [Validation(Required=false)]
             public List<string> DomainIds { get; set; }
 
             /// <summary>
-            /// <para>The list of synchronized (whitelisted) MCP server names, obtained from the AllowMcpServers field in the MCP Bridge registration configuration. If no configuration exists, an empty array [] is returned.</para>
+            /// <para>The list of synchronized (whitelisted) MCP server names, which are derived from the AllowMcpServers in the MCP Bridge registration configuration. If not configured, the value is [].</para>
             /// </summary>
             [NameInMap("mcpServers")]
             [Validation(Required=false)]

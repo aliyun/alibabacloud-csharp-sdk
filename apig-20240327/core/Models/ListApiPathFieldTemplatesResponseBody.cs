@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ListApiPathFieldTemplatesResponseBodyData Data { get; set; }
         public class ListApiPathFieldTemplatesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of field templates. Each element in the items list is a field template record that contains the templateId, path, and protocol.</para>
+            /// <para>The list of field templates. The list element is named items, and each element is a field template record that contains the templateId, path, and protocol.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<ListApiPathFieldTemplatesResponseBodyDataItems> Items { get; set; }
             public class ListApiPathFieldTemplatesResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The request path corresponding to the field template.</para>
+                /// <para>The API request path corresponding to the field template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/v1/chat/completions</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Protocol { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the field template.</para>
+                /// <para>The field template ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>atpl-ec5df7baf496bfac</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of records.</para>
+            /// <para>The total number of items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public UpdatePortalResponseBodyData Data { get; set; }
         public class UpdatePortalResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the updated portal. This is the primary ID of the portal resource specified by the portalId path parameter.</para>
+            /// <para>The portal ID. This is the ID of the updated portal and corresponds to the primary ID of the portal resource specified by the portalId path parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>portal-xxxxxxxx</para>

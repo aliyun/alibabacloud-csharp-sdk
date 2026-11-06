@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string JsonPath { get; set; }
 
         /// <summary>
-        /// <para>The value source of the field, which indicates the part of the message from which the field is read, such as response_body.</para>
+        /// <para>The value source of the field, which identifies the part of the message from which the field is read, such as response_body.</para>
         /// 
         /// <b>Example:</b>
         /// <para>response_body</para>

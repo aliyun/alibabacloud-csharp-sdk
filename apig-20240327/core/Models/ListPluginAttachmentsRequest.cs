@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListPluginAttachmentsRequest : TeaModel {
         /// <summary>
-        /// <para>The mount resource ID.</para>
+        /// <para>The ID of the mounted resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hr-cv2h58em1hkg7c6vt43g</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceId { get; set; }
 
         /// <summary>
-        /// <para>The plug-in mount point type. This parameter is not yet enabled.</para>
+        /// <para>The type of the plugin mount point. This parameter is not yet enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GatewayRoute</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceType { get; set; }
 
         /// <summary>
-        /// <para>The mount point types. Separate multiple types with commas.</para>
+        /// <para>The types of mount points. Separate multiple values with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GatewayRoute</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The plug-in ID.</para>
+        /// <para>The plugin ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pl-ct8181um1hkiqns9f6e0</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string PluginId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return parent resource mounts.</para>
+        /// <para>Specifies whether to return the mounts of parent resources. <notice>If this parameter is set to true, it must be used together with a single value of attachResourceTypes. Valid values: GatewayRoute and Operation.</notice></para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

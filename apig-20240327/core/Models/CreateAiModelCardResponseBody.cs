@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The model card information returned after successful creation.</para>
+        /// <para>The model card information returned after the model card is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;modelCardId&quot;:&quot;mc-8c13d2b4f8a1&quot;,&quot;gatewayId&quot;:&quot;gw-8c13d2b4f8a1&quot;,&quot;modelProvider&quot;:&quot;qwen&quot;,&quot;modelName&quot;:&quot;qwen-plus&quot;,&quot;source&quot;:&quot;user&quot;,&quot;credit&quot;:{&quot;type&quot;:&quot;fixed&quot;,&quot;inputCost&quot;:1.5,&quot;outputCost&quot;:3,&quot;cacheCost&quot;:0.5},&quot;features&quot;:{&quot;functionCalling&quot;:true,&quot;toolChoice&quot;:true},&quot;meta&quot;:{&quot;maxInputTokens&quot;:131072,&quot;maxOutputTokens&quot;:8192,&quot;maxTokens&quot;:131072,&quot;supportedInputModalities&quot;:[&quot;text&quot;,&quot;image&quot;],&quot;supportedOutputModalities&quot;:[&quot;text&quot;]},&quot;availablePaths&quot;:[{&quot;path&quot;:&quot;/v1/chat/completions&quot;,&quot;type&quot;:&quot;OpenAICompatible&quot;}],&quot;updateTime&quot;:&quot;2026-07-14 18:30:00&quot;}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public CreateAiModelCardResponseBodyData Data { get; set; }
         public class CreateAiModelCardResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of invocation paths supported by the model.</para>
+            /// <para>The list of call paths supported by the model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;path&quot;:&quot;/v1/chat/completions&quot;,&quot;type&quot;:&quot;OpenAICompatible&quot;}]</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<CreateAiModelCardResponseBodyDataAvailablePaths> AvailablePaths { get; set; }
             public class CreateAiModelCardResponseBodyDataAvailablePaths : TeaModel {
                 /// <summary>
-                /// <para>The model invocation path.</para>
+                /// <para>The model call path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/v1/chat/completions</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>The protocol type of the path.</para>
+                /// <para>The protocol type corresponding to the path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>OpenAICompatible</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public CreateAiModelCardResponseBodyDataCredit Credit { get; set; }
             public class CreateAiModelCardResponseBodyDataCredit : TeaModel {
                 /// <summary>
-                /// <para>The cache hit token cost, in Credits per million tokens.</para>
+                /// <para>The cost of cache hit tokens, in Credits per million tokens.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.5</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public float? CacheCost { get; set; }
 
                 /// <summary>
-                /// <para>The input token cost, in Credits per million tokens.</para>
+                /// <para>The cost of input tokens, in Credits per million tokens.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.5</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public float? InputCost { get; set; }
 
                 /// <summary>
-                /// <para>The output token cost, in Credits per million tokens.</para>
+                /// <para>The cost of output tokens, in Credits per million tokens.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public float? OutputCost { get; set; }
 
                 /// <summary>
-                /// <para>The billing type. The current value is fixed.</para>
+                /// <para>The billing type. Currently, fixed is returned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>fixed</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string GatewayId { get; set; }
 
             /// <summary>
-            /// <para>The token limits and input/output modality information of the model.</para>
+            /// <para>The token limits and input and output modality information of the model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;maxInputTokens&quot;:131072,&quot;maxOutputTokens&quot;:8192,&quot;maxTokens&quot;:131072,&quot;supportedInputModalities&quot;:[&quot;text&quot;,&quot;image&quot;],&quot;supportedOutputModalities&quot;:[&quot;text&quot;]}</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The model card ID.</para>
+            /// <para>The ID of the model card.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mc-8c13d2b4f8a1</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ModelCardId { get; set; }
 
             /// <summary>
-            /// <para>The model name.</para>
+            /// <para>The name of the model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qwen-plus</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ModelName { get; set; }
 
             /// <summary>
-            /// <para>The model provider identifier.</para>
+            /// <para>The identifier of the model provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qwen</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ModelProvider { get; set; }
 
             /// <summary>
-            /// <para>The source of the model card. The current value is user.</para>
+            /// <para>The source of the model card. Currently, user is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user</para>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>

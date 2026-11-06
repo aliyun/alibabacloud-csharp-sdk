@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The logon username of the developer. The length must not exceed 64 characters.</para>
+        /// <para>The logon username of the developer. The length cannot exceed 64 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>developer-demo</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListHttpApiOperationsRequest : TeaModel {
         /// <summary>
-        /// <para>The consumer authorization rule ID used to filter the API operation list. When specified, the response includes only authorized API operations.</para>
+        /// <para>Filters API operations by a specific consumer authorization rule ID. The response includes only authorized API operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cas-xxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ConsumerAuthorizationRuleId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to filter by authentication enablement status.</para>
+        /// <para>Specifies whether to enable the authentication filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? ForDeploy { get; set; }
 
         /// <summary>
-        /// <para>The gateway ID used to filter results.</para>
+        /// <para>The ID of the gateway used to filter API operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-001</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>Lists API operations by HTTP method.</para>
+        /// <para>Filters API operations by HTTP method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GET</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Method { get; set; }
 
         /// <summary>
-        /// <para>Searches for API operations by exact name match.</para>
+        /// <para>Searches for API operations by exact name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>getUserInfo</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string NameLike { get; set; }
 
         /// <summary>
-        /// <para>The page number to return. Pages start from 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Searches for API operations by path prefix match.</para>
+        /// <para>Searches for API operations by path prefix.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/v1</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string PathLike { get; set; }
 
         /// <summary>
-        /// <para>The environment ID. When specified together with withConsumerInfoById, the response includes the authorization rule list of the specified consumer in the specified environment for each API operation.</para>
+        /// <para>The ID of the environment. The response includes the list of authorization rules for the specified consumer in this environment for each API operation. You must also specify the withConsumerInfoById parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>env-xxx</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string WithConsumerInEnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>The consumer ID. When specified together with withConsumerInEnvironmentId, the response includes the authorization rule list of the specified consumer in the specified environment for each API operation.</para>
+        /// <para>The ID of the consumer. The response includes the list of authorization rules for this consumer in the specified environment for each API operation. You must also specify the withConsumerInEnvironmentId parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cs-xxx</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string WithConsumerInfoById { get; set; }
 
         /// <summary>
-        /// <para>The plug-in ID used to retrieve plug-in deployment information.</para>
+        /// <para>The ID of the plugin. Retrieves the plugin release information based on this plugin ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pl-xxx</para>

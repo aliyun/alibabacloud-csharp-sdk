@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string JsonPath { get; set; }
 
         /// <summary>
-        /// <para>The value extraction rule for the field.</para>
+        /// <para>The value rule for the field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>first</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The source of the field value, indicating which part of the message the field is read from, such as response_body.</para>
+        /// <para>The source of the field value, which indicates the part of the message from which the field is read, such as response_body.</para>
         /// 
         /// <b>Example:</b>
         /// <para>response_body</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The message direction to which the field belongs, indicating whether it is extracted from the request or the response.</para>
+        /// <para>The message direction of the field, which indicates whether it is extracted from the request or the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>response</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? Sensitive { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether collection is enabled for the field.</para>
+        /// <para>Indicates whether the collection of the field is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? JsonPathRewriteAllowed { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the field configuration is derived from a field template.</para>
+        /// <para>Indicates whether the field configuration is from a field template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

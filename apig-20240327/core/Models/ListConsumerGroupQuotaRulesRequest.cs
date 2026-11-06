@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListConsumerGroupQuotaRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the gateway. This parameter is optional. If specified, the results are filtered by the exact gateway ID.</para>
+        /// <para>The gateway ID. This parameter is optional. If specified, the results are filtered by the exact gateway ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-123456</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The keyword for the rule name. This parameter is optional. If specified, the results are filtered by fuzzy match on the rule name.</para>
+        /// <para>The keyword for the rule name. This parameter is optional. If specified, fuzzy matching is performed on the rule name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>daily</para>

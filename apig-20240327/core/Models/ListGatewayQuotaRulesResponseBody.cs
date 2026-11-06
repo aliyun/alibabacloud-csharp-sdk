@@ -40,6 +40,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<ListGatewayQuotaRulesResponseBodyDataItems> Items { get; set; }
             public class ListGatewayQuotaRulesResponseBodyDataItems : TeaModel {
                 /// <summary>
+                /// <para>The number of days in a custom period. This parameter is returned only when windowAlignment is set to epoch. Valid values: 1 to 106751. This parameter is not returned for natural periods.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
+                /// </summary>
+                [NameInMap("periodMultiplier")]
+                [Validation(Required=false)]
+                public long? PeriodMultiplier { get; set; }
+
+                /// <summary>
                 /// <para>The period type.</para>
                 /// 
                 /// <b>Example:</b>
@@ -100,7 +110,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string RuleStatus { get; set; }
 
                 /// <summary>
-                /// <para>The time zone for the natural period, in UTC+x format.</para>
+                /// <para>The time zone corresponding to the natural period, in UTC+x format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>GMT+8</para>
@@ -154,7 +164,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records to retrieve at a time. This parameter is not supported.</para>
+        /// <para>The maximum number of records to return in a single request. This parameter is not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

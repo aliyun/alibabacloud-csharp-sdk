@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> AttachResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The resource type to which the plug-in is mounted. Valid values: GatewayRoute, Gateway, GatewayDomain, HttpApi, and Operation.</para>
+        /// <para>The type of the resource to which the plugin is mounted. Valid values: GatewayRoute, Gateway, GatewayDomain, HttpApi, and Operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HttpApi</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the plug-in. Default value: false.</para>
+        /// <para>Specifies whether to enable the plugin. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The Base64-encoded content of the original plug-in configuration.</para>
+        /// <para>The Base64-encoded content of the original plugin configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cHJlcGVuZDoKLSByb2xlOiBzeXN0ZW0KICBjb250ZW50OiDor7fkvb/nlKjoi7Hor63lm57nrZTpl67popgKYXBwZW5kOgotIHJvbGU6IHVzZXIKICBjb250ZW50OiDmr4/mrKHlm57nrZTlrozpl67popjvvIzlsJ3or5Xov5vooYzlj43pl64K</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string PluginConfig { get; set; }
 
         /// <summary>
-        /// <para>The plug-in ID.</para>
+        /// <para>The plugin ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pl-cvo8udem1hkob1qd67i0</para>

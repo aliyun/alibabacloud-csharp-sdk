@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public BatchImportHttpApisResponseBodyData Data { get; set; }
         public class BatchImportHttpApisResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The asynchronous task ID. You can call the GetBatchImportTask operation to query the task progress.</para>
+            /// <para>The ID of the asynchronous task. You can call the GetBatchImportTask operation to query the task progress.</para>
             /// 
             /// <b>Example:</b>
             /// <para>async-task-xxx</para>

@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string PortalId { get; set; }
 
             /// <summary>
-            /// <para>The portal settings, including whether to enable username and password authentication, whether to automatically approve developer registrations, and whether to automatically approve subscription requests.</para>
+            /// <para>The portal settings, which specify whether username and password authentication is enabled, whether developer registrations are automatically approved, and whether subscription requests are automatically approved.</para>
             /// </summary>
             [NameInMap("portalSettingConfig")]
             [Validation(Required=false)]

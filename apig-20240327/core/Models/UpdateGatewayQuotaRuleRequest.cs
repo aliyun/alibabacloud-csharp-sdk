@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateGatewayQuotaRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The list of consumer subject IDs to bind.</para>
+        /// <para>The list of subject (consumer) IDs to associate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cs-001,cs-002</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> AddIds { get; set; }
 
         /// <summary>
-        /// <para>The conflict snapshot hash, used to prevent concurrent dirty overwrites when confirming an overwrite. Obtain this value from the response of a dry run request with dryRun set to true.</para>
-        /// <para>This parameter is not required in the following cases: no conflict exists, the request is a dry run with dryRun set to true, or overwrite is set to false (no overwrite confirmation).</para>
-        /// <para>When dryRun is set to false and overwrite is set to true, if this parameter is not provided or the value has expired and no longer matches, the backend returns accepted=false with a new conflict preview. Perform a new dry run to confirm the updated conflicts.</para>
+        /// <para>The conflict snapshot hash, which is used to prevent concurrent dirty overwrites when you confirm an overwrite. You can obtain this value by first executing a request with dryRun=true and extracting it from the response.</para>
+        /// <para>You do not need to specify this parameter in the following scenarios: no conflicts exist; the request is a dry run with dryRun=true; or overwrite=false, which means overwriting is not confirmed.</para>
+        /// <para>If dryRun=false and overwrite=true, but this parameter is not provided or has expired and does not match, the backend returns accepted=false along with a new conflict preview. In this case, you must perform a dry run again to confirm the new conflicts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541f50xxxxxx</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> ConsumerGroupIds { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run without persisting or applying the configuration. A dry run checks whether conflicting rules exist on the bound consumer subjects. The same consumer subject cannot have two calendar-period quotas with the same period. For example, a consumer subject that already has a daily calendar quota cannot be assigned another daily calendar quota rule.</para>
+        /// <para>Specifies whether to perform a dry run only without saving the configuration to the database or delivering the actual configuration. This parameter is used to check whether conflicting rules exist on the associated consumers. A single consumer cannot be configured with two natural period quotas of the same period. For example, a consumer that already has a natural daily quota cannot be assigned another natural daily quota rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -55,14 +55,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allow overwriting when a conflict exists. If overwriting is allowed, conflicting subjects (consumers or consumer groups) are unbound from the old rule and bound to the new rule.</para>
+        /// <para>Specifies whether to allow overwriting when conflicts occur. Note that if overwriting is allowed, the conflicting subjects (consumers or consumer groups) will be disassociated from the old rule and associated with the new rule.</para>
         /// </summary>
         [NameInMap("overwrite")]
         [Validation(Required=false)]
         public bool? Overwrite { get; set; }
 
         /// <summary>
-        /// <para>The updated total available quota per period.</para>
+        /// <para>The updated total available quota.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public long? QuotaLimit { get; set; }
 
         /// <summary>
-        /// <para>The list of consumer subject IDs to unbind.</para>
+        /// <para>The list of subject (consumer) IDs to disassociate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cs003,cs-004</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> RemoveIds { get; set; }
 
         /// <summary>
-        /// <para>The updated rule name.</para>
+        /// <para>The updated name of the rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>team-rule</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateAiModelCardRequest : TeaModel {
         /// <summary>
-        /// <para>The list of API paths supported by the model. Each entry must include both path and type.</para>
+        /// <para>The list of API call paths supported by the model. Each item must include both path and type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;path&quot;:&quot;/v1/chat/completions&quot;,&quot;type&quot;:&quot;OpenAICompatible&quot;}]</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<CreateAiModelCardRequestAvailablePaths> AvailablePaths { get; set; }
         public class CreateAiModelCardRequestAvailablePaths : TeaModel {
             /// <summary>
-            /// <para>The model invocation path. The value can be up to 2,048 characters in length.</para>
+            /// <para>The path. The model call path, which can be up to 2,048 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/v1/chat/completions</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>The protocol type of the path. The value can be up to 64 characters in length.</para>
+            /// <para>The protocol type corresponding to the path, which can be up to 64 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OpenAICompatible</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The credit billing information of the model. Currently, only the fixed type is supported, and the cost unit is Credits per million tokens. If this parameter is not specified, all cost values default to 0.</para>
+        /// <para>The credit billing information of the model. Currently, only the fixed type is supported, and the billing unit is Credits per million tokens. If this parameter is not specified, all costs default to 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;type&quot;:&quot;fixed&quot;,&quot;inputCost&quot;:1.5,&quot;outputCost&quot;:3,&quot;cacheCost&quot;:0.5}</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public CreateAiModelCardRequestCredit Credit { get; set; }
         public class CreateAiModelCardRequestCredit : TeaModel {
             /// <summary>
-            /// <para>The cache hit token cost, in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</para>
+            /// <para>The cost of cache hit tokens, in Credits per million tokens. The value must be greater than or equal to 0. If this parameter is not specified, the default value is 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public float? CacheCost { get; set; }
 
             /// <summary>
-            /// <para>The input token cost, in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</para>
+            /// <para>The cost of input tokens, in Credits per million tokens. The value must be greater than or equal to 0. If this parameter is not specified, the default value is 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.5</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public float? InputCost { get; set; }
 
             /// <summary>
-            /// <para>The output token cost, in Credits per million tokens. The value must be greater than or equal to 0. Default value: 0.</para>
+            /// <para>The cost of output tokens, in Credits per million tokens. The value must be greater than or equal to 0. If this parameter is not specified, the default value is 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The model capability switches. Keys must be model capability names supported by API Gateway, and values must be Boolean values.</para>
+        /// <para>The model capability switches. The key must be the name of a model capability supported by the API gateway, and the value must be a Boolean value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;functionCalling&quot;:true,&quot;toolChoice&quot;:true,&quot;promptCaching&quot;:false}</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The token limits and input/output modality information of the model.</para>
+        /// <para>The token limits and input and output modality information of the model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;maxInputTokens&quot;:131072,&quot;maxOutputTokens&quot;:8192,&quot;maxTokens&quot;:131072,&quot;supportedInputModalities&quot;:[&quot;text&quot;,&quot;image&quot;],&quot;supportedOutputModalities&quot;:[&quot;text&quot;]}</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? MaxTokens { get; set; }
 
             /// <summary>
-            /// <para>The list of input modalities supported by the model. The list can contain up to 16 entries, and each entry must not be empty.</para>
+            /// <para>The list of input modalities supported by the model. The list can contain up to 16 items, and each item cannot be empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;text&quot;,&quot;image&quot;]</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<string> SupportedInputModalities { get; set; }
 
             /// <summary>
-            /// <para>The list of output modalities supported by the model. The list can contain up to 16 entries, and each entry must not be empty.</para>
+            /// <para>The list of output modalities supported by the model. The list can contain up to 16 items, and each item cannot be empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;text&quot;]</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The model name. The model name must be unique within the same AI gateway instance and the same model provider. The value can be up to 256 characters in length.</para>
+        /// <para>The name of the model. The model name must be unique within the same AI gateway instance and model provider, and can be up to 256 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ModelName { get; set; }
 
         /// <summary>
-        /// <para>The model provider identifier. The value must reference a model provider that already exists in the target AI gateway instance. The value can be up to 128 characters in length.</para>
+        /// <para>The identifier of the model provider. It must reference an existing model provider in the target AI gateway instance and can be up to 128 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

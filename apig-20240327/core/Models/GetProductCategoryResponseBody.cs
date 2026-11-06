@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetProductCategoryResponseBodyData Data { get; set; }
         public class GetProductCategoryResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the product category. This ID can be used as the categoryId path parameter for GetProductCategory, UpdateProductCategory, and DeleteProductCategory, or as an element in the categories array for SetProductCategories and CreateProduct.</para>
+            /// <para>The product category ID. This ID can be used as the categoryId path parameter for GetProductCategory, UpdateProductCategory, and DeleteProductCategory, or as an element in the categories array for SetProductCategories and CreateProduct.</para>
             /// 
             /// <b>Example:</b>
             /// <para>category-xxxxxxxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string CategoryId { get; set; }
 
             /// <summary>
-            /// <para>The description of the product category.</para>
+            /// <para>The product category description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Product category containing AI-related capabilities</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The icon of the product category. It consists of two fields: icon type (type) and icon value (value).</para>
+            /// <para>The product category icon, which consists of two fields: icon type (type) and icon information (value).</para>
             /// </summary>
             [NameInMap("icon")]
             [Validation(Required=false)]
             public HiMarketIcon Icon { get; set; }
 
             /// <summary>
-            /// <para>The name of the product category.</para>
+            /// <para>The product category name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ai-capabilities</para>

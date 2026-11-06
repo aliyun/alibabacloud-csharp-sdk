@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ListMcpProductToolsResponseBodyData Data { get; set; }
         public class ListMcpProductToolsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of MCP tools. Each element in the list represents an MCP tool.</para>
+            /// <para>The list of MCP tools. Each element in the list is named tool and represents an MCP tool.</para>
             /// </summary>
             [NameInMap("tools")]
             [Validation(Required=false)]
             public List<ListMcpProductToolsResponseBodyDataTools> Tools { get; set; }
             public class ListMcpProductToolsResponseBodyDataTools : TeaModel {
                 /// <summary>
-                /// <para>The annotation information of the tool, which is a map structure. The API definition declares it only as map<any> without specifying its members or purposes.</para>
+                /// <para>The annotations of the tool. This is a map structure. The API definition declares it only as map<any> without specifying its members and usage.</para>
                 /// </summary>
                 [NameInMap("annotations")]
                 [Validation(Required=false)]
@@ -51,14 +51,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The input parameter structure definition of the tool, which is a map structure. The API definition declares it only as map<any> without specifying its members or constraints.</para>
+                /// <para>The input parameter schema of the tool. This is a map structure. The API definition declares it only as map<any> without specifying its members and constraints.</para>
                 /// </summary>
                 [NameInMap("inputSchema")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> InputSchema { get; set; }
 
                 /// <summary>
-                /// <para>The metadata information of the tool, which is a map structure. The API definition declares it only as map<any> without specifying its members or purposes.</para>
+                /// <para>The metadata of the tool. This is a map structure. The API definition declares it only as map<any> without specifying its members and usage.</para>
                 /// </summary>
                 [NameInMap("meta")]
                 [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The output result structure definition of the tool, which is a map structure. The API definition declares it only as map<any> without specifying its members or constraints.</para>
+                /// <para>The output schema of the tool. This is a map structure. The API definition declares it only as map<any> without specifying its members and constraints.</para>
                 /// </summary>
                 [NameInMap("outputSchema")]
                 [Validation(Required=false)]

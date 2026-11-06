@@ -31,8 +31,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AuthConfig AuthConfig { get; set; }
 
         /// <summary>
-        /// <para>The base path of the API. The value must start with a forward slash (/).</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The base path of the API. It must start with a forward slash (/).</para>
         /// 
         /// <b>Example:</b>
         /// <para>/v1</para>
@@ -49,10 +48,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<HttpApiDeployConfig> DeployConfigs { get; set; }
 
         /// <summary>
-        /// <para>The API description.</para>
+        /// <para>The description of the API.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Update API description</para>
+        /// <para>Updated API description</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -69,7 +68,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? EnableAuth { get; set; }
 
         /// <summary>
-        /// <para>The first byte timeout period. Unit: seconds.</para>
+        /// <para>The first byte timeout period, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -79,7 +78,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? FirstByteTimeout { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the HTTP Ingress API.</para>
+        /// <para>The configuration information of the HTTP Ingress API.</para>
         /// </summary>
         [NameInMap("ingressConfig")]
         [Validation(Required=false)]
@@ -106,7 +105,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string IngressClass { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to update the address in the Ingress status.</para>
+            /// <para>Specifies whether to update the IP address in the Ingress status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -126,7 +125,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string SourceId { get; set; }
 
             /// <summary>
-            /// <para>The namespace to listen on.</para>
+            /// <para>The namespace to watch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -138,7 +137,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to only modify the configuration. If this parameter is set to true, only the configuration is modified without triggering redeployment.</para>
+        /// <para>Specifies whether to only modify the configuration. A value of true indicates that only the configuration is modified without triggering a redeployment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -155,7 +154,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> Protocols { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to remove the base path when forwarding requests.</para>
+        /// <para>Specifies whether to remove the base path during forwarding.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -165,14 +164,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? RemoveBasePathOnForward { get; set; }
 
         /// <summary>
-        /// <para>The API versioning configuration.</para>
+        /// <para>The versioning configuration of the API.</para>
         /// </summary>
         [NameInMap("versionConfig")]
         [Validation(Required=false)]
         public HttpApiVersionConfig VersionConfig { get; set; }
 
         /// <summary>
-        /// <para>The idempotency token. If you call this operation for the same HTTP API by using the same clientToken value and request parameters, the result of the first successful call is returned.</para>
+        /// <para>The idempotent request token. If you call the same HTTP API with the same client token and request parameters, the result of the first successful call is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>update-http-api-client-token-001</para>
@@ -182,7 +181,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run. If this parameter is set to true, all synchronous validations identical to an actual update are performed, but no configurations are updated and no side effects are produced. If this parameter is not specified or is set to false, the behavior is the same as the existing version.</para>
+        /// <para>Specifies whether to perform a dry run. If you set this parameter to true, all synchronization checks consistent with a real update are performed, but no configurations are updated and no side effects are generated. If this parameter is left empty or set to false, the behavior remains the same as the existing version.</para>
         /// </summary>
         [NameInMap("dryRun")]
         [Validation(Required=false)]

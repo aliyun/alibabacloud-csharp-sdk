@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public CreateProductCategoryResponseBodyData Data { get; set; }
         public class CreateProductCategoryResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the newly created product category. It can be used as the categoryId path parameter in GetProductCategory, UpdateProductCategory, and DeleteProductCategory, or as an element in the category ID array for SetProductCategories.</para>
+            /// <para>The ID of the newly created product category. It can be used as the categoryId path parameter for GetProductCategory, UpdateProductCategory, and DeleteProductCategory, or as an element in the category ID array for SetProductCategories.</para>
             /// 
             /// <b>Example:</b>
             /// <para>category-xxxxxxxx</para>

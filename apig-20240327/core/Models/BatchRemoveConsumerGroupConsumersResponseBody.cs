@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class BatchRemoveConsumerGroupConsumersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response status code. Ok is returned if the request is successful.</para>
+        /// <para>The response status code. Returns Ok if the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<string> FailedConsumerIds { get; set; }
 
             /// <summary>
-            /// <para>The list of consumer IDs that were skipped because they are not in the consumer group.</para>
+            /// <para>The list of consumer IDs that are skipped because they are not in the consumer group.</para>
             /// </summary>
             [NameInMap("skippedConsumerIds")]
             [Validation(Required=false)]
             public List<string> SkippedConsumerIds { get; set; }
 
             /// <summary>
-            /// <para>The list of consumer IDs that were successfully removed from the consumer group.</para>
+            /// <para>The list of consumer IDs that are successfully removed from the consumer group.</para>
             /// </summary>
             [NameInMap("successConsumerIds")]
             [Validation(Required=false)]

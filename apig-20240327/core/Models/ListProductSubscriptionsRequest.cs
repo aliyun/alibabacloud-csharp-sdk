@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListProductSubscriptionsRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword of the consumer name used to search the subscription records of the API product by consumer name.</para>
+        /// <para>The keyword of the consumer name. This parameter is used to search for subscription records of the API product by consumer name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>consumer-1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The subscription status used to filter subscriptions. Valid values: PENDING and APPROVED.</para>
+        /// <para>The subscription status. This parameter is used to filter subscriptions by status. Valid values: PENDING and APPROVED.</para>
         /// 
         /// <b>Example:</b>
         /// <para>APPROVED</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public Backend Backend { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the route is a system built-in route.</para>
+        /// <para>Indicates whether the route is a built-in system route.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,21 +50,40 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The route description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Pre-release route for the product center</para>
+        /// <para>商品中心预发路由</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The list of domain name information.</para>
+        /// <para>The ExtProc service selected for the fixed dynamic forwarding route. This field is not returned when no matching binding exists.</para>
+        /// </summary>
+        [NameInMap("dfpConfig")]
+        [Validation(Required=false)]
+        public HttpRouteDfpConfig DfpConfig { get; set; }
+        public class HttpRouteDfpConfig : TeaModel {
+            /// <summary>
+            /// <para>The ExtProc gRPC service ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>svc-cr8k0udlhtgt80sh7png</para>
+            /// </summary>
+            [NameInMap("serviceId")]
+            [Validation(Required=false)]
+            public string ServiceId { get; set; }
+
+        }
+
+        /// <summary>
+        /// <para>The list of domain information.</para>
         /// </summary>
         [NameInMap("domainInfos")]
         [Validation(Required=false)]
         public List<HttpRouteDomainInfos> DomainInfos { get; set; }
         public class HttpRouteDomainInfos : TeaModel {
             /// <summary>
-            /// <para>The domain name ID.</para>
+            /// <para>The domain ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d-cr3v7dllhtgi9s***</para>
@@ -103,10 +122,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public HttpRouteEnvironmentInfo EnvironmentInfo { get; set; }
         public class HttpRouteEnvironmentInfo : TeaModel {
             /// <summary>
-            /// <para>The environment name alias.</para>
+            /// <para>The alias of the environment name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Pre-release environment for the product center</para>
+            /// <para>商品中心预发环境</para>
             /// </summary>
             [NameInMap("alias")]
             [Validation(Required=false)]
@@ -130,7 +149,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public HttpRouteEnvironmentInfoGatewayInfo GatewayInfo { get; set; }
             public class HttpRouteEnvironmentInfoGatewayInfo : TeaModel {
                 /// <summary>
-                /// <para>The gateway instance edition. Valid values: Professional, Serverless, MultiTenantServerless, Unknown.</para>
+                /// <para>The gateway instance edition. Valid values: Professional, Serverless, MultiTenantServerless, and Unknown.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MultiTenantServerless</para>
@@ -172,14 +191,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The list of default subdomain names for the environment.</para>
+            /// <para>The list of default subdomains for the environment.</para>
             /// </summary>
             [NameInMap("subDomains")]
             [Validation(Required=false)]
             public List<HttpRouteEnvironmentInfoSubDomains> SubDomains { get; set; }
             public class HttpRouteEnvironmentInfoSubDomains : TeaModel {
                 /// <summary>
-                /// <para>The domain name ID.</para>
+                /// <para>The domain ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>d-cqu19hdlhtgjuv4***</para>
@@ -237,7 +256,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public HttpRouteMatch Match { get; set; }
 
         /// <summary>
-        /// <para>The MCP server information.</para>
+        /// <para>The MCP service information.</para>
         /// </summary>
         [NameInMap("mcpServerInfo")]
         [Validation(Required=false)]
@@ -284,7 +303,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ImportNamespace { get; set; }
 
             /// <summary>
-            /// <para>The MCP route information.</para>
+            /// <para>The MCP routing information.</para>
             /// </summary>
             [NameInMap("mcpRouteConfig")]
             [Validation(Required=false)]
@@ -335,7 +354,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The HttpApi route ID.</para>
+        /// <para>The HTTP API route ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hr-crf5l7tlhtgp91t***</para>

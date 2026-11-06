@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateHttpApiOperationRequest : TeaModel {
         /// <summary>
-        /// <para>The list of operation definitions.</para>
+        /// <para>The list of API operation definitions.</para>
         /// </summary>
         [NameInMap("operations")]
         [Validation(Required=false)]

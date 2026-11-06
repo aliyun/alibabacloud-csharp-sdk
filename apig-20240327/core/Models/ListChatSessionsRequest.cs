@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListChatSessionsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries per page. The default value and value range are not specified in the API definition.</para>
+        /// <para>The maximum number of entries per page. The default value and valid values are not specified in the API definition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Pass the nextToken returned in the previous response to obtain the next page. Do not specify this parameter for the first query.</para>
+        /// <para>The pagination token. Pass the nextToken returned in the previous response to retrieve the next page. Do not specify this parameter for the first query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>token-xxxxxxxx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

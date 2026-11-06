@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ResetGatewayQuotaRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The conflict snapshot hash, used to prevent concurrent dirty overwrites during confirmation. Obtain this value from the response data of a previous dryRun=true call.</para>
-        /// <para>This parameter is not required in the following cases: no conflicts exist, the request is a dry run (dryRun=true), or overwrite is set to false.</para>
-        /// <para>When dryRun is set to false and overwrite is set to true, if this parameter is not provided or the value has expired and does not match, the backend returns accepted=false with a new conflict preview. Perform the dry run again to confirm the new conflicts.</para>
+        /// <para>The conflict snapshot hash, which is used to prevent concurrent dirty overwrites when overwriting is confirmed. You can obtain this value by first executing a request with dryRun=true and extracting it from the returned data.</para>
+        /// <para>This parameter is not required in the following scenarios: no conflicts exist; the request is only a dry run with dryRun=true; overwrite=false, meaning overwriting is not confirmed.</para>
+        /// <para>If dryRun=false and overwrite=true but this parameter is not provided or has expired and does not match, the backend returns accepted=false along with a new conflict preview. You must perform a dry run again to confirm the new conflicts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ConflictHash { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run without persisting or applying the configuration. A dry run checks whether conflicting rules exist on the bound subjects. The same subject cannot have two calendar-period quotas with the same period. For example, a subject that already has a daily calendar quota cannot have another daily calendar quota rule added.</para>
+        /// <para>Specifies whether to perform a dry run only without saving to the database or delivering actual configurations. This is used to check whether conflicting rules exist on the bound subjects. A single subject cannot be configured with two natural period quotas of the same period. For example, a subject that already has a natural daily quota cannot be added with another natural daily quota rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allow overwriting when conflicts exist. If overwriting is allowed, conflicting subjects (consumers or consumer groups) are unbound from the old rule and bound to the new rule.</para>
+        /// <para>Specifies whether to allow overwriting when a conflict occurs. Note that if overwriting is allowed, the conflicting subjects (consumers or consumer groups) are unbound from the old rule and bound to the new rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public long? PeriodMultiplier { get; set; }
 
         /// <summary>
-        /// <para>The period type. Calendar periods support daily, weekly, and monthly statistics. Valid values: day, week, and month. Custom periods support only daily statistics. The value is fixed to day.</para>
+        /// <para>The period type. Natural periods support daily, weekly, and monthly statistics, and valid values are day, week, and month. Custom periods support only daily statistics, and the fixed value is day.</para>
         /// 
         /// <b>Example:</b>
         /// <para>week</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public long? QuotaLimit { get; set; }
 
         /// <summary>
-        /// <para>The time zone for the calendar period, in UTC+x format.</para>
+        /// <para>The time zone corresponding to the natural period, in UTC+x format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UTC+8</para>
@@ -82,11 +82,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Timezone { get; set; }
 
         /// <summary>
-        /// <para>The period alignment type after the reset. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>calendar: calendar period.</description></item>
-        /// <item><description>epoch: custom period.</description></item>
-        /// </list>
+        /// <para>The period type for the reset. Natural periods (windowAlignment=calendar) and custom periods (windowAlignment=epoch) are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>calendar</para>

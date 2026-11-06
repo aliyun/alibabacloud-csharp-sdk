@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ListPortalsResponseBodyData Data { get; set; }
         public class ListPortalsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of portals. The list element is named portalConfig, and each element contains the information of a HiMarket developer portal.</para>
+            /// <para>The portal list. The list element is named portalConfig, and each element contains the information of a HiMarket developer portal.</para>
             /// </summary>
             [NameInMap("content")]
             [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The list of portal domain configurations. The list element is named domainConfig.</para>
+                /// <para>The portal domain configuration list. The list element is named domainConfig.</para>
                 /// </summary>
                 [NameInMap("portalDomainConfig")]
                 [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string PortalId { get; set; }
 
                 /// <summary>
-                /// <para>The portal configuration, including whether username and password authentication is enabled, whether developer registrations are automatically approved, and whether subscription requests are automatically approved.</para>
+                /// <para>The portal settings, including whether to enable username and password authentication, whether to automatically approve developer registrations, and whether to automatically approve subscription requests.</para>
                 /// </summary>
                 [NameInMap("portalSettingConfig")]
                 [Validation(Required=false)]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page.</para>
+        /// <para>The cursor token for querying the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>next-token-xxxxxxxx</para>

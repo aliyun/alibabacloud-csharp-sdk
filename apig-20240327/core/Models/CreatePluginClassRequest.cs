@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreatePluginClassRequest : TeaModel {
         /// <summary>
-        /// <para>The alias of the plugin class. This parameter is required. If this parameter is not specified, the service returns an InvalidParameter.WithValue error.</para>
+        /// <para>The alias of the plug-in. This parameter is required. If it is not provided, the service returns InvalidParameter.WithValue.</para>
         /// 
         /// <b>Example:</b>
         /// <para>My Wasm Plugin</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Alias { get; set; }
 
         /// <summary>
-        /// <para>The description of the plugin.</para>
+        /// <para>The description of the plug-in.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The execution priority of the plugin. This parameter is required when executeStage is specified. The default value 0 is invalid. We recommend that you set this parameter to 200.</para>
+        /// <para>The execution priority of the plug-in. This parameter is required when executeStage is specified. The default value 0 is invalid. Set this parameter to 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? ExecutePriority { get; set; }
 
         /// <summary>
-        /// <para>The execution stage of the plugin.</para>
+        /// <para>The execution stage of the plug-in.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ExecuteStage { get; set; }
 
         /// <summary>
-        /// <para>The name of the plugin class.</para>
+        /// <para>The name of the plug-in class.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The minimum gateway version that the plugin is compatible with.</para>
+        /// <para>The minimum supported gateway version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.0.0</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string SupportedMinGatewayVersion { get; set; }
 
         /// <summary>
-        /// <para>The version number of the plugin.</para>
+        /// <para>The version number of the plug-in.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string VersionDescription { get; set; }
 
         /// <summary>
-        /// <para>The development language of the WASM plugin. Valid values: TinyGo.</para>
+        /// <para>The development language of the WASM plug-in. Valid values: TinyGo.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string WasmLanguage { get; set; }
 
         /// <summary>
-        /// <para>The download URL of the WASM plugin binary file.</para>
+        /// <para>The download URL of the WASM plug-in binary file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

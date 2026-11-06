@@ -36,14 +36,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ConsumerPageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the API consumer list.</para>
+        /// <para>Specifies whether to output the consumer list.</para>
         /// </summary>
         [NameInMap("withConsumers")]
         [Validation(Required=false)]
         public bool? WithConsumers { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the general subject list. This parameter applies to both API consumer and API consumer group rules.</para>
+        /// <para>Specifies whether to output the general subject list. This parameter takes effect for both consumer and consumer group rules.</para>
         /// </summary>
         [NameInMap("withSubjects")]
         [Validation(Required=false)]

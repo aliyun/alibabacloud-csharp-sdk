@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListGatewaysShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The gateway ID for exact match query.</para>
+        /// <para>The gateway ID for exact match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-cpv4sqdl****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The gateway name for exact match query.</para>
+        /// <para>The gateway name for exact match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>itemcenter-gateway</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekzq6bzz5uyg2q</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string TagShrink { get; set; }
 
         /// <summary>
-        /// <para>The virtual private cloud (VPC) ID.</para>
+        /// <para>The VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-2zeqrgx6jrlb063y06yjo</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ApiNameLike { get; set; }
 
         /// <summary>
-        /// <para>The consumer group ID. If specified, the authorization rules of the consumer group are queried. At least one of the following parameters must be specified: resourceId, parentResourceId, consumerId, and consumerGroupId.</para>
+        /// <para>The consumer group ID. If specified, the authorization rules of the consumer group are queried. At least one of the resourceId, parentResourceId, consumerId, and consumerGroupId parameters must be specified as a query condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>csg-8c13d2b4f8a1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ConsumerGroupNameLike { get; set; }
 
         /// <summary>
-        /// <para>The consumer ID. At least one of the following parameters must be specified: resourceId, parentResourceId, consumerId, and consumerGroupId.</para>
+        /// <para>The consumer ID. At least one of the resourceId, parentResourceId, consumerId, and consumerGroupId parameters must be specified as a query condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cs-ct21c16m1hkp64hk6qmg</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ConsumerId { get; set; }
 
         /// <summary>
-        /// <para>The consumer name for fuzzy match.</para>
+        /// <para>The consumer name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>consumer-xxx</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to group results by API.</para>
+        /// <para>Specifies whether to group by API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The parent resource ID. At least one of the following parameters must be specified: resourceId, parentResourceId, consumerId, and consumerGroupId.</para>
+        /// <para>The parent resource ID. At least one of the resourceId, parentResourceId, consumerId, and consumerGroupId parameters must be specified as a query condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ha-cn-li942gy8p01</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string PrincipalType { get; set; }
 
         /// <summary>
-        /// <para>The resource ID. At least one of the following parameters must be specified: resourceId, parentResourceId, consumerId, and consumerGroupId.</para>
+        /// <para>The resource ID. At least one of the resourceId, parentResourceId, consumerId, and consumerGroupId parameters must be specified as a query condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ha-cn-li942gy8p03</para>

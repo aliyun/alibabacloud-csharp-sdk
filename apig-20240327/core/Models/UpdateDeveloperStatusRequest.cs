@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateDeveloperStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the portal to which the developer belongs, which is the primary ID of the portal resource. You can obtain this ID from the portalId field in the CreatePortal response or from the portalId field of an item in the ListPortals response.</para>
+        /// <para>The ID of the portal to which the developer belongs. This is the primary ID of the portal resource. You can obtain this ID from the portalId field in the response of CreatePortal or the portalId field of an item in the ListPortals response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>portal-xxxxxxxx</para>

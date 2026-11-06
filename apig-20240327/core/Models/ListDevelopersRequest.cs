@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination cursor. Pass the nextToken value returned in the previous response to retrieve the next page. Do not pass this parameter for the first query.</para>
+        /// <para>The pagination token. Pass the nextToken value returned in the previous response to retrieve the next page. Do not specify this parameter for the first query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>token-xxxxxxxx</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the portal used to filter developers.</para>
+        /// <para>The portal ID used to filter developers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>portal-xxxxxxxx</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string PortalId { get; set; }
 
         /// <summary>
-        /// <para>The status of the developer used to filter developers. Valid values: PENDING, APPROVED, and REJECTED.</para>
+        /// <para>The developer status used to filter developers. Valid values: PENDING, APPROVED, and REJECTED.</para>
         /// 
         /// <b>Example:</b>
         /// <para>APPROVED</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The logon username of the developer used to filter developers.</para>
+        /// <para>The logon username used to filter developers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>developer-demo</para>

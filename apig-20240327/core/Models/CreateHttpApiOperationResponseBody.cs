@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The operation information.</para>
+        /// <para>The API operation information.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateHttpApiOperationResponseBodyData Data { get; set; }
         public class CreateHttpApiOperationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The operation information.</para>
+            /// <para>The API operation information.</para>
             /// </summary>
             [NameInMap("operations")]
             [Validation(Required=false)]
             public List<CreateHttpApiOperationResponseBodyDataOperations> Operations { get; set; }
             public class CreateHttpApiOperationResponseBodyDataOperations : TeaModel {
                 /// <summary>
-                /// <para>The operation ID.</para>
+                /// <para>The API operation ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>op-xxx</para>

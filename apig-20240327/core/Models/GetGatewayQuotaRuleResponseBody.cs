@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetGatewayQuotaRuleResponseBodyData Data { get; set; }
         public class GetGatewayQuotaRuleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The period base timestamp.</para>
+            /// <para>The base timestamp of the period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1745846400000</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? BaseTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The number of API consumers associated with the rule.</para>
+            /// <para>The number of consumers associated with the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? ConsumerCount { get; set; }
 
             /// <summary>
-            /// <para>The list of subjects (API consumers) bound to this rule.</para>
+            /// <para>The list of subjects (consumers) bound to this rule.</para>
             /// </summary>
             [NameInMap("consumers")]
             [Validation(Required=false)]
             public List<GetGatewayQuotaRuleResponseBodyDataConsumers> Consumers { get; set; }
             public class GetGatewayQuotaRuleResponseBodyDataConsumers : TeaModel {
                 /// <summary>
-                /// <para>The subject (API consumer) ID.</para>
+                /// <para>The subject (consumer) ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c-aaa</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The subject (API consumer) name.</para>
+                /// <para>The subject (consumer) name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>consumer-a</para>
@@ -77,6 +77,26 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Name { get; set; }
 
             }
+
+            /// <summary>
+            /// <para>The reset time of the current cycle, in RFC 3339 format.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-10-25T00:00:00Z</para>
+            /// </summary>
+            [NameInMap("currentCycleResetAt")]
+            [Validation(Required=false)]
+            public string CurrentCycleResetAt { get; set; }
+
+            /// <summary>
+            /// <para>The number of days in a custom period. This parameter is returned only when windowAlignment is set to epoch. Valid values: 1 to 106751. This parameter is not returned for natural periods.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
+            /// </summary>
+            [NameInMap("periodMultiplier")]
+            [Validation(Required=false)]
+            public long? PeriodMultiplier { get; set; }
 
             /// <summary>
             /// <para>The quota period type.</para>
@@ -149,7 +169,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? SubjectCount { get; set; }
 
             /// <summary>
-            /// <para>The rule subject type. Valid values: consumer and consumer_group.</para>
+            /// <para>The subject type of the rule. Valid values: consumer and consumer_group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>consumer_group</para>
@@ -159,7 +179,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string SubjectType { get; set; }
 
             /// <summary>
-            /// <para>The list of general subjects bound to this rule. Returned only when withSubjects is set to true.</para>
+            /// <para>The list of general subjects bound to this rule. This parameter is returned only when withSubjects is set to true.</para>
             /// </summary>
             [NameInMap("subjects")]
             [Validation(Required=false)]
@@ -198,7 +218,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The time zone corresponding to the calendar period, in UTC+x format.</para>
+            /// <para>The time zone corresponding to the natural period, in UTC+x format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GMT+8</para>

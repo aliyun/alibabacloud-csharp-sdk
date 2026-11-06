@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetDeveloperResponseBodyData Data { get; set; }
         public class GetDeveloperResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The developer ID. This ID can be used to identify the developer in API operations such as SetHiMarketDeveloperStatus and DeleteHiMarketDeveloper.</para>
+            /// <para>The developer ID. You can use it to identify the developer in API operations such as SetHiMarketDeveloperStatus and DeleteHiMarketDeveloper.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev-xxxxxxxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string DeveloperId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the portal to which the developer belongs. This ID can be used to identify the portal in API operations such as GetPortal, UpdatePortal, and DeletePortal.</para>
+            /// <para>The ID of the portal to which the developer belongs. You can use it to identify the portal in API operations such as GetPortal, UpdatePortal, and DeletePortal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>portal-xxxxxxxx</para>

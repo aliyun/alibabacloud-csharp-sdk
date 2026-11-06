@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response struct.</para>
+        /// <para>The response structure.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateAndAttachPolicyResponseBodyData Data { get; set; }
         public class CreateAndAttachPolicyResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The attachment information.</para>
+            /// <para>The attachment relationship information.</para>
             /// </summary>
             [NameInMap("attachment")]
             [Validation(Required=false)]

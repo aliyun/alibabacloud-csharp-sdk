@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ConsumerId { get; set; }
 
                 /// <summary>
-                /// <para>The description of the consumer.</para>
+                /// <para>The consumer description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Test consumer</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public bool? IsPrimary { get; set; }
 
                 /// <summary>
-                /// <para>The name of the consumer.</para>
+                /// <para>The consumer name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>consumer-1</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. An empty value indicates that the last page has been reached.</para>
+        /// <para>The cursor for the next page. An empty value indicates that the last page has been reached.</para>
         /// 
         /// <b>Example:</b>
         /// <para>token-xxxxxxxx</para>

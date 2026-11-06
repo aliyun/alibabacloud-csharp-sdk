@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public UpdateGatewayMaintenancePeriodRequestMaintenancePeriod MaintenancePeriod { get; set; }
         public class UpdateGatewayMaintenancePeriodRequestMaintenancePeriod : TeaModel {
             /// <summary>
-            /// <para>The O&amp;M end time (HH:mm).</para>
+            /// <para>The end time of the O&amp;M window (HH:mm).</para>
             /// 
             /// <b>Example:</b>
             /// <para>02:00</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The O&amp;M start time (HH:mm).</para>
+            /// <para>The start time of the O&amp;M window (HH:mm).</para>
             /// 
             /// <b>Example:</b>
             /// <para>02:00</para>

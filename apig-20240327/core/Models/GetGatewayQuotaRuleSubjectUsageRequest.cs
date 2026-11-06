@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? FilterFailedRequests { get; set; }
 
         /// <summary>
-        /// <para>The page number of the detailed consumption (request) records for the consumer subject within the period.</para>
+        /// <para>The page number of the detailed consumption (request) records for the consumption subject within the period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for the detailed consumption (request) records of the consumer subject within the period. Maximum value: 10.</para>
+        /// <para>The number of entries per page for the detailed consumption (request) records of the consumption subject within the period. Maximum value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

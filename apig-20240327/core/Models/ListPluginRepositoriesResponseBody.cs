@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<ListPluginRepositoriesResponseBodyDataRepositories> Repositories { get; set; }
             public class ListPluginRepositoriesResponseBodyDataRepositories : TeaModel {
                 /// <summary>
-                /// <para>The Codeup repository ID (numeric string).</para>
+                /// <para>The Codeup repository ID, which is a numeric string.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12345678</para>

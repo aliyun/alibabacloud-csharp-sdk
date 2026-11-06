@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The query result of the gateway list.</para>
+        /// <para>The gateway list query results.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -36,8 +36,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <summary>
                 /// <para>The billing method. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>POSTPAY: pay-as-you-go.</description></item>
-                /// <item><description>PREPAY: subscription.</description></item>
+                /// <item><description>POSTPAY: Pay-as-you-go.</description></item>
+                /// <item><description>PREPAY: Subscription.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <summary>
                 /// <para>The source from which the gateway was created. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Console: the console.</description></item>
+                /// <item><description>Console: The console.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -71,6 +71,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? CreateTimestamp { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether elastic scaling is enabled. A value of true indicates that elastic scaling is enabled. A value of false indicates that elastic scaling is disabled. A value of null or an empty value indicates that the status is unknown. This parameter is for query and display purposes only.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
+                [NameInMap("elasticEnabled")]
+                [Validation(Required=false)]
+                public bool? ElasticEnabled { get; set; }
+
+                /// <summary>
                 /// <para>The expiration timestamp for subscription instances. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
@@ -81,12 +91,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? ExpireTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The gateway instance edition. Valid values:</para>
+                /// <para>The edition of the gateway instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Professional: standard instance.</para>
-                /// </description></item>
-                /// <item><description><para>Serverless: Serverless instance.</para>
-                /// </description></item>
+                /// <item><description>Professional: Regular instance.</description></item>
+                /// <item><description>Serverless: Serverless instance.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -110,9 +118,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The running mode of the AI MultiTenantServerless gateway. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>ENTERPRISE: Enterprise Edition.</description></item>
-                /// <item><description>STANDARD: Standard Edition.</description></item>
+                /// <item><description>STANDARD: Standard Edition.
+                /// This parameter is returned only for AI MultiTenantServerless gateways.</description></item>
                 /// </list>
-                /// <para>This parameter is returned only for AI MultiTenantServerless gateways.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ENTERPRISE</para>
@@ -142,7 +150,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public bool? Legacy { get; set; }
 
                 /// <summary>
-                /// <para>The list of gateway ingress addresses.</para>
+                /// <para>The list of ingress addresses for the gateway.</para>
                 /// </summary>
                 [NameInMap("loadBalancers")]
                 [Validation(Required=false)]
@@ -159,7 +167,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Address { get; set; }
 
                     /// <summary>
-                    /// <para>The protocol version. Valid values:</para>
+                    /// <para>The IP version. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>ipv4: IPv4.</description></item>
                     /// <item><description>ipv6: IPv6.</description></item>
@@ -175,8 +183,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <summary>
                     /// <para>The load balancing address type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Internet: public network.</description></item>
-                    /// <item><description>Intranet: private network.</description></item>
+                    /// <item><description>Internet: Internet.</description></item>
+                    /// <item><description>Intranet: Private network.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -187,7 +195,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string AddressType { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether this is the default ingress address of the gateway.</para>
+                    /// <para>Indicates whether the address is the default ingress address of the gateway.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -211,7 +219,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public List<string> Ipv6Addresses { get; set; }
 
                     /// <summary>
-                    /// <para>The load balancing instance ID.</para>
+                    /// <para>The load balancing ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>nlb-xqwioje1c91r***</para>
@@ -223,7 +231,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <summary>
                     /// <para>The load balancing provisioning pattern of the gateway. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Managed: managed by the cloud-native API gateway.</description></item>
+                    /// <item><description>Managed: Managed by Cloud-native API Gateway.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -234,7 +242,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Mode { get; set; }
 
                     /// <summary>
-                    /// <para>The list of listening ports.</para>
+                    /// <para>The list of listened ports.</para>
                     /// </summary>
                     [NameInMap("ports")]
                     [Validation(Required=false)]
@@ -253,8 +261,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                         /// <summary>
                         /// <para>The protocol. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>TCP.</description></item>
-                        /// <item><description>UDP.</description></item>
+                        /// <item><description>TCP: TCP.</description></item>
+                        /// <item><description>UDP: UDP.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -267,10 +275,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     }
 
                     /// <summary>
-                    /// <para>The status of the load balancing instance. Valid values:</para>
+                    /// <para>The load balancing status. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Ready: active.</description></item>
-                    /// <item><description>NotCreate: No instance is associated.</description></item>
+                    /// <item><description>Ready: Active.</description></item>
+                    /// <item><description>NotCreate: Not associated with an instance.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -283,8 +291,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <summary>
                     /// <para>The load balancing type of the gateway. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>NLB: Network Load Balancer (NLB).</description></item>
-                    /// <item><description>CLB: Classic Load Balancer (CLB).</description></item>
+                    /// <item><description>NLB: Network Load Balancer (NLB) load balancing.</description></item>
+                    /// <item><description>CLB: Classic load balancing.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -307,7 +315,174 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The number of gateway instance nodes.</para>
+                /// <para>The network access configuration of the gateway, including the access ingress type and the security group used by the private endpoint. This parameter is returned only when the gateway is configured with a private ingress.</para>
+                /// </summary>
+                [NameInMap("networkAccessConfig")]
+                [Validation(Required=false)]
+                public ListGatewaysResponseBodyDataItemsNetworkAccessConfig NetworkAccessConfig { get; set; }
+                public class ListGatewaysResponseBodyDataItemsNetworkAccessConfig : TeaModel {
+                    /// <summary>
+                    /// <para>The ID of the security group configured for the private endpoint. The security group belongs to the VPC selected by the user and is a non-managed security group.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>sg-bp1example123456789</para>
+                    /// </summary>
+                    [NameInMap("endpointSecurityGroupId")]
+                    [Validation(Required=false)]
+                    public string EndpointSecurityGroupId { get; set; }
+
+                    /// <summary>
+                    /// <para>The gateway access ingress type.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>UnionSearchMCP</para>
+                    /// </summary>
+                    [NameInMap("type")]
+                    [Validation(Required=false)]
+                    public string Type { get; set; }
+
+                }
+
+                /// <summary>
+                /// <para>The private connection information of the gateway, including the endpoint ID, access domain name, connection status, and zone information.</para>
+                /// </summary>
+                [NameInMap("privateLink")]
+                [Validation(Required=false)]
+                public ListGatewaysResponseBodyDataItemsPrivateLink PrivateLink { get; set; }
+                public class ListGatewaysResponseBodyDataItemsPrivateLink : TeaModel {
+                    /// <summary>
+                    /// <para>The connection status between the private endpoint and the endpoint service.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Connected</para>
+                    /// </summary>
+                    [NameInMap("connectionStatus")]
+                    [Validation(Required=false)]
+                    public string ConnectionStatus { get; set; }
+
+                    /// <summary>
+                    /// <para>The endpoint domain name used for connection configuration.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>ep-bp1example123456789.epsrv-bp1example123456789.cn-hangzhou.privatelink.aliyuncs.com</para>
+                    /// </summary>
+                    [NameInMap("endpointDomain")]
+                    [Validation(Required=false)]
+                    public string EndpointDomain { get; set; }
+
+                    /// <summary>
+                    /// <para>The endpoint ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>ep-bp1example123456789</para>
+                    /// </summary>
+                    [NameInMap("endpointId")]
+                    [Validation(Required=false)]
+                    public string EndpointId { get; set; }
+
+                    /// <summary>
+                    /// <para>The ID of the security group configured for the private endpoint.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>sg-bp1example123456789</para>
+                    /// </summary>
+                    [NameInMap("endpointSecurityGroupId")]
+                    [Validation(Required=false)]
+                    public string EndpointSecurityGroupId { get; set; }
+
+                    /// <summary>
+                    /// <para>The status of the private endpoint.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Active</para>
+                    /// </summary>
+                    [NameInMap("endpointStatus")]
+                    [Validation(Required=false)]
+                    public string EndpointStatus { get; set; }
+
+                    /// <summary>
+                    /// <para>The error code of the most recent fault that occurred during the private network ingress creation or delete procedure. This parameter is not returned if no error message is available.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Forbidden.RAM</para>
+                    /// </summary>
+                    [NameInMap("lastErrorCode")]
+                    [Validation(Required=false)]
+                    public string LastErrorCode { get; set; }
+
+                    /// <summary>
+                    /// <para>The description of the most recent fault that occurred during the private network ingress creation or delete procedure. You can use this description along with the error code to troubleshoot the issue. This parameter is not returned if no error message is available.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>private ingress CheckProductOpen failed (Forbidden.RAM)</para>
+                    /// </summary>
+                    [NameInMap("lastErrorMessage")]
+                    [Validation(Required=false)]
+                    public string LastErrorMessage { get; set; }
+
+                    /// <summary>
+                    /// <para>The time when the system last obtained the status of the private endpoint. The time is in RFC 3339 format, such as 2026-11-02T10:00:00Z. This parameter is not returned if the status has not been obtained.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2026-11-02T10:00:00Z</para>
+                    /// </summary>
+                    [NameInMap("observedAt")]
+                    [Validation(Required=false)]
+                    public string ObservedAt { get; set; }
+
+                    /// <summary>
+                    /// <para>Indicates whether the private endpoint may continue to incur charges. A value of true indicates that the endpoint has been created and its release has not been confirmed. A value of false indicates that there is no charge prompt. Actual charges are subject to the bill.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
+                    [NameInMap("resourceMayBeCharged")]
+                    [Validation(Required=false)]
+                    public bool? ResourceMayBeCharged { get; set; }
+
+                    /// <summary>
+                    /// <para>The current processing stage of the private ingress. A value of Ready indicates that the private ingress is ready.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Ready</para>
+                    /// </summary>
+                    [NameInMap("stage")]
+                    [Validation(Required=false)]
+                    public string Stage { get; set; }
+
+                    /// <summary>
+                    /// <para>The zone names.</para>
+                    /// </summary>
+                    [NameInMap("zones")]
+                    [Validation(Required=false)]
+                    public List<ListGatewaysResponseBodyDataItemsPrivateLinkZones> Zones { get; set; }
+                    public class ListGatewaysResponseBodyDataItemsPrivateLinkZones : TeaModel {
+                        /// <summary>
+                        /// <para>The status of the endpoint in the zone.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>200</para>
+                        /// </summary>
+                        [NameInMap("status")]
+                        [Validation(Required=false)]
+                        public string Status { get; set; }
+
+                        /// <summary>
+                        /// <para>The zone ID.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>cn-beijing</para>
+                        /// </summary>
+                        [NameInMap("zoneId")]
+                        [Validation(Required=false)]
+                        public string ZoneId { get; set; }
+
+                    }
+
+                }
+
+                /// <summary>
+                /// <para>The number of nodes in the gateway instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -348,7 +523,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <summary>
                 /// <para>The gateway specification. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>apigw.small.x1: small specification.</description></item>
+                /// <item><description>apigw.small.x1: Small specification.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -361,15 +536,15 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <summary>
                 /// <para>The gateway status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Running: The gateway is running.</description></item>
-                /// <item><description>Creating: The gateway is being created.</description></item>
-                /// <item><description>CreateFailed: The gateway failed to be created.</description></item>
-                /// <item><description>Upgrading: The gateway is being upgraded.</description></item>
-                /// <item><description>UpgradeFailed: The gateway failed to be upgraded.</description></item>
-                /// <item><description>Restarting: The gateway is being restarted.</description></item>
-                /// <item><description>RestartFailed: The gateway failed to be restarted.</description></item>
-                /// <item><description>Deleting: The gateway is being released.</description></item>
-                /// <item><description>DeleteFailed: The gateway failed to be released.</description></item>
+                /// <item><description>Running: Running.</description></item>
+                /// <item><description>Creating: Creating.</description></item>
+                /// <item><description>CreateFailed: Creation failed.</description></item>
+                /// <item><description>Upgrading: Upgrading.</description></item>
+                /// <item><description>UpgradeFailed: Upgrade failed.</description></item>
+                /// <item><description>Restarting: Restarting.</description></item>
+                /// <item><description>RestartFailed: Restart failed.</description></item>
+                /// <item><description>Deleting: Releasing.</description></item>
+                /// <item><description>DeleteFailed: Release failed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -380,7 +555,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The list of second-level domain names.</para>
+                /// <para>The list of subdomains.</para>
                 /// </summary>
                 [NameInMap("subDomainInfos")]
                 [Validation(Required=false)]
@@ -416,7 +591,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The target version of the gateway. When this value differs from version, a version upgrade can be performed.</para>
+                /// <para>The target version of the gateway. If this value differs from the current version, you can upgrade the gateway.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2.0.2</para>
@@ -544,7 +719,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of gateways.</para>
+            /// <para>The total count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>

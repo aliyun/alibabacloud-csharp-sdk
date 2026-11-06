@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public CreateGatewayResponseBodyData Data { get; set; }
         public class CreateGatewayResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The gateway ID.</para>
+            /// <para>The ID of the gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gw-cq2vundlhtg***</para>

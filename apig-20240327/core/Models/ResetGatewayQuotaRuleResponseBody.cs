@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The request data content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;key\&quot;: \&quot;value\&quot;}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ResetGatewayQuotaRuleResponseBodyData Data { get; set; }
         public class ResetGatewayQuotaRuleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the write request is accepted by the system. A value of false typically indicates a retryable scenario, such as an unconfirmed conflict overwrite.</para>
+            /// <para>Indicates whether the semantics of the current write request can be accepted by the system. A value of false is common in retryable scenarios such as unconfirmed conflict overwrites.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public ResetGatewayQuotaRuleResponseBodyDataConflictPreview ConflictPreview { get; set; }
             public class ResetGatewayQuotaRuleResponseBodyDataConflictPreview : TeaModel {
                 /// <summary>
-                /// <para>The hash of the conflict snapshot.</para>
+                /// <para>The hash of the conflict.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</para>
@@ -64,12 +64,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<ResetGatewayQuotaRuleResponseBodyDataConflictPreviewItems> Items { get; set; }
                 public class ResetGatewayQuotaRuleResponseBodyDataConflictPreviewItems : TeaModel {
                     /// <summary>
-                    /// <para>The period type of the existing conflicting rule on the subject. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>day: daily.</description></item>
-                    /// <item><description>week: weekly.</description></item>
-                    /// <item><description>month: monthly.</description></item>
-                    /// </list>
+                    /// <para>The period type of the existing conflicting rule on the subject. A value of day, week, or month indicates that the period of the existing conflicting rule on the subject is daily, weekly, or monthly.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>week</para>
@@ -79,11 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConflictPeriodType { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the existing conflicting rule on the subject. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>calendar: The existing conflicting rule uses a calendar period.</description></item>
-                    /// <item><description>epoch: The existing conflicting rule uses a custom period.</description></item>
-                    /// </list>
+                    /// <para>The type of the existing conflicting rule on the subject. A value of calendar indicates that the existing conflicting rule on the subject uses a natural period. A value of epoch indicates that the existing conflicting rule uses a custom period.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>calendar</para>
@@ -93,7 +84,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConflictType { get; set; }
 
                     /// <summary>
-                    /// <para>The consumer ID. You can use subjectId instead.</para>
+                    /// <para>The consumer ID. This parameter can now be uniformly replaced by subjectId.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cs-d82n1g6m1hkm3xxxxxxx</para>
@@ -103,7 +94,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConsumerId { get; set; }
 
                     /// <summary>
-                    /// <para>The consumer name. You can use subjectName instead.</para>
+                    /// <para>The consumer name. This parameter can now be uniformly replaced by subjectName.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>consumer-a</para>
@@ -133,11 +124,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string SubjectName { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the conflicting subject. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>consumer: consumer.</description></item>
-                    /// <item><description>consumer_group: consumer group.</description></item>
-                    /// </list>
+                    /// <para>The type of the conflicting subject. Valid values: consumer and consumer_group.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>consumer</para>
@@ -161,7 +148,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the request is a dry run.</para>
+            /// <para>Indicates whether it is a dry run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -186,7 +173,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The message content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Hello, World!</para>
+        /// <para>Hello, world!</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]

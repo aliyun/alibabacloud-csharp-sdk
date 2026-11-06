@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public CreateChatSessionResponseBodyData Data { get; set; }
         public class CreateChatSessionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The chat session ID. You can use this ID to locate the session in API operations such as UpdateChatSession and DeleteChatSession.</para>
+            /// <para>The ID of the chat session. You can use this ID to locate the session in API operations such as UpdateChatSession and DeleteChatSession.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ses-xxxxxxxx</para>

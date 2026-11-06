@@ -27,21 +27,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public QueryConsumerAuthorizationRulesResponseBodyData Data { get; set; }
         public class QueryConsumerAuthorizationRulesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of consumer authorization rules.</para>
+            /// <para>The list of consumer rules.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<QueryConsumerAuthorizationRulesResponseBodyDataItems> Items { get; set; }
             public class QueryConsumerAuthorizationRulesResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The API information.</para>
+                /// <para>The API information details.</para>
                 /// </summary>
                 [NameInMap("apiInfo")]
                 [Validation(Required=false)]
                 public HttpApiApiInfo ApiInfo { get; set; }
 
                 /// <summary>
-                /// <para>The consumer authorization rule ID.</para>
+                /// <para>The ID of the consumer authorization rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>car-csgeka5lhtggrjcprok0</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ConsumerId { get; set; }
 
                 /// <summary>
-                /// <para>The consumer information.</para>
+                /// <para>The consumer information details.</para>
                 /// </summary>
                 [NameInMap("consumerInfo")]
                 [Validation(Required=false)]
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? CreateTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The deployment status of the API in the current environment.</para>
+                /// <para>The publish status of the API in the current environment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The resource information.</para>
+                /// <para>The resource information details.</para>
                 /// </summary>
                 [NameInMap("resourceInfo")]
                 [Validation(Required=false)]

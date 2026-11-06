@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public CreateHttpApiResponseBodyData Data { get; set; }
         public class CreateHttpApiResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>HTTP API ID。</para>
+            /// <para>The HTTP API ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>api-xxx</para>
