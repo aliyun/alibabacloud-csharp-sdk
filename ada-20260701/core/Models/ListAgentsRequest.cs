@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The next page token returned in the previous response.</para>
+        /// <para>The next token returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJwYWdlIjoyfQ.example</para>
@@ -60,17 +60,17 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. Matches the name, display name, or description.</para>
+        /// <para>The search keyword used to match the name, display name, or description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>code review</para>
+        /// <para>Code review</para>
         /// </summary>
         [NameInMap("Q")]
         [Validation(Required=false)]
         public string Q { get; set; }
 
         /// <summary>
-        /// <para>Filters agents by runtime label.</para>
+        /// <para>Filters agents by the runtime tag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen</para>

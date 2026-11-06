@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
 {
     public class CreateTransitUploadPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The object storage key, which is also the <c>key</c> field in the PostObject form.</para>
+        /// <para>The object storage key, which is also the <c>key</c> in the PostObject form.</para>
         /// 
         /// <b>Example:</b>
         /// <para>skill-bundle/tenant-demo/user-demo/20260904120000_0123456789abcdef0123456789abcdef.zip</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string FilePath { get; set; }
 
         /// <summary>
-        /// <para>The upload policy object. For the complete list of subfields, see the following table.</para>
+        /// <para>The upload policy object. For complete sub-fields, see the following table.</para>
         /// </summary>
         [NameInMap("PolicyInfo")]
         [Validation(Required=false)]
         public CreateTransitUploadPolicyResponseBodyPolicyInfo PolicyInfo { get; set; }
         public class CreateTransitUploadPolicyResponseBodyPolicyInfo : TeaModel {
             /// <summary>
-            /// <para>The <c>OSSAccessKeyId</c> field in the PostObject form. Protect this value together with the entire <c>PolicyInfo</c>.</para>
+            /// <para>The <c>OSSAccessKeyId</c> in the PostObject form. Keep it secure along with the entire <c>PolicyInfo</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <REDACTED>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
             public string Dir { get; set; }
 
             /// <summary>
-            /// <para>The target URL to which the client sends the PostObject request.</para>
+            /// <para>The destination URL for the client to execute the PostObject request.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://upload.example.invalid">https://upload.example.invalid</a></para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
             public string Host { get; set; }
 
             /// <summary>
-            /// <para>The Base64-encoded PostObject upload policy. Protect this value together with the entire <c>PolicyInfo</c>.</para>
+            /// <para>The Base64-encoded PostObject upload policy. Keep it secure along with the entire <c>PolicyInfo</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <REDACTED>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
             public string Policy { get; set; }
 
             /// <summary>
-            /// <para>The <c>x-oss-security-token</c> field in the PostObject form when STS credentials are used. This field may be empty when STS is not used. This field contains sensitive authorization information.</para>
+            /// <para>When STS credentials are used, this is the <c>x-oss-security-token</c> in the PostObject form. It may be empty if STS is not used. This field contains sensitive authorization information.</para>
             /// 
             /// <b>Example:</b>
             /// <REDACTED>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
             public string SecurityToken { get; set; }
 
             /// <summary>
-            /// <para>The signature field in the PostObject form. This field contains sensitive authorization information.</para>
+            /// <para>The signature of the PostObject form. This field contains sensitive authorization information.</para>
             /// 
             /// <b>Example:</b>
             /// <REDACTED>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the upload policy is generated. A successful response always returns <c>true</c>. An error response is returned upon failure.</para>
+        /// <para>Indicates whether the upload policy is successfully generated. A successful response always returns <c>true</c>. An error response is returned upon failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the newly created Transit record, used for subsequent queries and storage operations.</para>
+        /// <para>The ID of the newly created Transit record, which is used for subsequent queries and storage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>transit_0123456789abcdef0123456789abcdef</para>

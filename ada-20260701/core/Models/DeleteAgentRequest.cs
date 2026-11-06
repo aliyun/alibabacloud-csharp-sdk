@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
 {
     public class DeleteAgentRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the Agent to delete.</para>
+        /// <para>The name of the agent to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

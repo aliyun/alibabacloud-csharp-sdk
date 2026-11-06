@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
 {
     public class CreateSkillResponseBody : TeaModel {
         /// <summary>
-        /// <para>The unique identifier of the Skill.</para>
+        /// <para>The unique identifier of the skill.</para>
         /// 
         /// <b>Example:</b>
         /// <para>code-review</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Skill ID。</para>
+        /// <para>The skill ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>skill_example123</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string SkillId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the Skill and its body or bundle are fully created and readable. A value of true is returned upon success. Business failures are returned as error responses.</para>
+        /// <para>Indicates whether the operation is successful. A value of true is returned when the skill and its body or bundle are fully created and readable. Business failures are indicated by error responses.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The time when the Skill was last updated after creation. The value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The update time after the skill is created. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1760000100000</para>

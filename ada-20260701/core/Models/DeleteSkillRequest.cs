@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
 {
     public class DeleteSkillRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the Skill to delete.</para>
+        /// <para>The name of the skill to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

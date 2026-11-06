@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
 {
     public class GetSkillRequest : TeaModel {
         /// <summary>
-        /// <para>The Skill name.</para>
+        /// <para>The name of the skill.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string Network { get; set; }
 
         /// <summary>
-        /// <para>The release history version number to query. If omitted, the current Skill main record is returned.</para>
+        /// <para>Specifies the published history version number to query. If omitted, the current main record of the skill is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

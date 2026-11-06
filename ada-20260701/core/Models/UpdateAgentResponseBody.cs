@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
 {
     public class UpdateAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>Agent ID。</para>
+        /// <para>The agent ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>agent_00000000000000000000000000000001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>The Agent name.</para>
+        /// <para>The name of the agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>code-review-agent</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The request ID, used for Tracing Analysis and troubleshooting.</para>
+        /// <para>The request ID, which is used for Tracing Analysis and troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0A1B2C3D-4E5F-6789-ABCD-EF0123456789</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the Agent was successfully updated. A successful response always returns <c>true</c>. A failure returns an error response.</para>
+        /// <para>Indicates whether the agent is updated. A success response always returns <c>true</c>. An error response is returned upon failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The most recent update time, as a UNIX timestamp in milliseconds.</para>
+        /// <para>The most recent update time. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1788332700000</para>

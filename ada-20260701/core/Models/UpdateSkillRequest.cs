@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
 {
     public class UpdateSkillRequest : TeaModel {
         /// <summary>
-        /// <para>The updated description of the Skill.</para>
+        /// <para>The updated description of the skill.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>A Skill for performing code reviews, security checks, and risk alerts</para>
+        /// <para>A skill used for code review, security checks, and risk alerts</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public long? ExpectedVersion { get; set; }
 
         /// <summary>
-        /// <para>The updated Skill metadata. The JSON object is replaced as a whole. The content supports exactly one of Transit ID, bundleUrl, or skillMd.</para>
+        /// <para>The updated metadata of the skill. The JSON object is replaced as a whole. The content supports one of the following: Transit ID, bundleUrl, or skillMd.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;transitId&quot;:&quot;transit_example456&quot;}</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public object Metadata { get; set; }
 
         /// <summary>
-        /// <para>The name of the Skill to update. This parameter is used only to locate the Skill and cannot be used to modify the name.</para>
+        /// <para>The name of the skill to be updated. This parameter is only used to locate the skill and cannot be used to modify the name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

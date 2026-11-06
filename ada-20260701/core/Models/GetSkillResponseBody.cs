@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
 {
     public class GetSkillResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the current caller can delete the Skill.</para>
+        /// <para>Indicates whether the current caller can delete the skill.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public bool? CanDelete { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current caller can modify the Skill.</para>
+        /// <para>Indicates whether the current caller can modify the skill.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public bool? CanModify { get; set; }
 
         /// <summary>
-        /// <para>The creation time of the Skill, in Unix millisecond timestamp.</para>
+        /// <para>The creation time of the skill. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1760000000000</para>
@@ -40,17 +40,17 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public long? CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The description in the current Skill main record.</para>
+        /// <para>The description in the current main record of the skill.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>A Skill for performing code review and risk alerts</para>
+        /// <para>A skill for code review and risk alerting</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The bundle download URL. Returned when a network type is specified, an accessible Artifact exists, and pre-signing succeeds.</para>
+        /// <para>The download URL of the bundle. This field is returned when the network is specified, an accessible artifact exists, and the pre-signing is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/artifacts/code-review-v2.zip?signature=example">https://example.com/artifacts/code-review-v2.zip?signature=example</a></para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string DownloadUrl { get; set; }
 
         /// <summary>
-        /// <para>The network type used to generate the download URL.</para>
+        /// <para>The network type actually used to generate the download URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>public</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string DownloadUrlNetwork { get; set; }
 
         /// <summary>
-        /// <para>The Skill icon URL, sourced from the iconUrl in the metadata. This field may be empty if no icon is configured.</para>
+        /// <para>The URL of the skill icon, which is derived from the iconUrl in the metadata. This field may be empty if no icon is configured.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/icons/code-review.png">https://example.com/icons/code-review.png</a></para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string IconUrl { get; set; }
 
         /// <summary>
-        /// <para>The Skill metadata, mapped to the metadata field in the backend response.</para>
+        /// <para>The metadata of the skill, which is mapped to the metadata field in the backend response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;skillMd&quot;:&quot;# Code Review\nCheck code quality.&quot;,&quot;artifactId&quot;:&quot;artifact_example003&quot;}</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public object Metadata { get; set; }
 
         /// <summary>
-        /// <para>The Skill name.</para>
+        /// <para>The name of the skill.</para>
         /// 
         /// <b>Example:</b>
         /// <para>code-review</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the Skill is an official Skill.</para>
+        /// <para>Indicates whether the skill is an official skill.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public bool? Official { get; set; }
 
         /// <summary>
-        /// <para>The request ID, used for Tracing Analysis and troubleshooting.</para>
+        /// <para>The request ID, which is used for Tracing Analysis and troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0A1B2C3D-4E5F-6789-ABCD-EF0123456789</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Skill ID。</para>
+        /// <para>The skill ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>skill_example123</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string SkillId { get; set; }
 
         /// <summary>
-        /// <para>The current Skill status. Common values are DRAFT and PUBLISHED.</para>
+        /// <para>The current status of the skill. Common values include DRAFT and PUBLISHED.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PUBLISHED</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The update time of the Skill, in Unix millisecond timestamp.</para>
+        /// <para>The update time of the skill. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1760000300000</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public long? UpdatedAt { get; set; }
 
         /// <summary>
-        /// <para>The visibility of the current Skill. Common values are user and tenant.</para>
+        /// <para>The visibility of the current skill. Common values include user and tenant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
 {
     public class ListSkillsRequest : TeaModel {
         /// <summary>
-        /// <para>Filters Skills by creator ID.</para>
+        /// <para>Filters the skills by creator ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example-user</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string CreatorId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for cursor-based pagination. Valid values: 1 to 100. Default value: <c>20</c>. If explicitly specified, cursor-based pagination takes precedence.</para>
+        /// <para>The number of entries per page for cursor-based pagination. Valid values: 1 to 100. Default value: 20. If you explicitly specify this parameter, cursor-based pagination takes precedence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token returned by the server for the next page. Do not pass this parameter for the first query. For subsequent queries, use the value returned in the previous response.</para>
+        /// <para>The next token returned by the server. Do not pass this parameter for the first query. For subsequent queries, use the value from the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJzIjoiZDc3ZGRhYmE3MDMwYWM1NCIsInAiOjJ9.vkKVySx9G26993sTNLZqwGSmgciRsrRm2SgsjOMJoCQ</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number for compatible page-number-based pagination. Pages start from 1. Default value: <c>1</c>.</para>
+        /// <para>The compatible page number parameter for page number-based pagination. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for compatible page-number-based pagination. Valid values: 1 to 100. Default value: <c>20</c>.</para>
+        /// <para>The compatible number of entries per page for page number-based pagination. Valid values: 1 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Performs a fuzzy match on the Skill name or description.</para>
+        /// <para>Performs a fuzzy match on the skill name or description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>review</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string Q { get; set; }
 
         /// <summary>
-        /// <para>The query scope for Skills. Valid values: <c>SYSTEM</c> and <c>CUSTOM</c>. If omitted, both official and custom Skills are queried.</para>
+        /// <para>The query scope for skills. Valid values: <c>SYSTEM</c> and <c>CUSTOM</c>. If this parameter is omitted, both official and custom skills are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CUSTOM</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>Filters Skills by visibility. Common values are <c>user</c> and <c>tenant</c>.</para>
+        /// <para>Filters skills by visibility. Common values are <c>user</c> and <c>tenant</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user</para>

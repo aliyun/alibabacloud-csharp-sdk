@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
 {
     public class ListAgentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of agent summaries. For field details, see &quot;Supplementary description of response parameters&quot;.</para>
+        /// <para>The list of agent summaries. For the fields of each element, see the supplementary description of response parameters.</para>
         /// </summary>
         [NameInMap("Agents")]
         [Validation(Required=false)]
         public List<object> Agents { get; set; }
 
         /// <summary>
-        /// <para>The actual cursor-based pagination size used.</para>
+        /// <para>The actual page size used for cursor-based pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The next page token. An empty string is returned if there is no next page.</para>
+        /// <para>The next token. An empty string is returned if no next page exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJwYWdlIjoyfQ.example</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of agents that match the filter conditions.</para>
+        /// <para>The total number of agents that meet the filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

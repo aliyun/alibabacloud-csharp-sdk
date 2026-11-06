@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
 {
     public class UpdateSkillResponseBody : TeaModel {
         /// <summary>
-        /// <para>The Skill name.</para>
+        /// <para>The name of the skill.</para>
         /// 
         /// <b>Example:</b>
         /// <para>code-review</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Skill ID。</para>
+        /// <para>The skill ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>skill_example123</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public string SkillId { get; set; }
 
         /// <summary>
-        /// <para>Returns <c>true</c> when the Skill update and optional bundle replacement have been fully committed and confirmed by read-back.</para>
+        /// <para>Indicates whether the operation is successful. Returns <c>true</c> if the skill update and optional package replacement have been fully submitted and confirmed by read-back.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ada20260701.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The time when the Skill was updated, in UNIX millisecond timestamp.</para>
+        /// <para>The time when the skill was updated. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1760000200000</para>
