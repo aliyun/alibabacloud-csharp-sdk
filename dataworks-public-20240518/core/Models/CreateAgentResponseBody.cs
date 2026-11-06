@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public CreateAgentResponseBodyAgent Agent { get; set; }
         public class CreateAgentResponseBodyAgent : TeaModel {
             /// <summary>
-            /// <para>已保存的套件引用。官方资源返回来源及目录 ID；发布后的制品版本由 PackageVersion 表示。</para>
+            /// <para>The saved suite references. Official resources return the source and directory ID. The published artifact version is represented by PackageVersion.</para>
             /// </summary>
             [NameInMap("ExpertSuites")]
             [Validation(Required=false)]
             public List<CreateAgentResponseBodyAgentExpertSuites> ExpertSuites { get; set; }
             public class CreateAgentResponseBodyAgentExpertSuites : TeaModel {
                 /// <summary>
-                /// <para>创建时不返回；请使用 GetAgent 显式查询已发布版本获取固定的官方套件制品版本。</para>
+                /// <para>This field is not returned during creation. Use GetAgent to explicitly query the published version to obtain the fixed official suite artifact version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.1.0.202610211408</para>
@@ -34,6 +34,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string PackageVersion { get; set; }
 
                 /// <summary>
+                /// <para>The source of the expert suite.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>OFFICIAL</para>
                 /// </summary>
@@ -42,6 +44,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Source { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the expert suite.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>dataworks-data-analysis-extension</para>
                 /// </summary>
@@ -50,6 +54,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string SuiteId { get; set; }
 
                 /// <summary>
+                /// <para>The release version number of the custom suite.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -57,29 +63,37 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 [Validation(Required=false)]
                 public int? Version { get; set; }
 
+                /// <summary>
+                /// <para>The saved version selection strategy is returned only for personal or enterprise resources and is mutually exclusive with the fixed integer Version. It does not represent the specific revision actually loaded in the session. This field is not returned for official resources.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>^1.2.3</para>
+                /// </summary>
+                [NameInMap("VersionSelector")]
+                [Validation(Required=false)]
+                public string VersionSelector { get; set; }
+
             }
 
             /// <summary>
-            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
-            /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
+            /// <para>The creation time, expressed as a timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1780555634000</para>
             /// </summary>
             [NameInMap("GmtCreateTime")]
             [Validation(Required=false)]
-            public string GmtCreateTime { get; set; }
+            public long? GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The last modification time. The value is a UNIX timestamp in milliseconds.</para>
-            /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
+            /// <para>The last modification time, expressed as a timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1780555634000</para>
             /// </summary>
             [NameInMap("GmtModifiedTime")]
             [Validation(Required=false)]
-            public string GmtModifiedTime { get; set; }
+            public long? GmtModifiedTime { get; set; }
 
             /// <summary>
             /// <para>The name of the agent.</para>
@@ -92,13 +106,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>已保存的 Skill 引用；官方 Skill 在 Agent 发布后返回固定的 PackageVersion。</para>
+            /// <para>The saved skill references. Official skills return a fixed PackageVersion after the agent is published.</para>
             /// </summary>
             [NameInMap("Skills")]
             [Validation(Required=false)]
             public List<CreateAgentResponseBodyAgentSkills> Skills { get; set; }
             public class CreateAgentResponseBodyAgentSkills : TeaModel {
                 /// <summary>
+                /// <para>The name of the custom skill.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>my-business-skill</para>
                 /// </summary>
@@ -107,7 +123,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>创建时不返回；请使用 GetAgent 显式查询已发布版本获取固定的官方制品版本。</para>
+                /// <para>This field is not returned during creation. Use GetAgent to explicitly query the published version to obtain the fixed official artifact version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.6.0.202608201110</para>
@@ -117,6 +133,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string PackageVersion { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the official skill.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>dataworks-semantic</para>
                 /// </summary>
@@ -125,6 +143,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string SkillId { get; set; }
 
                 /// <summary>
+                /// <para>The source of the skill.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>OFFICIAL</para>
                 /// </summary>
@@ -133,12 +153,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Source { get; set; }
 
                 /// <summary>
+                /// <para>The release version number of the custom skill.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
                 public int? Version { get; set; }
+
+                /// <summary>
+                /// <para>The saved version selection strategy is returned only for personal or enterprise resources and is mutually exclusive with the fixed integer Version. It does not represent the specific revision actually loaded in the session. This field is not returned for official resources.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>^1.2.3</para>
+                /// </summary>
+                [NameInMap("VersionSelector")]
+                [Validation(Required=false)]
+                public string VersionSelector { get; set; }
 
             }
 

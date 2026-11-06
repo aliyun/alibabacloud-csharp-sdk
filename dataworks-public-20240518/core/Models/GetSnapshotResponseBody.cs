@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public GetSnapshotResponseBodySnapshot Snapshot { get; set; }
         public class GetSnapshotResponseBodySnapshot : TeaModel {
             /// <summary>
-            /// <para>The submit comment.</para>
+            /// <para>The submission comment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>snapshot comment</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The OSS pre-signed download URL. This parameter is mutually exclusive with Content.</para>
+            /// <para>The pre-signed OSS download URL. This parameter is mutually exclusive with Content.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://oss.example.com/presigned">https://oss.example.com/presigned</a></para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ContentUrl { get; set; }
 
             /// <summary>
-            /// <para>The snapshot creation time in millisecond timestamp.</para>
+            /// <para>The timestamp when the snapshot was generated, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1782370983000</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the object to which the snapshot belongs.</para>
+            /// <para>The unique ID of the parent object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8467231038932407294</para>

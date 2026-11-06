@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetWorkflowRequest : TeaModel {
         /// <summary>
-        /// <para>The environment of the workspace. Valid values:</para>
+        /// <para>The project environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Prod: production environment</para>
-        /// </description></item>
-        /// <item><description><para>Dev: development environment</para>
-        /// </description></item>
+        /// <item><description>Prod: Production environment.</description></item>
+        /// <item><description>Dev: Development environment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string EnvType { get; set; }
 
         /// <summary>
-        /// <para>The workflow ID.</para>
+        /// <para>The unique identifier of the workflow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

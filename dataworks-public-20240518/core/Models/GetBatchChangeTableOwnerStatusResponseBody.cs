@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public GetBatchChangeTableOwnerStatusResponseBodyData Data { get; set; }
         public class GetBatchChangeTableOwnerStatusResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The batch transfer task ID.</para>
+            /// <para>The ID of the batch transfer task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>524257_openapi-req-abc123</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<GetBatchChangeTableOwnerStatusResponseBodyDataDetails> Details { get; set; }
             public class GetBatchChangeTableOwnerStatusResponseBodyDataDetails : TeaModel {
                 /// <summary>
-                /// <para>The error message returned when the table transfer fails.</para>
+                /// <para>The error message returned when the table fails to be transferred.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Forbidden: You are not a member of this project</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The number of tables that failed to transfer.</para>
+            /// <para>The number of tables that fail to be transferred.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The number of tables that were successfully transferred.</para>
+            /// <para>The number of tables that are successfully transferred.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

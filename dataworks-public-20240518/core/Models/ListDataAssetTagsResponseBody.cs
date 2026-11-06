@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDataAssetTagsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The paginated query results for the tag list.</para>
+        /// <para>The paginated query results of the tag list.</para>
         /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<ListDataAssetTagsResponseBodyPagingInfoDataAssetTags> DataAssetTags { get; set; }
             public class ListDataAssetTagsResponseBodyPagingInfoDataAssetTags : TeaModel {
                 /// <summary>
-                /// <para>The tag type.</para>
+                /// <para>The tag category. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>Normal</description></item>
                 /// <item><description>System</description></item>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Category { get; set; }
 
                 /// <summary>
-                /// <para>The creation time of the tag.</para>
+                /// <para>The time when the tag was created.</para>
                 /// <para>The value is a 13-digit number, such as <c>1735890003000</c>.</para>
                 /// 
                 /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The creator of the tag.</para>
+                /// <para>The user who created the tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12345</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public List<string> Managers { get; set; }
 
                 /// <summary>
-                /// <para>The last modification time of the tag.</para>
+                /// <para>The time when the tag was last modified.</para>
                 /// <para>The value is a 13-digit number, such as <c>1735890003000</c>.</para>
                 /// 
                 /// <b>Example:</b>

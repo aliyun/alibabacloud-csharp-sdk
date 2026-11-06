@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListProjectMembersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The paging information.</para>
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
         public ListProjectMembersResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListProjectMembersResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the requested data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries to return on each page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The list of Workspace members.</para>
+            /// <para>The list of workspace members.</para>
             /// </summary>
             [NameInMap("ProjectMembers")]
             [Validation(Required=false)]
             public List<ListProjectMembersResponseBodyPagingInfoProjectMembers> ProjectMembers { get; set; }
             public class ListProjectMembersResponseBodyPagingInfoProjectMembers : TeaModel {
                 /// <summary>
-                /// <para>The ID of the DataWorks Workspace.</para>
+                /// <para>The ID of the DataWorks workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>62136</para>
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The roles assigned to the Workspace member.</para>
+                /// <para>The list of workspace roles assigned to the workspace member.</para>
                 /// </summary>
                 [NameInMap("Roles")]
                 [Validation(Required=false)]
                 public List<ListProjectMembersResponseBodyPagingInfoProjectMembersRoles> Roles { get; set; }
                 public class ListProjectMembersResponseBodyPagingInfoProjectMembersRoles : TeaModel {
                     /// <summary>
-                    /// <para>The code of the role.</para>
+                    /// <para>The code of the workspace role.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>role_project_guest</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Code { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the role.</para>
+                    /// <para>The name of the workspace role.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Visitors</para>
@@ -81,11 +81,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the role.</para>
+                    /// <para>The type of the workspace role. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para><c>UserCustom</c>: A user-defined role.</para>
+                    /// <item><description><para>UserCustom: Custom role.</para>
                     /// </description></item>
-                    /// <item><description><para><c>System</c>: A system role.</para>
+                    /// <item><description><para>System: System role.</para>
                     /// </description></item>
                     /// </list>
                     /// 
@@ -99,11 +99,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The status of the Workspace member.</para>
+                /// <para>The status of the workspace member. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><c>Normal</c>: The member is active.</para>
+                /// <item><description><para>Normal: Normal.</para>
                 /// </description></item>
-                /// <item><description><para><c>Forbidden</c>: The member is disabled.</para>
+                /// <item><description><para>Forbidden: Disabled.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the DataWorks user.</para>
+                /// <para>The DataWorks account ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123422344899</para>
@@ -125,7 +125,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string UserId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the DataWorks user.</para>
+                /// <para>The cloud account name of the member.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>liusan</para>
                 /// </summary>
                 [NameInMap("UserName")]
                 [Validation(Required=false)]
@@ -134,7 +137,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The total number of matching entries.</para>
+            /// <para>The total number of entries that meet the conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -146,7 +149,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The unique ID of the request, used to track logs and troubleshoot issues.</para>
+        /// <para>The request ID. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9FBBBB1F-DD5E-5D8E-8F50-37F77460F056</para>

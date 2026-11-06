@@ -55,25 +55,23 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para><b>The creation time (UNIX timestamp in milliseconds).</b></para>
-                /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1780555634000</para>
                 /// </summary>
                 [NameInMap("GmtCreateTime")]
                 [Validation(Required=false)]
-                public string GmtCreateTime { get; set; }
+                public long? GmtCreateTime { get; set; }
 
                 /// <summary>
                 /// <para><b>The last modification time (UNIX timestamp in milliseconds).</b></para>
-                /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1780555634000</para>
                 /// </summary>
                 [NameInMap("GmtModifiedTime")]
                 [Validation(Required=false)]
-                public string GmtModifiedTime { get; set; }
+                public long? GmtModifiedTime { get; set; }
 
                 /// <summary>
                 /// <para><b>The last modifier ID.</b></para>

@@ -10,17 +10,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListAgentSessionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The JSON-RPC response.</para>
+        /// <para>The JSON-RPC response result.</para>
         /// </summary>
         [NameInMap("JsonRpcResponse")]
         [Validation(Required=false)]
         public ListAgentSessionsResponseBodyJsonRpcResponse JsonRpcResponse { get; set; }
         public class ListAgentSessionsResponseBodyJsonRpcResponse : TeaModel {
+            /// <summary>
+            /// <para>The JSON-RPC error information. This field is returned when the call fails and is not returned when the call succeeds.</para>
+            /// </summary>
             [NameInMap("Error")]
             [Validation(Required=false)]
             public ListAgentSessionsResponseBodyJsonRpcResponseError Error { get; set; }
             public class ListAgentSessionsResponseBodyJsonRpcResponseError : TeaModel {
                 /// <summary>
+                /// <para>The JSON-RPC error code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>400</para>
                 /// </summary>
@@ -29,6 +34,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public int? Code { get; set; }
 
                 /// <summary>
+                /// <para>The optional additional error information. The content depends on the error type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
                 /// </summary>
@@ -37,6 +44,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public object Data { get; set; }
 
                 /// <summary>
+                /// <para>The business error code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>SESSION_FILTER_REQUIRED</para>
                 /// </summary>
@@ -45,6 +54,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ErrorCode { get; set; }
 
                 /// <summary>
+                /// <para>The error message.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>SESSION_FILTER_REQUIRED</para>
                 /// </summary>
@@ -55,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The ID passed in by the requester. The value is returned as-is.</para>
+            /// <para>The request ID provided by the caller. This ID is returned as is in the response.</para>
             /// 
             /// <b>Example:</b>
             /// <para>29d9a29c-a284-48c1-9eaa-4a42c7c616d5</para>
@@ -65,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The JSON-RPC version. Fixed value: 2.0.</para>
+            /// <para>The JSON-RPC version, which is fixed to 2.0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.0</para>
@@ -75,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Jsonrpc { get; set; }
 
             /// <summary>
-            /// <para>The paginated result set of the session query.</para>
+            /// <para>The paginated result set for the session query.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
@@ -89,12 +100,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public List<ListAgentSessionsResponseBodyJsonRpcResponseResultAgentSessions> AgentSessions { get; set; }
                 public class ListAgentSessionsResponseBodyJsonRpcResponseResultAgentSessions : TeaModel {
                     /// <summary>
-                    /// <para>The extended session information from DataWorks, which is not part of the ACP standard protocol.</para>
+                    /// <para>The DataWorks extended session information, which is not part of the standard ACP protocol.</para>
                     /// </summary>
                     [NameInMap("Meta")]
                     [Validation(Required=false)]
                     public ListAgentSessionsResponseBodyJsonRpcResponseResultAgentSessionsMeta Meta { get; set; }
                     public class ListAgentSessionsResponseBodyJsonRpcResponseResultAgentSessionsMeta : TeaModel {
+                        /// <summary>
+                        /// <para>Indicates whether the session is archived.</para>
+                        /// </summary>
                         [NameInMap("Archived")]
                         [Validation(Required=false)]
                         public bool? Archived { get; set; }
@@ -115,9 +129,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         /// <b>Example:</b>
                         /// <list type="bullet">
                         /// <item><description>NORMAL: Stateless session</description></item>
-                        /// <item><description>INIT: Initialization state</description></item>
+                        /// <item><description>INIT: Initialized</description></item>
                         /// <item><description>RUNNING: Running</description></item>
-                        /// <item><description>RELEASED: Released state</description></item>
+                        /// <item><description>RELEASED: Released</description></item>
                         /// </list>
                         /// </summary>
                         [NameInMap("SessionStatus")]
@@ -125,14 +139,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string SessionStatus { get; set; }
 
                         /// <summary>
-                        /// <para>The list of session tags.</para>
+                        /// <para>The session tag list.</para>
                         /// </summary>
                         [NameInMap("SessionTagList")]
                         [Validation(Required=false)]
                         public List<ListAgentSessionsResponseBodyJsonRpcResponseResultAgentSessionsMetaSessionTagList> SessionTagList { get; set; }
                         public class ListAgentSessionsResponseBodyJsonRpcResponseResultAgentSessionsMetaSessionTagList : TeaModel {
                             /// <summary>
-                            /// <para>The session tag. You can filter sessions based on session tags. For example, if you use a fixed RAM user to call OpenAPI but the calling system has its own account system, you can filter the session list based on an account ID. In this case, set this parameter to the account ID of the calling system.</para>
+                            /// <para>The session tag. You can filter sessions based on session tags. For example, if you use a fixed RAM user when calling OpenAPI but the calling system has its own account system, you need to filter the session list based on the account ID. In this case, you can pass the account ID of the calling system as this tag.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>user_123456</para>
@@ -146,7 +160,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>The time when the session was created.</para>
+                    /// <para>The session creation time.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123456789</para>
@@ -186,7 +200,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string SessionTitle { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the session was last modified.</para>
+                    /// <para>The session update time.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123456789</para>
@@ -232,7 +246,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID for this OpenAPI request, which can be used to troubleshoot call failures. This is not a session ID or event cursor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50C5A9F7-B5BD-58B2-9EB8-ADFFA9E6A56F</para>

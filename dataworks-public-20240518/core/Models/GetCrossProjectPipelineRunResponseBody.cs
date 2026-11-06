@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The business response.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;RequestId&quot;:&quot;735894D1-D5E5-50B8-8A6D-041C90A98B23&quot;,&quot;PipelineRunId&quot;:&quot;fcfd4160-e2ff-4603-9719-09128fe733df&quot;,&quot;DeploymentEnvironmentId&quot;:101,&quot;ObjectId&quot;:&quot;1&quot;,&quot;ObjectType&quot;:&quot;ODPS_SQL&quot;,&quot;ObjectName&quot;:&quot;object-1&quot;,&quot;ObjectVersion&quot;:&quot;7&quot;,&quot;ChangeType&quot;:&quot;ADD&quot;,&quot;Status&quot;:&quot;Ready&quot;,&quot;Description&quot;:&quot;Publish objects that are published in the source project to the target project&quot;,&quot;Creator&quot;:&quot;creator&quot;,&quot;CreateTime&quot;:1788739200000}</para>
+        /// <para>{&quot;RequestId&quot;:&quot;735894D1-D5E5-50B8-8A6D-041C90A98B23&quot;,&quot;PipelineRunId&quot;:&quot;fcfd4160-e2ff-4603-9719-09128fe733df&quot;,&quot;DeploymentEnvironmentId&quot;:101,&quot;ObjectId&quot;:&quot;1&quot;,&quot;ObjectType&quot;:&quot;ODPS_SQL&quot;,&quot;ObjectName&quot;:&quot;object-1&quot;,&quot;ObjectVersion&quot;:&quot;7&quot;,&quot;ChangeType&quot;:&quot;ADD&quot;,&quot;Status&quot;:&quot;Ready&quot;,&quot;Description&quot;:&quot;Deploy objects already deployed in the source project to the target project&quot;,&quot;Creator&quot;:&quot;creator&quot;,&quot;CreateTime&quot;:1788739200000}</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetCrossProjectPipelineRunResponseBodyData Data { get; set; }
         public class GetCrossProjectPipelineRunResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The termination time. This value is a UNIX timestamp in milliseconds. This parameter is returned only after the flow is terminated.</para>
+            /// <para>The termination time. The value is a UNIX timestamp in milliseconds. This parameter is returned only after the pipeline run is terminated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1788739260000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? AbolishTime { get; set; }
 
             /// <summary>
-            /// <para>The user who terminated the flow.</para>
+            /// <para>The user who terminated the pipeline run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>operator</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ChangeType { get; set; }
 
             /// <summary>
-            /// <para>The creation time. This value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1788739200000</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>The deployment description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Publish objects that are published in the source project to the target project</para>
+            /// <para>Deploy objects already deployed in the source project to the target project</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The execution time. This value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The execution time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1788739260000</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Executor { get; set; }
 
             /// <summary>
-            /// <para>The completion time. This value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The completion time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1788739320000</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ObjectVersion { get; set; }
 
             /// <summary>
-            /// <para>The cross-workspace deployment flow ID.</para>
+            /// <para>The cross-workspace deployment pipeline run ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fcfd4160-e2ff-4603-9719-09128fe733df</para>
@@ -200,15 +200,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string RequestId { get; set; }
 
             /// <summary>
-            /// <para>The status of the deployment flow. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Building: Building.</description></item>
-            /// <item><description>Ready: Ready and waiting for execution.</description></item>
-            /// <item><description>Running: Running.</description></item>
-            /// <item><description>Termination: Terminated.</description></item>
-            /// <item><description>Success: Execution succeeded.</description></item>
-            /// <item><description>Fail: Execution failed.</description></item>
-            /// </list>
+            /// <para>The status of the deployment pipeline run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Ready</para>
@@ -220,7 +212,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate and troubleshoot this API call.</para>
+        /// <para>The request ID, which is used to locate and troubleshoot the current API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>735894D1-D5E5-50B8-8A6D-041C90A98B23</para>
@@ -230,7 +222,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ChangeType { get; set; }
 
         /// <summary>
-        /// <para>The start of the commit time range. This value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The start of the commit time range. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1788739200000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? CommitTimeFrom { get; set; }
 
         /// <summary>
-        /// <para>The end of the commit time range. This value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The end of the commit time range. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1788825599999</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? CommitTimeTo { get; set; }
 
         /// <summary>
-        /// <para>The committer.</para>
+        /// <para>The submitter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>operator</para>

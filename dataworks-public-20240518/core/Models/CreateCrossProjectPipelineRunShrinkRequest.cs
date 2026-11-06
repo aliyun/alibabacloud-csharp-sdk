@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateCrossProjectPipelineRunShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The cross-workspace deployment environment ID.</para>
+        /// <para>The ID of the cross-workspace deployment environment.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The deployment description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>This is a business process created through the API</para>
+        /// <para>This is a workflow created by calling the API operation</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The list of top-level object IDs from the source project to deploy. The list must contain exactly one object. Child objects of composite objects such as workflows are automatically included by the system.</para>
+        /// <para>The list of top-level object IDs from the source project to be deployed. The list must contain exactly one object. Sub-objects of composite objects such as workflows are automatically included by the system.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,11 +53,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The deployment type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Offline: Deployment to take the object offline.</description></item>
-        /// <item><description>Online: Deployment to bring the object online.</description></item>
-        /// </list>
+        /// <para>The deployment type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

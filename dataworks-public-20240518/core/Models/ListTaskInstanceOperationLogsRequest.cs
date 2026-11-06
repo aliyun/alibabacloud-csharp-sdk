@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListTaskInstanceOperationLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The operation date, accurate to the day. The default value is the current day. You can query only the operation logs generated within the previous 31 days. This value is a UNIX timestamp.</para>
+        /// <para>The date of the operation, accurate to the day. The default value is the current day. You can query operation logs from the past 31 days. Specify the value as a timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1710239005403</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Date { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The task instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

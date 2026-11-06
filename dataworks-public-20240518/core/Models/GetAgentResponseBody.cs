@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The agent details.</para>
+        /// <para>The details of the created agent.</para>
         /// </summary>
         [NameInMap("Agent")]
         [Validation(Required=false)]
         public GetAgentResponseBodyAgent Agent { get; set; }
         public class GetAgentResponseBodyAgent : TeaModel {
             /// <summary>
-            /// <para>本次读取的定义版本。更新当前定义时，将该值作为 UpdateAgent 的 ExpectedVersion，可拒绝覆盖其他调用者已提交的新版本。读取历史快照的版本不代表当前版本。</para>
+            /// <para>The definition version read in this request. When updating the current definition, use this value as the ExpectedVersion for UpdateAgent to prevent overwriting new versions submitted by other callers. The version read from a historical snapshot does not represent the current version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? AgentVersion { get; set; }
 
             /// <summary>
-            /// <para>A list of callable sub-agents.</para>
+            /// <para>The list of callable sub-agents.</para>
             /// </summary>
             [NameInMap("CallableAgents")]
             [Validation(Required=false)]
             public List<GetAgentResponseBodyAgentCallableAgents> CallableAgents { get; set; }
             public class GetAgentResponseBodyAgentCallableAgents : TeaModel {
                 /// <summary>
-                /// <para>The sub-agent display name.</para>
+                /// <para>The display name of the sub-agent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Sub-assistant</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string DisplayName { get; set; }
 
                 /// <summary>
-                /// <para>The sub-agent name.</para>
+                /// <para>The name of the sub-agent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sub-agent</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The sub-agent source.</para>
+                /// <para>The source of the sub-agent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>custom</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Source { get; set; }
 
                 /// <summary>
-                /// <para>The sub-agent version.</para>
+                /// <para>The version number of the sub-agent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <list type="bullet">
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The creator ID.</para>
+            /// <para>The ID of the creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para><b>The description.</b></para>
             /// 
             /// <b>Example:</b>
-            /// <para>Data analysis assistant</para>
+            /// <para>Data analytics assistant</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -108,31 +108,35 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>Agent 定义绑定的专家套件及固定发布版本。</para>
+            /// <para>The expert suites bound to the agent definition, including a fixed integer revision number or a version selection policy. Official resources continue to use PackageVersion to indicate the artifact version.</para>
             /// </summary>
             [NameInMap("ExpertSuites")]
             [Validation(Required=false)]
             public List<GetAgentResponseBodyAgentExpertSuites> ExpertSuites { get; set; }
             public class GetAgentResponseBodyAgentExpertSuites : TeaModel {
                 /// <summary>
-                /// <para>套件已删除、发布快照缺失或调用者无权查看时，不返回套件摘要，仅保留 ID 和版本号。</para>
+                /// <para>If the suite is deleted, the published snapshot is missing, or the caller does not have permission to view it, the suite summary is not returned, and only the ID and version number are retained.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>数据分析专家能力集合</para>
+                /// <para>Data analytics expert capability set</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
+                /// <para>The display name of the bound version.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>数据分析专家套件</para>
+                /// <para>Data analytics expert suite</para>
                 /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
                 public string DisplayName { get; set; }
 
                 /// <summary>
+                /// <para>The suite name of the bound version.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>analysis-suite</para>
                 /// </summary>
@@ -141,7 +145,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>显式查询 Agent 已发布版本时返回固定的官方制品版本；查询草稿或自定义套件时不返回。</para>
+                /// <para>Returns the fixed official artifact version when explicitly querying a published version of the agent. Not returned when querying a draft or a custom suite.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.1.0.202610211408</para>
@@ -151,7 +155,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string PackageVersion { get; set; }
 
                 /// <summary>
-                /// <para>可选套件摘要字段，当前新 DataAgent 应用不返回；缺省不表示版本 0。不可作为 UpdateAgent 的 Version，回写引用时必须省略。官方制品的固定版本请读取 PackageVersion。</para>
+                /// <para>An optional suite summary field that is not returned by current new DataAgent applications. A missing value does not indicate version 0. This field cannot be used as the Version for UpdateAgent and must be omitted when writing back references. For the fixed version of official artifacts, read PackageVersion.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.2.0</para>
@@ -161,7 +165,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string SemanticVersion { get; set; }
 
                 /// <summary>
-                /// <para>OFFICIAL 表示官方目录资源；省略或 DB 表示个人或企业资源。</para>
+                /// <para>OFFICIAL indicates an official catalog resource. Omitted or DB indicates a personal or enterprise resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>OFFICIAL</para>
@@ -171,6 +175,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Source { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the expert suite.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>suite_example</para>
                 /// </summary>
@@ -179,7 +185,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string SuiteId { get; set; }
 
                 /// <summary>
-                /// <para>仅个人或企业套件在引用明确指定版本或读取发布快照时返回；官方套件不返回。未返回不是 0；SDK 若将缺省整数初始化为 0，回写时必须省略。官方项只回写 Source 和 SuiteId，不传 Version、SemanticVersion 或 PackageVersion。</para>
+                /// <para>Returned only when a personal or enterprise suite explicitly specifies a fixed integer version in the reference. Not returned for official suites. A missing value is not 0. If the SDK initializes a missing integer to 0, it must be omitted when writing back. For official items, only Source and SuiteId are written back, and Version, VersionSelector, SemanticVersion, or PackageVersion are not passed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -188,32 +194,40 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 [Validation(Required=false)]
                 public int? Version { get; set; }
 
+                /// <summary>
+                /// <para>Returned only for personal or enterprise resources to indicate the saved version selection policy, which is mutually exclusive with the fixed integer Version. It does not represent the specific revision actually loaded in the session. Not returned for official resources.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>^1.2.3</para>
+                /// </summary>
+                [NameInMap("VersionSelector")]
+                [Validation(Required=false)]
+                public string VersionSelector { get; set; }
+
             }
 
             /// <summary>
-            /// <para>The creation time, as a Unix timestamp in milliseconds.</para>
-            /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
+            /// <para>The creation time, expressed as a timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1780555634000</para>
             /// </summary>
             [NameInMap("GmtCreateTime")]
             [Validation(Required=false)]
-            public string GmtCreateTime { get; set; }
+            public long? GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The last modification time, as a Unix timestamp in milliseconds.</para>
-            /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
+            /// <para>The last modified time, expressed as a timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1780555634000</para>
             /// </summary>
             [NameInMap("GmtModifiedTime")]
             [Validation(Required=false)]
-            public string GmtModifiedTime { get; set; }
+            public long? GmtModifiedTime { get; set; }
 
             /// <summary>
-            /// <para><b>Additional metadata.</b></para>
+            /// <para><b>The extended metadata.</b></para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -230,7 +244,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public GetAgentResponseBodyAgentModel Model { get; set; }
             public class GetAgentResponseBodyAgentModel : TeaModel {
                 /// <summary>
-                /// <para>Additional configuration for the model.</para>
+                /// <para>The additional configuration of the model.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -240,7 +254,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public Dictionary<string, object> Config { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of tokens to generate in one response.</para>
+                /// <para>The maximum number of output tokens per request.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8192</para>
@@ -250,7 +264,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public int? MaxTokens { get; set; }
 
                 /// <summary>
-                /// <para>The model name.</para>
+                /// <para>The name of the model.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qwen3-max</para>
@@ -260,7 +274,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ModelName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether streaming output is enabled.</para>
+                /// <para>Specifies whether to use streaming output.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -270,7 +284,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public bool? Stream { get; set; }
 
                 /// <summary>
-                /// <para>The temperature.</para>
+                /// <para>The sampling temperature.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -280,7 +294,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public double? Temperature { get; set; }
 
                 /// <summary>
-                /// <para>The top-p.</para>
+                /// <para>The top-P value for nucleus sampling.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -312,21 +326,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The runtime dependencies.</para>
+            /// <para>The environment dependencies required for runtime.</para>
             /// </summary>
             [NameInMap("RequiredRuntime")]
             [Validation(Required=false)]
             public List<string> RequiredRuntime { get; set; }
 
             /// <summary>
-            /// <para>A list of skills.</para>
+            /// <para>The list of skills.</para>
             /// </summary>
             [NameInMap("Skills")]
             [Validation(Required=false)]
             public List<GetAgentResponseBodyAgentSkills> Skills { get; set; }
             public class GetAgentResponseBodyAgentSkills : TeaModel {
                 /// <summary>
-                /// <para>The skill name.</para>
+                /// <para>The name of the skill.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my-skill</para>
@@ -336,7 +350,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>指定 AgentVersion 查询已发布快照时返回固定的官方制品版本；查询草稿或自定义 Skill 时不返回。</para>
+                /// <para>Returns the fixed official artifact version when querying a published snapshot with a specified AgentVersion. Not returned when querying a draft or a custom skill.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.6.0.202608201110</para>
@@ -346,6 +360,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string PackageVersion { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the official skill.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>dataworks-semantic</para>
                 /// </summary>
@@ -354,7 +370,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string SkillId { get; set; }
 
                 /// <summary>
-                /// <para>OFFICIAL 表示官方目录资源；省略或 DB 表示原有个人或企业资源。</para>
+                /// <para>OFFICIAL indicates an official catalog resource. Omitted or DB indicates an original personal or enterprise resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>OFFICIAL</para>
@@ -364,7 +380,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Source { get; set; }
 
                 /// <summary>
-                /// <para>The skill version.</para>
+                /// <para>The version number of the skill.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <list type="bullet">
@@ -375,27 +391,37 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 [Validation(Required=false)]
                 public int? Version { get; set; }
 
+                /// <summary>
+                /// <para>Returned only for personal or enterprise resources to indicate the saved version selection policy, which is mutually exclusive with the fixed integer Version. It does not represent the specific revision actually loaded in the session. Not returned for official resources.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>^1.2.3</para>
+                /// </summary>
+                [NameInMap("VersionSelector")]
+                [Validation(Required=false)]
+                public string VersionSelector { get; set; }
+
             }
 
             /// <summary>
             /// <para><b>The system prompt.</b></para>
             /// 
             /// <b>Example:</b>
-            /// <para>You are a data analysis assistant.</para>
+            /// <para>You are a data analytics assistant.</para>
             /// </summary>
             [NameInMap("SystemPrompt")]
             [Validation(Required=false)]
             public string SystemPrompt { get; set; }
 
             /// <summary>
-            /// <para><b>A list of tools.</b></para>
+            /// <para><b>The list of tools.</b></para>
             /// </summary>
             [NameInMap("Tools")]
             [Validation(Required=false)]
             public List<GetAgentResponseBodyAgentTools> Tools { get; set; }
             public class GetAgentResponseBodyAgentTools : TeaModel {
                 /// <summary>
-                /// <para><b>The name of the built-in tool. This parameter applies only when <c>Kind</c> is set to <c>builtin</c>.</b></para>
+                /// <para><b>The name of the built-in tool. Valid when Kind is builtin.</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>builtin_sql</para>
@@ -415,14 +441,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Kind { get; set; }
 
                 /// <summary>
-                /// <para><b>The selected MCP tool items. This parameter applies only when <c>Kind</c> is set to <c>mcp</c>.</b></para>
+                /// <para><b>The selected MCP tool items. Valid when Kind is mcp.</b></para>
                 /// </summary>
                 [NameInMap("McpItems")]
                 [Validation(Required=false)]
                 public List<string> McpItems { get; set; }
 
                 /// <summary>
-                /// <para><b>The name of the associated MCP server. This parameter applies only when <c>Kind</c> is set to <c>mcp</c>.</b></para>
+                /// <para><b>The name of the associated MCP server. Valid when Kind is mcp.</b></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>server-name</para>
@@ -451,14 +477,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public GetAgentResponseBodyAgentVisibilityScope VisibilityScope { get; set; }
             public class GetAgentResponseBodyAgentVisibilityScope : TeaModel {
                 /// <summary>
-                /// <para>A list of project IDs that can view the agent.</para>
+                /// <para>The list of visible project IDs.</para>
                 /// </summary>
                 [NameInMap("ProjectIds")]
                 [Validation(Required=false)]
                 public List<string> ProjectIds { get; set; }
 
                 /// <summary>
-                /// <para>A list of user IDs that can view the agent.</para>
+                /// <para>The list of visible user IDs.</para>
                 /// </summary>
                 [NameInMap("UserIds")]
                 [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListPartitionsRequest : TeaModel {
         /// <summary>
-        /// <para>The partition name. Fuzzy match is supported. This parameter is valid only for MaxCompute tables.</para>
+        /// <para>The name of the partition. Fuzzy match is supported. This parameter is valid only for MaxCompute tables.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ds=20250101</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The sort direction. Default value: Asc. Valid values:</para>
+        /// <para>The sort order. Default value: Asc. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Asc: ascending order.</description></item>
         /// <item><description>Desc: descending order.</description></item>
@@ -54,11 +54,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the results. Default value: CreateTime. Valid values:</para>
+        /// <para>The field used for sorting. Default value: CreateTime. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>CreateTime: the creation time. Only MaxCompute tables are supported.</description></item>
         /// <item><description>ModifyTime: the modification time. Only MaxCompute tables are supported.</description></item>
-        /// <item><description>Name: the name. This is the sort method used for HMS tables.</description></item>
+        /// <item><description>Name: the name. Used for HMS tables.</description></item>
         /// <item><description>RecordCount: the number of records. Only MaxCompute tables are supported.</description></item>
         /// <item><description>DataSize: the storage size. Only MaxCompute tables are supported.</description></item>
         /// </list>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the table. You can obtain this value from the response of the <a href="https://help.aliyun.com/document_detail/2880092.html">ListTables</a> operation. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</para>
+        /// <para>The ID of the table. You can refer to the response of the ListTables API operation and <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

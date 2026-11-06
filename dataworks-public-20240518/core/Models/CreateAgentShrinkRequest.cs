@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateAgentShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The list of child agents that can be called by this agent.</para>
+        /// <para>The list of sub-agents that can be called by this agent.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>Agent 绑定的已发布专家套件。个人或企业套件使用 SuiteId，可选 Version；官方套件必须显式指定 Source=OFFICIAL 和官方目录中的 SuiteId，不传 Version。未传时创建为空，不会默认加载所有官方套件。</para>
+        /// <para>The published expert suites bound to the agent. For personal or enterprise suites, use SuiteId, and optionally specify a fixed Version or VersionSelector. For official suites, you must explicitly specify Source=OFFICIAL and the SuiteId from the official catalog, and do not specify Version or VersionSelector. If not specified, an empty list is created, and all official suites are not loaded by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;Source&quot;:&quot;OFFICIAL&quot;,&quot;SuiteId&quot;:&quot;dataworks-data-analysis-extension&quot;},{&quot;SuiteId&quot;:&quot;suite_example&quot;,&quot;Version&quot;:1}]</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>是否在创建 Agent 后立即发布。true 发布创建的版本；false 或省略保持原有仅创建草稿行为。保存与发布不是原子操作，发布失败时草稿可能已存在；重试前应先查询 Agent，避免重复创建。</para>
+        /// <para>Specifies whether to publish the agent immediately after creation. A value of true publishes the created version. A value of false or omitting this parameter maintains the original behavior of creating a draft only. Saving and publishing are not atomic operations. If publishing fails, the draft may already exist. Before retrying, query the agent first to avoid duplicate creation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The system prompt.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>You are a data analytics assistant</para>
+        /// <para>You are a data analytics assistant.</para>
         /// </summary>
         [NameInMap("SystemPrompt")]
         [Validation(Required=false)]
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ToolsShrink { get; set; }
 
         /// <summary>
-        /// <para>The visibility level.<br>
+        /// <para>The visibility level. Valid values:<br>
         /// <c>TENANT</c>: Visible within the account.<br>
         /// <c>PROJECT</c>: Visible to specified projects.<br>
         /// <c>USER</c>: Visible to specified users.</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Visibility { get; set; }
 
         /// <summary>
-        /// <para>The visibility scope. The corresponding field is used based on the visibility level.</para>
+        /// <para>The visibility scope. Specify the corresponding fields based on the Visibility value.</para>
         /// </summary>
         [NameInMap("VisibilityScope")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDataQualityEvaluationTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The name used for fuzzy matching of data quality evaluation task names.</para>
+        /// <para>The keyword used to fuzzy match the name of the data quality check task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page number for paging. Default value: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size for paging. Default value: 10.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID.</para>
+        /// <para>The ID of the DataWorks workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the table in DataWorks Data Map.</para>
+        /// <para>The unique ID of the table in Data Map.</para>
         /// 
         /// <b>Example:</b>
         /// <para>odps.unit_test.tb_unit_test</para>

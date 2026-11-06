@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListCrossProjectDeploymentCandidatesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business response.</para>
+        /// <para>The response data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;RequestId&quot;:&quot;735894D1-D5E5-50B8-8A6D-041C90A98B23&quot;,&quot;PageNumber&quot;:1,&quot;PageSize&quot;:10,&quot;TotalCount&quot;:1,&quot;DeploymentCandidates&quot;:[{&quot;ObjectId&quot;:&quot;1&quot;,&quot;ObjectType&quot;:&quot;ODPS_SQL&quot;,&quot;ObjectName&quot;:&quot;object-1&quot;,&quot;ObjectVersion&quot;:&quot;7&quot;,&quot;ChangeType&quot;:&quot;ADD&quot;,&quot;CommitUser&quot;:&quot;operator&quot;,&quot;CommitTime&quot;:1788739200000}]}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public ListCrossProjectDeploymentCandidatesResponseBodyData Data { get; set; }
         public class ListCrossProjectDeploymentCandidatesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of candidate objects from the source workspace that are available for cross-workspace deployment.</para>
+            /// <para>The list of candidate objects in the source workspace that are available for cross-workspace deployment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;ObjectId&quot;:&quot;1&quot;,&quot;ObjectType&quot;:&quot;ODPS_SQL&quot;,&quot;ObjectName&quot;:&quot;object-1&quot;,&quot;ObjectVersion&quot;:&quot;7&quot;,&quot;ChangeType&quot;:&quot;ADD&quot;,&quot;CommitUser&quot;:&quot;operator&quot;,&quot;CommitTime&quot;:1788739200000}]</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ChangeType { get; set; }
 
                 /// <summary>
-                /// <para>The commit time. This value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The commit time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1788739200000</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CommitTime { get; set; }
 
                 /// <summary>
-                /// <para>The committer.</para>
+                /// <para>The submitter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>operator</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ObjectId { get; set; }
 
                 /// <summary>
-                /// <para>The candidate object name.</para>
+                /// <para>The name of the candidate object.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>object-1</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ObjectType { get; set; }
 
                 /// <summary>
-                /// <para>The candidate object version.</para>
+                /// <para>The version of the candidate object.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate and troubleshoot this API call.</para>
+        /// <para>The request ID. You can use the ID to locate and troubleshoot the API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>735894D1-D5E5-50B8-8A6D-041C90A98B23</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

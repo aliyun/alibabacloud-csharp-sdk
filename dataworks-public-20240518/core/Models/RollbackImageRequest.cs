@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The image version to roll back to.</para>
+        /// <para>The image version to roll back.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

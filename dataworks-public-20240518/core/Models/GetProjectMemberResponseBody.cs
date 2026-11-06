@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetProjectMemberResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the Workspace member.</para>
+        /// <para>The details of the workspace member.</para>
         /// </summary>
         [NameInMap("ProjectMember")]
         [Validation(Required=false)]
         public GetProjectMemberResponseBodyProjectMember ProjectMember { get; set; }
         public class GetProjectMemberResponseBodyProjectMember : TeaModel {
             /// <summary>
-            /// <para>The ID of the Workspace.</para>
+            /// <para>The ID of the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>88757</para>
@@ -27,36 +27,25 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>Roles assigned to the Workspace member.</para>
+            /// <para>The list of workspace roles assigned to the workspace member.</para>
             /// </summary>
             [NameInMap("Roles")]
             [Validation(Required=false)]
             public List<GetProjectMemberResponseBodyProjectMemberRoles> Roles { get; set; }
             public class GetProjectMemberResponseBodyProjectMemberRoles : TeaModel {
                 /// <summary>
-                /// <para>The code of the Workspace role.</para>
-                /// <para>The built-in system roles in a DataWorks Workspace include:</para>
+                /// <para>The code of the workspace role. Built-in workspace roles in DataWorks:</para>
                 /// <list type="bullet">
-                /// <item><description><para>role_project_admin: Workspace Administrator</para>
-                /// </description></item>
-                /// <item><description><para>role_project_dev: Developer</para>
-                /// </description></item>
-                /// <item><description><para>role_project_dg_admin: Data Governance Administrator</para>
-                /// </description></item>
-                /// <item><description><para>role_project_guest: Guest</para>
-                /// </description></item>
-                /// <item><description><para>role_project_security: Security Administrator</para>
-                /// </description></item>
-                /// <item><description><para>role_project_deploy: Deployment</para>
-                /// </description></item>
-                /// <item><description><para>role_project_owner: Workspace Owner</para>
-                /// </description></item>
-                /// <item><description><para>role_project_data_analyst: Data Analyst</para>
-                /// </description></item>
-                /// <item><description><para>role_project_pe: O\&amp;M (Operations &amp; Maintenance)</para>
-                /// </description></item>
-                /// <item><description><para>role_project_erd: Model Designer</para>
-                /// </description></item>
+                /// <item><description>role_project_admin: workspace administrator</description></item>
+                /// <item><description>role_project_dev: developer</description></item>
+                /// <item><description>role_project_dg_admin: data governance administrator</description></item>
+                /// <item><description>role_project_guest: guest</description></item>
+                /// <item><description>role_project_security: security administrator</description></item>
+                /// <item><description>role_project_deploy: deployer</description></item>
+                /// <item><description>role_project_owner: workspace owner</description></item>
+                /// <item><description>role_project_data_analyst: data analyst</description></item>
+                /// <item><description>role_project_pe: operator</description></item>
+                /// <item><description>role_project_erd: model designer</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -67,7 +56,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The name of the Workspace role.</para>
+                /// <para>The name of the workspace role.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Visitors</para>
@@ -77,12 +66,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The type of the Workspace role.</para>
+                /// <para>The type of the workspace role. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>UserCustom: A user-defined role.</para>
-                /// </description></item>
-                /// <item><description><para>System: A built-in System Role.</para>
-                /// </description></item>
+                /// <item><description>UserCustom: custom role</description></item>
+                /// <item><description>System: system role</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -95,9 +82,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The status of the Workspace member.</para>
+            /// <para>The status of the workspace member. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Normal: The member is active.</description></item>
+            /// <item><description>Normal: The member is normal.</description></item>
             /// <item><description>Forbidden: The member is disabled.</description></item>
             /// </list>
             /// 
@@ -109,7 +96,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user.</para>
+            /// <para>The ID of the DataWorks account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123422344899</para>
@@ -119,7 +106,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The name of the user.</para>
+            /// <para>The cloud account name of the member.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>liusan</para>
             /// </summary>
             [NameInMap("UserName")]
             [Validation(Required=false)]
@@ -128,7 +118,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID. Use this ID to locate logs and troubleshoot issues.</para>
+        /// <para>The request ID. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8abcb91f-d266-4073-b907-2ed670378ed1</para>

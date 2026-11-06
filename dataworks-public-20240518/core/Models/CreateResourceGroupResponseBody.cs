@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The ID of the order.</para>
+            /// <para>The ID of the order for the general-purpose resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2391982058XXXXX</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? OrderId { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the order.</para>
+            /// <para>The instance ID of the order for the general-purpose resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c442b330-3b10-4584-959e-736e4edXXXXX</para>

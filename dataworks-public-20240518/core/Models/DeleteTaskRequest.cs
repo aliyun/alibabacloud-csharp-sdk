@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class DeleteTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The ID of the task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,14 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The environment of the workspace.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Prod: production environment</para>
-        /// </description></item>
-        /// <item><description><para>Dev: development environment</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The project environment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Prod</para>

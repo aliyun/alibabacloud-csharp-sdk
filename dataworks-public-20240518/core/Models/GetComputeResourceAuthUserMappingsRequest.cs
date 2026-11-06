@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ComputeResourceId { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace to which the data source belongs.</para>
+        /// <para>The ID of the DataWorks workspace to which the data source belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

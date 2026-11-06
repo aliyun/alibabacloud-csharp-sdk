@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListAgentSessionsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID passed in by the requester. The value is returned as-is.</para>
+        /// <para>The request ID provided by the caller. This ID is returned as is in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>676303114031776</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The JSON-RPC version. Fixed value: 2.0.</para>
+        /// <para>The JSON-RPC version, which is fixed to 2.0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public ListAgentSessionsRequestParams Params { get; set; }
         public class ListAgentSessionsRequestParams : TeaModel {
             /// <summary>
-            /// <para><b>Agent name</b> for exact filtering. At least one of this parameter and <c>SessionSourceList</c> must be specified.</para>
+            /// <para>The <b>agent name</b> for exact match filtering. You must specify at least one of this parameter and <c>SessionSourceList</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>chat_cli_chatbi</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string AgentName { get; set; }
 
             /// <summary>
-            /// <para>true仅返回归档会话；false或省略仅返回未归档会话。</para>
+            /// <para>Specifies whether to query archived sessions. If you set this parameter to true, only archived sessions are returned. If you set this parameter to false or omit it, only unarchived sessions are returned. A value of false does not mean all sessions. To query both types of sessions, send separate requests and handle the pagination for each.</para>
             /// </summary>
             [NameInMap("Archived")]
             [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string SessionId { get; set; }
 
             /// <summary>
-            /// <para><b>Session source list</b> for filtering. At least one of this parameter and <c>AgentName</c> must be specified.</para>
+            /// <para>The <b>session source list</b> for filtering. You must specify at least one of this parameter and <c>AgentName</c>.</para>
             /// </summary>
             [NameInMap("SessionSourceList")]
             [Validation(Required=false)]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string SessionTitle { get; set; }
 
             /// <summary>
-            /// <para>The list of session tag codes for filtering.</para>
+            /// <para>The session tag code list for filtering.</para>
             /// </summary>
             [NameInMap("TagList")]
             [Validation(Required=false)]

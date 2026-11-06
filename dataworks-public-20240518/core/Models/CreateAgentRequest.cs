@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateAgentRequest : TeaModel {
         /// <summary>
-        /// <para>The list of child agents that can be called by this agent.</para>
+        /// <para>The list of sub-agents that can be called by this agent.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>Agent 绑定的已发布专家套件。个人或企业套件使用 SuiteId，可选 Version；官方套件必须显式指定 Source=OFFICIAL 和官方目录中的 SuiteId，不传 Version。未传时创建为空，不会默认加载所有官方套件。</para>
+        /// <para>The published expert suites bound to the agent. For personal or enterprise suites, use SuiteId, and optionally specify a fixed Version or VersionSelector. For official suites, you must explicitly specify Source=OFFICIAL and the SuiteId from the official catalog, and do not specify Version or VersionSelector. If not specified, an empty list is created, and all official suites are not loaded by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;Source&quot;:&quot;OFFICIAL&quot;,&quot;SuiteId&quot;:&quot;dataworks-data-analysis-extension&quot;},{&quot;SuiteId&quot;:&quot;suite_example&quot;,&quot;Version&quot;:1}]</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<CreateAgentRequestExpertSuites> ExpertSuites { get; set; }
         public class CreateAgentRequestExpertSuites : TeaModel {
             /// <summary>
-            /// <para>OFFICIAL 表示官方目录资源；DB 表示个人或企业资源。省略时保持原有数据库资源查询语义。官方资源在 Agent 发布时固定制品版本。</para>
+            /// <para>OFFICIAL indicates an official catalog resource. DB indicates a personal or enterprise resource. If omitted, the original database resource query semantics are maintained. For official resources, the artifact version is fixed when the agent is published.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OFFICIAL</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>传入专家套件引用时，每项需提供 SuiteId，由服务端校验。Source=OFFICIAL 时为官方目录 ID；其他情况为专家套件管理返回的 ID。引用资源必须对调用者可见。</para>
+            /// <para>When passing expert suite references, each item must provide a SuiteId, which is validated by the server. When Source is OFFICIAL, this is the official catalog ID. Otherwise, this is the ID returned by expert suite management. The referenced resource must be visible to the caller.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dataworks-data-analysis-extension</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string SuiteId { get; set; }
 
             /// <summary>
-            /// <para>仅用于个人或企业套件，必须为已发布快照的整数版本号。省略时在 Agent 发布时固定当前已发布版本。Source=OFFICIAL 时不传此字段。</para>
+            /// <para>Used only for personal or enterprise suites. Specifies the fixed integer revision number of a published snapshot. This parameter is mutually exclusive with VersionSelector. Publishing a new version does not change the fixed reference. If both are omitted, the latest version is used for each new session. Do not specify this parameter when Source is OFFICIAL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -92,6 +92,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [NameInMap("Version")]
             [Validation(Required=false)]
             public int? Version { get; set; }
+
+            /// <summary>
+            /// <para>Used only for personal or enterprise resources. This parameter is mutually exclusive with Version. Supports exact semantic versions, latest, and full npm/node-semver range syntax, such as 1.2.*, ^1.2.3, ~1.2.3, &gt;=1.0.0 &lt;2.0.0, and 1.x || 2.x. If both are omitted, the latest version is used, and the highest matching published version is selected for each new session. Existing fixed integer references remain unchanged. Do not specify this parameter when Source is OFFICIAL.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>^1.2.3</para>
+            /// </summary>
+            [NameInMap("VersionSelector")]
+            [Validation(Required=false)]
+            public string VersionSelector { get; set; }
 
         }
 
@@ -129,7 +139,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>是否在创建 Agent 后立即发布。true 发布创建的版本；false 或省略保持原有仅创建草稿行为。保存与发布不是原子操作，发布失败时草稿可能已存在；重试前应先查询 Agent，避免重复创建。</para>
+        /// <para>Specifies whether to publish the agent immediately after creation. A value of true publishes the created version. A value of false or omitting this parameter maintains the original behavior of creating a draft only. Saving and publishing are not atomic operations. If publishing fails, the draft may already exist. Before retrying, query the agent first to avoid duplicate creation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -161,7 +171,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Source=OFFICIAL 时传官方目录 ID，不传 Name 或 Version。个人或企业 Skill 不传此字段。</para>
+            /// <para>When Source is OFFICIAL, specify the official catalog ID. Do not specify Name, Version, or VersionSelector. Do not specify this field for personal or enterprise skills.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dataworks-semantic</para>
@@ -171,7 +181,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string SkillId { get; set; }
 
             /// <summary>
-            /// <para>OFFICIAL 表示官方目录资源；DB 表示个人或企业资源，省略时保持原有按名称查询语义。</para>
+            /// <para>OFFICIAL indicates an official catalog resource. DB indicates a personal or enterprise resource. If omitted, the original query-by-name semantics are maintained.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OFFICIAL</para>
@@ -181,7 +191,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>仅用于个人或企业 Skill，必须为已发布快照的整数版本。省略时在 Agent 发布时固定当前已发布版本；Source=OFFICIAL 时不传。</para>
+            /// <para>Used only for personal or enterprise skills. Specifies the fixed integer revision number of a published snapshot. This parameter is mutually exclusive with VersionSelector. Publishing a new version does not change the fixed reference. If both are omitted, the latest version is used for each new session. Do not specify this parameter when Source is OFFICIAL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -190,13 +200,23 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public int? Version { get; set; }
 
+            /// <summary>
+            /// <para>Used only for personal or enterprise resources. This parameter is mutually exclusive with Version. Supports exact semantic versions, latest, and full npm/node-semver range syntax, such as 1.2.*, ^1.2.3, ~1.2.3, &gt;=1.0.0 &lt;2.0.0, and 1.x || 2.x. If both are omitted, the latest version is used, and the highest matching published version is selected for each new session. Existing fixed integer references remain unchanged. Do not specify this parameter when Source is OFFICIAL.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>^1.2.3</para>
+            /// </summary>
+            [NameInMap("VersionSelector")]
+            [Validation(Required=false)]
+            public string VersionSelector { get; set; }
+
         }
 
         /// <summary>
         /// <para>The system prompt.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>You are a data analytics assistant</para>
+        /// <para>You are a data analytics assistant.</para>
         /// </summary>
         [NameInMap("SystemPrompt")]
         [Validation(Required=false)]
@@ -215,7 +235,47 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<CreateAgentRequestTools> Tools { get; set; }
         public class CreateAgentRequestTools : TeaModel {
             /// <summary>
-            /// <para>The name of the McpServer.</para>
+            /// <para>Required when Kind is BUILTIN_TOOLSET. Specifies the name of the built-in toolset supported by the target server. Omit this parameter when Kind is MCP_TOOLSET.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>web_search</para>
+            /// </summary>
+            [NameInMap("BuiltinName")]
+            [Validation(Required=false)]
+            public string BuiltinName { get; set; }
+
+            /// <summary>
+            /// <para>Required for valid tool references. BUILTIN_TOOLSET indicates a built-in toolset, and BuiltinName must be specified. MCP_TOOLSET indicates an MCP toolset, and McpServerName must be specified. The target server validates the parameter based on the tool type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>MCP_TOOLSET</para>
+            /// </summary>
+            [NameInMap("Kind")]
+            [Validation(Required=false)]
+            public string Kind { get; set; }
+
+            /// <summary>
+            /// <para>Optional when Kind is MCP_TOOLSET. If specified, only the listed tools are used. If omitted or left as an empty array, tools are not filtered by name. Each item must be the name of an actual tool in the target MCP service.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[&quot;only-this-tool&quot;]</para>
+            /// </summary>
+            [NameInMap("McpItems")]
+            [Validation(Required=false)]
+            public List<string> McpItems { get; set; }
+
+            /// <summary>
+            /// <para>Required when Kind is MCP_TOOLSET. Specifies the MCP service name that the current caller has permission to reference and that has an active published version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>mcp-a</para>
+            /// </summary>
+            [NameInMap("McpServerName")]
+            [Validation(Required=false)]
+            public string McpServerName { get; set; }
+
+            /// <summary>
+            /// <para>The name of the MCP server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>server-1</para>
@@ -227,7 +287,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The visibility level.<br>
+        /// <para>The visibility level. Valid values:<br>
         /// <c>TENANT</c>: Visible within the account.<br>
         /// <c>PROJECT</c>: Visible to specified projects.<br>
         /// <c>USER</c>: Visible to specified users.</para>
@@ -240,7 +300,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Visibility { get; set; }
 
         /// <summary>
-        /// <para>The visibility scope. The corresponding field is used based on the visibility level.</para>
+        /// <para>The visibility scope. Specify the corresponding fields based on the Visibility value.</para>
         /// </summary>
         [NameInMap("VisibilityScope")]
         [Validation(Required=false)]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public ListTaskInstanceOperationLogsResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListTaskInstanceOperationLogsResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The operation logs.</para>
+            /// <para>The list of operation logs.</para>
             /// </summary>
             [NameInMap("OperationLogs")]
             [Validation(Required=false)]
@@ -25,6 +25,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public class ListTaskInstanceOperationLogsResponseBodyPagingInfoOperationLogs : TeaModel {
                 /// <summary>
                 /// <para>The time when the operation log was generated.</para>
+                /// <para>The value is a 13-digit number, such as <c>1710239005403</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1710239005403</para>
@@ -34,7 +35,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The operation content.</para>
+                /// <para>The content of the operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Freeze tasks</para>
@@ -44,7 +45,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string OperationContent { get; set; }
 
                 /// <summary>
-                /// <para>The serial number of the operation.</para>
+                /// <para>The sequence number of the operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1111</para>
@@ -54,7 +55,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? OperationSeq { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the instance on which the operation was performed.</para>
+                /// <para>The ID of the task instance on which the operation was performed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1234</para>
@@ -64,7 +65,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? TaskInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The account ID of the operator.</para>
+                /// <para>The account ID of the user who performed the operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -108,7 +109,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID. You can locate logs and troubleshoot issues based on the ID.</para>
+        /// <para>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22C97E95-F023-56B5-8852-B1A77A1****</para>

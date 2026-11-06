@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class StopTaskInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID, which is used to locate logs and troubleshoot issues.</para>
+        /// <para>The request ID. You can use this ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22C97E95-F023-56B5-8852-B1A77A17****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result information of the batch operation. The structure is a map where the task instance ID is the key and the result information is the value.</para>
+        /// <para>The result information of the batch operation. The structure is a map where the key is the task instance ID and the value is the result information.</para>
         /// </summary>
         [NameInMap("SuccessInfo")]
         [Validation(Required=false)]

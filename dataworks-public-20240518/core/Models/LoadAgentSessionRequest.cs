@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class LoadAgentSessionRequest : TeaModel {
         /// <summary>
-        /// <para>The client-generated request ID, which is returned in the response.</para>
+        /// <para>The ID passed by the requester. The value is returned as is.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4as3dasf654a</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The JSON-RPC version. The value must be <c>2.0</c>.</para>
+        /// <para>The JSON-RPC version. The value is fixed to 2.0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.0</para>
@@ -30,21 +30,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Jsonrpc { get; set; }
 
         /// <summary>
-        /// <para>Business parameters.</para>
+        /// <para>The business parameters.</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public LoadAgentSessionRequestParams Params { get; set; }
         public class LoadAgentSessionRequestParams : TeaModel {
             /// <summary>
-            /// <para>DataWorks-specific extended parameters for ACP.</para>
+            /// <para>The ACP extension parameters of DataWorks.</para>
             /// </summary>
             [NameInMap("Meta")]
             [Validation(Required=false)]
             public LoadAgentSessionRequestParamsMeta Meta { get; set; }
             public class LoadAgentSessionRequestParamsMeta : TeaModel {
                 /// <summary>
-                /// <para>In a resumable transfer scenario, this specifies the offset from which to resume fetching the SSE output.</para>
+                /// <para>Pulls the subsequent SSE output from the specified position in a resumable transfer scenario.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10000</para>
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? BeginLogOffset { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to use resumable transfer. If the SSE stream is interrupted due to issues like an unstable network connection, you can set this parameter to <c>true</c> to re-fetch the stream data from the point of failure.</para>
+                /// <para>Specifies whether this is a resumable transfer scenario. In scenarios where the SSE stream is unstable, such as network instability that causes the SSE connection to drop midway, you can use this flag to pull the SSE response data again from the breakpoint.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>true or false</para>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("IsReload")]
                 [Validation(Required=false)]

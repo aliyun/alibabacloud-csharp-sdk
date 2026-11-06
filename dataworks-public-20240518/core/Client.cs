@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "dataworks-public";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -79,6 +82,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
                 {"us-east-1", "dataworks.us-east-1.aliyuncs.com"},
                 {"us-west-1", "dataworks.us-west-1.aliyuncs.com"},
                 {"ap-northeast-2", "dataworks.ap-northeast-2.aliyuncs.com"},
+                {"sa-east-1", "dataworks.sa-east-1.aliyuncs.com"},
+                {"na-south-1", "dataworks.na-south-1.aliyuncs.com"},
                 {"me-central-1", "dataworks.me-central-1.aliyuncs.com"},
             };
             CheckConfig(config);
@@ -308,7 +313,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a cross-workspace publish flow.</para>
+        /// <para>Terminates a cross-workspace deployment pipeline run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -358,7 +363,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a cross-workspace publish flow.</para>
+        /// <para>Terminates a cross-workspace deployment pipeline run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -408,7 +413,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a cross-workspace publish flow.</para>
+        /// <para>Terminates a cross-workspace deployment pipeline run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -426,7 +431,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a cross-workspace publish flow.</para>
+        /// <para>Terminates a cross-workspace deployment pipeline run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1164,6 +1169,182 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ApproveProcessInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the archive status of a specified agent session to archived or unarchived. This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the destination region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the destination region.
+        /// Archiving only modifies the archive flag of the session and does not stop or delete the session. If Archived is set to true, the session is archived. If Archived is set to false, the session is unarchived. If this parameter is omitted, the default value true is used. You can use the Archived parameter of ListAgentSessions to query archived and unarchived sessions separately.
+        /// The caller must have access permissions on the current session and the corresponding OpenAPI action permissions. An HTTP 200 status code does not indicate that the business operation is successful. You must check JsonRpcResponse.Error. The successful result is located in JsonRpcResponse.Result.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ArchiveAgentSessionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ArchiveAgentSessionResponse
+        /// </returns>
+        public ArchiveAgentSessionResponse ArchiveAgentSessionWithOptions(ArchiveAgentSessionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ArchiveAgentSessionShrinkRequest request = new ArchiveAgentSessionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Params))
+            {
+                request.ParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Params, "Params", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Jsonrpc))
+            {
+                body["Jsonrpc"] = request.Jsonrpc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamsShrink))
+            {
+                body["Params"] = request.ParamsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ArchiveAgentSession",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ArchiveAgentSessionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the archive status of a specified agent session to archived or unarchived. This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the destination region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the destination region.
+        /// Archiving only modifies the archive flag of the session and does not stop or delete the session. If Archived is set to true, the session is archived. If Archived is set to false, the session is unarchived. If this parameter is omitted, the default value true is used. You can use the Archived parameter of ListAgentSessions to query archived and unarchived sessions separately.
+        /// The caller must have access permissions on the current session and the corresponding OpenAPI action permissions. An HTTP 200 status code does not indicate that the business operation is successful. You must check JsonRpcResponse.Error. The successful result is located in JsonRpcResponse.Result.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ArchiveAgentSessionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ArchiveAgentSessionResponse
+        /// </returns>
+        public async Task<ArchiveAgentSessionResponse> ArchiveAgentSessionWithOptionsAsync(ArchiveAgentSessionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ArchiveAgentSessionShrinkRequest request = new ArchiveAgentSessionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Params))
+            {
+                request.ParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Params, "Params", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Jsonrpc))
+            {
+                body["Jsonrpc"] = request.Jsonrpc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamsShrink))
+            {
+                body["Params"] = request.ParamsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ArchiveAgentSession",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ArchiveAgentSessionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the archive status of a specified agent session to archived or unarchived. This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the destination region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the destination region.
+        /// Archiving only modifies the archive flag of the session and does not stop or delete the session. If Archived is set to true, the session is archived. If Archived is set to false, the session is unarchived. If this parameter is omitted, the default value true is used. You can use the Archived parameter of ListAgentSessions to query archived and unarchived sessions separately.
+        /// The caller must have access permissions on the current session and the corresponding OpenAPI action permissions. An HTTP 200 status code does not indicate that the business operation is successful. You must check JsonRpcResponse.Error. The successful result is located in JsonRpcResponse.Result.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ArchiveAgentSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ArchiveAgentSessionResponse
+        /// </returns>
+        public ArchiveAgentSessionResponse ArchiveAgentSession(ArchiveAgentSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ArchiveAgentSessionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the archive status of a specified agent session to archived or unarchived. This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the destination region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the destination region.
+        /// Archiving only modifies the archive flag of the session and does not stop or delete the session. If Archived is set to true, the session is archived. If Archived is set to false, the session is unarchived. If this parameter is omitted, the default value true is used. You can use the Archived parameter of ListAgentSessions to query archived and unarchived sessions separately.
+        /// The caller must have access permissions on the current session and the corresponding OpenAPI action permissions. An HTTP 200 status code does not indicate that the business operation is successful. You must check JsonRpcResponse.Error. The successful result is located in JsonRpcResponse.Result.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ArchiveAgentSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ArchiveAgentSessionResponse
+        /// </returns>
+        public async Task<ArchiveAgentSessionResponse> ArchiveAgentSessionAsync(ArchiveAgentSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ArchiveAgentSessionWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2162,8 +2343,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
-        /// <item><description><b>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</b></description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description><b>Ensure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -2224,8 +2405,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
-        /// <item><description><b>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</b></description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description><b>Ensure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -2286,8 +2467,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
-        /// <item><description><b>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</b></description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description><b>Ensure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -2312,8 +2493,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
-        /// <item><description><b>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</b></description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description><b>Ensure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -2522,7 +2703,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a more advanced edition to use this feature.</description></item>
         /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</b></description></item>
         /// </ol>
         /// </description>
@@ -2576,7 +2757,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a more advanced edition to use this feature.</description></item>
         /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</b></description></item>
         /// </ol>
         /// </description>
@@ -2630,7 +2811,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a more advanced edition to use this feature.</description></item>
         /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</b></description></item>
         /// </ol>
         /// </description>
@@ -2656,7 +2837,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a more advanced edition to use this feature.</description></item>
         /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</b></description></item>
         /// </ol>
         /// </description>
@@ -2857,9 +3038,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <list type="bullet">
         /// <item><description><b>Agent name</b>: Must be unique within the current account.</description></item>
         /// <item><description><b>Model configuration</b>: Optional. Specifies the model used by the agent and its related settings.</description></item>
-        /// <item><description><b>Visibility level</b>: Defines who can access the agent. Supported values include account-wide, project-specific, or user-specific visibility.</description></item>
+        /// <item><description><b>Visibility level</b>: Defines who can access the agent. Supports account-wide, project-specific, or user-specific visibility.</description></item>
         /// <item><description><b>Visibility scope</b>: When <c>PROJECT</c> or <c>USER</c> is selected as the visibility level, you must specify the specific project IDs or user IDs.</description></item>
-        /// <item><description><b>Other parameters</b>: Parameters such as the display name and description are optional. Fill them in as needed.</description></item>
+        /// <item><description><b>Other parameters</b>: Parameters such as the display name and description are optional. Specify them as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2989,9 +3170,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <list type="bullet">
         /// <item><description><b>Agent name</b>: Must be unique within the current account.</description></item>
         /// <item><description><b>Model configuration</b>: Optional. Specifies the model used by the agent and its related settings.</description></item>
-        /// <item><description><b>Visibility level</b>: Defines who can access the agent. Supported values include account-wide, project-specific, or user-specific visibility.</description></item>
+        /// <item><description><b>Visibility level</b>: Defines who can access the agent. Supports account-wide, project-specific, or user-specific visibility.</description></item>
         /// <item><description><b>Visibility scope</b>: When <c>PROJECT</c> or <c>USER</c> is selected as the visibility level, you must specify the specific project IDs or user IDs.</description></item>
-        /// <item><description><b>Other parameters</b>: Parameters such as the display name and description are optional. Fill them in as needed.</description></item>
+        /// <item><description><b>Other parameters</b>: Parameters such as the display name and description are optional. Specify them as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3121,9 +3302,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <list type="bullet">
         /// <item><description><b>Agent name</b>: Must be unique within the current account.</description></item>
         /// <item><description><b>Model configuration</b>: Optional. Specifies the model used by the agent and its related settings.</description></item>
-        /// <item><description><b>Visibility level</b>: Defines who can access the agent. Supported values include account-wide, project-specific, or user-specific visibility.</description></item>
+        /// <item><description><b>Visibility level</b>: Defines who can access the agent. Supports account-wide, project-specific, or user-specific visibility.</description></item>
         /// <item><description><b>Visibility scope</b>: When <c>PROJECT</c> or <c>USER</c> is selected as the visibility level, you must specify the specific project IDs or user IDs.</description></item>
-        /// <item><description><b>Other parameters</b>: Parameters such as the display name and description are optional. Fill them in as needed.</description></item>
+        /// <item><description><b>Other parameters</b>: Parameters such as the display name and description are optional. Specify them as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3151,9 +3332,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <list type="bullet">
         /// <item><description><b>Agent name</b>: Must be unique within the current account.</description></item>
         /// <item><description><b>Model configuration</b>: Optional. Specifies the model used by the agent and its related settings.</description></item>
-        /// <item><description><b>Visibility level</b>: Defines who can access the agent. Supported values include account-wide, project-specific, or user-specific visibility.</description></item>
+        /// <item><description><b>Visibility level</b>: Defines who can access the agent. Supports account-wide, project-specific, or user-specific visibility.</description></item>
         /// <item><description><b>Visibility scope</b>: When <c>PROJECT</c> or <c>USER</c> is selected as the visibility level, you must specify the specific project IDs or user IDs.</description></item>
-        /// <item><description><b>Other parameters</b>: Parameters such as the display name and description are optional. Fill them in as needed.</description></item>
+        /// <item><description><b>Other parameters</b>: Parameters such as the display name and description are optional. Specify them as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3177,17 +3358,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation creates a new agent session.</description></item>
-        /// <item><description>Use <c>_meta.agent.agentName</c> to specify the agent name to bind. This parameter is required.<list type="bullet">
-        /// <item><description>dataworks_data_agent: DataWorks built-in agent — Data Agent. Provides intelligent data development AI capabilities that cover the entire workflow of data integration, development, O&amp;M, governance, and analytics.</description></item>
-        /// <item><description>dataworks_chatbi_agent: DataWorks built-in agent — ChatBI. Uses natural language processing and intelligent analytics to automate the entire analysis workflow through conversational interaction, from requirement parsing, data extraction, and automatic code generation to visual report output.</description></item>
-        /// <item><description>dataworks_ai_assistant_agent: DataWorks built-in agent — AI Assistant Service. An enterprise-grade dedicated AI assistant for DataWorks built on open source frameworks such as OpenClaw and Hermes Agent.</description></item>
+        /// <item><description>Specify the name of the bound agent by using <c>Params.Meta.Agent.AgentName</c>. This parameter is required.<list type="bullet">
+        /// <item><description>dataworks_data_agent: DataWorks built-in agent - Data Agent. It provides AI capabilities for the entire data development lifecycle, including data integration, development, O&amp;M, governance, and analysis.</description></item>
+        /// <item><description>dataworks_chatbi_agent: DataWorks built-in agent - ChatBI. Based on natural language processing and intelligent analysis technologies, it automates the entire analysis process from requirement parsing, data extraction, and automatic code generation to visual report output through conversational interaction.</description></item>
+        /// <item><description>dataworks_ai_assistant_agent: DataWorks built-in agent - AI Assistant. An enterprise-grade AI assistant for DataWorks built on open-source frameworks such as OpenClaw and Hermes Agent.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Use <c>_meta.config.sessionSource</c> to pass through a session source identifier for subsequent retrieval by source.</description></item>
-        /// <item><description>Use <c>_meta.config.sessionTags[].sessionTagCode</c> to pass in session tags.</description></item>
+        /// <item><description>You can specify the session source by using <c>Params.Meta.Config.SessionSource</c> to facilitate subsequent retrieval by source.</description></item>
+        /// <item><description>You can pass session tags by using <c>Params.Meta.Config.SessionTags[].SessionTagCode</c>.</description></item>
+        /// <item><description>Set optional initial session configurations by using <c>Params.Meta.InitialConfigOptions</c>. Use <c>Model</c>, <c>Mode</c>, and <c>ReasoningEffort</c> for the model, authorization mode, and reasoning configuration, respectively. After the session is created, save the session ID from the response to send prompts or subscribe to session events later.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3249,17 +3431,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation creates a new agent session.</description></item>
-        /// <item><description>Use <c>_meta.agent.agentName</c> to specify the agent name to bind. This parameter is required.<list type="bullet">
-        /// <item><description>dataworks_data_agent: DataWorks built-in agent — Data Agent. Provides intelligent data development AI capabilities that cover the entire workflow of data integration, development, O&amp;M, governance, and analytics.</description></item>
-        /// <item><description>dataworks_chatbi_agent: DataWorks built-in agent — ChatBI. Uses natural language processing and intelligent analytics to automate the entire analysis workflow through conversational interaction, from requirement parsing, data extraction, and automatic code generation to visual report output.</description></item>
-        /// <item><description>dataworks_ai_assistant_agent: DataWorks built-in agent — AI Assistant Service. An enterprise-grade dedicated AI assistant for DataWorks built on open source frameworks such as OpenClaw and Hermes Agent.</description></item>
+        /// <item><description>Specify the name of the bound agent by using <c>Params.Meta.Agent.AgentName</c>. This parameter is required.<list type="bullet">
+        /// <item><description>dataworks_data_agent: DataWorks built-in agent - Data Agent. It provides AI capabilities for the entire data development lifecycle, including data integration, development, O&amp;M, governance, and analysis.</description></item>
+        /// <item><description>dataworks_chatbi_agent: DataWorks built-in agent - ChatBI. Based on natural language processing and intelligent analysis technologies, it automates the entire analysis process from requirement parsing, data extraction, and automatic code generation to visual report output through conversational interaction.</description></item>
+        /// <item><description>dataworks_ai_assistant_agent: DataWorks built-in agent - AI Assistant. An enterprise-grade AI assistant for DataWorks built on open-source frameworks such as OpenClaw and Hermes Agent.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Use <c>_meta.config.sessionSource</c> to pass through a session source identifier for subsequent retrieval by source.</description></item>
-        /// <item><description>Use <c>_meta.config.sessionTags[].sessionTagCode</c> to pass in session tags.</description></item>
+        /// <item><description>You can specify the session source by using <c>Params.Meta.Config.SessionSource</c> to facilitate subsequent retrieval by source.</description></item>
+        /// <item><description>You can pass session tags by using <c>Params.Meta.Config.SessionTags[].SessionTagCode</c>.</description></item>
+        /// <item><description>Set optional initial session configurations by using <c>Params.Meta.InitialConfigOptions</c>. Use <c>Model</c>, <c>Mode</c>, and <c>ReasoningEffort</c> for the model, authorization mode, and reasoning configuration, respectively. After the session is created, save the session ID from the response to send prompts or subscribe to session events later.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3321,17 +3504,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation creates a new agent session.</description></item>
-        /// <item><description>Use <c>_meta.agent.agentName</c> to specify the agent name to bind. This parameter is required.<list type="bullet">
-        /// <item><description>dataworks_data_agent: DataWorks built-in agent — Data Agent. Provides intelligent data development AI capabilities that cover the entire workflow of data integration, development, O&amp;M, governance, and analytics.</description></item>
-        /// <item><description>dataworks_chatbi_agent: DataWorks built-in agent — ChatBI. Uses natural language processing and intelligent analytics to automate the entire analysis workflow through conversational interaction, from requirement parsing, data extraction, and automatic code generation to visual report output.</description></item>
-        /// <item><description>dataworks_ai_assistant_agent: DataWorks built-in agent — AI Assistant Service. An enterprise-grade dedicated AI assistant for DataWorks built on open source frameworks such as OpenClaw and Hermes Agent.</description></item>
+        /// <item><description>Specify the name of the bound agent by using <c>Params.Meta.Agent.AgentName</c>. This parameter is required.<list type="bullet">
+        /// <item><description>dataworks_data_agent: DataWorks built-in agent - Data Agent. It provides AI capabilities for the entire data development lifecycle, including data integration, development, O&amp;M, governance, and analysis.</description></item>
+        /// <item><description>dataworks_chatbi_agent: DataWorks built-in agent - ChatBI. Based on natural language processing and intelligent analysis technologies, it automates the entire analysis process from requirement parsing, data extraction, and automatic code generation to visual report output through conversational interaction.</description></item>
+        /// <item><description>dataworks_ai_assistant_agent: DataWorks built-in agent - AI Assistant. An enterprise-grade AI assistant for DataWorks built on open-source frameworks such as OpenClaw and Hermes Agent.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Use <c>_meta.config.sessionSource</c> to pass through a session source identifier for subsequent retrieval by source.</description></item>
-        /// <item><description>Use <c>_meta.config.sessionTags[].sessionTagCode</c> to pass in session tags.</description></item>
+        /// <item><description>You can specify the session source by using <c>Params.Meta.Config.SessionSource</c> to facilitate subsequent retrieval by source.</description></item>
+        /// <item><description>You can pass session tags by using <c>Params.Meta.Config.SessionTags[].SessionTagCode</c>.</description></item>
+        /// <item><description>Set optional initial session configurations by using <c>Params.Meta.InitialConfigOptions</c>. Use <c>Model</c>, <c>Mode</c>, and <c>ReasoningEffort</c> for the model, authorization mode, and reasoning configuration, respectively. After the session is created, save the session ID from the response to send prompts or subscribe to session events later.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3355,17 +3539,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation creates a new agent session.</description></item>
-        /// <item><description>Use <c>_meta.agent.agentName</c> to specify the agent name to bind. This parameter is required.<list type="bullet">
-        /// <item><description>dataworks_data_agent: DataWorks built-in agent — Data Agent. Provides intelligent data development AI capabilities that cover the entire workflow of data integration, development, O&amp;M, governance, and analytics.</description></item>
-        /// <item><description>dataworks_chatbi_agent: DataWorks built-in agent — ChatBI. Uses natural language processing and intelligent analytics to automate the entire analysis workflow through conversational interaction, from requirement parsing, data extraction, and automatic code generation to visual report output.</description></item>
-        /// <item><description>dataworks_ai_assistant_agent: DataWorks built-in agent — AI Assistant Service. An enterprise-grade dedicated AI assistant for DataWorks built on open source frameworks such as OpenClaw and Hermes Agent.</description></item>
+        /// <item><description>Specify the name of the bound agent by using <c>Params.Meta.Agent.AgentName</c>. This parameter is required.<list type="bullet">
+        /// <item><description>dataworks_data_agent: DataWorks built-in agent - Data Agent. It provides AI capabilities for the entire data development lifecycle, including data integration, development, O&amp;M, governance, and analysis.</description></item>
+        /// <item><description>dataworks_chatbi_agent: DataWorks built-in agent - ChatBI. Based on natural language processing and intelligent analysis technologies, it automates the entire analysis process from requirement parsing, data extraction, and automatic code generation to visual report output through conversational interaction.</description></item>
+        /// <item><description>dataworks_ai_assistant_agent: DataWorks built-in agent - AI Assistant. An enterprise-grade AI assistant for DataWorks built on open-source frameworks such as OpenClaw and Hermes Agent.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Use <c>_meta.config.sessionSource</c> to pass through a session source identifier for subsequent retrieval by source.</description></item>
-        /// <item><description>Use <c>_meta.config.sessionTags[].sessionTagCode</c> to pass in session tags.</description></item>
+        /// <item><description>You can specify the session source by using <c>Params.Meta.Config.SessionSource</c> to facilitate subsequent retrieval by source.</description></item>
+        /// <item><description>You can pass session tags by using <c>Params.Meta.Config.SessionTags[].SessionTagCode</c>.</description></item>
+        /// <item><description>Set optional initial session configurations by using <c>Params.Meta.InitialConfigOptions</c>. Use <c>Model</c>, <c>Mode</c>, and <c>ReasoningEffort</c> for the model, authorization mode, and reasoning configuration, respectively. After the session is created, save the session ID from the response to send prompts or subscribe to session events later.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3960,6 +4145,150 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCalendarWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a code review.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCodeReviewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCodeReviewResponse
+        /// </returns>
+        public CreateCodeReviewResponse CreateCodeReviewWithOptions(CreateCodeReviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineRunId))
+            {
+                body["PipelineRunId"] = request.PipelineRunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reviewers))
+            {
+                body["Reviewers"] = request.Reviewers;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCodeReview",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCodeReviewResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a code review.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCodeReviewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCodeReviewResponse
+        /// </returns>
+        public async Task<CreateCodeReviewResponse> CreateCodeReviewWithOptionsAsync(CreateCodeReviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineRunId))
+            {
+                body["PipelineRunId"] = request.PipelineRunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reviewers))
+            {
+                body["Reviewers"] = request.Reviewers;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCodeReview",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCodeReviewResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a code review.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCodeReviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCodeReviewResponse
+        /// </returns>
+        public CreateCodeReviewResponse CreateCodeReview(CreateCodeReviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateCodeReviewWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a code review.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCodeReviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCodeReviewResponse
+        /// </returns>
+        public async Task<CreateCodeReviewResponse> CreateCodeReviewAsync(CreateCodeReviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateCodeReviewWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4584,12 +4913,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cross-workspace deployment flow.</para>
+        /// <para>Creates a cross-workspace deployment pipeline.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates and persists a cross-workspace deployment flow. The ObjectIds parameter must contain exactly one top-level object ID from the source project. Child objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call ListCrossProjectDeploymentCandidates to query candidate objects, call ExecCrossProjectPipelineRun to execute the deployment after creation, and call GetCrossProjectPipelineRun to query the deployment status.</para>
+        /// <para>Creates and solidifies a cross-project deployment pipeline. The ObjectIds parameter must contain exactly one top-level object ID from the source project. Sub-objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call the ListCrossProjectDeploymentCandidates operation to query candidate objects. After the pipeline is created, call the ExecCrossProjectPipelineRun operation to execute the deployment, and call the GetCrossProjectPipelineRun operation to query the status.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4653,12 +4982,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cross-workspace deployment flow.</para>
+        /// <para>Creates a cross-workspace deployment pipeline.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates and persists a cross-workspace deployment flow. The ObjectIds parameter must contain exactly one top-level object ID from the source project. Child objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call ListCrossProjectDeploymentCandidates to query candidate objects, call ExecCrossProjectPipelineRun to execute the deployment after creation, and call GetCrossProjectPipelineRun to query the deployment status.</para>
+        /// <para>Creates and solidifies a cross-project deployment pipeline. The ObjectIds parameter must contain exactly one top-level object ID from the source project. Sub-objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call the ListCrossProjectDeploymentCandidates operation to query candidate objects. After the pipeline is created, call the ExecCrossProjectPipelineRun operation to execute the deployment, and call the GetCrossProjectPipelineRun operation to query the status.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4722,12 +5051,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cross-workspace deployment flow.</para>
+        /// <para>Creates a cross-workspace deployment pipeline.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates and persists a cross-workspace deployment flow. The ObjectIds parameter must contain exactly one top-level object ID from the source project. Child objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call ListCrossProjectDeploymentCandidates to query candidate objects, call ExecCrossProjectPipelineRun to execute the deployment after creation, and call GetCrossProjectPipelineRun to query the deployment status.</para>
+        /// <para>Creates and solidifies a cross-project deployment pipeline. The ObjectIds parameter must contain exactly one top-level object ID from the source project. Sub-objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call the ListCrossProjectDeploymentCandidates operation to query candidate objects. After the pipeline is created, call the ExecCrossProjectPipelineRun operation to execute the deployment, and call the GetCrossProjectPipelineRun operation to query the status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4745,12 +5074,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cross-workspace deployment flow.</para>
+        /// <para>Creates a cross-workspace deployment pipeline.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates and persists a cross-workspace deployment flow. The ObjectIds parameter must contain exactly one top-level object ID from the source project. Child objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call ListCrossProjectDeploymentCandidates to query candidate objects, call ExecCrossProjectPipelineRun to execute the deployment after creation, and call GetCrossProjectPipelineRun to query the deployment status.</para>
+        /// <para>Creates and solidifies a cross-project deployment pipeline. The ObjectIds parameter must contain exactly one top-level object ID from the source project. Sub-objects of composite objects such as workflows are automatically included by the system. Passing multiple objects causes parameter validation to fail. You can call the ListCrossProjectDeploymentCandidates operation to query candidate objects. After the pipeline is created, call the ExecCrossProjectPipelineRun operation to execute the deployment, and call the GetCrossProjectPipelineRun operation to query the status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8136,7 +8465,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a file in Data Studio. This operation does not support creating Data Integration nodes.</para>
+        /// <para>Creates a file in Data Studio. This operation does not support creating data integration node tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8314,7 +8643,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a file in Data Studio. This operation does not support creating Data Integration nodes.</para>
+        /// <para>Creates a file in Data Studio. This operation does not support creating data integration node tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8492,7 +8821,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a file in Data Studio. This operation does not support creating Data Integration nodes.</para>
+        /// <para>Creates a file in Data Studio. This operation does not support creating data integration node tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8510,7 +8839,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a file in Data Studio. This operation does not support creating Data Integration nodes.</para>
+        /// <para>Creates a file in Data Studio. This operation does not support creating data integration node tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12314,9 +12643,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or later is required.</description></item>
-        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of DataWorks general-purpose resource groups.</b></description></item>
-        /// <item><description><b>Before you call this operation, make sure that you have created the service-linked role AliyunServiceRoleForDataWorks.</b></description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this API operation.</description></item>
+        /// <item><description><b>Before you call this API operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of DataWorks general-purpose resource groups.</b></description></item>
+        /// <item><description><b>Before you call this API operation, make sure that you have created the service-linked role AliyunServiceRoleForDataWorks.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -12415,9 +12744,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or later is required.</description></item>
-        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of DataWorks general-purpose resource groups.</b></description></item>
-        /// <item><description><b>Before you call this operation, make sure that you have created the service-linked role AliyunServiceRoleForDataWorks.</b></description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this API operation.</description></item>
+        /// <item><description><b>Before you call this API operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of DataWorks general-purpose resource groups.</b></description></item>
+        /// <item><description><b>Before you call this API operation, make sure that you have created the service-linked role AliyunServiceRoleForDataWorks.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -12516,9 +12845,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or later is required.</description></item>
-        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of DataWorks general-purpose resource groups.</b></description></item>
-        /// <item><description><b>Before you call this operation, make sure that you have created the service-linked role AliyunServiceRoleForDataWorks.</b></description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this API operation.</description></item>
+        /// <item><description><b>Before you call this API operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of DataWorks general-purpose resource groups.</b></description></item>
+        /// <item><description><b>Before you call this API operation, make sure that you have created the service-linked role AliyunServiceRoleForDataWorks.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -12543,9 +12872,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>DataWorks Basic Edition or later is required.</description></item>
-        /// <item><description><b>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of DataWorks general-purpose resource groups.</b></description></item>
-        /// <item><description><b>Before you call this operation, make sure that you have created the service-linked role AliyunServiceRoleForDataWorks.</b></description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this API operation.</description></item>
+        /// <item><description><b>Before you call this API operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2680173.html">pricing</a> of DataWorks general-purpose resource groups.</b></description></item>
+        /// <item><description><b>Before you call this API operation, make sure that you have created the service-linked role AliyunServiceRoleForDataWorks.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -14496,6 +14825,182 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes a specified agent session. This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.
+        /// Verify the target session before proceeding. A deleted session cannot be recovered by unarchiving it through ArchiveAgentSession. To temporarily hide a session, use ArchiveAgentSession. To stop the current execution, use CancelAgentSession.
+        /// The caller must have access permissions for the current session and the corresponding OpenAPI action permissions. An HTTP 200 status code does not indicate a successful business operation. You must check JsonRpcResponse.Error for errors. Successful results are located in JsonRpcResponse.Result.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteAgentSessionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentSessionResponse
+        /// </returns>
+        public DeleteAgentSessionResponse DeleteAgentSessionWithOptions(DeleteAgentSessionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteAgentSessionShrinkRequest request = new DeleteAgentSessionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Params))
+            {
+                request.ParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Params, "Params", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Jsonrpc))
+            {
+                body["Jsonrpc"] = request.Jsonrpc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamsShrink))
+            {
+                body["Params"] = request.ParamsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgentSession",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgentSessionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified agent session. This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.
+        /// Verify the target session before proceeding. A deleted session cannot be recovered by unarchiving it through ArchiveAgentSession. To temporarily hide a session, use ArchiveAgentSession. To stop the current execution, use CancelAgentSession.
+        /// The caller must have access permissions for the current session and the corresponding OpenAPI action permissions. An HTTP 200 status code does not indicate a successful business operation. You must check JsonRpcResponse.Error for errors. Successful results are located in JsonRpcResponse.Result.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteAgentSessionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentSessionResponse
+        /// </returns>
+        public async Task<DeleteAgentSessionResponse> DeleteAgentSessionWithOptionsAsync(DeleteAgentSessionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteAgentSessionShrinkRequest request = new DeleteAgentSessionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Params))
+            {
+                request.ParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Params, "Params", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Jsonrpc))
+            {
+                body["Jsonrpc"] = request.Jsonrpc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParamsShrink))
+            {
+                body["Params"] = request.ParamsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgentSession",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgentSessionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified agent session. This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.
+        /// Verify the target session before proceeding. A deleted session cannot be recovered by unarchiving it through ArchiveAgentSession. To temporarily hide a session, use ArchiveAgentSession. To stop the current execution, use CancelAgentSession.
+        /// The caller must have access permissions for the current session and the corresponding OpenAPI action permissions. An HTTP 200 status code does not indicate a successful business operation. You must check JsonRpcResponse.Error for errors. Successful results are located in JsonRpcResponse.Result.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentSessionResponse
+        /// </returns>
+        public DeleteAgentSessionResponse DeleteAgentSession(DeleteAgentSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteAgentSessionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified agent session. This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the canary release feature is enabled for the current account and the target region.
+        /// Verify the target session before proceeding. A deleted session cannot be recovered by unarchiving it through ArchiveAgentSession. To temporarily hide a session, use ArchiveAgentSession. To stop the current execution, use CancelAgentSession.
+        /// The caller must have access permissions for the current session and the corresponding OpenAPI action permissions. An HTTP 200 status code does not indicate a successful business operation. You must check JsonRpcResponse.Error for errors. Successful results are located in JsonRpcResponse.Result.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentSessionResponse
+        /// </returns>
+        public async Task<DeleteAgentSessionResponse> DeleteAgentSessionAsync(DeleteAgentSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteAgentSessionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a custom monitoring alert rule.</para>
         /// </summary>
         /// 
@@ -16411,11 +16916,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <para>Deletes a data quality monitoring rule.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>需要购买DataWorks基础版及以上版本才能使用</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// DeleteDataQualityRuleRequest
         /// </param>
@@ -16461,11 +16961,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <summary>
         /// <para>Deletes a data quality monitoring rule.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>需要购买DataWorks基础版及以上版本才能使用</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDataQualityRuleRequest
@@ -16513,11 +17008,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <para>Deletes a data quality monitoring rule.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>需要购买DataWorks基础版及以上版本才能使用</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// DeleteDataQualityRuleRequest
         /// </param>
@@ -16535,11 +17025,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <summary>
         /// <para>Deletes a data quality monitoring rule.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>需要购买DataWorks基础版及以上版本才能使用</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDataQualityRuleRequest
@@ -18034,8 +18519,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
-        /// <item><description><b>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</b></description></item>
+        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -18084,8 +18569,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
-        /// <item><description><b>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</b></description></item>
+        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -18134,8 +18619,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
-        /// <item><description><b>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</b></description></item>
+        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -18160,8 +18645,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
-        /// <item><description><b>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</b></description></item>
+        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -20908,12 +21393,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a task.</para>
+        /// <para>Deletes a specified task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20959,12 +21444,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a task.</para>
+        /// <para>Deletes a specified task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21010,12 +21495,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a task.</para>
+        /// <para>Deletes a specified task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21033,12 +21518,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a task.</para>
+        /// <para>Deletes a specified task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21722,8 +22207,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
-        /// <item><description><b>Before using this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</b></description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this API operation.</description></item>
+        /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -21772,8 +22257,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
-        /// <item><description><b>Before using this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</b></description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this API operation.</description></item>
+        /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -21822,8 +22307,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
-        /// <item><description><b>Before using this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</b></description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this API operation.</description></item>
+        /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -21848,8 +22333,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
-        /// <item><description><b>Before using this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</b></description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this API operation.</description></item>
+        /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this API operation.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -22559,7 +23044,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <description>
         /// <ol>
         /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
-        /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</b></description></item>
+        /// <item><description><b>Make sure that you have created the service-linked role AliyunServiceRoleForDataWorks before you call this API operation.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -22609,7 +23094,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <description>
         /// <ol>
         /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
-        /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</b></description></item>
+        /// <item><description><b>Make sure that you have created the service-linked role AliyunServiceRoleForDataWorks before you call this API operation.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -22659,7 +23144,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <description>
         /// <ol>
         /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
-        /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</b></description></item>
+        /// <item><description><b>Make sure that you have created the service-linked role AliyunServiceRoleForDataWorks before you call this API operation.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -22685,7 +23170,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <description>
         /// <ol>
         /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
-        /// <item><description><b>Make sure that the service-linked role AliyunServiceRoleForDataWorks is created before you call this operation.</b></description></item>
+        /// <item><description><b>Make sure that you have created the service-linked role AliyunServiceRoleForDataWorks before you call this API operation.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -23136,15 +23621,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a specified stage of a deployment process.</para>
+        /// <para>Executes a specified stage of a deployment pipeline.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>&lt;notice&gt;The stages of a deployment process are sequential. For more information, see the response of GetPipelineRun. You cannot skip or repeat a stage.&gt;&lt;/notice&gt;
-        /// &lt;notice&gt;The execution is asynchronous. The response only indicates that the stage is triggered, not that the stage is executed. Check the response of GetPipelineRun for the execution result.&gt;&lt;/notice&gt;
-        /// &lt;notice&gt;This operation may not be available in earlier SDK versions. In this case, use the ExecDeploymentStage operation. The parameters are the same as those described in this document.&gt;&lt;/notice&gt;</para>
+        /// <para>Notice: The stages in a deployment pipeline are sequential. For more information, see the return values of GetPipelineRun. You cannot skip or repeatedly execute a stage.
+        /// Notice: The execution process is asynchronous. The return value only indicates whether the execution is successfully triggered, not whether the stage is successfully executed. The execution result is subject to the return values of GetPipelineRun.
+        /// Notice: This operation may not be available in earlier SDK versions. In this case, use the ExecDeploymentStage operation, which uses the same parameters as described in this document.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -23197,15 +23682,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a specified stage of a deployment process.</para>
+        /// <para>Executes a specified stage of a deployment pipeline.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>&lt;notice&gt;The stages of a deployment process are sequential. For more information, see the response of GetPipelineRun. You cannot skip or repeat a stage.&gt;&lt;/notice&gt;
-        /// &lt;notice&gt;The execution is asynchronous. The response only indicates that the stage is triggered, not that the stage is executed. Check the response of GetPipelineRun for the execution result.&gt;&lt;/notice&gt;
-        /// &lt;notice&gt;This operation may not be available in earlier SDK versions. In this case, use the ExecDeploymentStage operation. The parameters are the same as those described in this document.&gt;&lt;/notice&gt;</para>
+        /// <para>Notice: The stages in a deployment pipeline are sequential. For more information, see the return values of GetPipelineRun. You cannot skip or repeatedly execute a stage.
+        /// Notice: The execution process is asynchronous. The return value only indicates whether the execution is successfully triggered, not whether the stage is successfully executed. The execution result is subject to the return values of GetPipelineRun.
+        /// Notice: This operation may not be available in earlier SDK versions. In this case, use the ExecDeploymentStage operation, which uses the same parameters as described in this document.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -23258,15 +23743,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a specified stage of a deployment process.</para>
+        /// <para>Executes a specified stage of a deployment pipeline.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>&lt;notice&gt;The stages of a deployment process are sequential. For more information, see the response of GetPipelineRun. You cannot skip or repeat a stage.&gt;&lt;/notice&gt;
-        /// &lt;notice&gt;The execution is asynchronous. The response only indicates that the stage is triggered, not that the stage is executed. Check the response of GetPipelineRun for the execution result.&gt;&lt;/notice&gt;
-        /// &lt;notice&gt;This operation may not be available in earlier SDK versions. In this case, use the ExecDeploymentStage operation. The parameters are the same as those described in this document.&gt;&lt;/notice&gt;</para>
+        /// <para>Notice: The stages in a deployment pipeline are sequential. For more information, see the return values of GetPipelineRun. You cannot skip or repeatedly execute a stage.
+        /// Notice: The execution process is asynchronous. The return value only indicates whether the execution is successfully triggered, not whether the stage is successfully executed. The execution result is subject to the return values of GetPipelineRun.
+        /// Notice: This operation may not be available in earlier SDK versions. In this case, use the ExecDeploymentStage operation, which uses the same parameters as described in this document.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -23285,15 +23770,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a specified stage of a deployment process.</para>
+        /// <para>Executes a specified stage of a deployment pipeline.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>&lt;notice&gt;The stages of a deployment process are sequential. For more information, see the response of GetPipelineRun. You cannot skip or repeat a stage.&gt;&lt;/notice&gt;
-        /// &lt;notice&gt;The execution is asynchronous. The response only indicates that the stage is triggered, not that the stage is executed. Check the response of GetPipelineRun for the execution result.&gt;&lt;/notice&gt;
-        /// &lt;notice&gt;This operation may not be available in earlier SDK versions. In this case, use the ExecDeploymentStage operation. The parameters are the same as those described in this document.&gt;&lt;/notice&gt;</para>
+        /// <para>Notice: The stages in a deployment pipeline are sequential. For more information, see the return values of GetPipelineRun. You cannot skip or repeatedly execute a stage.
+        /// Notice: The execution process is asynchronous. The return value only indicates whether the execution is successfully triggered, not whether the stage is successfully executed. The execution result is subject to the return values of GetPipelineRun.
+        /// Notice: This operation may not be available in earlier SDK versions. In this case, use the ExecDeploymentStage operation, which uses the same parameters as described in this document.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -23664,13 +24149,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves agent details by name.</para>
+        /// <para>Retrieves the details of an agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API retrieves detailed configuration information for the specified agent name, including but not limited to the model configuration, system prompt, and tool list. You must provide the exact agent name as a request parameter.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation retrieves the detailed configuration information of an agent by its name, including but not limited to model configurations, system prompts, and tool lists. You must provide the exact agent name as a parameter in the request.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23716,13 +24201,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves agent details by name.</para>
+        /// <para>Retrieves the details of an agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API retrieves detailed configuration information for the specified agent name, including but not limited to the model configuration, system prompt, and tool list. You must provide the exact agent name as a request parameter.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation retrieves the detailed configuration information of an agent by its name, including but not limited to model configurations, system prompts, and tool lists. You must provide the exact agent name as a parameter in the request.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23768,13 +24253,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves agent details by name.</para>
+        /// <para>Retrieves the details of an agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API retrieves detailed configuration information for the specified agent name, including but not limited to the model configuration, system prompt, and tool list. You must provide the exact agent name as a request parameter.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation retrieves the detailed configuration information of an agent by its name, including but not limited to model configurations, system prompts, and tool lists. You must provide the exact agent name as a parameter in the request.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23792,13 +24277,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves agent details by name.</para>
+        /// <para>Retrieves the details of an agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API retrieves detailed configuration information for the specified agent name, including but not limited to the model configuration, system prompt, and tool list. You must provide the exact agent name as a request parameter.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation retrieves the detailed configuration information of an agent by its name, including but not limited to model configurations, system prompts, and tool lists. You must provide the exact agent name as a parameter in the request.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23996,6 +24481,174 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAgentSessionArtifactMetaWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Subscribes to real-time Server-Sent Events (SSE) for a specified agent session independently, with support for resumption using a remote cursor. This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the corresponding canary release is enabled for your account and the target region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the corresponding canary release is enabled for your account and the target region.
+        /// This API operation provides a read-only SSE subscription and does not submit questions. Use a GET request and maintain streaming reads. Do not read the response as a standard JSON object at once. For long-running tasks that may exceed the timeout of a single request, establish an independent event subscription before calling PromptAgentSession. After creating a session, set SessionCode to the SessionId and read both streams in parallel. The Events stream displays real-time progress, while the built-in SSE of the Prompt stream is used to read the final state and business errors of the current turn.
+        /// Events display messages, tool invoke, and execution progress. The establishment of a subscription connection, heartbeats, or an HTTP 200 status code does not indicate task completion. Determine task completion based on the actual final state events and the Prompt invoke results.
+        /// When resuming after a disconnection, pass the ID of the last consumed remote event as Last-Event-Id. Also, save and pass back the EventEpoch of the same event stream if the server has returned it. When subscribing for the first time without a cursor, omit these two parameters to receive only real-time events after the subscription is established. Explicitly setting Last-Event-Id to 0 attempts to replay from the starting point still in the cache, which does not mean the complete history can be retrieved. Retrieve the complete history by calling LoadAgentSession. Do not generate cursors or epochs yourself, or use local message sequence numbers as replacements.
+        /// The event cache is bounded. If you receive a resynchronization prompt such as state_resync_required or the cursor is no longer available, restore the history by calling LoadAgentSession and then re-establish the subscription. LoadAgentSession is used for refreshing and exception recovery, and should not be called repeatedly to replace real-time event subscriptions. If the Prompt stream times out or disconnects before receiving the business final state, the result of the current turn is unknown, and you can continue to observe the progress through the Events stream. Avoid automatically resending the Prompt. Closing the Events subscription does not trigger CancelAgentSession.
+        /// Servers that support epoch information return eventEpoch in the data of the stream_open control frame and provide a mapping between the business sessionId and nativeSessionId. Save the identifiers returned by the server. Do not assume that the business session ID is the same as the native session ID. The cursor and eventEpoch must come from the same event stream epoch of the same native session, and cannot be reused across native sessions or epochs. Do not advance the cursor when the control frame does not have an ID.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentSessionEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentSessionEventsResponse
+        /// </returns>
+        public GetAgentSessionEventsResponse GetAgentSessionEventsWithOptions(GetAgentSessionEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventEpoch))
+            {
+                query["EventEpoch"] = request.EventEpoch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionCode))
+            {
+                query["SessionCode"] = request.SessionCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentSessionEvents",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentSessionEventsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Subscribes to real-time Server-Sent Events (SSE) for a specified agent session independently, with support for resumption using a remote cursor. This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the corresponding canary release is enabled for your account and the target region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the corresponding canary release is enabled for your account and the target region.
+        /// This API operation provides a read-only SSE subscription and does not submit questions. Use a GET request and maintain streaming reads. Do not read the response as a standard JSON object at once. For long-running tasks that may exceed the timeout of a single request, establish an independent event subscription before calling PromptAgentSession. After creating a session, set SessionCode to the SessionId and read both streams in parallel. The Events stream displays real-time progress, while the built-in SSE of the Prompt stream is used to read the final state and business errors of the current turn.
+        /// Events display messages, tool invoke, and execution progress. The establishment of a subscription connection, heartbeats, or an HTTP 200 status code does not indicate task completion. Determine task completion based on the actual final state events and the Prompt invoke results.
+        /// When resuming after a disconnection, pass the ID of the last consumed remote event as Last-Event-Id. Also, save and pass back the EventEpoch of the same event stream if the server has returned it. When subscribing for the first time without a cursor, omit these two parameters to receive only real-time events after the subscription is established. Explicitly setting Last-Event-Id to 0 attempts to replay from the starting point still in the cache, which does not mean the complete history can be retrieved. Retrieve the complete history by calling LoadAgentSession. Do not generate cursors or epochs yourself, or use local message sequence numbers as replacements.
+        /// The event cache is bounded. If you receive a resynchronization prompt such as state_resync_required or the cursor is no longer available, restore the history by calling LoadAgentSession and then re-establish the subscription. LoadAgentSession is used for refreshing and exception recovery, and should not be called repeatedly to replace real-time event subscriptions. If the Prompt stream times out or disconnects before receiving the business final state, the result of the current turn is unknown, and you can continue to observe the progress through the Events stream. Avoid automatically resending the Prompt. Closing the Events subscription does not trigger CancelAgentSession.
+        /// Servers that support epoch information return eventEpoch in the data of the stream_open control frame and provide a mapping between the business sessionId and nativeSessionId. Save the identifiers returned by the server. Do not assume that the business session ID is the same as the native session ID. The cursor and eventEpoch must come from the same event stream epoch of the same native session, and cannot be reused across native sessions or epochs. Do not advance the cursor when the control frame does not have an ID.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentSessionEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentSessionEventsResponse
+        /// </returns>
+        public async Task<GetAgentSessionEventsResponse> GetAgentSessionEventsWithOptionsAsync(GetAgentSessionEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventEpoch))
+            {
+                query["EventEpoch"] = request.EventEpoch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionCode))
+            {
+                query["SessionCode"] = request.SessionCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentSessionEvents",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentSessionEventsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Subscribes to real-time Server-Sent Events (SSE) for a specified agent session independently, with support for resumption using a remote cursor. This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the corresponding canary release is enabled for your account and the target region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the corresponding canary release is enabled for your account and the target region.
+        /// This API operation provides a read-only SSE subscription and does not submit questions. Use a GET request and maintain streaming reads. Do not read the response as a standard JSON object at once. For long-running tasks that may exceed the timeout of a single request, establish an independent event subscription before calling PromptAgentSession. After creating a session, set SessionCode to the SessionId and read both streams in parallel. The Events stream displays real-time progress, while the built-in SSE of the Prompt stream is used to read the final state and business errors of the current turn.
+        /// Events display messages, tool invoke, and execution progress. The establishment of a subscription connection, heartbeats, or an HTTP 200 status code does not indicate task completion. Determine task completion based on the actual final state events and the Prompt invoke results.
+        /// When resuming after a disconnection, pass the ID of the last consumed remote event as Last-Event-Id. Also, save and pass back the EventEpoch of the same event stream if the server has returned it. When subscribing for the first time without a cursor, omit these two parameters to receive only real-time events after the subscription is established. Explicitly setting Last-Event-Id to 0 attempts to replay from the starting point still in the cache, which does not mean the complete history can be retrieved. Retrieve the complete history by calling LoadAgentSession. Do not generate cursors or epochs yourself, or use local message sequence numbers as replacements.
+        /// The event cache is bounded. If you receive a resynchronization prompt such as state_resync_required or the cursor is no longer available, restore the history by calling LoadAgentSession and then re-establish the subscription. LoadAgentSession is used for refreshing and exception recovery, and should not be called repeatedly to replace real-time event subscriptions. If the Prompt stream times out or disconnects before receiving the business final state, the result of the current turn is unknown, and you can continue to observe the progress through the Events stream. Avoid automatically resending the Prompt. Closing the Events subscription does not trigger CancelAgentSession.
+        /// Servers that support epoch information return eventEpoch in the data of the stream_open control frame and provide a mapping between the business sessionId and nativeSessionId. Save the identifiers returned by the server. Do not assume that the business session ID is the same as the native session ID. The cursor and eventEpoch must come from the same event stream epoch of the same native session, and cannot be reused across native sessions or epochs. Do not advance the cursor when the control frame does not have an ID.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentSessionEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentSessionEventsResponse
+        /// </returns>
+        public GetAgentSessionEventsResponse GetAgentSessionEvents(GetAgentSessionEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAgentSessionEventsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Subscribes to real-time Server-Sent Events (SSE) for a specified agent session independently, with support for resumption using a remote cursor. This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the corresponding canary release is enabled for your account and the target region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API operation is available only when the canary release feature is enabled. Before calling this operation, ensure that the corresponding canary release is enabled for your account and the target region.
+        /// This API operation provides a read-only SSE subscription and does not submit questions. Use a GET request and maintain streaming reads. Do not read the response as a standard JSON object at once. For long-running tasks that may exceed the timeout of a single request, establish an independent event subscription before calling PromptAgentSession. After creating a session, set SessionCode to the SessionId and read both streams in parallel. The Events stream displays real-time progress, while the built-in SSE of the Prompt stream is used to read the final state and business errors of the current turn.
+        /// Events display messages, tool invoke, and execution progress. The establishment of a subscription connection, heartbeats, or an HTTP 200 status code does not indicate task completion. Determine task completion based on the actual final state events and the Prompt invoke results.
+        /// When resuming after a disconnection, pass the ID of the last consumed remote event as Last-Event-Id. Also, save and pass back the EventEpoch of the same event stream if the server has returned it. When subscribing for the first time without a cursor, omit these two parameters to receive only real-time events after the subscription is established. Explicitly setting Last-Event-Id to 0 attempts to replay from the starting point still in the cache, which does not mean the complete history can be retrieved. Retrieve the complete history by calling LoadAgentSession. Do not generate cursors or epochs yourself, or use local message sequence numbers as replacements.
+        /// The event cache is bounded. If you receive a resynchronization prompt such as state_resync_required or the cursor is no longer available, restore the history by calling LoadAgentSession and then re-establish the subscription. LoadAgentSession is used for refreshing and exception recovery, and should not be called repeatedly to replace real-time event subscriptions. If the Prompt stream times out or disconnects before receiving the business final state, the result of the current turn is unknown, and you can continue to observe the progress through the Events stream. Avoid automatically resending the Prompt. Closing the Events subscription does not trigger CancelAgentSession.
+        /// Servers that support epoch information return eventEpoch in the data of the stream_open control frame and provide a mapping between the business sessionId and nativeSessionId. Save the identifiers returned by the server. Do not assume that the business session ID is the same as the native session ID. The cursor and eventEpoch must come from the same event stream epoch of the same native session, and cannot be reused across native sessions or epochs. Do not advance the cursor when the control frame does not have an ID.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentSessionEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentSessionEventsResponse
+        /// </returns>
+        public async Task<GetAgentSessionEventsResponse> GetAgentSessionEventsAsync(GetAgentSessionEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAgentSessionEventsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -24852,13 +25505,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified data catalog in DataWorks Data Map. Currently, DLF and StarRocks catalog types are supported.</para>
+        /// <para>Retrieves the details of a specified data catalog in DataWorks Data Map. Currently, DLF and StarRocks types are supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must have DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -24897,13 +25550,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified data catalog in DataWorks Data Map. Currently, DLF and StarRocks catalog types are supported.</para>
+        /// <para>Retrieves the details of a specified data catalog in DataWorks Data Map. Currently, DLF and StarRocks types are supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must have DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -24942,13 +25595,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified data catalog in DataWorks Data Map. Currently, DLF and StarRocks catalog types are supported.</para>
+        /// <para>Retrieves the details of a specified data catalog in DataWorks Data Map. Currently, DLF and StarRocks types are supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must have DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -24967,13 +25620,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified data catalog in DataWorks Data Map. Currently, DLF and StarRocks catalog types are supported.</para>
+        /// <para>Retrieves the details of a specified data catalog in DataWorks Data Map. Currently, DLF and StarRocks types are supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must have DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -25136,13 +25789,141 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified column in a DataWorks Data Map table.</para>
+        /// <para>Retrieves the metadata of a code review.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCodeReviewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCodeReviewResponse
+        /// </returns>
+        public GetCodeReviewResponse GetCodeReviewWithOptions(GetCodeReviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCodeReview",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCodeReviewResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the metadata of a code review.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCodeReviewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCodeReviewResponse
+        /// </returns>
+        public async Task<GetCodeReviewResponse> GetCodeReviewWithOptionsAsync(GetCodeReviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCodeReview",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCodeReviewResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the metadata of a code review.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCodeReviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCodeReviewResponse
+        /// </returns>
+        public GetCodeReviewResponse GetCodeReview(GetCodeReviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCodeReviewWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the metadata of a code review.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCodeReviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCodeReviewResponse
+        /// </returns>
+        public async Task<GetCodeReviewResponse> GetCodeReviewAsync(GetCodeReviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCodeReviewWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a specified column in a Data Map table.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this API operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -25181,13 +25962,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified column in a DataWorks Data Map table.</para>
+        /// <para>Retrieves the details of a specified column in a Data Map table.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this API operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -25226,13 +26007,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified column in a DataWorks Data Map table.</para>
+        /// <para>Retrieves the details of a specified column in a Data Map table.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this API operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -25251,13 +26032,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified column in a DataWorks Data Map table.</para>
+        /// <para>Retrieves the details of a specified column in a Data Map table.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this API operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -25604,17 +26385,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the user mappings of a compute resource. Supports EMR and Serverless Spark resource types.</para>
+        /// <para>Queries the user mappings for compute resources, supporting EMR and Serverless Spark resource types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
         /// <item><description>You must have at least one of the following roles in the DataWorks workspace:</description></item>
         /// </ol>
         /// <list type="bullet">
-        /// <item><description>Tenant Owner, Workspace Administrator, Deployment, Developer, Project Owner, or O&amp;M Engineer</description></item>
+        /// <item><description>Tenant owner, workspace administrator, deployer, developer, project owner, or operator.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25661,17 +26442,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the user mappings of a compute resource. Supports EMR and Serverless Spark resource types.</para>
+        /// <para>Queries the user mappings for compute resources, supporting EMR and Serverless Spark resource types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
         /// <item><description>You must have at least one of the following roles in the DataWorks workspace:</description></item>
         /// </ol>
         /// <list type="bullet">
-        /// <item><description>Tenant Owner, Workspace Administrator, Deployment, Developer, Project Owner, or O&amp;M Engineer</description></item>
+        /// <item><description>Tenant owner, workspace administrator, deployer, developer, project owner, or operator.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25718,17 +26499,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the user mappings of a compute resource. Supports EMR and Serverless Spark resource types.</para>
+        /// <para>Queries the user mappings for compute resources, supporting EMR and Serverless Spark resource types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
         /// <item><description>You must have at least one of the following roles in the DataWorks workspace:</description></item>
         /// </ol>
         /// <list type="bullet">
-        /// <item><description>Tenant Owner, Workspace Administrator, Deployment, Developer, Project Owner, or O&amp;M Engineer</description></item>
+        /// <item><description>Tenant owner, workspace administrator, deployer, developer, project owner, or operator.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25747,17 +26528,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the user mappings of a compute resource. Supports EMR and Serverless Spark resource types.</para>
+        /// <para>Queries the user mappings for compute resources, supporting EMR and Serverless Spark resource types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
         /// <item><description>You must have at least one of the following roles in the DataWorks workspace:</description></item>
         /// </ol>
         /// <list type="bullet">
-        /// <item><description>Tenant Owner, Workspace Administrator, Deployment, Developer, Project Owner, or O&amp;M Engineer</description></item>
+        /// <item><description>Tenant owner, workspace administrator, deployer, developer, project owner, or operator.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26256,7 +27037,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a cross-workspace deployment flow.</para>
+        /// <para>Queries the details of a cross-workspace deployment pipeline run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26302,7 +27083,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a cross-workspace deployment flow.</para>
+        /// <para>Queries the details of a cross-workspace deployment pipeline run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26348,7 +27129,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a cross-workspace deployment flow.</para>
+        /// <para>Queries the details of a cross-workspace deployment pipeline run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26366,7 +27147,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a cross-workspace deployment flow.</para>
+        /// <para>Queries the details of a cross-workspace deployment pipeline run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26504,12 +27285,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View data integration tasks.</para>
+        /// <para>Queries the details of a data integration task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation requires DataWorks Basic Edition or later.</para>
+        /// <para>DataWorks Basic Edition or a higher edition is required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26547,12 +27328,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View data integration tasks.</para>
+        /// <para>Queries the details of a data integration task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation requires DataWorks Basic Edition or later.</para>
+        /// <para>DataWorks Basic Edition or a higher edition is required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26590,12 +27371,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View data integration tasks.</para>
+        /// <para>Queries the details of a data integration task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation requires DataWorks Basic Edition or later.</para>
+        /// <para>DataWorks Basic Edition or a higher edition is required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26613,12 +27394,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View data integration tasks.</para>
+        /// <para>Queries the details of a data integration task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation requires DataWorks Basic Edition or later.</para>
+        /// <para>DataWorks Basic Edition or a higher edition is required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27073,7 +27854,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or a higher edition is required to use this operation.</para>
+        /// <para>DataWorks Basic Edition or a higher edition is required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27122,7 +27903,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or a higher edition is required to use this operation.</para>
+        /// <para>DataWorks Basic Edition or a higher edition is required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27171,7 +27952,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or a higher edition is required to use this operation.</para>
+        /// <para>DataWorks Basic Edition or a higher edition is required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27200,7 +27981,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or a higher edition is required to use this operation.</para>
+        /// <para>DataWorks Basic Edition or a higher edition is required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29882,7 +30663,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must have DataWorks Standard Edition or a higher edition to use this operation.</description></item>
+        /// <item><description>You must purchase DataWorks Standard Edition or a higher edition to use this operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -29927,7 +30708,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must have DataWorks Standard Edition or a higher edition to use this operation.</description></item>
+        /// <item><description>You must purchase DataWorks Standard Edition or a higher edition to use this operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -29972,7 +30753,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must have DataWorks Standard Edition or a higher edition to use this operation.</description></item>
+        /// <item><description>You must purchase DataWorks Standard Edition or a higher edition to use this operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -29997,7 +30778,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must have DataWorks Standard Edition or a higher edition to use this operation.</description></item>
+        /// <item><description>You must purchase DataWorks Standard Edition or a higher edition to use this operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -31668,12 +32449,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific member in a Workspace.</para>
+        /// <para>Queries the details of a workspace member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is available only in DataWorks Basic Edition and later.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31719,12 +32500,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific member in a Workspace.</para>
+        /// <para>Queries the details of a workspace member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is available only in DataWorks Basic Edition and later.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31770,12 +32551,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific member in a Workspace.</para>
+        /// <para>Queries the details of a workspace member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is available only in DataWorks Basic Edition and later.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31793,12 +32574,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific member in a Workspace.</para>
+        /// <para>Queries the details of a workspace member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is available only in DataWorks Basic Edition and later.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33556,13 +34337,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified table in Data Map. You can choose whether to return business metadata.</para>
+        /// <para>Queries the details of a specified table in DataWorks Data Map. You can choose whether to return business metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this API.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -33601,13 +34382,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified table in Data Map. You can choose whether to return business metadata.</para>
+        /// <para>Queries the details of a specified table in DataWorks Data Map. You can choose whether to return business metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this API.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -33646,13 +34427,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified table in Data Map. You can choose whether to return business metadata.</para>
+        /// <para>Queries the details of a specified table in DataWorks Data Map. You can choose whether to return business metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this API.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -33671,13 +34452,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified table in Data Map. You can choose whether to return business metadata.</para>
+        /// <para>Queries the details of a specified table in DataWorks Data Map. You can choose whether to return business metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this API.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -34232,12 +35013,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a workflow.</para>
+        /// <para>Retrieves the details of a specified workflow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>This feature requires DataWorks Basic Edition or a higher edition.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34275,12 +35056,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a workflow.</para>
+        /// <para>Retrieves the details of a specified workflow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>This feature requires DataWorks Basic Edition or a higher edition.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34318,12 +35099,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a workflow.</para>
+        /// <para>Retrieves the details of a specified workflow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>This feature requires DataWorks Basic Edition or a higher edition.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34341,12 +35122,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a workflow.</para>
+        /// <para>Retrieves the details of a specified workflow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
+        /// <para>This feature requires DataWorks Basic Edition or a higher edition.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35704,18 +36485,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Loads the conversation history list of an Agent Session.</para>
+        /// <para>Retrieves the conversation history list of agent sessions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request instructions</h2>
         /// <list type="bullet">
-        /// <item><description>At least one of <c>agentName</c> and <c>sessionSourceList</c> must be provided.</description></item>
-        /// <item><description>Supports combined filtering by <c>tagList</c>, <c>sessionId</c>, and <c>sessionTitle</c>.</description></item>
-        /// <item><description>The response conforms to the Alibaba Cloud OpenAPI paging specification, including <c>totalCount</c>, <c>maxResults</c>, <c>nextToken</c>, and <c>sessionList</c>.</description></item>
-        /// <item><description>If <c>nextToken</c> is an invalid character string, it defaults to 1.</description></item>
-        /// <item><description>By default, 50 records are returned per page. Adjust this by using the <c>maxResults</c> parameter.</description></item>
+        /// <item><description>You must specify at least one of <c>Params.AgentName</c> and <c>Params.SessionSourceList</c>. You can also filter sessions by <c>Params.TagList</c>, <c>Params.SessionId</c>, and <c>Params.SessionTitle</c>.</description></item>
+        /// <item><description>If <c>Params.Archived</c> is set to <c>true</c>, only archived sessions are queried. If it is set to <c>false</c> or omitted, only unarchived sessions are queried. To query both types of sessions, send separate requests and handle the pagination for each.</description></item>
+        /// <item><description>The session list is located in <c>JsonRpcResponse.Result.AgentSessions</c>. The pagination information is located in <c>TotalCount</c>, <c>MaxResults</c>, and <c>NextToken</c> under the same <c>Result</c>.</description></item>
+        /// <item><description>The default value of <c>Params.MaxResults</c> is 50. For the first page, you can pass <c>Params.NextToken=1</c>. For subsequent pages, pass the <c>NextToken</c> value from the response as is.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -35772,18 +36552,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Loads the conversation history list of an Agent Session.</para>
+        /// <para>Retrieves the conversation history list of agent sessions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request instructions</h2>
         /// <list type="bullet">
-        /// <item><description>At least one of <c>agentName</c> and <c>sessionSourceList</c> must be provided.</description></item>
-        /// <item><description>Supports combined filtering by <c>tagList</c>, <c>sessionId</c>, and <c>sessionTitle</c>.</description></item>
-        /// <item><description>The response conforms to the Alibaba Cloud OpenAPI paging specification, including <c>totalCount</c>, <c>maxResults</c>, <c>nextToken</c>, and <c>sessionList</c>.</description></item>
-        /// <item><description>If <c>nextToken</c> is an invalid character string, it defaults to 1.</description></item>
-        /// <item><description>By default, 50 records are returned per page. Adjust this by using the <c>maxResults</c> parameter.</description></item>
+        /// <item><description>You must specify at least one of <c>Params.AgentName</c> and <c>Params.SessionSourceList</c>. You can also filter sessions by <c>Params.TagList</c>, <c>Params.SessionId</c>, and <c>Params.SessionTitle</c>.</description></item>
+        /// <item><description>If <c>Params.Archived</c> is set to <c>true</c>, only archived sessions are queried. If it is set to <c>false</c> or omitted, only unarchived sessions are queried. To query both types of sessions, send separate requests and handle the pagination for each.</description></item>
+        /// <item><description>The session list is located in <c>JsonRpcResponse.Result.AgentSessions</c>. The pagination information is located in <c>TotalCount</c>, <c>MaxResults</c>, and <c>NextToken</c> under the same <c>Result</c>.</description></item>
+        /// <item><description>The default value of <c>Params.MaxResults</c> is 50. For the first page, you can pass <c>Params.NextToken=1</c>. For subsequent pages, pass the <c>NextToken</c> value from the response as is.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -35840,18 +36619,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Loads the conversation history list of an Agent Session.</para>
+        /// <para>Retrieves the conversation history list of agent sessions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request instructions</h2>
         /// <list type="bullet">
-        /// <item><description>At least one of <c>agentName</c> and <c>sessionSourceList</c> must be provided.</description></item>
-        /// <item><description>Supports combined filtering by <c>tagList</c>, <c>sessionId</c>, and <c>sessionTitle</c>.</description></item>
-        /// <item><description>The response conforms to the Alibaba Cloud OpenAPI paging specification, including <c>totalCount</c>, <c>maxResults</c>, <c>nextToken</c>, and <c>sessionList</c>.</description></item>
-        /// <item><description>If <c>nextToken</c> is an invalid character string, it defaults to 1.</description></item>
-        /// <item><description>By default, 50 records are returned per page. Adjust this by using the <c>maxResults</c> parameter.</description></item>
+        /// <item><description>You must specify at least one of <c>Params.AgentName</c> and <c>Params.SessionSourceList</c>. You can also filter sessions by <c>Params.TagList</c>, <c>Params.SessionId</c>, and <c>Params.SessionTitle</c>.</description></item>
+        /// <item><description>If <c>Params.Archived</c> is set to <c>true</c>, only archived sessions are queried. If it is set to <c>false</c> or omitted, only unarchived sessions are queried. To query both types of sessions, send separate requests and handle the pagination for each.</description></item>
+        /// <item><description>The session list is located in <c>JsonRpcResponse.Result.AgentSessions</c>. The pagination information is located in <c>TotalCount</c>, <c>MaxResults</c>, and <c>NextToken</c> under the same <c>Result</c>.</description></item>
+        /// <item><description>The default value of <c>Params.MaxResults</c> is 50. For the first page, you can pass <c>Params.NextToken=1</c>. For subsequent pages, pass the <c>NextToken</c> value from the response as is.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -35870,18 +36648,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Loads the conversation history list of an Agent Session.</para>
+        /// <para>Retrieves the conversation history list of agent sessions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request instructions</h2>
         /// <list type="bullet">
-        /// <item><description>At least one of <c>agentName</c> and <c>sessionSourceList</c> must be provided.</description></item>
-        /// <item><description>Supports combined filtering by <c>tagList</c>, <c>sessionId</c>, and <c>sessionTitle</c>.</description></item>
-        /// <item><description>The response conforms to the Alibaba Cloud OpenAPI paging specification, including <c>totalCount</c>, <c>maxResults</c>, <c>nextToken</c>, and <c>sessionList</c>.</description></item>
-        /// <item><description>If <c>nextToken</c> is an invalid character string, it defaults to 1.</description></item>
-        /// <item><description>By default, 50 records are returned per page. Adjust this by using the <c>maxResults</c> parameter.</description></item>
+        /// <item><description>You must specify at least one of <c>Params.AgentName</c> and <c>Params.SessionSourceList</c>. You can also filter sessions by <c>Params.TagList</c>, <c>Params.SessionId</c>, and <c>Params.SessionTitle</c>.</description></item>
+        /// <item><description>If <c>Params.Archived</c> is set to <c>true</c>, only archived sessions are queried. If it is set to <c>false</c> or omitted, only unarchived sessions are queried. To query both types of sessions, send separate requests and handle the pagination for each.</description></item>
+        /// <item><description>The session list is located in <c>JsonRpcResponse.Result.AgentSessions</c>. The pagination information is located in <c>TotalCount</c>, <c>MaxResults</c>, and <c>NextToken</c> under the same <c>Result</c>.</description></item>
+        /// <item><description>The default value of <c>Params.MaxResults</c> is 50. For the first page, you can pass <c>Params.NextToken=1</c>. For subsequent pages, pass the <c>NextToken</c> value from the response as is.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -37056,6 +37833,166 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Performs a paging query of code reviews.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCodeReviewsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCodeReviewsResponse
+        /// </returns>
+        public ListCodeReviewsResponse ListCodeReviewsWithOptions(ListCodeReviewsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Creator))
+            {
+                query["Creator"] = request.Creator;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reviewer))
+            {
+                query["Reviewer"] = request.Reviewer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCodeReviews",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCodeReviewsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query of code reviews.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCodeReviewsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCodeReviewsResponse
+        /// </returns>
+        public async Task<ListCodeReviewsResponse> ListCodeReviewsWithOptionsAsync(ListCodeReviewsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Creator))
+            {
+                query["Creator"] = request.Creator;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reviewer))
+            {
+                query["Reviewer"] = request.Reviewer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCodeReviews",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCodeReviewsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query of code reviews.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCodeReviewsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCodeReviewsResponse
+        /// </returns>
+        public ListCodeReviewsResponse ListCodeReviews(ListCodeReviewsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListCodeReviewsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query of code reviews.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCodeReviewsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCodeReviewsResponse
+        /// </returns>
+        public async Task<ListCodeReviewsResponse> ListCodeReviewsAsync(ListCodeReviewsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListCodeReviewsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the columns of a specified table in DataWorks Data Map.</para>
         /// </summary>
         /// 
@@ -38168,7 +39105,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries cross-workspace deployment candidate objects.</para>
+        /// <para>Queries cross-workspace deployment candidates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38250,7 +39187,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries cross-workspace deployment candidate objects.</para>
+        /// <para>Queries cross-workspace deployment candidates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38332,7 +39269,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries cross-workspace deployment candidate objects.</para>
+        /// <para>Queries cross-workspace deployment candidates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38350,7 +39287,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries cross-workspace deployment candidate objects.</para>
+        /// <para>Queries cross-workspace deployment candidates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38504,7 +39441,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the publish items of a cross-workspace publish pipeline.</para>
+        /// <para>Queries the deployment items of a cross-workspace deployment pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38558,7 +39495,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the publish items of a cross-workspace publish pipeline.</para>
+        /// <para>Queries the deployment items of a cross-workspace deployment pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38612,7 +39549,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the publish items of a cross-workspace publish pipeline.</para>
+        /// <para>Queries the deployment items of a cross-workspace deployment pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38630,7 +39567,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the publish items of a cross-workspace publish pipeline.</para>
+        /// <para>Queries the deployment items of a cross-workspace deployment pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39756,12 +40693,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists new-version Data Integration tasks, including real-time database synchronization tasks, batch database synchronization tasks, and real-time single-table synchronization tasks.</para>
+        /// <para>Queries synchronization tasks in the new version of Data Integration, including full-database real-time synchronization tasks, full-database batch synchronization tasks, and single-table real-time synchronization tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation requires DataWorks Basic Edition or a later edition.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39799,12 +40736,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists new-version Data Integration tasks, including real-time database synchronization tasks, batch database synchronization tasks, and real-time single-table synchronization tasks.</para>
+        /// <para>Queries synchronization tasks in the new version of Data Integration, including full-database real-time synchronization tasks, full-database batch synchronization tasks, and single-table real-time synchronization tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation requires DataWorks Basic Edition or a later edition.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39842,12 +40779,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists new-version Data Integration tasks, including real-time database synchronization tasks, batch database synchronization tasks, and real-time single-table synchronization tasks.</para>
+        /// <para>Queries synchronization tasks in the new version of Data Integration, including full-database real-time synchronization tasks, full-database batch synchronization tasks, and single-table real-time synchronization tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation requires DataWorks Basic Edition or a later edition.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39865,12 +40802,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists new-version Data Integration tasks, including real-time database synchronization tasks, batch database synchronization tasks, and real-time single-table synchronization tasks.</para>
+        /// <para>Queries synchronization tasks in the new version of Data Integration, including full-database real-time synchronization tasks, full-database batch synchronization tasks, and single-table real-time synchronization tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation requires DataWorks Basic Edition or a later edition.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39893,7 +40830,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Enterprise Edition or a higher edition is required.</para>
+        /// <para>You must purchase DataWorks Enterprise Edition or higher to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39936,7 +40873,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Enterprise Edition or a higher edition is required.</para>
+        /// <para>You must purchase DataWorks Enterprise Edition or higher to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39979,7 +40916,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Enterprise Edition or a higher edition is required.</para>
+        /// <para>You must purchase DataWorks Enterprise Edition or higher to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -40002,7 +40939,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Enterprise Edition or a higher edition is required.</para>
+        /// <para>You must purchase DataWorks Enterprise Edition or higher to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -40504,12 +41441,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of quality monitoring tasks.</para>
+        /// <para>Queries the data quality monitoring task list by page.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this API operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -40553,12 +41490,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of quality monitoring tasks.</para>
+        /// <para>Queries the data quality monitoring task list by page.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this API operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -40602,12 +41539,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of quality monitoring tasks.</para>
+        /// <para>Queries the data quality monitoring task list by page.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this API operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -40631,12 +41568,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of quality monitoring tasks.</para>
+        /// <para>Queries the data quality monitoring task list by page.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this API operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43076,7 +44013,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of descendant tasks of a task by page.</para>
+        /// <para>Retrieves a paginated list of downstream tasks for a specified task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -43119,7 +44056,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of descendant tasks of a task by page.</para>
+        /// <para>Retrieves a paginated list of downstream tasks for a specified task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -43162,7 +44099,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of descendant tasks of a task by page.</para>
+        /// <para>Retrieves a paginated list of downstream tasks for a specified task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -43185,7 +44122,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of descendant tasks of a task by page.</para>
+        /// <para>Retrieves a paginated list of downstream tasks for a specified task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -47080,15 +48017,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the partition list of a specified table in DataWorks Data Map. Currently supports MaxCompute and HMS (EMR cluster) types.</para>
+        /// <para>Queries the partitions of a specified table in DataWorks Data Map. MaxCompute and HMS (EMR cluster) tables are supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
-        /// <item><description>Only MaxCompute and HMS (EMR cluster) table types are supported.</description></item>
-        /// <item><description>Before calling this API, call ListCrawlers to obtain the MetaEntityId of the metadata crawler, then call ListDatabases to obtain the database ID. For MaxCompute projects with Schema enabled, call ListSchemas to obtain the schema ID. Then call ListTables to obtain the TableId, and pass the returned table ID to this API.</description></item>
+        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description>Currently, only MaxCompute and HMS (EMR cluster) tables are supported.</description></item>
+        /// <item><description>Before you call this API operation, call ListCrawlers to obtain the MetaEntityId of the metadata crawler, and then call ListDatabases to obtain the database ID. For MaxCompute projects with the schema feature enabled, call ListSchemas to obtain the schema ID. Then, call ListTables to obtain the TableId, and pass the returned table ID to this API operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -47127,15 +48064,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the partition list of a specified table in DataWorks Data Map. Currently supports MaxCompute and HMS (EMR cluster) types.</para>
+        /// <para>Queries the partitions of a specified table in DataWorks Data Map. MaxCompute and HMS (EMR cluster) tables are supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
-        /// <item><description>Only MaxCompute and HMS (EMR cluster) table types are supported.</description></item>
-        /// <item><description>Before calling this API, call ListCrawlers to obtain the MetaEntityId of the metadata crawler, then call ListDatabases to obtain the database ID. For MaxCompute projects with Schema enabled, call ListSchemas to obtain the schema ID. Then call ListTables to obtain the TableId, and pass the returned table ID to this API.</description></item>
+        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description>Currently, only MaxCompute and HMS (EMR cluster) tables are supported.</description></item>
+        /// <item><description>Before you call this API operation, call ListCrawlers to obtain the MetaEntityId of the metadata crawler, and then call ListDatabases to obtain the database ID. For MaxCompute projects with the schema feature enabled, call ListSchemas to obtain the schema ID. Then, call ListTables to obtain the TableId, and pass the returned table ID to this API operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -47174,15 +48111,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the partition list of a specified table in DataWorks Data Map. Currently supports MaxCompute and HMS (EMR cluster) types.</para>
+        /// <para>Queries the partitions of a specified table in DataWorks Data Map. MaxCompute and HMS (EMR cluster) tables are supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
-        /// <item><description>Only MaxCompute and HMS (EMR cluster) table types are supported.</description></item>
-        /// <item><description>Before calling this API, call ListCrawlers to obtain the MetaEntityId of the metadata crawler, then call ListDatabases to obtain the database ID. For MaxCompute projects with Schema enabled, call ListSchemas to obtain the schema ID. Then call ListTables to obtain the TableId, and pass the returned table ID to this API.</description></item>
+        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description>Currently, only MaxCompute and HMS (EMR cluster) tables are supported.</description></item>
+        /// <item><description>Before you call this API operation, call ListCrawlers to obtain the MetaEntityId of the metadata crawler, and then call ListDatabases to obtain the database ID. For MaxCompute projects with the schema feature enabled, call ListSchemas to obtain the schema ID. Then, call ListTables to obtain the TableId, and pass the returned table ID to this API operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -47201,15 +48138,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the partition list of a specified table in DataWorks Data Map. Currently supports MaxCompute and HMS (EMR cluster) types.</para>
+        /// <para>Queries the partitions of a specified table in DataWorks Data Map. MaxCompute and HMS (EMR cluster) tables are supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
-        /// <item><description>Only MaxCompute and HMS (EMR cluster) table types are supported.</description></item>
-        /// <item><description>Before calling this API, call ListCrawlers to obtain the MetaEntityId of the metadata crawler, then call ListDatabases to obtain the database ID. For MaxCompute projects with Schema enabled, call ListSchemas to obtain the schema ID. Then call ListTables to obtain the TableId, and pass the returned table ID to this API.</description></item>
+        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description>Currently, only MaxCompute and HMS (EMR cluster) tables are supported.</description></item>
+        /// <item><description>Before you call this API operation, call ListCrawlers to obtain the MetaEntityId of the metadata crawler, and then call ListDatabases to obtain the database ID. For MaxCompute projects with the schema feature enabled, call ListSchemas to obtain the schema ID. Then, call ListTables to obtain the TableId, and pass the returned table ID to this API operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -47976,12 +48913,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets a paginated list of workspace member details.</para>
+        /// <para>Performs a paging query on the details of workspace members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This feature is available in DataWorks Basic Edition and higher.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -48049,12 +48986,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets a paginated list of workspace member details.</para>
+        /// <para>Performs a paging query on the details of workspace members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This feature is available in DataWorks Basic Edition and higher.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -48122,12 +49059,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets a paginated list of workspace member details.</para>
+        /// <para>Performs a paging query on the details of workspace members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This feature is available in DataWorks Basic Edition and higher.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48145,12 +49082,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets a paginated list of workspace member details.</para>
+        /// <para>Performs a paging query on the details of workspace members.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This feature is available in DataWorks Basic Edition and higher.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51008,13 +51945,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tables in Data Map. For types that do not support the schema level, this operation queries the tables in a specified database. For types that support the schema level, this operation queries the tables in a specified database, MaxCompute project, or schema. The response contains only basic table information and does not include technical or business metadata. For non-MaxCompute types, the response is not real-time and may be delayed by up to 1 hour compared to the metadata collection results.</para>
+        /// <para>Queries a list of data tables in DataWorks Data Map. For data source types that do not support the schema level, this operation queries data tables in a specified database. For data source types that support the schema level, this operation queries data tables in a specified database, MaxCompute project, or schema. The response includes only basic information about the data tables and excludes technical and business metadata. For non-MaxCompute data sources, the response is not real-time and may be delayed by up to one hour compared to the metadata collection results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this API.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -51059,13 +51996,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tables in Data Map. For types that do not support the schema level, this operation queries the tables in a specified database. For types that support the schema level, this operation queries the tables in a specified database, MaxCompute project, or schema. The response contains only basic table information and does not include technical or business metadata. For non-MaxCompute types, the response is not real-time and may be delayed by up to 1 hour compared to the metadata collection results.</para>
+        /// <para>Queries a list of data tables in DataWorks Data Map. For data source types that do not support the schema level, this operation queries data tables in a specified database. For data source types that support the schema level, this operation queries data tables in a specified database, MaxCompute project, or schema. The response includes only basic information about the data tables and excludes technical and business metadata. For non-MaxCompute data sources, the response is not real-time and may be delayed by up to one hour compared to the metadata collection results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this API.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -51110,13 +52047,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tables in Data Map. For types that do not support the schema level, this operation queries the tables in a specified database. For types that support the schema level, this operation queries the tables in a specified database, MaxCompute project, or schema. The response contains only basic table information and does not include technical or business metadata. For non-MaxCompute types, the response is not real-time and may be delayed by up to 1 hour compared to the metadata collection results.</para>
+        /// <para>Queries a list of data tables in DataWorks Data Map. For data source types that do not support the schema level, this operation queries data tables in a specified database. For data source types that support the schema level, this operation queries data tables in a specified database, MaxCompute project, or schema. The response includes only basic information about the data tables and excludes technical and business metadata. For non-MaxCompute data sources, the response is not real-time and may be delayed by up to one hour compared to the metadata collection results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this API.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -51135,13 +52072,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tables in Data Map. For types that do not support the schema level, this operation queries the tables in a specified database. For types that support the schema level, this operation queries the tables in a specified database, MaxCompute project, or schema. The response contains only basic table information and does not include technical or business metadata. For non-MaxCompute types, the response is not real-time and may be delayed by up to 1 hour compared to the metadata collection results.</para>
+        /// <para>Queries a list of data tables in DataWorks Data Map. For data source types that do not support the schema level, this operation queries data tables in a specified database. For data source types that support the schema level, this operation queries data tables in a specified database, MaxCompute project, or schema. The response includes only basic information about the data tables and excludes technical and business metadata. For non-MaxCompute data sources, the response is not real-time and may be delayed by up to one hour compared to the metadata collection results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this API.</description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -51160,13 +52097,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of operation logs for a task instance.</para>
+        /// <para>Retrieves a paginated list of operation logs for a specified task instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or a higher edition is required.
-        /// Only operation logs generated within the previous 31 days can be queried.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this API.
+        /// You can only query operation logs generated within the past 31 days.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51204,13 +52141,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of operation logs for a task instance.</para>
+        /// <para>Retrieves a paginated list of operation logs for a specified task instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or a higher edition is required.
-        /// Only operation logs generated within the previous 31 days can be queried.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this API.
+        /// You can only query operation logs generated within the past 31 days.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51248,13 +52185,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of operation logs for a task instance.</para>
+        /// <para>Retrieves a paginated list of operation logs for a specified task instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or a higher edition is required.
-        /// Only operation logs generated within the previous 31 days can be queried.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this API.
+        /// You can only query operation logs generated within the past 31 days.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51272,13 +52209,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of operation logs for a task instance.</para>
+        /// <para>Retrieves a paginated list of operation logs for a specified task instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or a higher edition is required.
-        /// Only operation logs generated within the previous 31 days can be queried.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this API.
+        /// You can only query operation logs generated within the past 31 days.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -52880,18 +53817,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Loads the message history of an existing session and returns it as an SSE stream. If the session does not exist, the server sends a JSONRPCResponse.error with a code of 400 through the SSE stream. The Content-Type is text/event-stream. Use this operation to restore session context.</para>
+        /// <para>Loads the historical messages of an existing agent session and returns them by using Server-Sent Events (SSE) for page refreshes and history recovery after exceptions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation retrieves session details and streams the Agent response using Server-Sent Events (SSE).</description></item>
-        /// <item><description>If the target session does not exist, the operation returns an error frame with an error code of 400.</description></item>
-        /// <item><description>The response includes information about the Agent\&quot;s request processing, such as message chunks, thought processes, and tool call status updates.</description></item>
-        /// <item><description>The <c>stopReason</c> field indicates why the Agent stops the current turn. Possible values include reaching the maximum turn limit or being canceled.</description></item>
-        /// <item><description>The returned content conforms to the Agent Client Protocol (ACP). For more information, see https\://agentclientprotocol.com.</description></item>
+        /// <item><description>This operation recovers the details of a specified session and returns the agent response in a streaming manner by using Server-Sent Events (SSE).</description></item>
+        /// <item><description>If the target session does not exist, an error frame with the error code 400 is returned.</description></item>
+        /// <item><description>The response includes processing information about how the agent handles the request, such as message chunks, thinking process, and tool invocation status updates.</description></item>
+        /// <item><description>The <c>stopReason</c> field indicates the reason why the agent stops the current conversation turn. Valid values include but are not limited to reaching the maximum number of turns and being canceled.</description></item>
+        /// <item><description>The returned content complies with the open source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -52948,18 +53885,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Loads the message history of an existing session and returns it as an SSE stream. If the session does not exist, the server sends a JSONRPCResponse.error with a code of 400 through the SSE stream. The Content-Type is text/event-stream. Use this operation to restore session context.</para>
+        /// <para>Loads the historical messages of an existing agent session and returns them by using Server-Sent Events (SSE) for page refreshes and history recovery after exceptions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation retrieves session details and streams the Agent response using Server-Sent Events (SSE).</description></item>
-        /// <item><description>If the target session does not exist, the operation returns an error frame with an error code of 400.</description></item>
-        /// <item><description>The response includes information about the Agent\&quot;s request processing, such as message chunks, thought processes, and tool call status updates.</description></item>
-        /// <item><description>The <c>stopReason</c> field indicates why the Agent stops the current turn. Possible values include reaching the maximum turn limit or being canceled.</description></item>
-        /// <item><description>The returned content conforms to the Agent Client Protocol (ACP). For more information, see https\://agentclientprotocol.com.</description></item>
+        /// <item><description>This operation recovers the details of a specified session and returns the agent response in a streaming manner by using Server-Sent Events (SSE).</description></item>
+        /// <item><description>If the target session does not exist, an error frame with the error code 400 is returned.</description></item>
+        /// <item><description>The response includes processing information about how the agent handles the request, such as message chunks, thinking process, and tool invocation status updates.</description></item>
+        /// <item><description>The <c>stopReason</c> field indicates the reason why the agent stops the current conversation turn. Valid values include but are not limited to reaching the maximum number of turns and being canceled.</description></item>
+        /// <item><description>The returned content complies with the open source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -53016,18 +53953,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Loads the message history of an existing session and returns it as an SSE stream. If the session does not exist, the server sends a JSONRPCResponse.error with a code of 400 through the SSE stream. The Content-Type is text/event-stream. Use this operation to restore session context.</para>
+        /// <para>Loads the historical messages of an existing agent session and returns them by using Server-Sent Events (SSE) for page refreshes and history recovery after exceptions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation retrieves session details and streams the Agent response using Server-Sent Events (SSE).</description></item>
-        /// <item><description>If the target session does not exist, the operation returns an error frame with an error code of 400.</description></item>
-        /// <item><description>The response includes information about the Agent\&quot;s request processing, such as message chunks, thought processes, and tool call status updates.</description></item>
-        /// <item><description>The <c>stopReason</c> field indicates why the Agent stops the current turn. Possible values include reaching the maximum turn limit or being canceled.</description></item>
-        /// <item><description>The returned content conforms to the Agent Client Protocol (ACP). For more information, see https\://agentclientprotocol.com.</description></item>
+        /// <item><description>This operation recovers the details of a specified session and returns the agent response in a streaming manner by using Server-Sent Events (SSE).</description></item>
+        /// <item><description>If the target session does not exist, an error frame with the error code 400 is returned.</description></item>
+        /// <item><description>The response includes processing information about how the agent handles the request, such as message chunks, thinking process, and tool invocation status updates.</description></item>
+        /// <item><description>The <c>stopReason</c> field indicates the reason why the agent stops the current conversation turn. Valid values include but are not limited to reaching the maximum number of turns and being canceled.</description></item>
+        /// <item><description>The returned content complies with the open source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -53046,18 +53983,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Loads the message history of an existing session and returns it as an SSE stream. If the session does not exist, the server sends a JSONRPCResponse.error with a code of 400 through the SSE stream. The Content-Type is text/event-stream. Use this operation to restore session context.</para>
+        /// <para>Loads the historical messages of an existing agent session and returns them by using Server-Sent Events (SSE) for page refreshes and history recovery after exceptions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation retrieves session details and streams the Agent response using Server-Sent Events (SSE).</description></item>
-        /// <item><description>If the target session does not exist, the operation returns an error frame with an error code of 400.</description></item>
-        /// <item><description>The response includes information about the Agent\&quot;s request processing, such as message chunks, thought processes, and tool call status updates.</description></item>
-        /// <item><description>The <c>stopReason</c> field indicates why the Agent stops the current turn. Possible values include reaching the maximum turn limit or being canceled.</description></item>
-        /// <item><description>The returned content conforms to the Agent Client Protocol (ACP). For more information, see https\://agentclientprotocol.com.</description></item>
+        /// <item><description>This operation recovers the details of a specified session and returns the agent response in a streaming manner by using Server-Sent Events (SSE).</description></item>
+        /// <item><description>If the target session does not exist, an error frame with the error code 400 is returned.</description></item>
+        /// <item><description>The response includes processing information about how the agent handles the request, such as message chunks, thinking process, and tool invocation status updates.</description></item>
+        /// <item><description>The <c>stopReason</c> field indicates the reason why the agent stops the current conversation turn. Valid values include but are not limited to reaching the maximum number of turns and being canceled.</description></item>
+        /// <item><description>The returned content complies with the open source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -53760,22 +54697,237 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a user prompt to an existing session and returns the Agent response in streaming mode.</para>
+        /// <para>Previews scheduling parameters without creating actual nodes or running instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <para>Previews the parameter parsing results for each cycle based on the provided script parameters, business date, and scheduling configuration. A task ID is not required.</para>
         /// <list type="bullet">
-        /// <item><description>This API sends a user prompt to a specified session ID and accepts the Agent response in SSE (Server-Sent Events) streaming mode.</description></item>
-        /// <item><description>The response may include message fragments, thinking procedures, tool calling status updates, and other information.</description></item>
-        /// <item><description>If the specified session does not exist, a 400 fault is returned through an SSE error frame.</description></item>
-        /// <item><description>The <c>stopReason</c> field indicates why the Agent stopped the current conversation turn.</description></item>
-        /// <item><description>Multiple types of content blocks are supported as prompt input, such as text and OSS file download links.</description></item>
-        /// <item><description>You can optionally provide additional meta information <c>Meta</c> to pass more context to the server.</description></item>
-        /// <item><description>The returned content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, visit: <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a></description></item>
-        /// <item><description><b>Before invoking this API, make sure you fully understand the billing methods and pricing of the Data Agent product</b>: <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing</a></description></item>
+        /// <item><description>This operation only performs a simulated preview and does not create or run actual tasks. The simulated cycles returned for weekly and monthly schedules cannot be used as the basis for determining actual trigger dates.</description></item>
+        /// <item><description><c>Bizdate</c> is the starting business date, normalized to 00:00:00 on that date in the time zone of the service region. <c>TriggerTime</c> is the scheduled trigger time for the corresponding simulated cycle.</description></item>
+        /// <item><description>System identifiers such as <c>$nodeid</c> use a simulated context. The preview value of <c>$nodeid</c> is <c>0</c>, which does not represent an actual task.</description></item>
+        /// <item><description>The parsing result for each cycle is indicated by <c>Success</c>. If the parsing is successful, <c>Parameters</c> is returned. If the parsing fails, <c>ErrorMessage</c> is returned, and partial parsing results for the cycle are not returned.</description></item>
         /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PreviewTaskParametersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PreviewTaskParametersResponse
+        /// </returns>
+        public PreviewTaskParametersResponse PreviewTaskParametersWithOptions(PreviewTaskParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bizdate))
+            {
+                body["Bizdate"] = request.Bizdate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cron))
+            {
+                body["Cron"] = request.Cron;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                body["Parameters"] = request.Parameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreviewCount))
+            {
+                body["PreviewCount"] = request.PreviewCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectEnv))
+            {
+                body["ProjectEnv"] = request.ProjectEnv;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PreviewTaskParameters",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PreviewTaskParametersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Previews scheduling parameters without creating actual nodes or running instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Previews the parameter parsing results for each cycle based on the provided script parameters, business date, and scheduling configuration. A task ID is not required.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation only performs a simulated preview and does not create or run actual tasks. The simulated cycles returned for weekly and monthly schedules cannot be used as the basis for determining actual trigger dates.</description></item>
+        /// <item><description><c>Bizdate</c> is the starting business date, normalized to 00:00:00 on that date in the time zone of the service region. <c>TriggerTime</c> is the scheduled trigger time for the corresponding simulated cycle.</description></item>
+        /// <item><description>System identifiers such as <c>$nodeid</c> use a simulated context. The preview value of <c>$nodeid</c> is <c>0</c>, which does not represent an actual task.</description></item>
+        /// <item><description>The parsing result for each cycle is indicated by <c>Success</c>. If the parsing is successful, <c>Parameters</c> is returned. If the parsing fails, <c>ErrorMessage</c> is returned, and partial parsing results for the cycle are not returned.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PreviewTaskParametersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PreviewTaskParametersResponse
+        /// </returns>
+        public async Task<PreviewTaskParametersResponse> PreviewTaskParametersWithOptionsAsync(PreviewTaskParametersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bizdate))
+            {
+                body["Bizdate"] = request.Bizdate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cron))
+            {
+                body["Cron"] = request.Cron;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                body["Parameters"] = request.Parameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreviewCount))
+            {
+                body["PreviewCount"] = request.PreviewCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectEnv))
+            {
+                body["ProjectEnv"] = request.ProjectEnv;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PreviewTaskParameters",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PreviewTaskParametersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Previews scheduling parameters without creating actual nodes or running instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Previews the parameter parsing results for each cycle based on the provided script parameters, business date, and scheduling configuration. A task ID is not required.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation only performs a simulated preview and does not create or run actual tasks. The simulated cycles returned for weekly and monthly schedules cannot be used as the basis for determining actual trigger dates.</description></item>
+        /// <item><description><c>Bizdate</c> is the starting business date, normalized to 00:00:00 on that date in the time zone of the service region. <c>TriggerTime</c> is the scheduled trigger time for the corresponding simulated cycle.</description></item>
+        /// <item><description>System identifiers such as <c>$nodeid</c> use a simulated context. The preview value of <c>$nodeid</c> is <c>0</c>, which does not represent an actual task.</description></item>
+        /// <item><description>The parsing result for each cycle is indicated by <c>Success</c>. If the parsing is successful, <c>Parameters</c> is returned. If the parsing fails, <c>ErrorMessage</c> is returned, and partial parsing results for the cycle are not returned.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PreviewTaskParametersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PreviewTaskParametersResponse
+        /// </returns>
+        public PreviewTaskParametersResponse PreviewTaskParameters(PreviewTaskParametersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PreviewTaskParametersWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Previews scheduling parameters without creating actual nodes or running instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Previews the parameter parsing results for each cycle based on the provided script parameters, business date, and scheduling configuration. A task ID is not required.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation only performs a simulated preview and does not create or run actual tasks. The simulated cycles returned for weekly and monthly schedules cannot be used as the basis for determining actual trigger dates.</description></item>
+        /// <item><description><c>Bizdate</c> is the starting business date, normalized to 00:00:00 on that date in the time zone of the service region. <c>TriggerTime</c> is the scheduled trigger time for the corresponding simulated cycle.</description></item>
+        /// <item><description>System identifiers such as <c>$nodeid</c> use a simulated context. The preview value of <c>$nodeid</c> is <c>0</c>, which does not represent an actual task.</description></item>
+        /// <item><description>The parsing result for each cycle is indicated by <c>Success</c>. If the parsing is successful, <c>Parameters</c> is returned. If the parsing fails, <c>ErrorMessage</c> is returned, and partial parsing results for the cycle are not returned.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PreviewTaskParametersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PreviewTaskParametersResponse
+        /// </returns>
+        public async Task<PreviewTaskParametersResponse> PreviewTaskParametersAsync(PreviewTaskParametersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PreviewTaskParametersWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a user prompt to an existing session and streams the agent response.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation sends a user prompt to a specified session ID and accepts the agent response as Server-Sent Events (SSE) streams.</description></item>
+        /// <item><description>The response may include message chunks, thinking procedures, and tool invocation status updates.</description></item>
+        /// <item><description>If the specified session does not exist, a 400 error is returned in an SSE error frame.</description></item>
+        /// <item><description>The <c>stopReason</c> field indicates the reason why the agent stopped the current conversation turn.</description></item>
+        /// <item><description>This operation supports multiple types of content blocks as prompt input, such as text and OSS file download links.</description></item>
+        /// <item><description>You can optionally provide additional metadata in <c>Meta</c> to pass more context to the server.</description></item>
+        /// <item><description>The returned content complies with the open-source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a>.</description></item>
+        /// <item><description><b>Before you use this API operation, make sure that you fully understand the billing methods and pricing of Data Agent</b>: <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing</a></description></item>
+        /// </list>
+        /// <h2>Long-running tasks and timeout recovery</h2>
+        /// <para>For long-running tasks that may exceed the single-request timeout, after the GetAgentSessionEvents canary release is enabled for the current account and target region, first establish an Events subscription and then call PromptAgentSession to read both streams in parallel. Use Events to display real-time progress, and use the Prompt stream to read the final state and business errors of the current turn. Each message is displayed only once.
+        /// If the Prompt stream times out or disconnects before the final business state is received, the result of the current turn is unknown. Continue to observe Events, and call LoadAgentSession when you need to verify the session history. Do not automatically resend the prompt.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -53831,22 +54983,25 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a user prompt to an existing session and returns the Agent response in streaming mode.</para>
+        /// <para>Sends a user prompt to an existing session and streams the agent response.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API sends a user prompt to a specified session ID and accepts the Agent response in SSE (Server-Sent Events) streaming mode.</description></item>
-        /// <item><description>The response may include message fragments, thinking procedures, tool calling status updates, and other information.</description></item>
-        /// <item><description>If the specified session does not exist, a 400 fault is returned through an SSE error frame.</description></item>
-        /// <item><description>The <c>stopReason</c> field indicates why the Agent stopped the current conversation turn.</description></item>
-        /// <item><description>Multiple types of content blocks are supported as prompt input, such as text and OSS file download links.</description></item>
-        /// <item><description>You can optionally provide additional meta information <c>Meta</c> to pass more context to the server.</description></item>
-        /// <item><description>The returned content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, visit: <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a></description></item>
-        /// <item><description><b>Before invoking this API, make sure you fully understand the billing methods and pricing of the Data Agent product</b>: <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing</a></description></item>
+        /// <item><description>This API operation sends a user prompt to a specified session ID and accepts the agent response as Server-Sent Events (SSE) streams.</description></item>
+        /// <item><description>The response may include message chunks, thinking procedures, and tool invocation status updates.</description></item>
+        /// <item><description>If the specified session does not exist, a 400 error is returned in an SSE error frame.</description></item>
+        /// <item><description>The <c>stopReason</c> field indicates the reason why the agent stopped the current conversation turn.</description></item>
+        /// <item><description>This operation supports multiple types of content blocks as prompt input, such as text and OSS file download links.</description></item>
+        /// <item><description>You can optionally provide additional metadata in <c>Meta</c> to pass more context to the server.</description></item>
+        /// <item><description>The returned content complies with the open-source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a>.</description></item>
+        /// <item><description><b>Before you use this API operation, make sure that you fully understand the billing methods and pricing of Data Agent</b>: <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing</a></description></item>
         /// </list>
+        /// <h2>Long-running tasks and timeout recovery</h2>
+        /// <para>For long-running tasks that may exceed the single-request timeout, after the GetAgentSessionEvents canary release is enabled for the current account and target region, first establish an Events subscription and then call PromptAgentSession to read both streams in parallel. Use Events to display real-time progress, and use the Prompt stream to read the final state and business errors of the current turn. Each message is displayed only once.
+        /// If the Prompt stream times out or disconnects before the final business state is received, the result of the current turn is unknown. Continue to observe Events, and call LoadAgentSession when you need to verify the session history. Do not automatically resend the prompt.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -53902,22 +55057,25 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a user prompt to an existing session and returns the Agent response in streaming mode.</para>
+        /// <para>Sends a user prompt to an existing session and streams the agent response.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API sends a user prompt to a specified session ID and accepts the Agent response in SSE (Server-Sent Events) streaming mode.</description></item>
-        /// <item><description>The response may include message fragments, thinking procedures, tool calling status updates, and other information.</description></item>
-        /// <item><description>If the specified session does not exist, a 400 fault is returned through an SSE error frame.</description></item>
-        /// <item><description>The <c>stopReason</c> field indicates why the Agent stopped the current conversation turn.</description></item>
-        /// <item><description>Multiple types of content blocks are supported as prompt input, such as text and OSS file download links.</description></item>
-        /// <item><description>You can optionally provide additional meta information <c>Meta</c> to pass more context to the server.</description></item>
-        /// <item><description>The returned content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, visit: <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a></description></item>
-        /// <item><description><b>Before invoking this API, make sure you fully understand the billing methods and pricing of the Data Agent product</b>: <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing</a></description></item>
+        /// <item><description>This API operation sends a user prompt to a specified session ID and accepts the agent response as Server-Sent Events (SSE) streams.</description></item>
+        /// <item><description>The response may include message chunks, thinking procedures, and tool invocation status updates.</description></item>
+        /// <item><description>If the specified session does not exist, a 400 error is returned in an SSE error frame.</description></item>
+        /// <item><description>The <c>stopReason</c> field indicates the reason why the agent stopped the current conversation turn.</description></item>
+        /// <item><description>This operation supports multiple types of content blocks as prompt input, such as text and OSS file download links.</description></item>
+        /// <item><description>You can optionally provide additional metadata in <c>Meta</c> to pass more context to the server.</description></item>
+        /// <item><description>The returned content complies with the open-source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a>.</description></item>
+        /// <item><description><b>Before you use this API operation, make sure that you fully understand the billing methods and pricing of Data Agent</b>: <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing</a></description></item>
         /// </list>
+        /// <h2>Long-running tasks and timeout recovery</h2>
+        /// <para>For long-running tasks that may exceed the single-request timeout, after the GetAgentSessionEvents canary release is enabled for the current account and target region, first establish an Events subscription and then call PromptAgentSession to read both streams in parallel. Use Events to display real-time progress, and use the Prompt stream to read the final state and business errors of the current turn. Each message is displayed only once.
+        /// If the Prompt stream times out or disconnects before the final business state is received, the result of the current turn is unknown. Continue to observe Events, and call LoadAgentSession when you need to verify the session history. Do not automatically resend the prompt.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -53935,22 +55093,25 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a user prompt to an existing session and returns the Agent response in streaming mode.</para>
+        /// <para>Sends a user prompt to an existing session and streams the agent response.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API sends a user prompt to a specified session ID and accepts the Agent response in SSE (Server-Sent Events) streaming mode.</description></item>
-        /// <item><description>The response may include message fragments, thinking procedures, tool calling status updates, and other information.</description></item>
-        /// <item><description>If the specified session does not exist, a 400 fault is returned through an SSE error frame.</description></item>
-        /// <item><description>The <c>stopReason</c> field indicates why the Agent stopped the current conversation turn.</description></item>
-        /// <item><description>Multiple types of content blocks are supported as prompt input, such as text and OSS file download links.</description></item>
-        /// <item><description>You can optionally provide additional meta information <c>Meta</c> to pass more context to the server.</description></item>
-        /// <item><description>The returned content conforms to the open-source Agent Client Protocol (ACP) specification. For more information, visit: <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a></description></item>
-        /// <item><description><b>Before invoking this API, make sure you fully understand the billing methods and pricing of the Data Agent product</b>: <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing</a></description></item>
+        /// <item><description>This API operation sends a user prompt to a specified session ID and accepts the agent response as Server-Sent Events (SSE) streams.</description></item>
+        /// <item><description>The response may include message chunks, thinking procedures, and tool invocation status updates.</description></item>
+        /// <item><description>If the specified session does not exist, a 400 error is returned in an SSE error frame.</description></item>
+        /// <item><description>The <c>stopReason</c> field indicates the reason why the agent stopped the current conversation turn.</description></item>
+        /// <item><description>This operation supports multiple types of content blocks as prompt input, such as text and OSS file download links.</description></item>
+        /// <item><description>You can optionally provide additional metadata in <c>Meta</c> to pass more context to the server.</description></item>
+        /// <item><description>The returned content complies with the open-source Agent Client Protocol (ACP) specification. For more information, see <a href="https://agentclientprotocol.com">https://agentclientprotocol.com</a>.</description></item>
+        /// <item><description><b>Before you use this API operation, make sure that you fully understand the billing methods and pricing of Data Agent</b>: <a href="https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing">https://www.alibabacloud.com/help/en/dataworks/dataworks-data-agent-agent-billing</a></description></item>
         /// </list>
+        /// <h2>Long-running tasks and timeout recovery</h2>
+        /// <para>For long-running tasks that may exceed the single-request timeout, after the GetAgentSessionEvents canary release is enabled for the current account and target region, first establish an Events subscription and then call PromptAgentSession to read both streams in parallel. Use Events to display real-time progress, and use the Prompt stream to read the final state and business errors of the current turn. Each message is displayed only once.
+        /// If the Prompt stream times out or disconnects before the final business state is received, the result of the current turn is unknown. Continue to observe Events, and call LoadAgentSession when you need to verify the session history. Do not automatically resend the prompt.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -55894,8 +57055,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
-        /// <item><description><b>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</b></description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks is created.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -55948,8 +57109,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
-        /// <item><description><b>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</b></description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks is created.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -56002,8 +57163,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
-        /// <item><description><b>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</b></description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks is created.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -56028,8 +57189,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
-        /// <item><description><b>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</b></description></item>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks is created.</b></description></item>
         /// </ol>
         /// </description>
         /// 
@@ -57964,17 +59125,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops multiple task instances.</para>
+        /// <para>Terminates multiple task instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or later is required.
-        /// Task instance stop mechanism and precautions:</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.
+        /// Instance termination mechanism and precautions:</para>
         /// <ol>
-        /// <item><description>Stopping a task instance is an asynchronous operation. Sending a stop request does not mean that the instance stops immediately. Continue to query the instance status after sending the request to confirm the result. If external compute resources are involved, verify the actual status of the remote job.</description></item>
-        /// <item><description>The status of a DataWorks task instance may not match the status of the remote job. For tasks that rely on external compute resources (such as MaxCompute, EMR, and SSH), DataWorks sends a stop request to the remote end through a client. Due to network exceptions, client compatibility, and other factors, a DataWorks task instance may be marked as failed while the remote job is still running. Therefore, you cannot rely solely on the DataWorks task instance status to determine whether the remote job has stopped. Check the status on the corresponding computing platform and manually stop the job if necessary to prevent it from continuing to run or consuming additional resources.</description></item>
-        /// <item><description>Pay special attention to MaxCompute tasks that use shared schedule resource groups. DataWorks shared schedule resource groups will soon be retired. Due to component version and compatibility limits, stop commands for some MaxCompute tasks may not take effect on the remote end. If this occurs, check the actual status of the corresponding instance in MaxCompute. If the instance is still running, perform a kill operation in MaxCompute and verify that it has stopped.</description></item>
+        /// <item><description>Instance termination is an asynchronous operation. A termination request does not immediately stop the instance. Continue to query the instance status after the request to confirm the termination result. If external compute resources are involved, verify the actual status of the remote job.</description></item>
+        /// <item><description>The DataWorks instance status may differ from the remote job status. For tasks that depend on external compute resources (such as MaxCompute, EMR, and SSH), DataWorks sends a termination request to the remote end through a client. Due to network exceptions or client compatibility issues, a DataWorks instance may be marked as failed while the remote job is still running. Therefore, do not rely solely on the DataWorks instance status to determine whether the remote job has stopped. Check the corresponding compute platform and manually terminate the job if necessary to prevent it from continuing to run or consuming extra resources.</description></item>
+        /// <item><description>Pay special attention to MaxCompute tasks that use shared resource groups for scheduling. DataWorks shared resource groups for scheduling will soon be retired. Due to component version and compatibility limits, termination commands for some MaxCompute tasks may not take effect on the remote end. If this occurs, check the actual status of the corresponding instance in MaxCompute. If the instance is still running, run a kill command in MaxCompute and verify that the instance has stopped.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -58027,17 +59188,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops multiple task instances.</para>
+        /// <para>Terminates multiple task instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or later is required.
-        /// Task instance stop mechanism and precautions:</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.
+        /// Instance termination mechanism and precautions:</para>
         /// <ol>
-        /// <item><description>Stopping a task instance is an asynchronous operation. Sending a stop request does not mean that the instance stops immediately. Continue to query the instance status after sending the request to confirm the result. If external compute resources are involved, verify the actual status of the remote job.</description></item>
-        /// <item><description>The status of a DataWorks task instance may not match the status of the remote job. For tasks that rely on external compute resources (such as MaxCompute, EMR, and SSH), DataWorks sends a stop request to the remote end through a client. Due to network exceptions, client compatibility, and other factors, a DataWorks task instance may be marked as failed while the remote job is still running. Therefore, you cannot rely solely on the DataWorks task instance status to determine whether the remote job has stopped. Check the status on the corresponding computing platform and manually stop the job if necessary to prevent it from continuing to run or consuming additional resources.</description></item>
-        /// <item><description>Pay special attention to MaxCompute tasks that use shared schedule resource groups. DataWorks shared schedule resource groups will soon be retired. Due to component version and compatibility limits, stop commands for some MaxCompute tasks may not take effect on the remote end. If this occurs, check the actual status of the corresponding instance in MaxCompute. If the instance is still running, perform a kill operation in MaxCompute and verify that it has stopped.</description></item>
+        /// <item><description>Instance termination is an asynchronous operation. A termination request does not immediately stop the instance. Continue to query the instance status after the request to confirm the termination result. If external compute resources are involved, verify the actual status of the remote job.</description></item>
+        /// <item><description>The DataWorks instance status may differ from the remote job status. For tasks that depend on external compute resources (such as MaxCompute, EMR, and SSH), DataWorks sends a termination request to the remote end through a client. Due to network exceptions or client compatibility issues, a DataWorks instance may be marked as failed while the remote job is still running. Therefore, do not rely solely on the DataWorks instance status to determine whether the remote job has stopped. Check the corresponding compute platform and manually terminate the job if necessary to prevent it from continuing to run or consuming extra resources.</description></item>
+        /// <item><description>Pay special attention to MaxCompute tasks that use shared resource groups for scheduling. DataWorks shared resource groups for scheduling will soon be retired. Due to component version and compatibility limits, termination commands for some MaxCompute tasks may not take effect on the remote end. If this occurs, check the actual status of the corresponding instance in MaxCompute. If the instance is still running, run a kill command in MaxCompute and verify that the instance has stopped.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -58090,17 +59251,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops multiple task instances.</para>
+        /// <para>Terminates multiple task instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or later is required.
-        /// Task instance stop mechanism and precautions:</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.
+        /// Instance termination mechanism and precautions:</para>
         /// <ol>
-        /// <item><description>Stopping a task instance is an asynchronous operation. Sending a stop request does not mean that the instance stops immediately. Continue to query the instance status after sending the request to confirm the result. If external compute resources are involved, verify the actual status of the remote job.</description></item>
-        /// <item><description>The status of a DataWorks task instance may not match the status of the remote job. For tasks that rely on external compute resources (such as MaxCompute, EMR, and SSH), DataWorks sends a stop request to the remote end through a client. Due to network exceptions, client compatibility, and other factors, a DataWorks task instance may be marked as failed while the remote job is still running. Therefore, you cannot rely solely on the DataWorks task instance status to determine whether the remote job has stopped. Check the status on the corresponding computing platform and manually stop the job if necessary to prevent it from continuing to run or consuming additional resources.</description></item>
-        /// <item><description>Pay special attention to MaxCompute tasks that use shared schedule resource groups. DataWorks shared schedule resource groups will soon be retired. Due to component version and compatibility limits, stop commands for some MaxCompute tasks may not take effect on the remote end. If this occurs, check the actual status of the corresponding instance in MaxCompute. If the instance is still running, perform a kill operation in MaxCompute and verify that it has stopped.</description></item>
+        /// <item><description>Instance termination is an asynchronous operation. A termination request does not immediately stop the instance. Continue to query the instance status after the request to confirm the termination result. If external compute resources are involved, verify the actual status of the remote job.</description></item>
+        /// <item><description>The DataWorks instance status may differ from the remote job status. For tasks that depend on external compute resources (such as MaxCompute, EMR, and SSH), DataWorks sends a termination request to the remote end through a client. Due to network exceptions or client compatibility issues, a DataWorks instance may be marked as failed while the remote job is still running. Therefore, do not rely solely on the DataWorks instance status to determine whether the remote job has stopped. Check the corresponding compute platform and manually terminate the job if necessary to prevent it from continuing to run or consuming extra resources.</description></item>
+        /// <item><description>Pay special attention to MaxCompute tasks that use shared resource groups for scheduling. DataWorks shared resource groups for scheduling will soon be retired. Due to component version and compatibility limits, termination commands for some MaxCompute tasks may not take effect on the remote end. If this occurs, check the actual status of the corresponding instance in MaxCompute. If the instance is still running, run a kill command in MaxCompute and verify that the instance has stopped.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -58119,17 +59280,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops multiple task instances.</para>
+        /// <para>Terminates multiple task instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or later is required.
-        /// Task instance stop mechanism and precautions:</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this feature.
+        /// Instance termination mechanism and precautions:</para>
         /// <ol>
-        /// <item><description>Stopping a task instance is an asynchronous operation. Sending a stop request does not mean that the instance stops immediately. Continue to query the instance status after sending the request to confirm the result. If external compute resources are involved, verify the actual status of the remote job.</description></item>
-        /// <item><description>The status of a DataWorks task instance may not match the status of the remote job. For tasks that rely on external compute resources (such as MaxCompute, EMR, and SSH), DataWorks sends a stop request to the remote end through a client. Due to network exceptions, client compatibility, and other factors, a DataWorks task instance may be marked as failed while the remote job is still running. Therefore, you cannot rely solely on the DataWorks task instance status to determine whether the remote job has stopped. Check the status on the corresponding computing platform and manually stop the job if necessary to prevent it from continuing to run or consuming additional resources.</description></item>
-        /// <item><description>Pay special attention to MaxCompute tasks that use shared schedule resource groups. DataWorks shared schedule resource groups will soon be retired. Due to component version and compatibility limits, stop commands for some MaxCompute tasks may not take effect on the remote end. If this occurs, check the actual status of the corresponding instance in MaxCompute. If the instance is still running, perform a kill operation in MaxCompute and verify that it has stopped.</description></item>
+        /// <item><description>Instance termination is an asynchronous operation. A termination request does not immediately stop the instance. Continue to query the instance status after the request to confirm the termination result. If external compute resources are involved, verify the actual status of the remote job.</description></item>
+        /// <item><description>The DataWorks instance status may differ from the remote job status. For tasks that depend on external compute resources (such as MaxCompute, EMR, and SSH), DataWorks sends a termination request to the remote end through a client. Due to network exceptions or client compatibility issues, a DataWorks instance may be marked as failed while the remote job is still running. Therefore, do not rely solely on the DataWorks instance status to determine whether the remote job has stopped. Check the corresponding compute platform and manually terminate the job if necessary to prevent it from continuing to run or consuming extra resources.</description></item>
+        /// <item><description>Pay special attention to MaxCompute tasks that use shared resource groups for scheduling. DataWorks shared resource groups for scheduling will soon be retired. Due to component version and compatibility limits, termination commands for some MaxCompute tasks may not take effect on the remote end. If this occurs, check the actual status of the corresponding instance in MaxCompute. If the instance is still running, run a kill command in MaxCompute and verify that the instance has stopped.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -58148,12 +59309,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates multiple workflow instances in batches.</para>
+        /// <para>Terminates multiple workflow instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or later to use this feature.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -58205,12 +59366,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates multiple workflow instances in batches.</para>
+        /// <para>Terminates multiple workflow instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or later to use this feature.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -58262,12 +59423,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates multiple workflow instances in batches.</para>
+        /// <para>Terminates multiple workflow instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or later to use this feature.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -58285,12 +59446,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates multiple workflow instances in batches.</para>
+        /// <para>Terminates multiple workflow instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must purchase DataWorks Basic Edition or later to use this feature.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -58608,7 +59769,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Suspends multiple instances at a time.</para>
+        /// <para>Pauses multiple task instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -58665,7 +59826,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Suspends multiple instances at a time.</para>
+        /// <para>Pauses multiple task instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -58722,7 +59883,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Suspends multiple instances at a time.</para>
+        /// <para>Pauses multiple task instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -58745,7 +59906,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Suspends multiple instances at a time.</para>
+        /// <para>Pauses multiple task instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -58773,7 +59934,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation requires DataWorks Enterprise Edition or later.</para>
+        /// <para>You must purchase DataWorks Enterprise Edition or higher to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -58850,7 +60011,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation requires DataWorks Enterprise Edition or later.</para>
+        /// <para>You must purchase DataWorks Enterprise Edition or higher to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -58927,7 +60088,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation requires DataWorks Enterprise Edition or later.</para>
+        /// <para>You must purchase DataWorks Enterprise Edition or higher to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -58950,7 +60111,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation requires DataWorks Enterprise Edition or later.</para>
+        /// <para>You must purchase DataWorks Enterprise Edition or higher to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -59492,12 +60653,332 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Agent会话标题</para>
+        /// <para>Updates the definition of a specified agent, increments the definition version, and optionally publishes the agent immediately. This operation is available only when the canary release feature is enabled. Before calling this operation, make sure that the canary release feature is enabled for the current account and the target region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>修改当前身份可访问的 Agent 会话标题，不改变任务执行状态。</para>
+        /// <para>This operation is available only when the canary release feature is enabled. Before calling this operation, make sure that the canary release feature is enabled for the current account and the target region.
+        /// Updates a custom agent that the current identity has administrative permissions for. The Name parameter is used to locate the target agent and cannot be used to rename the agent. Call the GetAgent operation first to read the current AgentVersion, and then explicitly pass the ExpectedVersion parameter during the update. If a conflict occurs, read the version again and verify the differences instead of blindly overwriting the agent.
+        /// Omit reference lists that do not need to be modified. The current new backend retains existing references for empty arrays of Tools, Skills, and CallableAgents, but clears references for an empty array of ExpertSuites. A unified empty array clearing rule cannot be used. The Tools parameter already includes Kind and the corresponding tool configurations, and uses the same structure as CreateAgent. Specifying only Name does not constitute a valid tool configuration.
+        /// For official skills, specify only Source=OFFICIAL and SkillId. For official suites, specify only Source=OFFICIAL and SuiteId. Do not mix in name, version, or artifact fields. The integer Version and VersionSelector parameters for custom resources are mutually exclusive. The version selection capability depends on the deployment of the target server.
+        /// If PublishImmediately is omitted or set to false, only the definition is saved. If it is set to true, a new draft version is saved first and then a publish request is initiated. Saving and publishing are not atomic operations. If publishing fails, the draft version may have already been incremented. In this case, call GetAgent to read the current version back before deciding whether to retry, to avoid generating duplicate versions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentResponse
+        /// </returns>
+        public UpdateAgentResponse UpdateAgentWithOptions(UpdateAgentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateAgentShrinkRequest request = new UpdateAgentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CallableAgents))
+            {
+                request.CallableAgentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallableAgents, "CallableAgents", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExpertSuites))
+            {
+                request.ExpertSuitesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExpertSuites, "ExpertSuites", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Metadata))
+            {
+                request.MetadataShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Metadata, "Metadata", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Model))
+            {
+                request.ModelShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Model, "Model", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Skills))
+            {
+                request.SkillsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Skills, "Skills", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tools))
+            {
+                request.ToolsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tools, "Tools", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VisibilityScope))
+            {
+                request.VisibilityScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VisibilityScope, "VisibilityScope", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallableAgentsShrink))
+            {
+                body["CallableAgents"] = request.CallableAgentsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                body["DisplayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectedVersion))
+            {
+                body["ExpectedVersion"] = request.ExpectedVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpertSuitesShrink))
+            {
+                body["ExpertSuites"] = request.ExpertSuitesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetadataShrink))
+            {
+                body["Metadata"] = request.MetadataShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelShrink))
+            {
+                body["Model"] = request.ModelShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublishImmediately))
+            {
+                body["PublishImmediately"] = request.PublishImmediately;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillsShrink))
+            {
+                body["Skills"] = request.SkillsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemPrompt))
+            {
+                body["SystemPrompt"] = request.SystemPrompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToolsShrink))
+            {
+                body["Tools"] = request.ToolsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Visibility))
+            {
+                body["Visibility"] = request.Visibility;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisibilityScopeShrink))
+            {
+                body["VisibilityScope"] = request.VisibilityScopeShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAgent",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the definition of a specified agent, increments the definition version, and optionally publishes the agent immediately. This operation is available only when the canary release feature is enabled. Before calling this operation, make sure that the canary release feature is enabled for the current account and the target region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only when the canary release feature is enabled. Before calling this operation, make sure that the canary release feature is enabled for the current account and the target region.
+        /// Updates a custom agent that the current identity has administrative permissions for. The Name parameter is used to locate the target agent and cannot be used to rename the agent. Call the GetAgent operation first to read the current AgentVersion, and then explicitly pass the ExpectedVersion parameter during the update. If a conflict occurs, read the version again and verify the differences instead of blindly overwriting the agent.
+        /// Omit reference lists that do not need to be modified. The current new backend retains existing references for empty arrays of Tools, Skills, and CallableAgents, but clears references for an empty array of ExpertSuites. A unified empty array clearing rule cannot be used. The Tools parameter already includes Kind and the corresponding tool configurations, and uses the same structure as CreateAgent. Specifying only Name does not constitute a valid tool configuration.
+        /// For official skills, specify only Source=OFFICIAL and SkillId. For official suites, specify only Source=OFFICIAL and SuiteId. Do not mix in name, version, or artifact fields. The integer Version and VersionSelector parameters for custom resources are mutually exclusive. The version selection capability depends on the deployment of the target server.
+        /// If PublishImmediately is omitted or set to false, only the definition is saved. If it is set to true, a new draft version is saved first and then a publish request is initiated. Saving and publishing are not atomic operations. If publishing fails, the draft version may have already been incremented. In this case, call GetAgent to read the current version back before deciding whether to retry, to avoid generating duplicate versions.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentResponse
+        /// </returns>
+        public async Task<UpdateAgentResponse> UpdateAgentWithOptionsAsync(UpdateAgentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateAgentShrinkRequest request = new UpdateAgentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CallableAgents))
+            {
+                request.CallableAgentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallableAgents, "CallableAgents", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExpertSuites))
+            {
+                request.ExpertSuitesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExpertSuites, "ExpertSuites", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Metadata))
+            {
+                request.MetadataShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Metadata, "Metadata", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Model))
+            {
+                request.ModelShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Model, "Model", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Skills))
+            {
+                request.SkillsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Skills, "Skills", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tools))
+            {
+                request.ToolsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tools, "Tools", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VisibilityScope))
+            {
+                request.VisibilityScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VisibilityScope, "VisibilityScope", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallableAgentsShrink))
+            {
+                body["CallableAgents"] = request.CallableAgentsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                body["DisplayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectedVersion))
+            {
+                body["ExpectedVersion"] = request.ExpectedVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpertSuitesShrink))
+            {
+                body["ExpertSuites"] = request.ExpertSuitesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetadataShrink))
+            {
+                body["Metadata"] = request.MetadataShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelShrink))
+            {
+                body["Model"] = request.ModelShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublishImmediately))
+            {
+                body["PublishImmediately"] = request.PublishImmediately;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillsShrink))
+            {
+                body["Skills"] = request.SkillsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemPrompt))
+            {
+                body["SystemPrompt"] = request.SystemPrompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToolsShrink))
+            {
+                body["Tools"] = request.ToolsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Visibility))
+            {
+                body["Visibility"] = request.Visibility;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisibilityScopeShrink))
+            {
+                body["VisibilityScope"] = request.VisibilityScopeShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAgent",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the definition of a specified agent, increments the definition version, and optionally publishes the agent immediately. This operation is available only when the canary release feature is enabled. Before calling this operation, make sure that the canary release feature is enabled for the current account and the target region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only when the canary release feature is enabled. Before calling this operation, make sure that the canary release feature is enabled for the current account and the target region.
+        /// Updates a custom agent that the current identity has administrative permissions for. The Name parameter is used to locate the target agent and cannot be used to rename the agent. Call the GetAgent operation first to read the current AgentVersion, and then explicitly pass the ExpectedVersion parameter during the update. If a conflict occurs, read the version again and verify the differences instead of blindly overwriting the agent.
+        /// Omit reference lists that do not need to be modified. The current new backend retains existing references for empty arrays of Tools, Skills, and CallableAgents, but clears references for an empty array of ExpertSuites. A unified empty array clearing rule cannot be used. The Tools parameter already includes Kind and the corresponding tool configurations, and uses the same structure as CreateAgent. Specifying only Name does not constitute a valid tool configuration.
+        /// For official skills, specify only Source=OFFICIAL and SkillId. For official suites, specify only Source=OFFICIAL and SuiteId. Do not mix in name, version, or artifact fields. The integer Version and VersionSelector parameters for custom resources are mutually exclusive. The version selection capability depends on the deployment of the target server.
+        /// If PublishImmediately is omitted or set to false, only the definition is saved. If it is set to true, a new draft version is saved first and then a publish request is initiated. Saving and publishing are not atomic operations. If publishing fails, the draft version may have already been incremented. In this case, call GetAgent to read the current version back before deciding whether to retry, to avoid generating duplicate versions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentResponse
+        /// </returns>
+        public UpdateAgentResponse UpdateAgent(UpdateAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateAgentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the definition of a specified agent, increments the definition version, and optionally publishes the agent immediately. This operation is available only when the canary release feature is enabled. Before calling this operation, make sure that the canary release feature is enabled for the current account and the target region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only when the canary release feature is enabled. Before calling this operation, make sure that the canary release feature is enabled for the current account and the target region.
+        /// Updates a custom agent that the current identity has administrative permissions for. The Name parameter is used to locate the target agent and cannot be used to rename the agent. Call the GetAgent operation first to read the current AgentVersion, and then explicitly pass the ExpectedVersion parameter during the update. If a conflict occurs, read the version again and verify the differences instead of blindly overwriting the agent.
+        /// Omit reference lists that do not need to be modified. The current new backend retains existing references for empty arrays of Tools, Skills, and CallableAgents, but clears references for an empty array of ExpertSuites. A unified empty array clearing rule cannot be used. The Tools parameter already includes Kind and the corresponding tool configurations, and uses the same structure as CreateAgent. Specifying only Name does not constitute a valid tool configuration.
+        /// For official skills, specify only Source=OFFICIAL and SkillId. For official suites, specify only Source=OFFICIAL and SuiteId. Do not mix in name, version, or artifact fields. The integer Version and VersionSelector parameters for custom resources are mutually exclusive. The version selection capability depends on the deployment of the target server.
+        /// If PublishImmediately is omitted or set to false, only the definition is saved. If it is set to true, a new draft version is saved first and then a publish request is initiated. Saving and publishing are not atomic operations. If publishing fails, the draft version may have already been incremented. In this case, call GetAgent to read the current version back before deciding whether to retry, to avoid generating duplicate versions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentResponse
+        /// </returns>
+        public async Task<UpdateAgentResponse> UpdateAgentAsync(UpdateAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateAgentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the title of an agent session accessible by the current identity without changing the task execution status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies the title of an agent session accessible by the current identity without changing the task execution status.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -59553,12 +61034,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Agent会话标题</para>
+        /// <para>Modifies the title of an agent session accessible by the current identity without changing the task execution status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>修改当前身份可访问的 Agent 会话标题，不改变任务执行状态。</para>
+        /// <para>Modifies the title of an agent session accessible by the current identity without changing the task execution status.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -59614,12 +61095,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Agent会话标题</para>
+        /// <para>Modifies the title of an agent session accessible by the current identity without changing the task execution status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>修改当前身份可访问的 Agent 会话标题，不改变任务执行状态。</para>
+        /// <para>Modifies the title of an agent session accessible by the current identity without changing the task execution status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -59637,12 +61118,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Agent会话标题</para>
+        /// <para>Modifies the title of an agent session accessible by the current identity without changing the task execution status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>修改当前身份可访问的 Agent 会话标题，不改变任务执行状态。</para>
+        /// <para>Modifies the title of an agent session accessible by the current identity without changing the task execution status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -60248,6 +61729,142 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateCalendarWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Approves or rejects a code review.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCodeReviewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCodeReviewResponse
+        /// </returns>
+        public UpdateCodeReviewResponse UpdateCodeReviewWithOptions(UpdateCodeReviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCodeReview",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCodeReviewResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Approves or rejects a code review.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCodeReviewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCodeReviewResponse
+        /// </returns>
+        public async Task<UpdateCodeReviewResponse> UpdateCodeReviewWithOptionsAsync(UpdateCodeReviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCodeReview",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCodeReviewResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Approves or rejects a code review.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCodeReviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCodeReviewResponse
+        /// </returns>
+        public UpdateCodeReviewResponse UpdateCodeReview(UpdateCodeReviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateCodeReviewWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Approves or rejects a code review.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCodeReviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCodeReviewResponse
+        /// </returns>
+        public async Task<UpdateCodeReviewResponse> UpdateCodeReviewAsync(UpdateCodeReviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateCodeReviewWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

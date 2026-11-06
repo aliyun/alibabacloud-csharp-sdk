@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDIJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the destination data source. If you do not specify this parameter, jobs are not filtered by this criterion. Valid values: <c>Hologres</c>, <c>OSS-HDFS</c>, <c>OSS</c>, <c>MaxCompute</c>, <c>LogHub</c>, <c>StarRocks</c>, <c>DataHub</c>, <c>AnalyticDB_For_MySQL</c>, <c>Kafka</c>, and <c>Hive</c>.</para>
+        /// <para>The type of the destination data source. If you do not specify this parameter, no limit is applied. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, LogHub, StarRocks, DataHub, AnalyticDB_For_MySQL, Kafka, and Hive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Hologres</para>
@@ -22,16 +22,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The synchronization type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>FullAndRealtimeIncremental</c>: full and real-time incremental synchronization</para>
-        /// </description></item>
-        /// <item><description><para><c>RealtimeIncremental</c>: real-time incremental synchronization</para>
-        /// </description></item>
-        /// <item><description><para><c>Full</c>: full synchronization</para>
-        /// </description></item>
-        /// <item><description><para><c>OfflineIncremental</c>: offline incremental synchronization</para>
-        /// </description></item>
-        /// <item><description><para><c>FullAndOfflineIncremental</c>: full and offline incremental synchronization</para>
-        /// </description></item>
+        /// <item><description>FullAndRealtimeIncremental: full and real-time incremental synchronization</description></item>
+        /// <item><description>RealtimeIncremental: real-time incremental synchronization</description></item>
+        /// <item><description>Full: full synchronization</description></item>
+        /// <item><description>OfflineIncremental: batch incremental synchronization</description></item>
+        /// <item><description>FullAndOfflineIncremental: full and batch incremental synchronization</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,8 +37,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string MigrationType { get; set; }
 
         /// <summary>
-        /// <para>The name of the Data Integration job.</para>
-        /// <para>The name must be unique within the DataWorks workspace.</para>
+        /// <para>The name of the export task.</para>
+        /// <para>The name must be unique within the current DataWorks workspace. Duplicate names are not allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_export_01</para>
@@ -53,7 +48,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages are numbered starting from 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -63,7 +58,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default: 10. Maximum: 100.</para>
+        /// <para>The number of entries to return on each page. Default value: 10. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -73,7 +68,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace.</para>
+        /// <para>The ID of the workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,7 +79,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The type of the source data source. If you do not specify this parameter, jobs are not filtered by this criterion. Valid values: <c>PolarDB</c>, <c>MySQL</c>, <c>Kafka</c>, <c>LogHub</c>, <c>Hologres</c>, <c>Oracle</c>, <c>OceanBase</c>, <c>MongoDB</c>, <c>RedShift</c>, <c>Hive</c>, <c>SQLServer</c>, <c>Doris</c>, and <c>ClickHouse</c>.</para>
+        /// <para>The type of the source data source. If you do not specify this parameter, no limit is applied. Valid values: PolarDB, MySQL, Kafka, LogHub, Hologres, Oracle, OceanBase, MongoDB, RedShift, Hive, SQLServer, Doris, and ClickHouse.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
@@ -94,7 +89,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SourceDataSourceType { get; set; }
 
         /// <summary>
-        /// <para>The configuration type of the job. Valid values: <c>FILESPEC</c>, <c>CLASSIC</c>, and <c>ALL</c>. <c>FILESPEC</c> indicates a new job type configured based on a structured file specification. <c>CLASSIC</c> indicates a job configured in the traditional mode. If you set this parameter to <c>ALL</c>, jobs of both types are returned.</para>
+        /// <para>The task configuration specification type. Valid values: FILESPEC, CLASSIC, and ALL. FILESPEC: new-version tasks based on structured filespec. CLASSIC: tasks in the traditional configuration mode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FILESPEC</para>
         /// </summary>
         [NameInMap("SpecType")]
         [Validation(Required=false)]

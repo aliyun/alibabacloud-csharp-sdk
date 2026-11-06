@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate and troubleshoot this API call.</para>
+        /// <para>The request ID, which is used to locate and troubleshoot the API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>735894D1-D5E5-50B8-8A6D-041C90A98B23</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListTablesRequest : TeaModel {
         /// <summary>
-        /// <para>The comment. Fuzzy match is supported.</para>
+        /// <para>The comment on the data table. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a comment</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? IncludeExtendedProperties { get; set; }
 
         /// <summary>
-        /// <para>The name. Fuzzy match is supported.</para>
+        /// <para>The name of the data table. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parent metadata entity. You can refer to the response of the ListDatabases or ListSchemas operation, or see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata entity concepts</a>.</para>
+        /// <para>The ID of the parent metadata entity. You can refer to the response of the ListDatabases or ListSchemas operation, or see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts of metadata entities</a>.</para>
         /// <list type="bullet">
         /// <item><description><para>The parent entity can be the database to which the table belongs. The <c>ParentMetaEntityId</c> format is <c>${EntityType}:${Instance ID or URL-encoded JDBC URL}:${Data catalog identifier}:${Database name}</c>. Use an empty string as a placeholder for non-existent levels.</para>
         /// </description></item>
@@ -83,12 +83,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The database schema can be used for <c>ParentMetaEntityId</c> only when the database type supports schemas (<c>maxcompute</c>, <c>holo</c>, <c>postgresql</c>, <c>sqlserver</c>, <c>hybriddb_for_postgresql</c>, or <c>oracle</c>). For MaxCompute, the three-level model must be enabled. Otherwise, only the database can be used.</description></item>
-        /// <item><description>For MaxCompute and DLF types, use an empty string as a placeholder for the instance ID. For MaxCompute, the database name is the MaxCompute project name.</description></item>
-        /// <item><description>For StarRocks, the data catalog identifier is the catalog name. For DLF, the data catalog identifier is the catalog ID. Other types do not support the catalog level, so use an empty string as a placeholder.</description></item>
+        /// <item><description>You can use a database schema for <c>ParentMetaEntityId</c> only when the database type supports schemas (<c>maxcompute</c>, <c>holo</c>, <c>postgresql</c>, <c>sqlserver</c>, <c>hybriddb_for_postgresql</c>, or <c>oracle</c>). For MaxCompute, the three-level model must be enabled. Otherwise, you can only use a database.</description></item>
+        /// <item><description>For MaxCompute and DLF data sources, use an empty string as a placeholder for the instance ID. For MaxCompute, the database name is the MaxCompute project name.</description></item>
+        /// <item><description>For StarRocks, the data catalog identifier is the catalog name. For DLF, the data catalog identifier is the catalog ID. Other types do not support the catalog level, so you can use an empty string as a placeholder.</description></item>
         /// </list>
         /// </remarks>
-        /// <para>Examples of <c>ParentMetaEntityId</c> formats for common types:</para>
+        /// <para>The following examples show the <c>ParentMetaEntityId</c> formats for common data source types:</para>
         /// <list type="bullet">
         /// <item><description><para><c>maxcompute-project:::project_name</c></para>
         /// </description></item>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ParentMetaEntityId { get; set; }
 
         /// <summary>
-        /// <para>The field used for sorting. Default value: CreateTime. Valid values:</para>
+        /// <para>The field by which to sort the results. Default value: CreateTime. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>CreateTime: creation time</description></item>
         /// <item><description>ModifyTime: modification time</description></item>

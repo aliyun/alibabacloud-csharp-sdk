@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<GetComputeResourceAuthUserMappingsResponseBodyDataAccounts> Accounts { get; set; }
             public class GetComputeResourceAuthUserMappingsResponseBodyDataAccounts : TeaModel {
                 /// <summary>
-                /// <para>The Alibaba Cloud UID.</para>
+                /// <para>The Alibaba Cloud user ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12747300953xxx62</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string UserId { get; set; }
 
                 /// <summary>
-                /// <para>The username in the target system, such as an LDAP account.</para>
+                /// <para>The username in the destination system, such as an LDAP account.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>jsmitxxxx</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

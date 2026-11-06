@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetBatchChangeTableOwnerStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The batch transfer task ID returned by SubmitBatchChangeTableOwner.</para>
+        /// <para>The ID of the batch transfer task returned by SubmitBatchChangeTableOwner.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

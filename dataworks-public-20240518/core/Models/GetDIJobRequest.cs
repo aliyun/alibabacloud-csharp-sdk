@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This field is deprecated. Use the <c>Id</c> field instead.</para>
+        /// <para><b>[Deprecated]</b> This field is deprecated. Use the Id field instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11588</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? DIJobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DI job.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11588</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can call the <c>ListProjects</c> operation to obtain the workspace ID.</para>
+        /// <para>The DataWorks workspace ID. You can call the ListProjects operation to obtain the workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the detailed configuration, including <c>TransformationRules</c>, <c>TableMappings</c>, and <c>JobSettings</c>. This configuration is returned by default.</para>
+        /// <para>Specifies whether to return detailed configuration information, which includes TransformationRules, TableMappings, and JobSettings. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

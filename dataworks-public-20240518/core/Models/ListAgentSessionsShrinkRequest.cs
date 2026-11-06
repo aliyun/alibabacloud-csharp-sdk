@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListAgentSessionsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID passed in by the requester. The value is returned as-is.</para>
+        /// <para>The request ID provided by the caller. This ID is returned as is in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>676303114031776</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The JSON-RPC version. Fixed value: 2.0.</para>
+        /// <para>The JSON-RPC version, which is fixed to 2.0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.0</para>

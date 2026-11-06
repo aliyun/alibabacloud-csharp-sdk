@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The data asset type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DataWorks table (ACS::DataWorks::Table)</description></item>
-        /// <item><description>DataWorks scheduled task (ACS::DataWorks::Task)</description></item>
+        /// <item><description>Data table (ACS::DataWorks::Table)</description></item>
+        /// <item><description>Scheduling task (ACS::DataWorks::Task)</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -45,8 +45,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The workspace environment to which the data asset belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Dev (development environment)</description></item>
-        /// <item><description>Prod (production environment)</description></item>
+        /// <item><description>Dev: development environment</description></item>
+        /// <item><description>Prod: production environment</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The list of data asset tags to attach.</para>
+        /// <para>The list of tags to attach to the data assets.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tags")]

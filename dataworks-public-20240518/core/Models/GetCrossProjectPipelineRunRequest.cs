@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetCrossProjectPipelineRunRequest : TeaModel {
         /// <summary>
-        /// <para>The cross-workspace deployment flow ID.</para>
+        /// <para>The cross-workspace deployment pipeline run ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
