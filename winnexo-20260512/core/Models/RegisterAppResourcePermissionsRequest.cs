@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class RegisterAppResourcePermissionsRequest : TeaModel {
         /// <summary>
-        /// <para>The batch authorization items.</para>
+        /// <para>The batch authorization item.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("items")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<RegisterAppResourcePermissionsRequestItems> Items { get; set; }
         public class RegisterAppResourcePermissionsRequestItems : TeaModel {
             /// <summary>
-            /// <para>The expiration time with the time zone. If not specified, the permissions never expire.</para>
+            /// <para>The expiration time with a time zone. If omitted, the permissions never expire.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-12-31T23:59:59+08:00</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<string> Permissions { get; set; }
 
             /// <summary>
-            /// <para>The dot-separated resource key, where the first segment is the APP application key.</para>
+            /// <para>The dot-separated resource key with the first segment as the APP application key.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ResourceKey { get; set; }
 
             /// <summary>
-            /// <para>The resource type. Set the value to APP_RESOURCE.</para>
+            /// <para>The resource type. Fixed to APP_RESOURCE.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The ID of the tenant to which the resource belongs. If not specified, the current tenant of the caller is used.</para>
+        /// <para>The batch authorization item.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ResourceTenantId { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
+        /// <para>The ID of the tenant to which the resource belongs. If omitted, the current tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

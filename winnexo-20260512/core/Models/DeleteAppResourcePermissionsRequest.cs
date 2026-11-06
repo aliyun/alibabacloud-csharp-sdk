@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class DeleteAppResourcePermissionsRequest : TeaModel {
         /// <summary>
-        /// <para>The scope of the permissions to be revoked.</para>
+        /// <para>The scope of permission revocation.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("items")]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<string> GranteeIds { get; set; }
 
             /// <summary>
-            /// <para>The ID of the tenant to which the grantee user belongs. This parameter is optional if the user and the resource belong to the same tenant, and is required for cross-tenant users.</para>
+            /// <para>The tenant to which the grantee user belongs. This parameter can be omitted if the user belongs to the same tenant as the resource, and is required for cross-tenant users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GranteeTenantId { get; set; }
 
             /// <summary>
-            /// <para>The grantee principal type.</para>
+            /// <para>The type of the grantee principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>USER</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GranteeType { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to include dot-separated descendant resources for the RESOURCE. Default value: false.</para>
+            /// <para>Specifies whether the resource includes dot-separated descendant resources. Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? IncludeDescendants { get; set; }
 
             /// <summary>
-            /// <para>The dot-separated resource key whose first segment is the application key of the APP.</para>
+            /// <para>The dot-separated resource key whose first segment is the APP application key.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ResourceKey { get; set; }
 
             /// <summary>
-            /// <para>The resource type. Set the value to APP_RESOURCE.</para>
+            /// <para>The resource type. Fixed to APP_RESOURCE.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The ID of the tenant to which the resource belongs. If not specified, the current tenant of the caller is used.</para>
+        /// <para>The scope of permission revocation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ResourceTenantId { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
+        /// <para>The ID of the tenant to which the resource belongs. If omitted, the current tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

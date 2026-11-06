@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CheckAppResourcePermissionsBatchRequest : TeaModel {
         /// <summary>
-        /// <para>The check items.</para>
+        /// <para>The check item.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("checks")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Permission { get; set; }
 
             /// <summary>
-            /// <para>The dot-separated resource key whose first segment is the APP application key.</para>
+            /// <para>The dot-separated resource key whose first segment is the application key.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The ID of the tenant to which the resource belongs. If not specified, the current tenant of the caller is used.</para>
+        /// <para>The ID of the target platform user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ResourceTenantId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the target platform user.</para>
+        /// <para>The tenant to which the target user belongs. This parameter is required for cross-tenant targets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10086</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? TargetUserId { get; set; }
 
         /// <summary>
-        /// <para>The tenant to which the target user belongs. This parameter is required for cross-tenant targets.</para>
+        /// <para>The check item.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TargetUserTenantId { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
+        /// <para>The ID of the tenant to which the resource belongs. If this parameter is not specified, the current tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

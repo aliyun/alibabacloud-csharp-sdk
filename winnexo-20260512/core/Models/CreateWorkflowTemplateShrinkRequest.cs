@@ -10,7 +10,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateWorkflowTemplateShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The write action. Valid values: SAVE: Saves the template as a draft without taking effect. SUBMIT: Saves and submits the template and sets it as the only effective version. Default value: SUBMIT.</para>
+        /// <para>The write action. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>SAVE: Saves the template as a draft. The draft does not take effect. Node names and assignees can be left empty.</description></item>
+        /// <item><description>SUBMIT: Requires complete nodes. The template is saved and submitted as the only effective version.
+        /// Default value: SUBMIT.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>SUBMIT</para>
@@ -24,7 +29,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>group_example</para>
+        /// <para>cg_9401</para>
         /// </summary>
         [NameInMap("collaborationGroupId")]
         [Validation(Required=false)]
@@ -35,14 +40,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>example</para>
+        /// <para>{&quot;name&quot;:&quot;Customer Complaint Handling Process&quot;,&quot;schemaVersion&quot;:2,&quot;steps&quot;:[{&quot;stepId&quot;:&quot;collect&quot;,&quot;sortOrder&quot;:1,&quot;name&quot;:&quot;Collect Customer Information&quot;}]}</para>
         /// </summary>
         [NameInMap("definition")]
         [Validation(Required=false)]
         public string DefinitionShrink { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
+        /// <para>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

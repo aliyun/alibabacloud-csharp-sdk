@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>group_example</para>
+        /// <para>cg_9401</para>
         /// </summary>
         [NameInMap("collaborationGroupId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The keyword for fuzzy search in the template name or description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>example</para>
+        /// <para>Weekly report</para>
         /// </summary>
         [NameInMap("keyword")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The pagination token. Obtain the token from the nextToken parameter in the previous response. This parameter takes precedence over page if both are specified.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>example</para>
+        /// <para>tok_9401</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]

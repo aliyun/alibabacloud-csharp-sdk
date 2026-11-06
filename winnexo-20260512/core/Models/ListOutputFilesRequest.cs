@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListOutputFilesRequest : TeaModel {
         /// <summary>
-        /// <para>The business ID used for exact filtering. The length is 1 to 128 characters. This value is derived from the businessId of the file registration or associated workflow instance.</para>
+        /// <para>The business ID used for exact filtering. The length is 1 to 128 characters. This ID is derived from file registrations or the businessId of associated workflow instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>REQ-20261012-001</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The name of the digital employee (operating object). Filters outputs by name.</para>
+        /// <para>The name of the digital employee (operating object). Filters results by name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Business Analysis Assistant</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display only shared outputs and output details.</para>
+        /// <para>Specifies whether to display only the outputs and output details that have sharing enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? SharedOnly { get; set; }
 
         /// <summary>
-        /// <para>The tags used for exact filtering. All specified tags must be matched simultaneously. You can specify up to 20 tags. Each tag must be a non-empty string of 1 to 128 characters. Tags are derived from file registrations or the variables.tags of associated instances.</para>
+        /// <para>The tags used for exact filtering. All specified tags must match simultaneously. You can specify up to 20 tags. Each tag must be a non-empty string of 1 to 128 characters. Tags are derived from file registrations or the variables.tags of associated instances.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]

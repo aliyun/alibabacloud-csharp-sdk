@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GrantedBy { get; set; }
 
             /// <summary>
-            /// <para>The grantee ID.</para>
+            /// <para>The tenant filter for cross-tenant users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10086</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GranteeId { get; set; }
 
             /// <summary>
-            /// <para>The grantee name.</para>
+            /// <para>The principal name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Zhang San</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GranteeName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the tenant to which the cross-tenant user belongs.</para>
+            /// <para>The permission filter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GranteeTenantId { get; set; }
 
             /// <summary>
-            /// <para>The grantee type.</para>
+            /// <para>The principal ID filter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>USER</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Permission { get; set; }
 
             /// <summary>
-            /// <para>The ID of the permission record.</para>
+            /// <para>The permission record ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1001</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ResourceKey { get; set; }
 
             /// <summary>
-            /// <para>The resource type.</para>
+            /// <para>The application key or its subpath.</para>
             /// 
             /// <b>Example:</b>
             /// <para>APP_RESOURCE</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The number of items per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The principal type filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request tracking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>

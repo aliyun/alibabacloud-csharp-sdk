@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether more data is available.</para>
+        /// <para>Indicates whether more data exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The list of template summaries on the current page.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>example</para>
+        /// <para>[{\&quot;id\&quot;:\&quot;item_9401\&quot;}]</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The description of the template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>example</para>
+            /// <para>Standard process for handling customer complaints</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string EffectiveVersion { get; set; }
 
             /// <summary>
-            /// <para>The time when the template was last modified. The time is in the ISO 8601 standard.</para>
+            /// <para>The time of the last modification. The time follows the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>example</para>
+            /// <para>2026-11-05T08:00:00Z</para>
             /// </summary>
             [NameInMap("gmtModified")]
             [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <summary>
             /// <para>The status of the latest version. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>DRAFT: Draft. The version contains uncommitted edits.</description></item>
+            /// <item><description>DRAFT: Draft. Unsubmitted edits exist.</description></item>
             /// <item><description>SUBMITTED: Submitted.</description></item>
             /// </list>
             /// 
@@ -97,14 +97,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The name of the template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>example</para>
+            /// <para>Customer complaint handling process</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The number of unique owners.</para>
+            /// <para>The number of owners.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The ID of the template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>example</para>
+            /// <para>tpl_9401</para>
             /// </summary>
             [NameInMap("templateId")]
             [Validation(Required=false)]
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per page in the current request.</para>
+        /// <para>The effective maximum number of entries to return per page for the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -166,10 +166,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. An empty string indicates that no more data is available.</para>
+        /// <para>The pagination token for the next page. An empty string indicates that no more data exists.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>example</para>
+        /// <para>tok_9401</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in the current request.</para>
+        /// <para>The effective number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request tracking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of visible entries that match the filter conditions.</para>
+        /// <para>The total number of visible items under the filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

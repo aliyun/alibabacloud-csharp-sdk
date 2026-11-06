@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListAppResourceUserPermissionsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The permission filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The permission points to filter.</para>
+        /// <para>The permission filter.</para>
         /// </summary>
         [NameInMap("permissions")]
         [Validation(Required=false)]
         public string PermissionsShrink { get; set; }
 
         /// <summary>
-        /// <para>The application key or its subpath.</para>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ResourceKeyPrefix { get; set; }
 
         /// <summary>
-        /// <para>The ID of the tenant to which the resource belongs. If you do not specify this parameter, the current tenant of the caller is used.</para>
+        /// <para>The ID of the target platform user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ResourceTenantId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Set the value to APP_RESOURCE.</para>
+        /// <para>The application key or its subpath.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the target platform user.</para>
+        /// <para>The tenant to which the target user belongs. This parameter is required for cross-tenant targets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10086</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? TargetUserId { get; set; }
 
         /// <summary>
-        /// <para>The tenant to which the target user belongs. This parameter is required for cross-tenant targets.</para>
+        /// <para>The fixed value APP_RESOURCE.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TargetUserTenantId { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. If you do not specify this parameter, the default tenant of the caller is used.</para>
+        /// <para>The ID of the tenant to which the resource belongs. If omitted, the current tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

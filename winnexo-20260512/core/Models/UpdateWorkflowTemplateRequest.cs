@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <summary>
         /// <para>The write action. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SAVE: Saves the template as a draft without taking effect.</description></item>
-        /// <item><description>SUBMIT: Saves and submits the template, setting it as the only effective version.
+        /// <item><description>SAVE: Saves the template as a draft. The changes do not take effect. Node names and assignees can be left empty.</description></item>
+        /// <item><description>SUBMIT: Requires complete nodes. Saves and submits the template as the only effective version.
         /// Default value: SUBMIT.</description></item>
         /// </list>
         /// 
@@ -29,25 +29,25 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>group_example</para>
+        /// <para>cg_9401</para>
         /// </summary>
         [NameInMap("collaborationGroupId")]
         [Validation(Required=false)]
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>The complete JSON definition of the template to overwrite the existing one.</para>
+        /// <para>The complete JSON definition of the template. This overwrites the existing definition.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>example</para>
+        /// <para>{&quot;name&quot;:&quot;Customer Complaint Handling Process&quot;,&quot;schemaVersion&quot;:2,&quot;steps&quot;:[{&quot;stepId&quot;:&quot;collect&quot;,&quot;sortOrder&quot;:1,&quot;name&quot;:&quot;Collect Customer Information&quot;}]}</para>
         /// </summary>
         [NameInMap("definition")]
         [Validation(Required=false)]
         public Dictionary<string, object> Definition { get; set; }
 
         /// <summary>
-        /// <para>The submitted version number on which the new version is based. This parameter is mutually exclusive with the version parameter. If not specified, the current effective version is used as the fallback.</para>
+        /// <para>The submitted version number on which the new version is based. This parameter is mutually exclusive with version. If you do not specify this parameter, the current effective version is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>tpl_example</para>
+        /// <para>tpl_9401</para>
         /// </summary>
         [NameInMap("templateId")]
         [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The draft template version number to write. The format is a lowercase v followed by a positive integer, such as v1. Submitted versions cannot be written. If not specified, a new version is generated.</para>
+        /// <para>The version number to which the content belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v2</para>
@@ -88,10 +88,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Version { get; set; }
 
         /// <summary>
-        /// <para>The version description. The maximum length is 500 characters. When writing a draft, if this parameter is not specified or is null, the original value is retained. An empty string clears the value.</para>
+        /// <para>The change description for this version. An empty value indicates that no description is provided.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Add a review step</para>
+        /// <para>Added a review step</para>
         /// </summary>
         [NameInMap("versionDescription")]
         [Validation(Required=false)]

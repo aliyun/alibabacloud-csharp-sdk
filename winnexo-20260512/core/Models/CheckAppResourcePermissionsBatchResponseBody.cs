@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message. This field is empty if the request is successful.</para>
+        /// <para>The error description. This field is empty if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The requested resource does not exist</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The results, returned in the same order as the requested items.</para>
+        /// <para>The results in the same order as the request.</para>
         /// </summary>
         [NameInMap("results")]
         [Validation(Required=false)]
         public List<CheckAppResourcePermissionsBatchResponseBodyResults> Results { get; set; }
         public class CheckAppResourcePermissionsBatchResponseBodyResults : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the user has the permission.</para>
+            /// <para>Indicates whether the user has the required permissions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Permission { get; set; }
 
             /// <summary>
-            /// <para>The dot-separated resource key whose first segment is the APP application key.</para>
+            /// <para>The dot-separated resource key whose first segment is the application key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app.demo.resource_1</para>

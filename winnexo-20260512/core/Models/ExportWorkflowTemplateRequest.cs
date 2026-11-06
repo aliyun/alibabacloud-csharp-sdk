@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>group_example</para>
+        /// <para>cg_9401</para>
         /// </summary>
         [NameInMap("collaborationGroupId")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>tpl_example</para>
+        /// <para>tpl_9401</para>
         /// </summary>
         [NameInMap("templateId")]
         [Validation(Required=false)]

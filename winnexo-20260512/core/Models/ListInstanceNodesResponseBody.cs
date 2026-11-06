@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListInstanceNodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. A value of 200 indicates success.</para>
+        /// <para>The business status code. The value 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The physical instance ID.</para>
+        /// <para>The physical workflow instance ID (planId).</para>
         /// 
         /// <b>Example:</b>
         /// <para>plan_example</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The error description.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The requested resource does not exist</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? Duration { get; set; }
 
             /// <summary>
-            /// <para>The time when the node was first run. This field is empty for historical or unrun nodes.</para>
+            /// <para>The time when the node was first run. This field is empty for historical nodes or nodes that have not run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-14T08:00:00Z</para>
@@ -93,14 +93,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The display name of the node assignee. This field is empty if the assignee is unknown.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Assistant Customer Success Manager (CSM)</para>
+            /// <para>Customer Success Manager (CSM) Assistant</para>
             /// </summary>
             [NameInMap("handler")]
             [Validation(Required=false)]
             public string Handler { get; set; }
 
             /// <summary>
-            /// <para>The lane position of the node in the workflow graph.</para>
+            /// <para>The lane of the node in the workflow graph.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? Lane { get; set; }
 
             /// <summary>
-            /// <para>The key of the node (nodeKey). This is not the session ID.</para>
+            /// <para>The visible nodes arranged in topological order. The number of nodes is determined by the actual dynamic graph.</para>
             /// 
             /// <b>Example:</b>
             /// <para>query.amount</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? Rank { get; set; }
 
             /// <summary>
-            /// <para>The original running status of the node, such as READY, RUNNING, WAITING, SUCCEEDED, or FAILED.</para>
+            /// <para>The original node running status, such as READY, RUNNING, WAITING, SUCCEEDED, or FAILED.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The reason for waiting, such as HUMAN_INPUT, HUMAN_STEP, REVIEW, MANUAL_PAUSE, or UNBLOCK. This field is empty if the node is not waiting.</para>
+            /// <para>The wait reason: HUMAN_INPUT, HUMAN_STEP, REVIEW, MANUAL_PAUSE, or UNBLOCK. This field is empty when the node is not waiting.</para>
             /// 
             /// <b>Example:</b>
             /// <para>REVIEW</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The request tracking ID.</para>
+        /// <para>The request trace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<ListAppResourceUserPermissionsResponseBodyItems> Items { get; set; }
         public class ListAppResourceUserPermissionsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The stored and valid permission points.</para>
+            /// <para>The permission filter.</para>
             /// </summary>
             [NameInMap("permissions")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ResourceKey { get; set; }
 
             /// <summary>
-            /// <para>The resource type.</para>
+            /// <para>The application key or its subpath.</para>
             /// 
             /// <b>Example:</b>
             /// <para>APP_RESOURCE</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The error description. This parameter is empty if the request is successful.</para>
+        /// <para>The error description. This field is empty when the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The requested resource does not exist</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The permission filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request tracking ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>

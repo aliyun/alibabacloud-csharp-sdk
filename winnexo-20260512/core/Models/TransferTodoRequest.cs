@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class TransferTodoRequest : TeaModel {
         /// <summary>
-        /// <para>The handover description.</para>
+        /// <para>The handover note.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Please continue processing</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The list of target user IDs to whom the task is reassigned. You can specify 1 to 100 user IDs.</para>
+        /// <para>The list of target user IDs for the transfer (1 to 100).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> TargetUserIds { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
+        /// <para>The to-do item ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the to-do task.</para>
+        /// <para>The list of target user IDs for the transfer (1 to 100).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

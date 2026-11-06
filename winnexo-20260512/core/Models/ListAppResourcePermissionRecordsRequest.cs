@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListAppResourcePermissionRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The grantee ID filter.</para>
+        /// <para>The tenant filter for cross-tenant users.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10086</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GranteeId { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID filter for cross-tenant users.</para>
+        /// <para>The permission filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GranteeTenantId { get; set; }
 
         /// <summary>
-        /// <para>The grantee type filter.</para>
+        /// <para>The principal ID filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>USER</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GranteeType { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The number of items per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The principal type filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> Permissions { get; set; }
 
         /// <summary>
-        /// <para>The application key or its subpath.</para>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ResourceKeyPrefix { get; set; }
 
         /// <summary>
-        /// <para>The ID of the tenant to which the resource belongs. If not specified, the current tenant of the caller is used.</para>
+        /// <para>The resource tenant ID. This parameter is fixed to APP_RESOURCE.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ResourceTenantId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Set this parameter to APP_RESOURCE.</para>
+        /// <para>The application key or its subpath.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
+        /// <para>The ID of the tenant to which the resource belongs. If omitted, the current tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

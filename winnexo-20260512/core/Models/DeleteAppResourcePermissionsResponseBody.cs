@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class DeleteAppResourcePermissionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value 200 indicates success.</para>
+        /// <para>The business status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? DeletedCount { get; set; }
 
         /// <summary>
-        /// <para>The error message. This field is empty if the request is successful.</para>
+        /// <para>The error message. Empty if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The requested resource does not exist</para>

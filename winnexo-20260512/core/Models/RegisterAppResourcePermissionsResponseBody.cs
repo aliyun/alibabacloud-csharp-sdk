@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message. This parameter is empty if the request is successful.</para>
+        /// <para>The error description. Empty if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The requested resource does not exist</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The newly created or idempotently matched permission records.</para>
+        /// <para>The created or idempotently matched permission records.</para>
         /// </summary>
         [NameInMap("records")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The expiration time.</para>
+            /// <para>The expiration time with a time zone. If omitted, the permissions never expire.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-12-31T23:59:59+08:00</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GrantedBy { get; set; }
 
             /// <summary>
-            /// <para>The principal ID.</para>
+            /// <para>The principal ID. Omit this parameter for ALL_USERS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10086</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? PermissionId { get; set; }
 
             /// <summary>
-            /// <para>The resource key.</para>
+            /// <para>The dot-separated resource key with the first segment as the APP application key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app.demo.resource_1</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ResourceKey { get; set; }
 
             /// <summary>
-            /// <para>The resource type.</para>
+            /// <para>The resource type. Fixed to APP_RESOURCE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>APP_RESOURCE</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The request tracking ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>

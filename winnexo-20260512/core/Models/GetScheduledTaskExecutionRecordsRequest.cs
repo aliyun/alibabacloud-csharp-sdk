@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetScheduledTaskExecutionRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the collaboration group to which the task belongs, such as cg_101. If this parameter is specified, a group workspace task is created and the caller must be a valid group member. If this parameter is left empty, a personal task is created.</para>
+        /// <para>The ID of the collaboration group to which the task belongs, such as cg_101. If you specify this parameter, a group space task is created, and the caller must be a valid group member. If you leave this parameter empty, a personal task is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1112</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>The platform user ID of the initiator for filtering. The scope is the executor of the record. For manual execution, this is the user who triggered the execution. For automatic execution, this is the task creator. To view only tasks initiated by yourself, pass the current user ID.</para>
+        /// <para>The business status code. A value of 200 indicates success. A failure is indicated by a backend error code, such as ERR.* or InvalidParameter.*.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The page number. Default value: 1. Minimum value: 1. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>exampleCollaborationGroupId</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
@@ -50,16 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The execution status filter (lowercase). Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>pending: Queued.</description></item>
-        /// <item><description>running: Running.</description></item>
-        /// <item><description>success: Succeeded.</description></item>
-        /// <item><description>failed: Failed.</description></item>
-        /// <item><description>timeout: Timed out.</description></item>
-        /// <item><description>cancelled: Cancelled.</description></item>
-        /// </list>
-        /// <para>If this parameter is not specified, no status filtering is applied. If this parameter is specified, future planned items are no longer generated.</para>
+        /// <para>The initiator filter based on the platform user ID. The scope is the executor of the record. For manual execution, it is the user who triggers the task. For automatic execution, it is the task creator. To view only the tasks that you initiated, specify the current user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>failed</para>
@@ -69,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of a single task for pre-filtering. If this parameter is not specified, execution records of all visible tasks are returned.</para>
+        /// <para>The execution status filter in lowercase. Valid values: pending (queued), running (running), success (successful), failed (failed), timeout (timed out), and cancelled (cancelled). If you do not specify this parameter, no filtering is applied. If you specify this parameter, no future plan items are generated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleTaskId</para>
@@ -79,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the effective tenant.</para>
+        /// <para>The ID of the active tenant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

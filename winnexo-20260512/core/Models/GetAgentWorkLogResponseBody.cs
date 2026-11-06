@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// <para>The saved raw record content. Tool invocations and artifact metadata are represented as JSON strings.</para>
+            /// <para>The saved original record content. Tool invocations and artifact metadata are JSON strings.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The data query for the current round is completed</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Detail { get; set; }
 
             /// <summary>
-            /// <para>The duration of this operation record, in milliseconds. The value is 0 for artifact records.</para>
+            /// <para>The time consumed by the operation record, in milliseconds. The value is 0 for artifact records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1200</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? Duration { get; set; }
 
             /// <summary>
-            /// <para>The key of the node to which the record belongs. This is not the session ID.</para>
+            /// <para>The optional node key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>query.amount</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>The time when the event was recorded, in ISO 8601 format. If the source record has no time, an empty string is returned.</para>
+            /// <para>The event time of the record in ISO 8601 format. If the source record has no time, an empty string is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-14T08:00:00Z</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The current page number, starting from 1.</para>
+        /// <para>The page number, starting from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100.</para>
+        /// <para>The number of entries per page. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of filtered operation log entries.</para>
+        /// <para>The total number of filtered operation logs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

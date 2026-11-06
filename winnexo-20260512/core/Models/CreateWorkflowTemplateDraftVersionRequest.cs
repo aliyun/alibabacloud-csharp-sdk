@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>group_example</para>
+        /// <para>cg_9401</para>
         /// </summary>
         [NameInMap("collaborationGroupId")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>tpl_example</para>
+        /// <para>tpl_9401</para>
         /// </summary>
         [NameInMap("templateId")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The version number of the template on which the edit is based. The format is a lowercase v followed by a positive integer, such as v1. A draft version is returned as-is.</para>
+        /// <para>The version number to which the returned content belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

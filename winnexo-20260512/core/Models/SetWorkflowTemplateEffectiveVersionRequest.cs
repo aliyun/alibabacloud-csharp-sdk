@@ -10,29 +10,29 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class SetWorkflowTemplateEffectiveVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the collaboration workspace.</para>
+        /// <para>The collaboration workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>group_example</para>
+        /// <para>cg_9401</para>
         /// </summary>
         [NameInMap("collaborationGroupId")]
         [Validation(Required=false)]
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the template.</para>
+        /// <para>The template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>tpl_example</para>
+        /// <para>tpl_9401</para>
         /// </summary>
         [NameInMap("templateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The submitted template version number to be set as effective. The format is a lowercase v followed by a positive integer, such as v1.</para>
+        /// <para>The version number of the returned content.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

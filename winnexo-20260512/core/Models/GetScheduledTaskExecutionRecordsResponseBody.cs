@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether more data is available.</para>
+        /// <para>Indicates whether more data exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The current page number.</para>
+        /// <para>The page number, starting from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of tasks per page.</para>
+        /// <para>The ID of the collaboration group, such as cg_101. If you specify this parameter, the data is returned by group dimension, and the caller must be a valid group member. If you do not specify this parameter, the data is returned by personal dimension, excluding group tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<GetScheduledTaskExecutionRecordsResponseBodyTasks> Tasks { get; set; }
         public class GetScheduledTaskExecutionRecordsResponseBodyTasks : TeaModel {
             /// <summary>
-            /// <para>The ID of the collaboration group to which the task belongs. An empty value indicates a personal task.</para>
+            /// <para>The pre-filter for a single task. If you do not specify this parameter, the execution records of all visible tasks are returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleCollaborationGroupId</para>
@@ -117,12 +117,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? IsOpen { get; set; }
 
             /// <summary>
-            /// <para>The execution model tier. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>flagship: Flagship.</description></item>
-            /// <item><description>standard: Standard.</description></item>
-            /// <item><description>quick: Lightweight.</description></item>
-            /// </list>
+            /// <para>The execution model tier. Valid values: flagship (flagship), standard (standard), and quick (lightweight).</para>
             /// 
             /// <b>Example:</b>
             /// <para>standard</para>
@@ -135,7 +130,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>SampleName.pdf</para>
+            /// <para>Sample name.pdf</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
@@ -159,7 +154,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<GetScheduledTaskExecutionRecordsResponseBodyTasksTimeline> Timeline { get; set; }
             public class GetScheduledTaskExecutionRecordsResponseBodyTasksTimeline : TeaModel {
                 /// <summary>
-                /// <para>The actual hours spent, in hours.</para>
+                /// <para>The actual working hours in hours.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-10-01T12:00:00Z</para>
@@ -199,7 +194,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string ExecutionId { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the execution record has been archived due to expiration.</para>
+                /// <para>The time zone.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -209,7 +204,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public bool? IsExpired { get; set; }
 
                 /// <summary>
-                /// <para>The execution output content (historical records only).</para>
+                /// <para>The execution output content (history records only).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string_value</para>
@@ -256,8 +251,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <summary>
             /// <para>The trigger type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Manual: Manual execution.</description></item>
-            /// <item><description>Cron: Timed scheduling.</description></item>
+            /// <item><description>Manual: manual execution.</description></item>
+            /// <item><description>Cron: scheduled trigger.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

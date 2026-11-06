@@ -10,29 +10,29 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ImportWorkflowTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The collaboration workspace ID.</para>
+        /// <para>The ID of the collaboration workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>group_example</para>
+        /// <para>cg_9401</para>
         /// </summary>
         [NameInMap("collaborationGroupId")]
         [Validation(Required=false)]
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>The portable template JSON. The stepId and sortOrder fields can be omitted.</para>
+        /// <para>The portable template in JSON format. The stepId and sortOrder fields can be omitted.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>example</para>
+        /// <para>{&quot;name&quot;:&quot;Customer Complaint Handling Process&quot;,&quot;schemaVersion&quot;:2}</para>
         /// </summary>
         [NameInMap("template")]
         [Validation(Required=false)]
         public Dictionary<string, object> Template { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. If omitted, the default tenant of the caller is used.</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

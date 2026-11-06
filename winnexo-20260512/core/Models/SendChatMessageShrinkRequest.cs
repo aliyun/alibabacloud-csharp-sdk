@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class SendChatMessageShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The message body from the user.</para>
+        /// <para>The body of the user message.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ContentType { get; set; }
 
         /// <summary>
-        /// <para>The list of digital employee names. A single string can be passed for backward compatibility with the legacy format.</para>
+        /// <para>The list of digital employee names. For compatibility with the legacy format, a single string can be passed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DigitalEmployeeNameShrink { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable direct connection mode. If set to true, the standard scenario routing is skipped and the direct conversation scenario is entered directly.</para>
+        /// <para>Specifies whether to enable the direct connection mode. If this parameter is set to true, the regular scenario routing is skipped and the direct connection conversation scenario is directly entered.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? DirectChat { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable web search. Default value: False. In task execution scenarios (when taskExecution is provided), the task configuration takes precedence.</para>
+        /// <para>Specifies whether to enable web search. Default value: false. In the task execution scenario where taskExecution is passed, the task configuration prevails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? EnableWebSearch { get; set; }
 
         /// <summary>
-        /// <para>The list of file references. Each item is an object, and fileId is required (returned by uploadChatFile).</para>
+        /// <para>The list of file references. Each item is an object, and the fileId parameter is required, which is returned by uploadChatFile.</para>
         /// </summary>
         [NameInMap("files")]
         [Validation(Required=false)]
         public string FilesShrink { get; set; }
 
         /// <summary>
-        /// <para>The abstract model tier. Valid values: quick, standard, and flagship. If not specified, new sessions use standard, and existing sessions retain the current session tier.</para>
+        /// <para>The abstract model tier. Valid values: quick, standard, and flagship. If this parameter is not specified, standard is used for new sessions, and the current tier is used for existing sessions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quick</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Model { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to reuse the most recent session of the digital employee when sessionId is not provided (CLI scenario). Default value: false, which creates a new session.</para>
+        /// <para>Specifies whether to reuse the most recent session under the digital employee when sessionId is not passed, which applies to CLI scenarios. Default value: false, which indicates that a new session is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? Stream { get; set; }
 
         /// <summary>
-        /// <para>The task execution metadata returned by executeScheduledTask. When provided, the request is processed through the task execution pipeline.</para>
+        /// <para>The task execution metadata returned by executeScheduledTask. If this parameter is passed, the request is processed according to the task execution link.</para>
         /// </summary>
         [NameInMap("taskExecution")]
         [Validation(Required=false)]
@@ -125,13 +125,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The session work mode. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>ask: Quick Q&amp;A. Tools, skills, and connectors are trimmed, and single-turn direct answers are provided.</description></item>
-        /// <item><description>work: Deep work. This is the default value.</description></item>
-        /// <item><description>direct: Direct connection mode (request-level). The sandbox is not started and no context pollution occurs. This is equivalent to directChat=true.</description></item>
-        /// </list>
-        /// <para>The ask and work modes are session-level: the mode is selected and fixed when a session is created. By default, follow-up messages inherit the session mode. If an explicitly provided value is inconsistent with the session mode, a parameter error is returned. To switch modes, create a new session or fork the existing one. In multi-digital-employee or task execution scenarios, if ask is provided, work takes effect instead. When directChat=true, this parameter is ignored.</para>
+        /// <para>The session work mode. Valid values: ask (quick Q&amp;A, which trims tools, skills, and connectors for single-turn direct answers), work (deep work, which is the default value), and direct (direct connection mode at the request level, which does not start the sandbox and prevents context pollution, equivalent to directChat=true). The ask and work modes are at the session level. The mode is fixed when a new session is created. Subsequent chats inherit the session mode by default. If the explicitly passed value is inconsistent with the session mode, a parameter error is returned. To switch the mode, create a new session or fork the session. If ask is passed in the multi-digital employee or task execution scenario, it takes effect as work. If directChat is set to true, this parameter is ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>work</para>

@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Result { get; set; }
 
             /// <summary>
-            /// <para>The ID of the target user.</para>
+            /// <para>The target user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>43</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The ID of the to-do task.</para>
+        /// <para>The list of target user IDs for the transfer (1 to 100).</para>
         /// 
         /// <b>Example:</b>
         /// <para>todo_abc123</para>

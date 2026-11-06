@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class SubmitTodoRequest : TeaModel {
         /// <summary>
-        /// <para>The array of answers. The original text of the question must match the to-do question.</para>
+        /// <para>The answer array. The original text of the question must align with the to-do question.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<string> Answer { get; set; }
 
             /// <summary>
-            /// <para>The original text that corresponds to questions[].question.</para>
+            /// <para>The original text corresponding to questions[].question.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</para>
+        /// <para>The to-do task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the to-do item.</para>
+        /// <para>The answer array. The original text of the question must align with the to-do question.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

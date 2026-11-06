@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>The SSE event stream payload. On success, the response is a text/event-stream raw frame that must be consumed frame by frame in streaming mode.</para>
+        /// <para>The Server-Sent Events (SSE) event stream payload. If the request is successful, the response is the raw frame of text/event-stream, which must be consumed frame by frame in a streaming manner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -79,13 +79,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The session work mode that takes effect for the current turn. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>ask: Quick Q&amp;A.</description></item>
-        /// <item><description>work: Deep work.</description></item>
-        /// <item><description>direct: Direct connection (request-level).</description></item>
-        /// </list>
-        /// <para>In multi-digital-employee or task execution scenarios, if ask is provided, work takes effect instead.</para>
+        /// <para>The session work mode. Valid values: ask (quick Q&amp;A, which trims tools, skills, and connectors for single-turn direct answers), work (deep work, which is the default value), and direct (direct connection mode at the request level, which does not start the sandbox and prevents context pollution, equivalent to directChat=true). The ask and work modes are at the session level. The mode is fixed when a new session is created. Subsequent chats inherit the session mode by default. If the explicitly passed value is inconsistent with the session mode, a parameter error is returned. To switch the mode, create a new session or fork the session. If ask is passed in the multi-digital employee or task execution scenario, it takes effect as work. If directChat is set to true, this parameter is ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>work</para>
