@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class UpdateImageRequest : TeaModel {
         /// <summary>
-        /// <para>The complete list of application adaptation IDs for the selected image version. A maximum of 100 items are supported. <b>When a non-empty list is passed, it must include the adaptations that you still want to retain. Omitting this parameter or passing an empty list does not clear the existing associations.</b></para>
+        /// <para>The complete list of application adapter IDs for the selected image version. A maximum of 100 items are supported. <b>When a non-empty list is passed, it must include the adapters that you still want to retain. Omitting this parameter or passing an empty list does not clear the existing associations.</b></para>
         /// </summary>
         [NameInMap("AdaptorIdList")]
         [Validation(Required=false)]
         public List<string> AdaptorIdList { get; set; }
 
         /// <summary>
-        /// <para>The new description of the image usage.</para>
+        /// <para>The updated description of the image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Update office software and basic configurations</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image version to be modified. If this parameter is omitted, the current effective version of the image specified by ImageId is used. You must provide at least one of VersionId and ImageId.</para>
+        /// <para>The ID of the image version to be modified. If this parameter is omitted, the current effective version of the image specified by ImageId is used. You must provide at least one of ImageId and VersionId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>iv-bp1example****</para>

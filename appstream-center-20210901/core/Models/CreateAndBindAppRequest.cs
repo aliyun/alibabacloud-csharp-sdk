@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class CreateAndBindAppRequest : TeaModel {
         /// <summary>
-        /// <para>The URL of the application icon. Specify an accessible icon URL when a custom icon needs to be displayed.</para>
+        /// <para>The URL of the application icon. Specify an accessible icon URL to display a custom icon.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/apps/business/icon.png">https://example.com/apps/business/icon.png</a></para>
@@ -42,13 +42,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The application form. If omitted, the default value is CLIENT_BASE. Valid values:</para>
+        /// <para>The application type. If omitted, the default value is CLIENT_BASE. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CLIENT_BASE</b>: client application</description></item>
-        /// <item><description><b>WEB_BASE</b>: browser application</description></item>
-        /// <item><description><b>CLOUD_NATIVE_BASE</b>: cloud-native application</description></item>
-        /// <item><description><b>PORT_SERVICE_BASE</b>: port service application</description></item>
-        /// <item><description><b>AGENT_SERVICE_BASE</b>: agent application</description></item>
+        /// <item><description><b>CLIENT_BASE</b>: Client application.</description></item>
+        /// <item><description><b>WEB_BASE</b>: Browser application.</description></item>
+        /// <item><description><b>CLOUD_NATIVE_BASE</b>: Cloud-native application.</description></item>
+        /// <item><description><b>PORT_SERVICE_BASE</b>: Port service application.</description></item>
+        /// <item><description><b>AGENT_SERVICE_BASE</b>: Agent application.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OriginAppType { get; set; }
 
         /// <summary>
-        /// <para>The service port of the application. For applications that require port-based access, specify the actual port number that the application listens on.</para>
+        /// <para>The application service port. For applications that require port-based access, specify the actual port number that the application listens on.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8080</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Port { get; set; }
 
         /// <summary>
-        /// <para>The path suffix of the application access URL, which describes the access entry point together with the application service port.</para>
+        /// <para>The path suffix of the application access URL, which is used together with the application service port to describe the access entry point.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/console</para>

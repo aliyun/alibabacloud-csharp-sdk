@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The associated resource ID. <b>If you do not specify TaskId, you must specify EntityId, EntityType, and TaskCategory at the same time.</b> The resource ID must match the selected resource type.</para>
+        /// <para>The associated resource ID. <b>If you do not specify the TaskId parameter, you must specify the EntityId, EntityType, and TaskCategory parameters at the same time.</b> The resource ID must match the selected resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>imgc-bp1example****</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string EntityId { get; set; }
 
         /// <summary>
-        /// <para>The associated resource type. This parameter is required if you do not specify TaskId.</para>
+        /// <para>The associated resource type. This parameter is required if you do not specify the TaskId parameter.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>IMAGE</b>: Image resource.</description></item>
-        /// <item><description><b>APP</b>: Application resource.</description></item>
-        /// <item><description><b>SNAPSHOT</b>: Snapshot resource.</description></item>
+        /// <item><description><b>IMAGE</b>: image resource.</description></item>
+        /// <item><description><b>APP</b>: application resource.</description></item>
+        /// <item><description><b>SNAPSHOT</b>: snapshot resource.</description></item>
         /// </list>
-        /// <para>You must also specify a valid TaskCategory. The resource type itself does not mean that all task categories can be queried by resource.</para>
+        /// <para>You must also select an applicable TaskCategory. The resource type itself does not mean that all task categories can be queried by resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IMAGE</para>
@@ -47,11 +47,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string EntityVersionId { get; set; }
 
         /// <summary>
-        /// <para>The task category when you query by resource. This parameter is required if you do not specify TaskId.</para>
+        /// <para>The task category when you query by resource. This parameter is required if you do not specify the TaskId parameter.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>IMAGE_BUILDER</b>: Image creation. Queries tasks for manual creation, automatic creation, or creation based on an instance.</description></item>
-        /// <item><description><b>IMAGE_DISTRIBUTE</b>: Image distribution across regions.</description></item>
+        /// <item><description><b>IMAGE_BUILDER</b>: image creation. Queries tasks for manual creation, automatic creation, or creation based on an instance.</description></item>
+        /// <item><description><b>IMAGE_DISTRIBUTE</b>: image distribution across regions.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string TaskCategory { get; set; }
 
         /// <summary>
-        /// <para>The task ID. If you specify this parameter, the system queries the task by this ID, and the resource information query conditions are ignored.</para>
+        /// <para>The task ID. If you specify this parameter, the system queries the task by this ID first, and the resource information query conditions are no longer used for locating the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tid-bp1example****</para>
@@ -72,8 +72,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para><b>Not enabled. Do not specify this parameter.</b> When you query a task, locate the task by using TaskId or the combination of resource information and TaskCategory. This parameter is not used for task filtering.</para>
-        /// <para>The example &quot;Not applicable (not enabled)&quot; is only a description of the field status and is not a valid parameter value.</para>
+        /// <para><b>Not enabled. Do not specify this parameter.</b> When you query a task, locate the task by using the TaskId parameter or the resource information and TaskCategory parameter. This parameter is not used for task filtering.</para>
+        /// <para>The example &quot;Not applicable (not enabled)&quot; is only a description of the field status, not a valid parameter value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Not applicable (not enabled)</para>

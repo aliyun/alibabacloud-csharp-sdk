@@ -1,3 +1,17 @@
+2026-11-07 Version: 5.12.0
+- Support API CreateExportTask.
+- Support API DescribeExportTasks.
+- Support API GetAgentRuntimeStatistic.
+- Support API GetResourceGroupAgentModelSettings.
+- Support API ListAgentInstanceVersions.
+- Support API ListBrowserBookmarks.
+- Support API ListBrowserRestrictedURLs.
+- Support API ListModelProviderLlmCodes.
+- Support API QuerySessionData.
+- Support API ValidateLlmTemplateConfig.
+- Update API ListDesktopAgentRuntime: add response parameters Body.Data.$.AgentInstanceInfoList.$.MindCenterVersion.
+
+
 2026-11-05 Version: 5.11.0
 - Support API BuilderImageByParent.
 - Support API CreateAndBindApp.

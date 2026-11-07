@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The business data returned by the operation.</para>
+        /// <para>The business data returned by this operation.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public BuilderImageByParentResponseBodyData Data { get; set; }
         public class BuilderImageByParentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the image, which is used to query or modify the image later.</para>
+            /// <para>The image ID, which is used for subsequent queries or modifications of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>imgc-bp1example****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task, which can be used to call GetTask to query the task status.</para>
+            /// <para>The task ID, which can be used to call GetTask to query the task status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tid-bp1example****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the image version, which is used to query or operate on the specified version of the image.</para>
+            /// <para>The image version ID, which is used to query or manage the specified version of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>iv-bp1example****</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. To check whether the asynchronous task is complete, you must query the task status separately.</para>
+        /// <para>Indicates whether the request is processed successfully. A value of true indicates that the request is processed successfully. To check whether the asynchronous task is completed, you must query the task status separately.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

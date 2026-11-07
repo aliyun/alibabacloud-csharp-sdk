@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class UpdateImageTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is returned when the request fails. A successful response may not contain this parameter.</para>
+        /// <para>The error code. Returned when the request fails. A successful response may not contain this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The error or result message. This parameter describes the cause when the request fails. A successful response may not contain this parameter.</para>
+        /// <para>The error or result message. Used to describe the cause when the request fails. A successful response may not contain this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Internal error.</para>

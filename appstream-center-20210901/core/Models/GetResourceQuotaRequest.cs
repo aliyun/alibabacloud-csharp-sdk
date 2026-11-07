@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetResourceQuotaRequest : TeaModel {
         /// <summary>
-        /// <para>The business region ID. If this parameter is omitted, the general quota that is not limited by region is queried. The quotas of different regions are not added together. This parameter must be consistent with the business region in What to do next.</para>
+        /// <para>The business region ID. If this parameter is omitted, the general quota that is not limited by region is queried. The quotas of different regions are not added together. This parameter must be consistent with the business region for What to do next.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The billing method query condition. If this parameter is omitted, the general quota that is not limited by billing method is queried. The quotas of different billing methods are not added together. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>PrePaid</c>: subscription.</description></item>
-        /// <item><description><c>PostPaid</c>: pay-as-you-go.</description></item>
+        /// <item><description>PrePaid: subscription.</description></item>
+        /// <item><description>PostPaid: pay-as-you-go.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The product type. Set this parameter to the following value when you call the operation:</para>
         /// <list type="bullet">
-        /// <item><description><c>CloudApp</c>: WUYING Cloud App.</description></item>
+        /// <item><description>CloudApp: WUYING Cloud App.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The business resource type to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>AppInstanceGroup</c>: the quantity quota for delivery groups. Unit: groups.</description></item>
-        /// <item><description><c>AppAuthUser</c>: the quantity quota for authorized users. Unit: users.</description></item>
-        /// <item><description><c>PoolNodeAmount</c>: the quantity quota for purchased resource nodes. Unit: nodes.</description></item>
+        /// <item><description>AppInstanceGroup: the quantity quota for delivery groups. Unit: count.</description></item>
+        /// <item><description>AppAuthUser: the quantity quota for authorized users. Unit: users.</description></item>
+        /// <item><description>PoolNodeAmount: the quantity quota for purchased resource nodes. Unit: count.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

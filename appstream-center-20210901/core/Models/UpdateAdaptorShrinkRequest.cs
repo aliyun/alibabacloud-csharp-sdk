@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AdaptorId { get; set; }
 
         /// <summary>
-        /// <para><b>Not enabled. Do not pass this parameter.</b> This parameter does not support modifying application scripts.</para>
+        /// <para><b>Not enabled. Do not pass this parameter.</b> This operation does not support modifying application scripts through this parameter.</para>
         /// <para>The example &quot;Not applicable (not enabled)&quot; is only a description of the field status and is not a valid parameter value.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppScript { get; set; }
 
         /// <summary>
-        /// <para><b>Not enabled. Do not pass this parameter.</b> This parameter does not support modifying executable file paths.</para>
+        /// <para><b>Not enabled. Do not pass this parameter.</b> This operation does not support modifying executable file paths through this parameter.</para>
         /// <para>The example &quot;Not applicable (not enabled)&quot; is only a description of the field status and is not a valid parameter value.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OptimizeParam { get; set; }
 
         /// <summary>
-        /// <para>The command-line parameters used when the application starts. If this parameter is not empty, it is used to update the startup parameters of the application adapter. Specify the parameters based on the startup requirements of the application.</para>
+        /// <para>The command-line parameters used when the application starts. If not empty, this parameter is used to update the startup parameters of the application adapter. Specify the value based on the startup requirements of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>--lang=zh-CN</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The application runtime configuration object. If this parameter is omitted, the existing user configuration is not modified.</para>
-        /// <para><b>If this parameter is passed, the original UserConfig is completely replaced and not merged item by item.</b> Submit the complete configuration and include the configuration items that need to be retained. Subfields that are not provided do not automatically inherit the original values.</para>
+        /// <para><b>If passed, the original UserConfig is entirely replaced and not merged item by item.</b> Submit the complete configuration and include the configuration items that need to be retained. Subfields that are not provided do not automatically inherit the original values.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;FixedResolution&quot;:&quot;1440x2560&quot;,&quot;DisconnectAction&quot;:&quot;KEEP_CURRENT&quot;,&quot;ShowWindow&quot;:&quot;HIDE&quot;}</para>

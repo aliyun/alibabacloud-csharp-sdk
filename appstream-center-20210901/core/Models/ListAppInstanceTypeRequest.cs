@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppCenterImageId { get; set; }
 
         /// <summary>
-        /// <para>The session instance type code. An exact match is performed based on the complete code. If this parameter and AppInstanceTypeList are specified at the same time, the results are filtered by intersection. You can first call this operation without this condition, and then select a returned code.</para>
+        /// <para>The session instance type code. Exact match is performed based on the complete code. If this parameter and <c>AppInstanceTypeList</c> are specified at the same time, the results are filtered by intersection. You can perform a conditional query without this condition first, and then select the returned codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>appstreaming.vgpu.4c8g</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceTypeFamily { get; set; }
 
         /// <summary>
-        /// <para>The list of session instance type codes. A maximum of 100 items can be specified. This parameter takes effect by intersection with other filtering conditions. If this parameter and AppInstanceType are specified at the same time, the results must also match the single code.</para>
+        /// <para>The list of session instance type codes. A maximum of 100 items are supported. This parameter takes effect by intersection with other filtering conditions. If this parameter and <c>AppInstanceType</c> are specified at the same time, the results must also match the single code.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> AppInstanceTypeList { get; set; }
 
         /// <summary>
-        /// <para>The business region ID. If this parameter is omitted, the region of the current request is used. The available instance types may vary by region and account. You can call <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListRegions">ListRegions</a> to obtain the business region ID.</para>
+        /// <para>The business region ID. If this parameter is omitted, the region of the current request is used. The available instance types may vary by region and account. You can call the <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListRegions">ListRegions</a> operation to obtain the business region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -62,8 +62,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The instance type category filtering condition. If this parameter is omitted, no category filtering condition is added. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Cpu: CPU instance type.</description></item>
-        /// <item><description>Gpu: GPU instance type.</description></item>
+        /// <item><description><c>Cpu</c>: CPU instance type.</description></item>
+        /// <item><description><c>Gpu</c>: GPU instance type.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,10 +74,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The billing method for filtering available instance types. If this parameter is omitted, no billing method condition is added. Valid values:</para>
+        /// <para>The billing method used to filter available instance types. If this parameter is omitted, no billing method condition is added. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PrePaid: subscription.</description></item>
-        /// <item><description>PostPaid: pay-as-you-go.</description></item>
+        /// <item><description><c>PrePaid</c>: subscription.</description></item>
+        /// <item><description><c>PostPaid</c>: pay-as-you-go.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -110,10 +110,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The language of the instance type name.</para>
         /// <list type="bullet">
-        /// <item><description>zh-CN: The Chinese name of the instance type.</description></item>
-        /// <item><description>Other values or omitted: The instance type code is used as the name.</description></item>
+        /// <item><description><c>zh-CN</c>: Use the Chinese name of the instance type.</description></item>
+        /// <item><description>Other values or omitted: Use the instance type code as the name.</description></item>
         /// </list>
-        /// <para>This parameter only affects the display of InstanceTypeName and does not change the instance type code.</para>
+        /// <para>This parameter only affects the display of <c>InstanceTypeName</c> and does not change the instance type code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
@@ -133,9 +133,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? Memory { get; set; }
 
         /// <summary>
-        /// <para>The operating system type. For the Wuying Cloud App (CloudApp) scenario, use the following values:</para>
+        /// <para>The operating system type. In the Wuying Cloud Application (CloudApp) scenario, set the value to:</para>
         /// <list type="bullet">
-        /// <item><description>Windows: Windows operating system.</description></item>
+        /// <item><description><c>Windows</c>: Windows operating system.</description></item>
         /// </list>
         /// <para>If this parameter is omitted, no operating system filtering condition is added.</para>
         /// 
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of instance types to return on each page. Unit: entries. Default value: 200. Explicitly set a positive integer that meets your business requirements. The default value here does not indicate the maximum value allowed by the service.</para>
+        /// <para>The number of instance types returned per page. Unit: entries. Default value: 200. Explicitly set a positive integer that meets your business requirements. The default value here does not represent the maximum value allowed by the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The product type. Set the value to the following fixed value when you call this operation:</para>
         /// <list type="bullet">
-        /// <item><description>CloudApp: Wuying Cloud App.</description></item>
+        /// <item><description><c>CloudApp</c>: Wuying Cloud Application.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -181,10 +181,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query the instance type inventory at the same time. Default value: false.</para>
+        /// <para>Specifies whether to query the instance type inventory at the same time. Default value: <c>false</c>.</para>
         /// <list type="bullet">
-        /// <item><description>true: Queries the inventory and returns InventoryInfo if the inventory information is available.</description></item>
-        /// <item><description>false: Queries only the instance types and does not query the inventory.</description></item>
+        /// <item><description><c>true</c>: Queries the inventory and returns InventoryInfo when the inventory information is available.</description></item>
+        /// <item><description><c>false</c>: Queries only the instance types and does not query the inventory.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

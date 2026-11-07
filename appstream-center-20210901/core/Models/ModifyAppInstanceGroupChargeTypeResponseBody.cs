@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ModifyAppInstanceGroupChargeTypeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The task information for the billing method conversion.</para>
+        /// <para>The task information for this billing method conversion.</para>
         /// </summary>
         [NameInMap("AppInstanceGroupModel")]
         [Validation(Required=false)]
         public ModifyAppInstanceGroupChargeTypeResponseBodyAppInstanceGroupModel AppInstanceGroupModel { get; set; }
         public class ModifyAppInstanceGroupChargeTypeResponseBodyAppInstanceGroupModel : TeaModel {
             /// <summary>
-            /// <para>The ID of the billing conversion order task, used to associate with the current conversion. It is returned only when a related order task is required and created. It does not indicate that the payment is completed or the new billing method has taken effect.</para>
+            /// <para>The ID of the billing conversion order task, used to associate with this conversion. It is returned only when a related order task is required and created. It does not indicate that the payment is completed or the new billing method has taken effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>task-123</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The unique ID of the request. You can use the ID to troubleshoot request issues.</para>
+        /// <para>The unique ID of the request, which can be used to troubleshoot request issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>

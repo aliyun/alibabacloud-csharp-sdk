@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public ListDesktopAgentRuntimeResponseBodyDataAgentImInfo AgentImInfo { get; set; }
             public class ListDesktopAgentRuntimeResponseBodyDataAgentImInfo : TeaModel {
                 /// <summary>
-                /// <para>The agent IM online status (Online/Offline). Default value: Offline.</para>
+                /// <para>The online status of the agent IM. Valid values: Online and Offline. Default value: Offline.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Online</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string AgentInstanceVersion { get; set; }
 
                 /// <summary>
-                /// <para>The agent platform.</para>
+                /// <para>The Agent platform.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ENTERPRISE_AGENTIC_COMPUTER</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string AgentProvider { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the agent instance has a third-party channel configured.</para>
+                /// <para>Indicates whether a third-party channel is configured for the agent instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -130,7 +130,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string DeploymentSource { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the agent instance has a model configured.</para>
+                /// <para>The latest reported MindCenter version in the instance properties. This value is null if the version is not reported.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>v0.3.20-D-20261105.181002</para>
+                /// </summary>
+                [NameInMap("MindCenterVersion")]
+                [Validation(Required=false)]
+                public string MindCenterVersion { get; set; }
+
+                /// <summary>
+                /// <para>Indicates whether a model is configured for the agent instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -140,7 +150,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public bool? ModelConfigure { get; set; }
 
                 /// <summary>
-                /// <para>The configured model group ID.</para>
+                /// <para>The ID of the configured model group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mt-xxxx</para>
@@ -186,7 +196,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>The agent runtime name.</para>
+            /// <para>The Agent runtime name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Agent-001</para>
@@ -196,7 +206,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string DesktopName { get; set; }
 
             /// <summary>
-            /// <para>The Cloud Desktop status.</para>
+            /// <para>The cloud desktop status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -206,7 +216,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string DesktopStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether there is an authorized user with authorization.</para>
+            /// <para>Indicates whether users are authorized.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -216,7 +226,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public bool? HasAuthUser { get; set; }
 
             /// <summary>
-            /// <para>The management status list, parsed from the managementStatus combined value.</para>
+            /// <para>The list of management statuses parsed from the aggregated managementStatus value.</para>
             /// </summary>
             [NameInMap("ManagementStatuses")]
             [Validation(Required=false)]
@@ -233,7 +243,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public bool? ModelConfigure { get; set; }
 
             /// <summary>
-            /// <para>The active model template ID. This parameter is returned only when modelConfigure is set to true.</para>
+            /// <para>The ID of the effective model template. This parameter is returned only when modelConfigure is set to true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mt-xxxx</para>
@@ -243,7 +253,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ModelTemplateId { get; set; }
 
             /// <summary>
-            /// <para>The active model template name. This parameter is returned only when modelConfigure is set to true.</para>
+            /// <para>The name of the effective model template. This parameter is returned only when modelConfigure is set to true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>model-template-001</para>
@@ -263,7 +273,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string OsType { get; set; }
 
             /// <summary>
-            /// <para>The list of channel codes in QR code configuration.</para>
+            /// <para>The list of channel codes in the QR code configuration.</para>
             /// </summary>
             [NameInMap("QrCodeConfiguringList")]
             [Validation(Required=false)]
@@ -280,7 +290,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The region location (the Chinese mainland or outside the Chinese mainland).</para>
+            /// <para>The region location (mainland China or overseas).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Mainland</para>
@@ -307,7 +317,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The resource group name.</para>
+                /// <para>The name of the resource group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>resource-group-001</para>
@@ -319,7 +329,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The resource ID, which is the Cloud Desktop ID.</para>
+            /// <para>The resource ID, which is the cloud desktop ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-xxxx</para>
@@ -329,14 +339,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The risk information. This parameter is returned only when the request parameter IncludeRiskInfo is set to true. Otherwise, null is returned.</para>
+            /// <para>The risk information. This parameter is returned only when the IncludeRiskInfo request parameter is set to true. Otherwise, null is returned.</para>
             /// </summary>
             [NameInMap("RiskInfo")]
             [Validation(Required=false)]
             public ListDesktopAgentRuntimeResponseBodyDataRiskInfo RiskInfo { get; set; }
             public class ListDesktopAgentRuntimeResponseBodyDataRiskInfo : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the agent has been uninstalled.</para>
+                /// <para>Indicates whether the agent is uninstalled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -346,7 +356,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public bool? AgentUninstalled { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the third-party channel configuration has been modified (inconsistent with the configuration distributed by the administrator).</para>
+                /// <para>Indicates whether the third-party channel configuration is modified and inconsistent with the configuration delivered by the administrator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -356,7 +366,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public bool? ChannelModified { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the model configuration has been modified (inconsistent with the configuration distributed by the administrator).</para>
+                /// <para>Indicates whether the model configuration is modified and inconsistent with the configuration delivered by the administrator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -380,7 +390,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -400,7 +410,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListRegionIdResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This field is returned when the request fails. A successful response may not contain this field.</para>
+        /// <para>The error code. This parameter is returned when the request fails. A successful response may not contain this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> Data { get; set; }
 
         /// <summary>
-        /// <para>The error or result message. This field describes the cause when a request fails. A successful response may not contain this field.</para>
+        /// <para>The error or result message. This parameter describes the cause when a request fails. A successful response may not contain this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Internal error.</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the request was processed successfully. A value of true indicates that the request was processed successfully. To determine whether an asynchronous task is completed, you must query the task status separately.</para>
+        /// <para>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. To check whether an asynchronous task is completed, you must query the task status separately.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

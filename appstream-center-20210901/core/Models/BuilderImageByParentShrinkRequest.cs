@@ -12,13 +12,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The business type to which the image belongs. <b>Required</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: basic product</description></item>
-        /// <item><description><b>2</b>: personal cloud</description></item>
-        /// <item><description><b>3</b>: cloud office</description></item>
-        /// <item><description><b>4</b>: cloud flow</description></item>
-        /// <item><description><b>10</b>: personal edition</description></item>
-        /// <item><description><b>20</b>: business edition</description></item>
-        /// <item><description><b>60</b>: Linggou team edition</description></item>
+        /// <item><description><b>1</b>: Basic product.</description></item>
+        /// <item><description><b>2</b>: Personal cloud.</description></item>
+        /// <item><description><b>3</b>: Cloud office.</description></item>
+        /// <item><description><b>4</b>: Cloud Flow.</description></item>
+        /// <item><description><b>10</b>: Personal edition.</description></item>
+        /// <item><description><b>20</b>: Business edition.</description></item>
+        /// <item><description><b>60</b>: Linggou team edition.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? BizType { get; set; }
 
         /// <summary>
-        /// <para>The capacity of the data disk in the creation environment. Unit: GiB. Specify this parameter when a data disk is required, and ensure that it meets the disk requirements of the selected resource specifications.</para>
+        /// <para>The capacity of the data cloud disk in the creation environment. Unit: GiB. Specify this parameter when a data cloud disk is required, and ensure that it meets the disk requirements of the selected resource specifications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? DataDiskSize { get; set; }
 
         /// <summary>
-        /// <para>The description of the new image, which facilitates subsequent querying and distinguishing of images.</para>
+        /// <para>The description of the new image, which facilitates subsequent queries and differentiation of images.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Business image that includes office applications and standard configurations</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The image creation mode. Use the following mode:</para>
         /// <list type="bullet">
-        /// <item><description><b>BUILDER_MANUAL</b>: manually enter the creation environment to install applications and configure the image.</description></item>
+        /// <item><description><b>BUILDER_MANUAL</b>: Manually enter the creation environment to install applications and configure the image.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ImageCreateMode { get; set; }
 
         /// <summary>
-        /// <para>The name of the new image. <b>Required</b>. The name must start with a letter or a Chinese character and can contain letters, digits, Chinese characters, colons (:), underscores (_), periods (.), and hyphens (-). It cannot start with http:// or https://. The length is calculated as 3 for each Chinese character and 1 for each other character, with a total length of 2 to 64 characters.</para>
+        /// <para>The name of the new image. <b>Required</b>. The name must start with a letter or a Chinese character, and can contain letters, digits, Chinese characters, colons (:), underscores (_), periods (.), and hyphens (-). It cannot start with http:// or https://. The length is calculated as 3 for each Chinese character and 1 for each other character. The total length must be 2 to 64 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OfficeImage_202611</para>
@@ -96,14 +96,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The language of the image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh-CN</b>: Simplified Chinese</description></item>
-        /// <item><description><b>zh-HK</b>: Traditional Chinese (Hong Kong)</description></item>
-        /// <item><description><b>en-US</b>: English</description></item>
-        /// <item><description><b>ja-JP</b>: Japanese</description></item>
-        /// <item><description><b>CN</b>: compatible value for Simplified Chinese</description></item>
-        /// <item><description><b>EN</b>: compatible value for English</description></item>
-        /// <item><description><b>JP</b>: compatible value for Japanese</description></item>
-        /// <item><description><b>CN-HK</b>: compatible value for Traditional Chinese (Hong Kong)</description></item>
+        /// <item><description><b>zh-CN</b>: Simplified Chinese.</description></item>
+        /// <item><description><b>zh-HK</b>: Traditional Chinese (Hong Kong).</description></item>
+        /// <item><description><b>en-US</b>: English.</description></item>
+        /// <item><description><b>ja-JP</b>: Japanese.</description></item>
+        /// <item><description><b>CN</b>: Compatible value for Simplified Chinese.</description></item>
+        /// <item><description><b>EN</b>: Compatible value for English.</description></item>
+        /// <item><description><b>JP</b>: Compatible value for Japanese.</description></item>
+        /// <item><description><b>CN-HK</b>: Compatible value for Traditional Chinese (Hong Kong).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The ID of the node specifications for the creation resources. You can call ListNodeInstanceType to query the ID. Select node specifications that are active in the creation region and under the associated product, and that meet the CPU or GPU computing requirements.</para>
+        /// <para>The ID of the node specifications for the creation resources. You can invoke ListNodeInstanceType to query the ID. Select a specification that is active in the creation region and under the associated product, and meets the CPU or GPU computing requirements.</para>
         /// 
         /// <b>Example:</b>
         /// <para>appstreaming.general.4c8g</para>
@@ -134,13 +134,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The package type of the image. Keep it consistent with the selected parent image and the creation scenario. Valid values:</para>
+        /// <para>The package type of the image. Keep it consistent with the selected parent image and creation scenario. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Ecs</b>: ECS instance image</description></item>
-        /// <item><description><b>Vhd</b>: VHD application image</description></item>
-        /// <item><description><b>Container</b>: container image</description></item>
-        /// <item><description><b>Ecs_Container</b>: combined ECS and container image</description></item>
-        /// <item><description><b>K8s_Node</b>: Kubernetes node image</description></item>
+        /// <item><description><b>Ecs</b>: ECS instance image.</description></item>
+        /// <item><description><b>Vhd</b>: VHD application image.</description></item>
+        /// <item><description><b>Container</b>: Container image.</description></item>
+        /// <item><description><b>Ecs_Container</b>: ECS and container combined image.</description></item>
+        /// <item><description><b>K8s_Node</b>: Kubernetes node image.</description></item>
         /// </list>
         /// <para><b>This operation does not provide the BaseImageId parameter. You cannot explicitly specify the Vhd or Container type that requires a base image to be configured separately.</b></para>
         /// 
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string PackageType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parent image used to create the new image. <b>Required</b>. You can call ListImage to query the ID. An available distribution record of the parent image must exist in the region where the image is to be created.</para>
+        /// <para>The ID of the parent image used to create the new image. <b>Required</b>. You can call ListImage to query the ID. An available distribution record of the parent image must exist in the region where the image is created.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -163,10 +163,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ParentImageId { get; set; }
 
         /// <summary>
-        /// <para>The computing type of the creation resources. Valid values:</para>
+        /// <para>The computing type of the creation resources.</para>
         /// <list type="bullet">
-        /// <item><description><b>CPU</b>: uses CPU compute resources</description></item>
-        /// <item><description><b>GPU</b>: uses GPU compute resources</description></item>
+        /// <item><description><b>CPU</b>: Uses CPU compute resources.</description></item>
+        /// <item><description><b>GPU</b>: Uses GPU compute resources.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -180,23 +180,23 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The product to which the image belongs. <b>Required</b>. Use an activated product and keep it consistent with the selected parent image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CloudGame</b>: cloud gaming</description></item>
-        /// <item><description><b>CloudApp</b>: Wuying cloud application</description></item>
-        /// <item><description><b>CloudBrowser</b>: secure browser</description></item>
-        /// <item><description><b>CloudDesktop</b>: Wuying cloud desktop</description></item>
-        /// <item><description><b>ImageBuilder</b>: image creation resource</description></item>
-        /// <item><description><b>ImageValidate</b>: image validation resource</description></item>
-        /// <item><description><b>AndroidCloud</b>: Android cloud</description></item>
-        /// <item><description><b>GpuRender</b>: GPU rendering</description></item>
-        /// <item><description><b>AndroidGpuRender</b>: Android cloud GPU rendering</description></item>
-        /// <item><description><b>WuyingServer</b>: enterprise edition workstation</description></item>
-        /// <item><description><b>GpuProxy</b>: GPU remote rendering proxy</description></item>
-        /// <item><description><b>GpuCache</b>: GPU remote rendering cache</description></item>
-        /// <item><description><b>AIAgent</b>: AI agent service</description></item>
-        /// <item><description><b>HostedDesktop</b>: hosted desktop</description></item>
-        /// <item><description><b>WuyingWorkstation</b>: personal edition container workstation</description></item>
-        /// <item><description><b>WuyingWorkstationBusiness</b>: business edition container workstation</description></item>
-        /// <item><description><b>WuyingWorkstationTeam</b>: Linggou container workstation team edition</description></item>
+        /// <item><description><b>CloudGame</b>: Cloud game.</description></item>
+        /// <item><description><b>CloudApp</b>: Wuying Cloud App.</description></item>
+        /// <item><description><b>CloudBrowser</b>: Secure browser.</description></item>
+        /// <item><description><b>CloudDesktop</b>: Wuying Cloud Computer.</description></item>
+        /// <item><description><b>ImageBuilder</b>: Image creation resource.</description></item>
+        /// <item><description><b>ImageValidate</b>: Image validation resource.</description></item>
+        /// <item><description><b>AndroidCloud</b>: Android cloud.</description></item>
+        /// <item><description><b>GpuRender</b>: GPU rendering.</description></item>
+        /// <item><description><b>AndroidGpuRender</b>: Android cloud GPU rendering.</description></item>
+        /// <item><description><b>WuyingServer</b>: Enterprise edition workstation.</description></item>
+        /// <item><description><b>GpuProxy</b>: GPU remote rendering proxy.</description></item>
+        /// <item><description><b>GpuCache</b>: GPU remote rendering cache.</description></item>
+        /// <item><description><b>AIAgent</b>: AI agent service.</description></item>
+        /// <item><description><b>HostedDesktop</b>: Hosted computer.</description></item>
+        /// <item><description><b>WuyingWorkstation</b>: Personal edition container workstation.</description></item>
+        /// <item><description><b>WuyingWorkstationBusiness</b>: Business edition container workstation.</description></item>
+        /// <item><description><b>WuyingWorkstationTeam</b>: Linggou container workstation team edition.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The extended properties of the image. Both keys and values are strings. This parameter can be omitted when no extended configuration is required.</para>
-        /// <para>The property key for the driver list is DRIVER_LIST, and the value is a JSON string of an array of driver IDs. We recommend that you specify drivers by using DriverIdList. <b>If both DriverIdList and PropertyMap.DRIVER_LIST are specified, DriverIdList prevails.</b> Specify other extended properties only when their purposes and values are confirmed.</para>
+        /// <para>The property key for the driver list is DRIVER_LIST, and the value is a JSON string of an array of driver IDs. We recommend that you specify drivers by using DriverIdList. <b>If both DriverIdList and PropertyMap.DRIVER_LIST are specified, DriverIdList takes precedence.</b> Specify other extended properties only when their purposes and values are confirmed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;DRIVER_LIST&quot;:&quot;[\&quot;6d4af751-f522-40d7-ab6c-4a0ae587****\&quot;,\&quot;b5bdf6c0-41de-4878-8963-e8324106****\&quot;]&quot;}</para>
@@ -237,9 +237,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <summary>
             /// <para>The provision method of the resource content. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>HOSTED</b>: hosted resource</description></item>
-            /// <item><description><b>TEXT</b>: text resource</description></item>
-            /// <item><description><b>URL</b>: resource provided through a URL</description></item>
+            /// <item><description><b>HOSTED</b>: Hosted resource.</description></item>
+            /// <item><description><b>TEXT</b>: Text resource.</description></item>
+            /// <item><description><b>URL</b>: Resource provided through a URL.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -254,8 +254,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The running mode of the image creation environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NORMAL</b>: normal running mode</description></item>
-        /// <item><description><b>COMPATIBLE</b>: compatible running mode</description></item>
+        /// <item><description><b>NORMAL</b>: Normal running mode.</description></item>
+        /// <item><description><b>COMPATIBLE</b>: Compatible running mode.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RunMode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the image is created. The selected parent image must have been distributed to this region. Available regions are also affected by the region configurations of the account and the product.</para>
+        /// <para>The ID of the region where the image is created. The selected parent image must have been distributed to this region. Available regions are also affected by the region configurations of the account and product.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string SourceRegion { get; set; }
 
         /// <summary>
-        /// <para>The capacity of the system disk in the creation environment. Unit: GiB. The capacity cannot be less than the system disk capacity required by the parent image and must meet the disk requirements of the selected resource specifications.</para>
+        /// <para>The capacity of the system cloud disk in the creation environment. Unit: GiB. The capacity cannot be smaller than the system cloud disk capacity required by the parent image, and must meet the disk requirements of the selected resource specifications.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -294,7 +294,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> VSwitchIdList { get; set; }
 
         /// <summary>
-        /// <para>The display name of the new image version, which is used to distinguish different versions of the same image.</para>
+        /// <para>The display name of the new image version, which is used to differentiate different versions of the same image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Office environment-202611</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class CreateAndBindAppResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This field is returned when the request fails and may not be included in a successful response.</para>
+        /// <para>The error code. This field is returned when the request fails. A successful response may not contain this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The business data returned by this operation.</para>
+        /// <para>The business data returned by the operation.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateAndBindAppResponseBodyData Data { get; set; }
         public class CreateAndBindAppResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The application ID, used for subsequent application queries or to dissociate the application from the image.</para>
+            /// <para>The application ID, which is used to query the application or dissociate the image later.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app-bp1example****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The application version ID, used to locate a specified version of the application. This field is not the image version ID.</para>
+            /// <para>The application version ID, which is used to locate a specified version of the application. This field is not the image version ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apv-bp1example****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppVersionId { get; set; }
 
             /// <summary>
-            /// <para>The image ID, used for subsequent image queries or modifications.</para>
+            /// <para>The image ID, which is used to query or modify the image later.</para>
             /// 
             /// <b>Example:</b>
             /// <para>imgc-bp1example****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The image version ID, used to query or manage a specified version of the image.</para>
+            /// <para>The image version ID, which is used to query or manage a specified version of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>iv-bp1example****</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The error or result message. This field describes the cause when the request fails and may not be included in a successful response.</para>
+        /// <para>The error or result message. This field describes the cause when the request fails. A successful response may not contain this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Internal error.</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request. You can provide this value for troubleshooting.</para>
+        /// <para>The unique identifier of the request. Provide this value when you troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>01A1A962-5503-107B-AC8F-EBA85DF905AC</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. To check whether an asynchronous task is completed, query the task status separately.</para>
+        /// <para>Indicates whether the request is processed successfully. A value of true indicates that the request is processed successfully. To determine whether an asynchronous task is completed, query the task status separately.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

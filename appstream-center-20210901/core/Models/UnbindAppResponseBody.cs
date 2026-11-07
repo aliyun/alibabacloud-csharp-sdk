@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class UnbindAppResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. Returned when the request fails. A successful response may not contain this field.</para>
+        /// <para>The error code. This field is returned when the request fails and may not be included in a successful response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error or result message. Used to describe the cause when the request fails. A successful response may not contain this field.</para>
+        /// <para>The error or result message. This field describes the cause of a failed request and may not be included in a successful response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Internal error.</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. To check whether the asynchronous task is completed, query the task status separately.</para>
+        /// <para>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. To check whether an asynchronous task is completed, query the task status separately.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

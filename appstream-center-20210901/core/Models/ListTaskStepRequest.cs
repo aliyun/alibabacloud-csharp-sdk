@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The task type to which the step belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ADAPTOR</b>: application adaptation steps</description></item>
-        /// <item><description><b>IMAGE</b>: image creation steps</description></item>
+        /// <item><description><b>ADAPTOR</b>: Application adaptation steps.</description></item>
+        /// <item><description><b>IMAGE</b>: Image creation steps.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

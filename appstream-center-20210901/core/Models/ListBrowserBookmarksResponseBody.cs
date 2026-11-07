@@ -1,0 +1,84 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Appstream_center20210901.Models
+{
+    public class ListBrowserBookmarksResponseBody : TeaModel {
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public List<ListBrowserBookmarksResponseBodyData> Data { get; set; }
+        public class ListBrowserBookmarksResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>工作</para>
+            /// </summary>
+            [NameInMap("BookmarkFolder")]
+            [Validation(Required=false)]
+            public string BookmarkFolder { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>bm-0c7loey7fzjq****</para>
+            /// </summary>
+            [NameInMap("BookmarkId")]
+            [Validation(Required=false)]
+            public string BookmarkId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>阿里云</para>
+            /// </summary>
+            [NameInMap("BookmarkName")]
+            [Validation(Required=false)]
+            public string BookmarkName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="https://www.aliyun.com">https://www.aliyun.com</a></para>
+            /// </summary>
+            [NameInMap("BookmarkURL")]
+            [Validation(Required=false)]
+            public string BookmarkURL { get; set; }
+
+        }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>01A0C2ED-95F2-1A37-9FC6-4A395179****</para>
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>5</para>
+        /// </summary>
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
+
+    }
+
+}

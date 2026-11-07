@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class DeleteAdaptorRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application adapter to process. <b>Required</b>. It must correspond to the same application adapter as AppId and AppVersionId.</para>
+        /// <para>The ID of the application adaptation to be processed. <b>Required</b>. It must point to the same application adaptation as AppId and AppVersionId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>adt-bp1example****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AdaptorId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application. <b>Required</b>. It must correspond to the same application as AdaptorId.</para>
+        /// <para>The ID of the application. <b>Required</b>. It must match the application corresponding to AdaptorId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app-bp1example****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application version. <b>Required</b>. It must correspond to the same application version as AdaptorId. This parameter is not the image version ID.</para>
+        /// <para>The ID of the application version. <b>Required</b>. It must match the application version corresponding to AdaptorId. This parameter is not the image version ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apv-bp1example****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppVersionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image to dissociate. <b>Must be provided together with VersionId</b>. If both parameters are not specified at the same time, the adapter deletion process is initiated.</para>
+        /// <para>The ID of the image to be dissociated. <b>Must be provided together with VersionId</b>. If both parameters are not specified at the same time, the adaptation deletion process starts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>imgc-bp1example****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image version to dissociate. It must be provided together with ImageId and belong to the specified image.</para>
+        /// <para>The ID of the image version to be dissociated. It must be provided together with ImageId and belong to the specified image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>iv-bp1example****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListDesktopAgentRuntimeRequest : TeaModel {
         /// <summary>
-        /// <para>The agent IM online status filter.</para>
+        /// <para>The Agent IM online status filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Online</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentImOnlineStatus { get; set; }
 
         /// <summary>
-        /// <para>The list of agent instance statuses.</para>
+        /// <para>The list of Agent instance statuses.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> AgentInstanceStatuses { get; set; }
 
         /// <summary>
-        /// <para>The list of agent instance versions.</para>
+        /// <para>The list of Agent instance versions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OpenClaw 2026.4.15</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> AgentInstanceVersions { get; set; }
 
         /// <summary>
-        /// <para>The agent platform.</para>
+        /// <para>The Agent platform.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE_AGENTIC_COMPUTER</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentPlatform { get; set; }
 
         /// <summary>
-        /// <para>The list of agent platforms. If both AgentPlatformList and AgentPlatform are specified, AgentPlatform takes precedence and this list is ignored.</para>
+        /// <para>The list of Agent platforms. If both AgentPlatform and AgentPlatformList are specified, AgentPlatform takes precedence and this list is ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> AgentPlatformList { get; set; }
 
         /// <summary>
-        /// <para>The agent provider name.</para>
+        /// <para>The name of the Agent provider.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AgenticComputer</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentProvider { get; set; }
 
         /// <summary>
-        /// <para>The list of agent providers. If both AgentProviderList and AgentProvider are specified, AgentProvider takes precedence and this list is ignored.</para>
+        /// <para>The list of Agent providers. If both AgentProvider and AgentProviderList are specified, AgentProvider takes precedence and this list is ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OpenClaw</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> AgentProviderList { get; set; }
 
         /// <summary>
-        /// <para>The list of agent template IDs. A match occurs only when all valid templates are assigned.</para>
+        /// <para>The list of Agent template IDs. A match occurs only when all valid templates are assigned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>at-xxxxx</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string DeploymentSource { get; set; }
 
         /// <summary>
-        /// <para>The list of agent runtime IDs.</para>
+        /// <para>The list of Agent runtime IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>jvs-xxxxx</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> DesktopIds { get; set; }
 
         /// <summary>
-        /// <para>The list of agent runtime names.</para>
+        /// <para>The list of Agent runtime names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Desktop001</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> DesktopNames { get; set; }
 
         /// <summary>
-        /// <para>The list of Cloud Desktop statuses.</para>
+        /// <para>The list of cloud desktop statuses.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> DesktopStatuses { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether authorization is granted to an authorized user.</para>
+        /// <para>Specifies whether authorization is granted to an authorized user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -180,8 +180,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? HasAuthUser { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether risks exist. This parameter is used to filter Cloud Desktops with or without risks. It takes effect only when IncludeRiskInfo is set to true.</para>
-        /// <para>Set this parameter to true to return only records with risks. Set this parameter to false to return only records without risks. If this parameter is not specified, no filtering is applied.</para>
+        /// <para>Specifies whether a risk exists. This parameter is used to filter cloud desktops with or without risks and takes effect only when IncludeRiskInfo is set to true. If set to true, only records with risks are returned. If set to false, only records without risks are returned. If this parameter is not specified, no filtering is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -191,7 +190,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? HasRisk { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query and return risk information. Default value: false. If this parameter is set to true, the RiskInfo field is included in the response, and the HasRisk filter takes effect.</para>
+        /// <para>Specifies whether to query and return risk information. Default value: false. If set to true, the response includes the RiskInfo field, and the HasRisk filter takes effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -241,7 +240,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The page number, starting from 1. Values 0 and 1 return the same result.</para>
+        /// <para>The page number, starting from 1. Entering 0 or 1 returns the same result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -251,7 +250,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -271,7 +270,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of resource IDs (underlying actual resource IDs).</para>
+        /// <para>The list of resource IDs, which are the underlying actual resource IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-xxxxx</para>

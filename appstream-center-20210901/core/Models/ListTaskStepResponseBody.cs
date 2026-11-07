@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The list of step definitions for the selected task type.</para>
+        /// <para>The list of step definitions for the specified task type.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <para>The interaction method of the step. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>prompt</b>: Displays step prompts.</description></item>
-            /// <item><description><b>connection</b>: Provides connection operations to enter the build or validation environment.</description></item>
+            /// <item><description><b>connection</b>: Provides connection operations to enter the builder or validation environment.</description></item>
             /// <item><description><b>prompt_connection</b>: Provides both prompts and connection operations.</description></item>
             /// </list>
             /// 
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// <para>The Chinese name of the phase to which the step belongs, such as build environment preparation or test validation.</para>
+            /// <para>The Chinese name of the phase to which the step belongs, such as builder environment preparation or test validation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>制作环境准备</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string CategoryEn { get; set; }
 
             /// <summary>
-            /// <para>The numeric index of the step definition, which is used to identify the step and its sequence. Do not treat this value as a completion percentage.</para>
+            /// <para>The numeric index of the step definition, which is used to identify the step and its sequence. Do not use this value as the completion percentage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -75,36 +75,36 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <para>The name identifier of the step, which is used to match the step records returned by GetTask.</para>
             /// <para>Steps when Type is set to IMAGE:</para>
             /// <list type="bullet">
-            /// <item><description><b>INIT</b>: Initializes the task.</description></item>
-            /// <item><description><b>CREATE_BUILDER_ENV</b>: Creates the build environment.</description></item>
-            /// <item><description><b>DEPLOY_BUILDER_ENV</b>: Deploys the build environment.</description></item>
-            /// <item><description><b>INIT_BUILDER</b>: Initializes the build tool.</description></item>
-            /// <item><description><b>DOWNLOAD_APP</b>: Downloads application resources.</description></item>
-            /// <item><description><b>START_BUILD</b>: Starts image creation.</description></item>
-            /// <item><description><b>COMPLETE_INSTALL</b>: Completes application installation and configuration.</description></item>
-            /// <item><description><b>CREATE_VALIDATE_ENV</b>: Creates the validation environment.</description></item>
-            /// <item><description><b>DEPLOY_VALIDATE_ENV</b>: Deploys the validation environment.</description></item>
-            /// <item><description><b>COMPLETE_VALIDATE</b>: Completes image validation.</description></item>
-            /// <item><description><b>ARCHIVE_DATA</b>: Archives image data.</description></item>
-            /// <item><description><b>CREATE_IMAGE</b>: Generates the image.</description></item>
-            /// <item><description><b>FINISH_ADAPT</b>: Ends the creation process.</description></item>
+            /// <item><description><b>INIT</b>: Initialize the task.</description></item>
+            /// <item><description><b>CREATE_BUILDER_ENV</b>: Create the builder environment.</description></item>
+            /// <item><description><b>DEPLOY_BUILDER_ENV</b>: Deploy the builder environment.</description></item>
+            /// <item><description><b>INIT_BUILDER</b>: Initialize the builder tool.</description></item>
+            /// <item><description><b>DOWNLOAD_APP</b>: Download application resources.</description></item>
+            /// <item><description><b>START_BUILD</b>: Start image creation.</description></item>
+            /// <item><description><b>COMPLETE_INSTALL</b>: Complete application installation and configuration.</description></item>
+            /// <item><description><b>CREATE_VALIDATE_ENV</b>: Create the validation environment.</description></item>
+            /// <item><description><b>DEPLOY_VALIDATE_ENV</b>: Deploy the validation environment.</description></item>
+            /// <item><description><b>COMPLETE_VALIDATE</b>: Complete image validation.</description></item>
+            /// <item><description><b>ARCHIVE_DATA</b>: Archive image data.</description></item>
+            /// <item><description><b>CREATE_IMAGE</b>: Generate the image.</description></item>
+            /// <item><description><b>FINISH_ADAPT</b>: End the creation process.</description></item>
             /// </list>
             /// <para>Steps when Type is set to ADAPTOR:</para>
             /// <list type="bullet">
-            /// <item><description><b>INIT</b>: Initializes the task.</description></item>
-            /// <item><description><b>CREATE_BUILDER_ENV</b>: Creates the build environment.</description></item>
-            /// <item><description><b>DEPLOY_BUILDER_ENV</b>: Deploys the build environment.</description></item>
-            /// <item><description><b>INIT_BUILDER</b>: Initializes the build tool.</description></item>
-            /// <item><description><b>DOWNLOAD_APP</b>: Downloads application resources.</description></item>
-            /// <item><description><b>START_VHD</b>: Starts application recording.</description></item>
-            /// <item><description><b>BUILD_VHD</b>: Generates the application VHD.</description></item>
-            /// <item><description><b>UPLOAD_VHD</b>: Uploads the application VHD.</description></item>
-            /// <item><description><b>COMPLETE_BUILDER</b>: Completes application creation.</description></item>
-            /// <item><description><b>CREATE_VALIDATE_ENV</b>: Creates the validation environment.</description></item>
-            /// <item><description><b>DEPLOY_VALIDATE_ENV</b>: Deploys the validation environment.</description></item>
-            /// <item><description><b>COMPLETE_VALIDATE</b>: Completes application validation.</description></item>
-            /// <item><description><b>CREATE_IMAGE</b>: Generates the application image.</description></item>
-            /// <item><description><b>FINISH_ADAPT</b>: Ends the application adaptation process.</description></item>
+            /// <item><description><b>INIT</b>: Initialize the task.</description></item>
+            /// <item><description><b>CREATE_BUILDER_ENV</b>: Create the builder environment.</description></item>
+            /// <item><description><b>DEPLOY_BUILDER_ENV</b>: Deploy the builder environment.</description></item>
+            /// <item><description><b>INIT_BUILDER</b>: Initialize the builder tool.</description></item>
+            /// <item><description><b>DOWNLOAD_APP</b>: Download application resources.</description></item>
+            /// <item><description><b>START_VHD</b>: Start application recording.</description></item>
+            /// <item><description><b>BUILD_VHD</b>: Generate the application VHD.</description></item>
+            /// <item><description><b>UPLOAD_VHD</b>: Upload the application VHD.</description></item>
+            /// <item><description><b>COMPLETE_BUILDER</b>: Complete application creation.</description></item>
+            /// <item><description><b>CREATE_VALIDATE_ENV</b>: Create the validation environment.</description></item>
+            /// <item><description><b>DEPLOY_VALIDATE_ENV</b>: Deploy the validation environment.</description></item>
+            /// <item><description><b>COMPLETE_VALIDATE</b>: Complete application validation.</description></item>
+            /// <item><description><b>CREATE_IMAGE</b>: Generate the application image.</description></item>
+            /// <item><description><b>FINISH_ADAPT</b>: End the application adaptation process.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

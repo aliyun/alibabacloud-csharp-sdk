@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetAuthCodeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This field is returned when the request fails. A successful response may not contain this field.</para>
+        /// <para>The error code. It is returned when the request fails. A success response may not contain this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternalError</para>
@@ -28,7 +28,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public class GetAuthCodeResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The network access type supported by the connection resource.</para>
-            /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>INTERNET</b>: Supports Internet access.</description></item>
             /// <item><description><b>VPC</b>: Supports virtual private cloud (VPC) access.</description></item>
@@ -53,7 +52,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The delivery group ID of the building or validation resource. This ID is used together with the user and application information in the current response during connection.</para>
+            /// <para>The delivery group ID of the creation or validation resource. It is used together with the user and application information in this response during connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aig-bp1example****</para>
@@ -73,8 +72,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppVersionId { get; set; }
 
             /// <summary>
-            /// <para>The authorization code used to connect to the current building or validation resource. <b>The validity period is 180 seconds (3 minutes) from the time of issuance. Use it promptly after obtaining it.</b> Use this code together with the user, delivery group, and application information in the same response, and keep it confidential as a connection credential.</para>
-            /// <para>Do not reuse the authorization code after it is successfully redeemed. If the code has been used or has expired, call this operation again to obtain a new one.</para>
+            /// <para>The authorization code used to connect to the creation or validation resource. <b>The validity period is 180 seconds (3 minutes) from the time of issuance. Use it promptly after obtaining it.</b> Use it together with the user, delivery group, and application information in the same response, and keep it confidential as a connection credential.</para>
+            /// <para>Do not reuse the authorization code after it is redeemed. If it has been used or expired, call this operation again to obtain a new one.</para>
             /// 
             /// <b>Example:</b>
             /// <para>e4e169bea1cc48e8afac53**********</para>
@@ -84,11 +83,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AuthCode { get; set; }
 
             /// <summary>
-            /// <para>The usage type of the connection resource.</para>
-            /// <para>Valid values:</para>
+            /// <para>The purpose type of the connection resource.</para>
             /// <list type="bullet">
-            /// <item><description><b>ImageBuilder</b>: image or application building resource</description></item>
-            /// <item><description><b>ImageValidate</b>: image or application validation resource</description></item>
+            /// <item><description><b>ImageBuilder</b>: Image or application creation resource.</description></item>
+            /// <item><description><b>ImageValidate</b>: Image or application validation resource.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -99,7 +97,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ProductType { get; set; }
 
             /// <summary>
-            /// <para>The region ID in the current response.</para>
+            /// <para>The region ID in this response.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -109,7 +107,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The user ID used when connecting to the building or validation environment. Use the value returned in the current response.</para>
+            /// <para>The user ID used when connecting to the creation or validation environment. Use the value returned in this response.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b>vhd_builder</b></para>
@@ -121,7 +119,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The error or result message. This field describes the cause when the request fails. A successful response may not contain this field.</para>
+        /// <para>The error or result message. It describes the cause when the request fails. A success response may not contain this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Internal error.</para>

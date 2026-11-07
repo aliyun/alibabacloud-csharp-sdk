@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<ListAppInstanceTypeResponseBodyAppInstanceTypeModels> AppInstanceTypeModels { get; set; }
         public class ListAppInstanceTypeResponseBodyAppInstanceTypeModels : TeaModel {
             /// <summary>
-            /// <para>The session instance type code. This can be used as the session instance type parameter for subsequent operations.</para>
+            /// <para>The session instance type code, which can be used as the session instance type parameter for subsequent operations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>appstreaming.vgpu.4c8g</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceTypeFamily { get; set; }
 
             /// <summary>
-            /// <para>The number of CPU cores included in the instance type. This is represented by a numeric string. Unit: cores.</para>
+            /// <para>The number of CPU cores included in the instance type, represented by a numeric string. Unit: cores.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public long? DataDiskSize { get; set; }
 
             /// <summary>
-            /// <para>This parameter is not enabled. The example value is only used to demonstrate the format and does not represent the actual number of GPUs returned by this operation.</para>
+            /// <para>Not enabled yet. The example value is only used to demonstrate the format and does not represent the actual number of GPUs returned by this operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string GpuSpec { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the instance type record. When you connect to the price inquiry or creation operation, use AppInstanceType. Do not use this field to replace the instance type code.</para>
+            /// <para>The identifier of the instance type record. When integrating with pricing or creation operations, use <c>AppInstanceType</c>. Do not use this field to replace the instance type code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The display name of the instance type. The Chinese name is used only when Language is set to zh-CN. Otherwise, the instance type code is used.</para>
+            /// <para>The display name of the instance type. The Chinese name is used only when <c>Language</c> is set to <c>zh-CN</c>. For other values or when omitted, the instance type code is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>appstreaming.vgpu.4c8g</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string InstanceTypeName { get; set; }
 
             /// <summary>
-            /// <para>The inventory information of the instance type. This is returned only when the inventory is queried and the relevant information is obtained. If this field is not returned, it does not mean that the inventory is 0.</para>
+            /// <para>The inventory information of the instance type. This parameter is returned only when the inventory is queried and the relevant information is obtained. If this parameter is not returned, it does not mean that the inventory is 0.</para>
             /// </summary>
             [NameInMap("InventoryInfo")]
             [Validation(Required=false)]
@@ -126,8 +126,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 /// <summary>
                 /// <para>The instance type inventory status obtained in the current query.</para>
                 /// <list type="bullet">
-                /// <item><description>Available: The total inventory of the queried zones is greater than 0.</description></item>
-                /// <item><description>SoldOut: The total inventory of the queried zones is not greater than 0.</description></item>
+                /// <item><description><c>Available</c>: The total inventory of the queried zones is greater than 0.</description></item>
+                /// <item><description><c>SoldOut</c>: The total inventory of the queried zones is not greater than 0.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public List<ListAppInstanceTypeResponseBodyAppInstanceTypeModelsInventoryInfoZoneInventoryInfo> ZoneInventoryInfo { get; set; }
                 public class ListAppInstanceTypeResponseBodyAppInstanceTypeModelsInventoryInfoZoneInventoryInfo : TeaModel {
                     /// <summary>
-                    /// <para>The available quantity in the zone obtained in the current query. Unit: instances. This value is an inventory snapshot and does not indicate that resources have been reserved for the current account.</para>
+                    /// <para>The available quantity in the zone obtained in this query. Unit: instances. This value is an inventory snapshot and does not indicate that resources have been reserved for the current account.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     public string Amount { get; set; }
 
                     /// <summary>
-                    /// <para>The zone ID. You can call <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListZones">ListZones</a> to query the zone ID.</para>
+                    /// <para>The zone ID, which can be queried by calling the <a href="https://api.aliyun.com/document/appstream-center/2021-09-01/ListZones">ListZones</a> operation.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-hangzhou-h</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <summary>
             /// <para>The type of the product to which the instance type belongs. The current document displays the following values:</para>
             /// <list type="bullet">
-            /// <item><description>CloudApp: Wuying Cloud App.</description></item>
+            /// <item><description><c>CloudApp</c>: Wuying Cloud Application.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The page number used in the current query. This corresponds to the request parameter and the total number of entries.</para>
+        /// <para>The page number used in this query, which corresponds to the request parameters and the total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page used in the current query.</para>
+        /// <para>The number of entries per page used in this query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request. You can use this ID to troubleshoot request issues.</para>
+        /// <para>The unique identifier of the request, which can be used to troubleshoot request issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of instance types that meet all filtering conditions. This is not the number of entries on the current page.</para>
+        /// <para>The total number of instance types that meet all filtering conditions, not the number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
