@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class DeleteNacosMcpServerResponseBody : TeaModel {
         /// <summary>
+        /// <para>The returned data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? Data { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D0DB055C-51F2-5BB2-82A6-CD8A3C6EE6BA</para>
         /// </summary>

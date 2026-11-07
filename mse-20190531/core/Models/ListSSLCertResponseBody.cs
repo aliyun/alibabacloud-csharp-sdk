@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListSSLCertResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned. A value of 200 indicates that the request is successful.</para>
+        /// <para>The status code. A value of 200 indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListSSLCertResponseBodyData> Data { get; set; }
         public class ListSSLCertResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the certificate expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The time when the certificate expired. The time was formatted as a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2021-04-01 02:35:12</para>
+            /// <para>1726039184803</para>
             /// </summary>
             [NameInMap("AfterDate")]
             [Validation(Required=false)]
@@ -47,17 +47,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Algorithm { get; set; }
 
             /// <summary>
-            /// <para>The time when the certificate took effect. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The time when the certificate took effect. The time was formatted as a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2031-03-30 02:35:12</para>
+            /// <para>1694503184803</para>
             /// </summary>
             [NameInMap("BeforeDate")]
             [Validation(Required=false)]
             public string BeforeDate { get; set; }
 
             /// <summary>
-            /// <para>The ID of the certificate.</para>
+            /// <para>The certificate ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string CertIdentifier { get; set; }
 
             /// <summary>
-            /// <para>The name of the certificate.</para>
+            /// <para>The certificate name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test.com</para>
@@ -87,27 +87,27 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string CommonName { get; set; }
 
             /// <summary>
-            /// <para>The time when the certificate expires. This value is a GMT timestamp.</para>
+            /// <para>The time when the certificate expired. The time was formatted as a GMT timestamp.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2021-04-01 02:35:12</para>
+            /// <para>2024-09-11T07:19:44.803+0000</para>
             /// </summary>
             [NameInMap("GmtAfter")]
             [Validation(Required=false)]
             public string GmtAfter { get; set; }
 
             /// <summary>
-            /// <para>The time when the certificate took effect. This value is a GMT timestamp.</para>
+            /// <para>The time when the certificate took effect. The time was formatted as a GMT timestamp.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2031-03-30 02:35:12</para>
+            /// <para>2023-09-12T07:19:44.803+0000</para>
             /// </summary>
             [NameInMap("GmtBefore")]
             [Validation(Required=false)]
             public string GmtBefore { get; set; }
 
             /// <summary>
-            /// <para>The issuer of the certificate.</para>
+            /// <para>The issuer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>You are not authorized to perform this operation.</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CAA9A229-141D-5FBA-AC5C-516C02026A11</para>
@@ -159,10 +159,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

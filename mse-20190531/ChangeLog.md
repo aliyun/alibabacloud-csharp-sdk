@@ -1,3 +1,16 @@
+2026-11-07 Version: 6.23.0
+- Support API AddZooKeeperSaslUser.
+- Support API ListZooKeeperSaslUser.
+- Support API RemoveZooKeeperSaslUser.
+- Support API UpdateZooKeeperSaslUser.
+- Update API GetGatewayConfig: add response parameters Body.Data.LogRequestResponseConfig.
+- Update API GetGatewayDomainDetail: add response parameters Body.Data.EnableWaf.
+- Update API GetGatewayDomainDetail: add response parameters Body.Data.SupportWaf.
+- Update API ListGatewayDomain: add response parameters Body.Data.$.EnableWaf.
+- Update API ListGatewayDomain: add response parameters Body.Data.$.SupportWaf.
+- Update API UpdateGatewayDomain: add request parameters EnableWaf.
+
+
 2026-03-16 Version: 6.22.2
 - Update API AddGatewayDomain: add request parameters CaCertIdentifier.
 - Update API AddGatewayDomain: add request parameters MtlsEnabled.

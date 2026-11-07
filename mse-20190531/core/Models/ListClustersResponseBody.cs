@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListClustersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the data.</para>
+        /// <para>The data overview.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string AppVersion { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the instance can be upgraded.</para>
+            /// <para>Indicates whether the cluster can be upgraded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? CanUpdate { get; set; }
 
             /// <summary>
-            /// <para>The billing method, such as subscription or pay-as-you-go.</para>
+            /// <para>The billing method, including subscription and pay-as-you-go.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Pay-as-you-go</para>
+            /// <para>subscription</para>
             /// </summary>
             [NameInMap("ChargeType")]
             [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>The type of the cluster. Valid values: ZooKeeper, Nacos-Ans, and Eureka.</para>
+            /// <para>The cluster type, including ZooKeeper, Nacos-Ans, and Eureka.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Eureka</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the cluster expires.</para>
+            /// <para>The expiration time of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-08-01 00:00:00</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string EndDate { get; set; }
 
             /// <summary>
-            /// <para>The initialization status of the instance.</para>
+            /// <para>The initialization status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RESTART_SUCCESS</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The public IP address.</para>
+            /// <para>The public address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>47.98.XX.XX</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string InternetAddress { get; set; }
 
             /// <summary>
-            /// <para>The public endpoint.</para>
+            /// <para>The public domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mse-7413****-p.eureka.mse.aliyuncs.com</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string InternetDomain { get; set; }
 
             /// <summary>
-            /// <para>The internal IP address.</para>
+            /// <para>The private network address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.XX.XX</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string IntranetAddress { get; set; }
 
             /// <summary>
-            /// <para>The internal endpoint.</para>
+            /// <para>The internal domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mse-7413****-eureka.mse.aliyuncs.com</para>
@@ -166,14 +166,29 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string IntranetDomain { get; set; }
 
+            /// <summary>
+            /// <para>The O&amp;M time window.</para>
+            /// </summary>
             [NameInMap("MaintenancePeriod")]
             [Validation(Required=false)]
             public ListClustersResponseBodyDataMaintenancePeriod MaintenancePeriod { get; set; }
             public class ListClustersResponseBodyDataMaintenancePeriod : TeaModel {
+                /// <summary>
+                /// <para>The end time of the O&amp;M time window.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>06:00</para>
+                /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public string EndTime { get; set; }
 
+                /// <summary>
+                /// <para>The start time of the O&amp;M time window.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>02:00</para>
+                /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public string StartTime { get; set; }
@@ -201,7 +216,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The tags that are attached to the instance.</para>
+            /// <para>The tags bound to the instance.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -217,11 +232,19 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string VersionCode { get; set; }
 
+            /// <summary>
+            /// <para>The version lifecycle.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>STABLE</para>
+            /// </summary>
             [NameInMap("VersionLifecycle")]
             [Validation(Required=false)]
             public string VersionLifecycle { get; set; }
 
             /// <summary>
+            /// <para>The ID of the VPC where the cluster is deployed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1hcg467ekqsv0zr****</para>
             /// </summary>
@@ -232,7 +255,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-100-000</para>
@@ -242,7 +265,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>202</para>
@@ -252,17 +275,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string HttpCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request was successfully processed.</para>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -272,7 +295,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of instances returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -282,7 +305,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>69AD2AA7-DB47-449B-941B-B14409DF****</para>
@@ -292,10 +315,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><c>true</c>: The request is successful.</description></item>
+        /// <item><description><c>false</c>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -306,7 +329,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned instances.</para>
+        /// <para>The total number of instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The details of the data.</para>
+        /// <para>The returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -40,7 +40,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message that is returned for the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -57,7 +60,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values: true: The request was successful. false: The request failed.</para>
+        /// <para>The result of the request. Valid values: - true: The request is successful. - false: The request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

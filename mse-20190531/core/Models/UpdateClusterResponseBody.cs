@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-100-100</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request is successfully processed.</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5B170A0D-2C5D-4CF8-B808-03966B86****</para>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

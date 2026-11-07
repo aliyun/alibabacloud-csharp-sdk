@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListNacosConfigsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The returned code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The configurations.</para>
+        /// <para>The list of configurations.</para>
         /// </summary>
         [NameInMap("Configurations")]
         [Validation(Required=false)]
         public List<ListNacosConfigsResponseBodyConfigurations> Configurations { get; set; }
         public class ListNacosConfigsResponseBodyConfigurations : TeaModel {
             /// <summary>
-            /// <para>The name of the application.</para>
+            /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -36,12 +36,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string AppName { get; set; }
 
+            /// <summary>
+            /// <para>The tags of the configuration. Multiple tags are separated by commas.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>tag1,tag2</para>
+            /// </summary>
             [NameInMap("ConfigTags")]
             [Validation(Required=false)]
             public string ConfigTags { get; set; }
 
             /// <summary>
-            /// <para>The ID of the configuration.</para>
+            /// <para>The configuration ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>log.yaml</para>
@@ -50,12 +56,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string DataId { get; set; }
 
+            /// <summary>
+            /// <para>The description of the configuration item.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test-description</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the group.</para>
+            /// <para>The group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>public</para>
@@ -65,7 +77,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Group { get; set; }
 
             /// <summary>
-            /// <para>The ID of the application.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>132****</para>
@@ -77,7 +89,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-100-000</para>
@@ -87,7 +99,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -97,17 +109,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string HttpCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request was successfully processed.</para>
+        /// <para>Request processed successfully</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -117,7 +129,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of instances displayed on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -127,7 +139,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4081087F-3429-5873-A1E7-D4B5479D0B84</para>
@@ -137,10 +149,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><c>true</c>: The request is successful.</description></item>
+        /// <item><description><c>false</c>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -151,7 +163,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned instances.</para>
+        /// <para>The total number of instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>

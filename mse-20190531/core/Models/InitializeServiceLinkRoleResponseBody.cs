@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class InitializeServiceLinkRoleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The response parameters.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public InitializeServiceLinkRoleResponseBodyData Data { get; set; }
         public class InitializeServiceLinkRoleResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The permission that is granted to the RAM user to call the API operation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ram:CreateServiceLinkedRole</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string RequiredPermission { get; set; }
 
             /// <summary>
+            /// <para>The name of the created service-linked role.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>AliyunServiceRoleForMSE</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string RoleName { get; set; }
 
             /// <summary>
+            /// <para>The service to which the service-linked role belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>mse.aliyuncs.com</para>
             /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
+        /// <para>The message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A5E7D4E3-D30C-56C1-817F-F2B8CE6BXXXX</para>
         /// </summary>
@@ -64,6 +79,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CreatePluginConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The plug-in configuration ID.</para>
+        /// <para>The ID of the plug-in configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

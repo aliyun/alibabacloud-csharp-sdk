@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The authentication configurations.</para>
+        /// <para>The authentication configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AuthJSON")]

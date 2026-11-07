@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateGatewayDomainRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese (default).</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -23,12 +23,48 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        /// <summary>
+        /// <para>The CA certificate content.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>-----BEGIN CERTIFICATE-----
+        /// MIIFazCCA1OgAwIBAgIRAIIQz7DSQONZRGPgu2OCiwAwDQYJKoZIhvcNAQELBQAw
+        /// TzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh
+        /// cmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMTUwNjA0MTEwNDM4
+        /// WhcNMzUwNjA0MTEwNDM4WjBPMQswCQYDVQQGEwJVUzEpMCcGA1UEChMgSW50ZXJu
+        /// ZXQgU2VjdXJpdHkgUmVzZWFyY2ggR3JvdXAxFTATBgNVBAMTDElTUkcgUm9vdCBY
+        /// MTCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBAK3oJHP0FDfzm54rVygc
+        /// h77ct984kIxuPOZXoHj3dcKi/vVqbvYATyjb3miGbESTtrFj/RQSa78f0uoxmyF+
+        /// 0TM8ukj13Xnfs7j/EvEhmkvBioZxaUpmZmyPfjxwv60pIgbz5MDmgK7iS4+3mX6U
+        /// A5/TR5d8mUgjU+g4rk8Kb4Mu0UlXjIB0ttov0DiNewNwIRt18jA8+o+u3dpjq+sW
+        /// T8KOEUt+zwvo/7V3LvSye0rgTBIlDHCNAymg4VMk7BPZ7hm/ELNKjD+Jo2FR3qyH
+        /// B5T0Y3HsLuJvW5iB4YlcNHlsdu87kGJ55tukmi8mxdAQ4Q7e2RCOFvu396j3x+UC
+        /// B5iPNgiV5+I3lg02dZ77DnKxHZu8A/lJBdiB3QW0KtZB6awBdpUKD9jf1b0SHzUv
+        /// KBds0pjBqAlkd25HN7rOrFleaJ1/ctaJxQZBKT5ZPt0m9STJEadao0xAH0ahmbWn
+        /// OlFuhjuefXKnEgV4We0+UXgVCwOPjdAvBbI+e0ocS3MFEvzG6uBQE3xDk3SzynTn
+        /// jh8BCNAw1FtxNrQHusEwMFxIt4I7mKZ9YIqioymCzLq9gwQbooMDQaHWBfEbwrbw
+        /// qHyGO0aoSCqI3Haadr8faqU9GY/rOPNk3sgrDQoo//fb4hVC1CLQJ13hef4Y53CI
+        /// rU7m2Ys6xt0nUW7/vGT1M0NPAgMBAAGjQjBAMA4GA1UdDwEB/wQEAwIBBjAPBgNV
+        /// HRMBAf8EBTADAQH/MB0GA1UdDgQWBBR5tFnme7bl5AFzgAiIyBpY9umbbjANBgkq
+        /// hkiG9w0BAQsFAAOCAgEAVR9YqbyyqFDQDLHYGmkgJykIrGF1XIpu+ILlaS/V9lZL
+        /// ubhzEFnTIZd+50xx+7LSYK05qAvqFyFWhfFQDlnrzuBZ6brJFe+GnY+EgPbk6ZGQ
+        /// 3BebYhtF8GaV0nxvwuo77x/Py9auJ/GpsMiu/X1+mvoiBOv/2X/qkSsisRcOj/KK
+        /// NFtY2PwByVS5uCbMiogziUwthDyC3+6WVwW6LLv3xLfHTjuCvjHIInNzktHCgKQ5
+        /// ORAzI4JMPJ+GslWYHb4phowim57iaztXOoJwTdwJx4nLCgdNbOhdjsnvzqvHu7Ur
+        /// TkXWStAmzOVyyghqpZXjFaH3pO3JLF+l+/+sKAIuvtd7u+Nxe5AW0wdeRlN8NwdC
+        /// jNPElpzVmbUq4JUagEiuTDkHzsxHpFKVK7q4+63SM1N95R1NbdWhscdCb+ZAJzVc
+        /// oyi3B43njTOQ5yOf+1CceWxG1bQVs5ZufpsMljq4Ui0/1lvh+wjChP4kqKOJ2qxq
+        /// 4RgqsahDYVvTH9w7jXbyLeiNdd8XM2w9U/t7y0Ff/9yi0GE44Za4rF2LN9d11TPA
+        /// mRGunUHBcnWEvgJBQl9nJEiU0Zsnvgc/ubhPgXRR4Xq37Z0j4r7g1SgEEzwxA57d
+        /// emyPxgcYxn/eR44/KJ4EBs+lVDR3veyJm+kXQ99b21/+jh5Xos1AnX5iItreGCc=
+        /// -----END CERTIFICATE-----</para>
+        /// </summary>
         [NameInMap("CaCertIdentifier")]
         [Validation(Required=false)]
         public string CaCertIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The ID of the certificate.</para>
+        /// <para>The certificate ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6209108-cn-hangzhou</para>
@@ -36,6 +72,13 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [NameInMap("CertIdentifier")]
         [Validation(Required=false)]
         public string CertIdentifier { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to enable Web Application Firewall (WAF) for the gateway domain name.</para>
+        /// </summary>
+        [NameInMap("EnableWaf")]
+        [Validation(Required=false)]
+        public bool? EnableWaf { get; set; }
 
         /// <summary>
         /// <para>The unique ID of the gateway.</para>
@@ -48,11 +91,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable <c>HTTP/2</c>.</para>
+        /// <para>Specifies whether to enable HTTP/2. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>open</c>: <c>HTTP/2</c> is enabled.</description></item>
-        /// <item><description><c>close</c>: <c>HTTP/2</c> is disabled.</description></item>
-        /// <item><description><c>globalConfig</c>: Global configurations are used.</description></item>
+        /// <item><description><c>open</c>: enables HTTP/2.</description></item>
+        /// <item><description><c>close</c>: disables HTTP/2.</description></item>
+        /// <item><description><c>globalConfig</c>: uses the global configuration.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,7 +106,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Http2 { get; set; }
 
         /// <summary>
-        /// <para>The ID of the domain name that you want to update.</para>
+        /// <para>The ID of the domain name to be updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>94</para>
@@ -72,12 +115,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public long? Id { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable mTLS.</para>
+        /// </summary>
         [NameInMap("MtlsEnabled")]
         [Validation(Required=false)]
         public bool? MtlsEnabled { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcibly use HTTPS.</para>
+        /// <para>Specifies whether to force HTTPS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -87,7 +133,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? MustHttps { get; set; }
 
         /// <summary>
-        /// <para>The type of the protocol. Valid values:</para>
+        /// <para>The protocol type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>HTTPS</description></item>
         /// <item><description>HTTP</description></item>
@@ -100,14 +146,30 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Protocol { get; set; }
 
+        /// <summary>
+        /// <para>The TLS cipher suite configuration.</para>
+        /// </summary>
         [NameInMap("TlsCipherSuitesConfigJSON")]
         [Validation(Required=false)]
         public UpdateGatewayDomainRequestTlsCipherSuitesConfigJSON TlsCipherSuitesConfigJSON { get; set; }
         public class UpdateGatewayDomainRequestTlsCipherSuitesConfigJSON : TeaModel {
+            /// <summary>
+            /// <para>The cipher suite configuration type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>DEFAULT</description></item>
+            /// <item><description>CUSTOM</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>DEFAULT</para>
+            /// </summary>
             [NameInMap("ConfigType")]
             [Validation(Required=false)]
             public string ConfigType { get; set; }
 
+            /// <summary>
+            /// <para>The list of cipher suite names.</para>
+            /// </summary>
             [NameInMap("TlsCipherSuites")]
             [Validation(Required=false)]
             public List<string> TlsCipherSuites { get; set; }
@@ -115,7 +177,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The maximum version of Transport Layer Security (TLS).</para>
+        /// <para>The maximum TLS version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TLS 1.3</para>
@@ -125,7 +187,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string TlsMax { get; set; }
 
         /// <summary>
-        /// <para>The minimum version of TLS.</para>
+        /// <para>The minimum TLS version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TLS 1.0</para>

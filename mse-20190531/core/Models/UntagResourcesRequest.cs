@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the response information:</para>
         /// <list type="bullet">
         /// <item><description>zh: Chinese</description></item>
         /// <item><description>en: English</description></item>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to delete all tags. This parameter takes effect only when the TagKey.N parameter is not specified. Valid values:</para>
+        /// <para>Specifies whether to delete all tags. This parameter takes effect only when TagKey.N is empty. Valid values: </para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? All { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs. A maximum of 50 resource IDs can be specified.</para>
+        /// <para>The resource IDs. You can specify up to 50 resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -58,10 +58,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Valid values:</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CLUSTER: MSE instance</description></item>
-        /// <item><description>GATEWAY: cloud-native gateway</description></item>
+        /// <item><description><para>CLUSTER: registration and configuration center.</para>
+        /// </description></item>
+        /// <item><description><para>GATEWAY: cloud-native gateway.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -73,7 +75,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tag keys. A maximum of 20 tag keys are supported.</para>
+        /// <para>The tag keys. You can specify up to 20 tag keys.</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

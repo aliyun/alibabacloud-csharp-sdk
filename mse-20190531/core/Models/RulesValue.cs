@@ -11,42 +11,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
     public class RulesValue : TeaModel {
         /// <summary>
         /// <para>The status.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>0</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>The routing rule does not take effect</para>
-        /// <!-- -->
-        /// 
-        /// <para>.</para>
-        /// </description></item>
-        /// <item><description><para>1</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>The routing rule takes effect</para>
-        /// <!-- -->
-        /// 
-        /// <para>.</para>
-        /// </description></item>
-        /// <item><description><para>2</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>The routing rule is invalid</para>
-        /// <!-- -->
-        /// 
-        /// <para>.</para>
-        /// </description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -66,7 +30,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Rate { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the routing rule.</para>
+        /// <para>Specifies whether the rule is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -76,7 +40,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>The environment of the routing rule.</para>
+        /// <para>The environment of this routing rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gray</para>
@@ -96,7 +60,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the routing rule.</para>
+        /// <para>The ID of the rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -116,21 +80,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? InstanceNum { get; set; }
 
         /// <summary>
-        /// <para>The details of the routing rule.</para>
+        /// <para>The rule information.</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public RulesValueRules Rules { get; set; }
         public class RulesValueRules : TeaModel {
             /// <summary>
-            /// <para>The rule of the Spring Cloud application.</para>
+            /// <para>The Spring Cloud rules.</para>
             /// </summary>
             [NameInMap("springcloud")]
             [Validation(Required=false)]
             public List<RulesValueRulesSpringcloud> Springcloud { get; set; }
             public class RulesValueRulesSpringcloud : TeaModel {
                 /// <summary>
-                /// <para>The logical operation relationships. Valid values: AND and OR.</para>
+                /// <para>The logical operator used between the following items. Valid values: AND and OR.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AND</para>
@@ -139,12 +103,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string Condition { get; set; }
 
+                /// <summary>
+                /// <para>The list of matching conditions for REST requests.</para>
+                /// </summary>
                 [NameInMap("restItems")]
                 [Validation(Required=false)]
                 public List<RulesValueRulesSpringcloudRestItems> RestItems { get; set; }
                 public class RulesValueRulesSpringcloudRestItems : TeaModel {
                     /// <summary>
-                    /// <para>The value on which operators such as rawvalue are performed.</para>
+                    /// <para>The value to be compared for operators such as rawvalue.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -154,7 +121,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string Datum { get; set; }
 
                     /// <summary>
-                    /// <para>The operator. A value of rawvalue indicates direct comparison. A value of mode indicates the modulo operation. A value of list indicates using a whitelist.</para>
+                    /// <para>The operator. A value of rawvalue indicates direct comparison. A value of mode indicates a modulo operation. A value of list indicates a whitelist.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>rawvalue</para>
@@ -164,7 +131,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string Operator { get; set; }
 
                     /// <summary>
-                    /// <para>Information about the fields that are required by the list operator.</para>
+                    /// <para>The field required for the list operator.</para>
                     /// </summary>
                     [NameInMap("nameList")]
                     [Validation(Required=false)]
@@ -181,7 +148,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string Cond { get; set; }
 
                     /// <summary>
-                    /// <para>The divisor that is required by the mod operator.</para>
+                    /// <para>The divisor field required for the mod operator.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>30</para>
@@ -191,7 +158,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public int? Divisor { get; set; }
 
                     /// <summary>
-                    /// <para>The remainder.</para>
+                    /// <para>The percentage value field required for the percentage operation.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>30</para>
@@ -201,7 +168,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public int? Remainder { get; set; }
 
                     /// <summary>
-                    /// <para>The rate. A value of 20 indicates that 20% of the traffic is routed to the tagged node.</para>
+                    /// <para>The proportion rule. For example, 20% indicates that 20% of the traffic is routed to the node corresponding to the tag.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>20</para>
@@ -244,22 +211,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
                 /// <summary>
                 /// <para>The policy type.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>PERCENT</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><para>CONTENT</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- --></description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CONTENT</para>
@@ -269,7 +220,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string TriggerPolicy { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable the routing rule.</para>
+                /// <para>Specifies whether the rule is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -299,7 +250,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? Priority { get; set; }
 
                 /// <summary>
-                /// <para>The tags.</para>
+                /// <para>The list of tags.</para>
                 /// </summary>
                 [NameInMap("tags")]
                 [Validation(Required=false)]
@@ -325,7 +276,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// <para>The rules of the Dubbo application.</para>
+            /// <para>The Dubbo rules.</para>
             /// </summary>
             [NameInMap("dubbo")]
             [Validation(Required=false)]
@@ -342,7 +293,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// <para>The tags.</para>
+                /// <para>The list of tags.</para>
                 /// </summary>
                 [NameInMap("tags")]
                 [Validation(Required=false)]
@@ -369,7 +320,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string ServiceName { get; set; }
 
                 /// <summary>
-                /// <para>The group of the Dubbo application.</para>
+                /// <para>The Dubbo service group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default</para>
@@ -379,7 +330,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Group { get; set; }
 
                 /// <summary>
-                /// <para>The version of the Dubbo application.</para>
+                /// <para>The Dubbo service version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0.0</para>
@@ -389,7 +340,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Version { get; set; }
 
                 /// <summary>
-                /// <para>The method name of the Dubbo application.</para>
+                /// <para>The method name of the Dubbo service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hello</para>
@@ -399,14 +350,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string MethodName { get; set; }
 
                 /// <summary>
-                /// <para>The list of parameter data types.</para>
+                /// <para>The list of parameter types.</para>
                 /// </summary>
                 [NameInMap("paramTypes")]
                 [Validation(Required=false)]
                 public List<string> ParamTypes { get; set; }
 
                 /// <summary>
-                /// <para>The logical operation relationships. Valid values: AND and OR.</para>
+                /// <para>The logical operator used between the following items. Valid values: AND and OR.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AND</para>
@@ -416,14 +367,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Condition { get; set; }
 
                 /// <summary>
-                /// <para>The list of parameter contents.</para>
+                /// <para>The list of parameter content.</para>
                 /// </summary>
                 [NameInMap("argumentItems")]
                 [Validation(Required=false)]
                 public List<RulesValueRulesDubboArgumentItems> ArgumentItems { get; set; }
                 public class RulesValueRulesDubboArgumentItems : TeaModel {
                     /// <summary>
-                    /// <para>The operator. A value of rawvalue indicates direct comparison. A value of mode indicates the modulo operation. A value of list indicates using a whitelist.</para>
+                    /// <para>The operator. A value of rawvalue indicates direct comparison. A value of mode indicates a modulo operation. A value of list indicates a whitelist.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>rawvalue</para>
@@ -440,7 +391,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public List<string> NameList { get; set; }
 
                     /// <summary>
-                    /// <para>The value on which operators such as rawvalue are performed.</para>
+                    /// <para>The value to be compared for operators such as rawvalue.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>30</para>
@@ -460,7 +411,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string Cond { get; set; }
 
                     /// <summary>
-                    /// <para>The divisor that is required by the mod operator.</para>
+                    /// <para>The divisor field required for the mod operator.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>30</para>
@@ -470,7 +421,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public int? Divisor { get; set; }
 
                     /// <summary>
-                    /// <para>The remainder.</para>
+                    /// <para>The percentage value field required for the percentage operation.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>30</para>
@@ -480,7 +431,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public int? Remainder { get; set; }
 
                     /// <summary>
-                    /// <para>The rate. A value of 20 indicates that 20% of the traffic is routed to the tagged node.</para>
+                    /// <para>The proportion rule. For example, 20% indicates that 20% of the traffic is routed to the node corresponding to the tag.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -490,7 +441,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public int? Rate { get; set; }
 
                     /// <summary>
-                    /// <para>The position of the parameter, which starts from 0.</para>
+                    /// <para>The position of the parameter, starting from 0.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -500,14 +451,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public int? Index { get; set; }
 
                     /// <summary>
-                    /// <para>The expression.</para>
+                    /// <para>The expression. See other field descriptions for details.</para>
                     /// </summary>
                     [NameInMap("expr")]
                     [Validation(Required=false)]
                     public string Expr { get; set; }
 
                     /// <summary>
-                    /// <para>The value that is used for comparison. The value obtained by the expression is compared with this value. If the list operator is used, data of the value parameter is separated by commas (,). For example, 1,2,3.</para>
+                    /// <para>The value to compare. The value obtained from the expression is compared with this value. If the operator is a list whitelist, separate values with commas (,), such as 1,2,3.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1,2,3</para>

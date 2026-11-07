@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the routing rule.</para>
+        /// <para>Specifies whether the rule is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>The Microservices Engine (MSE) namespace to which the application belongs.</para>
+        /// <para>The MSE namespace to which the application belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>Optional. The ID of the namespace.</para>
+        /// <para>The namespace ID. This parameter is optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12233****</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -88,10 +88,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The details of the routing rule.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>{ &quot;blue&quot;: { # Tag key. &quot;rate&quot;: 20, # Rate. A value of 20 indicates that 20% of the traffic is routed to the node identified by the tag. &quot;name&quot;: &quot;luoye-route-test&quot;, # Routing rule name. &quot;carryData&quot;: false, # Specifies whether to enable pass-through. This parameter is applicable to end-to-end canary release. &quot;rules&quot;: { # Rule information. &quot;dubbo&quot;: [{ # Dubbo rule. The system also supports Spring Cloud and Istio rule. &quot;serviceName&quot;: &quot;com.taobao.hsf.common.DemoService&quot;, # Service name (operation name). &quot;group&quot;: &quot;&quot;, # Group name. &quot;version&quot;: &quot;&quot;, # Service version. &quot;methodName&quot;: &quot;sayHello&quot;, # Method name. &quot;condition&quot;: &quot;AND&quot;, # Logical operator used by the following items. Valid values: AND and OR. &quot;argumentItems&quot;: [{ # Array of rule details. &quot;index&quot;: 0, # Index field. &quot;expr&quot;: &quot;&quot;, # Expression. Its details is described below. &quot;operator&quot;: &quot;rawvalue&quot;, # The comparison mode. A value of rawvalue indicates direct comparison. A value of mode indicates the modulo operation. A value of list indicates using a whitelist. &quot;value&quot;: &quot;jim&quot;, # Base value. The value obtained by the expression will be compared with this value. If operator is set to list, separate the items specified for this parameter with commas (,). Example: 1,2,3. &quot;cond&quot;: &quot;==&quot; # Comparison operator. Valid values: &gt;=, &lt;=, &gt;, &lt;, and ==. }] }] } }, &quot;_base&quot;: { # Another tag key. &quot;rate&quot;: 80 # Rate. A value of 20 indicates that 20% of the traffic is routed to the node identified by the tag. } }</para>
+        /// <para>The routing rules.</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]

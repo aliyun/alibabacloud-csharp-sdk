@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class QueryInstancesInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-09k1q11****</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse_prepaid_public_cn-tl32g1u9k01</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20574710974****</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance resides.</para>
+        /// <para>The region ID of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The extended request parameters in the JSON format.</para>
+        /// <para>The extended request parameters in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

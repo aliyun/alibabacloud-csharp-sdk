@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The name of the application.</para>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example-app</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The name of the Microservices Engine (MSE) namespace.</para>
+        /// <para>The MSE namespace name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -55,13 +55,13 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The region where the instance resides. Examples:</para>
+        /// <para>The region where the cluster is deployed, including but not limited to:</para>
         /// <list type="bullet">
-        /// <item><description><c>cn-hangzhou</c>: China (Hangzhou)</description></item>
-        /// <item><description><c>cn-beijing</c>: China (Beijing)</description></item>
-        /// <item><description><c>cn-shanghai</c>: China (Shanghai)</description></item>
-        /// <item><description><c>cn-zhangjiakou</c>: China (Zhangjiakou)</description></item>
-        /// <item><description><c>cn-shenzhen</c>: China (Shenzhen)</description></item>
+        /// <item><description><c>cn-hangzhou</c>: Hangzhou</description></item>
+        /// <item><description><c>cn-beijing</c>: Beijing</description></item>
+        /// <item><description><c>cn-shanghai</c>: Shanghai</description></item>
+        /// <item><description><c>cn-zhangjiakou</c>: Zhangjiakou</description></item>
+        /// <item><description><c>cn-shenzhen</c>: Shenzhen</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

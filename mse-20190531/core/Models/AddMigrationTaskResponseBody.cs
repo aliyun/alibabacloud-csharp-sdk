@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class AddMigrationTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>Data structure.</para>
+        /// <para>The data structure.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AddMigrationTaskResponseBodyData Data { get; set; }
         public class AddMigrationTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Cluster type.</para>
+            /// <para>The cluster type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Nacos-Ans</description></item>
             /// <item><description>ZooKeeper</description></item>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ClusterType { get; set; }
 
             /// <summary>
-            /// <para>Task ID.</para>
+            /// <para>The ID of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>Source instance node address.</para>
+            /// <para>The address of the source instance node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.1.1:8848</para>
@@ -52,17 +52,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string OriginInstanceAddress { get; set; }
 
             /// <summary>
-            /// <para>Source instance name.</para>
+            /// <para>The name of the source instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Source instance</para>
+            /// <para>Source cluster</para>
             /// </summary>
             [NameInMap("OriginInstanceName")]
             [Validation(Required=false)]
             public string OriginInstanceName { get; set; }
 
             /// <summary>
-            /// <para>Namespace list, required when the source cluster is Nacos.</para>
+            /// <para>The list of namespaces. This parameter is optional when the source cluster is Nacos.</para>
             /// 
             /// <b>Example:</b>
             /// <para>namesapceId1,namesapceId2</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string OriginInstanceNamespace { get; set; }
 
             /// <summary>
-            /// <para>Description.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testsdfsdfsd</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ProjectDesc { get; set; }
 
             /// <summary>
-            /// <para>SyncType</para>
+            /// <para>The synchronization type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Service</para>
@@ -92,17 +92,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string SyncType { get; set; }
 
             /// <summary>
-            /// <para>Target instance name.</para>
+            /// <para>The name of the target instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Destination instance</para>
+            /// <para>Target cluster</para>
             /// </summary>
             [NameInMap("TargetClusterName")]
             [Validation(Required=false)]
             public string TargetClusterName { get; set; }
 
             /// <summary>
-            /// <para>Target instance URL.</para>
+            /// <para>The URL of the target instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mse-94d****-nacos-ans.mse.aliyuncs.com:8848</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string TargetClusterUrl { get; set; }
 
             /// <summary>
-            /// <para>Target instance ID.</para>
+            /// <para>The instance ID of the target instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mse-cn-7pp2w*****</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string TargetInstanceId { get; set; }
 
             /// <summary>
-            /// <para>User ID.</para>
+            /// <para>The ID of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>183876217*****</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>Error code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-100-000</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Message.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The request is processed successfully.</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7466566F-F30F-4A29-965D-3E0AF21D****</para>
@@ -164,10 +164,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>请求结果，取值如下：</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>：请求成功。</description></item>
-        /// <item><description><c>false</c>：请求失败。</description></item>
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

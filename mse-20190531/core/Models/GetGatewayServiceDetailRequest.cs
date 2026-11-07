@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetGatewayServiceDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the service.</para>
+        /// <para>The service ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>35</para>

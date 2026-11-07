@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class AddGatewayServiceVersionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned. The value 200 indicates that the request is successfully processed.</para>
+        /// <para>The status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The ID of the gateway service.</para>
+        /// <para>The gateway service ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>330</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? Data { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>403</para>
@@ -40,17 +40,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request is successfully processed.</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BA4046B6-CFC6-583C-B608-DD75011A590F</para>
@@ -60,9 +60,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>The request result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
+        /// <item><description><c>true</c>: The request succeeded.</description></item>
         /// <item><description><c>false</c>: The request failed.</description></item>
         /// </list>
         /// 

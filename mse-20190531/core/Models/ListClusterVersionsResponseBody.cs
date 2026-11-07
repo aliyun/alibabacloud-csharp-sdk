@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListClusterVersionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The details of the data.</para>
+        /// <para>The data overview.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListClusterVersionsResponseBodyData> Data { get; set; }
         public class ListClusterVersionsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The type of the instance.</para>
+            /// <para>The cluster type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Nacos-Ans</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ClusterType { get; set; }
 
             /// <summary>
-            /// <para>The code of the instance type.</para>
+            /// <para>The cluster type code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NACOS_2_0_0</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The version of the instance.</para>
+            /// <para>The cluster version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.1.0</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The dynamic part in the error message.</para>
+        /// <para>The dynamic error message related to the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The specified parameter is invalid.</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-100-000</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -89,17 +89,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request was successfully processed.</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7717BE5B-C958-5F87-BF49-464AA276EDD1</para>
@@ -109,10 +109,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><c>true</c>: The request is successful.</description></item>
+        /// <item><description><c>false</c>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class QueryGovernanceKubernetesClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of items per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

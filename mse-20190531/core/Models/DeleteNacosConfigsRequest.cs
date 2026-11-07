@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The IDs of configurations.</para>
+        /// <para>The configuration IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Ids { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the namespace.</para>
+        /// <para>The namespace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

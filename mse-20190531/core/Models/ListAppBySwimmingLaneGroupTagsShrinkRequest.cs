@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListAppBySwimmingLaneGroupTagsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</para>
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese. This is the default value.</description></item>
+        /// <item><description>en: English.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -31,7 +35,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the MSE namespace that you want to query.</para>
+        /// <para>The name of the Microservices Engine (MSE) namespace to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +46,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The tag based on which you want to list applications.</para>
+        /// <para>The tags to query.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

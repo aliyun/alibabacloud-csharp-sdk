@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class QueryConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The result code returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,21 +20,24 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The data overview.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryConfigResponseBodyData Data { get; set; }
         public class QueryConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether Simple Authentication and Security Layer (SASL) forced identity authentication is enabled for the ZooKeeper instance.</para>
+            /// <para>The switch for ZooKeeper SASL-based forced identity authentication.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("AuthEnabled")]
             [Validation(Required=false)]
             public bool? AuthEnabled { get; set; }
 
             /// <summary>
-            /// <para>A reserved parameter.</para>
+            /// <para>A reserved field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>none</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string AutopurgePurgeInterval { get; set; }
 
             /// <summary>
-            /// <para>A reserved parameter.</para>
+            /// <para>A reserved field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>none</para>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string AutopurgeSnapRetainCount { get; set; }
 
             /// <summary>
-            /// <para>The name of the instance.</para>
+            /// <para>The name of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -64,10 +67,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether RAM authentication of a configuration center is enabled. This parameter is valid for Nacos instances. Valid values:</para>
+            /// <para>The Nacos configuration. This parameter indicates whether RAM authentication is enabled for the configuration center. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: enabled.</description></item>
-            /// <item><description><c>false</c>: disabled.</description></item>
+            /// <item><description><para><c>true</c>: enabled</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: disabled</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -78,10 +83,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? ConfigAuthEnabled { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether RAM authentication is supported by a configuration center of the instance. This parameter is valid for Nacos instances. Valid values:</para>
+            /// <para>The Nacos configuration. This parameter indicates whether the configuration center of the current cluster supports RAM authentication. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: supported.</description></item>
-            /// <item><description><c>false</c>: not supported.</description></item>
+            /// <item><description><para><c>true</c>: supported</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: not supported</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -92,7 +99,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? ConfigAuthSupported { get; set; }
 
             /// <summary>
-            /// <para>The maximum size of contents in a configuration. Unit: KB.</para>
+            /// <para>The maximum size of the content of a single configuration. Unit: KB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -102,10 +109,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? ConfigContentLimit { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether configuration encryption of a configuration center is enabled by the instance. This parameter is valid for Nacos instances. Valid values:</para>
+            /// <para>The Nacos configuration. This parameter indicates whether configuration encryption is enabled for the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: enabled.</description></item>
-            /// <item><description><c>false</c>: disabled.</description></item>
+            /// <item><description><para><c>true</c>: enabled</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: disabled</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -116,10 +125,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? ConfigSecretEnabled { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether configuration encryption of a configuration center is supported by the instance. This parameter is valid for Nacos instances. Valid values:</para>
+            /// <para>The Nacos configuration. This parameter indicates whether the cluster supports configuration encryption. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: supported.</description></item>
-            /// <item><description><c>false</c>: not supported.</description></item>
+            /// <item><description><para><c>true</c>: supported</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: not supported</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -130,7 +141,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? ConfigSecretSupported { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Nacos open source console is enabled.</para>
+            /// <para>Specifies whether to enable the Nacos open source console.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -139,12 +150,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public bool? ConsoleUIEnabled { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to enable the four-letter words command.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("Enable4lw")]
             [Validation(Required=false)]
             public bool? Enable4lw { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether access port 8761 was enabled for Eureka. If this port is disabled, applications cannot use the Eureka protocol for service registration and discovery.</para>
+            /// <para>Specifies whether to enable port 8761 for access to the Eureka protocol. If you disable this port, applications cannot use the Eureka protocol for service registration and discovery.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -154,7 +171,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? EurekaSupported { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the time to live (TTL) configuration is enabled. This parameter is valid for ZooKeeper instances.</para>
+            /// <para>The ZooKeeper parameter that specifies whether to enable the TTL configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -164,7 +181,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? ExtendedTypesEnable { get; set; }
 
             /// <summary>
-            /// <para>The maximum connection duration of the instance. Unit: seconds. This parameter is valid for ZooKeeper instances.</para>
+            /// <para>The ZooKeeper configuration. This parameter indicates the maximum connection duration of an instance. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -174,7 +191,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string InitLimit { get; set; }
 
             /// <summary>
-            /// <para>The maximum amount of data on each node. This parameter is valid for ZooKeeper instances. Unit: bytes.</para>
+            /// <para>The ZooKeeper configuration. This parameter indicates the maximum data size of each node. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -184,7 +201,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string JuteMaxbuffer { get; set; }
 
             /// <summary>
-            /// <para>A reserved parameter.</para>
+            /// <para>A reserved field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>none</para>
@@ -194,10 +211,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string JvmFlagsCustom { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether Mesh Configuration Protocol (MCP) is enabled. This parameter is valid for Nacos instances. Valid values:</para>
+            /// <para>The Nacos configuration. This parameter indicates whether Mesh Configuration Protocol (MCP) is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: enabled.</description></item>
-            /// <item><description><c>false</c>: disabled.</description></item>
+            /// <item><description><para><c>true</c>: enabled</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: disabled</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -208,10 +227,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? MCPEnabled { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether MCP is supported. This parameter is valid for Nacos instances. Valid values:</para>
+            /// <para>The Nacos configuration. This parameter indicates whether MCP is supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: supported.</description></item>
-            /// <item><description><c>false</c>: not supported.</description></item>
+            /// <item><description><para><c>true</c>: supported</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: not supported</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -222,8 +243,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? MCPSupported { get; set; }
 
             /// <summary>
-            /// <para>The number of connections between a client and a server. This parameter is valid for ZooKeeper instances.\
-            /// If this parameter is set to 0, no limits are imposed on the number of connections.</para>
+            /// <para>The ZooKeeper configuration. This parameter indicates the number of connections between a client and a server.<br>
+            /// If this parameter is set to 0, no limit is imposed.<br></para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -233,7 +254,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string MaxClientCnxns { get; set; }
 
             /// <summary>
-            /// <para>The maximum timeout period. This parameter is valid for ZooKeeper instances.</para>
+            /// <para>The ZooKeeper configuration. This parameter indicates the maximum timeout duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-1</para>
@@ -243,7 +264,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string MaxSessionTimeout { get; set; }
 
             /// <summary>
-            /// <para>The minimum timeout period. This parameter is valid for ZooKeeper instances.</para>
+            /// <para>The ZooKeeper configuration. This parameter indicates the minimum timeout duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-1</para>
@@ -253,14 +274,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string MinSessionTimeout { get; set; }
 
             /// <summary>
-            /// <para>The runtime configuration of the Nacos instance.</para>
+            /// <para>The runtime configuration of Nacos.</para>
             /// </summary>
             [NameInMap("NacosRunningEnv")]
             [Validation(Required=false)]
             public QueryConfigResponseBodyDataNacosRunningEnv NacosRunningEnv { get; set; }
             public class QueryConfigResponseBodyDataNacosRunningEnv : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether empty list protection is enabled.</para>
+                /// <para>The switch for push-empty protection.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -285,12 +306,20 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     [Validation(Required=false)]
                     public Dictionary<string, string> InterceptPolicy { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>query_security_check</para>
+                    /// </summary>
                     [NameInMap("serviceName")]
                     [Validation(Required=false)]
                     public string ServiceName { get; set; }
 
                 }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("grayAuth")]
                 [Validation(Required=false)]
                 public string GrayAuth { get; set; }
@@ -298,10 +327,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether RAM authentication of a registry is enabled. This parameter is valid for Nacos instances. Valid values:</para>
+            /// <para>The Nacos configuration. This parameter indicates whether RAM authentication is enabled for the service registry. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: enabled.</description></item>
-            /// <item><description><c>false</c>: disabled.</description></item>
+            /// <item><description><para><c>true</c>: enabled</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: disabled</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -312,10 +343,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? NamingAuthEnabled { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether RAM authentication of services is supported by the instance. This parameter is valid for Nacos instances. Valid values:</para>
+            /// <para>The Nacos configuration. This parameter indicates whether the cluster supports RAM authentication for services. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: supported.</description></item>
-            /// <item><description><c>false</c>: not supported.</description></item>
+            /// <item><description><para><c>true</c>: supported</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: not supported</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -326,10 +359,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? NamingAuthSupported { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether service creation is supported for the instance. This parameter is valid for Nacos instances. Valid values:</para>
+            /// <para>The Nacos configuration. This parameter indicates whether the cluster supports service creation. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: supported.</description></item>
-            /// <item><description><c>false</c>: not supported.</description></item>
+            /// <item><description><para><c>true</c>: supported</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: not supported</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -340,10 +375,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? NamingCreateServiceSupported { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether super permissions are enabled. This parameter is valid for ZooKeeper instances. Valid values:</para>
+            /// <para>The ZooKeeper configuration. This parameter indicates whether the super permission is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: enabled.</description></item>
-            /// <item><description><c>false</c>: disabled.</description></item>
+            /// <item><description><para><c>true</c>: enabled</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: disabled</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -354,7 +391,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? OpenSuperAcl { get; set; }
 
             /// <summary>
-            /// <para>The password that corresponds to the username. This parameter is valid only if OpenSuperAcl is set to true.</para>
+            /// <para>The password. This parameter is returned only when OpenSuperAcl is set to true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>password</para>
@@ -363,15 +400,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string PassWord { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("PrometheusSdProtocolEnabled")]
             [Validation(Required=false)]
             public string PrometheusSdProtocolEnabled { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the instance was restarted and new configurations have taken effect. Valid values:</para>
+            /// <para>Indicates whether the cluster is restarted and the new configuration is applied. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: The restart was successful.</description></item>
-            /// <item><description><c>false</c>: The restart failed.</description></item>
+            /// <item><description><para><c>true</c>: The cluster is restarted.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: The cluster fails to be restarted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -382,7 +425,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? RestartFlag { get; set; }
 
             /// <summary>
-            /// <para>The frequency for generating snapshots. This parameter is valid for ZooKeeper instances.</para>
+            /// <para>The ZooKeeper configuration. This parameter indicates the frequency of generating snapshots.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100000</para>
@@ -392,7 +435,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string SnapshotCount { get; set; }
 
             /// <summary>
-            /// <para>The connection timeout period of the instance. This parameter is valid for ZooKeeper instances. Unit: seconds.</para>
+            /// <para>The ZooKeeper configuration. This parameter indicates the connection timeout duration of an instance. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -402,7 +445,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string SyncLimit { get; set; }
 
             /// <summary>
-            /// <para>MSE Nacos supports TLS transmission link encryption since version 2.1.2.1. Nacos clients must be upgraded to version 2.2.1 or later. After TLS is enabled, the system performance will decrease by about 10%. You must evaluate the system capacity. For more information about the relevant operations, see Nacos TLS transmission encryption.</para>
+            /// <para>MSE Nacos instances of version 2.1.2.1 or later support Transport Layer Security (TLS) encryption. The version of the Nacos client must be 2.2.1 or later. After you enable TLS, the performance may decrease by about 10%. You must evaluate the system capacity. For more information about the operations, see Nacos TLS transport encryption.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -412,7 +455,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? TLSEnabled { get; set; }
 
             /// <summary>
-            /// <para>The time unit of the engine. This parameter is valid for ZooKeeper instances. Default value: 2000. Unit: milliseconds.</para>
+            /// <para>The ZooKeeper configuration. This parameter indicates a unit of time in the engine. The default value is 2000. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2000</para>
@@ -422,7 +465,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string TickTime { get; set; }
 
             /// <summary>
-            /// <para>The username of the user. This parameter is valid only if OpenSuperAcl is set to true.</para>
+            /// <para>The username. This parameter is returned only when OpenSuperAcl is set to true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -434,7 +477,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -447,7 +490,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <para>The message returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request was successfully processed.</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -466,8 +509,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

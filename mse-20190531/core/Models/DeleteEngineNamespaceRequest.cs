@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class DeleteEngineNamespaceRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-0c738****</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the namespace.</para>
+        /// <para>The namespace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>678ca857-****-b1bf-d0a98c5ca84b</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-cn-7pp2d1****</para>

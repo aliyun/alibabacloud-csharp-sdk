@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class QueryNacosGrayConfigResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryNacosGrayConfigResponseBodyData Data { get; set; }
         public class QueryNacosGrayConfigResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The application name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>spring-cloud-a</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string AppName { get; set; }
 
             /// <summary>
+            /// <para>The configuration content.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>text</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Content { get; set; }
 
             /// <summary>
+            /// <para>The DataId of the configuration.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test.yaml</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string DataId { get; set; }
 
             /// <summary>
+            /// <para>The canary release rule.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>nacos.config.gray.label=test</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GrayRule { get; set; }
 
             /// <summary>
+            /// <para>The name of the canary release version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Beta(IP)</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GrayRuleName { get; set; }
 
             /// <summary>
+            /// <para>The priority of the canary release version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GrayRulePriority { get; set; }
 
             /// <summary>
+            /// <para>The canary release type. Valid values: Beta or Tag.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Tags</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GrayType { get; set; }
 
             /// <summary>
+            /// <para>The configuration group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dubbo</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Group { get; set; }
 
             /// <summary>
+            /// <para>The last modification time of the configuration.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1742277568000</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string LastModified { get; set; }
 
             /// <summary>
+            /// <para>The MD5 hash of the configuration content.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>87d14faf58a103ac8840b9c5f1c2a0fe</para>
             /// </summary>
@@ -96,6 +119,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EE5C32A1-BC0E-4B79-817C-103E4EDF****</para>
         /// </summary>

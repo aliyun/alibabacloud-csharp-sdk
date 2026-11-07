@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GatewayBlackWhiteListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. A value of 200 is returned if the request is successful.</para>
+        /// <para>The code that synchronizes with the Success parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GatewayBlackWhiteListResponseBodyData Data { get; set; }
         public class GatewayBlackWhiteListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the instance list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of entries per page specified in the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The returned information.</para>
+            /// <para>The returned result set.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public long? GatewayId { get; set; }
 
                 /// <summary>
-                /// <para>The unique ID of the gateway.</para>
+                /// <para>The unique identifier of the gateway.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>gw-5017305290e14centbrveca****</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string GatewayUniqueId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the blacklist or whitelist was created.</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-08-02T02:43:40.000+0000</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The time when the rule was modified.</para>
+                /// <para>The update time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-08-02T02:43:40.000+0000</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the blacklist and whitelist.</para>
+                /// <para>The ID of the blacklists and whitelists.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>549</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable the whitelist feature.</para>
+                /// <para>Indicates whether it is a whitelist.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -134,7 +134,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The comment.</para>
+                /// <para>The note.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Blocked IP list</para>
                 /// </summary>
                 [NameInMap("Note")]
                 [Validation(Required=false)]
@@ -151,10 +154,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public long? ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The list of resource IDs in the JSON format.</para>
+                /// <para>The JSON string of the resource ID list.</para>
                 /// <list type="bullet">
-                /// <item><description>If the value of the ResourceType parameter is ROUTE, the value of this parameter is the list of route IDs.</description></item>
-                /// <item><description>If the value of the ResourceType parameter is DOMAIN, the value of this parameter is the list of domain names.</description></item>
+                /// <item><description><para>If ResourceType is set to ROUTE, this parameter is a list of route IDs.</para>
+                /// </description></item>
+                /// <item><description><para>If ResourceType is set to DOMAIN, this parameter is a list of domain name IDs.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -165,7 +170,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string ResourceIdJsonList { get; set; }
 
                 /// <summary>
-                /// <para>The description of the resource name.</para>
+                /// <para>The resource name description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -175,11 +180,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string ResourceIdNameJson { get; set; }
 
                 /// <summary>
-                /// <para>The effective scope of the blacklist or whitelist. Valid values:</para>
+                /// <para>The effective granularity. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>GATEWAY</description></item>
-                /// <item><description>DOMAIN</description></item>
-                /// <item><description>ROUTE</description></item>
+                /// <item><description>GATEWAY: global gateway level.</description></item>
+                /// <item><description>DOMAIN: domain name level.</description></item>
+                /// <item><description>ROUTE: route level.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -190,10 +195,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// <para>The status of the blacklist or whitelist.</para>
+                /// <para>The status of the blacklists and whitelists. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>on</description></item>
-                /// <item><description>off</description></item>
+                /// <item><description><para>on: enabled.</para>
+                /// </description></item>
+                /// <item><description><para>off: shutdown.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -204,7 +211,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The type of the blacklist and whitelist. The value is fixed to IP address blacklist and whitelist.</para>
+                /// <para>The type of the blacklists and whitelists. The value is fixed to IP blacklists and whitelists.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>IP</para>
@@ -216,7 +223,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// <para>The total number of instances returned.</para>
+            /// <para>The total number of queried instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -228,7 +235,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The placeholder in the dynamic error message. This parameter is not returned.</para>
+        /// <para>The placeholder in the dynamic error message. This parameter is not used and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>code</para>
@@ -238,7 +245,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic message. This parameter is not returned.</para>
+        /// <para>The dynamic message. This parameter is not used and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The specified parameter is invalid.</para>
@@ -288,10 +295,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c></description></item>
-        /// <item><description><c>false</c></description></item>
+        /// <item><description><c>true</c>: The request is successful.</description></item>
+        /// <item><description><c>false</c>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

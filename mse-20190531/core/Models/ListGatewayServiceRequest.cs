@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable sorting.</para>
+        /// <para>The sort order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? DescSort { get; set; }
 
         /// <summary>
-        /// <para>The parameters that are used to specify filter conditions. The values of the parameters are in the format of {&quot;key1&quot;:&quot;value1&quot;}.</para>
+        /// <para>The filter conditions in the format of {&quot;key1&quot;:&quot;value1&quot;}.</para>
         /// </summary>
         [NameInMap("FilterParams")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GatewayUniqueId { get; set; }
 
             /// <summary>
-            /// <para>The group.</para>
+            /// <para>The group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The name of the service.</para>
+            /// <para>The service name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The namespace to which the service belongs.</para>
+            /// <para>The namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>public</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The protocol of the service.</para>
+            /// <para>The Terms of Service. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>HTTP</description></item>
             /// <item><description>HTTPS</description></item>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ServiceProtocol { get; set; }
 
             /// <summary>
-            /// <para>The type of the source.</para>
+            /// <para>The source type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MSE</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The item based on which entries are sorted.</para>
+        /// <para>The sort attribute.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GmtCreate</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string OrderItem { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

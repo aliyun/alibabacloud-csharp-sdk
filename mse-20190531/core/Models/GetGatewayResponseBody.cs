@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetGatewayResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned. A value of 200 indicates that the request is successful.</para>
+        /// <para>The status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The information about the gateway.</para>
+        /// <para>The gateway information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetGatewayResponseBodyData Data { get; set; }
         public class GetGatewayResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The billing method, such as subscription or pay-as-you-go.</para>
+            /// <para>The billing method. Valid values: subscription and pay-as-you-go.</para>
             /// 
             /// <b>Example:</b>
             /// <para>POSTPAY</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether auto scale-out is enabled.</para>
+            /// <para>Specifies whether auto-scaling is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -47,16 +47,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? Elastic { get; set; }
 
             /// <summary>
-            /// <para>The auto scale-out policy.</para>
+            /// <para>The auto-scaling policy.</para>
             /// </summary>
             [NameInMap("ElasticPolicy")]
             [Validation(Required=false)]
             public GetGatewayResponseBodyDataElasticPolicy ElasticPolicy { get; set; }
             public class GetGatewayResponseBodyDataElasticPolicy : TeaModel {
                 /// <summary>
-                /// <para>The type of auto scale-out. Valid value:</para>
+                /// <para>The auto-scaling type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>CronHPA: scale-out by time</description></item>
+                /// <item><description>CronHPA: Time-based scaling.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string ElasticType { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of instances that are automatically scaled out. This parameter is used for horizontal scale-out.</para>
+                /// <para>The maximum number of instances for auto-scaling, which is used for horizontal scaling.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? MaxReplica { get; set; }
 
                 /// <summary>
-                /// <para>The policy of scale-out by time.</para>
+                /// <para>The time-based scaling policy.</para>
                 /// </summary>
                 [NameInMap("TimePolicyList")]
                 [Validation(Required=false)]
                 public List<GetGatewayResponseBodyDataElasticPolicyTimePolicyList> TimePolicyList { get; set; }
                 public class GetGatewayResponseBodyDataElasticPolicyTimePolicyList : TeaModel {
                     /// <summary>
-                    /// <para>The number of expected replicas.</para>
+                    /// <para>The expected number of replicas.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public int? DesiredReplica { get; set; }
 
                     /// <summary>
-                    /// <para>The end time of auto scale-out.</para>
+                    /// <para>The end time in the HH:mm format (24-hour clock).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>18:00</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string EndTime { get; set; }
 
                     /// <summary>
-                    /// <para>The start time of auto scale-out.</para>
+                    /// <para>The start time in the HH:mm format (24-hour clock).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>16:00</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// <para>The number of replicas that are automatically scaled out.</para>
+            /// <para>The number of auto-scaling replicas.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -128,9 +128,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? ElasticReplica { get; set; }
 
             /// <summary>
-            /// <para>The type of auto scale-out. Valid value:</para>
+            /// <para>The auto-scaling type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CronHPA: scale-out by time</description></item>
+            /// <item><description>CronHPA: Time-based scaling.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ElasticType { get; set; }
 
             /// <summary>
-            /// <para>The time when the gateway expires.</para>
+            /// <para>The expiration time of the gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-08-01 00:00:00</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GatewayUniqueId { get; set; }
 
             /// <summary>
-            /// <para>The time when the gateway was created. The time is displayed in GMT. The time is the local time of the region in which the gateway resides.</para>
+            /// <para>The time when the gateway was created. The time is in GMT and represents the local time of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-01-07T10:07:57.000+0000</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the gateway was last modified.</para>
+            /// <para>The time when the instance was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-01-07T10:07:57.000+0000</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The ID of the gateway.</para>
+            /// <para>The gateway ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mse-cn-st21ri2****</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public GetGatewayResponseBodyDataLogConfigDetails LogConfigDetails { get; set; }
             public class GetGatewayResponseBodyDataLogConfigDetails : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether Log Service is activated.</para>
+                /// <para>Specifies whether log delivery is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public bool? LogEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The name of the Logstore.</para>
+                /// <para>The Logstore name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mse_access_log</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string LogStoreName { get; set; }
 
                 /// <summary>
-                /// <para>The name of the project.</para>
+                /// <para>The project name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>k8s-log-c173117256e934a96b7fefdf2ef8a8057</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// <para>The tag of the resource.</para>
+            /// <para>The resource tags.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;TagKey&quot;:&quot;TagValue&quot;}</para>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string MseTag { get; set; }
 
             /// <summary>
-            /// <para>The name of the gateway.</para>
+            /// <para>The gateway name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DEFAULT</para>
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud account ID of the user who created the gateway.</para>
+            /// <para>The ID of the primary user who created the gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1231254</para>
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string PrimaryUser { get; set; }
 
             /// <summary>
-            /// <para>The region ID.</para>
+            /// <para>The region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -283,14 +283,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// <para>The number of gateway replicas.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Replica")]
             [Validation(Required=false)]
             public int? Replica { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfm34x43l*****</para>
@@ -300,7 +300,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the security group.</para>
+            /// <para>The security group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-bp11ufzqn6mmb8dtzz82</para>
@@ -310,7 +310,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string SecurityGroup { get; set; }
 
             /// <summary>
-            /// <para>The specifications of the gateway.</para>
+            /// <para>The gateway specifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MSE_GTW_16_32_200_c</para>
@@ -320,19 +320,19 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Spec { get; set; }
 
             /// <summary>
-            /// <para>The status of the gateway. Valid values:</para>
+            /// <para>The result status of the data integration synchronization node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: The gateway is being created.</description></item>
-            /// <item><description>1: The gateway fails to be created.</description></item>
-            /// <item><description>2: The gateway is running.</description></item>
-            /// <item><description>3: The gateway is changing.</description></item>
-            /// <item><description>4: The gateway is scaling in.</description></item>
-            /// <item><description>6: The gateway is scaling out.</description></item>
-            /// <item><description>8: The gateway is being deleted.</description></item>
-            /// <item><description>10: The gateway is restarting.</description></item>
-            /// <item><description>11: The gateway is being rebuilt.</description></item>
-            /// <item><description>12: The gateway is updating.</description></item>
-            /// <item><description>13: The gateway fails to be updated.</description></item>
+            /// <item><description>0: Creating.</description></item>
+            /// <item><description>1: Creation failed.</description></item>
+            /// <item><description>2: Running.</description></item>
+            /// <item><description>3: Modifying.</description></item>
+            /// <item><description>4: Scaling in.</description></item>
+            /// <item><description>6: Scaling out.</description></item>
+            /// <item><description>8: delete.</description></item>
+            /// <item><description>10: Restarting.</description></item>
+            /// <item><description>11: Rebuilding.</description></item>
+            /// <item><description>12: Upgrading.</description></item>
+            /// <item><description>13: Upgrade failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -343,7 +343,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The description of the status.</para>
+            /// <para>The status description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Restarting</para>
@@ -353,7 +353,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string StatusDesc { get; set; }
 
             /// <summary>
-            /// <para>The total number of replicas, including the number of replicas that are automatically scaled out.</para>
+            /// <para>The total number of replicas, including auto-scaling replicas.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -363,7 +363,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? TotalReplica { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC.</para>
+            /// <para>The VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1328cm01m6uel42b5zb</para>
@@ -373,7 +373,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Vpc { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch.</para>
+            /// <para>The vSwitch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-bp18zeqxx6mpuq843z4n5</para>
@@ -383,7 +383,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Vswitch { get; set; }
 
             /// <summary>
-            /// <para>The ID of the secondary vSwitch.</para>
+            /// <para>The secondary vSwitch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1j6ivhav15ve7q54kq2</para>
@@ -393,14 +393,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Vswitch2 { get; set; }
 
             /// <summary>
-            /// <para>The details of Tracing Analysis.</para>
+            /// <para>The XTrace details.</para>
             /// </summary>
             [NameInMap("XtraceDetails")]
             [Validation(Required=false)]
             public GetGatewayResponseBodyDataXtraceDetails XtraceDetails { get; set; }
             public class GetGatewayResponseBodyDataXtraceDetails : TeaModel {
                 /// <summary>
-                /// <para>The sampling rate of Tracing Analysis.</para>
+                /// <para>The XTrace sampling rate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -410,7 +410,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? Sample { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether sampling by using Tracing Analysis is enabled.</para>
+                /// <para>Specifies whether XTrace sampling is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -424,7 +424,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -434,17 +434,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The message that indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request is successfully processed.</para>
+        /// <para>The request is processed successfully</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9C96CDF8-9E6C-5AB6-B83C-8F87A10117E6</para>
@@ -454,10 +454,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><c>true</c>: The request is successful.</description></item>
+        /// <item><description><c>false</c>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

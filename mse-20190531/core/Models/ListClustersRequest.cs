@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The alias of the instance. Fuzzy match is supported.</para>
+        /// <para>The name of the cluster. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cluster</para>
@@ -33,12 +33,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string ClusterAliasName { get; set; }
 
+        /// <summary>
+        /// <para>The key ID. If the cluster is a Nacos cluster, this parameter is used to query instances bound to the specified key ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>key-hzz67774641bsp21vhj4h</para>
+        /// </summary>
         [NameInMap("KeyId")]
         [Validation(Required=false)]
         public string KeyId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +55,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of clusters to return on each page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,7 +66,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the instance resides. The region is supported by MSE.</para>
+        /// <para>The region ID of the cluster. The region must be supported by Microservices Engine (MSE).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,7 +77,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The extended request parameters in the JSON format.</para>
+        /// <para>The extended request parameters in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -81,7 +87,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestPars { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. For more information about resource groups, see the topic &quot;View basic information of a resource group.&quot;</para>
+        /// <para>The ID of the resource group. For more information, see View basic information of a resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxbzafebvvfa</para>
@@ -91,14 +97,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of tags. A maximum number of 20 tags are supported.</para>
+        /// <para>The list of tags. A maximum of 20 tags can be specified.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListClustersRequestTag> Tag { get; set; }
         public class ListClustersRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env</para>
@@ -108,7 +114,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prd</para>
@@ -119,6 +125,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         }
 
+        /// <summary>
+        /// <para>The VPC ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-bp1t50e045b5g7i3p****</para>
+        /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class QueryClusterDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query access control lists (ACLs).</para>
+        /// <para>Specifies whether to query the access control list (ACL).</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? AclSwitch { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-cn-st21ri2****</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20576750143****</para>

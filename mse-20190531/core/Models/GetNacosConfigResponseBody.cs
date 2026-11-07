@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// <para>Configuration description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>For testing</para>
+            /// <para>Testdedicateduse</para>
             /// </summary>
             [NameInMap("Desc")]
             [Validation(Required=false)]

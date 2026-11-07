@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListEurekaServicesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the data.</para>
+        /// <para>The data overview.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListEurekaServicesResponseBodyData> Data { get; set; }
         public class ListEurekaServicesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The details of the instance.</para>
+            /// <para>The instance information.</para>
             /// </summary>
             [NameInMap("InstancesId")]
             [Validation(Required=false)]
             public List<string> InstancesId { get; set; }
 
             /// <summary>
-            /// <para>The name of the service.</para>
+            /// <para>The service name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CONTACTINFO</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The number of service providers. The value is in the following format: Number of healthy instances/Total number of instances.</para>
+            /// <para>The number of service providers, in the format of healthy instances/total instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1/1</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-100-000</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>202</para>
@@ -66,17 +66,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string HttpCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request is successfully processed.</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of instances to return per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>316F5F64-F73D-42DC-8632-01E308B6****</para>
@@ -106,9 +106,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
+        /// <item><description><c>true</c>: The request succeeded.</description></item>
         /// <item><description><c>false</c>: The request failed.</description></item>
         /// </list>
         /// 
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned instances.</para>
+        /// <para>The total number of instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>

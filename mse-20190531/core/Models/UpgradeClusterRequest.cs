@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpgradeClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The extended request parameters in the JSON format.</para>
+        /// <para>The extended request parameters in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestPars { get; set; }
 
         /// <summary>
-        /// <para>The destination version.</para>
+        /// <para>The target upgrade version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

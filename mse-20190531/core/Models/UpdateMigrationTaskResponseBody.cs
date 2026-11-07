@@ -17,11 +17,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public UpdateMigrationTaskResponseBodyData Data { get; set; }
         public class UpdateMigrationTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The type of the instance.</para>
+            /// <para>The type of the cluster.</para>
             /// <list type="bullet">
-            /// <item><description>Nacos-Ans</description></item>
-            /// <item><description>ZooKeeper</description></item>
-            /// <item><description>Eureka</description></item>
+            /// <item><description><para>Nacos-Ans</para>
+            /// </description></item>
+            /// <item><description><para>ZooKeeper</para>
+            /// </description></item>
+            /// <item><description><para>Eureka</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -32,7 +35,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ClusterType { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the migration task was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-01-07T10:07:57.000+0000</para>
@@ -42,7 +45,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The time when the migration task was updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-01-07T10:07:57.000+0000</para>
@@ -52,7 +55,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -62,7 +65,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The address of the source instance node.</para>
+            /// <para>The source instance node address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.100.2:2181</para>
@@ -92,7 +95,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string OriginInstanceNamespace { get; set; }
 
             /// <summary>
-            /// <para>The description.</para>
+            /// <para>The description of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1232345</para>
@@ -101,6 +104,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string ProjectDesc { get; set; }
 
+            /// <summary>
+            /// <para>The synchronization type</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>All</para>
+            /// </summary>
             [NameInMap("SyncType")]
             [Validation(Required=false)]
             public string SyncType { get; set; }
@@ -136,7 +145,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string TargetInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>183876217*****</para>
@@ -148,7 +157,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-100-000</para>
@@ -158,7 +167,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -168,17 +177,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string HttpCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request was successfully processed.</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AF21683A-29C7-4853-AC0F-B5ADEE4****</para>
@@ -190,8 +199,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

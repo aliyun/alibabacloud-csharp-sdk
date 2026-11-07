@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class AddGatewaySlbShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// <para>The HTTP port number (virtual service group).</para>
+        /// <para>The HTTP port (virtual service group).</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpPort { get; set; }
 
         /// <summary>
-        /// <para>The HTTPS port number (virtual service group).</para>
+        /// <para>The HTTPS port (virtual service group).</para>
         /// 
         /// <b>Example:</b>
         /// <para>443</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string HttpsVServerGroupId { get; set; }
 
         /// <summary>
-        /// <para>The service weight.</para>
+        /// <para>The weight of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? ServiceWeight { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SLB instance.</para>
+        /// <para>The SLB ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,10 +86,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string SlbId { get; set; }
 
         /// <summary>
-        /// <para>The type of the service source. Valid values:</para>
+        /// <para>The type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PUB_NET: Internet</description></item>
-        /// <item><description>PRIVATE_NET: VPC</description></item>
+        /// <item><description>PUB_NET: Internet.</description></item>
+        /// <item><description>PRIVATE_NET: Private network.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string VServerGroupId { get; set; }
 
         /// <summary>
-        /// <para>The SLB monitoring information.</para>
+        /// <para>The SLB listener information.</para>
         /// </summary>
         [NameInMap("VServiceList")]
         [Validation(Required=false)]

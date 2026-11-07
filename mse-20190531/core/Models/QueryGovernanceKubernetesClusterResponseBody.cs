@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class QueryGovernanceKubernetesClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryGovernanceKubernetesClusterResponseBodyData Data { get; set; }
         public class QueryGovernanceKubernetesClusterResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The size of the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The details of the data.</para>
+            /// <para>The data structure.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string K8sVersion { get; set; }
 
                 /// <summary>
-                /// <para>The information about the namespace.</para>
+                /// <para>The namespace information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[{&quot;Name&quot;:&quot;ack-onepilot&quot;,&quot;Tags&quot;:{&quot;name&quot;:&quot;ack-onepilot&quot;}}]</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string NamespaceInfos { get; set; }
 
                 /// <summary>
-                /// <para>The time when the pilot component was started.</para>
+                /// <para>The start time of Pilot.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-05-17T05:39:43.000+0000</para>
@@ -93,12 +93,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string PilotStartTime { get; set; }
 
+                /// <summary>
+                /// <para>The Pilot version.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>4.1.1</para>
+                /// </summary>
                 [NameInMap("PilotVersion")]
                 [Validation(Required=false)]
                 public string PilotVersion { get; set; }
 
                 /// <summary>
-                /// <para>The region where the cluster resides.</para>
+                /// <para>The region where the cluster is deployed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-shanghai</para>
@@ -107,6 +113,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
+                /// <summary>
+                /// <para>The version lifecycle.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>STABLE</para>
+                /// </summary>
                 [NameInMap("VersionLifeCycle")]
                 [Validation(Required=false)]
                 public string VersionLifeCycle { get; set; }
@@ -136,7 +148,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DE34D413-2B79-5E77-9696-36D875E822AD</para>
@@ -146,7 +158,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

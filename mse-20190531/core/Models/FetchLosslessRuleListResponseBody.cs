@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class FetchLosslessRuleListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code returned.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public FetchLosslessRuleListResponseBodyData Data { get; set; }
         public class FetchLosslessRuleListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public List<FetchLosslessRuleListResponseBodyDataResults> Results { get; set; }
             public class FetchLosslessRuleListResponseBodyDataResults : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether service registration is complete before readiness probe.</para>
+                /// <para>Specifies whether to enable completing service registration before passing the readiness check.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -64,17 +64,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public bool? Aligned { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the application.</para>
+                /// <para>The application ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>hkhon1po62@24810bf4364aea1</para>
+                /// <para>hkhon1po62@24810bf4364a***</para>
                 /// </summary>
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the application.</para>
+                /// <para>The application name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>echo-demo</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? Count { get; set; }
 
                 /// <summary>
-                /// <para>The registration latency. Unit: seconds.</para>
+                /// <para>The delayed registration time in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>60</para>
@@ -104,10 +104,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? DelayTime { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether graceful start is enabled. Valid values:</para>
+                /// <para>The enabling status of graceful start. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>true</c>: enabled</description></item>
-                /// <item><description><c>false</c>: disabled</description></item>
+                /// <item><description><c>true</c>: Enabled.</description></item>
+                /// <item><description><c>false</c>: Disabled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public bool? Enable { get; set; }
 
                 /// <summary>
-                /// <para>The slope of the prefetching curve.</para>
+                /// <para>The slope of the warm-up curve.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? FuncType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether online and offline processing details are displayed.</para>
+                /// <para>Specifies whether to enable the processing details for graceful start and shutdown.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public bool? LossLessDetail { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether notification is enabled.</para>
+                /// <para>Specifies whether to enable proactive notifications.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public bool? Notice { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether service prefetching is complete before readiness probe.</para>
+                /// <para>Specifies whether to enable completing service warm-up before passing the readiness check.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public bool? Related { get; set; }
 
                 /// <summary>
-                /// <para>The prefetching duration. Unit: seconds.</para>
+                /// <para>The warm-up duration in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>60</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>36</para>
@@ -182,6 +182,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -190,6 +192,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -198,7 +202,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -208,7 +212,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>56D9E600-6348-4260-B35F-583413F****</para>
@@ -218,14 +222,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>The request result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><c>true</c>: The request is successful.</description></item>
+        /// <item><description><c>false</c>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>True</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

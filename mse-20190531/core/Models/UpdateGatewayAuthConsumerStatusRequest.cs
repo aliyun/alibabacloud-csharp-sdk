@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateGatewayAuthConsumerStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +26,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The status of the consumer. Valid values:</para>
+        /// <para>Specifies whether the authentication consumer is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The consumer is enabled.</description></item>
-        /// <item><description>false: The consumer is disabled.</description></item>
+        /// <item><description><para>true: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para>false: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// <para>The consumer ID.</para>
+        /// <para>The ID of the authentication consumer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public CreateMseServiceApplicationResponseBodyData Data { get; set; }
         public class CreateMseServiceApplicationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The application ID.</para>
+            /// <para>The ID of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxxxxxx@xxxxxxxxxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1631001140913</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>The license key in use.</para>
+            /// <para>The license key of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxxxxxx@xxxxxxxxxx</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string LicenseKey { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The status. Valid values: 1: available; 2: deleted.</para>
+            /// <para>The status. A value of 1 indicates the available state, and a value of 2 indicates the deleted state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The last modification time.</para>
+            /// <para>The last update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1632979237663</para>
@@ -139,10 +139,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request was successfully processed.</para>
+        /// <para>The request is processed successfully</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -159,10 +159,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>The request result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><c>true</c>: The request is successful.</description></item>
+        /// <item><description><c>false</c>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

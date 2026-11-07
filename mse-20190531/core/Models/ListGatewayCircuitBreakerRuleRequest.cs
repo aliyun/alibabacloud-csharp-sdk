@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListGatewayCircuitBreakerRuleRequest : TeaModel {
         /// <summary>
+        /// <para>The language in which the returned results are displayed. Valid values: zh (default): Chinese, en: English</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>

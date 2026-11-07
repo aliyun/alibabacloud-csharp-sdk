@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CreateApplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code returned.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data of the node.</para>
+        /// <para>The data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>data</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public CreateApplicationResponseBodyData Data { get; set; }
         public class CreateApplicationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the application.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxxxxxx@xxxxxxxxxx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The name of the application.</para>
+            /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>spring-cloud-a</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1631001140913</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The additional information.</para>
+            /// <para>The extra information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;rpcTypes\&quot;:[\&quot;dubbo\&quot;,\&quot;springCloud\&quot;]}</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>The license key in use.</para>
+            /// <para>The license key corresponding to the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxxxxxx@xxxxxxxxxx</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string LicenseKey { get; set; }
 
             /// <summary>
-            /// <para>MSE命名空间名字。</para>
+            /// <para>The name of the MSE namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prod</para>
@@ -110,10 +110,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The service where the application is deployed. Valid values:</para>
+            /// <para>The deployment method of the application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>\- ACK: Container Service for Kubernetes</description></item>
-            /// <item><description>\- Normal: another service</description></item>
+            /// <item><description>ACK: Container Service for Kubernetes (ACK).</description></item>
+            /// <item><description>Normal: Other access methods.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The status of the application. A value of 1 indicates that the application is in a normal state.</para>
+            /// <para>The application status. A value of 1 indicates normal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The last update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1632979237663</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account.</para>
+            /// <para>The Alibaba Cloud user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1888888888</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>版本号。</para>
+            /// <para>The version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>68D91223-CCE9-5F9C-B538-20F617DA48B1</para>
@@ -196,10 +196,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>The request result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><c>true</c>: The request is successful.</description></item>
+        /// <item><description><c>false</c>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

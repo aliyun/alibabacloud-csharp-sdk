@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class RemoveApplicationRequest : TeaModel {
         /// <summary>
+        /// <para>The language of the returned results. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese. This is the default value.</description></item>
+        /// <item><description>en: English.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +24,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>The ID of the application to delete.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>abcde@12345</para>
         /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The name of the application to delete.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example-app</para>
         /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>The microservice namespace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>prod</para>
         /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <para>The region.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

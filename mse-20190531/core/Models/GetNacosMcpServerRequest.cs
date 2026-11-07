@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetNacosMcpServerRequest : TeaModel {
         /// <summary>
+        /// <para>The language of the response. Valid values: zh (default): Chinese. en: English.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mse_prepaid_public_cn-tl327w****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the MCP server.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5e3c5211-d365-4013-8540-c4106ec2a5dc</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string McpServerId { get; set; }
 
         /// <summary>
+        /// <para>The version of the MCP server.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1.0.0</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string McpServerVersion { get; set; }
 
         /// <summary>
+        /// <para>The namespace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5e3ee449-b5c0-4aee-b857-32c0acbebf26</para>
         /// </summary>

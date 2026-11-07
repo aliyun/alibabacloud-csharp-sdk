@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CreateOrUpdateSwimmingLaneShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.</para>
+        /// <para>The language in which the results are returned. Valid values: zh (Chinese, default) and en (English).</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the lane.</para>
+        /// <para>Specifies whether the lane is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to configure a routing rule for the lane. If an Ingress gateway is used, this parameter is not required.</para>
+        /// <para>Specifies whether to configure routing rules for the lane. Configuration is not required if the ingress is a gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <para>The JSON string.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{}</para>
+        /// <para>[{&quot;Priority&quot;:1,&quot;Paths&quot;:[],&quot;Condition&quot;:&quot;AND&quot;,&quot;RestItems&quot;:[{&quot;Type&quot;:&quot;param&quot;,&quot;Name&quot;:&quot;name&quot;,&quot;Value&quot;:&quot;xiaoming&quot;,&quot;Cond&quot;:&quot;==&quot;,&quot;Operator&quot;:&quot;rawvalue&quot;}]}]</para>
         /// </summary>
         [NameInMap("EntryRule")]
         [Validation(Required=false)]
@@ -53,24 +53,24 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string EntryRule { get; set; }
 
         /// <summary>
-        /// <para>The lane.</para>
+        /// <para>The collection of lane rules.</para>
         /// </summary>
         [NameInMap("EntryRules")]
         [Validation(Required=false)]
         public List<CreateOrUpdateSwimmingLaneShrinkRequestEntryRules> EntryRules { get; set; }
         public class CreateOrUpdateSwimmingLaneShrinkRequestEntryRules : TeaModel {
             /// <summary>
-            /// <para>Specifies how RESTful items are combined into the final condition.</para>
+            /// <para>Specifies how RestItems are combined to form the final condition.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot;&quot;</para>
+            /// <para>AND</para>
             /// </summary>
             [NameInMap("Condition")]
             [Validation(Required=false)]
             public string Condition { get; set; }
 
             /// <summary>
-            /// <para>The paths.</para>
+            /// <para>The list of paths.</para>
             /// </summary>
             [NameInMap("Paths")]
             [Validation(Required=false)]
@@ -87,17 +87,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The matching list.</para>
+            /// <para>The list of matching items.</para>
             /// </summary>
             [NameInMap("RestItems")]
             [Validation(Required=false)]
             public List<CreateOrUpdateSwimmingLaneShrinkRequestEntryRulesRestItems> RestItems { get; set; }
             public class CreateOrUpdateSwimmingLaneShrinkRequestEntryRulesRestItems : TeaModel {
                 /// <summary>
-                /// <para>The matching character.</para>
+                /// <para>The match operator.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>=</para>
+                /// <para>==</para>
                 /// </summary>
                 [NameInMap("Cond")]
                 [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 /// <para>The value.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>.params[0]</para>
+                /// <para>x</para>
                 /// </summary>
                 [NameInMap("Datum")]
                 [Validation(Required=false)]
@@ -127,14 +127,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 /// <para>The name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>&quot;&quot;</para>
+                /// <para>x-mse-tag</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The matching list.</para>
+                /// <para>The list of matching items.</para>
                 /// </summary>
                 [NameInMap("NameList")]
                 [Validation(Required=false)]
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 /// <para>The operator.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>mod</para>
+                /// <para>rawvalue</para>
                 /// </summary>
                 [NameInMap("Operator")]
                 [Validation(Required=false)]
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 /// <para>The percentage.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>10</para>
+                /// <para>30</para>
                 /// </summary>
                 [NameInMap("Rate")]
                 [Validation(Required=false)]
@@ -164,14 +164,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 /// <para>The remainder.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>3</para>
+                /// <para>10</para>
                 /// </summary>
                 [NameInMap("Remainder")]
                 [Validation(Required=false)]
                 public int? Remainder { get; set; }
 
                 /// <summary>
-                /// <para>The matching type.</para>
+                /// <para>The match type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>header</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 /// <para>The value.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>&quot;&quot;</para>
+                /// <para>gray</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -195,21 +195,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The information about the routing rule for the gateway. This parameter is required when a cloud-native gateway is used as the ingress.</para>
+        /// <para>The gateway routing information. This parameter is used when a cloud-native gateway is used as the ingress.</para>
         /// </summary>
         [NameInMap("GatewaySwimmingLaneRouteJson")]
         [Validation(Required=false)]
         public string GatewaySwimmingLaneRouteJsonShrink { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:****</para>
-        /// <list type="bullet">
-        /// <item><description><b>zh-CN</b>: Chinese</description></item>
-        /// <item><description><b>en-US</b>: English</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>Default value: <b>zh-CN</b>.</para>
-        /// </remarks>
+        /// <para>The ID of the lane group to which the lane belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>115</para>
@@ -219,7 +212,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the primary key. The value -1 indicates a request that is used to create a lane. A value greater than 0 indicates a request that is used to modify a lane.</para>
+        /// <para>The primary key ID. A value of -1 indicates that a lane is created. A value greater than 0 indicates that a specified lane is updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-1</para>
@@ -233,13 +226,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test lane</para>
+        /// <para>gray</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The name of the MSE namespace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default</para>
         /// </summary>
@@ -247,12 +242,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
+        /// <summary>
+        /// <para><b>[Deprecated]</b> The Java gateway-related configuration for percentage-based routing by path.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("PathIndependentPercentageEnable")]
         [Validation(Required=false)]
         public bool? PathIndependentPercentageEnable { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -262,7 +263,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The tag.</para>
+        /// <para>The identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gray</para>

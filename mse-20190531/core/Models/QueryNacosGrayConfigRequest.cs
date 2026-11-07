@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class QueryNacosGrayConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The language of the response. Valid values: zh (default): Chinese. en: English.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>The DataId of the configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DataId { get; set; }
 
         /// <summary>
+        /// <para>The name of the canary release rule.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GrayName { get; set; }
 
         /// <summary>
+        /// <para>The configuration group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DEFAULT_GROUP</para>
         /// </summary>
@@ -44,6 +51,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Group { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The namespace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6bafdde3-4fa7-4d67-b3da-a607ab87f7e4</para>
         /// </summary>
@@ -62,6 +72,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
+        /// <para>The region where the cluster resides.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -70,6 +82,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>This field is deprecated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>

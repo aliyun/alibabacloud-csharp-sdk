@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CreateGatewayIsolationRuleRequest : TeaModel {
         /// <summary>
+        /// <para>The language in which you want to display the results. Valid values: zh and en. zh is the default value, which indicates Chinese. en indicates English.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +20,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>The type of a web fallback behavior.</para>
+        /// <para>0: The specified content is returned.</para>
+        /// <para>1: The specified page is displayed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +33,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? BehaviorType { get; set; }
 
         /// <summary>
+        /// <para>The encoding type.</para>
+        /// <para>0: plain text</para>
+        /// <para>1: JSON</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -36,6 +45,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? BodyEncoding { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable the rule.</para>
+        /// <para>0: disabled.</para>
+        /// <para>1: enabled.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +58,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Enable { get; set; }
 
         /// <summary>
+        /// <para>The gateway ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>14407</para>
         /// </summary>
@@ -54,6 +68,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? GatewayId { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the gateway.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,6 +79,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of concurrent requests.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? MaxConcurrency { get; set; }
 
         /// <summary>
+        /// <para>The HTTP text to be returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>text</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ResponseContentBody { get; set; }
 
         /// <summary>
+        /// <para>The address to be redirected to.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>www.******.com</para>
         /// </summary>
@@ -90,6 +110,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ResponseRedirectUrl { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>429</para>
         /// </summary>
@@ -98,6 +120,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? ResponseStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The route ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -108,6 +131,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? RouteId { get; set; }
 
         /// <summary>
+        /// <para>The name of the route.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

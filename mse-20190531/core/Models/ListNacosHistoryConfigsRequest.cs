@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Group { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the namespace.</para>
+        /// <para>The namespace ID. Default value: public</para>
         /// 
         /// <b>Example:</b>
         /// <para>fc0f6e40-****-946b-45e3af313707</para>
@@ -65,7 +67,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,7 +78,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries to return per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -87,7 +89,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the instance resides. The region is supported by MSE.</para>
+        /// <para>The region where the cluster is located. MSE supports specific regions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -97,10 +99,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The extended request parameters in the JSON format.</para>
+        /// <para>The extended request parameter in the JSON format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\\&quot;appGroup\\&quot;:\\&quot;aliyun-phecda-service-staging\\&quot;,\\&quot;appName\\&quot;:\\&quot;aliyun-phecda-service\\&quot;,\\&quot;appStage\\&quot;:\\&quot;DAILY\\&quot;,\\&quot;appUnit\\&quot;:\\&quot;center\\&quot;,\\&quot;bucId\\&quot;:\\&quot;250858\\&quot;,\\&quot;bucName\\&quot;:\\&quot;Alibaba Cloud\\&quot;,\\&quot;provider\\&quot;:\\&quot;aliyun\\&quot;}</para>
+        /// <para>{\&quot;appGroup\&quot;:\&quot;aliyun-phecda-service-staging\&quot;,\&quot;appName\&quot;:\&quot;aliyun-phecda-service\&quot;,\&quot;appStage\&quot;:\&quot;DAILY\&quot;,\&quot;appUnit\&quot;:\&quot;center\&quot;,\&quot;bucId\&quot;:\&quot;250858\&quot;,\&quot;bucName\&quot;:\&quot; Alibaba Cloud\&quot;,\&quot;provider\&quot;:\&quot;aliyun\&quot;}</para>
         /// </summary>
         [NameInMap("RequestPars")]
         [Validation(Required=false)]

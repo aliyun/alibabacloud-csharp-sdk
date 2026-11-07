@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetLocalityRuleRequest : TeaModel {
         /// <summary>
+        /// <para>The language in which you want the results to be displayed. Valid values: zh and en. zh is the default value, which indicates Chinese. en indicates English.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>The application ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hgxznfcvbe@be2c0228f******</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The application name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example-app</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>The name of the Microservices Engine (MSE) namespace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default</para>
         /// </summary>
@@ -42,6 +50,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <para>The region of the gateway.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,6 +61,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Region { get; set; }
 
         /// <summary>
+        /// <para>The source of the rule. This field is optional.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>edasmsc</para>
         /// </summary>

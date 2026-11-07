@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class AddServiceSourceShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The supported languages. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh-CN (default): Chinese</description></item>
-        /// <item><description>en-US: English</description></item>
-        /// <item><description>ja: Japanese</description></item>
+        /// <item><description>zh-CN: Chinese. This is the default value.</description></item>
+        /// <item><description>en-US: English.</description></item>
+        /// <item><description>ja: Japanese.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,17 +25,24 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to monitor Ingress classes.</para>
+        /// <para>The access address. This parameter is required.</para>
+        /// <list type="bullet">
+        /// <item><description>Container Service: the ID of the Container Service cluster.</description></item>
+        /// <item><description>MSE Nacos: the internal endpoint of the instance.</description></item>
+        /// <item><description>MSE ZooKeeper: the internal endpoint of the instance.</description></item>
+        /// <item><description>SAE registry: the namespace TID.</description></item>
+        /// <item><description>EDAS registry: the microservice namespace.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>c9ad2a0717032427e920754e25b49e3b5</para>
+        /// <para>mse-********-nacos-ans.mse.aliyuncs.com:8848</para>
         /// </summary>
         [NameInMap("Address")]
         [Validation(Required=false)]
         public string Address { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to update the Ingress status.</para>
+        /// <para>The unique ID of the gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-c70622ff52fe49beb29bea9a6f52****</para>
@@ -45,66 +52,79 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// <para>The data structure.</para>
+        /// <para>The list of service groups.</para>
         /// </summary>
         [NameInMap("GroupList")]
         [Validation(Required=false)]
         public string GroupListShrink { get; set; }
 
         /// <summary>
-        /// <para>The list of service groups.</para>
+        /// <para>The Ingress configurations. This parameter is used when the service source type is K8s.</para>
         /// </summary>
         [NameInMap("IngressOptionsRequest")]
         [Validation(Required=false)]
         public string IngressOptionsRequestShrink { get; set; }
 
         /// <summary>
-        /// <para>The namespace whose resources you want to monitor.</para>
+        /// <para>The name.</para>
+        /// <remarks>
+        /// <para>Descriptions for different source types.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>When the type is K8s, the input parameter is the name.</description></item>
+        /// <item><description>When the type is NACOS, the input parameter is the instance ID.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>istio</para>
+        /// <para>nacos</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The array of service root paths.</para>
         /// </summary>
         [NameInMap("PathList")]
         [Validation(Required=false)]
         public string PathListShrink { get; set; }
 
         /// <summary>
-        /// <para>The service source.</para>
+        /// <para>The service source type:</para>
         /// <list type="bullet">
-        /// <item><description>K8s: ACK cluster</description></item>
-        /// <item><description>NACOS: MSE Nacos instance</description></item>
+        /// <item><description>Container Service: K8S</description></item>
+        /// <item><description>MSE Nacos: MSE</description></item>
+        /// <item><description>MSE ZooKeeper: MSE_ZK</description></item>
+        /// <item><description>SAE registry: SAE</description></item>
+        /// <item><description>EDAS registry: EDAS</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>K8s,MSE</para>
+        /// <para>MSE</para>
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The list of security groups to be authorized. You can specify security groups to allow backend services to access data sources that you create.</para>
+        /// <para>The list of security groups to be authorized. This parameter is used to remove security group restrictions for backend services when creating a source.</para>
         /// </summary>
         [NameInMap("ToAuthorizeSecurityGroups")]
         [Validation(Required=false)]
         public string ToAuthorizeSecurityGroupsShrink { get; set; }
 
         /// <summary>
-        /// <para>The type of the service source.</para>
+        /// <para>The service registration type. Specify the corresponding value based on the source type:</para>
         /// <list type="bullet">
-        /// <item><description>K8s: Container Service for Kubernetes (ACK) cluster</description></item>
-        /// <item><description>NACOS: Nacos instance</description></item>
+        /// <item><description>Container Service: K8S</description></item>
+        /// <item><description>MSE Nacos: NACOS</description></item>
+        /// <item><description>MSE ZooKeeper: ZOOKEEPER</description></item>
+        /// <item><description>SAE registry: NACOS</description></item>
+        /// <item><description>EDAS registry: NACOS</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>The Ingress configuration.</para>
+        /// <para>NACOS</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

@@ -9,19 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListNacosMcpServersResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data structure.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListNacosMcpServersResponseBodyData Data { get; set; }
         public class ListNacosMcpServersResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The paginated list of MCP servers.</para>
+            /// </summary>
             [NameInMap("PageItems")]
             [Validation(Required=false)]
             public List<ListNacosMcpServersResponseBodyDataPageItems> PageItems { get; set; }
             public class ListNacosMcpServersResponseBodyDataPageItems : TeaModel {
+                /// <summary>
+                /// <para>The capabilities of the MCP server.</para>
+                /// </summary>
                 [NameInMap("Capabilities")]
                 [Validation(Required=false)]
                 public List<string> Capabilities { get; set; }
 
                 /// <summary>
+                /// <para>The description.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -30,6 +41,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Description { get; set; }
 
                 /// <summary>
+                /// <para>The frontend protocol type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>mcp-sse</para>
                 /// </summary>
@@ -48,6 +61,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Id { get; set; }
 
                 /// <summary>
+                /// <para>The name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -56,6 +71,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The type of the MCP server.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>stdio</para>
                 /// </summary>
@@ -64,6 +81,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Protocol { get; set; }
 
                 /// <summary>
+                /// <para>The current latest version.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1.1.0</para>
                 /// </summary>
@@ -71,11 +90,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string Version { get; set; }
 
+                /// <summary>
+                /// <para>The version details.</para>
+                /// </summary>
                 [NameInMap("VersionDetail")]
                 [Validation(Required=false)]
                 public ListNacosMcpServersResponseBodyDataPageItemsVersionDetail VersionDetail { get; set; }
                 public class ListNacosMcpServersResponseBodyDataPageItemsVersionDetail : TeaModel {
                     /// <summary>
+                    /// <para>Indicates whether this is the latest version.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
                     /// </summary>
@@ -84,6 +108,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public bool? IsLatest { get; set; }
 
                     /// <summary>
+                    /// <para>The release date.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2025-07-16</para>
                     /// </summary>
@@ -92,6 +118,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string ReleaseDate { get; set; }
 
                     /// <summary>
+                    /// <para>The version number.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1.0.0</para>
                     /// </summary>
@@ -124,6 +152,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? PagesAvailable { get; set; }
 
             /// <summary>
+            /// <para>The total number of entries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4</para>
             /// </summary>
@@ -134,6 +164,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ADDD8AB7-8D1C-4697-A83E-410D2607****</para>
         /// </summary>

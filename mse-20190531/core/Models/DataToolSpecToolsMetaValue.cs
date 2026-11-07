@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class DataToolSpecToolsMetaValue : TeaModel {
         /// <summary>
+        /// <para>Indicates whether the tool is enabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public bool? Enabled { get; set; }
 
+        /// <summary>
+        /// <para>The protocol conversion template configuration.</para>
+        /// </summary>
         [NameInMap("Templates")]
         [Validation(Required=false)]
         public Dictionary<string, object> Templates { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListAuthPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values: zh-CN and en-US. Default value: zh-CN. The value zh-CN indicates Chinese and the value en-US indicates English.</para>
+        /// <para>The language in which the response is displayed. Valid values: zh-CN (default): Chinese, en-US: English</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The name of the authentication rule.</para>
+        /// <para>The authentication rule name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>auto-rule-**</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The name of the Microservices Engine (MSE) namespace.</para>
+        /// <para>The MSE namespace name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -72,11 +72,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The protocol type. Valid values:</para>
+        /// <para>The Protocol Type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SPRING_CLOUD</b></description></item>
-        /// <item><description><b>DUBBO</b></description></item>
-        /// <item><description><b>istio</b></description></item>
+        /// <item><description><para><b>SPRING_CLOUD</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>DUBBO</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>istio</b>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -87,7 +90,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>Region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -98,7 +101,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The service source.</para>
+        /// <para>The source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class DeleteGatewayAuthRequest : TeaModel {
         /// <summary>
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese. This is the default value.</description></item>
+        /// <item><description>en: English.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +24,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the gateway.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>gw-e2d226bba4b2445c9e29fa7f8216****</para>
         /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
+        /// <para>The authentication ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>120</para>
         /// </summary>

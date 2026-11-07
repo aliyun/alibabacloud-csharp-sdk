@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class QueryAllSwimmingLaneGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. A value of 200 is returned if the request is successful.</para>
+        /// <para>The code is used only to synchronize with success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The details of the data.</para>
+        /// <para>The data returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{id:100,name:&quot;test&quot;}]</para>
@@ -39,12 +39,24 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string AppIds { get; set; }
 
+            /// <summary>
+            /// <para>The routing mode for end-to-end canary release:</para>
+            /// <list type="bullet">
+            /// <item><description><para>0: routing based on request content</para>
+            /// </description></item>
+            /// <item><description><para>1: routing based on percentages</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("CanaryModel")]
             [Validation(Required=false)]
             public int? CanaryModel { get; set; }
 
             /// <summary>
-            /// <para>The type and ID of the ingress application.</para>
+            /// <para>The type of the ingress application and the ID of the ingress application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mse:abcde@abcde</para>
@@ -64,7 +76,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The side at which canary release for messaging was enabled.</para>
+            /// <para>The side at which canary release for messaging is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Client</para>
@@ -84,7 +96,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? MessageQueueGrayEnable { get; set; }
 
             /// <summary>
-            /// <para>The name of the lane group.</para>
+            /// <para>The name of a lane group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>swimmingGroup</para>
@@ -103,12 +115,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Namespace { get; set; }
 
+            /// <summary>
+            /// <para>This parameter is deprecated</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[&quot;/a&quot;]</para>
+            /// </summary>
             [NameInMap("Paths")]
             [Validation(Required=false)]
             public string Paths { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the request details (metrics of end-to-end canary release) were recorded.</para>
+            /// <para>Indicates whether to record the request details (metrics of end-to-end canary release).</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -127,6 +145,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Region { get; set; }
 
+            /// <summary>
+            /// <para>The canary version. Valid values: 0 and 2. Recommended value: 2.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("SwimVersion")]
             [Validation(Required=false)]
             public int? SwimVersion { get; set; }
@@ -154,7 +178,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-100-000</para>
@@ -164,7 +188,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -174,21 +198,23 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message that is returned for the request.</para>
         /// <list type="bullet">
-        /// <item><description>If the request is successful, a success message is returned.</description></item>
-        /// <item><description>If the request fails, an error message is returned.</description></item>
+        /// <item><description><para>If the request is successful, a success message is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, an error message is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>The request was successfully processed.</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>54973C90-F379-4372-9AA5-053A3F7****</para>
@@ -200,8 +226,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

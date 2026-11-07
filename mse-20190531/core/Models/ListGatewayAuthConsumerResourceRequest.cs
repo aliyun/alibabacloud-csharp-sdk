@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the consumer.</para>
+        /// <para>The ID of the gateway authentication consumer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,10 +68,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The resource authorization status. Valid values:</para>
+        /// <para>The resource status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: enabled</description></item>
-        /// <item><description>false: disabled</description></item>
+        /// <item><description><para>true: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para>false: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

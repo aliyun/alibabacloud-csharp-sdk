@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The details of the data.</para>
+        /// <para>The data overview.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<QueryClusterSpecificationResponseBodyData> Data { get; set; }
         public class QueryClusterSpecificationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The engine specifications that can be used.</para>
+            /// <para>The available engine specifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MSE_SC_1_2_200_c</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ClusterSpecificationName { get; set; }
 
             /// <summary>
-            /// <para>The number of vCPUs in the specifications.</para>
+            /// <para>The number of CPU cores for this specification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string CpuCapacity { get; set; }
 
             /// <summary>
-            /// <para>The memory size in the specifications. Unit: GB.</para>
+            /// <para>The memory size for this specification. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-100-000</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -79,17 +79,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request was successfully processed.</para>
+        /// <para>Request processed successfully</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EE5C32A1-BC0E-4B79-817C-103E4EDF****</para>

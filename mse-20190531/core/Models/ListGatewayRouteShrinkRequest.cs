@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListGatewayRouteShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>Language type for returned information:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable sorting. This parameter is unavailable.</para>
+        /// <para>Sorting. This field is currently unavailable and being deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -34,14 +36,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? DescSort { get; set; }
 
         /// <summary>
-        /// <para>The parameters that specify filter conditions. The parameters are in the format of {&quot;key1&quot;:&quot;value1&quot;}.</para>
+        /// <para>Filter conditions in the format {&quot;key1&quot;:&quot;value1&quot;}</para>
         /// </summary>
         [NameInMap("FilterParams")]
         [Validation(Required=false)]
         public string FilterParamsShrink { get; set; }
 
         /// <summary>
-        /// <para>The item based on which entries are sorted.</para>
+        /// <para>Sorting property.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GmtCreate</para>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string OrderItem { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>Page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -61,7 +63,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>Number of instances displayed per page (currently not in effect, queries all instances by default).</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

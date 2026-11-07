@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class DeleteSwimmingLaneGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the lane group.</para>
+        /// <para>The ID of the end-to-end traffic lane group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>145</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The name of the Microservices Engine (MSE) namespace.</para>
+        /// <para>The name of the MSE namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>

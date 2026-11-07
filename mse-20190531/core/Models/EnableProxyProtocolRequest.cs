@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class EnableProxyProtocolRequest : TeaModel {
         /// <summary>
-        /// <para>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</para>
+        /// <para>The language of the returned results. Valid values: zh (default): Chinese. en: English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the proxy protocol to preserve client IP addresses. Valid values:</para>
+        /// <para>Specifies whether to enable the feature of preserving the client source IP address by using the PROXY protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b>: enables the feature of preserving the client source IP address.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): disables the feature of preserving the client source IP address.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

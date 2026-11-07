@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class DeleteGatewayRouteResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeleteGatewayRouteResponseBodyData Data { get; set; }
         public class DeleteGatewayRouteResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The default service ID.</para>
+            /// <para>The ID of the default service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? GatewayId { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the gateway.</para>
+            /// <para>The unique identifier of the gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gw-5017305290e14cebbrvec4a5****</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Predicates { get; set; }
 
             /// <summary>
-            /// <para>The sequence number of the route.</para>
+            /// <para>The route order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -117,14 +117,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? RouteOrder { get; set; }
 
             /// <summary>
-            /// <para>The status of the route. Valid values:</para>
+            /// <para>The route status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: unpublished</description></item>
-            /// <item><description>2: publishing</description></item>
-            /// <item><description>3: published</description></item>
-            /// <item><description>4: editing (updated but not published)</description></item>
-            /// <item><description>5: unpublishing</description></item>
-            /// <item><description>6: unavailable</description></item>
+            /// <item><description>0: Unpublished.</description></item>
+            /// <item><description>2: Publishing.</description></item>
+            /// <item><description>3: Published.</description></item>
+            /// <item><description>4: Editing (unpublished updates).</description></item>
+            /// <item><description>5: Going offline.</description></item>
+            /// <item><description>6: Unavailable.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -147,10 +147,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request is successfully processed.</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -167,9 +167,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
+        /// <item><description><c>true</c>: The request is successful.</description></item>
         /// <item><description><c>false</c>: The request failed.</description></item>
         /// </list>
         /// 

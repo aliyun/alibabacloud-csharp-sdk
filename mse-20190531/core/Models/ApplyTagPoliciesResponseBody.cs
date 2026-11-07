@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ApplyTagPoliciesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the data.</para>
+        /// <para>The data overview.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ApplyTagPoliciesResponseBodyData> Data { get; set; }
         public class ApplyTagPoliciesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the field is the primary key.</para>
+            /// <para>Indicates whether it is a primary key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? CarryData { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the rule is enabled. Valid values:</para>
+            /// <para>Indicates whether the feature is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: The rule is enabled.</description></item>
-            /// <item><description><c>false</c>: The rule is disabled.</description></item>
+            /// <item><description><c>true</c>: Enabled.</description></item>
+            /// <item><description><c>false</c>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The ID of the primary key.</para>
+            /// <para>The primary key ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The rate.</para>
+            /// <para>The ratio.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -81,14 +81,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? Rate { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the routing rule was deleted.</para>
+            /// <para>Indicates whether the deletion is successful.</para>
             /// </summary>
             [NameInMap("Remove")]
             [Validation(Required=false)]
             public bool? Remove { get; set; }
 
             /// <summary>
-            /// <para>The details of the routing rule.</para>
+            /// <para>The tag rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;_base\&quot;: {\&quot;rate\&quot;: 100, \&quot;remove\&quot;: true}, \&quot;blue\&quot;: {\&quot;rate\&quot;: 0}}</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Rules { get; set; }
 
             /// <summary>
-            /// <para>The status.</para>
+            /// <para>The effective status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>316F5F64-F73D-42DC-8632-01E308B6****</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>The request result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

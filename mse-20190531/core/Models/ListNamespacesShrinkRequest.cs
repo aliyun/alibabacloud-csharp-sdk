@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListNamespacesShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Language for displaying results. Values: zh (default): Chinese, en: English</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>Namespace name for fuzzy query. If not specified, all namespaces are queried by default.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>myNamespace</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>Page number for paged query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>Number of entries per page for paged queries. The default is 5. To return more data, increase this value.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -42,6 +50,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,6 +60,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        /// <summary>
+        /// <para>Alibaba Cloud tags.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public string TagShrink { get; set; }

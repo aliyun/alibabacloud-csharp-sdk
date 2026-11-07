@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListFlowRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The details of the data.</para>
+        /// <para>The node data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The data returned.</para>
+            /// <para>The returned collection.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<ListFlowRulesResponseBodyDataResult> Result { get; set; }
             public class ListFlowRulesResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// <para>The ID of the application.</para>
+                /// <para>The application ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hkhon1po62@5f1b08becb*****</para>
@@ -74,27 +74,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// <para>The throttling effect.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>0</para>
-                /// <!-- -->
-                /// 
-                /// <para>:</para>
-                /// <!-- -->
-                /// 
-                /// <para>fast failure</para>
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><para>2</para>
-                /// <!-- -->
-                /// 
-                /// <para>:</para>
-                /// <!-- -->
-                /// 
-                /// <para>in queue</para>
-                /// <!-- --></description></item>
-                /// </list>
+                /// <para>The flow control behavior.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -104,23 +84,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? ControlBehavior { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the throttling rule was enabled.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>true</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><para>false</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- --></description></item>
-                /// </list>
+                /// <para>Indicates whether the rule is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -130,7 +94,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public bool? Enable { get; set; }
 
                 /// <summary>
-                /// <para>The throttling behavior.</para>
+                /// <para>The fallback behavior.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>&quot;{\&quot;appName\&quot;:\&quot;spring-cloud-a\&quot;,\&quot;fallbackBehavior\&quot;:{\&quot;webFallbackMode\&quot;:0,\&quot;webRespContentType\&quot;:0,\&quot;webRespMessage\&quot;:\&quot;Blocked\&quot;,\&quot;webRespStatusCode\&quot;:429},\&quot;id\&quot;:977,\&quot;name\&quot;:\&quot;Fallback\&quot;,\&quot;namespace\&quot;:\&quot;default\&quot;,\&quot;resourceClassification\&quot;:1}&quot;</para>
@@ -140,7 +104,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string FallbackObject { get; set; }
 
                 /// <summary>
-                /// <para>Requests source application.</para>
+                /// <para>The source application of the request.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>spring-cloud-a</para>
@@ -150,7 +114,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string LimitApp { get; set; }
 
                 /// <summary>
-                /// <para>The timeout period for queuing when the value of ControlBehavior is set to 2. Unit: milliseconds.</para>
+                /// <para>The timeout period in milliseconds when the flow control behavior is set to queuing.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>500</para>
@@ -160,7 +124,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? MaxQueueingTimeMs { get; set; }
 
                 /// <summary>
-                /// <para>The statistical dimension. The value 1 indicates that the number of accepted requests is used for statistics.</para>
+                /// <para>The statistical dimension. A value of 1 indicates the number of passed requests.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -180,7 +144,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the region in which the instance resides.</para>
+                /// <para>The region ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -190,7 +154,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the interface resource.</para>
+                /// <para>The API resource name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/a</para>
@@ -200,7 +164,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Resource { get; set; }
 
                 /// <summary>
-                /// <para>Interface resource type.</para>
+                /// <para>The API resource category.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -220,7 +184,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public long? RuleId { get; set; }
 
                 /// <summary>
-                /// <para>The throttling threshold.</para>
+                /// <para>The threshold of the flow control rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -230,7 +194,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public float? Threshold { get; set; }
 
                 /// <summary>
-                /// <para>A reserved parameter.</para>
+                /// <para>The reserved field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;origin\&quot;:\&quot;default\&quot;}</para>
@@ -264,10 +228,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>OK</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -284,27 +248,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>The request was successful.</para>
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>The request failed.</para>
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,21 +24,31 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The IDs of applications. Separate application IDs with commas (,).</para>
+        /// <para>The IDs of the applications. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>hkhon1po62@c3df23522baa898,hkhon1po62@66e5235415730a5,hkhon1po62@958bba95910341f</para>
+        /// <para>xxxxn1po62@492b8f98d4bxxxx,xxxxn1po62@2d8f5d1b7f2xxxx</para>
         /// </summary>
         [NameInMap("AppIds")]
         [Validation(Required=false)]
         public string AppIds { get; set; }
 
+        /// <summary>
+        /// <para>The end-to-end canary release mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: Route by request content.</description></item>
+        /// <item><description>1: Route by proportion.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("CanaryModel")]
         [Validation(Required=false)]
         public int? CanaryModel { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable database canary release.</para>
+        /// <para><b>[Deprecated]</b> Specifies whether to enable canary release for databases.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -48,17 +58,22 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? DbGrayEnable { get; set; }
 
         /// <summary>
-        /// <para>The ingress application.</para>
+        /// <para>The entry application. Format: Source system:ID. Examples:</para>
+        /// <list type="bullet">
+        /// <item><description>mse:${MSE application ID}</description></item>
+        /// <item><description>mse-gw:${MSE cloud-native gateway ID}</description></item>
+        /// <item><description>apig:${cloud-native API gateway ID}</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Ingress</para>
+        /// <para>mse-gw:gw-2b1407e050f1446xxxcd2a65fd9xxxx</para>
         /// </summary>
         [NameInMap("EntryApp")]
         [Validation(Required=false)]
         public string EntryApp { get; set; }
 
         /// <summary>
-        /// <para>The ID of the lane group. A value of -1 is used to create a lane group. A value greater than 0 is used to modify the specified lane group.</para>
+        /// <para>The ID of the swimlane group. A value of -1 indicates that a swimlane group is created. A value greater than 0 indicates that a specified swimlane group is updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>120</para>
@@ -68,7 +83,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The side for message filtering when the canary release for messaging feature is enabled.</para>
+        /// <para>The side where message queue canary release filtering is performed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Server</para>
@@ -78,7 +93,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string MessageQueueFilterSide { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable canary release for messaging.</para>
+        /// <para>Specifies whether to enable canary release for message queues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -91,7 +106,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? MessageQueueGrayEnable { get; set; }
 
         /// <summary>
-        /// <para>The name.</para>
+        /// <para>The name of the swimlane group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -102,7 +117,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The name of the Microservices Engine (MSE) namespace.</para>
+        /// <para>The name of the MSE namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -111,19 +126,25 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
+        /// <summary>
+        /// <para><b>[Deprecated]</b> The paths. This parameter is required when a Java gateway is used as the entry point.</para>
+        /// </summary>
         [NameInMap("Paths")]
         [Validation(Required=false)]
         public string PathsShrink { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to record request details.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("RecordCanaryDetail")]
         [Validation(Required=false)]
         public bool? RecordCanaryDetail { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -132,12 +153,19 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the routes. If a cloud-native gateway is used as the entry point, you must call this operation to pass the IDs of the selected cloud-native gateway routes before creating a swimlane for the swimlane group.</para>
+        /// </summary>
         [NameInMap("RouteIds")]
         [Validation(Required=false)]
         public string RouteIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The status of the lane group. The value 0 specifies that the lane group is disabled. The value 1 specifies that the lane group is enabled.</para>
+        /// <para>The status of the swimlane group. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: Inactive.</description></item>
+        /// <item><description>1: Active.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -146,6 +174,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public int? Status { get; set; }
 
+        /// <summary>
+        /// <para>The version of the end-to-end canary release. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: Not recommended. Routes must be specified.</description></item>
+        /// <item><description>2: Recommended. Routes do not need to be specified.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("SwimVersion")]
         [Validation(Required=false)]
         public int? SwimVersion { get; set; }

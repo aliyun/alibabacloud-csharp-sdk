@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListIsolationRulesRequest : TeaModel {
         /// <summary>
+        /// <para>The language in which you want the results to be displayed. Valid values: zh (default): Chinese. en: English.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>The application ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hkhon1po62@c3df23522bXXXXX</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The application name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>The microservice namespace to which the application belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <para>The first page. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
+        /// <para>The page size. Default value: 6.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -62,6 +72,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Find protection rules for specified interface.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/a</para>
         /// </summary>
@@ -70,6 +82,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Resource { get; set; }
 
         /// <summary>
+        /// <para>Find protection rules that contain the interface keyword.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>a</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class QuerySwimmingLaneByIdResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the data.</para>
+        /// <para>The returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{id:102,name:&quot;test&quot;}</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public QuerySwimmingLaneByIdResponseBodyData Data { get; set; }
         public class QuerySwimmingLaneByIdResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>This parameter is discontinued. This parameter is used to specify whether to enable grayscale by path when Java gateway is used as the entry for the swimming lane group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? PathIndependentPercentageEnable { get; set; }
 
             /// <summary>
-            /// <para>泳道开关</para>
+            /// <para>The swimming lane switch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>是否开启规则。</para>
+            /// <para>Specifies whether to enable the rule. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? EnableRules { get; set; }
 
             /// <summary>
-            /// <para>入口应用规则</para>
+            /// <para>The entry application rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -58,14 +60,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string EntryRule { get; set; }
 
             /// <summary>
-            /// <para>入口应用规则详情</para>
+            /// <para>The details of the entry application rules.</para>
             /// </summary>
             [NameInMap("entryRules")]
             [Validation(Required=false)]
             public List<QuerySwimmingLaneByIdResponseBodyDataEntryRules> EntryRules { get; set; }
             public class QuerySwimmingLaneByIdResponseBodyDataEntryRules : TeaModel {
                 /// <summary>
-                /// <para>条件</para>
+                /// <para>The condition.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AND</para>
@@ -75,7 +77,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Condition { get; set; }
 
                 /// <summary>
-                /// <para>路径</para>
+                /// <para>The path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/</para>
@@ -85,21 +87,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>路径列表</para>
+                /// <para>The list of paths.</para>
                 /// </summary>
                 [NameInMap("paths")]
                 [Validation(Required=false)]
                 public List<string> Paths { get; set; }
 
                 /// <summary>
-                /// <para>Rest匹配规则列表</para>
+                /// <para>The Restful matching rules.</para>
                 /// </summary>
                 [NameInMap("restItems")]
                 [Validation(Required=false)]
                 public List<QuerySwimmingLaneByIdResponseBodyDataEntryRulesRestItems> RestItems { get; set; }
                 public class QuerySwimmingLaneByIdResponseBodyDataEntryRulesRestItems : TeaModel {
                     /// <summary>
-                    /// <para>匹配符</para>
+                    /// <para>The matching character.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>==</para>
@@ -109,7 +111,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string Cond { get; set; }
 
                     /// <summary>
-                    /// <para>数值</para>
+                    /// <para>The number.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>x</para>
@@ -119,7 +121,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string Datum { get; set; }
 
                     /// <summary>
-                    /// <para>除数</para>
+                    /// <para>The divisor.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -129,7 +131,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public int? Divisor { get; set; }
 
                     /// <summary>
-                    /// <para>名称</para>
+                    /// <para>The name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>11111</para>
@@ -139,14 +141,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>名称列表</para>
+                    /// <para>The names.</para>
                     /// </summary>
                     [NameInMap("nameList")]
                     [Validation(Required=false)]
                     public List<string> NameList { get; set; }
 
                     /// <summary>
-                    /// <para>操作符</para>
+                    /// <para>The filter operator.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>rawvalue</para>
@@ -156,7 +158,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string Operator { get; set; }
 
                     /// <summary>
-                    /// <para>百分比</para>
+                    /// <para>The percentage.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>30</para>
@@ -166,7 +168,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public int? Rate { get; set; }
 
                     /// <summary>
-                    /// <para>余数</para>
+                    /// <para>The remainder.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -176,7 +178,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public int? Remainder { get; set; }
 
                     /// <summary>
-                    /// <para>匹配类型</para>
+                    /// <para>The matching type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cookie</para>
@@ -186,7 +188,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>值</para>
+                    /// <para>The value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>hello</para>
@@ -200,7 +202,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// <para>MSE网关路由规则</para>
+            /// <para>The MSE gateway routing rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -210,7 +212,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GatewaySwimmingLaneRouteJson { get; set; }
 
             /// <summary>
-            /// <para>规则创建时间</para>
+            /// <para>Rule Created At</para>
             /// 
             /// <b>Example:</b>
             /// <para>1683598484000</para>
@@ -220,7 +222,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>规则修改时间</para>
+            /// <para>Rule Modified At</para>
             /// 
             /// <b>Example:</b>
             /// <para>1683598484000</para>
@@ -230,7 +232,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>泳道组Id。</para>
+            /// <para>The swimming lane group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -240,7 +242,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? GroupId { get; set; }
 
             /// <summary>
-            /// <para>泳道ID</para>
+            /// <para>The swimming lane ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -250,7 +252,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>泳道名称</para>
+            /// <para>The swimming lane name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -260,7 +262,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>区域ID。</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -270,7 +272,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>泳道状态</para>
+            /// <para>The swimming lane status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -280,7 +282,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>泳道对应的标签。</para>
+            /// <para>The tag corresponding to the swimming lane.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gray</para>
@@ -292,7 +294,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-100-000</para>
@@ -302,17 +304,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request was successfully processed.</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>69AD2AA7-DB47-449B-941B-B14409DF****</para>
@@ -322,10 +324,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

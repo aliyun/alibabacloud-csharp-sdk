@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateGatewayRouteShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned information. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>zh: Chinese</description></item>
         /// <item><description>en: English</description></item>
@@ -24,6 +24,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>The description of the route.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>a route for xxx</para>
         /// </summary>
@@ -32,7 +34,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The destination service type.</para>
+        /// <para>The type of the destination service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Mock</para>
@@ -42,14 +44,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DestinationType { get; set; }
 
         /// <summary>
-        /// <para>The information about service mocking.</para>
+        /// <para>The mock content.</para>
         /// </summary>
         [NameInMap("DirectResponseJSON")]
         [Validation(Required=false)]
         public string DirectResponseJSONShrink { get; set; }
 
         /// <summary>
-        /// <para>The associated domain name.</para>
+        /// <para>The associated domain names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[90]</para>
@@ -61,7 +63,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Specifies whether to activate Web Application Firewall (WAF).</para>
+        /// <para><b>[Deprecated]</b> Use UpdateGatewayRouteWafStatus to update the WAF status of the route.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -72,7 +74,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? EnableWaf { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the Fallback service.</para>
+        /// <para>Specifies whether to enable the fallback service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -82,7 +84,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? Fallback { get; set; }
 
         /// <summary>
-        /// <para>The information about the Fallback service.</para>
+        /// <para>The fallback services.</para>
         /// </summary>
         [NameInMap("FallbackServices")]
         [Validation(Required=false)]
@@ -132,21 +134,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The route matching conditions.</para>
+        /// <para>The matching conditions of the route.</para>
         /// </summary>
         [NameInMap("Predicates")]
         [Validation(Required=false)]
         public string PredicatesShrink { get; set; }
 
         /// <summary>
-        /// <para>The information about redirection.</para>
+        /// <para>The redirect configuration.</para>
         /// </summary>
         [NameInMap("RedirectJSON")]
         [Validation(Required=false)]
         public string RedirectJSONShrink { get; set; }
 
         /// <summary>
-        /// <para>The sequence number of the route.</para>
+        /// <para>The order of the route.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -156,7 +158,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? RouteOrder { get; set; }
 
         /// <summary>
-        /// <para>The information about destination services.</para>
+        /// <para>The destination services. Specify this parameter when the route points to a single service, multiple services, or tag-based routing.</para>
         /// </summary>
         [NameInMap("Services")]
         [Validation(Required=false)]

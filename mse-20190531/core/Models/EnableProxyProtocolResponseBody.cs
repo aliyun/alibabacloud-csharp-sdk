@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class EnableProxyProtocolResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. A value of 200 is returned if the request is successful.</para>
+        /// <para>The code used only to synchronize with the success status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The dynamic part in the error message.</para>
+        /// <para>The placeholder in the dynamic error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>code</para>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic part in the error message. This parameter is used to replace the <b>%s</b> variable in the <b>ErrMessage</b> parameter.</para>
+        /// <para>The dynamic error message, which is used to replace <b>%s</b> in the error message of the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para> For example, if the return value of the <b>ErrMessage</b> parameter is <b>The Value of Input Parameter %s is not valid</b> and the return value of the <b>DynamicMessage</b> parameter is <b>DtsJobId</b>, the <b>DtsJobId</b> parameter in the request is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the passed request parameter <b>DtsJobId</b> is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -93,10 +93,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>The request result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><c>true</c>: The request is successful.</description></item>
+        /// <item><description><c>false</c>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

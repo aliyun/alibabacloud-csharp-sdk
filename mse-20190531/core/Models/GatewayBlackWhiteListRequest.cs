@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GatewayBlackWhiteListRequest : TeaModel {
         /// <summary>
-        /// <para>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</para>
+        /// <para>The language of the response. Valid values: zh (Chinese, default) and en (English).</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>This parameter is unavailable for public use.</para>
+        /// <para>This parameter is not available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? DescSort { get; set; }
 
         /// <summary>
-        /// <para>The filter parameters.</para>
+        /// <para>parse from filterParams</para>
         /// </summary>
         [NameInMap("FilterParams")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? GatewayId { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the gateway. If this parameter is used together with the GatewayId parameter, the value of the GatewayId parameter is used.</para>
+            /// <para>The unique identifier of the gateway. If both GatewayUniqueId and GatewayId are specified, GatewayId takes precedence.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gw-5017305290e14centbrveca****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GatewayUniqueId { get; set; }
 
             /// <summary>
-            /// <para>This parameter is unavailable for public use.</para>
+            /// <para>This parameter is not available.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? IsWhite { get; set; }
 
             /// <summary>
-            /// <para>This parameter is unavailable for public use.</para>
+            /// <para>This parameter is not available.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The content that you want to query.</para>
+            /// <para>The search content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.1.1.1</para>
@@ -89,9 +89,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// <summary>
             /// <para>The query type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ROUTE: The list is queried by route. If the value of this parameter is ROUTE, set the SearchContent parameter to the route name.</description></item>
-            /// <item><description>DOMAIN: The list is queried by domain name. If the value of this parameter is DOMAIN, set the SearchContent parameter to the domain name.</description></item>
-            /// <item><description>IP: The list is queried by specified IP address. If the value of this parameter is IP, set the SearchContent parameter to the IP address.</description></item>
+            /// <item><description><para>ROUTE: searches by route. Set SearchContent to the route name.</para>
+            /// </description></item>
+            /// <item><description><para>DOMAIN: searches by domain name. Set SearchContent to the domain name.</para>
+            /// </description></item>
+            /// <item><description><para>IP: searches by specified IP address. Set SearchContent to the IP address.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -102,7 +105,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string SearchType { get; set; }
 
             /// <summary>
-            /// <para>This parameter is unavailable for public use.</para>
+            /// <para>This parameter is not available.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>
@@ -114,7 +117,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>This parameter is unavailable for public use.</para>
+        /// <para>This parameter is not available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -124,7 +127,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string OrderItem { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Valid values: integers greater than 0. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

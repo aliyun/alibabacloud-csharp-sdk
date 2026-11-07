@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CreateClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The language type of the returned information:</para>
+        /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,8 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>Billing method, including PREPAY (Subscription) and POSTPAY (Pay-As-You-Go).</para>
-        /// <para>This parameter is ignored for the Serverless edition.</para>
+        /// <para>The billing method. Valid values: PREPAY (subscription) and POSTPAY (pay-as-you-go). This parameter is ignored for Serverless Edition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>POSTPAY</para>
@@ -35,22 +34,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>Engine specifications, with the following values:</para>
-        /// <para>[Professional Edition] </para>
-        /// <list type="bullet">
-        /// <item><description><c>MSE_SC_2_4_60_c</c>: 2 cores, 4GB</description></item>
-        /// <item><description><c>MSE_SC_1_2_60_c</c>: 1 core, 2GB</description></item>
-        /// <item><description><c>MSE_SC_4_8_60_c</c>: 4 cores, 8GB</description></item>
-        /// <item><description><c>MSE_SC_8_16_60_c</c>: 8 cores, 16GB</description></item>
-        /// <item><description><c>MSE_SC_16_32_60_c</c>: 16 cores, 32GB</description></item>
-        /// </list>
-        /// <para>[Developer Edition] </para>
-        /// <list type="bullet">
-        /// <item><description><c>MSE_SC_1_2_60_c</c>: 1 core, 2GB</description></item>
-        /// <item><description><c>MSE_SC_2_4_60_c</c>: 2 cores, 4GB</description></item>
-        /// </list>
-        /// <para>[Serverless Edition]</para>
-        /// <para>Ignore this parameter, or you can fill in <c>MSE_SC_SERVERLESS</c>.</para>
+        /// <para>The engine specifications. Valid values:</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +45,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ClusterSpecification { get; set; }
 
         /// <summary>
-        /// <para>Cluster type, including ZooKeeper, Nacos-Ans.</para>
+        /// <para>The cluster type. Valid values: ZooKeeper and Nacos-Ans.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,22 +56,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// <para>Cluster version, with the following values:</para>
-        /// <para>[Professional Edition] </para>
-        /// <list type="bullet">
-        /// <item><description><c>NACOS_2_0_0</c>: indicates Nacos 2.x.x version.</description></item>
-        /// <item><description><c>ZooKeeper_3_8_0</c>: indicates ZooKeeper 3.8.x version.</description></item>
-        /// </list>
-        /// <para>[Developer Edition] </para>
-        /// <list type="bullet">
-        /// <item><description><c>NACOS_2_0_0</c>: indicates Nacos 2.x version.</description></item>
-        /// <item><description><c>ZooKeeper_3_8_0</c>: indicates ZooKeeper 3.8.x version.</description></item>
-        /// </list>
-        /// <para>[Serverless Edition]</para>
-        /// <list type="bullet">
-        /// <item><description><c>NACOS_2_0_0</c>: indicates Nacos 2.x version.</description></item>
-        /// <item><description><c>ZooKeeper_3_8_0</c>: indicates ZooKeeper 3.8.x version.</description></item>
-        /// </list>
+        /// <para>The cluster version. Valid values:</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -98,7 +67,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ClusterVersion { get; set; }
 
         /// <summary>
-        /// <para>Network access type, <c>slb</c> or <c>single_eni</c>; some regions\&quot; Developer Edition only support the <c>single_eni</c> type.</para>
+        /// <para>The network access type. Valid values: <c>slb</c> and <c>single_eni</c>. In some regions, Developer Edition supports only <c>single_eni</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>slb</para>
@@ -110,7 +79,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>No longer in use</para>
+        /// <para>This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alicloud-disk-ssd</para>
@@ -121,7 +90,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DiskType { get; set; }
 
         /// <summary>
-        /// <para>Valid when <c>ConnectionType</c> is <c>single_eni</c>, indicating whether to enable public network access (Elastic IP).</para>
+        /// <para>Specifies whether to enable public network access by using an elastic IP address (EIP). This parameter takes effect only when ConnectionType is set to <c>single_eni</c>.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
@@ -131,17 +100,24 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? EipEnabled { get; set; }
 
         /// <summary>
-        /// <para>Number of instance nodes, with a range limit of 1 to 9.</para>
-        /// <para>[Professional Edition] </para>
+        /// <para>The number of nodes in the instance. Valid values: 1 to 9.
+        /// [Professional Edition] </para>
         /// <list type="bullet">
-        /// <item><description>The number of instances must be 3 or more and must be an odd number.</description></item>
+        /// <item><description><para><c>NACOS_2_0_0</c>: Nacos 2.x.x.</para>
+        /// </description></item>
+        /// <item><description><para><c>ZooKeeper_3_8_0</c>: ZooKeeper 3.8.x.
+        /// [Developer Edition] </para>
+        /// </description></item>
+        /// <item><description><para><c>NACOS_2_0_0</c>: Nacos 2.x.</para>
+        /// </description></item>
+        /// <item><description><para><c>ZooKeeper_3_8_0</c>: ZooKeeper 3.8.x.
+        /// [Serverless Edition]</para>
+        /// </description></item>
+        /// <item><description><para><c>NACOS_2_0_0</c>: Nacos 2.x.</para>
+        /// </description></item>
+        /// <item><description><para><c>ZooKeeper_3_8_0</c>: ZooKeeper 3.8.x.</para>
+        /// </description></item>
         /// </list>
-        /// <para>[Developer Edition] </para>
-        /// <list type="bullet">
-        /// <item><description>The number of instances can only be 1.</description></item>
-        /// </list>
-        /// <para>[Serverless Edition]</para>
-        /// <para>Ignore this parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -152,7 +128,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? InstanceCount { get; set; }
 
         /// <summary>
-        /// <para>Custom instance name</para>
+        /// <para>The custom name of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tanshuyingtest001</para>
@@ -162,11 +138,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>Required unless under special circumstances, with the following values:</para>
+        /// <para>The instance edition. This parameter is required unless otherwise specified. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>mse_pro</c>: indicates Professional Edition.</description></item>
-        /// <item><description><c>mse_dev</c>: indicates Developer Edition.</description></item>
-        /// <item><description><c>mse_serverless</c>: indicates Serverless Edition.</description></item>
+        /// <item><description><c>mse_pro</c>: Professional Edition.</description></item>
+        /// <item><description><c>mse_dev</c>: Developer Edition.</description></item>
+        /// <item><description><c>mse_serverless</c>: Serverless Edition.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -177,10 +153,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string MseVersion { get; set; }
 
         /// <summary>
-        /// <para>Network type, with the following values:</para>
+        /// <para>The network type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>privatenet</c>: indicates a private network.</description></item>
-        /// <item><description><c>pubnet</c>: indicates a public network.</description></item>
+        /// <item><description><c>privatenet</c>: virtual private cloud (VPC).</description></item>
+        /// <item><description><c>pubnet</c>: Internet.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -194,7 +170,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>No longer in use</para>
+        /// <para>This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>slb.s1.small</para>
@@ -205,8 +181,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string PrivateSlbSpecification { get; set; }
 
         /// <summary>
-        /// <para>Valid when <c>ConnectionType</c> is <c>slb</c>. 0 indicates no public network access SLB creation, and values above 1 indicate a fixed bandwidth for public network access SLB; unit: Mbps.</para>
-        /// <para>Value range: 0~5000.</para>
+        /// <para>The bandwidth of the Internet-facing Server Load Balancer (SLB) instance. This parameter takes effect only when ConnectionType is set to <c>slb</c>. A value of 0 indicates that no Internet-facing SLB instance is created. A value greater than 1 indicates the fixed bandwidth of the Internet-facing SLB instance. Unit: Mbit/s. Valid values: 0 to 5000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -218,7 +193,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>No longer in use</para>
+        /// <para>This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>slb.s1.small</para>
@@ -229,13 +204,13 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string PubSlbSpecification { get; set; }
 
         /// <summary>
-        /// <para>The region where the cluster is located, including but not limited to the following regions:</para>
+        /// <para>The region where the cluster is deployed. Valid values include but are not limited to:</para>
         /// <list type="bullet">
-        /// <item><description><c>cn-hangzhou</c>: Hangzhou</description></item>
-        /// <item><description><c>cn-beijing</c>: Beijing</description></item>
-        /// <item><description><c>cn-shanghai</c>: Shanghai</description></item>
-        /// <item><description><c>cn-zhangjiakou</c>: Zhangjiakou</description></item>
-        /// <item><description><c>cn-shenzhen</c>: Shenzhen</description></item>
+        /// <item><description><c>cn-hangzhou</c>: China (Hangzhou)</description></item>
+        /// <item><description><c>cn-beijing</c>: China (Beijing)</description></item>
+        /// <item><description><c>cn-shanghai</c>: China (Shanghai)</description></item>
+        /// <item><description><c>cn-zhangjiakou</c>: China (Zhangjiakou)</description></item>
+        /// <item><description><c>cn-shenzhen</c>: China (Shenzhen)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -246,7 +221,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>Extended request parameters, in JSON format.</para>
+        /// <para>The extended request parameters in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -256,7 +231,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestPars { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID. For more details about the resource group, see <a href="https://help.aliyun.com/document_detail/457230.html">Basic Information of Resource Group</a>.</para>
+        /// <para>The resource group ID. For more information, see <a href="https://help.aliyun.com/document_detail/457230.html">View the basic information of a resource group</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekzcqmoay3dlyq</para>
@@ -266,7 +241,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Valid when <c>ConnectionType</c> is <c>single_eni</c>, indicating the security group type of the instance.</para>
+        /// <para>The type of the security group to which the instance belongs. This parameter takes effect only when ConnectionType is set to <c>single_eni</c>. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>enterprise</para>
@@ -276,14 +251,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string SecurityGroupType { get; set; }
 
         /// <summary>
-        /// <para>List of tags to be added. Contains up to 20 items.</para>
+        /// <para>The tags to be added. You can add up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateClusterRequestTag> Tag { get; set; }
         public class CreateClusterRequestTag : TeaModel {
             /// <summary>
-            /// <para>Tag key.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env</para>
@@ -293,7 +268,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>Tag value.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prd</para>
@@ -305,7 +280,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>Switch ID.</para>
+        /// <para>The vSwitch ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-bp17opt4v18sto39k****</para>
@@ -315,7 +290,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>VPC ID.</para>
+        /// <para>The VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1t50e045b5g7i3p****</para>

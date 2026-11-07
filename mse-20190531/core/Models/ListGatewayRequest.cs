@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListGatewayRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned information. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>zh: Chinese</description></item>
         /// <item><description>en: English</description></item>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the sorting feature. This feature is not available.</para>
+        /// <para>The sorting order. This parameter is currently not used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? DescSort { get; set; }
 
         /// <summary>
-        /// <para>The details of parameters.</para>
+        /// <para>The filter parameters.</para>
         /// </summary>
         [NameInMap("FilterParams")]
         [Validation(Required=false)]
         public ListGatewayRequestFilterParams FilterParams { get; set; }
         public class ListGatewayRequestFilterParams : TeaModel {
             /// <summary>
-            /// <para>The type of the gateway.</para>
+            /// <para>The gateway type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Ingress</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GatewayUniqueId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mse_ingresspre-cn-****</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The tag of the instance.</para>
+            /// <para>The resource tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;key&quot;:&quot;tagkey&quot;,&quot;value&quot;:&quot;tagvalue&quot;}]</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string MseTag { get; set; }
 
             /// <summary>
-            /// <para>The name of the gateway.</para>
+            /// <para>The gateway name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rutain-test</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-7y2uye*****</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the virtual private cloud (VPC).</para>
+            /// <para>The VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp13hhyjntbab7w****</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string OrderItem { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of instances per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

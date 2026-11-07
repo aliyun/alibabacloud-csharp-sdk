@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListGatewayRouteRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>Language type for returned information:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable sorting. This parameter is unavailable.</para>
+        /// <para>Sorting. This field is currently unavailable and being deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? DescSort { get; set; }
 
         /// <summary>
-        /// <para>The parameters that specify filter conditions. The parameters are in the format of {&quot;key1&quot;:&quot;value1&quot;}.</para>
+        /// <para>Filter conditions in the format {&quot;key1&quot;:&quot;value1&quot;}</para>
         /// </summary>
         [NameInMap("FilterParams")]
         [Validation(Required=false)]
@@ -43,7 +45,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The default service ID.</para>
+            /// <para>Default service ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? DefaultServiceId { get; set; }
 
             /// <summary>
-            /// <para>The domain ID.</para>
+            /// <para>Domain ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>284</para>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? DomainId { get; set; }
 
             /// <summary>
-            /// <para>The associated domain name.</para>
+            /// <para>Associated domain</para>
             /// 
             /// <b>Example:</b>
             /// <para>*.alites.com</para>
@@ -74,7 +76,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string DomainName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the gateway.</para>
+            /// <para>Gateway ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>81</para>
@@ -84,7 +86,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? GatewayId { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the gateway.</para>
+            /// <para>Gateway unique identifier ID</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -95,7 +97,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GatewayUniqueId { get; set; }
 
             /// <summary>
-            /// <para>The name of the gateway.</para>
+            /// <para>Route name</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -105,6 +107,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Route path</para>
+            /// 
             /// <b>Example:</b>
             /// <para>/test</para>
             /// </summary>
@@ -113,7 +117,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>The order.</para>
+            /// <para>Order (unused)</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -123,10 +127,24 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? RouteOrder { get; set; }
 
             /// <summary>
-            /// <para>The status.</para>
+            /// <para>Route status:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Unpublished: 0</para>
+            /// </description></item>
+            /// <item><description><para>Publishing: 2</para>
+            /// </description></item>
+            /// <item><description><para>Published: 3</para>
+            /// </description></item>
+            /// <item><description><para>Editing (updates not published): 4</para>
+            /// </description></item>
+            /// <item><description><para>Unpublishing: 5</para>
+            /// </description></item>
+            /// <item><description><para>Unavailable: 6</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
@@ -135,7 +153,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The item based on which entries are sorted.</para>
+        /// <para>Sorting property.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GmtCreate</para>
@@ -145,7 +163,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string OrderItem { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>Page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -155,7 +173,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>Number of instances displayed per page (currently not in effect, queries all instances by default).</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

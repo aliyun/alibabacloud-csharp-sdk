@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetOverviewRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned information. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>zh: Chinese</description></item>
         /// <item><description>en: English</description></item>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The query time. Unit: days. For example, if you set this parameter to 30, the governance rules within the last 30 days are queried.</para>
+        /// <para>The query period. Unit: days. For example, if you set this parameter to 30, the governance rules within the last 30 days are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

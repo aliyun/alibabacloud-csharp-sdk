@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListSecurityGroupRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -26,6 +26,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public List<ListSecurityGroupRuleResponseBodyData> Data { get; set; }
         public class ListSecurityGroupRuleResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The list of IP address CIDR blocks with authorization to access the gateway.</para>
+            /// </summary>
             [NameInMap("AuthCidrs")]
             [Validation(Required=false)]
             public List<string> AuthCidrs { get; set; }
@@ -41,7 +44,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The gateway ID.</para>
+            /// <para>The ID of the gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>81</para>
@@ -123,7 +126,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -133,7 +136,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -143,7 +146,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>9EC7BDBF-3C38-5C9C-95DD-61E298CD43E8</para>
@@ -153,10 +156,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>The request result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><c>true</c>: The request is successful.</description></item>
+        /// <item><description><c>false</c>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

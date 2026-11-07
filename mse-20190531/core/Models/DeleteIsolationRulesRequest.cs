@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class DeleteIsolationRulesRequest : TeaModel {
         /// <summary>
+        /// <para>The language in which the response is displayed. Valid values: zh (default): Chinese; en: English.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>The application name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,11 +30,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string AppName { get; set; }
 
+        /// <summary>
+        /// <para>The list of rule IDs to be deleted.</para>
+        /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
         public List<long?> Ids { get; set; }
 
         /// <summary>
+        /// <para>The microservice namespace to which the application belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

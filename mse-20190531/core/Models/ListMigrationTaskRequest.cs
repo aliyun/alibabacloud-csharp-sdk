@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string OriginInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The extended request parameters in the JSON format.</para>
+        /// <para>The extended request parameters. This parameter is a JSON string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

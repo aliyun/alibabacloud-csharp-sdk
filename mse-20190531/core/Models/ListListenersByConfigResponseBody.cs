@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListListenersByConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-100-000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>202</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string HttpCode { get; set; }
 
         /// <summary>
-        /// <para>The information about listeners.</para>
+        /// <para>The listener information.</para>
         /// </summary>
         [NameInMap("Listeners")]
         [Validation(Required=false)]
         public List<ListListenersByConfigResponseBodyListeners> Listeners { get; set; }
         public class ListListenersByConfigResponseBodyListeners : TeaModel {
             /// <summary>
-            /// <para>The IP address.</para>
+            /// <para>IP。</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.1.1.1</para>
@@ -47,22 +47,34 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The label of the listener.</para>
+            /// <para>The labels of the listener.</para>
             /// </summary>
             [NameInMap("Labels")]
             [Validation(Required=false)]
             public Dictionary<string, string> Labels { get; set; }
 
+            /// <summary>
+            /// <para>The name of the canary release rule matched by the current listener.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Name of the matched canary release rule</para>
+            /// </summary>
             [NameInMap("MatchRuleName")]
             [Validation(Required=false)]
             public string MatchRuleName { get; set; }
 
+            /// <summary>
+            /// <para>The type of the matched canary release rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Beta</para>
+            /// </summary>
             [NameInMap("MatchRuleType")]
             [Validation(Required=false)]
             public string MatchRuleType { get; set; }
 
             /// <summary>
-            /// <para>The verification string.</para>
+            /// <para>The checksum string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23sdfdf</para>
@@ -72,17 +84,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Md5 { get; set; }
 
             /// <summary>
-            /// <para>The status.</para>
+            /// <para>Indicates whether the push is successful.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>beta</para>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The current version of the listener. Valid values: gray and normal.</para>
+            /// <para>The current version of the listener. Valid values: gray (canary release version) or normal (production version).</para>
             /// 
             /// <b>Example:</b>
             /// <para>gray</para>
@@ -94,7 +106,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -104,7 +116,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -114,7 +126,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The size of the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -124,7 +136,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>75E1442F-11EC-567A-9CF0-5A36F7904F39</para>
@@ -134,7 +146,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>The request result. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>true</c>: The request was successful.</description></item>
         /// <item><description><c>false</c>: The request failed.</description></item>
@@ -148,7 +160,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>

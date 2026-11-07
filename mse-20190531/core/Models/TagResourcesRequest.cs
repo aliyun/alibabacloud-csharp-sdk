@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,13 +37,23 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The resource ID.</para>
+        /// <list type="bullet">
+        /// <item><description><para><em>Registration and configuration center</em>: the instance ID.</para>
+        /// </description></item>
+        /// <item><description><para><em>Cloud-native gateway</em>: the unique ID of the gateway.</para>
+        /// </description></item>
+        /// <item><description><para><em>Microservice administration application</em>: the AppID of the microservice administration application. Note that this is not the LicenseKey.</para>
+        /// </description></item>
+        /// </list>
         /// <remarks>
-        /// <para>This parameter specifies the instance ID that is passed. Examples:</para>
+        /// <para>The number in the parameter name specifies the index of the instance ID. For example:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>ResourceId.0 specifies the first instance ID that is passed.</description></item>
-        /// <item><description>ResourceId.1 specifies the second instance ID that is passed.</description></item>
+        /// <item><description><para><b>ResourceId.0</b> specifies the first instance ID.</para>
+        /// </description></item>
+        /// <item><description><para><b>ResourceId.1</b> specifies the second instance ID.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -49,22 +61,26 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resources. Valid values:</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CLUSTER: Microservices Engine (MSE) instance</description></item>
-        /// <item><description>GATEWAY: cloud-native gateway</description></item>
+        /// <item><description><para>CLUSTER: a registration and configuration center.</para>
+        /// </description></item>
+        /// <item><description><para>GATEWAY: a cloud-native gateway.</para>
+        /// </description></item>
+        /// <item><description><para>GOVERNANCEAPPLICATION: a microservice administration application.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CLUSTER</para>
+        /// <para>CLUSTER、GATEWAY、GOVERNANCEAPPLICATION</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of tags. You can specify a maximum of 20 tags.</para>
+        /// <para>A list of tags. You can specify up to 20 tags.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -72,7 +88,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key must be 1 to 128 characters in length. The tag key cannot start with acs: or aliyun or contain <a href="http://https://%E3%80%82">http:// or https://.</a></para>
+            /// <para>The tag key. The tag key cannot be an empty string. It can be up to 128 characters in length. The tag key cannot start with \<c>aliyun\\</c> or \<c>acs:\\</c>. The tag key cannot contain \<c>http\\://\\</c> or \<c>https\\://\\</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env</para>
@@ -82,7 +98,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prd</para>

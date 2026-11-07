@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class AddMockRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned information. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>zh: Chinese</description></item>
         /// <item><description>en: English</description></item>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the custom application.</para>
+        /// <para>The IDs of the custom applications.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,10 +46,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DubboMockItems { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the alert rule. Valid values:</para>
+        /// <para>Specifies whether the alert rule is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: enables the alert rule.</description></item>
-        /// <item><description><c>false</c>: disables the alert rule.</description></item>
+        /// <item><description><c>true</c>: Enabled.</description></item>
+        /// <item><description><c>false</c>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,12 +71,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ExtraJson { get; set; }
 
         /// <summary>
-        /// <para>The response time (RT) threshold of slow calls. Valid values:</para>
+        /// <para>The response time (RT) for slow calls. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>\- 15: 15 ms</description></item>
-        /// <item><description>\- 30: 30 ms</description></item>
-        /// <item><description>\- 60: 60 ms</description></item>
-        /// <item><description>\- 120: 120 ms</description></item>
+        /// <item><description>15: 15 ms</description></item>
+        /// <item><description>30: 30 ms</description></item>
+        /// <item><description>60: 60 ms</description></item>
+        /// <item><description>120: 120 ms</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ProviderAppName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The input parameters. The JSON format is supported.</para>
+        /// <para>The input parameters. JSON format is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ScMockItems { get; set; }
 
         /// <summary>
-        /// <para>The rule source.</para>
+        /// <para>The source of the rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

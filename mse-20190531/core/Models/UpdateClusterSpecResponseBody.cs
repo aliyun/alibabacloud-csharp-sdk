@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateClusterSpecResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code returned.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>This is a reserved field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the request failed. Take note of the following rules:</para>
+        /// <para>The error code. Take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>The <b>ErrorCode</b> parameter is not returned if the request succeeds.</description></item>
-        /// <item><description>The <b>ErrorCode</b> parameter is returned if the request fails. For more information, see the <b>Error codes</b> section in this topic.</description></item>
+        /// <item><description><para>If the request is successful: The <b>ErrorCode</b> field is not returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails: The <b>ErrorCode</b> field is returned. For more information, see the <b>Error codes</b> section in this topic.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -54,17 +56,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request is successfully processed.</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5B170A0D-2C5D-4CF8-B808-03966B86****</para>
@@ -76,8 +78,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

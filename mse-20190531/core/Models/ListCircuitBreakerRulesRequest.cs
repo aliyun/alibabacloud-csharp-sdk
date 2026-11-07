@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListCircuitBreakerRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values: zh-CN and en-US. Default value: zh-CN. The value zh-CN indicates Chinese, and the value en-US indicates English.</para>
+        /// <para>The language in which you want the results to be displayed. Valid values: zh-CN (default value): Chinese. en-US: English</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The start page of the returned pages. Default value: 1.</para>
+        /// <para>The first page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>This parameter is used for exact match of circuit breaking rules.</para>
+        /// <para>The interface for which the protection rule is configured.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/a</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Resource { get; set; }
 
         /// <summary>
-        /// <para>This parameter is used for fuzzy match of circuit breaking rules.</para>
+        /// <para>The interface keyword in the protection rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a</para>

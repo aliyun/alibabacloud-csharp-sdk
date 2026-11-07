@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetGatewayServiceDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code returned.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,18 +20,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The data overview.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetGatewayServiceDetailResponseBodyData Data { get; set; }
         public class GetGatewayServiceDetailResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The list of DNS servers. This parameter is only used for DNS domain name services.</para>
+            /// </summary>
             [NameInMap("DnsServerList")]
             [Validation(Required=false)]
             public List<string> DnsServerList { get; set; }
 
             /// <summary>
-            /// <para>The ID of the gateway.</para>
+            /// <para>The gateway ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -41,7 +44,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? GatewayId { get; set; }
 
             /// <summary>
-            /// <para>The traffic policy of the service.</para>
+            /// <para>The service traffic policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -81,7 +84,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The name of the group.</para>
+            /// <para>The group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the health check is enabled.</para>
+            /// <para>Indicates whether health checks are enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -101,7 +104,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string HealthCheck { get; set; }
 
             /// <summary>
-            /// <para>The status of the health check. Valid values:</para>
+            /// <para>The health check status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -111,7 +114,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string HealthStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the service.</para>
+            /// <para>The service ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -121,21 +124,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the service.</para>
+            /// <para>The IP addresses of the service.</para>
             /// </summary>
             [NameInMap("Ips")]
             [Validation(Required=false)]
             public List<string> Ips { get; set; }
 
             /// <summary>
-            /// <para>The details of the tag.</para>
+            /// <para>The label details.</para>
             /// </summary>
             [NameInMap("LabelDetails")]
             [Validation(Required=false)]
             public List<GetGatewayServiceDetailResponseBodyDataLabelDetails> LabelDetails { get; set; }
             public class GetGatewayServiceDetailResponseBodyDataLabelDetails : TeaModel {
                 /// <summary>
-                /// <para>The tag.</para>
+                /// <para>The label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>label</para>
@@ -145,7 +148,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag value.</para>
+                /// <para>The label value.</para>
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
@@ -154,7 +157,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// <para>The basic information about the service.</para>
+            /// <para>The basic information of the service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -164,7 +167,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string MetaInfo { get; set; }
 
             /// <summary>
-            /// <para>The name of the service.</para>
+            /// <para>The service name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -184,7 +187,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The traffic policy of service ports.</para>
+            /// <para>The traffic policies for service ports.</para>
             /// </summary>
             [NameInMap("PortTrafficPolicyList")]
             [Validation(Required=false)]
@@ -221,7 +224,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The port ID.</para>
+                /// <para>The port configuration ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -241,7 +244,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public long? ServiceId { get; set; }
 
                 /// <summary>
-                /// <para>The service port number.</para>
+                /// <para>The service port.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8080</para>
@@ -266,12 +269,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public List<int?> Ports { get; set; }
 
+            /// <summary>
+            /// <para>The fully qualified domain name (FQDN) of the service.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>demo.default.svc.cluster.local</para>
+            /// </summary>
             [NameInMap("ServiceFQDN")]
             [Validation(Required=false)]
             public string ServiceFQDN { get; set; }
 
             /// <summary>
-            /// <para>The name of the service registered with the service registry.</para>
+            /// <para>The name of the service registered in the registry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -280,12 +289,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string ServiceNameInRegistry { get; set; }
 
+            /// <summary>
+            /// <para>The service port.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8080</para>
+            /// </summary>
             [NameInMap("ServicePort")]
             [Validation(Required=false)]
             public int? ServicePort { get; set; }
 
             /// <summary>
-            /// <para>The protocol of the service.</para>
+            /// <para>The service protocol.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HTTP</para>
@@ -295,7 +310,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ServiceProtocol { get; set; }
 
             /// <summary>
-            /// <para>The ID of the service source.</para>
+            /// <para>The source ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -305,7 +320,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? SourceId { get; set; }
 
             /// <summary>
-            /// <para>The source type of the service.</para>
+            /// <para>The service source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MSE</para>
@@ -315,7 +330,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>The details of versions.</para>
+            /// <para>The version details.</para>
             /// </summary>
             [NameInMap("VersionDetails")]
             [Validation(Required=false)]
@@ -349,14 +364,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public GetGatewayServiceDetailResponseBodyDataVersionDetailsServiceVersion ServiceVersion { get; set; }
                 public class GetGatewayServiceDetailResponseBodyDataVersionDetailsServiceVersion : TeaModel {
                     /// <summary>
-                    /// <para>The tag.</para>
+                    /// <para>The label.</para>
                     /// </summary>
                     [NameInMap("Labels")]
                     [Validation(Required=false)]
                     public List<GetGatewayServiceDetailResponseBodyDataVersionDetailsServiceVersionLabels> Labels { get; set; }
                     public class GetGatewayServiceDetailResponseBodyDataVersionDetailsServiceVersionLabels : TeaModel {
                         /// <summary>
-                        /// <para>The tag.</para>
+                        /// <para>The label.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>version</para>
@@ -366,7 +381,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// <para>The tag value.</para>
+                        /// <para>The label value.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>v2</para>
@@ -378,7 +393,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     }
 
                     /// <summary>
-                    /// <para>The version number.</para>
+                    /// <para>The version name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>v2</para>
@@ -392,14 +407,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// <para>The service version. This parameter is deprecated.</para>
+            /// <para>The service version numbers. <b>[Deprecated]</b></para>
             /// </summary>
             [NameInMap("Versions")]
             [Validation(Required=false)]
             public List<GetGatewayServiceDetailResponseBodyDataVersions> Versions { get; set; }
             public class GetGatewayServiceDetailResponseBodyDataVersions : TeaModel {
                 /// <summary>
-                /// <para>The tag.</para>
+                /// <para>The label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>version</para>
@@ -419,7 +434,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The tag value.</para>
+                /// <para>The label value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>v1</para>
@@ -433,7 +448,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -443,17 +458,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request is successfully processed.</para>
+        /// <para>Succ</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9802C54E-5CC5-5706-927B-993DBB6DCF2F</para>
@@ -463,10 +478,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><c>true</c>: The request is successful.</description></item>
+        /// <item><description><c>false</c>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

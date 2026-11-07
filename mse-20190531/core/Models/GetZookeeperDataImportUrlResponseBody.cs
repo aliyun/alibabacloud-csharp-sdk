@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <para>The request was successfully processed.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The dynamic part in the error message.</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

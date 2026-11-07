@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class DeleteNamespaceRequest : TeaModel {
         /// <summary>
-        /// <para>The language in which you want to display the results. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.</para>
+        /// <para>The language in which the response is displayed. Valid values: zh (default): Chinese, en: English</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>The name of the MSE namespace to be deleted.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>prod</para>
         /// </summary>
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The region of the operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

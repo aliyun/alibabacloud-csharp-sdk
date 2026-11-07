@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,12 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The billing method you specify when you purchase an ordinary instance.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PREPAY: subscription</description></item>
-        /// <item><description>POSTPAY: pay-as-you-go</description></item>
-        /// </list>
+        /// <para>The billing method. This parameter is specified when you purchase a traditional instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>POSTPAY</para>
@@ -39,12 +34,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The network type of the purchased Classic Load Balancer (CLB) instance that is billed based on LCUs.</para>
+        /// <para>The network type of the pay-by-LCU Classic Load Balancer (CLB) to be purchased. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>pubnet: Internet</description></item>
-        /// <item><description>privatenet: private network</description></item>
-        /// <item><description>privatepubnet: Internet and private network</description></item>
+        /// <item><description>pubnet: Internet.</description></item>
+        /// <item><description>privatenet: Internal network.</description></item>
+        /// <item><description>privatepubnet: Internet and internal network.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para>Traditional instance: When you create a traditional instance, you can purchase only one of the following load balancers: an NLB, a pay-by-LCU CLB, or a pay-by-specification CLB.</para>
+        /// </remarks>
+        /// <remarks>
+        /// <para>Serverless instance: When you create a Serverless instance, you can purchase only one of the following load balancers: an NLB or a pay-by-LCU CLB.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>pubnet</para>
@@ -54,7 +55,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ClbNetworkType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to activate Tracing Analysis.</para>
+        /// <para>Specifies whether to enable hardware acceleration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -64,7 +65,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? EnableHardwareAcceleration { get; set; }
 
         /// <summary>
-        /// <para>The tag of the gateway.</para>
+        /// <para>Specifies whether to enable log delivery to Simple Log Service (SLS).</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -74,7 +75,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? EnableSls { get; set; }
 
         /// <summary>
-        /// <para>The sampling rate of Tracing Analysis. Valid values: [1,100].</para>
+        /// <para>Specifies whether to enable Tracing Analysis.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -84,7 +85,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? EnableXtrace { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable hardware acceleration.</para>
+        /// <para>Specifies whether the security group is an advanced security group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -96,15 +97,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The specifications of the Internet-facing Server Load Balancer (SLB) instance. Valid values:</para>
+        /// <para>The specifications of the Internet-facing SLB instance. This parameter is applicable to traditional instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>slb.s1.small</description></item>
-        /// <item><description>slb.s2.smal</description></item>
-        /// <item><description>slb.s2.medium</description></item>
-        /// <item><description>slb.s3.small</description></item>
-        /// <item><description>slb.s3.medium</description></item>
-        /// <item><description>slb.s3.large</description></item>
+        /// <item><description>Basic (slb.s1.small)</description></item>
+        /// <item><description>Standard 1 (slb.s2.small)</description></item>
+        /// <item><description>Standard I (slb.s2.medium)</description></item>
+        /// <item><description>Advanced 1 (slb.s3.small)</description></item>
+        /// <item><description>Advanced I (slb.s3.medium)</description></item>
+        /// <item><description>Ultra-high I (slb.s3.large)</description></item>
         /// </list>
+        /// <remarks>
+        /// <para>Traditional instance: When you create a traditional instance, you can purchase only one of the following load balancers: an NLB, a pay-by-LCU CLB, or a pay-by-specification CLB.</para>
+        /// </remarks>
+        /// <remarks>
+        /// <para>Serverless instance: When you create a Serverless instance, you can purchase only one of the following load balancers: an NLB or a pay-by-LCU CLB.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>slb.s2.small</para>
@@ -115,6 +122,13 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InternetSlbSpec { get; set; }
 
         /// <summary>
+        /// <para>The gateway ingress type. This parameter is applicable to the Professional Edition of a standard instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>pubnet: Internet.</description></item>
+        /// <item><description>privatenet: Internal network.</description></item>
+        /// <item><description>privatepubnet: Internet and internal network.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>pubnet</para>
         /// </summary>
@@ -123,10 +137,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ManagedEntryNetworkType { get; set; }
 
         /// <summary>
-        /// <para>The MSE instance type. Valid values:</para>
+        /// <para>The gateway product type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>mse_pro: ordinary instance</description></item>
-        /// <item><description>mse_serverless: serverless instance</description></item>
+        /// <item><description>mse_premium: Professional Edition of a standard instance.</description></item>
+        /// <item><description>mse_pro: Standard Edition of a standard instance.</description></item>
+        /// <item><description>mse_serverless: Serverless.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -137,7 +152,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string MserVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The name of the gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-ceshi</para>
@@ -147,12 +162,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The network type of the Network Load Balancer (NLB) instance you specify when you purchase a serverless instance.</para>
+        /// <para>The network type of the Network Load Balancer (NLB) to be purchased. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>pubnet: Internet</description></item>
-        /// <item><description>privatenet: private network</description></item>
-        /// <item><description>privatepubnet: Internet and private network</description></item>
+        /// <item><description>pubnet: Internet.</description></item>
+        /// <item><description>privatenet: Internal network.</description></item>
+        /// <item><description>privatepubnet: Internet and internal network.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para>Traditional instance: When you create a traditional instance, you can purchase only one of the following load balancers: an NLB, a pay-by-LCU Classic Load Balancer (CLB), or a pay-by-specification CLB.</para>
+        /// </remarks>
+        /// <remarks>
+        /// <para>Serverless instance: When you create a Serverless instance, you can purchase only one of the following load balancers: an NLB or a pay-by-LCU CLB.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>pubnet</para>
@@ -162,15 +183,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string NlbNetworkType { get; set; }
 
         /// <summary>
-        /// <para>The specifications of the internal-facing Server Load Balancer (SLB) instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>slb.s1.small</description></item>
-        /// <item><description>slb.s2.small</description></item>
-        /// <item><description>slb.s2.medium</description></item>
-        /// <item><description>slb.s3.small</description></item>
-        /// <item><description>slb.s3.medium</description></item>
-        /// <item><description>slb.s3.large</description></item>
-        /// </list>
+        /// <para>The region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -181,7 +194,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The number of nodes you specify when you purchase an ordinary instance.</para>
+        /// <para>The number of nodes. This parameter is specified when you purchase a traditional instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -191,7 +204,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Replica { get; set; }
 
         /// <summary>
-        /// <para>The extended field.</para>
+        /// <para>The extended fields.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -201,11 +214,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestPars { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
-        /// </list>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm34x43l*****</para>
@@ -217,15 +226,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The specifications of the internal-facing Server Load Balancer (SLB) instance. Valid values:</para>
+        /// <para>The specifications of the internal-facing Server Load Balancer (SLB) instance. This parameter is applicable to traditional instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>slb.s1.small</description></item>
-        /// <item><description>slb.s2.small</description></item>
-        /// <item><description>slb.s2.medium</description></item>
-        /// <item><description>slb.s3.small</description></item>
-        /// <item><description>slb.s3.medium</description></item>
-        /// <item><description>slb.s3.large</description></item>
+        /// <item><description>Basic (slb.s1.small)</description></item>
+        /// <item><description>Standard 1 (slb.s2.small)</description></item>
+        /// <item><description>Standard I (slb.s2.medium)</description></item>
+        /// <item><description>Advanced 1 (slb.s3.small)</description></item>
+        /// <item><description>Advanced I (slb.s3.medium)</description></item>
+        /// <item><description>Ultra-high I (slb.s3.large)</description></item>
         /// </list>
+        /// <remarks>
+        /// <para>Traditional instance: When you create a traditional instance, you can purchase only one of the following load balancers: an NLB, a pay-by-LCU CLB, or a pay-by-specification CLB.</para>
+        /// </remarks>
+        /// <remarks>
+        /// <para>Serverless instance: When you create a Serverless instance, you can purchase only one of the following load balancers: an NLB or a pay-by-LCU CLB.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>slb.s2.small</para>
@@ -236,7 +251,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string SlbSpec { get; set; }
 
         /// <summary>
-        /// <para>The node specifications you specify when you purchase an ordinary instance. Valid values:</para>
+        /// <para>The node specifications. This parameter is specified when you purchase a traditional instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>MSE_GTW_16_32_200_c(16C32G)</description></item>
         /// <item><description>MSE_GTW_2_4_200_c(2C4G)</description></item>
@@ -252,14 +267,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Spec { get; set; }
 
         /// <summary>
-        /// <para>The tag object.</para>
+        /// <para>The tags of the gateway.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<AddGatewayShrinkRequestTag> Tag { get; set; }
         public class AddGatewayShrinkRequestTag : TeaModel {
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key</para>
@@ -269,7 +284,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value</para>
@@ -291,7 +306,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use an advanced security group.</para>
+        /// <para>The ID of the secondary vSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-wz9bu6o5vsvitt5mrxo6s</para>
@@ -301,7 +316,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string VSwitchId2 { get; set; }
 
         /// <summary>
-        /// <para>The ID of the primary vSwitch.</para>
+        /// <para>The ID of the virtual private cloud (VPC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -312,7 +327,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Vpc { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to activate Log Service.</para>
+        /// <para>The sampling rate for Tracing Analysis. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -322,7 +337,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string XtraceRatio { get; set; }
 
         /// <summary>
-        /// <para>The details of the zone.</para>
+        /// <para>The zone information.</para>
         /// </summary>
         [NameInMap("ZoneInfo")]
         [Validation(Required=false)]

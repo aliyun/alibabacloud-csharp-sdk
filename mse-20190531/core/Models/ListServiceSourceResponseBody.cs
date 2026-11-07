@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListServiceSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListServiceSourceResponseBodyData> Data { get; set; }
         public class ListServiceSourceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the Container Service for Kubernetes (ACK) cluster or the endpoint of the Microservices Engine (MSE) instance.</para>
+            /// <para>The ACK ID or the MSE registry address.</para>
             /// 
             /// <b>Example:</b>
             /// <hr>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Address { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the service source is associated with the gateway. The value 1 indicates that the service source is associated with the gateway.</para>
+            /// <para>Indicates whether the binding is completed. A value of 1 indicates that the binding is completed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? BindingWithGateway { get; set; }
 
             /// <summary>
-            /// <para>The ID of the gateway.</para>
+            /// <para>The gateway ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -104,14 +104,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The information about the support for Ingresses by applications.</para>
+            /// <para>The Ingress support for application routing.</para>
             /// </summary>
             [NameInMap("IngressOptions")]
             [Validation(Required=false)]
             public ListServiceSourceResponseBodyDataIngressOptions IngressOptions { get; set; }
             public class ListServiceSourceResponseBodyDataIngressOptions : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether Ingresses are enabled.</para>
+                /// <para>Specifies whether to enable or disable Ingress.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public bool? EnableIngress { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the Ingress status is updated.</para>
+                /// <para>Specifies whether to update IngressStatus.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string IngressClass { get; set; }
 
                 /// <summary>
-                /// <para>The namespace that you want to monitor.</para>
+                /// <para>The monitored namespace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default</para>
@@ -152,6 +152,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
             }
 
+            /// <summary>
+            /// <para>Indicates whether the source is valid.</para>
+            /// </summary>
             [NameInMap("Invalid")]
             [Validation(Required=false)]
             public bool? Invalid { get; set; }
@@ -167,14 +170,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The array of root paths of service lists.</para>
+            /// <para>The array of root paths for the service list.</para>
             /// </summary>
             [NameInMap("PathList")]
             [Validation(Required=false)]
             public List<string> PathList { get; set; }
 
             /// <summary>
-            /// <para>The type of the service source.</para>
+            /// <para>The source type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MSE</para>
@@ -184,7 +187,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the service source.</para>
+            /// <para>The unique identifier of the source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mse-cn-***</para>
@@ -206,7 +209,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -216,7 +219,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>You are not authorized to perform this operation.</para>
@@ -226,7 +229,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B8C4B0D8-EBB9-5F20-8295-04224FBE5529</para>
@@ -236,10 +239,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><c>true</c>: The request is successful.</description></item>
+        /// <item><description><c>false</c>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

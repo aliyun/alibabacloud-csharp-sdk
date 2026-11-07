@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetGatewayRouteDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>Language type of the returned information:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the gateway.</para>
+        /// <para>Gateway unique identifier ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-5d3a78a53ec947aa928212d671d400ac</para>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route.</para>
+        /// <para>Route ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1050</para>

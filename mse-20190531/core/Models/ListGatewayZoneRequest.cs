@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListGatewayZoneRequest : TeaModel {
         /// <summary>
-        /// <para>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</para>
+        /// <para>The language of the response. Valid values: <c>zh</c> (Chinese) and <c>en</c> (English). Default value: <c>zh</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListGatewayRouteResponseBody : TeaModel {
         /// <summary>
-        /// <para>The code returned.</para>
+        /// <para>Code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>Returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListGatewayRouteResponseBodyData Data { get; set; }
         public class ListGatewayRouteResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>Page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>Page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -47,21 +47,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The data structure.</para>
+            /// <para>Data structure.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<ListGatewayRouteResponseBodyDataResult> Result { get; set; }
             public class ListGatewayRouteResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// <para>The route comment (ingress).</para>
+                /// <para>Route comment (ingress)</para>
                 /// </summary>
                 [NameInMap("Comment")]
                 [Validation(Required=false)]
                 public ListGatewayRouteResponseBodyDataResultComment Comment { get; set; }
                 public class ListGatewayRouteResponseBodyDataResultComment : TeaModel {
                     /// <summary>
-                    /// <para>The status.</para>
+                    /// <para>Status.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>error</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 }
 
                 /// <summary>
-                /// <para>The default service ID.</para>
+                /// <para>Default service ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public long? DefaultServiceId { get; set; }
 
                 /// <summary>
-                /// <para>The default service name.</para>
+                /// <para>Default service name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string DefaultServiceName { get; set; }
 
                 /// <summary>
-                /// <para>The destination service type.</para>
+                /// <para>Destination type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Single</para>
@@ -103,14 +103,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string DestinationType { get; set; }
 
                 /// <summary>
-                /// <para>The information about service mocking.</para>
+                /// <para>Mock configuration</para>
                 /// </summary>
                 [NameInMap("DirectResponse")]
                 [Validation(Required=false)]
                 public ListGatewayRouteResponseBodyDataResultDirectResponse DirectResponse { get; set; }
                 public class ListGatewayRouteResponseBodyDataResultDirectResponse : TeaModel {
                     /// <summary>
-                    /// <para>The return value for service mocking.</para>
+                    /// <para>Mock return value</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>hello</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string Body { get; set; }
 
                     /// <summary>
-                    /// <para>The response code returned.</para>
+                    /// <para>Response code.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>200</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 }
 
                 /// <summary>
-                /// <para>The domain ID.</para>
+                /// <para>Domain ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>265</para>
@@ -142,14 +142,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public long? DomainId { get; set; }
 
                 /// <summary>
-                /// <para>The domain IDs.</para>
+                /// <para>Domain list.</para>
                 /// </summary>
                 [NameInMap("DomainIdList")]
                 [Validation(Required=false)]
                 public List<long?> DomainIdList { get; set; }
 
                 /// <summary>
-                /// <para>The domain name.</para>
+                /// <para>Domain name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>y.com</para>
@@ -159,18 +159,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string DomainName { get; set; }
 
                 /// <summary>
-                /// <para>The domain names.</para>
+                /// <para>Domain name list.</para>
                 /// </summary>
                 [NameInMap("DomainNameList")]
                 [Validation(Required=false)]
                 public List<string> DomainNameList { get; set; }
 
+                /// <summary>
+                /// <para>Whether to enable dynamic routing</para>
+                /// </summary>
                 [NameInMap("DynamicRoute")]
                 [Validation(Required=false)]
                 public bool? DynamicRoute { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether Web Application Firewall (WAF) is activated.</para>
+                /// <para>Whether to enable WAF</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -180,7 +183,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string EnableWaf { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the Fallback service is enabled.</para>
+                /// <para>Whether to enable Fallback service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -190,14 +193,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public bool? Fallback { get; set; }
 
                 /// <summary>
-                /// <para>The information about the Fallback service.</para>
+                /// <para>Fallback service.</para>
                 /// </summary>
                 [NameInMap("FallbackServices")]
                 [Validation(Required=false)]
                 public List<ListGatewayRouteResponseBodyDataResultFallbackServices> FallbackServices { get; set; }
                 public class ListGatewayRouteResponseBodyDataResultFallbackServices : TeaModel {
                     /// <summary>
-                    /// <para>The type of the protocol.</para>
+                    /// <para>Protocol Type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>DUBBO</para>
@@ -207,7 +210,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string AgreementType { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the group to which the service belongs.</para>
+                    /// <para>Service group name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -217,7 +220,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string GroupName { get; set; }
 
                     /// <summary>
-                    /// <para>The name.</para>
+                    /// <para>Name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>name</para>
@@ -227,7 +230,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The namespace to which the service belongs.</para>
+                    /// <para>Service namespace.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Namespace</para>
@@ -237,7 +240,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string Namespace { get; set; }
 
                     /// <summary>
-                    /// <para>The weight in the form of a percentage value.</para>
+                    /// <para>Weight percentage.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -247,7 +250,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public int? Percent { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the service.</para>
+                    /// <para>Service ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>353</para>
@@ -257,7 +260,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public long? ServiceId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the service.</para>
+                    /// <para>Service name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>service name</para>
@@ -267,7 +270,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string ServiceName { get; set; }
 
                     /// <summary>
-                    /// <para>The service port number.</para>
+                    /// <para>Service port.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>8848</para>
@@ -277,7 +280,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public int? ServicePort { get; set; }
 
                     /// <summary>
-                    /// <para>The source type.</para>
+                    /// <para>Source type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>MSE</para>
@@ -287,7 +290,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string SourceType { get; set; }
 
                     /// <summary>
-                    /// <para>The version of the service.</para>
+                    /// <para>Service version.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>v1</para>
@@ -299,7 +302,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the gateway.</para>
+                /// <para>Gateway ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>496</para>
@@ -309,7 +312,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public long? GatewayId { get; set; }
 
                 /// <summary>
-                /// <para>The unique ID of the gateway.</para>
+                /// <para>Gateway unique identifier.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>gw-cf0e7f52ecc7429dbc7ba4d5e3656100</para>
@@ -319,7 +322,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string GatewayUniqueId { get; set; }
 
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>Creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-01-25T07:14:01.817+0000</para>
@@ -329,7 +332,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The modification time.</para>
+                /// <para>Modification time</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-01-07 18:07:57</para>
@@ -339,7 +342,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The ID.</para>
+                /// <para>Route ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>47</para>
@@ -349,7 +352,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The name.</para>
+                /// <para>Name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -359,7 +362,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The matching rules.</para>
+                /// <para>Matching rules</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;PathPredicates\&quot;:{\&quot;Path\&quot;:\&quot;/rpc/compute \&quot;,\&quot;Type\&quot;:\&quot;PRE\&quot;,\&quot;IgnoreCase\&quot;:true}}</para>
@@ -369,14 +372,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Predicates { get; set; }
 
                 /// <summary>
-                /// <para>The information about redirection.</para>
+                /// <para>Redirection</para>
                 /// </summary>
                 [NameInMap("Redirect")]
                 [Validation(Required=false)]
                 public ListGatewayRouteResponseBodyDataResultRedirect Redirect { get; set; }
                 public class ListGatewayRouteResponseBodyDataResultRedirect : TeaModel {
                     /// <summary>
-                    /// <para>The response code returned.</para>
+                    /// <para>Response code.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>200</para>
@@ -386,7 +389,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public int? Code { get; set; }
 
                     /// <summary>
-                    /// <para>The hostname to be redirected to.</para>
+                    /// <para>Redirect hostname</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test.com</para>
@@ -396,7 +399,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string Host { get; set; }
 
                     /// <summary>
-                    /// <para>The path.</para>
+                    /// <para>Path.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>/test</para>
@@ -408,7 +411,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 }
 
                 /// <summary>
-                /// <para>The order.</para>
+                /// <para>Order</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -418,21 +421,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? RouteOrder { get; set; }
 
                 /// <summary>
-                /// <para>The matching rules.</para>
+                /// <para>Matching rules</para>
                 /// </summary>
                 [NameInMap("RoutePredicates")]
                 [Validation(Required=false)]
                 public ListGatewayRouteResponseBodyDataResultRoutePredicates RoutePredicates { get; set; }
                 public class ListGatewayRouteResponseBodyDataResultRoutePredicates : TeaModel {
                     /// <summary>
-                    /// <para>The headers used for route matching.</para>
+                    /// <para>Header matching</para>
                     /// </summary>
                     [NameInMap("HeaderPredicates")]
                     [Validation(Required=false)]
                     public List<ListGatewayRouteResponseBodyDataResultRoutePredicatesHeaderPredicates> HeaderPredicates { get; set; }
                     public class ListGatewayRouteResponseBodyDataResultRoutePredicatesHeaderPredicates : TeaModel {
                         /// <summary>
-                        /// <para>The header key.</para>
+                        /// <para>Header KEY</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>userid</para>
@@ -442,7 +445,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// <para>The matching type.</para>
+                        /// <para>Matching type</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>PRE</para>
@@ -452,7 +455,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                         public string Type { get; set; }
 
                         /// <summary>
-                        /// <para>The value.</para>
+                        /// <para>Matching value</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>test</para>
@@ -464,21 +467,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     }
 
                     /// <summary>
-                    /// <para>The HTTP methods used for route matching.</para>
+                    /// <para>HTTP method matching</para>
                     /// </summary>
                     [NameInMap("MethodPredicates")]
                     [Validation(Required=false)]
                     public List<string> MethodPredicates { get; set; }
 
                     /// <summary>
-                    /// <para>The path used for route matching.</para>
+                    /// <para>Route Path matching.</para>
                     /// </summary>
                     [NameInMap("PathPredicates")]
                     [Validation(Required=false)]
                     public ListGatewayRouteResponseBodyDataResultRoutePredicatesPathPredicates PathPredicates { get; set; }
                     public class ListGatewayRouteResponseBodyDataResultRoutePredicatesPathPredicates : TeaModel {
                         /// <summary>
-                        /// <para>Indicates whether case sensitivity is ignored.</para>
+                        /// <para>Case insensitive</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -488,7 +491,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                         public bool? IgnoreCase { get; set; }
 
                         /// <summary>
-                        /// <para>The path of the node.</para>
+                        /// <para>Node path.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>/getIp</para>
@@ -498,7 +501,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                         public string Path { get; set; }
 
                         /// <summary>
-                        /// <para>The matching type.</para>
+                        /// <para>Matching type.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>PRE</para>
@@ -510,14 +513,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     }
 
                     /// <summary>
-                    /// <para>The parameters used for route matching.</para>
+                    /// <para>Parameter matching</para>
                     /// </summary>
                     [NameInMap("QueryPredicates")]
                     [Validation(Required=false)]
                     public List<ListGatewayRouteResponseBodyDataResultRoutePredicatesQueryPredicates> QueryPredicates { get; set; }
                     public class ListGatewayRouteResponseBodyDataResultRoutePredicatesQueryPredicates : TeaModel {
                         /// <summary>
-                        /// <para>The key.</para>
+                        /// <para>Parameter name</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>userid</para>
@@ -527,7 +530,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// <para>The matching type.</para>
+                        /// <para>Matching type</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>PRE</para>
@@ -537,7 +540,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                         public string Type { get; set; }
 
                         /// <summary>
-                        /// <para>The value.</para>
+                        /// <para>Matching value</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>test</para>
@@ -551,14 +554,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 }
 
                 /// <summary>
-                /// <para>The information about services.</para>
+                /// <para>Service.</para>
                 /// </summary>
                 [NameInMap("RouteServices")]
                 [Validation(Required=false)]
                 public List<ListGatewayRouteResponseBodyDataResultRouteServices> RouteServices { get; set; }
                 public class ListGatewayRouteResponseBodyDataResultRouteServices : TeaModel {
                     /// <summary>
-                    /// <para>The type of the protocol.</para>
+                    /// <para>Protocol Type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>DUBBO</para>
@@ -568,7 +571,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string AgreementType { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the group to which the service belongs.</para>
+                    /// <para>Service group name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>api</para>
@@ -578,6 +581,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string GroupName { get; set; }
 
                     /// <summary>
+                    /// <para>Health status</para>
+                    /// <list type="bullet">
+                    /// <item><description><para>Health</para>
+                    /// </description></item>
+                    /// <item><description><para>Unhealthy</para>
+                    /// </description></item>
+                    /// <item><description><para>Checking</para>
+                    /// </description></item>
+                    /// <item><description><para>Unknown</para>
+                    /// </description></item>
+                    /// </list>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>Health</para>
                     /// </summary>
@@ -586,14 +601,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string HealthStatus { get; set; }
 
                     /// <summary>
-                    /// <para>The transcoder of the Dubbo protocol.</para>
+                    /// <para>Dubbo protocol conversion body.</para>
                     /// </summary>
                     [NameInMap("HttpDubboTranscoder")]
                     [Validation(Required=false)]
                     public ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoder HttpDubboTranscoder { get; set; }
                     public class ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoder : TeaModel {
                         /// <summary>
-                        /// <para>The Dubbo service group.</para>
+                        /// <para>Dubbo service group.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>service group</para>
@@ -603,7 +618,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                         public string DubboServiceGroup { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the Dubbo service.</para>
+                        /// <para>Dubbo service name.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>org.apache.dubbo.samples.basic.api.DemoService</para>
@@ -613,7 +628,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                         public string DubboServiceName { get; set; }
 
                         /// <summary>
-                        /// <para>The version of the Dubbo service.</para>
+                        /// <para>Dubbo service version.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0.0.0</para>
@@ -623,14 +638,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                         public string DubboServiceVersion { get; set; }
 
                         /// <summary>
-                        /// <para>The forwarding rules of the Dubbo service.</para>
+                        /// <para>Dubbo forwarding rule list.</para>
                         /// </summary>
                         [NameInMap("MothedMapList")]
                         [Validation(Required=false)]
                         public List<ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapList> MothedMapList { get; set; }
                         public class ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapList : TeaModel {
                             /// <summary>
-                            /// <para>The method name of the Dubbo service.</para>
+                            /// <para>Dubbo method name.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>sayHello</para>
@@ -640,10 +655,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                             public string DubboMothedName { get; set; }
 
                             /// <summary>
-                            /// <para>The HTTP method.</para>
+                            /// <para>Http method.</para>
                             /// <remarks>
-                            /// <para>Valid values:</para>
-                            /// </remarks>
+                            /// <para>Supported HTTP method parameter values.</para>
                             /// <list type="bullet">
                             /// <item><description><para>ALL_GET</para>
                             /// </description></item>
@@ -656,6 +670,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                             /// <item><description><para>ALL_PATCH</para>
                             /// </description></item>
                             /// </list>
+                            /// </remarks>
                             /// 
                             /// <b>Example:</b>
                             /// <para>ALL_GET</para>
@@ -665,7 +680,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                             public string HttpMothed { get; set; }
 
                             /// <summary>
-                            /// <para>The path used for method matching.</para>
+                            /// <para>Method matching path.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>/mytestzbk/sayhello</para>
@@ -675,14 +690,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                             public string Mothedpath { get; set; }
 
                             /// <summary>
-                            /// <para>The information about parameter mappings.</para>
+                            /// <para>Parameter mapping list.</para>
                             /// </summary>
                             [NameInMap("ParamMapsList")]
                             [Validation(Required=false)]
                             public List<ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapListParamMapsList> ParamMapsList { get; set; }
                             public class ListGatewayRouteResponseBodyDataResultRouteServicesHttpDubboTranscoderMothedMapListParamMapsList : TeaModel {
                                 /// <summary>
-                                /// <para>The key extracted from the input parameter.</para>
+                                /// <para>Extract key from input.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>name</para>
@@ -692,20 +707,20 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                                 public string ExtractKey { get; set; }
 
                                 /// <summary>
-                                /// <para>The position of the input parameter.</para>
+                                /// <para>Input parameter position.</para>
                                 /// <remarks>
-                                /// <para>Valid values:</para>
-                                /// </remarks>
+                                /// <para>Input parameter position enumeration values.</para>
                                 /// <list type="bullet">
-                                /// <item><description><para><c>ALL_QUERY_PARAMETER</c>: request parameter</para>
+                                /// <item><description><para>Request parameter: <c>ALL_QUERY_PARAMETER</c></para>
                                 /// </description></item>
-                                /// <item><description><para><c>ALL_HEADER</c>: request header</para>
+                                /// <item><description><para>Request header: <c>ALL_HEADER</c></para>
                                 /// </description></item>
-                                /// <item><description><para><c>ALL_PATH</c>: request path</para>
+                                /// <item><description><para>Request path: <c>ALL_PATH</c></para>
                                 /// </description></item>
-                                /// <item><description><para><c>ALL_BODY</c>: request body</para>
+                                /// <item><description><para>Request body: <c>ALL_BODY</c></para>
                                 /// </description></item>
                                 /// </list>
+                                /// </remarks>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>ALL_QUERY_PARAMETER</para>
@@ -715,7 +730,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                                 public string ExtractKeySpec { get; set; }
 
                                 /// <summary>
-                                /// <para>The type of the backend service parameter.</para>
+                                /// <para>Backend parameter type.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>java.lang.String</para>
@@ -727,18 +742,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                             }
 
                             /// <summary>
-                            /// <para>The pass-through type of the header.</para>
+                            /// <para>Header pass-through type.</para>
                             /// <remarks>
-                            /// <para>Valid values:</para>
-                            /// </remarks>
+                            /// <para>Pass-through type enumeration values.</para>
                             /// <list type="bullet">
-                            /// <item><description><para>PASS_ALL: All headers are passed through.</para>
+                            /// <item><description><para>Pass through all: PASS_ALL</para>
                             /// </description></item>
-                            /// <item><description><para>PASS_NOT: All headers are not passed through.</para>
+                            /// <item><description><para>No pass-through: PASS_NOT</para>
                             /// </description></item>
-                            /// <item><description><para>PASS_ASSIGN: Specified headers are passed through.</para>
+                            /// <item><description><para>Specified parameters: PASS_ASSIGN</para>
                             /// </description></item>
                             /// </list>
+                            /// </remarks>
                             /// 
                             /// <b>Example:</b>
                             /// <para>PASS_NOT</para>
@@ -748,7 +763,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                             public string PassThroughAllHeaders { get; set; }
 
                             /// <summary>
-                            /// <para>The list of headers to be passed through.</para>
+                            /// <para>Specified pass-through Header list.</para>
                             /// </summary>
                             [NameInMap("PassThroughList")]
                             [Validation(Required=false)]
@@ -759,7 +774,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     }
 
                     /// <summary>
-                    /// <para>The name.</para>
+                    /// <para>Name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -769,7 +784,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The namespace.</para>
+                    /// <para>Namespace.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>default</para>
@@ -779,7 +794,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string Namespace { get; set; }
 
                     /// <summary>
-                    /// <para>The weight in the form of a percentage value.</para>
+                    /// <para>Weight percentage</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>11</para>
@@ -789,7 +804,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public int? Percent { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the service.</para>
+                    /// <para>Service ID</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1563</para>
@@ -799,7 +814,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public long? ServiceId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the service.</para>
+                    /// <para>Service name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>hu</para>
@@ -809,7 +824,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string ServiceName { get; set; }
 
                     /// <summary>
-                    /// <para>The Dubbo port number.</para>
+                    /// <para>Service port.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>20880</para>
@@ -819,7 +834,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public int? ServicePort { get; set; }
 
                     /// <summary>
-                    /// <para>The source type.</para>
+                    /// <para>Source type</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>MSE</para>
@@ -828,12 +843,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     [Validation(Required=false)]
                     public string SourceType { get; set; }
 
+                    /// <summary>
+                    /// <para>Unhealthy Endpoint list</para>
+                    /// </summary>
                     [NameInMap("UnhealthyEndpoints")]
                     [Validation(Required=false)]
                     public List<string> UnhealthyEndpoints { get; set; }
 
                     /// <summary>
-                    /// <para>The version of the service.</para>
+                    /// <para>Service version.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>v1</para>
@@ -845,7 +863,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 }
 
                 /// <summary>
-                /// <para>The information about services.</para>
+                /// <para>Service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[]</para>
@@ -855,7 +873,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Services { get; set; }
 
                 /// <summary>
-                /// <para>The status.</para>
+                /// <para>Status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -865,7 +883,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? Status { get; set; }
 
                 /// <summary>
-                /// <para>The route type.</para>
+                /// <para>Route type</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Op</para>
@@ -877,7 +895,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>Total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>36</para>
@@ -889,7 +907,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -899,7 +917,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request failed.</para>
+        /// <para>Error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>You are not authorized to perform this operation.</para>
@@ -909,7 +927,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>83F02EAB-ECDF-55C6-B332-8649E5E7AF2C</para>
@@ -919,10 +937,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Request result, with the following values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><para><c>true</c>: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

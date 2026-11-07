@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,6 +44,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <para>The service source ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -52,10 +54,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? SourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the service source.</para>
+        /// <para>The service source type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>K8s</para>
+        /// <para>K8S</para>
         /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]

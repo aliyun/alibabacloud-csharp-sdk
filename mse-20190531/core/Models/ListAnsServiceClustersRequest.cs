@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,11 +30,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>The ID of the MSE cluster.</para>
         /// <remarks>
-        /// <para> The MSE cluster is different from the cluster of the Nacos service.</para>
+        /// <para>The MSE cluster is different from the cluster of the Nacos service.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>mse-09k1q110q01</para>
+        /// <para>mse-09k1xxxx</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -43,7 +45,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <para>The alias of the cluster.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>mse-7413****</para>
+        /// <para>qewr</para>
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]

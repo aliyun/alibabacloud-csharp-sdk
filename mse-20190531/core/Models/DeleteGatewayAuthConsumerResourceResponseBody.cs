@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class DeleteGatewayAuthConsumerResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. The status code 200 indicates that the request was successful.</para>
+        /// <para>The code is used only to synchronize with the success status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The operation succeeded.</para>
+        /// </description></item>
+        /// <item><description><para>false: The operation failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The dynamic part in the error message.</para>
+        /// <para>The placeholder in the dynamic error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>code</para>
@@ -44,9 +46,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic part in the error message. This parameter is used to replace the \<em>\</em>%s\<em>\</em> variable in the <b>ErrMessage</b> parameter.</para>
+        /// <para>The dynamic error message used to replace <b>%s</b> in the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para>If the return value of the <b>ErrMessage</b> parameter is <b>The Value of Input Parameter %s is not valid</b> and the return value of the <b>DynamicMessage</b> parameter is <b>DtsJobId</b>, the specified <b>DtsJobId</b> parameter is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -57,7 +59,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error code returned.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NoPermission</para>
@@ -77,10 +79,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request is successfully processed.</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -97,10 +99,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c></description></item>
-        /// <item><description><c>false</c></description></item>
+        /// <item><description><c>true</c>: The request succeeded.</description></item>
+        /// <item><description><c>false</c>: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

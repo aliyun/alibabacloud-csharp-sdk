@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CreateNacosMcpServerRequest : TeaModel {
         /// <summary>
+        /// <para>The language of the response. Valid values: zh (Chinese, default) and en (English).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -17,11 +19,20 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to encrypt the MCP tool specification. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: Encrypts the specification.</description></item>
+        /// <item><description><c>false</c>: Does not encrypt the specification. This is the default value.</description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("EncryptToolSpec")]
         [Validation(Required=false)]
         public bool? EncryptToolSpec { get; set; }
 
         /// <summary>
+        /// <para>The JSON string of the endpoint specification.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;type&quot;:&quot;REF&quot;,&quot;data&quot;:{&quot;namespaceId&quot;:&quot;public&quot;,&quot;groupName&quot;:&quot;mcp-endpoints&quot;,&quot;serviceName&quot;:&quot;mcp-demo&quot;}}</para>
         /// </summary>
@@ -30,6 +41,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string EndpointSpecification { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mse-cn-st21ri2****</para>
         /// </summary>
@@ -38,6 +51,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The namespace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>public</para>
         /// </summary>
@@ -46,6 +61,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
+        /// <para>The service name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mcp-demo</para>
         /// </summary>
@@ -54,6 +71,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ServerName { get; set; }
 
         /// <summary>
+        /// <para>The JSON string of the server specification.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;description&quot;:&quot;a mcp demo service&quot;,&quot;capabilities&quot;:[],&quot;allVersions&quot;:[{&quot;version&quot;:&quot;1.0.0&quot;,&quot;release_date&quot;:&quot;2025-08-13T01:58:42Z&quot;,&quot;is_latest&quot;:true}],&quot;remoteServerConfig&quot;:{&quot;exportPath&quot;:&quot;/sse&quot;},&quot;enabled&quot;:true,&quot;versionDetail&quot;:{&quot;version&quot;:&quot;1.0.1&quot;},&quot;backendEndpoints&quot;:[{&quot;path&quot;:&quot;/sse&quot;,&quot;address&quot;:&quot;127.0.0.1&quot;,&quot;port&quot;:8080}],&quot;protocol&quot;:&quot;mcp-sse&quot;,&quot;name&quot;:&quot;mcp-demo&quot;,&quot;frontProtocol&quot;:&quot;mcp-sse&quot;}</para>
         /// </summary>
@@ -62,6 +81,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ServerSpecification { get; set; }
 
         /// <summary>
+        /// <para>The JSON string of the tool specification.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;tools&quot;:[{&quot;name&quot;:&quot;demo-tool&quot;,&quot;description&quot;:&quot;a demo tool&quot;,&quot;inputSchema&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;name&quot;:{&quot;type&quot;:&quot;string&quot;,&quot;description&quot;:&quot;name&quot;}}}}],&quot;toolsMeta&quot;:{&quot;demo-tool&quot;:{&quot;enabled&quot;:true}}}</para>
         /// </summary>
@@ -70,6 +91,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ToolSpecification { get; set; }
 
         /// <summary>
+        /// <para>The YAML configuration of the AI gateway. This parameter is optional.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>allowTools:</para>
         /// <list type="bullet">

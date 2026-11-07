@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class DeleteGatewayCircuitBreakerRuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? Data { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>52BA6DA6-A702-4362-A32F-DFF79655****</para>
         /// </summary>

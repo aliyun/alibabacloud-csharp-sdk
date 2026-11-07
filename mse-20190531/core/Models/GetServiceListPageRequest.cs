@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetServiceListPageRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.</para>
+        /// <para>The language of the response. Valid values: zh: Chinese, en: English. Default value: zh.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The IP address from which the query is initiated.</para>
+        /// <para>The IP address to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>223.5.5.5</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Ip { get; set; }
 
         /// <summary>
-        /// <para>The name of the MSE namespace.</para>
+        /// <para>The MSE namespace name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The name of the application.</para>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fpx-pds-pns</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data.</para>
+        /// <para>The data ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zeekr-*</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DataId { get; set; }
 
         /// <summary>
-        /// <para>The name of the group. Default value: <c>default</c></para>
+        /// <para>The group type. Default value: <c>default</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crm</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Group { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the namespace.</para>
+        /// <para>The namespace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fad732a7-ff1a-4f21-8126-4edd4****</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).</para>
+        /// <para>The region where the cluster is located. Only regions supported by Microservices Engine (MSE) are valid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -107,10 +107,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The extended request parameters. The JSON format is supported.</para>
+        /// <para>The extended request parameters. JSON format is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\\&quot;appGroup\\&quot;:\\&quot;sm_zk_asi_na610\\&quot;,\\&quot;appName\\&quot;:\\&quot;sm-zk\\&quot;,\\&quot;appStage\\&quot;:\\&quot;PUBLISH\\&quot;,\\&quot;appUnit\\&quot;:\\&quot;center\\&quot;,\\&quot;bucId\\&quot;:\\&quot;193554\\&quot;,\\&quot;bucName\\&quot;:\\&quot;Alibaba Mobile Business Group-UC\\&quot;,\\&quot;provider\\&quot;:\\&quot;aliyun\\&quot;}</para>
+        /// <para>{\&quot;appGroup\&quot;:\&quot;sm_zk_asi_na610\&quot;,\&quot;appName\&quot;:\&quot;sm-zk\&quot;,\&quot;appStage\&quot;:\&quot;PUBLISH\&quot;,\&quot;appUnit\&quot;:\&quot;center\&quot;,\&quot;bucId\&quot;:\&quot;193554\&quot;,\&quot;bucName\&quot;:\&quot;Alibaba Mobile Business Group-UC\&quot;,\&quot;provider\&quot;:\&quot;aliyun\&quot;}</para>
         /// </summary>
         [NameInMap("RequestPars")]
         [Validation(Required=false)]

@@ -10,8 +10,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetPluginsRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
-        /// <para>zh: Chinese en: English</para>
+        /// <para>The language of the returned information. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -21,14 +24,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The type of the plug-in. Valid values:</para>
+        /// <para>The plug-in type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: custom</description></item>
-        /// <item><description>1: permission authorization</description></item>
-        /// <item><description>2: security protection</description></item>
-        /// <item><description>3: transmission protocol</description></item>
-        /// <item><description>4: traffic control</description></item>
-        /// <item><description>5: traffic observation</description></item>
+        /// <item><description>0: Custom.</description></item>
+        /// <item><description>1: Authentication and authorization.</description></item>
+        /// <item><description>2: Security protection.</description></item>
+        /// <item><description>3: Transport protocol.</description></item>
+        /// <item><description>4: Traffic control.</description></item>
+        /// <item><description>5: Traffic observability.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,7 +42,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Category { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the plug-in.</para>
+        /// <para>Specifies whether the plug-in is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -49,7 +52,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? EnableOnly { get; set; }
 
         /// <summary>
-        /// <para>The ID of the gateway.</para>
+        /// <para>The gateway ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

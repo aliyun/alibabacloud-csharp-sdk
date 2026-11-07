@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <para>The content of the configuration.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>attribute1=1221111\r\nattribute2=Chinese\r\nattribute3=abc11\r\nattribute4=1.00111</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <para>The description of the configuration.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Basic configurations</para>
+        /// <para>Base configuration</para>
         /// </summary>
         [NameInMap("Desc")]
         [Validation(Required=false)]

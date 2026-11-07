@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the instance resides. The region is supported by MSE.</para>
+        /// <para>The region where the cluster is located. MSE supports specific regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

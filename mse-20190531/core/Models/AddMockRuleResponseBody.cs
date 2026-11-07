@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class AddMockRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The details of the data.</para>
+        /// <para>The data overview.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AddMockRuleResponseBodyData Data { get; set; }
         public class AddMockRuleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account.</para>
+            /// <para>The account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>178432728867xxxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the consumer application.</para>
+            /// <para>The ID of the service consumer application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hkhon1po62@a000601b265xxxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ConsumerAppId { get; set; }
 
             /// <summary>
-            /// <para>The name of the consumer application.</para>
+            /// <para>The name of the application to be queried.</para>
             /// 
             /// <b>Example:</b>
             /// <para>demo-xxxx</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ConsumerAppName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the mock rule is enabled.</para>
+            /// <para>Indicates whether the rule is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: enabled</description></item>
-            /// <item><description><c>false</c>: disabled</description></item>
+            /// <item><description><c>true</c>: Enabled.</description></item>
+            /// <item><description><c>false</c>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ExtraJson { get; set; }
 
             /// <summary>
-            /// <para>The ID of the rule.</para>
+            /// <para>The rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>275</para>
@@ -91,10 +91,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The mock type. Valid values:</para>
+            /// <para>The model type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>\- <c>[unk]0[unk]</c>: desktop client</description></item>
-            /// <item><description>\- <c>[unk]1[unk]</c>: mobile client</description></item>
+            /// <item><description><c>[unk]0[unk]</c>: Desktop model</description></item>
+            /// <item><description><c>[unk]1[unk]</c>: Mobile model</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the namespace.</para>
+            /// <para>The namespace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ProviderAppName { get; set; }
 
             /// <summary>
-            /// <para>The region ID.</para>
+            /// <para>The region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The HTTP mock rule.</para>
+            /// <para>The mock rule for the HTTP protocol.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;oper&quot;:&quot;return+json&quot;,&quot;Path&quot;:&quot;/mock&quot;,&quot;Value&quot;:&quot;{\n \&quot;date\&quot;: \&quot;2021-09-10T07:45:12.357+0000\&quot;,\n \&quot;name\&quot;: \&quot;name\&quot;,\n \&quot;id\&quot;: \&quot;1\&quot;\n}&quot;,&quot;Method&quot;:&quot;GET&quot;,&quot;Condition&quot;:&quot;AND&quot;,&quot;Timeout&quot;:1,&quot;ArgumentMockItems&quot;:[{&quot;type&quot;:&quot;param&quot;,&quot;name&quot;:&quot;id&quot;,&quot;value&quot;:&quot;1&quot;,&quot;cond&quot;:&quot;==&quot;,&quot;operator&quot;:&quot;rawvalue&quot;},{&quot;type&quot;:&quot;param&quot;,&quot;name&quot;:&quot;name&quot;,&quot;value&quot;:&quot;aliyun&quot;,&quot;cond&quot;:&quot;==&quot;,&quot;operator&quot;:&quot;rawvalue&quot;}]}]</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ScMockItemJson { get; set; }
 
             /// <summary>
-            /// <para>The service source.</para>
+            /// <para>The source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>edasmsc</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -187,17 +187,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request is successfully processed.</para>
+        /// <para>Succ</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>316F5F64-F73D-42DC-8632-01E308B6****</para>
@@ -207,9 +207,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
+        /// <item><description><c>true</c>: The request succeeded.</description></item>
         /// <item><description><c>false</c>: The request failed.</description></item>
         /// </list>
         /// 

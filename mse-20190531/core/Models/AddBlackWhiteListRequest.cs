@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// <para>The whitelist. Default value: No.</para>
+        /// <para>Specifies whether the list is a whitelist. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The description.</para>
+        /// <para>The note.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a note</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Note { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs in the JSON format.</para>
+        /// <para>The JSON string of the resource ID list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[123]</para>
@@ -84,11 +84,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ResourceIdJsonList { get; set; }
 
         /// <summary>
-        /// <para>The effective scope of the blacklist or whitelist. Valid values:</para>
+        /// <para>The effective granularity. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>GATEWAY</description></item>
-        /// <item><description>DOMAIN</description></item>
-        /// <item><description>ROUTE</description></item>
+        /// <item><description>GATEWAY: the entire gateway.</description></item>
+        /// <item><description>DOMAIN: the domain name.</description></item>
+        /// <item><description>ROUTE: the route.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -99,10 +99,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The status of the blacklist.</para>
+        /// <para>The status of the blacklist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: enabled</description></item>
-        /// <item><description>off: disabled</description></item>
+        /// <item><description>on: enabled.</description></item>
+        /// <item><description>off: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The type of object in the blacklist or whitelist.</para>
+        /// <para>The type of blacklists and whitelists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IP</para>

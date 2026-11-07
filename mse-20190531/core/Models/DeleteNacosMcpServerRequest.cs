@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class DeleteNacosMcpServerRequest : TeaModel {
         /// <summary>
+        /// <para>The language of the returned results. Valid values: zh (default): Chinese. en: English.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mse_prepaid_public_cn-u0t2xzvxa06</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the MCP Server.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5e3c5211-d365-4013-8540-c4106ec2a5dc</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string McpServerId { get; set; }
 
         /// <summary>
+        /// <para>The namespace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>fc0f6e40-****-946b-45e3af313707</para>
         /// </summary>

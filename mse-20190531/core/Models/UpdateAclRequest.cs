@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateAclRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses or CIDR blocks in the IP address whitelist.</para>
+        /// <para>The whitelist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.0.0/XX,192.168.0.0/XX</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AclEntryList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-cn-78v1l83****</para>
@@ -43,6 +43,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The network type to which the access control rule applies. Valid values: Public and Private.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Public</para>
+        /// </summary>
         [NameInMap("NetworkType")]
         [Validation(Required=false)]
         public string NetworkType { get; set; }

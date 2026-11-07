@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CreateGatewayIsolationRuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the circuit breaking rule that you create.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>608</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? Data { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>94B12406-E44D-57C9-BF93-A8B35BFF****</para>
         /// </summary>

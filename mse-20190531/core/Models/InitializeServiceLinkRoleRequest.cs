@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class InitializeServiceLinkRoleRequest : TeaModel {
         /// <summary>
+        /// <para>The language in which the returned results are displayed. Valid values: zh (default): Chinese. en: English.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>The name of the server-linked role. Set this parameter to AliyunServiceRoleForMSE</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AliyunServiceRoleForMSE</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RoleName { get; set; }
 
         /// <summary>
+        /// <para>This parameter is reserved and not in use.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>

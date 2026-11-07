@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>A reserved parameter.</para>
+        /// <para>A reserved field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether runtime configurations are required.</para>
+        /// <para>Specifies whether to query the runtime configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

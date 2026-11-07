@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListWebFlowRulesRequest : TeaModel {
         /// <summary>
+        /// <para>The language in which the returned results are displayed. Valid values: zh (default): Chinese. en: English.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>The application ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>b22qb1****@2f0586be4b1****</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The application name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>The namespace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <para>The first page to export. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -52,6 +61,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -60,6 +71,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The interface to which the protection rule applies. This parameter is mutually exclusive with the ResourceSearchKey parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/flow</para>
         /// </summary>
@@ -68,6 +81,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Resource { get; set; }
 
         /// <summary>
+        /// <para>The interface keyword that you can search from protection rules. This parameter is mutually exclusive with the Resource parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>flow</para>
         /// </summary>

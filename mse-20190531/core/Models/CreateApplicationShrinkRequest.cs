@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CreateApplicationShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned information. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>zh: Chinese</description></item>
         /// <item><description>en: English</description></item>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>MSE命名空间名字。</para>
+        /// <para>The name of the MSE namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>prod</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to start the switch.</para>
+        /// <para>Specifies whether to enable Sentinel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string SentinelEnable { get; set; }
 
         /// <summary>
-        /// <para>The service where the application is deployed. A value of ACK indicates Container Service for Kubernetes.</para>
+        /// <para>The deployment method of the application. ACK indicates Container Service for Kubernetes (ACK).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACK</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The name of the Microservices Engine (MSE) namespace.</para>
+        /// <para>Specifies whether to enable Switch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -95,6 +95,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string SwitchEnable { get; set; }
 
+        /// <summary>
+        /// <para>The Alibaba Cloud tags.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }

@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <para>Message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the authorization record.</para>
+        /// <para>The authorization ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>13</para>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? AuthId { get; set; }
 
         /// <summary>
-        /// <para>The authentication resource headers.</para>
+        /// <para>The list of authentication resource headers.</para>
         /// </summary>
         [NameInMap("AuthResourceHeaderList")]
         [Validation(Required=false)]
         public string AuthResourceHeaderListShrink { get; set; }
 
         /// <summary>
-        /// <para>The domain ID.</para>
+        /// <para>The domain name ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>128</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? DomainId { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the gateway.</para>
+        /// <para>The unique gateway ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-86575c0bc9f04ecfbacb92b8e392****</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the matching is not case-sensitive. Default value: true.</para>
+        /// <para>Specifies whether to ignore case. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -71,15 +71,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? IgnoreCase { get; set; }
 
         /// <summary>
-        /// <para>The matching type. Valid values:</para>
+        /// <para>The match type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>EQUAL</description></item>
-        /// <item><description>PRE</description></item>
-        /// <item><description>ERGULAR</description></item>
+        /// <item><description>EQUAL: Exact match.</description></item>
+        /// <item><description>PRE: Prefix match.</description></item>
+        /// <item><description>ERGULAR: Regular expression match.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>exact</para>
+        /// <para>PRE</para>
         /// </summary>
         [NameInMap("MatchType")]
         [Validation(Required=false)]

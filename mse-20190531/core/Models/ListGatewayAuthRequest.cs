@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListGatewayAuthRequest : TeaModel {
         /// <summary>
+        /// <para>The language of the response. Valid values: zh (default): Chinese, en: English.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>The sort order.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public bool? DescSort { get; set; }
 
+        /// <summary>
+        /// <para>The filter conditions. Refer to the examples.</para>
+        /// </summary>
         [NameInMap("FilterParams")]
         [Validation(Required=false)]
         public ListGatewayAuthRequestFilterParams FilterParams { get; set; }
         public class ListGatewayAuthRequestFilterParams : TeaModel {
             /// <summary>
+            /// <para>The unique ID of the gateway.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>gw-5017305290e14centbrveca****</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GatewayUniqueId { get; set; }
 
             /// <summary>
+            /// <para>The whitelist mode.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? IsWhite { get; set; }
 
             /// <summary>
+            /// <para>The parameter name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rutain-test</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The enabling status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? Status { get; set; }
 
             /// <summary>
+            /// <para>The type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>JWT</para>
             /// </summary>
@@ -72,6 +89,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
+        /// <para>This parameter is not available.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -80,6 +99,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string OrderItem { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -88,6 +109,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of items per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

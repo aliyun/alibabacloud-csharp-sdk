@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListClusterVersionsRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The type of the instance. Valid values: ZooKeeper, Nacos-Ans, and Eureka.</para>
+        /// <para>The cluster type. Valid values: ZooKeeper, Nacos-Ans, and Eureka.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Nacos-Ans</para>
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// <para>The instance edition. Valid values:</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>mse_dev</c>: Developer Edition.</description></item>
-        /// <item><description><c>mse_pro</c>: Professional Edition. This is the default value.</description></item>
+        /// <item><description><c>mse_pro</c>: Professional Edition (default).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

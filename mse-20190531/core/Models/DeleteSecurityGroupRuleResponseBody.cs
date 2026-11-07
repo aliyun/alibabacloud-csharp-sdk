@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class DeleteSecurityGroupRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public DeleteSecurityGroupRuleResponseBodyData Data { get; set; }
         public class DeleteSecurityGroupRuleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The description.</para>
+            /// <para>The description of the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>auto-description1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the gateway.</para>
+            /// <para>The gateway ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>103</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GatewayUniqueId { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the rule was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-01-07 18:07:57</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The time when the rule was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-01-11T14:12:55.000+0000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The ID.</para>
+            /// <para>The rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -87,13 +87,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The transport layer protocol. The value of this parameter is case-insensitive. Valid values:</para>
+            /// <para>The transport-layer protocol. The value is not case-sensitive. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>icmp</description></item>
-            /// <item><description>gre</description></item>
-            /// <item><description>tcp</description></item>
-            /// <item><description>udp</description></item>
-            /// <item><description>all: All protocols are supported.</description></item>
+            /// <item><description><para>icmp</para>
+            /// </description></item>
+            /// <item><description><para>gre</para>
+            /// </description></item>
+            /// <item><description><para>tcp</para>
+            /// </description></item>
+            /// <item><description><para>udp</para>
+            /// </description></item>
+            /// <item><description><para>all: The rule applies to all protocols.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -104,12 +109,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string IpProtocol { get; set; }
 
             /// <summary>
-            /// <para>The range of ports for the transport layer protocol in the destination security group. Valid values:</para>
+            /// <para>The transport-layer port range. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>When the IpProtocol parameter is set to tcp or udp, the port number range is 1 to 65535. The start port number and the end port number are separated by a forward slash (/). Example: 1/200.</description></item>
-            /// <item><description>If the IpProtocol parameter is set to icmp, the port number range is -1/-1, which indicates all ports.</description></item>
-            /// <item><description>If the IpProtocol parameter is set to gre, the port number range is -1/-1, which indicates all ports.</description></item>
-            /// <item><description>If the IpProtocol parameter is set to all, the port number range is -1/-1, which indicates all ports.</description></item>
+            /// <item><description><para>For TCP or UDP, the port range is 1 to 65535. Use a forward slash (/) to separate the start port from the end port. For example: <c>1/200</c>.</para>
+            /// </description></item>
+            /// <item><description><para>For ICMP, the value is <c>-1/-1</c>.</para>
+            /// </description></item>
+            /// <item><description><para>For GRE, the value is <c>-1/-1</c>.</para>
+            /// </description></item>
+            /// <item><description><para>For all protocols, the value is <c>-1/-1</c>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -120,7 +129,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string PortRange { get; set; }
 
             /// <summary>
-            /// <para>The ID of the security group.</para>
+            /// <para>The security group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-uf6hgwe067prhg68agfa</para>
@@ -132,7 +141,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -142,10 +151,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request is successfully processed.</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -164,8 +173,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class AddAuthPolicyRequest : TeaModel {
         /// <summary>
+        /// <para>The language of the response. Valid values: zh-CN (Chinese, default) and en-US (English).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>The ID of the application.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>e9clba2xlc@***</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The content of the service authentication rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AuthRule { get; set; }
 
         /// <summary>
+        /// <para>The type of the rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: application dimension.</description></item>
+        /// <item><description>1: namespace dimension.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -44,6 +55,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? AuthType { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the authentication rule is enabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: Enabled.</description></item>
+        /// <item><description><c>false</c>: Disabled.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +70,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Enable { get; set; }
 
         /// <summary>
+        /// <para>The ID of the namespace in the Kubernetes cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c19c6c500e1ff4d7abc7***</para>
         /// </summary>
@@ -62,6 +80,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string K8sNamespace { get; set; }
 
         /// <summary>
+        /// <para>The name of the rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,6 +91,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The MSE namespace to which the application belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default</para>
         /// </summary>
@@ -80,6 +101,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <para>The protocol type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>SPRING_CLOUD</b></description></item>
+        /// <item><description><b>DUBBO</b></description></item>
+        /// <item><description><b>istio</b></description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,6 +117,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Protocol { get; set; }
 
         /// <summary>
+        /// <para>The region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -100,6 +128,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Region { get; set; }
 
         /// <summary>
+        /// <para>The source. Valid values: edasmsc.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

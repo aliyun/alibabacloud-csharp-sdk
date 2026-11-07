@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>The ID of the cluster.</para>
         /// <remarks>
-        /// <para>This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</para>
+        /// <para>You must specify either this parameter or InstanceId.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -40,7 +42,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>查询服务下某个集群的实例列表是所需要的参数</para>
+        /// <para>The parameter that is required to query the list of instances in a specific cluster of a service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DEFAULT</para>
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
@@ -57,7 +62,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query the number of instances that are used for the service.</para>
+        /// <para>Specifies whether to query the number of service instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -69,7 +74,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>The ID of the instance.</para>
         /// <remarks>
-        /// <para>This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</para>
+        /// <para>You must specify either this parameter or ClusterId.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -90,7 +95,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -101,7 +106,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of instances to display on each page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -111,6 +116,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

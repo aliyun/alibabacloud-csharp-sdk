@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The details of the rule.</para>
+        /// <para>The rules.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListCircuitBreakerRulesResponseBodyData Data { get; set; }
         public class ListCircuitBreakerRulesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The first page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the rule was enabled.</para>
+                /// <para>Indicates whether the rule is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// <para>The region in which the instance resides.</para>
+                /// <para>The region in which the cluster resides.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the interface to which the rule is applicable. The interface name must be the same as the name on the interface details page in the console.</para>
+                /// <para>The name of the interface to which the rule applies. The interface name must be the same as that displayed on the API Details page in the console.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/a</para>
@@ -163,12 +163,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string Resource { get; set; }
 
+                /// <summary>
+                /// <para>The interface resource type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public int? ResourceType { get; set; }
 
                 /// <summary>
-                /// <para>The period in which circuit breaking is implemented. Unit: milliseconds. If circuit breaking is implemented on the requests for the route, the calls to all the requests for the route fail in the configured circuit breaking period.</para>
+                /// <para>The period in which circuit breaking is implemented. Unit: milliseconds. If circuit breaking is implemented on the resources, all requests quickly fail in the configured duration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10000</para>
@@ -199,26 +205,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
                 /// <summary>
                 /// <para>The threshold type.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>0</para>
-                /// <!-- -->
-                /// 
-                /// <para>:</para>
-                /// <!-- -->
-                /// 
-                /// <para>slow call proportion</para>
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><para>1</para>
-                /// <!-- -->
-                /// 
-                /// <para>:</para>
-                /// <!-- -->
-                /// 
-                /// <para>abnormal proportion</para>
-                /// <!-- --></description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -262,7 +248,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -272,7 +258,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4E9FDCFE-0738-493B-B801-82BDFBCB****</para>
@@ -282,7 +268,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>The result of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

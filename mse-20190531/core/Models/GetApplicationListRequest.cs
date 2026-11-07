@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The ID of an application.</para>
+        /// <para>The application ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hkhon1po62@c3df23522b*****</para>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The name of an application.</para>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rest-container</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The programming language of the application, such as Java and Go.</para>
+        /// <para>The programming language, such as Java or Go.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Java</para>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,7 +77,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,7 +88,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,7 +99,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the Sentinel-compatible mode.</para>
+        /// <para>Specifies whether to enable the Sentinel component.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -117,7 +119,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable switching.</para>
+        /// <para>Specifies whether to enable the switch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -126,14 +128,29 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public bool? SwitchEnable { get; set; }
 
+        /// <summary>
+        /// <para>Alibaba Cloud tags. You can perform filtering by Alibaba Cloud tag.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<GetApplicationListRequestTags> Tags { get; set; }
         public class GetApplicationListRequestTags : TeaModel {
+            /// <summary>
+            /// <para>The custom tag key. It can contain up to 128 characters and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>tagKey</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>tagValue</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

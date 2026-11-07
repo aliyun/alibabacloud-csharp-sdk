@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the certificate.</para>
+        /// <para>The certificate ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5213641-cn-hangzhou</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string CertIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The domain ID.</para>
+        /// <para>The domain name ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

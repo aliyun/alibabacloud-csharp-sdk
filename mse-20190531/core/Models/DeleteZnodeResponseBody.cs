@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class DeleteZnodeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the data.</para>
+        /// <para>The data overview.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeleteZnodeResponseBodyData Data { get; set; }
         public class DeleteZnodeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The data of the node.</para>
+            /// <para>The list of node data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cluster</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Data { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the node information was returned. Valid values:</para>
+            /// <para>The node list information. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: The node information was returned.</description></item>
-            /// <item><description><c>false</c>: The node information failed to be returned.</description></item>
+            /// <item><description><c>true</c>: The information is returned successfully.</description></item>
+            /// <item><description><c>false</c>: The information fails to be returned.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? Dir { get; set; }
 
             /// <summary>
-            /// <para>The name of the node.</para>
+            /// <para>The node name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mse-bc1a29b0-160230875****-reg-center-0-1</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The path of the node.</para>
+            /// <para>The node path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-100-000</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -83,17 +83,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string HttpCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request is successfully processed.</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DC34E4A3-5F1C-4E40-86EA-02EDF967****</para>
@@ -103,9 +103,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>The request result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
+        /// <item><description><c>true</c>: The request succeeded.</description></item>
         /// <item><description><c>false</c>: The request failed.</description></item>
         /// </list>
         /// 

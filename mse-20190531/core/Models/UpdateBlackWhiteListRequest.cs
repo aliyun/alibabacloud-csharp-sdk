@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateBlackWhiteListRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the whitelist.</para>
+        /// <para>Specifies whether the list is a whitelist. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Note { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs in the JSON format.</para>
+        /// <para>The JSON string of the resource ID list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[123]</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ResourceIdJsonList { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource.</para>
+        /// <para>The scope of the bound resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GATEWAY</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the blacklist or whitelist.</para>
+        /// <para>Specifies whether it is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>on</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The type of the blacklist or whitelist.</para>
+        /// <para>The resource type of blacklists and whitelists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IP</para>

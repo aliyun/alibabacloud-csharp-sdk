@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class AddGatewayRouteShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned information. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>zh: Chinese</description></item>
         /// <item><description>en: English</description></item>
@@ -24,6 +24,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>The route description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>a route for xxx</para>
         /// </summary>
@@ -32,13 +34,13 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The type of the destination service. Valid values:</para>
+        /// <para>The destination service type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Single</description></item>
-        /// <item><description>Multiple</description></item>
-        /// <item><description>VersionOriented</description></item>
-        /// <item><description>Mock</description></item>
-        /// <item><description>Redirect</description></item>
+        /// <item><description>Single: single service</description></item>
+        /// <item><description>Multiple: multiple services</description></item>
+        /// <item><description>VersionOriented: tag-based routing</description></item>
+        /// <item><description>Mock: mock</description></item>
+        /// <item><description>Redirect: redirect</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +58,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DirectResponseJSONShrink { get; set; }
 
         /// <summary>
-        /// <para>The domain ID.</para>
+        /// <para>The domain name ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -66,7 +68,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? DomainId { get; set; }
 
         /// <summary>
-        /// <para>The domain IDs.</para>
+        /// <para>The domain name list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[0,94]</para>
@@ -78,7 +80,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Specifies whether to activate Web Application Firewall (WAF).</para>
+        /// <para><b>[Deprecated]</b> Use UpdateGatewayRouteWafStatus to update the WAF status of the route.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -89,7 +91,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? EnableWaf { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the Fallback service.</para>
+        /// <para>Specifies whether to enable the fallback service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -99,14 +101,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? Fallback { get; set; }
 
         /// <summary>
-        /// <para>The information about the Fallback service.</para>
+        /// <para>The fallback service.</para>
         /// </summary>
         [NameInMap("FallbackServices")]
         [Validation(Required=false)]
         public string FallbackServicesShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the gateway.</para>
+        /// <para>The gateway ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>526</para>
@@ -126,7 +128,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// <para>The name of the route.</para>
+        /// <para>The route name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -136,7 +138,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The routing policy in a JSON string.</para>
+        /// <para>The JSON string of the route policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;CORS&quot;:&quot;{\&quot;allowMethods\&quot;:\&quot;GET,POST,PUT,DELETE,HEAD,OPTIONS,PATCH\&quot;,\&quot;allowHeaders\&quot;:\&quot;<em>\&quot;,\&quot;exposeHeaders\&quot;:\&quot;</em>\&quot;,\&quot;unitNum\&quot;:12,\&quot;allowCredentials\&quot;:true,\&quot;status\&quot;:\&quot;off\&quot;,\&quot;allowOrigins\&quot;:\&quot;*\&quot;,\&quot;timeUnit\&quot;:\&quot;h\&quot;}&quot;,&quot;Timeout&quot;:&quot;{\&quot;unitNum\&quot;:10,\&quot;timeUnit\&quot;:\&quot;s\&quot;,\&quot;status\&quot;:\&quot;off\&quot;}&quot;,&quot;Retry&quot;:&quot;{\&quot;attempts\&quot;:2,\&quot;retryOn\&quot;:[\&quot;5xx\&quot;],\&quot;status\&quot;:\&quot;off\&quot;}&quot;,&quot;HTTPRewrite&quot;:&quot;{\&quot;pathType\&quot;:\&quot;EQUAL\&quot;,\&quot;path\&quot;:\&quot;/o\&quot;,\&quot;status\&quot;:\&quot;off\&quot;}&quot;,&quot;Waf&quot;:&quot;{\&quot;enabled\&quot;:false}&quot;,&quot;HeaderOp&quot;:&quot;{\&quot;status\&quot;:\&quot;off\&quot;,\&quot;headerOpItems\&quot;:[{\&quot;directionType\&quot;:\&quot;Request\&quot;,\&quot;opType\&quot;:\&quot;Add\&quot;,\&quot;key\&quot;:\&quot;kkk\&quot;,\&quot;value\&quot;:\&quot;ll\&quot;}]}&quot;}</para>
@@ -146,21 +148,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Policies { get; set; }
 
         /// <summary>
-        /// <para>The matching rule.</para>
+        /// <para>The matching rules.</para>
         /// </summary>
         [NameInMap("Predicates")]
         [Validation(Required=false)]
         public string PredicatesShrink { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the redirection.</para>
+        /// <para>The redirect configuration.</para>
         /// </summary>
         [NameInMap("RedirectJSON")]
         [Validation(Required=false)]
         public string RedirectJSONShrink { get; set; }
 
         /// <summary>
-        /// <para>The sequence number of the route. (A small value indicates a high priority.)</para>
+        /// <para>The route order. A smaller value indicates a higher priority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -171,7 +173,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// <para>The route type. Valid values:</para>
-        /// <para>Op: Manage routes.</para>
+        /// <list type="bullet">
+        /// <item><description>Op: management and control route</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Op</para>
@@ -181,7 +185,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RouteType { get; set; }
 
         /// <summary>
-        /// <para>The list of services.</para>
+        /// <para>The service list. This parameter is required when the route points to a single service, multiple services, or tag-based routing.</para>
         /// </summary>
         [NameInMap("Services")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateFlowRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The return value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -48,26 +48,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
             /// <summary>
             /// <para>The throttling effect.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>0</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>fast failure</para>
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>2</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>in queue</para>
-            /// <!-- --></description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -77,23 +57,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? ControlBehavior { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the rule was enabled.</para>
-            /// <para>Valid value:</para>
-            /// <list type="bullet">
-            /// <item><description><para>true</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>false</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
-            /// </list>
+            /// <para>Indicates whether the rule is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -112,12 +76,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public long? Id { get; set; }
 
+            /// <summary>
+            /// <para>The source application of the request.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Spring-cloud-a</para>
+            /// </summary>
             [NameInMap("LimitApp")]
             [Validation(Required=false)]
             public string LimitApp { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for queuing when the value of ControlBehavior is set to 2. Unit: milliseconds.</para>
+            /// <para>The timeout period for queuing when the ControlBehavior parameter is set to 2. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>500</para>
@@ -137,7 +107,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The name of the API resource.</para>
+            /// <para>The interface resource name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/c</para>
@@ -159,7 +129,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -176,27 +149,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>The request was successful.</para>
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>The request failed.</para>
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>The result of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

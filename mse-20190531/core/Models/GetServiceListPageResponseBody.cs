@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetServiceListPageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response to the request.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetServiceListPageResponseBodyData Data { get; set; }
         public class GetServiceListPageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// <para>The time when the service was last updated.</para>
+                /// <para>The last update time of the service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string GmtModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>The group to which the service belongs.</para>
+                /// <para>The service group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DEFAULT_GROUP</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Group { get; set; }
 
                 /// <summary>
-                /// <para>The number of service nodes.</para>
+                /// <para>The number of instances for the service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -103,6 +103,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string ServiceName { get; set; }
 
+                /// <summary>
+                /// <para>The service type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>springCloud</para>
+                /// </summary>
                 [NameInMap("ServiceType")]
                 [Validation(Required=false)]
                 public string ServiceType { get; set; }
@@ -120,7 +126,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -152,7 +158,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

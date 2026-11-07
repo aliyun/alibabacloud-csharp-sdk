@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,10 +38,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ConnectType { get; set; }
 
         /// <summary>
-        /// <para>The edition of the MSE instance that you want to purchase.</para>
+        /// <para>The Microservices Engine (MSE) cluster edition to be activated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>mse_pro: Professional Edition</description></item>
-        /// <item><description>mse_dev: Developer Edition</description></item>
+        /// <item><description>mse_pro: Professional Edition.</description></item>
+        /// <item><description>mse_dev: Developer Edition.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string MseVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).</para>
+        /// <para>The region ID of the cluster. The region must be supported by Microservices Engine (MSE).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

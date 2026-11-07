@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetApplicationListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the data.</para>
+        /// <para>The data structure.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetApplicationListResponseBodyData Data { get; set; }
         public class GetApplicationListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The data returned.</para>
+            /// <para>The information about the applications.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<GetApplicationListResponseBodyDataResult> Result { get; set; }
             public class GetApplicationListResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// <para>The ID of the application.</para>
+                /// <para>The application ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hkhon1po62@5f1b08becb*****</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the application.</para>
+                /// <para>The application name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>finance</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string ExtraInfo { get; set; }
 
                 /// <summary>
-                /// <para>The number of instances.</para>
+                /// <para>The total number of instances.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -133,6 +133,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public long? Status { get; set; }
 
+                /// <summary>
+                /// <para>The Alibaba Cloud tags.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;tagKey1&quot;:&quot;tagValue1&quot;,&quot;tagKey2&quot;:&quot;tagValue2&quot;}</para>
+                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> Tags { get; set; }
@@ -150,7 +156,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11</para>
@@ -162,17 +168,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request is successfully processed.</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F55E608F-7C15-****-9CFD-DF832EBC4A0F</para>
@@ -184,8 +190,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

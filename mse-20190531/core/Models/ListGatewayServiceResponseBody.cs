@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public ListGatewayServiceResponseBodyData Data { get; set; }
         public class ListGatewayServiceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of the returned page.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page. Default value: 10.</para>
+            /// <para>The maximum number of records per page. Default value: 10.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -47,12 +47,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The data returned.</para>
+            /// <para>The returned collection.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<ListGatewayServiceResponseBodyDataResult> Result { get; set; }
             public class ListGatewayServiceResponseBodyDataResult : TeaModel {
+                /// <summary>
+                /// <para>The DNS server list (for DNS domain name service only).</para>
+                /// </summary>
                 [NameInMap("DnsServerList")]
                 [Validation(Required=false)]
                 public List<string> DnsServerList { get; set; }
@@ -82,19 +85,23 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettings LoadBalancerSettings { get; set; }
                     public class ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettings : TeaModel {
                         /// <summary>
-                        /// <para>The consistent hashing settings.</para>
+                        /// <para>The consistent hashing configuration.</para>
                         /// </summary>
                         [NameInMap("ConsistentHashLBConfig")]
                         [Validation(Required=false)]
                         public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfig ConsistentHashLBConfig { get; set; }
                         public class ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfig : TeaModel {
                             /// <summary>
-                            /// <para>The type based on which consistent hashing load balancing is performed.</para>
+                            /// <para>The consistent hashing method. Valid values:</para>
                             /// <list type="bullet">
-                            /// <item><description>HEADER</description></item>
-                            /// <item><description>COOKIE</description></item>
-                            /// <item><description>SOURCE_IP</description></item>
-                            /// <item><description>QUERY_PARAMETER</description></item>
+                            /// <item><description><para>HEADER</para>
+                            /// </description></item>
+                            /// <item><description><para>COOKIE</para>
+                            /// </description></item>
+                            /// <item><description><para>SOURCE_IP</para>
+                            /// </description></item>
+                            /// <item><description><para>QUERY_PARAMETER</para>
+                            /// </description></item>
                             /// </list>
                             /// 
                             /// <b>Example:</b>
@@ -105,14 +112,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                             public string ConsistentHashLBType { get; set; }
 
                             /// <summary>
-                            /// <para>The cookie-based load balancing parameters.</para>
+                            /// <para>The cookie-based parameter.</para>
                             /// </summary>
                             [NameInMap("HttpCookie")]
                             [Validation(Required=false)]
                             public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfigHttpCookie HttpCookie { get; set; }
                             public class ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyLoadBalancerSettingsConsistentHashLBConfigHttpCookie : TeaModel {
                                 /// <summary>
-                                /// <para>The name of the cookie.</para>
+                                /// <para>The cookie name.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>name</para>
@@ -122,7 +129,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                                 public string Name { get; set; }
 
                                 /// <summary>
-                                /// <para>The path of the cookie.</para>
+                                /// <para>The cookie path.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>/path</para>
@@ -132,7 +139,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                                 public string Path { get; set; }
 
                                 /// <summary>
-                                /// <para>The lifecycle of the cookie.</para>
+                                /// <para>The time-to-live (TTL) of the cookie.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>360</para>
@@ -144,7 +151,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                             }
 
                             /// <summary>
-                            /// <para>The minimum value of the hash ring.</para>
+                            /// <para>The minimum size of the hash ring.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>10000</para>
@@ -154,7 +161,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                             public long? MinimumRingSize { get; set; }
 
                             /// <summary>
-                            /// <para>The name of the parameter.</para>
+                            /// <para>The parameter name.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>param</para>
@@ -166,12 +173,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                         }
 
                         /// <summary>
-                        /// <para>The load balancing type.</para>
+                        /// <para>The load balancing policy. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>ROUND_ROBIN</description></item>
-                        /// <item><description>LEAST_CONN</description></item>
-                        /// <item><description>RANDOM</description></item>
-                        /// <item><description>CONSISTENT_HASH</description></item>
+                        /// <item><description><para>ROUND_ROBIN</para>
+                        /// </description></item>
+                        /// <item><description><para>LEAST_CONN</para>
+                        /// </description></item>
+                        /// <item><description><para>RANDOM</para>
+                        /// </description></item>
+                        /// <item><description><para>CONSISTENT_HASH</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -182,7 +193,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                         public string LoadbalancerType { get; set; }
 
                         /// <summary>
-                        /// <para>The prefetch time of the least connection load balancing.</para>
+                        /// <para>The warm-up duration for the minimum number of requests.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>10</para>
@@ -194,14 +205,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     }
 
                     /// <summary>
-                    /// <para>The Transport Layer Security (TLS).</para>
+                    /// <para>The TLS.</para>
                     /// </summary>
                     [NameInMap("Tls")]
                     [Validation(Required=false)]
                     public ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyTls Tls { get; set; }
                     public class ListGatewayServiceResponseBodyDataResultGatewayTrafficPolicyTls : TeaModel {
                         /// <summary>
-                        /// <para>The public key of the CA certificate .</para>
+                        /// <para>The public key of the CA certificate.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>content</para>
@@ -211,7 +222,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                         public string CaCertContent { get; set; }
 
                         /// <summary>
-                        /// <para>The ID of the certification authority (CA) certificate.</para>
+                        /// <para>The CA certificate ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>5******-cn-hangzhou</para>
@@ -221,7 +232,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                         public string CaCertId { get; set; }
 
                         /// <summary>
-                        /// <para>The ID of the certificate.</para>
+                        /// <para>The certificate ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>5******-cn-hangzhou</para>
@@ -231,12 +242,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                         public string CertId { get; set; }
 
                         /// <summary>
-                        /// <para>The TLS mode.</para>
+                        /// <para>The TLS mode. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>DISABLE</description></item>
-                        /// <item><description>SIMPLE</description></item>
-                        /// <item><description>MUTUAL</description></item>
-                        /// <item><description>ISTIO_MUTUAL</description></item>
+                        /// <item><description><para>DISABLE</para>
+                        /// </description></item>
+                        /// <item><description><para>SIMPLE</para>
+                        /// </description></item>
+                        /// <item><description><para>MUTUAL</para>
+                        /// </description></item>
+                        /// <item><description><para>ISTIO_MUTUAL</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -247,7 +262,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                         public string Mode { get; set; }
 
                         /// <summary>
-                        /// <para>The Server Name Indication (SNI) value.</para>
+                        /// <para>The service name identity.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>name-sni</para>
@@ -257,7 +272,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                         public string Sni { get; set; }
 
                         /// <summary>
-                        /// <para>The array of subject aliases.</para>
+                        /// <para>The array of subject alternative names.</para>
                         /// </summary>
                         [NameInMap("SubjectAltNames")]
                         [Validation(Required=false)]
@@ -278,7 +293,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string GatewayUniqueId { get; set; }
 
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>The time when the record was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-01-07 18:07:57</para>
@@ -288,7 +303,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The modification time.</para>
+                /// <para>The time when the record was modified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-01-07 18:07:57</para>
@@ -298,7 +313,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The group.</para>
+                /// <para>The group name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -308,11 +323,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// <para>The health status.</para>
+                /// <para>The health status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Health</description></item>
-                /// <item><description>Unhealthy</description></item>
-                /// <item><description>Unknown</description></item>
+                /// <item><description><para>Health</para>
+                /// </description></item>
+                /// <item><description><para>Unhealthy</para>
+                /// </description></item>
+                /// <item><description><para>Unknown</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -333,14 +351,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public bool? HealthCheck { get; set; }
 
                 /// <summary>
-                /// <para>The information about health checks.</para>
+                /// <para>The health check information.</para>
                 /// </summary>
                 [NameInMap("HealthCheckInfo")]
                 [Validation(Required=false)]
                 public ListGatewayServiceResponseBodyDataResultHealthCheckInfo HealthCheckInfo { get; set; }
                 public class ListGatewayServiceResponseBodyDataResultHealthCheckInfo : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether checks are performed.</para>
+                    /// <para>Indicates whether the check is performed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -350,14 +368,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public bool? Check { get; set; }
 
                     /// <summary>
-                    /// <para>The expected status of the health check.</para>
+                    /// <para>The expected HTTP status codes for health checks.</para>
                     /// </summary>
                     [NameInMap("ExpectedStatuses")]
                     [Validation(Required=false)]
                     public List<int?> ExpectedStatuses { get; set; }
 
                     /// <summary>
-                    /// <para>The threshold for healthy instances.</para>
+                    /// <para>The healthy threshold.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -367,7 +385,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public int? HealthyThreshold { get; set; }
 
                     /// <summary>
-                    /// <para>The endpoint of the HTTP request for the health check.</para>
+                    /// <para>The HTTP request address for health checks.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="http://172.168.0.1">http://172.168.0.1</a></para>
@@ -377,7 +395,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string HttpHost { get; set; }
 
                     /// <summary>
-                    /// <para>The path to which the HTTP request for the health check is sent.</para>
+                    /// <para>The HTTP request path for health checks.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>/health</para>
@@ -417,7 +435,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public int? Timeout { get; set; }
 
                     /// <summary>
-                    /// <para>The threshold for unhealthy instances.</para>
+                    /// <para>The unhealthy threshold.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -429,11 +447,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 }
 
                 /// <summary>
-                /// <para>The health status.</para>
+                /// <para>The health status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Health</description></item>
-                /// <item><description>Unhealthy</description></item>
-                /// <item><description>Unknown</description></item>
+                /// <item><description><para>Health</para>
+                /// </description></item>
+                /// <item><description><para>Unhealthy</para>
+                /// </description></item>
+                /// <item><description><para>Unknown</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -454,14 +475,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The list of IP addresses.</para>
+                /// <para>The IP address list.</para>
                 /// </summary>
                 [NameInMap("Ips")]
                 [Validation(Required=false)]
                 public List<string> Ips { get; set; }
 
                 /// <summary>
-                /// <para>The metadata or IP addresses of the service.</para>
+                /// <para>The metadata or IP address list.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -471,7 +492,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string MetaInfo { get; set; }
 
                 /// <summary>
-                /// <para>The name of the service.</para>
+                /// <para>The service name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -491,18 +512,24 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// <para>The port array.</para>
+                /// <para>The array of ports.</para>
                 /// </summary>
                 [NameInMap("Ports")]
                 [Validation(Required=false)]
                 public List<int?> Ports { get; set; }
 
+                /// <summary>
+                /// <para>The fully qualified domain name (FQDN) of the service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>demo.default.svc.cluster.local</para>
+                /// </summary>
                 [NameInMap("ServiceFQDN")]
                 [Validation(Required=false)]
                 public string ServiceFQDN { get; set; }
 
                 /// <summary>
-                /// <para>The name of the service that is registered with the service registry.</para>
+                /// <para>The original service name in the registry.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -512,7 +539,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string ServiceNameInRegistry { get; set; }
 
                 /// <summary>
-                /// <para>The service port number.</para>
+                /// <para>The service port.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>80</para>
@@ -522,7 +549,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public long? ServicePort { get; set; }
 
                 /// <summary>
-                /// <para>The protocol of the service.</para>
+                /// <para>The service protocol.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HTTP</para>
@@ -532,7 +559,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string ServiceProtocol { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the service source.</para>
+                /// <para>The source ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -552,21 +579,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The array of endpoints of unhealthy instances.</para>
+                /// <para>The array of unhealthy endpoints.</para>
                 /// </summary>
                 [NameInMap("UnhealthyEndpoints")]
                 [Validation(Required=false)]
                 public List<string> UnhealthyEndpoints { get; set; }
 
                 /// <summary>
-                /// <para>The service version.</para>
+                /// <para>The service versions.</para>
                 /// </summary>
                 [NameInMap("Versions")]
                 [Validation(Required=false)]
                 public List<ListGatewayServiceResponseBodyDataResultVersions> Versions { get; set; }
                 public class ListGatewayServiceResponseBodyDataResultVersions : TeaModel {
                     /// <summary>
-                    /// <para>The version number.</para>
+                    /// <para>The version name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>v1</para>
@@ -580,7 +607,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9</para>
@@ -592,7 +619,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -602,7 +629,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request failed.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>You are not authorized to perform this operation.</para>
@@ -612,7 +639,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F46CDBA4-B1EE-5C94-8A48-51C10177****</para>
@@ -622,10 +649,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><c>true</c>: The request is successful.</description></item>
+        /// <item><description><c>false</c>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

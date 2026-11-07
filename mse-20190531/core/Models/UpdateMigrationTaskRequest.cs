@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,11 +26,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The type of the instance. Valid values:</para>
+        /// <para>The type of a cluster.</para>
         /// <list type="bullet">
-        /// <item><description>Nacos-Ans</description></item>
-        /// <item><description>ZooKeeper</description></item>
-        /// <item><description>Eureka</description></item>
+        /// <item><description><para>Nacos-Ans</para>
+        /// </description></item>
+        /// <item><description><para>ZooKeeper</para>
+        /// </description></item>
+        /// <item><description><para>Eureka</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,7 +44,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -49,7 +54,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The address of the source instance node.</para>
+        /// <para>The source instance node address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.1.1:8848</para>
@@ -62,14 +67,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <para>The name of the source instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Source instance</para>
+        /// <para>Source cluster</para>
         /// </summary>
         [NameInMap("OriginInstanceName")]
         [Validation(Required=false)]
         public string OriginInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The list of namespaces. This parameter is optional if you want to migrate applications from a Nacos instance.</para>
+        /// <para>The list of namespaces. This parameter is optional if applications are migrated from a Nacos instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>namesapceId1,namesapceId2</para>
@@ -79,7 +84,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string OriginInstanceNamespace { get; set; }
 
         /// <summary>
-        /// <para>The description.</para>
+        /// <para>The description of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a description.</para>
@@ -89,7 +94,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ProjectDesc { get; set; }
 
         /// <summary>
-        /// <para>The extended request parameters in the JSON format.</para>
+        /// <para>The extended request parameter in the JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -98,6 +103,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string RequestPars { get; set; }
 
+        /// <summary>
+        /// <para>The synchronization type</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>All</para>
+        /// </summary>
         [NameInMap("SyncType")]
         [Validation(Required=false)]
         public string SyncType { get; set; }
@@ -106,7 +117,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <para>The name of the destination instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Destination instance</para>
+        /// <para>Target cluster</para>
         /// </summary>
         [NameInMap("TargetClusterName")]
         [Validation(Required=false)]

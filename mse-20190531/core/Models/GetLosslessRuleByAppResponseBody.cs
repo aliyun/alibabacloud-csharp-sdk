@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetLosslessRuleByAppResponseBodyData Data { get; set; }
         public class GetLosslessRuleByAppResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether service registration is complete before readiness probe.</para>
+            /// <para>Indicates whether service registration is completed before the readiness check is passed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? Aligned { get; set; }
 
             /// <summary>
-            /// <para>The ID of the application.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hkhon1po62@24810bf4364a***</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The name of the application.</para>
+            /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>spring-cloud-a</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The registration latency. Unit: seconds.</para>
+            /// <para>The delayed registration time in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -77,10 +77,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? DelayTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether graceful start is enabled. Valid values:</para>
+            /// <para>The enabling status of graceful start. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: enabled</description></item>
-            /// <item><description><c>false</c>: disabled</description></item>
+            /// <item><description><c>true</c>: Enabled.</description></item>
+            /// <item><description><c>false</c>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The slope of the prefetching curve.</para>
+            /// <para>The slope of the warm-up curve.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? FuncType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether online and offline processing details are displayed.</para>
+            /// <para>Indicates whether the processing details for graceful start and shutdown are enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? LossLessDetail { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether notification is enabled.</para>
+            /// <para>Indicates whether proactive notification is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? Notice { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether service prefetching is complete before readiness probe.</para>
+            /// <para>Indicates whether service warm-up is completed before the readiness check is passed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? Related { get; set; }
 
             /// <summary>
-            /// <para>The prefetching duration. Unit: seconds.</para>
+            /// <para>The warm-up duration in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The error code returned.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -183,9 +183,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>true: The request succeeded.</description></item>
         /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 

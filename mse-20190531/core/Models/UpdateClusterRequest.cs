@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The alias of the instance.</para>
+        /// <para>The alias of the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cluster-1</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ClusterAliasName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-cn-78v1l83****</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the O\&amp;M window.</para>
+        /// <para>The end time of the O&amp;M window.</para>
         /// 
         /// <b>Example:</b>
         /// <para>06:00</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string MaintenanceEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the O\&amp;M window.</para>
+        /// <para>The start time of the O&amp;M window.</para>
         /// 
         /// <b>Example:</b>
         /// <para>02:00</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string MaintenanceStartTime { get; set; }
 
         /// <summary>
-        /// <para>The extended request parameters in the JSON format.</para>
+        /// <para>The extended request parameters in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateGatewayAuthConsumerResourceRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The gateway authentication consumer ID.</para>
+        /// <para>The ID of the gateway authentication consumer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? ConsumerId { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the gateway.</para>
+        /// <para>UpdateGatewayAuthConsumerResource</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// <para>The gateway authentication consumer ID.</para>
+        /// <para>The list of resources.</para>
         /// </summary>
         [NameInMap("ResourceList")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? RouteId { get; set; }
 
             /// <summary>
-            /// <para>The name of the route.</para>
+            /// <para>The route name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>helo</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class PullServicesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public List<PullServicesResponseBodyData> Data { get; set; }
         public class PullServicesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The name of the group.</para>
+            /// <para>The group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The alias of the namespace.</para>
+            /// <para>The namespace alias.</para>
             /// 
             /// <b>Example:</b>
             /// <para>public</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string NamespaceShowName { get; set; }
 
             /// <summary>
-            /// <para>The information about services.</para>
+            /// <para>The list of services.</para>
             /// </summary>
             [NameInMap("Services")]
             [Validation(Required=false)]
             public List<PullServicesResponseBodyDataServices> Services { get; set; }
             public class PullServicesResponseBodyDataServices : TeaModel {
                 /// <summary>
-                /// <para>The name of the group.</para>
+                /// <para>The group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// <para>The name of the service.</para>
+                /// <para>The service name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -93,12 +93,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string Namespace { get; set; }
 
+                /// <summary>
+                /// <para>The SAE application ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>7171a6ca-d1cd-4928-8642-7d5cfe69****</para>
+                /// </summary>
                 [NameInMap("SaeAppId")]
                 [Validation(Required=false)]
                 public string SaeAppId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the service source.</para>
+                /// <para>The source ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -107,12 +113,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public string SourceId { get; set; }
 
+                /// <summary>
+                /// <para>The list of associated service source IDs.</para>
+                /// </summary>
                 [NameInMap("SourceIdList")]
                 [Validation(Required=false)]
                 public List<long?> SourceIdList { get; set; }
 
                 /// <summary>
-                /// <para>The type of the service source.</para>
+                /// <para>The source type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MSE</para>
@@ -126,7 +135,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -136,7 +145,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>You are not authorized to perform this operation. Action: mse:PullServices, Resource: acs:mse:cn-shenzhen:1228932054837788:*</para>
@@ -146,7 +155,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC0A99B9-8BA3-5FE3-8FE7-D7C719CF7BD2</para>
@@ -156,10 +165,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><c>true</c>: The request is successful.</description></item>
+        /// <item><description><c>false</c>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

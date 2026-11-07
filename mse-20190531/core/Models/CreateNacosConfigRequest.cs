@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <para>The content of the configuration.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>asdf</para>
+        /// <para>text</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <para>The description of the configuration.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Basic module configuration.</para>
+        /// <para>Base module configuration</para>
         /// </summary>
         [NameInMap("Desc")]
         [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <para>The tags of the configuration.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Basic configurations</para>
+        /// <para>Basic configuration</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

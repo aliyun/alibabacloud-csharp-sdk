@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The type of the object that is exported. Valid values:</para>
+        /// <para>The export type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>transactionLog: transaction logs</description></item>
-        /// <item><description>snapshot: snapshots</description></item>
+        /// <item><description>transactionLog: transaction log</description></item>
+        /// <item><description>snapshot: snapshot file</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).</para>
+        /// <para>The region where the cluster is deployed. Specify a region supported by Microservices Engine (MSE).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The extended request parameters in the JSON format.</para>
+        /// <para>The extended request parameters in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

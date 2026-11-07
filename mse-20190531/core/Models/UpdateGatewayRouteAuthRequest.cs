@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The authentication configurations.</para>
+        /// <para>The authentication configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AuthJSON")]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public UpdateGatewayRouteAuthRequestAuthJSON AuthJSON { get; set; }
         public class UpdateGatewayRouteAuthRequestAuthJSON : TeaModel {
             /// <summary>
-            /// <para>The authentication type. If an empty string is passed, no authentication type is available. Valid values:</para>
+            /// <para>The authentication type. An empty string indicates that authentication is disabled. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>JWT</description></item>
             /// </list>

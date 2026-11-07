@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data.</para>
+        /// <para>The data ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,22 +34,49 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string DataId { get; set; }
 
+        /// <summary>
+        /// <para>The list of additional canary release rules. When performing listener matching, the additional canary release rules are merged with existing rules for matching.</para>
+        /// </summary>
         [NameInMap("ExtGrayRules")]
         [Validation(Required=false)]
         public List<ListListenersByConfigRequestExtGrayRules> ExtGrayRules { get; set; }
         public class ListListenersByConfigRequestExtGrayRules : TeaModel {
+            /// <summary>
+            /// <para>The canary release rule. If it is a Beta canary release, this field contains the IP addresses of the canary release clients, separated by commas. If it is a tag-based canary release, this field contains tag_name=tag_value, with multiple tag values separated by commas.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>127.0.0.1</para>
+            /// </summary>
             [NameInMap("GrayRule")]
             [Validation(Required=false)]
             public string GrayRule { get; set; }
 
+            /// <summary>
+            /// <para>The name of the canary release version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("GrayRuleName")]
             [Validation(Required=false)]
             public string GrayRuleName { get; set; }
 
+            /// <summary>
+            /// <para>The priority of the canary release version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
             [NameInMap("GrayRulePriority")]
             [Validation(Required=false)]
             public int? GrayRulePriority { get; set; }
 
+            /// <summary>
+            /// <para>The type of the canary release rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Tags</para>
+            /// </summary>
             [NameInMap("GrayRuleType")]
             [Validation(Required=false)]
             public string GrayRuleType { get; set; }
@@ -57,7 +84,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The name of the group.</para>
+        /// <para>The group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -79,7 +106,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the namespace.</para>
+        /// <para>The namespace ID. Default value: public.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aaeb4d28-c9eb-4fa2-85f5-d03ce7ee8df1</para>
@@ -89,10 +116,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// <para>The extended request parameters in the JSON format.</para>
+        /// <para>This parameter is deprecated and does not need to be specified.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\\&quot;appGroup\\&quot;:\\&quot;emas-zfive_prehost\\&quot;,\\&quot;appName\\&quot;:\\&quot;emas-zfive\\&quot;,\\&quot;appStage\\&quot;:\\&quot;PRE_PUBLISH\\&quot;,\\&quot;appUnit\\&quot;:\\&quot;\\&quot;,\\&quot;bucId\\&quot;:\\&quot;225902\\&quot;,\\&quot;bucName\\&quot;:\\&quot;Wireless\\&quot;,\\&quot;provider\\&quot;:\\&quot;aliyun\\&quot;}</para>
+        /// <para>...</para>
         /// </summary>
         [NameInMap("RequestPars")]
         [Validation(Required=false)]

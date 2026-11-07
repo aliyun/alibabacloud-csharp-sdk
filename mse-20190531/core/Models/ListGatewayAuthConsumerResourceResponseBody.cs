@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListGatewayAuthConsumerResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. A value of 200 is returned if the request is successful.</para>
+        /// <para>The code used only to synchronize with the success field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListGatewayAuthConsumerResourceResponseBodyData Data { get; set; }
         public class ListGatewayAuthConsumerResourceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public List<ListGatewayAuthConsumerResourceResponseBodyDataResult> Result { get; set; }
             public class ListGatewayAuthConsumerResourceResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// <para>The ID of the consumer.</para>
+                /// <para>The ID of the gateway authentication consumer.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The modification time.</para>
+                /// <para>The update time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-01-07 18:07:57</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the authorized resource for the consumer.</para>
+                /// <para>The authorization ID of the gateway authentication consumer.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -106,8 +106,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 /// <summary>
                 /// <para>The resource authorization status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: enabled</description></item>
-                /// <item><description>false: disabled</description></item>
+                /// <item><description><para>true: Enabled.</para>
+                /// </description></item>
+                /// <item><description><para>false: Disabled.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -118,7 +120,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public bool? ResourceStatus { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the route.</para>
+                /// <para>The route ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3091</para>
@@ -140,7 +142,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11</para>
@@ -152,7 +154,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The dynamic part in the error message.</para>
+        /// <para>The placeholder in the dynamic error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>code</para>
@@ -162,9 +164,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic part in the error message. This parameter is used to replace the \<em>\</em>%s\<em>\</em> variable in the <b>ErrMessage</b> parameter.</para>
+        /// <para>The dynamic error message, which is used to replace the <b>%s</b> placeholder in the error message of the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para> If the return value of the <b>ErrMessage</b> parameter is <b>The Value of Input Parameter %s is not valid</b> and the return value of the <b>DynamicMessage</b> parameter is <b>DtsJobId</b>, the specified <b>DtsJobId</b> parameter is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -175,7 +177,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error code that is returned.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-100-000</para>
@@ -185,7 +187,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -195,17 +197,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request is successfully processed.</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A73AC37C-C617-4E3A-8049-372CF49C****</para>
@@ -215,10 +217,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

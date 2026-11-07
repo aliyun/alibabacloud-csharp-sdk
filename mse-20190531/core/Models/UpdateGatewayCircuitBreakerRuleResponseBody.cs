@@ -9,11 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateGatewayCircuitBreakerRuleResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpdateGatewayCircuitBreakerRuleResponseBodyData Data { get; set; }
         public class UpdateGatewayCircuitBreakerRuleResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The web fallback behavior type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: Return specified text.</description></item>
+            /// <item><description>1: Redirect to a specified page.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -22,6 +31,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? BehaviorType { get; set; }
 
             /// <summary>
+            /// <para>The encoding type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: Plain text.</description></item>
+            /// <item><description>1: JSON.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -30,6 +45,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? BodyEncoding { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether to enable the rule. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: Disabled.</description></item>
+            /// <item><description>1: Enabled.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -38,6 +59,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? Enable { get; set; }
 
             /// <summary>
+            /// <para>The ID of the gateway.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>14407</para>
             /// </summary>
@@ -46,6 +69,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? GatewayId { get; set; }
 
             /// <summary>
+            /// <para>The unique ID of the gateway.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>gw-c9bc5afd61014165bd58f621b491****</para>
             /// </summary>
@@ -54,6 +79,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string GatewayUniqueId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the circuit breaker rule.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>369</para>
             /// </summary>
@@ -61,11 +88,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public long? Id { get; set; }
 
+            /// <summary>
+            /// <para>The IDs of the filter rules.</para>
+            /// </summary>
             [NameInMap("IdList")]
             [Validation(Required=false)]
             public List<long?> IdList { get; set; }
 
             /// <summary>
+            /// <para>The threshold conversion mode. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: Standalone.</description></item>
+            /// <item><description>1: Cluster.</description></item>
+            /// <item><description>2: Cluster to standalone.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -74,6 +111,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? LimitMode { get; set; }
 
             /// <summary>
+            /// <para>The slow call threshold in slow call mode.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -82,6 +121,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? MaxAllowedMs { get; set; }
 
             /// <summary>
+            /// <para>The minimum number of requests that triggers circuit breaking.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -90,6 +131,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? MinRequestAmount { get; set; }
 
             /// <summary>
+            /// <para>The recovery duration for circuit breaking.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12</para>
             /// </summary>
@@ -98,6 +141,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? RecoveryTimeoutSec { get; set; }
 
             /// <summary>
+            /// <para>The custom headers, which are entered as key-value pairs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>key=value</para>
             /// </summary>
@@ -106,6 +151,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ResponseAdditionalHeaders { get; set; }
 
             /// <summary>
+            /// <para>The HTTP response text.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>text</para>
             /// </summary>
@@ -114,6 +161,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ResponseContentBody { get; set; }
 
             /// <summary>
+            /// <para>The redirect URL.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>www.******.com</para>
             /// </summary>
@@ -122,6 +171,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ResponseRedirectUrl { get; set; }
 
             /// <summary>
+            /// <para>The HTTP status code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>201</para>
             /// </summary>
@@ -130,6 +181,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? ResponseStatusCode { get; set; }
 
             /// <summary>
+            /// <para>The ID of the route.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>645</para>
             /// </summary>
@@ -138,6 +191,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? RouteId { get; set; }
 
             /// <summary>
+            /// <para>The name of the route.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>routeName</para>
             /// </summary>
@@ -146,6 +201,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string RouteName { get; set; }
 
             /// <summary>
+            /// <para>The statistical duration for circuit breaking.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>11</para>
             /// </summary>
@@ -154,6 +211,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? StatDurationSec { get; set; }
 
             /// <summary>
+            /// <para>The threshold type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: Slow call.</description></item>
+            /// <item><description>1: Exception.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -162,6 +225,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? Strategy { get; set; }
 
             /// <summary>
+            /// <para>The percentage that triggers circuit breaking.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -172,6 +237,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DC34E4A3-5F1C-4E40-86EA-02EDF967****</para>
         /// </summary>

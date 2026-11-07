@@ -10,8 +10,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdatePluginConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
-        /// <para>zh: Chinese en: English</para>
+        /// <para>The language of the returned information. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -21,21 +24,30 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The plug-in configuration. Configurations of WebAssembly plug-ins are in the YAML format, and configurations of Lua plug-ins are in the Lua code.</para>
+        /// <para>The configuration content of the plug-in. Use YAML for Wasm plug-ins and Lua code for Lua plug-ins.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>\# Configure a check for the required fields of the plug-in, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne</para>
+        /// <para>name: John
+        /// age: 18
+        /// friends:</para>
+        /// <list type="bullet">
+        /// <item><description>David</description></item>
+        /// <item><description>Anne</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The application scope of the plug-in.</para>
+        /// <para>The application scope of the plug-in. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: global</description></item>
-        /// <item><description>1: route</description></item>
-        /// <item><description>2: domain name</description></item>
+        /// <item><description><para>0: Global.</para>
+        /// </description></item>
+        /// <item><description><para>1: Route.</para>
+        /// </description></item>
+        /// <item><description><para>2: Domain name.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -124,6 +136,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public long? PluginId { get; set; }
 
+        /// <summary>
+        /// <para>The list of domain name IDs or route IDs, which depends on the value of ConfigLevel.</para>
+        /// </summary>
         [NameInMap("ResourceIdList")]
         [Validation(Required=false)]
         public List<long?> ResourceIdList { get; set; }

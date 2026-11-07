@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// <para>The unique ID of the gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gw-913a49bab6c5461187a3305fb8da****</para>
         /// </summary>
         [NameInMap("GatewayUniqueId")]
         [Validation(Required=false)]
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// <para>The name of the group to which the service belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DEFAULT_GROUP</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
@@ -32,6 +38,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// <para>The ID of the service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -39,6 +48,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// <para>The metadata of the service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[\&quot;192.168.0.xxx:80\&quot;]</para>
         /// </summary>
         [NameInMap("MetaInfo")]
         [Validation(Required=false)]
@@ -46,6 +58,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// <para>The name of the service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -53,6 +68,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// <para>The namespace to which the service belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>public</para>
         /// </summary>
         [NameInMap("Namespace")]
         [Validation(Required=false)]
@@ -60,6 +78,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// <para>The source type of the service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MSE</para>
         /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]

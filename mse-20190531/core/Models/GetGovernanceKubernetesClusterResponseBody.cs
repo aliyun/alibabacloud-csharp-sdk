@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetGovernanceKubernetesClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the data.</para>
+        /// <para>The data overview.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetGovernanceKubernetesClusterResponseBodyData Data { get; set; }
         public class GetGovernanceKubernetesClusterResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cd23228b3c80c4d4f9ad7af1d87cc30d5</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The name of the instance.</para>
+            /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>myCluster</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>The version of Kubernetes.</para>
+            /// <para>The Kubernetes version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.20.11-aliyun.1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string K8sVersion { get; set; }
 
             /// <summary>
-            /// <para>The information of the namespace.</para>
+            /// <para>The information about namespaces.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{\&quot;Name\&quot;:\&quot;ack-onepilot\&quot;,\&quot;Tags\&quot;:null},{\&quot;Name\&quot;:\&quot;default\&quot;,\&quot;Tags\&quot;:{\&quot;mse-enable\&quot;:\&quot;enabled\&quot;}},{\&quot;Name\&quot;:\&quot;kube-node-lease\&quot;,\&quot;Tags\&quot;:null},{\&quot;Name\&quot;:\&quot;kube-public\&quot;,\&quot;Tags\&quot;:null},{\&quot;Name\&quot;:\&quot;kube-system\&quot;,\&quot;Tags\&quot;:null}]</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string NamespaceInfos { get; set; }
 
             /// <summary>
-            /// <para>The queried namespaces.</para>
+            /// <para>The list of namespaces.</para>
             /// </summary>
             [NameInMap("Namespaces")]
             [Validation(Required=false)]
             public List<GetGovernanceKubernetesClusterResponseBodyDataNamespaces> Namespaces { get; set; }
             public class GetGovernanceKubernetesClusterResponseBodyDataNamespaces : TeaModel {
                 /// <summary>
-                /// <para>The name of the MSE namespace that you want to access.</para>
+                /// <para>The corresponding MSE namespace name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string MseNamespace { get; set; }
 
                 /// <summary>
-                /// <para>The name of the namespace in the ACK cluster.</para>
+                /// <para>The Kubernetes namespace name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// <para>The time when the pilot component was started.</para>
+            /// <para>The Pilot startup time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-01-11T11:50:38.000+0000</para>
@@ -95,12 +95,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string PilotStartTime { get; set; }
 
+            /// <summary>
+            /// <para>The ack-onepilot component version</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4.1.1</para>
+            /// </summary>
             [NameInMap("PilotVersion")]
             [Validation(Required=false)]
             public string PilotVersion { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region in which the instance resides. The region is supported by MSE.</para>
+            /// <para>The region where the cluster is located. MSE supports specific regions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -110,7 +116,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The time of the last modification.</para>
+            /// <para>The time when the UDF was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-01-12T05:24:31.000+0000</para>
@@ -119,6 +125,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string UpdateTime { get; set; }
 
+            /// <summary>
+            /// <para>The version lifecycle.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>STABLE</para>
+            /// </summary>
             [NameInMap("VersionLifeCycle")]
             [Validation(Required=false)]
             public string VersionLifeCycle { get; set; }
@@ -126,7 +138,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The information that is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -136,7 +148,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5B170A0D-2C5D-4CF8-B808-03966B86****</para>
@@ -148,8 +160,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

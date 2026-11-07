@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListNacosHistoryConfigsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-100-000</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public List<ListNacosHistoryConfigsResponseBodyHistoryItems> HistoryItems { get; set; }
         public class ListNacosHistoryConfigsResponseBodyHistoryItems : TeaModel {
             /// <summary>
-            /// <para>The application tag.</para>
+            /// <para>The tags of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gateway</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Group { get; set; }
 
             /// <summary>
-            /// <para>The ID of the configuration.</para>
+            /// <para>The configuration ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23fdsf</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// <para>The timestamp when the configuration was last modified.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>16434400</para>
+            /// <para>1643440066000</para>
             /// </summary>
             [NameInMap("LastModifiedTime")]
             [Validation(Required=false)]
@@ -86,6 +86,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string OpType { get; set; }
 
+            /// <summary>
+            /// <para>The user who modified this version</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("SrcUser")]
             [Validation(Required=false)]
             public string SrcUser { get; set; }
@@ -93,7 +99,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -103,17 +109,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string HttpCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The message that is returned for the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request was successfully processed.</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -133,7 +139,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>53338ECA-F880-54D8-A9B3-5606355A1B89</para>
@@ -145,8 +151,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

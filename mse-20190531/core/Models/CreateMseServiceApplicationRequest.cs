@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class CreateMseServiceApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned information. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>zh: Chinese</description></item>
         /// <item><description>en: English</description></item>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The edition of the MSE instance that you want to purchase.</para>
+        /// <para>The version of the Microservices Engine (MSE) cluster to be activated. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>mse_pro: Professional Edition.</description></item>
         /// <item><description>mse_dev: Developer Edition.</description></item>
@@ -69,13 +69,13 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string MseVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance resides. Examples:</para>
+        /// <para>The region where the cluster is located, including but not limited to:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: China (Hangzhou)</description></item>
-        /// <item><description>cn-beijing: China (Beijing)</description></item>
-        /// <item><description>cn-shanghai: China (Shanghai)</description></item>
-        /// <item><description>cn-zhangjiakou: China (Zhangjiakou)</description></item>
-        /// <item><description>cn-shenzhen: China (Shenzhen)</description></item>
+        /// <item><description>cn-hangzhou: Hangzhou</description></item>
+        /// <item><description>cn-beijing: Beijing</description></item>
+        /// <item><description>cn-shanghai: Shanghai</description></item>
+        /// <item><description>cn-zhangjiakou: Zhangjiakou</description></item>
+        /// <item><description>cn-shenzhen: Shenzhen</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the Sentinel-compatible mode.</para>
+        /// <para>Specifies whether to enable Sentinel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string SentinelEnable { get; set; }
 
         /// <summary>
-        /// <para>The service source.</para>
+        /// <para>The source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>edasmsc</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable switching.</para>
+        /// <para>Specifies whether to enable Switch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

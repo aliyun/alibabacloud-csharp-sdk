@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListListenersByIpResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>Error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MSE-100-000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>202</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string HttpCode { get; set; }
 
         /// <summary>
-        /// <para>The information about listeners.</para>
+        /// <para>Listener information.</para>
         /// </summary>
         [NameInMap("Listeners")]
         [Validation(Required=false)]
         public List<ListListenersByIpResponseBodyListeners> Listeners { get; set; }
         public class ListListenersByIpResponseBodyListeners : TeaModel {
             /// <summary>
-            /// <para>The ID of the data.</para>
+            /// <para>Data ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test.yaml</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string DataId { get; set; }
 
             /// <summary>
-            /// <para>The group.</para>
+            /// <para>Group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Group { get; set; }
 
             /// <summary>
-            /// <para>The verification string.</para>
+            /// <para>Verification string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23sdfdf</para>
@@ -66,6 +66,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Md5 { get; set; }
 
+            /// <summary>
+            /// <para>Namespace ID</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("NamespaceId")]
             [Validation(Required=false)]
             public string NamespaceId { get; set; }
@@ -73,17 +79,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>Response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request was successfully processed.</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>Current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -93,7 +99,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>Size of the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -103,7 +109,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>54973C90-F379-4372-9AA5-053A3F7****</para>
@@ -113,21 +119,23 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Request result, with the following values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><para><c>true</c>: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>True</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned instances.</para>
+        /// <para>Total number of instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>

@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,26 +48,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// <para>The throttling effect.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>0</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>fast failure</para>
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>2</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>in queue</para>
-        /// <!-- --></description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -76,22 +58,6 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// <para>Specifies whether to enable the rule.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -100,12 +66,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
+        /// <summary>
+        /// <para>The source application of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Spring-cloud-a</para>
+        /// </summary>
         [NameInMap("LimitApp")]
         [Validation(Required=false)]
         public string LimitApp { get; set; }
 
         /// <summary>
-        /// <para>The timeout period. Unit: milliseconds. This parameter is required when the value of ControlBehavior is set to 2.</para>
+        /// <para>The timeout period. Unit: milliseconds. This parameter is required if the ControlBehavior parameter is set to 2.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class QueryNamespaceRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values: zh and en. Default value: zh. The value zh which indicates Chinese, and the value en indicates English.</para>
+        /// <para>The language in which you want the results to be displayed. Valid values: zh (default): Chinese. en: English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>The name of the namespace that you want to query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default</para>
         /// </summary>
@@ -28,6 +30,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The region to which the namespace belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

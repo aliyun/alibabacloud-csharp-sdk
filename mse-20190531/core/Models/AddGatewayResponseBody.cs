@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class AddGatewayResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
-        /// </list>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -24,14 +20,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the gateway.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AddGatewayResponseBodyData Data { get; set; }
         public class AddGatewayResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>code</para>
+            /// <para>The unique ID of the gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gw-5017305290e14cebbrvec4a5****</para>
@@ -43,11 +39,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
-        /// <list type="bullet">
-        /// <item><description>If the request is successful, a success message is returned.</description></item>
-        /// <item><description>If the request fails, an error message is returned.</description></item>
-        /// </list>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -57,17 +49,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request is successfully processed.</para>
+        /// <para>The returned message.</para>
+        /// <list type="bullet">
+        /// <item><description>If the request is successful, a success message is returned.</description></item>
+        /// <item><description>If the request fails, the cause of the failure is returned.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>The return value.</para>
+        /// <para>Succ</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2F46B9E7-67EF-5C8A-BA52-D38D5B32AF2C</para>
@@ -77,7 +73,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: The request is successful.</description></item>
+        /// <item><description><c>false</c>: The request fails.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateAuthPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values: zh-CN and en-US. Default value: zh-CN. The value zh-CN indicates Chinese, and the value en-US indicates English.</para>
+        /// <para>The language in which you want the results to be displayed. Valid values: zh-CN and en-US. Default value: zh-CN. The value zh-CN indicates Chinese, and the value en-US indicates English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ACK cluster namespace.</para>
+        /// <para>The namespace ID of the Kubernetes cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c19c6c500e1ff4d7abc7bed9b8236***</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string K8sNamespace { get; set; }
 
         /// <summary>
-        /// <para>The name of the rule.</para>
+        /// <para>The rule name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo-test</para>
@@ -81,11 +81,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The protocol type. Valid values:</para>
+        /// <para>The Protocol Type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SPRING_CLOUD</b></description></item>
-        /// <item><description><b>DUBBO</b></description></item>
-        /// <item><description><b>istio</b></description></item>
+        /// <item><description><para><b>SPRING_CLOUD</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>DUBBO</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>istio</b>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,7 +99,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -106,7 +109,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The source for application access.</para>
+        /// <para>The service source that the application accesses.</para>
         /// 
         /// <b>Example:</b>
         /// <para>edasmsc</para>

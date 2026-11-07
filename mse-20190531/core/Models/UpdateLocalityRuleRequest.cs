@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateLocalityRuleRequest : TeaModel {
         /// <summary>
+        /// <para>The language of the response. Valid values: zh (default): Chinese. en: English.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>The ID of the application.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hkhon1po62@c3df23522******</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The name of the application.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example-app</para>
         /// </summary>
@@ -34,6 +40,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable zone affinity.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? Enable { get; set; }
 
         /// <summary>
+        /// <para>The name of the MSE namespace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>myNamespace</para>
         /// </summary>
@@ -52,6 +61,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <para>The region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,11 +71,19 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        /// <summary>
+        /// <para>The reserved parameter. This parameter is not used.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>No input required</para>
+        /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public string Rules { get; set; }
 
         /// <summary>
+        /// <para>The source of the rule.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>edasmsc</para>
         /// </summary>
@@ -74,6 +92,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Source { get; set; }
 
         /// <summary>
+        /// <para>The threshold for zone affinity to take effect. The zone affinity routing feature is enabled for a zone only when the proportion of instances of the current application deployed in the zone exceeds this threshold. That is, when a consumer sends a request to the application, the request is preferentially routed to an instance in the same zone as the consumer.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.2</para>
         /// </summary>

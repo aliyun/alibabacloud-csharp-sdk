@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetPluginConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,13 +27,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public GetPluginConfigResponseBodyData Data { get; set; }
         public class GetPluginConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The category of the plug-in. Valid values:</para>
-            /// <para>0: user-defined</para>
-            /// <para>1: permission authentication</para>
-            /// <para>2: security protection</para>
-            /// <para>3: transmission protocol</para>
-            /// <para>4: traffic control</para>
-            /// <para>5: traffic observation</para>
+            /// <para>The plug-in category. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: Custom.</description></item>
+            /// <item><description>1: Authentication and authorization.</description></item>
+            /// <item><description>2: Security protection.</description></item>
+            /// <item><description>3: Transport protocol.</description></item>
+            /// <item><description>4: Traffic control.</description></item>
+            /// <item><description>5: Traffic observation.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -43,20 +45,36 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? Category { get; set; }
 
             /// <summary>
-            /// <para>The information about the plug-in configuration used for checking.</para>
+            /// <para>The configuration validation.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>\# The configuration includes the fields required for checking, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne</para>
+            /// <h1>Validate required configuration fields. In the following example, the plug-in configuration must contain the &quot;name&quot;, &quot;age&quot;, and &quot;friends&quot; fields.</h1>
+            /// <para>name: John
+            /// age: 18
+            /// friends:</para>
+            /// <list type="bullet">
+            /// <item><description>David</description></item>
+            /// <item><description>Anne</description></item>
+            /// </list>
             /// </summary>
             [NameInMap("ConfigCheck")]
             [Validation(Required=false)]
             public string ConfigCheck { get; set; }
 
+            /// <summary>
+            /// <para>The plug-in configuration example.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>blocked_code: 404
+            /// blocked_message: resource not found</para>
+            /// </summary>
             [NameInMap("ConfigExample")]
             [Validation(Required=false)]
             public string ConfigExample { get; set; }
 
             /// <summary>
+            /// <para>The start index of domain-level rules in GatewayConfigList. If no domain-level rules exist, the value is -1.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5</para>
             /// </summary>
@@ -75,17 +93,26 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 /// <para>The plug-in configuration.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>\# Configure a check for the required fields of the plug-in, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne</para>
+                /// <h1>Validate required configuration fields. In the following example, the plug-in configuration must contain the &quot;name&quot;, &quot;age&quot;, and &quot;friends&quot; fields.</h1>
+                /// <para>name: John
+                /// age: 18
+                /// friends:</para>
+                /// <list type="bullet">
+                /// <item><description>David</description></item>
+                /// <item><description>Anne</description></item>
+                /// </list>
                 /// </summary>
                 [NameInMap("Config")]
                 [Validation(Required=false)]
                 public string Config { get; set; }
 
                 /// <summary>
-                /// <para>The application scope of the plug-in. Valid values:</para>
-                /// <para>0: global</para>
-                /// <para>1: domain names</para>
-                /// <para>2: routes</para>
+                /// <para>The plug-in application scope. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: Global.</description></item>
+                /// <item><description>1: Domain name.</description></item>
+                /// <item><description>2: Route.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -105,7 +132,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public bool? Enable { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the gateway.</para>
+                /// <para>The gateway ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -145,7 +172,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the plug-in configuration.</para>
+                /// <para>The plug-in configuration ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -164,15 +191,26 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 [Validation(Required=false)]
                 public long? PluginId { get; set; }
 
+                /// <summary>
+                /// <para>The list of domain name and route resources, distinguished by ConfigLevel.</para>
+                /// </summary>
                 [NameInMap("ResourceList")]
                 [Validation(Required=false)]
                 public List<GetPluginConfigResponseBodyDataGatewayConfigListResourceList> ResourceList { get; set; }
                 public class GetPluginConfigResponseBodyDataGatewayConfigListResourceList : TeaModel {
+                    /// <summary>
+                    /// <para>The resource ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
+                    /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
                     public long? Id { get; set; }
 
                     /// <summary>
+                    /// <para>The resource name, which is the domain name or route name.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>test-route</para>
                     /// </summary>
@@ -185,6 +223,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
+            /// <para>The index of instance-level rules in GatewayConfigList. If no instance-level rules exist, the value is -1.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>7</para>
             /// </summary>
@@ -193,7 +233,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? GatewayConfigStartIndex { get; set; }
 
             /// <summary>
-            /// <para>The ID of the plug-in.</para>
+            /// <para>The plug-in ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -203,7 +243,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the image.</para>
+            /// <para>The image name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -223,7 +263,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? Mode { get; set; }
 
             /// <summary>
-            /// <para>The name of the plug-in.</para>
+            /// <para>The plug-in name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -233,11 +273,13 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The execution stage of the plug-in. Valid values:</para>
-            /// <para>0: default stage</para>
-            /// <para>1: authorization stage</para>
-            /// <para>2: authentication stage</para>
-            /// <para>3: statistics stage</para>
+            /// <para>The plug-in execution phase. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: Default phase.</description></item>
+            /// <item><description>1: Authentication phase.</description></item>
+            /// <item><description>2: Authorization phase.</description></item>
+            /// <item><description>3: Statistics phase.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -257,7 +299,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string PrimaryUser { get; set; }
 
             /// <summary>
-            /// <para>The execution priority of the plug-in. A larger value indicates a higher priority.</para>
+            /// <para>The plug-in execution priority. A larger value indicates a higher priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -277,7 +319,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? PublishState { get; set; }
 
             /// <summary>
-            /// <para>The description of the README file.</para>
+            /// <para>The README description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>read me</para>
@@ -287,7 +329,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Readme { get; set; }
 
             /// <summary>
-            /// <para>The description of the README file that is edited in English.</para>
+            /// <para>The README description in English.</para>
             /// 
             /// <b>Example:</b>
             /// <para>read me</para>
@@ -297,6 +339,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ReadmeEn { get; set; }
 
             /// <summary>
+            /// <para>The start index of route-level rules in GatewayConfigList. If no route-level rules exist, the value is -1.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -305,9 +349,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? RouteConfigStartIndex { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the plug-in is enabled. Valid values:</para>
-            /// <para>0: disabled</para>
-            /// <para>1: enabled</para>
+            /// <para>The enabling status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: Disabled.</description></item>
+            /// <item><description>1: Enabled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -317,21 +363,31 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The summary of the plug-in.</para>
+            /// <para>The plug-in summary.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>This is a plug-in.</para>
+            /// <para>This is a plug-in</para>
             /// </summary>
             [NameInMap("Summary")]
             [Validation(Required=false)]
             public string Summary { get; set; }
 
+            /// <summary>
+            /// <para>The plug-in summary in English.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Convert request/response headers, request query parameters, and request/response body parameters.</para>
+            /// </summary>
             [NameInMap("SummaryEn")]
             [Validation(Required=false)]
             public string SummaryEn { get; set; }
 
             /// <summary>
-            /// <para>The type.</para>
+            /// <para>The plug-in type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: HTTP filter.</description></item>
+            /// <item><description>1: Network filter.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -341,7 +397,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? Type { get; set; }
 
             /// <summary>
-            /// <para>The version of the plug-in.</para>
+            /// <para>The plug-in version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1</para>
@@ -350,17 +406,25 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             [Validation(Required=false)]
             public string Version { get; set; }
 
+            /// <summary>
+            /// <para>The list of gateway plug-in version information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[{&quot;id&quot;:1, &quot;version&quot;: &quot;1.0.0&quot;}]</para>
+            /// </summary>
             [NameInMap("VersionJson")]
             [Validation(Required=false)]
             public string VersionJson { get; set; }
 
             /// <summary>
-            /// <para>The WebAssembly language. Valid values:</para>
-            /// <para>0: C++</para>
-            /// <para>1: TinyGo</para>
-            /// <para>2: Rust</para>
-            /// <para>3: AssemblyScript</para>
-            /// <para>4: Zig</para>
+            /// <para>The WebAssembly (Wasm) implementation language. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: C++.</description></item>
+            /// <item><description>1: TinyGo.</description></item>
+            /// <item><description>2: Rust.</description></item>
+            /// <item><description>3: AssemblyScript.</description></item>
+            /// <item><description>4: Zig.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -392,7 +456,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -402,7 +466,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -412,7 +476,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The API message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -422,7 +486,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>03A3E2F4-6804-5663-9D5D-2EC47A1*****</para>

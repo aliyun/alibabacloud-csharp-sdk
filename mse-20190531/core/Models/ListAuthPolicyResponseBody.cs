@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The details of the data.</para>
+        /// <para>The data overview.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The data returned.</para>
+            /// <para>The returned data.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<ListAuthPolicyResponseBodyDataResult> Result { get; set; }
             public class ListAuthPolicyResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account to which the resource belongs.</para>
+                /// <para>The Alibaba Cloud account ID of the resource owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>19039813784***</para>
@@ -84,24 +84,26 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// <para>The content of the service authentication rule.</para>
+                /// <para>The list of service authentication rules.</para>
                 /// </summary>
                 [NameInMap("AuthRule")]
                 [Validation(Required=false)]
                 public List<ListAuthPolicyResponseBodyDataResultAuthRule> AuthRule { get; set; }
                 public class ListAuthPolicyResponseBodyDataResultAuthRule : TeaModel {
                     /// <summary>
-                    /// <para>The IDs of applications.</para>
+                    /// <para>The application collection.</para>
                     /// </summary>
                     [NameInMap("AppIds")]
                     [Validation(Required=false)]
                     public List<string> AppIds { get; set; }
 
                     /// <summary>
-                    /// <para>The rule type. Valid values:</para>
+                    /// <para>The rule type.</para>
                     /// <list type="bullet">
-                    /// <item><description>0: by application</description></item>
-                    /// <item><description>1: by namespace</description></item>
+                    /// <item><description><para>0, by application dimension.</para>
+                    /// </description></item>
+                    /// <item><description><para>1, by namespace dimension.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -112,7 +114,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public int? AuthType { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the rule is a blacklist rule.</para>
+                    /// <para>Indicates whether it is a blacklist.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -122,7 +124,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public bool? Black { get; set; }
 
                     /// <summary>
-                    /// <para>The queried namespaces.</para>
+                    /// <para>The namespace list.</para>
                     /// </summary>
                     [NameInMap("K8sNamespaces")]
                     [Validation(Required=false)]
@@ -156,14 +158,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                         public string Name { get; set; }
 
                         /// <summary>
-                        /// <para>The types of request parameters.</para>
+                        /// <para>The list of request parameter types.</para>
                         /// </summary>
                         [NameInMap("ParameterTypes")]
                         [Validation(Required=false)]
                         public List<string> ParameterTypes { get; set; }
 
                         /// <summary>
-                        /// <para>The type of the return value.</para>
+                        /// <para>The return value type.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Boolean</para>
@@ -183,7 +185,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                         public string ServiceName { get; set; }
 
                         /// <summary>
-                        /// <para>The method version.</para>
+                        /// <para>The method version number.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0.0.1</para>
@@ -195,7 +197,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     }
 
                     /// <summary>
-                    /// <para>The service path.</para>
+                    /// <para>The path.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>/a</para>
@@ -207,10 +209,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 }
 
                 /// <summary>
-                /// <para>The rule type. Valid values:</para>
+                /// <para>The rule type.</para>
                 /// <list type="bullet">
-                /// <item><description>0: by application</description></item>
-                /// <item><description>1: by namespace</description></item>
+                /// <item><description><para>0: by application dimension.</para>
+                /// </description></item>
+                /// <item><description><para>1: by namespace dimension.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -221,10 +225,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? AuthType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the rule was enabled or disabled. Valid values:</para>
+                /// <para>Enable or disable.</para>
                 /// <list type="bullet">
-                /// <item><description><c>true</c>: enabled</description></item>
-                /// <item><description><c>false</c>: disabled</description></item>
+                /// <item><description><para><c>true</c>: Enable.</para>
+                /// </description></item>
+                /// <item><description><para><c>false</c>: disable.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -235,7 +241,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public bool? Enable { get; set; }
 
                 /// <summary>
-                /// <para>The rule ID.</para>
+                /// <para>The ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>204</para>
@@ -255,7 +261,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string K8sNamespace { get; set; }
 
                 /// <summary>
-                /// <para>The name of the authentication rule.</para>
+                /// <para>The authentication rule name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -275,11 +281,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string NamespaceId { get; set; }
 
                 /// <summary>
-                /// <para>The protocol type. Valid values:</para>
+                /// <para>The Protocol Type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>SPRING_CLOUD</b></description></item>
-                /// <item><description><b>DUBBO</b></description></item>
-                /// <item><description><b>istio</b></description></item>
+                /// <item><description><para><b>SPRING_CLOUD</b>.</para>
+                /// </description></item>
+                /// <item><description><para><b>DUBBO</b>.</para>
+                /// </description></item>
+                /// <item><description><para><b>istio</b>.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -300,7 +309,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The source of the application.</para>
+                /// <para>The application source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>edasmsc</para>
@@ -345,6 +354,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
         /// <summary>
         /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -361,10 +373,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>The request result, with the following values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

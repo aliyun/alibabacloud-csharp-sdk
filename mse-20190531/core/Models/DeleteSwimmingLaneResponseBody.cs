@@ -13,17 +13,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>mse-100-000</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request was successfully processed.</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

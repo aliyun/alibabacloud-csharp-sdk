@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetPluginsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned code.</para>
+        /// <para>The code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,20 +20,22 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data entries returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetPluginsResponseBodyData> Data { get; set; }
         public class GetPluginsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The type of the plug-in. Valid values:</para>
-            /// <para>0: custom</para>
-            /// <para>1: permission authorization</para>
-            /// <para>2: security protection</para>
-            /// <para>3: transmission protocol</para>
-            /// <para>4: traffic control</para>
-            /// <para>5: traffic observation</para>
+            /// <para>The plug-in type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: Custom.</description></item>
+            /// <item><description>1: Authentication and authorization.</description></item>
+            /// <item><description>2: Security protection.</description></item>
+            /// <item><description>3: Transport protocol.</description></item>
+            /// <item><description>4: Traffic control.</description></item>
+            /// <item><description>5: Traffic observability.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -43,17 +45,24 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? Category { get; set; }
 
             /// <summary>
-            /// <para>The information about the plug-in configuration used for checking.</para>
+            /// <para>The configuration validation.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>\# The configuration includes the fields required for checking, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne</para>
+            /// <h1>Validate required fields in the configuration. As shown in the following example, the plug-in configuration must contain the &quot;name&quot;, &quot;age&quot;, and &quot;friends&quot; fields.</h1>
+            /// <para>name: John
+            /// age: 18
+            /// friends:</para>
+            /// <list type="bullet">
+            /// <item><description>David</description></item>
+            /// <item><description>Anne</description></item>
+            /// </list>
             /// </summary>
             [NameInMap("ConfigCheck")]
             [Validation(Required=false)]
             public string ConfigCheck { get; set; }
 
             /// <summary>
-            /// <para>The ID of the plug-in.</para>
+            /// <para>The plug-in ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -63,6 +72,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The latest version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>
             /// </summary>
@@ -71,6 +82,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string MaxVersion { get; set; }
 
             /// <summary>
+            /// <para>The plug-in language. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: Wasm plug-in.</description></item>
+            /// <item><description>2: Lua plug-in.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -89,6 +106,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the latest version is being published.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -97,12 +116,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? NewVersionPublishingFlag { get; set; }
 
             /// <summary>
-            /// <para>The execution stage of the plug-in.</para>
+            /// <para>The plug-in execution phase. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: default stage</description></item>
-            /// <item><description>1: authorization stage</description></item>
-            /// <item><description>2: authentication stage</description></item>
-            /// <item><description>3: statistics stage</description></item>
+            /// <item><description>0: Default phase.</description></item>
+            /// <item><description>1: Authentication phase.</description></item>
+            /// <item><description>2: Authorization phase.</description></item>
+            /// <item><description>3: Statistics phase.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -133,7 +152,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The publish status.</para>
+            /// <para>The publish status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: Successful.</description></item>
+            /// <item><description>1: Publishing.</description></item>
+            /// <item><description>2: Failed.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -143,10 +167,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? PublishState { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the plug-in is enabled.</para>
+            /// <para>The enabling status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: disabled</description></item>
-            /// <item><description>1: enabled</description></item>
+            /// <item><description>0: Disabled.</description></item>
+            /// <item><description>1: Enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -157,21 +181,27 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The summary of the plug-in.</para>
+            /// <para>The plug-in summary.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>This is a plug-in.</para>
+            /// <para>This is a plug-in</para>
             /// </summary>
             [NameInMap("Summary")]
             [Validation(Required=false)]
             public string Summary { get; set; }
 
+            /// <summary>
+            /// <para>The English plug-in summary.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Authentication based on API Key.</para>
+            /// </summary>
             [NameInMap("SummaryEn")]
             [Validation(Required=false)]
             public string SummaryEn { get; set; }
 
             /// <summary>
-            /// <para>The version of the plug-in.</para>
+            /// <para>The plug-in version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1</para>
@@ -181,20 +211,20 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Version { get; set; }
 
             /// <summary>
-            /// <para>The URL of the Object Storage Service (OSS) bucket that stores the WebAssembly plug-in.</para>
+            /// <para>The OSS object of the Wasm plug-in.</para>
             /// </summary>
             [NameInMap("WasmFile")]
             [Validation(Required=false)]
             public string WasmFile { get; set; }
 
             /// <summary>
-            /// <para>The WebAssembly language. Valid values:</para>
+            /// <para>The WebAssembly (Wasm) implementation language. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: C++</description></item>
-            /// <item><description>1: TinyGo</description></item>
-            /// <item><description>2: Rust</description></item>
-            /// <item><description>3: AssemblyScript</description></item>
-            /// <item><description>4: Zig</description></item>
+            /// <item><description>0: C++.</description></item>
+            /// <item><description>1: TinyGo.</description></item>
+            /// <item><description>2: Rust.</description></item>
+            /// <item><description>3: AssemblyScript.</description></item>
+            /// <item><description>4: Zig.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -207,7 +237,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The dynamic part in the error message.</para>
+        /// <para>The placeholder in the dynamic error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>code</para>
@@ -227,7 +257,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -237,7 +267,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -247,7 +277,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -257,7 +287,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>03A3E2F4-6804-5663-9D5D-2EC47A1*****</para>
@@ -267,7 +297,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

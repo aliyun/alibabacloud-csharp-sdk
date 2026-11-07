@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class QueryInstancesInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the data.</para>
+        /// <para>The data overview.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string CreationTimestamp { get; set; }
 
             /// <summary>
-            /// <para>A reserved parameter.</para>
+            /// <para>The reserved field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string PodName { get; set; }
 
             /// <summary>
-            /// <para>A reserved parameter.</para>
+            /// <para>The reserved field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string SingleTunnelVip { get; set; }
 
             /// <summary>
-            /// <para>The zone ID.</para>
+            /// <para>The zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-k</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Zone { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether all pods in the cluster are distributed in the specified zones.</para>
+            /// <para>Indicates whether all pods are distributed across multiple zones.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-100-000</para>
@@ -139,21 +139,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string HttpCode { get; set; }
 
         /// <summary>
-        /// <para>The message that is returned.</para>
+        /// <para>The returned message.</para>
         /// <list type="bullet">
         /// <item><description>If the request is successful, a success message is returned.</description></item>
-        /// <item><description>If the request fails, an error message is returned.</description></item>
+        /// <item><description>If the request fails, the cause of the failure is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>The request is successfully processed.</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>54973C90-F379-4372-9AA5-053A3F7****</para>
@@ -163,10 +163,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><c>true</c>: The request is successful.</description></item>
+        /// <item><description><c>false</c>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

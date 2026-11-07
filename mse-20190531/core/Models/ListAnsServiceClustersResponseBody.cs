@@ -76,13 +76,16 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 /// <summary>
                 /// <para>The type of the health check. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>connection: connection status check</description></item>
-                /// <item><description>tcp: TCP connection check</description></item>
-                /// <item><description>http: HTTP connection check</description></item>
+                /// <item><description><para>connection: connection status check</para>
+                /// </description></item>
+                /// <item><description><para>tcp: TCP connection check</para>
+                /// </description></item>
+                /// <item><description><para>http: HTTP connection check</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>connection</para>
+                /// <para>tcp</para>
                 /// </summary>
                 [NameInMap("CheckType")]
                 [Validation(Required=false)]
@@ -151,7 +154,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 /// <para>The type of the health check.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Heartbeat Reporting</para>
+                /// <para>tcp</para>
                 /// </summary>
                 [NameInMap("HealthCheckerType")]
                 [Validation(Required=false)]
@@ -202,8 +205,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// <summary>
             /// <para>Indicates whether the service is a temporary service. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: yes</description></item>
-            /// <item><description><c>false</c>: no</description></item>
+            /// <item><description><para><c>true</c>: yes</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: no</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -266,9 +271,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             /// <summary>
             /// <para>The source type of the service. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>console: The service was registered in the console.</description></item>
-            /// <item><description>sdk: The service was registered by using the SDK.</description></item>
-            /// <item><description>governance: The service was registered on Microservices Governance.</description></item>
+            /// <item><description><para>console: The service was registered in the console.</para>
+            /// </description></item>
+            /// <item><description><para>sdk: The service was registered by using the SDK.</para>
+            /// </description></item>
+            /// <item><description><para>governance: The service was registered on Microservices Governance.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -304,7 +312,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <para>The message returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request was successfully processed.</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -323,8 +331,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

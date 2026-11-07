@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class GetGatewayConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The language of the returned results. Valid values: zh (default): Chinese. en: English.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the gateway.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>The region where the application resides.</para>
+        /// <para>The region where the application is deployed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The application name.</para>
+        /// <para>The name of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example-app-name</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The application ID.</para>
+        /// <para>The ID of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456abcde@12345abcde</para>

@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese. This is the default value.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -23,12 +23,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
+        /// <summary>
+        /// <para>The content of the CA certificate.</para>
+        /// </summary>
         [NameInMap("CaCertIdentifier")]
         [Validation(Required=false)]
         public string CaCertIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The ID of the certificate.</para>
+        /// <para>The certificate ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6828169-cn-hangzhou</para>
@@ -48,11 +51,11 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable <c>HTTP/2</c>.</para>
+        /// <para>Specifies whether to enable HTTP/2. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>open</c>: enables <c>HTTP/2</c></description></item>
-        /// <item><description><c>close</c>: disables <c>HTTP/2</c></description></item>
-        /// <item><description><c>globalConfig</c>: uses global configurations</description></item>
+        /// <item><description><c>open</c>: Enables HTTP/2.</description></item>
+        /// <item><description><c>close</c>: Disables HTTP/2.</description></item>
+        /// <item><description><c>globalConfig</c>: Uses the global configuration.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,6 +65,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Http2 { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable mTLS.</para>
+        /// </summary>
         [NameInMap("MtlsEnabled")]
         [Validation(Required=false)]
         public bool? MtlsEnabled { get; set; }
@@ -87,7 +93,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The type of the protocol. Valid values:</para>
+        /// <para>The protocol type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>HTTP</c></description></item>
         /// <item><description><c>HTTPS</c></description></item>
@@ -100,12 +106,15 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         [Validation(Required=false)]
         public string Protocol { get; set; }
 
+        /// <summary>
+        /// <para>The TLS cipher suite configuration.</para>
+        /// </summary>
         [NameInMap("TlsCipherSuitesConfigJSON")]
         [Validation(Required=false)]
         public string TlsCipherSuitesConfigJSONShrink { get; set; }
 
         /// <summary>
-        /// <para>The maximum version of Transport Layer Security (TLS).</para>
+        /// <para>The maximum TLS version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TLS 1.3</para>
@@ -115,7 +124,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string TlsMax { get; set; }
 
         /// <summary>
-        /// <para>The minimum version of TLS.</para>
+        /// <para>The minimum TLS version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TLS 1.0</para>

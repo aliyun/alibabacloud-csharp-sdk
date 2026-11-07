@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListClusterHealthCheckTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. A value of 200 is returned if the request was successful.</para>
+        /// <para>Code is only used to synchronize with success</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,24 +20,24 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The details of the data.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListClusterHealthCheckTaskResponseBodyData Data { get; set; }
         public class ListClusterHealthCheckTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the list.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>0</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("PageNumber")]
             [Validation(Required=false)]
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string ChargeType { get; set; }
 
                 /// <summary>
-                /// <para>The type of the cluster.</para>
+                /// <para>The type of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Nacos-Ans</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? Id { get; set; }
 
                 /// <summary>
-                /// <para>A redundant parameter.</para>
+                /// <para>Redundant field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>null</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string ImageVersion { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the instance.</para>
+                /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mse_ingresspost-cn-0jbvrcex****</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user to which the instance belongs.</para>
+                /// <para>The ID of the user to which the cluster belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string PrimaryUser { get; set; }
 
                 /// <summary>
-                /// <para>The number of nodes in the instance.</para>
+                /// <para>The number of nodes in the cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -154,12 +154,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     /// <para>The description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>{\\&quot;desc\\&quot;:\\&quot;The engine version is outdated and a large number of features are not supported. Upgrade the engine to the latest version at the earliest opportunity. \\&quot;}</para>
+                    /// <para>{&quot;desc&quot;:&quot;The engine version is outdated and many features are missing. Upgrade to the latest version at the earliest opportunity.&quot;}</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
+                    /// <summary>
+                    /// <para>The English description of the risk.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Upgrade to the latest version to ensure that all features are available!</para>
+                    /// </summary>
                     [NameInMap("DescriptionEn")]
                     [Validation(Required=false)]
                     public string DescriptionEn { get; set; }
@@ -175,7 +181,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public int? Id { get; set; }
 
                     /// <summary>
-                    /// <para>A redundant parameter.</para>
+                    /// <para>Redundant field.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>null</para>
@@ -185,10 +191,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string Module { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the risk item notification feature is disabled.</para>
+                    /// <para>Specifies whether to disable the notification feature if the risk item occurs.</para>
                     /// <list type="bullet">
-                    /// <item><description>true: disabled</description></item>
-                    /// <item><description>false: enabled</description></item>
+                    /// <item><description><para>true: Disables risk item notifications</para>
+                    /// </description></item>
+                    /// <item><description><para>false: Enables risk item notifications</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -199,7 +207,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public bool? Mute { get; set; }
 
                     /// <summary>
-                    /// <para>A redundant parameter.</para>
+                    /// <para>Redundant field.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>null</para>
@@ -229,11 +237,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string RiskCode { get; set; }
 
                     /// <summary>
-                    /// <para>The severity of the risk. Valid values:</para>
+                    /// <para>The risk level. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>HIGH: high risk</description></item>
-                    /// <item><description>MID: medium risk</description></item>
-                    /// <item><description>LOW: low risk</description></item>
+                    /// <item><description><para>HIGH: High risk</para>
+                    /// </description></item>
+                    /// <item><description><para>MID: Medium risk</para>
+                    /// </description></item>
+                    /// <item><description><para>LOW: Low risk</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -244,15 +255,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string RiskLevel { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the risk.</para>
+                    /// <para>The risk name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>The engine version is outdated.</para>
+                    /// <para>Engine version too low</para>
                     /// </summary>
                     [NameInMap("RiskName")]
                     [Validation(Required=false)]
                     public string RiskName { get; set; }
 
+                    /// <summary>
+                    /// <para>The English name of the risk.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Low engine version</para>
+                    /// </summary>
                     [NameInMap("RiskNameEn")]
                     [Validation(Required=false)]
                     public string RiskNameEn { get; set; }
@@ -268,15 +285,21 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public string RiskType { get; set; }
 
                     /// <summary>
-                    /// <para>The situation.</para>
+                    /// <para>The current situation.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>{\\&quot;desc\\&quot;:\\&quot;The engine version is outdated and a large number of features are not supported.\\&quot;,\\&quot;links\\&quot;:[{\\&quot;type\\&quot;:\\&quot;url\\&quot;,\\&quot;value\\&quot;:\\&quot;<a href="https://xxxx%22%5C%5C%5C%5C%22,%5C%5C%5C%5C%22desc%5C%5C%5C%5C%22:%5C%5C%5C%5C%22Release">https://xxxx&quot;\\\\&quot;,\\\\&quot;desc\\\\&quot;:\\\\&quot;Release</a> notes\\&quot;}]}</para>
+                    /// <para>{&quot;desc&quot;:&quot;The current engine version is too low with many missing features&quot;,&quot;links&quot;:[{&quot;type&quot;:&quot;url&quot;,&quot;value&quot;:&quot;<a href="https://xxxx%22%22,%22desc%22:%22Version">https://xxxx&quot;&quot;,&quot;desc&quot;:&quot;Version</a> notes&quot;}]}</para>
                     /// </summary>
                     [NameInMap("Situation")]
                     [Validation(Required=false)]
                     public string Situation { get; set; }
 
+                    /// <summary>
+                    /// <para>The English description of the current situation.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>The current engine version is low, and there are many missing features</para>
+                    /// </summary>
                     [NameInMap("SituationEn")]
                     [Validation(Required=false)]
                     public string SituationEn { get; set; }
@@ -285,12 +308,18 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     /// <para>The suggestion.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>{&quot;desc&quot;: &quot;Upgrade to the latest version at the earliest opportunity.&quot;, &quot;links&quot;:[{&quot;type&quot;: &quot;upgrade&quot;, &quot;desc&quot;: &quot;Click to upgrade&quot;}]}</para>
+                    /// <para>{&quot;desc&quot;: &quot;Upgrade to the latest version at the earliest opportunity.&quot;, &quot;links&quot;:[{&quot;type&quot;:&quot;upgrade&quot;,&quot;desc&quot;:&quot;Click to upgrade&quot;}]}</para>
                     /// </summary>
                     [NameInMap("Suggestion")]
                     [Validation(Required=false)]
                     public string Suggestion { get; set; }
 
+                    /// <summary>
+                    /// <para>The English description of the suggestion.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Upgrade to the latest version</para>
+                    /// </summary>
                     [NameInMap("SuggestionEn")]
                     [Validation(Required=false)]
                     public string SuggestionEn { get; set; }
@@ -306,7 +335,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public long? TaskId { get; set; }
 
                     /// <summary>
-                    /// <para>A redundant parameter.</para>
+                    /// <para>Redundant field.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>null</para>
@@ -316,7 +345,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                     public int? Type { get; set; }
 
                     /// <summary>
-                    /// <para>A redundant parameter.</para>
+                    /// <para>Redundant field.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>null</para>
@@ -348,7 +377,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Spec { get; set; }
 
                 /// <summary>
-                /// <para>The status of the task.</para>
+                /// <para>The job states.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FINISH</para>
@@ -358,7 +387,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The total number of check items.</para>
+                /// <para>The total number of inspection items.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -378,7 +407,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public int? TotalRisk { get; set; }
 
                 /// <summary>
-                /// <para>A redundant parameter.</para>
+                /// <para>Redundant field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>null</para>
@@ -388,7 +417,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The last update time.</para>
+                /// <para>The time when the instance was last updated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-11-12 15:07:55</para>
@@ -410,7 +439,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             }
 
             /// <summary>
-            /// <para>The total number of returned entries.</para>
+            /// <para>The total number of queried rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9</para>
@@ -432,9 +461,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic part in the error message. This parameter is used to replace the \<em>\</em>%s\<em>\</em> variable in the <b>ErrMessage</b> parameter.</para>
+        /// <para>The dynamic error message used to replace \<em>\</em>%s\<em>\</em> in the <b>ErrMessage</b> parameter.</para>
         /// <remarks>
-        /// <para>If the return value of the <b>ErrMessage</b> parameter is <b>The Value of Input Parameter %s is not valid</b> and the return value of the <b>DynamicMessage</b> parameter is <b>DtsJobId</b>, the specified <b>DtsJobId</b> parameter is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b>, and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -445,10 +474,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error code returned if the request failed. Take note of the following rules:</para>
+        /// <para>The error code. Take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>The <b>ErrorCode</b> parameter is not returned if the request is successful.</description></item>
-        /// <item><description>The <b>ErrorCode</b> parameter is returned if the request fails. For more information, see the <b>Error codes</b> section in this topic.</description></item>
+        /// <item><description><para>Successful request: The <b>ErrorCode</b> field is not returned.</para>
+        /// </description></item>
+        /// <item><description><para>Failed request: The <b>ErrorCode</b> field is returned. For more information, see the <b>Error codes</b> section in this topic.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -459,7 +490,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -469,17 +500,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request was successfully processed.</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4E9FDCFE-0738-493B-B801-82BDFBCB****</para>
@@ -489,10 +520,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

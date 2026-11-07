@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>The request is successfully processed.</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

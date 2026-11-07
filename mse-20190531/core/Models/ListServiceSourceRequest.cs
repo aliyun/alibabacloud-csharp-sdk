@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListServiceSourceRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,13 +34,13 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// <para>Specifies the type of the returned service source. If this parameter is not specified, service sources of all types are returned. Valid values:</para>
+        /// <para>Specifies the service source type. If this parameter is left empty, all types are returned. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>K8s</description></item>
-        /// <item><description>MSE</description></item>
-        /// <item><description>MSE_ZK</description></item>
-        /// <item><description>SAE</description></item>
-        /// <item><description>EDAS</description></item>
+        /// <item><description>K8s: Container Service.</description></item>
+        /// <item><description>MSE: MSE Nacos.</description></item>
+        /// <item><description>MSE_ZK: MSE ZooKeeper.</description></item>
+        /// <item><description>SAE: SAE registry.</description></item>
+        /// <item><description>EDAS: EDAS registry.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

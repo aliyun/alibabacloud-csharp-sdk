@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The consumer ID.</para>
+        /// <para>The ID of the gateway authentication consumer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the authorized resources that you want to delete.</para>
+        /// <para>The list of authorization IDs to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

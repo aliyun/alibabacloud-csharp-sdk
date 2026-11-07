@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateGatewayFlowRuleRequest : TeaModel {
         /// <summary>
+        /// <para>The language in which you want to display the results. Valid values: zh (default): Chinese. en: English.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +20,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>The type of the web fallback behavior.</para>
+        /// <para>0: returns the specified text</para>
+        /// <para>1: redirects to the specified page</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +33,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? BehaviorType { get; set; }
 
         /// <summary>
+        /// <para>The encoding type.</para>
+        /// <para>0: plain text</para>
+        /// <para>1: JSON</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -36,6 +45,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? BodyEncoding { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable the rule.</para>
+        /// <para>0: disables the rule.</para>
+        /// <para>1: enables the rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +58,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? Enable { get; set; }
 
         /// <summary>
+        /// <para>The gateway ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>14407</para>
         /// </summary>
@@ -54,6 +68,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? GatewayId { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the gateway.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,6 +79,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GatewayUniqueId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the throttling rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The returned HTTP text.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>text</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ResponseContentBody { get; set; }
 
         /// <summary>
+        /// <para>The redirection URL.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>www.******.com</para>
         /// </summary>
@@ -90,6 +110,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ResponseRedirectUrl { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>429</para>
         /// </summary>
@@ -98,6 +120,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? ResponseStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The route ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -108,6 +131,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? RouteId { get; set; }
 
         /// <summary>
+        /// <para>The route name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -118,6 +142,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RouteName { get; set; }
 
         /// <summary>
+        /// <para>The overall queries per second (QPS) threshold.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

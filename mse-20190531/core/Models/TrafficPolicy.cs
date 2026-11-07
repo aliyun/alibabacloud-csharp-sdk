@@ -116,6 +116,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 
             /// <summary>
             /// <para>The prefetch duration. Unit: seconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5</para>
             /// </summary>
             [NameInMap("WarmupDuration")]
             [Validation(Required=false)]

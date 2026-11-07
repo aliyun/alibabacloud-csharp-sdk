@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListListenersByIpRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>Language type of the returned information:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the listener.</para>
+        /// <para>Listener IP address.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +48,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string Ip { get; set; }
 
         /// <summary>
-        /// <para>The ID of the namespace.</para>
+        /// <para>Namespace ID, default is public</para>
         /// 
         /// <b>Example:</b>
         /// <para>ea02a522-9482-4255-bb65-dc0636d783f2</para>
@@ -56,7 +58,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// <para>The extended request parameters in the JSON format.</para>
+        /// <para>Extended request parameters in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

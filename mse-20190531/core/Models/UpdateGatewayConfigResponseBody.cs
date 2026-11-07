@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class UpdateGatewayConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AF21683A-29C7-4853-AC0F-B5ADEE4D****</para>
         /// </summary>

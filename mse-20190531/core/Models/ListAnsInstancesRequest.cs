@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListAnsInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned information. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>zh: Chinese</description></item>
         /// <item><description>en: English</description></item>
@@ -26,10 +26,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The ID of the Nacos instance.</para>
-        /// <remarks>
-        /// <para>This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</para>
-        /// </remarks>
+        /// <para>The cluster ID.&gt;Notice: If this operation includes both InstanceId and ClusterId, you must specify at least one of them.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-09k1q11****</para>
@@ -40,17 +37,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The alias of the Nacos instance.</para>
+        /// <para>The cluster alias.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>mse-7413****</para>
+        /// <para>DEFAULT</para>
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The name of the contact group.</para>
+        /// <para>The contact group name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -60,10 +57,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
-        /// <remarks>
-        /// <para>This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.</para>
-        /// </remarks>
+        /// <para>The instance ID.&gt;Notice: If this operation includes both InstanceId and ClusterId, you must specify at least one of them.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse_prepaid_public_cn-tl327w****</para>
@@ -73,7 +67,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the namespace.</para>
+        /// <para>The namespace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12233****</para>
@@ -83,7 +77,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,7 +88,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of instances to return on each page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -105,7 +99,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The extended request parameters in the JSON format.</para>
+        /// <para>The extended request parameters in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -115,7 +109,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestPars { get; set; }
 
         /// <summary>
-        /// <para>The name of the service.</para>
+        /// <para>The service name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

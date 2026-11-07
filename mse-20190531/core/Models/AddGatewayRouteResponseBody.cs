@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class AddGatewayRouteResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,13 +30,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public long? Data { get; set; }
 
         /// <summary>
-        /// <para>The error code that is returned.</para>
+        /// <para>The error code.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>InvalidParameter: The parameter is invalid. For example, the parameter is incomplete or the parameter format is invalid.</description></item>
-        /// <item><description>IllegalRequest: The request is invalid. Unauthorized access to data initiated by parameters is identified.</description></item>
-        /// <item><description>NoPermission: You are not authorized to perform this operation.</description></item>
-        /// <item><description>NotFound: The resource does not exist and error 404 is returned.</description></item>
-        /// <item><description>InternalError: An internal error occurred.</description></item>
+        /// <item><description>InvalidParameter: Parameter error: missing or invalid format.</description></item>
+        /// <item><description>IllegalRequest: Illegal request: unauthorized parameter.</description></item>
+        /// <item><description>NoPermission: Permission denied.</description></item>
+        /// <item><description>NotFound: Resource not found.</description></item>
+        /// <item><description>InternalError: Internal error.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,7 +48,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -57,17 +58,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request is successfully processed.</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>03A3E2F4-6804-5663-9D5D-2EC47A1*****</para>
@@ -77,9 +78,9 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request succeeded. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
+        /// <item><description><c>true</c>: The request succeeded.</description></item>
         /// <item><description><c>false</c>: The request failed.</description></item>
         /// </list>
         /// 

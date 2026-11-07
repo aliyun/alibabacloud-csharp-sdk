@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
 {
     public class ListAnsInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the data.</para>
+        /// <para>The data overview.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListAnsInstancesResponseBodyData> Data { get; set; }
         public class ListAnsInstancesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The name of the application.</para>
+            /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string App { get; set; }
 
             /// <summary>
-            /// <para>The name of the cluster.</para>
+            /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DEFAULT</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>The reference key.</para>
+            /// <para>The datum key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30.5.XX.XX:unknown:DEFAULT</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string DefaultKey { get; set; }
 
             /// <summary>
-            /// <para>The effective status of the instance. Valid values:</para>
+            /// <para>Indicates whether the instance is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: The instance takes effect.</description></item>
-            /// <item><description><c>false</c>: The instance does not take effect.</description></item>
+            /// <item><description><c>true</c>: Enabled.</description></item>
+            /// <item><description><c>false</c>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,10 +71,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the information about the ephemeral node is obtained. Valid values:</para>
+            /// <para>Indicates whether the node is ephemeral. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: yes</description></item>
-            /// <item><description><c>false</c>: no</description></item>
+            /// <item><description><c>true</c>: Obtained successfully.</description></item>
+            /// <item><description><c>false</c>: Failed to obtain.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public bool? Ephemeral { get; set; }
 
             /// <summary>
-            /// <para>The number of counted failures.</para>
+            /// <para>The failure count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? InstanceHeartBeatInterval { get; set; }
 
             /// <summary>
-            /// <para>The timeout period of the instance heartbeat.</para>
+            /// <para>The instance heartbeat timeout.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15000</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? InstanceHeartBeatTimeOut { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30.5.XX.XX#0#DEFAULT#DEFAULT_GROUP@@consumers:com.alibaba.edas.IHelloService</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for removing an IP address.</para>
+            /// <para>The IP address deletion timeout.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30000</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? IpDeleteTimeout { get; set; }
 
             /// <summary>
-            /// <para>The last heartbeat time.</para>
+            /// <para>The time of the last heartbeat.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20201010</para>
@@ -169,10 +169,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public long? LastBeat { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the instance was marked. Valid values:</para>
+            /// <para>Indicates whether the instance is marked. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: The instance marking was successful.</description></item>
-            /// <item><description><c>false</c>: The instance marking failed.</description></item>
+            /// <item><description><c>true</c>: Marked successfully.</description></item>
+            /// <item><description><c>false</c>: Failed to mark.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public Dictionary<string, object> Metadata { get; set; }
 
             /// <summary>
-            /// <para>The number of counted successes.</para>
+            /// <para>The success count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The name of the service.</para>
+            /// <para>The service name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DEFAULT_GROUP@@consumers:com.alibaba.edas.IHelloService::</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-100-000</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>202</para>
@@ -255,17 +255,17 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string HttpCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request was successfully processed.</para>
+        /// <para>The request is processed successfully.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -275,7 +275,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of instances to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>52BA6DA6-A702-4362-A32F-DFF79655****</para>
@@ -295,10 +295,10 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request was successful.</description></item>
-        /// <item><description><c>false</c>: The request failed.</description></item>
+        /// <item><description><c>true</c>: The request is successful.</description></item>
+        /// <item><description><c>false</c>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -309,7 +309,7 @@ namespace AlibabaCloud.SDK.Mse20190531.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned instances.</para>
+        /// <para>The total number of instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
