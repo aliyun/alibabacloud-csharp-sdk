@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeAlertLogCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The alert history statistics.</para>
+        /// <para>The statistics of the alert history count.</para>
         /// </summary>
         [NameInMap("AlertLogCount")]
         [Validation(Required=false)]
         public List<DescribeAlertLogCountResponseBodyAlertLogCount> AlertLogCount { get; set; }
         public class DescribeAlertLogCountResponseBodyAlertLogCount : TeaModel {
             /// <summary>
-            /// <para>The number of alert history statistics.</para>
+            /// <para>The number of alert history records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <remarks>
-        /// <para>The value 200 indicates success.</para>
+        /// <para>200 indicates success.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>true: Successful.</para>
         /// </description></item>

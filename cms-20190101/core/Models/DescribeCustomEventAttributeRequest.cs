@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeCustomEventAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query.</para>
-        /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The end time.</para>
+        /// <para>The value is a UNIX timestamp that indicates the number of milliseconds that have elapsed since January 1, 1970.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1552227965971</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string EventId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application group.</para>
+        /// <para>The application group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123****</para>
@@ -75,12 +75,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The keywords that are used to search for the event.</para>
+        /// <para>The keywords used to search event content.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you need to query the custom event whose content contains a and b, set the value to a and b.</para>
-        /// </description></item>
-        /// <item><description><para>If you need to query the custom event whose content contains a or b, set the value to a or b.</para>
-        /// </description></item>
+        /// <item><description>If the event content contains both A and B, you can search for A and B.</description></item>
+        /// <item><description>If the event content contains either A or B, you can search for A or B.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,8 +89,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string SearchKeywords { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
-        /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The start time.</para>
+        /// <para>The value is a UNIX timestamp that indicates the number of milliseconds that have elapsed since January 1, 1970.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1552224365971</para>

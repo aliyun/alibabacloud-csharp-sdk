@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <remarks>
-        /// <para>A value of 200 indicates success.</para>
+        /// <para>200 indicates success.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. A value of true indicates success. A value of false indicates failure.</para>
+        /// <para>Indicates whether the operation is successful. true indicates success, and false indicates failure.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutResourceMetricRulesRequest : TeaModel {
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
         /// <summary>
-        /// <para>Specifies whether to only precheck the request. Valid values:</para>
+        /// <para>Specifies whether to only precheck this request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The system only prechecks the request and does not bind a security group to the instance. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): The system sends a normal request. After the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: A check request is sent, and no security group is associated with the instance. Check items include whether required parameters are specified, the request format, and service limits. If the check fails, an error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): A normal request is sent. If the check succeeds, an HTTP 2xx status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,14 +45,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public PutResourceMetricRulesRequestRulesEscalationsCritical Critical { get; set; }
                 public class PutResourceMetricRulesRequestRulesEscalationsCritical : TeaModel {
                     /// <summary>
-                    /// <para>The comparison operator for the Critical-level threshold. Valid values:</para>
+                    /// <para>The comparison operator for the Critical level. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to.</description></item>
-                    /// <item><description>GreaterThanThreshold: greater than.</description></item>
-                    /// <item><description>LessThanOrEqualToThreshold: less than or equal to.</description></item>
-                    /// <item><description>LessThanThreshold: less than.</description></item>
-                    /// <item><description>NotEqualToThreshold: not equal to.</description></item>
-                    /// <item><description>EqualToThreshold: equal to.</description></item>
+                    /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to the threshold.</description></item>
+                    /// <item><description>GreaterThanThreshold: greater than the threshold.</description></item>
+                    /// <item><description>LessThanOrEqualToThreshold: less than or equal to the threshold.</description></item>
+                    /// <item><description>LessThanThreshold: less than the threshold.</description></item>
+                    /// <item><description>NotEqualToThreshold: not equal to the threshold.</description></item>
+                    /// <item><description>EqualToThreshold: equal to the threshold.</description></item>
                     /// <item><description>GreaterThanYesterday: greater than the value at the same time yesterday.</description></item>
                     /// <item><description>LessThanYesterday: less than the value at the same time yesterday.</description></item>
                     /// <item><description>GreaterThanLastWeek: greater than the value at the same time last week.</description></item>
@@ -58,7 +62,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     /// </list>
                     /// <para>Valid values of N: 1 to 50.</para>
                     /// <remarks>
-                    /// <para>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
+                    /// <para>You must configure at least one of the following alert levels: Critical, Warn, or Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -77,11 +81,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string PreCondition { get; set; }
 
                     /// <summary>
-                    /// <para>The statistical method for Critical-level alerts.</para>
+                    /// <para>The statistical method for the Critical level.</para>
                     /// <para>Valid values of N: 1 to 50.</para>
-                    /// <para>The value of this parameter is determined by the <c>Statistics</c> column corresponding to the <c>MetricName</c> parameter of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</para>
+                    /// <para>The value of this parameter is determined by the <c>Statistics</c> column corresponding to the <c>MetricName</c> of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</para>
                     /// <remarks>
-                    /// <para>You must configure the Settings for at least one of the following alert levels: Critical, Warn (warning), and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
+                    /// <para>You must configure the Settings for at least one of the following alert levels: Critical, Warn, or Info. For the configured alert level, you must configure the Settings for the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -92,10 +96,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Statistics { get; set; }
 
                     /// <summary>
-                    /// <para>The threshold for Critical-level alerts.</para>
+                    /// <para>The alert threshold for the Critical level.</para>
                     /// <para>Valid values of N: 1 to 50.</para>
                     /// <remarks>
-                    /// <para>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
+                    /// <para>You must configure at least one of the following alert levels: Critical, Warn, or Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -106,10 +110,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Threshold { get; set; }
 
                     /// <summary>
-                    /// <para>The number of retries for Critical-level alerts.</para>
+                    /// <para>The number of alert retries for the Critical level.</para>
                     /// <para>Valid values of N: 1 to 50.</para>
                     /// <remarks>
-                    /// <para>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
+                    /// <para>You must configure at least one of the following alert levels: Critical, Warn, or Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -126,14 +130,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public PutResourceMetricRulesRequestRulesEscalationsInfo Info { get; set; }
                 public class PutResourceMetricRulesRequestRulesEscalationsInfo : TeaModel {
                     /// <summary>
-                    /// <para>The comparison operator for the Info-level threshold. Valid values:</para>
+                    /// <para>The comparison operator for the Info level. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to.</description></item>
-                    /// <item><description>GreaterThanThreshold: greater than.</description></item>
-                    /// <item><description>LessThanOrEqualToThreshold: less than or equal to.</description></item>
-                    /// <item><description>LessThanThreshold: less than.</description></item>
-                    /// <item><description>NotEqualToThreshold: not equal to.</description></item>
-                    /// <item><description>EqualToThreshold: equal to.</description></item>
+                    /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to the threshold.</description></item>
+                    /// <item><description>GreaterThanThreshold: greater than the threshold.</description></item>
+                    /// <item><description>LessThanOrEqualToThreshold: less than or equal to the threshold.</description></item>
+                    /// <item><description>LessThanThreshold: less than the threshold.</description></item>
+                    /// <item><description>NotEqualToThreshold: not equal to the threshold.</description></item>
+                    /// <item><description>EqualToThreshold: equal to the threshold.</description></item>
                     /// <item><description>GreaterThanYesterday: greater than the value at the same time yesterday.</description></item>
                     /// <item><description>LessThanYesterday: less than the value at the same time yesterday.</description></item>
                     /// <item><description>GreaterThanLastWeek: greater than the value at the same time last week.</description></item>
@@ -143,7 +147,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     /// </list>
                     /// <para>Valid values of N: 1 to 50.</para>
                     /// <remarks>
-                    /// <para>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
+                    /// <para>You must configure at least one of the following alert levels: Critical, Warn, or Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -162,11 +166,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string PreCondition { get; set; }
 
                     /// <summary>
-                    /// <para>The statistical method for Info-level alerts.</para>
+                    /// <para>The statistical method for the Info level.</para>
                     /// <para>Valid values of N: 1 to 50.</para>
-                    /// <para>The value of this parameter is determined by the <c>Statistics</c> column corresponding to the <c>MetricName</c> parameter of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</para>
+                    /// <para>The value of this parameter is determined by the <c>Statistics</c> column corresponding to the <c>MetricName</c> of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</para>
                     /// <remarks>
-                    /// <para>You must configure the Settings for at least one of the following alert levels: Critical, Warn (warning), and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
+                    /// <para>You must configure the Settings for at least one of the following alert levels: Critical, Warn, or Info. For the configured alert level, you must configure the Settings for the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -177,9 +181,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Statistics { get; set; }
 
                     /// <summary>
-                    /// <para>The threshold for Info-level alerts.</para>
+                    /// <para>The alert threshold for the Info level.</para>
                     /// <remarks>
-                    /// <para>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
+                    /// <para>You must configure at least one of the following alert levels: Critical, Warn, or Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -190,10 +194,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Threshold { get; set; }
 
                     /// <summary>
-                    /// <para>The number of retries for Info-level alerts.</para>
+                    /// <para>The number of alert retries for the Info level.</para>
                     /// <para>Valid values of N: 1 to 50.</para>
                     /// <remarks>
-                    /// <para>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
+                    /// <para>You must configure at least one of the following alert levels: Critical, Warn, or Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -210,14 +214,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public PutResourceMetricRulesRequestRulesEscalationsWarn Warn { get; set; }
                 public class PutResourceMetricRulesRequestRulesEscalationsWarn : TeaModel {
                     /// <summary>
-                    /// <para>The comparison operator for the Warn-level threshold. Valid values:</para>
+                    /// <para>The comparison operator for the Warn level. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to.</description></item>
-                    /// <item><description>GreaterThanThreshold: greater than.</description></item>
-                    /// <item><description>LessThanOrEqualToThreshold: less than or equal to.</description></item>
-                    /// <item><description>LessThanThreshold: less than.</description></item>
-                    /// <item><description>NotEqualToThreshold: not equal to.</description></item>
-                    /// <item><description>EqualToThreshold: equal to.</description></item>
+                    /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to the threshold.</description></item>
+                    /// <item><description>GreaterThanThreshold: greater than the threshold.</description></item>
+                    /// <item><description>LessThanOrEqualToThreshold: less than or equal to the threshold.</description></item>
+                    /// <item><description>LessThanThreshold: less than the threshold.</description></item>
+                    /// <item><description>NotEqualToThreshold: not equal to the threshold.</description></item>
+                    /// <item><description>EqualToThreshold: equal to the threshold.</description></item>
                     /// <item><description>GreaterThanYesterday: greater than the value at the same time yesterday.</description></item>
                     /// <item><description>LessThanYesterday: less than the value at the same time yesterday.</description></item>
                     /// <item><description>GreaterThanLastWeek: greater than the value at the same time last week.</description></item>
@@ -227,7 +231,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     /// </list>
                     /// <para>Valid values of N: 1 to 50.</para>
                     /// <remarks>
-                    /// <para>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
+                    /// <para>You must configure at least one of the following alert levels: Critical, Warn, or Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -246,11 +250,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string PreCondition { get; set; }
 
                     /// <summary>
-                    /// <para>The statistical method for Warn-level alerts.</para>
+                    /// <para>The statistical method for the Warn level.</para>
                     /// <para>Valid values of N: 1 to 50.</para>
-                    /// <para>The value of this parameter is determined by the <c>Statistics</c> column corresponding to the <c>MetricName</c> parameter of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</para>
+                    /// <para>The value of this parameter is determined by the <c>Statistics</c> column corresponding to the <c>MetricName</c> of the specified Alibaba Cloud service, such as Maximum, Minimum, and Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</para>
                     /// <remarks>
-                    /// <para>You must configure the Settings for at least one of the following alert levels: Critical, Warn (warning), and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
+                    /// <para>You must configure the Settings for at least one of the following alert levels: Critical, Warn, or Info. For the configured alert level, you must configure the Settings for the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -261,10 +265,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Statistics { get; set; }
 
                     /// <summary>
-                    /// <para>The threshold for Warn-level alerts.</para>
+                    /// <para>The alert threshold for the Warn level.</para>
                     /// <para>Valid values of N: 1 to 50.</para>
                     /// <remarks>
-                    /// <para>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
+                    /// <para>You must configure at least one of the following alert levels: Critical, Warn, or Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -275,10 +279,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Threshold { get; set; }
 
                     /// <summary>
-                    /// <para>The number of retries for Warn-level alerts.</para>
+                    /// <para>The number of alert retries for the Warn level.</para>
                     /// <para>Valid values of N: 1 to 50.</para>
                     /// <remarks>
-                    /// <para>You must configure at least one of the following alert levels: Critical, Warn, and Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
+                    /// <para>You must configure at least one of the following alert levels: Critical, Warn, or Info. For the configured alert level, you must configure the Statistics, ComparisonOperator, Threshold, and Times parameters at the same time.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -296,7 +300,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <para>The alert contact group. Alert notifications are sent to the alert contacts in this alert contact group.</para>
             /// <para>Valid values of N: 1 to 50.</para>
             /// <remarks>
-            /// <para>An alert contact group is a group of alert contacts and can contain one or more alert contacts. For more information about how to create alert contacts and alert contact groups, see <a href="https://help.aliyun.com/document_detail/114923.html">PutContact</a> and <a href="https://help.aliyun.com/document_detail/114929.html">PutContactGroup</a>.</para>
+            /// <para>An alert contact group contains one or more alert contacts. For more information about how to create an alert contact and an alert contact group, see <a href="https://help.aliyun.com/document_detail/114923.html">PutContact</a> and <a href="https://help.aliyun.com/document_detail/114929.html">PutContactGroup</a>.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -334,7 +338,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <para>Unit: seconds.</para>
             /// <para>Valid values of N: 1 to 50.</para>
             /// <remarks>
-            /// <para>For more information about how to query the statistical period of a monitoring metric, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</para>
+            /// <para>For more information about how to query the statistical period of a metric, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -352,7 +356,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<PutResourceMetricRulesRequestRulesLabels> Labels { get; set; }
             public class PutResourceMetricRulesRequestRulesLabels : TeaModel {
                 /// <summary>
-                /// <para>The tag key.</para>
+                /// <para>The label key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tagKey1</para>
@@ -362,9 +366,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag value.</para>
+                /// <para>The label value.</para>
                 /// <remarks>
-                /// <para>Tag values support template parameters. The template parameters are replaced with the actual tag values.</para>
+                /// <para>Label values support template parameters. The template parameters are replaced with the actual label values.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -377,9 +381,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The monitoring metric name.</para>
+            /// <para>The name of the metric.</para>
             /// <para>Valid values of N: 1 to 50.</para>
-            /// <para>For more information about how to query the monitoring metric name, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</para>
+            /// <para>For more information about how to query the name of a metric, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cpu_total</para>
@@ -402,9 +406,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The handling method for alerts when no monitoring data is available. Valid values:</para>
+            /// <para>The processing method when no monitoring data is available. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>KEEP_LAST_STATE (default): No operations are performed.</description></item>
+            /// <item><description>KEEP_LAST_STATE (default): No action is taken.</description></item>
             /// <item><description>INSUFFICIENT_DATA: The alert content indicates that no data is available.</description></item>
             /// <item><description>OK: Normal.</description></item>
             /// </list>
@@ -418,7 +422,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string NoDataPolicy { get; set; }
 
             /// <summary>
-            /// <para>The inactive time range of the alert rule.</para>
+            /// <para>The time range during which the alert rule does not take effect.</para>
             /// <para>Valid values of N: 1 to 50.</para>
             /// 
             /// <b>Example:</b>
@@ -429,11 +433,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string NoEffectiveInterval { get; set; }
 
             /// <summary>
-            /// <para>The statistical period of the monitoring metric.</para>
-            /// <para>Unit: seconds. Default value: the original reporting period of the monitoring metric.</para>
+            /// <para>The statistical period of the metric.</para>
+            /// <para>Unit: seconds. Default value: the original reporting period of the metric.</para>
             /// <para>Valid values of N: 1 to 50.</para>
             /// <remarks>
-            /// <para>For more information about how to query the statistical period of a monitoring metric, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</para>
+            /// <para>For more information about how to query the statistical period of a metric, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service monitoring metrics</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -514,7 +518,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public int? SilenceTime { get; set; }
 
             /// <summary>
-            /// <para>The webhook URL to which a POST request is sent when an alert callback is triggered.</para>
+            /// <para>The webhook URL to which a POST request is sent when an alert is triggered.</para>
             /// <para>Valid values of N: 1 to 50.</para>
             /// 
             /// <b>Example:</b>

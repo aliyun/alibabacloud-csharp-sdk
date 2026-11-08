@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DisableMetricRulesRequest : TeaModel {
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
         /// <summary>
-        /// <para>Specifies whether to perform a dry run of the request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run only. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: sends a dry run request and does not bind a security group to the instance. Check items include whether required parameters are specified, the request format, and service limits. If the request fails the check, the corresponding error is returned. If the request passes the check, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): sends a normal request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: sends a check request and does not bind a security group to the instance. Check items include whether required parameters are specified, the request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a normal request. If the check passes, an HTTP 2xx status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

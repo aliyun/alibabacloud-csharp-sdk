@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutMonitoringConfigRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is not required.</para>
+        /// <para>Ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -19,6 +19,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public bool? AutoInstall { get; set; }
 
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to perform a dry run on the request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Sends a dry run request without deleting the endpoint IPAM pool. The system checks whether all required parameters are specified, the request format is valid, and service limits are met. If the request fails the check, the corresponding error is returned. If the request passes the check, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): Sends a normal request and directly deletes the endpoint IPAM pool if the request passes the check.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
@@ -26,9 +40,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Specifies whether to automatically install the CloudMonitor agent on newly purchased ECS instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true (default): The CloudMonitor agent is automatically installed on newly purchased ECS instances.</para>
+        /// <item><description><para>true (default): Automatically installs the CloudMonitor agent on newly purchased ECS instances.</para>
         /// </description></item>
-        /// <item><description><para>false: The CloudMonitor agent is not automatically installed on newly purchased ECS instances.</para>
+        /// <item><description><para>false: Does not automatically install the CloudMonitor agent on newly purchased ECS instances.</para>
         /// </description></item>
         /// </list>
         /// 

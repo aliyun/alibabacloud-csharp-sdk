@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateSiteMonitorResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code of the operation.</para>
+        /// <para>The status code.</para>
         /// <remarks>
-        /// <para>A value of \<c>200\\</c> indicates success.</para>
+        /// <para>200 indicates success.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>The results of the monitoring task.</para>
+        /// <para>The details of the monitoring task result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>The message returned for the request.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>68192f5d-0d45-4b98-9724-892813f86c71</para>
@@ -104,11 +104,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The request was successful.</para>
+        /// <item><description><para>true: The operation is successful.</para>
         /// </description></item>
-        /// <item><description><para>false: The request failed.</para>
+        /// <item><description><para>false: The operation fails.</para>
         /// </description></item>
         /// </list>
         /// 

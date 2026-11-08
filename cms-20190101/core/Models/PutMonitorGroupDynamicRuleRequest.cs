@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutMonitorGroupDynamicRuleRequest : TeaModel {
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to only precheck this request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: sends a check request. No security group is associated with the instance. The check items include whether required parameters are specified, the request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a normal request. If the check succeeds, an HTTP 2xx status code is returned and the operation is directly performed.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
@@ -33,13 +47,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public List<PutMonitorGroupDynamicRuleRequestGroupRules> GroupRules { get; set; }
         public class PutMonitorGroupDynamicRuleRequestGroupRules : TeaModel {
             /// <summary>
-            /// <para>The cloud service to which the alert rule is applied. Valid values of N: 1 to 3. Valid values:</para>
+            /// <para>The type of Alibaba Cloud service for the dynamic alert rule. Valid values of N: 1 to 3. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>ecs: Elastic Compute Service (ECS)</para>
+            /// <item><description><para>ecs: Elastic Compute Service (ECS) server.</para>
             /// </description></item>
-            /// <item><description><para>rds: ApsaraDB RDS</para>
+            /// <item><description><para>rds: relational database.</para>
             /// </description></item>
-            /// <item><description><para>slb: Server Load Balancer (SLB)</para>
+            /// <item><description><para>slb: load balancing.</para>
             /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
@@ -52,11 +66,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The logical operator used between conditional expressions in the alert rule. Valid values of N: 1 to 3. Valid values:</para>
+            /// <para>The combination condition for dynamic matching rules. Valid values of N: 1 to 3. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>and: The instances that meet all the conditional expressions are automatically added to the application group.</para>
+            /// <item><description><para>and: Only instances that meet all matching rules are automatically added to the application group.</para>
             /// </description></item>
-            /// <item><description><para>or: The instances that meet one of the conditional expressions are automatically added to the application group.</para>
+            /// <item><description><para>or: Instances that meet any matching rule are automatically added to the application group.</para>
             /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
@@ -77,16 +91,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public List<PutMonitorGroupDynamicRuleRequestGroupRulesFilters> Filters { get; set; }
             public class PutMonitorGroupDynamicRuleRequestGroupRulesFilters : TeaModel {
                 /// <summary>
-                /// <para>The method that is used to filter instances. Valid values of N: 1 to 3. Valid values:</para>
+                /// <para>The filter condition for instances. Valid values of N: 1 to 3. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>contains: contains</para>
-                /// </description></item>
-                /// <item><description><para>notContains: does not contain</para>
-                /// </description></item>
-                /// <item><description><para>startWith: starts with a prefix</para>
-                /// </description></item>
-                /// <item><description><para>endWith: ends with a suffix</para>
-                /// </description></item>
+                /// <item><description>contains: Contains.</description></item>
+                /// <item><description>notContains: Does not contain.</description></item>
+                /// <item><description>startWith: Prefix.</description></item>
+                /// <item><description>endWith: Suffix.</description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -98,8 +108,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Function { get; set; }
 
                 /// <summary>
-                /// <para>The name of the field based on which instances are filtered. Valid values of N: 1 to 3.</para>
-                /// <para>Only hostnames are supported. Example: hostName.</para>
+                /// <para>The field name for instance matching. Valid values of N: 1 to 3.</para>
+                /// <para>Currently, only the hostname is supported, such as hostName.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -110,7 +120,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The value to be matched with the specified field. Valid values of N: 1 to 3.</para>
+                /// <para>The value that meets the matching condition. Valid values of N: 1 to 3.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -125,12 +135,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>The mode for creating the alert rule. Valid values:</para>
+        /// <para>The mode for creating the dynamic matching rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: creates asynchronously</para>
-        /// </description></item>
-        /// <item><description><para>false (default): creates synchronously</para>
-        /// </description></item>
+        /// <item><description>true: Asynchronous creation.</description></item>
+        /// <item><description>false (default): Synchronous creation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

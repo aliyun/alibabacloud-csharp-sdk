@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Describe { get; set; }
 
         /// <summary>
-        /// <para>The destination for data export.</para>
+        /// <para>The destinations for data export.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DstNames")]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public List<string> DstNames { get; set; }
 
         /// <summary>
-        /// <para>The metric name. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service metrics</a>.</para>
+        /// <para>The name of the metric. &gt;For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service metrics</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CPUUtilization</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The namespace of the Alibaba Cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service metrics</a>.</para>
+        /// <para>The data namespace of the Alibaba Cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Alibaba Cloud service metrics</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs_ecs_dashboard</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The name of the rule.</para>
         /// <remarks>
-        /// <para>If the rule name already exists, the existing rule is modified. Otherwise, a new rule is created.</para>
+        /// <para>If the specified rule name is the same as an existing rule name, the existing rule is modified. Otherwise, a new rule is created.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -65,14 +65,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The time windows for data export. Unit: seconds.</para>
+        /// <para>The time window for exporting data. Unit: seconds.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>To export data for multiple windows, separate the windows with commas (,).</description></item>
+        /// <item><description>To export data for multiple time windows, separate the values with commas (,).</description></item>
         /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Exporting data at intervals of less than 60 seconds is not supported.</description></item>
+        /// <item><description>Exporting data for a time window of less than 60 seconds is not supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

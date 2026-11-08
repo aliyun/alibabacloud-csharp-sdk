@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateGroupMonitoringAgentProcessResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The HTTP status code.</para>
         /// <remarks>
-        /// <para>The status code 200 indicates that the call is successful.</para>
+        /// <para>A status code of 200 indicates success.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public CreateGroupMonitoringAgentProcessResponseBodyResource Resource { get; set; }
         public class CreateGroupMonitoringAgentProcessResponseBodyResource : TeaModel {
             /// <summary>
-            /// <para>The ID of the group process.</para>
+            /// <para>The group process ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7F2B0024-4F21-48B9-A764-211CEC48****</para>
@@ -62,11 +62,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The call is successful.</para>
+        /// <item><description><para>true: The operation was successful.</para>
         /// </description></item>
-        /// <item><description><para>false: The call fails.</para>
+        /// <item><description><para>false: The operation failed.</para>
         /// </description></item>
         /// </list>
         /// 

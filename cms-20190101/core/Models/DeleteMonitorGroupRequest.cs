@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteMonitorGroupRequest : TeaModel {
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
         /// <summary>
-        /// <para>Specifies whether to perform a dry run on the request. A dry run includes checks on permissions and instance status. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run on the request. The dry run checks permissions and instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): Sends a normal request. If the request passes the check, the name and description of the route table are modified.</description></item>
-        /// <item><description><b>true</b>: Sends a dry run request. Only the check is performed, and the name and description of the route table are not modified. Check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check passes, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a normal request. If the request passes the check, the name and description of the route table are modified.</description></item>
+        /// <item><description><b>true</b>: sends a dry run request. Only the check is performed, and the name and description of the route table are not modified. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

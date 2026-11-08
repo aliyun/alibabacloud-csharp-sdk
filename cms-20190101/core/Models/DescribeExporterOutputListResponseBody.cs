@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeExporterOutputListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The HTTP status code.</para>
         /// <remarks>
-        /// <para>The status code 200 indicates that the call was successful. Other status codes indicate that the call failed.</para>
+        /// <para>A status code of 200 indicates success, and other values indicate failure.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -101,8 +101,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Indicates whether the call was successful. Valid values:  </para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: successful</description></item>
-        /// <item><description><c>false</c>: failed</description></item>
+        /// <item><description><c>true</c>: The call was successful.</description></item>
+        /// <item><description><c>false</c>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25</para>

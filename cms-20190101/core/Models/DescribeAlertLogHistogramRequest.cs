@@ -24,8 +24,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>Unit: milliseconds.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can query only the alert history within the last year.</description></item>
-        /// <item><description>The interval between the start time (StartTime) and end time (EndTime) must be less than or equal to 15 days.</description></item>
+        /// <item><description>You can only query the alert history of the last year.</description></item>
+        /// <item><description>The time interval between the start time (<c>StartTime</c>) and the end time (<c>EndTime</c>) must be less than or equal to 15 days.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -51,13 +51,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>Aggregates data by spatial dimension, equivalent to Group By in SQL. Valid values:</para>
+        /// <para>The dimension for data aggregation, which is equivalent to the GROUP BY clause in SQL. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>product</c>: aggregates by Alibaba Cloud service.</description></item>
-        /// <item><description><c>level</c>: aggregates by alert level.</description></item>
-        /// <item><description><c>groupId</c>: aggregates by application group.</description></item>
-        /// <item><description><c>contactGroup</c>: aggregates by alert contact group.</description></item>
-        /// <item><description><c>product,metricName</c>: aggregates by Alibaba Cloud service and metric.</description></item>
+        /// <item><description><c>product</c>: Aggregates data by cloud service.</description></item>
+        /// <item><description><c>level</c>: Aggregates data by alert level.</description></item>
+        /// <item><description><c>groupId</c>: Aggregates data by application group.</description></item>
+        /// <item><description><c>contactGroup</c>: Aggregates data by alert contact group.</description></item>
+        /// <item><description><c>product,metricName</c>: Aggregates data by cloud service and metric.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string GroupBy { get; set; }
 
         /// <summary>
-        /// <para>The application group ID.</para>
+        /// <para>The ID of the application group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7301****</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The period for obtaining logs. Unit: minutes.</para>
+        /// <para>The period for retrieving logs. Unit: minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>360</para>
@@ -89,14 +89,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The alert level and notification method. Valid values:</para>
-        /// <para>&lt;props=&quot;china&quot;&gt;- P2: phone call + text message + email + DingTalk chatbot.</para>
-        /// <para>&lt;props=&quot;china&quot;&gt;- P3: text message + email + DingTalk chatbot.</para>
-        /// <para>&lt;props=&quot;china&quot;&gt;- P4: email + DingTalk chatbot.</para>
-        /// <para>&lt;props=&quot;china&quot;&gt;- OK: no alert.</para>
-        /// <para>&lt;props=&quot;intl&quot;&gt;- P4: email + DingTalk chatbot.</para>
-        /// <para>&lt;props=&quot;intl&quot;&gt;- OK: no alert.</para>
-        /// <para>&lt;props=&quot;partner&quot;&gt;- P4: email + DingTalk chatbot.</para>
-        /// <para>&lt;props=&quot;partner&quot;&gt;- OK: no alert.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;- P2: Phone call + text message + email + DingTalk chatbot.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;- P3: Text message + email + DingTalk chatbot.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;- P4: Email + DingTalk chatbot.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;- OK: No alert.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;- P4: Email + DingTalk chatbot.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;- OK: No alert.</para>
+        /// <para>&lt;props=&quot;partner&quot;&gt;- P4: Email + DingTalk chatbot.</para>
+        /// <para>&lt;props=&quot;partner&quot;&gt;- OK: No alert.</para>
         /// 
         /// <b>Example:</b>
         /// <para>P4</para>
@@ -106,9 +106,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Level { get; set; }
 
         /// <summary>
-        /// <para>The metric name.</para>
+        /// <para>The name of the metric.</para>
         /// <remarks>
-        /// <para>For information about the metrics of Alibaba Cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Metrics</a>.</para>
+        /// <para>For more information about the metrics of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service metrics</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -119,9 +119,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The namespace of the Alibaba Cloud service.</para>
+        /// <para>The namespace of the cloud service.</para>
         /// <remarks>
-        /// <para>For information about the namespaces of Alibaba Cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Metrics</a>.</para>
+        /// <para>For more information about the namespaces of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service metrics</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The abbreviation of the Alibaba Cloud service name.</para>
+        /// <para>The abbreviation of the cloud service name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECS</para>
@@ -168,8 +168,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The alert rule ID.</para>
-        /// <para>For information about how to obtain the alert rule ID, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</para>
+        /// <para>The ID of the alert rule.</para>
+        /// <para>For more information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ae06917_75a8c43178ab66****</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RuleId { get; set; }
 
         /// <summary>
-        /// <para>The alert rule name.</para>
+        /// <para>The name of the alert rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test123</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The keyword for searching alert history.</para>
+        /// <para>The search keyword for querying alert history.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alert</para>
@@ -202,14 +202,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>The alert status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>0: An alert is triggered or the alert recovers to Normal.</description></item>
-        /// <item><description>1: The alert is not in the effective period.</description></item>
-        /// <item><description>2: The mute for epoch.</description></item>
+        /// <item><description>1: Outside the effective period.</description></item>
+        /// <item><description>2: Mute epoch.</description></item>
         /// <item><description>3: The host is restarting.</description></item>
-        /// <item><description>4: Alerts are not send.</description></item>
+        /// <item><description>4: Does not send alert notifications.</description></item>
         /// </list>
-        /// <para>&lt;props=&quot;china&quot;&gt;When the alert status is 0, if the value of Level is P2, P3, or P4, an alert is triggered. If the value of Level is OK, the alert recovers to Normal.
-        /// &lt;props=&quot;intl&quot;&gt;When the alert status is 0, if the value of Level is P4, an alert is triggered. If the value of Level is OK, the alert recovers to Normal.
-        /// &lt;props=&quot;partner&quot;&gt;When the alert status is 0, if the value of Level is P4, an alert is triggered. If the value of Level is OK, the alert recovers to Normal.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;If the alert status is 0 and the value of Level is P2, P3, or P4, an alert is triggered. If the value of Level is OK, the alert recovers to Normal.
+        /// &lt;props=&quot;intl&quot;&gt;If the alert status is 0 and the value of Level is P4, an alert is triggered. If the value of Level is OK, the alert recovers to Normal.
+        /// &lt;props=&quot;partner&quot;&gt;If the alert status is 0 and the value of Level is P4, an alert is triggered. If the value of Level is OK, the alert recovers to Normal.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para><b>[Deprecated]</b> This parameter is deprecated and does not need to be specified.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -236,8 +236,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>Unit: milliseconds.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can query only the alert history within the last year.</description></item>
-        /// <item><description>The interval between the start time (StartTime) and end time (EndTime) must be less than or equal to 15 days.</description></item>
+        /// <item><description>You can only query the alert history of the last year.</description></item>
+        /// <item><description>The time interval between the start time (<c>StartTime</c>) and the end time (<c>EndTime</c>) must be less than or equal to 15 days.</description></item>
         /// </list>
         /// </remarks>
         /// 

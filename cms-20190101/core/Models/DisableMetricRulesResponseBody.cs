@@ -45,8 +45,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Indicates whether the operation is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The operation is successful.</description></item>
-        /// <item><description>false: The operation fails.</description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateHybridMonitorNamespaceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The call result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Successful.</description></item>
-        /// <item><description>false: Failed.</description></item>
+        /// <item><description>true: The operation was successful.</description></item>
+        /// <item><description>false: The operation failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

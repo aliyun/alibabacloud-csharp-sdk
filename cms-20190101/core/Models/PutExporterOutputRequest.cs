@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutExporterOutputRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration of the data export. The value is a JSONObject string that must contain the following fields:</para>
+        /// <para>The data export configuration. It is a JSON object string that must contain the following fields:</para>
         /// <list type="bullet">
-        /// <item><description>endpoint: the domain name that corresponds to the data of Log Service (SLS).</description></item>
+        /// <item><description>endpoint: the domain name for Simple Log Service (SLS) data.</description></item>
         /// <item><description>project: the project.</description></item>
         /// <item><description>logstore: the Logstore.</description></item>
         /// <item><description>ak: the AccessKey ID.</description></item>
-        /// <item><description>as: the AccessKey secret.</description></item>
+        /// <item><description>as: the AccessKey Secret.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string DestName { get; set; }
 
         /// <summary>
-        /// <para>The product to which the data is exported.</para>
+        /// <para>The destination service for the export.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sls</para>

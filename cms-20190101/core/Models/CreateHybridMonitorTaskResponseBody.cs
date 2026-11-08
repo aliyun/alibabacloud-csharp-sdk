@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateHybridMonitorTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code.</para>
         /// <remarks>
-        /// <para>200 indicates success.</para>
+        /// <para>A status code of 200 indicates that the call was successful.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -45,8 +45,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Successful.</description></item>
-        /// <item><description>false: Failed.</description></item>
+        /// <item><description>true: The operation was successful.</description></item>
+        /// <item><description>false: The operation failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Success { get; set; }
 
         /// <summary>
-        /// <para>The monitoring task ID.</para>
+        /// <para>The ID of the monitoring task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36****</para>

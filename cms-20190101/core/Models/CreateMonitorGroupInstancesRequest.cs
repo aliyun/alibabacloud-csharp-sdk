@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateMonitorGroupInstancesRequest : TeaModel {
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to only perform a dry run on the request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: performs a dry run. A check request is sent, and no security group is bound to the instance. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the check, the corresponding error is returned. If the request passes the check, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a normal request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public string DryRun { get; set; }
@@ -25,7 +39,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The instances that you want to add to the application group.</para>
+        /// <para>The list of instances.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Instances")]
@@ -34,7 +48,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public class CreateMonitorGroupInstancesRequestInstances : TeaModel {
             /// <summary>
             /// <para>The abbreviation of the Alibaba Cloud service name.</para>
-            /// <para>To obtain the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation. The <c>metricCategory</c> tag in the <c>Labels</c> response parameter indicates the abbreviation of the Alibaba Cloud service name.</para>
+            /// <para>For more information about how to obtain the abbreviation of the Alibaba Cloud service name, see the <c>metricCategory</c> field in the <c>Labels</c> response parameter of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -56,7 +70,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The instance name.</para>
+            /// <para>The name of the instance.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -67,7 +81,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the instance.</para>
+            /// <para>The region where the instance resides.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

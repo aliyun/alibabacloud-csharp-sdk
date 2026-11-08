@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public PutGroupMetricRuleResponseBodyResult Result { get; set; }
         public class PutGroupMetricRuleResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The ID of the alert rule.</para>
+            /// <para>The alert rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>

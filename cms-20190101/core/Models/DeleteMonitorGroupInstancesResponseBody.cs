@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful. Valid values:</para>
+        /// <para>Specifies whether the operation is successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: The operation is successful.</description></item>
         /// <item><description>false: The operation fails.</description></item>

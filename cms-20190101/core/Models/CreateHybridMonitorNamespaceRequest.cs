@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateHybridMonitorNamespaceRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the metric repository.</para>
+        /// <para>The description of the metric namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Alibaba Cloud product metric repository.</para>
@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the metric repository.</para>
-        /// <para>Format: consists of lowercase letters, digits, and hyphens (-).</para>
+        /// <para>The name of the metric namespace.</para>
+        /// <para>Format: The name can contain only lowercase letters, digits, and hyphens (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The region in which monitoring data is stored.</para>
+        /// <para>The region where the monitoring data is stored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The storage solution for monitoring data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>aliyun_prometheus: monitoring data is stored in Managed Service for Prometheus.</description></item>
+        /// <item><description>aliyun_prometheus: Stores monitoring data in Prometheus.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>For more information about storage solutions for monitoring data, see <a href="https://help.aliyun.com/document_detail/2594921.html">Storage solutions for Hybrid Cloud Monitoring data</a>.</para>
+        /// <para>For more information about storage solutions for monitoring data, see <a href="https://help.aliyun.com/document_detail/2594921.html">Storage solutions for monitoring data in Hybrid Cloud Monitoring</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -64,14 +64,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The data storage duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cms.s1.large: storage duration of 15 days.</description></item>
-        /// <item><description>cms.s1.xlarge: storage duration of 32 days.</description></item>
-        /// <item><description>cms.s1.2xlarge: storage duration of 63 days.</description></item>
-        /// <item><description>cms.s1.3xlarge (default): storage duration of 93 days.</description></item>
-        /// <item><description>cms.s1.6xlarge: storage duration of 185 days.</description></item>
-        /// <item><description>cms.s1.12xlarge: storage duration of 376 days.</description></item>
+        /// <item><description>cms.s1.large: Stores data for 15 days.</description></item>
+        /// <item><description>cms.s1.xlarge: Stores data for 32 days.</description></item>
+        /// <item><description>cms.s1.2xlarge: Stores data for 63 days.</description></item>
+        /// <item><description>cms.s1.3xlarge (default): Stores data for 93 days.</description></item>
+        /// <item><description>cms.s1.6xlarge: Stores data for 185 days.</description></item>
+        /// <item><description>cms.s1.12xlarge: Stores data for 376 days.</description></item>
         /// </list>
-        /// <para>For the pricing of different storage duration specifications, see the <b>Pricing</b> section in <a href="https://help.aliyun.com/document_detail/223532.html">monitoring dashboard</a>.</para>
+        /// <para>For more information about the pricing of different storage durations, see the <b>Pricing</b> table in <a href="https://help.aliyun.com/document_detail/223532.html">Dashboard</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cms.s1.3xlarge</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeAlertLogHistogramResponseBody : TeaModel {
         /// <summary>
-        /// <para>The histogram list of alert history.</para>
+        /// <para>The histogram list of the queried alert history.</para>
         /// </summary>
         [NameInMap("AlertLogHistogramList")]
         [Validation(Required=false)]
         public List<DescribeAlertLogHistogramResponseBodyAlertLogHistogramList> AlertLogHistogramList { get; set; }
         public class DescribeAlertLogHistogramResponseBodyAlertLogHistogramList : TeaModel {
             /// <summary>
-            /// <para>The number of alert history entries.</para>
+            /// <para>The number of alert history records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The start timestamp for querying alert history.</para>
+            /// <para>The start timestamp of the queried alert history.</para>
             /// <para>Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public long? From { get; set; }
 
             /// <summary>
-            /// <para>The end timestamp for querying alert history.</para>
+            /// <para>The end timestamp of the queried alert history.</para>
             /// <para>Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <remarks>
-        /// <para>The value 200 indicates success.</para>
+        /// <para>200 indicates success.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -84,11 +84,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Successful.</para>
+        /// <item><description><para>true: The operation is successful.</para>
         /// </description></item>
-        /// <item><description><para>false: Failed.</para>
+        /// <item><description><para>false: The operation fails.</para>
         /// </description></item>
         /// </list>
         /// 

@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateMonitorGroupByResourceGroupIdRequest : TeaModel {
         /// <summary>
-        /// <para>The alert contact groups. The alert notifications of the application group are sent to the alert contacts that belong to the specified alert contact groups.</para>
-        /// <para>An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see <a href="https://help.aliyun.com/document_detail/114923.html">PutContact</a> and <a href="https://help.aliyun.com/document_detail/114929.html">PutContactGroup</a>. For information about how to obtain alert contact groups, see <a href="https://help.aliyun.com/document_detail/114922.html">DescribeContactGroupList</a>.</para>
+        /// <para>The alert contact group. Alert notifications for the application group are sent to the alert contacts in this alert contact group.</para>
+        /// <para>An alert contact group is a collection of alert contacts and can contain one or more alert contacts. For more information about how to create alert contacts and alert contact groups, see <a href="https://help.aliyun.com/document_detail/114923.html">PutContact</a> and <a href="https://help.aliyun.com/document_detail/114929.html">PutContactGroup</a>. For more information about how to obtain alert contact groups, see <a href="https://help.aliyun.com/document_detail/114922.html">DescribeContactGroupList</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public List<string> ContactGroupList { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the CloudMonitor agent is automatically installed for the application group. CloudMonitor determines whether to automatically install the CloudMonitor agent for the hosts in an application group based on the value of this parameter. Valid values:</para>
+        /// <para>Specifies whether to enable automatic installation of the CloudMonitor agent for the application group. CloudMonitor automatically installs the CloudMonitor agent on hosts in the application group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The CloudMonitor agent is automatically installed.</para>
+        /// <item><description><para>true: Enabled.</para>
         /// </description></item>
-        /// <item><description><para>false (default): The CloudMonitor agent is not automatically installed.</para>
+        /// <item><description><para>false: Disabled. Default value.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -38,11 +38,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public bool? EnableInstallAgent { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the application group automatically subscribes to event notifications. If events whose severity level is critical or warning occur on resources in an application group, CloudMonitor sends alert notifications. Valid values:</para>
+        /// <para>Specifies whether to enable automatic subscription to event notifications for the application group. When critical or warning events occur on resources in the application group, CloudMonitor sends alert notifications. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The application group automatically subscribes to event notifications.</para>
+        /// <item><description><para>true: Enabled.</para>
         /// </description></item>
-        /// <item><description><para>false (default): The application group does not automatically subscribe to event notifications.</para>
+        /// <item><description><para>false: Disabled. Default value.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -54,8 +54,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public bool? EnableSubscribeEvent { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the resource group resides.</para>
-        /// <para>For information about how to obtain the ID of the region where a resource group resides, see <a href="https://help.aliyun.com/document_detail/158866.html">GetResourceGroup</a>.</para>
+        /// <para>The region ID of the resource group.</para>
+        /// <para>For more information about how to obtain the region ID of a resource group, see <a href="https://help.aliyun.com/document_detail/158866.html">GetResourceGroup</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The ID of the resource group.</para>
-        /// <para>For information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a>.</para>
+        /// <para>For more information about how to obtain the resource group ID, see <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The name of the resource group.</para>
-        /// <para>For information about how to obtain the name of a resource group, see <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a>.</para>
+        /// <para>For more information about how to obtain the resource group name, see <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
