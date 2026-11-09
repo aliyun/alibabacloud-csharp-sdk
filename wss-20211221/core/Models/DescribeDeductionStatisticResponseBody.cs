@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 public long? AliUid { get; set; }
 
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>The creation time in the YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-01-01 00:00:00</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The end time.</para>
+                /// <para>The end time in the YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-12-31 23:59:59</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The expiration time.</para>
+                /// <para>The expiration time in the YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-12-31 23:59:59</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// <para>The start time.</para>
+                /// <para>The start time in the YYYY-MM-DD HH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-01-01 00:00:00</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 public long? ConsumeSecond { get; set; }
 
                 /// <summary>
-                /// <para>The deduction date.</para>
+                /// <para>The deduction date in the YYYY-MM-DD format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-01-01</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             }
 
             /// <summary>
-            /// <para><b>The usage list.</b></para>
+            /// <para><b>The list of usage records.</b></para>
             /// </summary>
             [NameInMap("Usages")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
 {
     public class DescribeCreditPackageAgentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The Agent list.</para>
+        /// <para>The agent list.</para>
         /// </summary>
         [NameInMap("Agents")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public string AgentId { get; set; }
 
             /// <summary>
-            /// <para><b>The instance creation time.</b></para>
+            /// <para>The time when the instance was created, in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-01 10:00:00</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public string CreditPackageId { get; set; }
 
             /// <summary>
-            /// <para><b>The time when the instance expires.</b></para>
+            /// <para>The time when the instance expires, in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-01 10:00:00</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public long? TotalCredit { get; set; }
 
             /// <summary>
-            /// <para><b>The amount of credits used.</b></para>
+            /// <para><b>The number of credits used.</b></para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

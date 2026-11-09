@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
 {
     public class DescribeDeductionStatisticRequest : TeaModel {
         /// <summary>
-        /// <para>The end time (timestamp).</para>
+        /// <para>The end time of the query. UNIX timestamp, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2025-06-06T02:14:00Z</para>
+        /// <para>1749176040000</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The list of instance IDs (JSON array).</para>
+        /// <para>The list of instance IDs in JSON array format.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public List<DescribeDeductionStatisticRequestPeriods> Periods { get; set; }
         public class DescribeDeductionStatisticRequestPeriods : TeaModel {
             /// <summary>
-            /// <para>The base time.</para>
+            /// <para>The base time in the YYYY-MM-DD format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-01</para>
@@ -66,10 +66,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public List<string> ResourceTypes { get; set; }
 
         /// <summary>
-        /// <para>The start time (timestamp).</para>
+        /// <para>The start time of the query. UNIX timestamp, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2026-03-20T16:00:00Z</para>
+        /// <para>1774022400000</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

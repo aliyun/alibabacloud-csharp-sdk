@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
 {
     public class CreateMultiOrderRequest : TeaModel {
         /// <summary>
-        /// <para>The channel cookie information.</para>
+        /// <para>The cookie information used for channel attribution. Specify this parameter if channel attribution information exists. Otherwise, you can leave it empty.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>channel=example</para>
         /// </summary>
         [NameInMap("ChannelCookie")]
         [Validation(Required=false)]
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public List<CreateMultiOrderRequestOrderItems> OrderItems { get; set; }
         public class CreateMultiOrderRequestOrderItems : TeaModel {
             /// <summary>
-            /// <para>The quantity to purchase.</para>
+            /// <para>The purchase quantity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -54,7 +57,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public bool? AutoRenew { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether this is a change purchase.</para>
+            /// <para>Specifies whether to modify the configuration of the monthly duration package.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("BuyChange")]
             [Validation(Required=false)]
@@ -79,28 +85,28 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
 
                 /// <summary>
                 /// <para>The value of the module.</para>
-                /// <para>The following section describes the sample values and valid values for each key of the Enterprise Edition monthly duration package:</para>
+                /// <para>The sample values and valid values for each key of the monthly duration package for Enterprise Edition are as follows:</para>
                 /// <list type="bullet">
-                /// <item><description>RegionId: ap-southeast-1</description></item>
+                /// <item><description>RegionId: cn-shanghai</description></item>
                 /// <item><description>InstanceType: eds.enterprise_office.4c8g</description></item>
-                /// <item><description>DurationType (hours): Valid values: <list type="bullet">
+                /// <item><description>DurationType (hours): [Enum] <list type="bullet">
                 /// <item><description>120</description></item>
                 /// <item><description>250</description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description>OsType: Valid values: <list type="bullet">
+                /// <item><description>OsType: [Enum] <list type="bullet">
                 /// <item><description>Windows</description></item>
                 /// <item><description>Linux</description></item>
                 /// </list>
                 /// </description></item>
                 /// <item><description>RootDiskSize (GiB): 80</description></item>
-                /// <item><description>RootDiskCategory: Valid values: <list type="bullet">
+                /// <item><description>RootDiskCategory: [Enum] <list type="bullet">
                 /// <item><description>cloud_efficiency (ultra cloud disk)</description></item>
-                /// <item><description>cloud_auto (ultra-fast cloud disk)</description></item>
-                /// <item><description>cloud_essd (enhanced standard SSD. Only specific instance types support this value.)</description></item>
+                /// <item><description>cloud_auto (ESSD AutoPL cloud disk)</description></item>
+                /// <item><description>cloud_essd (enhanced standard SSD, supported only by specific instance types)</description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description>RootPerformanceLevel: Valid values: <list type="bullet">
+                /// <item><description>RootPerformanceLevel: [Enum] <list type="bullet">
                 /// <item><description>PL0</description></item>
                 /// <item><description>PL1</description></item>
                 /// <item><description>PL2</description></item>
@@ -129,18 +135,21 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public List<string> InstanceIds { get; set; }
 
             /// <summary>
-            /// <para>The callback URL after the payment is completed.</para>
+            /// <para>The callback URL after the order is paid. Specify the URL to receive the payment result based on your business requirements.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://example.com/order/paid">https://example.com/order/paid</a></para>
             /// </summary>
             [NameInMap("PaidCallBackUrl")]
             [Validation(Required=false)]
             public string PaidCallBackUrl { get; set; }
 
             /// <summary>
-            /// <para>The subscription duration. Valid values:</para>
+            /// <para>The subscription period. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>If PeriodUnit is set to Year: 1, 2, 3, and 5.</para>
+            /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Year</c>, valid values are 1, 2, 3, and 5.</para>
             /// </description></item>
-            /// <item><description><para>If PeriodUnit is set to Month: 1, 2, 3, and 6.</para>
+            /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Month</c>, valid values are 1, 2, 3, and 6.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -152,9 +161,9 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public int? Period { get; set; }
 
             /// <summary>
-            /// <para>The unit of the subscription duration for a subscription instance.</para>
+            /// <para>The unit of the subscription period for the subscription instance.</para>
             /// <remarks>
-            /// <para>This parameter is required only when the billing method of the instance is subscription. This parameter is case-sensitive. Make sure that the value is spelled correctly.</para>
+            /// <para>This parameter is required only when the billing method of the instance is subscription. This parameter is case-sensitive. Make sure that the spelling is correct.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -165,7 +174,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public string PeriodUnit { get; set; }
 
             /// <summary>
-            /// <para>The promotion ID.</para>
+            /// <para>The ID of the promotion.</para>
             /// 
             /// <b>Example:</b>
             /// <para>youhuiquan_promotion_option_id_for_blank</para>
@@ -177,7 +186,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             /// <summary>
             /// <para>The list of resource IDs.</para>
             /// <remarks>
-            /// <para>For monthly duration packages, this parameter corresponds to the cloud desktop ID. This parameter is required when OrderType is not set to <c>create</c>.</para>
+            /// <para>For the monthly duration package, this parameter corresponds to the cloud desktop ID. This parameter is required when OrderType is not set to <c>create</c>.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("ResourceIds")]
@@ -187,7 +196,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             /// <summary>
             /// <para>The resource type.</para>
             /// <remarks>
-            /// <para>This parameter is case-sensitive. Make sure that the value is spelled correctly.</para>
+            /// <para>This parameter is case-sensitive. Make sure that the spelling is correct.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -197,6 +206,16 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             [NameInMap("ResourceType")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
+
+            /// <summary>
+            /// <para>The unified expiration date, which can be a day from the 1st to the 28th of a month. If this parameter is not specified, the standard renewal process is applied.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>15</para>
+            /// </summary>
+            [NameInMap("UnifiedExpireDay")]
+            [Validation(Required=false)]
+            public int? UnifiedExpireDay { get; set; }
 
         }
 
@@ -218,7 +237,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public Dictionary<string, string> Properties { get; set; }
 
         /// <summary>
-        /// <para>The UID of the reseller owner.</para>
+        /// <para>The ID of the actual end user. This parameter is required when a reseller partner places an order.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100000000001</para>
         /// </summary>
         [NameInMap("ResellerOwnerUid")]
         [Validation(Required=false)]

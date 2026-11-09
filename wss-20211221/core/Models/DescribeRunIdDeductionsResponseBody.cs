@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public List<DescribeRunIdDeductionsResponseBodyDeductions> Deductions { get; set; }
         public class DescribeRunIdDeductionsResponseBodyDeductions : TeaModel {
             /// <summary>
-            /// <para>The agent type: <c>CREDIT_PACKAGE</c> / <c>JVS_CLAW</c> / <c>OPEN_CLAW</c> / <c>JVS_COPILOT</c>.</para>
+            /// <para>The agent type. Valid values: CREDIT_PACKAGE, JVS_CLAW, OPEN_CLAW, and JVS_COPILOT.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OpenClaw</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public string AgentType { get; set; }
 
             /// <summary>
-            /// <para>The end time of the period.</para>
+            /// <para>The end time of the period. The time is in ISO 8601 format and displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-07-31T03:00Z</para>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The group resource type.</para>
+            /// <para>The grouped resource type to which the deduction record belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>GROUP_CREDIT_PACKAGE、GROUP_BUSINESS_CREDIT_PACKAGE</para>
+            /// <para>GROUP_CREDIT_PACKAGE</para>
             /// </summary>
             [NameInMap("GroupResourceType")]
             [Validation(Required=false)]
@@ -56,12 +56,18 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// <para>The identifier of the called large language model. This field is used to distinguish the consumption of each model when grouping by model.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>qwen-3.7</para>
+            /// </summary>
             [NameInMap("Model")]
             [Validation(Required=false)]
             public string Model { get; set; }
 
             /// <summary>
-            /// <para>The credit or plan package ID.</para>
+            /// <para>The ID of the credit or package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>crp-xxx</para>
@@ -91,7 +97,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The unique run ID.</para>
+            /// <para>The unique ID of the run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>run-szwB1fYHCTocjGkFAIf6V8A</para>
@@ -101,7 +107,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public string RunId { get; set; }
 
             /// <summary>
-            /// <para>The start time.</para>
+            /// <para>The start time. The time is in ISO 8601 format and displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-16T02:10:00Z</para>
@@ -114,14 +120,14 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             /// <para>The summary of the large language model call.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>How is the weather today</para>
+            /// <para>How is the weather today?</para>
             /// </summary>
             [NameInMap("Summary")]
             [Validation(Required=false)]
             public string Summary { get; set; }
 
             /// <summary>
-            /// <para>The usage duration. Unit: seconds. Do not use this field for AI scenarios.</para>
+            /// <para>The usage duration. Unit: seconds. Do not use this field in AI scenarios.</para>
             /// 
             /// <b>Example:</b>
             /// <para>360000000</para>
@@ -131,7 +137,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public long? UsedTime { get; set; }
 
             /// <summary>
-            /// <para>The credits used.</para>
+            /// <para>The used credits.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.23</para>
@@ -153,7 +159,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Leave this parameter empty for the first request. For subsequent requests, use the <c>nextToken</c> value from the previous response.</para>
+        /// <para>The pagination token. Leave this parameter empty for the first request. For subsequent requests, use the nextToken value returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJvZmZzZXQiOjIwfQ==</para>
@@ -163,7 +169,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The current page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -173,7 +179,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query.</para>
+        /// <para>The Settings for the number of entries per page during paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -183,7 +189,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The unique identifier of the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>68BD3312-53D8-123E-BB32-1A9F25E07A03</para>
@@ -193,7 +199,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of core-hour package deduction details in the query result.</para>
+        /// <para>The total number of core-hour package deduction details returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -203,7 +209,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The total usage duration. Unit: seconds. Do not use this field for AI scenarios.</para>
+        /// <para>The total usage duration. Unit: seconds. Do not use this field in AI scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000</para>
@@ -213,7 +219,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public long? TotalUsedTime { get; set; }
 
         /// <summary>
-        /// <para>The total credits used that match the specified conditions.</para>
+        /// <para>The total used credits that meet the conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.23</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public List<string> AgentIds { get; set; }
 
         /// <summary>
-        /// <para>The Agent type. Valid values: <c>CREDIT_PACKAGE</c>, <c>JVS_CLAW</c>, <c>OPEN_CLAW</c>, and <c>JVS_COPILOT</c>.</para>
+        /// <para>The agent type. Valid values: <c>CREDIT_PACKAGE</c>, <c>JVS_CLAW</c>, <c>OPEN_CLAW</c>, and <c>JVS_COPILOT</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>JVS_COPILOT</para>

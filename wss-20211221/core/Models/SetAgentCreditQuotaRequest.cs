@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
 {
     public class SetAgentCreditQuotaRequest : TeaModel {
         /// <summary>
-        /// <para>A list of Agent IDs.</para>
+        /// <para>The list of Agent IDs.</para>
         /// </summary>
         [NameInMap("AgentIds")]
         [Validation(Required=false)]
@@ -45,6 +45,21 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         [NameInMap("CreditQuota")]
         [Validation(Required=false)]
         public int? CreditQuota { get; set; }
+
+        /// <summary>
+        /// <para>The operator scenarios type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If this parameter is not specified or is set to NaturalMonthlyOwn: calendar month exclusive.</description></item>
+        /// <item><description>JzYearlyShare: Jiaozi yearly shared.</description></item>
+        /// <item><description>JzYearlyOwn: Jiaozi yearly exclusive.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NaturalMonthlyOwn</para>
+        /// </summary>
+        [NameInMap("SceneType")]
+        [Validation(Required=false)]
+        public string SceneType { get; set; }
 
     }
 

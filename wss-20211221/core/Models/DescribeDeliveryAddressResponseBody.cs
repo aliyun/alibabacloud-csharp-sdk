@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
 {
     public class DescribeDeliveryAddressResponseBody : TeaModel {
         /// <summary>
-        /// <para>The address list.</para>
+        /// <para>The list of addresses.</para>
         /// </summary>
         [NameInMap("Addresses")]
         [Validation(Required=false)]
         public List<DescribeDeliveryAddressResponseBodyAddresses> Addresses { get; set; }
         public class DescribeDeliveryAddressResponseBodyAddresses : TeaModel {
             /// <summary>
-            /// <para>The area.</para>
+            /// <para>The district.</para>
             /// </summary>
             [NameInMap("Area")]
             [Validation(Required=false)]
             public DescribeDeliveryAddressResponseBodyAddressesArea Area { get; set; }
             public class DescribeDeliveryAddressResponseBodyAddressesArea : TeaModel {
                 /// <summary>
-                /// <para>The area ID.</para>
+                /// <para>The district ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>33****</para>
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 public long? AreaId { get; set; }
 
                 /// <summary>
-                /// <para>The area name.</para>
+                /// <para>The district name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>西湖区</para>
+                /// <para>Xihu District</para>
                 /// </summary>
                 [NameInMap("AreaName")]
                 [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 /// <para>The city name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>杭州市</para>
+                /// <para>Hangzhou</para>
                 /// </summary>
                 [NameInMap("CityName")]
                 [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             }
 
             /// <summary>
-            /// <para>The contact name.</para>
+            /// <para>The contact.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alice</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public string Contacts { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether this is the default address.</para>
+            /// <para>Indicates whether the address is the default address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -95,17 +95,17 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public bool? DefaultAddress { get; set; }
 
             /// <summary>
-            /// <para>The detailed address, which should include the street name and house number.</para>
+            /// <para>The detailed address, which must be accurate down to the street and building number.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>灯彩街1008号云园区2号楼测试中心</para>
+            /// <para>Test Center, Building 2, Cloud Park, No. 1008 Dengcai Street</para>
             /// </summary>
             [NameInMap("Detail")]
             [Validation(Required=false)]
             public string Detail { get; set; }
 
             /// <summary>
-            /// <para>The mobile number.</para>
+            /// <para>The mobile phone number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1381111****</para>
@@ -132,8 +132,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
             public DescribeDeliveryAddressResponseBodyAddressesProvince Province { get; set; }
             public class DescribeDeliveryAddressResponseBodyAddressesProvince : TeaModel {
                 /// <summary>
-                /// <para>The province ID. For more information, see <a href="https://help.aliyun.com/document_detail/167926.html">China regions, countries and territories codes</a>.</para>
-                /// <para>For example, <b>110000</b> represents Beijing and <b>120000</b> represents Tianjin.</para>
+                /// <para>The province ID. For more information, see <a href="https://help.aliyun.com/document_detail/167926.html">Codes for regions, countries, and areas in China</a>. For example, <b>110000</b> indicates Beijing, and <b>120000</b> indicates Tianjin.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>330000</para>
@@ -146,7 +145,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 /// <para>The province name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>浙江省</para>
+                /// <para>Zhejiang Province</para>
                 /// </summary>
                 [NameInMap("ProvinceName")]
                 [Validation(Required=false)]
@@ -175,7 +174,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 /// <para>The town name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>三墩镇</para>
+                /// <para>Sandun Town</para>
                 /// </summary>
                 [NameInMap("TownName")]
                 [Validation(Required=false)]
@@ -186,7 +185,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         }
 
         /// <summary>
-        /// <para>The request ID. Alibaba Cloud generates this unique identifier for each request.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>72481C12-69AB-5CE1-8A35-A8EFA921****</para>
@@ -196,10 +195,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total count of addresses.</para>
-        /// <remarks>
-        /// <para>Up to 20 addresses are supported.</para>
-        /// </remarks>
+        /// <para>The total number of addresses. A maximum of 20 addresses are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>

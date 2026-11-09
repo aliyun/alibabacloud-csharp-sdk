@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
 {
     public class DescribeMultiPriceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The price details.</para>
+        /// <para>The detailed pricing information.</para>
         /// </summary>
         [NameInMap("PriceInfo")]
         [Validation(Required=false)]
         public DescribeMultiPriceResponseBodyPriceInfo PriceInfo { get; set; }
         public class DescribeMultiPriceResponseBodyPriceInfo : TeaModel {
             /// <summary>
-            /// <para>The price information.</para>
+            /// <para>The pricing information.</para>
             /// </summary>
             [NameInMap("Price")]
             [Validation(Required=false)]
             public DescribeMultiPriceResponseBodyPriceInfoPrice Price { get; set; }
             public class DescribeMultiPriceResponseBodyPriceInfoPrice : TeaModel {
                 /// <summary>
-                /// <para>The currency unit.</para>
+                /// <para>The currency unit. CNY for the China site. USD for the international site.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CNY</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// <para>The discount price.</para>
+                /// <para>The discounted price.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>534.6</para>
@@ -54,21 +54,21 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 public float? OriginalPrice { get; set; }
 
                 /// <summary>
-                /// <para>The price details.</para>
+                /// <para>The pricing details.</para>
                 /// </summary>
                 [NameInMap("PriceDetails")]
                 [Validation(Required=false)]
                 public List<DescribeMultiPriceResponseBodyPriceInfoPricePriceDetails> PriceDetails { get; set; }
                 public class DescribeMultiPriceResponseBodyPriceInfoPricePriceDetails : TeaModel {
                     /// <summary>
-                    /// <para>The pricing module details.</para>
+                    /// <para>The pricing details of the billing module.</para>
                     /// </summary>
                     [NameInMap("ModuleDetails")]
                     [Validation(Required=false)]
                     public List<DescribeMultiPriceResponseBodyPriceInfoPricePriceDetailsModuleDetails> ModuleDetails { get; set; }
                     public class DescribeMultiPriceResponseBodyPriceInfoPricePriceDetailsModuleDetails : TeaModel {
                         /// <summary>
-                        /// <para>The discount price.</para>
+                        /// <para>The discounted price.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>734.65</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                         /// <para>The module name.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Enterprise Office-8C32G</para>
+                        /// <para>Enterprise Office - 8C32G</para>
                         /// </summary>
                         [NameInMap("ModuleName")]
                         [Validation(Required=false)]
@@ -119,6 +119,9 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
 
                         /// <summary>
                         /// <para>The savings plan discount price.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>0</para>
                         /// </summary>
                         [NameInMap("SavingPlanDiscountPrice")]
                         [Validation(Required=false)]
@@ -137,7 +140,7 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                     }
 
                     /// <summary>
-                    /// <para>The sort property.</para>
+                    /// <para>The sorting attribute.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -147,14 +150,14 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                     public int? OrderItem { get; set; }
 
                     /// <summary>
-                    /// <para>The price details.</para>
+                    /// <para>The pricing details.</para>
                     /// </summary>
                     [NameInMap("PriceDetail")]
                     [Validation(Required=false)]
                     public DescribeMultiPriceResponseBodyPriceInfoPricePriceDetailsPriceDetail PriceDetail { get; set; }
                     public class DescribeMultiPriceResponseBodyPriceInfoPricePriceDetailsPriceDetail : TeaModel {
                         /// <summary>
-                        /// <para>The discount price.</para>
+                        /// <para>The discounted price.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>20.00</para>
@@ -185,6 +188,9 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
 
                         /// <summary>
                         /// <para>The savings plan recommended price.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>0</para>
                         /// </summary>
                         [NameInMap("SavingPlanRecommendPrice")]
                         [Validation(Required=false)]
@@ -212,21 +218,27 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 public List<DescribeMultiPriceResponseBodyPriceInfoPricePromotions> Promotions { get; set; }
                 public class DescribeMultiPriceResponseBodyPriceInfoPricePromotions : TeaModel {
                     /// <summary>
-                    /// <para>The activity ID.</para>
+                    /// <para>The promotion activity ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>123456****</para>
                     /// </summary>
                     [NameInMap("ActivityId")]
                     [Validation(Required=false)]
                     public string ActivityId { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the activity is effective.</para>
+                    /// <para>Indicates whether the promotion activity is in effect.</para>
                     /// </summary>
                     [NameInMap("Effective")]
                     [Validation(Required=false)]
                     public bool? Effective { get; set; }
 
                     /// <summary>
-                    /// <para>The timestamp when the activity ends.</para>
+                    /// <para>The end time of the promotion activity. The value is a UNIX timestamp in milliseconds.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1790784000000</para>
                     /// </summary>
                     [NameInMap("EndTimestamp")]
                     [Validation(Required=false)]
@@ -243,14 +255,20 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                     public string OptionCode { get; set; }
 
                     /// <summary>
-                    /// <para>The tiered pricing discount value.</para>
+                    /// <para>The discount amount after the spend-and-save promotion threshold is reached. Unit: CNY. Two decimal places are retained.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>10.00</para>
                     /// </summary>
                     [NameInMap("PriceBreakReduceValue")]
                     [Validation(Required=false)]
                     public string PriceBreakReduceValue { get; set; }
 
                     /// <summary>
-                    /// <para>The tiered pricing threshold.</para>
+                    /// <para>The threshold amount for the spend-and-save promotion. Unit: CNY. Two decimal places are retained.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>100.00</para>
                     /// </summary>
                     [NameInMap("PriceBreakThreshold")]
                     [Validation(Required=false)]
@@ -297,7 +315,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                     public bool? Selected { get; set; }
 
                     /// <summary>
-                    /// <para>The timestamp when the activity starts.</para>
+                    /// <para>The start time of the promotion activity. The value is a UNIX timestamp in milliseconds.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1788192000000</para>
                     /// </summary>
                     [NameInMap("StartTimestamp")]
                     [Validation(Required=false)]
@@ -306,14 +327,14 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 }
 
                 /// <summary>
-                /// <para>The unsubscription instance and pricing details.</para>
+                /// <para>The unsubscribed instances and pricing details.</para>
                 /// </summary>
                 [NameInMap("RefundInstanceIdPriceMap")]
                 [Validation(Required=false)]
                 public Dictionary<string, float?> RefundInstanceIdPriceMap { get; set; }
 
                 /// <summary>
-                /// <para>The unsubscription price.</para>
+                /// <para>The refund price.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>60.00</para>
@@ -352,10 +373,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The promotion rule ID.</para>
+                /// <para>The pricing rule ID. The value is an integer.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>hrzdvc</para>
+                /// <para>1001</para>
                 /// </summary>
                 [NameInMap("RuleId")]
                 [Validation(Required=false)]

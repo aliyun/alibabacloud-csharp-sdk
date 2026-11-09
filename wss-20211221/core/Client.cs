@@ -18,12 +18,10 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "wss";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"ap-southeast-1", "wss.ap-southeast-1.aliyuncs.com"},
-                {"cn-shanghai", "wss.cn-shanghai.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("wss", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -44,14 +42,14 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Places, renews, or modifies orders for specific products of Elastic Desktop Service (EDS) Enterprise Edition, such as monthly duration packages.</para>
+        /// <para>Creates an order, renews, or modifies the configuration of specific products such as the monthly duration package for Wuying Workspace Enterprise Edition.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of EDS.
-        /// &lt;props=&quot;intl&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/cloud-desktop?#J_8623712560">pricing</a> of EDS.
-        /// If automatic payment is not specified, this operation does not process the payment. You must use the order ID returned by this operation to construct a payment redirect URL and complete the payment before the order takes effect and the resources are provisioned.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of Wuying Workspace before you call this operation.
+        /// &lt;props=&quot;intl&quot;&gt;Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/cloud-desktop?#J_8623712560">pricing</a> of Wuying Workspace before you call this operation.
+        /// If automatic payment is not specified, this operation does not process the payment. You must use the order ID returned by this operation to construct a payment redirect URL and complete the payment. The order takes effect and resources are provisioned only after the payment is completed.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -115,14 +113,14 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Places, renews, or modifies orders for specific products of Elastic Desktop Service (EDS) Enterprise Edition, such as monthly duration packages.</para>
+        /// <para>Creates an order, renews, or modifies the configuration of specific products such as the monthly duration package for Wuying Workspace Enterprise Edition.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of EDS.
-        /// &lt;props=&quot;intl&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/cloud-desktop?#J_8623712560">pricing</a> of EDS.
-        /// If automatic payment is not specified, this operation does not process the payment. You must use the order ID returned by this operation to construct a payment redirect URL and complete the payment before the order takes effect and the resources are provisioned.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of Wuying Workspace before you call this operation.
+        /// &lt;props=&quot;intl&quot;&gt;Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/cloud-desktop?#J_8623712560">pricing</a> of Wuying Workspace before you call this operation.
+        /// If automatic payment is not specified, this operation does not process the payment. You must use the order ID returned by this operation to construct a payment redirect URL and complete the payment. The order takes effect and resources are provisioned only after the payment is completed.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -186,14 +184,14 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Places, renews, or modifies orders for specific products of Elastic Desktop Service (EDS) Enterprise Edition, such as monthly duration packages.</para>
+        /// <para>Creates an order, renews, or modifies the configuration of specific products such as the monthly duration package for Wuying Workspace Enterprise Edition.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of EDS.
-        /// &lt;props=&quot;intl&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/cloud-desktop?#J_8623712560">pricing</a> of EDS.
-        /// If automatic payment is not specified, this operation does not process the payment. You must use the order ID returned by this operation to construct a payment redirect URL and complete the payment before the order takes effect and the resources are provisioned.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of Wuying Workspace before you call this operation.
+        /// &lt;props=&quot;intl&quot;&gt;Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/cloud-desktop?#J_8623712560">pricing</a> of Wuying Workspace before you call this operation.
+        /// If automatic payment is not specified, this operation does not process the payment. You must use the order ID returned by this operation to construct a payment redirect URL and complete the payment. The order takes effect and resources are provisioned only after the payment is completed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -211,14 +209,14 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Places, renews, or modifies orders for specific products of Elastic Desktop Service (EDS) Enterprise Edition, such as monthly duration packages.</para>
+        /// <para>Creates an order, renews, or modifies the configuration of specific products such as the monthly duration package for Wuying Workspace Enterprise Edition.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of EDS.
-        /// &lt;props=&quot;intl&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/cloud-desktop?#J_8623712560">pricing</a> of EDS.
-        /// If automatic payment is not specified, this operation does not process the payment. You must use the order ID returned by this operation to construct a payment redirect URL and complete the payment before the order takes effect and the resources are provisioned.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of Wuying Workspace before you call this operation.
+        /// &lt;props=&quot;intl&quot;&gt;Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/cloud-desktop?#J_8623712560">pricing</a> of Wuying Workspace before you call this operation.
+        /// If automatic payment is not specified, this operation does not process the payment. You must use the order ID returned by this operation to construct a payment redirect URL and complete the payment. The order takes effect and resources are provisioned only after the payment is completed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -236,16 +234,16 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Agents and usage summary information under the current username.</para>
+        /// <para>Queries the list of agents and usage summary information under the current username.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Paging support</b>: Use the <c>NextToken</c> and <c>MaxResults</c> parameters for paging. Set <c>NextToken</c> to an empty character string for the first request.</description></item>
-        /// <item><description><b>Filtering</b>: Use the <c>AgentType</c> and <c>AgentIds</c> parameters to filter the returned Agent list.</description></item>
-        /// <item><description><b>Status filtering</b>: Use the <c>Status</c> parameter to filter Agents by status (0: deleted, 1: active).</description></item>
+        /// <item><description><b>Paging</b>: Use the <c>NextToken</c> and <c>MaxResults</c> parameters for paging. Set <c>NextToken</c> to an empty character string for the first request.</description></item>
+        /// <item><description><b>Filtering</b>: Use the <c>AgentType</c> and <c>AgentIds</c> parameters to filter the returned agent list.</description></item>
+        /// <item><description><b>Status filtering</b>: Use the <c>Status</c> parameter to filter agents by status. Valid values: 0 (deleted) and 1 (active).</description></item>
         /// <item><description><b>Sorting</b>: Results are sorted by <c>id</c> in ascending order by default.</description></item>
         /// <item><description><b>Additional parameter for anonymous edition</b>: The <c>FillInstance</c> parameter automatically populates the bound JVS_COPILOT AgentId of the currently logged-on user.</description></item>
         /// </list>
@@ -306,16 +304,16 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Agents and usage summary information under the current username.</para>
+        /// <para>Queries the list of agents and usage summary information under the current username.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Paging support</b>: Use the <c>NextToken</c> and <c>MaxResults</c> parameters for paging. Set <c>NextToken</c> to an empty character string for the first request.</description></item>
-        /// <item><description><b>Filtering</b>: Use the <c>AgentType</c> and <c>AgentIds</c> parameters to filter the returned Agent list.</description></item>
-        /// <item><description><b>Status filtering</b>: Use the <c>Status</c> parameter to filter Agents by status (0: deleted, 1: active).</description></item>
+        /// <item><description><b>Paging</b>: Use the <c>NextToken</c> and <c>MaxResults</c> parameters for paging. Set <c>NextToken</c> to an empty character string for the first request.</description></item>
+        /// <item><description><b>Filtering</b>: Use the <c>AgentType</c> and <c>AgentIds</c> parameters to filter the returned agent list.</description></item>
+        /// <item><description><b>Status filtering</b>: Use the <c>Status</c> parameter to filter agents by status. Valid values: 0 (deleted) and 1 (active).</description></item>
         /// <item><description><b>Sorting</b>: Results are sorted by <c>id</c> in ascending order by default.</description></item>
         /// <item><description><b>Additional parameter for anonymous edition</b>: The <c>FillInstance</c> parameter automatically populates the bound JVS_COPILOT AgentId of the currently logged-on user.</description></item>
         /// </list>
@@ -376,16 +374,16 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Agents and usage summary information under the current username.</para>
+        /// <para>Queries the list of agents and usage summary information under the current username.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Paging support</b>: Use the <c>NextToken</c> and <c>MaxResults</c> parameters for paging. Set <c>NextToken</c> to an empty character string for the first request.</description></item>
-        /// <item><description><b>Filtering</b>: Use the <c>AgentType</c> and <c>AgentIds</c> parameters to filter the returned Agent list.</description></item>
-        /// <item><description><b>Status filtering</b>: Use the <c>Status</c> parameter to filter Agents by status (0: deleted, 1: active).</description></item>
+        /// <item><description><b>Paging</b>: Use the <c>NextToken</c> and <c>MaxResults</c> parameters for paging. Set <c>NextToken</c> to an empty character string for the first request.</description></item>
+        /// <item><description><b>Filtering</b>: Use the <c>AgentType</c> and <c>AgentIds</c> parameters to filter the returned agent list.</description></item>
+        /// <item><description><b>Status filtering</b>: Use the <c>Status</c> parameter to filter agents by status. Valid values: 0 (deleted) and 1 (active).</description></item>
         /// <item><description><b>Sorting</b>: Results are sorted by <c>id</c> in ascending order by default.</description></item>
         /// <item><description><b>Additional parameter for anonymous edition</b>: The <c>FillInstance</c> parameter automatically populates the bound JVS_COPILOT AgentId of the currently logged-on user.</description></item>
         /// </list>
@@ -406,16 +404,16 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Agents and usage summary information under the current username.</para>
+        /// <para>Queries the list of agents and usage summary information under the current username.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Paging support</b>: Use the <c>NextToken</c> and <c>MaxResults</c> parameters for paging. Set <c>NextToken</c> to an empty character string for the first request.</description></item>
-        /// <item><description><b>Filtering</b>: Use the <c>AgentType</c> and <c>AgentIds</c> parameters to filter the returned Agent list.</description></item>
-        /// <item><description><b>Status filtering</b>: Use the <c>Status</c> parameter to filter Agents by status (0: deleted, 1: active).</description></item>
+        /// <item><description><b>Paging</b>: Use the <c>NextToken</c> and <c>MaxResults</c> parameters for paging. Set <c>NextToken</c> to an empty character string for the first request.</description></item>
+        /// <item><description><b>Filtering</b>: Use the <c>AgentType</c> and <c>AgentIds</c> parameters to filter the returned agent list.</description></item>
+        /// <item><description><b>Status filtering</b>: Use the <c>Status</c> parameter to filter agents by status. Valid values: 0 (deleted) and 1 (active).</description></item>
         /// <item><description><b>Sorting</b>: Results are sorted by <c>id</c> in ascending order by default.</description></item>
         /// <item><description><b>Additional parameter for anonymous edition</b>: The <c>FillInstance</c> parameter automatically populates the bound JVS_COPILOT AgentId of the currently logged-on user.</description></item>
         /// </list>
@@ -436,21 +434,22 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries credit usage details by a specified dimension such as user, credit package, or agent.</para>
+        /// <para>Queries the credit usage of users, credit packages, or agents based on a specified dimension.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API queries credit usage details based on the dimension specified by <c>UsageType</c> (User / CreditPackage / Agent). The response includes the total credits, remaining credits, used credits, hourly consumption samples, alert thresholds, and period quotas of the current credit package.</para>
+        /// <para>This API queries credit usage details based on the dimension specified by <c>UsageType</c> (User, CreditPackage, Agent, or EndUser). The response includes the total amount, remaining amount, and used amount of the current credit package, hourly consumption samples, alert thresholds, and periodic quotas.</para>
         /// <list type="bullet">
-        /// <item><description><b>User</b>: User dimension. Returns the aggregated usage and remaining credits of all active credit packages for the current user.</description></item>
-        /// <item><description><b>CreditPackage</b>: Credit package dimension. Returns the total credits, remaining credits, and consumption samples of a specified credit package instance.</description></item>
-        /// <item><description><b>Agent</b>: Agent dimension. Returns the cumulative usage, current period usage, quota, and alert information of a specified agent.
-        /// <b>Notes</b>:</description></item>
-        /// <item><description>The <c>InstanceIds</c> parameter can be omitted when <c>UsageType=User</c>. Pass a credit package instance ID when <c>UsageType=CreditPackage</c>, or pass an AgentId when <c>UsageType=Agent</c>.</description></item>
-        /// <item><description>Anonymous requests support the <c>FillInstance</c> parameter. When <c>InstanceIds</c> is not explicitly provided and <c>FillInstance=true</c>, the server automatically populates the bound <c>JVS_COPILOT</c> AgentId based on the current logon <c>wyId</c>.</description></item>
-        /// <item><description>Time window constants: The <c>dayUsedCredit</c> statistics window is <c>now - ONE_DAY_MILLIS</c>, and the <c>weekUsedCredit</c> statistics window is <c>now - ONE_WEEK_MILLIS</c>.</description></item>
+        /// <item><description><b>User</b>: The user dimension. Returns the total used amount and remaining amount of all active credit packages for the current user.</description></item>
+        /// <item><description><b>CreditPackage</b>: The credit package dimension. Returns the total amount, remaining amount, and consumption samples of a specified credit package instance.</description></item>
+        /// <item><description><b>Agent</b>: The agent dimension. Returns the cumulative used amount, current period used amount, quota, and alerts for a specified agent.</description></item>
+        /// <item><description><b>EndUser</b>: The Wuying user dimension. Returns the shared credit usage, pay-as-you-go credit usage, and total credit usage for the current period of a Wuying user.
+        /// <b>Note</b>:</description></item>
+        /// <item><description>The <c>InstanceIds</c> parameter can be omitted when <c>UsageType</c> is set to <c>User</c>. Set it to the credit package instance ID when <c>UsageType</c> is <c>CreditPackage</c>, the agent ID when <c>UsageType</c> is <c>Agent</c>, and the Wuying ID when <c>UsageType</c> is <c>EndUser</c>.</description></item>
+        /// <item><description>Anonymous requests support the <c>FillInstance</c> parameter. If <c>InstanceIds</c> is not explicitly provided and <c>FillInstance</c> is set to <c>true</c>, the server automatically populates the bound <c>JVS_COPILOT</c> agent ID based on the currently logged-in <c>wyId</c>.</description></item>
+        /// <item><description>Time window constants: The statistical window for <c>dayUsedCredit</c> is <c>now - ONE_DAY_MILLIS</c>, and the statistical window for <c>weekUsedCredit</c> is <c>now - ONE_WEEK_MILLIS</c>.</description></item>
         /// <item><description>The consumption samples in <c>currentCreditConsumeList</c> are aggregated by hour and may have an asynchronous synchronization delay of up to 5 minutes.</description></item>
         /// </list>
         /// </description>
@@ -477,6 +476,10 @@ namespace AlibabaCloud.SDK.Wss20211221
             {
                 query["InstanceIds"] = request.InstanceIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneType))
+            {
+                query["SceneType"] = request.SceneType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsageType))
             {
                 query["UsageType"] = request.UsageType;
@@ -502,21 +505,22 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries credit usage details by a specified dimension such as user, credit package, or agent.</para>
+        /// <para>Queries the credit usage of users, credit packages, or agents based on a specified dimension.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API queries credit usage details based on the dimension specified by <c>UsageType</c> (User / CreditPackage / Agent). The response includes the total credits, remaining credits, used credits, hourly consumption samples, alert thresholds, and period quotas of the current credit package.</para>
+        /// <para>This API queries credit usage details based on the dimension specified by <c>UsageType</c> (User, CreditPackage, Agent, or EndUser). The response includes the total amount, remaining amount, and used amount of the current credit package, hourly consumption samples, alert thresholds, and periodic quotas.</para>
         /// <list type="bullet">
-        /// <item><description><b>User</b>: User dimension. Returns the aggregated usage and remaining credits of all active credit packages for the current user.</description></item>
-        /// <item><description><b>CreditPackage</b>: Credit package dimension. Returns the total credits, remaining credits, and consumption samples of a specified credit package instance.</description></item>
-        /// <item><description><b>Agent</b>: Agent dimension. Returns the cumulative usage, current period usage, quota, and alert information of a specified agent.
-        /// <b>Notes</b>:</description></item>
-        /// <item><description>The <c>InstanceIds</c> parameter can be omitted when <c>UsageType=User</c>. Pass a credit package instance ID when <c>UsageType=CreditPackage</c>, or pass an AgentId when <c>UsageType=Agent</c>.</description></item>
-        /// <item><description>Anonymous requests support the <c>FillInstance</c> parameter. When <c>InstanceIds</c> is not explicitly provided and <c>FillInstance=true</c>, the server automatically populates the bound <c>JVS_COPILOT</c> AgentId based on the current logon <c>wyId</c>.</description></item>
-        /// <item><description>Time window constants: The <c>dayUsedCredit</c> statistics window is <c>now - ONE_DAY_MILLIS</c>, and the <c>weekUsedCredit</c> statistics window is <c>now - ONE_WEEK_MILLIS</c>.</description></item>
+        /// <item><description><b>User</b>: The user dimension. Returns the total used amount and remaining amount of all active credit packages for the current user.</description></item>
+        /// <item><description><b>CreditPackage</b>: The credit package dimension. Returns the total amount, remaining amount, and consumption samples of a specified credit package instance.</description></item>
+        /// <item><description><b>Agent</b>: The agent dimension. Returns the cumulative used amount, current period used amount, quota, and alerts for a specified agent.</description></item>
+        /// <item><description><b>EndUser</b>: The Wuying user dimension. Returns the shared credit usage, pay-as-you-go credit usage, and total credit usage for the current period of a Wuying user.
+        /// <b>Note</b>:</description></item>
+        /// <item><description>The <c>InstanceIds</c> parameter can be omitted when <c>UsageType</c> is set to <c>User</c>. Set it to the credit package instance ID when <c>UsageType</c> is <c>CreditPackage</c>, the agent ID when <c>UsageType</c> is <c>Agent</c>, and the Wuying ID when <c>UsageType</c> is <c>EndUser</c>.</description></item>
+        /// <item><description>Anonymous requests support the <c>FillInstance</c> parameter. If <c>InstanceIds</c> is not explicitly provided and <c>FillInstance</c> is set to <c>true</c>, the server automatically populates the bound <c>JVS_COPILOT</c> agent ID based on the currently logged-in <c>wyId</c>.</description></item>
+        /// <item><description>Time window constants: The statistical window for <c>dayUsedCredit</c> is <c>now - ONE_DAY_MILLIS</c>, and the statistical window for <c>weekUsedCredit</c> is <c>now - ONE_WEEK_MILLIS</c>.</description></item>
         /// <item><description>The consumption samples in <c>currentCreditConsumeList</c> are aggregated by hour and may have an asynchronous synchronization delay of up to 5 minutes.</description></item>
         /// </list>
         /// </description>
@@ -543,6 +547,10 @@ namespace AlibabaCloud.SDK.Wss20211221
             {
                 query["InstanceIds"] = request.InstanceIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneType))
+            {
+                query["SceneType"] = request.SceneType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsageType))
             {
                 query["UsageType"] = request.UsageType;
@@ -568,21 +576,22 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries credit usage details by a specified dimension such as user, credit package, or agent.</para>
+        /// <para>Queries the credit usage of users, credit packages, or agents based on a specified dimension.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API queries credit usage details based on the dimension specified by <c>UsageType</c> (User / CreditPackage / Agent). The response includes the total credits, remaining credits, used credits, hourly consumption samples, alert thresholds, and period quotas of the current credit package.</para>
+        /// <para>This API queries credit usage details based on the dimension specified by <c>UsageType</c> (User, CreditPackage, Agent, or EndUser). The response includes the total amount, remaining amount, and used amount of the current credit package, hourly consumption samples, alert thresholds, and periodic quotas.</para>
         /// <list type="bullet">
-        /// <item><description><b>User</b>: User dimension. Returns the aggregated usage and remaining credits of all active credit packages for the current user.</description></item>
-        /// <item><description><b>CreditPackage</b>: Credit package dimension. Returns the total credits, remaining credits, and consumption samples of a specified credit package instance.</description></item>
-        /// <item><description><b>Agent</b>: Agent dimension. Returns the cumulative usage, current period usage, quota, and alert information of a specified agent.
-        /// <b>Notes</b>:</description></item>
-        /// <item><description>The <c>InstanceIds</c> parameter can be omitted when <c>UsageType=User</c>. Pass a credit package instance ID when <c>UsageType=CreditPackage</c>, or pass an AgentId when <c>UsageType=Agent</c>.</description></item>
-        /// <item><description>Anonymous requests support the <c>FillInstance</c> parameter. When <c>InstanceIds</c> is not explicitly provided and <c>FillInstance=true</c>, the server automatically populates the bound <c>JVS_COPILOT</c> AgentId based on the current logon <c>wyId</c>.</description></item>
-        /// <item><description>Time window constants: The <c>dayUsedCredit</c> statistics window is <c>now - ONE_DAY_MILLIS</c>, and the <c>weekUsedCredit</c> statistics window is <c>now - ONE_WEEK_MILLIS</c>.</description></item>
+        /// <item><description><b>User</b>: The user dimension. Returns the total used amount and remaining amount of all active credit packages for the current user.</description></item>
+        /// <item><description><b>CreditPackage</b>: The credit package dimension. Returns the total amount, remaining amount, and consumption samples of a specified credit package instance.</description></item>
+        /// <item><description><b>Agent</b>: The agent dimension. Returns the cumulative used amount, current period used amount, quota, and alerts for a specified agent.</description></item>
+        /// <item><description><b>EndUser</b>: The Wuying user dimension. Returns the shared credit usage, pay-as-you-go credit usage, and total credit usage for the current period of a Wuying user.
+        /// <b>Note</b>:</description></item>
+        /// <item><description>The <c>InstanceIds</c> parameter can be omitted when <c>UsageType</c> is set to <c>User</c>. Set it to the credit package instance ID when <c>UsageType</c> is <c>CreditPackage</c>, the agent ID when <c>UsageType</c> is <c>Agent</c>, and the Wuying ID when <c>UsageType</c> is <c>EndUser</c>.</description></item>
+        /// <item><description>Anonymous requests support the <c>FillInstance</c> parameter. If <c>InstanceIds</c> is not explicitly provided and <c>FillInstance</c> is set to <c>true</c>, the server automatically populates the bound <c>JVS_COPILOT</c> agent ID based on the currently logged-in <c>wyId</c>.</description></item>
+        /// <item><description>Time window constants: The statistical window for <c>dayUsedCredit</c> is <c>now - ONE_DAY_MILLIS</c>, and the statistical window for <c>weekUsedCredit</c> is <c>now - ONE_WEEK_MILLIS</c>.</description></item>
         /// <item><description>The consumption samples in <c>currentCreditConsumeList</c> are aggregated by hour and may have an asynchronous synchronization delay of up to 5 minutes.</description></item>
         /// </list>
         /// </description>
@@ -602,21 +611,22 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries credit usage details by a specified dimension such as user, credit package, or agent.</para>
+        /// <para>Queries the credit usage of users, credit packages, or agents based on a specified dimension.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API queries credit usage details based on the dimension specified by <c>UsageType</c> (User / CreditPackage / Agent). The response includes the total credits, remaining credits, used credits, hourly consumption samples, alert thresholds, and period quotas of the current credit package.</para>
+        /// <para>This API queries credit usage details based on the dimension specified by <c>UsageType</c> (User, CreditPackage, Agent, or EndUser). The response includes the total amount, remaining amount, and used amount of the current credit package, hourly consumption samples, alert thresholds, and periodic quotas.</para>
         /// <list type="bullet">
-        /// <item><description><b>User</b>: User dimension. Returns the aggregated usage and remaining credits of all active credit packages for the current user.</description></item>
-        /// <item><description><b>CreditPackage</b>: Credit package dimension. Returns the total credits, remaining credits, and consumption samples of a specified credit package instance.</description></item>
-        /// <item><description><b>Agent</b>: Agent dimension. Returns the cumulative usage, current period usage, quota, and alert information of a specified agent.
-        /// <b>Notes</b>:</description></item>
-        /// <item><description>The <c>InstanceIds</c> parameter can be omitted when <c>UsageType=User</c>. Pass a credit package instance ID when <c>UsageType=CreditPackage</c>, or pass an AgentId when <c>UsageType=Agent</c>.</description></item>
-        /// <item><description>Anonymous requests support the <c>FillInstance</c> parameter. When <c>InstanceIds</c> is not explicitly provided and <c>FillInstance=true</c>, the server automatically populates the bound <c>JVS_COPILOT</c> AgentId based on the current logon <c>wyId</c>.</description></item>
-        /// <item><description>Time window constants: The <c>dayUsedCredit</c> statistics window is <c>now - ONE_DAY_MILLIS</c>, and the <c>weekUsedCredit</c> statistics window is <c>now - ONE_WEEK_MILLIS</c>.</description></item>
+        /// <item><description><b>User</b>: The user dimension. Returns the total used amount and remaining amount of all active credit packages for the current user.</description></item>
+        /// <item><description><b>CreditPackage</b>: The credit package dimension. Returns the total amount, remaining amount, and consumption samples of a specified credit package instance.</description></item>
+        /// <item><description><b>Agent</b>: The agent dimension. Returns the cumulative used amount, current period used amount, quota, and alerts for a specified agent.</description></item>
+        /// <item><description><b>EndUser</b>: The Wuying user dimension. Returns the shared credit usage, pay-as-you-go credit usage, and total credit usage for the current period of a Wuying user.
+        /// <b>Note</b>:</description></item>
+        /// <item><description>The <c>InstanceIds</c> parameter can be omitted when <c>UsageType</c> is set to <c>User</c>. Set it to the credit package instance ID when <c>UsageType</c> is <c>CreditPackage</c>, the agent ID when <c>UsageType</c> is <c>Agent</c>, and the Wuying ID when <c>UsageType</c> is <c>EndUser</c>.</description></item>
+        /// <item><description>Anonymous requests support the <c>FillInstance</c> parameter. If <c>InstanceIds</c> is not explicitly provided and <c>FillInstance</c> is set to <c>true</c>, the server automatically populates the bound <c>JVS_COPILOT</c> agent ID based on the currently logged-in <c>wyId</c>.</description></item>
+        /// <item><description>Time window constants: The statistical window for <c>dayUsedCredit</c> is <c>now - ONE_DAY_MILLIS</c>, and the statistical window for <c>weekUsedCredit</c> is <c>now - ONE_WEEK_MILLIS</c>.</description></item>
         /// <item><description>The consumption samples in <c>currentCreditConsumeList</c> are aggregated by hour and may have an asynchronous synchronization delay of up to 5 minutes.</description></item>
         /// </list>
         /// </description>
@@ -648,7 +658,7 @@ namespace AlibabaCloud.SDK.Wss20211221
         /// <item><description>The <c>resourceTypes</c> parameter is in JSON array format and contains multiple resource type strings.</description></item>
         /// <item><description>The <c>startTime</c> and <c>endTime</c> parameters are in timestamp format and specify the time range for the query.</description></item>
         /// <item><description>Pagination parameters include <c>nextToken</c>, <c>maxResults</c>, <c>pageNo</c>, and <c>pageSize</c>, which control the number and pagination of returned results.</description></item>
-        /// <item><description>When the <c>resourceTypes</c> parameter contains invalid values or the <c>periods</c> parameter fails JSON parsing, a <c>SalesClientException</c> exception is thrown.</description></item>
+        /// <item><description>If the <c>resourceTypes</c> parameter contains invalid values or the <c>periods</c> parameter fails JSON parsing, a <c>SalesClientException</c> exception is thrown.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -719,7 +729,7 @@ namespace AlibabaCloud.SDK.Wss20211221
         /// <item><description>The <c>resourceTypes</c> parameter is in JSON array format and contains multiple resource type strings.</description></item>
         /// <item><description>The <c>startTime</c> and <c>endTime</c> parameters are in timestamp format and specify the time range for the query.</description></item>
         /// <item><description>Pagination parameters include <c>nextToken</c>, <c>maxResults</c>, <c>pageNo</c>, and <c>pageSize</c>, which control the number and pagination of returned results.</description></item>
-        /// <item><description>When the <c>resourceTypes</c> parameter contains invalid values or the <c>periods</c> parameter fails JSON parsing, a <c>SalesClientException</c> exception is thrown.</description></item>
+        /// <item><description>If the <c>resourceTypes</c> parameter contains invalid values or the <c>periods</c> parameter fails JSON parsing, a <c>SalesClientException</c> exception is thrown.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -790,7 +800,7 @@ namespace AlibabaCloud.SDK.Wss20211221
         /// <item><description>The <c>resourceTypes</c> parameter is in JSON array format and contains multiple resource type strings.</description></item>
         /// <item><description>The <c>startTime</c> and <c>endTime</c> parameters are in timestamp format and specify the time range for the query.</description></item>
         /// <item><description>Pagination parameters include <c>nextToken</c>, <c>maxResults</c>, <c>pageNo</c>, and <c>pageSize</c>, which control the number and pagination of returned results.</description></item>
-        /// <item><description>When the <c>resourceTypes</c> parameter contains invalid values or the <c>periods</c> parameter fails JSON parsing, a <c>SalesClientException</c> exception is thrown.</description></item>
+        /// <item><description>If the <c>resourceTypes</c> parameter contains invalid values or the <c>periods</c> parameter fails JSON parsing, a <c>SalesClientException</c> exception is thrown.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -821,7 +831,7 @@ namespace AlibabaCloud.SDK.Wss20211221
         /// <item><description>The <c>resourceTypes</c> parameter is in JSON array format and contains multiple resource type strings.</description></item>
         /// <item><description>The <c>startTime</c> and <c>endTime</c> parameters are in timestamp format and specify the time range for the query.</description></item>
         /// <item><description>Pagination parameters include <c>nextToken</c>, <c>maxResults</c>, <c>pageNo</c>, and <c>pageSize</c>, which control the number and pagination of returned results.</description></item>
-        /// <item><description>When the <c>resourceTypes</c> parameter contains invalid values or the <c>periods</c> parameter fails JSON parsing, a <c>SalesClientException</c> exception is thrown.</description></item>
+        /// <item><description>If the <c>resourceTypes</c> parameter contains invalid values or the <c>periods</c> parameter fails JSON parsing, a <c>SalesClientException</c> exception is thrown.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -840,7 +850,7 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about delivery addresses.</para>
+        /// <para>Queries logistics address information.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -870,7 +880,7 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about delivery addresses.</para>
+        /// <para>Queries logistics address information.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -900,7 +910,7 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about delivery addresses.</para>
+        /// <para>Queries logistics address information.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -914,7 +924,7 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about delivery addresses.</para>
+        /// <para>Queries logistics address information.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -928,12 +938,428 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the prices of Elastic Desktop Service products, including prices for new purchases, renewals, specification changes, and unsubscriptions.</para>
+        /// <para>Queries deduction group information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing of Elastic Desktop Service and its <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of Elastic Desktop Service.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGroupsResponse
+        /// </returns>
+        public DescribeGroupsResponse DescribeGroupsWithOptions(DescribeGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupResourceTypes))
+            {
+                query["GroupResourceTypes"] = request.GroupResourceTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
+            {
+                query["GroupType"] = request.GroupType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIds))
+            {
+                query["ResourceIds"] = request.ResourceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.States))
+            {
+                query["States"] = request.States;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeUsingPeriod))
+            {
+                query["TimeUsingPeriod"] = request.TimeUsingPeriod;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeGroups",
+                Version = "2021-12-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeGroupsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries deduction group information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of Elastic Desktop Service.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeGroupsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGroupsResponse
+        /// </returns>
+        public async Task<DescribeGroupsResponse> DescribeGroupsWithOptionsAsync(DescribeGroupsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupResourceTypes))
+            {
+                query["GroupResourceTypes"] = request.GroupResourceTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
+            {
+                query["GroupType"] = request.GroupType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceIds))
+            {
+                query["ResourceIds"] = request.ResourceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.States))
+            {
+                query["States"] = request.States;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeUsingPeriod))
+            {
+                query["TimeUsingPeriod"] = request.TimeUsingPeriod;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeGroups",
+                Version = "2021-12-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeGroupsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries deduction group information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of Elastic Desktop Service.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGroupsResponse
+        /// </returns>
+        public DescribeGroupsResponse DescribeGroups(DescribeGroupsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeGroupsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries deduction group information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of Elastic Desktop Service.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGroupsResponse
+        /// </returns>
+        public async Task<DescribeGroupsResponse> DescribeGroupsAsync(DescribeGroupsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeGroupsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the renewal methods.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Filters instances by resource type, instance, and region, and uses paging to query the auto-renewal status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceAutoRenewalAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceAutoRenewalAttributeResponse
+        /// </returns>
+        public DescribeInstanceAutoRenewalAttributeResponse DescribeInstanceAutoRenewalAttributeWithOptions(DescribeInstanceAutoRenewalAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenewal))
+            {
+                query["AutoRenewal"] = request.AutoRenewal;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdList))
+            {
+                query["InstanceIdList"] = request.InstanceIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypeList))
+            {
+                query["ResourceTypeList"] = request.ResourceTypeList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchRegionId))
+            {
+                query["SearchRegionId"] = request.SearchRegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInstanceAutoRenewalAttribute",
+                Version = "2021-12-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInstanceAutoRenewalAttributeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the renewal methods.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Filters instances by resource type, instance, and region, and uses paging to query the auto-renewal status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceAutoRenewalAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceAutoRenewalAttributeResponse
+        /// </returns>
+        public async Task<DescribeInstanceAutoRenewalAttributeResponse> DescribeInstanceAutoRenewalAttributeWithOptionsAsync(DescribeInstanceAutoRenewalAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenewal))
+            {
+                query["AutoRenewal"] = request.AutoRenewal;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdList))
+            {
+                query["InstanceIdList"] = request.InstanceIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypeList))
+            {
+                query["ResourceTypeList"] = request.ResourceTypeList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchRegionId))
+            {
+                query["SearchRegionId"] = request.SearchRegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInstanceAutoRenewalAttribute",
+                Version = "2021-12-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInstanceAutoRenewalAttributeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the renewal methods.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Filters instances by resource type, instance, and region, and uses paging to query the auto-renewal status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceAutoRenewalAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceAutoRenewalAttributeResponse
+        /// </returns>
+        public DescribeInstanceAutoRenewalAttributeResponse DescribeInstanceAutoRenewalAttribute(DescribeInstanceAutoRenewalAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeInstanceAutoRenewalAttributeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the renewal methods.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Filters instances by resource type, instance, and region, and uses paging to query the auto-renewal status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeInstanceAutoRenewalAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInstanceAutoRenewalAttributeResponse
+        /// </returns>
+        public async Task<DescribeInstanceAutoRenewalAttributeResponse> DescribeInstanceAutoRenewalAttributeAsync(DescribeInstanceAutoRenewalAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeInstanceAutoRenewalAttributeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the prices of Elastic Desktop Service products for order types such as new purchases, renewals, configuration changes, and unsubscriptions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of Elastic Desktop Service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -987,12 +1413,12 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the prices of Elastic Desktop Service products, including prices for new purchases, renewals, specification changes, and unsubscriptions.</para>
+        /// <para>Queries the prices of Elastic Desktop Service products for order types such as new purchases, renewals, configuration changes, and unsubscriptions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing of Elastic Desktop Service and its <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of Elastic Desktop Service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1046,12 +1472,12 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the prices of Elastic Desktop Service products, including prices for new purchases, renewals, specification changes, and unsubscriptions.</para>
+        /// <para>Queries the prices of Elastic Desktop Service products for order types such as new purchases, renewals, configuration changes, and unsubscriptions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing of Elastic Desktop Service and its <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of Elastic Desktop Service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1069,12 +1495,12 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the prices of Elastic Desktop Service products, including prices for new purchases, renewals, specification changes, and unsubscriptions.</para>
+        /// <para>Queries the prices of Elastic Desktop Service products for order types such as new purchases, renewals, configuration changes, and unsubscriptions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing of Elastic Desktop Service and its <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product?#/gws/detail/gws">pricing</a> of Elastic Desktop Service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1092,7 +1518,7 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the deduction details of a core-hour package.</para>
+        /// <para>Queries the deduction details of core-hour packages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1109,13 +1535,57 @@ namespace AlibabaCloud.SDK.Wss20211221
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentType))
+            {
+                query["AgentType"] = request.AgentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentTypes))
+            {
+                query["AgentTypes"] = request.AgentTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumeWyId))
+            {
+                query["ConsumeWyId"] = request.ConsumeWyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumeWyIds))
+            {
+                query["ConsumeWyIds"] = request.ConsumeWyIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeductionRequestId))
+            {
+                query["DeductionRequestId"] = request.DeductionRequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeductionTypes))
+            {
+                query["DeductionTypes"] = request.DeductionTypes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupResourceTypes))
+            {
+                query["GroupResourceTypes"] = request.GroupResourceTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdType))
+            {
+                query["InstanceIdType"] = request.InstanceIdType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
             {
                 query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                query["Model"] = request.Model;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageIds))
             {
@@ -1137,9 +1607,21 @@ namespace AlibabaCloud.SDK.Wss20211221
             {
                 query["ResourceTypes"] = request.ResourceTypes;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
+            {
+                query["RunId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunIdList))
+            {
+                query["RunIdList"] = request.RunIdList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WyId))
+            {
+                query["WyId"] = request.WyId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1162,7 +1644,7 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the deduction details of a core-hour package.</para>
+        /// <para>Queries the deduction details of core-hour packages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1179,13 +1661,57 @@ namespace AlibabaCloud.SDK.Wss20211221
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentType))
+            {
+                query["AgentType"] = request.AgentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentTypes))
+            {
+                query["AgentTypes"] = request.AgentTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumeWyId))
+            {
+                query["ConsumeWyId"] = request.ConsumeWyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumeWyIds))
+            {
+                query["ConsumeWyIds"] = request.ConsumeWyIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeductionRequestId))
+            {
+                query["DeductionRequestId"] = request.DeductionRequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeductionTypes))
+            {
+                query["DeductionTypes"] = request.DeductionTypes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupResourceTypes))
+            {
+                query["GroupResourceTypes"] = request.GroupResourceTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdType))
+            {
+                query["InstanceIdType"] = request.InstanceIdType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
             {
                 query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                query["Model"] = request.Model;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageIds))
             {
@@ -1207,9 +1733,21 @@ namespace AlibabaCloud.SDK.Wss20211221
             {
                 query["ResourceTypes"] = request.ResourceTypes;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
+            {
+                query["RunId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunIdList))
+            {
+                query["RunIdList"] = request.RunIdList;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WyId))
+            {
+                query["WyId"] = request.WyId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1232,7 +1770,7 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the deduction details of a core-hour package.</para>
+        /// <para>Queries the deduction details of core-hour packages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1250,7 +1788,7 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the deduction details of a core-hour package.</para>
+        /// <para>Queries the deduction details of core-hour packages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1273,14 +1811,14 @@ namespace AlibabaCloud.SDK.Wss20211221
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation supports GET and POST methods.</description></item>
-        /// <item><description>The <c>periods</c> parameter is in JSON array format. Each element is a <c>PeriodParam</c> object that contains the <c>periodUnit</c> and <c>baseTime</c> fields.</description></item>
-        /// <item><description>The <c>resourceTypes</c> parameter is in JSON array format and contains multiple resource type strings.</description></item>
-        /// <item><description>The <c>startTime</c> and <c>endTime</c> parameters are in timestamp format and specify the time range for the query.</description></item>
-        /// <item><description>Pagination parameters include <c>nextToken</c>, <c>maxResults</c>, <c>pageNo</c>, and <c>pageSize</c>, which control the number of returned results and pagination.</description></item>
-        /// <item><description>When the <c>resourceTypes</c> parameter contains invalid values or the <c>periods</c> parameter fails JSON parsing, a <c>SalesClientException</c> exception is thrown.</description></item>
+        /// <item><description>This operation supports the GET and POST methods.</description></item>
+        /// <item><description>The periods parameter is in JSON array format. Each element is a PeriodParam object that contains the periodUnit and baseTime fields.</description></item>
+        /// <item><description>The resourceTypes parameter is in JSON array format and contains multiple resource type strings.</description></item>
+        /// <item><description>The startTime and endTime parameters are in timestamp format and specify the time range for the query.</description></item>
+        /// <item><description>The pagination parameters include nextToken, maxResults, pageNo, and pageSize, which are used to control the number of returned results and pagination.</description></item>
+        /// <item><description>If the resourceTypes parameter contains invalid values or the JSON parsing of the periods parameter fails, a SalesClientException is thrown.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1314,6 +1852,18 @@ namespace AlibabaCloud.SDK.Wss20211221
             {
                 query["BizType"] = request.BizType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumeWyId))
+            {
+                query["ConsumeWyId"] = request.ConsumeWyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumeWyIds))
+            {
+                query["ConsumeWyIds"] = request.ConsumeWyIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeductionRequestId))
+            {
+                query["DeductionRequestId"] = request.DeductionRequestId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeductionTypes))
             {
                 query["DeductionTypes"] = request.DeductionTypes;
@@ -1334,6 +1884,10 @@ namespace AlibabaCloud.SDK.Wss20211221
             {
                 query["GroupSeparator"] = request.GroupSeparator;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdType))
             {
                 query["InstanceIdType"] = request.InstanceIdType;
@@ -1345,6 +1899,10 @@ namespace AlibabaCloud.SDK.Wss20211221
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                query["Model"] = request.Model;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
@@ -1369,6 +1927,14 @@ namespace AlibabaCloud.SDK.Wss20211221
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypes))
             {
                 query["ResourceTypes"] = request.ResourceTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
+            {
+                query["RunId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunIdList))
+            {
+                query["RunIdList"] = request.RunIdList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
@@ -1404,14 +1970,14 @@ namespace AlibabaCloud.SDK.Wss20211221
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation supports GET and POST methods.</description></item>
-        /// <item><description>The <c>periods</c> parameter is in JSON array format. Each element is a <c>PeriodParam</c> object that contains the <c>periodUnit</c> and <c>baseTime</c> fields.</description></item>
-        /// <item><description>The <c>resourceTypes</c> parameter is in JSON array format and contains multiple resource type strings.</description></item>
-        /// <item><description>The <c>startTime</c> and <c>endTime</c> parameters are in timestamp format and specify the time range for the query.</description></item>
-        /// <item><description>Pagination parameters include <c>nextToken</c>, <c>maxResults</c>, <c>pageNo</c>, and <c>pageSize</c>, which control the number of returned results and pagination.</description></item>
-        /// <item><description>When the <c>resourceTypes</c> parameter contains invalid values or the <c>periods</c> parameter fails JSON parsing, a <c>SalesClientException</c> exception is thrown.</description></item>
+        /// <item><description>This operation supports the GET and POST methods.</description></item>
+        /// <item><description>The periods parameter is in JSON array format. Each element is a PeriodParam object that contains the periodUnit and baseTime fields.</description></item>
+        /// <item><description>The resourceTypes parameter is in JSON array format and contains multiple resource type strings.</description></item>
+        /// <item><description>The startTime and endTime parameters are in timestamp format and specify the time range for the query.</description></item>
+        /// <item><description>The pagination parameters include nextToken, maxResults, pageNo, and pageSize, which are used to control the number of returned results and pagination.</description></item>
+        /// <item><description>If the resourceTypes parameter contains invalid values or the JSON parsing of the periods parameter fails, a SalesClientException is thrown.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1445,6 +2011,18 @@ namespace AlibabaCloud.SDK.Wss20211221
             {
                 query["BizType"] = request.BizType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumeWyId))
+            {
+                query["ConsumeWyId"] = request.ConsumeWyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumeWyIds))
+            {
+                query["ConsumeWyIds"] = request.ConsumeWyIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeductionRequestId))
+            {
+                query["DeductionRequestId"] = request.DeductionRequestId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeductionTypes))
             {
                 query["DeductionTypes"] = request.DeductionTypes;
@@ -1465,6 +2043,10 @@ namespace AlibabaCloud.SDK.Wss20211221
             {
                 query["GroupSeparator"] = request.GroupSeparator;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdType))
             {
                 query["InstanceIdType"] = request.InstanceIdType;
@@ -1476,6 +2058,10 @@ namespace AlibabaCloud.SDK.Wss20211221
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                query["Model"] = request.Model;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
@@ -1500,6 +2086,14 @@ namespace AlibabaCloud.SDK.Wss20211221
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypes))
             {
                 query["ResourceTypes"] = request.ResourceTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
+            {
+                query["RunId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunIdList))
+            {
+                query["RunIdList"] = request.RunIdList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
@@ -1535,14 +2129,14 @@ namespace AlibabaCloud.SDK.Wss20211221
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation supports GET and POST methods.</description></item>
-        /// <item><description>The <c>periods</c> parameter is in JSON array format. Each element is a <c>PeriodParam</c> object that contains the <c>periodUnit</c> and <c>baseTime</c> fields.</description></item>
-        /// <item><description>The <c>resourceTypes</c> parameter is in JSON array format and contains multiple resource type strings.</description></item>
-        /// <item><description>The <c>startTime</c> and <c>endTime</c> parameters are in timestamp format and specify the time range for the query.</description></item>
-        /// <item><description>Pagination parameters include <c>nextToken</c>, <c>maxResults</c>, <c>pageNo</c>, and <c>pageSize</c>, which control the number of returned results and pagination.</description></item>
-        /// <item><description>When the <c>resourceTypes</c> parameter contains invalid values or the <c>periods</c> parameter fails JSON parsing, a <c>SalesClientException</c> exception is thrown.</description></item>
+        /// <item><description>This operation supports the GET and POST methods.</description></item>
+        /// <item><description>The periods parameter is in JSON array format. Each element is a PeriodParam object that contains the periodUnit and baseTime fields.</description></item>
+        /// <item><description>The resourceTypes parameter is in JSON array format and contains multiple resource type strings.</description></item>
+        /// <item><description>The startTime and endTime parameters are in timestamp format and specify the time range for the query.</description></item>
+        /// <item><description>The pagination parameters include nextToken, maxResults, pageNo, and pageSize, which are used to control the number of returned results and pagination.</description></item>
+        /// <item><description>If the resourceTypes parameter contains invalid values or the JSON parsing of the periods parameter fails, a SalesClientException is thrown.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1566,14 +2160,14 @@ namespace AlibabaCloud.SDK.Wss20211221
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation supports GET and POST methods.</description></item>
-        /// <item><description>The <c>periods</c> parameter is in JSON array format. Each element is a <c>PeriodParam</c> object that contains the <c>periodUnit</c> and <c>baseTime</c> fields.</description></item>
-        /// <item><description>The <c>resourceTypes</c> parameter is in JSON array format and contains multiple resource type strings.</description></item>
-        /// <item><description>The <c>startTime</c> and <c>endTime</c> parameters are in timestamp format and specify the time range for the query.</description></item>
-        /// <item><description>Pagination parameters include <c>nextToken</c>, <c>maxResults</c>, <c>pageNo</c>, and <c>pageSize</c>, which control the number of returned results and pagination.</description></item>
-        /// <item><description>When the <c>resourceTypes</c> parameter contains invalid values or the <c>periods</c> parameter fails JSON parsing, a <c>SalesClientException</c> exception is thrown.</description></item>
+        /// <item><description>This operation supports the GET and POST methods.</description></item>
+        /// <item><description>The periods parameter is in JSON array format. Each element is a PeriodParam object that contains the periodUnit and baseTime fields.</description></item>
+        /// <item><description>The resourceTypes parameter is in JSON array format and contains multiple resource type strings.</description></item>
+        /// <item><description>The startTime and endTime parameters are in timestamp format and specify the time range for the query.</description></item>
+        /// <item><description>The pagination parameters include nextToken, maxResults, pageNo, and pageSize, which are used to control the number of returned results and pagination.</description></item>
+        /// <item><description>If the resourceTypes parameter contains invalid values or the JSON parsing of the periods parameter fails, a SalesClientException is thrown.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1620,6 +2214,10 @@ namespace AlibabaCloud.SDK.Wss20211221
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
             {
                 query["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Properties))
+            {
+                query["Properties"] = request.Properties;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
             {
@@ -1678,6 +2276,10 @@ namespace AlibabaCloud.SDK.Wss20211221
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
             {
                 query["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Properties))
+            {
+                query["Properties"] = request.Properties;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
             {
@@ -1744,18 +2346,18 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the credit quota for specified Agents.</para>
+        /// <para>Sets the credit usage quota for a specified Agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This operation sets the credit quota for one or more Agents of a specific type.</para>
-        /// <h3>Usage notes</h3>
+        /// <h2>Operation description</h2>
+        /// <para>You can use this API operation to set the credit usage quota for a specific type of Agent. Batch setting of quotas for multiple Agents is supported.</para>
+        /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>The <c>AgentType</c> parameter specifies the type of Agent to which the quota applies, such as <c>JVSClaw</c> or <c>OpenClaw</c>.</description></item>
-        /// <item><description>The <c>AgentIds</c> parameter is an array of up to 100 Agent IDs.</description></item>
-        /// <item><description>The <c>CreditQuota</c> parameter specifies the credit quota for each Agent.</description></item>
+        /// <item><description>The <c>AgentType</c> parameter specifies the type of Agent for which you want to set the quota, such as <c>JVSClaw</c> or <c>OpenClaw</c>.</description></item>
+        /// <item><description>The <c>AgentIds</c> parameter is an array that can contain up to 100 Agent IDs.</description></item>
+        /// <item><description>The <c>CreditQuota</c> parameter specifies the credit usage quota for each Agent.</description></item>
         /// </list>
         /// <h3>Examples</h3>
         /// </description>
@@ -1790,6 +2392,10 @@ namespace AlibabaCloud.SDK.Wss20211221
             {
                 query["CreditQuota"] = request.CreditQuota;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneType))
+            {
+                query["SceneType"] = request.SceneType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1811,18 +2417,18 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the credit quota for specified Agents.</para>
+        /// <para>Sets the credit usage quota for a specified Agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This operation sets the credit quota for one or more Agents of a specific type.</para>
-        /// <h3>Usage notes</h3>
+        /// <h2>Operation description</h2>
+        /// <para>You can use this API operation to set the credit usage quota for a specific type of Agent. Batch setting of quotas for multiple Agents is supported.</para>
+        /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>The <c>AgentType</c> parameter specifies the type of Agent to which the quota applies, such as <c>JVSClaw</c> or <c>OpenClaw</c>.</description></item>
-        /// <item><description>The <c>AgentIds</c> parameter is an array of up to 100 Agent IDs.</description></item>
-        /// <item><description>The <c>CreditQuota</c> parameter specifies the credit quota for each Agent.</description></item>
+        /// <item><description>The <c>AgentType</c> parameter specifies the type of Agent for which you want to set the quota, such as <c>JVSClaw</c> or <c>OpenClaw</c>.</description></item>
+        /// <item><description>The <c>AgentIds</c> parameter is an array that can contain up to 100 Agent IDs.</description></item>
+        /// <item><description>The <c>CreditQuota</c> parameter specifies the credit usage quota for each Agent.</description></item>
         /// </list>
         /// <h3>Examples</h3>
         /// </description>
@@ -1857,6 +2463,10 @@ namespace AlibabaCloud.SDK.Wss20211221
             {
                 query["CreditQuota"] = request.CreditQuota;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneType))
+            {
+                query["SceneType"] = request.SceneType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1878,18 +2488,18 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the credit quota for specified Agents.</para>
+        /// <para>Sets the credit usage quota for a specified Agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This operation sets the credit quota for one or more Agents of a specific type.</para>
-        /// <h3>Usage notes</h3>
+        /// <h2>Operation description</h2>
+        /// <para>You can use this API operation to set the credit usage quota for a specific type of Agent. Batch setting of quotas for multiple Agents is supported.</para>
+        /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>The <c>AgentType</c> parameter specifies the type of Agent to which the quota applies, such as <c>JVSClaw</c> or <c>OpenClaw</c>.</description></item>
-        /// <item><description>The <c>AgentIds</c> parameter is an array of up to 100 Agent IDs.</description></item>
-        /// <item><description>The <c>CreditQuota</c> parameter specifies the credit quota for each Agent.</description></item>
+        /// <item><description>The <c>AgentType</c> parameter specifies the type of Agent for which you want to set the quota, such as <c>JVSClaw</c> or <c>OpenClaw</c>.</description></item>
+        /// <item><description>The <c>AgentIds</c> parameter is an array that can contain up to 100 Agent IDs.</description></item>
+        /// <item><description>The <c>CreditQuota</c> parameter specifies the credit usage quota for each Agent.</description></item>
         /// </list>
         /// <h3>Examples</h3>
         /// </description>
@@ -1909,18 +2519,18 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the credit quota for specified Agents.</para>
+        /// <para>Sets the credit usage quota for a specified Agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This operation sets the credit quota for one or more Agents of a specific type.</para>
-        /// <h3>Usage notes</h3>
+        /// <h2>Operation description</h2>
+        /// <para>You can use this API operation to set the credit usage quota for a specific type of Agent. Batch setting of quotas for multiple Agents is supported.</para>
+        /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>The <c>AgentType</c> parameter specifies the type of Agent to which the quota applies, such as <c>JVSClaw</c> or <c>OpenClaw</c>.</description></item>
-        /// <item><description>The <c>AgentIds</c> parameter is an array of up to 100 Agent IDs.</description></item>
-        /// <item><description>The <c>CreditQuota</c> parameter specifies the credit quota for each Agent.</description></item>
+        /// <item><description>The <c>AgentType</c> parameter specifies the type of Agent for which you want to set the quota, such as <c>JVSClaw</c> or <c>OpenClaw</c>.</description></item>
+        /// <item><description>The <c>AgentIds</c> parameter is an array that can contain up to 100 Agent IDs.</description></item>
+        /// <item><description>The <c>CreditQuota</c> parameter specifies the credit usage quota for each Agent.</description></item>
         /// </list>
         /// <h3>Examples</h3>
         /// </description>
