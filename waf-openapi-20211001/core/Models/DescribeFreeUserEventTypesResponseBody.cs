@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeFreeUserEventTypesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of security event types detected by the basic detection feature.</para>
+        /// <para>The list of security event types for basic detection.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

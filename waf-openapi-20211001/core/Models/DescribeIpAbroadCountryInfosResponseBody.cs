@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeIpAbroadCountryInfosResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of country information outside China.</para>
+        /// <para>The list of overseas country information.</para>
         /// </summary>
         [NameInMap("AbroadInfos")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Continent { get; set; }
 
             /// <summary>
-            /// <para>The ID of the country.</para>
+            /// <para>The country ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>US</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Country { get; set; }
 
             /// <summary>
-            /// <para>The name of the country.</para>
+            /// <para>The country name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>United States</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string CountryName { get; set; }
 
             /// <summary>
-            /// <para>The list of region information outside China.</para>
+            /// <para>The list of overseas region information.</para>
             /// </summary>
             [NameInMap("Regions")]
             [Validation(Required=false)]
             public List<DescribeIpAbroadCountryInfosResponseBodyAbroadInfosRegions> Regions { get; set; }
             public class DescribeIpAbroadCountryInfosResponseBodyAbroadInfosRegions : TeaModel {
                 /// <summary>
-                /// <para>The ID of the region.</para>
+                /// <para>The region ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>US-CA</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public string AbroadRegionId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the region.</para>
+                /// <para>The region name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>California</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Valid values: 1 to 500. Default value: 20.</para>
+        /// <para>The number of entries to return on each page for a paging query. Valid values: 1 to 500. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page.</para>
+        /// <para>The pagination token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0*****</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>66A98669-CC6E-4F3E-80A6-3014697B11AE</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

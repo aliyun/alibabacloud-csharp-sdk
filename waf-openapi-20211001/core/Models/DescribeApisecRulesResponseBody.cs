@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The details of the rule. The value is a string that is converted from a JSON object.</para>
+            /// <para>The rule details, formatted as a JSON string constructed from a series of parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -46,9 +46,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The status of the rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: enabled</para>
+            /// <item><description><para><b>1</b>: Enabled.</para>
             /// </description></item>
-            /// <item><description><para><b>0</b>: disabled</para>
+            /// <item><description><para><b>0</b>: Disabled.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -60,26 +60,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the rule. Valid values:</para>
+            /// <para>The rule type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>risk</b>: threat detection</para>
-            /// </description></item>
-            /// <item><description><para><b>event</b>: security event</para>
-            /// </description></item>
-            /// <item><description><para><b>sensitive_word</b>: sensitive data</para>
-            /// </description></item>
-            /// <item><description><para><b>auth_flag</b>: authentication credential</para>
-            /// </description></item>
-            /// <item><description><para><b>api_tag</b>: business purpose</para>
-            /// </description></item>
-            /// <item><description><para><b>desensitization</b>: data masking</para>
-            /// </description></item>
-            /// <item><description><para><b>whitelist</b>: whitelist</para>
-            /// </description></item>
-            /// <item><description><para><b>recognition</b>: API.</para>
-            /// </description></item>
-            /// <item><description><para><b>offline_api</b>: lifecycle management</para>
-            /// </description></item>
+            /// <item><description><b>risk</b>: Risk detection.</description></item>
+            /// <item><description><b>event</b>: Security events.</description></item>
+            /// <item><description><b>sensitive_word</b>: Sensitive data.</description></item>
+            /// <item><description><b>auth_flag</b>: Authentication credentials.</description></item>
+            /// <item><description><b>api_tag</b>: Business purpose.</description></item>
+            /// <item><description><b>desensitization</b>: Data masking.</description></item>
+            /// <item><description><b>whitelist</b>: Whitelist.</description></item>
+            /// <item><description><b>recognition</b>: API identification.</description></item>
+            /// <item><description><b>offline_api</b>: Lifecycle management.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -90,7 +81,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The time when the rule was updated. This value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The update time of the rule. The time is a UNIX timestamp in UTC. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1721095301</para>
@@ -102,7 +93,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D7861F61-5B61-46CE-A47C-6B19160D5EB0</para>
@@ -112,7 +103,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of returned entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>

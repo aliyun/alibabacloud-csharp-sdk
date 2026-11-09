@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeRuleHitsTopTuleTypeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>45E377CE-0B04-578E-B653-EEA63CFE****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The top 10 protection rule types that were hit.</para>
+        /// <para>The top 10 protection types with the most rule hits.</para>
         /// </summary>
         [NameInMap("RuleHitsTopTuleType")]
         [Validation(Required=false)]
@@ -37,19 +37,19 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Count { get; set; }
 
             /// <summary>
-            /// <para>The type of rule that was hit. This parameter is not returned by default, which indicates that data for all rule types is returned.</para>
+            /// <para>The type of the rule hit by the protected object. By default, this parameter is not returned, which indicates that all rules are displayed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>waf</b>: basic protection rules.</para>
+            /// <item><description><para><b>waf</b>: basic protection rule.</para>
             /// </description></item>
-            /// <item><description><para><b>blacklist</b>: IP address blacklist.</para>
+            /// <item><description><para><b>blacklist</b>: IP blacklist.</para>
             /// </description></item>
-            /// <item><description><para><b>custom</b>: custom rules.</para>
+            /// <item><description><para><b>custom</b>: custom rule.</para>
             /// </description></item>
-            /// <item><description><para><b>antiscan</b>: scan protection rules.</para>
+            /// <item><description><para><b>antiscan</b>: scan protection rule.</para>
             /// </description></item>
-            /// <item><description><para><b>cc_system</b>: HTTP flood protection rules.</para>
+            /// <item><description><para><b>cc_system</b>: HTTP flood protection rule.</para>
             /// </description></item>
-            /// <item><description><para><b>region_block</b>: location blacklist.</para>
+            /// <item><description><para><b>region_block</b>: area blocking.</para>
             /// </description></item>
             /// <item><description><para><b>scene</b>: bot management.</para>
             /// </description></item>

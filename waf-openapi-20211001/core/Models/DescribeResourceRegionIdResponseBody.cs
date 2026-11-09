@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeResourceRegionIdResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F5905D3F-F674-5177-9E48-466DD3B8****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The region IDs of cloud service resources that can be added to WAF by using the SDK.</para>
+        /// <para>The list of region IDs of SDK-integrated resources.</para>
         /// </summary>
         [NameInMap("ResourceRegionIds")]
         [Validation(Required=false)]

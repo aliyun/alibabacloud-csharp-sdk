@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeIpAbroadCountryInfosRequest : TeaModel {
         /// <summary>
-        /// <para>The region outside China to query. Supports fuzzy query by region ID or region name in Chinese or English.</para>
+        /// <para>The overseas region to query. You can perform a fuzzy match by using the region ID or the region name in Chinese or English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>US-CA</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string AbroadRegion { get; set; }
 
         /// <summary>
-        /// <para>The country outside China to query. Supports fuzzy query by country ID or country name in Chinese or English.</para>
+        /// <para>The overseas country to query. You can perform a fuzzy match by using the country ID or the country name in Chinese or English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>US</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Country { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the current WAF instance ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language used for country and region names in the response. Valid values:</para>
+        /// <para>The language used for the country and region names in the response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>en</b> (<b>default</b>): English.</para>
         /// </description></item>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Valid values: 1 to 500. Default value: 20.</para>
+        /// <para>The number of entries to return on each page for a paging query. Valid values: 1 to 500. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page. Set this parameter to the value of the <b>NextToken</b> parameter returned from the previous API call. You do not need to specify this parameter for the first page query.</para>
+        /// <para>The paging token that is used to query the next page. Set the value to the <b>NextToken</b> value returned from the previous API call. You do not need to specify this parameter for the first call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0*****</para>
@@ -80,11 +80,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region in which the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: The Chinese mainland.</para>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: Outside the Chinese mainland.</para>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
         /// </description></item>
         /// </list>
         /// 

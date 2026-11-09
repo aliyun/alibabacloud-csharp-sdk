@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeUserAbnormalTypeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the hybrid cloud cluster.</para>
+        /// <para>The ID of the hybrid cloud cluster. </para>
         /// <remarks>
-        /// <para>This parameter applies only to hybrid cloud scenarios. Call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the IDs of hybrid cloud clusters.</para>
+        /// <para>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain the hybrid cloud cluster information.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time as a UNIX timestamp in seconds. The time is in UTC.</para>
+        /// <para>The end time of the query, in UNIX timestamp format (UTC). Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1726113600</para>
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>Instance ID of the WAF instance. </para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time as a UNIX timestamp in seconds. The time is in UTC.</para>
+        /// <para>The start time of the query, in UNIX timestamp format (UTC). Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1723435200</para>
@@ -83,9 +83,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The list of risk states for which to collect statistics.</para>
+        /// <para>The list of statuses for risk statistics.</para>
         /// <remarks>
-        /// <para>By default, statistics are collected for risks in the <b>toBeConfirmed</b>, <b>toBeFixed</b>, <b>toBeVerified</b>, and <b>notFixed</b> states.</para>
+        /// <para>By default, risk data in the <b>toBeConfirmed</b>, <b>toBeFixed</b>, <b>toBeVerified</b>, and <b>notFixed</b> states is collected.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("UserStatusList")]

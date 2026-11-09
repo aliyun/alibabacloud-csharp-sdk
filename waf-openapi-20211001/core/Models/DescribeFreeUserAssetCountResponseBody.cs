@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeFreeUserAssetCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The statistics information about assets detected by the basic API security feature.</para>
+        /// <para>The asset statistics information for basic detection.</para>
         /// </summary>
         [NameInMap("Asset")]
         [Validation(Required=false)]

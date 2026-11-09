@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeFlowChartResponseBody : TeaModel {
         /// <summary>
-        /// <para>The traffic statistics.</para>
+        /// <para>The traffic statistics information.</para>
         /// </summary>
         [NameInMap("FlowChart")]
         [Validation(Required=false)]
         public List<DescribeFlowChartResponseBodyFlowChart> FlowChart { get; set; }
         public class DescribeFlowChartResponseBodyFlowChart : TeaModel {
             /// <summary>
-            /// <para>The number of requests that are blocked by custom access control list (ACL) rules.</para>
+            /// <para>The number of requests blocked by custom ACL rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AclCustomBlockSum { get; set; }
 
             /// <summary>
-            /// <para>The number of requests that are monitored by custom ACL rules.</para>
+            /// <para>The number of monitored hits on custom ACL rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AclCustomReportsSum { get; set; }
 
             /// <summary>
-            /// <para>The number of requests that are blocked by scan protection rules.</para>
+            /// <para>The number of requests blocked by scan protection rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AntiScanBlockSum { get; set; }
 
             /// <summary>
-            /// <para>The number of requests that are blocked by bot management rules.</para>
+            /// <para>The number of requests blocked by bot management rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AntibotBlockSum { get; set; }
 
             /// <summary>
-            /// <para>The number of requests that are monitored by bot management rules.</para>
+            /// <para>The number of monitored hits on bot management rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string AntibotReportSum { get; set; }
 
             /// <summary>
-            /// <para>The number of requests that are monitored by scan protection rules.</para>
+            /// <para>The number of monitored hits on scan protection rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AntiscanReportsSum { get; set; }
 
             /// <summary>
-            /// <para>The number of requests that are blocked by the IP address blacklist.</para>
+            /// <para>The number of requests blocked by the IP blacklist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string BlacklistBlockSum { get; set; }
 
             /// <summary>
-            /// <para>The number of requests that are monitored by the IP address blacklist.</para>
+            /// <para>The number of monitored hits on the IP blacklist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? BlacklistReportsSum { get; set; }
 
             /// <summary>
-            /// <para>The number of requests that are blocked by custom HTTP flood protection rules.</para>
+            /// <para>The number of requests blocked by custom HTTP flood mitigation rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? CcCustomBlockSum { get; set; }
 
             /// <summary>
-            /// <para>The number of requests that are monitored by custom HTTP flood protection rules.</para>
+            /// <para>The number of monitored hits on custom HTTP flood mitigation rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? CcCustomReportsSum { get; set; }
 
             /// <summary>
-            /// <para>The number of requests that are blocked by system HTTP flood protection rules.</para>
+            /// <para>The number of requests blocked by built-in HTTP flood mitigation rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? CcSystemBlocksSum { get; set; }
 
             /// <summary>
-            /// <para>The number of requests that are monitored by system HTTP flood protection rules.</para>
+            /// <para>The number of monitored hits on built-in HTTP flood mitigation rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Count { get; set; }
 
             /// <summary>
-            /// <para>The total volume of inbound traffic. Unit: bytes.</para>
+            /// <para>The total inbound traffic to WAF.</para>
             /// 
             /// <b>Example:</b>
             /// <para>121645464</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? InBytes { get; set; }
 
             /// <summary>
-            /// <para>The time sequence number, sorted in chronological order.</para>
+            /// <para>The time index, sorted in chronological order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? MaxPv { get; set; }
 
             /// <summary>
-            /// <para>The total volume of outbound traffic. Unit: bytes.</para>
+            /// <para>The total outbound traffic from WAF.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1200540464</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? OutBytes { get; set; }
 
             /// <summary>
-            /// <para>The number of requests that are blocked by peak traffic throttling rules.</para>
+            /// <para>The number of requests blocked by peak traffic throttling rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? RatelimitBlockSum { get; set; }
 
             /// <summary>
-            /// <para>The number of requests that are monitored by peak traffic throttling rules.</para>
+            /// <para>The number of monitored hits on peak traffic throttling rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? RatelimitReportSum { get; set; }
 
             /// <summary>
-            /// <para>The number of requests that are blocked by Location Blacklist rules.</para>
+            /// <para>The number of requests blocked by area blocking rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? RegionBlockBlocksSum { get; set; }
 
             /// <summary>
-            /// <para>The number of requests that are monitored by Location Blacklist rules.</para>
+            /// <para>The number of monitored hits on area blocking rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? RegionBlockReportsSum { get; set; }
 
             /// <summary>
-            /// <para>The total number of requests from bots.</para>
+            /// <para>The total number of bot requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1110</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? RobotCount { get; set; }
 
             /// <summary>
-            /// <para>The number of requests that are blocked by basic protection rules.</para>
+            /// <para>The number of requests blocked by basic protection rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? WafBlockSum { get; set; }
 
             /// <summary>
-            /// <para>The number of requests that are monitored by basic protection rules.</para>
+            /// <para>The number of monitored hits on basic protection rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

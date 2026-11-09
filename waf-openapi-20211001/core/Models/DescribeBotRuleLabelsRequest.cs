@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of bot rule tag to query.</para>
+        /// <para>The type of the bot rule label to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>human_machine_challenge</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string LabelType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Valid values: 1 to 200. Default value: 20.</para>
+        /// <para>The number of entries to return per paging in a paged query. Valid values: 1 to 200. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. If a next page exists, this field returns a value.</para>
+        /// <para>The pagination token for the next page. This parameter is returned only if a next page exists.</para>
         /// <remarks>
-        /// <para>If this parameter returns a value, a next page exists. Use the returned <b>NextToken</b> as a request parameter to retrieve the next page of data. Repeat until no value is returned, which indicates that all data has been retrieved.</para>
+        /// <para>If this parameter is returned, it indicates that there is a next page. You can use the returned <b>NextToken</b> as a request parameter to obtain the data of the next page until no value is returned, which indicates that all data is obtained.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The bot management protection scenario type.</para>
+        /// <para>The type of the bot management protection scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app</para>

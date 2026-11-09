@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "waf-openapi";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -210,7 +213,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the resource group to which a protected object belongs.</para>
+        /// <para>Modifies the resource group of a protected object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -268,7 +271,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the resource group to which a protected object belongs.</para>
+        /// <para>Modifies the resource group of a protected object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -326,7 +329,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the resource group to which a protected object belongs.</para>
+        /// <para>Modifies the resource group of a protected object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -344,7 +347,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the resource group to which a protected object belongs.</para>
+        /// <para>Modifies the resource group of a protected object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1386,7 +1389,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an extension certificate for a cloud native mode resource.</para>
+        /// <para>Adds an extension certificate for cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1444,7 +1447,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an extension certificate for a cloud native mode resource.</para>
+        /// <para>Adds an extension certificate for cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1502,7 +1505,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an extension certificate for a cloud native mode resource.</para>
+        /// <para>Adds an extension certificate for cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1520,7 +1523,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an extension certificate for a cloud native mode resource.</para>
+        /// <para>Adds an extension certificate for cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4838,7 +4841,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an extension certificate for a cloud service connected in cloud native mode.</para>
+        /// <para>Deletes the extended certificate for a resource onboarded in cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4896,7 +4899,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an extension certificate for a cloud service connected in cloud native mode.</para>
+        /// <para>Deletes the extended certificate for a resource onboarded in cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4954,7 +4957,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an extension certificate for a cloud service connected in cloud native mode.</para>
+        /// <para>Deletes the extended certificate for a resource onboarded in cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4972,7 +4975,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an extension certificate for a cloud service connected in cloud native mode.</para>
+        /// <para>Deletes the extended certificate for a resource onboarded in cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6742,7 +6745,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries abnormal cloud resources added in cloud native mode.</para>
+        /// <para>Queries abnormal cloud native mode resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6792,7 +6795,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries abnormal cloud resources added in cloud native mode.</para>
+        /// <para>Queries abnormal cloud native mode resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6842,7 +6845,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries abnormal cloud resources added in cloud native mode.</para>
+        /// <para>Queries abnormal cloud native mode resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6860,7 +6863,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries abnormal cloud resources added in cloud native mode.</para>
+        /// <para>Queries abnormal cloud native mode resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10014,7 +10017,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rules of an API security policy.</para>
+        /// <para>Queries the configuration rules for API security policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10096,7 +10099,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rules of an API security policy.</para>
+        /// <para>Queries the configuration rules for API security policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10178,7 +10181,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rules of an API security policy.</para>
+        /// <para>Queries the configuration rules for API security policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10196,7 +10199,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rules of an API security policy.</para>
+        /// <para>Queries the configuration rules for API security policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11718,7 +11721,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag information of bot management rules.</para>
+        /// <para>Queries the bot management rule label information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11784,7 +11787,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag information of bot management rules.</para>
+        /// <para>Queries the bot management rule label information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11850,7 +11853,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag information of bot management rules.</para>
+        /// <para>Queries the bot management rule label information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11868,7 +11871,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tag information of bot management rules.</para>
+        /// <para>Queries the bot management rule label information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12342,7 +12345,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the pricing results of WAF pricing modules.</para>
+        /// <para>Queries the billing results of WAF billing modules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12404,7 +12407,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the pricing results of WAF pricing modules.</para>
+        /// <para>Queries the billing results of WAF billing modules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12466,7 +12469,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the pricing results of WAF pricing modules.</para>
+        /// <para>Queries the billing results of WAF billing modules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12484,7 +12487,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the pricing results of WAF pricing modules.</para>
+        /// <para>Queries the billing results of WAF billing modules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17586,7 +17589,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the traffic statistics.</para>
+        /// <para>Queries traffic statistics information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17652,7 +17655,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the traffic statistics.</para>
+        /// <para>Queries traffic statistics information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17718,7 +17721,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the traffic statistics.</para>
+        /// <para>Queries traffic statistics information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17736,7 +17739,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the traffic statistics.</para>
+        /// <para>Queries traffic statistics information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18066,7 +18069,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics information about assets detected by the basic API security feature.</para>
+        /// <para>Queries the asset statistics information for basic API security detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18116,7 +18119,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics information about assets detected by the basic API security feature.</para>
+        /// <para>Queries the asset statistics information for basic API security detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18166,7 +18169,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics information about assets detected by the basic API security feature.</para>
+        /// <para>Queries the asset statistics information for basic API security detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18184,7 +18187,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics information about assets detected by the basic API security feature.</para>
+        /// <para>Queries the asset statistics information for basic API security detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18338,7 +18341,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the types of security events for basic API security detection.</para>
+        /// <para>Queries the security event types for basic API security detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18388,7 +18391,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the types of security events for basic API security detection.</para>
+        /// <para>Queries the security event types for basic API security detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18438,7 +18441,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the types of security events for basic API security detection.</para>
+        /// <para>Queries the security event types for basic API security detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18456,7 +18459,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the types of security events for basic API security detection.</para>
+        /// <para>Queries the security event types for basic API security detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21442,7 +21445,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves supported countries and regions outside China for IP-based region blacklist.</para>
+        /// <para>Queries the countries and areas outside China supported by the Location Blacklist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21512,7 +21515,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves supported countries and regions outside China for IP-based region blacklist.</para>
+        /// <para>Queries the countries and areas outside China supported by the Location Blacklist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21582,7 +21585,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves supported countries and regions outside China for IP-based region blacklist.</para>
+        /// <para>Queries the countries and areas outside China supported by the Location Blacklist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21600,7 +21603,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves supported countries and regions outside China for IP-based region blacklist.</para>
+        /// <para>Queries the countries and areas outside China supported by the Location Blacklist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24734,7 +24737,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the region IDs of cloud service resources that can be added to Web Application Firewall (WAF) by using the SDK.</para>
+        /// <para>Queries the region IDs of SDK-integrated resources, primarily for ALB and MSE.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24784,7 +24787,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the region IDs of cloud service resources that can be added to Web Application Firewall (WAF) by using the SDK.</para>
+        /// <para>Queries the region IDs of SDK-integrated resources, primarily for ALB and MSE.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24834,7 +24837,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the region IDs of cloud service resources that can be added to Web Application Firewall (WAF) by using the SDK.</para>
+        /// <para>Queries the region IDs of SDK-integrated resources, primarily for ALB and MSE.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24852,7 +24855,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the region IDs of cloud service resources that can be added to Web Application Firewall (WAF) by using the SDK.</para>
+        /// <para>Queries the region IDs of SDK-integrated resources, primarily for ALB and MSE.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25190,7 +25193,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the authorization status of the service-linked role for Web Application Firewall (WAF).</para>
+        /// <para>Queries the authorization status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25236,7 +25239,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the authorization status of the service-linked role for Web Application Firewall (WAF).</para>
+        /// <para>Queries the authorization status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25282,7 +25285,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the authorization status of the service-linked role for Web Application Firewall (WAF).</para>
+        /// <para>Queries the authorization status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25300,7 +25303,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the authorization status of the service-linked role for Web Application Firewall (WAF).</para>
+        /// <para>Queries the authorization status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25990,7 +25993,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 most frequently triggered protection rule types.</para>
+        /// <para>Queries the top 10 protection types with the most rule hits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26052,7 +26055,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 most frequently triggered protection rule types.</para>
+        /// <para>Queries the top 10 protection types with the most rule hits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26114,7 +26117,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 most frequently triggered protection rule types.</para>
+        /// <para>Queries the top 10 protection types with the most rule hits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26132,7 +26135,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 most frequently triggered protection rule types.</para>
+        /// <para>Queries the top 10 protection types with the most rule hits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29954,7 +29957,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user risk types and statistics related to API security in Web Application Firewall (WAF).</para>
+        /// <para>Queries API security user risk types and statistics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30020,7 +30023,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user risk types and statistics related to API security in Web Application Firewall (WAF).</para>
+        /// <para>Queries API security user risk types and statistics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30086,7 +30089,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user risk types and statistics related to API security in Web Application Firewall (WAF).</para>
+        /// <para>Queries API security user risk types and statistics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30104,7 +30107,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user risk types and statistics related to API security in Web Application Firewall (WAF).</para>
+        /// <para>Queries API security user risk types and statistics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34022,7 +34025,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the certificate for a cloud native mode resource.</para>
+        /// <para>Modifies the certificates for cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34088,7 +34091,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the certificate for a cloud native mode resource.</para>
+        /// <para>Modifies the certificates for cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34154,7 +34157,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the certificate for a cloud native mode resource.</para>
+        /// <para>Modifies the certificates for cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34172,7 +34175,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the certificate for a cloud native mode resource.</para>
+        /// <para>Modifies the certificates for cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34190,7 +34193,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the default certificate for a cloud native mode resource.</para>
+        /// <para>Modifies the default certificate for cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34248,7 +34251,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the default certificate for a cloud native mode resource.</para>
+        /// <para>Modifies the default certificate for cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34306,7 +34309,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the default certificate for a cloud native mode resource.</para>
+        /// <para>Modifies the default certificate for cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34324,7 +34327,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the default certificate for a cloud native mode resource.</para>
+        /// <para>Modifies the default certificate for cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39778,7 +39781,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Re-connects a cloud service to WAF. This operation is used only when the cloud native mode connection status is protection exception.</para>
+        /// <para>Re-onboards a cloud service to WAF. This operation is used only when the protection status of the cloud service in cloud native mode is abnormal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39844,7 +39847,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Re-connects a cloud service to WAF. This operation is used only when the cloud native mode connection status is protection exception.</para>
+        /// <para>Re-onboards a cloud service to WAF. This operation is used only when the protection status of the cloud service in cloud native mode is abnormal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39910,7 +39913,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Re-connects a cloud service to WAF. This operation is used only when the cloud native mode connection status is protection exception.</para>
+        /// <para>Re-onboards a cloud service to WAF. This operation is used only when the protection status of the cloud service in cloud native mode is abnormal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39928,7 +39931,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Re-connects a cloud service to WAF. This operation is used only when the cloud native mode connection status is protection exception.</para>
+        /// <para>Re-onboards a cloud service to WAF. This operation is used only when the protection status of the cloud service in cloud native mode is abnormal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40382,7 +40385,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from resources and then deletes the tags.</para>
+        /// <para>Removes and deletes tags from one or more specified resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40440,7 +40443,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from resources and then deletes the tags.</para>
+        /// <para>Removes and deletes tags from one or more specified resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40498,7 +40501,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from resources and then deletes the tags.</para>
+        /// <para>Removes and deletes tags from one or more specified resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40516,7 +40519,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from resources and then deletes the tags.</para>
+        /// <para>Removes and deletes tags from one or more specified resources.</para>
         /// </summary>
         /// 
         /// <param name="request">

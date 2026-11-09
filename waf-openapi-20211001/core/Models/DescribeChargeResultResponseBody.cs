@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<DescribeChargeResultResponseBodyModuleDetails> ModuleDetails { get; set; }
         public class DescribeChargeResultResponseBodyModuleDetails : TeaModel {
             /// <summary>
-            /// <para>The number of Credits for the pricing module.</para>
+            /// <para>The number of credits for the billing module.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public double? Credit { get; set; }
 
             /// <summary>
-            /// <para>The pricing module identifier.</para>
+            /// <para>The billing module code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>domainCount</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ModuleCode { get; set; }
 
             /// <summary>
-            /// <para>The number of SeCUs for the pricing module.</para>
+            /// <para>The number of SeCUs for the billing module.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1080</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of calculated Credits.</para>
+        /// <para>The total number of calculated credits.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

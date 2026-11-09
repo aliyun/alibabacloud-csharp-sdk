@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,12 +24,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the returned rules. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,25 +39,18 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// <para>The level of the rule.</para>
-        /// <para>For threat detection (risk) and security events (event), valid values are:</para>
+        /// <para>For risk detection (risk) and security events (event), valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>high</b>: important</para>
-        /// </description></item>
-        /// <item><description><para><b>medium</b>: medium</para>
-        /// </description></item>
-        /// <item><description><para><b>low</b>: low</para>
-        /// </description></item>
+        /// <item><description><b>high</b>: High risk.</description></item>
+        /// <item><description><b>medium</b>: Medium risk.</description></item>
+        /// <item><description><b>low</b>: Low risk.</description></item>
         /// </list>
-        /// <para>For sensitive data (sensitive_word), valid values are:</para>
+        /// <para>For sensitive data (sensitive_word), valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>S1</b>: S1</para>
-        /// </description></item>
-        /// <item><description><para><b>S2</b>: S2</para>
-        /// </description></item>
-        /// <item><description><para><b>S3</b>: S3</para>
-        /// </description></item>
-        /// <item><description><para><b>S4</b>: S4</para>
-        /// </description></item>
+        /// <item><description><b>S1</b>: S1 level.</description></item>
+        /// <item><description><b>S2</b>: S2 level.</description></item>
+        /// <item><description><b>S3</b>: S3 level.</description></item>
+        /// <item><description><b>S4</b>: S4 level.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,10 +73,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The source of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>custom</b>: custom</para>
-        /// </description></item>
-        /// <item><description><para><b>default</b>: built-in</para>
-        /// </description></item>
+        /// <item><description><b>custom</b>: Custom.</description></item>
+        /// <item><description><b>default</b>: Built-in.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,7 +85,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Origin { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number to return in a paged query. Default value: <b>1</b>, which indicates the first page of paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -106,7 +95,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b>.</para>
+        /// <para>The number of entries to return on each page in a paged query. Default value: <b>10</b>, which indicates 10 entries per paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -116,11 +105,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region of the WAF instance. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland</para>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland</para>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -132,7 +121,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -144,9 +133,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The enabling status of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: enabled</para>
+        /// <item><description><para><b>1</b>: Enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>0</b>: disabled</para>
+        /// <item><description><para><b>0</b>: shutdown.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -158,26 +147,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? Status { get; set; }
 
         /// <summary>
-        /// <para>The type of the rule. Valid values:</para>
+        /// <para>The rule type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>risk</b>: threat detection</para>
-        /// </description></item>
-        /// <item><description><para><b>event</b>: security event</para>
-        /// </description></item>
-        /// <item><description><para><b>sensitive_word</b>: sensitive data</para>
-        /// </description></item>
-        /// <item><description><para><b>auth_flag</b>: authentication credential</para>
-        /// </description></item>
-        /// <item><description><para><b>api_tag</b>: business purpose</para>
-        /// </description></item>
-        /// <item><description><para><b>desensitization</b>: data masking</para>
-        /// </description></item>
-        /// <item><description><para><b>whitelist</b>: whitelist</para>
-        /// </description></item>
-        /// <item><description><para><b>recognition</b>: API</para>
-        /// </description></item>
-        /// <item><description><para><b>offline_api</b>: lifecycle management</para>
-        /// </description></item>
+        /// <item><description><b>risk</b>: Risk detection.</description></item>
+        /// <item><description><b>event</b>: Security events.</description></item>
+        /// <item><description><b>sensitive_word</b>: Sensitive data.</description></item>
+        /// <item><description><b>auth_flag</b>: Authentication credentials.</description></item>
+        /// <item><description><b>api_tag</b>: Business purpose.</description></item>
+        /// <item><description><b>desensitization</b>: Data masking.</description></item>
+        /// <item><description><b>whitelist</b>: Whitelist.</description></item>
+        /// <item><description><b>recognition</b>: API identification.</description></item>
+        /// <item><description><b>offline_api</b>: Lifecycle management.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

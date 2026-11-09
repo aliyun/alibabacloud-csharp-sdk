@@ -10,12 +10,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to remove all tags from the specified resource groups or members. Valid values:</para>
+        /// <para>Specifies whether to remove and delete all tags from the specified resource group or resource directory member. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>false (default)</para>
-        /// </description></item>
-        /// <item><description><para>true</para>
-        /// </description></item>
+        /// <item><description>false: no.</description></item>
+        /// <item><description>true: yes.
+        /// Default value: false.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,9 +25,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public bool? All { get; set; }
 
         /// <summary>
-        /// <para>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</para>
+        /// <para>The region where the Web Application Firewall (WAF) instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: Chinese mainland.</para>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
         /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
         /// </description></item>
@@ -43,7 +42,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs. You can specify up to 50 resource IDs.</para>
+        /// <para>The list of resource IDs. You can specify up to 50 items.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -51,7 +50,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Set the value to ALIYUN::WAF::DEFENSERESOURCE.</para>
+        /// <para>The resource type. Valid value: ALIYUN::WAF::DEFENSERESOURCE.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +61,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tag keys. You can specify up to 20 tag keys.</para>
+        /// <para>The list of tag keys. You can specify up to 20 items.</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]
