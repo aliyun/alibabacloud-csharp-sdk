@@ -311,6 +311,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
+                /// <para>仅查询返回。服务端按完整实例分布统计，不受实例列表分页和筛选影响。镜像 tag 缺失、分页不完整或无法确认时为空，不等同于 0。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
+                [NameInMap("outdatedInstanceCount")]
+                [Validation(Required=false)]
+                public long? OutdatedInstanceCount { get; set; }
+
+                /// <summary>
                 /// <para>The type of the runtime framework.</para>
                 /// 
                 /// <b>Example:</b>
@@ -319,6 +329,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 [NameInMap("type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
+
+                /// <summary>
+                /// <para>仅查询返回。当前返回 Pool 目标镜像 tag；无法解析时为空，不能用 Agent 配置版本代替。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>202611031754</para>
+                /// </summary>
+                [NameInMap("version")]
+                [Validation(Required=false)]
+                public string Version { get; set; }
 
             }
 
@@ -457,6 +477,19 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public long? UsedAmount { get; set; }
 
                 }
+
+                /// <summary>
+                /// <para>未配置时表示 default，空字符串、null 或省略均按模型和 Harness 默认行为处理。可选值 off、low、medium、high、xhigh、max。创建未传或 null 时使用 default；更新提交模型配置时，思考强度未传或为 null 均恢复 default。除 off 转为 none 外原样传给运行框架，不校验模型支持情况、不自动降档；模型不支持时请调整强度。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>high</para>
+                /// 
+                /// <b>if can be null:</b>
+                /// <c>true</c>
+                /// </summary>
+                [NameInMap("thinkingLevel")]
+                [Validation(Required=false)]
+                public string ThinkingLevel { get; set; }
 
             }
 

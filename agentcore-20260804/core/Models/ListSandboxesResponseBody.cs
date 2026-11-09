@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListSandboxesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value is SUCCESS when the request is successful.</para>
+        /// <para>The business status code. The value is SUCCESS if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code. The value is 200 when the request is successful.</para>
+        /// <para>The HTTP status code. The value is 200 if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public int? ActiveSessionCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the sandbox was created. The time is in the RFC 3339 UTC format.</para>
+            /// <para>The time when the sandbox was created, in RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-29T00:00:00Z</para>
@@ -57,7 +57,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The time of the last activity of the sandbox. The time is in the RFC 3339 UTC format.</para>
+            /// <para>The tag of the actual observed image of the currently returned instance. This parameter is empty if the tag cannot be parsed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>202611031754</para>
+            /// </summary>
+            [NameInMap("harnessVersion")]
+            [Validation(Required=false)]
+            public string HarnessVersion { get; set; }
+
+            /// <summary>
+            /// <para>The time of the last activity of the sandbox, in RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-29T00:02:00Z</para>
@@ -67,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string LastActiveAt { get; set; }
 
             /// <summary>
-            /// <para>The time of the last heartbeat of the sandbox. The time is in the RFC 3339 UTC format.</para>
+            /// <para>The time of the last heartbeat of the sandbox, in RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-29T00:01:00Z</para>
@@ -77,7 +87,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string LastHeartbeatAt { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of concurrent sessions allowed for the sandbox. This value is obtained from the auto-scaling configuration that takes effect at runtime. If auto-scaling is disabled or the configuration is unavailable, this value is empty.</para>
+            /// <para>Used to continue calling GetSandboxRebuildOperation to query the overall result after a page refresh. This parameter is empty if there is no historical rebuild. Do not use the ID of a subsequently created task instead.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>01a19f98-906d-7e82-96aa-8b7ea1d1a29d</para>
+            /// </summary>
+            [NameInMap("lastRebuildOperationId")]
+            [Validation(Required=false)]
+            public string LastRebuildOperationId { get; set; }
+
+            /// <summary>
+            /// <para>The maximum number of concurrent sessions allowed for the sandbox, which is obtained from the effective auto-scaling configuration at runtime. This parameter is empty if auto-scaling is disabled or the configuration is unavailable.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -106,6 +126,26 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             [Validation(Required=false)]
             public string SandboxId { get; set; }
 
+            /// <summary>
+            /// <para>The server compares the actual image tag of the instance with the pool target image tag. The value is true if the tags are different during the RUNNING, HIBERNATED, or FAILED phase. The value is false if the tags are the same or during other known phases. This parameter is empty if the tag or phase cannot be confirmed, and it cannot be treated as false. The version sequence is not determined by the tag size.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("updateAvailable")]
+            [Validation(Required=false)]
+            public bool? UpdateAvailable { get; set; }
+
+            /// <summary>
+            /// <para>A value of true indicates that the most recent rebuild corresponding to the current instance generation failed as a whole. A value of false indicates that there is no historical rebuild or the rebuild succeeded as a whole. This parameter is empty if the rebuild is in progress, canceled, replaced, the generation does not match, or the result cannot be confirmed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
+            [NameInMap("updateFailed")]
+            [Validation(Required=false)]
+            public bool? UpdateFailed { get; set; }
+
         }
 
         /// <summary>
@@ -119,7 +159,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The response message. The value is success when the request is successful.</para>
+        /// <para>The response message. The value is success if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

@@ -1216,12 +1216,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存智能体版本</para>
+        /// <para>Saves an agent version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>将指定托管智能体或自定义智能体当前已生效的配置保存为一个不可变的固定版本，并归档版本模板与制品。仅保存版本，不部署实例。其他类型的智能体（如外部智能体）不支持版本，返回 AgentVersionSubtypeUnsupported。Agent 最新发布必须已生效（latestSpecVersion 等于 effectiveSpecVersion）。系统按 Agent 递增生成版本号 agentVersion（v1、v2……），版本号在 Agent 内唯一且已删除版本的序号不复用，查询、删除版本及服务端点引用版本均使用该版本号。每个 Agent 最多保留 50 个未删除的版本，达到上限时返回 AgentVersionQuotaExceeded，删除不再使用的版本后可继续保存。versionName 相同且发布流水号相同的重复提交返回已有版本（不受上限限制）；versionName 相同但发布流水号不同时返回 AgentVersionAlreadyExists。</para>
+        /// <para>Saves the currently effective configuration of a specified managed or custom agent as an immutable fixed version, and archives the version template and artifacts. This operation only saves the version and does not deploy an instance. Other types of agents, such as external agents, do not support versions and return AgentVersionSubtypeUnsupported. The latest release of the agent must be effective, meaning latestSpecVersion is equal to effectiveSpecVersion. The system generates an incrementing version number, agentVersion, such as v1 and v2, for each agent. The version number is unique within the agent, and the sequence numbers of deleted versions are not reused. This version number is used for querying, deleting, and referencing versions in service endpoints. Each agent can retain up to 50 undeleted versions. If the limit is reached, AgentVersionQuotaExceeded is returned. You can continue to save versions after deleting unused ones. Duplicate submissions with the same versionName and release serial number return the existing version and are not subject to the limit. Submissions with the same versionName but a different release serial number return AgentVersionAlreadyExists.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1279,12 +1279,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存智能体版本</para>
+        /// <para>Saves an agent version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>将指定托管智能体或自定义智能体当前已生效的配置保存为一个不可变的固定版本，并归档版本模板与制品。仅保存版本，不部署实例。其他类型的智能体（如外部智能体）不支持版本，返回 AgentVersionSubtypeUnsupported。Agent 最新发布必须已生效（latestSpecVersion 等于 effectiveSpecVersion）。系统按 Agent 递增生成版本号 agentVersion（v1、v2……），版本号在 Agent 内唯一且已删除版本的序号不复用，查询、删除版本及服务端点引用版本均使用该版本号。每个 Agent 最多保留 50 个未删除的版本，达到上限时返回 AgentVersionQuotaExceeded，删除不再使用的版本后可继续保存。versionName 相同且发布流水号相同的重复提交返回已有版本（不受上限限制）；versionName 相同但发布流水号不同时返回 AgentVersionAlreadyExists。</para>
+        /// <para>Saves the currently effective configuration of a specified managed or custom agent as an immutable fixed version, and archives the version template and artifacts. This operation only saves the version and does not deploy an instance. Other types of agents, such as external agents, do not support versions and return AgentVersionSubtypeUnsupported. The latest release of the agent must be effective, meaning latestSpecVersion is equal to effectiveSpecVersion. The system generates an incrementing version number, agentVersion, such as v1 and v2, for each agent. The version number is unique within the agent, and the sequence numbers of deleted versions are not reused. This version number is used for querying, deleting, and referencing versions in service endpoints. Each agent can retain up to 50 undeleted versions. If the limit is reached, AgentVersionQuotaExceeded is returned. You can continue to save versions after deleting unused ones. Duplicate submissions with the same versionName and release serial number return the existing version and are not subject to the limit. Submissions with the same versionName but a different release serial number return AgentVersionAlreadyExists.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1342,12 +1342,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存智能体版本</para>
+        /// <para>Saves an agent version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>将指定托管智能体或自定义智能体当前已生效的配置保存为一个不可变的固定版本，并归档版本模板与制品。仅保存版本，不部署实例。其他类型的智能体（如外部智能体）不支持版本，返回 AgentVersionSubtypeUnsupported。Agent 最新发布必须已生效（latestSpecVersion 等于 effectiveSpecVersion）。系统按 Agent 递增生成版本号 agentVersion（v1、v2……），版本号在 Agent 内唯一且已删除版本的序号不复用，查询、删除版本及服务端点引用版本均使用该版本号。每个 Agent 最多保留 50 个未删除的版本，达到上限时返回 AgentVersionQuotaExceeded，删除不再使用的版本后可继续保存。versionName 相同且发布流水号相同的重复提交返回已有版本（不受上限限制）；versionName 相同但发布流水号不同时返回 AgentVersionAlreadyExists。</para>
+        /// <para>Saves the currently effective configuration of a specified managed or custom agent as an immutable fixed version, and archives the version template and artifacts. This operation only saves the version and does not deploy an instance. Other types of agents, such as external agents, do not support versions and return AgentVersionSubtypeUnsupported. The latest release of the agent must be effective, meaning latestSpecVersion is equal to effectiveSpecVersion. The system generates an incrementing version number, agentVersion, such as v1 and v2, for each agent. The version number is unique within the agent, and the sequence numbers of deleted versions are not reused. This version number is used for querying, deleting, and referencing versions in service endpoints. Each agent can retain up to 50 undeleted versions. If the limit is reached, AgentVersionQuotaExceeded is returned. You can continue to save versions after deleting unused ones. Duplicate submissions with the same versionName and release serial number return the existing version and are not subject to the limit. Submissions with the same versionName but a different release serial number return AgentVersionAlreadyExists.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1366,12 +1366,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存智能体版本</para>
+        /// <para>Saves an agent version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>将指定托管智能体或自定义智能体当前已生效的配置保存为一个不可变的固定版本，并归档版本模板与制品。仅保存版本，不部署实例。其他类型的智能体（如外部智能体）不支持版本，返回 AgentVersionSubtypeUnsupported。Agent 最新发布必须已生效（latestSpecVersion 等于 effectiveSpecVersion）。系统按 Agent 递增生成版本号 agentVersion（v1、v2……），版本号在 Agent 内唯一且已删除版本的序号不复用，查询、删除版本及服务端点引用版本均使用该版本号。每个 Agent 最多保留 50 个未删除的版本，达到上限时返回 AgentVersionQuotaExceeded，删除不再使用的版本后可继续保存。versionName 相同且发布流水号相同的重复提交返回已有版本（不受上限限制）；versionName 相同但发布流水号不同时返回 AgentVersionAlreadyExists。</para>
+        /// <para>Saves the currently effective configuration of a specified managed or custom agent as an immutable fixed version, and archives the version template and artifacts. This operation only saves the version and does not deploy an instance. Other types of agents, such as external agents, do not support versions and return AgentVersionSubtypeUnsupported. The latest release of the agent must be effective, meaning latestSpecVersion is equal to effectiveSpecVersion. The system generates an incrementing version number, agentVersion, such as v1 and v2, for each agent. The version number is unique within the agent, and the sequence numbers of deleted versions are not reused. This version number is used for querying, deleting, and referencing versions in service endpoints. Each agent can retain up to 50 undeleted versions. If the limit is reached, AgentVersionQuotaExceeded is returned. You can continue to save versions after deleting unused ones. Duplicate submissions with the same versionName and release serial number return the existing version and are not subject to the limit. Submissions with the same versionName but a different release serial number return AgentVersionAlreadyExists.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3799,9 +3799,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an agent by using a platform-managed runtime framework. This corresponds to the &quot;Managed Harness&quot; creation method in the console, where you can configure the model, instructions, and skills.</para>
+        /// <para>Creates an agent by using a platform-managed runtime framework. This corresponds to the &quot;Managed Harness&quot; creation method in the console, where you can configure models, instructions, and skills.</para>
         /// <h3>Required configurations</h3>
-        /// <para>Submit name, model, and runtime. The runtime parameter must include both compute and sessionPolicy. The agent is deployed and run by the platform, so you do not need to provide a code package or container image.</para>
+        /// <para>Submit <c>name</c>, <c>model</c>, and <c>runtime</c>. The <c>runtime</c> parameter must include both <c>compute</c> and <c>sessionPolicy</c>. The agent is deployed and run by the platform. You do not need to provide a code package or container image.</para>
         /// <h3>Harness and model</h3>
         /// <table>
         /// <thead>
@@ -3811,15 +3811,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>qwenpaw</td>
-        /// <td>If you omit harness during creation, this type is used by default. Set model.modelConnectionId to the workspace model connection ID, and set model.modelName to the name of the model created under this connection.</td>
+        /// <td><c>qwenpaw</c></td>
+        /// <td>If you omit <c>harness</c> during creation, this type is used by default. Set <c>model.modelConnectionId</c> to the workspace model connection ID, and set <c>model.modelName</c> to the name of the model created under this connection.</td>
         /// </tr>
         /// <tr>
-        /// <td>qodercli</td>
-        /// <td>The qodercli connector must be enabled in the workspace. Set model.modelConnectionId to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. You can omit model.modelName.</td>
+        /// <td><c>qodercli</c></td>
+        /// <td>The qodercli connector must be enabled in the workspace. Set <c>model.modelConnectionId</c> to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. You can omit <c>model.modelName</c>.</td>
         /// </tr>
         /// <tr>
-        /// <td>harness is an object, such as {&quot;type&quot;:&quot;qwenpaw&quot;}. For qodercli, set harness.configuration.connectorServiceAccountKey to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. You can omit this parameter if only one key record exists. If multiple records exist, you must specify this parameter. connectorServiceAccountName is the account name. Do not specify these two binding fields for qwenpaw.</td>
+        /// <td><c>harness</c> is an object, such as <c>{&quot;type&quot;:&quot;qwenpaw&quot;}</c>. For qodercli, set <c>harness.configuration.connectorServiceAccountKey</c> to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. You can omit this parameter if only one key record exists. You must specify this parameter if multiple records exist. <c>connectorServiceAccountName</c> is the account name. Do not specify these two binding fields for qwenpaw.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
@@ -3828,11 +3828,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </tbody></table>
         /// <h3>Instructions, templates, and skills</h3>
-        /// <para>skills uses the skill names in the workspace AI registry. If sourceType=REFERENCE, the version is referenced by versionSelector: use LABEL with a label name, or VERSION with a specific version number. If the selector is omitted, LABEL/latest is used. If sourceType=STATIC, static files bundled with the package are used, and no version selector is provided.
-        /// For template.aiRegistry, specify the agent template name and an optional version. If you omit the version during creation, the published version is resolved and fixed. When a template is used, instruction, promptVariables, and subAgents are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions by using configuredSkills and skills.
-        /// If you do not use a template, you can set instructions by using instruction, declare variables by using promptVariables, and configure up to 20 sub-agents by using subAgents. The name and instruction of a sub-agent cannot be empty. Each sub-agent name must be unique. Tools currently use tools[].type=MCP.</para>
+        /// <para><c>skills</c> uses the skill names in the workspace AI registry. If <c>sourceType=REFERENCE</c>, versions are referenced by <c>versionSelector</c>: use <c>LABEL</c> with a label name, or <c>VERSION</c> with a specific version number. If the selector is omitted, <c>LABEL/latest</c> is used. If <c>sourceType=STATIC</c>, static files bundled with the package are used, and no version selector is provided.
+        /// <c>template.aiRegistry</c> specifies the agent template name and an optional version. If you omit the version during creation, the published version is resolved and fixed. When a template is used, <c>instruction</c>, <c>promptVariables</c>, and <c>subAgents</c> are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions by using <c>configuredSkills</c> and <c>skills</c>.
+        /// If you do not use a template, you can set instructions by using <c>instruction</c>, declare variables by using <c>promptVariables</c>, and configure up to 20 sub-agents by using <c>subAgents</c>. The name and instruction of a sub-agent cannot be empty. Each sub-agent must have a unique name. Tools currently use <c>tools[].type=MCP</c>.</para>
         /// <h3>Runtime configurations and mounts</h3>
-        /// <para>Omitted fields in runtime.hpa use the following default values:</para>
+        /// <para>Omitted fields in <c>runtime.hpa</c> use the following default values:</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -3842,42 +3842,42 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>enabled</td>
-        /// <td>false</td>
+        /// <td><c>enabled</c></td>
+        /// <td><c>false</c></td>
         /// <td>Specifies whether to enable elastic scaling.</td>
         /// </tr>
         /// <tr>
-        /// <td>minSandboxCount</td>
-        /// <td>1</td>
+        /// <td><c>minSandboxCount</c></td>
+        /// <td><c>1</c></td>
         /// <td>The minimum number of instances. Valid values: 0 to 100.</td>
         /// </tr>
         /// <tr>
-        /// <td>maxSandboxCount</td>
-        /// <td>10</td>
+        /// <td><c>maxSandboxCount</c></td>
+        /// <td><c>10</c></td>
         /// <td>The maximum number of instances. Valid values: 0 to 100. The value cannot be less than the minimum number.</td>
         /// </tr>
         /// <tr>
-        /// <td>maxConcurrentSessionsPerSandbox</td>
-        /// <td>20</td>
+        /// <td><c>maxConcurrentSessionsPerSandbox</c></td>
+        /// <td><c>20</c></td>
         /// <td>The maximum number of concurrent sessions per instance. Valid values: 1 to 20.</td>
         /// </tr>
         /// <tr>
-        /// <td>sessionTtlSeconds</td>
-        /// <td>600</td>
+        /// <td><c>sessionTtlSeconds</c></td>
+        /// <td><c>600</c></td>
         /// <td>The maximum idle time of a session, in seconds. Valid values: 60 to 86400.</td>
         /// </tr>
         /// <tr>
-        /// <td>If sessionPolicy.type=ISOLATED_HEADER_FIELD, you must provide headerName. Do not specify this parameter for other policies.</td>
+        /// <td>If <c>sessionPolicy.type=ISOLATED_HEADER_FIELD</c>, you must provide <c>headerName</c>. Do not specify this parameter for other policies.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>If you provide network, you must specify both accessInternet.enabled and accessVpc.enabled. Actual access is restricted by the workspace network configurations.</td>
+        /// <td>If you provide <c>network</c>, you must specify both <c>accessInternet.enabled</c> and <c>accessVpc.enabled</c>. Actual access is restricted by the workspace network configurations.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>The total number of ossMounts and agenticFsMounts cannot exceed 10. The mount target mountPath uses an absolute path in the container, such as /data/train. The path cannot conflict with platform-reserved directories, and cannot be duplicated or form parent-child directory overwrites.</td>
+        /// <td>The total number of <c>ossMounts</c> and <c>agenticFsMounts</c> cannot exceed 10. The mount target <c>mountPath</c> uses an absolute path in the container, such as <c>/data/train</c>. The path cannot conflict with platform-reserved directories, and mount targets cannot be duplicated or form parent-child directory overwrites.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
@@ -3887,18 +3887,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>The path for an OSS mount must be a non-empty directory prefix in the bucket. The server for an AgenticFS mount is the access point domain name, without a protocol, port, or path. The path is an existing non-empty relative directory in the access point. You cannot mount the root directory of the access point. If readOnly is omitted, the default value is false.</td>
+        /// <td>The <c>path</c> for an OSS mount must be a non-empty directory prefix in a bucket. The <c>server</c> for an AgenticFS mount is the access point domain name, without a protocol, port, or path. The <c>path</c> is an existing non-empty relative directory in the access point. You cannot mount the root directory of the access point. If <c>readOnly</c> is omitted, the default value is <c>false</c>.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>environment.variables configures environment variables, and environment.credentialReferences references workspace credentials. Environment variable names must be non-empty and unique, and values must be strings.</td>
+        /// <td><c>environment.variables</c> configures environment variables, and <c>environment.credentialReferences</c> references workspace credentials. Environment variable names must be non-empty and unique, and values must be strings.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Query deployment results</h3>
-        /// <para>A successful response indicates that the request is accepted. Save the agentId and use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query latestVersionStatus, status, and sandboxPhaseCounts to confirm the configuration processing and instance status. clientToken is a reserved query parameter and currently does not provide idempotence guarantees.</para>
+        /// <para>A successful response indicates that the request is accepted. Save the <c>agentId</c> and use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query <c>latestVersionStatus</c>, <c>status</c>, and <c>sandboxPhaseCounts</c> to confirm the configuration processing and instance status. <c>clientToken</c> is a reserved query parameter and does not provide idempotency guarantees.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -3961,9 +3961,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an agent by using a platform-managed runtime framework. This corresponds to the &quot;Managed Harness&quot; creation method in the console, where you can configure the model, instructions, and skills.</para>
+        /// <para>Creates an agent by using a platform-managed runtime framework. This corresponds to the &quot;Managed Harness&quot; creation method in the console, where you can configure models, instructions, and skills.</para>
         /// <h3>Required configurations</h3>
-        /// <para>Submit name, model, and runtime. The runtime parameter must include both compute and sessionPolicy. The agent is deployed and run by the platform, so you do not need to provide a code package or container image.</para>
+        /// <para>Submit <c>name</c>, <c>model</c>, and <c>runtime</c>. The <c>runtime</c> parameter must include both <c>compute</c> and <c>sessionPolicy</c>. The agent is deployed and run by the platform. You do not need to provide a code package or container image.</para>
         /// <h3>Harness and model</h3>
         /// <table>
         /// <thead>
@@ -3973,15 +3973,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>qwenpaw</td>
-        /// <td>If you omit harness during creation, this type is used by default. Set model.modelConnectionId to the workspace model connection ID, and set model.modelName to the name of the model created under this connection.</td>
+        /// <td><c>qwenpaw</c></td>
+        /// <td>If you omit <c>harness</c> during creation, this type is used by default. Set <c>model.modelConnectionId</c> to the workspace model connection ID, and set <c>model.modelName</c> to the name of the model created under this connection.</td>
         /// </tr>
         /// <tr>
-        /// <td>qodercli</td>
-        /// <td>The qodercli connector must be enabled in the workspace. Set model.modelConnectionId to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. You can omit model.modelName.</td>
+        /// <td><c>qodercli</c></td>
+        /// <td>The qodercli connector must be enabled in the workspace. Set <c>model.modelConnectionId</c> to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. You can omit <c>model.modelName</c>.</td>
         /// </tr>
         /// <tr>
-        /// <td>harness is an object, such as {&quot;type&quot;:&quot;qwenpaw&quot;}. For qodercli, set harness.configuration.connectorServiceAccountKey to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. You can omit this parameter if only one key record exists. If multiple records exist, you must specify this parameter. connectorServiceAccountName is the account name. Do not specify these two binding fields for qwenpaw.</td>
+        /// <td><c>harness</c> is an object, such as <c>{&quot;type&quot;:&quot;qwenpaw&quot;}</c>. For qodercli, set <c>harness.configuration.connectorServiceAccountKey</c> to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. You can omit this parameter if only one key record exists. You must specify this parameter if multiple records exist. <c>connectorServiceAccountName</c> is the account name. Do not specify these two binding fields for qwenpaw.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
@@ -3990,11 +3990,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </tbody></table>
         /// <h3>Instructions, templates, and skills</h3>
-        /// <para>skills uses the skill names in the workspace AI registry. If sourceType=REFERENCE, the version is referenced by versionSelector: use LABEL with a label name, or VERSION with a specific version number. If the selector is omitted, LABEL/latest is used. If sourceType=STATIC, static files bundled with the package are used, and no version selector is provided.
-        /// For template.aiRegistry, specify the agent template name and an optional version. If you omit the version during creation, the published version is resolved and fixed. When a template is used, instruction, promptVariables, and subAgents are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions by using configuredSkills and skills.
-        /// If you do not use a template, you can set instructions by using instruction, declare variables by using promptVariables, and configure up to 20 sub-agents by using subAgents. The name and instruction of a sub-agent cannot be empty. Each sub-agent name must be unique. Tools currently use tools[].type=MCP.</para>
+        /// <para><c>skills</c> uses the skill names in the workspace AI registry. If <c>sourceType=REFERENCE</c>, versions are referenced by <c>versionSelector</c>: use <c>LABEL</c> with a label name, or <c>VERSION</c> with a specific version number. If the selector is omitted, <c>LABEL/latest</c> is used. If <c>sourceType=STATIC</c>, static files bundled with the package are used, and no version selector is provided.
+        /// <c>template.aiRegistry</c> specifies the agent template name and an optional version. If you omit the version during creation, the published version is resolved and fixed. When a template is used, <c>instruction</c>, <c>promptVariables</c>, and <c>subAgents</c> are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions by using <c>configuredSkills</c> and <c>skills</c>.
+        /// If you do not use a template, you can set instructions by using <c>instruction</c>, declare variables by using <c>promptVariables</c>, and configure up to 20 sub-agents by using <c>subAgents</c>. The name and instruction of a sub-agent cannot be empty. Each sub-agent must have a unique name. Tools currently use <c>tools[].type=MCP</c>.</para>
         /// <h3>Runtime configurations and mounts</h3>
-        /// <para>Omitted fields in runtime.hpa use the following default values:</para>
+        /// <para>Omitted fields in <c>runtime.hpa</c> use the following default values:</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -4004,42 +4004,42 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>enabled</td>
-        /// <td>false</td>
+        /// <td><c>enabled</c></td>
+        /// <td><c>false</c></td>
         /// <td>Specifies whether to enable elastic scaling.</td>
         /// </tr>
         /// <tr>
-        /// <td>minSandboxCount</td>
-        /// <td>1</td>
+        /// <td><c>minSandboxCount</c></td>
+        /// <td><c>1</c></td>
         /// <td>The minimum number of instances. Valid values: 0 to 100.</td>
         /// </tr>
         /// <tr>
-        /// <td>maxSandboxCount</td>
-        /// <td>10</td>
+        /// <td><c>maxSandboxCount</c></td>
+        /// <td><c>10</c></td>
         /// <td>The maximum number of instances. Valid values: 0 to 100. The value cannot be less than the minimum number.</td>
         /// </tr>
         /// <tr>
-        /// <td>maxConcurrentSessionsPerSandbox</td>
-        /// <td>20</td>
+        /// <td><c>maxConcurrentSessionsPerSandbox</c></td>
+        /// <td><c>20</c></td>
         /// <td>The maximum number of concurrent sessions per instance. Valid values: 1 to 20.</td>
         /// </tr>
         /// <tr>
-        /// <td>sessionTtlSeconds</td>
-        /// <td>600</td>
+        /// <td><c>sessionTtlSeconds</c></td>
+        /// <td><c>600</c></td>
         /// <td>The maximum idle time of a session, in seconds. Valid values: 60 to 86400.</td>
         /// </tr>
         /// <tr>
-        /// <td>If sessionPolicy.type=ISOLATED_HEADER_FIELD, you must provide headerName. Do not specify this parameter for other policies.</td>
+        /// <td>If <c>sessionPolicy.type=ISOLATED_HEADER_FIELD</c>, you must provide <c>headerName</c>. Do not specify this parameter for other policies.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>If you provide network, you must specify both accessInternet.enabled and accessVpc.enabled. Actual access is restricted by the workspace network configurations.</td>
+        /// <td>If you provide <c>network</c>, you must specify both <c>accessInternet.enabled</c> and <c>accessVpc.enabled</c>. Actual access is restricted by the workspace network configurations.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>The total number of ossMounts and agenticFsMounts cannot exceed 10. The mount target mountPath uses an absolute path in the container, such as /data/train. The path cannot conflict with platform-reserved directories, and cannot be duplicated or form parent-child directory overwrites.</td>
+        /// <td>The total number of <c>ossMounts</c> and <c>agenticFsMounts</c> cannot exceed 10. The mount target <c>mountPath</c> uses an absolute path in the container, such as <c>/data/train</c>. The path cannot conflict with platform-reserved directories, and mount targets cannot be duplicated or form parent-child directory overwrites.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
@@ -4049,18 +4049,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>The path for an OSS mount must be a non-empty directory prefix in the bucket. The server for an AgenticFS mount is the access point domain name, without a protocol, port, or path. The path is an existing non-empty relative directory in the access point. You cannot mount the root directory of the access point. If readOnly is omitted, the default value is false.</td>
+        /// <td>The <c>path</c> for an OSS mount must be a non-empty directory prefix in a bucket. The <c>server</c> for an AgenticFS mount is the access point domain name, without a protocol, port, or path. The <c>path</c> is an existing non-empty relative directory in the access point. You cannot mount the root directory of the access point. If <c>readOnly</c> is omitted, the default value is <c>false</c>.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>environment.variables configures environment variables, and environment.credentialReferences references workspace credentials. Environment variable names must be non-empty and unique, and values must be strings.</td>
+        /// <td><c>environment.variables</c> configures environment variables, and <c>environment.credentialReferences</c> references workspace credentials. Environment variable names must be non-empty and unique, and values must be strings.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Query deployment results</h3>
-        /// <para>A successful response indicates that the request is accepted. Save the agentId and use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query latestVersionStatus, status, and sandboxPhaseCounts to confirm the configuration processing and instance status. clientToken is a reserved query parameter and currently does not provide idempotence guarantees.</para>
+        /// <para>A successful response indicates that the request is accepted. Save the <c>agentId</c> and use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query <c>latestVersionStatus</c>, <c>status</c>, and <c>sandboxPhaseCounts</c> to confirm the configuration processing and instance status. <c>clientToken</c> is a reserved query parameter and does not provide idempotency guarantees.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4123,9 +4123,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an agent by using a platform-managed runtime framework. This corresponds to the &quot;Managed Harness&quot; creation method in the console, where you can configure the model, instructions, and skills.</para>
+        /// <para>Creates an agent by using a platform-managed runtime framework. This corresponds to the &quot;Managed Harness&quot; creation method in the console, where you can configure models, instructions, and skills.</para>
         /// <h3>Required configurations</h3>
-        /// <para>Submit name, model, and runtime. The runtime parameter must include both compute and sessionPolicy. The agent is deployed and run by the platform, so you do not need to provide a code package or container image.</para>
+        /// <para>Submit <c>name</c>, <c>model</c>, and <c>runtime</c>. The <c>runtime</c> parameter must include both <c>compute</c> and <c>sessionPolicy</c>. The agent is deployed and run by the platform. You do not need to provide a code package or container image.</para>
         /// <h3>Harness and model</h3>
         /// <table>
         /// <thead>
@@ -4135,15 +4135,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>qwenpaw</td>
-        /// <td>If you omit harness during creation, this type is used by default. Set model.modelConnectionId to the workspace model connection ID, and set model.modelName to the name of the model created under this connection.</td>
+        /// <td><c>qwenpaw</c></td>
+        /// <td>If you omit <c>harness</c> during creation, this type is used by default. Set <c>model.modelConnectionId</c> to the workspace model connection ID, and set <c>model.modelName</c> to the name of the model created under this connection.</td>
         /// </tr>
         /// <tr>
-        /// <td>qodercli</td>
-        /// <td>The qodercli connector must be enabled in the workspace. Set model.modelConnectionId to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. You can omit model.modelName.</td>
+        /// <td><c>qodercli</c></td>
+        /// <td>The qodercli connector must be enabled in the workspace. Set <c>model.modelConnectionId</c> to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. You can omit <c>model.modelName</c>.</td>
         /// </tr>
         /// <tr>
-        /// <td>harness is an object, such as {&quot;type&quot;:&quot;qwenpaw&quot;}. For qodercli, set harness.configuration.connectorServiceAccountKey to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. You can omit this parameter if only one key record exists. If multiple records exist, you must specify this parameter. connectorServiceAccountName is the account name. Do not specify these two binding fields for qwenpaw.</td>
+        /// <td><c>harness</c> is an object, such as <c>{&quot;type&quot;:&quot;qwenpaw&quot;}</c>. For qodercli, set <c>harness.configuration.connectorServiceAccountKey</c> to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. You can omit this parameter if only one key record exists. You must specify this parameter if multiple records exist. <c>connectorServiceAccountName</c> is the account name. Do not specify these two binding fields for qwenpaw.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
@@ -4152,11 +4152,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </tbody></table>
         /// <h3>Instructions, templates, and skills</h3>
-        /// <para>skills uses the skill names in the workspace AI registry. If sourceType=REFERENCE, the version is referenced by versionSelector: use LABEL with a label name, or VERSION with a specific version number. If the selector is omitted, LABEL/latest is used. If sourceType=STATIC, static files bundled with the package are used, and no version selector is provided.
-        /// For template.aiRegistry, specify the agent template name and an optional version. If you omit the version during creation, the published version is resolved and fixed. When a template is used, instruction, promptVariables, and subAgents are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions by using configuredSkills and skills.
-        /// If you do not use a template, you can set instructions by using instruction, declare variables by using promptVariables, and configure up to 20 sub-agents by using subAgents. The name and instruction of a sub-agent cannot be empty. Each sub-agent name must be unique. Tools currently use tools[].type=MCP.</para>
+        /// <para><c>skills</c> uses the skill names in the workspace AI registry. If <c>sourceType=REFERENCE</c>, versions are referenced by <c>versionSelector</c>: use <c>LABEL</c> with a label name, or <c>VERSION</c> with a specific version number. If the selector is omitted, <c>LABEL/latest</c> is used. If <c>sourceType=STATIC</c>, static files bundled with the package are used, and no version selector is provided.
+        /// <c>template.aiRegistry</c> specifies the agent template name and an optional version. If you omit the version during creation, the published version is resolved and fixed. When a template is used, <c>instruction</c>, <c>promptVariables</c>, and <c>subAgents</c> are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions by using <c>configuredSkills</c> and <c>skills</c>.
+        /// If you do not use a template, you can set instructions by using <c>instruction</c>, declare variables by using <c>promptVariables</c>, and configure up to 20 sub-agents by using <c>subAgents</c>. The name and instruction of a sub-agent cannot be empty. Each sub-agent must have a unique name. Tools currently use <c>tools[].type=MCP</c>.</para>
         /// <h3>Runtime configurations and mounts</h3>
-        /// <para>Omitted fields in runtime.hpa use the following default values:</para>
+        /// <para>Omitted fields in <c>runtime.hpa</c> use the following default values:</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -4166,42 +4166,42 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>enabled</td>
-        /// <td>false</td>
+        /// <td><c>enabled</c></td>
+        /// <td><c>false</c></td>
         /// <td>Specifies whether to enable elastic scaling.</td>
         /// </tr>
         /// <tr>
-        /// <td>minSandboxCount</td>
-        /// <td>1</td>
+        /// <td><c>minSandboxCount</c></td>
+        /// <td><c>1</c></td>
         /// <td>The minimum number of instances. Valid values: 0 to 100.</td>
         /// </tr>
         /// <tr>
-        /// <td>maxSandboxCount</td>
-        /// <td>10</td>
+        /// <td><c>maxSandboxCount</c></td>
+        /// <td><c>10</c></td>
         /// <td>The maximum number of instances. Valid values: 0 to 100. The value cannot be less than the minimum number.</td>
         /// </tr>
         /// <tr>
-        /// <td>maxConcurrentSessionsPerSandbox</td>
-        /// <td>20</td>
+        /// <td><c>maxConcurrentSessionsPerSandbox</c></td>
+        /// <td><c>20</c></td>
         /// <td>The maximum number of concurrent sessions per instance. Valid values: 1 to 20.</td>
         /// </tr>
         /// <tr>
-        /// <td>sessionTtlSeconds</td>
-        /// <td>600</td>
+        /// <td><c>sessionTtlSeconds</c></td>
+        /// <td><c>600</c></td>
         /// <td>The maximum idle time of a session, in seconds. Valid values: 60 to 86400.</td>
         /// </tr>
         /// <tr>
-        /// <td>If sessionPolicy.type=ISOLATED_HEADER_FIELD, you must provide headerName. Do not specify this parameter for other policies.</td>
+        /// <td>If <c>sessionPolicy.type=ISOLATED_HEADER_FIELD</c>, you must provide <c>headerName</c>. Do not specify this parameter for other policies.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>If you provide network, you must specify both accessInternet.enabled and accessVpc.enabled. Actual access is restricted by the workspace network configurations.</td>
+        /// <td>If you provide <c>network</c>, you must specify both <c>accessInternet.enabled</c> and <c>accessVpc.enabled</c>. Actual access is restricted by the workspace network configurations.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>The total number of ossMounts and agenticFsMounts cannot exceed 10. The mount target mountPath uses an absolute path in the container, such as /data/train. The path cannot conflict with platform-reserved directories, and cannot be duplicated or form parent-child directory overwrites.</td>
+        /// <td>The total number of <c>ossMounts</c> and <c>agenticFsMounts</c> cannot exceed 10. The mount target <c>mountPath</c> uses an absolute path in the container, such as <c>/data/train</c>. The path cannot conflict with platform-reserved directories, and mount targets cannot be duplicated or form parent-child directory overwrites.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
@@ -4211,18 +4211,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>The path for an OSS mount must be a non-empty directory prefix in the bucket. The server for an AgenticFS mount is the access point domain name, without a protocol, port, or path. The path is an existing non-empty relative directory in the access point. You cannot mount the root directory of the access point. If readOnly is omitted, the default value is false.</td>
+        /// <td>The <c>path</c> for an OSS mount must be a non-empty directory prefix in a bucket. The <c>server</c> for an AgenticFS mount is the access point domain name, without a protocol, port, or path. The <c>path</c> is an existing non-empty relative directory in the access point. You cannot mount the root directory of the access point. If <c>readOnly</c> is omitted, the default value is <c>false</c>.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>environment.variables configures environment variables, and environment.credentialReferences references workspace credentials. Environment variable names must be non-empty and unique, and values must be strings.</td>
+        /// <td><c>environment.variables</c> configures environment variables, and <c>environment.credentialReferences</c> references workspace credentials. Environment variable names must be non-empty and unique, and values must be strings.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Query deployment results</h3>
-        /// <para>A successful response indicates that the request is accepted. Save the agentId and use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query latestVersionStatus, status, and sandboxPhaseCounts to confirm the configuration processing and instance status. clientToken is a reserved query parameter and currently does not provide idempotence guarantees.</para>
+        /// <para>A successful response indicates that the request is accepted. Save the <c>agentId</c> and use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query <c>latestVersionStatus</c>, <c>status</c>, and <c>sandboxPhaseCounts</c> to confirm the configuration processing and instance status. <c>clientToken</c> is a reserved query parameter and does not provide idempotency guarantees.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4246,9 +4246,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates an agent by using a platform-managed runtime framework. This corresponds to the &quot;Managed Harness&quot; creation method in the console, where you can configure the model, instructions, and skills.</para>
+        /// <para>Creates an agent by using a platform-managed runtime framework. This corresponds to the &quot;Managed Harness&quot; creation method in the console, where you can configure models, instructions, and skills.</para>
         /// <h3>Required configurations</h3>
-        /// <para>Submit name, model, and runtime. The runtime parameter must include both compute and sessionPolicy. The agent is deployed and run by the platform, so you do not need to provide a code package or container image.</para>
+        /// <para>Submit <c>name</c>, <c>model</c>, and <c>runtime</c>. The <c>runtime</c> parameter must include both <c>compute</c> and <c>sessionPolicy</c>. The agent is deployed and run by the platform. You do not need to provide a code package or container image.</para>
         /// <h3>Harness and model</h3>
         /// <table>
         /// <thead>
@@ -4258,15 +4258,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>qwenpaw</td>
-        /// <td>If you omit harness during creation, this type is used by default. Set model.modelConnectionId to the workspace model connection ID, and set model.modelName to the name of the model created under this connection.</td>
+        /// <td><c>qwenpaw</c></td>
+        /// <td>If you omit <c>harness</c> during creation, this type is used by default. Set <c>model.modelConnectionId</c> to the workspace model connection ID, and set <c>model.modelName</c> to the name of the model created under this connection.</td>
         /// </tr>
         /// <tr>
-        /// <td>qodercli</td>
-        /// <td>The qodercli connector must be enabled in the workspace. Set model.modelConnectionId to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. You can omit model.modelName.</td>
+        /// <td><c>qodercli</c></td>
+        /// <td>The qodercli connector must be enabled in the workspace. Set <c>model.modelConnectionId</c> to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. You can omit <c>model.modelName</c>.</td>
         /// </tr>
         /// <tr>
-        /// <td>harness is an object, such as {&quot;type&quot;:&quot;qwenpaw&quot;}. For qodercli, set harness.configuration.connectorServiceAccountKey to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. You can omit this parameter if only one key record exists. If multiple records exist, you must specify this parameter. connectorServiceAccountName is the account name. Do not specify these two binding fields for qwenpaw.</td>
+        /// <td><c>harness</c> is an object, such as <c>{&quot;type&quot;:&quot;qwenpaw&quot;}</c>. For qodercli, set <c>harness.configuration.connectorServiceAccountKey</c> to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. You can omit this parameter if only one key record exists. You must specify this parameter if multiple records exist. <c>connectorServiceAccountName</c> is the account name. Do not specify these two binding fields for qwenpaw.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
@@ -4275,11 +4275,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </tbody></table>
         /// <h3>Instructions, templates, and skills</h3>
-        /// <para>skills uses the skill names in the workspace AI registry. If sourceType=REFERENCE, the version is referenced by versionSelector: use LABEL with a label name, or VERSION with a specific version number. If the selector is omitted, LABEL/latest is used. If sourceType=STATIC, static files bundled with the package are used, and no version selector is provided.
-        /// For template.aiRegistry, specify the agent template name and an optional version. If you omit the version during creation, the published version is resolved and fixed. When a template is used, instruction, promptVariables, and subAgents are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions by using configuredSkills and skills.
-        /// If you do not use a template, you can set instructions by using instruction, declare variables by using promptVariables, and configure up to 20 sub-agents by using subAgents. The name and instruction of a sub-agent cannot be empty. Each sub-agent name must be unique. Tools currently use tools[].type=MCP.</para>
+        /// <para><c>skills</c> uses the skill names in the workspace AI registry. If <c>sourceType=REFERENCE</c>, versions are referenced by <c>versionSelector</c>: use <c>LABEL</c> with a label name, or <c>VERSION</c> with a specific version number. If the selector is omitted, <c>LABEL/latest</c> is used. If <c>sourceType=STATIC</c>, static files bundled with the package are used, and no version selector is provided.
+        /// <c>template.aiRegistry</c> specifies the agent template name and an optional version. If you omit the version during creation, the published version is resolved and fixed. When a template is used, <c>instruction</c>, <c>promptVariables</c>, and <c>subAgents</c> are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions by using <c>configuredSkills</c> and <c>skills</c>.
+        /// If you do not use a template, you can set instructions by using <c>instruction</c>, declare variables by using <c>promptVariables</c>, and configure up to 20 sub-agents by using <c>subAgents</c>. The name and instruction of a sub-agent cannot be empty. Each sub-agent must have a unique name. Tools currently use <c>tools[].type=MCP</c>.</para>
         /// <h3>Runtime configurations and mounts</h3>
-        /// <para>Omitted fields in runtime.hpa use the following default values:</para>
+        /// <para>Omitted fields in <c>runtime.hpa</c> use the following default values:</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -4289,42 +4289,42 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>enabled</td>
-        /// <td>false</td>
+        /// <td><c>enabled</c></td>
+        /// <td><c>false</c></td>
         /// <td>Specifies whether to enable elastic scaling.</td>
         /// </tr>
         /// <tr>
-        /// <td>minSandboxCount</td>
-        /// <td>1</td>
+        /// <td><c>minSandboxCount</c></td>
+        /// <td><c>1</c></td>
         /// <td>The minimum number of instances. Valid values: 0 to 100.</td>
         /// </tr>
         /// <tr>
-        /// <td>maxSandboxCount</td>
-        /// <td>10</td>
+        /// <td><c>maxSandboxCount</c></td>
+        /// <td><c>10</c></td>
         /// <td>The maximum number of instances. Valid values: 0 to 100. The value cannot be less than the minimum number.</td>
         /// </tr>
         /// <tr>
-        /// <td>maxConcurrentSessionsPerSandbox</td>
-        /// <td>20</td>
+        /// <td><c>maxConcurrentSessionsPerSandbox</c></td>
+        /// <td><c>20</c></td>
         /// <td>The maximum number of concurrent sessions per instance. Valid values: 1 to 20.</td>
         /// </tr>
         /// <tr>
-        /// <td>sessionTtlSeconds</td>
-        /// <td>600</td>
+        /// <td><c>sessionTtlSeconds</c></td>
+        /// <td><c>600</c></td>
         /// <td>The maximum idle time of a session, in seconds. Valid values: 60 to 86400.</td>
         /// </tr>
         /// <tr>
-        /// <td>If sessionPolicy.type=ISOLATED_HEADER_FIELD, you must provide headerName. Do not specify this parameter for other policies.</td>
+        /// <td>If <c>sessionPolicy.type=ISOLATED_HEADER_FIELD</c>, you must provide <c>headerName</c>. Do not specify this parameter for other policies.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>If you provide network, you must specify both accessInternet.enabled and accessVpc.enabled. Actual access is restricted by the workspace network configurations.</td>
+        /// <td>If you provide <c>network</c>, you must specify both <c>accessInternet.enabled</c> and <c>accessVpc.enabled</c>. Actual access is restricted by the workspace network configurations.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>The total number of ossMounts and agenticFsMounts cannot exceed 10. The mount target mountPath uses an absolute path in the container, such as /data/train. The path cannot conflict with platform-reserved directories, and cannot be duplicated or form parent-child directory overwrites.</td>
+        /// <td>The total number of <c>ossMounts</c> and <c>agenticFsMounts</c> cannot exceed 10. The mount target <c>mountPath</c> uses an absolute path in the container, such as <c>/data/train</c>. The path cannot conflict with platform-reserved directories, and mount targets cannot be duplicated or form parent-child directory overwrites.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
@@ -4334,18 +4334,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>The path for an OSS mount must be a non-empty directory prefix in the bucket. The server for an AgenticFS mount is the access point domain name, without a protocol, port, or path. The path is an existing non-empty relative directory in the access point. You cannot mount the root directory of the access point. If readOnly is omitted, the default value is false.</td>
+        /// <td>The <c>path</c> for an OSS mount must be a non-empty directory prefix in a bucket. The <c>server</c> for an AgenticFS mount is the access point domain name, without a protocol, port, or path. The <c>path</c> is an existing non-empty relative directory in the access point. You cannot mount the root directory of the access point. If <c>readOnly</c> is omitted, the default value is <c>false</c>.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>environment.variables configures environment variables, and environment.credentialReferences references workspace credentials. Environment variable names must be non-empty and unique, and values must be strings.</td>
+        /// <td><c>environment.variables</c> configures environment variables, and <c>environment.credentialReferences</c> references workspace credentials. Environment variable names must be non-empty and unique, and values must be strings.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Query deployment results</h3>
-        /// <para>A successful response indicates that the request is accepted. Save the agentId and use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query latestVersionStatus, status, and sandboxPhaseCounts to confirm the configuration processing and instance status. clientToken is a reserved query parameter and currently does not provide idempotence guarantees.</para>
+        /// <para>A successful response indicates that the request is accepted. Save the <c>agentId</c> and use <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query <c>latestVersionStatus</c>, <c>status</c>, and <c>sandboxPhaseCounts</c> to confirm the configuration processing and instance status. <c>clientToken</c> is a reserved query parameter and does not provide idempotency guarantees.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6668,12 +6668,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除智能体版本</para>
+        /// <para>Deletes a saved fixed version of a specified managed or custom agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定托管智能体或自定义智能体已保存的固定版本。仍被服务端点引用的版本不可删除，系统维护的 latest 版本不可删除。</para>
+        /// <para>Deletes a saved fixed version of a specified managed or custom agent. You cannot delete versions that are still referenced by service endpoints or the system-maintained latest version.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6719,12 +6719,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除智能体版本</para>
+        /// <para>Deletes a saved fixed version of a specified managed or custom agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定托管智能体或自定义智能体已保存的固定版本。仍被服务端点引用的版本不可删除，系统维护的 latest 版本不可删除。</para>
+        /// <para>Deletes a saved fixed version of a specified managed or custom agent. You cannot delete versions that are still referenced by service endpoints or the system-maintained latest version.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6770,12 +6770,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除智能体版本</para>
+        /// <para>Deletes a saved fixed version of a specified managed or custom agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定托管智能体或自定义智能体已保存的固定版本。仍被服务端点引用的版本不可删除，系统维护的 latest 版本不可删除。</para>
+        /// <para>Deletes a saved fixed version of a specified managed or custom agent. You cannot delete versions that are still referenced by service endpoints or the system-maintained latest version.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6794,12 +6794,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除智能体版本</para>
+        /// <para>Deletes a saved fixed version of a specified managed or custom agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定托管智能体或自定义智能体已保存的固定版本。仍被服务端点引用的版本不可删除，系统维护的 latest 版本不可删除。</para>
+        /// <para>Deletes a saved fixed version of a specified managed or custom agent. You cannot delete versions that are still referenced by service endpoints or the system-maintained latest version.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12100,12 +12100,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能体版本详情</para>
+        /// <para>Queries the details of an agent version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询指定托管智能体或自定义智能体已保存的固定版本详情，configuration 返回版本保存时的 Agent 配置。</para>
+        /// <para>Queries the details of a saved fixed version for a specified managed or custom agent. The configuration field returns the agent configuration at the time the version was saved.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12145,12 +12145,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能体版本详情</para>
+        /// <para>Queries the details of an agent version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询指定托管智能体或自定义智能体已保存的固定版本详情，configuration 返回版本保存时的 Agent 配置。</para>
+        /// <para>Queries the details of a saved fixed version for a specified managed or custom agent. The configuration field returns the agent configuration at the time the version was saved.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12190,12 +12190,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能体版本详情</para>
+        /// <para>Queries the details of an agent version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询指定托管智能体或自定义智能体已保存的固定版本详情，configuration 返回版本保存时的 Agent 配置。</para>
+        /// <para>Queries the details of a saved fixed version for a specified managed or custom agent. The configuration field returns the agent configuration at the time the version was saved.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12214,12 +12214,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能体版本详情</para>
+        /// <para>Queries the details of an agent version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询指定托管智能体或自定义智能体已保存的固定版本详情，configuration 返回版本保存时的 Agent 配置。</para>
+        /// <para>Queries the details of a saved fixed version for a specified managed or custom agent. The configuration field returns the agent configuration at the time the version was saved.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16606,13 +16606,163 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified service endpoint, including the target route, access addresses, authentication configuration, and current status.</para>
+        /// <para>Queries the overall result of a specified sandbox rebuild task. Always use the initial operationId returned by RebuildSandbox without tracking the rebuild task and subsequent creation tasks separately. Only the SUCCEEDED status indicates completion. Do not treat UNKNOWN, missing status, or query exceptions as success, and do not automatically resubmit the rebuild.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the service endpoint of an agent or collaboration component to obtain stable access addresses, authentication configuration, and current status.
-        /// A service endpoint associates access addresses with a specified agent version or workspace collaboration component. You can use the target route and address list in the response to verify the access target.</para>
+        /// <para>Always use the initial operationId returned by RebuildSandbox for queries. Magic aggregates and returns the rebuildOutcome result from Runtime Manager, so the frontend does not need to track Claim tasks. Only SUCCEEDED indicates overall completion. UNKNOWN, missing fields, or query exceptions must not be treated as success, and the rebuild must not be automatically resubmitted. You can specify the endpoint runtime version by using serviceEndpointId. If omitted, the default latest runtime identity is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSandboxRebuildOperationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSandboxRebuildOperationResponse
+        /// </returns>
+        public GetSandboxRebuildOperationResponse GetSandboxRebuildOperationWithOptions(string workspaceId, string agentId, string sandboxId, string operationId, GetSandboxRebuildOperationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceEndpointId))
+            {
+                query["serviceEndpointId"] = request.ServiceEndpointId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSandboxRebuildOperation",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/managed-agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/sandboxes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sandboxId) + "/rebuild-operations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(operationId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSandboxRebuildOperationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the overall result of a specified sandbox rebuild task. Always use the initial operationId returned by RebuildSandbox without tracking the rebuild task and subsequent creation tasks separately. Only the SUCCEEDED status indicates completion. Do not treat UNKNOWN, missing status, or query exceptions as success, and do not automatically resubmit the rebuild.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Always use the initial operationId returned by RebuildSandbox for queries. Magic aggregates and returns the rebuildOutcome result from Runtime Manager, so the frontend does not need to track Claim tasks. Only SUCCEEDED indicates overall completion. UNKNOWN, missing fields, or query exceptions must not be treated as success, and the rebuild must not be automatically resubmitted. You can specify the endpoint runtime version by using serviceEndpointId. If omitted, the default latest runtime identity is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSandboxRebuildOperationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSandboxRebuildOperationResponse
+        /// </returns>
+        public async Task<GetSandboxRebuildOperationResponse> GetSandboxRebuildOperationWithOptionsAsync(string workspaceId, string agentId, string sandboxId, string operationId, GetSandboxRebuildOperationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceEndpointId))
+            {
+                query["serviceEndpointId"] = request.ServiceEndpointId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSandboxRebuildOperation",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/managed-agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/sandboxes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sandboxId) + "/rebuild-operations/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(operationId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSandboxRebuildOperationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the overall result of a specified sandbox rebuild task. Always use the initial operationId returned by RebuildSandbox without tracking the rebuild task and subsequent creation tasks separately. Only the SUCCEEDED status indicates completion. Do not treat UNKNOWN, missing status, or query exceptions as success, and do not automatically resubmit the rebuild.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Always use the initial operationId returned by RebuildSandbox for queries. Magic aggregates and returns the rebuildOutcome result from Runtime Manager, so the frontend does not need to track Claim tasks. Only SUCCEEDED indicates overall completion. UNKNOWN, missing fields, or query exceptions must not be treated as success, and the rebuild must not be automatically resubmitted. You can specify the endpoint runtime version by using serviceEndpointId. If omitted, the default latest runtime identity is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSandboxRebuildOperationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSandboxRebuildOperationResponse
+        /// </returns>
+        public GetSandboxRebuildOperationResponse GetSandboxRebuildOperation(string workspaceId, string agentId, string sandboxId, string operationId, GetSandboxRebuildOperationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetSandboxRebuildOperationWithOptions(workspaceId, agentId, sandboxId, operationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the overall result of a specified sandbox rebuild task. Always use the initial operationId returned by RebuildSandbox without tracking the rebuild task and subsequent creation tasks separately. Only the SUCCEEDED status indicates completion. Do not treat UNKNOWN, missing status, or query exceptions as success, and do not automatically resubmit the rebuild.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Always use the initial operationId returned by RebuildSandbox for queries. Magic aggregates and returns the rebuildOutcome result from Runtime Manager, so the frontend does not need to track Claim tasks. Only SUCCEEDED indicates overall completion. UNKNOWN, missing fields, or query exceptions must not be treated as success, and the rebuild must not be automatically resubmitted. You can specify the endpoint runtime version by using serviceEndpointId. If omitted, the default latest runtime identity is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSandboxRebuildOperationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSandboxRebuildOperationResponse
+        /// </returns>
+        public async Task<GetSandboxRebuildOperationResponse> GetSandboxRebuildOperationAsync(string workspaceId, string agentId, string sandboxId, string operationId, GetSandboxRebuildOperationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetSandboxRebuildOperationWithOptionsAsync(workspaceId, agentId, sandboxId, operationId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified service endpoint, including the target route, access URLs, authentication configuration, and current status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the service endpoint of an agent or collaboration component to obtain stable access URLs, authentication configuration, and current status.
+        /// A service endpoint associates access URLs with a specified agent version or workspace collaboration component. You can use the target route and URL list in the response to verify the access target.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16652,13 +16802,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified service endpoint, including the target route, access addresses, authentication configuration, and current status.</para>
+        /// <para>Queries the details of a specified service endpoint, including the target route, access URLs, authentication configuration, and current status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the service endpoint of an agent or collaboration component to obtain stable access addresses, authentication configuration, and current status.
-        /// A service endpoint associates access addresses with a specified agent version or workspace collaboration component. You can use the target route and address list in the response to verify the access target.</para>
+        /// <para>Queries the service endpoint of an agent or collaboration component to obtain stable access URLs, authentication configuration, and current status.
+        /// A service endpoint associates access URLs with a specified agent version or workspace collaboration component. You can use the target route and URL list in the response to verify the access target.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16698,13 +16848,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified service endpoint, including the target route, access addresses, authentication configuration, and current status.</para>
+        /// <para>Queries the details of a specified service endpoint, including the target route, access URLs, authentication configuration, and current status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the service endpoint of an agent or collaboration component to obtain stable access addresses, authentication configuration, and current status.
-        /// A service endpoint associates access addresses with a specified agent version or workspace collaboration component. You can use the target route and address list in the response to verify the access target.</para>
+        /// <para>Queries the service endpoint of an agent or collaboration component to obtain stable access URLs, authentication configuration, and current status.
+        /// A service endpoint associates access URLs with a specified agent version or workspace collaboration component. You can use the target route and URL list in the response to verify the access target.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16723,13 +16873,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified service endpoint, including the target route, access addresses, authentication configuration, and current status.</para>
+        /// <para>Queries the details of a specified service endpoint, including the target route, access URLs, authentication configuration, and current status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the service endpoint of an agent or collaboration component to obtain stable access addresses, authentication configuration, and current status.
-        /// A service endpoint associates access addresses with a specified agent version or workspace collaboration component. You can use the target route and address list in the response to verify the access target.</para>
+        /// <para>Queries the service endpoint of an agent or collaboration component to obtain stable access URLs, authentication configuration, and current status.
+        /// A service endpoint associates access URLs with a specified agent version or workspace collaboration component. You can use the target route and URL list in the response to verify the access target.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19356,12 +19506,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能体版本列表</para>
+        /// <para>Queries a list of agent versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分页查询指定托管智能体或自定义智能体已保存的固定版本，按创建时间倒序返回，不包含系统维护的 latest 版本。列表项不返回 configuration，需查看配置时调用 GetAgentVersion。</para>
+        /// <para>Performs a paged query for saved fixed versions of a specified managed or custom agent. The paging results are returned in descending order of creation time and do not include the latest version under system maintenance. List items do not return the configuration. To view the configuration, invoke GetAgentVersion.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19411,12 +19561,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能体版本列表</para>
+        /// <para>Queries a list of agent versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分页查询指定托管智能体或自定义智能体已保存的固定版本，按创建时间倒序返回，不包含系统维护的 latest 版本。列表项不返回 configuration，需查看配置时调用 GetAgentVersion。</para>
+        /// <para>Performs a paged query for saved fixed versions of a specified managed or custom agent. The paging results are returned in descending order of creation time and do not include the latest version under system maintenance. List items do not return the configuration. To view the configuration, invoke GetAgentVersion.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19466,12 +19616,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能体版本列表</para>
+        /// <para>Queries a list of agent versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分页查询指定托管智能体或自定义智能体已保存的固定版本，按创建时间倒序返回，不包含系统维护的 latest 版本。列表项不返回 configuration，需查看配置时调用 GetAgentVersion。</para>
+        /// <para>Performs a paged query for saved fixed versions of a specified managed or custom agent. The paging results are returned in descending order of creation time and do not include the latest version under system maintenance. List items do not return the configuration. To view the configuration, invoke GetAgentVersion.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19490,12 +19640,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能体版本列表</para>
+        /// <para>Queries a list of agent versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分页查询指定托管智能体或自定义智能体已保存的固定版本，按创建时间倒序返回，不包含系统维护的 latest 版本。列表项不返回 configuration，需查看配置时调用 GetAgentVersion。</para>
+        /// <para>Performs a paged query for saved fixed versions of a specified managed or custom agent. The paging results are returned in descending order of creation time and do not include the latest version under system maintenance. List items do not return the configuration. To view the configuration, invoke GetAgentVersion.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21316,16 +21466,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for the identity, harnesses, configuration versions, and status summary of managed Harness agents in a workspace.</para>
+        /// <para>Performs a paging query for the identity, harness, configuration version, and status summary of managed Harness agents in a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for the identity, harnesses, configuration versions, and status summary of managed Harness agents in a workspace.</para>
+        /// <para>Performs a paging query for the identity, harness, configuration version, and status summary of managed Harness agents in a workspace.</para>
         /// <h3>Paging query</h3>
-        /// <para>If <c>maxResults</c> is omitted or set to <c>0</c>, the default value is 20, and the maximum value is 100. Omit <c>nextToken</c> in the first request. For subsequent requests, pass the token returned in the previous response as is, and keep the same workspace and filter conditions. An empty token indicates that no more pages are available.</para>
+        /// <para>If maxResults is omitted or set to 0, the default value is 20, and the maximum value is 100. Omit nextToken in the first request. For subsequent requests, pass the token returned in the previous response as is, and keep the same workspace and filter conditions. An empty token indicates that there are no more pages.</para>
         /// <h3>Response content</h3>
-        /// <para>The list returns summary information, where <c>harness.type</c> indicates the runtime framework. You can query the complete configuration, skill targets and effective versions, and instance status statistics by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a>.</para>
+        /// <para>The list returns summary information, where harness.type indicates the runtime framework. For complete configurations, skill targets and effective versions, and instance status statistics, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21375,16 +21525,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for the identity, harnesses, configuration versions, and status summary of managed Harness agents in a workspace.</para>
+        /// <para>Performs a paging query for the identity, harness, configuration version, and status summary of managed Harness agents in a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for the identity, harnesses, configuration versions, and status summary of managed Harness agents in a workspace.</para>
+        /// <para>Performs a paging query for the identity, harness, configuration version, and status summary of managed Harness agents in a workspace.</para>
         /// <h3>Paging query</h3>
-        /// <para>If <c>maxResults</c> is omitted or set to <c>0</c>, the default value is 20, and the maximum value is 100. Omit <c>nextToken</c> in the first request. For subsequent requests, pass the token returned in the previous response as is, and keep the same workspace and filter conditions. An empty token indicates that no more pages are available.</para>
+        /// <para>If maxResults is omitted or set to 0, the default value is 20, and the maximum value is 100. Omit nextToken in the first request. For subsequent requests, pass the token returned in the previous response as is, and keep the same workspace and filter conditions. An empty token indicates that there are no more pages.</para>
         /// <h3>Response content</h3>
-        /// <para>The list returns summary information, where <c>harness.type</c> indicates the runtime framework. You can query the complete configuration, skill targets and effective versions, and instance status statistics by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a>.</para>
+        /// <para>The list returns summary information, where harness.type indicates the runtime framework. For complete configurations, skill targets and effective versions, and instance status statistics, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21434,16 +21584,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for the identity, harnesses, configuration versions, and status summary of managed Harness agents in a workspace.</para>
+        /// <para>Performs a paging query for the identity, harness, configuration version, and status summary of managed Harness agents in a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for the identity, harnesses, configuration versions, and status summary of managed Harness agents in a workspace.</para>
+        /// <para>Performs a paging query for the identity, harness, configuration version, and status summary of managed Harness agents in a workspace.</para>
         /// <h3>Paging query</h3>
-        /// <para>If <c>maxResults</c> is omitted or set to <c>0</c>, the default value is 20, and the maximum value is 100. Omit <c>nextToken</c> in the first request. For subsequent requests, pass the token returned in the previous response as is, and keep the same workspace and filter conditions. An empty token indicates that no more pages are available.</para>
+        /// <para>If maxResults is omitted or set to 0, the default value is 20, and the maximum value is 100. Omit nextToken in the first request. For subsequent requests, pass the token returned in the previous response as is, and keep the same workspace and filter conditions. An empty token indicates that there are no more pages.</para>
         /// <h3>Response content</h3>
-        /// <para>The list returns summary information, where <c>harness.type</c> indicates the runtime framework. You can query the complete configuration, skill targets and effective versions, and instance status statistics by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a>.</para>
+        /// <para>The list returns summary information, where harness.type indicates the runtime framework. For complete configurations, skill targets and effective versions, and instance status statistics, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21462,16 +21612,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paging query for the identity, harnesses, configuration versions, and status summary of managed Harness agents in a workspace.</para>
+        /// <para>Performs a paging query for the identity, harness, configuration version, and status summary of managed Harness agents in a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paging query for the identity, harnesses, configuration versions, and status summary of managed Harness agents in a workspace.</para>
+        /// <para>Performs a paging query for the identity, harness, configuration version, and status summary of managed Harness agents in a workspace.</para>
         /// <h3>Paging query</h3>
-        /// <para>If <c>maxResults</c> is omitted or set to <c>0</c>, the default value is 20, and the maximum value is 100. Omit <c>nextToken</c> in the first request. For subsequent requests, pass the token returned in the previous response as is, and keep the same workspace and filter conditions. An empty token indicates that no more pages are available.</para>
+        /// <para>If maxResults is omitted or set to 0, the default value is 20, and the maximum value is 100. Omit nextToken in the first request. For subsequent requests, pass the token returned in the previous response as is, and keep the same workspace and filter conditions. An empty token indicates that there are no more pages.</para>
         /// <h3>Response content</h3>
-        /// <para>The list returns summary information, where <c>harness.type</c> indicates the runtime framework. You can query the complete configuration, skill targets and effective versions, and instance status statistics by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a>.</para>
+        /// <para>The list returns summary information, where harness.type indicates the runtime framework. For complete configurations, skill targets and effective versions, and instance status statistics, call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23606,18 +23756,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query for the current active sessions and their sources in a specified agent instance, supporting paging.</para>
+        /// <para>Performs a paging query to retrieve the current active sessions and their sources in a specified agent instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Queries the active sessions in a specified running instance to view the current mapping between sessions and instances.</para>
         /// <h3>Query scope</h3>
-        /// <para>Locate the instance by using <c>workspaceId</c>, <c>agentId</c>, and <c>sandboxId</c>. You can obtain the <c>sandboxId</c> from <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxes">ListSandboxes</a>. This operation queries the current active sessions.</para>
+        /// <para>Locates the instance by using workspaceId, agentId, and sandboxId. You can obtain the sandboxId from <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxes">ListSandboxes</a>. This operation queries the current active sessions.</para>
         /// <h3>Pagination</h3>
-        /// <para>The default value of <c>maxResults</c> is 20. Valid values: 1 to 100. Omit <c>nextToken</c> in the first request. For subsequent requests, use the returned token as is, and keep the workspace, agent, instance, and page size unchanged. An empty token indicates that no more pages are available.</para>
-        /// <h3>Session source</h3>
-        /// <para>The source can be <c>API</c>, <c>CONSOLE_DEBUG</c>, <c>EXTERNAL_CHANNEL</c>, or <c>UNKNOWN</c>. For external channels, the channel type is additionally returned. If no source information is provided, <c>UNKNOWN</c> is returned.</para>
+        /// <para>The default value of maxResults is 20. Valid values: 1 to 100. Omit nextToken in the first request. For subsequent requests, use the returned token as is, and keep the workspace, agent, instance, and page size unchanged. An empty token indicates that no more pages are available.</para>
+        /// <h3>Session sources</h3>
+        /// <para>The source can be API, CONSOLE_DEBUG, EXTERNAL_CHANNEL, or UNKNOWN. For external channels, the channel type is additionally returned. If no source information is provided, UNKNOWN is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23671,18 +23821,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query for the current active sessions and their sources in a specified agent instance, supporting paging.</para>
+        /// <para>Performs a paging query to retrieve the current active sessions and their sources in a specified agent instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Queries the active sessions in a specified running instance to view the current mapping between sessions and instances.</para>
         /// <h3>Query scope</h3>
-        /// <para>Locate the instance by using <c>workspaceId</c>, <c>agentId</c>, and <c>sandboxId</c>. You can obtain the <c>sandboxId</c> from <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxes">ListSandboxes</a>. This operation queries the current active sessions.</para>
+        /// <para>Locates the instance by using workspaceId, agentId, and sandboxId. You can obtain the sandboxId from <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxes">ListSandboxes</a>. This operation queries the current active sessions.</para>
         /// <h3>Pagination</h3>
-        /// <para>The default value of <c>maxResults</c> is 20. Valid values: 1 to 100. Omit <c>nextToken</c> in the first request. For subsequent requests, use the returned token as is, and keep the workspace, agent, instance, and page size unchanged. An empty token indicates that no more pages are available.</para>
-        /// <h3>Session source</h3>
-        /// <para>The source can be <c>API</c>, <c>CONSOLE_DEBUG</c>, <c>EXTERNAL_CHANNEL</c>, or <c>UNKNOWN</c>. For external channels, the channel type is additionally returned. If no source information is provided, <c>UNKNOWN</c> is returned.</para>
+        /// <para>The default value of maxResults is 20. Valid values: 1 to 100. Omit nextToken in the first request. For subsequent requests, use the returned token as is, and keep the workspace, agent, instance, and page size unchanged. An empty token indicates that no more pages are available.</para>
+        /// <h3>Session sources</h3>
+        /// <para>The source can be API, CONSOLE_DEBUG, EXTERNAL_CHANNEL, or UNKNOWN. For external channels, the channel type is additionally returned. If no source information is provided, UNKNOWN is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23736,18 +23886,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query for the current active sessions and their sources in a specified agent instance, supporting paging.</para>
+        /// <para>Performs a paging query to retrieve the current active sessions and their sources in a specified agent instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Queries the active sessions in a specified running instance to view the current mapping between sessions and instances.</para>
         /// <h3>Query scope</h3>
-        /// <para>Locate the instance by using <c>workspaceId</c>, <c>agentId</c>, and <c>sandboxId</c>. You can obtain the <c>sandboxId</c> from <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxes">ListSandboxes</a>. This operation queries the current active sessions.</para>
+        /// <para>Locates the instance by using workspaceId, agentId, and sandboxId. You can obtain the sandboxId from <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxes">ListSandboxes</a>. This operation queries the current active sessions.</para>
         /// <h3>Pagination</h3>
-        /// <para>The default value of <c>maxResults</c> is 20. Valid values: 1 to 100. Omit <c>nextToken</c> in the first request. For subsequent requests, use the returned token as is, and keep the workspace, agent, instance, and page size unchanged. An empty token indicates that no more pages are available.</para>
-        /// <h3>Session source</h3>
-        /// <para>The source can be <c>API</c>, <c>CONSOLE_DEBUG</c>, <c>EXTERNAL_CHANNEL</c>, or <c>UNKNOWN</c>. For external channels, the channel type is additionally returned. If no source information is provided, <c>UNKNOWN</c> is returned.</para>
+        /// <para>The default value of maxResults is 20. Valid values: 1 to 100. Omit nextToken in the first request. For subsequent requests, use the returned token as is, and keep the workspace, agent, instance, and page size unchanged. An empty token indicates that no more pages are available.</para>
+        /// <h3>Session sources</h3>
+        /// <para>The source can be API, CONSOLE_DEBUG, EXTERNAL_CHANNEL, or UNKNOWN. For external channels, the channel type is additionally returned. If no source information is provided, UNKNOWN is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23766,18 +23916,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query for the current active sessions and their sources in a specified agent instance, supporting paging.</para>
+        /// <para>Performs a paging query to retrieve the current active sessions and their sources in a specified agent instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Queries the active sessions in a specified running instance to view the current mapping between sessions and instances.</para>
         /// <h3>Query scope</h3>
-        /// <para>Locate the instance by using <c>workspaceId</c>, <c>agentId</c>, and <c>sandboxId</c>. You can obtain the <c>sandboxId</c> from <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxes">ListSandboxes</a>. This operation queries the current active sessions.</para>
+        /// <para>Locates the instance by using workspaceId, agentId, and sandboxId. You can obtain the sandboxId from <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxes">ListSandboxes</a>. This operation queries the current active sessions.</para>
         /// <h3>Pagination</h3>
-        /// <para>The default value of <c>maxResults</c> is 20. Valid values: 1 to 100. Omit <c>nextToken</c> in the first request. For subsequent requests, use the returned token as is, and keep the workspace, agent, instance, and page size unchanged. An empty token indicates that no more pages are available.</para>
-        /// <h3>Session source</h3>
-        /// <para>The source can be <c>API</c>, <c>CONSOLE_DEBUG</c>, <c>EXTERNAL_CHANNEL</c>, or <c>UNKNOWN</c>. For external channels, the channel type is additionally returned. If no source information is provided, <c>UNKNOWN</c> is returned.</para>
+        /// <para>The default value of maxResults is 20. Valid values: 1 to 100. Omit nextToken in the first request. For subsequent requests, use the returned token as is, and keep the workspace, agent, instance, and page size unchanged. An empty token indicates that no more pages are available.</para>
+        /// <h3>Session sources</h3>
+        /// <para>The source can be API, CONSOLE_DEBUG, EXTERNAL_CHANNEL, or UNKNOWN. For external channels, the channel type is additionally returned. If no source information is provided, UNKNOWN is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23801,11 +23951,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the running instances (sandboxes) of an agent to view the instance distribution and current running status.</para>
+        /// <para>Queries the running instances (sandboxes) of an agent to view instance distribution and current running status.</para>
         /// <h3>Filter instances</h3>
-        /// <para><c>searchText</c> matches Sandbox ID fragments, and <c>sessionId</c> matches current valid session ID fragments. Both are case-insensitive. If both are submitted at the same time, they are combined for filtering.</para>
+        /// <para><c>searchText</c> matches Sandbox ID fragments, and <c>sessionId</c> matches current valid session ID fragments. Both are case-insensitive. If both are submitted, they are combined for filtering.</para>
         /// <h3>Pagination and status</h3>
-        /// <para>The default value of <c>maxResults</c> is 20, and the valid values are 1 to 100. Omit <c>nextToken</c> for the first request. For subsequent requests, use the response token as is, and keep <c>workspaceId</c>, <c>agentId</c>, filter conditions, and <c>maxResults</c> unchanged. An empty token indicates that the query is complete.
+        /// <para>The default value of <c>maxResults</c> is 20. Valid values: 1 to 100. Omit <c>nextToken</c> for the first request. For subsequent requests, use the response token as is, and keep <c>workspaceId</c>, <c>agentId</c>, filter conditions, and <c>maxResults</c> unchanged. An empty token indicates that the query is complete.
         /// <c>phase</c> indicates the instance phase, <c>activeSessionCount</c> indicates the number of current active sessions, and <c>maxConcurrentSessions</c> indicates the configured concurrency limit for a single instance. You can query the active sessions of an instance by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxSessions">ListSandboxSessions</a>.</para>
         /// </description>
         /// 
@@ -23873,11 +24023,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the running instances (sandboxes) of an agent to view the instance distribution and current running status.</para>
+        /// <para>Queries the running instances (sandboxes) of an agent to view instance distribution and current running status.</para>
         /// <h3>Filter instances</h3>
-        /// <para><c>searchText</c> matches Sandbox ID fragments, and <c>sessionId</c> matches current valid session ID fragments. Both are case-insensitive. If both are submitted at the same time, they are combined for filtering.</para>
+        /// <para><c>searchText</c> matches Sandbox ID fragments, and <c>sessionId</c> matches current valid session ID fragments. Both are case-insensitive. If both are submitted, they are combined for filtering.</para>
         /// <h3>Pagination and status</h3>
-        /// <para>The default value of <c>maxResults</c> is 20, and the valid values are 1 to 100. Omit <c>nextToken</c> for the first request. For subsequent requests, use the response token as is, and keep <c>workspaceId</c>, <c>agentId</c>, filter conditions, and <c>maxResults</c> unchanged. An empty token indicates that the query is complete.
+        /// <para>The default value of <c>maxResults</c> is 20. Valid values: 1 to 100. Omit <c>nextToken</c> for the first request. For subsequent requests, use the response token as is, and keep <c>workspaceId</c>, <c>agentId</c>, filter conditions, and <c>maxResults</c> unchanged. An empty token indicates that the query is complete.
         /// <c>phase</c> indicates the instance phase, <c>activeSessionCount</c> indicates the number of current active sessions, and <c>maxConcurrentSessions</c> indicates the configured concurrency limit for a single instance. You can query the active sessions of an instance by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxSessions">ListSandboxSessions</a>.</para>
         /// </description>
         /// 
@@ -23945,11 +24095,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the running instances (sandboxes) of an agent to view the instance distribution and current running status.</para>
+        /// <para>Queries the running instances (sandboxes) of an agent to view instance distribution and current running status.</para>
         /// <h3>Filter instances</h3>
-        /// <para><c>searchText</c> matches Sandbox ID fragments, and <c>sessionId</c> matches current valid session ID fragments. Both are case-insensitive. If both are submitted at the same time, they are combined for filtering.</para>
+        /// <para><c>searchText</c> matches Sandbox ID fragments, and <c>sessionId</c> matches current valid session ID fragments. Both are case-insensitive. If both are submitted, they are combined for filtering.</para>
         /// <h3>Pagination and status</h3>
-        /// <para>The default value of <c>maxResults</c> is 20, and the valid values are 1 to 100. Omit <c>nextToken</c> for the first request. For subsequent requests, use the response token as is, and keep <c>workspaceId</c>, <c>agentId</c>, filter conditions, and <c>maxResults</c> unchanged. An empty token indicates that the query is complete.
+        /// <para>The default value of <c>maxResults</c> is 20. Valid values: 1 to 100. Omit <c>nextToken</c> for the first request. For subsequent requests, use the response token as is, and keep <c>workspaceId</c>, <c>agentId</c>, filter conditions, and <c>maxResults</c> unchanged. An empty token indicates that the query is complete.
         /// <c>phase</c> indicates the instance phase, <c>activeSessionCount</c> indicates the number of current active sessions, and <c>maxConcurrentSessions</c> indicates the configured concurrency limit for a single instance. You can query the active sessions of an instance by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxSessions">ListSandboxSessions</a>.</para>
         /// </description>
         /// 
@@ -23974,11 +24124,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the running instances (sandboxes) of an agent to view the instance distribution and current running status.</para>
+        /// <para>Queries the running instances (sandboxes) of an agent to view instance distribution and current running status.</para>
         /// <h3>Filter instances</h3>
-        /// <para><c>searchText</c> matches Sandbox ID fragments, and <c>sessionId</c> matches current valid session ID fragments. Both are case-insensitive. If both are submitted at the same time, they are combined for filtering.</para>
+        /// <para><c>searchText</c> matches Sandbox ID fragments, and <c>sessionId</c> matches current valid session ID fragments. Both are case-insensitive. If both are submitted, they are combined for filtering.</para>
         /// <h3>Pagination and status</h3>
-        /// <para>The default value of <c>maxResults</c> is 20, and the valid values are 1 to 100. Omit <c>nextToken</c> for the first request. For subsequent requests, use the response token as is, and keep <c>workspaceId</c>, <c>agentId</c>, filter conditions, and <c>maxResults</c> unchanged. An empty token indicates that the query is complete.
+        /// <para>The default value of <c>maxResults</c> is 20. Valid values: 1 to 100. Omit <c>nextToken</c> for the first request. For subsequent requests, use the response token as is, and keep <c>workspaceId</c>, <c>agentId</c>, filter conditions, and <c>maxResults</c> unchanged. An empty token indicates that the query is complete.
         /// <c>phase</c> indicates the instance phase, <c>activeSessionCount</c> indicates the number of current active sessions, and <c>maxConcurrentSessions</c> indicates the configured concurrency limit for a single instance. You can query the active sessions of an instance by calling <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListSandboxSessions">ListSandboxSessions</a>.</para>
         /// </description>
         /// 
@@ -24003,11 +24153,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries service endpoints in a workspace with paging to find the access entries for agents or collaboration components.</para>
+        /// <para>Queries service endpoints in a workspace with paging to find the access endpoints for agents or collaboration components.</para>
         /// <list type="bullet">
-        /// <item><description>Use <c>targetType</c>, <c>agentId</c>, <c>agentVersion</c>, <c>resourceBindingId</c>, <c>collaborationComponent</c>, and <c>status</c> to filter the results.</description></item>
-        /// <item><description>Use <c>maxResults</c> to set the number of entries per page. If omitted, the default value is 20.</description></item>
-        /// <item><description>Use the returned <c>nextToken</c> to query the next page.</description></item>
+        /// <item><description>Use targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status to filter the results.</description></item>
+        /// <item><description>Use maxResults to set the number of entries per page. If omitted, the default value is 20.</description></item>
+        /// <item><description>Use the returned nextToken to query the next page.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24087,11 +24237,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries service endpoints in a workspace with paging to find the access entries for agents or collaboration components.</para>
+        /// <para>Queries service endpoints in a workspace with paging to find the access endpoints for agents or collaboration components.</para>
         /// <list type="bullet">
-        /// <item><description>Use <c>targetType</c>, <c>agentId</c>, <c>agentVersion</c>, <c>resourceBindingId</c>, <c>collaborationComponent</c>, and <c>status</c> to filter the results.</description></item>
-        /// <item><description>Use <c>maxResults</c> to set the number of entries per page. If omitted, the default value is 20.</description></item>
-        /// <item><description>Use the returned <c>nextToken</c> to query the next page.</description></item>
+        /// <item><description>Use targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status to filter the results.</description></item>
+        /// <item><description>Use maxResults to set the number of entries per page. If omitted, the default value is 20.</description></item>
+        /// <item><description>Use the returned nextToken to query the next page.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24171,11 +24321,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries service endpoints in a workspace with paging to find the access entries for agents or collaboration components.</para>
+        /// <para>Queries service endpoints in a workspace with paging to find the access endpoints for agents or collaboration components.</para>
         /// <list type="bullet">
-        /// <item><description>Use <c>targetType</c>, <c>agentId</c>, <c>agentVersion</c>, <c>resourceBindingId</c>, <c>collaborationComponent</c>, and <c>status</c> to filter the results.</description></item>
-        /// <item><description>Use <c>maxResults</c> to set the number of entries per page. If omitted, the default value is 20.</description></item>
-        /// <item><description>Use the returned <c>nextToken</c> to query the next page.</description></item>
+        /// <item><description>Use targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status to filter the results.</description></item>
+        /// <item><description>Use maxResults to set the number of entries per page. If omitted, the default value is 20.</description></item>
+        /// <item><description>Use the returned nextToken to query the next page.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24200,11 +24350,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries service endpoints in a workspace with paging to find the access entries for agents or collaboration components.</para>
+        /// <para>Queries service endpoints in a workspace with paging to find the access endpoints for agents or collaboration components.</para>
         /// <list type="bullet">
-        /// <item><description>Use <c>targetType</c>, <c>agentId</c>, <c>agentVersion</c>, <c>resourceBindingId</c>, <c>collaborationComponent</c>, and <c>status</c> to filter the results.</description></item>
-        /// <item><description>Use <c>maxResults</c> to set the number of entries per page. If omitted, the default value is 20.</description></item>
-        /// <item><description>Use the returned <c>nextToken</c> to query the next page.</description></item>
+        /// <item><description>Use targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status to filter the results.</description></item>
+        /// <item><description>Use maxResults to set the number of entries per page. If omitted, the default value is 20.</description></item>
+        /// <item><description>Use the returned nextToken to query the next page.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26060,6 +26210,156 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await PublishSkillVersionWithOptionsAsync(workspaceId, skillName, skillVersion, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a request to rebuild a single sandbox image for a specified managed agent. Existing sessions may be interrupted. An HTTP 200 response only indicates that the request is accepted. Use the returned operationId to call GetSandboxRebuildOperation to query the overall result. Only a SUCCEEDED status indicates that the rebuild is complete. Do not automatically resubmit the rebuild request if the query times out, returns UNKNOWN, or the result is unclear.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Submits a request to rebuild a single sandbox image for a specified managed agent. Existing sessions may be interrupted. An HTTP 200 response only indicates that the request is successfully submitted and accepted. You must use the returned operationId to call GetSandboxRebuildOperation. Only an overall SUCCEEDED status indicates that the rebuild is complete. Do not automatically resubmit the request if the query times out, returns UNKNOWN, or the result is unclear. You can specify an endpoint runtime version by using serviceEndpointId. If this parameter is omitted, the default latest runtime identity is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RebuildSandboxRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RebuildSandboxResponse
+        /// </returns>
+        public RebuildSandboxResponse RebuildSandboxWithOptions(string workspaceId, string agentId, string sandboxId, RebuildSandboxRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceEndpointId))
+            {
+                query["serviceEndpointId"] = request.ServiceEndpointId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RebuildSandbox",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/managed-agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/sandboxes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sandboxId) + "/rebuild",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RebuildSandboxResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a request to rebuild a single sandbox image for a specified managed agent. Existing sessions may be interrupted. An HTTP 200 response only indicates that the request is accepted. Use the returned operationId to call GetSandboxRebuildOperation to query the overall result. Only a SUCCEEDED status indicates that the rebuild is complete. Do not automatically resubmit the rebuild request if the query times out, returns UNKNOWN, or the result is unclear.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Submits a request to rebuild a single sandbox image for a specified managed agent. Existing sessions may be interrupted. An HTTP 200 response only indicates that the request is successfully submitted and accepted. You must use the returned operationId to call GetSandboxRebuildOperation. Only an overall SUCCEEDED status indicates that the rebuild is complete. Do not automatically resubmit the request if the query times out, returns UNKNOWN, or the result is unclear. You can specify an endpoint runtime version by using serviceEndpointId. If this parameter is omitted, the default latest runtime identity is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RebuildSandboxRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RebuildSandboxResponse
+        /// </returns>
+        public async Task<RebuildSandboxResponse> RebuildSandboxWithOptionsAsync(string workspaceId, string agentId, string sandboxId, RebuildSandboxRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceEndpointId))
+            {
+                query["serviceEndpointId"] = request.ServiceEndpointId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RebuildSandbox",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/managed-agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/sandboxes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sandboxId) + "/rebuild",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RebuildSandboxResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a request to rebuild a single sandbox image for a specified managed agent. Existing sessions may be interrupted. An HTTP 200 response only indicates that the request is accepted. Use the returned operationId to call GetSandboxRebuildOperation to query the overall result. Only a SUCCEEDED status indicates that the rebuild is complete. Do not automatically resubmit the rebuild request if the query times out, returns UNKNOWN, or the result is unclear.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Submits a request to rebuild a single sandbox image for a specified managed agent. Existing sessions may be interrupted. An HTTP 200 response only indicates that the request is successfully submitted and accepted. You must use the returned operationId to call GetSandboxRebuildOperation. Only an overall SUCCEEDED status indicates that the rebuild is complete. Do not automatically resubmit the request if the query times out, returns UNKNOWN, or the result is unclear. You can specify an endpoint runtime version by using serviceEndpointId. If this parameter is omitted, the default latest runtime identity is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RebuildSandboxRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RebuildSandboxResponse
+        /// </returns>
+        public RebuildSandboxResponse RebuildSandbox(string workspaceId, string agentId, string sandboxId, RebuildSandboxRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RebuildSandboxWithOptions(workspaceId, agentId, sandboxId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a request to rebuild a single sandbox image for a specified managed agent. Existing sessions may be interrupted. An HTTP 200 response only indicates that the request is accepted. Use the returned operationId to call GetSandboxRebuildOperation to query the overall result. Only a SUCCEEDED status indicates that the rebuild is complete. Do not automatically resubmit the rebuild request if the query times out, returns UNKNOWN, or the result is unclear.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Submits a request to rebuild a single sandbox image for a specified managed agent. Existing sessions may be interrupted. An HTTP 200 response only indicates that the request is successfully submitted and accepted. You must use the returned operationId to call GetSandboxRebuildOperation. Only an overall SUCCEEDED status indicates that the rebuild is complete. Do not automatically resubmit the request if the query times out, returns UNKNOWN, or the result is unclear. You can specify an endpoint runtime version by using serviceEndpointId. If this parameter is omitted, the default latest runtime identity is used.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RebuildSandboxRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RebuildSandboxResponse
+        /// </returns>
+        public async Task<RebuildSandboxResponse> RebuildSandboxAsync(string workspaceId, string agentId, string sandboxId, RebuildSandboxRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RebuildSandboxWithOptionsAsync(workspaceId, agentId, sandboxId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -30080,14 +30380,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the model, instructions, skills, and runtime configuration of a managed Harness agent and executes the update asynchronously. Omitted top-level fields retain their original configuration.</para>
+        /// <para>Updates the model, instructions, skills, and runtime configuration of a managed Harness agent and executes the update asynchronously. Omitted top-level fields retain their original configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Updates the model, instructions, skills, or runtime configuration of a managed Harness agent to adjust the capabilities and runtime behavior of an existing agent.</para>
         /// <h3>Update rules</h3>
-        /// <para>At least one updatable field must be provided. Omitted top-level fields retain their original configuration. You can set description=null to clear the description.</para>
+        /// <para>Provide at least one updatable field. Omitted top-level fields retain their original configurations. You can set <c>description=null</c> to clear the description.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -30096,35 +30396,35 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>harness</td>
-        /// <td>The type cannot be changed. When updating the qodercli account binding, keep the original type and submit the corresponding configuration.</td>
+        /// <td><c>harness</c></td>
+        /// <td>The type cannot be changed. When updating the qodercli account binding, keep the original <c>type</c> and submit the corresponding <c>configuration</c>.</td>
         /// </tr>
         /// <tr>
-        /// <td>model</td>
+        /// <td><c>model</c></td>
         /// <td>Provide a model configuration that matches the current Harness. For qwenpaw, specify the model connection ID and model name. For qodercli, use the available model identifier of the connector.</td>
         /// </tr>
         /// <tr>
-        /// <td>runtime</td>
-        /// <td>Specify both compute and sessionPolicy when submitting. Omitting the entire object retains the original runtime configuration.</td>
+        /// <td><c>runtime</c></td>
+        /// <td>Specify both <c>compute</c> and <c>sessionPolicy</c> when submitting. Omitting the entire object retains the original runtime configuration.</td>
         /// </tr>
         /// <tr>
-        /// <td>tools, skills, promptVariables, and subAgents</td>
-        /// <td>The corresponding lists are entirely replaced upon submission. You must include the items to be retained. Pass [] to clear the corresponding explicit list.</td>
+        /// <td><c>tools</c>, <c>skills</c>, <c>promptVariables</c>, <c>subAgents</c></td>
+        /// <td>The corresponding lists are entirely replaced upon submission. You must include the items to be retained. Pass <c>[]</c> to clear the corresponding explicit lists.</td>
         /// </tr>
         /// <tr>
-        /// <td>environment</td>
+        /// <td><c>environment</c></td>
         /// <td>The variable list and credential reference list are entirely replaced respectively. Submit the items to be retained together.</td>
         /// </tr>
         /// <tr>
-        /// <td>network</td>
-        /// <td>Specify both accessInternet.enabled and accessVpc.enabled when submitting.</td>
+        /// <td><c>network</c></td>
+        /// <td>Specify both <c>accessInternet.enabled</c> and <c>accessVpc.enabled</c> when submitting.</td>
         /// </tr>
         /// <tr>
-        /// <td>ossMounts and agenticFsMounts</td>
-        /// <td>Entirely replaced respectively. Pass [] to clear the corresponding list. agenticFsMounts does not accept null.</td>
+        /// <td><c>ossMounts</c>, <c>agenticFsMounts</c></td>
+        /// <td>Entirely replaced respectively. Pass <c>[]</c> to clear the corresponding lists. <c>agenticFsMounts</c> does not accept <c>null</c>.</td>
         /// </tr>
         /// </tbody></table>
-        /// <h3>Harness, templates, and skills</h3>
+        /// <h3>Harnesses, templates, and skills</h3>
         /// <table>
         /// <thead>
         /// <tr>
@@ -30133,28 +30433,28 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>qwenpaw</td>
-        /// <td>This type is used by default if harness is omitted during creation. Set model.modelConnectionId to the workspace model connection ID, and set model.modelName to the name of the model created under this connection.</td>
+        /// <td><c>qwenpaw</c></td>
+        /// <td>This type is used by default if <c>harness</c> is omitted during creation. Set <c>model.modelConnectionId</c> to the workspace model connection ID, and set <c>model.modelName</c> to the name of the model created under this connection.</td>
         /// </tr>
         /// <tr>
-        /// <td>qodercli</td>
-        /// <td>The qodercli Connector must be enabled in the workspace. Set model.modelConnectionId to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. model.modelName can be omitted.</td>
+        /// <td><c>qodercli</c></td>
+        /// <td>The qodercli connector must be enabled in the workspace. Set <c>model.modelConnectionId</c> to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. <c>model.modelName</c> can be omitted.</td>
         /// </tr>
         /// <tr>
-        /// <td>harness is an object, such as {&quot;type&quot;:&quot;qwenpaw&quot;}. For qodercli, set harness.configuration.connectorServiceAccountKey to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original Service Account Key. This field can be omitted if there is only one key record, but must be specified if there are multiple records. connectorServiceAccountName is the account name. Do not specify these two binding fields for qwenpaw.</td>
+        /// <td><c>harness</c> is an object, such as <c>{&quot;type&quot;:&quot;qwenpaw&quot;}</c>. For qodercli, set <c>harness.configuration.connectorServiceAccountKey</c> to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. This field can be omitted if there is only one key record, but must be specified if there are multiple records. <c>connectorServiceAccountName</c> is the account name. Do not specify these two binding fields for qwenpaw.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>skills uses the Skill names in the workspace AI Registry. If sourceType=REFERENCE, the version is referenced by versionSelector: use LABEL with a label name, or VERSION with a specific version number. If the selector is omitted, LABEL/latest is used. If sourceType=STATIC, static files bundled with the package are used, and no version selector is provided.</td>
+        /// <td><c>skills</c> uses the skill names in the workspace AI Registry. If <c>sourceType=REFERENCE</c>, versions are referenced by <c>versionSelector</c>: use <c>LABEL</c> with a tag name, or <c>VERSION</c> with a specific version number. If the selector is omitted, <c>LABEL/latest</c> is used. If <c>sourceType=STATIC</c>, static files bundled with the package are used, and no version selector is provided.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>For template.aiRegistry, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, instruction, promptVariables, and subAgents are derived from the template, and the corresponding fields in the current request do not take effect. Explicit Skills and template Skills are recorded separately. You can query the target and effective versions through configuredSkills and skills.</td>
+        /// <td>For <c>template.aiRegistry</c>, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, <c>instruction</c>, <c>promptVariables</c>, and <c>subAgents</c> are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions through <c>configuredSkills</c> and <c>skills</c>.</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Elasticity and instances</h3>
-        /// <para>If runtime is committed but hpa or some of its fields are omitted, the following default values are used for unspecified items. To retain the existing elastic policy, commit the complete hpa together.</para>
+        /// <para>If <c>runtime</c> is committed but <c>hpa</c> or some of its fields are omitted, the following default values are used for unspecified items. To retain the existing elastic policy, commit the complete <c>hpa</c>.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -30164,42 +30464,42 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>enabled</td>
-        /// <td>false</td>
-        /// <td>Specifies whether to enable elastic scaling.</td>
+        /// <td><c>enabled</c></td>
+        /// <td><c>false</c></td>
+        /// <td>Specifies whether elastic scaling is enabled.</td>
         /// </tr>
         /// <tr>
-        /// <td>minSandboxCount</td>
-        /// <td>1</td>
+        /// <td><c>minSandboxCount</c></td>
+        /// <td><c>1</c></td>
         /// <td>The minimum number of instances. Valid values: 0 to 100.</td>
         /// </tr>
         /// <tr>
-        /// <td>maxSandboxCount</td>
-        /// <td>10</td>
+        /// <td><c>maxSandboxCount</c></td>
+        /// <td><c>10</c></td>
         /// <td>The maximum number of instances. Valid values: 0 to 100. The value cannot be less than the minimum number.</td>
         /// </tr>
         /// <tr>
-        /// <td>maxConcurrentSessionsPerSandbox</td>
-        /// <td>20</td>
+        /// <td><c>maxConcurrentSessionsPerSandbox</c></td>
+        /// <td><c>20</c></td>
         /// <td>The maximum number of concurrent sessions per instance. Valid values: 1 to 20.</td>
         /// </tr>
         /// <tr>
-        /// <td>sessionTtlSeconds</td>
-        /// <td>600</td>
-        /// <td>The maximum idle time for a session, in seconds. Valid values: 60 to 86400.</td>
+        /// <td><c>sessionTtlSeconds</c></td>
+        /// <td><c>600</c></td>
+        /// <td>The maximum idle time of a session, in seconds. Valid values: 60 to 86400.</td>
         /// </tr>
         /// <tr>
-        /// <td>If you only modify instructions, models, or skills, you can omit the entire runtime object, and the original runtime configuration remains unchanged. The minimum and maximum numbers of instances are configuration borders. You can query the actual number through sandboxPhaseCounts.</td>
+        /// <td>If you only modify instructions, models, or skills, you can omit the entire <c>runtime</c> to keep the original runtime configuration unchanged. The minimum and maximum numbers of instances are the configuration border. You can query the actual number through <c>sandboxPhaseCounts</c>.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Environment and mounts</h3>
-        /// <para>Omitting the entire environment object retains the original configuration. Submitting environment={} or environment=null clears the environment configuration. Environment variable values must be strings, and variable names must be non-empty and unique.
-        /// The total number of ossMounts and agenticFsMounts cannot exceed 10. The mount target mountPath uses an absolute path in the container, such as /data/train. It cannot conflict with platform reserved directories, and cannot be duplicated or form parent-child directory overwrites.
-        /// The path for an OSS mount must be a non-empty directory prefix in the bucket. For an AgenticFS mount, server is the AccessPoint domain name, without a protocol, port, or path. path is an existing non-empty relative directory in the AccessPoint. You cannot mount the root directory of the AccessPoint. If readOnly is omitted, the default value is false.</para>
+        /// <para>Omitting the entire <c>environment</c> retains the original configuration. Submitting <c>environment={}</c> or <c>environment=null</c> clears the environment configuration. Environment variable values must be strings, and variable names must be non-empty and unique.
+        /// The total number of <c>ossMounts</c> and <c>agenticFsMounts</c> cannot exceed 10. The mount target <c>mountPath</c> uses an absolute path in the container, such as <c>/data/train</c>. It cannot conflict with platform reserved directories, and cannot be duplicated or form parent-child directory overwrites.
+        /// The <c>path</c> for OSS mounts must be a non-empty directory prefix in the bucket. For AgenticFS mounts, <c>server</c> is the AccessPoint domain name, without a protocol, port, or path. <c>path</c> is an existing non-empty relative directory in the AccessPoint. You cannot mount the root directory of the AccessPoint. If <c>readOnly</c> is omitted, the default value is <c>false</c>.</para>
         /// <h3>Query update results</h3>
-        /// <para>A successful response indicates that the update request has been accepted. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query latestSpecVersion, latestVersionStatus, status, and sandboxPhaseCounts to confirm the configuration processing and instance status. clientToken does not provide idempotency guarantees at this time.</para>
+        /// <para>A successful response indicates that the update request has been accepted. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query <c>latestSpecVersion</c>, <c>latestVersionStatus</c>, <c>status</c>, and <c>sandboxPhaseCounts</c> to confirm the configuration processing and instance status. <c>clientToken</c> does not provide idempotence guarantees at this time.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -30257,14 +30557,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the model, instructions, skills, and runtime configuration of a managed Harness agent and executes the update asynchronously. Omitted top-level fields retain their original configuration.</para>
+        /// <para>Updates the model, instructions, skills, and runtime configuration of a managed Harness agent and executes the update asynchronously. Omitted top-level fields retain their original configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Updates the model, instructions, skills, or runtime configuration of a managed Harness agent to adjust the capabilities and runtime behavior of an existing agent.</para>
         /// <h3>Update rules</h3>
-        /// <para>At least one updatable field must be provided. Omitted top-level fields retain their original configuration. You can set description=null to clear the description.</para>
+        /// <para>Provide at least one updatable field. Omitted top-level fields retain their original configurations. You can set <c>description=null</c> to clear the description.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -30273,35 +30573,35 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>harness</td>
-        /// <td>The type cannot be changed. When updating the qodercli account binding, keep the original type and submit the corresponding configuration.</td>
+        /// <td><c>harness</c></td>
+        /// <td>The type cannot be changed. When updating the qodercli account binding, keep the original <c>type</c> and submit the corresponding <c>configuration</c>.</td>
         /// </tr>
         /// <tr>
-        /// <td>model</td>
+        /// <td><c>model</c></td>
         /// <td>Provide a model configuration that matches the current Harness. For qwenpaw, specify the model connection ID and model name. For qodercli, use the available model identifier of the connector.</td>
         /// </tr>
         /// <tr>
-        /// <td>runtime</td>
-        /// <td>Specify both compute and sessionPolicy when submitting. Omitting the entire object retains the original runtime configuration.</td>
+        /// <td><c>runtime</c></td>
+        /// <td>Specify both <c>compute</c> and <c>sessionPolicy</c> when submitting. Omitting the entire object retains the original runtime configuration.</td>
         /// </tr>
         /// <tr>
-        /// <td>tools, skills, promptVariables, and subAgents</td>
-        /// <td>The corresponding lists are entirely replaced upon submission. You must include the items to be retained. Pass [] to clear the corresponding explicit list.</td>
+        /// <td><c>tools</c>, <c>skills</c>, <c>promptVariables</c>, <c>subAgents</c></td>
+        /// <td>The corresponding lists are entirely replaced upon submission. You must include the items to be retained. Pass <c>[]</c> to clear the corresponding explicit lists.</td>
         /// </tr>
         /// <tr>
-        /// <td>environment</td>
+        /// <td><c>environment</c></td>
         /// <td>The variable list and credential reference list are entirely replaced respectively. Submit the items to be retained together.</td>
         /// </tr>
         /// <tr>
-        /// <td>network</td>
-        /// <td>Specify both accessInternet.enabled and accessVpc.enabled when submitting.</td>
+        /// <td><c>network</c></td>
+        /// <td>Specify both <c>accessInternet.enabled</c> and <c>accessVpc.enabled</c> when submitting.</td>
         /// </tr>
         /// <tr>
-        /// <td>ossMounts and agenticFsMounts</td>
-        /// <td>Entirely replaced respectively. Pass [] to clear the corresponding list. agenticFsMounts does not accept null.</td>
+        /// <td><c>ossMounts</c>, <c>agenticFsMounts</c></td>
+        /// <td>Entirely replaced respectively. Pass <c>[]</c> to clear the corresponding lists. <c>agenticFsMounts</c> does not accept <c>null</c>.</td>
         /// </tr>
         /// </tbody></table>
-        /// <h3>Harness, templates, and skills</h3>
+        /// <h3>Harnesses, templates, and skills</h3>
         /// <table>
         /// <thead>
         /// <tr>
@@ -30310,28 +30610,28 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>qwenpaw</td>
-        /// <td>This type is used by default if harness is omitted during creation. Set model.modelConnectionId to the workspace model connection ID, and set model.modelName to the name of the model created under this connection.</td>
+        /// <td><c>qwenpaw</c></td>
+        /// <td>This type is used by default if <c>harness</c> is omitted during creation. Set <c>model.modelConnectionId</c> to the workspace model connection ID, and set <c>model.modelName</c> to the name of the model created under this connection.</td>
         /// </tr>
         /// <tr>
-        /// <td>qodercli</td>
-        /// <td>The qodercli Connector must be enabled in the workspace. Set model.modelConnectionId to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. model.modelName can be omitted.</td>
+        /// <td><c>qodercli</c></td>
+        /// <td>The qodercli connector must be enabled in the workspace. Set <c>model.modelConnectionId</c> to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. <c>model.modelName</c> can be omitted.</td>
         /// </tr>
         /// <tr>
-        /// <td>harness is an object, such as {&quot;type&quot;:&quot;qwenpaw&quot;}. For qodercli, set harness.configuration.connectorServiceAccountKey to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original Service Account Key. This field can be omitted if there is only one key record, but must be specified if there are multiple records. connectorServiceAccountName is the account name. Do not specify these two binding fields for qwenpaw.</td>
+        /// <td><c>harness</c> is an object, such as <c>{&quot;type&quot;:&quot;qwenpaw&quot;}</c>. For qodercli, set <c>harness.configuration.connectorServiceAccountKey</c> to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. This field can be omitted if there is only one key record, but must be specified if there are multiple records. <c>connectorServiceAccountName</c> is the account name. Do not specify these two binding fields for qwenpaw.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>skills uses the Skill names in the workspace AI Registry. If sourceType=REFERENCE, the version is referenced by versionSelector: use LABEL with a label name, or VERSION with a specific version number. If the selector is omitted, LABEL/latest is used. If sourceType=STATIC, static files bundled with the package are used, and no version selector is provided.</td>
+        /// <td><c>skills</c> uses the skill names in the workspace AI Registry. If <c>sourceType=REFERENCE</c>, versions are referenced by <c>versionSelector</c>: use <c>LABEL</c> with a tag name, or <c>VERSION</c> with a specific version number. If the selector is omitted, <c>LABEL/latest</c> is used. If <c>sourceType=STATIC</c>, static files bundled with the package are used, and no version selector is provided.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>For template.aiRegistry, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, instruction, promptVariables, and subAgents are derived from the template, and the corresponding fields in the current request do not take effect. Explicit Skills and template Skills are recorded separately. You can query the target and effective versions through configuredSkills and skills.</td>
+        /// <td>For <c>template.aiRegistry</c>, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, <c>instruction</c>, <c>promptVariables</c>, and <c>subAgents</c> are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions through <c>configuredSkills</c> and <c>skills</c>.</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Elasticity and instances</h3>
-        /// <para>If runtime is committed but hpa or some of its fields are omitted, the following default values are used for unspecified items. To retain the existing elastic policy, commit the complete hpa together.</para>
+        /// <para>If <c>runtime</c> is committed but <c>hpa</c> or some of its fields are omitted, the following default values are used for unspecified items. To retain the existing elastic policy, commit the complete <c>hpa</c>.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -30341,42 +30641,42 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>enabled</td>
-        /// <td>false</td>
-        /// <td>Specifies whether to enable elastic scaling.</td>
+        /// <td><c>enabled</c></td>
+        /// <td><c>false</c></td>
+        /// <td>Specifies whether elastic scaling is enabled.</td>
         /// </tr>
         /// <tr>
-        /// <td>minSandboxCount</td>
-        /// <td>1</td>
+        /// <td><c>minSandboxCount</c></td>
+        /// <td><c>1</c></td>
         /// <td>The minimum number of instances. Valid values: 0 to 100.</td>
         /// </tr>
         /// <tr>
-        /// <td>maxSandboxCount</td>
-        /// <td>10</td>
+        /// <td><c>maxSandboxCount</c></td>
+        /// <td><c>10</c></td>
         /// <td>The maximum number of instances. Valid values: 0 to 100. The value cannot be less than the minimum number.</td>
         /// </tr>
         /// <tr>
-        /// <td>maxConcurrentSessionsPerSandbox</td>
-        /// <td>20</td>
+        /// <td><c>maxConcurrentSessionsPerSandbox</c></td>
+        /// <td><c>20</c></td>
         /// <td>The maximum number of concurrent sessions per instance. Valid values: 1 to 20.</td>
         /// </tr>
         /// <tr>
-        /// <td>sessionTtlSeconds</td>
-        /// <td>600</td>
-        /// <td>The maximum idle time for a session, in seconds. Valid values: 60 to 86400.</td>
+        /// <td><c>sessionTtlSeconds</c></td>
+        /// <td><c>600</c></td>
+        /// <td>The maximum idle time of a session, in seconds. Valid values: 60 to 86400.</td>
         /// </tr>
         /// <tr>
-        /// <td>If you only modify instructions, models, or skills, you can omit the entire runtime object, and the original runtime configuration remains unchanged. The minimum and maximum numbers of instances are configuration borders. You can query the actual number through sandboxPhaseCounts.</td>
+        /// <td>If you only modify instructions, models, or skills, you can omit the entire <c>runtime</c> to keep the original runtime configuration unchanged. The minimum and maximum numbers of instances are the configuration border. You can query the actual number through <c>sandboxPhaseCounts</c>.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Environment and mounts</h3>
-        /// <para>Omitting the entire environment object retains the original configuration. Submitting environment={} or environment=null clears the environment configuration. Environment variable values must be strings, and variable names must be non-empty and unique.
-        /// The total number of ossMounts and agenticFsMounts cannot exceed 10. The mount target mountPath uses an absolute path in the container, such as /data/train. It cannot conflict with platform reserved directories, and cannot be duplicated or form parent-child directory overwrites.
-        /// The path for an OSS mount must be a non-empty directory prefix in the bucket. For an AgenticFS mount, server is the AccessPoint domain name, without a protocol, port, or path. path is an existing non-empty relative directory in the AccessPoint. You cannot mount the root directory of the AccessPoint. If readOnly is omitted, the default value is false.</para>
+        /// <para>Omitting the entire <c>environment</c> retains the original configuration. Submitting <c>environment={}</c> or <c>environment=null</c> clears the environment configuration. Environment variable values must be strings, and variable names must be non-empty and unique.
+        /// The total number of <c>ossMounts</c> and <c>agenticFsMounts</c> cannot exceed 10. The mount target <c>mountPath</c> uses an absolute path in the container, such as <c>/data/train</c>. It cannot conflict with platform reserved directories, and cannot be duplicated or form parent-child directory overwrites.
+        /// The <c>path</c> for OSS mounts must be a non-empty directory prefix in the bucket. For AgenticFS mounts, <c>server</c> is the AccessPoint domain name, without a protocol, port, or path. <c>path</c> is an existing non-empty relative directory in the AccessPoint. You cannot mount the root directory of the AccessPoint. If <c>readOnly</c> is omitted, the default value is <c>false</c>.</para>
         /// <h3>Query update results</h3>
-        /// <para>A successful response indicates that the update request has been accepted. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query latestSpecVersion, latestVersionStatus, status, and sandboxPhaseCounts to confirm the configuration processing and instance status. clientToken does not provide idempotency guarantees at this time.</para>
+        /// <para>A successful response indicates that the update request has been accepted. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query <c>latestSpecVersion</c>, <c>latestVersionStatus</c>, <c>status</c>, and <c>sandboxPhaseCounts</c> to confirm the configuration processing and instance status. <c>clientToken</c> does not provide idempotence guarantees at this time.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -30434,14 +30734,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the model, instructions, skills, and runtime configuration of a managed Harness agent and executes the update asynchronously. Omitted top-level fields retain their original configuration.</para>
+        /// <para>Updates the model, instructions, skills, and runtime configuration of a managed Harness agent and executes the update asynchronously. Omitted top-level fields retain their original configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Updates the model, instructions, skills, or runtime configuration of a managed Harness agent to adjust the capabilities and runtime behavior of an existing agent.</para>
         /// <h3>Update rules</h3>
-        /// <para>At least one updatable field must be provided. Omitted top-level fields retain their original configuration. You can set description=null to clear the description.</para>
+        /// <para>Provide at least one updatable field. Omitted top-level fields retain their original configurations. You can set <c>description=null</c> to clear the description.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -30450,35 +30750,35 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>harness</td>
-        /// <td>The type cannot be changed. When updating the qodercli account binding, keep the original type and submit the corresponding configuration.</td>
+        /// <td><c>harness</c></td>
+        /// <td>The type cannot be changed. When updating the qodercli account binding, keep the original <c>type</c> and submit the corresponding <c>configuration</c>.</td>
         /// </tr>
         /// <tr>
-        /// <td>model</td>
+        /// <td><c>model</c></td>
         /// <td>Provide a model configuration that matches the current Harness. For qwenpaw, specify the model connection ID and model name. For qodercli, use the available model identifier of the connector.</td>
         /// </tr>
         /// <tr>
-        /// <td>runtime</td>
-        /// <td>Specify both compute and sessionPolicy when submitting. Omitting the entire object retains the original runtime configuration.</td>
+        /// <td><c>runtime</c></td>
+        /// <td>Specify both <c>compute</c> and <c>sessionPolicy</c> when submitting. Omitting the entire object retains the original runtime configuration.</td>
         /// </tr>
         /// <tr>
-        /// <td>tools, skills, promptVariables, and subAgents</td>
-        /// <td>The corresponding lists are entirely replaced upon submission. You must include the items to be retained. Pass [] to clear the corresponding explicit list.</td>
+        /// <td><c>tools</c>, <c>skills</c>, <c>promptVariables</c>, <c>subAgents</c></td>
+        /// <td>The corresponding lists are entirely replaced upon submission. You must include the items to be retained. Pass <c>[]</c> to clear the corresponding explicit lists.</td>
         /// </tr>
         /// <tr>
-        /// <td>environment</td>
+        /// <td><c>environment</c></td>
         /// <td>The variable list and credential reference list are entirely replaced respectively. Submit the items to be retained together.</td>
         /// </tr>
         /// <tr>
-        /// <td>network</td>
-        /// <td>Specify both accessInternet.enabled and accessVpc.enabled when submitting.</td>
+        /// <td><c>network</c></td>
+        /// <td>Specify both <c>accessInternet.enabled</c> and <c>accessVpc.enabled</c> when submitting.</td>
         /// </tr>
         /// <tr>
-        /// <td>ossMounts and agenticFsMounts</td>
-        /// <td>Entirely replaced respectively. Pass [] to clear the corresponding list. agenticFsMounts does not accept null.</td>
+        /// <td><c>ossMounts</c>, <c>agenticFsMounts</c></td>
+        /// <td>Entirely replaced respectively. Pass <c>[]</c> to clear the corresponding lists. <c>agenticFsMounts</c> does not accept <c>null</c>.</td>
         /// </tr>
         /// </tbody></table>
-        /// <h3>Harness, templates, and skills</h3>
+        /// <h3>Harnesses, templates, and skills</h3>
         /// <table>
         /// <thead>
         /// <tr>
@@ -30487,28 +30787,28 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>qwenpaw</td>
-        /// <td>This type is used by default if harness is omitted during creation. Set model.modelConnectionId to the workspace model connection ID, and set model.modelName to the name of the model created under this connection.</td>
+        /// <td><c>qwenpaw</c></td>
+        /// <td>This type is used by default if <c>harness</c> is omitted during creation. Set <c>model.modelConnectionId</c> to the workspace model connection ID, and set <c>model.modelName</c> to the name of the model created under this connection.</td>
         /// </tr>
         /// <tr>
-        /// <td>qodercli</td>
-        /// <td>The qodercli Connector must be enabled in the workspace. Set model.modelConnectionId to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. model.modelName can be omitted.</td>
+        /// <td><c>qodercli</c></td>
+        /// <td>The qodercli connector must be enabled in the workspace. Set <c>model.modelConnectionId</c> to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. <c>model.modelName</c> can be omitted.</td>
         /// </tr>
         /// <tr>
-        /// <td>harness is an object, such as {&quot;type&quot;:&quot;qwenpaw&quot;}. For qodercli, set harness.configuration.connectorServiceAccountKey to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original Service Account Key. This field can be omitted if there is only one key record, but must be specified if there are multiple records. connectorServiceAccountName is the account name. Do not specify these two binding fields for qwenpaw.</td>
+        /// <td><c>harness</c> is an object, such as <c>{&quot;type&quot;:&quot;qwenpaw&quot;}</c>. For qodercli, set <c>harness.configuration.connectorServiceAccountKey</c> to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. This field can be omitted if there is only one key record, but must be specified if there are multiple records. <c>connectorServiceAccountName</c> is the account name. Do not specify these two binding fields for qwenpaw.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>skills uses the Skill names in the workspace AI Registry. If sourceType=REFERENCE, the version is referenced by versionSelector: use LABEL with a label name, or VERSION with a specific version number. If the selector is omitted, LABEL/latest is used. If sourceType=STATIC, static files bundled with the package are used, and no version selector is provided.</td>
+        /// <td><c>skills</c> uses the skill names in the workspace AI Registry. If <c>sourceType=REFERENCE</c>, versions are referenced by <c>versionSelector</c>: use <c>LABEL</c> with a tag name, or <c>VERSION</c> with a specific version number. If the selector is omitted, <c>LABEL/latest</c> is used. If <c>sourceType=STATIC</c>, static files bundled with the package are used, and no version selector is provided.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>For template.aiRegistry, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, instruction, promptVariables, and subAgents are derived from the template, and the corresponding fields in the current request do not take effect. Explicit Skills and template Skills are recorded separately. You can query the target and effective versions through configuredSkills and skills.</td>
+        /// <td>For <c>template.aiRegistry</c>, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, <c>instruction</c>, <c>promptVariables</c>, and <c>subAgents</c> are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions through <c>configuredSkills</c> and <c>skills</c>.</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Elasticity and instances</h3>
-        /// <para>If runtime is committed but hpa or some of its fields are omitted, the following default values are used for unspecified items. To retain the existing elastic policy, commit the complete hpa together.</para>
+        /// <para>If <c>runtime</c> is committed but <c>hpa</c> or some of its fields are omitted, the following default values are used for unspecified items. To retain the existing elastic policy, commit the complete <c>hpa</c>.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -30518,42 +30818,42 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>enabled</td>
-        /// <td>false</td>
-        /// <td>Specifies whether to enable elastic scaling.</td>
+        /// <td><c>enabled</c></td>
+        /// <td><c>false</c></td>
+        /// <td>Specifies whether elastic scaling is enabled.</td>
         /// </tr>
         /// <tr>
-        /// <td>minSandboxCount</td>
-        /// <td>1</td>
+        /// <td><c>minSandboxCount</c></td>
+        /// <td><c>1</c></td>
         /// <td>The minimum number of instances. Valid values: 0 to 100.</td>
         /// </tr>
         /// <tr>
-        /// <td>maxSandboxCount</td>
-        /// <td>10</td>
+        /// <td><c>maxSandboxCount</c></td>
+        /// <td><c>10</c></td>
         /// <td>The maximum number of instances. Valid values: 0 to 100. The value cannot be less than the minimum number.</td>
         /// </tr>
         /// <tr>
-        /// <td>maxConcurrentSessionsPerSandbox</td>
-        /// <td>20</td>
+        /// <td><c>maxConcurrentSessionsPerSandbox</c></td>
+        /// <td><c>20</c></td>
         /// <td>The maximum number of concurrent sessions per instance. Valid values: 1 to 20.</td>
         /// </tr>
         /// <tr>
-        /// <td>sessionTtlSeconds</td>
-        /// <td>600</td>
-        /// <td>The maximum idle time for a session, in seconds. Valid values: 60 to 86400.</td>
+        /// <td><c>sessionTtlSeconds</c></td>
+        /// <td><c>600</c></td>
+        /// <td>The maximum idle time of a session, in seconds. Valid values: 60 to 86400.</td>
         /// </tr>
         /// <tr>
-        /// <td>If you only modify instructions, models, or skills, you can omit the entire runtime object, and the original runtime configuration remains unchanged. The minimum and maximum numbers of instances are configuration borders. You can query the actual number through sandboxPhaseCounts.</td>
+        /// <td>If you only modify instructions, models, or skills, you can omit the entire <c>runtime</c> to keep the original runtime configuration unchanged. The minimum and maximum numbers of instances are the configuration border. You can query the actual number through <c>sandboxPhaseCounts</c>.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Environment and mounts</h3>
-        /// <para>Omitting the entire environment object retains the original configuration. Submitting environment={} or environment=null clears the environment configuration. Environment variable values must be strings, and variable names must be non-empty and unique.
-        /// The total number of ossMounts and agenticFsMounts cannot exceed 10. The mount target mountPath uses an absolute path in the container, such as /data/train. It cannot conflict with platform reserved directories, and cannot be duplicated or form parent-child directory overwrites.
-        /// The path for an OSS mount must be a non-empty directory prefix in the bucket. For an AgenticFS mount, server is the AccessPoint domain name, without a protocol, port, or path. path is an existing non-empty relative directory in the AccessPoint. You cannot mount the root directory of the AccessPoint. If readOnly is omitted, the default value is false.</para>
+        /// <para>Omitting the entire <c>environment</c> retains the original configuration. Submitting <c>environment={}</c> or <c>environment=null</c> clears the environment configuration. Environment variable values must be strings, and variable names must be non-empty and unique.
+        /// The total number of <c>ossMounts</c> and <c>agenticFsMounts</c> cannot exceed 10. The mount target <c>mountPath</c> uses an absolute path in the container, such as <c>/data/train</c>. It cannot conflict with platform reserved directories, and cannot be duplicated or form parent-child directory overwrites.
+        /// The <c>path</c> for OSS mounts must be a non-empty directory prefix in the bucket. For AgenticFS mounts, <c>server</c> is the AccessPoint domain name, without a protocol, port, or path. <c>path</c> is an existing non-empty relative directory in the AccessPoint. You cannot mount the root directory of the AccessPoint. If <c>readOnly</c> is omitted, the default value is <c>false</c>.</para>
         /// <h3>Query update results</h3>
-        /// <para>A successful response indicates that the update request has been accepted. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query latestSpecVersion, latestVersionStatus, status, and sandboxPhaseCounts to confirm the configuration processing and instance status. clientToken does not provide idempotency guarantees at this time.</para>
+        /// <para>A successful response indicates that the update request has been accepted. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query <c>latestSpecVersion</c>, <c>latestVersionStatus</c>, <c>status</c>, and <c>sandboxPhaseCounts</c> to confirm the configuration processing and instance status. <c>clientToken</c> does not provide idempotence guarantees at this time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30572,14 +30872,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the model, instructions, skills, and runtime configuration of a managed Harness agent and executes the update asynchronously. Omitted top-level fields retain their original configuration.</para>
+        /// <para>Updates the model, instructions, skills, and runtime configuration of a managed Harness agent and executes the update asynchronously. Omitted top-level fields retain their original configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Updates the model, instructions, skills, or runtime configuration of a managed Harness agent to adjust the capabilities and runtime behavior of an existing agent.</para>
         /// <h3>Update rules</h3>
-        /// <para>At least one updatable field must be provided. Omitted top-level fields retain their original configuration. You can set description=null to clear the description.</para>
+        /// <para>Provide at least one updatable field. Omitted top-level fields retain their original configurations. You can set <c>description=null</c> to clear the description.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -30588,35 +30888,35 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>harness</td>
-        /// <td>The type cannot be changed. When updating the qodercli account binding, keep the original type and submit the corresponding configuration.</td>
+        /// <td><c>harness</c></td>
+        /// <td>The type cannot be changed. When updating the qodercli account binding, keep the original <c>type</c> and submit the corresponding <c>configuration</c>.</td>
         /// </tr>
         /// <tr>
-        /// <td>model</td>
+        /// <td><c>model</c></td>
         /// <td>Provide a model configuration that matches the current Harness. For qwenpaw, specify the model connection ID and model name. For qodercli, use the available model identifier of the connector.</td>
         /// </tr>
         /// <tr>
-        /// <td>runtime</td>
-        /// <td>Specify both compute and sessionPolicy when submitting. Omitting the entire object retains the original runtime configuration.</td>
+        /// <td><c>runtime</c></td>
+        /// <td>Specify both <c>compute</c> and <c>sessionPolicy</c> when submitting. Omitting the entire object retains the original runtime configuration.</td>
         /// </tr>
         /// <tr>
-        /// <td>tools, skills, promptVariables, and subAgents</td>
-        /// <td>The corresponding lists are entirely replaced upon submission. You must include the items to be retained. Pass [] to clear the corresponding explicit list.</td>
+        /// <td><c>tools</c>, <c>skills</c>, <c>promptVariables</c>, <c>subAgents</c></td>
+        /// <td>The corresponding lists are entirely replaced upon submission. You must include the items to be retained. Pass <c>[]</c> to clear the corresponding explicit lists.</td>
         /// </tr>
         /// <tr>
-        /// <td>environment</td>
+        /// <td><c>environment</c></td>
         /// <td>The variable list and credential reference list are entirely replaced respectively. Submit the items to be retained together.</td>
         /// </tr>
         /// <tr>
-        /// <td>network</td>
-        /// <td>Specify both accessInternet.enabled and accessVpc.enabled when submitting.</td>
+        /// <td><c>network</c></td>
+        /// <td>Specify both <c>accessInternet.enabled</c> and <c>accessVpc.enabled</c> when submitting.</td>
         /// </tr>
         /// <tr>
-        /// <td>ossMounts and agenticFsMounts</td>
-        /// <td>Entirely replaced respectively. Pass [] to clear the corresponding list. agenticFsMounts does not accept null.</td>
+        /// <td><c>ossMounts</c>, <c>agenticFsMounts</c></td>
+        /// <td>Entirely replaced respectively. Pass <c>[]</c> to clear the corresponding lists. <c>agenticFsMounts</c> does not accept <c>null</c>.</td>
         /// </tr>
         /// </tbody></table>
-        /// <h3>Harness, templates, and skills</h3>
+        /// <h3>Harnesses, templates, and skills</h3>
         /// <table>
         /// <thead>
         /// <tr>
@@ -30625,28 +30925,28 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>qwenpaw</td>
-        /// <td>This type is used by default if harness is omitted during creation. Set model.modelConnectionId to the workspace model connection ID, and set model.modelName to the name of the model created under this connection.</td>
+        /// <td><c>qwenpaw</c></td>
+        /// <td>This type is used by default if <c>harness</c> is omitted during creation. Set <c>model.modelConnectionId</c> to the workspace model connection ID, and set <c>model.modelName</c> to the name of the model created under this connection.</td>
         /// </tr>
         /// <tr>
-        /// <td>qodercli</td>
-        /// <td>The qodercli Connector must be enabled in the workspace. Set model.modelConnectionId to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. model.modelName can be omitted.</td>
+        /// <td><c>qodercli</c></td>
+        /// <td>The qodercli connector must be enabled in the workspace. Set <c>model.modelConnectionId</c> to the model identifier returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectorModels">ListConnectorModels</a>. <c>model.modelName</c> can be omitted.</td>
         /// </tr>
         /// <tr>
-        /// <td>harness is an object, such as {&quot;type&quot;:&quot;qwenpaw&quot;}. For qodercli, set harness.configuration.connectorServiceAccountKey to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original Service Account Key. This field can be omitted if there is only one key record, but must be specified if there are multiple records. connectorServiceAccountName is the account name. Do not specify these two binding fields for qwenpaw.</td>
+        /// <td><c>harness</c> is an object, such as <c>{&quot;type&quot;:&quot;qwenpaw&quot;}</c>. For qodercli, set <c>harness.configuration.connectorServiceAccountKey</c> to the account key record ID returned by <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/ListConnectors">ListConnectors</a>, not the original service account key. This field can be omitted if there is only one key record, but must be specified if there are multiple records. <c>connectorServiceAccountName</c> is the account name. Do not specify these two binding fields for qwenpaw.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>skills uses the Skill names in the workspace AI Registry. If sourceType=REFERENCE, the version is referenced by versionSelector: use LABEL with a label name, or VERSION with a specific version number. If the selector is omitted, LABEL/latest is used. If sourceType=STATIC, static files bundled with the package are used, and no version selector is provided.</td>
+        /// <td><c>skills</c> uses the skill names in the workspace AI Registry. If <c>sourceType=REFERENCE</c>, versions are referenced by <c>versionSelector</c>: use <c>LABEL</c> with a tag name, or <c>VERSION</c> with a specific version number. If the selector is omitted, <c>LABEL/latest</c> is used. If <c>sourceType=STATIC</c>, static files bundled with the package are used, and no version selector is provided.</td>
         /// <td></td>
         /// </tr>
         /// <tr>
-        /// <td>For template.aiRegistry, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, instruction, promptVariables, and subAgents are derived from the template, and the corresponding fields in the current request do not take effect. Explicit Skills and template Skills are recorded separately. You can query the target and effective versions through configuredSkills and skills.</td>
+        /// <td>For <c>template.aiRegistry</c>, specify the agent template name and an optional version. If the version is omitted during creation, the published version is resolved and fixed. When a template is used, <c>instruction</c>, <c>promptVariables</c>, and <c>subAgents</c> are derived from the template, and the corresponding fields in the current request do not take effect. Explicit skills and template skills are recorded separately. You can query the target and effective versions through <c>configuredSkills</c> and <c>skills</c>.</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Elasticity and instances</h3>
-        /// <para>If runtime is committed but hpa or some of its fields are omitted, the following default values are used for unspecified items. To retain the existing elastic policy, commit the complete hpa together.</para>
+        /// <para>If <c>runtime</c> is committed but <c>hpa</c> or some of its fields are omitted, the following default values are used for unspecified items. To retain the existing elastic policy, commit the complete <c>hpa</c>.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -30656,42 +30956,42 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// </tr>
         /// </thead>
         /// <tbody><tr>
-        /// <td>enabled</td>
-        /// <td>false</td>
-        /// <td>Specifies whether to enable elastic scaling.</td>
+        /// <td><c>enabled</c></td>
+        /// <td><c>false</c></td>
+        /// <td>Specifies whether elastic scaling is enabled.</td>
         /// </tr>
         /// <tr>
-        /// <td>minSandboxCount</td>
-        /// <td>1</td>
+        /// <td><c>minSandboxCount</c></td>
+        /// <td><c>1</c></td>
         /// <td>The minimum number of instances. Valid values: 0 to 100.</td>
         /// </tr>
         /// <tr>
-        /// <td>maxSandboxCount</td>
-        /// <td>10</td>
+        /// <td><c>maxSandboxCount</c></td>
+        /// <td><c>10</c></td>
         /// <td>The maximum number of instances. Valid values: 0 to 100. The value cannot be less than the minimum number.</td>
         /// </tr>
         /// <tr>
-        /// <td>maxConcurrentSessionsPerSandbox</td>
-        /// <td>20</td>
+        /// <td><c>maxConcurrentSessionsPerSandbox</c></td>
+        /// <td><c>20</c></td>
         /// <td>The maximum number of concurrent sessions per instance. Valid values: 1 to 20.</td>
         /// </tr>
         /// <tr>
-        /// <td>sessionTtlSeconds</td>
-        /// <td>600</td>
-        /// <td>The maximum idle time for a session, in seconds. Valid values: 60 to 86400.</td>
+        /// <td><c>sessionTtlSeconds</c></td>
+        /// <td><c>600</c></td>
+        /// <td>The maximum idle time of a session, in seconds. Valid values: 60 to 86400.</td>
         /// </tr>
         /// <tr>
-        /// <td>If you only modify instructions, models, or skills, you can omit the entire runtime object, and the original runtime configuration remains unchanged. The minimum and maximum numbers of instances are configuration borders. You can query the actual number through sandboxPhaseCounts.</td>
+        /// <td>If you only modify instructions, models, or skills, you can omit the entire <c>runtime</c> to keep the original runtime configuration unchanged. The minimum and maximum numbers of instances are the configuration border. You can query the actual number through <c>sandboxPhaseCounts</c>.</td>
         /// <td></td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <h3>Environment and mounts</h3>
-        /// <para>Omitting the entire environment object retains the original configuration. Submitting environment={} or environment=null clears the environment configuration. Environment variable values must be strings, and variable names must be non-empty and unique.
-        /// The total number of ossMounts and agenticFsMounts cannot exceed 10. The mount target mountPath uses an absolute path in the container, such as /data/train. It cannot conflict with platform reserved directories, and cannot be duplicated or form parent-child directory overwrites.
-        /// The path for an OSS mount must be a non-empty directory prefix in the bucket. For an AgenticFS mount, server is the AccessPoint domain name, without a protocol, port, or path. path is an existing non-empty relative directory in the AccessPoint. You cannot mount the root directory of the AccessPoint. If readOnly is omitted, the default value is false.</para>
+        /// <para>Omitting the entire <c>environment</c> retains the original configuration. Submitting <c>environment={}</c> or <c>environment=null</c> clears the environment configuration. Environment variable values must be strings, and variable names must be non-empty and unique.
+        /// The total number of <c>ossMounts</c> and <c>agenticFsMounts</c> cannot exceed 10. The mount target <c>mountPath</c> uses an absolute path in the container, such as <c>/data/train</c>. It cannot conflict with platform reserved directories, and cannot be duplicated or form parent-child directory overwrites.
+        /// The <c>path</c> for OSS mounts must be a non-empty directory prefix in the bucket. For AgenticFS mounts, <c>server</c> is the AccessPoint domain name, without a protocol, port, or path. <c>path</c> is an existing non-empty relative directory in the AccessPoint. You cannot mount the root directory of the AccessPoint. If <c>readOnly</c> is omitted, the default value is <c>false</c>.</para>
         /// <h3>Query update results</h3>
-        /// <para>A successful response indicates that the update request has been accepted. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query latestSpecVersion, latestVersionStatus, status, and sandboxPhaseCounts to confirm the configuration processing and instance status. clientToken does not provide idempotency guarantees at this time.</para>
+        /// <para>A successful response indicates that the update request has been accepted. Call <a href="https://api.aliyun.com/document/AgentCore/2026-08-04/GetManagedAgent">GetManagedAgent</a> to query <c>latestSpecVersion</c>, <c>latestVersionStatus</c>, <c>status</c>, and <c>sandboxPhaseCounts</c> to confirm the configuration processing and instance status. <c>clientToken</c> does not provide idempotence guarantees at this time.</para>
         /// </description>
         /// 
         /// <param name="request">

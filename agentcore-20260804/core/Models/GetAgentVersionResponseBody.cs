@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class GetAgentVersionResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码，请求成功时为 SUCCESS，失败时为错误码。</para>
+        /// <para>The business status code. The value is SUCCESS if the request is successful, or an error code if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>智能体固定版本详情，configuration 为版本保存时的 Agent 配置。</para>
+        /// <para>The details of the fixed agent version. The configuration field contains the agent configuration at the time the version was saved.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetAgentVersionResponseBodyData Data { get; set; }
         public class GetAgentVersionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>版本所属的托管智能体或自定义智能体 ID。</para>
+            /// <para>The ID of the managed or custom agent that owns the version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent-0123456789abcdef0123456789abcdef</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AgentId { get; set; }
 
             /// <summary>
-            /// <para>系统按 Agent 递增生成的版本号，例如 v1、v2。查询、删除版本及服务端点引用版本时使用。</para>
+            /// <para>The system-generated version number that increments for each agent, such as v1 and v2. This is used when querying or deleting versions, and when referencing versions in service endpoints.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AgentVersion { get; set; }
 
             /// <summary>
-            /// <para>仅表示版本模板与制品归档是否完整，不代表部署或运行状态。READY 为完整，INVALID 为归档缺失或不一致。</para>
+            /// <para>Indicates only whether the version template and artifact archiving are complete, and does not represent the deployment or running status. A value of READY indicates that the archiving is complete. A value of INVALID indicates that the archiving is missing or inconsistent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>READY</para>
@@ -57,17 +57,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ArtifactStatus { get; set; }
 
             /// <summary>
-            /// <para>托管智能体与 GetManagedAgent 的 data 结构一致，自定义智能体与 GetCustomAgent 的 data 结构一致，脱敏规则相同。</para>
+            /// <para>For managed agents, the structure is consistent with the data structure of GetManagedAgent. For custom agents, the structure is consistent with the data structure of GetCustomAgent. The desensitization rules are the same.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;agentId&quot;:&quot;agent-0123456789abcdef0123456789abcdef&quot;,&quot;workspaceId&quot;:&quot;ws-0123456789abcdef01234&quot;,&quot;name&quot;:&quot;customer-service&quot;,&quot;description&quot;:&quot;客服智能体&quot;,&quot;status&quot;:&quot;Running&quot;,&quot;latestSpecVersion&quot;:2,&quot;instruction&quot;:&quot;你是一名客服助手。&quot;}</para>
+            /// <para>{&quot;agentId&quot;:&quot;agent-0123456789abcdef0123456789abcdef&quot;,&quot;workspaceId&quot;:&quot;ws-0123456789abcdef01234&quot;,&quot;name&quot;:&quot;customer-service&quot;,&quot;description&quot;:&quot;Customer service agent&quot;,&quot;status&quot;:&quot;Running&quot;,&quot;latestSpecVersion&quot;:2,&quot;instruction&quot;:&quot;You are a customer service assistant.&quot;}</para>
             /// </summary>
             [NameInMap("configuration")]
             [Validation(Required=false)]
             public Dictionary<string, object> Configuration { get; set; }
 
             /// <summary>
-            /// <para>版本保存的时间，采用 ISO 8601 UTC 格式。</para>
+            /// <para>The time when the version was saved, in ISO 8601 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T01:02:03Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>保存该版本的调用者阿里云账号 UID；RAM 用户调用时为其所属阿里云主账号 UID。</para>
+            /// <para>The UID of the Alibaba Cloud account of the caller who saved the version. If the API is called by a RAM user, this value is the UID of the Alibaba Cloud account to which the RAM user belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234567890123456</para>
@@ -87,17 +87,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedBy { get; set; }
 
             /// <summary>
-            /// <para>保存版本时填写的版本描述，最多 1024 个字符；保存时未填写则为空。</para>
+            /// <para>The version description provided when the version was saved. It can contain up to 1,024 characters. If no description was provided when the version was saved, this field is empty.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>生产环境稳定版本</para>
+            /// <para>Stable version for the production environment</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>保存版本时 Agent 已生效的发布流水号，即当时的 effectiveSpecVersion。版本保存后该值不再变化。</para>
+            /// <para>The effective release serial number of the agent when the version was saved, which is the effectiveSpecVersion at that time. This value does not change after the version is saved.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -107,17 +107,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? TargetSpecVersion { get; set; }
 
             /// <summary>
-            /// <para>保存版本时用户指定的展示名称。早期保存且未记录名称的版本返回 agentVersion。</para>
+            /// <para>The display name specified by the user when the version was saved. For earlier saved versions that did not record a name, the agentVersion is returned.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>生产稳定版 V1.0</para>
+            /// <para>Production stable version V1.0</para>
             /// </summary>
             [NameInMap("versionName")]
             [Validation(Required=false)]
             public string VersionName { get; set; }
 
             /// <summary>
-            /// <para>版本所属智能体所在的 AgentCore 工作空间 ID。</para>
+            /// <para>The ID of the AgentCore workspace where the agent that owns the version resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ws-0123456789abcdef01234</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>HTTP 状态码。</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>响应消息，请求成功时为 success，失败时为错误信息。</para>
+        /// <para>The response message. The value is success if the request is successful, or an error message if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求 ID，用于定位和排查请求。</para>
+        /// <para>The request ID, which is used to locate and troubleshoot the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5E8F3C2A-1B4D-4F6E-9A7C-0D2B8E6F4A1C</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>请求是否成功。</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class DeleteAgentVersionRequest : TeaModel {
         /// <summary>
-        /// <para>客户端生成的幂等令牌，当前为预留参数，后端暂不提供持久化幂等保证。</para>
+        /// <para>The client-generated idempotency token. This is a reserved parameter, and the backend does not currently provide persistent idempotency guarantees.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c2d8a6f0-3b1e-4a7d-9f25-6e4b0c1a8d37</para>

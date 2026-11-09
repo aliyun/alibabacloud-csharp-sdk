@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListManagedAgentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value is SUCCESS when the request is successful.</para>
+        /// <para>The business status code. A value of SUCCESS indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code. The value is 200 when the request is successful.</para>
+        /// <para>The HTTP status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public ListManagedAgentsResponseBodyItemsHarnessConfiguration Configuration { get; set; }
                 public class ListManagedAgentsResponseBodyItemsHarnessConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the connector account key record bound to qodercli, not the original service account key.</para>
+                    /// <para>The ID of the connector account key record bound to qodercli, which is not the original service account key.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>key-xxxx</para>
@@ -146,6 +146,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
+                /// <para>Returned only in queries. The server calculates this value based on the complete instance distribution, which is not affected by the pagination and filtering of the instance list. If the image tag is missing, pagination is incomplete, or the value cannot be confirmed, this parameter is empty, which is not equivalent to 0.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
+                [NameInMap("outdatedInstanceCount")]
+                [Validation(Required=false)]
+                public long? OutdatedInstanceCount { get; set; }
+
+                /// <summary>
                 /// <para>The runtime framework type.</para>
                 /// 
                 /// <b>Example:</b>
@@ -154,6 +164,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 [NameInMap("type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
+
+                /// <summary>
+                /// <para>Returned only in queries. Currently returns the tag of the pool target image. If the tag cannot be parsed, this parameter is empty and cannot be replaced by the agent configuration version.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>202611031754</para>
+                /// </summary>
+                [NameInMap("version")]
+                [Validation(Required=false)]
+                public string Version { get; set; }
 
             }
 

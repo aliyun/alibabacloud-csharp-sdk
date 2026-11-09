@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The list of active sessions in the sandbox.</para>
+        /// <para>The list of active sessions for the sandbox.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ListSandboxSessionsResponseBodyItems> Items { get; set; }
         public class ListSandboxSessionsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The type of the external channel, such as DINGTALK, FEISHU, or WECOM. This parameter is empty for non-external channels.</para>
+            /// <para>The external channel type, such as DINGTALK, FEISHU, or WECOM. This parameter is empty for non-external channels.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DINGTALK</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string SessionId { get; set; }
 
             /// <summary>
-            /// <para>The source type of the session. A value of API indicates an API call. A value of CONSOLE_DEBUG indicates console debugging. A value of EXTERNAL_CHANNEL indicates an external channel. A value of UNKNOWN indicates an unknown source.</para>
+            /// <para>The source type of the session. A value of API indicates an API call, CONSOLE_DEBUG indicates console debugging, EXTERNAL_CHANNEL indicates an external channel, and UNKNOWN indicates an unknown source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>EXTERNAL_CHANNEL</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListAgentVersionsRequest : TeaModel {
         /// <summary>
-        /// <para>单页最大记录数，取值范围 1 至 100，默认 20。</para>
+        /// <para>The maximum number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>查询下一页时传入上一次 ListAgentVersions 响应返回的 nextToken；首次查询不传。</para>
+        /// <para>The token used to query the next page. Pass the nextToken returned in the previous ListAgentVersions response. Do not pass this parameter for the first query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>YWdlbnQtdmVyc2lvbnM6MjA</para>
