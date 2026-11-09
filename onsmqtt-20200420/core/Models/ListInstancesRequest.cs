@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class ListInstancesRequest : TeaModel {
         /// <summary>
+        /// <para>A list of resource tags in JSON format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[{&quot;key&quot;:&quot;test&quot;,&quot;value&quot;:&quot;test&quot;}]</para>
         /// </summary>

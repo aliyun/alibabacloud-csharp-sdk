@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class TagResourcesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code of the API call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The result of the call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public bool? Data { get; set; }
 
         /// <summary>
+        /// <para>The returned message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>operation success.</para>
         /// </summary>
@@ -34,7 +40,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>82B9E503-F4A1-4F30-976F-C6999FF9****</para>

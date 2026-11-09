@@ -29,8 +29,10 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
             /// <summary>
             /// <para>The action on the message. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>sub</b>: The ApsaraMQ for MQTT client subscribes to the message.</description></item>
-            /// <item><description><b>push_offline</b>: The ApsaraMQ for MQTT broker pushes the offline message to the ApsaraMQ for MQTT client.</description></item>
+            /// <item><description><para><b>sub</b>: The ApsaraMQ for MQTT client subscribes to the message.</para>
+            /// </description></item>
+            /// <item><description><para><b>push_offline</b>: The ApsaraMQ for MQTT broker pushes the offline message to the ApsaraMQ for MQTT client.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,8 +45,10 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
             /// <summary>
             /// <para>The code returned for the action on the message. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>mqtt.trace.action.msg.sub</b>: The value that is returned if the value of Action is <b>sub</b>.</description></item>
-            /// <item><description><b>mqtt.trace.action.msg.push.offline</b>: The value that is returned if the value of Action is <b>push_offline</b>.</description></item>
+            /// <item><description><para><b>mqtt.trace.action.msg.sub</b>: The value that is returned if the value of Action is <b>sub</b>.</para>
+            /// </description></item>
+            /// <item><description><para><b>mqtt.trace.action.msg.push.offline</b>: The value that is returned if the value of Action is <b>push_offline</b>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -57,8 +61,10 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
             /// <summary>
             /// <para>The returned information for the action on the message. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Push To Mqtt Client</b>: The value that is returned if the value of Action is <b>sub</b>.</description></item>
-            /// <item><description><b>Push Offline Msg To Mqtt Client</b>: The value that is returned if the value of Action is <b>push_offline</b>.</description></item>
+            /// <item><description><para><b>Push To Mqtt Client</b>: The value that is returned if the value of Action is <b>sub</b>.</para>
+            /// </description></item>
+            /// <item><description><para><b>Push Offline Msg To Mqtt Client</b>: The value that is returned if the value of Action is <b>push_offline</b>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

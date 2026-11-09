@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class QueryMqttTraceDeviceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,18 +20,21 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The details of the action on the device.</para>
+        /// <para>The details of the device activity entries.</para>
         /// </summary>
         [NameInMap("DeviceInfoList")]
         [Validation(Required=false)]
         public List<QueryMqttTraceDeviceResponseBodyDeviceInfoList> DeviceInfoList { get; set; }
         public class QueryMqttTraceDeviceResponseBodyDeviceInfoList : TeaModel {
             /// <summary>
-            /// <para>The action on the device. Valid values:</para>
+            /// <para>The device action. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>connect</b>: The ApsaraMQ for MQTT client requests a connection to the ApsaraMQ for MQTT broker.</description></item>
-            /// <item><description><b>close</b>: The TCP connection is closed.</description></item>
-            /// <item><description><b>disconnect</b>: The ApsaraMQ for MQTT client requests a disconnection from the ApsaraMQ for MQTT broker.</description></item>
+            /// <item><description><para><b>connect</b>: The client requests a connection to the server.</para>
+            /// </description></item>
+            /// <item><description><para><b>close</b>: The TCP connection is closed.</para>
+            /// </description></item>
+            /// <item><description><para><b>disconnect</b>: The client requests to disconnect from the server.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -42,11 +45,14 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// <para>The returned code for the action on the device. Valid values:</para>
+            /// <para>The return code of the device action. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>mqtt.trace.action.connect</b>: This value is returned if the value of Action is <b>connect</b>.</description></item>
-            /// <item><description><b>mqtt.trace.action.close</b>: This value is returned if the value of Action is <b>close</b>.</description></item>
-            /// <item><description><b>mqtt.trace.action.disconnect</b>: This value is returned if the value of Action is <b>disconnect</b>.</description></item>
+            /// <item><description><para><b>mqtt.trace.action.connect</b>: returned when the device action is <b>connect</b>.</para>
+            /// </description></item>
+            /// <item><description><para><b>mqtt.trace.action.close</b>: returned when the device action is <b>close</b>.</para>
+            /// </description></item>
+            /// <item><description><para><b>mqtt.trace.action.disconnect</b>: returned when the device action is <b>disconnect</b>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -57,17 +63,26 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
             public string ActionCode { get; set; }
 
             /// <summary>
-            /// <para>The returned information for the action on the device. Valid values:</para>
+            /// <para>The description of the device action. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>accepted</b>: The ApsaraMQ for MQTT broker accepts the connection request from the ApsaraMQ for MQTT client.</description></item>
-            /// <item><description><b>not authorized</b>: The TCP connection is closed because the permission verification of the client to access the instance fails.</description></item>
-            /// <item><description><b>clientId conflict</b>: The TCP connection is closed due to a conflict in the ID of the ApsaraMQ for MQTT client.</description></item>
-            /// <item><description><b>resource auth failed</b>: The TCP connection is closed because the permission verification for the ApsaraMQ for MQTT client to access the topic or group fails.</description></item>
-            /// <item><description><b>no heart</b>: The TCP connection is closed because no heartbeat is detected on the client.</description></item>
-            /// <item><description><b>closed by client</b>: The TCP connection is closed because an exception occurs on the client.</description></item>
-            /// <item><description><b>disconnected by client</b>: The client requests a disconnection.</description></item>
-            /// <item><description><b>invalid param</b>: The TCP connection is closed due to invalid request parameters.</description></item>
-            /// <item><description><b>Socket IOException</b>: The TCP connection is closed due to network jitter or packet loss.</description></item>
+            /// <item><description><para><b>accepted</b>: The server accepts the connection request from the client.</para>
+            /// </description></item>
+            /// <item><description><para><b>not authorized</b>: The TCP connection is closed because the permission verification of the instance accessed by the client fails.</para>
+            /// </description></item>
+            /// <item><description><para><b>clientId conflict</b>: The TCP connection is closed because of a client ID conflict.</para>
+            /// </description></item>
+            /// <item><description><para><b>resource auth failed</b>: The TCP connection is closed because the permission verification of the topic or group ID resource accessed by the client fails.</para>
+            /// </description></item>
+            /// <item><description><para><b>no heart</b>: The TCP connection is closed because no heartbeat is detected from the client.</para>
+            /// </description></item>
+            /// <item><description><para><b>closed by client</b>: The TCP connection is closed because of a client exception.</para>
+            /// </description></item>
+            /// <item><description><para><b>disconnected by client</b>: The client requests to disconnect.</para>
+            /// </description></item>
+            /// <item><description><para><b>invalid param</b>: The TCP connection is closed because of invalid request parameters.</para>
+            /// </description></item>
+            /// <item><description><para><b>Socket IOException</b>: The TCP connection is closed because of network jitter or packet loss.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -78,7 +93,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
             public string ActionInfo { get; set; }
 
             /// <summary>
-            /// <para>The connection ID.</para>
+            /// <para>The connection identifier of the device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c69fe839209547fa9d073781b9cd****</para>
@@ -88,7 +103,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
             public string ChannelId { get; set; }
 
             /// <summary>
-            /// <para>The time when the action occurred on the device.</para>
+            /// <para>The time when the device action occurred.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-05-21 15:51:54.867</para>
@@ -100,7 +115,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The maximum number of device activity entries displayed per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -110,7 +125,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can use the ID to troubleshoot issues. This parameter is a common parameter.</para>
+        /// <para>A common parameter. Each request has a unique ID that is active for troubleshooting and locating issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>317076B7-F946-46BC-A98F-4CF9777C****</para>
@@ -120,7 +135,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned actions on the device.</para>
+        /// <para>The total number of device activity entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

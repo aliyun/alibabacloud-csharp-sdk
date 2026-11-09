@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class ApplyTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID. This parameter is a common parameter.</para>
+        /// <para>The common parameter. The ID of each request is unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>31782AAF-D0CC-44C3-ABFD-1B500276****</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The token that is returned by the ApsaraMQ for MQTT broker.</para>
+        /// <para>The token returned by the broker.</para>
         /// <remarks>
-        /// <para> Do not assume the length, format, or rule of the token to return. The actual returned token shall prevail.</para>
+        /// <para>Do not make any assumptions about the length, format, or rules of the returned token. The actual returned value prevails.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

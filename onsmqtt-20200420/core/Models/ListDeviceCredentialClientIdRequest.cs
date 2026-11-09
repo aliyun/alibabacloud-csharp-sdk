@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string PageNo { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of query records to display per page. 
+        /// <para>The maximum number of query records to display per page.
         /// Value range: 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 

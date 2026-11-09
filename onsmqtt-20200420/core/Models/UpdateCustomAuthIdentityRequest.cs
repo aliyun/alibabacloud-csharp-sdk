@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class UpdateCustomAuthIdentityRequest : TeaModel {
         /// <summary>
-        /// <para>The client ID if you set IdentityType to CLIENT.</para>
+        /// <para>The client ID of the device. This parameter is required when the identity type is CLIENT.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GID_test@@@test</para>
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         /// <summary>
         /// <para>The identity type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>USER</description></item>
-        /// <item><description>CLIENT</description></item>
+        /// <item><description>USER: Username only.</description></item>
+        /// <item><description>CLIENT: Specific to the client.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The AccessKey secret.</para>
+        /// <para>The secret.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,11 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string Secret { get; set; }
 
         /// <summary>
-        /// <para>The signature verification mode. ORIGIN: compares the password and the AccessKey secret. SIGNED: uses the HMAC_SHA1 algorithm to sign the client ID to obtain a password and then compares the password.</para>
+        /// <para>The signature verification method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ORIGIN: Original value comparison. The password is directly compared with the secret.</description></item>
+        /// <item><description>SIGNED: Signature verification. The clientId is signed by using HmacSHA1 and the secret, and then the signature is compared with the password.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,7 +72,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string SignMode { get; set; }
 
         /// <summary>
-        /// <para>The username. The value cannot exceed 64 characters in length.</para>
+        /// <para>The username.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

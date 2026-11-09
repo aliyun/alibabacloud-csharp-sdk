@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class AddCustomAuthPermissionRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to allow or deny access.</para>
+        /// <para>The authorization effect.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,11 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string Identity { get; set; }
 
         /// <summary>
-        /// <para>The identity type. Valid values: USER and CLIENT.</para>
+        /// <para>The identity type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>USER: username only.</description></item>
+        /// <item><description>CLIENT: specific client.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +47,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string IdentityType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ApsaraMQ for MQTT instance.</para>
+        /// <para>The ID of the MSMQ for MQTT instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +58,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The permissions that you want to grant.</para>
+        /// <para>The authorized action.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +69,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string PermitAction { get; set; }
 
         /// <summary>
-        /// <para>The topics on which you want to grant permissions. Multi-level topics and wildcard characters are supported.</para>
+        /// <para>The authorized topic. Multi-level MQTT topics and wildcards are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

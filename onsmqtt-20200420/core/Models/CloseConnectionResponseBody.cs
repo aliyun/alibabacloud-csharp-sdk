@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class CloseConnectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code of the interface: 200 indicates success. Other values indicate error codes. For details about the error codes, see Error Codes.</para>
+        /// <para>The return code of the API operation. A value of 200 indicates success. Other values indicate error codes. For more information, see Error codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>Call result information</para>
+        /// <para>The result message of the API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>operation success.</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. true means success, false means failure.</para>
+        /// <para>Indicates whether the operation is successful. A value of true indicates success, and a value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "OnsMqtt";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("onsmqtt", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -39,15 +42,15 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activate CA Certificate</para>
+        /// <para>ApsaraMQ for MQTT supports X.509 certificate authentication, which allows clients to authenticate by using device certificates. A CA certificate is used to issue device certificates for clients and verify the validity of the device certificates. A CA certificate must be active to be used. By default, a CA certificate is active after registration. If a CA certificate is changed to the inactive state, you can invoke this operation to reactivate it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
-        /// <item><description>You can call this operation to reactivate only CA certificates that are registered with ApsaraMQ for MQTT brokers. You can call the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation to query CA certificates that are registered with an ApsaraMQ for MQTT instance.</description></item>
+        /// <item><description>Only Platinum&lt;props=&quot;china&quot;&gt; and Professional instances support the ActiveCaCertificate operation.</description></item>
+        /// <item><description>The request frequency limit for a single user is 500 requests per second. For special requirements, contact ApsaraMQ for MQTT technical support. DingTalk group ID: 35228338.</description></item>
+        /// <item><description>The ActiveCaCertificate operation only supports CA certificates that are registered on the ApsaraMQ for MQTT server. You can invoke the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation to query the registered CA certificates under a specified instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -89,27 +92,20 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ActiveCaCertificateResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ActiveCaCertificateResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ActiveCaCertificateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activate CA Certificate</para>
+        /// <para>ApsaraMQ for MQTT supports X.509 certificate authentication, which allows clients to authenticate by using device certificates. A CA certificate is used to issue device certificates for clients and verify the validity of the device certificates. A CA certificate must be active to be used. By default, a CA certificate is active after registration. If a CA certificate is changed to the inactive state, you can invoke this operation to reactivate it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
-        /// <item><description>You can call this operation to reactivate only CA certificates that are registered with ApsaraMQ for MQTT brokers. You can call the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation to query CA certificates that are registered with an ApsaraMQ for MQTT instance.</description></item>
+        /// <item><description>Only Platinum&lt;props=&quot;china&quot;&gt; and Professional instances support the ActiveCaCertificate operation.</description></item>
+        /// <item><description>The request frequency limit for a single user is 500 requests per second. For special requirements, contact ApsaraMQ for MQTT technical support. DingTalk group ID: 35228338.</description></item>
+        /// <item><description>The ActiveCaCertificate operation only supports CA certificates that are registered on the ApsaraMQ for MQTT server. You can invoke the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation to query the registered CA certificates under a specified instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -151,27 +147,20 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ActiveCaCertificateResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ActiveCaCertificateResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ActiveCaCertificateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activate CA Certificate</para>
+        /// <para>ApsaraMQ for MQTT supports X.509 certificate authentication, which allows clients to authenticate by using device certificates. A CA certificate is used to issue device certificates for clients and verify the validity of the device certificates. A CA certificate must be active to be used. By default, a CA certificate is active after registration. If a CA certificate is changed to the inactive state, you can invoke this operation to reactivate it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
-        /// <item><description>You can call this operation to reactivate only CA certificates that are registered with ApsaraMQ for MQTT brokers. You can call the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation to query CA certificates that are registered with an ApsaraMQ for MQTT instance.</description></item>
+        /// <item><description>Only Platinum&lt;props=&quot;china&quot;&gt; and Professional instances support the ActiveCaCertificate operation.</description></item>
+        /// <item><description>The request frequency limit for a single user is 500 requests per second. For special requirements, contact ApsaraMQ for MQTT technical support. DingTalk group ID: 35228338.</description></item>
+        /// <item><description>The ActiveCaCertificate operation only supports CA certificates that are registered on the ApsaraMQ for MQTT server. You can invoke the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation to query the registered CA certificates under a specified instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -190,15 +179,15 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activate CA Certificate</para>
+        /// <para>ApsaraMQ for MQTT supports X.509 certificate authentication, which allows clients to authenticate by using device certificates. A CA certificate is used to issue device certificates for clients and verify the validity of the device certificates. A CA certificate must be active to be used. By default, a CA certificate is active after registration. If a CA certificate is changed to the inactive state, you can invoke this operation to reactivate it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
-        /// <item><description>You can call this operation to reactivate only CA certificates that are registered with ApsaraMQ for MQTT brokers. You can call the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation to query CA certificates that are registered with an ApsaraMQ for MQTT instance.</description></item>
+        /// <item><description>Only Platinum&lt;props=&quot;china&quot;&gt; and Professional instances support the ActiveCaCertificate operation.</description></item>
+        /// <item><description>The request frequency limit for a single user is 500 requests per second. For special requirements, contact ApsaraMQ for MQTT technical support. DingTalk group ID: 35228338.</description></item>
+        /// <item><description>The ActiveCaCertificate operation only supports CA certificates that are registered on the ApsaraMQ for MQTT server. You can invoke the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation to query the registered CA certificates under a specified instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -217,14 +206,14 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reactivates a device certificate. Device certificates are digital certificates issued to clients by certificate authority (CA) root certificates. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, the broker uses the device certificate to authenticate the client based on the registered CA certificate. If the CA certificate matches the device certificate, the client passes the authentication and the system automatically registers the device certificate with the ApsaraMQ for MQTT broker. After a device certificate is registered with an ApsaraMQ for MQTT broker, the certificate is automatically activated. If your device certificate is changed to the inactivated state, you can call this operation to reactivate the device certificate.</para>
+        /// <para>Activates a device certificate. A device certificate is a digital certificate issued by a CA root certificate to a client device for security authentication when the client connects to the server. When a client device uses a device certificate for access authentication, the server verifies the device certificate based on the registered CA certificate. If the CA certificate and the device certificate match, the client authentication succeeds, and the system automatically registers the device certificate on the server. By default, a device certificate is in the activated state after it is registered on the server. If a device certificate that you want to use is deactivated, you can call this operation to reactivate it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
+        /// <item><description>Only Platinum&lt;props=&quot;china&quot;&gt; and Professional edition instances support the ActiveDeviceCertificate operation.</description></item>
+        /// <item><description>The request frequency limit for a single user is 500 calls per second. If you have special requirements, contact the technical support team of MSMQ for MQTT. DingTalk group ID: 35228338.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -270,26 +259,19 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ActiveDeviceCertificateResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ActiveDeviceCertificateResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ActiveDeviceCertificateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reactivates a device certificate. Device certificates are digital certificates issued to clients by certificate authority (CA) root certificates. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, the broker uses the device certificate to authenticate the client based on the registered CA certificate. If the CA certificate matches the device certificate, the client passes the authentication and the system automatically registers the device certificate with the ApsaraMQ for MQTT broker. After a device certificate is registered with an ApsaraMQ for MQTT broker, the certificate is automatically activated. If your device certificate is changed to the inactivated state, you can call this operation to reactivate the device certificate.</para>
+        /// <para>Activates a device certificate. A device certificate is a digital certificate issued by a CA root certificate to a client device for security authentication when the client connects to the server. When a client device uses a device certificate for access authentication, the server verifies the device certificate based on the registered CA certificate. If the CA certificate and the device certificate match, the client authentication succeeds, and the system automatically registers the device certificate on the server. By default, a device certificate is in the activated state after it is registered on the server. If a device certificate that you want to use is deactivated, you can call this operation to reactivate it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
+        /// <item><description>Only Platinum&lt;props=&quot;china&quot;&gt; and Professional edition instances support the ActiveDeviceCertificate operation.</description></item>
+        /// <item><description>The request frequency limit for a single user is 500 calls per second. If you have special requirements, contact the technical support team of MSMQ for MQTT. DingTalk group ID: 35228338.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -335,26 +317,19 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ActiveDeviceCertificateResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ActiveDeviceCertificateResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ActiveDeviceCertificateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reactivates a device certificate. Device certificates are digital certificates issued to clients by certificate authority (CA) root certificates. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, the broker uses the device certificate to authenticate the client based on the registered CA certificate. If the CA certificate matches the device certificate, the client passes the authentication and the system automatically registers the device certificate with the ApsaraMQ for MQTT broker. After a device certificate is registered with an ApsaraMQ for MQTT broker, the certificate is automatically activated. If your device certificate is changed to the inactivated state, you can call this operation to reactivate the device certificate.</para>
+        /// <para>Activates a device certificate. A device certificate is a digital certificate issued by a CA root certificate to a client device for security authentication when the client connects to the server. When a client device uses a device certificate for access authentication, the server verifies the device certificate based on the registered CA certificate. If the CA certificate and the device certificate match, the client authentication succeeds, and the system automatically registers the device certificate on the server. By default, a device certificate is in the activated state after it is registered on the server. If a device certificate that you want to use is deactivated, you can call this operation to reactivate it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
+        /// <item><description>Only Platinum&lt;props=&quot;china&quot;&gt; and Professional edition instances support the ActiveDeviceCertificate operation.</description></item>
+        /// <item><description>The request frequency limit for a single user is 500 calls per second. If you have special requirements, contact the technical support team of MSMQ for MQTT. DingTalk group ID: 35228338.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -373,14 +348,14 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reactivates a device certificate. Device certificates are digital certificates issued to clients by certificate authority (CA) root certificates. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, the broker uses the device certificate to authenticate the client based on the registered CA certificate. If the CA certificate matches the device certificate, the client passes the authentication and the system automatically registers the device certificate with the ApsaraMQ for MQTT broker. After a device certificate is registered with an ApsaraMQ for MQTT broker, the certificate is automatically activated. If your device certificate is changed to the inactivated state, you can call this operation to reactivate the device certificate.</para>
+        /// <para>Activates a device certificate. A device certificate is a digital certificate issued by a CA root certificate to a client device for security authentication when the client connects to the server. When a client device uses a device certificate for access authentication, the server verifies the device certificate based on the registered CA certificate. If the CA certificate and the device certificate match, the client authentication succeeds, and the system automatically registers the device certificate on the server. By default, a device certificate is in the activated state after it is registered on the server. If a device certificate that you want to use is deactivated, you can call this operation to reactivate it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
+        /// <item><description>Only Platinum&lt;props=&quot;china&quot;&gt; and Professional edition instances support the ActiveDeviceCertificate operation.</description></item>
+        /// <item><description>The request frequency limit for a single user is 500 calls per second. If you have special requirements, contact the technical support team of MSMQ for MQTT. DingTalk group ID: 35228338.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -399,7 +374,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a device to the connection blacklist to disable connections from the device.</para>
+        /// <para>Adds a connection blacklist to disable connections from a specific device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -440,19 +415,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddCustomAuthConnectBlackResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddCustomAuthConnectBlackResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddCustomAuthConnectBlackResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a device to the connection blacklist to disable connections from the device.</para>
+        /// <para>Adds a connection blacklist to disable connections from a specific device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -493,19 +461,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddCustomAuthConnectBlackResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddCustomAuthConnectBlackResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddCustomAuthConnectBlackResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a device to the connection blacklist to disable connections from the device.</para>
+        /// <para>Adds a connection blacklist to disable connections from a specific device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -523,7 +484,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a device to the connection blacklist to disable connections from the device.</para>
+        /// <para>Adds a connection blacklist to disable connections from a specific device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -541,7 +502,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds the information about identity authentication. The identity can be accurate to a client.</para>
+        /// <para>Adds account authentication information, which can be specified at the client level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -598,19 +559,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddCustomAuthIdentityResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddCustomAuthIdentityResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddCustomAuthIdentityResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds the information about identity authentication. The identity can be accurate to a client.</para>
+        /// <para>Adds account authentication information, which can be specified at the client level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -667,19 +621,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddCustomAuthIdentityResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddCustomAuthIdentityResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddCustomAuthIdentityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds the information about identity authentication. The identity can be accurate to a client.</para>
+        /// <para>Adds account authentication information, which can be specified at the client level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -697,7 +644,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds the information about identity authentication. The identity can be accurate to a client.</para>
+        /// <para>Adds account authentication information, which can be specified at the client level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -715,7 +662,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions on topics. You must create a parent topic in the console before you call this API operation.</para>
+        /// <para>Adds authorization information for a topic resource. A first-level topic must be created in the console in advance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -772,19 +719,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddCustomAuthPermissionResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddCustomAuthPermissionResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddCustomAuthPermissionResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions on topics. You must create a parent topic in the console before you call this API operation.</para>
+        /// <para>Adds authorization information for a topic resource. A first-level topic must be created in the console in advance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -841,19 +781,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<AddCustomAuthPermissionResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<AddCustomAuthPermissionResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<AddCustomAuthPermissionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions on topics. You must create a parent topic in the console before you call this API operation.</para>
+        /// <para>Adds authorization information for a topic resource. A first-level topic must be created in the console in advance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -871,7 +804,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions on topics. You must create a parent topic in the console before you call this API operation.</para>
+        /// <para>Adds authorization information for a topic resource. A first-level topic must be created in the console in advance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -889,14 +822,14 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a token from ApsaraMQ for MQTT. If token-based authentication is used for permission authentication on an ApsaraMQ for MQTT broker, a token that is issued by the broker is required for authentication each time a client is connected to the broker.</para>
+        /// <para>When token-based authentication is used, the ApsaraMQ for MQTT broker issues a token (temporary credential) to the client, and the client must include the token when accessing the ApsaraMQ for MQTT broker to authenticate permissions. This API operation is used to apply for a temporary token from ApsaraMQ for MQTT.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.</para>
         /// <list type="bullet">
-        /// <item><description>Each successful call to the <b>ApplyToken</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
+        /// <item><description>The request frequency limit for a single user is 100 calls per second. If you have special requirements, contact the technical support team of ApsaraMQ for MQTT. DingTalk group ID: 35228338.</description></item>
+        /// <item><description>Each time you successfully call the <b>ApplyToken</b> API operation, it is counted as one message TPS, which affects your billing. For billing details, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing overview</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -946,26 +879,19 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ApplyTokenResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ApplyTokenResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ApplyTokenResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a token from ApsaraMQ for MQTT. If token-based authentication is used for permission authentication on an ApsaraMQ for MQTT broker, a token that is issued by the broker is required for authentication each time a client is connected to the broker.</para>
+        /// <para>When token-based authentication is used, the ApsaraMQ for MQTT broker issues a token (temporary credential) to the client, and the client must include the token when accessing the ApsaraMQ for MQTT broker to authenticate permissions. This API operation is used to apply for a temporary token from ApsaraMQ for MQTT.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.</para>
         /// <list type="bullet">
-        /// <item><description>Each successful call to the <b>ApplyToken</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
+        /// <item><description>The request frequency limit for a single user is 100 calls per second. If you have special requirements, contact the technical support team of ApsaraMQ for MQTT. DingTalk group ID: 35228338.</description></item>
+        /// <item><description>Each time you successfully call the <b>ApplyToken</b> API operation, it is counted as one message TPS, which affects your billing. For billing details, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing overview</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1015,26 +941,19 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ApplyTokenResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ApplyTokenResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ApplyTokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a token from ApsaraMQ for MQTT. If token-based authentication is used for permission authentication on an ApsaraMQ for MQTT broker, a token that is issued by the broker is required for authentication each time a client is connected to the broker.</para>
+        /// <para>When token-based authentication is used, the ApsaraMQ for MQTT broker issues a token (temporary credential) to the client, and the client must include the token when accessing the ApsaraMQ for MQTT broker to authenticate permissions. This API operation is used to apply for a temporary token from ApsaraMQ for MQTT.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.</para>
         /// <list type="bullet">
-        /// <item><description>Each successful call to the <b>ApplyToken</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
+        /// <item><description>The request frequency limit for a single user is 100 calls per second. If you have special requirements, contact the technical support team of ApsaraMQ for MQTT. DingTalk group ID: 35228338.</description></item>
+        /// <item><description>Each time you successfully call the <b>ApplyToken</b> API operation, it is counted as one message TPS, which affects your billing. For billing details, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing overview</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1053,14 +972,14 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a token from ApsaraMQ for MQTT. If token-based authentication is used for permission authentication on an ApsaraMQ for MQTT broker, a token that is issued by the broker is required for authentication each time a client is connected to the broker.</para>
+        /// <para>When token-based authentication is used, the ApsaraMQ for MQTT broker issues a token (temporary credential) to the client, and the client must include the token when accessing the ApsaraMQ for MQTT broker to authenticate permissions. This API operation is used to apply for a temporary token from ApsaraMQ for MQTT.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 100 times per second per account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.</para>
         /// <list type="bullet">
-        /// <item><description>Each successful call to the <b>ApplyToken</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
+        /// <item><description>The request frequency limit for a single user is 100 calls per second. If you have special requirements, contact the technical support team of ApsaraMQ for MQTT. DingTalk group ID: 35228338.</description></item>
+        /// <item><description>Each time you successfully call the <b>ApplyToken</b> API operation, it is counted as one message TPS, which affects your billing. For billing details, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing overview</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1079,15 +998,16 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of multiple ApsaraMQ for MQTT clients by client ID.</para>
+        /// <para>Queries the online status of clients in batches by client ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call the <b>BatchQuerySessionByClientIds</b> operation up to 100 times per second. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You can call the <b>BatchQuerySessionByClientIds</b> operation to query the status of up to 10 ApsaraMQ for MQTT clients in a single query.</description></item>
-        /// <item><description>Each successful call to the <b>BatchQuerySessionByClientIds</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
+        /// <item><description>The QPS limit for the <b>BatchQuerySessionByClientIds</b> operation is 100. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">QPS limits</a>.</description></item>
+        /// <item><description>You can query the online status of up to 10 client IDs each time you call the <b>BatchQuerySessionByClientIds</b> operation.</description></item>
+        /// <item><description>Each successful call to the <b>BatchQuerySessionByClientIds</b> operation is counted as one message TPS, which affects your billing. For billing details, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing</a>.</description></item>
+        /// <item><description>Considering the performance impact, the <b>BatchQuerySessionByClientIds</b> operation uses an internal cache for queries, which may result in data inconsistency. For exact queries, use the <a href="https://help.aliyun.com/document_detail/2603924.html">QuerySessionByClientId</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1129,27 +1049,21 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<BatchQuerySessionByClientIdsResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<BatchQuerySessionByClientIdsResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<BatchQuerySessionByClientIdsResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of multiple ApsaraMQ for MQTT clients by client ID.</para>
+        /// <para>Queries the online status of clients in batches by client ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call the <b>BatchQuerySessionByClientIds</b> operation up to 100 times per second. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You can call the <b>BatchQuerySessionByClientIds</b> operation to query the status of up to 10 ApsaraMQ for MQTT clients in a single query.</description></item>
-        /// <item><description>Each successful call to the <b>BatchQuerySessionByClientIds</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
+        /// <item><description>The QPS limit for the <b>BatchQuerySessionByClientIds</b> operation is 100. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">QPS limits</a>.</description></item>
+        /// <item><description>You can query the online status of up to 10 client IDs each time you call the <b>BatchQuerySessionByClientIds</b> operation.</description></item>
+        /// <item><description>Each successful call to the <b>BatchQuerySessionByClientIds</b> operation is counted as one message TPS, which affects your billing. For billing details, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing</a>.</description></item>
+        /// <item><description>Considering the performance impact, the <b>BatchQuerySessionByClientIds</b> operation uses an internal cache for queries, which may result in data inconsistency. For exact queries, use the <a href="https://help.aliyun.com/document_detail/2603924.html">QuerySessionByClientId</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1191,27 +1105,21 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<BatchQuerySessionByClientIdsResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<BatchQuerySessionByClientIdsResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<BatchQuerySessionByClientIdsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of multiple ApsaraMQ for MQTT clients by client ID.</para>
+        /// <para>Queries the online status of clients in batches by client ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call the <b>BatchQuerySessionByClientIds</b> operation up to 100 times per second. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You can call the <b>BatchQuerySessionByClientIds</b> operation to query the status of up to 10 ApsaraMQ for MQTT clients in a single query.</description></item>
-        /// <item><description>Each successful call to the <b>BatchQuerySessionByClientIds</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
+        /// <item><description>The QPS limit for the <b>BatchQuerySessionByClientIds</b> operation is 100. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">QPS limits</a>.</description></item>
+        /// <item><description>You can query the online status of up to 10 client IDs each time you call the <b>BatchQuerySessionByClientIds</b> operation.</description></item>
+        /// <item><description>Each successful call to the <b>BatchQuerySessionByClientIds</b> operation is counted as one message TPS, which affects your billing. For billing details, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing</a>.</description></item>
+        /// <item><description>Considering the performance impact, the <b>BatchQuerySessionByClientIds</b> operation uses an internal cache for queries, which may result in data inconsistency. For exact queries, use the <a href="https://help.aliyun.com/document_detail/2603924.html">QuerySessionByClientId</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1230,15 +1138,16 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of multiple ApsaraMQ for MQTT clients by client ID.</para>
+        /// <para>Queries the online status of clients in batches by client ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call the <b>BatchQuerySessionByClientIds</b> operation up to 100 times per second. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You can call the <b>BatchQuerySessionByClientIds</b> operation to query the status of up to 10 ApsaraMQ for MQTT clients in a single query.</description></item>
-        /// <item><description>Each successful call to the <b>BatchQuerySessionByClientIds</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
+        /// <item><description>The QPS limit for the <b>BatchQuerySessionByClientIds</b> operation is 100. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">QPS limits</a>.</description></item>
+        /// <item><description>You can query the online status of up to 10 client IDs each time you call the <b>BatchQuerySessionByClientIds</b> operation.</description></item>
+        /// <item><description>Each successful call to the <b>BatchQuerySessionByClientIds</b> operation is counted as one message TPS, which affects your billing. For billing details, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing</a>.</description></item>
+        /// <item><description>Considering the performance impact, the <b>BatchQuerySessionByClientIds</b> operation uses an internal cache for queries, which may result in data inconsistency. For exact queries, use the <a href="https://help.aliyun.com/document_detail/2603924.html">QuerySessionByClientId</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1257,13 +1166,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Proactively closes an online connection. After you call this API operation, the device may reconnect to the broker based on the client reconnection mechanism.</para>
+        /// <para>Closes an active connection. However, the device may reconnect depending on the client reconnection mechanism.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This API is still in the testing phase and is only available for Professional Edition instances in the Shanghai region. Legacy instances are not supported at this time.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// CloseConnectionRequest
@@ -1303,25 +1207,13 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CloseConnectionResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CloseConnectionResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CloseConnectionResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Proactively closes an online connection. After you call this API operation, the device may reconnect to the broker based on the client reconnection mechanism.</para>
+        /// <para>Closes an active connection. However, the device may reconnect depending on the client reconnection mechanism.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This API is still in the testing phase and is only available for Professional Edition instances in the Shanghai region. Legacy instances are not supported at this time.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// CloseConnectionRequest
@@ -1361,25 +1253,13 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CloseConnectionResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CloseConnectionResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CloseConnectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Proactively closes an online connection. After you call this API operation, the device may reconnect to the broker based on the client reconnection mechanism.</para>
+        /// <para>Closes an active connection. However, the device may reconnect depending on the client reconnection mechanism.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This API is still in the testing phase and is only available for Professional Edition instances in the Shanghai region. Legacy instances are not supported at this time.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// CloseConnectionRequest
@@ -1396,13 +1276,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Proactively closes an online connection. After you call this API operation, the device may reconnect to the broker based on the client reconnection mechanism.</para>
+        /// <para>Closes an active connection. However, the device may reconnect depending on the client reconnection mechanism.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>This API is still in the testing phase and is only available for Professional Edition instances in the Shanghai region. Legacy instances are not supported at this time.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// CloseConnectionRequest
@@ -1419,12 +1294,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a group ID. Before you connect producers and consumers to an ApsaraMQ for MQTT broker to send and receive messages, you must specify a unique ID for each client for identification. A client ID is in the format of \<GroupID>@@@\<DeviceID>. In the preceding format, DeviceID is the custom ID that you specify for the client, and GroupID is the ID of the group that you create on the ApsaraMQ for MQTT broker in advance.</para>
+        /// <para>When message producers and consumers connect to the ApsaraMQ for MQTT server to send and receive messages, they must specify a client ID as the unique identity of a client. A client ID consists of two parts in the <GroupID>@@@<DeviceID> format. The DeviceID is defined by the client, and the GroupID must be created in advance in the ApsaraMQ for MQTT server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each successful call to the <b>CreateGroupId</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
+        /// <para>Each successful call to the <b>CreateGroupId</b> operation is counted as one message TPS, which affects your billing. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1449,9 +1324,9 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
             {
                 query["InstanceId"] = request.InstanceId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
-                query["Tags"] = request.Tags;
+                query["Tag"] = request.Tag;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1469,24 +1344,17 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateGroupIdResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateGroupIdResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateGroupIdResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a group ID. Before you connect producers and consumers to an ApsaraMQ for MQTT broker to send and receive messages, you must specify a unique ID for each client for identification. A client ID is in the format of \<GroupID>@@@\<DeviceID>. In the preceding format, DeviceID is the custom ID that you specify for the client, and GroupID is the ID of the group that you create on the ApsaraMQ for MQTT broker in advance.</para>
+        /// <para>When message producers and consumers connect to the ApsaraMQ for MQTT server to send and receive messages, they must specify a client ID as the unique identity of a client. A client ID consists of two parts in the <GroupID>@@@<DeviceID> format. The DeviceID is defined by the client, and the GroupID must be created in advance in the ApsaraMQ for MQTT server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each successful call to the <b>CreateGroupId</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
+        /// <para>Each successful call to the <b>CreateGroupId</b> operation is counted as one message TPS, which affects your billing. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1511,9 +1379,9 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
             {
                 query["InstanceId"] = request.InstanceId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
-                query["Tags"] = request.Tags;
+                query["Tag"] = request.Tag;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1531,24 +1399,17 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<CreateGroupIdResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<CreateGroupIdResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<CreateGroupIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a group ID. Before you connect producers and consumers to an ApsaraMQ for MQTT broker to send and receive messages, you must specify a unique ID for each client for identification. A client ID is in the format of \<GroupID>@@@\<DeviceID>. In the preceding format, DeviceID is the custom ID that you specify for the client, and GroupID is the ID of the group that you create on the ApsaraMQ for MQTT broker in advance.</para>
+        /// <para>When message producers and consumers connect to the ApsaraMQ for MQTT server to send and receive messages, they must specify a client ID as the unique identity of a client. A client ID consists of two parts in the <GroupID>@@@<DeviceID> format. The DeviceID is defined by the client, and the GroupID must be created in advance in the ApsaraMQ for MQTT server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each successful call to the <b>CreateGroupId</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
+        /// <para>Each successful call to the <b>CreateGroupId</b> operation is counted as one message TPS, which affects your billing. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1566,12 +1427,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a group ID. Before you connect producers and consumers to an ApsaraMQ for MQTT broker to send and receive messages, you must specify a unique ID for each client for identification. A client ID is in the format of \<GroupID>@@@\<DeviceID>. In the preceding format, DeviceID is the custom ID that you specify for the client, and GroupID is the ID of the group that you create on the ApsaraMQ for MQTT broker in advance.</para>
+        /// <para>When message producers and consumers connect to the ApsaraMQ for MQTT server to send and receive messages, they must specify a client ID as the unique identity of a client. A client ID consists of two parts in the <GroupID>@@@<DeviceID> format. The DeviceID is defined by the client, and the GroupID must be created in advance in the ApsaraMQ for MQTT server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each successful call to the <b>CreateGroupId</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
+        /// <para>Each successful call to the <b>CreateGroupId</b> operation is counted as one message TPS, which affects your billing. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1589,16 +1450,16 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a certificate authority (CA) certificate from an ApsaraMQ for MQTT broker. ApsaraMQ for MQTT allows you to use X.509 certificates for authentication. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, you can use the device certificate to implement authentication. CA certificates are used to issue device certificates to clients and validate the device certificates. Before you can use a CA certificate, you must register the certificate with an ApsaraMQ for MQTT broker. If you no longer require a CA certificate, you can call this operation to delete the certificate from the ApsaraMQ for MQTT broker.</para>
+        /// <para>ApsaraMQ for MQTT supports X.509 certificate authentication, allowing clients to use device certificates for access authentication. CA certificates are used to issue device certificates for clients and verify the validity of device certificates. Before you use a CA certificate, you must register it with the ApsaraMQ for MQTT server. If you no longer need a CA certificate, you can invoke the DeleteCaCertificate operation to delete it from the server records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
-        /// <item><description>You can call this operation to delete only CA certificates that are registered with ApsaraMQ for MQTT brokers. You can call the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation to query CA certificates that are registered with an ApsaraMQ for MQTT instance.</description></item>
-        /// <item><description>If you delete a specific CA certificate from an ApsaraMQ for MQTT broker, all device certificates that are issued by the CA certificate and are registered with the ApsaraMQ for MQTT broker are automatically deleted.</description></item>
+        /// <item><description>Only Platinum&lt;props=&quot;china&quot;&gt; and Professional instances support the DeleteCaCertificate operation.</description></item>
+        /// <item><description>The request frequency limit for a single user is 500 requests per second. For special requirements, contact ApsaraMQ for MQTT technical support. DingTalk group ID: 35228338.</description></item>
+        /// <item><description>The DeleteCaCertificate operation only supports CA certificates that are already registered with the ApsaraMQ for MQTT server. You can invoke the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation to query registered CA certificates under a specific instance.</description></item>
+        /// <item><description>When you delete a specified CA certificate, all device certificates issued by this CA certificate and registered with the ApsaraMQ for MQTT server are also automatically deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1640,28 +1501,21 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteCaCertificateResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteCaCertificateResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteCaCertificateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a certificate authority (CA) certificate from an ApsaraMQ for MQTT broker. ApsaraMQ for MQTT allows you to use X.509 certificates for authentication. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, you can use the device certificate to implement authentication. CA certificates are used to issue device certificates to clients and validate the device certificates. Before you can use a CA certificate, you must register the certificate with an ApsaraMQ for MQTT broker. If you no longer require a CA certificate, you can call this operation to delete the certificate from the ApsaraMQ for MQTT broker.</para>
+        /// <para>ApsaraMQ for MQTT supports X.509 certificate authentication, allowing clients to use device certificates for access authentication. CA certificates are used to issue device certificates for clients and verify the validity of device certificates. Before you use a CA certificate, you must register it with the ApsaraMQ for MQTT server. If you no longer need a CA certificate, you can invoke the DeleteCaCertificate operation to delete it from the server records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
-        /// <item><description>You can call this operation to delete only CA certificates that are registered with ApsaraMQ for MQTT brokers. You can call the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation to query CA certificates that are registered with an ApsaraMQ for MQTT instance.</description></item>
-        /// <item><description>If you delete a specific CA certificate from an ApsaraMQ for MQTT broker, all device certificates that are issued by the CA certificate and are registered with the ApsaraMQ for MQTT broker are automatically deleted.</description></item>
+        /// <item><description>Only Platinum&lt;props=&quot;china&quot;&gt; and Professional instances support the DeleteCaCertificate operation.</description></item>
+        /// <item><description>The request frequency limit for a single user is 500 requests per second. For special requirements, contact ApsaraMQ for MQTT technical support. DingTalk group ID: 35228338.</description></item>
+        /// <item><description>The DeleteCaCertificate operation only supports CA certificates that are already registered with the ApsaraMQ for MQTT server. You can invoke the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation to query registered CA certificates under a specific instance.</description></item>
+        /// <item><description>When you delete a specified CA certificate, all device certificates issued by this CA certificate and registered with the ApsaraMQ for MQTT server are also automatically deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1703,28 +1557,21 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteCaCertificateResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteCaCertificateResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteCaCertificateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a certificate authority (CA) certificate from an ApsaraMQ for MQTT broker. ApsaraMQ for MQTT allows you to use X.509 certificates for authentication. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, you can use the device certificate to implement authentication. CA certificates are used to issue device certificates to clients and validate the device certificates. Before you can use a CA certificate, you must register the certificate with an ApsaraMQ for MQTT broker. If you no longer require a CA certificate, you can call this operation to delete the certificate from the ApsaraMQ for MQTT broker.</para>
+        /// <para>ApsaraMQ for MQTT supports X.509 certificate authentication, allowing clients to use device certificates for access authentication. CA certificates are used to issue device certificates for clients and verify the validity of device certificates. Before you use a CA certificate, you must register it with the ApsaraMQ for MQTT server. If you no longer need a CA certificate, you can invoke the DeleteCaCertificate operation to delete it from the server records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
-        /// <item><description>You can call this operation to delete only CA certificates that are registered with ApsaraMQ for MQTT brokers. You can call the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation to query CA certificates that are registered with an ApsaraMQ for MQTT instance.</description></item>
-        /// <item><description>If you delete a specific CA certificate from an ApsaraMQ for MQTT broker, all device certificates that are issued by the CA certificate and are registered with the ApsaraMQ for MQTT broker are automatically deleted.</description></item>
+        /// <item><description>Only Platinum&lt;props=&quot;china&quot;&gt; and Professional instances support the DeleteCaCertificate operation.</description></item>
+        /// <item><description>The request frequency limit for a single user is 500 requests per second. For special requirements, contact ApsaraMQ for MQTT technical support. DingTalk group ID: 35228338.</description></item>
+        /// <item><description>The DeleteCaCertificate operation only supports CA certificates that are already registered with the ApsaraMQ for MQTT server. You can invoke the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation to query registered CA certificates under a specific instance.</description></item>
+        /// <item><description>When you delete a specified CA certificate, all device certificates issued by this CA certificate and registered with the ApsaraMQ for MQTT server are also automatically deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1743,16 +1590,16 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a certificate authority (CA) certificate from an ApsaraMQ for MQTT broker. ApsaraMQ for MQTT allows you to use X.509 certificates for authentication. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, you can use the device certificate to implement authentication. CA certificates are used to issue device certificates to clients and validate the device certificates. Before you can use a CA certificate, you must register the certificate with an ApsaraMQ for MQTT broker. If you no longer require a CA certificate, you can call this operation to delete the certificate from the ApsaraMQ for MQTT broker.</para>
+        /// <para>ApsaraMQ for MQTT supports X.509 certificate authentication, allowing clients to use device certificates for access authentication. CA certificates are used to issue device certificates for clients and verify the validity of device certificates. Before you use a CA certificate, you must register it with the ApsaraMQ for MQTT server. If you no longer need a CA certificate, you can invoke the DeleteCaCertificate operation to delete it from the server records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
-        /// <item><description>You can call this operation to delete only CA certificates that are registered with ApsaraMQ for MQTT brokers. You can call the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation to query CA certificates that are registered with an ApsaraMQ for MQTT instance.</description></item>
-        /// <item><description>If you delete a specific CA certificate from an ApsaraMQ for MQTT broker, all device certificates that are issued by the CA certificate and are registered with the ApsaraMQ for MQTT broker are automatically deleted.</description></item>
+        /// <item><description>Only Platinum&lt;props=&quot;china&quot;&gt; and Professional instances support the DeleteCaCertificate operation.</description></item>
+        /// <item><description>The request frequency limit for a single user is 500 requests per second. For special requirements, contact ApsaraMQ for MQTT technical support. DingTalk group ID: 35228338.</description></item>
+        /// <item><description>The DeleteCaCertificate operation only supports CA certificates that are already registered with the ApsaraMQ for MQTT server. You can invoke the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation to query registered CA certificates under a specific instance.</description></item>
+        /// <item><description>When you delete a specified CA certificate, all device certificates issued by this CA certificate and registered with the ApsaraMQ for MQTT server are also automatically deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1812,14 +1659,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteCustomAuthConnectBlackResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteCustomAuthConnectBlackResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteCustomAuthConnectBlackResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1865,14 +1705,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteCustomAuthConnectBlackResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteCustomAuthConnectBlackResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteCustomAuthConnectBlackResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -1913,7 +1746,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an identity for custom authorization.</para>
+        /// <para>Deletes custom authentication.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1962,19 +1795,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteCustomAuthIdentityResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteCustomAuthIdentityResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteCustomAuthIdentityResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an identity for custom authorization.</para>
+        /// <para>Deletes custom authentication.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2023,19 +1849,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteCustomAuthIdentityResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteCustomAuthIdentityResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteCustomAuthIdentityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an identity for custom authorization.</para>
+        /// <para>Deletes custom authentication.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2053,7 +1872,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an identity for custom authorization.</para>
+        /// <para>Deletes custom authentication.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2071,7 +1890,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes permissions on a topic.</para>
+        /// <para>Deletes topic authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2120,19 +1939,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteCustomAuthPermissionResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteCustomAuthPermissionResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteCustomAuthPermissionResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes permissions on a topic.</para>
+        /// <para>Deletes topic authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2181,19 +1993,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteCustomAuthPermissionResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteCustomAuthPermissionResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteCustomAuthPermissionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes permissions on a topic.</para>
+        /// <para>Deletes topic authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2211,7 +2016,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes permissions on a topic.</para>
+        /// <para>Deletes topic authorization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2229,14 +2034,14 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the registration information about a specific device certificate from an ApsaraMQ for MQTT broker. Device certificates are digital certificates issued to clients by certificate authority (CA) root certificates. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, the broker uses the device certificate to authenticate the client. If the client passes the authentication, the client and the broker can communicate with each other based on the encrypted private key in the device certificate. If the client fails the authentication, access requests from the client are denied by the client. If you no longer require a device certificate, you can call this operation to delete the registration information about the certificate from an ApsaraMQ for MQTT broker.</para>
+        /// <para>Deletes the registration information of a specified device certificate from the server storage. A device certificate is a digital certificate issued by a certification authority (CA) root certificate to a client device. It is used for security authentication when the client connects to the server. After authentication, the server and the client can communicate securely by using the encryption key in the certificate. If the authentication fails, the server rejects the client connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
+        /// <item><description>Only Platinum&lt;props=&quot;china&quot;&gt; and Professional edition instances support the DeleteDeviceCertificate operation.</description></item>
+        /// <item><description>The request frequency limit for a single user is 500 calls per second. If you have special requirements, contact the technical support team of ApsaraMQ for MQTT. DingTalk group ID: 35228338.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2282,26 +2087,19 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteDeviceCertificateResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteDeviceCertificateResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteDeviceCertificateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the registration information about a specific device certificate from an ApsaraMQ for MQTT broker. Device certificates are digital certificates issued to clients by certificate authority (CA) root certificates. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, the broker uses the device certificate to authenticate the client. If the client passes the authentication, the client and the broker can communicate with each other based on the encrypted private key in the device certificate. If the client fails the authentication, access requests from the client are denied by the client. If you no longer require a device certificate, you can call this operation to delete the registration information about the certificate from an ApsaraMQ for MQTT broker.</para>
+        /// <para>Deletes the registration information of a specified device certificate from the server storage. A device certificate is a digital certificate issued by a certification authority (CA) root certificate to a client device. It is used for security authentication when the client connects to the server. After authentication, the server and the client can communicate securely by using the encryption key in the certificate. If the authentication fails, the server rejects the client connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
+        /// <item><description>Only Platinum&lt;props=&quot;china&quot;&gt; and Professional edition instances support the DeleteDeviceCertificate operation.</description></item>
+        /// <item><description>The request frequency limit for a single user is 500 calls per second. If you have special requirements, contact the technical support team of ApsaraMQ for MQTT. DingTalk group ID: 35228338.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2347,26 +2145,19 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteDeviceCertificateResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteDeviceCertificateResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteDeviceCertificateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the registration information about a specific device certificate from an ApsaraMQ for MQTT broker. Device certificates are digital certificates issued to clients by certificate authority (CA) root certificates. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, the broker uses the device certificate to authenticate the client. If the client passes the authentication, the client and the broker can communicate with each other based on the encrypted private key in the device certificate. If the client fails the authentication, access requests from the client are denied by the client. If you no longer require a device certificate, you can call this operation to delete the registration information about the certificate from an ApsaraMQ for MQTT broker.</para>
+        /// <para>Deletes the registration information of a specified device certificate from the server storage. A device certificate is a digital certificate issued by a certification authority (CA) root certificate to a client device. It is used for security authentication when the client connects to the server. After authentication, the server and the client can communicate securely by using the encryption key in the certificate. If the authentication fails, the server rejects the client connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
+        /// <item><description>Only Platinum&lt;props=&quot;china&quot;&gt; and Professional edition instances support the DeleteDeviceCertificate operation.</description></item>
+        /// <item><description>The request frequency limit for a single user is 500 calls per second. If you have special requirements, contact the technical support team of ApsaraMQ for MQTT. DingTalk group ID: 35228338.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2385,14 +2176,14 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the registration information about a specific device certificate from an ApsaraMQ for MQTT broker. Device certificates are digital certificates issued to clients by certificate authority (CA) root certificates. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, the broker uses the device certificate to authenticate the client. If the client passes the authentication, the client and the broker can communicate with each other based on the encrypted private key in the device certificate. If the client fails the authentication, access requests from the client are denied by the client. If you no longer require a device certificate, you can call this operation to delete the registration information about the certificate from an ApsaraMQ for MQTT broker.</para>
+        /// <para>Deletes the registration information of a specified device certificate from the server storage. A device certificate is a digital certificate issued by a certification authority (CA) root certificate to a client device. It is used for security authentication when the client connects to the server. After authentication, the server and the client can communicate securely by using the encryption key in the certificate. If the authentication fails, the server rejects the client connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
+        /// <item><description>Only Platinum&lt;props=&quot;china&quot;&gt; and Professional edition instances support the DeleteDeviceCertificate operation.</description></item>
+        /// <item><description>The request frequency limit for a single user is 500 calls per second. If you have special requirements, contact the technical support team of ApsaraMQ for MQTT. DingTalk group ID: 35228338.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2411,12 +2202,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a group from an ApsaraMQ for MQTT instance.</para>
+        /// <para>Deletes a group ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each successful call to the <b>DeleteGroupId</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
+        /// <para>Each successful call to the <b>DeleteGroupId</b> operation is counted as one message TPS, which affects your billing. For more information about billing, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2457,24 +2248,17 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteGroupIdResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteGroupIdResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteGroupIdResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a group from an ApsaraMQ for MQTT instance.</para>
+        /// <para>Deletes a group ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each successful call to the <b>DeleteGroupId</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
+        /// <para>Each successful call to the <b>DeleteGroupId</b> operation is counted as one message TPS, which affects your billing. For more information about billing, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2515,24 +2299,17 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DeleteGroupIdResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DeleteGroupIdResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DeleteGroupIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a group from an ApsaraMQ for MQTT instance.</para>
+        /// <para>Deletes a group ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each successful call to the <b>DeleteGroupId</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
+        /// <para>Each successful call to the <b>DeleteGroupId</b> operation is counted as one message TPS, which affects your billing. For more information about billing, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2550,12 +2327,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a group from an ApsaraMQ for MQTT instance.</para>
+        /// <para>Deletes a group ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each successful call to the <b>DeleteGroupId</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
+        /// <para>Each successful call to the <b>DeleteGroupId</b> operation is counted as one message TPS, which affects your billing. For more information about billing, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2573,7 +2350,171 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Downgrades the virtual IP address (VIP) access of a specific instance during the disaster recovery of multiple instances. Only Enterprise Platinum Edition instances support this operation. To call the operation, you must submit a ticket.</para>
+        /// <para>Deletes wildcard subscriptions in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Each successful call to the <b>DeleteTopic</b> operation counts as one message TPS, which affects your billing. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing overview</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteWildcardByTopicRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWildcardByTopicResponse
+        /// </returns>
+        public DeleteWildcardByTopicResponse DeleteWildcardByTopicWithOptions(DeleteWildcardByTopicRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirstTopic))
+            {
+                query["FirstTopic"] = request.FirstTopic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Wildcards))
+            {
+                query["Wildcards"] = request.Wildcards;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWildcardByTopic",
+                Version = "2020-04-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteWildcardByTopicResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes wildcard subscriptions in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Each successful call to the <b>DeleteTopic</b> operation counts as one message TPS, which affects your billing. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing overview</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteWildcardByTopicRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWildcardByTopicResponse
+        /// </returns>
+        public async Task<DeleteWildcardByTopicResponse> DeleteWildcardByTopicWithOptionsAsync(DeleteWildcardByTopicRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirstTopic))
+            {
+                query["FirstTopic"] = request.FirstTopic;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Wildcards))
+            {
+                query["Wildcards"] = request.Wildcards;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWildcardByTopic",
+                Version = "2020-04-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteWildcardByTopicResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes wildcard subscriptions in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Each successful call to the <b>DeleteTopic</b> operation counts as one message TPS, which affects your billing. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing overview</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteWildcardByTopicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWildcardByTopicResponse
+        /// </returns>
+        public DeleteWildcardByTopicResponse DeleteWildcardByTopic(DeleteWildcardByTopicRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteWildcardByTopicWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes wildcard subscriptions in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Each successful call to the <b>DeleteTopic</b> operation counts as one message TPS, which affects your billing. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing overview</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteWildcardByTopicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWildcardByTopicResponse
+        /// </returns>
+        public async Task<DeleteWildcardByTopicResponse> DeleteWildcardByTopicAsync(DeleteWildcardByTopicRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteWildcardByTopicWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Downgrades the public VIP access of a specific instance for multi-instance disaster recovery. This operation is supported only for Platinum instances and requires you to submit a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2614,19 +2555,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DisasterDowngradeResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DisasterDowngradeResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DisasterDowngradeResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Downgrades the virtual IP address (VIP) access of a specific instance during the disaster recovery of multiple instances. Only Enterprise Platinum Edition instances support this operation. To call the operation, you must submit a ticket.</para>
+        /// <para>Downgrades the public VIP access of a specific instance for multi-instance disaster recovery. This operation is supported only for Platinum instances and requires you to submit a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2667,19 +2601,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DisasterDowngradeResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DisasterDowngradeResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DisasterDowngradeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Downgrades the virtual IP address (VIP) access of a specific instance during the disaster recovery of multiple instances. Only Enterprise Platinum Edition instances support this operation. To call the operation, you must submit a ticket.</para>
+        /// <para>Downgrades the public VIP access of a specific instance for multi-instance disaster recovery. This operation is supported only for Platinum instances and requires you to submit a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2697,7 +2624,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Downgrades the virtual IP address (VIP) access of a specific instance during the disaster recovery of multiple instances. Only Enterprise Platinum Edition instances support this operation. To call the operation, you must submit a ticket.</para>
+        /// <para>Downgrades the public VIP access of a specific instance for multi-instance disaster recovery. This operation is supported only for Platinum instances and requires you to submit a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2715,7 +2642,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Recovers the public virtual IP address (VIP) access of a specific instance during the disaster recovery of multiple instances. Only Enterprise Platinum Edition instances support this operation. To call this operation, you must submit a ticket.</para>
+        /// <para>Restores Internet access for an instance using its virtual IP address (VIP) for graceful recovery in a multi-instance disaster recovery architecture. This operation is available only for Platinum Edition instances. To use this operation, submit a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2756,19 +2683,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DisasterRecoveryResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DisasterRecoveryResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DisasterRecoveryResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Recovers the public virtual IP address (VIP) access of a specific instance during the disaster recovery of multiple instances. Only Enterprise Platinum Edition instances support this operation. To call this operation, you must submit a ticket.</para>
+        /// <para>Restores Internet access for an instance using its virtual IP address (VIP) for graceful recovery in a multi-instance disaster recovery architecture. This operation is available only for Platinum Edition instances. To use this operation, submit a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2809,19 +2729,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<DisasterRecoveryResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<DisasterRecoveryResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<DisasterRecoveryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Recovers the public virtual IP address (VIP) access of a specific instance during the disaster recovery of multiple instances. Only Enterprise Platinum Edition instances support this operation. To call this operation, you must submit a ticket.</para>
+        /// <para>Restores Internet access for an instance using its virtual IP address (VIP) for graceful recovery in a multi-instance disaster recovery architecture. This operation is available only for Platinum Edition instances. To use this operation, submit a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2839,7 +2752,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Recovers the public virtual IP address (VIP) access of a specific instance during the disaster recovery of multiple instances. Only Enterprise Platinum Edition instances support this operation. To call this operation, you must submit a ticket.</para>
+        /// <para>Restores Internet access for an instance using its virtual IP address (VIP) for graceful recovery in a multi-instance disaster recovery architecture. This operation is available only for Platinum Edition instances. To use this operation, submit a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2898,14 +2811,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetCaCertificateResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetCaCertificateResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetCaCertificateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -2951,14 +2857,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetCaCertificateResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetCaCertificateResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetCaCertificateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3056,14 +2955,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetDeviceCertificateResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetDeviceCertificateResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetDeviceCertificateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3109,14 +3001,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetDeviceCertificateResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetDeviceCertificateResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetDeviceCertificateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3178,8 +3063,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</para>
         /// <list type="bullet">
+        /// <item><description>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
         /// <item><description>Each successful call to the <b>GetDeviceCredential</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
         /// </list>
         /// </description>
@@ -3222,14 +3107,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetDeviceCredentialResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetDeviceCredentialResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetDeviceCredentialResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3239,8 +3117,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</para>
         /// <list type="bullet">
+        /// <item><description>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
         /// <item><description>Each successful call to the <b>GetDeviceCredential</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
         /// </list>
         /// </description>
@@ -3283,14 +3161,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetDeviceCredentialResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetDeviceCredentialResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetDeviceCredentialResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3300,8 +3171,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</para>
         /// <list type="bullet">
+        /// <item><description>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
         /// <item><description>Each successful call to the <b>GetDeviceCredential</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
         /// </list>
         /// </description>
@@ -3326,8 +3197,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</para>
         /// <list type="bullet">
+        /// <item><description>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
         /// <item><description>Each successful call to the <b>GetDeviceCredential</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
         /// </list>
         /// </description>
@@ -3388,14 +3259,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetRegisterCodeResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetRegisterCodeResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetRegisterCodeResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3441,14 +3305,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<GetRegisterCodeResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<GetRegisterCodeResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<GetRegisterCodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3505,15 +3362,15 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deregister a certificate authority (CA) certificate. ApsaraMQ for MQTT allows you to use X.509 certificates for authentication. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, you can use the device certificate to implement authentication. CA certificates are used to issue device certificates to clients and validate the device certificates. If you no longer require a CA certificate, you can call this operation to deregister the certificate. If you want to continue using a deregistered CA certificate, you can call the ActiveCaCertificate operation to reactivate the certificate.</para>
+        /// <para>ApsaraMQ for MQTT supports X.509 certificate-based device verification. Clients use device certificates for connection authentication. A Certificate Authority (CA) certificate is used to issue device certificates to clients and to verify the validity of those certificates. If you do not need to use a CA certificate for a period of time, call this operation to unregister it. This changes the status of the CA certificate to inactive. When you need to use the CA certificate again, you can call the ActiveCaCertificate operation to reactivate it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
-        /// <item><description>You can call this operation to deregister only CA certificates that are registered with ApsaraMQ for MQTT brokers. You can call the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation to query CA certificates that are registered with an ApsaraMQ for MQTT instance.</description></item>
+        /// <item><description>Only Platinum Edition&lt;props=&quot;china&quot;&gt; and Professional Edition instances support the InactivateCaCertificate operation.</description></item>
+        /// <item><description>The request rate for a single user is limited to 500 per second. If you have special requirements, contact ApsaraMQ for MQTT technical support. The DingTalk group number is 35228338.</description></item>
+        /// <item><description>You can call this operation only for CA certificates that are registered with ApsaraMQ for MQTT. To query the registered CA certificates for an instance, call the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3555,27 +3412,20 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<InactivateCaCertificateResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<InactivateCaCertificateResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<InactivateCaCertificateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deregister a certificate authority (CA) certificate. ApsaraMQ for MQTT allows you to use X.509 certificates for authentication. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, you can use the device certificate to implement authentication. CA certificates are used to issue device certificates to clients and validate the device certificates. If you no longer require a CA certificate, you can call this operation to deregister the certificate. If you want to continue using a deregistered CA certificate, you can call the ActiveCaCertificate operation to reactivate the certificate.</para>
+        /// <para>ApsaraMQ for MQTT supports X.509 certificate-based device verification. Clients use device certificates for connection authentication. A Certificate Authority (CA) certificate is used to issue device certificates to clients and to verify the validity of those certificates. If you do not need to use a CA certificate for a period of time, call this operation to unregister it. This changes the status of the CA certificate to inactive. When you need to use the CA certificate again, you can call the ActiveCaCertificate operation to reactivate it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
-        /// <item><description>You can call this operation to deregister only CA certificates that are registered with ApsaraMQ for MQTT brokers. You can call the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation to query CA certificates that are registered with an ApsaraMQ for MQTT instance.</description></item>
+        /// <item><description>Only Platinum Edition&lt;props=&quot;china&quot;&gt; and Professional Edition instances support the InactivateCaCertificate operation.</description></item>
+        /// <item><description>The request rate for a single user is limited to 500 per second. If you have special requirements, contact ApsaraMQ for MQTT technical support. The DingTalk group number is 35228338.</description></item>
+        /// <item><description>You can call this operation only for CA certificates that are registered with ApsaraMQ for MQTT. To query the registered CA certificates for an instance, call the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3617,27 +3467,20 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<InactivateCaCertificateResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<InactivateCaCertificateResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<InactivateCaCertificateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deregister a certificate authority (CA) certificate. ApsaraMQ for MQTT allows you to use X.509 certificates for authentication. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, you can use the device certificate to implement authentication. CA certificates are used to issue device certificates to clients and validate the device certificates. If you no longer require a CA certificate, you can call this operation to deregister the certificate. If you want to continue using a deregistered CA certificate, you can call the ActiveCaCertificate operation to reactivate the certificate.</para>
+        /// <para>ApsaraMQ for MQTT supports X.509 certificate-based device verification. Clients use device certificates for connection authentication. A Certificate Authority (CA) certificate is used to issue device certificates to clients and to verify the validity of those certificates. If you do not need to use a CA certificate for a period of time, call this operation to unregister it. This changes the status of the CA certificate to inactive. When you need to use the CA certificate again, you can call the ActiveCaCertificate operation to reactivate it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
-        /// <item><description>You can call this operation to deregister only CA certificates that are registered with ApsaraMQ for MQTT brokers. You can call the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation to query CA certificates that are registered with an ApsaraMQ for MQTT instance.</description></item>
+        /// <item><description>Only Platinum Edition&lt;props=&quot;china&quot;&gt; and Professional Edition instances support the InactivateCaCertificate operation.</description></item>
+        /// <item><description>The request rate for a single user is limited to 500 per second. If you have special requirements, contact ApsaraMQ for MQTT technical support. The DingTalk group number is 35228338.</description></item>
+        /// <item><description>You can call this operation only for CA certificates that are registered with ApsaraMQ for MQTT. To query the registered CA certificates for an instance, call the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3656,15 +3499,15 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deregister a certificate authority (CA) certificate. ApsaraMQ for MQTT allows you to use X.509 certificates for authentication. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, you can use the device certificate to implement authentication. CA certificates are used to issue device certificates to clients and validate the device certificates. If you no longer require a CA certificate, you can call this operation to deregister the certificate. If you want to continue using a deregistered CA certificate, you can call the ActiveCaCertificate operation to reactivate the certificate.</para>
+        /// <para>ApsaraMQ for MQTT supports X.509 certificate-based device verification. Clients use device certificates for connection authentication. A Certificate Authority (CA) certificate is used to issue device certificates to clients and to verify the validity of those certificates. If you do not need to use a CA certificate for a period of time, call this operation to unregister it. This changes the status of the CA certificate to inactive. When you need to use the CA certificate again, you can call the ActiveCaCertificate operation to reactivate it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
-        /// <item><description>You can call this operation to deregister only CA certificates that are registered with ApsaraMQ for MQTT brokers. You can call the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation to query CA certificates that are registered with an ApsaraMQ for MQTT instance.</description></item>
+        /// <item><description>Only Platinum Edition&lt;props=&quot;china&quot;&gt; and Professional Edition instances support the InactivateCaCertificate operation.</description></item>
+        /// <item><description>The request rate for a single user is limited to 500 per second. If you have special requirements, contact ApsaraMQ for MQTT technical support. The DingTalk group number is 35228338.</description></item>
+        /// <item><description>You can call this operation only for CA certificates that are registered with ApsaraMQ for MQTT. To query the registered CA certificates for an instance, call the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3683,14 +3526,14 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deregisters a device certificate. Device certificates are digital certificates issued to clients by certificate authority (CA) root certificates. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, the broker uses the device certificate to authenticate the client. If the client passes the authentication, the client and the broker can communicate with each other based on the encrypted private key in the device certificate. If the client fails the authentication, access requests from the client are denied by the client.</para>
+        /// <para>A device certificate is a digital certificate that a root Certificate Authority (CA) issues to a client device. The service uses this certificate to authenticate the client during connection. If authentication is successful, the service and the client can communicate securely using the encryption key in the certificate. If authentication fails, the service denies the client\&quot;s connection. Should you need to temporarily disable a device certificate, you can call this operation to inactivate it, setting its status to inactive.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
+        /// <item><description>Only Platinum Edition&lt;props=&quot;china&quot;&gt;and Professional Edition instances support the InactivateDeviceCertificate operation.</description></item>
+        /// <item><description>The request frequency for a single user is limited to 500 calls per second. For special requirements, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3736,26 +3579,19 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<InactivateDeviceCertificateResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<InactivateDeviceCertificateResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<InactivateDeviceCertificateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deregisters a device certificate. Device certificates are digital certificates issued to clients by certificate authority (CA) root certificates. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, the broker uses the device certificate to authenticate the client. If the client passes the authentication, the client and the broker can communicate with each other based on the encrypted private key in the device certificate. If the client fails the authentication, access requests from the client are denied by the client.</para>
+        /// <para>A device certificate is a digital certificate that a root Certificate Authority (CA) issues to a client device. The service uses this certificate to authenticate the client during connection. If authentication is successful, the service and the client can communicate securely using the encryption key in the certificate. If authentication fails, the service denies the client\&quot;s connection. Should you need to temporarily disable a device certificate, you can call this operation to inactivate it, setting its status to inactive.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
+        /// <item><description>Only Platinum Edition&lt;props=&quot;china&quot;&gt;and Professional Edition instances support the InactivateDeviceCertificate operation.</description></item>
+        /// <item><description>The request frequency for a single user is limited to 500 calls per second. For special requirements, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3801,26 +3637,19 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<InactivateDeviceCertificateResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<InactivateDeviceCertificateResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<InactivateDeviceCertificateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deregisters a device certificate. Device certificates are digital certificates issued to clients by certificate authority (CA) root certificates. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, the broker uses the device certificate to authenticate the client. If the client passes the authentication, the client and the broker can communicate with each other based on the encrypted private key in the device certificate. If the client fails the authentication, access requests from the client are denied by the client.</para>
+        /// <para>A device certificate is a digital certificate that a root Certificate Authority (CA) issues to a client device. The service uses this certificate to authenticate the client during connection. If authentication is successful, the service and the client can communicate securely using the encryption key in the certificate. If authentication fails, the service denies the client\&quot;s connection. Should you need to temporarily disable a device certificate, you can call this operation to inactivate it, setting its status to inactive.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
+        /// <item><description>Only Platinum Edition&lt;props=&quot;china&quot;&gt;and Professional Edition instances support the InactivateDeviceCertificate operation.</description></item>
+        /// <item><description>The request frequency for a single user is limited to 500 calls per second. For special requirements, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3839,14 +3668,14 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deregisters a device certificate. Device certificates are digital certificates issued to clients by certificate authority (CA) root certificates. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, the broker uses the device certificate to authenticate the client. If the client passes the authentication, the client and the broker can communicate with each other based on the encrypted private key in the device certificate. If the client fails the authentication, access requests from the client are denied by the client.</para>
+        /// <para>A device certificate is a digital certificate that a root Certificate Authority (CA) issues to a client device. The service uses this certificate to authenticate the client during connection. If authentication is successful, the service and the client can communicate securely using the encryption key in the certificate. If authentication fails, the service denies the client\&quot;s connection. Should you need to temporarily disable a device certificate, you can call this operation to inactivate it, setting its status to inactive.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
+        /// <item><description>Only Platinum Edition&lt;props=&quot;china&quot;&gt;and Professional Edition instances support the InactivateDeviceCertificate operation.</description></item>
+        /// <item><description>The request frequency for a single user is limited to 500 calls per second. For special requirements, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3906,14 +3735,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListCaCertificateResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListCaCertificateResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListCaCertificateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -3959,14 +3781,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListCaCertificateResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListCaCertificateResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListCaCertificateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4064,14 +3879,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListDeviceCertificateResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListDeviceCertificateResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListDeviceCertificateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4117,14 +3925,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListDeviceCertificateResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListDeviceCertificateResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListDeviceCertificateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4222,14 +4023,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListDeviceCertificateByCaSnResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListDeviceCertificateByCaSnResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListDeviceCertificateByCaSnResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4275,14 +4069,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListDeviceCertificateByCaSnResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListDeviceCertificateByCaSnResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListDeviceCertificateByCaSnResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4392,14 +4179,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListDeviceCredentialClientIdResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListDeviceCredentialClientIdResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListDeviceCredentialClientIdResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4457,14 +4237,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListDeviceCredentialClientIdResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListDeviceCredentialClientIdResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListDeviceCredentialClientIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -4505,12 +4278,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all groups on an ApsaraMQ for MQTT instance.</para>
+        /// <para>You can call the ListGroupId operation to query all Group IDs in an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each successful call to the <b>ListGroupId</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
+        /// <para>Each successful call to the <b>ListGroupId</b> operation is counted as one message transaction and is billed based on transactions per second (TPS). For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">billing details</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4531,9 +4304,9 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
             {
                 query["InstanceId"] = request.InstanceId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
-                query["Tags"] = request.Tags;
+                query["Tag"] = request.Tag;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4551,24 +4324,17 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListGroupIdResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListGroupIdResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListGroupIdResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all groups on an ApsaraMQ for MQTT instance.</para>
+        /// <para>You can call the ListGroupId operation to query all Group IDs in an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each successful call to the <b>ListGroupId</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
+        /// <para>Each successful call to the <b>ListGroupId</b> operation is counted as one message transaction and is billed based on transactions per second (TPS). For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">billing details</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4589,9 +4355,9 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
             {
                 query["InstanceId"] = request.InstanceId;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
-                query["Tags"] = request.Tags;
+                query["Tag"] = request.Tag;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4609,24 +4375,17 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListGroupIdResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListGroupIdResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListGroupIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all groups on an ApsaraMQ for MQTT instance.</para>
+        /// <para>You can call the ListGroupId operation to query all Group IDs in an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each successful call to the <b>ListGroupId</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
+        /// <para>Each successful call to the <b>ListGroupId</b> operation is counted as one message transaction and is billed based on transactions per second (TPS). For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">billing details</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4644,12 +4403,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all groups on an ApsaraMQ for MQTT instance.</para>
+        /// <para>You can call the ListGroupId operation to query all Group IDs in an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each successful call to the <b>ListGroupId</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
+        /// <para>Each successful call to the <b>ListGroupId</b> operation is counted as one message transaction and is billed based on transactions per second (TPS). For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">billing details</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4667,7 +4426,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>You can call this operation to query a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4704,19 +4463,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListInstancesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListInstancesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListInstancesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>You can call this operation to query a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4753,19 +4505,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListInstancesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListInstancesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>You can call this operation to query a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4783,7 +4528,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>You can call this operation to query a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4801,7 +4546,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签</para>
+        /// <para>Lists the tags that are attached to one or more resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4850,19 +4595,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListTagResourcesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签</para>
+        /// <para>Lists the tags that are attached to one or more resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4911,19 +4649,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<ListTagResourcesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签</para>
+        /// <para>Lists the tags that are attached to one or more resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4941,7 +4672,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签</para>
+        /// <para>Lists the tags that are attached to one or more resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4992,14 +4723,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<QueryCustomAuthConnectBlackResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<QueryCustomAuthConnectBlackResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<QueryCustomAuthConnectBlackResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -5037,14 +4761,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<QueryCustomAuthConnectBlackResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<QueryCustomAuthConnectBlackResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<QueryCustomAuthConnectBlackResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -5085,7 +4802,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about custom identity authentication.</para>
+        /// <para>Queries custom identity authentication.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5118,19 +4835,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<QueryCustomAuthIdentityResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<QueryCustomAuthIdentityResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<QueryCustomAuthIdentityResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about custom identity authentication.</para>
+        /// <para>Queries custom identity authentication.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5163,19 +4873,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<QueryCustomAuthIdentityResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<QueryCustomAuthIdentityResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<QueryCustomAuthIdentityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about custom identity authentication.</para>
+        /// <para>Queries custom identity authentication.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5193,7 +4896,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about custom identity authentication.</para>
+        /// <para>Queries custom identity authentication.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5244,14 +4947,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<QueryCustomAuthPermissionResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<QueryCustomAuthPermissionResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<QueryCustomAuthPermissionResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -5289,14 +4985,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<QueryCustomAuthPermissionResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<QueryCustomAuthPermissionResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<QueryCustomAuthPermissionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -5337,14 +5026,14 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trace of a device that corresponds to an ApsaraMQ for MQTT client by page. When the status of a device is abnormal, you can call this operation to query the connection history of the device. This helps you efficiently troubleshoot issues.</para>
+        /// <para>Queries the device trace of an ApsaraMQ for MQTT client by paging. When a device encounters an exception, you can call this operation to query the connection history of the specified device to help you quickly identify the cause of the exception.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Each successful call to the <b>QueryMqttTraceDevice</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
+        /// <item><description>Each successful call to the <b>QueryMqttTraceDevice</b> operation counts as one message TPS, which affects your billing. For more information about billing, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing</a>.</description></item>
+        /// <item><description>The queries per second (QPS) limit for a single user on this operation is 500. Exceeding this limit will trigger throttling, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">QPS limits</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5410,26 +5099,19 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<QueryMqttTraceDeviceResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<QueryMqttTraceDeviceResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<QueryMqttTraceDeviceResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trace of a device that corresponds to an ApsaraMQ for MQTT client by page. When the status of a device is abnormal, you can call this operation to query the connection history of the device. This helps you efficiently troubleshoot issues.</para>
+        /// <para>Queries the device trace of an ApsaraMQ for MQTT client by paging. When a device encounters an exception, you can call this operation to query the connection history of the specified device to help you quickly identify the cause of the exception.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Each successful call to the <b>QueryMqttTraceDevice</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
+        /// <item><description>Each successful call to the <b>QueryMqttTraceDevice</b> operation counts as one message TPS, which affects your billing. For more information about billing, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing</a>.</description></item>
+        /// <item><description>The queries per second (QPS) limit for a single user on this operation is 500. Exceeding this limit will trigger throttling, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">QPS limits</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5495,26 +5177,19 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<QueryMqttTraceDeviceResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<QueryMqttTraceDeviceResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<QueryMqttTraceDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trace of a device that corresponds to an ApsaraMQ for MQTT client by page. When the status of a device is abnormal, you can call this operation to query the connection history of the device. This helps you efficiently troubleshoot issues.</para>
+        /// <para>Queries the device trace of an ApsaraMQ for MQTT client by paging. When a device encounters an exception, you can call this operation to query the connection history of the specified device to help you quickly identify the cause of the exception.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Each successful call to the <b>QueryMqttTraceDevice</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
+        /// <item><description>Each successful call to the <b>QueryMqttTraceDevice</b> operation counts as one message TPS, which affects your billing. For more information about billing, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing</a>.</description></item>
+        /// <item><description>The queries per second (QPS) limit for a single user on this operation is 500. Exceeding this limit will trigger throttling, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">QPS limits</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5533,14 +5208,14 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trace of a device that corresponds to an ApsaraMQ for MQTT client by page. When the status of a device is abnormal, you can call this operation to query the connection history of the device. This helps you efficiently troubleshoot issues.</para>
+        /// <para>Queries the device trace of an ApsaraMQ for MQTT client by paging. When a device encounters an exception, you can call this operation to query the connection history of the specified device to help you quickly identify the cause of the exception.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Each successful call to the <b>QueryMqttTraceDevice</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
+        /// <item><description>Each successful call to the <b>QueryMqttTraceDevice</b> operation counts as one message TPS, which affects your billing. For more information about billing, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing</a>.</description></item>
+        /// <item><description>The queries per second (QPS) limit for a single user on this operation is 500. Exceeding this limit will trigger throttling, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">QPS limits</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5632,14 +5307,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<QueryMqttTraceMessageOfClientResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<QueryMqttTraceMessageOfClientResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<QueryMqttTraceMessageOfClientResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -5717,14 +5385,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<QueryMqttTraceMessageOfClientResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<QueryMqttTraceMessageOfClientResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<QueryMqttTraceMessageOfClientResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -5842,14 +5503,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<QueryMqttTraceMessagePublishResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<QueryMqttTraceMessagePublishResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<QueryMqttTraceMessagePublishResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -5915,14 +5569,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<QueryMqttTraceMessagePublishResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<QueryMqttTraceMessagePublishResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<QueryMqttTraceMessagePublishResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -5984,8 +5631,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Each successful call to the <b>QueryMqttTraceMessageSubscribe</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
         /// <list type="bullet">
+        /// <item><description>Each successful call to the <b>QueryMqttTraceMessageSubscribe</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
         /// <item><description>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
         /// </list>
         /// </description>
@@ -6056,14 +5703,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<QueryMqttTraceMessageSubscribeResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<QueryMqttTraceMessageSubscribeResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<QueryMqttTraceMessageSubscribeResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -6073,8 +5713,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Each successful call to the <b>QueryMqttTraceMessageSubscribe</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
         /// <list type="bullet">
+        /// <item><description>Each successful call to the <b>QueryMqttTraceMessageSubscribe</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
         /// <item><description>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
         /// </list>
         /// </description>
@@ -6145,14 +5785,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<QueryMqttTraceMessageSubscribeResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<QueryMqttTraceMessageSubscribeResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<QueryMqttTraceMessageSubscribeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -6162,8 +5795,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Each successful call to the <b>QueryMqttTraceMessageSubscribe</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
         /// <list type="bullet">
+        /// <item><description>Each successful call to the <b>QueryMqttTraceMessageSubscribe</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
         /// <item><description>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
         /// </list>
         /// </description>
@@ -6188,8 +5821,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Each successful call to the <b>QueryMqttTraceMessageSubscribe</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
         /// <list type="bullet">
+        /// <item><description>Each successful call to the <b>QueryMqttTraceMessageSubscribe</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
         /// <item><description>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
         /// </list>
         /// </description>
@@ -6214,8 +5847,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 500 times per second.**** For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</para>
         /// <list type="bullet">
+        /// <item><description>You can call this operation up to 500 times per second.\<em>\</em>\<em>\</em> For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
         /// <item><description>Each successful call to the <b>QuerySessionByClientId</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
         /// </list>
         /// </description>
@@ -6258,14 +5891,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<QuerySessionByClientIdResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<QuerySessionByClientIdResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<QuerySessionByClientIdResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -6275,8 +5901,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 500 times per second.**** For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</para>
         /// <list type="bullet">
+        /// <item><description>You can call this operation up to 500 times per second.\<em>\</em>\<em>\</em> For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
         /// <item><description>Each successful call to the <b>QuerySessionByClientId</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
         /// </list>
         /// </description>
@@ -6319,14 +5945,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<QuerySessionByClientIdResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<QuerySessionByClientIdResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<QuerySessionByClientIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -6336,8 +5955,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 500 times per second.**** For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</para>
         /// <list type="bullet">
+        /// <item><description>You can call this operation up to 500 times per second.\<em>\</em>\<em>\</em> For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
         /// <item><description>Each successful call to the <b>QuerySessionByClientId</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
         /// </list>
         /// </description>
@@ -6362,8 +5981,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 500 times per second.**** For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</para>
         /// <list type="bullet">
+        /// <item><description>You can call this operation up to 500 times per second.\<em>\</em>\<em>\</em> For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
         /// <item><description>Each successful call to the <b>QuerySessionByClientId</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
         /// </list>
         /// </description>
@@ -6432,14 +6051,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<QueryTokenResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<QueryTokenResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<QueryTokenResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -6493,14 +6105,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<QueryTokenResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<QueryTokenResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<QueryTokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -6557,6 +6162,146 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries all wildcards and the upper limit under a specific topic.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Each successful call to the <b>DeleteTopic</b> operation counts as one message TPS, which affects your billing. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing overview</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryWildcardByTopicRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWildcardByTopicResponse
+        /// </returns>
+        public QueryWildcardByTopicResponse QueryWildcardByTopicWithOptions(QueryWildcardByTopicRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryWildcardByTopic",
+                Version = "2020-04-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryWildcardByTopicResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all wildcards and the upper limit under a specific topic.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Each successful call to the <b>DeleteTopic</b> operation counts as one message TPS, which affects your billing. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing overview</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryWildcardByTopicRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWildcardByTopicResponse
+        /// </returns>
+        public async Task<QueryWildcardByTopicResponse> QueryWildcardByTopicWithOptionsAsync(QueryWildcardByTopicRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryWildcardByTopic",
+                Version = "2020-04-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryWildcardByTopicResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all wildcards and the upper limit under a specific topic.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Each successful call to the <b>DeleteTopic</b> operation counts as one message TPS, which affects your billing. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing overview</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryWildcardByTopicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWildcardByTopicResponse
+        /// </returns>
+        public QueryWildcardByTopicResponse QueryWildcardByTopic(QueryWildcardByTopicRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryWildcardByTopicWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all wildcards and the upper limit under a specific topic.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Each successful call to the <b>DeleteTopic</b> operation counts as one message TPS, which affects your billing. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing overview</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryWildcardByTopicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryWildcardByTopicResponse
+        /// </returns>
+        public async Task<QueryWildcardByTopicResponse> QueryWildcardByTopicAsync(QueryWildcardByTopicRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryWildcardByTopicWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Updates the access credential of a device.</para>
         /// </summary>
         /// 
@@ -6565,7 +6310,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// <h2><a href="#"></a>Limits</h2>
         /// <para>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</para>
         /// <remarks>
-        /// <para> Each successful call to the <b>RefreshDeviceCredential</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
+        /// <para>Each successful call to the <b>RefreshDeviceCredential</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6607,14 +6352,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RefreshDeviceCredentialResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RefreshDeviceCredentialResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RefreshDeviceCredentialResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -6627,7 +6365,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// <h2><a href="#"></a>Limits</h2>
         /// <para>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</para>
         /// <remarks>
-        /// <para> Each successful call to the <b>RefreshDeviceCredential</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
+        /// <para>Each successful call to the <b>RefreshDeviceCredential</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6669,14 +6407,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RefreshDeviceCredentialResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RefreshDeviceCredentialResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RefreshDeviceCredentialResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -6689,7 +6420,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// <h2><a href="#"></a>Limits</h2>
         /// <para>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</para>
         /// <remarks>
-        /// <para> Each successful call to the <b>RefreshDeviceCredential</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
+        /// <para>Each successful call to the <b>RefreshDeviceCredential</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6716,7 +6447,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// <h2><a href="#"></a>Limits</h2>
         /// <para>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</para>
         /// <remarks>
-        /// <para> Each successful call to the <b>RefreshDeviceCredential</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
+        /// <para>Each successful call to the <b>RefreshDeviceCredential</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6740,8 +6471,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
+        /// <item><description>Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</description></item>
         /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
         /// </list>
         /// </description>
@@ -6792,14 +6523,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RegisterCaCertificateResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RegisterCaCertificateResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RegisterCaCertificateResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -6809,8 +6533,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
+        /// <item><description>Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</description></item>
         /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
         /// </list>
         /// </description>
@@ -6861,14 +6585,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RegisterCaCertificateResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RegisterCaCertificateResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RegisterCaCertificateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -6878,8 +6595,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
+        /// <item><description>Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</description></item>
         /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
         /// </list>
         /// </description>
@@ -6904,8 +6621,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</para>
         /// <list type="bullet">
+        /// <item><description>Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</description></item>
         /// <item><description>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</description></item>
         /// </list>
         /// </description>
@@ -6930,8 +6647,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</para>
         /// <list type="bullet">
+        /// <item><description>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
         /// <item><description>Each successful call to the <b>RegisterDeviceCredential</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
         /// </list>
         /// </description>
@@ -6974,14 +6691,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RegisterDeviceCredentialResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RegisterDeviceCredentialResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RegisterDeviceCredentialResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -6991,8 +6701,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</para>
         /// <list type="bullet">
+        /// <item><description>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
         /// <item><description>Each successful call to the <b>RegisterDeviceCredential</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
         /// </list>
         /// </description>
@@ -7035,14 +6745,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RegisterDeviceCredentialResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RegisterDeviceCredentialResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RegisterDeviceCredentialResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -7052,8 +6755,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</para>
         /// <list type="bullet">
+        /// <item><description>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
         /// <item><description>Each successful call to the <b>RegisterDeviceCredential</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
         /// </list>
         /// </description>
@@ -7078,8 +6781,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</para>
         /// <list type="bullet">
+        /// <item><description>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
         /// <item><description>Each successful call to the <b>RegisterDeviceCredential</b> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
         /// </list>
         /// </description>
@@ -7148,14 +6851,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RevokeTokenResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RevokeTokenResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RevokeTokenResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -7209,14 +6905,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<RevokeTokenResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<RevokeTokenResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<RevokeTokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -7327,14 +7016,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SendMessageResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SendMessageResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SendMessageResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -7393,14 +7075,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SendMessageResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SendMessageResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SendMessageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -7504,14 +7179,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SetSniConfigResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SetSniConfigResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SetSniConfigResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -7561,14 +7229,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<SetSniConfigResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<SetSniConfigResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<SetSniConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -7609,7 +7270,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增tag</para>
+        /// <para>Adds tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7654,19 +7315,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<TagResourcesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增tag</para>
+        /// <para>Adds tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7711,19 +7365,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<TagResourcesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增tag</para>
+        /// <para>Adds tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7741,7 +7388,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增tag</para>
+        /// <para>Adds tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7764,8 +7411,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</para>
         /// <list type="bullet">
+        /// <item><description>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
         /// <item><description>Each successful call to the <b>UnRegisterDeviceCredential</b> operation increases the number of transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
         /// </list>
         /// </description>
@@ -7808,14 +7455,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UnRegisterDeviceCredentialResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UnRegisterDeviceCredentialResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UnRegisterDeviceCredentialResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -7825,8 +7465,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</para>
         /// <list type="bullet">
+        /// <item><description>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
         /// <item><description>Each successful call to the <b>UnRegisterDeviceCredential</b> operation increases the number of transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
         /// </list>
         /// </description>
@@ -7869,14 +7509,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UnRegisterDeviceCredentialResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UnRegisterDeviceCredentialResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UnRegisterDeviceCredentialResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -7886,8 +7519,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</para>
         /// <list type="bullet">
+        /// <item><description>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
         /// <item><description>Each successful call to the <b>UnRegisterDeviceCredential</b> operation increases the number of transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
         /// </list>
         /// </description>
@@ -7912,8 +7545,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</para>
         /// <list type="bullet">
+        /// <item><description>You can call this operation up to 500 times per second per account. If the limit is exceeded, throttling is triggered. This may affect your business. We recommend that you take note of this limit when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</description></item>
         /// <item><description>Each successful call to the <b>UnRegisterDeviceCredential</b> operation increases the number of transactions per second (TPS) by one. This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</description></item>
         /// </list>
         /// </description>
@@ -7933,7 +7566,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除标签</para>
+        /// <para>Removes tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7982,19 +7615,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UntagResourcesResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除标签</para>
+        /// <para>Removes tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8043,19 +7669,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UntagResourcesResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除标签</para>
+        /// <para>Removes tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8073,7 +7692,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除标签</para>
+        /// <para>Removes tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8091,7 +7710,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about custom identity authentication.</para>
+        /// <para>Updates custom authentication.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8148,19 +7767,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateCustomAuthIdentityResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateCustomAuthIdentityResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateCustomAuthIdentityResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about custom identity authentication.</para>
+        /// <para>Updates custom authentication.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8217,19 +7829,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateCustomAuthIdentityResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateCustomAuthIdentityResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateCustomAuthIdentityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about custom identity authentication.</para>
+        /// <para>Updates custom authentication.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8247,7 +7852,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about custom identity authentication.</para>
+        /// <para>Updates custom authentication.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8322,14 +7927,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateCustomAuthPermissionResponse>(CallApi(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateCustomAuthPermissionResponse>(Execute(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateCustomAuthPermissionResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
@@ -8391,14 +7989,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420
                 ReqBodyType = "formData",
                 BodyType = "json",
             };
-            if (AlibabaCloud.TeaUtil.Common.IsUnset(_signatureVersion) || !AlibabaCloud.TeaUtil.Common.EqualString(_signatureVersion, "v4"))
-            {
-                return TeaModel.ToObject<UpdateCustomAuthPermissionResponse>(await CallApiAsync(params_, req, runtime));
-            }
-            else
-            {
-                return TeaModel.ToObject<UpdateCustomAuthPermissionResponse>(await ExecuteAsync(params_, req, runtime));
-            }
+            return TeaModel.ToObject<UpdateCustomAuthPermissionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class DeleteCaCertificateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The common parameter. The ID of each request is unique and can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>020F6A43-19E6-4B6E-B846-44EB31DF****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The serial number of the CA certificate that you deleted. The serial number is the unique identifier of a CA certificate.</para>
+        /// <para>The SN of the deleted CA certificate. The SN uniquely identifies a CA certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>007269004887******</para>

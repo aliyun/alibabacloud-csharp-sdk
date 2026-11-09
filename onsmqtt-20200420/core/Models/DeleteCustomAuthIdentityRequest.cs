@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class DeleteCustomAuthIdentityRequest : TeaModel {
         /// <summary>
-        /// <para>The client ID if you set IdentityType to CLIENT.</para>
+        /// <para>The client ID of the device. This parameter is required when the identity type is CLIENT.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GID_test@@@test</para>
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         /// <summary>
         /// <para>The identity type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>USER</description></item>
-        /// <item><description>CLIENT</description></item>
+        /// <item><description>USER: Username only.</description></item>
+        /// <item><description>CLIENT: Specific to the client.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string IdentityType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ApsaraMQ for MQTT instance.</para>
+        /// <para>The ID of the MSMQ for MQTT instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

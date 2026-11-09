@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class DisasterDowngradeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ApsaraMQ for MQTT instance for which you want to downgrade the VIP access.</para>
+        /// <para>The instance ID to be downgraded.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string DowngradeInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ApsaraMQ for MQTT instance.</para>
+        /// <para>The ID of the ApsaraMQ for MQTT (MSMQ) instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

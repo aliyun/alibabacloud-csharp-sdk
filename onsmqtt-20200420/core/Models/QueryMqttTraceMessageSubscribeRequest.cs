@@ -99,8 +99,10 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         /// <summary>
         /// <para>Specifies whether the returned results are displayed in reverse chronological order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The returned results are displayed in reverse order of the time when messages are delivered. This means that the latest consumed message is displayed as the first entry and the earliest consumed message is displayed as the last entry.</description></item>
-        /// <item><description><b>false</b>: The returned results are displayed in order of the time when messages are delivered. This means that the earliest consumed message is displayed as the first entry and the latest consumed message is displayed as the last entry.</description></item>
+        /// <item><description><para><b>true</b>: The returned results are displayed in reverse order of the time when messages are delivered. This means that the latest consumed message is displayed as the first entry and the earliest consumed message is displayed as the last entry.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The returned results are displayed in order of the time when messages are delivered. This means that the earliest consumed message is displayed as the first entry and the latest consumed message is displayed as the last entry.</para>
+        /// </description></item>
         /// </list>
         /// <para>If you do not specify this parameter, the returned results are displayed in order of time when messages are delivered.</para>
         /// 

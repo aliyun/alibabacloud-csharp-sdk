@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class CreateGroupIdResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID. This parameter is a common parameter.</para>
+        /// <para>The request ID. This is a common parameter. Each request ID is unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2C7D722D-0F3D-4415-A9CD-A464D82C****</para>

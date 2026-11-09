@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class QueryMqttTraceDeviceRequest : TeaModel {
         /// <summary>
-        /// <para>The beginning of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.</para>
+        /// <para>The beginning of the time range to query. Unit: milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public long? BeginTime { get; set; }
 
         /// <summary>
-        /// <para>The client ID of the device whose trace you want to query.</para>
+        /// <para>The client ID of the device whose trace information you want to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string ClientId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Pages start from page 1. If the input parameter value is greater than the total number of pages, the returned result is empty.</para>
+        /// <para>The number of the page to return. Pages start from page 1. If the value of this parameter exceeds the total number of pages, an empty result is returned.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The value of this parameter is a UNIX timestamp in milliseconds.</para>
+        /// <para>The end of the time range to query. Unit: milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ApsaraMQ for MQTT instance. The ID must be consistent with the ID of the instance that the ApsaraMQ for MQTT client uses. You can view the instance ID in the <b>Basic Information</b> section on the <b>Instance Details</b> page that corresponds to the instance in the ApsaraMQ for MQTT console.</para>
+        /// <para>The ID of the ApsaraMQ for MQTT instance. This value must match the instance ID that the client actually uses. You can view the instance ID in the <b>Basic Information</b> area on the <b>Instance Details</b> page in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the ApsaraMQ for MQTT instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/181438.html">Endpoints</a>.</para>
+        /// <para>The region ID of the ApsaraMQ for MQTT instance. For more information, see <a href="https://help.aliyun.com/document_detail/181438.html">Endpoints</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string MqttRegionId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: 1 to 100.</para>
+        /// <para>The maximum number of MSMQ to display on each page for paging. Minimum value: 1. Maximum value: 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -87,12 +87,14 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the returned results are displayed in reverse chronological order. Valid values:</para>
+        /// <para>Specifies whether to display the results in reverse chronological order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The returned results are displayed in reverse time order of actions on the device. This means that the information about the latest action on the device is displayed as the first entry and the information about the earliest action on the device is displayed as the last entry.</description></item>
-        /// <item><description><b>false</b>: The returned results are displayed in time order of actions on the device. This means that the information about the earliest action on the device is displayed as the first entry and the information about the latest action on the device is displayed as the last entry.</description></item>
+        /// <item><description><para><b>true</b>: Results are displayed in reverse chronological order of device activity time. The most recent device activity is displayed first, and the earliest device activity is displayed last.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Results are displayed in chronological order of device activity time. The earliest device activity is displayed first, and the most recent device activity is displayed last.</para>
+        /// </description></item>
         /// </list>
-        /// <para>If you do not specify this parameter, the returned results are displayed in time order of actions on the device by default.</para>
+        /// <para>If this parameter is not specified, results are displayed in chronological order by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

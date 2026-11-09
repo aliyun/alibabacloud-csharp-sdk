@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class DeleteGroupIdResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID. This parameter is a common parameter.</para>
+        /// <para>The common parameter. The ID of each request is unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0621DDD7-F0E9-4D35-8900-518116D6****</para>

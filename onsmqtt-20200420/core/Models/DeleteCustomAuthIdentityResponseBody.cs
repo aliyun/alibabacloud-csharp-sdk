@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class DeleteCustomAuthIdentityResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. The status code 200 indicates that the request is successful. Other status codes indicate that the request failed.</para>
+        /// <para>The status code. A value of 200 indicates success, and other status codes indicate errors.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>11568B5B-13A8-4E72-9DBA-3A14F7D3****</para>
@@ -40,7 +40,11 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful. Valid values: true and false.</para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The operation is successful.</description></item>
+        /// <item><description>false: The operation fails.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

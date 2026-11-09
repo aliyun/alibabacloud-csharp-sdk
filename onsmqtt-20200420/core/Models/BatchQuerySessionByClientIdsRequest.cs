@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class BatchQuerySessionByClientIdsRequest : TeaModel {
         /// <summary>
-        /// <para>The ApsaraMQ for MQTT clients.</para>
+        /// <para>The list of clients.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public List<string> ClientIdList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ApsaraMQ for MQTT instance. The ID must be consistent with the ID of the instance that the ApsaraMQ for MQTT client uses. You can obtain the instance ID on the <b>Instance Details</b> page that corresponds to the instance in the <a href="https://mqtt.console.aliyun.com">ApsaraMQ for MQTT console</a>.</para>
+        /// <para>The ID of the ApsaraMQ for MQTT instance. The ID must match the actual instance ID used by the client. You can obtain the ID on the <b>Instance Details</b> page in the <a href="https://mqtt.console.aliyun.com">console</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

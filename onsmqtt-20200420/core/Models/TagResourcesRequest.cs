@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>A list of resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
+        /// <para>The resource type. The value must be instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string ResourceType { get; set; }
 
         /// <summary>
+        /// <para>A list of tags. You can add up to 20 tags at a time. A resource can have a maximum of 20 tags.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -34,6 +37,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
+            /// <para>The tag key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -42,6 +47,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The tag value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>

@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         /// <summary>
         /// <para>The identity type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>USER</description></item>
-        /// <item><description>CLIENT</description></item>
+        /// <item><description>USER: username only.</description></item>
+        /// <item><description>CLIENT: specific client.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string IdentityType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ApsaraMQ for MQTT instance.</para>
+        /// <para>The ID of the Micro MSMQ MQTT instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The topic on which you want to grant permissions. Multi-level topics and Wildcard characters are supported.</para>
+        /// <para>The authorized topic. Multi-level MQTT topics and wildcards are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -12,7 +12,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         /// <summary>
         /// <para>The content of the CA certificate that you want to register with an ApsaraMQ for MQTT broker.</para>
         /// <remarks>
-        /// <para>In the example, \n indicates a line feed.</para>
+        /// <para>In the example, 
+        ///  indicates a line feed.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -48,7 +49,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         /// <summary>
         /// <para>The content of the validation certificate issued by the CA certificate that you want to register with an ApsaraMQ for MQTT broker. The validation certificate must be used together with the registration code of the CA certificate to verify the private key of the CA certificate.</para>
         /// <remarks>
-        /// <para>In the example, \n indicates a line feed.</para>
+        /// <para>In the example, 
+        ///  indicates a line feed.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

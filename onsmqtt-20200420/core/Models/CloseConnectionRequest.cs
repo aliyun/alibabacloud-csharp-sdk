@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class CloseConnectionRequest : TeaModel {
         /// <summary>
-        /// <para>Client ID of the device</para>
+        /// <para>The client ID of the device.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string ClientId { get; set; }
 
         /// <summary>
-        /// <para>ID of the Micro Message Queue MQTT version instance.</para>
+        /// <para>The ID of the MSMQ MQTT instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

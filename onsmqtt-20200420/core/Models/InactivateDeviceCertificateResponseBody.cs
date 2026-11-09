@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class InactivateDeviceCertificateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The serial number of the device certificate that is deregistered. The serial number is the unique identifier of a device certificate.</para>
+        /// <para>The SN of the inactivated device certificate. The SN uniquely identifies a device certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>356217374433******</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string DeviceSn { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. This common parameter is unique to each request. Use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>020F6A43-19E6-4B6E-B846-44EB31DF****</para>

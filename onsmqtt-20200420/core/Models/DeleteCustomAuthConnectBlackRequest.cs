@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class DeleteCustomAuthConnectBlackRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ApsaraMQ for MQTT client.</para>
+        /// <para>The client ID of the device.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string ClientId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ApsaraMQ for MQTT instance.</para>
+        /// <para>The ID of the MSMQ for MQTT instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

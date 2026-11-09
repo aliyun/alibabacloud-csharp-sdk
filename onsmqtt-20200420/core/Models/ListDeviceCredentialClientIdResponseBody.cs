@@ -24,10 +24,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
             public List<string> ClientIdList { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether there is a token (Token) for the next query. Values: </para>
+            /// <para>Indicates whether there is a token (Token) for the next query. Values:</para>
             /// <list type="bullet">
-            /// <item><description>For the first query and when there is no next query, this field does not need to be filled. </description></item>
-            /// <item><description>If there is a next query, the value should be the NextToken returned from the previous API call.</description></item>
+            /// <item><description><para>For the first query and when there is no next query, this field does not need to be filled.</para>
+            /// </description></item>
+            /// <item><description><para>If there is a next query, the value should be the NextToken returned from the previous API call.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

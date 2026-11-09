@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class DeleteCustomAuthConnectBlackResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. The status code 200 indicates that the request was successful.</para>
+        /// <para>The status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The result message of the call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>operation success.</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>317076B7-F946-46BC-A98F-4CF9777C****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values: true and false.</para>
+        /// <para>Indicates whether the operation was successful. A value of true indicates success, and a value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

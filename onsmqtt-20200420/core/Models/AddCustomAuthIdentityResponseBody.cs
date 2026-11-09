@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class AddCustomAuthIdentityResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. The status code 200 indicates that the request is successful.</para>
+        /// <para>The status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>operation success.</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>020F6A43-19E6-4B6E-B846-44EB31DF****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful. Valid values: true and false.</para>
+        /// <para>Indicates whether the operation is successful. A value of true indicates success, and a value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class AddCustomAuthIdentityRequest : TeaModel {
         /// <summary>
-        /// <para>The client ID if you set IdentityType to CLIENT.</para>
+        /// <para>The client ID of the device. Specify this parameter when the identity type is CLIENT.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GID_test@@@test</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string ClientId { get; set; }
 
         /// <summary>
-        /// <para>The identity type. Valid values:</para>
+        /// <para>The identity type.</para>
         /// <list type="bullet">
-        /// <item><description>USER</description></item>
-        /// <item><description>CLIENT</description></item>
+        /// <item><description><para>USER: Username only.</para>
+        /// </description></item>
+        /// <item><description><para>CLIENT: Specific to a client.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string IdentityType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Message Queue for MQTT instance.</para>
+        /// <para>The ID of the ApsaraMQ for MQTT instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +48,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The AccessKey secret.</para>
+        /// <para>The secret.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +59,11 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string Secret { get; set; }
 
         /// <summary>
-        /// <para>The signature verification mode. ORIGIN: compares the password and the AccessKey secret. SIGNED: uses the HMAC_SHA1 algorithm to sign the client ID to obtain a password and then compares the password.</para>
+        /// <para>The signature verification method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ORIGIN: Original value comparison. The password is compared with the secret.</description></item>
+        /// <item><description>SIGNED: Signature verification. An HmacSHA1 signature is generated for the clientId by using the secret, and then the signature is compared with the password.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

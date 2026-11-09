@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class SetSniConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The default certificate. If the domain name that you access cannot match the certificates of the broker, the default certificate is returned.</para>
+        /// <para>The default certificate. This certificate is returned if no matching domain name is found in the server certificate list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string MqttInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The Server Name Indication (SNI) configuration. This parameter is used to map domain names and certificates. Format: Domain name#Certificate ID#Password (if available);Domain name#Certificate ID#Password (if available).</para>
+        /// <para>The Server Name Indication (SNI) configuration that maps domain names to certificates. Format: DomainName#CertificateID#Password(if any);DomainName#CertificateID#Password(if any)</para>
         /// 
         /// <b>Example:</b>
         /// <para>*.mqtt.aliyuncs.com#15xxxxx-cn-hangzhou;mqtt-test.mqtt.aliyuncs.com#15xxxx9-cn-hangzhou</para>

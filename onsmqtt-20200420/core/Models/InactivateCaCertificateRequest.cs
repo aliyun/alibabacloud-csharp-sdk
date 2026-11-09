@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
 {
     public class InactivateCaCertificateRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ApsaraMQ for MQTT instance to which the CA certificate is bound.</para>
+        /// <para>The ID of the ApsaraMQ for MQTT instance to which the CA certificate is attached.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.OnsMqtt20200420.Models
         public string MqttInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The serial number of the CA certificate that you want to deregister. The serial number is the unique identifier of a CA certificate.</para>
-        /// <para>The serial number of a CA certificate cannot exceed 128 bytes in size.</para>
+        /// <para>The serial number (SN) of the CA certificate that you want to unregister. The SN uniquely identifies a CA certificate.</para>
+        /// <para>The value can be up to 128 bytes long.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
