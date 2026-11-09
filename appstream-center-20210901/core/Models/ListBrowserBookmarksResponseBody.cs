@@ -9,19 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListBrowserBookmarksResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of bookmarks on the current page.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListBrowserBookmarksResponseBodyData> Data { get; set; }
         public class ListBrowserBookmarksResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The bookmark folder.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>工作</para>
+            /// <para>Work</para>
             /// </summary>
             [NameInMap("BookmarkFolder")]
             [Validation(Required=false)]
             public string BookmarkFolder { get; set; }
 
             /// <summary>
+            /// <para>The bookmark ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>bm-0c7loey7fzjq****</para>
             /// </summary>
@@ -30,14 +37,18 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string BookmarkId { get; set; }
 
             /// <summary>
+            /// <para>The bookmark name.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>阿里云</para>
+            /// <para>Alibaba Cloud</para>
             /// </summary>
             [NameInMap("BookmarkName")]
             [Validation(Required=false)]
             public string BookmarkName { get; set; }
 
             /// <summary>
+            /// <para>The bookmark URL.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://www.aliyun.com">https://www.aliyun.com</a></para>
             /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries returned per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID, which is used to troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>01A0C2ED-95F2-1A37-9FC6-4A395179****</para>
         /// </summary>
@@ -72,6 +89,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of bookmarks that meet the filtering conditions.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>

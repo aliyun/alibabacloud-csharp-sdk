@@ -1,3 +1,7 @@
+2026-11-09 Version: 5.13.0
+- Support API GetMqttTicket.
+
+
 2026-11-07 Version: 5.12.0
 - Support API CreateExportTask.
 - Support API DescribeExportTasks.

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<GetAgentRuntimeStatisticResponseBodyData> Data { get; set; }
         public class GetAgentRuntimeStatisticResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The display name of the agent, which is determined by both the agent platform and the agent provider. For example, OpenClaw under the ENTERPRISE platform is displayed as OpenClaw, and OpenClaw under the JVS platform is displayed as JVS Claw.</para>
+            /// <para>The agent display name, which is determined by both the agent platform and the agent provider. For example, OpenClaw under the ENTERPRISE platform is displayed as OpenClaw, and OpenClaw under the JVS platform is displayed as JVS Claw.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Agentic Computer</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is used to uniquely identify the request.</para>
+        /// <para>The request ID, which uniquely identifies the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned statistical records, which is the length of the Data list.</para>
+        /// <para>The number of returned statistics records, which is the length of the Data list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

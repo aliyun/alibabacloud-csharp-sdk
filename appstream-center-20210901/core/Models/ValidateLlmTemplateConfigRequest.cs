@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ValidateLlmTemplateConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The JSON string of the LLM configuration to be validated.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Config { get; set; }
 
         /// <summary>
+        /// <para>The ID of the provider template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
