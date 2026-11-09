@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Green20220302
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "Green";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -65,7 +68,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The document moderation result.</para>
+        /// <para>Queries the document moderation results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -111,7 +114,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The document moderation result.</para>
+        /// <para>Queries the document moderation results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -157,7 +160,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The document moderation result.</para>
+        /// <para>Queries the document moderation results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -175,7 +178,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The document moderation result.</para>
+        /// <para>Queries the document moderation results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2597,12 +2600,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the asynchronous detection results of AI security guardrails for multimodal content, supporting audio and video modalities.</para>
+        /// <para>Queries the asynchronous moderation results of the AI security guardrail for multimodal content, including audio and video modalities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If the API operation incurs fees, add the bold text &quot;<b>Make sure that you fully understand the billing methods and pricing of the XXX product before you call this API operation.</b>&quot; as the first sentence. Make &quot;pricing&quot; a hyperlink to <a href="https://www.aliyun.com/price/product#/ecs/detail">https://www.aliyun.com/price/product#/ecs/detail</a>.</para>
+        /// <para>If the API operation involves fees, add the bold text &quot;<b>Make sure that you fully understand the billing methods and pricing of the XXX service before you call this API operation.</b>&quot; as the first sentence. Make &quot;pricing&quot; a hyperlink to <a href="https://www.aliyun.com/price/product#/ecs/detail">https://www.aliyun.com/price/product#/ecs/detail</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2648,12 +2651,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the asynchronous detection results of AI security guardrails for multimodal content, supporting audio and video modalities.</para>
+        /// <para>Queries the asynchronous moderation results of the AI security guardrail for multimodal content, including audio and video modalities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If the API operation incurs fees, add the bold text &quot;<b>Make sure that you fully understand the billing methods and pricing of the XXX product before you call this API operation.</b>&quot; as the first sentence. Make &quot;pricing&quot; a hyperlink to <a href="https://www.aliyun.com/price/product#/ecs/detail">https://www.aliyun.com/price/product#/ecs/detail</a>.</para>
+        /// <para>If the API operation involves fees, add the bold text &quot;<b>Make sure that you fully understand the billing methods and pricing of the XXX service before you call this API operation.</b>&quot; as the first sentence. Make &quot;pricing&quot; a hyperlink to <a href="https://www.aliyun.com/price/product#/ecs/detail">https://www.aliyun.com/price/product#/ecs/detail</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2699,12 +2702,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the asynchronous detection results of AI security guardrails for multimodal content, supporting audio and video modalities.</para>
+        /// <para>Queries the asynchronous moderation results of the AI security guardrail for multimodal content, including audio and video modalities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If the API operation incurs fees, add the bold text &quot;<b>Make sure that you fully understand the billing methods and pricing of the XXX product before you call this API operation.</b>&quot; as the first sentence. Make &quot;pricing&quot; a hyperlink to <a href="https://www.aliyun.com/price/product#/ecs/detail">https://www.aliyun.com/price/product#/ecs/detail</a>.</para>
+        /// <para>If the API operation involves fees, add the bold text &quot;<b>Make sure that you fully understand the billing methods and pricing of the XXX service before you call this API operation.</b>&quot; as the first sentence. Make &quot;pricing&quot; a hyperlink to <a href="https://www.aliyun.com/price/product#/ecs/detail">https://www.aliyun.com/price/product#/ecs/detail</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2722,12 +2725,12 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the asynchronous detection results of AI security guardrails for multimodal content, supporting audio and video modalities.</para>
+        /// <para>Queries the asynchronous moderation results of the AI security guardrail for multimodal content, including audio and video modalities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If the API operation incurs fees, add the bold text &quot;<b>Make sure that you fully understand the billing methods and pricing of the XXX product before you call this API operation.</b>&quot; as the first sentence. Make &quot;pricing&quot; a hyperlink to <a href="https://www.aliyun.com/price/product#/ecs/detail">https://www.aliyun.com/price/product#/ecs/detail</a>.</para>
+        /// <para>If the API operation involves fees, add the bold text &quot;<b>Make sure that you fully understand the billing methods and pricing of the XXX service before you call this API operation.</b>&quot; as the first sentence. Make &quot;pricing&quot; a hyperlink to <a href="https://www.aliyun.com/price/product#/ecs/detail">https://www.aliyun.com/price/product#/ecs/detail</a>.</para>
         /// </description>
         /// 
         /// <param name="request">

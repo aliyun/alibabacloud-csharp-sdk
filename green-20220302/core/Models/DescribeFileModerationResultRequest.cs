@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class DescribeFileModerationResultRequest : TeaModel {
         /// <summary>
-        /// <para>The service supported by the enhanced file moderation feature.</para>
+        /// <para>The services supported by the enhanced file moderation edition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>document_detection</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string Service { get; set; }
 
         /// <summary>
-        /// <para>The set of parameters required by the moderation service, in JSON character string format.</para>
+        /// <para>The parameter set required by the moderation service, in JSON character string format.</para>
         /// <list type="bullet">
-        /// <item><description>taskId: Required. The URL of the object to be moderated. Make sure that the URL is accessible through public network access.</description></item>
+        /// <item><description>taskId: Required. The URL of the object to be moderated. Make sure that the URL is accessible via public network access.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

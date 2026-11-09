@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public MultiModalGuardAsyncResultResponseBodyData Data { get; set; }
         public class MultiModalGuardAsyncResultResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The segmented results of audio moderation.</para>
+            /// <para>The segmented audio moderation results.</para>
             /// </summary>
             [NameInMap("AudioResult")]
             [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public List<MultiModalGuardAsyncResultResponseBodyDataAudioResultSliceDetails> SliceDetails { get; set; }
                 public class MultiModalGuardAsyncResultResponseBodyDataAudioResultSliceDetails : TeaModel {
                     /// <summary>
-                    /// <para>The detection details.</para>
+                    /// <para>The moderation details.</para>
                     /// </summary>
                     [NameInMap("Detail")]
                     [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         /// <summary>
                         /// <para>The risk level. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>high: High risk. If a custom dictionary is hit, the risk level defaults to high.</description></item>
+                        /// <item><description>high: High risk. If a custom dictionary is hit, the risk level is high by default.</description></item>
                         /// <item><description>medium: Medium risk.</description></item>
                         /// <item><description>low: Low risk.</description></item>
                         /// <item><description>none: No risk detected.</description></item>
@@ -64,14 +64,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         public string Level { get; set; }
 
                         /// <summary>
-                        /// <para>The list of detection results.</para>
+                        /// <para>The list of moderation results.</para>
                         /// </summary>
                         [NameInMap("Result")]
                         [Validation(Required=false)]
                         public List<MultiModalGuardAsyncResultResponseBodyDataAudioResultSliceDetailsDetailResult> Result { get; set; }
                         public class MultiModalGuardAsyncResultResponseBodyDataAudioResultSliceDetailsDetailResult : TeaModel {
                             /// <summary>
-                            /// <para>The confidence score, which ranges from 0 to 100 and is accurate to two decimal places.</para>
+                            /// <para>The confidence score. Valid values: 0 to 100. The value is accurate to two decimal places.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>90</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             public string Description { get; set; }
 
                             /// <summary>
-                            /// <para>The extended information of the detection result.</para>
+                            /// <para>The extended information of the moderation result.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>{}</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             /// <summary>
                             /// <para>The risk level. Valid values:</para>
                             /// <list type="bullet">
-                            /// <item><description>high: High risk. If a custom dictionary is hit, the risk level defaults to high.</description></item>
+                            /// <item><description>high: High risk. If a custom dictionary is hit, the risk level is high by default.</description></item>
                             /// <item><description>medium: Medium risk.</description></item>
                             /// <item><description>low: Low risk.</description></item>
                             /// <item><description>none: No risk detected.</description></item>
@@ -145,9 +145,9 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         public string Suggestion { get; set; }
 
                         /// <summary>
-                        /// <para>The detection type. Valid values:</para>
+                        /// <para>The moderation type. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>contentModeration: Content compliance detection.</description></item>
+                        /// <item><description>contentModeration: Content compliance moderation.</description></item>
                         /// <item><description>promptAttack: Prompt attack detection.</description></item>
                         /// <item><description>sensitiveData: Sensitive content detection.</description></item>
                         /// <item><description>modelHallucination: Model hallucination detection.</description></item>
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             }
 
             /// <summary>
-            /// <para>The value of dataId passed in the API request. If dataId is not passed in the request, this field is not returned.</para>
+            /// <para>The value of the dataId parameter passed in the API request. If this parameter is not passed in the request, this field is not returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>data1234</para>
@@ -261,14 +261,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public MultiModalGuardAsyncResultResponseBodyDataFrameResult FrameResult { get; set; }
             public class MultiModalGuardAsyncResultResponseBodyDataFrameResult : TeaModel {
                 /// <summary>
-                /// <para>The frame detection results.</para>
+                /// <para>The frame moderation results.</para>
                 /// </summary>
                 [NameInMap("Frames")]
                 [Validation(Required=false)]
                 public List<MultiModalGuardAsyncResultResponseBodyDataFrameResultFrames> Frames { get; set; }
                 public class MultiModalGuardAsyncResultResponseBodyDataFrameResultFrames : TeaModel {
                     /// <summary>
-                    /// <para>The list of detection results.</para>
+                    /// <para>The list of moderation results.</para>
                     /// </summary>
                     [NameInMap("Detail")]
                     [Validation(Required=false)]
@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         /// <summary>
                         /// <para>The risk level. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>high: High risk. If a custom dictionary is hit, the risk level defaults to high.</description></item>
+                        /// <item><description>high: High risk. If a custom dictionary is hit, the risk level is high by default.</description></item>
                         /// <item><description>medium: Medium risk.</description></item>
                         /// <item><description>low: Low risk.</description></item>
                         /// <item><description>none: No risk detected.</description></item>
@@ -291,14 +291,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         public string Level { get; set; }
 
                         /// <summary>
-                        /// <para>The detection result.</para>
+                        /// <para>The moderation result.</para>
                         /// </summary>
                         [NameInMap("Result")]
                         [Validation(Required=false)]
                         public List<MultiModalGuardAsyncResultResponseBodyDataFrameResultFramesDetailResult> Result { get; set; }
                         public class MultiModalGuardAsyncResultResponseBodyDataFrameResultFramesDetailResult : TeaModel {
                             /// <summary>
-                            /// <para>The confidence score, which ranges from 0 to 100 and is accurate to two decimal places.</para>
+                            /// <para>The confidence score. Valid values: 0 to 100. The value is accurate to two decimal places.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>80</para>
@@ -318,7 +318,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             public string Description { get; set; }
 
                             /// <summary>
-                            /// <para>The extended information of the detection result.</para>
+                            /// <para>The extended information of the moderation result.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>{}</para>
@@ -340,7 +340,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             /// <summary>
                             /// <para>The risk level. Valid values:</para>
                             /// <list type="bullet">
-                            /// <item><description>high: High risk. If a custom dictionary is hit, the risk level defaults to high.</description></item>
+                            /// <item><description>high: High risk. If a custom dictionary is hit, the risk level is high by default.</description></item>
                             /// <item><description>medium: Medium risk.</description></item>
                             /// <item><description>low: Low risk.</description></item>
                             /// <item><description>none: No risk detected.</description></item>
@@ -372,9 +372,9 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         public string Suggestion { get; set; }
 
                         /// <summary>
-                        /// <para>The detection type. Valid values:</para>
+                        /// <para>The moderation type. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>contentModeration: Content compliance detection.</description></item>
+                        /// <item><description>contentModeration: Content compliance moderation.</description></item>
                         /// <item><description>promptAttack: Prompt attack detection.</description></item>
                         /// <item><description>sensitiveData: Sensitive content detection.</description></item>
                         /// <item><description>modelHallucination: Model hallucination detection.</description></item>
@@ -411,7 +411,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public string ErrorMsg { get; set; }
 
                     /// <summary>
-                    /// <para>The offset of the captured frame.</para>
+                    /// <para>The position of the captured frame.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1.5</para>
@@ -524,7 +524,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public string ResultOssBucketName { get; set; }
 
                 /// <summary>
-                /// <para>The name of the masked OSS object.</para>
+                /// <para>The name of the OSS object for the masked data.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>video.mp4</para>
@@ -554,7 +554,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public string ResultUrl { get; set; }
 
                 /// <summary>
-                /// <para>The original URL.</para>
+                /// <para>The URL of the object before masking.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://XX">https://XX</a></para>
