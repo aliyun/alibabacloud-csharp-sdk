@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "Yike";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("yike", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -203,7 +206,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消生成任务接口</para>
+        /// <para>Cancels an AI generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -245,7 +248,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消生成任务接口</para>
+        /// <para>Cancels an AI generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -287,7 +290,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消生成任务接口</para>
+        /// <para>Cancels an AI generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -305,7 +308,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消生成任务接口</para>
+        /// <para>Cancels an AI generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1943,13 +1946,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a media asset content understanding job.</para>
+        /// <para>Queries media content understanding jobs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This API is used to query a media asset content understanding job.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation queries media content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1991,13 +1994,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a media asset content understanding job.</para>
+        /// <para>Queries media content understanding jobs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This API is used to query a media asset content understanding job.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation queries media content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2039,13 +2042,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a media asset content understanding job.</para>
+        /// <para>Queries media content understanding jobs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This API is used to query a media asset content understanding job.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation queries media content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2063,13 +2066,13 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a media asset content understanding job.</para>
+        /// <para>Queries media content understanding jobs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para>This API is used to query a media asset content understanding job.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation queries media content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2203,6 +2206,126 @@ namespace AlibabaCloud.SDK.Yike20260707
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetRemakeScriptJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a video creative generation job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVideoCreativeGenerationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoCreativeGenerationJobResponse
+        /// </returns>
+        public GetVideoCreativeGenerationJobResponse GetVideoCreativeGenerationJobWithOptions(GetVideoCreativeGenerationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVideoCreativeGenerationJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVideoCreativeGenerationJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a video creative generation job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVideoCreativeGenerationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoCreativeGenerationJobResponse
+        /// </returns>
+        public async Task<GetVideoCreativeGenerationJobResponse> GetVideoCreativeGenerationJobWithOptionsAsync(GetVideoCreativeGenerationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVideoCreativeGenerationJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVideoCreativeGenerationJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a video creative generation job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVideoCreativeGenerationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoCreativeGenerationJobResponse
+        /// </returns>
+        public GetVideoCreativeGenerationJobResponse GetVideoCreativeGenerationJob(GetVideoCreativeGenerationJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetVideoCreativeGenerationJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a video creative generation job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVideoCreativeGenerationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVideoCreativeGenerationJobResponse
+        /// </returns>
+        public async Task<GetVideoCreativeGenerationJobResponse> GetVideoCreativeGenerationJobAsync(GetVideoCreativeGenerationJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetVideoCreativeGenerationJobWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2475,7 +2598,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a video rendering and composition task.</para>
+        /// <para>Submits a video rendering and compositing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2517,7 +2640,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a video rendering and composition task.</para>
+        /// <para>Submits a video rendering and compositing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2559,7 +2682,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a video rendering and composition task.</para>
+        /// <para>Submits a video rendering and compositing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2577,7 +2700,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a video rendering and composition task.</para>
+        /// <para>Submits a video rendering and compositing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3348,8 +3471,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API is used to query media asset content understanding jobs.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3420,8 +3543,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API is used to query media asset content understanding jobs.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3492,8 +3615,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API is used to query media asset content understanding jobs.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3516,8 +3639,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API is used to query media asset content understanding jobs.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation queries media asset content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3535,7 +3658,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns media asset information that matches the specified filter conditions.</para>
+        /// <para>Queries media assets that match the specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3601,7 +3724,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns media asset information that matches the specified filter conditions.</para>
+        /// <para>Queries media assets that match the specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3667,7 +3790,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns media asset information that matches the specified filter conditions.</para>
+        /// <para>Queries media assets that match the specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3685,7 +3808,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns media asset information that matches the specified filter conditions.</para>
+        /// <para>Queries media assets that match the specified parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3863,7 +3986,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an image generation task.</para>
+        /// <para>Submits an image generation request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3941,7 +4064,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an image generation task.</para>
+        /// <para>Submits an image generation request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4019,7 +4142,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an image generation task.</para>
+        /// <para>Submits an image generation request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4037,7 +4160,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an image generation task.</para>
+        /// <para>Submits an image generation request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4060,8 +4183,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation performs content understanding based on the provided media asset files (such as video URLs). You can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation performs content understanding based on the provided media asset files, such as video URLs. Additionally, you can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4120,8 +4243,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation performs content understanding based on the provided media asset files (such as video URLs). You can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation performs content understanding based on the provided media asset files, such as video URLs. Additionally, you can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4180,8 +4303,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation performs content understanding based on the provided media asset files (such as video URLs). You can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation performs content understanding based on the provided media asset files, such as video URLs. Additionally, you can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4204,8 +4327,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation performs content understanding based on the provided media asset files (such as video URLs). You can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation performs content understanding based on the provided media asset files, such as video URLs. Additionally, you can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4228,7 +4351,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API generates a new voiceover script based on content comprehension results and new product/model information by imitating the style of the original script. You can pass custom parameters through the UserData field, which are returned as-is in the callback.</para>
+        /// <para>This operation generates a new voiceover script based on content understanding results and new product or avatar information. It also supports passing custom parameters through the UserData field, which are returned as-is in callbacks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4283,7 +4406,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API generates a new voiceover script based on content comprehension results and new product/model information by imitating the style of the original script. You can pass custom parameters through the UserData field, which are returned as-is in the callback.</para>
+        /// <para>This operation generates a new voiceover script based on content understanding results and new product or avatar information. It also supports passing custom parameters through the UserData field, which are returned as-is in callbacks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4338,7 +4461,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API generates a new voiceover script based on content comprehension results and new product/model information by imitating the style of the original script. You can pass custom parameters through the UserData field, which are returned as-is in the callback.</para>
+        /// <para>This operation generates a new voiceover script based on content understanding results and new product or avatar information. It also supports passing custom parameters through the UserData field, which are returned as-is in callbacks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4361,7 +4484,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API generates a new voiceover script based on content comprehension results and new product/model information by imitating the style of the original script. You can pass custom parameters through the UserData field, which are returned as-is in the callback.</para>
+        /// <para>This operation generates a new voiceover script based on content understanding results and new product or avatar information. It also supports passing custom parameters through the UserData field, which are returned as-is in callbacks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4375,6 +4498,190 @@ namespace AlibabaCloud.SDK.Yike20260707
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitRemakeScriptJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a video creative generation job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitVideoCreativeGenerationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitVideoCreativeGenerationJobResponse
+        /// </returns>
+        public SubmitVideoCreativeGenerationJobResponse SubmitVideoCreativeGenerationJobWithOptions(SubmitVideoCreativeGenerationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AspectRatio))
+            {
+                query["AspectRatio"] = request.AspectRatio;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvatarData))
+            {
+                query["AvatarData"] = request.AvatarData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobParams))
+            {
+                query["JobParams"] = request.JobParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputLanguages))
+            {
+                query["OutputLanguages"] = request.OutputLanguages;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resolution))
+            {
+                query["Resolution"] = request.Resolution;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneType))
+            {
+                query["SceneType"] = request.SceneType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserMaterials))
+            {
+                query["UserMaterials"] = request.UserMaterials;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithSubtitles))
+            {
+                query["WithSubtitles"] = request.WithSubtitles;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitVideoCreativeGenerationJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitVideoCreativeGenerationJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a video creative generation job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitVideoCreativeGenerationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitVideoCreativeGenerationJobResponse
+        /// </returns>
+        public async Task<SubmitVideoCreativeGenerationJobResponse> SubmitVideoCreativeGenerationJobWithOptionsAsync(SubmitVideoCreativeGenerationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AspectRatio))
+            {
+                query["AspectRatio"] = request.AspectRatio;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AvatarData))
+            {
+                query["AvatarData"] = request.AvatarData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobParams))
+            {
+                query["JobParams"] = request.JobParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputLanguages))
+            {
+                query["OutputLanguages"] = request.OutputLanguages;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resolution))
+            {
+                query["Resolution"] = request.Resolution;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneType))
+            {
+                query["SceneType"] = request.SceneType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                query["UserData"] = request.UserData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserMaterials))
+            {
+                query["UserMaterials"] = request.UserMaterials;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithSubtitles))
+            {
+                query["WithSubtitles"] = request.WithSubtitles;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitVideoCreativeGenerationJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitVideoCreativeGenerationJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a video creative generation job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitVideoCreativeGenerationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitVideoCreativeGenerationJobResponse
+        /// </returns>
+        public SubmitVideoCreativeGenerationJobResponse SubmitVideoCreativeGenerationJob(SubmitVideoCreativeGenerationJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitVideoCreativeGenerationJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a video creative generation job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitVideoCreativeGenerationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitVideoCreativeGenerationJobResponse
+        /// </returns>
+        public async Task<SubmitVideoCreativeGenerationJobResponse> SubmitVideoCreativeGenerationJobAsync(SubmitVideoCreativeGenerationJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitVideoCreativeGenerationJobWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4895,12 +5202,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an asynchronous video translation task that supports subtitle translation, voice translation, main subtitle erasure, and on-screen text translation.</para>
+        /// <para>Submits an asynchronous video translation task that supports subtitle translation, voice translation, primary subtitle erasure, and on-screen text translation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submits an asynchronous video translation task. The input supports a media URL or an Intelligent Media Management (IMM) media asset ID. Task parameters specify the source language, target language, and translation capabilities to enable.</para>
+        /// <para>Submits an asynchronous video translation task. The input supports media URLs or Yike media asset IDs. The task parameters are used to select the source language, target language, and the translation capabilities to enable.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4970,12 +5277,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an asynchronous video translation task that supports subtitle translation, voice translation, main subtitle erasure, and on-screen text translation.</para>
+        /// <para>Submits an asynchronous video translation task that supports subtitle translation, voice translation, primary subtitle erasure, and on-screen text translation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submits an asynchronous video translation task. The input supports a media URL or an Intelligent Media Management (IMM) media asset ID. Task parameters specify the source language, target language, and translation capabilities to enable.</para>
+        /// <para>Submits an asynchronous video translation task. The input supports media URLs or Yike media asset IDs. The task parameters are used to select the source language, target language, and the translation capabilities to enable.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5045,12 +5352,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an asynchronous video translation task that supports subtitle translation, voice translation, main subtitle erasure, and on-screen text translation.</para>
+        /// <para>Submits an asynchronous video translation task that supports subtitle translation, voice translation, primary subtitle erasure, and on-screen text translation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submits an asynchronous video translation task. The input supports a media URL or an Intelligent Media Management (IMM) media asset ID. Task parameters specify the source language, target language, and translation capabilities to enable.</para>
+        /// <para>Submits an asynchronous video translation task. The input supports media URLs or Yike media asset IDs. The task parameters are used to select the source language, target language, and the translation capabilities to enable.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5068,12 +5375,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an asynchronous video translation task that supports subtitle translation, voice translation, main subtitle erasure, and on-screen text translation.</para>
+        /// <para>Submits an asynchronous video translation task that supports subtitle translation, voice translation, primary subtitle erasure, and on-screen text translation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submits an asynchronous video translation task. The input supports a media URL or an Intelligent Media Management (IMM) media asset ID. Task parameters specify the source language, target language, and translation capabilities to enable.</para>
+        /// <para>Submits an asynchronous video translation task. The input supports media URLs or Yike media asset IDs. The task parameters are used to select the source language, target language, and the translation capabilities to enable.</para>
         /// </description>
         /// 
         /// <param name="request">

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class SubmitVideoTranslationJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The video translation job ID, used to call GetVideoTranslationJob to query the job.</para>
+        /// <para>The video translation job ID, which is used to call GetVideoTranslationJob to query the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vtj_0123456789abcdef0123456789abcdef</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The request ID, used for Tracing Analysis and troubleshooting.</para>
+        /// <para>The request ID, which is used for Tracing Analysis and troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>req-vt-20260820-001</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class SearchMediaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The collection of media assets that meet the specified criteria.</para>
+        /// <para>The collection of media assets that meet the requirements.</para>
         /// </summary>
         [NameInMap("MediaInfoList")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public List<SearchMediaResponseBodyMediaInfoListFileInfoList> FileInfoList { get; set; }
             public class SearchMediaResponseBodyMediaInfoListFileInfoList : TeaModel {
                 /// <summary>
-                /// <para>The basic file information, including duration and size.</para>
+                /// <para>The basic file information, including the duration and size.</para>
                 /// </summary>
                 [NameInMap("FileBasicInfo")]
                 [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
                     public string FileName { get; set; }
 
                     /// <summary>
-                    /// <para>The file size, in bytes.</para>
+                    /// <para>The file size in bytes.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>48524</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
                     public string ModifiedTime { get; set; }
 
                     /// <summary>
-                    /// <para>The file storage region.</para>
+                    /// <para>The storage region of the file.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-shanghai</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             }
 
             /// <summary>
-            /// <para>The basic information of the media asset.</para>
+            /// <para>The basic media asset information.</para>
             /// </summary>
             [NameInMap("MediaBasicInfo")]
             [Validation(Required=false)]
@@ -454,7 +454,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The pagination token.</para>
+        /// <para>The scroll token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F8C4F642184DBDA5D93907A70AAE****</para>
@@ -464,7 +464,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string ScrollToken { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -474,7 +474,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of media assets that meet the specified criteria.</para>
+        /// <para>The total number of media assets that meet the requirements.</para>
         /// 
         /// <b>Example:</b>
         /// <para>163</para>

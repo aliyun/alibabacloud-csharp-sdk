@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string CanvasId { get; set; }
 
             /// <summary>
-            /// <para>The cover URL.</para>
+            /// <para>The URL of the cover image.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://example.com/cover.png">http://example.com/cover.png</a></para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The thumbnail height, in px.</para>
+            /// <para>The height of the thumbnail, in pixels.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://example.com/thumbnail2.png">http://example.com/thumbnail2.png</a></para>

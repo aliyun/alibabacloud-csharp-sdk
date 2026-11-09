@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The job ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>68ca759e798b40b4903b255*******</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The file URL of the script imitation result. The file content is in JSON format of the creative script.</para>
+            /// <para>The URL of the file that contains the script rewriting result. The file content is the creative script in JSON format.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxxx.json">http://xxxx.json</a></para>
@@ -57,13 +57,13 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Result { get; set; }
 
             /// <summary>
-            /// <para>The file status. Valid values:</para>
+            /// <para>The status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Created: Created.</description></item>
-            /// <item><description>Executing: Executing.</description></item>
-            /// <item><description>Finished: Finished.</description></item>
-            /// <item><description>Failed: Failed.</description></item>
-            /// <item><description>Deleted: Deleted.</description></item>
+            /// <item><description>Created: The task is created.</description></item>
+            /// <item><description>Executing: The task is executing.</description></item>
+            /// <item><description>Finished: The task is finished.</description></item>
+            /// <item><description>Failed: The task failed.</description></item>
+            /// <item><description>Deleted: The task is deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The user-defined parameter, in JSON format string.</para>
+            /// <para>The user-defined parameter, which is a string in JSON format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;NotifyAddress&quot;: &quot;<a href="http://xxx.callback.url%22%7D">http://xxx.callback.url&quot;}</a></para>

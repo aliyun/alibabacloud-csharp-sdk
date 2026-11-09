@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class SubmitMediaComprehensionJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business error code. An empty string is returned when the submission is successful.</para>
+        /// <para>The business error code. It is an empty string if the submission is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>

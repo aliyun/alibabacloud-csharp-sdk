@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class DeleteMediasRequest : TeaModel {
+        /// <summary>
+        /// <para>The business configuration. It is a JSON string that can contain ProductionId (the project ID).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;ProductionId&quot;:&quot;pd_abc1234567&quot;}</para>
+        /// </summary>
         [NameInMap("BizConfig")]
         [Validation(Required=false)]
         public string BizConfig { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to delete the physical files at the same time.</para>
+        /// <para>Specifies whether to delete physical files at the same time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class GetVideoRenderJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The video rendering and composition task object.</para>
+        /// <para>The video rendering and compositing task object.</para>
         /// </summary>
         [NameInMap("Job")]
         [Validation(Required=false)]
         public GetVideoRenderJobResponseBodyJob Job { get; set; }
         public class GetVideoRenderJobResponseBodyJob : TeaModel {
             /// <summary>
-            /// <para>The online editing project ID, which can be used for secondary editing of the output video.</para>
+            /// <para>The ID of the online editing project, which can be used for secondary editing of the produced video.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8239345231244512***</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string EditingProjectId { get; set; }
 
             /// <summary>
-            /// <para>The error code. This parameter is returned when the task is in the Failed state.</para>
+            /// <para>The error code. This parameter is returned when the job is in the Failed state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error message. This parameter is returned when the task is in the Failed state.</para>
+            /// <para>The error message. This parameter is returned when the job is in the Failed state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The specified product does not exist.</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The job ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>68ca759e798b40b4903b255*******</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The narration language of the output video.</para>
+            /// <para>The voiceover language of the produced video.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zh</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>The download URL of the rendered and composed video.</para>
+            /// <para>The download URL of the rendered and composited video.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://xxxx.mp4">https://xxxx.mp4</a></para>
@@ -77,13 +77,13 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Result { get; set; }
 
             /// <summary>
-            /// <para>The task status. Valid values:</para>
+            /// <para>The job status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Created: The task is created.</description></item>
-            /// <item><description>Executing: The task is being executed.</description></item>
-            /// <item><description>Finished: The task is completed.</description></item>
-            /// <item><description>Failed: The task has failed.</description></item>
-            /// <item><description>Deleted: The task is deleted.</description></item>
+            /// <item><description>Created: The job is created.</description></item>
+            /// <item><description>Executing: The job is being executed.</description></item>
+            /// <item><description>Finished: The job is completed.</description></item>
+            /// <item><description>Failed: The job failed.</description></item>
+            /// <item><description>Deleted: The job is deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The custom user data in JSON format.</para>
+            /// <para>The user-defined parameter, which is a JSON-formatted string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;NotifyAddress&quot;: &quot;<a href="http://xxx.callback.url%22%7D">http://xxx.callback.url&quot;}</a></para>

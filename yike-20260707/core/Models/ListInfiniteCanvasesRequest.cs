@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class ListInfiniteCanvasesRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword for querying site monitoring tasks. Supports fuzzy match based on task name or task address.</para>
+        /// <para>The keyword used to query site monitoring tasks. Note: Fuzzy match is supported based on the task name or task address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v2_</para>
@@ -39,6 +39,12 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pd_abc1234567</para>
+        /// </summary>
         [NameInMap("ProductionId")]
         [Validation(Required=false)]
         public string ProductionId { get; set; }
@@ -54,11 +60,10 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The sort direction.</para>
-        /// <para>Valid values:</para>
+        /// <para>The sort direction. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Asc: Ascending order.</description></item>
-        /// <item><description>Desc: Descending order.</description></item>
+        /// <item><description>Asc: ascending order</description></item>
+        /// <item><description>Desc: descending order</description></item>
         /// </list>
         /// <para>Default value: Desc.</para>
         /// 
@@ -69,6 +74,12 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         [Validation(Required=false)]
         public string SortOrder { get; set; }
 
+        /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ws_abc1234567</para>
+        /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

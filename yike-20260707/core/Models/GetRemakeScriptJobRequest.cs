@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class GetRemakeScriptJobRequest : TeaModel {
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>68ca759e798b40b4903b255*******</para>

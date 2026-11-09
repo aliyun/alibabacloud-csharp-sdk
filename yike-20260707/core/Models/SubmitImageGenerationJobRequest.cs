@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         /// <list type="bullet">
         /// <item><description>Prompt: String. Required. The prompt text.</description></item>
         /// <item><description>Medias: A list of media items. Required when the task type is <c>image_to_image</c>. A maximum of 9 items are supported.<remarks>
-        /// <para>The Media structure contains the following fields: Type, the media type (String, valid value: image). URL, the media download URL (String). MediaId, the media asset ID (String).</para>
+        /// <para>The Media structure contains the following fields: Type, the media type, String, valid value: image. URL, the media download URL, String. MediaId, the media asset ID, String.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -50,7 +50,11 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string Input { get; set; }
 
         /// <summary>
-        /// <para>The task feature parameters. The value is a JSON string. You do not need to set this parameter currently.</para>
+        /// <para>The task parameters. The value is a JSON string.</para>
+        /// <list type="bullet">
+        /// <item><description>PromptExtend: Specifies whether to enable prompt optimization. Boolean. Valid values: <c>true</c> and <c>false</c>.</description></item>
+        /// <item><description>PromptExtendMode: The prompt extension mode. Valid values: <c>direct</c> (default) and <c>agent</c> (supported for text-to-image generation). Only qwen-image-3.0 supports this parameter.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -90,7 +94,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string Model { get; set; }
 
         /// <summary>
-        /// <para>The number of images. Valid values: 1 to 4. Default value: 1.</para>
+        /// <para>The number of images to generate. Valid values: 1 to 4. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
