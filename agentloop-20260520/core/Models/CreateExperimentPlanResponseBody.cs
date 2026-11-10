@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Experiment plan created successfully</para>
+        /// <para>The experiment plan is created</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The experiment plan ID.</para>
+        /// <para>The ID of the experiment plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exp-plan-e95bff54685a4ae29ff3a834c1008a71</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The creation result. The value <c>created</c> indicates success.</para>
+        /// <para>The creation result. A value of created indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>created</para>

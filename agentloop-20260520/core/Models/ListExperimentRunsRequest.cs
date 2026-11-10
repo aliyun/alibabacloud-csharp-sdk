@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class ListExperimentRunsRequest : TeaModel {
         /// <summary>
-        /// <para>Filters results by exact dataset ID.</para>
+        /// <para>Filters the results by exact dataset ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>arms_customer_agent_level1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string DatasetId { get; set; }
 
         /// <summary>
-        /// <para>Filters results by fuzzy match on the experiment configuration name.</para>
+        /// <para>Filters the results by using a fuzzy match on the name in the experiment configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>experimentA</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string ExperimentName { get; set; }
 
         /// <summary>
-        /// <para>Optional. Use <c>page</c> and <c>pageSize</c> for pagination instead.</para>
+        /// <para>Optional. For pagination, use page and pageSize.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Optional. Use <c>page</c> and <c>pageSize</c> for pagination instead.</para>
+        /// <para>Optional. For pagination, use page and pageSize.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJwYWdlIjoxfQ==</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Filters results by fuzzy match on the experiment plan name.</para>
+        /// <para>Filters the results by using a fuzzy match on the experiment plan name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>arms_agent_experiment</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string PlanName { get; set; }
 
         /// <summary>
-        /// <para>Filters results by status.</para>
+        /// <para>Filters the results by status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>evaluating</para>

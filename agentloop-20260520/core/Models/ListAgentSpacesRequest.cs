@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class ListAgentSpacesRequest : TeaModel {
         /// <summary>
-        /// <para>The AgentSpace name.</para>
+        /// <para>The name of the AgentSpace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-agent-space</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string AgentSpace { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return.</para>
+        /// <para>The maximum number of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

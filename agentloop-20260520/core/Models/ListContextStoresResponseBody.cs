@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class ListContextStoresResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of results per page specified in the request.</para>
+        /// <para>The maximum number of entries per page specified in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which can be used to locate the request during troubleshooting.</para>
+        /// <para>The request ID, which is used to locate the request during troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string ContextType { get; set; }
 
             /// <summary>
-            /// <para>The time when the context store was created, in ISO 8601 UTC format.</para>
+            /// <para>The time when the context store was created. The time is in the ISO 8601 UTC format.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public List<string> ServiceNames { get; set; }
 
             /// <summary>
-            /// <para>The memory data source type, such as manual, trajectory, or dataset. This parameter has a value only for the memory type.</para>
+            /// <para>The data source type of the memory context store. Valid values: manual, trajectory, and dataset. This parameter has a value only for the memory type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>trajectory</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The memory storage mode, such as event or upsert. This parameter has a value only for the memory type.</para>
+            /// <para>The storage mode of the memory context store. Valid values: event and upsert. This parameter has a value only for the memory type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>upsert</para>
@@ -147,12 +147,15 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             [Validation(Required=false)]
             public string StorageMode { get; set; }
 
+            /// <summary>
+            /// <para>The actual storage modes of each policy. A hybrid context store includes both event and upsert.</para>
+            /// </summary>
             [NameInMap("storageModes")]
             [Validation(Required=false)]
             public List<string> StorageModes { get; set; }
 
             /// <summary>
-            /// <para>The time when the context store was last updated, in ISO 8601 UTC format.</para>
+            /// <para>The time when the context store was last updated. The time is in the ISO 8601 UTC format.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>

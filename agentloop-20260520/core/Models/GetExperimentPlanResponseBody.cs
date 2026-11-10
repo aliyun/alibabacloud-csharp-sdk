@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class GetExperimentPlanResponseBody : TeaModel {
         /// <summary>
-        /// <para>The creation time. The value is a millisecond-level UNIX timestamp.</para>
+        /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1782816000000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public long? CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The associated dataset ID.</para>
+        /// <para>The ID of the associated dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>arms_customer_agent_level1</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Compare checkout Agent baseline with optimized version</para>
+        /// <para>Compare the checkout agent baseline with the optimized version</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public List<Evaluator> Evaluators { get; set; }
 
         /// <summary>
-        /// <para>The experiment type.</para>
+        /// <para>The type of the experiment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>online</para>
@@ -73,21 +73,21 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>Optional.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;question&quot;: &quot;How do I request a refund?&quot;}</para>
+        /// <para>{&quot;question&quot;: &quot;How do I get a refund?&quot;}</para>
         /// </summary>
         [NameInMap("input")]
         [Validation(Required=false)]
         public Dictionary<string, object> Input { get; set; }
 
         /// <summary>
-        /// <para>The name of the associated data processing pipeline. This value is empty if no pipeline is associated.</para>
+        /// <para>The name of the associated data processing pipeline. This field is empty if no pipeline is associated.</para>
         /// </summary>
         [NameInMap("pipelineName")]
         [Validation(Required=false)]
         public string PipelineName { get; set; }
 
         /// <summary>
-        /// <para>The experiment plan ID.</para>
+        /// <para>The ID of the experiment plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exp-plan-0242d983f5d340fd8479cf2c19eb279e</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string PlanId { get; set; }
 
         /// <summary>
-        /// <para>The experiment plan name.</para>
+        /// <para>The name of the experiment plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>arms_agent_experiment</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public List<string> SelectedItemIds { get; set; }
 
         /// <summary>
-        /// <para>The plan status.</para>
+        /// <para>The status of the plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>stopped</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The update time. The value is a millisecond-level UNIX timestamp.</para>
+        /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1782816600000</para>

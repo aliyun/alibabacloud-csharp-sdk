@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The memory data source type used for filtering, such as manual, trajectory, or dataset. If this parameter is not specified, no filtering is performed.</para>
+        /// <para>The data source type of the memory context store used for filtering. Valid values: manual, trajectory, and dataset. If this parameter is not specified, no filtering is performed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>trajectory</para>

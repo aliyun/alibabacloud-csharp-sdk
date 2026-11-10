@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class ListAgentSpacesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The AgentSpaces information.</para>
+        /// <para>The information about the AgentSpaces.</para>
         /// </summary>
         [NameInMap("agentSpaces")]
         [Validation(Required=false)]
         public List<ListAgentSpacesResponseBodyAgentSpaces> AgentSpaces { get; set; }
         public class ListAgentSpacesResponseBodyAgentSpaces : TeaModel {
             /// <summary>
-            /// <para>The AgentSpace name.</para>
+            /// <para>The name of the AgentSpace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-agent-space</para>
@@ -64,12 +64,18 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             [Validation(Required=false)]
             public ListAgentSpacesResponseBodyAgentSpacesMseNamespace MseNamespace { get; set; }
             public class ListAgentSpacesResponseBodyAgentSpacesMseNamespace : TeaModel {
+                /// <summary>
+                /// <para>The attach method of the MSE namespace. AutoCreated indicates automatic creation by AgentLoop. UserSelected indicates that an existing namespace is selected and attached when the AgentSpace is created.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>AutoCreated</para>
+                /// </summary>
                 [NameInMap("bindType")]
                 [Validation(Required=false)]
                 public string BindType { get; set; }
 
                 /// <summary>
-                /// <para>The MSE namespace ID.</para>
+                /// <para>The ID of the MSE namespace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>phoenixcloud-raw-logs</para>
@@ -79,7 +85,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string NamespaceId { get; set; }
 
                 /// <summary>
-                /// <para>The MSE namespace name.</para>
+                /// <para>The name of the MSE namespace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>terraform-alicloud-modules</para>
@@ -101,7 +107,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The Simple Log Service project name.</para>
+            /// <para>The name of the Simple Log Service project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default-cms-1152309027070167-cn-beijing</para>
@@ -124,7 +130,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of results returned.</para>
+        /// <para>The maximum number of returned results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -134,7 +140,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. This parameter is empty if no more pages are available.</para>
+        /// <para>The pagination token. This parameter is empty if no next page is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b5754ef15c784abc8696d82790d2985c</para>
@@ -154,7 +160,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>13</para>

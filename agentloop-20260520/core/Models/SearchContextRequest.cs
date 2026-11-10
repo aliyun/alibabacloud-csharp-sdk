@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public bool? Formatted { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include memories whose sourceState is inactive. Default value: false.</para>
+        /// <para>Specifies whether to include memories with sourceState=inactive. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public bool? IncludeInactive { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of returned results, which corresponds to the top N results by similarity.</para>
+        /// <para>The maximum number of returned results based on the top-N similarity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -71,14 +71,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RetrievalOption { get; set; }
 
         /// <summary>
-        /// <para>The recall scope. If a field with the same name conflicts with the filter, a 400 ScopeFilterConflict error is returned.</para>
+        /// <para>The recall scope. If a field with the same name exists in the filter, a 400 ScopeFilterConflict error is returned.</para>
         /// </summary>
         [NameInMap("scope")]
         [Validation(Required=false)]
         public SearchContextRequestScope Scope { get; set; }
         public class SearchContextRequestScope : TeaModel {
             /// <summary>
-            /// <para>Agent Id</para>
+            /// <para>The ID of the agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sales-copilot</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string AgentId { get; set; }
 
             /// <summary>
-            /// <para>The application ID.</para>
+            /// <para>The ID of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>crm-service</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The run ID.</para>
+            /// <para>The ID of the run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>run-001</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string RunId { get; set; }
 
             /// <summary>
-            /// <para>The user ID.</para>
+            /// <para>The ID of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>u-10001</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>Filters results by extraction strategy ID. Multiple IDs in the list are evaluated with an OR condition. If this parameter is not specified, all strategies are recalled. An empty list returns a 400 error. If the format is valid but no matching IDs are found, an empty result is returned. IDs of historically removed strategies are supported.</para>
+        /// <para>Filters results by extraction strategy IDs. Multiple IDs in the list are evaluated with an OR logic. If this parameter is not specified, all strategies are recalled. An empty list returns a 400 error. Valid IDs with no matches return empty results. Historical removed strategy IDs are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;preferences&quot;,&quot;profile&quot;]</para>

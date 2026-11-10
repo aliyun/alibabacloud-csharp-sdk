@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class GetDatasetResponseBody : TeaModel {
         /// <summary>
-        /// <para>The name of the agent space.</para>
+        /// <para>The name of the agent workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sop-agent</para>

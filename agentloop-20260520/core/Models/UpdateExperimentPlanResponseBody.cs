@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The experiment plan is updated successfully</para>
+        /// <para>Experiment plan updated successfully</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]

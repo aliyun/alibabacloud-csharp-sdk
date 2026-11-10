@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "AgentLoop";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("agentloop", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -340,6 +343,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             {
                 body["mseNamespaceId"] = request.MseNamespaceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrajectoryEmbeddingEnabled))
+            {
+                body["trajectoryEmbeddingEnabled"] = request.TrajectoryEmbeddingEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrajectoryStoreEnabled))
             {
                 body["trajectoryStoreEnabled"] = request.TrajectoryStoreEnabled;
@@ -408,6 +415,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             {
                 body["mseNamespaceId"] = request.MseNamespaceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrajectoryEmbeddingEnabled))
+            {
+                body["trajectoryEmbeddingEnabled"] = request.TrajectoryEmbeddingEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrajectoryStoreEnabled))
             {
                 body["trajectoryStoreEnabled"] = request.TrajectoryStoreEnabled;
@@ -473,7 +484,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a context library.</para>
+        /// <para>Creates a context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -537,7 +548,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a context library.</para>
+        /// <para>Creates a context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -601,7 +612,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a context library.</para>
+        /// <para>Creates a context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -620,7 +631,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a context library.</para>
+        /// <para>Creates a context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1578,7 +1589,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. This operation defines the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</para>
+        /// <para>Creates an experiment plan in a specified AgentSpace. You can use this operation to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to initiate the execution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1665,7 +1676,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. This operation defines the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</para>
+        /// <para>Creates an experiment plan in a specified AgentSpace. You can use this operation to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to initiate the execution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1752,7 +1763,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. This operation defines the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</para>
+        /// <para>Creates an experiment plan in a specified AgentSpace. You can use this operation to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to initiate the execution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1776,7 +1787,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. This operation defines the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</para>
+        /// <para>Creates an experiment plan in a specified AgentSpace. You can use this operation to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to initiate the execution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4533,7 +4544,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a context store.</para>
+        /// <para>Queries the context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4573,7 +4584,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a context store.</para>
+        /// <para>Queries the context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4613,7 +4624,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a context store.</para>
+        /// <para>Queries the context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4632,7 +4643,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a context store.</para>
+        /// <para>Queries the context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4788,9 +4799,15 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         public GetDatasetResponse GetDatasetWithOptions(string agentSpace, string datasetName, GetDatasetRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["version"] = request.Version;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4828,9 +4845,15 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         public async Task<GetDatasetResponse> GetDatasetWithOptionsAsync(string agentSpace, string datasetName, GetDatasetRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["version"] = request.Version;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5529,12 +5552,12 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an experiment run record.</para>
+        /// <para>Queries the details of an experiment run.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls GetExperimentRun to query the details of a specific experiment run record, including the status, progress, configuration snapshot, and associated evaluation task ID.</para>
+        /// <para>Calls the GetExperimentRun operation to query the details of an experiment run, including the status, progress, configuration snapshot, and associated evaluation task ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5574,12 +5597,12 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an experiment run record.</para>
+        /// <para>Queries the details of an experiment run.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls GetExperimentRun to query the details of a specific experiment run record, including the status, progress, configuration snapshot, and associated evaluation task ID.</para>
+        /// <para>Calls the GetExperimentRun operation to query the details of an experiment run, including the status, progress, configuration snapshot, and associated evaluation task ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5619,12 +5642,12 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an experiment run record.</para>
+        /// <para>Queries the details of an experiment run.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls GetExperimentRun to query the details of a specific experiment run record, including the status, progress, configuration snapshot, and associated evaluation task ID.</para>
+        /// <para>Calls the GetExperimentRun operation to query the details of an experiment run, including the status, progress, configuration snapshot, and associated evaluation task ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5643,12 +5666,12 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an experiment run record.</para>
+        /// <para>Queries the details of an experiment run.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls GetExperimentRun to query the details of a specific experiment run record, including the status, progress, configuration snapshot, and associated evaluation task ID.</para>
+        /// <para>Calls the GetExperimentRun operation to query the details of an experiment run, including the status, progress, configuration snapshot, and associated evaluation task ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7771,12 +7794,12 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of experiment run records.</para>
+        /// <para>Queries a list of experiment runs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls ListExperimentRuns to query experiment run records under a specified AgentSpace for the current account. You can filter results by status, dataset, plan name, or experiment name, and use <c>page</c>/<c>pageSize</c> for pagination.</para>
+        /// <para>Calls the ListExperimentRuns operation to query the experiment execution records of the current account in a specified AgentSpace. You can filter records by status, dataset, plan name, and experiment name, and paginate results by using page and pageSize.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7850,12 +7873,12 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of experiment run records.</para>
+        /// <para>Queries a list of experiment runs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls ListExperimentRuns to query experiment run records under a specified AgentSpace for the current account. You can filter results by status, dataset, plan name, or experiment name, and use <c>page</c>/<c>pageSize</c> for pagination.</para>
+        /// <para>Calls the ListExperimentRuns operation to query the experiment execution records of the current account in a specified AgentSpace. You can filter records by status, dataset, plan name, and experiment name, and paginate results by using page and pageSize.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7929,12 +7952,12 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of experiment run records.</para>
+        /// <para>Queries a list of experiment runs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls ListExperimentRuns to query experiment run records under a specified AgentSpace for the current account. You can filter results by status, dataset, plan name, or experiment name, and use <c>page</c>/<c>pageSize</c> for pagination.</para>
+        /// <para>Calls the ListExperimentRuns operation to query the experiment execution records of the current account in a specified AgentSpace. You can filter records by status, dataset, plan name, and experiment name, and paginate results by using page and pageSize.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7953,12 +7976,12 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of experiment run records.</para>
+        /// <para>Queries a list of experiment runs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls ListExperimentRuns to query experiment run records under a specified AgentSpace for the current account. You can filter results by status, dataset, plan name, or experiment name, and use <c>page</c>/<c>pageSize</c> for pagination.</para>
+        /// <para>Calls the ListExperimentRuns operation to query the experiment execution records of the current account in a specified AgentSpace. You can filter records by status, dataset, plan name, and experiment name, and paginate results by using page and pageSize.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9744,6 +9767,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             {
                 body["description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectedRuntimeRecallRevision))
+            {
+                body["expectedRuntimeRecallRevision"] = request.ExpectedRuntimeRecallRevision;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
+            {
+                body["reason"] = request.Reason;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 body["status"] = request.Status;
@@ -9811,6 +9842,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectedRuntimeRecallRevision))
+            {
+                body["expectedRuntimeRecallRevision"] = request.ExpectedRuntimeRecallRevision;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
+            {
+                body["reason"] = request.Reason;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -10724,7 +10763,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates a specified experiment plan. Fields that are not specified remain unchanged. You can only update plans created by the current account.</para>
+        /// <para>Updates a specified experiment plan. Unspecified fields remain unchanged. Only plans created by the current account can be updated.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10815,7 +10854,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates a specified experiment plan. Fields that are not specified remain unchanged. You can only update plans created by the current account.</para>
+        /// <para>Updates a specified experiment plan. Unspecified fields remain unchanged. Only plans created by the current account can be updated.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10906,7 +10945,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates a specified experiment plan. Fields that are not specified remain unchanged. You can only update plans created by the current account.</para>
+        /// <para>Updates a specified experiment plan. Unspecified fields remain unchanged. Only plans created by the current account can be updated.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10930,7 +10969,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates a specified experiment plan. Fields that are not specified remain unchanged. You can only update plans created by the current account.</para>
+        /// <para>Updates a specified experiment plan. Unspecified fields remain unchanged. Only plans created by the current account can be updated.</para>
         /// </description>
         /// 
         /// <param name="request">
