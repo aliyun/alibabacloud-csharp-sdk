@@ -18389,10 +18389,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The default value of message_type is primary. Set this parameter to additional or cancel when you need to append information or cancel the session.</description></item>
-        /// <item><description>The reply_to field specifies the agent message to which this message responds. The default value is 0.</description></item>
-        /// <item><description>When message_type is set to additional, the question field is required.</description></item>
-        /// <item><description>You can use quoted_message to quote previous user messages.</description></item>
+        /// <item><description>The default value of <c>message_type</c> is <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel the session.</description></item>
+        /// <item><description>The <c>reply_to</c> field specifies the agent message to which this message responds. The default value is <c>0</c>.</description></item>
+        /// <item><description>The <c>question</c> field is required when <c>message_type</c> is set to <c>additional</c>.</description></item>
+        /// <item><description>You can use <c>quoted_message</c> to quote previous user messages.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18516,10 +18516,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The default value of message_type is primary. Set this parameter to additional or cancel when you need to append information or cancel the session.</description></item>
-        /// <item><description>The reply_to field specifies the agent message to which this message responds. The default value is 0.</description></item>
-        /// <item><description>When message_type is set to additional, the question field is required.</description></item>
-        /// <item><description>You can use quoted_message to quote previous user messages.</description></item>
+        /// <item><description>The default value of <c>message_type</c> is <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel the session.</description></item>
+        /// <item><description>The <c>reply_to</c> field specifies the agent message to which this message responds. The default value is <c>0</c>.</description></item>
+        /// <item><description>The <c>question</c> field is required when <c>message_type</c> is set to <c>additional</c>.</description></item>
+        /// <item><description>You can use <c>quoted_message</c> to quote previous user messages.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18643,10 +18643,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The default value of message_type is primary. Set this parameter to additional or cancel when you need to append information or cancel the session.</description></item>
-        /// <item><description>The reply_to field specifies the agent message to which this message responds. The default value is 0.</description></item>
-        /// <item><description>When message_type is set to additional, the question field is required.</description></item>
-        /// <item><description>You can use quoted_message to quote previous user messages.</description></item>
+        /// <item><description>The default value of <c>message_type</c> is <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel the session.</description></item>
+        /// <item><description>The <c>reply_to</c> field specifies the agent message to which this message responds. The default value is <c>0</c>.</description></item>
+        /// <item><description>The <c>question</c> field is required when <c>message_type</c> is set to <c>additional</c>.</description></item>
+        /// <item><description>You can use <c>quoted_message</c> to quote previous user messages.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18672,10 +18672,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The default value of message_type is primary. Set this parameter to additional or cancel when you need to append information or cancel the session.</description></item>
-        /// <item><description>The reply_to field specifies the agent message to which this message responds. The default value is 0.</description></item>
-        /// <item><description>When message_type is set to additional, the question field is required.</description></item>
-        /// <item><description>You can use quoted_message to quote previous user messages.</description></item>
+        /// <item><description>The default value of <c>message_type</c> is <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel the session.</description></item>
+        /// <item><description>The <c>reply_to</c> field specifies the agent message to which this message responds. The default value is <c>0</c>.</description></item>
+        /// <item><description>The <c>question</c> field is required when <c>message_type</c> is set to <c>additional</c>.</description></item>
+        /// <item><description>You can use <c>quoted_message</c> to quote previous user messages.</description></item>
         /// </list>
         /// </description>
         /// 

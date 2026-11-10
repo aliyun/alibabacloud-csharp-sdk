@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The error code. This parameter is returned when a request exception occurs.</para>
+        /// <para>The error code returned when a request exception occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidTid</para>
