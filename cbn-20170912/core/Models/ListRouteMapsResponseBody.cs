@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. Valid values:</para>
+        /// <para>The token that is used to retrieve the next page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next query is available.</description></item>
-        /// <item><description>If <b>NextToken</b> returns a value, the value is the token for the next query.</description></item>
+        /// <item><description>If NextToken is empty, no subsequent query is to be sent.</description></item>
+        /// <item><description>If NextToken is returned, the value indicates the token used to start the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,8 +75,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// <para>The direction of the route map. Valid values: </para>
             /// <list type="bullet">
-            /// <item><description>Inbound: inbound.</description></item>
-            /// <item><description>Outbound: outbound.</description></item>
+            /// <item><description><b>Inbound</b>: inbound.</description></item>
+            /// <item><description><b>Outbound</b>: outbound.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -129,10 +129,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// <para>The status of the route map. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Creating</b>: The route map is being created.</description></item>
-            /// <item><description><b>Updating</b>: The route map is being updated.</description></item>
-            /// <item><description><b>Active</b>: The route map is available.</description></item>
-            /// <item><description><b>Deleting</b>: The route map is being deleted.</description></item>
+            /// <item><description><b>Creating</b>: creating.</description></item>
+            /// <item><description><b>Updating</b>: updating.</description></item>
+            /// <item><description><b>Active</b>: active.</description></item>
+            /// <item><description><b>Deleting</b>: deleting.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListRouteMapRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries returned on each page in a paginated query.</para>
+        /// <para>The number of entries returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. Valid values:</para>
+        /// <para>The token that is used to retrieve the next page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next query is available.</description></item>
-        /// <item><description>If <b>NextToken</b> has a return value, the value indicates the token for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
+        /// <item><description>If <b>NextToken</b> has a return value, the value indicates the token used to start the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,17 +61,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The match conditions of the route map rule. The system executes the actions defined in <b>SetActions</b> only when a route meets all the match conditions defined in this parameter.</para>
+            /// <para>The match conditions of the route map rule. The system performs the actions defined in <b>SetActions</b> only if a route meets all the match conditions defined in this parameter.</para>
             /// </summary>
             [NameInMap("MatchConditions")]
             [Validation(Required=false)]
             public ListRouteMapRulesResponseBodyRouteMapRulesMatchConditions MatchConditions { get; set; }
             public class ListRouteMapRulesResponseBodyRouteMapRulesMatchConditions : TeaModel {
                 /// <summary>
-                /// <para>The route prefix list for fuzzy matching.</para>
-                /// <para>A match succeeds if the route prefix in the match condition contains the route prefix of the matched route.</para>
+                /// <para>The list of routing prefixes for fuzzy match.</para>
+                /// <para>A match is successful if the route prefix in the match condition contains the route prefix of the matched route.</para>
                 /// <para>For example, a policy defined with 10.0.0.0/8 can fuzzy match a route with 10.10.10.0/24.</para>
-                /// <para>IP address ranges use the CIDR format. Both IPv4 and IPv6 are supported.</para>
+                /// <para>The IP CIDR blocks are in CIDR format and support IPv4 and IPv6.</para>
                 /// <para>This parameter and <b>AddressPrefixesMatch</b> are mutually exclusive and cannot be specified at the same time.</para>
                 /// </summary>
                 [NameInMap("AddressPrefixesInclude")]
@@ -79,10 +79,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public List<string> AddressPrefixesInclude { get; set; }
 
                 /// <summary>
-                /// <para>The route prefix list for exact matching.</para>
-                /// <para>A match succeeds only when the route prefix in the match condition is exactly the same as the route prefix of the matched route.</para>
-                /// <para>For example, a policy defined with 10.0.0.0/8 can only exactly match a route with 10.0.0.0/8.</para>
-                /// <para>IP address ranges use the CIDR format. Both IPv4 and IPv6 are supported.</para>
+                /// <para>The list of routing prefixes for exact match.</para>
+                /// <para>A match is successful only if the route prefix in the match condition is exactly the same as the route prefix of the matched route.</para>
+                /// <para>For example, a policy defined with 10.0.0.0/8 can only exact match a route with 10.0.0.0/8.</para>
+                /// <para>The IP CIDR blocks are in CIDR format and support IPv4 and IPv6.</para>
                 /// <para>This parameter and <b>AddressPrefixesInclude</b> are mutually exclusive and cannot be specified at the same time.</para>
                 /// </summary>
                 [NameInMap("AddressPrefixesMatch")]
@@ -90,11 +90,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public List<string> AddressPrefixesMatch { get; set; }
 
                 /// <summary>
-                /// <para>The list of AS paths for fuzzy matching.</para>
-                /// <para>A match succeeds if the AS path in the match condition overlaps with the AS path of the matched route.</para>
+                /// <para>The list of AS paths for fuzzy match.</para>
+                /// <para>A match is successful if the AS path in the match condition overlaps with the AS path of the matched route.</para>
                 /// <para>This parameter and <b>AsPathsMatch</b> are mutually exclusive and cannot be specified at the same time.</para>
                 /// <remarks>
-                /// <para>Only AS SEQUENCE is supported. AS SET, AS CONFED SEQUENCE, and AS CONFED SET are not supported. This means only a list of AS numbers is supported, and sets and sub-lists are not supported.</para>
+                /// <para>Only AS SEQUENCE is supported. AS SET, AS CONFED SEQUENCE, and AS CONFED SET are not supported. This means that only a list of AS numbers is supported, and sets and sublists are not supported.</para>
                 /// </remarks>
                 /// </summary>
                 [NameInMap("AsPathsInclude")]
@@ -102,11 +102,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public List<long?> AsPathsInclude { get; set; }
 
                 /// <summary>
-                /// <para>The list of AS paths for exact matching.</para>
-                /// <para>A match succeeds only when the AS path in the match condition is exactly the same as the AS path of the matched route.</para>
+                /// <para>The list of AS paths for exact match.</para>
+                /// <para>A match is successful only if the AS path in the match condition is exactly the same as the AS path of the matched route.</para>
                 /// <para>This parameter and <b>AsPathsInclude</b> are mutually exclusive and cannot be specified at the same time.</para>
                 /// <remarks>
-                /// <para>Only AS SEQUENCE is supported. AS SET, AS CONFED SEQUENCE, and AS CONFED SET are not supported. This means only a list of AS numbers is supported, and sets and sub-lists are not supported.</para>
+                /// <para>Only AS SEQUENCE is supported. AS SET, AS CONFED SEQUENCE, and AS CONFED SET are not supported. This means that only a list of AS numbers is supported, and sets and sublists are not supported.</para>
                 /// </remarks>
                 /// </summary>
                 [NameInMap("AsPathsMatch")]
@@ -114,9 +114,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public List<long?> AsPathsMatch { get; set; }
 
                 /// <summary>
-                /// <para>The community set for fuzzy matching.</para>
-                /// <para>A match succeeds if the community in the match condition overlaps with the community of the matched route.</para>
-                /// <para>Each community is in the format of n:m, where n and m range from <b>1</b> to <b>65535</b>. The community must comply with RFC 1997. Large communities (RFC 8092) are not supported.</para>
+                /// <para>The community set for fuzzy match.</para>
+                /// <para>A match is successful if the community in the match condition overlaps with the community of the matched route.</para>
+                /// <para>Each community is in the n:m format, where n and m range from <b>1</b> to <b>65535</b>. The community must comply with RFC 1997. Large communities (RFC 8092) are not supported.</para>
                 /// <para>This parameter and <b>CommunitySetMatch</b> are mutually exclusive and cannot be specified at the same time.</para>
                 /// <remarks>
                 /// <para>Incorrect community configurations may prevent routes from being advertised to the on-premises data center.</para>
@@ -127,9 +127,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public List<string> CommunitySetInclude { get; set; }
 
                 /// <summary>
-                /// <para>The community set for exact matching.</para>
-                /// <para>A match succeeds only when the community in the match condition is exactly the same as the community of the matched route.</para>
-                /// <para>Each community is in the format of n:m, where n and m range from <b>1</b> to <b>65535</b>. The community must comply with RFC 1997. Large communities (RFC 8092) are not supported.</para>
+                /// <para>The community set for exact match.</para>
+                /// <para>A match is successful only if the community in the match condition is exactly the same as the community of the matched route.</para>
+                /// <para>Each community is in the n:m format, where n and m range from <b>1</b> to <b>65535</b>. The community must comply with RFC 1997. Large communities (RFC 8092) are not supported.</para>
                 /// <para>This parameter and <b>CommunitySetInclude</b> are mutually exclusive and cannot be specified at the same time.</para>
                 /// <remarks>
                 /// <para>Incorrect community configurations may prevent routes from being advertised to the on-premises data center.</para>
@@ -142,8 +142,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 /// <summary>
                 /// <para>The list of destination instance IDs to match. The following instance types are supported:</para>
                 /// <list type="bullet">
-                /// <item><description>Virtual private cloud (VPC) instance IDs</description></item>
-                /// <item><description>Virtual border router (VBR) instance IDs</description></item>
+                /// <item><description>Virtual Private Cloud (VPC) instance IDs</description></item>
+                /// <item><description>Virtual Border Router (VBR) instance IDs</description></item>
                 /// </list>
                 /// <remarks>
                 /// <para>The list of destination instance IDs takes effect only when the direction of the route map is outbound.</para>
@@ -154,10 +154,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public List<string> DestinationInstanceIds { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to use the exclude matching mode for the list of destination instance IDs. Valid values:</para>
+                /// <para>Specifies whether to use the reverse match mode for the list of destination instance IDs. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>false</b> (default): no. A match succeeds when the destination instance ID of the route is in <b>DestinationInstanceIds.N</b>.</description></item>
-                /// <item><description><b>true</b>: yes. A match succeeds when the destination instance ID of the route is not in <b>DestinationInstanceIds.N</b>.</description></item>
+                /// <item><description><b>false</b> (default): no. A match is successful if the destination instance ID of the route is in <b>DestinationInstanceIds.N</b>.</description></item>
+                /// <item><description><b>true</b>: yes. A match is successful if the destination instance ID of the route is not in <b>DestinationInstanceIds.N</b>.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 /// <item><description><b>IPv4</b>: matches only IPv4 routes.</description></item>
                 /// <item><description><b>IPv6</b>: matches only IPv6 routes.</description></item>
                 /// </list>
-                /// <para>You can leave this parameter empty to match routes of all types.</para>
+                /// <para>If this parameter is left empty, all types of routes are matched.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>IPv4</para>
@@ -214,11 +214,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string MatchAddressType { get; set; }
 
                 /// <summary>
-                /// <para>The list of route types to match. The following route types are supported:</para>
+                /// <para>The list of routing types to match. The following route types are supported:</para>
                 /// <list type="bullet">
-                /// <item><description><b>System</b>: system route, which is automatically generated by the system.</description></item>
-                /// <item><description><b>Custom</b>: custom route, which is manually added by a user.</description></item>
-                /// <item><description><b>BGP</b>: BGP route, which is propagated through the BGP routable protocol.</description></item>
+                /// <item><description><para><b>System</b>: system route, which is automatically generated by the system.</para>
+                /// </description></item>
+                /// <item><description><para><b>Custom</b>: custom route, which is manually added by the user.</para>
+                /// </description></item>
+                /// <item><description><para><b>BGP</b>: BGP route, which is propagated through the BGP routable protocol.</para>
+                /// </description></item>
                 /// </list>
                 /// <para>You can specify multiple route types.</para>
                 /// </summary>
@@ -229,8 +232,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 /// <summary>
                 /// <para>The list of source instance IDs to match. The following instance types are supported:</para>
                 /// <list type="bullet">
-                /// <item><description>Virtual private cloud (VPC) instance IDs</description></item>
-                /// <item><description>Virtual border router (VBR) instance IDs</description></item>
+                /// <item><description>Virtual Private Cloud (VPC) instance IDs</description></item>
+                /// <item><description>Virtual Border Router (VBR) instance IDs</description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("SourceInstanceIds")]
@@ -238,10 +241,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public List<string> SourceInstanceIds { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to use the exclude matching mode for the list of source instance IDs. Valid values:</para>
+                /// <para>Specifies whether to use the reverse match mode for the list of source instance IDs. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>false</b> (default): no. A match succeeds when the source instance ID of the route is in <b>SourceInstanceIds.N</b>.</description></item>
-                /// <item><description><b>true</b>: yes. A match succeeds when the source instance ID of the route is not in <b>SourceInstanceIds.N</b>.</description></item>
+                /// <item><description><b>false</b> (default): no. A match is successful if the source instance ID of the route is in <b>SourceInstanceIds.N</b>.</description></item>
+                /// <item><description><b>true</b>: yes. A match is successful if the source instance ID of the route is not in <b>SourceInstanceIds.N</b>.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -319,14 +322,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string RouteMapRuleId { get; set; }
 
             /// <summary>
-            /// <para>The actions to execute for the route map rule. After a route meets all the match conditions defined in <b>MatchConditions</b>, the system processes the route based on the actions defined in this parameter.</para>
+            /// <para>The actions to perform for the route map rule. After a route meets all the match conditions defined in <b>MatchConditions</b>, the system processes the route based on the actions defined in this parameter.</para>
             /// </summary>
             [NameInMap("SetActions")]
             [Validation(Required=false)]
             public ListRouteMapRulesResponseBodyRouteMapRulesSetActions SetActions { get; set; }
             public class ListRouteMapRulesResponseBodyRouteMapRulesSetActions : TeaModel {
                 /// <summary>
-                /// <para>The AS path to prepend when the regional gateway receives or advertises routes.</para>
+                /// <para>The AS path to prepend when the regional gateway accepts or publishes routing entries.</para>
                 /// <para>This parameter and <b>AsPathReplace</b> are mutually exclusive and cannot be specified at the same time.</para>
                 /// <para>This parameter specifies the action to execute after a route meets the match conditions.</para>
                 /// </summary>
@@ -335,7 +338,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public List<long?> AsPathPrepend { get; set; }
 
                 /// <summary>
-                /// <para>The AS path to replace when the regional gateway receives or advertises routes. The original AS path of the route is replaced with the list of AS numbers specified in this parameter.</para>
+                /// <para>The AS path to replace when the regional gateway accepts or publishes routing entries. The original AS path of the route is replaced with the list of AS numbers specified in this parameter.</para>
                 /// <para>This parameter and <b>AsPathPrepend</b> are mutually exclusive and cannot be specified at the same time.</para>
                 /// <para>This parameter specifies the action to execute after a route meets the match conditions.</para>
                 /// </summary>
@@ -345,9 +348,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
                 /// <summary>
                 /// <para>The community set to add to the route.</para>
-                /// <para>Each community is in the format of n:m, where n and m range from <b>1</b> to <b>65535</b>. The community must comply with RFC 1997. Large communities (RFC 8092) are not supported.</para>
+                /// <para>Each community is in the n:m format, where n and m range from <b>1</b> to <b>65535</b>. The community must comply with RFC 1997. Large communities (RFC 8092) are not supported.</para>
                 /// <para>This parameter and <b>CommunityReplace</b> are mutually exclusive and cannot be specified at the same time.</para>
-                /// <para>This parameter specifies the action to execute after a route meets the match conditions.</para>
+                /// <para>This parameter specifies the action to perform after a route meets the match conditions.</para>
                 /// <remarks>
                 /// <para>Incorrect community configurations may prevent routes from being advertised to the on-premises data center.</para>
                 /// </remarks>
@@ -358,9 +361,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
                 /// <summary>
                 /// <para>The community set to replace the original community of the route.</para>
-                /// <para>Each community is in the format of n:m, where n and m range from <b>1</b> to <b>65535</b>. The community must comply with RFC 1997. Large communities (RFC 8092) are not supported.</para>
+                /// <para>Each community is in the n:m format, where n and m range from <b>1</b> to <b>65535</b>. The community must comply with RFC 1997. Large communities (RFC 8092) are not supported.</para>
                 /// <para>This parameter and <b>CommunityAdd</b> are mutually exclusive and cannot be specified at the same time.</para>
-                /// <para>This parameter specifies the action to execute after a route meets the match conditions.</para>
+                /// <para>This parameter specifies the action to perform after a route meets the match conditions.</para>
                 /// <remarks>
                 /// <para>Incorrect community configurations may prevent routes from being advertised to the on-premises data center.</para>
                 /// </remarks>
@@ -384,7 +387,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public long? NextPriority { get; set; }
 
                 /// <summary>
-                /// <para>The policy action after all conditions are met. Valid values:</para>
+                /// <para>The policy action to perform after all conditions are met. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>Permit</b>: permits the matched routes.</description></item>
                 /// <item><description><b>Deny</b>: denies the matched routes.</description></item>

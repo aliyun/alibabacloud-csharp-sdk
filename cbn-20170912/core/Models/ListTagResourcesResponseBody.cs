@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether a next query token exists. Valid values:</para>
+        /// <para>The token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If <b>NextToken</b> is empty, no next query exists.</para>
+        /// <item><description><para>If <b>NextToken</b> is empty, no next query is required.</para>
         /// </description></item>
-        /// <item><description><para>If <b>NextToken</b> is returned, the value indicates the token for the next query.</para>
+        /// <item><description><para>If <b>NextToken</b> has a return value, the value indicates the token for the next query.</para>
         /// </description></item>
         /// </list>
         /// 

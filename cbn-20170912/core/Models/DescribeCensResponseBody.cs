@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the returned page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paging query.</para>
+        /// <para>The number of entries returned per page during paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

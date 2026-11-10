@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<DescribeTransitRouterCapacityReservationsResponseBodyDeploymentSets> DeploymentSets { get; set; }
         public class DescribeTransitRouterCapacityReservationsResponseBodyDeploymentSets : TeaModel {
             /// <summary>
-            /// <para>The instance ID of the deployment set configured in the specified active zone of the transit router, which handles forward and routing tasks.</para>
+            /// <para>The instance ID of the deployment set configured in the specified active zone of the transit router for forward routing.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ds-badxcs*****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string DeploymentSetID { get; set; }
 
             /// <summary>
-            /// <para>The zone for which you want to modify the deployment set of the resource reservation.</para>
+            /// <para>The zone for which the deployment set of the resource reservation needs to be modified.</para>
             /// <list type="bullet">
             /// <item><description>To cancel the deployment set, specify the zone and leave the deployment set instance ID empty.</description></item>
             /// </list>
@@ -60,16 +60,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<DescribeTransitRouterCapacityReservationsResponseBodyMinimumTransitRouterCapacities> MinimumTransitRouterCapacities { get; set; }
         public class DescribeTransitRouterCapacityReservationsResponseBodyMinimumTransitRouterCapacities : TeaModel {
             /// <summary>
-            /// <para>The reserved capacity information for the specified zone in the resource reservation.</para>
+            /// <para>The reserved capacity information of the specified zone for the resource reservation.</para>
             /// </summary>
             [NameInMap("DataProcessGbps")]
             [Validation(Required=false)]
             public DescribeTransitRouterCapacityReservationsResponseBodyMinimumTransitRouterCapacitiesDataProcessGbps DataProcessGbps { get; set; }
             public class DescribeTransitRouterCapacityReservationsResponseBodyMinimumTransitRouterCapacitiesDataProcessGbps : TeaModel {
                 /// <summary>
-                /// <para>The effective reserved value for the specified zone in the resource reservation.</para>
+                /// <para>The effective reserved value of the specified zone for the resource reservation.</para>
                 /// <list type="bullet">
-                /// <item><description>The effective reserved value refers to the current billed value for the resource reservation.</description></item>
+                /// <item><description>The effective reserved value refers to the current billed value of the resource reservation.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -80,10 +80,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public long? Effective { get; set; }
 
                 /// <summary>
-                /// <para>The target reserved value for the specified active zone in the resource reservation.</para>
+                /// <para>The target reserved value of the specified zone for the resource reservation.</para>
                 /// <list type="bullet">
-                /// <item><description>In scenarios where you decrease the quota, the change takes effect in the next month, and the effective reserved value is updated in synchronization.</description></item>
-                /// <item><description>Upgrade and initial reservation scenarios require spooling by Alibaba Cloud and take effect immediately after the spooling is complete.</description></item>
+                /// <item><description>When you decrease the quota, the change takes effect in the next month, and the active reserved value is updated in synchronization.</description></item>
+                /// <item><description>Upgrades and initial reservations require spooling by Alibaba Cloud and take effect immediately after the spooling is complete.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -96,14 +96,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             }
 
             /// <summary>
-            /// <para>The status information of the specified zone in the resource reservation.</para>
+            /// <para>The status information of the specified zone for the resource reservation.</para>
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
             public DescribeTransitRouterCapacityReservationsResponseBodyMinimumTransitRouterCapacitiesState State { get; set; }
             public class DescribeTransitRouterCapacityReservationsResponseBodyMinimumTransitRouterCapacitiesState : TeaModel {
                 /// <summary>
-                /// <para>The reason for failure when the reservation status is ProvisionFailed.</para>
+                /// <para>The reason for the failure when the reservation status is ProvisionFailed.</para>
                 /// <list type="bullet">
                 /// <item><description>For example, Reservation.InsufficientCapacity indicates that resources are insufficient to meet the target reserved value.</description></item>
                 /// </list>
@@ -116,9 +116,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string Reason { get; set; }
 
                 /// <summary>
-                /// <para>The resource reservation status. Valid values:</para>
+                /// <para>The resource reservation status.</para>
                 /// <list type="bullet">
-                /// <item><description>Pending: The initial reservation is initiated and is pending processing by Alibaba Cloud.</description></item>
+                /// <item><description>Pending: The initial reservation is initiated and is waiting to be processed by Alibaba Cloud.</description></item>
                 /// <item><description>Provisioning: Alibaba Cloud is processing the reservation request.</description></item>
                 /// <item><description>Provisioned: The reservation is successful.</description></item>
                 /// <item><description>ProvisionFailed: The reservation failed. You can refer to the failure reason.</description></item>

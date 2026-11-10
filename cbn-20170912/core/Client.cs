@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "Cbn";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "central";
             CheckConfig(config);
             this._endpoint = GetEndpoint("cbn", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1359,6 +1362,186 @@ namespace AlibabaCloud.SDK.Cbn20170912
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AssociateTransitRouterMulticastDomainWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a policy route table.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The AssociateTransitRouterPolicyTable API operation is asynchronous. The system returns an association ID before the association is fully created, and the creation task continues in the background. You can call the DescribeTransitRouterPolicyTableAssociations API operation to query the status of the policy route table association.</para>
+        /// <list type="bullet">
+        /// <item><description>When the policy route table association is in the Associating state, the association is being created. In this state, you can only perform query operations.</description></item>
+        /// <item><description>When the policy route table association is in the Active state, the association is created.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssociateTransitRouterPolicyTableRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateTransitRouterPolicyTableResponse
+        /// </returns>
+        public AssociateTransitRouterPolicyTableResponse AssociateTransitRouterPolicyTableWithOptions(AssociateTransitRouterPolicyTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachmentId))
+            {
+                query["AttachmentId"] = request.AttachmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyTableId))
+            {
+                query["PolicyTableId"] = request.PolicyTableId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AssociateTransitRouterPolicyTable",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AssociateTransitRouterPolicyTableResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a policy route table.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The AssociateTransitRouterPolicyTable API operation is asynchronous. The system returns an association ID before the association is fully created, and the creation task continues in the background. You can call the DescribeTransitRouterPolicyTableAssociations API operation to query the status of the policy route table association.</para>
+        /// <list type="bullet">
+        /// <item><description>When the policy route table association is in the Associating state, the association is being created. In this state, you can only perform query operations.</description></item>
+        /// <item><description>When the policy route table association is in the Active state, the association is created.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssociateTransitRouterPolicyTableRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateTransitRouterPolicyTableResponse
+        /// </returns>
+        public async Task<AssociateTransitRouterPolicyTableResponse> AssociateTransitRouterPolicyTableWithOptionsAsync(AssociateTransitRouterPolicyTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachmentId))
+            {
+                query["AttachmentId"] = request.AttachmentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyTableId))
+            {
+                query["PolicyTableId"] = request.PolicyTableId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AssociateTransitRouterPolicyTable",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AssociateTransitRouterPolicyTableResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a policy route table.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The AssociateTransitRouterPolicyTable API operation is asynchronous. The system returns an association ID before the association is fully created, and the creation task continues in the background. You can call the DescribeTransitRouterPolicyTableAssociations API operation to query the status of the policy route table association.</para>
+        /// <list type="bullet">
+        /// <item><description>When the policy route table association is in the Associating state, the association is being created. In this state, you can only perform query operations.</description></item>
+        /// <item><description>When the policy route table association is in the Active state, the association is created.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssociateTransitRouterPolicyTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateTransitRouterPolicyTableResponse
+        /// </returns>
+        public AssociateTransitRouterPolicyTableResponse AssociateTransitRouterPolicyTable(AssociateTransitRouterPolicyTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AssociateTransitRouterPolicyTableWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a policy route table.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The AssociateTransitRouterPolicyTable API operation is asynchronous. The system returns an association ID before the association is fully created, and the creation task continues in the background. You can call the DescribeTransitRouterPolicyTableAssociations API operation to query the status of the policy route table association.</para>
+        /// <list type="bullet">
+        /// <item><description>When the policy route table association is in the Associating state, the association is being created. In this state, you can only perform query operations.</description></item>
+        /// <item><description>When the policy route table association is in the Active state, the association is created.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AssociateTransitRouterPolicyTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateTransitRouterPolicyTableResponse
+        /// </returns>
+        public async Task<AssociateTransitRouterPolicyTableResponse> AssociateTransitRouterPolicyTableAsync(AssociateTransitRouterPolicyTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AssociateTransitRouterPolicyTableWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4056,10 +4239,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The <c>CreateRouteMap</c> operation is asynchronous. The system first returns a route map ID, but the route map is not yet created. The creation task continues to run in the background. You can call the <c>ListRouteMaps</c> operation to query the status of the route map.</para>
+        /// <para>The <c>CreateRouteMap</c> operation is asynchronous. The system returns a route map ID before the route map is created, and the creation task continues in the background. You can call the <c>ListRouteMaps</c> operation to query the status of the route map.</para>
         /// <list type="bullet">
-        /// <item><description>When the route map is in the <b>Creating</b> state, the route map is being created. In this state, you can only perform query operations and cannot perform other operations.</description></item>
-        /// <item><description>When the route map is in the <b>Active</b> state, the route map is created.</description></item>
+        /// <item><description>If the route map is in the <b>Creating</b> state, the route map is being created. In this state, you can only perform query operations.</description></item>
+        /// <item><description>If the route map is in the <b>Active</b> state, the route map is created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4135,10 +4318,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The <c>CreateRouteMap</c> operation is asynchronous. The system first returns a route map ID, but the route map is not yet created. The creation task continues to run in the background. You can call the <c>ListRouteMaps</c> operation to query the status of the route map.</para>
+        /// <para>The <c>CreateRouteMap</c> operation is asynchronous. The system returns a route map ID before the route map is created, and the creation task continues in the background. You can call the <c>ListRouteMaps</c> operation to query the status of the route map.</para>
         /// <list type="bullet">
-        /// <item><description>When the route map is in the <b>Creating</b> state, the route map is being created. In this state, you can only perform query operations and cannot perform other operations.</description></item>
-        /// <item><description>When the route map is in the <b>Active</b> state, the route map is created.</description></item>
+        /// <item><description>If the route map is in the <b>Creating</b> state, the route map is being created. In this state, you can only perform query operations.</description></item>
+        /// <item><description>If the route map is in the <b>Active</b> state, the route map is created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4214,10 +4397,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The <c>CreateRouteMap</c> operation is asynchronous. The system first returns a route map ID, but the route map is not yet created. The creation task continues to run in the background. You can call the <c>ListRouteMaps</c> operation to query the status of the route map.</para>
+        /// <para>The <c>CreateRouteMap</c> operation is asynchronous. The system returns a route map ID before the route map is created, and the creation task continues in the background. You can call the <c>ListRouteMaps</c> operation to query the status of the route map.</para>
         /// <list type="bullet">
-        /// <item><description>When the route map is in the <b>Creating</b> state, the route map is being created. In this state, you can only perform query operations and cannot perform other operations.</description></item>
-        /// <item><description>When the route map is in the <b>Active</b> state, the route map is created.</description></item>
+        /// <item><description>If the route map is in the <b>Creating</b> state, the route map is being created. In this state, you can only perform query operations.</description></item>
+        /// <item><description>If the route map is in the <b>Active</b> state, the route map is created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4241,10 +4424,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The <c>CreateRouteMap</c> operation is asynchronous. The system first returns a route map ID, but the route map is not yet created. The creation task continues to run in the background. You can call the <c>ListRouteMaps</c> operation to query the status of the route map.</para>
+        /// <para>The <c>CreateRouteMap</c> operation is asynchronous. The system returns a route map ID before the route map is created, and the creation task continues in the background. You can call the <c>ListRouteMaps</c> operation to query the status of the route map.</para>
         /// <list type="bullet">
-        /// <item><description>When the route map is in the <b>Creating</b> state, the route map is being created. In this state, you can only perform query operations and cannot perform other operations.</description></item>
-        /// <item><description>When the route map is in the <b>Active</b> state, the route map is created.</description></item>
+        /// <item><description>If the route map is in the <b>Creating</b> state, the route map is being created. In this state, you can only perform query operations.</description></item>
+        /// <item><description>If the route map is in the <b>Active</b> state, the route map is created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4270,11 +4453,11 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>RouteMapId</c> is a required parameter that specifies the route map to which the new rule belongs.</description></item>
-        /// <item><description><c>Priority</c> is a required parameter. A smaller value indicates a higher priority. Rules within the same route map cannot have duplicate priorities.</description></item>
-        /// <item><description><c>Name</c> and <c>Description</c> are optional parameters used to identify the rule and describe its purpose.</description></item>
-        /// <item><description><c>MatchConditions</c> defines the match conditions for the rule, and <c>SetActions</c> defines the actions to be executed when a route meets all match conditions. Both are passed as JSON strings.</description></item>
-        /// <item><description><c>DryRun</c> is an optional parameter used to precheck the request without actually creating the route map rule.</description></item>
+        /// <item><description>RouteMapId is a required parameter that specifies the route map to which the new rule belongs.</description></item>
+        /// <item><description>Priority is a required parameter. A smaller value indicates a higher priority. Rules within the same route map cannot have duplicate priorities.</description></item>
+        /// <item><description>Name and Description are optional parameters used to identify the rule and describe its purpose.</description></item>
+        /// <item><description>MatchConditions defines the match conditions for the rule, and SetActions defines the actions to be performed when a route meets all match conditions. Both are passed as JSON strings.</description></item>
+        /// <item><description>DryRun is an optional parameter used to perform a dry run of the request without actually creating the route map rule.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4362,11 +4545,11 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>RouteMapId</c> is a required parameter that specifies the route map to which the new rule belongs.</description></item>
-        /// <item><description><c>Priority</c> is a required parameter. A smaller value indicates a higher priority. Rules within the same route map cannot have duplicate priorities.</description></item>
-        /// <item><description><c>Name</c> and <c>Description</c> are optional parameters used to identify the rule and describe its purpose.</description></item>
-        /// <item><description><c>MatchConditions</c> defines the match conditions for the rule, and <c>SetActions</c> defines the actions to be executed when a route meets all match conditions. Both are passed as JSON strings.</description></item>
-        /// <item><description><c>DryRun</c> is an optional parameter used to precheck the request without actually creating the route map rule.</description></item>
+        /// <item><description>RouteMapId is a required parameter that specifies the route map to which the new rule belongs.</description></item>
+        /// <item><description>Priority is a required parameter. A smaller value indicates a higher priority. Rules within the same route map cannot have duplicate priorities.</description></item>
+        /// <item><description>Name and Description are optional parameters used to identify the rule and describe its purpose.</description></item>
+        /// <item><description>MatchConditions defines the match conditions for the rule, and SetActions defines the actions to be performed when a route meets all match conditions. Both are passed as JSON strings.</description></item>
+        /// <item><description>DryRun is an optional parameter used to perform a dry run of the request without actually creating the route map rule.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4454,11 +4637,11 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>RouteMapId</c> is a required parameter that specifies the route map to which the new rule belongs.</description></item>
-        /// <item><description><c>Priority</c> is a required parameter. A smaller value indicates a higher priority. Rules within the same route map cannot have duplicate priorities.</description></item>
-        /// <item><description><c>Name</c> and <c>Description</c> are optional parameters used to identify the rule and describe its purpose.</description></item>
-        /// <item><description><c>MatchConditions</c> defines the match conditions for the rule, and <c>SetActions</c> defines the actions to be executed when a route meets all match conditions. Both are passed as JSON strings.</description></item>
-        /// <item><description><c>DryRun</c> is an optional parameter used to precheck the request without actually creating the route map rule.</description></item>
+        /// <item><description>RouteMapId is a required parameter that specifies the route map to which the new rule belongs.</description></item>
+        /// <item><description>Priority is a required parameter. A smaller value indicates a higher priority. Rules within the same route map cannot have duplicate priorities.</description></item>
+        /// <item><description>Name and Description are optional parameters used to identify the rule and describe its purpose.</description></item>
+        /// <item><description>MatchConditions defines the match conditions for the rule, and SetActions defines the actions to be performed when a route meets all match conditions. Both are passed as JSON strings.</description></item>
+        /// <item><description>DryRun is an optional parameter used to perform a dry run of the request without actually creating the route map rule.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4484,11 +4667,11 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>RouteMapId</c> is a required parameter that specifies the route map to which the new rule belongs.</description></item>
-        /// <item><description><c>Priority</c> is a required parameter. A smaller value indicates a higher priority. Rules within the same route map cannot have duplicate priorities.</description></item>
-        /// <item><description><c>Name</c> and <c>Description</c> are optional parameters used to identify the rule and describe its purpose.</description></item>
-        /// <item><description><c>MatchConditions</c> defines the match conditions for the rule, and <c>SetActions</c> defines the actions to be executed when a route meets all match conditions. Both are passed as JSON strings.</description></item>
-        /// <item><description><c>DryRun</c> is an optional parameter used to precheck the request without actually creating the route map rule.</description></item>
+        /// <item><description>RouteMapId is a required parameter that specifies the route map to which the new rule belongs.</description></item>
+        /// <item><description>Priority is a required parameter. A smaller value indicates a higher priority. Rules within the same route map cannot have duplicate priorities.</description></item>
+        /// <item><description>Name and Description are optional parameters used to identify the rule and describe its purpose.</description></item>
+        /// <item><description>MatchConditions defines the match conditions for the rule, and SetActions defines the actions to be performed when a route meets all match conditions. Both are passed as JSON strings.</description></item>
+        /// <item><description>DryRun is an optional parameter used to perform a dry run of the request without actually creating the route map rule.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5303,23 +5486,23 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A transit router CIDR block is a custom CIDR block that you define for a transit router, similar to a CIDR block used to assign IP addresses to a router loopback interface. Calls the CreateTransitRouterCidr operation to create a CIDR block for a transit router.</para>
+        /// <para>Creates a custom CIDR block for a transit router. The CIDR block is similar to an IP address block assigned to a router loopback interface.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A transit router CIDR block is a custom CIDR block that you define for a transit router, similar to a CIDR block used to assign IP addresses to a router loopback interface. Transit router CIDR blocks are used to assign addresses to network instance connections. For more information, see <a href="https://help.aliyun.com/document_detail/462635.html">Transit router CIDR blocks</a>.
-        /// The <b>CreateTransitRouterCidr</b> operation is used only to add a CIDR block to a transit router after the transit router is created.
-        /// Before you create a transit router CIDR block, take note of the following information:</para>
+        /// <para>A transit router CIDR block is a custom CIDR block that you configure for a transit router. It is similar to the IP address block assigned to a router loopback interface. Transit router CIDR blocks are used to assign addresses to network instance connections. For more information, see <a href="https://help.aliyun.com/document_detail/462635.html">Transit router CIDR blocks</a>.
+        /// The <b>CreateTransitRouterCidr</b> operation is applicable only for adding a CIDR block to a transit router after the transit router is created.
+        /// Before you create a transit router CIDR block, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Only Enterprise Edition transit routers support transit router CIDR blocks.</description></item>
-        /// <item><description>For limits on transit router CIDR blocks, see <a href="https://help.aliyun.com/document_detail/462635.html">Limits on transit router CIDR blocks</a>.</description></item>
-        /// <item><description>A maximum of five CIDR blocks can be configured for a transit router. The subnet mask of each CIDR block must be 16 to 24 bits in length.</description></item>
-        /// <item><description>CIDR blocks that fall within 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, or 169.254.0.0/16 and their subnets are not supported.</description></item>
-        /// <item><description>Each CIDR block cannot conflict with any CIDR block that needs to communicate within the Cloud Enterprise Network (CEN) instance.</description></item>
+        /// <item><description>For the limits on transit router CIDR blocks, see <a href="https://help.aliyun.com/document_detail/462635.html">Limits on transit router CIDR blocks</a>.</description></item>
+        /// <item><description>A transit router supports up to five CIDR blocks. The subnet mask of each CIDR block must be 16 to 26 bits in length.</description></item>
+        /// <item><description>You cannot create CIDR blocks for 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, or their subnets.</description></item>
+        /// <item><description>Each CIDR block cannot overlap with the CIDR blocks of the network instances that need to communicate with each other in the Cloud Enterprise Network (CEN) instance.</description></item>
         /// <item><description>Each CIDR block must be unique within the same CEN instance.</description></item>
-        /// <item><description>After you add a CIDR block to a transit router, the system automatically reserves three CIDR blocks from the CIDR block when you create the first VPN connection on the transit router. The reserved CIDR blocks are used by the system to create VPN connections in the background. The system assigns IP addresses to IPsec connections from the remaining CIDR blocks.
-        ///   You can call the <a href="https://help.aliyun.com/document_detail/464173.html">ListTransitRouterCidrAllocation</a> operation to query the CIDR blocks that are reserved by the system or from which IP addresses are allocated.</description></item>
+        /// <item><description>After you add a CIDR block to a transit router and create the first VPN connection under the transit router, the system automatically allocates three CIDR blocks from the CIDR block as system-reserved CIDR blocks for creating VPN connections in the background. The system assigns IP addresses to the IPsec connection from the remaining CIDR blocks.
+        ///   You can call the <a href="https://help.aliyun.com/document_detail/464173.html">ListTransitRouterCidrAllocation</a> operation to query the system-reserved or assigned CIDR blocks.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5406,23 +5589,23 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A transit router CIDR block is a custom CIDR block that you define for a transit router, similar to a CIDR block used to assign IP addresses to a router loopback interface. Calls the CreateTransitRouterCidr operation to create a CIDR block for a transit router.</para>
+        /// <para>Creates a custom CIDR block for a transit router. The CIDR block is similar to an IP address block assigned to a router loopback interface.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A transit router CIDR block is a custom CIDR block that you define for a transit router, similar to a CIDR block used to assign IP addresses to a router loopback interface. Transit router CIDR blocks are used to assign addresses to network instance connections. For more information, see <a href="https://help.aliyun.com/document_detail/462635.html">Transit router CIDR blocks</a>.
-        /// The <b>CreateTransitRouterCidr</b> operation is used only to add a CIDR block to a transit router after the transit router is created.
-        /// Before you create a transit router CIDR block, take note of the following information:</para>
+        /// <para>A transit router CIDR block is a custom CIDR block that you configure for a transit router. It is similar to the IP address block assigned to a router loopback interface. Transit router CIDR blocks are used to assign addresses to network instance connections. For more information, see <a href="https://help.aliyun.com/document_detail/462635.html">Transit router CIDR blocks</a>.
+        /// The <b>CreateTransitRouterCidr</b> operation is applicable only for adding a CIDR block to a transit router after the transit router is created.
+        /// Before you create a transit router CIDR block, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Only Enterprise Edition transit routers support transit router CIDR blocks.</description></item>
-        /// <item><description>For limits on transit router CIDR blocks, see <a href="https://help.aliyun.com/document_detail/462635.html">Limits on transit router CIDR blocks</a>.</description></item>
-        /// <item><description>A maximum of five CIDR blocks can be configured for a transit router. The subnet mask of each CIDR block must be 16 to 24 bits in length.</description></item>
-        /// <item><description>CIDR blocks that fall within 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, or 169.254.0.0/16 and their subnets are not supported.</description></item>
-        /// <item><description>Each CIDR block cannot conflict with any CIDR block that needs to communicate within the Cloud Enterprise Network (CEN) instance.</description></item>
+        /// <item><description>For the limits on transit router CIDR blocks, see <a href="https://help.aliyun.com/document_detail/462635.html">Limits on transit router CIDR blocks</a>.</description></item>
+        /// <item><description>A transit router supports up to five CIDR blocks. The subnet mask of each CIDR block must be 16 to 26 bits in length.</description></item>
+        /// <item><description>You cannot create CIDR blocks for 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, or their subnets.</description></item>
+        /// <item><description>Each CIDR block cannot overlap with the CIDR blocks of the network instances that need to communicate with each other in the Cloud Enterprise Network (CEN) instance.</description></item>
         /// <item><description>Each CIDR block must be unique within the same CEN instance.</description></item>
-        /// <item><description>After you add a CIDR block to a transit router, the system automatically reserves three CIDR blocks from the CIDR block when you create the first VPN connection on the transit router. The reserved CIDR blocks are used by the system to create VPN connections in the background. The system assigns IP addresses to IPsec connections from the remaining CIDR blocks.
-        ///   You can call the <a href="https://help.aliyun.com/document_detail/464173.html">ListTransitRouterCidrAllocation</a> operation to query the CIDR blocks that are reserved by the system or from which IP addresses are allocated.</description></item>
+        /// <item><description>After you add a CIDR block to a transit router and create the first VPN connection under the transit router, the system automatically allocates three CIDR blocks from the CIDR block as system-reserved CIDR blocks for creating VPN connections in the background. The system assigns IP addresses to the IPsec connection from the remaining CIDR blocks.
+        ///   You can call the <a href="https://help.aliyun.com/document_detail/464173.html">ListTransitRouterCidrAllocation</a> operation to query the system-reserved or assigned CIDR blocks.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5509,23 +5692,23 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A transit router CIDR block is a custom CIDR block that you define for a transit router, similar to a CIDR block used to assign IP addresses to a router loopback interface. Calls the CreateTransitRouterCidr operation to create a CIDR block for a transit router.</para>
+        /// <para>Creates a custom CIDR block for a transit router. The CIDR block is similar to an IP address block assigned to a router loopback interface.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A transit router CIDR block is a custom CIDR block that you define for a transit router, similar to a CIDR block used to assign IP addresses to a router loopback interface. Transit router CIDR blocks are used to assign addresses to network instance connections. For more information, see <a href="https://help.aliyun.com/document_detail/462635.html">Transit router CIDR blocks</a>.
-        /// The <b>CreateTransitRouterCidr</b> operation is used only to add a CIDR block to a transit router after the transit router is created.
-        /// Before you create a transit router CIDR block, take note of the following information:</para>
+        /// <para>A transit router CIDR block is a custom CIDR block that you configure for a transit router. It is similar to the IP address block assigned to a router loopback interface. Transit router CIDR blocks are used to assign addresses to network instance connections. For more information, see <a href="https://help.aliyun.com/document_detail/462635.html">Transit router CIDR blocks</a>.
+        /// The <b>CreateTransitRouterCidr</b> operation is applicable only for adding a CIDR block to a transit router after the transit router is created.
+        /// Before you create a transit router CIDR block, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Only Enterprise Edition transit routers support transit router CIDR blocks.</description></item>
-        /// <item><description>For limits on transit router CIDR blocks, see <a href="https://help.aliyun.com/document_detail/462635.html">Limits on transit router CIDR blocks</a>.</description></item>
-        /// <item><description>A maximum of five CIDR blocks can be configured for a transit router. The subnet mask of each CIDR block must be 16 to 24 bits in length.</description></item>
-        /// <item><description>CIDR blocks that fall within 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, or 169.254.0.0/16 and their subnets are not supported.</description></item>
-        /// <item><description>Each CIDR block cannot conflict with any CIDR block that needs to communicate within the Cloud Enterprise Network (CEN) instance.</description></item>
+        /// <item><description>For the limits on transit router CIDR blocks, see <a href="https://help.aliyun.com/document_detail/462635.html">Limits on transit router CIDR blocks</a>.</description></item>
+        /// <item><description>A transit router supports up to five CIDR blocks. The subnet mask of each CIDR block must be 16 to 26 bits in length.</description></item>
+        /// <item><description>You cannot create CIDR blocks for 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, or their subnets.</description></item>
+        /// <item><description>Each CIDR block cannot overlap with the CIDR blocks of the network instances that need to communicate with each other in the Cloud Enterprise Network (CEN) instance.</description></item>
         /// <item><description>Each CIDR block must be unique within the same CEN instance.</description></item>
-        /// <item><description>After you add a CIDR block to a transit router, the system automatically reserves three CIDR blocks from the CIDR block when you create the first VPN connection on the transit router. The reserved CIDR blocks are used by the system to create VPN connections in the background. The system assigns IP addresses to IPsec connections from the remaining CIDR blocks.
-        ///   You can call the <a href="https://help.aliyun.com/document_detail/464173.html">ListTransitRouterCidrAllocation</a> operation to query the CIDR blocks that are reserved by the system or from which IP addresses are allocated.</description></item>
+        /// <item><description>After you add a CIDR block to a transit router and create the first VPN connection under the transit router, the system automatically allocates three CIDR blocks from the CIDR block as system-reserved CIDR blocks for creating VPN connections in the background. The system assigns IP addresses to the IPsec connection from the remaining CIDR blocks.
+        ///   You can call the <a href="https://help.aliyun.com/document_detail/464173.html">ListTransitRouterCidrAllocation</a> operation to query the system-reserved or assigned CIDR blocks.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5544,23 +5727,23 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A transit router CIDR block is a custom CIDR block that you define for a transit router, similar to a CIDR block used to assign IP addresses to a router loopback interface. Calls the CreateTransitRouterCidr operation to create a CIDR block for a transit router.</para>
+        /// <para>Creates a custom CIDR block for a transit router. The CIDR block is similar to an IP address block assigned to a router loopback interface.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A transit router CIDR block is a custom CIDR block that you define for a transit router, similar to a CIDR block used to assign IP addresses to a router loopback interface. Transit router CIDR blocks are used to assign addresses to network instance connections. For more information, see <a href="https://help.aliyun.com/document_detail/462635.html">Transit router CIDR blocks</a>.
-        /// The <b>CreateTransitRouterCidr</b> operation is used only to add a CIDR block to a transit router after the transit router is created.
-        /// Before you create a transit router CIDR block, take note of the following information:</para>
+        /// <para>A transit router CIDR block is a custom CIDR block that you configure for a transit router. It is similar to the IP address block assigned to a router loopback interface. Transit router CIDR blocks are used to assign addresses to network instance connections. For more information, see <a href="https://help.aliyun.com/document_detail/462635.html">Transit router CIDR blocks</a>.
+        /// The <b>CreateTransitRouterCidr</b> operation is applicable only for adding a CIDR block to a transit router after the transit router is created.
+        /// Before you create a transit router CIDR block, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Only Enterprise Edition transit routers support transit router CIDR blocks.</description></item>
-        /// <item><description>For limits on transit router CIDR blocks, see <a href="https://help.aliyun.com/document_detail/462635.html">Limits on transit router CIDR blocks</a>.</description></item>
-        /// <item><description>A maximum of five CIDR blocks can be configured for a transit router. The subnet mask of each CIDR block must be 16 to 24 bits in length.</description></item>
-        /// <item><description>CIDR blocks that fall within 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, or 169.254.0.0/16 and their subnets are not supported.</description></item>
-        /// <item><description>Each CIDR block cannot conflict with any CIDR block that needs to communicate within the Cloud Enterprise Network (CEN) instance.</description></item>
+        /// <item><description>For the limits on transit router CIDR blocks, see <a href="https://help.aliyun.com/document_detail/462635.html">Limits on transit router CIDR blocks</a>.</description></item>
+        /// <item><description>A transit router supports up to five CIDR blocks. The subnet mask of each CIDR block must be 16 to 26 bits in length.</description></item>
+        /// <item><description>You cannot create CIDR blocks for 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, or their subnets.</description></item>
+        /// <item><description>Each CIDR block cannot overlap with the CIDR blocks of the network instances that need to communicate with each other in the Cloud Enterprise Network (CEN) instance.</description></item>
         /// <item><description>Each CIDR block must be unique within the same CEN instance.</description></item>
-        /// <item><description>After you add a CIDR block to a transit router, the system automatically reserves three CIDR blocks from the CIDR block when you create the first VPN connection on the transit router. The reserved CIDR blocks are used by the system to create VPN connections in the background. The system assigns IP addresses to IPsec connections from the remaining CIDR blocks.
-        ///   You can call the <a href="https://help.aliyun.com/document_detail/464173.html">ListTransitRouterCidrAllocation</a> operation to query the CIDR blocks that are reserved by the system or from which IP addresses are allocated.</description></item>
+        /// <item><description>After you add a CIDR block to a transit router and create the first VPN connection under the transit router, the system automatically allocates three CIDR blocks from the CIDR block as system-reserved CIDR blocks for creating VPN connections in the background. The system assigns IP addresses to the IPsec connection from the remaining CIDR blocks.
+        ///   You can call the <a href="https://help.aliyun.com/document_detail/464173.html">ListTransitRouterCidrAllocation</a> operation to query the system-reserved or assigned CIDR blocks.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6499,6 +6682,474 @@ namespace AlibabaCloud.SDK.Cbn20170912
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateTransitRouterPeerAttachmentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a policy-based routing rule in the policy route table of an Enterprise Edition transit router.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The <b>CreateTransitRouterPolicyBasedRoute</b> API operation is asynchronous. The system returns a route entry ID before the route entry is created, and the creation task continues in the background. You can call the <b>DescribeTransitRouterPolicyBasedRoutes</b> API operation to query the status of the route entry. </para>
+        /// <list type="bullet">
+        /// <item><description>If the route entry is in the <b>Creating</b> state, the route entry is being created. In this state, you can only query the route entry and cannot perform other operations.</description></item>
+        /// <item><description>If the route entry is in the <b>Active</b> state, the route entry is created.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateTransitRouterPolicyBasedRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTransitRouterPolicyBasedRouteResponse
+        /// </returns>
+        public CreateTransitRouterPolicyBasedRouteResponse CreateTransitRouterPolicyBasedRouteWithOptions(CreateTransitRouterPolicyBasedRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressFamily))
+            {
+                query["AddressFamily"] = request.AddressFamily;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestPortRange))
+            {
+                query["DestPortRange"] = request.DestPortRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationCidr))
+            {
+                query["DestinationCidr"] = request.DestinationCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dscp))
+            {
+                query["Dscp"] = request.Dscp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyTableId))
+            {
+                query["PolicyTableId"] = request.PolicyTableId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                query["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
+            {
+                query["Protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCidr))
+            {
+                query["SourceCidr"] = request.SourceCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcePortRange))
+            {
+                query["SourcePortRange"] = request.SourcePortRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetRouteTableId))
+            {
+                query["TargetRouteTableId"] = request.TargetRouteTableId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTransitRouterPolicyBasedRoute",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTransitRouterPolicyBasedRouteResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a policy-based routing rule in the policy route table of an Enterprise Edition transit router.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The <b>CreateTransitRouterPolicyBasedRoute</b> API operation is asynchronous. The system returns a route entry ID before the route entry is created, and the creation task continues in the background. You can call the <b>DescribeTransitRouterPolicyBasedRoutes</b> API operation to query the status of the route entry. </para>
+        /// <list type="bullet">
+        /// <item><description>If the route entry is in the <b>Creating</b> state, the route entry is being created. In this state, you can only query the route entry and cannot perform other operations.</description></item>
+        /// <item><description>If the route entry is in the <b>Active</b> state, the route entry is created.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateTransitRouterPolicyBasedRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTransitRouterPolicyBasedRouteResponse
+        /// </returns>
+        public async Task<CreateTransitRouterPolicyBasedRouteResponse> CreateTransitRouterPolicyBasedRouteWithOptionsAsync(CreateTransitRouterPolicyBasedRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressFamily))
+            {
+                query["AddressFamily"] = request.AddressFamily;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestPortRange))
+            {
+                query["DestPortRange"] = request.DestPortRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationCidr))
+            {
+                query["DestinationCidr"] = request.DestinationCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dscp))
+            {
+                query["Dscp"] = request.Dscp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyTableId))
+            {
+                query["PolicyTableId"] = request.PolicyTableId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                query["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
+            {
+                query["Protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCidr))
+            {
+                query["SourceCidr"] = request.SourceCidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcePortRange))
+            {
+                query["SourcePortRange"] = request.SourcePortRange;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetRouteTableId))
+            {
+                query["TargetRouteTableId"] = request.TargetRouteTableId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTransitRouterPolicyBasedRoute",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTransitRouterPolicyBasedRouteResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a policy-based routing rule in the policy route table of an Enterprise Edition transit router.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The <b>CreateTransitRouterPolicyBasedRoute</b> API operation is asynchronous. The system returns a route entry ID before the route entry is created, and the creation task continues in the background. You can call the <b>DescribeTransitRouterPolicyBasedRoutes</b> API operation to query the status of the route entry. </para>
+        /// <list type="bullet">
+        /// <item><description>If the route entry is in the <b>Creating</b> state, the route entry is being created. In this state, you can only query the route entry and cannot perform other operations.</description></item>
+        /// <item><description>If the route entry is in the <b>Active</b> state, the route entry is created.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateTransitRouterPolicyBasedRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTransitRouterPolicyBasedRouteResponse
+        /// </returns>
+        public CreateTransitRouterPolicyBasedRouteResponse CreateTransitRouterPolicyBasedRoute(CreateTransitRouterPolicyBasedRouteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateTransitRouterPolicyBasedRouteWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a policy-based routing rule in the policy route table of an Enterprise Edition transit router.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The <b>CreateTransitRouterPolicyBasedRoute</b> API operation is asynchronous. The system returns a route entry ID before the route entry is created, and the creation task continues in the background. You can call the <b>DescribeTransitRouterPolicyBasedRoutes</b> API operation to query the status of the route entry. </para>
+        /// <list type="bullet">
+        /// <item><description>If the route entry is in the <b>Creating</b> state, the route entry is being created. In this state, you can only query the route entry and cannot perform other operations.</description></item>
+        /// <item><description>If the route entry is in the <b>Active</b> state, the route entry is created.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateTransitRouterPolicyBasedRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTransitRouterPolicyBasedRouteResponse
+        /// </returns>
+        public async Task<CreateTransitRouterPolicyBasedRouteResponse> CreateTransitRouterPolicyBasedRouteAsync(CreateTransitRouterPolicyBasedRouteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateTransitRouterPolicyBasedRouteWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建策略路由表</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>当前仅企业版转发路由器支持创建策略路由表。关于企业版转发路由器支持的地域和可用区信息，请参见<a href="https://help.aliyun.com/document_detail/181681.html">什么是云企业网</a>。</description></item>
+        /// <item><description><b>CreateTransitRouterPolicyTable</b>接口属于异步接口，即系统会先返回一个策略路由表ID，但该策略路由表并未创建完成，系统后台的创建任务仍在进行。您可以调用<b>DescribeTransitRouterPolicyTables</b>接口查询策略路由表的状态。<list type="bullet">
+        /// <item><description>当策略路由表处于<b>Creating</b>状态时，表示策略路由表正在创建中。在该状态下，您只能执行查询操作，不能执行其他操作。</description></item>
+        /// <item><description>当策略路由表处于<b>Active</b>状态时，表示策略路由表创建完成。</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateTransitRouterPolicyTableRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTransitRouterPolicyTableResponse
+        /// </returns>
+        public CreateTransitRouterPolicyTableResponse CreateTransitRouterPolicyTableWithOptions(CreateTransitRouterPolicyTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterId))
+            {
+                query["TransitRouterId"] = request.TransitRouterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTransitRouterPolicyTable",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTransitRouterPolicyTableResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建策略路由表</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>当前仅企业版转发路由器支持创建策略路由表。关于企业版转发路由器支持的地域和可用区信息，请参见<a href="https://help.aliyun.com/document_detail/181681.html">什么是云企业网</a>。</description></item>
+        /// <item><description><b>CreateTransitRouterPolicyTable</b>接口属于异步接口，即系统会先返回一个策略路由表ID，但该策略路由表并未创建完成，系统后台的创建任务仍在进行。您可以调用<b>DescribeTransitRouterPolicyTables</b>接口查询策略路由表的状态。<list type="bullet">
+        /// <item><description>当策略路由表处于<b>Creating</b>状态时，表示策略路由表正在创建中。在该状态下，您只能执行查询操作，不能执行其他操作。</description></item>
+        /// <item><description>当策略路由表处于<b>Active</b>状态时，表示策略路由表创建完成。</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateTransitRouterPolicyTableRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTransitRouterPolicyTableResponse
+        /// </returns>
+        public async Task<CreateTransitRouterPolicyTableResponse> CreateTransitRouterPolicyTableWithOptionsAsync(CreateTransitRouterPolicyTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterId))
+            {
+                query["TransitRouterId"] = request.TransitRouterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTransitRouterPolicyTable",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTransitRouterPolicyTableResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建策略路由表</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>当前仅企业版转发路由器支持创建策略路由表。关于企业版转发路由器支持的地域和可用区信息，请参见<a href="https://help.aliyun.com/document_detail/181681.html">什么是云企业网</a>。</description></item>
+        /// <item><description><b>CreateTransitRouterPolicyTable</b>接口属于异步接口，即系统会先返回一个策略路由表ID，但该策略路由表并未创建完成，系统后台的创建任务仍在进行。您可以调用<b>DescribeTransitRouterPolicyTables</b>接口查询策略路由表的状态。<list type="bullet">
+        /// <item><description>当策略路由表处于<b>Creating</b>状态时，表示策略路由表正在创建中。在该状态下，您只能执行查询操作，不能执行其他操作。</description></item>
+        /// <item><description>当策略路由表处于<b>Active</b>状态时，表示策略路由表创建完成。</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateTransitRouterPolicyTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTransitRouterPolicyTableResponse
+        /// </returns>
+        public CreateTransitRouterPolicyTableResponse CreateTransitRouterPolicyTable(CreateTransitRouterPolicyTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateTransitRouterPolicyTableWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建策略路由表</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>当前仅企业版转发路由器支持创建策略路由表。关于企业版转发路由器支持的地域和可用区信息，请参见<a href="https://help.aliyun.com/document_detail/181681.html">什么是云企业网</a>。</description></item>
+        /// <item><description><b>CreateTransitRouterPolicyTable</b>接口属于异步接口，即系统会先返回一个策略路由表ID，但该策略路由表并未创建完成，系统后台的创建任务仍在进行。您可以调用<b>DescribeTransitRouterPolicyTables</b>接口查询策略路由表的状态。<list type="bullet">
+        /// <item><description>当策略路由表处于<b>Creating</b>状态时，表示策略路由表正在创建中。在该状态下，您只能执行查询操作，不能执行其他操作。</description></item>
+        /// <item><description>当策略路由表处于<b>Active</b>状态时，表示策略路由表创建完成。</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateTransitRouterPolicyTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTransitRouterPolicyTableResponse
+        /// </returns>
+        public async Task<CreateTransitRouterPolicyTableResponse> CreateTransitRouterPolicyTableAsync(CreateTransitRouterPolicyTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateTransitRouterPolicyTableWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10218,10 +10869,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <description>
         /// <para>If the route map to be deleted is still associated with any resources, this operation fails.
         /// If route map rules exist under the route map, this operation is not supported.
-        /// The DeleteRouteMap operation is asynchronous. The system returns a <b>RequestId</b>, but the route map is not completely deleted. The deletion task continues in the background. You can call the ListRouteMaps operation to query the status of the route map.</para>
+        /// The <c>DeleteRouteMap</c> operation is asynchronous. The system first returns a <b>RequestId</b>, but the route map is not completely deleted. The deletion task is still running in the background. You can call the <c>ListRouteMaps</c> operation to query the status of the route map.</para>
         /// <list type="bullet">
-        /// <item><description>If the route map is in the <b>Deleting</b> state, the route map is being deleted. In this state, you can only perform query operations.</description></item>
-        /// <item><description>If the route map cannot be queried by using the ListRouteMaps operation, the route map is completely deleted.</description></item>
+        /// <item><description>When the route map is in the <b>Deleting</b> state, it indicates that the route map is being deleted. In this state, you can only perform query operations and cannot perform other operations.</description></item>
+        /// <item><description>When the route map cannot be queried by calling the <c>ListRouteMaps</c> operation, it indicates that the route map is completely deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10279,10 +10930,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <description>
         /// <para>If the route map to be deleted is still associated with any resources, this operation fails.
         /// If route map rules exist under the route map, this operation is not supported.
-        /// The DeleteRouteMap operation is asynchronous. The system returns a <b>RequestId</b>, but the route map is not completely deleted. The deletion task continues in the background. You can call the ListRouteMaps operation to query the status of the route map.</para>
+        /// The <c>DeleteRouteMap</c> operation is asynchronous. The system first returns a <b>RequestId</b>, but the route map is not completely deleted. The deletion task is still running in the background. You can call the <c>ListRouteMaps</c> operation to query the status of the route map.</para>
         /// <list type="bullet">
-        /// <item><description>If the route map is in the <b>Deleting</b> state, the route map is being deleted. In this state, you can only perform query operations.</description></item>
-        /// <item><description>If the route map cannot be queried by using the ListRouteMaps operation, the route map is completely deleted.</description></item>
+        /// <item><description>When the route map is in the <b>Deleting</b> state, it indicates that the route map is being deleted. In this state, you can only perform query operations and cannot perform other operations.</description></item>
+        /// <item><description>When the route map cannot be queried by calling the <c>ListRouteMaps</c> operation, it indicates that the route map is completely deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10340,10 +10991,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <description>
         /// <para>If the route map to be deleted is still associated with any resources, this operation fails.
         /// If route map rules exist under the route map, this operation is not supported.
-        /// The DeleteRouteMap operation is asynchronous. The system returns a <b>RequestId</b>, but the route map is not completely deleted. The deletion task continues in the background. You can call the ListRouteMaps operation to query the status of the route map.</para>
+        /// The <c>DeleteRouteMap</c> operation is asynchronous. The system first returns a <b>RequestId</b>, but the route map is not completely deleted. The deletion task is still running in the background. You can call the <c>ListRouteMaps</c> operation to query the status of the route map.</para>
         /// <list type="bullet">
-        /// <item><description>If the route map is in the <b>Deleting</b> state, the route map is being deleted. In this state, you can only perform query operations.</description></item>
-        /// <item><description>If the route map cannot be queried by using the ListRouteMaps operation, the route map is completely deleted.</description></item>
+        /// <item><description>When the route map is in the <b>Deleting</b> state, it indicates that the route map is being deleted. In this state, you can only perform query operations and cannot perform other operations.</description></item>
+        /// <item><description>When the route map cannot be queried by calling the <c>ListRouteMaps</c> operation, it indicates that the route map is completely deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10369,10 +11020,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <description>
         /// <para>If the route map to be deleted is still associated with any resources, this operation fails.
         /// If route map rules exist under the route map, this operation is not supported.
-        /// The DeleteRouteMap operation is asynchronous. The system returns a <b>RequestId</b>, but the route map is not completely deleted. The deletion task continues in the background. You can call the ListRouteMaps operation to query the status of the route map.</para>
+        /// The <c>DeleteRouteMap</c> operation is asynchronous. The system first returns a <b>RequestId</b>, but the route map is not completely deleted. The deletion task is still running in the background. You can call the <c>ListRouteMaps</c> operation to query the status of the route map.</para>
         /// <list type="bullet">
-        /// <item><description>If the route map is in the <b>Deleting</b> state, the route map is being deleted. In this state, you can only perform query operations.</description></item>
-        /// <item><description>If the route map cannot be queried by using the ListRouteMaps operation, the route map is completely deleted.</description></item>
+        /// <item><description>When the route map is in the <b>Deleting</b> state, it indicates that the route map is being deleted. In this state, you can only perform query operations and cannot perform other operations.</description></item>
+        /// <item><description>When the route map cannot be queried by calling the <c>ListRouteMaps</c> operation, it indicates that the route map is completely deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12343,6 +12994,366 @@ namespace AlibabaCloud.SDK.Cbn20170912
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteTransitRouterPeerAttachmentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a policy-based route from the policy-based route table of an Enterprise Edition transit router.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The <b>DeleteTransitRouterPolicyBasedRoute</b> operation is asynchronous. After you call this operation, the system returns a <b>RequestId</b>, but the policy-based route is not immediately deleted. The deletion task is still running in the background. You can call the <b>DescribeTransitRouterPolicyBasedRoutes</b> operation to query the status of the policy-based route. <list type="bullet">
+        /// <item><description>If the policy-based route is in the <b>Deleting</b> state, the policy-based route is being deleted. In this state, you can only query the policy-based route and cannot perform other operations.</description></item>
+        /// <item><description>If the specified policy-based route cannot be queried, the policy-based route is deleted.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteTransitRouterPolicyBasedRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTransitRouterPolicyBasedRouteResponse
+        /// </returns>
+        public DeleteTransitRouterPolicyBasedRouteResponse DeleteTransitRouterPolicyBasedRouteWithOptions(DeleteTransitRouterPolicyBasedRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyBasedRouteId))
+            {
+                query["PolicyBasedRouteId"] = request.PolicyBasedRouteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTransitRouterPolicyBasedRoute",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTransitRouterPolicyBasedRouteResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a policy-based route from the policy-based route table of an Enterprise Edition transit router.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The <b>DeleteTransitRouterPolicyBasedRoute</b> operation is asynchronous. After you call this operation, the system returns a <b>RequestId</b>, but the policy-based route is not immediately deleted. The deletion task is still running in the background. You can call the <b>DescribeTransitRouterPolicyBasedRoutes</b> operation to query the status of the policy-based route. <list type="bullet">
+        /// <item><description>If the policy-based route is in the <b>Deleting</b> state, the policy-based route is being deleted. In this state, you can only query the policy-based route and cannot perform other operations.</description></item>
+        /// <item><description>If the specified policy-based route cannot be queried, the policy-based route is deleted.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteTransitRouterPolicyBasedRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTransitRouterPolicyBasedRouteResponse
+        /// </returns>
+        public async Task<DeleteTransitRouterPolicyBasedRouteResponse> DeleteTransitRouterPolicyBasedRouteWithOptionsAsync(DeleteTransitRouterPolicyBasedRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyBasedRouteId))
+            {
+                query["PolicyBasedRouteId"] = request.PolicyBasedRouteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTransitRouterPolicyBasedRoute",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTransitRouterPolicyBasedRouteResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a policy-based route from the policy-based route table of an Enterprise Edition transit router.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The <b>DeleteTransitRouterPolicyBasedRoute</b> operation is asynchronous. After you call this operation, the system returns a <b>RequestId</b>, but the policy-based route is not immediately deleted. The deletion task is still running in the background. You can call the <b>DescribeTransitRouterPolicyBasedRoutes</b> operation to query the status of the policy-based route. <list type="bullet">
+        /// <item><description>If the policy-based route is in the <b>Deleting</b> state, the policy-based route is being deleted. In this state, you can only query the policy-based route and cannot perform other operations.</description></item>
+        /// <item><description>If the specified policy-based route cannot be queried, the policy-based route is deleted.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteTransitRouterPolicyBasedRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTransitRouterPolicyBasedRouteResponse
+        /// </returns>
+        public DeleteTransitRouterPolicyBasedRouteResponse DeleteTransitRouterPolicyBasedRoute(DeleteTransitRouterPolicyBasedRouteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteTransitRouterPolicyBasedRouteWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a policy-based route from the policy-based route table of an Enterprise Edition transit router.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The <b>DeleteTransitRouterPolicyBasedRoute</b> operation is asynchronous. After you call this operation, the system returns a <b>RequestId</b>, but the policy-based route is not immediately deleted. The deletion task is still running in the background. You can call the <b>DescribeTransitRouterPolicyBasedRoutes</b> operation to query the status of the policy-based route. <list type="bullet">
+        /// <item><description>If the policy-based route is in the <b>Deleting</b> state, the policy-based route is being deleted. In this state, you can only query the policy-based route and cannot perform other operations.</description></item>
+        /// <item><description>If the specified policy-based route cannot be queried, the policy-based route is deleted.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteTransitRouterPolicyBasedRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTransitRouterPolicyBasedRouteResponse
+        /// </returns>
+        public async Task<DeleteTransitRouterPolicyBasedRouteResponse> DeleteTransitRouterPolicyBasedRouteAsync(DeleteTransitRouterPolicyBasedRouteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteTransitRouterPolicyBasedRouteWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteTransitRouterPolicyTable</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><b>DeleteTransitRouterPolicyTable</b>接口属于异步接口，即系统会先返回一个<b>RequestId</b>，但策略路由表并未删除完成，系统后台的删除任务仍在进行。您可以调用<b>DescribeTransitRouterPolicyTables</b>接口查询策略路由表的状态。 <list type="bullet">
+        /// <item><description>当策略路由表处于Deleting状态时，表示策略路由表正在删除中。在该状态下，您只能对策略路由表执行查询操作，不能执行其他操作。</description></item>
+        /// <item><description>当查询不到指定策略路由表时，表示该策略路由表删除完成。</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteTransitRouterPolicyTableRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTransitRouterPolicyTableResponse
+        /// </returns>
+        public DeleteTransitRouterPolicyTableResponse DeleteTransitRouterPolicyTableWithOptions(DeleteTransitRouterPolicyTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyTableId))
+            {
+                query["PolicyTableId"] = request.PolicyTableId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTransitRouterPolicyTable",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTransitRouterPolicyTableResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteTransitRouterPolicyTable</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><b>DeleteTransitRouterPolicyTable</b>接口属于异步接口，即系统会先返回一个<b>RequestId</b>，但策略路由表并未删除完成，系统后台的删除任务仍在进行。您可以调用<b>DescribeTransitRouterPolicyTables</b>接口查询策略路由表的状态。 <list type="bullet">
+        /// <item><description>当策略路由表处于Deleting状态时，表示策略路由表正在删除中。在该状态下，您只能对策略路由表执行查询操作，不能执行其他操作。</description></item>
+        /// <item><description>当查询不到指定策略路由表时，表示该策略路由表删除完成。</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteTransitRouterPolicyTableRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTransitRouterPolicyTableResponse
+        /// </returns>
+        public async Task<DeleteTransitRouterPolicyTableResponse> DeleteTransitRouterPolicyTableWithOptionsAsync(DeleteTransitRouterPolicyTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyTableId))
+            {
+                query["PolicyTableId"] = request.PolicyTableId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTransitRouterPolicyTable",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTransitRouterPolicyTableResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteTransitRouterPolicyTable</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><b>DeleteTransitRouterPolicyTable</b>接口属于异步接口，即系统会先返回一个<b>RequestId</b>，但策略路由表并未删除完成，系统后台的删除任务仍在进行。您可以调用<b>DescribeTransitRouterPolicyTables</b>接口查询策略路由表的状态。 <list type="bullet">
+        /// <item><description>当策略路由表处于Deleting状态时，表示策略路由表正在删除中。在该状态下，您只能对策略路由表执行查询操作，不能执行其他操作。</description></item>
+        /// <item><description>当查询不到指定策略路由表时，表示该策略路由表删除完成。</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteTransitRouterPolicyTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTransitRouterPolicyTableResponse
+        /// </returns>
+        public DeleteTransitRouterPolicyTableResponse DeleteTransitRouterPolicyTable(DeleteTransitRouterPolicyTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteTransitRouterPolicyTableWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteTransitRouterPolicyTable</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><b>DeleteTransitRouterPolicyTable</b>接口属于异步接口，即系统会先返回一个<b>RequestId</b>，但策略路由表并未删除完成，系统后台的删除任务仍在进行。您可以调用<b>DescribeTransitRouterPolicyTables</b>接口查询策略路由表的状态。 <list type="bullet">
+        /// <item><description>当策略路由表处于Deleting状态时，表示策略路由表正在删除中。在该状态下，您只能对策略路由表执行查询操作，不能执行其他操作。</description></item>
+        /// <item><description>当查询不到指定策略路由表时，表示该策略路由表删除完成。</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteTransitRouterPolicyTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTransitRouterPolicyTableResponse
+        /// </returns>
+        public async Task<DeleteTransitRouterPolicyTableResponse> DeleteTransitRouterPolicyTableAsync(DeleteTransitRouterPolicyTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteTransitRouterPolicyTableWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -14551,7 +15562,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about bandwidth package instances by calling the DescribeCenBandwidthPackages operation.</para>
+        /// <para>Queries the details of bandwidth plan instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14633,7 +15644,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about bandwidth package instances by calling the DescribeCenBandwidthPackages operation.</para>
+        /// <para>Queries the details of bandwidth plan instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14715,7 +15726,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about bandwidth package instances by calling the DescribeCenBandwidthPackages operation.</para>
+        /// <para>Queries the details of bandwidth plan instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14733,7 +15744,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about bandwidth package instances by calling the DescribeCenBandwidthPackages operation.</para>
+        /// <para>Queries the details of bandwidth plan instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16231,7 +17242,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about Cloud Enterprise Network (CEN) instances under the current Alibaba Cloud account, including the instance status, whether IPv6 is enabled, and the list of bandwidth packages associated with the instances.</para>
+        /// <para>Queries the status, IPv6 status, and list of associated bandwidth plans for Cloud Enterprise Network (CEN) instances under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16305,7 +17316,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about Cloud Enterprise Network (CEN) instances under the current Alibaba Cloud account, including the instance status, whether IPv6 is enabled, and the list of bandwidth packages associated with the instances.</para>
+        /// <para>Queries the status, IPv6 status, and list of associated bandwidth plans for Cloud Enterprise Network (CEN) instances under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16379,7 +17390,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about Cloud Enterprise Network (CEN) instances under the current Alibaba Cloud account, including the instance status, whether IPv6 is enabled, and the list of bandwidth packages associated with the instances.</para>
+        /// <para>Queries the status, IPv6 status, and list of associated bandwidth plans for Cloud Enterprise Network (CEN) instances under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16397,7 +17408,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about Cloud Enterprise Network (CEN) instances under the current Alibaba Cloud account, including the instance status, whether IPv6 is enabled, and the list of bandwidth packages associated with the instances.</para>
+        /// <para>Queries the status, IPv6 status, and list of associated bandwidth plans for Cloud Enterprise Network (CEN) instances under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18411,7 +19422,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource reservation configuration of a specified transit router.</para>
+        /// <para>Queries the resource reservation configurations of a specified transit router.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18457,7 +19468,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource reservation configuration of a specified transit router.</para>
+        /// <para>Queries the resource reservation configurations of a specified transit router.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18503,7 +19514,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource reservation configuration of a specified transit router.</para>
+        /// <para>Queries the resource reservation configurations of a specified transit router.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18521,7 +19532,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource reservation configuration of a specified transit router.</para>
+        /// <para>Queries the resource reservation configurations of a specified transit router.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18535,6 +19546,430 @@ namespace AlibabaCloud.SDK.Cbn20170912
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeTransitRouterCapacityReservationsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the policy-based route rules in the policy-based route table of an Enterprise Edition transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTransitRouterPolicyBasedRoutesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTransitRouterPolicyBasedRoutesResponse
+        /// </returns>
+        public DescribeTransitRouterPolicyBasedRoutesResponse DescribeTransitRouterPolicyBasedRoutesWithOptions(DescribeTransitRouterPolicyBasedRoutesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyTableId))
+            {
+                query["PolicyTableId"] = request.PolicyTableId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTransitRouterPolicyBasedRoutes",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTransitRouterPolicyBasedRoutesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the policy-based route rules in the policy-based route table of an Enterprise Edition transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTransitRouterPolicyBasedRoutesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTransitRouterPolicyBasedRoutesResponse
+        /// </returns>
+        public async Task<DescribeTransitRouterPolicyBasedRoutesResponse> DescribeTransitRouterPolicyBasedRoutesWithOptionsAsync(DescribeTransitRouterPolicyBasedRoutesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyTableId))
+            {
+                query["PolicyTableId"] = request.PolicyTableId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTransitRouterPolicyBasedRoutes",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTransitRouterPolicyBasedRoutesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the policy-based route rules in the policy-based route table of an Enterprise Edition transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTransitRouterPolicyBasedRoutesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTransitRouterPolicyBasedRoutesResponse
+        /// </returns>
+        public DescribeTransitRouterPolicyBasedRoutesResponse DescribeTransitRouterPolicyBasedRoutes(DescribeTransitRouterPolicyBasedRoutesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeTransitRouterPolicyBasedRoutesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the policy-based route rules in the policy-based route table of an Enterprise Edition transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTransitRouterPolicyBasedRoutesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTransitRouterPolicyBasedRoutesResponse
+        /// </returns>
+        public async Task<DescribeTransitRouterPolicyBasedRoutesResponse> DescribeTransitRouterPolicyBasedRoutesAsync(DescribeTransitRouterPolicyBasedRoutesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeTransitRouterPolicyBasedRoutesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the associations of a policy route table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTransitRouterPolicyTableAssociationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTransitRouterPolicyTableAssociationsResponse
+        /// </returns>
+        public DescribeTransitRouterPolicyTableAssociationsResponse DescribeTransitRouterPolicyTableAssociationsWithOptions(DescribeTransitRouterPolicyTableAssociationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTransitRouterPolicyTableAssociations",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTransitRouterPolicyTableAssociationsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the associations of a policy route table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTransitRouterPolicyTableAssociationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTransitRouterPolicyTableAssociationsResponse
+        /// </returns>
+        public async Task<DescribeTransitRouterPolicyTableAssociationsResponse> DescribeTransitRouterPolicyTableAssociationsWithOptionsAsync(DescribeTransitRouterPolicyTableAssociationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTransitRouterPolicyTableAssociations",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTransitRouterPolicyTableAssociationsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the associations of a policy route table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTransitRouterPolicyTableAssociationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTransitRouterPolicyTableAssociationsResponse
+        /// </returns>
+        public DescribeTransitRouterPolicyTableAssociationsResponse DescribeTransitRouterPolicyTableAssociations(DescribeTransitRouterPolicyTableAssociationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeTransitRouterPolicyTableAssociationsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the associations of a policy route table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTransitRouterPolicyTableAssociationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTransitRouterPolicyTableAssociationsResponse
+        /// </returns>
+        public async Task<DescribeTransitRouterPolicyTableAssociationsResponse> DescribeTransitRouterPolicyTableAssociationsAsync(DescribeTransitRouterPolicyTableAssociationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeTransitRouterPolicyTableAssociationsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of the policy route tables of an Enterprise Edition transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTransitRouterPolicyTablesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTransitRouterPolicyTablesResponse
+        /// </returns>
+        public DescribeTransitRouterPolicyTablesResponse DescribeTransitRouterPolicyTablesWithOptions(DescribeTransitRouterPolicyTablesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterId))
+            {
+                query["TransitRouterId"] = request.TransitRouterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTransitRouterPolicyTables",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTransitRouterPolicyTablesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of the policy route tables of an Enterprise Edition transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTransitRouterPolicyTablesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTransitRouterPolicyTablesResponse
+        /// </returns>
+        public async Task<DescribeTransitRouterPolicyTablesResponse> DescribeTransitRouterPolicyTablesWithOptionsAsync(DescribeTransitRouterPolicyTablesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRouterId))
+            {
+                query["TransitRouterId"] = request.TransitRouterId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTransitRouterPolicyTables",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTransitRouterPolicyTablesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of the policy route tables of an Enterprise Edition transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTransitRouterPolicyTablesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTransitRouterPolicyTablesResponse
+        /// </returns>
+        public DescribeTransitRouterPolicyTablesResponse DescribeTransitRouterPolicyTables(DescribeTransitRouterPolicyTablesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeTransitRouterPolicyTablesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of the policy route tables of an Enterprise Edition transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTransitRouterPolicyTablesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTransitRouterPolicyTablesResponse
+        /// </returns>
+        public async Task<DescribeTransitRouterPolicyTablesResponse> DescribeTransitRouterPolicyTablesAsync(DescribeTransitRouterPolicyTablesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeTransitRouterPolicyTablesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -19391,6 +20826,178 @@ namespace AlibabaCloud.SDK.Cbn20170912
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisassociateTransitRouterMulticastDomainWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a transit router policy table.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The <b>DisassociateTransitRouterPolicyTable</b> operation is asynchronous. The system first returns a request ID, but the transit router policy routing table association is not immediately deleted. The deletion node continues to run in the background. You can invoke the <b>DescribeTransitRouterPolicyTableAssociations</b> operation to query the status of the transit router policy routing table association.</para>
+        /// <list type="bullet">
+        /// <item><description>When the transit router policy routing table association is in the <b>Dissociating</b> state, the association is being deleted. In this state, you can only execute query operations and cannot execute other operations.</description></item>
+        /// <item><description>If the <b>DescribeTransitRouterPolicyTableAssociations</b> operation cannot query the association between the network instance connection and the transit router policy routing table, the association is successfully dissociated.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisassociateTransitRouterPolicyTableRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisassociateTransitRouterPolicyTableResponse
+        /// </returns>
+        public DisassociateTransitRouterPolicyTableResponse DisassociateTransitRouterPolicyTableWithOptions(DisassociateTransitRouterPolicyTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssociationId))
+            {
+                query["AssociationId"] = request.AssociationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisassociateTransitRouterPolicyTable",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisassociateTransitRouterPolicyTableResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a transit router policy table.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The <b>DisassociateTransitRouterPolicyTable</b> operation is asynchronous. The system first returns a request ID, but the transit router policy routing table association is not immediately deleted. The deletion node continues to run in the background. You can invoke the <b>DescribeTransitRouterPolicyTableAssociations</b> operation to query the status of the transit router policy routing table association.</para>
+        /// <list type="bullet">
+        /// <item><description>When the transit router policy routing table association is in the <b>Dissociating</b> state, the association is being deleted. In this state, you can only execute query operations and cannot execute other operations.</description></item>
+        /// <item><description>If the <b>DescribeTransitRouterPolicyTableAssociations</b> operation cannot query the association between the network instance connection and the transit router policy routing table, the association is successfully dissociated.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisassociateTransitRouterPolicyTableRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisassociateTransitRouterPolicyTableResponse
+        /// </returns>
+        public async Task<DisassociateTransitRouterPolicyTableResponse> DisassociateTransitRouterPolicyTableWithOptionsAsync(DisassociateTransitRouterPolicyTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssociationId))
+            {
+                query["AssociationId"] = request.AssociationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisassociateTransitRouterPolicyTable",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisassociateTransitRouterPolicyTableResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a transit router policy table.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The <b>DisassociateTransitRouterPolicyTable</b> operation is asynchronous. The system first returns a request ID, but the transit router policy routing table association is not immediately deleted. The deletion node continues to run in the background. You can invoke the <b>DescribeTransitRouterPolicyTableAssociations</b> operation to query the status of the transit router policy routing table association.</para>
+        /// <list type="bullet">
+        /// <item><description>When the transit router policy routing table association is in the <b>Dissociating</b> state, the association is being deleted. In this state, you can only execute query operations and cannot execute other operations.</description></item>
+        /// <item><description>If the <b>DescribeTransitRouterPolicyTableAssociations</b> operation cannot query the association between the network instance connection and the transit router policy routing table, the association is successfully dissociated.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisassociateTransitRouterPolicyTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisassociateTransitRouterPolicyTableResponse
+        /// </returns>
+        public DisassociateTransitRouterPolicyTableResponse DisassociateTransitRouterPolicyTable(DisassociateTransitRouterPolicyTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DisassociateTransitRouterPolicyTableWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a transit router policy table.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The <b>DisassociateTransitRouterPolicyTable</b> operation is asynchronous. The system first returns a request ID, but the transit router policy routing table association is not immediately deleted. The deletion node continues to run in the background. You can invoke the <b>DescribeTransitRouterPolicyTableAssociations</b> operation to query the status of the transit router policy routing table association.</para>
+        /// <list type="bullet">
+        /// <item><description>When the transit router policy routing table association is in the <b>Dissociating</b> state, the association is being deleted. In this state, you can only execute query operations and cannot execute other operations.</description></item>
+        /// <item><description>If the <b>DescribeTransitRouterPolicyTableAssociations</b> operation cannot query the association between the network instance connection and the transit router policy routing table, the association is successfully dissociated.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisassociateTransitRouterPolicyTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisassociateTransitRouterPolicyTableResponse
+        /// </returns>
+        public async Task<DisassociateTransitRouterPolicyTableResponse> DisassociateTransitRouterPolicyTableAsync(DisassociateTransitRouterPolicyTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DisassociateTransitRouterPolicyTableWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -21538,11 +23145,11 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>RouteMapId: specifies the route map whose rules you want to query.</description></item>
-        /// <item><description>RouteMapRuleIds: the list of rule IDs to query. This parameter and filter conditions can be used together for matching, and they have an OR relationship.</description></item>
-        /// <item><description>Filter: the filter. You can filter by attributes such as direction. Supported filter conditions include Status and Direction.</description></item>
+        /// <item><description>RouteMapId: specifies the route map to which the rules to be queried belong.</description></item>
+        /// <item><description>RouteMapRuleIds: the list of rule IDs to query. This parameter and filter conditions can be used together for matching, and the relationship is OR.</description></item>
+        /// <item><description>Filter: the filter conditions. You can filter by attributes such as direction. Supported filter conditions include Status and Direction.</description></item>
         /// <item><description>DryRun: specifies whether to enable the dry run mode. Default value: false.
-        /// You must specify at least one of RouteMapId and RouteMapRuleIds. If both are provided, a joint query is performed based on these two parameters. If only RouteMapId is provided, all rules under the route map are returned. If only RouteMapRuleIds is provided, the details of the specified rules are returned.</description></item>
+        /// You must specify at least one of RouteMapId and RouteMapRuleIds. If both are provided, a joint query is performed based on these two parameters. If only RouteMapId is provided, all rules under the route map are returned. If only RouteMapRuleIds is provided, the details of these rules are returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21616,11 +23223,11 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>RouteMapId: specifies the route map whose rules you want to query.</description></item>
-        /// <item><description>RouteMapRuleIds: the list of rule IDs to query. This parameter and filter conditions can be used together for matching, and they have an OR relationship.</description></item>
-        /// <item><description>Filter: the filter. You can filter by attributes such as direction. Supported filter conditions include Status and Direction.</description></item>
+        /// <item><description>RouteMapId: specifies the route map to which the rules to be queried belong.</description></item>
+        /// <item><description>RouteMapRuleIds: the list of rule IDs to query. This parameter and filter conditions can be used together for matching, and the relationship is OR.</description></item>
+        /// <item><description>Filter: the filter conditions. You can filter by attributes such as direction. Supported filter conditions include Status and Direction.</description></item>
         /// <item><description>DryRun: specifies whether to enable the dry run mode. Default value: false.
-        /// You must specify at least one of RouteMapId and RouteMapRuleIds. If both are provided, a joint query is performed based on these two parameters. If only RouteMapId is provided, all rules under the route map are returned. If only RouteMapRuleIds is provided, the details of the specified rules are returned.</description></item>
+        /// You must specify at least one of RouteMapId and RouteMapRuleIds. If both are provided, a joint query is performed based on these two parameters. If only RouteMapId is provided, all rules under the route map are returned. If only RouteMapRuleIds is provided, the details of these rules are returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21694,11 +23301,11 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>RouteMapId: specifies the route map whose rules you want to query.</description></item>
-        /// <item><description>RouteMapRuleIds: the list of rule IDs to query. This parameter and filter conditions can be used together for matching, and they have an OR relationship.</description></item>
-        /// <item><description>Filter: the filter. You can filter by attributes such as direction. Supported filter conditions include Status and Direction.</description></item>
+        /// <item><description>RouteMapId: specifies the route map to which the rules to be queried belong.</description></item>
+        /// <item><description>RouteMapRuleIds: the list of rule IDs to query. This parameter and filter conditions can be used together for matching, and the relationship is OR.</description></item>
+        /// <item><description>Filter: the filter conditions. You can filter by attributes such as direction. Supported filter conditions include Status and Direction.</description></item>
         /// <item><description>DryRun: specifies whether to enable the dry run mode. Default value: false.
-        /// You must specify at least one of RouteMapId and RouteMapRuleIds. If both are provided, a joint query is performed based on these two parameters. If only RouteMapId is provided, all rules under the route map are returned. If only RouteMapRuleIds is provided, the details of the specified rules are returned.</description></item>
+        /// You must specify at least one of RouteMapId and RouteMapRuleIds. If both are provided, a joint query is performed based on these two parameters. If only RouteMapId is provided, all rules under the route map are returned. If only RouteMapRuleIds is provided, the details of these rules are returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21724,11 +23331,11 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>RouteMapId: specifies the route map whose rules you want to query.</description></item>
-        /// <item><description>RouteMapRuleIds: the list of rule IDs to query. This parameter and filter conditions can be used together for matching, and they have an OR relationship.</description></item>
-        /// <item><description>Filter: the filter. You can filter by attributes such as direction. Supported filter conditions include Status and Direction.</description></item>
+        /// <item><description>RouteMapId: specifies the route map to which the rules to be queried belong.</description></item>
+        /// <item><description>RouteMapRuleIds: the list of rule IDs to query. This parameter and filter conditions can be used together for matching, and the relationship is OR.</description></item>
+        /// <item><description>Filter: the filter conditions. You can filter by attributes such as direction. Supported filter conditions include Status and Direction.</description></item>
         /// <item><description>DryRun: specifies whether to enable the dry run mode. Default value: false.
-        /// You must specify at least one of RouteMapId and RouteMapRuleIds. If both are provided, a joint query is performed based on these two parameters. If only RouteMapId is provided, all rules under the route map are returned. If only RouteMapRuleIds is provided, the details of the specified rules are returned.</description></item>
+        /// You must specify at least one of RouteMapId and RouteMapRuleIds. If both are provided, a joint query is performed based on these two parameters. If only RouteMapId is provided, all rules under the route map are returned. If only RouteMapRuleIds is provided, the details of these rules are returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21754,12 +23361,12 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>RouteMapIds</b>: optional. Specifies a list of one or more route map IDs to query. If you do not specify this parameter, all route maps are queried by default.</description></item>
-        /// <item><description><b>Filter</b>: optional. Filters route maps based on specific conditions such as the name and direction.</description></item>
-        /// <item><description><b>ResourceGroupId</b>: optional. Specifies the ID of the resource group to further filter the results.</description></item>
-        /// <item><description><b>DryRun</b>: optional. Specifies whether to check the request without actually performing the operation.</description></item>
-        /// <item><description><b>MaxResults</b> and <b>NextToken</b>: pagination parameters. Used to control the number of returned results and obtain the next page of data.
-        /// Note: If you specify both <c>RouteMapIds</c> and <c>Filter</c>, they are connected by an OR logical operator. Route maps that meet either condition are queried.</description></item>
+        /// <item><description><b>RouteMapIds</b>: Optional. The IDs of the route maps to query. If you do not specify this parameter, all route maps are queried.</description></item>
+        /// <item><description><b>Filter</b>: Optional. The filter conditions used to filter route maps based on specific attributes such as name and direction.</description></item>
+        /// <item><description><b>ResourceGroupId</b>: Optional. The ID of the resource group used to further filter the results.</description></item>
+        /// <item><description><b>DryRun</b>: Optional. Specifies whether to perform a dry run.</description></item>
+        /// <item><description><b>MaxResults</b> and <b>NextToken</b>: The pagination parameters used to control the number of returned results and retrieve the next page.
+        /// Note: If you specify both RouteMapIds and Filter, the logical OR operator is used. A route map that meets either condition is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21833,12 +23440,12 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>RouteMapIds</b>: optional. Specifies a list of one or more route map IDs to query. If you do not specify this parameter, all route maps are queried by default.</description></item>
-        /// <item><description><b>Filter</b>: optional. Filters route maps based on specific conditions such as the name and direction.</description></item>
-        /// <item><description><b>ResourceGroupId</b>: optional. Specifies the ID of the resource group to further filter the results.</description></item>
-        /// <item><description><b>DryRun</b>: optional. Specifies whether to check the request without actually performing the operation.</description></item>
-        /// <item><description><b>MaxResults</b> and <b>NextToken</b>: pagination parameters. Used to control the number of returned results and obtain the next page of data.
-        /// Note: If you specify both <c>RouteMapIds</c> and <c>Filter</c>, they are connected by an OR logical operator. Route maps that meet either condition are queried.</description></item>
+        /// <item><description><b>RouteMapIds</b>: Optional. The IDs of the route maps to query. If you do not specify this parameter, all route maps are queried.</description></item>
+        /// <item><description><b>Filter</b>: Optional. The filter conditions used to filter route maps based on specific attributes such as name and direction.</description></item>
+        /// <item><description><b>ResourceGroupId</b>: Optional. The ID of the resource group used to further filter the results.</description></item>
+        /// <item><description><b>DryRun</b>: Optional. Specifies whether to perform a dry run.</description></item>
+        /// <item><description><b>MaxResults</b> and <b>NextToken</b>: The pagination parameters used to control the number of returned results and retrieve the next page.
+        /// Note: If you specify both RouteMapIds and Filter, the logical OR operator is used. A route map that meets either condition is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21912,12 +23519,12 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>RouteMapIds</b>: optional. Specifies a list of one or more route map IDs to query. If you do not specify this parameter, all route maps are queried by default.</description></item>
-        /// <item><description><b>Filter</b>: optional. Filters route maps based on specific conditions such as the name and direction.</description></item>
-        /// <item><description><b>ResourceGroupId</b>: optional. Specifies the ID of the resource group to further filter the results.</description></item>
-        /// <item><description><b>DryRun</b>: optional. Specifies whether to check the request without actually performing the operation.</description></item>
-        /// <item><description><b>MaxResults</b> and <b>NextToken</b>: pagination parameters. Used to control the number of returned results and obtain the next page of data.
-        /// Note: If you specify both <c>RouteMapIds</c> and <c>Filter</c>, they are connected by an OR logical operator. Route maps that meet either condition are queried.</description></item>
+        /// <item><description><b>RouteMapIds</b>: Optional. The IDs of the route maps to query. If you do not specify this parameter, all route maps are queried.</description></item>
+        /// <item><description><b>Filter</b>: Optional. The filter conditions used to filter route maps based on specific attributes such as name and direction.</description></item>
+        /// <item><description><b>ResourceGroupId</b>: Optional. The ID of the resource group used to further filter the results.</description></item>
+        /// <item><description><b>DryRun</b>: Optional. Specifies whether to perform a dry run.</description></item>
+        /// <item><description><b>MaxResults</b> and <b>NextToken</b>: The pagination parameters used to control the number of returned results and retrieve the next page.
+        /// Note: If you specify both RouteMapIds and Filter, the logical OR operator is used. A route map that meets either condition is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21943,12 +23550,12 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>RouteMapIds</b>: optional. Specifies a list of one or more route map IDs to query. If you do not specify this parameter, all route maps are queried by default.</description></item>
-        /// <item><description><b>Filter</b>: optional. Filters route maps based on specific conditions such as the name and direction.</description></item>
-        /// <item><description><b>ResourceGroupId</b>: optional. Specifies the ID of the resource group to further filter the results.</description></item>
-        /// <item><description><b>DryRun</b>: optional. Specifies whether to check the request without actually performing the operation.</description></item>
-        /// <item><description><b>MaxResults</b> and <b>NextToken</b>: pagination parameters. Used to control the number of returned results and obtain the next page of data.
-        /// Note: If you specify both <c>RouteMapIds</c> and <c>Filter</c>, they are connected by an OR logical operator. Route maps that meet either condition are queried.</description></item>
+        /// <item><description><b>RouteMapIds</b>: Optional. The IDs of the route maps to query. If you do not specify this parameter, all route maps are queried.</description></item>
+        /// <item><description><b>Filter</b>: Optional. The filter conditions used to filter route maps based on specific attributes such as name and direction.</description></item>
+        /// <item><description><b>ResourceGroupId</b>: Optional. The ID of the resource group used to further filter the results.</description></item>
+        /// <item><description><b>DryRun</b>: Optional. Specifies whether to perform a dry run.</description></item>
+        /// <item><description><b>MaxResults</b> and <b>NextToken</b>: The pagination parameters used to control the number of returned results and retrieve the next page.
+        /// Note: If you specify both RouteMapIds and Filter, the logical OR operator is used. A route map that meets either condition is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21967,18 +23574,18 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags bound to a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Queries the tags associated with Cloud Enterprise Network (CEN) instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call the ListTagResources operation, you must specify at least one of the request parameters <b>ResourceId.N</b> and <b>Tag.N.Key</b>:</para>
+        /// <para>When you call the ListTagResources operation, you must specify at least one of the <b>ResourceId.N</b> and <b>Tag.N.Key</b> request parameters:</para>
         /// <list type="bullet">
-        /// <item><description>If you specify only <b>ResourceId.N</b>, the tags bound to the specified CEN instance are queried.</description></item>
-        /// <item><description>If you specify only <b>Tag.N.Key</b>, all CEN instances that have the specified tag key bound are queried.</description></item>
-        /// <item><description>If you specify both <b>ResourceId.N</b> and <b>Tag.N.Key</b>, the specified tags bound to the specified CEN instance are queried.<list type="bullet">
+        /// <item><description>If you specify only <b>ResourceId.N</b>, the system queries the tags associated with the specified CEN instances.</description></item>
+        /// <item><description>If you specify only <b>Tag.N.Key</b>, the system queries all CEN instances associated with the specified tag key.</description></item>
+        /// <item><description>If you specify both <b>ResourceId.N</b> and <b>Tag.N.Key</b>, the system queries the specified tags associated with the specified CEN instances.<list type="bullet">
         /// <item><description>Make sure that the values of <b>ResourceId.N</b> and <b>Tag.N.Key</b> correspond to each other. Otherwise, an empty result is returned.</description></item>
-        /// <item><description>If you specify multiple tag keys, the tag keys are evaluated by using the logical AND operator.</description></item>
+        /// <item><description>If you specify multiple tag keys, the logical <b>AND</b> relation is applied to the tag keys.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -22059,18 +23666,18 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags bound to a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Queries the tags associated with Cloud Enterprise Network (CEN) instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call the ListTagResources operation, you must specify at least one of the request parameters <b>ResourceId.N</b> and <b>Tag.N.Key</b>:</para>
+        /// <para>When you call the ListTagResources operation, you must specify at least one of the <b>ResourceId.N</b> and <b>Tag.N.Key</b> request parameters:</para>
         /// <list type="bullet">
-        /// <item><description>If you specify only <b>ResourceId.N</b>, the tags bound to the specified CEN instance are queried.</description></item>
-        /// <item><description>If you specify only <b>Tag.N.Key</b>, all CEN instances that have the specified tag key bound are queried.</description></item>
-        /// <item><description>If you specify both <b>ResourceId.N</b> and <b>Tag.N.Key</b>, the specified tags bound to the specified CEN instance are queried.<list type="bullet">
+        /// <item><description>If you specify only <b>ResourceId.N</b>, the system queries the tags associated with the specified CEN instances.</description></item>
+        /// <item><description>If you specify only <b>Tag.N.Key</b>, the system queries all CEN instances associated with the specified tag key.</description></item>
+        /// <item><description>If you specify both <b>ResourceId.N</b> and <b>Tag.N.Key</b>, the system queries the specified tags associated with the specified CEN instances.<list type="bullet">
         /// <item><description>Make sure that the values of <b>ResourceId.N</b> and <b>Tag.N.Key</b> correspond to each other. Otherwise, an empty result is returned.</description></item>
-        /// <item><description>If you specify multiple tag keys, the tag keys are evaluated by using the logical AND operator.</description></item>
+        /// <item><description>If you specify multiple tag keys, the logical <b>AND</b> relation is applied to the tag keys.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -22151,18 +23758,18 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags bound to a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Queries the tags associated with Cloud Enterprise Network (CEN) instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call the ListTagResources operation, you must specify at least one of the request parameters <b>ResourceId.N</b> and <b>Tag.N.Key</b>:</para>
+        /// <para>When you call the ListTagResources operation, you must specify at least one of the <b>ResourceId.N</b> and <b>Tag.N.Key</b> request parameters:</para>
         /// <list type="bullet">
-        /// <item><description>If you specify only <b>ResourceId.N</b>, the tags bound to the specified CEN instance are queried.</description></item>
-        /// <item><description>If you specify only <b>Tag.N.Key</b>, all CEN instances that have the specified tag key bound are queried.</description></item>
-        /// <item><description>If you specify both <b>ResourceId.N</b> and <b>Tag.N.Key</b>, the specified tags bound to the specified CEN instance are queried.<list type="bullet">
+        /// <item><description>If you specify only <b>ResourceId.N</b>, the system queries the tags associated with the specified CEN instances.</description></item>
+        /// <item><description>If you specify only <b>Tag.N.Key</b>, the system queries all CEN instances associated with the specified tag key.</description></item>
+        /// <item><description>If you specify both <b>ResourceId.N</b> and <b>Tag.N.Key</b>, the system queries the specified tags associated with the specified CEN instances.<list type="bullet">
         /// <item><description>Make sure that the values of <b>ResourceId.N</b> and <b>Tag.N.Key</b> correspond to each other. Otherwise, an empty result is returned.</description></item>
-        /// <item><description>If you specify multiple tag keys, the tag keys are evaluated by using the logical AND operator.</description></item>
+        /// <item><description>If you specify multiple tag keys, the logical <b>AND</b> relation is applied to the tag keys.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -22183,18 +23790,18 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags bound to a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Queries the tags associated with Cloud Enterprise Network (CEN) instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call the ListTagResources operation, you must specify at least one of the request parameters <b>ResourceId.N</b> and <b>Tag.N.Key</b>:</para>
+        /// <para>When you call the ListTagResources operation, you must specify at least one of the <b>ResourceId.N</b> and <b>Tag.N.Key</b> request parameters:</para>
         /// <list type="bullet">
-        /// <item><description>If you specify only <b>ResourceId.N</b>, the tags bound to the specified CEN instance are queried.</description></item>
-        /// <item><description>If you specify only <b>Tag.N.Key</b>, all CEN instances that have the specified tag key bound are queried.</description></item>
-        /// <item><description>If you specify both <b>ResourceId.N</b> and <b>Tag.N.Key</b>, the specified tags bound to the specified CEN instance are queried.<list type="bullet">
+        /// <item><description>If you specify only <b>ResourceId.N</b>, the system queries the tags associated with the specified CEN instances.</description></item>
+        /// <item><description>If you specify only <b>Tag.N.Key</b>, the system queries all CEN instances associated with the specified tag key.</description></item>
+        /// <item><description>If you specify both <b>ResourceId.N</b> and <b>Tag.N.Key</b>, the system queries the specified tags associated with the specified CEN instances.<list type="bullet">
         /// <item><description>Make sure that the values of <b>ResourceId.N</b> and <b>Tag.N.Key</b> correspond to each other. Otherwise, an empty result is returned.</description></item>
-        /// <item><description>If you specify multiple tag keys, the tag keys are evaluated by using the logical AND operator.</description></item>
+        /// <item><description>If you specify multiple tag keys, the logical <b>AND</b> relation is applied to the tag keys.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -24795,7 +26402,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the ListTransitRouterRouteEntries operation to query the details of route entries in an Enterprise Edition transit router route table.</para>
+        /// <para>Queries the details of the route entry in the routing table of an Enterprise Edition forwarding router.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24913,7 +26520,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the ListTransitRouterRouteEntries operation to query the details of route entries in an Enterprise Edition transit router route table.</para>
+        /// <para>Queries the details of the route entry in the routing table of an Enterprise Edition forwarding router.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25031,7 +26638,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the ListTransitRouterRouteEntries operation to query the details of route entries in an Enterprise Edition transit router route table.</para>
+        /// <para>Queries the details of the route entry in the routing table of an Enterprise Edition forwarding router.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25049,7 +26656,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the ListTransitRouterRouteEntries operation to query the details of route entries in an Enterprise Edition transit router route table.</para>
+        /// <para>Queries the details of the route entry in the routing table of an Enterprise Edition forwarding router.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25531,7 +27138,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of route tables of an Enterprise Edition transit router by calling the ListTransitRouterRouteTables operation.</para>
+        /// <para>Queries the details of the route tables of an Enterprise Edition transit router.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25621,7 +27228,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of route tables of an Enterprise Edition transit router by calling the ListTransitRouterRouteTables operation.</para>
+        /// <para>Queries the details of the route tables of an Enterprise Edition transit router.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25711,7 +27318,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of route tables of an Enterprise Edition transit router by calling the ListTransitRouterRouteTables operation.</para>
+        /// <para>Queries the details of the route tables of an Enterprise Edition transit router.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25729,7 +27336,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of route tables of an Enterprise Edition transit router by calling the ListTransitRouterRouteTables operation.</para>
+        /// <para>Queries the details of the route tables of an Enterprise Edition transit router.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31415,27 +33022,27 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a cloud service to add access configurations for on-premises networks by calling the ResolveAndRouteServiceInCen operation.</para>
+        /// <para>Configures a cloud service and adds configurations for an on-premises network to access the cloud service by calling the ResolveAndRouteServiceInCen operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cloud services refer to Alibaba Cloud services that use the 100.64.0.0/10 CIDR block, such as Object Storage Service (OSS), Simple Log Service (SLS), and Data Transmission Service (DTS). If your on-premises network needs to access cloud services, you must load the Virtual Border Router (VBR) instance or Cloud Connect Network (CCN) instance associated with your on-premises network to a Cloud Enterprise Network (CEN) instance. You must also load a VPC-connected instance in the region where the cloud service resides to the same CEN instance. After loading, your on-premises network can access the VPC-connected instance in the region of the cloud service through CEN, and then access the cloud service through the VPC by forwarding traffic. The CEN handles the routing accordingly.</para>
+        /// <para>Cloud services refer to Alibaba Cloud products that provide services by using the cloud service CIDR block 100.64.0.0/10, such as Object Storage Service (OSS), Simple Log Service (SLS), and Data Transmission Service (DTS). If your on-premises network needs to access cloud services, you must load the virtual border router (VBR) instance that handles routing or the Cloud Connect Network (CCN) instance associated with the on-premises network to a Cloud Enterprise Network (CEN) instance. You must also load a VPC-connected instance in the region where the cloud services are deployed to the CEN instance. After the instances are loaded, your on-premises network can access the VPC-connected instance in the region where the cloud services are deployed through the CEN instance, and then access the cloud services through the VPC-connected instance.</para>
         /// <list type="bullet">
-        /// <item><description>Limits: This operation applies only to Basic Edition transit routers. On-premises networks associated with VBR instances can access only cloud services in the same region through CEN.
-        ///   For example, if the cloud service resides in the China (Beijing) region, only on-premises networks associated with VBR instances in the China (Beijing) region can access the cloud service.</description></item>
-        /// <item><description>The <b>ResolveAndRouteServiceInCen</b> operation is asynchronous. After you send a request, the system returns a <b>RequestId</b> but the cloud service configuration is not yet complete. The background node for adding the configuration continues to run. You can invoke the <b>DescribeRouteServicesInCen</b> operation to query the status of the cloud service. <list type="bullet">
-        /// <item><description>If the cloud service is in the <b>Creating</b> state, the cloud service configuration is being added. In this state, you can only execute a query on the cloud service configuration and cannot execute other operations.</description></item>
-        /// <item><description>If the cloud service is in the <b>Active</b> state, the cloud service configuration is added.</description></item>
-        /// <item><description>If the cloud service is in the <b>Failed</b> state, the cloud service configuration failed to be added.</description></item>
+        /// <item><description>Limits: This operation is applicable only to Basic Edition transit routers that forward traffic. An on-premises network associated with a VBR instance can access only cloud services in the same region through the CEN instance.
+        ///   For example, if the cloud services are deployed in the China (Beijing) region, only the on-premises networks associated with VBR instances in the China (Beijing) region can access the cloud services.</description></item>
+        /// <item><description>The <b>ResolveAndRouteServiceInCen</b> operation is asynchronous. After you invoke this operation, the system returns a <b>RequestId</b>, but the cloud service configurations are not completely added. The addition task is still running in the background. You can invoke the <b>DescribeRouteServicesInCen</b> operation to query the status of the cloud services. <list type="bullet">
+        /// <item><description>If the cloud services are in the <b>Creating</b> state, the cloud service configurations are being added. In this state, you can only execute query operations on the cloud service configurations and cannot execute other operations.</description></item>
+        /// <item><description>If the cloud services are in the <b>Active</b> state, the cloud service configurations are added.</description></item>
+        /// <item><description>If the cloud services are in the <b>Failed</b> state, the cloud service configurations fail to be added.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <h3>Before you begin</h3>
         /// <para>Before you invoke the ResolveAndRouteServiceInCen operation, make sure that the following conditions are met:</para>
         /// <list type="bullet">
-        /// <item><description>The VBR or CCN instance with network connectivity to your on-premises network is loaded to the CEN instance.</description></item>
-        /// <item><description>A VPC-connected instance in the region where the cloud service resides is loaded to the CEN instance. For more information, see <a href="https://help.aliyun.com/document_detail/65902.html">AttachCenChildInstance</a>.</description></item>
+        /// <item><description>The VBR or CCN instance that has network connectivity to your on-premises network is loaded to the CEN instance.</description></item>
+        /// <item><description>A VPC-connected instance in the region where the cloud services are deployed is loaded to the CEN instance. For more information, see <a href="https://help.aliyun.com/document_detail/65902.html">AttachCenChildInstance</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31518,27 +33125,27 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a cloud service to add access configurations for on-premises networks by calling the ResolveAndRouteServiceInCen operation.</para>
+        /// <para>Configures a cloud service and adds configurations for an on-premises network to access the cloud service by calling the ResolveAndRouteServiceInCen operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cloud services refer to Alibaba Cloud services that use the 100.64.0.0/10 CIDR block, such as Object Storage Service (OSS), Simple Log Service (SLS), and Data Transmission Service (DTS). If your on-premises network needs to access cloud services, you must load the Virtual Border Router (VBR) instance or Cloud Connect Network (CCN) instance associated with your on-premises network to a Cloud Enterprise Network (CEN) instance. You must also load a VPC-connected instance in the region where the cloud service resides to the same CEN instance. After loading, your on-premises network can access the VPC-connected instance in the region of the cloud service through CEN, and then access the cloud service through the VPC by forwarding traffic. The CEN handles the routing accordingly.</para>
+        /// <para>Cloud services refer to Alibaba Cloud products that provide services by using the cloud service CIDR block 100.64.0.0/10, such as Object Storage Service (OSS), Simple Log Service (SLS), and Data Transmission Service (DTS). If your on-premises network needs to access cloud services, you must load the virtual border router (VBR) instance that handles routing or the Cloud Connect Network (CCN) instance associated with the on-premises network to a Cloud Enterprise Network (CEN) instance. You must also load a VPC-connected instance in the region where the cloud services are deployed to the CEN instance. After the instances are loaded, your on-premises network can access the VPC-connected instance in the region where the cloud services are deployed through the CEN instance, and then access the cloud services through the VPC-connected instance.</para>
         /// <list type="bullet">
-        /// <item><description>Limits: This operation applies only to Basic Edition transit routers. On-premises networks associated with VBR instances can access only cloud services in the same region through CEN.
-        ///   For example, if the cloud service resides in the China (Beijing) region, only on-premises networks associated with VBR instances in the China (Beijing) region can access the cloud service.</description></item>
-        /// <item><description>The <b>ResolveAndRouteServiceInCen</b> operation is asynchronous. After you send a request, the system returns a <b>RequestId</b> but the cloud service configuration is not yet complete. The background node for adding the configuration continues to run. You can invoke the <b>DescribeRouteServicesInCen</b> operation to query the status of the cloud service. <list type="bullet">
-        /// <item><description>If the cloud service is in the <b>Creating</b> state, the cloud service configuration is being added. In this state, you can only execute a query on the cloud service configuration and cannot execute other operations.</description></item>
-        /// <item><description>If the cloud service is in the <b>Active</b> state, the cloud service configuration is added.</description></item>
-        /// <item><description>If the cloud service is in the <b>Failed</b> state, the cloud service configuration failed to be added.</description></item>
+        /// <item><description>Limits: This operation is applicable only to Basic Edition transit routers that forward traffic. An on-premises network associated with a VBR instance can access only cloud services in the same region through the CEN instance.
+        ///   For example, if the cloud services are deployed in the China (Beijing) region, only the on-premises networks associated with VBR instances in the China (Beijing) region can access the cloud services.</description></item>
+        /// <item><description>The <b>ResolveAndRouteServiceInCen</b> operation is asynchronous. After you invoke this operation, the system returns a <b>RequestId</b>, but the cloud service configurations are not completely added. The addition task is still running in the background. You can invoke the <b>DescribeRouteServicesInCen</b> operation to query the status of the cloud services. <list type="bullet">
+        /// <item><description>If the cloud services are in the <b>Creating</b> state, the cloud service configurations are being added. In this state, you can only execute query operations on the cloud service configurations and cannot execute other operations.</description></item>
+        /// <item><description>If the cloud services are in the <b>Active</b> state, the cloud service configurations are added.</description></item>
+        /// <item><description>If the cloud services are in the <b>Failed</b> state, the cloud service configurations fail to be added.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <h3>Before you begin</h3>
         /// <para>Before you invoke the ResolveAndRouteServiceInCen operation, make sure that the following conditions are met:</para>
         /// <list type="bullet">
-        /// <item><description>The VBR or CCN instance with network connectivity to your on-premises network is loaded to the CEN instance.</description></item>
-        /// <item><description>A VPC-connected instance in the region where the cloud service resides is loaded to the CEN instance. For more information, see <a href="https://help.aliyun.com/document_detail/65902.html">AttachCenChildInstance</a>.</description></item>
+        /// <item><description>The VBR or CCN instance that has network connectivity to your on-premises network is loaded to the CEN instance.</description></item>
+        /// <item><description>A VPC-connected instance in the region where the cloud services are deployed is loaded to the CEN instance. For more information, see <a href="https://help.aliyun.com/document_detail/65902.html">AttachCenChildInstance</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31621,27 +33228,27 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a cloud service to add access configurations for on-premises networks by calling the ResolveAndRouteServiceInCen operation.</para>
+        /// <para>Configures a cloud service and adds configurations for an on-premises network to access the cloud service by calling the ResolveAndRouteServiceInCen operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cloud services refer to Alibaba Cloud services that use the 100.64.0.0/10 CIDR block, such as Object Storage Service (OSS), Simple Log Service (SLS), and Data Transmission Service (DTS). If your on-premises network needs to access cloud services, you must load the Virtual Border Router (VBR) instance or Cloud Connect Network (CCN) instance associated with your on-premises network to a Cloud Enterprise Network (CEN) instance. You must also load a VPC-connected instance in the region where the cloud service resides to the same CEN instance. After loading, your on-premises network can access the VPC-connected instance in the region of the cloud service through CEN, and then access the cloud service through the VPC by forwarding traffic. The CEN handles the routing accordingly.</para>
+        /// <para>Cloud services refer to Alibaba Cloud products that provide services by using the cloud service CIDR block 100.64.0.0/10, such as Object Storage Service (OSS), Simple Log Service (SLS), and Data Transmission Service (DTS). If your on-premises network needs to access cloud services, you must load the virtual border router (VBR) instance that handles routing or the Cloud Connect Network (CCN) instance associated with the on-premises network to a Cloud Enterprise Network (CEN) instance. You must also load a VPC-connected instance in the region where the cloud services are deployed to the CEN instance. After the instances are loaded, your on-premises network can access the VPC-connected instance in the region where the cloud services are deployed through the CEN instance, and then access the cloud services through the VPC-connected instance.</para>
         /// <list type="bullet">
-        /// <item><description>Limits: This operation applies only to Basic Edition transit routers. On-premises networks associated with VBR instances can access only cloud services in the same region through CEN.
-        ///   For example, if the cloud service resides in the China (Beijing) region, only on-premises networks associated with VBR instances in the China (Beijing) region can access the cloud service.</description></item>
-        /// <item><description>The <b>ResolveAndRouteServiceInCen</b> operation is asynchronous. After you send a request, the system returns a <b>RequestId</b> but the cloud service configuration is not yet complete. The background node for adding the configuration continues to run. You can invoke the <b>DescribeRouteServicesInCen</b> operation to query the status of the cloud service. <list type="bullet">
-        /// <item><description>If the cloud service is in the <b>Creating</b> state, the cloud service configuration is being added. In this state, you can only execute a query on the cloud service configuration and cannot execute other operations.</description></item>
-        /// <item><description>If the cloud service is in the <b>Active</b> state, the cloud service configuration is added.</description></item>
-        /// <item><description>If the cloud service is in the <b>Failed</b> state, the cloud service configuration failed to be added.</description></item>
+        /// <item><description>Limits: This operation is applicable only to Basic Edition transit routers that forward traffic. An on-premises network associated with a VBR instance can access only cloud services in the same region through the CEN instance.
+        ///   For example, if the cloud services are deployed in the China (Beijing) region, only the on-premises networks associated with VBR instances in the China (Beijing) region can access the cloud services.</description></item>
+        /// <item><description>The <b>ResolveAndRouteServiceInCen</b> operation is asynchronous. After you invoke this operation, the system returns a <b>RequestId</b>, but the cloud service configurations are not completely added. The addition task is still running in the background. You can invoke the <b>DescribeRouteServicesInCen</b> operation to query the status of the cloud services. <list type="bullet">
+        /// <item><description>If the cloud services are in the <b>Creating</b> state, the cloud service configurations are being added. In this state, you can only execute query operations on the cloud service configurations and cannot execute other operations.</description></item>
+        /// <item><description>If the cloud services are in the <b>Active</b> state, the cloud service configurations are added.</description></item>
+        /// <item><description>If the cloud services are in the <b>Failed</b> state, the cloud service configurations fail to be added.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <h3>Before you begin</h3>
         /// <para>Before you invoke the ResolveAndRouteServiceInCen operation, make sure that the following conditions are met:</para>
         /// <list type="bullet">
-        /// <item><description>The VBR or CCN instance with network connectivity to your on-premises network is loaded to the CEN instance.</description></item>
-        /// <item><description>A VPC-connected instance in the region where the cloud service resides is loaded to the CEN instance. For more information, see <a href="https://help.aliyun.com/document_detail/65902.html">AttachCenChildInstance</a>.</description></item>
+        /// <item><description>The VBR or CCN instance that has network connectivity to your on-premises network is loaded to the CEN instance.</description></item>
+        /// <item><description>A VPC-connected instance in the region where the cloud services are deployed is loaded to the CEN instance. For more information, see <a href="https://help.aliyun.com/document_detail/65902.html">AttachCenChildInstance</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31660,27 +33267,27 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a cloud service to add access configurations for on-premises networks by calling the ResolveAndRouteServiceInCen operation.</para>
+        /// <para>Configures a cloud service and adds configurations for an on-premises network to access the cloud service by calling the ResolveAndRouteServiceInCen operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cloud services refer to Alibaba Cloud services that use the 100.64.0.0/10 CIDR block, such as Object Storage Service (OSS), Simple Log Service (SLS), and Data Transmission Service (DTS). If your on-premises network needs to access cloud services, you must load the Virtual Border Router (VBR) instance or Cloud Connect Network (CCN) instance associated with your on-premises network to a Cloud Enterprise Network (CEN) instance. You must also load a VPC-connected instance in the region where the cloud service resides to the same CEN instance. After loading, your on-premises network can access the VPC-connected instance in the region of the cloud service through CEN, and then access the cloud service through the VPC by forwarding traffic. The CEN handles the routing accordingly.</para>
+        /// <para>Cloud services refer to Alibaba Cloud products that provide services by using the cloud service CIDR block 100.64.0.0/10, such as Object Storage Service (OSS), Simple Log Service (SLS), and Data Transmission Service (DTS). If your on-premises network needs to access cloud services, you must load the virtual border router (VBR) instance that handles routing or the Cloud Connect Network (CCN) instance associated with the on-premises network to a Cloud Enterprise Network (CEN) instance. You must also load a VPC-connected instance in the region where the cloud services are deployed to the CEN instance. After the instances are loaded, your on-premises network can access the VPC-connected instance in the region where the cloud services are deployed through the CEN instance, and then access the cloud services through the VPC-connected instance.</para>
         /// <list type="bullet">
-        /// <item><description>Limits: This operation applies only to Basic Edition transit routers. On-premises networks associated with VBR instances can access only cloud services in the same region through CEN.
-        ///   For example, if the cloud service resides in the China (Beijing) region, only on-premises networks associated with VBR instances in the China (Beijing) region can access the cloud service.</description></item>
-        /// <item><description>The <b>ResolveAndRouteServiceInCen</b> operation is asynchronous. After you send a request, the system returns a <b>RequestId</b> but the cloud service configuration is not yet complete. The background node for adding the configuration continues to run. You can invoke the <b>DescribeRouteServicesInCen</b> operation to query the status of the cloud service. <list type="bullet">
-        /// <item><description>If the cloud service is in the <b>Creating</b> state, the cloud service configuration is being added. In this state, you can only execute a query on the cloud service configuration and cannot execute other operations.</description></item>
-        /// <item><description>If the cloud service is in the <b>Active</b> state, the cloud service configuration is added.</description></item>
-        /// <item><description>If the cloud service is in the <b>Failed</b> state, the cloud service configuration failed to be added.</description></item>
+        /// <item><description>Limits: This operation is applicable only to Basic Edition transit routers that forward traffic. An on-premises network associated with a VBR instance can access only cloud services in the same region through the CEN instance.
+        ///   For example, if the cloud services are deployed in the China (Beijing) region, only the on-premises networks associated with VBR instances in the China (Beijing) region can access the cloud services.</description></item>
+        /// <item><description>The <b>ResolveAndRouteServiceInCen</b> operation is asynchronous. After you invoke this operation, the system returns a <b>RequestId</b>, but the cloud service configurations are not completely added. The addition task is still running in the background. You can invoke the <b>DescribeRouteServicesInCen</b> operation to query the status of the cloud services. <list type="bullet">
+        /// <item><description>If the cloud services are in the <b>Creating</b> state, the cloud service configurations are being added. In this state, you can only execute query operations on the cloud service configurations and cannot execute other operations.</description></item>
+        /// <item><description>If the cloud services are in the <b>Active</b> state, the cloud service configurations are added.</description></item>
+        /// <item><description>If the cloud services are in the <b>Failed</b> state, the cloud service configurations fail to be added.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <h3>Before you begin</h3>
         /// <para>Before you invoke the ResolveAndRouteServiceInCen operation, make sure that the following conditions are met:</para>
         /// <list type="bullet">
-        /// <item><description>The VBR or CCN instance with network connectivity to your on-premises network is loaded to the CEN instance.</description></item>
-        /// <item><description>A VPC-connected instance in the region where the cloud service resides is loaded to the CEN instance. For more information, see <a href="https://help.aliyun.com/document_detail/65902.html">AttachCenChildInstance</a>.</description></item>
+        /// <item><description>The VBR or CCN instance that has network connectivity to your on-premises network is loaded to the CEN instance.</description></item>
+        /// <item><description>A VPC-connected instance in the region where the cloud services are deployed is loaded to the CEN instance. For more information, see <a href="https://help.aliyun.com/document_detail/65902.html">AttachCenChildInstance</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32471,14 +34078,14 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and attaches tags to resources.</para>
+        /// <para>Creates and attaches tags to a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>A tag consists of a tag key and a tag value. Both the tag key and tag value are required when you add a tag.</description></item>
-        /// <item><description>If you want to add multiple tags to a Cloud Enterprise Network (CEN) instance, the tag keys of the tags must be unique within the instance.</description></item>
+        /// <item><description>A tag consists of a tag key and a tag value. Both the tag key and the tag value are required when you add a tag.</description></item>
+        /// <item><description>If you want to add multiple tags to a Cloud Enterprise Network (CEN) instance, the tag keys of the tags attached to the instance must be unique.</description></item>
         /// <item><description>You can attach up to 20 tags to a CEN instance.</description></item>
         /// </list>
         /// </description>
@@ -32550,14 +34157,14 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and attaches tags to resources.</para>
+        /// <para>Creates and attaches tags to a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>A tag consists of a tag key and a tag value. Both the tag key and tag value are required when you add a tag.</description></item>
-        /// <item><description>If you want to add multiple tags to a Cloud Enterprise Network (CEN) instance, the tag keys of the tags must be unique within the instance.</description></item>
+        /// <item><description>A tag consists of a tag key and a tag value. Both the tag key and the tag value are required when you add a tag.</description></item>
+        /// <item><description>If you want to add multiple tags to a Cloud Enterprise Network (CEN) instance, the tag keys of the tags attached to the instance must be unique.</description></item>
         /// <item><description>You can attach up to 20 tags to a CEN instance.</description></item>
         /// </list>
         /// </description>
@@ -32629,14 +34236,14 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and attaches tags to resources.</para>
+        /// <para>Creates and attaches tags to a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>A tag consists of a tag key and a tag value. Both the tag key and tag value are required when you add a tag.</description></item>
-        /// <item><description>If you want to add multiple tags to a Cloud Enterprise Network (CEN) instance, the tag keys of the tags must be unique within the instance.</description></item>
+        /// <item><description>A tag consists of a tag key and a tag value. Both the tag key and the tag value are required when you add a tag.</description></item>
+        /// <item><description>If you want to add multiple tags to a Cloud Enterprise Network (CEN) instance, the tag keys of the tags attached to the instance must be unique.</description></item>
         /// <item><description>You can attach up to 20 tags to a CEN instance.</description></item>
         /// </list>
         /// </description>
@@ -32656,14 +34263,14 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and attaches tags to resources.</para>
+        /// <para>Creates and attaches tags to a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>A tag consists of a tag key and a tag value. Both the tag key and tag value are required when you add a tag.</description></item>
-        /// <item><description>If you want to add multiple tags to a Cloud Enterprise Network (CEN) instance, the tag keys of the tags must be unique within the instance.</description></item>
+        /// <item><description>A tag consists of a tag key and a tag value. Both the tag key and the tag value are required when you add a tag.</description></item>
+        /// <item><description>If you want to add multiple tags to a Cloud Enterprise Network (CEN) instance, the tag keys of the tags attached to the instance must be unique.</description></item>
         /// <item><description>You can attach up to 20 tags to a CEN instance.</description></item>
         /// </list>
         /// </description>
@@ -33287,7 +34894,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Remove tags from resources.</para>
+        /// <para>Removes tags from one or more resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33361,7 +34968,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Remove tags from resources.</para>
+        /// <para>Removes tags from one or more resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33435,7 +35042,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Remove tags from resources.</para>
+        /// <para>Removes tags from one or more resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33453,7 +35060,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Remove tags from resources.</para>
+        /// <para>Removes tags from one or more resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33868,7 +35475,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The UpdateRouteMap operation is asynchronous. After you call this operation, the system returns a <b>RequestId</b>, but the route map is not immediately updated. The update task continues to run in the background. You can call the ListRouteMaps operation to query the status of the route map.</para>
+        /// <para>The <c>UpdateRouteMap</c> operation is asynchronous. After you call this operation, the system returns a <b>RequestId</b>, but the route map is not immediately updated. The update task continues to run in the background. You can call the <c>ListRouteMaps</c> operation to query the status of the route map.</para>
         /// <list type="bullet">
         /// <item><description>If the route map is in the <b>Updating</b> state, the route map is being updated. In this state, you can only perform query operations.</description></item>
         /// <item><description>If the route map is in the <b>Active</b> state, the route map is updated.</description></item>
@@ -33939,7 +35546,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The UpdateRouteMap operation is asynchronous. After you call this operation, the system returns a <b>RequestId</b>, but the route map is not immediately updated. The update task continues to run in the background. You can call the ListRouteMaps operation to query the status of the route map.</para>
+        /// <para>The <c>UpdateRouteMap</c> operation is asynchronous. After you call this operation, the system returns a <b>RequestId</b>, but the route map is not immediately updated. The update task continues to run in the background. You can call the <c>ListRouteMaps</c> operation to query the status of the route map.</para>
         /// <list type="bullet">
         /// <item><description>If the route map is in the <b>Updating</b> state, the route map is being updated. In this state, you can only perform query operations.</description></item>
         /// <item><description>If the route map is in the <b>Active</b> state, the route map is updated.</description></item>
@@ -34010,7 +35617,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The UpdateRouteMap operation is asynchronous. After you call this operation, the system returns a <b>RequestId</b>, but the route map is not immediately updated. The update task continues to run in the background. You can call the ListRouteMaps operation to query the status of the route map.</para>
+        /// <para>The <c>UpdateRouteMap</c> operation is asynchronous. After you call this operation, the system returns a <b>RequestId</b>, but the route map is not immediately updated. The update task continues to run in the background. You can call the <c>ListRouteMaps</c> operation to query the status of the route map.</para>
         /// <list type="bullet">
         /// <item><description>If the route map is in the <b>Updating</b> state, the route map is being updated. In this state, you can only perform query operations.</description></item>
         /// <item><description>If the route map is in the <b>Active</b> state, the route map is updated.</description></item>
@@ -34037,7 +35644,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The UpdateRouteMap operation is asynchronous. After you call this operation, the system returns a <b>RequestId</b>, but the route map is not immediately updated. The update task continues to run in the background. You can call the ListRouteMaps operation to query the status of the route map.</para>
+        /// <para>The <c>UpdateRouteMap</c> operation is asynchronous. After you call this operation, the system returns a <b>RequestId</b>, but the route map is not immediately updated. The update task continues to run in the background. You can call the <c>ListRouteMaps</c> operation to query the status of the route map.</para>
         /// <list type="bullet">
         /// <item><description>If the route map is in the <b>Updating</b> state, the route map is being updated. In this state, you can only perform query operations.</description></item>
         /// <item><description>If the route map is in the <b>Active</b> state, the route map is updated.</description></item>
@@ -34068,7 +35675,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <list type="bullet">
         /// <item><description><c>RouteMapRuleId</c> specifies the route map rule to be updated.</description></item>
         /// <item><description><c>Name</c>, <c>Description</c>, and <c>Priority</c> are used to update the name, description, and priority of the rule. Rule priorities under the same route map must be unique.</description></item>
-        /// <item><description><c>MatchConditions</c> is used to update the match conditions of the rule, and <c>SetActions</c> is used to update the actions to be performed when a route meets the match conditions.</description></item>
+        /// <item><description><c>MatchConditions</c> is used to update the match conditions of the rule, and <c>SetActions</c> is used to update the actions to be executed after a route meets the match conditions.</description></item>
         /// <item><description><c>DryRun</c> is an optional parameter used to precheck the request without actually updating the route map rule.</description></item>
         /// </list>
         /// </description>
@@ -34159,7 +35766,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <list type="bullet">
         /// <item><description><c>RouteMapRuleId</c> specifies the route map rule to be updated.</description></item>
         /// <item><description><c>Name</c>, <c>Description</c>, and <c>Priority</c> are used to update the name, description, and priority of the rule. Rule priorities under the same route map must be unique.</description></item>
-        /// <item><description><c>MatchConditions</c> is used to update the match conditions of the rule, and <c>SetActions</c> is used to update the actions to be performed when a route meets the match conditions.</description></item>
+        /// <item><description><c>MatchConditions</c> is used to update the match conditions of the rule, and <c>SetActions</c> is used to update the actions to be executed after a route meets the match conditions.</description></item>
         /// <item><description><c>DryRun</c> is an optional parameter used to precheck the request without actually updating the route map rule.</description></item>
         /// </list>
         /// </description>
@@ -34250,7 +35857,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <list type="bullet">
         /// <item><description><c>RouteMapRuleId</c> specifies the route map rule to be updated.</description></item>
         /// <item><description><c>Name</c>, <c>Description</c>, and <c>Priority</c> are used to update the name, description, and priority of the rule. Rule priorities under the same route map must be unique.</description></item>
-        /// <item><description><c>MatchConditions</c> is used to update the match conditions of the rule, and <c>SetActions</c> is used to update the actions to be performed when a route meets the match conditions.</description></item>
+        /// <item><description><c>MatchConditions</c> is used to update the match conditions of the rule, and <c>SetActions</c> is used to update the actions to be executed after a route meets the match conditions.</description></item>
         /// <item><description><c>DryRun</c> is an optional parameter used to precheck the request without actually updating the route map rule.</description></item>
         /// </list>
         /// </description>
@@ -34279,7 +35886,7 @@ namespace AlibabaCloud.SDK.Cbn20170912
         /// <list type="bullet">
         /// <item><description><c>RouteMapRuleId</c> specifies the route map rule to be updated.</description></item>
         /// <item><description><c>Name</c>, <c>Description</c>, and <c>Priority</c> are used to update the name, description, and priority of the rule. Rule priorities under the same route map must be unique.</description></item>
-        /// <item><description><c>MatchConditions</c> is used to update the match conditions of the rule, and <c>SetActions</c> is used to update the actions to be performed when a route meets the match conditions.</description></item>
+        /// <item><description><c>MatchConditions</c> is used to update the match conditions of the rule, and <c>SetActions</c> is used to update the actions to be executed after a route meets the match conditions.</description></item>
         /// <item><description><c>DryRun</c> is an optional parameter used to precheck the request without actually updating the route map rule.</description></item>
         /// </list>
         /// </description>
@@ -35203,6 +36810,310 @@ namespace AlibabaCloud.SDK.Cbn20170912
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateTransitRouterPeerAttachmentAttributeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name and description of a policy-based routing rule in the route table of an Enterprise Edition transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTransitRouterPolicyBasedRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTransitRouterPolicyBasedRouteResponse
+        /// </returns>
+        public UpdateTransitRouterPolicyBasedRouteResponse UpdateTransitRouterPolicyBasedRouteWithOptions(UpdateTransitRouterPolicyBasedRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyBasedRouteId))
+            {
+                query["PolicyBasedRouteId"] = request.PolicyBasedRouteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateTransitRouterPolicyBasedRoute",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateTransitRouterPolicyBasedRouteResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name and description of a policy-based routing rule in the route table of an Enterprise Edition transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTransitRouterPolicyBasedRouteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTransitRouterPolicyBasedRouteResponse
+        /// </returns>
+        public async Task<UpdateTransitRouterPolicyBasedRouteResponse> UpdateTransitRouterPolicyBasedRouteWithOptionsAsync(UpdateTransitRouterPolicyBasedRouteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyBasedRouteId))
+            {
+                query["PolicyBasedRouteId"] = request.PolicyBasedRouteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateTransitRouterPolicyBasedRoute",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateTransitRouterPolicyBasedRouteResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name and description of a policy-based routing rule in the route table of an Enterprise Edition transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTransitRouterPolicyBasedRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTransitRouterPolicyBasedRouteResponse
+        /// </returns>
+        public UpdateTransitRouterPolicyBasedRouteResponse UpdateTransitRouterPolicyBasedRoute(UpdateTransitRouterPolicyBasedRouteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateTransitRouterPolicyBasedRouteWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name and description of a policy-based routing rule in the route table of an Enterprise Edition transit router.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTransitRouterPolicyBasedRouteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTransitRouterPolicyBasedRouteResponse
+        /// </returns>
+        public async Task<UpdateTransitRouterPolicyBasedRouteResponse> UpdateTransitRouterPolicyBasedRouteAsync(UpdateTransitRouterPolicyBasedRouteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateTransitRouterPolicyBasedRouteWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name and description of a policy route table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTransitRouterPolicyTableRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTransitRouterPolicyTableResponse
+        /// </returns>
+        public UpdateTransitRouterPolicyTableResponse UpdateTransitRouterPolicyTableWithOptions(UpdateTransitRouterPolicyTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyTableId))
+            {
+                query["PolicyTableId"] = request.PolicyTableId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateTransitRouterPolicyTable",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateTransitRouterPolicyTableResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name and description of a policy route table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTransitRouterPolicyTableRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTransitRouterPolicyTableResponse
+        /// </returns>
+        public async Task<UpdateTransitRouterPolicyTableResponse> UpdateTransitRouterPolicyTableWithOptionsAsync(UpdateTransitRouterPolicyTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyTableId))
+            {
+                query["PolicyTableId"] = request.PolicyTableId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateTransitRouterPolicyTable",
+                Version = "2017-09-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateTransitRouterPolicyTableResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name and description of a policy route table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTransitRouterPolicyTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTransitRouterPolicyTableResponse
+        /// </returns>
+        public UpdateTransitRouterPolicyTableResponse UpdateTransitRouterPolicyTable(UpdateTransitRouterPolicyTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateTransitRouterPolicyTableWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name and description of a policy route table.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTransitRouterPolicyTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTransitRouterPolicyTableResponse
+        /// </returns>
+        public async Task<UpdateTransitRouterPolicyTableResponse> UpdateTransitRouterPolicyTableAsync(UpdateTransitRouterPolicyTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateTransitRouterPolicyTableWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

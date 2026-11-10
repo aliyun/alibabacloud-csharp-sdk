@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to delete all tags. Valid values:</para>
+        /// <para>Specifies whether to remove all tags. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Yes</description></item>
-        /// <item><description><b>false</b> (default): No</description></item>
+        /// <item><description><b>true</b>: yes.</description></item>
+        /// <item><description><b>false</b> (default): no.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter takes effect only when the <b>TagKey.N</b> parameter is empty.</para>
+        /// <para>This parameter takes effect only when <b>TagKey.N</b> is left empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,8 +35,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
-        /// <para>This parameter is not required when the resource type is Cen or BandwidthPackage. For all other resource types, this parameter is required.</para>
+        /// <para>The region ID of the resource.</para>
+        /// <para>This parameter is not required when the resource type is Cen or BandwidthPackage. This parameter is required for other resource types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource ID. The value of <b>N</b> ranges from <b>1</b> to <b>50</b>.</para>
+        /// <para>The resource ID. <b>N</b> ranges from <b>1</b> to <b>50</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,17 +65,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Resource type. Valid values:</para>
-        /// <para><b>Cen</b>: Cloud Enterprise Network (CEN).</para>
-        /// <para><b>BandwidthPackage</b>: Bandwidth package.</para>
-        /// <para><b>TransitRouter</b>: Transit router.</para>
-        /// <para><b>TransitRouterVpcAttachment</b>: VPC attachment.</para>
-        /// <para><b>TransitRouterVbrAttachment</b>: VBR attachment.</para>
-        /// <para><b>TransitRouterPeerAttachment</b>: Inter-region attachment.</para>
-        /// <para><b>TransitRouterVpnAttachment</b>: VPN attachment.</para>
-        /// <para><b>TransitRouterRouteTable</b>: Route table.</para>
-        /// <para><b>Flowlog</b>: Flow log.</para>
-        /// <para><b>TransitRouterMulticastDomain</b>: Multicast domain.</para>
+        /// <para>The resource type. Valid values:</para>
+        /// <para><b>Cen</b>: Cloud Enterprise Network (CEN) instance.</para>
+        /// <para><b>BandwidthPackage</b>: bandwidth plan instance.</para>
+        /// <para><b>TransitRouter</b>: transit router instance.</para>
+        /// <para><b>TransitRouterVpcAttachment</b>: VPC connection instance.</para>
+        /// <para><b>TransitRouterVbrAttachment</b>: VBR connection instance.</para>
+        /// <para><b>TransitRouterPeerAttachment</b>: cross-region connection instance.</para>
+        /// <para><b>TransitRouterVpnAttachment</b>: VPN connection instance.</para>
+        /// <para><b>TransitRouterRouteTable</b>: route table instance.</para>
+        /// <para><b>Flowlog</b>: flow log instance.</para>
+        /// <para><b>TransitRouterMulticastDomain</b>: multicast domain instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,9 +86,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>Tag key.</para>
-        /// <para>A tag key can contain up to 64 characters. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
-        /// <para>If you specify multiple tag keys, the logical relation among these tag keys is <b>OR</b>. Valid values of <b>N</b>: <b>1</b> to <b>20</b>.</para>
+        /// <para>The tag key.</para>
+        /// <para>A tag key can be up to 64 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+        /// <para>If you specify multiple tag keys, they are evaluated by using the <b>OR</b> logical operator. <b>N</b> ranges from <b>1</b> to <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FinanceDept</para>

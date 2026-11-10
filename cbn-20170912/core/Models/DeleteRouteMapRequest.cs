@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class DeleteRouteMapRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can generate the value from your client and make sure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</para>
+        /// <para>You can generate a parameter value from your client to ensure that the value is unique among different requests. The client token only supports ASCII characters.</para>
         /// <remarks>
         /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>Specifies whether to only precheck the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The system prechecks the request without deleting the route map. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the precheck, the system returns an error. If the request passes the precheck, the system returns the DryRunOperation error code.</description></item>
-        /// <item><description><b>false</b> (default): The system sends a normal request and deletes the route map after the request passes the precheck.</description></item>
+        /// <item><description><b>true</b>: sends a check request and does not delete the route map. The system checks whether required parameters are specified, the request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a normal request and directly deletes the route map after the check succeeds.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

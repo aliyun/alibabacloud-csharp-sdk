@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class DeleteRouteMapRuleRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can generate the parameter value from your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</para>
+        /// <para>You can generate a parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</para>
         /// <remarks>
         /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to only precheck the request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run on the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: sends a check request and does not delete the route map rule. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the check, the corresponding error is returned. If the request passes the check, the DryRunOperation error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): sends a regular request and directly deletes the route map rule after the request passes the check.</description></item>
+        /// <item><description><b>true</b>: performs a dry run and does not delete the route map rule. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the check fails, the system returns an error. If the check succeeds, the system returns the error code <c>DryRunOperation</c>.</description></item>
+        /// <item><description><b>false</b> (default): sends a regular request and deletes the route map rule if the dry run succeeds.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("DryRun")]

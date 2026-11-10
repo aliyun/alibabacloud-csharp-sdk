@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class CreateRouteMapRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can generate a parameter value on your client to ensure that the value is unique across different requests. The client token only supports ASCII characters.</para>
+        /// <para>You can generate the parameter value on your client. Make sure that the token is unique among different requests. The client token only supports ASCII characters.</para>
         /// <remarks>
         /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The description of the route map.</para>
-        /// <para>The description can be empty or 1 to 256 characters in length. It cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length. It cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>descname</para>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run on the request, including permission and instance status checks. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run on the request. The dry run includes checks on permissions and instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): sends a normal request. After the check is passed, the route map is directly created.</description></item>
-        /// <item><description><b>true</b>: sends a dry run request. Only the check is performed, and the route map is not created. Check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check is passed, the error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a normal request. If the request passes the check, the route map is created.</description></item>
+        /// <item><description><b>true</b>: sends a dry run request. The system only checks the request and does not create the route map. The check items include whether required parameters are specified and whether the request format is valid. If the request fails the check, the corresponding error is returned. If the request passes the check, the <c>DryRunOperation</c> error code is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The name of the route map.</para>
-        /// <para>The name can be empty or 1 to 128 characters in length. It cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length. It cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>Policy priority of the route map. Valid values: <b>1</b> to <b>100</b>. A smaller value indicates a higher priority.</para>
         /// <remarks>
-        /// <para>Policy priority of a route map must be unique within an Alibaba Cloud account. When a route map is executed, the system matches route map rules starting from the route map with the smallest priority value based on policy priority of the route map rules. Therefore, when you specify policy priority of a route map, make sure that policy priority meets your expected matching order.</para>
+        /// <para>Policy priority of each route map under an Alibaba Cloud account must be unique. When a route map is applied, the system starts matching route map rules from the route map with the smallest priority value based on policy priority of the route map rules. Therefore, when you specify policy priority of a route map, make sure that policy priority meets the expected matching order.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public class CreateRouteMapRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the resource.</para>
-            /// <para>If you specify this parameter, it cannot be an empty string. The tag key can be up to 64 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key cannot be an empty string. It can be up to 64 characters in length, and cannot start with aliyun or acs:. It cannot contain http:// or https://.</para>
             /// <para>You can specify up to 20 tag keys at a time.</para>
             /// 
             /// <b>Example:</b>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The tag value of the resource.</para>
-            /// <para>If you specify this parameter, it cannot be empty. The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value cannot be empty. It can be up to 128 characters in length, and cannot start with aliyun or acs:. It cannot contain http:// or https://.</para>
             /// <para>Each tag key corresponds to a tag value. You can specify up to 20 tag values at a time.</para>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenBandwidthPackagesRequest : TeaModel {
         /// <summary>
-        /// <para>The filter information.</para>
+        /// <para>The filter conditions.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
@@ -18,19 +18,19 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public class DescribeCenBandwidthPackagesRequestFilter : TeaModel {
             /// <summary>
             /// <para>The filter condition.
-            /// You can use filter conditions to filter the bandwidth package instances to query. The following filter conditions are supported:</para>
+            /// You can use filter conditions to filter the bandwidth plan instances to be viewed. The system supports the following filter conditions:</para>
             /// <list type="bullet">
             /// <item><description><para><b>CenId</b>: The ID of the Cloud Enterprise Network (CEN) instance.</para>
             /// </description></item>
-            /// <item><description><para><b>Status</b>: The status of the bandwidth package instance. Valid values:</para>
+            /// <item><description><para><b>Status</b>: The status of the bandwidth plan instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Idle</b>: Not associated.</description></item>
-            /// <item><description><b>InUse</b>: Associated.</description></item>
+            /// <item><description><b>Idle</b>: Unbound.</description></item>
+            /// <item><description><b>InUse</b>: Bound.</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para><b>CenBandwidthPackageId</b>: The ID of the bandwidth package.</para>
+            /// <item><description><para><b>CenBandwidthPackageId</b>: The ID of the bandwidth plan.</para>
             /// </description></item>
-            /// <item><description><para><b>Name</b>: The name of the bandwidth package.
+            /// <item><description><para><b>Name</b>: The name of the bandwidth plan.
             /// You can specify one or more filter conditions. The maximum value of <b>N</b> is <b>5</b>.</para>
             /// </description></item>
             /// </list>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The filter values based on the specified <b>Key</b>. You can specify multiple filter values for a single <b>Key</b>. The filter values have an <b>OR</b> relationship, which means that a bandwidth package matching any of the filter values is considered a match for the filter condition.</para>
+            /// <para>The filter value specified based on <b>Key</b>. You can specify multiple filter values for a single <b>Key</b>. The filter values have an <b>OR</b> relationship. A match occurs when any of the filter values is met.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Idle</para>
@@ -73,9 +73,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The logical relationship between filter conditions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b> (default): The filter conditions have an <b>AND</b> relationship. A bandwidth package must match all filter conditions to be returned.</para>
+        /// <item><description><para><b>false</b> (default): The filter conditions have an <b>AND</b> relationship. A match occurs only when all filter conditions are met.</para>
         /// </description></item>
-        /// <item><description><para><b>true</b>: The filter conditions have an <b>OR</b> relationship. A bandwidth package that matches any filter condition is returned.</para>
+        /// <item><description><para><b>true</b>: The filter conditions have an <b>OR</b> relationship. A match occurs when any of the filter conditions is met.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfnwjeo4tv****</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tag information list.</para>
+        /// <para>The list of tag information.</para>
         /// <para>You can specify up to 20 tags at a time.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public class DescribeCenBandwidthPackagesRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the resource.</para>
-            /// <para>Once specified, the tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>This parameter cannot be an empty string once specified. It can be up to 64 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>, or contain <c>http://</c> or <c>https://</c>.</para>
             /// <para>You can specify up to 20 tag keys at a time.</para>
             /// 
             /// <b>Example:</b>
@@ -154,8 +154,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The tag value of the resource.</para>
-            /// <para>The tag value can be empty or a string of up to 128 characters. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</para>
+            /// <para>The tag value can be empty or a string of up to 128 characters. It cannot start with <c>aliyun</c> or <c>acs:</c>, or contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>Each tag key corresponds to a tag value. You can specify up to 20 tag values at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagValue</para>

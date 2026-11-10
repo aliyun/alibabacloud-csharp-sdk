@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// <para>The filter condition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>CenId</b>: the CEN instance ID.</description></item>
-            /// <item><description><b>Name</b>: the CEN instance name.</description></item>
+            /// <item><description><b>CenId</b>: the instance ID of the CEN.</description></item>
+            /// <item><description><b>Name</b>: the name of the CEN instance.</description></item>
             /// </list>
-            /// <para>The relationship between multiple filter conditions is <b>AND</b>, which means that a record must match all filter conditions to be returned.</para>
+            /// <para>By default, multiple filter conditions have an <b>AND</b> relationship. A CEN instance is matched only when it meets all the filter conditions.</para>
             /// <para>You can specify up to 5 filter conditions at a time.</para>
             /// 
             /// <b>Example:</b>
@@ -35,8 +35,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The value of the filter condition.</para>
-            /// <para>Specify filter values based on the <b>Key</b> parameter. You can specify multiple filter values for a single <b>Key</b>. The relationship between multiple filter values is <b>OR</b>, which means that a record is returned if it matches any of the filter values.</para>
-            /// <para>You can specify up to 5 filter values for each filter condition.</para>
+            /// <para>Specify the filter value based on the <b>Key</b>. You can specify multiple filter values for a single <b>Key</b>. Multiple filter values have an <b>OR</b> relationship. A CEN instance is matched if it meets any of the filter values.</para>
+            /// <para>You can specify up to 5 filter values for a single filter condition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cen-0xyeagctz5sfg9****</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number to query. Default value: <b>1</b>.</para>
+        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query. Valid values: <b>1</b> to <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries to return per page during paging in a paged query. Valid values: <b>1</b> to <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public class DescribeCensRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the resource.</para>
-            /// <para>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key cannot be an empty string. It can be up to 64 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// <para>You can specify up to 20 tag keys at a time.</para>
             /// 
             /// <b>Example:</b>
@@ -115,8 +115,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The tag value of the resource.</para>
-            /// <para>The tag value can be an empty string or up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</para>
+            /// <para>The tag value can be an empty string or a string up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>Each tag key corresponds to a tag value. You can specify up to 20 tag values at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tagtest</para>

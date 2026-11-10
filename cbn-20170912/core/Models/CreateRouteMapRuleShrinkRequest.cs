@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class CreateRouteMapRuleShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can generate the parameter value on your client. Make sure that the token is unique across different requests. The client token supports only ASCII characters.</para>
+        /// <para>You can generate the value from your client and ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</para>
         /// <remarks>
         /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to only precheck the request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run of the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Prechecks the request without creating the route map rule. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): Sends the request. After the request passes the precheck, the route map rule is created.</description></item>
+        /// <item><description><b>true</b>: performs a dry run without creating the route map rule. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the dry run, an error is returned. If the request passes the dry run, the DryRunOperation error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a normal request. If the request passes the dry run, the route map rule is created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The match conditions of the route map rule. The system executes the actions defined in <b>SetActions</b> only when a route meets all the match conditions defined in this parameter.</para>
+        /// <para>The match conditions of the route map rule. The system performs the actions defined in <b>SetActions</b> only when a route meets all the match conditions defined in this parameter.</para>
         /// </summary>
         [NameInMap("MatchConditions")]
         [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RouteMapId { get; set; }
 
         /// <summary>
-        /// <para>The actions to execute for the route map rule. After a route meets all the match conditions defined in <b>MatchConditions</b>, the system processes the route based on the actions defined in this parameter.</para>
+        /// <para>The actions to be performed for the route map rule. After a route meets all the match conditions defined in <b>MatchConditions</b>, the system processes the route based on the actions defined in this parameter.</para>
         /// </summary>
         [NameInMap("SetActions")]
         [Validation(Required=false)]

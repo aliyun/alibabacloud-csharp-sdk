@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class ListRouteMapRulesRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can generate a parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</para>
+        /// <para>You can generate a parameter value on your client to ensure that the parameter value is unique across different requests. The ClientToken parameter supports only ASCII characters.</para>
         /// <remarks>
         /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>Specifies whether to only precheck the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: sends a check request and does not query the route map rules. Check items include whether required parameters are specified, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the error code DryRunOperation is returned.</description></item>
-        /// <item><description><b>false</b> (default): sends a normal request and directly queries the route map rules after the check succeeds.</description></item>
+        /// <item><description><b>true</b>: sends a check request, and no route map rules are queried. Check items include whether required parameters are specified, the request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the error code DryRunOperation is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a normal request, and route map rules are queried directly after the check succeeds.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("DryRun")]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The information about the filter conditions.</para>
+        /// <para>The filter conditions.</para>
         /// <para>You can specify up to 5 filter conditions at a time.</para>
         /// </summary>
         [NameInMap("Filter")]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <item><description><b>Name</b>: the name of the route map rule.</description></item>
             /// <item><description><b>Priority</b>: the priority of the route map rule.</description></item>
             /// </list>
-            /// <para>By default, multiple filter conditions have an AND relationship. A match succeeds only when all filter conditions are met.</para>
+            /// <para>By default, multiple filter conditions are evaluated by using the AND logical operator. A rule matches the filter conditions only if it meets all the filter conditions.</para>
             /// <para>You can specify up to 5 filter conditions at a time.</para>
             /// 
             /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The value of the filter condition.</para>
-            /// <para>Specify the filter value based on the Key parameter. You can specify multiple filter values for a single key. Multiple filter values have an OR relationship. A match succeeds if any of the filter values is met.</para>
+            /// <para>Specify the filter value based on the Key. You can specify multiple filter values for a single Key. Multiple filter values are evaluated by using the OR logical operator. A rule matches the filter condition if it meets any of the filter values.</para>
             /// <para>You can specify up to 5 filter values for a single filter condition.</para>
             /// </summary>
             [NameInMap("Value")]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// <para>The number of entries to return on each page in a paginated query.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -80,10 +80,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. Valid values:</para>
+        /// <para>The token that is used to retrieve the next page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter for the first query or when no next query is available.</description></item>
-        /// <item><description>If a next query is available, set this parameter to the <b>NextToken</b> value returned by the previous API call.</description></item>
+        /// <item><description>If this is the first query or no next page exists, you do not need to specify this parameter.</description></item>
+        /// <item><description>If a next page exists, set the value to the <b>NextToken</b> value returned from the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RouteMapId { get; set; }
 
         /// <summary>
-        /// <para>The list of route map rule IDs to query. This parameter and filter conditions can be used together for matching, and they have an AND relationship.</para>
+        /// <para>The list of route map rule IDs to query. This parameter and filter conditions can be used together for matching, and the relationship is AND.</para>
         /// </summary>
         [NameInMap("RouteMapRuleIds")]
         [Validation(Required=false)]
