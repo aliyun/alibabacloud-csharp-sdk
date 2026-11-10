@@ -375,6 +375,16 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public long? Status { get; set; }
 
             /// <summary>
+            /// <para>用户来源的企业身份源类型，由后端根据企业身份源自定义列的显隐配置决定是否查询。取值：DINGDING（钉钉）、FEISHU（飞书）、WECHAT（企业微信）、ENTRA_ID（Microsoft Entra ID）。列隐藏、未配置或无企业身份源关联时为空。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>FEISHU</para>
+            /// </summary>
+            [NameInMap("UserSource")]
+            [Validation(Required=false)]
+            public string UserSource { get; set; }
+
+            /// <summary>
             /// <para>The globally unique ID of the convenience user.</para>
             /// 
             /// <b>Example:</b>

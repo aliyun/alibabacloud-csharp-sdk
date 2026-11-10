@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class CreateResourceGroupRequest : TeaModel {
+        /// <summary>
+        /// <para>The agent subtype of the DesktopAgent resource group. Valid values: JVSClaw and HermesAgent.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>JVSClaw</para>
+        /// </summary>
         [NameInMap("AgentType")]
         [Validation(Required=false)]
         public string AgentType { get; set; }
@@ -23,6 +29,9 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public string BusinessChannel { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to create an Alibaba Cloud resource group at the same time. This is supported only for resource groups in the Default category.</para>
+        /// </summary>
         [NameInMap("EnableAliyunResourceGroup")]
         [Validation(Required=false)]
         public bool? EnableAliyunResourceGroup { get; set; }
@@ -40,7 +49,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public long? IsResourceGroupWithOfficeSite { get; set; }
 
         /// <summary>
-        /// <para>For Elastic Desktop Service (EDS) Enterprise Edition, set the value to <c>AliyunConsole</c>. Other platforms are not supported.</para>
+        /// <para>For Elastic Desktop Service Enterprise Edition, set the value to <c>AliyunConsole</c>. Other platforms are not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AliyunConsole</para>
@@ -50,7 +59,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string Platform { get; set; }
 
         /// <summary>
-        /// <para>The resource category.</para>
+        /// <para>The category of the resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Default</para>

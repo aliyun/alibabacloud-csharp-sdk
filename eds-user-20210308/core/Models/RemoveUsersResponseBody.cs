@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class RemoveUsersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result of deleting the convenience users.</para>
+        /// <para>The result of the convenience user deletion operation.</para>
         /// </summary>
         [NameInMap("RemoveUsersResult")]
         [Validation(Required=false)]
         public RemoveUsersResponseBodyRemoveUsersResult RemoveUsersResult { get; set; }
         public class RemoveUsersResponseBodyRemoveUsersResult : TeaModel {
             /// <summary>
-            /// <para>The information about the users that failed to be deleted.</para>
+            /// <para>The collection of information about users that failed to be deleted.</para>
             /// </summary>
             [NameInMap("FailedUsers")]
             [Validation(Required=false)]
@@ -55,17 +55,23 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
             }
 
+            /// <summary>
+            /// <para>The list of usernames of convenience users for which asynchronous deletion tasks already exist and have not finished. This request does not create duplicate deletion tasks for these users. The return of this field does not indicate that the users have been deleted.</para>
+            /// </summary>
             [NameInMap("ProcessingUsers")]
             [Validation(Required=false)]
             public List<string> ProcessingUsers { get; set; }
 
             /// <summary>
-            /// <para>The convenience users that are successfully deleted.</para>
+            /// <para>The convenience users that were successfully deleted.</para>
             /// </summary>
             [NameInMap("RemovedUsers")]
             [Validation(Required=false)]
             public List<string> RemovedUsers { get; set; }
 
+            /// <summary>
+            /// <para>The list of usernames of convenience users for which asynchronous deletion tasks have been successfully accepted and created in this request. Asynchronous deletion is used when UnbindDesktops is set to true. Task acceptance does not mean that the convenience users have been deleted.</para>
+            /// </summary>
             [NameInMap("SubmittedUsers")]
             [Validation(Required=false)]
             public List<string> SubmittedUsers { get; set; }
