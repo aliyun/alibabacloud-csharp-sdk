@@ -45470,7 +45470,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the custom images available for creating RDS Custom instances.</para>
+        /// <para>Queries a list of custom images available for creating RDS Custom instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45508,7 +45508,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the custom images available for creating RDS Custom instances.</para>
+        /// <para>Queries a list of custom images available for creating RDS Custom instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45546,7 +45546,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the custom images available for creating RDS Custom instances.</para>
+        /// <para>Queries a list of custom images available for creating RDS Custom instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45564,7 +45564,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the custom images available for creating RDS Custom instances.</para>
+        /// <para>Queries a list of custom images available for creating RDS Custom instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -60927,7 +60927,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
+        /// <h3>Supported engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
@@ -60936,13 +60936,13 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></para>
+        /// <para>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/98818.html">Configure an automatic backup policy for an ApsaraDB RDS for MySQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/96772.html">Configure an automatic backup policy for an ApsaraDB RDS for PostgreSQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/95717.html">Configure an automatic backup policy for an ApsaraDB RDS for SQL Server instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/97147.html">Configure an automatic backup policy for an ApsaraDB RDS for MariaDB instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/98818.html">Configure the automatic backup policy for an ApsaraDB RDS for MySQL instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/96772.html">Configure the automatic backup policy for an ApsaraDB RDS for PostgreSQL instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/95717.html">Configure the automatic backup policy for an ApsaraDB RDS for SQL Server instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/97147.html">Configure the automatic backup policy for an ApsaraDB RDS for MariaDB instance</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -61118,7 +61118,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
+        /// <h3>Supported engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
@@ -61127,13 +61127,13 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></para>
+        /// <para>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/98818.html">Configure an automatic backup policy for an ApsaraDB RDS for MySQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/96772.html">Configure an automatic backup policy for an ApsaraDB RDS for PostgreSQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/95717.html">Configure an automatic backup policy for an ApsaraDB RDS for SQL Server instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/97147.html">Configure an automatic backup policy for an ApsaraDB RDS for MariaDB instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/98818.html">Configure the automatic backup policy for an ApsaraDB RDS for MySQL instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/96772.html">Configure the automatic backup policy for an ApsaraDB RDS for PostgreSQL instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/95717.html">Configure the automatic backup policy for an ApsaraDB RDS for SQL Server instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/97147.html">Configure the automatic backup policy for an ApsaraDB RDS for MariaDB instance</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -61309,7 +61309,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
+        /// <h3>Supported engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
@@ -61318,13 +61318,13 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></para>
+        /// <para>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/98818.html">Configure an automatic backup policy for an ApsaraDB RDS for MySQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/96772.html">Configure an automatic backup policy for an ApsaraDB RDS for PostgreSQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/95717.html">Configure an automatic backup policy for an ApsaraDB RDS for SQL Server instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/97147.html">Configure an automatic backup policy for an ApsaraDB RDS for MariaDB instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/98818.html">Configure the automatic backup policy for an ApsaraDB RDS for MySQL instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/96772.html">Configure the automatic backup policy for an ApsaraDB RDS for PostgreSQL instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/95717.html">Configure the automatic backup policy for an ApsaraDB RDS for SQL Server instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/97147.html">Configure the automatic backup policy for an ApsaraDB RDS for MariaDB instance</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -61348,7 +61348,7 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable engines</h3>
+        /// <h3>Supported engines</h3>
         /// <list type="bullet">
         /// <item><description>ApsaraDB RDS for MySQL</description></item>
         /// <item><description>ApsaraDB RDS for PostgreSQL</description></item>
@@ -61357,13 +61357,13 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></para>
+        /// <para>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/98818.html">Configure an automatic backup policy for an ApsaraDB RDS for MySQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/96772.html">Configure an automatic backup policy for an ApsaraDB RDS for PostgreSQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/95717.html">Configure an automatic backup policy for an ApsaraDB RDS for SQL Server instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/97147.html">Configure an automatic backup policy for an ApsaraDB RDS for MariaDB instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/98818.html">Configure the automatic backup policy for an ApsaraDB RDS for MySQL instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/96772.html">Configure the automatic backup policy for an ApsaraDB RDS for PostgreSQL instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/95717.html">Configure the automatic backup policy for an ApsaraDB RDS for SQL Server instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/97147.html">Configure the automatic backup policy for an ApsaraDB RDS for MariaDB instance</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -77246,7 +77246,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP address whitelist configuration of a specified ApsaraDB RDS instance. This operation supports three modification modes: overwrite, append, and delete.</para>
+        /// <para>Modifies the IP whitelist configuration of a specified ApsaraDB RDS instance. This operation supports overwrite, append, and delete modes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -77260,13 +77260,13 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.</para>
+        /// <para>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/96118.html">Configure an IP address whitelist for an ApsaraDB RDS for MySQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/43187.html">Configure an IP address whitelist for an ApsaraDB RDS for PostgreSQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/43186.html">Configure an IP address whitelist for an ApsaraDB RDS for SQL Server instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/90336.html">Configure an IP address whitelist for an ApsaraDB RDS for MariaDB instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/96118.html">Configure an IP whitelist for an ApsaraDB RDS for MySQL instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/43187.html">Configure an IP whitelist for an ApsaraDB RDS for PostgreSQL instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/43186.html">Configure an IP whitelist for an ApsaraDB RDS for SQL Server instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/90336.html">Configure an IP whitelist for an ApsaraDB RDS for MariaDB instance</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -77284,6 +77284,10 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchMode))
+            {
+                query["BatchMode"] = request.BatchMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceIPArrayAttribute))
             {
                 query["DBInstanceIPArrayAttribute"] = request.DBInstanceIPArrayAttribute;
@@ -77299,6 +77303,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FreshWhiteListReadins))
             {
                 query["FreshWhiteListReadins"] = request.FreshWhiteListReadins;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupItems))
+            {
+                query["GroupItems"] = request.GroupItems;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyMode))
             {
@@ -77341,7 +77349,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP address whitelist configuration of a specified ApsaraDB RDS instance. This operation supports three modification modes: overwrite, append, and delete.</para>
+        /// <para>Modifies the IP whitelist configuration of a specified ApsaraDB RDS instance. This operation supports overwrite, append, and delete modes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -77355,13 +77363,13 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.</para>
+        /// <para>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/96118.html">Configure an IP address whitelist for an ApsaraDB RDS for MySQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/43187.html">Configure an IP address whitelist for an ApsaraDB RDS for PostgreSQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/43186.html">Configure an IP address whitelist for an ApsaraDB RDS for SQL Server instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/90336.html">Configure an IP address whitelist for an ApsaraDB RDS for MariaDB instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/96118.html">Configure an IP whitelist for an ApsaraDB RDS for MySQL instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/43187.html">Configure an IP whitelist for an ApsaraDB RDS for PostgreSQL instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/43186.html">Configure an IP whitelist for an ApsaraDB RDS for SQL Server instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/90336.html">Configure an IP whitelist for an ApsaraDB RDS for MariaDB instance</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -77379,6 +77387,10 @@ namespace AlibabaCloud.SDK.Rds20140815
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchMode))
+            {
+                query["BatchMode"] = request.BatchMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceIPArrayAttribute))
             {
                 query["DBInstanceIPArrayAttribute"] = request.DBInstanceIPArrayAttribute;
@@ -77394,6 +77406,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FreshWhiteListReadins))
             {
                 query["FreshWhiteListReadins"] = request.FreshWhiteListReadins;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupItems))
+            {
+                query["GroupItems"] = request.GroupItems;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyMode))
             {
@@ -77436,7 +77452,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP address whitelist configuration of a specified ApsaraDB RDS instance. This operation supports three modification modes: overwrite, append, and delete.</para>
+        /// <para>Modifies the IP whitelist configuration of a specified ApsaraDB RDS instance. This operation supports overwrite, append, and delete modes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -77450,13 +77466,13 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.</para>
+        /// <para>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/96118.html">Configure an IP address whitelist for an ApsaraDB RDS for MySQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/43187.html">Configure an IP address whitelist for an ApsaraDB RDS for PostgreSQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/43186.html">Configure an IP address whitelist for an ApsaraDB RDS for SQL Server instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/90336.html">Configure an IP address whitelist for an ApsaraDB RDS for MariaDB instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/96118.html">Configure an IP whitelist for an ApsaraDB RDS for MySQL instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/43187.html">Configure an IP whitelist for an ApsaraDB RDS for PostgreSQL instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/43186.html">Configure an IP whitelist for an ApsaraDB RDS for SQL Server instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/90336.html">Configure an IP whitelist for an ApsaraDB RDS for MariaDB instance</a></description></item>
         /// </list>
         /// </description>
         /// 
@@ -77475,7 +77491,7 @@ namespace AlibabaCloud.SDK.Rds20140815
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP address whitelist configuration of a specified ApsaraDB RDS instance. This operation supports three modification modes: overwrite, append, and delete.</para>
+        /// <para>Modifies the IP whitelist configuration of a specified ApsaraDB RDS instance. This operation supports overwrite, append, and delete modes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -77489,13 +77505,13 @@ namespace AlibabaCloud.SDK.Rds20140815
         /// </list>
         /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.</para>
+        /// <para>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/96118.html">Configure an IP address whitelist for an ApsaraDB RDS for MySQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/43187.html">Configure an IP address whitelist for an ApsaraDB RDS for PostgreSQL instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/43186.html">Configure an IP address whitelist for an ApsaraDB RDS for SQL Server instance</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/90336.html">Configure an IP address whitelist for an ApsaraDB RDS for MariaDB instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/96118.html">Configure an IP whitelist for an ApsaraDB RDS for MySQL instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/43187.html">Configure an IP whitelist for an ApsaraDB RDS for PostgreSQL instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/43186.html">Configure an IP whitelist for an ApsaraDB RDS for SQL Server instance</a></description></item>
+        /// <item><description><a href="https://help.aliyun.com/document_detail/90336.html">Configure an IP whitelist for an ApsaraDB RDS for MariaDB instance</a></description></item>
         /// </list>
         /// </description>
         /// 

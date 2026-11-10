@@ -1,3 +1,8 @@
+2026-11-10 Version: 15.10.2
+- Update API ModifySecurityIps: add request parameters BatchMode.
+- Update API ModifySecurityIps: add request parameters GroupItems.
+
+
 2026-11-05 Version: 15.10.1
 - Update API DescribeBackupPolicy: add response parameters Body.EnableImmutableBackup.
 - Update API DescribeRCElasticScaling: add request parameters AcuType.

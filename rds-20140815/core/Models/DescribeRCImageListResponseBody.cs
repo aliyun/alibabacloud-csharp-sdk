@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The mappings between cloud disks and snapshots included in the image.</para>
+            /// <para>The mapping between cloud disks and snapshots included in the image.</para>
             /// </summary>
             [NameInMap("DiskDeviceMappings")]
             [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
                 public string Size { get; set; }
 
                 /// <summary>
-                /// <para>The attribute of the cloud disk. Valid values:</para>
+                /// <para>The property of the cloud disk. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>system</b>: System cloud disk.</description></item>
                 /// <item><description><b>data</b>: Data cloud disk.</description></item>
@@ -124,10 +124,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             public string ImageVersion { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the image is public. Public images include public images provided by Alibaba Cloud and custom images that you have published as community images. Valid values:</para>
+            /// <para>Indicates whether the image is a public image. Public images include public images provided by Alibaba Cloud and custom images that you have published as community images. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The image is public.</description></item>
-            /// <item><description><b>false</b>: The image is not public.</description></item>
+            /// <item><description><b>true</b>: The image is a public image.</description></item>
+            /// <item><description><b>false</b>: The image is not a public image.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
