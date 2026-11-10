@@ -13945,6 +13945,220 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>发起智能助手会话运行（AG-UI 协议）</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>独立的原生 AG-UI 接口，成功建流后返回 text/event-stream。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InvokeAgentRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InvokeAgentResponse
+        /// </returns>
+        public InvokeAgentResponse InvokeAgentWithOptions(InvokeAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Context))
+            {
+                body["context"] = request.Context;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForwardedProps))
+            {
+                body["forwardedProps"] = request.ForwardedProps;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Messages))
+            {
+                body["messages"] = request.Messages;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentRunId))
+            {
+                body["parentRunId"] = request.ParentRunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resume))
+            {
+                body["resume"] = request.Resume;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
+            {
+                body["runId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                body["state"] = request.State;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThreadId))
+            {
+                body["threadId"] = request.ThreadId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tools))
+            {
+                body["tools"] = request.Tools;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InvokeAgent",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/intelligence/invoke",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InvokeAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发起智能助手会话运行（AG-UI 协议）</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>独立的原生 AG-UI 接口，成功建流后返回 text/event-stream。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InvokeAgentRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InvokeAgentResponse
+        /// </returns>
+        public async Task<InvokeAgentResponse> InvokeAgentWithOptionsAsync(InvokeAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Context))
+            {
+                body["context"] = request.Context;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForwardedProps))
+            {
+                body["forwardedProps"] = request.ForwardedProps;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Messages))
+            {
+                body["messages"] = request.Messages;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentRunId))
+            {
+                body["parentRunId"] = request.ParentRunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resume))
+            {
+                body["resume"] = request.Resume;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
+            {
+                body["runId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                body["state"] = request.State;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThreadId))
+            {
+                body["threadId"] = request.ThreadId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tools))
+            {
+                body["tools"] = request.Tools;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InvokeAgent",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/intelligence/invoke",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InvokeAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发起智能助手会话运行（AG-UI 协议）</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>独立的原生 AG-UI 接口，成功建流后返回 text/event-stream。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InvokeAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InvokeAgentResponse
+        /// </returns>
+        public InvokeAgentResponse InvokeAgent(InvokeAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return InvokeAgentWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发起智能助手会话运行（AG-UI 协议）</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>独立的原生 AG-UI 接口，成功建流后返回 text/event-stream。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InvokeAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InvokeAgentResponse
+        /// </returns>
+        public async Task<InvokeAgentResponse> InvokeAgentAsync(InvokeAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await InvokeAgentWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries a list of available components and retrieves detailed component information based on parameters such as the region, cluster type, cluster profile, and cluster version. The detailed information includes whether the component is managed, the schema of supported custom parameters, and compatible operating system architectures.</para>
         /// </summary>
         /// 

@@ -1,3 +1,7 @@
+2026-11-10 Version: 7.3.0
+- Support API InvokeAgent.
+
+
 2026-11-06 Version: 7.2.6
 - Update API CreateCluster: add request parameters body.support_policy.
 - Update API DeleteClusterNodes: add request parameters body.drain_timeout_seconds.
