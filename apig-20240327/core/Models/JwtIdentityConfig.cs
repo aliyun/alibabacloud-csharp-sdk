@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Claim { get; set; }
 
             /// <summary>
-            /// <para>The HTTP header name after conversion.</para>
+            /// <para>The converted HTTP header name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>X-Consumer-Id</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Header { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to overwrite an existing header with the same name.</para>
+            /// <para>Specifies whether to override an existing header with the same name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The JWKS configuration.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para><a href="https://example.com/.well-known/jwks.json">https://example.com/.well-known/jwks.json</a></para>
         /// </summary>
         [NameInMap("jwks")]
         [Validation(Required=false)]
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public JwtIdentityConfigJwtTokenConfig JwtTokenConfig { get; set; }
         public class JwtIdentityConfigJwtTokenConfig : TeaModel {
             /// <summary>
-            /// <para>The key configuration of the JWT.</para>
+            /// <para>The JWT key configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Authorization</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the request is passed through.</para>
+            /// <para>Specifies whether to pass the token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? Pass { get; set; }
 
             /// <summary>
-            /// <para>The position where the JWT is stored.</para>
+            /// <para>The JWT storage location.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HEADER</para>

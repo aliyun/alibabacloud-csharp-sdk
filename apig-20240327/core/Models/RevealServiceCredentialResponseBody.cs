@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class RevealServiceCredentialResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of Ok indicates success.</para>
+        /// <para>The response code. The value is Ok if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public RevealServiceCredentialResponseBodyData Data { get; set; }
         public class RevealServiceCredentialResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The current configuration revision. For legacy objects, the value is legacy.</para>
+            /// <para>The current configuration revision. The value is legacy for historical objects.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ConfigRevision { get; set; }
 
             /// <summary>
-            /// <para>The credential object for the currently active type. Only the fields corresponding to the credentialType are populated.</para>
+            /// <para>The credential object of the currently active type. Only the fields corresponding to the credentialType are populated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;apiKeyGenerateMode&quot;:&quot;Custom&quot;,&quot;apiKeys&quot;:[&quot;sk-xxxxxxxx&quot;]}</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ApiKeyGenerateMode { get; set; }
 
                 /// <summary>
-                /// <para>The list of Key Management Service (KMS) reference names. This field is returned only in Reference mode. Reference values are not returned.</para>
+                /// <para>The list of Key Management Service (KMS) reference names. This parameter is returned only in Reference mode. The reference values are not returned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;my-kms-ref&quot;]</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<string> ApiKeyReferences { get; set; }
 
                 /// <summary>
-                /// <para>The list of custom API keys. This field is returned only when apiKeyGenerateMode is set to Custom. The keys are returned in their original order without deduplication.</para>
+                /// <para>The list of custom API keys. This parameter is returned only when apiKeyGenerateMode is set to Custom. The keys are returned in the original order without deduplication.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;sk-xxxxxxxx&quot;,&quot;sk-yyyyyyyy&quot;]</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<string> ApiKeys { get; set; }
 
                 /// <summary>
-                /// <para>Bedrock AWS Access Key</para>
+                /// <para>The AWS access key ID for Bedrock.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AKIAxxxxxxxx</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string AwsAccessKey { get; set; }
 
                 /// <summary>
-                /// <para>Bedrock AWS Region</para>
+                /// <para>The AWS region for Bedrock.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>us-east-1</para>
@@ -100,17 +100,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string AwsRegion { get; set; }
 
                 /// <summary>
-                /// <para>Bedrock AWS Secret Key</para>
+                /// <para>The AWS secret access key for Bedrock.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <hr>
+                /// <para>wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY</para>
                 /// </summary>
                 [NameInMap("awsSecretKey")]
                 [Validation(Required=false)]
                 public string AwsSecretKey { get; set; }
 
                 /// <summary>
-                /// <para>The source of the credential. When backfilled by the PAI-EAS system, the value is pai-eas.</para>
+                /// <para>The source of the credential. The value is pai-eas when the credential is backfilled by the PAI-EAS system.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pai-eas</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string CredentialSource { get; set; }
 
                 /// <summary>
-                /// <para>The Bedrock endpoint mode. A value of runtime is returned for historical null values.</para>
+                /// <para>The Bedrock endpoint mode. The value is runtime for historical null values.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>runtime</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string EndpointMode { get; set; }
 
                 /// <summary>
-                /// <para>Kling Access Key</para>
+                /// <para>The access key ID for Kling.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AKxxxxxxxx</para>
@@ -140,10 +140,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string KlingAccessKey { get; set; }
 
                 /// <summary>
-                /// <para>Kling Secret Key</para>
+                /// <para>The secret access key for Kling.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <hr>
+                /// <para>sk-kling-9f2c1d7e</para>
                 /// </summary>
                 [NameInMap("klingSecretKey")]
                 [Validation(Required=false)]
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string VertexAuthKey { get; set; }
 
                 /// <summary>
-                /// <para>Vertex Project ID</para>
+                /// <para>The Vertex project ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my-gcp-project</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string VertexProjectId { get; set; }
 
                 /// <summary>
-                /// <para>Vertex Region</para>
+                /// <para>The region for Vertex.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>us-central1</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The response message. A value of success indicates success.</para>
+        /// <para>The response message. The value is success if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

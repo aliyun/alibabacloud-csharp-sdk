@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public CreateConsumerAuthorizationRuleResponseBodyData Data { get; set; }
         public class CreateConsumerAuthorizationRuleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The consumer authorization rule ID. When this ID is used to filter the API list, the response contains only the authorized APIs.</para>
+            /// <para>The consumer authorization rule ID. The list of APIs in the response is filtered based on the specified consumer authorization rule ID and includes only authorized APIs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>car-d06p196m1hkg9ukum5pg</para>

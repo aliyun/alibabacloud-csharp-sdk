@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public UpdateDomainResponseBodyData Data { get; set; }
         public class UpdateDomainResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The deployment revision ID.</para>
+            /// <para>The release version ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apr-xxxxx</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used to trace the API call chain.</para>
+        /// <para>The request ID, used to trace API calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4BACB05C-3FE2-588F-9148-700C5C026B74</para>

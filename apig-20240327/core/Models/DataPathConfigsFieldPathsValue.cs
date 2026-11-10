@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The message direction of the field, which indicates whether it is extracted from the request or the response.</para>
+        /// <para>The message direction of the field, which indicates whether the field is extracted from the request or the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>response</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? Sensitive { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the collection of the field is enabled.</para>
+        /// <para>Indicates whether collection is enabled for the field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -55,6 +55,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public class GetApiPathFieldConfigResponseBodyDataPathConfigs : TeaModel {
                 /// <summary>
                 /// <para>The collection of field configurations under the path, grouped by mapping key, where each group represents a set of field configuration items.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;model&quot;:[&quot;$.model&quot;],&quot;messages&quot;:[&quot;$.messages[*].content&quot;]}</para>
                 /// </summary>
                 [NameInMap("fieldPaths")]
                 [Validation(Required=false)]

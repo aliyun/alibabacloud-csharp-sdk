@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public InvokeAIAgentResponseBodyData Data { get; set; }
         public class InvokeAIAgentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The response body of the debug result.</para>
+            /// <para>The response body of the test result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;choices&quot;:[{&quot;delta&quot;:{&quot;content&quot;:&quot;Analysis result...&quot;}}]}</para>
@@ -38,13 +38,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
             /// <summary>
             /// <para>The response headers, such as Content-Type: text/event-stream.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;Content-Type&quot;:&quot;text/event-stream&quot;}</para>
             /// </summary>
             [NameInMap("headers")]
             [Validation(Required=false)]
             public Dictionary<string, string> Headers { get; set; }
 
             /// <summary>
-            /// <para>The HTTP status code of the debug result.</para>
+            /// <para>The HTTP status code of the test result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -66,7 +69,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A60EE5CA-1294-532A-9775-8D2FD1C6EFBF</para>

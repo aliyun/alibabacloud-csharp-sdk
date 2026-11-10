@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AuthConfig AuthConfig { get; set; }
 
         /// <summary>
-        /// <para>The base path of the API. It must start with a forward slash (/).</para>
+        /// <para>The base path of the API, which must start with a forward slash (/).</para>
         /// 
         /// <b>Example:</b>
         /// <para>/v1</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string EnvironmentId { get; set; }
 
             /// <summary>
-            /// <para>The Ingress class to listen on.</para>
+            /// <para>The Ingress class to listen to.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mse</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string IngressClass { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to update the IP address in the Ingress status.</para>
+            /// <para>Specifies whether to update the address in the Ingress status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to only modify the configuration. A value of true indicates that only the configuration is modified without triggering a redeployment.</para>
+        /// <para>Specifies whether to modify only the configuration. A value of true indicates that only the configuration is modified without triggering a redeployment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public HttpApiVersionConfig VersionConfig { get; set; }
 
         /// <summary>
-        /// <para>The idempotent request token. If you call the same HTTP API with the same client token and request parameters, the result of the first successful call is returned.</para>
+        /// <para>The idempotency token. If the same HTTP API is repeatedly called with the same client token and request parameters, the first successful result is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>update-http-api-client-token-001</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. If you set this parameter to true, all synchronization checks consistent with a real update are performed, but no configurations are updated and no side effects are generated. If this parameter is left empty or set to false, the behavior remains the same as the existing version.</para>
+        /// <para>Specifies whether to perform a dry run. A value of true indicates that all synchronization checks identical to a real update are executed without updating any configurations or causing side effects. If omitted or set to false, the behavior remains consistent with the current version.</para>
         /// </summary>
         [NameInMap("dryRun")]
         [Validation(Required=false)]

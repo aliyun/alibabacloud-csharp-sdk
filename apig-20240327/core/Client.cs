@@ -2614,6 +2614,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             return await CreateConsumerWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateConsumerAuthorizationRule is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Creates a consumer authorization rule.</para>
@@ -2632,6 +2636,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <returns>
         /// CreateConsumerAuthorizationRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateConsumerAuthorizationRule is deprecated")]
+        // Deprecated
         public CreateConsumerAuthorizationRuleResponse CreateConsumerAuthorizationRuleWithOptions(string consumerId, CreateConsumerAuthorizationRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2676,6 +2682,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             return TeaModel.ToObject<CreateConsumerAuthorizationRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateConsumerAuthorizationRule is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Creates a consumer authorization rule.</para>
@@ -2694,6 +2704,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <returns>
         /// CreateConsumerAuthorizationRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateConsumerAuthorizationRule is deprecated")]
+        // Deprecated
         public async Task<CreateConsumerAuthorizationRuleResponse> CreateConsumerAuthorizationRuleWithOptionsAsync(string consumerId, CreateConsumerAuthorizationRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2738,6 +2750,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             return TeaModel.ToObject<CreateConsumerAuthorizationRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateConsumerAuthorizationRule is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Creates a consumer authorization rule.</para>
@@ -2750,6 +2766,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <returns>
         /// CreateConsumerAuthorizationRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateConsumerAuthorizationRule is deprecated")]
+        // Deprecated
         public CreateConsumerAuthorizationRuleResponse CreateConsumerAuthorizationRule(string consumerId, CreateConsumerAuthorizationRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2757,6 +2775,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             return CreateConsumerAuthorizationRuleWithOptions(consumerId, request, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateConsumerAuthorizationRule is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Creates a consumer authorization rule.</para>
@@ -2769,6 +2791,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <returns>
         /// CreateConsumerAuthorizationRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateConsumerAuthorizationRule is deprecated")]
+        // Deprecated
         public async Task<CreateConsumerAuthorizationRuleResponse> CreateConsumerAuthorizationRuleAsync(string consumerId, CreateConsumerAuthorizationRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -3894,6 +3918,248 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateGatewayWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建网关配额限流规则主体用量明细导出任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>调用流程</h2>
+        /// <para>本接口为指定网关配额规则下的一个消费者或消费者组创建消费明细导出任务，导出内容来自网关访问日志。</para>
+        /// <ol>
+        /// <item><description>调用本接口获取 taskId。新任务返回 Pending，表示已提交，文件尚未生成。</description></item>
+        /// <item><description>使用相同的 gatewayId、ruleId、subjectId 和返回的 taskId 调用 GetGatewayQuotaRuleSubjectUsageExportTask，轮询任务状态。</description></item>
+        /// <item><description>当轮询状态为 Success 且文件未过期时，通过GetGatewayQuotaRuleSubjectUsageExportTask下载 csv.gz 文件；状态为 Failed 时，根据 errorMessage 排查后重新创建任务。</description></item>
+        /// </ol>
+        /// <h2>使用条件与限制</h2>
+        /// <list type="bullet">
+        /// <item><description>创建任务时，配额规则必须存在，且目标主体已绑定到该规则。消费者规则使用消费者 ID，消费者组规则使用消费者组 ID。</description></item>
+        /// <item><description>有效导出时间范围内的明细依赖网关访问日志投递，请先启用日志投递并确认所需时段的日志可查询。</description></item>
+        /// <item><description>单次导出时间跨度不得超过一个规则周期。单次最多导出 100000 条明细；后台统计结果超过上限时任务失败，请缩小时间范围后重试。</description></item>
+        /// <item><description>同一用户在当前地域对同一网关、规则和主体在最近 10 分钟内已有 Pending 或 Running 任务时，重复创建会被拒绝；最近 10 分钟内创建且仍为 Pending 或 Running 的导出任务总数达到 3 个时也会被拒绝。请等待已有任务结束。相同 clientToken、相同参数的幂等重试可复用已有任务。</description></item>
+        /// <item><description>任务自创建起的处理超时为 10 分钟。超时后任务按 Failed 处理；这不是任务必定成功完成的时限承诺。</description></item>
+        /// <item><description>创建时确定导出时间范围、计量维度和主体名称，后续查询不会重新计算这些条件。文件成功生成后可在 24 小时内获取下载链接；每次查询生成的签名链接有效期为 10 分钟，具体时间以查询结果为准。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGatewayQuotaRuleSubjectUsageExportTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGatewayQuotaRuleSubjectUsageExportTaskResponse
+        /// </returns>
+        public CreateGatewayQuotaRuleSubjectUsageExportTaskResponse CreateGatewayQuotaRuleSubjectUsageExportTaskWithOptions(string gatewayId, string ruleId, string subjectId, CreateGatewayQuotaRuleSubjectUsageExportTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterFailedRequests))
+            {
+                body["filterFailedRequests"] = request.FilterFailedRequests;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Format))
+            {
+                body["format"] = request.Format;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["startTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGatewayQuotaRuleSubjectUsageExportTask",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/quota-rules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ruleId) + "/subjects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(subjectId) + "/usage/export-tasks",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGatewayQuotaRuleSubjectUsageExportTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建网关配额限流规则主体用量明细导出任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>调用流程</h2>
+        /// <para>本接口为指定网关配额规则下的一个消费者或消费者组创建消费明细导出任务，导出内容来自网关访问日志。</para>
+        /// <ol>
+        /// <item><description>调用本接口获取 taskId。新任务返回 Pending，表示已提交，文件尚未生成。</description></item>
+        /// <item><description>使用相同的 gatewayId、ruleId、subjectId 和返回的 taskId 调用 GetGatewayQuotaRuleSubjectUsageExportTask，轮询任务状态。</description></item>
+        /// <item><description>当轮询状态为 Success 且文件未过期时，通过GetGatewayQuotaRuleSubjectUsageExportTask下载 csv.gz 文件；状态为 Failed 时，根据 errorMessage 排查后重新创建任务。</description></item>
+        /// </ol>
+        /// <h2>使用条件与限制</h2>
+        /// <list type="bullet">
+        /// <item><description>创建任务时，配额规则必须存在，且目标主体已绑定到该规则。消费者规则使用消费者 ID，消费者组规则使用消费者组 ID。</description></item>
+        /// <item><description>有效导出时间范围内的明细依赖网关访问日志投递，请先启用日志投递并确认所需时段的日志可查询。</description></item>
+        /// <item><description>单次导出时间跨度不得超过一个规则周期。单次最多导出 100000 条明细；后台统计结果超过上限时任务失败，请缩小时间范围后重试。</description></item>
+        /// <item><description>同一用户在当前地域对同一网关、规则和主体在最近 10 分钟内已有 Pending 或 Running 任务时，重复创建会被拒绝；最近 10 分钟内创建且仍为 Pending 或 Running 的导出任务总数达到 3 个时也会被拒绝。请等待已有任务结束。相同 clientToken、相同参数的幂等重试可复用已有任务。</description></item>
+        /// <item><description>任务自创建起的处理超时为 10 分钟。超时后任务按 Failed 处理；这不是任务必定成功完成的时限承诺。</description></item>
+        /// <item><description>创建时确定导出时间范围、计量维度和主体名称，后续查询不会重新计算这些条件。文件成功生成后可在 24 小时内获取下载链接；每次查询生成的签名链接有效期为 10 分钟，具体时间以查询结果为准。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGatewayQuotaRuleSubjectUsageExportTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGatewayQuotaRuleSubjectUsageExportTaskResponse
+        /// </returns>
+        public async Task<CreateGatewayQuotaRuleSubjectUsageExportTaskResponse> CreateGatewayQuotaRuleSubjectUsageExportTaskWithOptionsAsync(string gatewayId, string ruleId, string subjectId, CreateGatewayQuotaRuleSubjectUsageExportTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterFailedRequests))
+            {
+                body["filterFailedRequests"] = request.FilterFailedRequests;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Format))
+            {
+                body["format"] = request.Format;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["startTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGatewayQuotaRuleSubjectUsageExportTask",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/quota-rules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ruleId) + "/subjects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(subjectId) + "/usage/export-tasks",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGatewayQuotaRuleSubjectUsageExportTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建网关配额限流规则主体用量明细导出任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>调用流程</h2>
+        /// <para>本接口为指定网关配额规则下的一个消费者或消费者组创建消费明细导出任务，导出内容来自网关访问日志。</para>
+        /// <ol>
+        /// <item><description>调用本接口获取 taskId。新任务返回 Pending，表示已提交，文件尚未生成。</description></item>
+        /// <item><description>使用相同的 gatewayId、ruleId、subjectId 和返回的 taskId 调用 GetGatewayQuotaRuleSubjectUsageExportTask，轮询任务状态。</description></item>
+        /// <item><description>当轮询状态为 Success 且文件未过期时，通过GetGatewayQuotaRuleSubjectUsageExportTask下载 csv.gz 文件；状态为 Failed 时，根据 errorMessage 排查后重新创建任务。</description></item>
+        /// </ol>
+        /// <h2>使用条件与限制</h2>
+        /// <list type="bullet">
+        /// <item><description>创建任务时，配额规则必须存在，且目标主体已绑定到该规则。消费者规则使用消费者 ID，消费者组规则使用消费者组 ID。</description></item>
+        /// <item><description>有效导出时间范围内的明细依赖网关访问日志投递，请先启用日志投递并确认所需时段的日志可查询。</description></item>
+        /// <item><description>单次导出时间跨度不得超过一个规则周期。单次最多导出 100000 条明细；后台统计结果超过上限时任务失败，请缩小时间范围后重试。</description></item>
+        /// <item><description>同一用户在当前地域对同一网关、规则和主体在最近 10 分钟内已有 Pending 或 Running 任务时，重复创建会被拒绝；最近 10 分钟内创建且仍为 Pending 或 Running 的导出任务总数达到 3 个时也会被拒绝。请等待已有任务结束。相同 clientToken、相同参数的幂等重试可复用已有任务。</description></item>
+        /// <item><description>任务自创建起的处理超时为 10 分钟。超时后任务按 Failed 处理；这不是任务必定成功完成的时限承诺。</description></item>
+        /// <item><description>创建时确定导出时间范围、计量维度和主体名称，后续查询不会重新计算这些条件。文件成功生成后可在 24 小时内获取下载链接；每次查询生成的签名链接有效期为 10 分钟，具体时间以查询结果为准。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGatewayQuotaRuleSubjectUsageExportTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGatewayQuotaRuleSubjectUsageExportTaskResponse
+        /// </returns>
+        public CreateGatewayQuotaRuleSubjectUsageExportTaskResponse CreateGatewayQuotaRuleSubjectUsageExportTask(string gatewayId, string ruleId, string subjectId, CreateGatewayQuotaRuleSubjectUsageExportTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateGatewayQuotaRuleSubjectUsageExportTaskWithOptions(gatewayId, ruleId, subjectId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建网关配额限流规则主体用量明细导出任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>调用流程</h2>
+        /// <para>本接口为指定网关配额规则下的一个消费者或消费者组创建消费明细导出任务，导出内容来自网关访问日志。</para>
+        /// <ol>
+        /// <item><description>调用本接口获取 taskId。新任务返回 Pending，表示已提交，文件尚未生成。</description></item>
+        /// <item><description>使用相同的 gatewayId、ruleId、subjectId 和返回的 taskId 调用 GetGatewayQuotaRuleSubjectUsageExportTask，轮询任务状态。</description></item>
+        /// <item><description>当轮询状态为 Success 且文件未过期时，通过GetGatewayQuotaRuleSubjectUsageExportTask下载 csv.gz 文件；状态为 Failed 时，根据 errorMessage 排查后重新创建任务。</description></item>
+        /// </ol>
+        /// <h2>使用条件与限制</h2>
+        /// <list type="bullet">
+        /// <item><description>创建任务时，配额规则必须存在，且目标主体已绑定到该规则。消费者规则使用消费者 ID，消费者组规则使用消费者组 ID。</description></item>
+        /// <item><description>有效导出时间范围内的明细依赖网关访问日志投递，请先启用日志投递并确认所需时段的日志可查询。</description></item>
+        /// <item><description>单次导出时间跨度不得超过一个规则周期。单次最多导出 100000 条明细；后台统计结果超过上限时任务失败，请缩小时间范围后重试。</description></item>
+        /// <item><description>同一用户在当前地域对同一网关、规则和主体在最近 10 分钟内已有 Pending 或 Running 任务时，重复创建会被拒绝；最近 10 分钟内创建且仍为 Pending 或 Running 的导出任务总数达到 3 个时也会被拒绝。请等待已有任务结束。相同 clientToken、相同参数的幂等重试可复用已有任务。</description></item>
+        /// <item><description>任务自创建起的处理超时为 10 分钟。超时后任务按 Failed 处理；这不是任务必定成功完成的时限承诺。</description></item>
+        /// <item><description>创建时确定导出时间范围、计量维度和主体名称，后续查询不会重新计算这些条件。文件成功生成后可在 24 小时内获取下载链接；每次查询生成的签名链接有效期为 10 分钟，具体时间以查询结果为准。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGatewayQuotaRuleSubjectUsageExportTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGatewayQuotaRuleSubjectUsageExportTaskResponse
+        /// </returns>
+        public async Task<CreateGatewayQuotaRuleSubjectUsageExportTaskResponse> CreateGatewayQuotaRuleSubjectUsageExportTaskAsync(string gatewayId, string ruleId, string subjectId, CreateGatewayQuotaRuleSubjectUsageExportTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateGatewayQuotaRuleSubjectUsageExportTaskWithOptionsAsync(gatewayId, ruleId, subjectId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6861,7 +7127,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates multiple services.</para>
+        /// <para>This operation supports creating multiple services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6930,7 +7196,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates multiple services.</para>
+        /// <para>This operation supports creating multiple services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6999,7 +7265,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates multiple services.</para>
+        /// <para>This operation supports creating multiple services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7023,7 +7289,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates multiple services.</para>
+        /// <para>This operation supports creating multiple services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7698,9 +7964,13 @@ namespace AlibabaCloud.SDK.APIG20240327
             return await DeleteConsumerWithOptionsAsync(consumerId, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteConsumerAuthorizationRule is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an API consumer authorization rule.</para>
+        /// <para>Deletes a consumer authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7713,6 +7983,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <returns>
         /// DeleteConsumerAuthorizationRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteConsumerAuthorizationRule is deprecated")]
+        // Deprecated
         public DeleteConsumerAuthorizationRuleResponse DeleteConsumerAuthorizationRuleWithOptions(string consumerAuthorizationRuleId, string consumerId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -7734,9 +8006,13 @@ namespace AlibabaCloud.SDK.APIG20240327
             return TeaModel.ToObject<DeleteConsumerAuthorizationRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteConsumerAuthorizationRule is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an API consumer authorization rule.</para>
+        /// <para>Deletes a consumer authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7749,6 +8025,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <returns>
         /// DeleteConsumerAuthorizationRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteConsumerAuthorizationRule is deprecated")]
+        // Deprecated
         public async Task<DeleteConsumerAuthorizationRuleResponse> DeleteConsumerAuthorizationRuleWithOptionsAsync(string consumerAuthorizationRuleId, string consumerId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -7770,14 +8048,20 @@ namespace AlibabaCloud.SDK.APIG20240327
             return TeaModel.ToObject<DeleteConsumerAuthorizationRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteConsumerAuthorizationRule is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an API consumer authorization rule.</para>
+        /// <para>Deletes a consumer authorization rule.</para>
         /// </summary>
         /// 
         /// <returns>
         /// DeleteConsumerAuthorizationRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteConsumerAuthorizationRule is deprecated")]
+        // Deprecated
         public DeleteConsumerAuthorizationRuleResponse DeleteConsumerAuthorizationRule(string consumerAuthorizationRuleId, string consumerId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7785,14 +8069,20 @@ namespace AlibabaCloud.SDK.APIG20240327
             return DeleteConsumerAuthorizationRuleWithOptions(consumerAuthorizationRuleId, consumerId, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteConsumerAuthorizationRule is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an API consumer authorization rule.</para>
+        /// <para>Deletes a consumer authorization rule.</para>
         /// </summary>
         /// 
         /// <returns>
         /// DeleteConsumerAuthorizationRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteConsumerAuthorizationRule is deprecated")]
+        // Deprecated
         public async Task<DeleteConsumerAuthorizationRuleResponse> DeleteConsumerAuthorizationRuleAsync(string consumerAuthorizationRuleId, string consumerId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11334,7 +11624,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the effective field collection configurations for each request path of an HTTP API under a specified cloud-native API gateway, including the field source, JSONPath, collection status, switch permission, and template origin.</para>
+        /// <para>Queries the effective field collection configurations for each request path of an HTTP API in a specified cloud-native API gateway, including the field source, JSONPath, collection status, switch permission, and template origin.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11384,7 +11674,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the effective field collection configurations for each request path of an HTTP API under a specified cloud-native API gateway, including the field source, JSONPath, collection status, switch permission, and template origin.</para>
+        /// <para>Queries the effective field collection configurations for each request path of an HTTP API in a specified cloud-native API gateway, including the field source, JSONPath, collection status, switch permission, and template origin.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11434,7 +11724,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the effective field collection configurations for each request path of an HTTP API under a specified cloud-native API gateway, including the field source, JSONPath, collection status, switch permission, and template origin.</para>
+        /// <para>Queries the effective field collection configurations for each request path of an HTTP API in a specified cloud-native API gateway, including the field source, JSONPath, collection status, switch permission, and template origin.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11453,7 +11743,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the effective field collection configurations for each request path of an HTTP API under a specified cloud-native API gateway, including the field source, JSONPath, collection status, switch permission, and template origin.</para>
+        /// <para>Queries the effective field collection configurations for each request path of an HTTP API in a specified cloud-native API gateway, including the field source, JSONPath, collection status, switch permission, and template origin.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11472,7 +11762,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the field template corresponding to a URI of the request and returns the template name, applicable protocol, template description, and the set of fields defined by the template, including field keys, JSONPaths, value sources, and statistical categories.</para>
+        /// <para>Queries the field template corresponding to the API request path and returns the template name, applicable protocol, template description, and the set of fields defined by the template, including field keys, JSONPaths, value sources, and statistical categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11518,7 +11808,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the field template corresponding to a URI of the request and returns the template name, applicable protocol, template description, and the set of fields defined by the template, including field keys, JSONPaths, value sources, and statistical categories.</para>
+        /// <para>Queries the field template corresponding to the API request path and returns the template name, applicable protocol, template description, and the set of fields defined by the template, including field keys, JSONPaths, value sources, and statistical categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11564,7 +11854,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the field template corresponding to a URI of the request and returns the template name, applicable protocol, template description, and the set of fields defined by the template, including field keys, JSONPaths, value sources, and statistical categories.</para>
+        /// <para>Queries the field template corresponding to the API request path and returns the template name, applicable protocol, template description, and the set of fields defined by the template, including field keys, JSONPaths, value sources, and statistical categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11583,7 +11873,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the field template corresponding to a URI of the request and returns the template name, applicable protocol, template description, and the set of fields defined by the template, including field keys, JSONPaths, value sources, and statistical categories.</para>
+        /// <para>Queries the field template corresponding to the API request path and returns the template name, applicable protocol, template description, and the set of fields defined by the template, including field keys, JSONPaths, value sources, and statistical categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11938,9 +12228,13 @@ namespace AlibabaCloud.SDK.APIG20240327
             return await GetConsumerWithOptionsAsync(consumerId, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetConsumerAuthorizationRule is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a consumer authorization rule.</para>
+        /// <para>Retrieves consumer authorization rules.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -11953,6 +12247,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <returns>
         /// GetConsumerAuthorizationRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI GetConsumerAuthorizationRule is deprecated")]
+        // Deprecated
         public GetConsumerAuthorizationRuleResponse GetConsumerAuthorizationRuleWithOptions(string consumerAuthorizationRuleId, string consumerId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -11974,9 +12270,13 @@ namespace AlibabaCloud.SDK.APIG20240327
             return TeaModel.ToObject<GetConsumerAuthorizationRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetConsumerAuthorizationRule is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a consumer authorization rule.</para>
+        /// <para>Retrieves consumer authorization rules.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -11989,6 +12289,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <returns>
         /// GetConsumerAuthorizationRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI GetConsumerAuthorizationRule is deprecated")]
+        // Deprecated
         public async Task<GetConsumerAuthorizationRuleResponse> GetConsumerAuthorizationRuleWithOptionsAsync(string consumerAuthorizationRuleId, string consumerId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
@@ -12010,14 +12312,20 @@ namespace AlibabaCloud.SDK.APIG20240327
             return TeaModel.ToObject<GetConsumerAuthorizationRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetConsumerAuthorizationRule is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a consumer authorization rule.</para>
+        /// <para>Retrieves consumer authorization rules.</para>
         /// </summary>
         /// 
         /// <returns>
         /// GetConsumerAuthorizationRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI GetConsumerAuthorizationRule is deprecated")]
+        // Deprecated
         public GetConsumerAuthorizationRuleResponse GetConsumerAuthorizationRule(string consumerAuthorizationRuleId, string consumerId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -12025,14 +12333,20 @@ namespace AlibabaCloud.SDK.APIG20240327
             return GetConsumerAuthorizationRuleWithOptions(consumerAuthorizationRuleId, consumerId, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetConsumerAuthorizationRule is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a consumer authorization rule.</para>
+        /// <para>Retrieves consumer authorization rules.</para>
         /// </summary>
         /// 
         /// <returns>
         /// GetConsumerAuthorizationRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI GetConsumerAuthorizationRule is deprecated")]
+        // Deprecated
         public async Task<GetConsumerAuthorizationRuleResponse> GetConsumerAuthorizationRuleAsync(string consumerAuthorizationRuleId, string consumerId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -13486,6 +13800,192 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetGatewayQuotaRuleSubjectUsageWithOptionsAsync(gatewayId, ruleId, subjectId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status, processing progress, failure cause, and file download information of an export task for quota rule subject consumption details.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Call flow</h2>
+        /// <para>First, call CreateGatewayQuotaRuleSubjectUsageExportTask to create a task. Then, use the returned taskId along with the same gatewayId, ruleId, and subjectId to call this operation in the same region.</para>
+        /// <list type="bullet">
+        /// <item><description>Pending or Running: The task is not completed. You can query again after a period of time.</description></item>
+        /// <item><description>Success: Check result.fileExpired and result.downloadUrl. If the file is not expired and a link is returned, you can download the file.</description></item>
+        /// <item><description>Failed: Troubleshoot the issue based on errorMessage. To re-export, call the create operation and use a new clientToken.</description></item>
+        /// </list>
+        /// <h2>Download link and file validity period</h2>
+        /// <para>For each successful query where the file is not expired, a signed link with a validity period of 10 minutes is generated. Download the file promptly based on downloadUrlExpiredAt. If the link expires but the file has not reached fileExpiredAt, you can query again to obtain a new link. Querying again does not regenerate the file or extend the 24-hour validity period of the file.
+        /// After the file reaches fileExpiredAt, this operation no longer issues new links, returns fileExpired=true, and omits downloadUrl and downloadUrlExpiredAt. The task status remains Success. To export again, create a new task.</para>
+        /// <h2>Query scope and task progress</h2>
+        /// <para>This operation returns only the export tasks of the current user in the current region that match the gateway, rule, and subject paths. If the paths do not match or the task does not exist, a not found error is returned. Existing tasks are queried based on the information recorded at creation. The export conditions are not recalculated due to subsequent rule resets or subject name changes.
+        /// If a task remains in the Pending or Running state for more than 10 minutes after creation, the query treats it as a timeout failure. Determine whether the task is completed based on the status, not just totalCount or processedCount.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGatewayQuotaRuleSubjectUsageExportTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGatewayQuotaRuleSubjectUsageExportTaskResponse
+        /// </returns>
+        public GetGatewayQuotaRuleSubjectUsageExportTaskResponse GetGatewayQuotaRuleSubjectUsageExportTaskWithOptions(string gatewayId, string ruleId, string subjectId, string taskId, GetGatewayQuotaRuleSubjectUsageExportTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetGatewayQuotaRuleSubjectUsageExportTask",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/quota-rules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ruleId) + "/subjects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(subjectId) + "/usage/export-tasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetGatewayQuotaRuleSubjectUsageExportTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status, processing progress, failure cause, and file download information of an export task for quota rule subject consumption details.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Call flow</h2>
+        /// <para>First, call CreateGatewayQuotaRuleSubjectUsageExportTask to create a task. Then, use the returned taskId along with the same gatewayId, ruleId, and subjectId to call this operation in the same region.</para>
+        /// <list type="bullet">
+        /// <item><description>Pending or Running: The task is not completed. You can query again after a period of time.</description></item>
+        /// <item><description>Success: Check result.fileExpired and result.downloadUrl. If the file is not expired and a link is returned, you can download the file.</description></item>
+        /// <item><description>Failed: Troubleshoot the issue based on errorMessage. To re-export, call the create operation and use a new clientToken.</description></item>
+        /// </list>
+        /// <h2>Download link and file validity period</h2>
+        /// <para>For each successful query where the file is not expired, a signed link with a validity period of 10 minutes is generated. Download the file promptly based on downloadUrlExpiredAt. If the link expires but the file has not reached fileExpiredAt, you can query again to obtain a new link. Querying again does not regenerate the file or extend the 24-hour validity period of the file.
+        /// After the file reaches fileExpiredAt, this operation no longer issues new links, returns fileExpired=true, and omits downloadUrl and downloadUrlExpiredAt. The task status remains Success. To export again, create a new task.</para>
+        /// <h2>Query scope and task progress</h2>
+        /// <para>This operation returns only the export tasks of the current user in the current region that match the gateway, rule, and subject paths. If the paths do not match or the task does not exist, a not found error is returned. Existing tasks are queried based on the information recorded at creation. The export conditions are not recalculated due to subsequent rule resets or subject name changes.
+        /// If a task remains in the Pending or Running state for more than 10 minutes after creation, the query treats it as a timeout failure. Determine whether the task is completed based on the status, not just totalCount or processedCount.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGatewayQuotaRuleSubjectUsageExportTaskRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGatewayQuotaRuleSubjectUsageExportTaskResponse
+        /// </returns>
+        public async Task<GetGatewayQuotaRuleSubjectUsageExportTaskResponse> GetGatewayQuotaRuleSubjectUsageExportTaskWithOptionsAsync(string gatewayId, string ruleId, string subjectId, string taskId, GetGatewayQuotaRuleSubjectUsageExportTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetGatewayQuotaRuleSubjectUsageExportTask",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/quota-rules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ruleId) + "/subjects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(subjectId) + "/usage/export-tasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(taskId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetGatewayQuotaRuleSubjectUsageExportTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status, processing progress, failure cause, and file download information of an export task for quota rule subject consumption details.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Call flow</h2>
+        /// <para>First, call CreateGatewayQuotaRuleSubjectUsageExportTask to create a task. Then, use the returned taskId along with the same gatewayId, ruleId, and subjectId to call this operation in the same region.</para>
+        /// <list type="bullet">
+        /// <item><description>Pending or Running: The task is not completed. You can query again after a period of time.</description></item>
+        /// <item><description>Success: Check result.fileExpired and result.downloadUrl. If the file is not expired and a link is returned, you can download the file.</description></item>
+        /// <item><description>Failed: Troubleshoot the issue based on errorMessage. To re-export, call the create operation and use a new clientToken.</description></item>
+        /// </list>
+        /// <h2>Download link and file validity period</h2>
+        /// <para>For each successful query where the file is not expired, a signed link with a validity period of 10 minutes is generated. Download the file promptly based on downloadUrlExpiredAt. If the link expires but the file has not reached fileExpiredAt, you can query again to obtain a new link. Querying again does not regenerate the file or extend the 24-hour validity period of the file.
+        /// After the file reaches fileExpiredAt, this operation no longer issues new links, returns fileExpired=true, and omits downloadUrl and downloadUrlExpiredAt. The task status remains Success. To export again, create a new task.</para>
+        /// <h2>Query scope and task progress</h2>
+        /// <para>This operation returns only the export tasks of the current user in the current region that match the gateway, rule, and subject paths. If the paths do not match or the task does not exist, a not found error is returned. Existing tasks are queried based on the information recorded at creation. The export conditions are not recalculated due to subsequent rule resets or subject name changes.
+        /// If a task remains in the Pending or Running state for more than 10 minutes after creation, the query treats it as a timeout failure. Determine whether the task is completed based on the status, not just totalCount or processedCount.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGatewayQuotaRuleSubjectUsageExportTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGatewayQuotaRuleSubjectUsageExportTaskResponse
+        /// </returns>
+        public GetGatewayQuotaRuleSubjectUsageExportTaskResponse GetGatewayQuotaRuleSubjectUsageExportTask(string gatewayId, string ruleId, string subjectId, string taskId, GetGatewayQuotaRuleSubjectUsageExportTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetGatewayQuotaRuleSubjectUsageExportTaskWithOptions(gatewayId, ruleId, subjectId, taskId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status, processing progress, failure cause, and file download information of an export task for quota rule subject consumption details.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Call flow</h2>
+        /// <para>First, call CreateGatewayQuotaRuleSubjectUsageExportTask to create a task. Then, use the returned taskId along with the same gatewayId, ruleId, and subjectId to call this operation in the same region.</para>
+        /// <list type="bullet">
+        /// <item><description>Pending or Running: The task is not completed. You can query again after a period of time.</description></item>
+        /// <item><description>Success: Check result.fileExpired and result.downloadUrl. If the file is not expired and a link is returned, you can download the file.</description></item>
+        /// <item><description>Failed: Troubleshoot the issue based on errorMessage. To re-export, call the create operation and use a new clientToken.</description></item>
+        /// </list>
+        /// <h2>Download link and file validity period</h2>
+        /// <para>For each successful query where the file is not expired, a signed link with a validity period of 10 minutes is generated. Download the file promptly based on downloadUrlExpiredAt. If the link expires but the file has not reached fileExpiredAt, you can query again to obtain a new link. Querying again does not regenerate the file or extend the 24-hour validity period of the file.
+        /// After the file reaches fileExpiredAt, this operation no longer issues new links, returns fileExpired=true, and omits downloadUrl and downloadUrlExpiredAt. The task status remains Success. To export again, create a new task.</para>
+        /// <h2>Query scope and task progress</h2>
+        /// <para>This operation returns only the export tasks of the current user in the current region that match the gateway, rule, and subject paths. If the paths do not match or the task does not exist, a not found error is returned. Existing tasks are queried based on the information recorded at creation. The export conditions are not recalculated due to subsequent rule resets or subject name changes.
+        /// If a task remains in the Pending or Running state for more than 10 minutes after creation, the query treats it as a timeout failure. Determine whether the task is completed based on the status, not just totalCount or processedCount.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGatewayQuotaRuleSubjectUsageExportTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGatewayQuotaRuleSubjectUsageExportTaskResponse
+        /// </returns>
+        public async Task<GetGatewayQuotaRuleSubjectUsageExportTaskResponse> GetGatewayQuotaRuleSubjectUsageExportTaskAsync(string gatewayId, string ruleId, string subjectId, string taskId, GetGatewayQuotaRuleSubjectUsageExportTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetGatewayQuotaRuleSubjectUsageExportTaskWithOptionsAsync(gatewayId, ruleId, subjectId, taskId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -17048,7 +17548,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls an AI agent.</para>
+        /// <para>Invokes an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17110,7 +17610,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls an AI agent.</para>
+        /// <para>Invokes an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17172,7 +17672,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls an AI agent.</para>
+        /// <para>Invokes an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17191,7 +17691,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls an AI agent.</para>
+        /// <para>Invokes an AI agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17994,6 +18494,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             return await ListChatSessionsWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ListConsumerAuthorizationRules is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Retrieves a list of consumer authorization rules.</para>
@@ -18012,6 +18516,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <returns>
         /// ListConsumerAuthorizationRulesResponse
         /// </returns>
+        [Obsolete("OpenAPI ListConsumerAuthorizationRules is deprecated")]
+        // Deprecated
         public ListConsumerAuthorizationRulesResponse ListConsumerAuthorizationRulesWithOptions(string consumerId, ListConsumerAuthorizationRulesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18048,6 +18554,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             return TeaModel.ToObject<ListConsumerAuthorizationRulesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ListConsumerAuthorizationRules is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Retrieves a list of consumer authorization rules.</para>
@@ -18066,6 +18576,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <returns>
         /// ListConsumerAuthorizationRulesResponse
         /// </returns>
+        [Obsolete("OpenAPI ListConsumerAuthorizationRules is deprecated")]
+        // Deprecated
         public async Task<ListConsumerAuthorizationRulesResponse> ListConsumerAuthorizationRulesWithOptionsAsync(string consumerId, ListConsumerAuthorizationRulesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -18102,6 +18614,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             return TeaModel.ToObject<ListConsumerAuthorizationRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ListConsumerAuthorizationRules is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Retrieves a list of consumer authorization rules.</para>
@@ -18114,6 +18630,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <returns>
         /// ListConsumerAuthorizationRulesResponse
         /// </returns>
+        [Obsolete("OpenAPI ListConsumerAuthorizationRules is deprecated")]
+        // Deprecated
         public ListConsumerAuthorizationRulesResponse ListConsumerAuthorizationRules(string consumerId, ListConsumerAuthorizationRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18121,6 +18639,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             return ListConsumerAuthorizationRulesWithOptions(consumerId, request, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ListConsumerAuthorizationRules is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Retrieves a list of consumer authorization rules.</para>
@@ -18133,6 +18655,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <returns>
         /// ListConsumerAuthorizationRulesResponse
         /// </returns>
+        [Obsolete("OpenAPI ListConsumerAuthorizationRules is deprecated")]
+        // Deprecated
         public async Task<ListConsumerAuthorizationRulesResponse> ListConsumerAuthorizationRulesAsync(string consumerId, ListConsumerAuthorizationRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -18616,7 +19140,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of quota rules configured for a specific consumer.</para>
+        /// <para>Queries the list of configured quota rules for a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18674,7 +19198,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of quota rules configured for a specific consumer.</para>
+        /// <para>Queries the list of configured quota rules for a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18732,7 +19256,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of quota rules configured for a specific consumer.</para>
+        /// <para>Queries the list of configured quota rules for a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18751,7 +19275,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of quota rules configured for a specific consumer.</para>
+        /// <para>Queries the list of configured quota rules for a consumer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20200,7 +20724,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of load balancers for a gateway.</para>
+        /// <para>Retrieves the list of gateway load balancers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20266,7 +20790,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of load balancers for a gateway.</para>
+        /// <para>Retrieves the list of gateway load balancers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20332,7 +20856,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of load balancers for a gateway.</para>
+        /// <para>Retrieves the list of gateway load balancers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20351,7 +20875,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of load balancers for a gateway.</para>
+        /// <para>Retrieves the list of gateway load balancers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22326,7 +22850,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of Model Context Protocol (MCP) tools in an API product of the MCP Server type. The response returns a list of tools. Each tool includes three text members (name, title, and description) and four map members (inputSchema, outputSchema, annotations, and meta).</para>
+        /// <para>Queries the details of Model Context Protocol (MCP) tools in an MCP Server-type API product and returns a list of tools. Each tool contains three text fields: name, title, and description, and four map fields: inputSchema, outputSchema, annotations, and meta.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22366,7 +22890,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of Model Context Protocol (MCP) tools in an API product of the MCP Server type. The response returns a list of tools. Each tool includes three text members (name, title, and description) and four map members (inputSchema, outputSchema, annotations, and meta).</para>
+        /// <para>Queries the details of Model Context Protocol (MCP) tools in an MCP Server-type API product and returns a list of tools. Each tool contains three text fields: name, title, and description, and four map fields: inputSchema, outputSchema, annotations, and meta.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22406,7 +22930,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of Model Context Protocol (MCP) tools in an API product of the MCP Server type. The response returns a list of tools. Each tool includes three text members (name, title, and description) and four map members (inputSchema, outputSchema, annotations, and meta).</para>
+        /// <para>Queries the details of Model Context Protocol (MCP) tools in an MCP Server-type API product and returns a list of tools. Each tool contains three text fields: name, title, and description, and four map fields: inputSchema, outputSchema, annotations, and meta.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22425,7 +22949,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of Model Context Protocol (MCP) tools in an API product of the MCP Server type. The response returns a list of tools. Each tool includes three text members (name, title, and description) and four map members (inputSchema, outputSchema, annotations, and meta).</para>
+        /// <para>Queries the details of Model Context Protocol (MCP) tools in an MCP Server-type API product and returns a list of tools. Each tool contains three text fields: name, title, and description, and four map fields: inputSchema, outputSchema, annotations, and meta.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22780,7 +23304,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of model cards and returns the model name, provider, and source identifier for each card, along with the features, pricing, meta, availablePaths, and snapshots structures. The only request parameter is the provider identifier.</para>
+        /// <para>Queries a list of model cards and returns the model name, provider, and source identifier of each card, along with its features, pricing, meta, availablePaths, and snapshots structures. The only business request parameter is the provider identifier.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22826,7 +23350,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of model cards and returns the model name, provider, and source identifier for each card, along with the features, pricing, meta, availablePaths, and snapshots structures. The only request parameter is the provider identifier.</para>
+        /// <para>Queries a list of model cards and returns the model name, provider, and source identifier of each card, along with its features, pricing, meta, availablePaths, and snapshots structures. The only business request parameter is the provider identifier.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22872,7 +23396,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of model cards and returns the model name, provider, and source identifier for each card, along with the features, pricing, meta, availablePaths, and snapshots structures. The only request parameter is the provider identifier.</para>
+        /// <para>Queries a list of model cards and returns the model name, provider, and source identifier of each card, along with its features, pricing, meta, availablePaths, and snapshots structures. The only business request parameter is the provider identifier.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22891,7 +23415,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of model cards and returns the model name, provider, and source identifier for each card, along with the features, pricing, meta, availablePaths, and snapshots structures. The only request parameter is the provider identifier.</para>
+        /// <para>Queries a list of model cards and returns the model name, provider, and source identifier of each card, along with its features, pricing, meta, availablePaths, and snapshots structures. The only business request parameter is the provider identifier.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28216,12 +28740,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the currently active credentials for an AI service.</para>
+        /// <para>Queries the currently active credentials for the AI service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the currently active credentials for an AI service.</para>
+        /// <para>Queries the currently active credentials for the AI service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28261,12 +28785,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the currently active credentials for an AI service.</para>
+        /// <para>Queries the currently active credentials for the AI service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the currently active credentials for an AI service.</para>
+        /// <para>Queries the currently active credentials for the AI service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28306,12 +28830,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the currently active credentials for an AI service.</para>
+        /// <para>Queries the currently active credentials for the AI service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the currently active credentials for an AI service.</para>
+        /// <para>Queries the currently active credentials for the AI service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28330,12 +28854,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the currently active credentials for an AI service.</para>
+        /// <para>Queries the currently active credentials for the AI service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the currently active credentials for an AI service.</para>
+        /// <para>Queries the currently active credentials for the AI service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28764,7 +29288,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tags resources.</para>
+        /// <para>Adds tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28818,7 +29342,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tags resources.</para>
+        /// <para>Adds tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28872,7 +29396,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tags resources.</para>
+        /// <para>Adds tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28891,7 +29415,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tags resources.</para>
+        /// <para>Adds tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30474,14 +30998,18 @@ namespace AlibabaCloud.SDK.APIG20240327
             return await UpdateConsumerWithOptionsAsync(consumerId, request, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateConsumerAuthorizationRule is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates consumer authorization rules.</para>
+        /// <para>Updates the consumer authorization rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation is replaced by UpdateAuthorizationRule. The new API path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When you call the new API operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</para>
+        /// <para>This API operation has been replaced by UpdateAuthorizationRule. The new API path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When you call the new API operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30497,6 +31025,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <returns>
         /// UpdateConsumerAuthorizationRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateConsumerAuthorizationRule is deprecated")]
+        // Deprecated
         public UpdateConsumerAuthorizationRuleResponse UpdateConsumerAuthorizationRuleWithOptions(string consumerId, string consumerAuthorizationRuleId, UpdateConsumerAuthorizationRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -30533,14 +31063,18 @@ namespace AlibabaCloud.SDK.APIG20240327
             return TeaModel.ToObject<UpdateConsumerAuthorizationRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateConsumerAuthorizationRule is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates consumer authorization rules.</para>
+        /// <para>Updates the consumer authorization rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation is replaced by UpdateAuthorizationRule. The new API path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When you call the new API operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</para>
+        /// <para>This API operation has been replaced by UpdateAuthorizationRule. The new API path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When you call the new API operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30556,6 +31090,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <returns>
         /// UpdateConsumerAuthorizationRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateConsumerAuthorizationRule is deprecated")]
+        // Deprecated
         public async Task<UpdateConsumerAuthorizationRuleResponse> UpdateConsumerAuthorizationRuleWithOptionsAsync(string consumerId, string consumerAuthorizationRuleId, UpdateConsumerAuthorizationRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -30592,14 +31128,18 @@ namespace AlibabaCloud.SDK.APIG20240327
             return TeaModel.ToObject<UpdateConsumerAuthorizationRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateConsumerAuthorizationRule is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates consumer authorization rules.</para>
+        /// <para>Updates the consumer authorization rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation is replaced by UpdateAuthorizationRule. The new API path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When you call the new API operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</para>
+        /// <para>This API operation has been replaced by UpdateAuthorizationRule. The new API path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When you call the new API operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30609,6 +31149,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <returns>
         /// UpdateConsumerAuthorizationRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateConsumerAuthorizationRule is deprecated")]
+        // Deprecated
         public UpdateConsumerAuthorizationRuleResponse UpdateConsumerAuthorizationRule(string consumerId, string consumerAuthorizationRuleId, UpdateConsumerAuthorizationRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -30616,14 +31158,18 @@ namespace AlibabaCloud.SDK.APIG20240327
             return UpdateConsumerAuthorizationRuleWithOptions(consumerId, consumerAuthorizationRuleId, request, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateConsumerAuthorizationRule is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates consumer authorization rules.</para>
+        /// <para>Updates the consumer authorization rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation is replaced by UpdateAuthorizationRule. The new API path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When you call the new API operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</para>
+        /// <para>This API operation has been replaced by UpdateAuthorizationRule. The new API path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When you call the new API operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30633,6 +31179,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <returns>
         /// UpdateConsumerAuthorizationRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateConsumerAuthorizationRule is deprecated")]
+        // Deprecated
         public async Task<UpdateConsumerAuthorizationRuleResponse> UpdateConsumerAuthorizationRuleAsync(string consumerId, string consumerAuthorizationRuleId, UpdateConsumerAuthorizationRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -30923,7 +31471,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type can update the listener Ingress configuration.</para>
+        /// <para>Only sources of the <b>container service</b> type are allowed to update the listener Ingress configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31014,7 +31562,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type can update the listener Ingress configuration.</para>
+        /// <para>Only sources of the <b>container service</b> type are allowed to update the listener Ingress configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31105,7 +31653,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type can update the listener Ingress configuration.</para>
+        /// <para>Only sources of the <b>container service</b> type are allowed to update the listener Ingress configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31129,7 +31677,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type can update the listener Ingress configuration.</para>
+        /// <para>Only sources of the <b>container service</b> type are allowed to update the listener Ingress configurations.</para>
         /// </description>
         /// 
         /// <param name="request">

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public HttpApiApiInfo ApiInfo { get; set; }
 
         /// <summary>
-        /// <para>Filters the API list by a specified consumer authorization rule ID. The API list in the response contains only authorized APIs.</para>
+        /// <para>Filters the API list by a specific consumer authorization rule ID. The API list in the response contains only authorized APIs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>car-ctgdn8em1hko5krqq03g</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public long? CreateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The publishing status of the API in the current environment.</para>
+        /// <para>The publish status of the API in the current environment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public EnvironmentInfo EnvironmentInfo { get; set; }
 
         /// <summary>
-        /// <para>The expiration mode. Valid values: LongTerm and ShortTerm. Specify one of the two.</para>
+        /// <para>The expiration mode. Valid values: LongTerm, ShortTerm.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LongTerm</para>

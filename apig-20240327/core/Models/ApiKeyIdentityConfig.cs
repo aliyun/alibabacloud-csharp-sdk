@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The API key value.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxxx</para>
+            /// <para>apikey-xxxxxxxx</para>
             /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]
@@ -39,14 +39,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The complete set of API key credential sources. The set contains one to three items. Multiple sources are applicable only to the AI gateway Header mode. Query String and non-AI gateway scenarios allow only a single source. If submitted together with apikeySource, the latter must be consistent with the compatible projection.</para>
+        /// <para>The complete collection of API key credential sources. The collection contains one to three items. Multiple sources apply only to the AI gateway header mode. Query string and non-AI gateway modes allow only a single source. If submitted together with apikeySource, the latter must be consistent with the compatible projection.</para>
         /// </summary>
         [NameInMap("apikeySources")]
         [Validation(Required=false)]
         public List<ApiKeyIdentityConfigApikeySources> ApikeySources { get; set; }
         public class ApiKeyIdentityConfigApikeySources : TeaModel {
             /// <summary>
-            /// <para>The credential source type.</para>
+            /// <para>The credential source category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Default</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The API key configuration.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxxxx</para>
+            /// <para>apikey-xxxxxxxx</para>
             /// </summary>
             [NameInMap("apikey")]
             [Validation(Required=false)]

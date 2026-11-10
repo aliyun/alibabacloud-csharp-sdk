@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListGatewayErrorAccessLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name filter. This parameter performs an exact match against the authority field in Simple Log Service (SLS).</para>
+        /// <para>The domain name filter. This parameter performs an exact match on the authority field in Simple Log Service (SLS).</para>
         /// 
         /// <b>Example:</b>
         /// <para>api.example.com</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Authority { get; set; }
 
         /// <summary>
-        /// <para>The end of the query window, in UNIX seconds. The value cannot be later than the current time, and the time span cannot exceed 24 hours.</para>
+        /// <para>The end time of the query window, in UNIX seconds. The value cannot be later than the current time, and the time span must be less than or equal to 24 hours.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The gateway request ID (x-acs-request-id) for exact match filtering.</para>
+        /// <para>The exact filter for the gateway request ID (x-acs-request-id).</para>
         /// 
         /// <b>Example:</b>
         /// <para>E5D4xxxx</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>The HTTP error code. Only three-digit numbers in the 400–599 range are accepted. This parameter is required. If you do not specify this parameter, the API returns InvalidParameter.WithDetail (400).</para>
+        /// <para>The specific HTTP error code. Only three-digit numbers in the range of 400 to 599 are accepted. This parameter is required. If it is not provided, the API returns the InvalidParameter.WithDetail(400) error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>502</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string RouteName { get; set; }
 
         /// <summary>
-        /// <para>The start of the query window, in UNIX seconds. The value must be no earlier than 24 hours before the current time.</para>
+        /// <para>The start time of the query window, in UNIX seconds. The value must be greater than or equal to the current time minus 24 hours.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayName { get; set; }
 
                 /// <summary>
-                /// <para>The period multiplier, which specifies the number of periods after which the quota resets. This parameter is returned when the rule uses a custom period. Minimum value: 1. Maximum value: 60.</para>
+                /// <para>The period multiplier, which indicates the number of periods after which the quota is reset. This parameter is returned when the rule uses a custom period. Minimum value: 1. Maximum value: 60.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string RuleStatus { get; set; }
 
                 /// <summary>
-                /// <para>The time zone corresponding to the calendar period, in UTC+x format.</para>
+                /// <para>The time zone corresponding to the natural period, in UTC+x format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>UTC+8</para>
@@ -140,11 +140,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Timezone { get; set; }
 
                 /// <summary>
-                /// <para>The period type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>calendar: calendar period.</description></item>
-                /// <item><description>epoch: custom period.</description></item>
-                /// </list>
+                /// <para>The period type. calendar indicates a natural period, and epoch indicates a custom period.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>calendar</para>
@@ -198,7 +194,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>

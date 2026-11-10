@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The keyword for the rule name, used for fuzzy match.</para>
+        /// <para>The keyword in the rule name for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>daily</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of items per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

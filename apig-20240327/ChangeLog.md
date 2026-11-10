@@ -1,3 +1,8 @@
+2026-11-10 Version: 11.8.0
+- Support API CreateGatewayQuotaRuleSubjectUsageExportTask.
+- Support API GetGatewayQuotaRuleSubjectUsageExportTask.
+
+
 2026-11-06 Version: 11.7.1
 - Generated csharp 2024-03-27 for APIG.
 

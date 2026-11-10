@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<ListGatewayLoadBalancersResponseBodyDataItems> Items { get; set; }
             public class ListGatewayLoadBalancersResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether this is the default ingress of the gateway.</para>
+                /// <para>Indicates whether the load balancer is the default ingress of the gateway.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public bool? DefaultGatewayIngress { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the load balancer can be edited. This parameter serves as an edit switch for load balancers that are being migrated.</para>
+                /// <para>Indicates whether the load balancer can be edited. This serves as an edit switch for load balancers during migration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayId { get; set; }
 
                 /// <summary>
-                /// <para>The load balancer address (IP address or domain name).</para>
+                /// <para>The load balancer address, which can be an IP address or a domain name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>47.x.x.x</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string LoadBalancerAddressType { get; set; }
 
                 /// <summary>
-                /// <para>The load balancer availability status.</para>
+                /// <para>The availability status of the load balancer.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Active</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string LoadBalancerId { get; set; }
 
                 /// <summary>
-                /// <para>The binding mode.</para>
+                /// <para>The association mode.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Managed</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public List<ListGatewayLoadBalancersResponseBodyDataItemsLoadBalancerZoneMappingsLoadBalancerAddresses> LoadBalancerAddresses { get; set; }
                     public class ListGatewayLoadBalancersResponseBodyDataItemsLoadBalancerZoneMappingsLoadBalancerAddresses : TeaModel {
                         /// <summary>
-                        /// <para>The Elastic IP Address (EIP) allocation ID that corresponds to the public address.</para>
+                        /// <para>The allocation ID of the elastic IP address (EIP) corresponding to the public IP address.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>eip-bp1xxxx</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                         public string AllocationId { get; set; }
 
                         /// <summary>
-                        /// <para>The ID of the elastic network interface (ENI).</para>
+                        /// <para>The ID of the elastic network interface controller (NIC).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>eni-bp1xxxx</para>
@@ -274,7 +274,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Status { get; set; }
 
                     /// <summary>
-                    /// <para>The vSwitch ID that corresponds to the zone.</para>
+                    /// <para>The vSwitch ID corresponding to the zone.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vsw-bp1xxxx</para>
@@ -325,7 +325,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The gateway service weight, which ranges from 0 to 100. This parameter is used in migration and traffic shifting scenarios.</para>
+                /// <para>The gateway service weight, which ranges from 0 to 100 and is used in migration and traffic switching scenarios.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -335,12 +335,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? ServiceWeight { get; set; }
 
                 /// <summary>
-                /// <para>The VServerGroup metadata.</para>
+                /// <para>The metadata of the vServer group.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <list type="bullet">
-                /// <item><description></description></item>
-                /// </list>
+                /// <para>default-vserver-group</para>
                 /// </summary>
                 [NameInMap("vServerGroupMetaInfo")]
                 [Validation(Required=false)]
@@ -371,7 +369,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                         public int? Port { get; set; }
 
                         /// <summary>
-                        /// <para>The listener protocol. No backend enumeration validation is performed. The actual values are returned from SLB or NLB OpenAPI. Common values include tcp, udp, http, https, and tls.</para>
+                        /// <para>The listener protocol. No backend enumeration validation is performed. The actual value is obtained from the SLB or NLB API. Common values include tcp, udp, http, https, and tls.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>https</para>
@@ -383,7 +381,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     }
 
                     /// <summary>
-                    /// <para>The virtual server group ID. For CLB, this is the VServerGroupId. For NLB, this is the ServerGroupId.</para>
+                    /// <para>The ID of the virtual server group. This is VServerGroupId for Classic Load Balancer (CLB) and ServerGroupId for Network Load Balancer (NLB).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>rsp-xxxx</para>
@@ -393,7 +391,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string VirtualServiceGroupId { get; set; }
 
                     /// <summary>
-                    /// <para>The group name.</para>
+                    /// <para>The name of the group.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>80-tcp</para>

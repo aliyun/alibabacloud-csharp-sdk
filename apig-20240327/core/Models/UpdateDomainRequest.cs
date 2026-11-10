@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string DomainScope { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable forced HTTPS redirect when the HTTPS protocol type is set. When the protocol is HTTPS, forceHttps is required.</para>
+        /// <para>The Settings for the HTTPS Protocol Type. Specifies whether to enable forced HTTPS redirection. This parameter is required when the protocol is HTTPS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -74,17 +74,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Http2Option { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable mutual TLS (mTLS) authentication.</para>
+        /// <para>Specifies whether to enable mTLS mutual authentication.</para>
         /// </summary>
         [NameInMap("mTLSEnabled")]
         [Validation(Required=false)]
         public bool? MTLSEnabled { get; set; }
 
         /// <summary>
-        /// <para>The protocol type supported by the domain name.</para>
+        /// <para>The protocol types supported by the domain name.</para>
         /// <list type="bullet">
-        /// <item><description>HTTP: Only the HTTP protocol is supported.</description></item>
-        /// <item><description>HTTPS: Only the HTTPS protocol is supported.</description></item>
+        /// <item><description>HTTP: Supports only the HTTP protocol.</description></item>
+        /// <item><description>HTTPS: Supports only the HTTPS protocol.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,14 +95,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The cipher suite configuration.</para>
+        /// <para>The cipher suite configurations.</para>
         /// </summary>
         [NameInMap("tlsCipherSuitesConfig")]
         [Validation(Required=false)]
         public TlsCipherSuitesConfig TlsCipherSuitesConfig { get; set; }
 
         /// <summary>
-        /// <para>The maximum TLS protocol version. TLS 1.3 is the maximum supported version.</para>
+        /// <para>The maximum TLS protocol version. The maximum supported version is TLS 1.3.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TLS 1.3</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string TlsMax { get; set; }
 
         /// <summary>
-        /// <para>The minimum TLS protocol version. TLS 1.0 is the minimum supported version.</para>
+        /// <para>The minimum TLS protocol version. The minimum supported version is TLS 1.0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TLS 1.0</para>

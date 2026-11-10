@@ -38,13 +38,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
             /// <summary>
             /// <para>The set of fields defined by the field template, grouped by mapping key, where each group contains a set of template field items.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;model&quot;:[&quot;$.model&quot;],&quot;messages&quot;:[&quot;$.messages[*].content&quot;]}</para>
             /// </summary>
             [NameInMap("fieldPaths")]
             [Validation(Required=false)]
             public Dictionary<string, List<DataFieldPathsValue>> FieldPaths { get; set; }
 
             /// <summary>
-            /// <para>The URI of the request corresponding to the field template.</para>
+            /// <para>The API request path corresponding to the field template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/v1/chat/completions</para>

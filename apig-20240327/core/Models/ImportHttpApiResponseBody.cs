@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public ImportHttpApiResponseBodyDataDryRunInfo DryRunInfo { get; set; }
             public class ImportHttpApiResponseBodyDataDryRunInfo : TeaModel {
                 /// <summary>
-                /// <para>The error messages. If the error messages are not empty, the API cannot be imported.</para>
+                /// <para>The error messages. If the error messages are not empty, the API cannot be imported successfully.</para>
                 /// </summary>
                 [NameInMap("errorMessages")]
                 [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The list of routes that failed to be imported.</para>
+                /// <para>The list of failed routes.</para>
                 /// </summary>
                 [NameInMap("failureRoutes")]
                 [Validation(Required=false)]
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<ImportHttpApiResponseBodyDataDryRunInfoSuccessComponents> SuccessComponents { get; set; }
                 public class ImportHttpApiResponseBodyDataDryRunInfoSuccessComponents : TeaModel {
                     /// <summary>
-                    /// <para>The action to be performed after the dry run. Valid values:</para>
+                    /// <para>The action to be performed after the dry run.</para>
                     /// <list type="bullet">
                     /// <item><description>Create: Create.</description></item>
                     /// <item><description>Update: Update.</description></item>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<ImportHttpApiResponseBodyDataDryRunInfoSuccessOperations> SuccessOperations { get; set; }
                 public class ImportHttpApiResponseBodyDataDryRunInfoSuccessOperations : TeaModel {
                     /// <summary>
-                    /// <para>The action to be performed after the dry run. Valid values:</para>
+                    /// <para>The action to be performed after the dry run.</para>
                     /// <list type="bullet">
                     /// <item><description>Create: Create.</description></item>
                     /// <item><description>Update: Update.</description></item>
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The list of routes that were successfully imported.</para>
+                /// <para>The list of successfully imported routes.</para>
                 /// </summary>
                 [NameInMap("successRoutes")]
                 [Validation(Required=false)]

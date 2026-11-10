@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<string> Addresses { get; set; }
 
             /// <summary>
-            /// <para>The agent service configuration. This parameter is required when the sourceType is AGENT.</para>
+            /// <para>The agent service configuration. This parameter is required when the source type is AGENT.</para>
             /// </summary>
             [NameInMap("agentServiceConfig")]
             [Validation(Required=false)]
             public AgentServiceConfig AgentServiceConfig { get; set; }
 
             /// <summary>
-            /// <para>The AI service configuration. This parameter is required when the sourceType is AI.</para>
+            /// <para>The AI service configuration. This parameter is required when the source type is AI.</para>
             /// </summary>
             [NameInMap("aiServiceConfig")]
             [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ExpressType { get; set; }
 
             /// <summary>
-            /// <para>The name of the service group. This parameter is required when the sourceType is MSE_NACOS.</para>
+            /// <para>The name of the service group. This parameter is required when the source type is MSE_NACOS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DEFAULT_GROUP</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ModelProviderId { get; set; }
 
             /// <summary>
-            /// <para>The name of the service. This parameter is required when the sourceType is FC3.</para>
+            /// <para>The name of the service. This parameter is required when the source type is FC3.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user-service</para>
@@ -107,10 +107,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <summary>
             /// <para>The namespace of the service:</para>
             /// <list type="bullet">
-            /// <item><description>When the sourceType is K8S, this parameter specifies the namespace where the Kubernetes service resides.</description></item>
-            /// <item><description>When the sourceType is MSE_NACOS, this parameter specifies the namespace in Nacos.
-            /// This parameter is required when the sourceType is K8S or MSE_NACOS.</description></item>
+            /// <item><description>If the source type is K8S, this parameter specifies the namespace where the Kubernetes service resides.</description></item>
+            /// <item><description>If the source type is MSE_NACOS, this parameter specifies the namespace in Nacos.</description></item>
             /// </list>
+            /// <para>This parameter is required when the source type is K8S or MSE_NACOS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PUBLIC</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string SourceId { get; set; }
 
             /// <summary>
-            /// <para>The validation options, which are configuration options related to service validation.</para>
+            /// <para>The validation options, which include configuration options related to service validation.</para>
             /// </summary>
             [NameInMap("validationOptions")]
             [Validation(Required=false)]
@@ -160,14 +160,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The source of the service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MSE_NACOS: services in MSE Nacos.</description></item>
-        /// <item><description>K8S: services in Container Service for Kubernetes clusters.</description></item>
-        /// <item><description>VIP: fixed address services.</description></item>
+        /// <item><description>MSE_NACOS: Services in MSE Nacos.</description></item>
+        /// <item><description>K8S: Services in Kubernetes clusters of Container Service.</description></item>
+        /// <item><description>VIP: Fixed-address services.</description></item>
         /// <item><description>DNS: DNS domain name services.</description></item>
-        /// <item><description>FC3: services in Function Compute.</description></item>
+        /// <item><description>FC3: Services in Function Compute.</description></item>
         /// <item><description>SAE_K8S_SERVICE: SAE Kubernetes services.</description></item>
         /// <item><description>AI: AI services.</description></item>
-        /// <item><description>AGENT: agent services.</description></item>
+        /// <item><description>AGENT: Agent services.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The client token.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>create-service-client-token-001</para>
         /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]

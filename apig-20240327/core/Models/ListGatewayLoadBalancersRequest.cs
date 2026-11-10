@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListGatewayLoadBalancersRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to return all instances in the selectable list mode. This parameter affects pagination and filtering behavior.</para>
+        /// <para>Specifies whether to return all instances in the optional list mode. This parameter affects the pagination and filtering strategies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? All { get; set; }
 
         /// <summary>
-        /// <para>The load balancer instance ID. Specify this parameter to query details of a specific load balancer in the selectable list mode.</para>
+        /// <para>The exact load balancer instance ID used to query details by ID in the optional list mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lb-xxxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string LoadBalancerId { get; set; }
 
         /// <summary>
-        /// <para>The network type used to filter results.</para>
+        /// <para>The network type filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Internet</para>
@@ -40,12 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Network { get; set; }
 
         /// <summary>
-        /// <para>The mode switch. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: Returns the list of load balancers that are already associated with the gateway by reading database relationships.</description></item>
-        /// <item><description>false (default): Returns the selectable list by calling SLB or NLB OpenAPI to filter bindable instances.</description></item>
-        /// </list>
-        /// <para>Use related=true to retrieve the list of associated load balancers. The default mode (related=false) calls SLB or NLB OpenAPI to filter bindable instances, which may return a 500 error in common scenarios due to backend data issues.</para>
+        /// <para>Specifies whether to return the list of load balancers associated with the gateway. If set to true, the associated load balancers are returned based on database relationships. We recommend setting this parameter to true to retrieve the associated load balancers. If set to false or left empty, the optional list mode is used to call the SLB or NLB API and filter bindable instances. In the default mode where related is false, calling the SLB or NLB API may return a 500 error due to backend data issues in common scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -55,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? Related { get; set; }
 
         /// <summary>
-        /// <para>The load balancer type used to filter results.</para>
+        /// <para>The load balancer type filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NLB</para>
@@ -65,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The VPC ID used to filter instances within the specified VPC in the selectable list mode. This parameter is required when type is set to NLB and related is not set to true. Otherwise, the API returns a 500 error.</para>
+        /// <para>The VPC filter used to filter instances within the specified VPC in the optional list mode. This parameter is required when type is set to NLB and related is not set to true. Otherwise, the API returns a 500 error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-xxxx</para>

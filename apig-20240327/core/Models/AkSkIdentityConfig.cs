@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The AK configuration.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para>ak-xxxxxxxx</para>
         /// </summary>
         [NameInMap("ak")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The SK configuration.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para>sk-xxxxxxxx</para>
         /// </summary>
         [NameInMap("sk")]
         [Validation(Required=false)]

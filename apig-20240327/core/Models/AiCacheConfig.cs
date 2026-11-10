@@ -13,9 +13,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The cache key generation strategy.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("cacheKeyStrategy")]
         [Validation(Required=false)]
@@ -32,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string CacheMode { get; set; }
 
         /// <summary>
-        /// <para>The cache expiration time, in seconds.</para>
+        /// <para>The cache expiration time in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -49,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AiCacheConfigEmbeddingConfig EmbeddingConfig { get; set; }
         public class AiCacheConfigEmbeddingConfig : TeaModel {
             /// <summary>
-            /// <para>The embedding model name.</para>
+            /// <para>The name of the embedding model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>text-embedding-v2</para>
@@ -59,7 +57,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ModelName { get; set; }
 
             /// <summary>
-            /// <para>The embedding service ID.</para>
+            /// <para>The ID of the embedding service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>svc-xxx</para>
@@ -69,7 +67,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ServiceId { get; set; }
 
             /// <summary>
-            /// <para>The request timeout period, in milliseconds.</para>
+            /// <para>The request timeout in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5000</para>
@@ -91,7 +89,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The plugin running status.</para>
+        /// <para>The running status of the plugin.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -118,7 +116,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AiCacheConfigVectorConfig VectorConfig { get; set; }
         public class AiCacheConfigVectorConfig : TeaModel {
             /// <summary>
-            /// <para>The vector database API key.</para>
+            /// <para>The API key for the vector database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sk-xxx</para>
@@ -128,7 +126,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ApiKey { get; set; }
 
             /// <summary>
-            /// <para>The vector collection ID.</para>
+            /// <para>The ID of the vector collection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>col-xxx</para>
@@ -138,7 +136,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string CollectionId { get; set; }
 
             /// <summary>
-            /// <para>The vector database service address.</para>
+            /// <para>The vector database service endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vdb-xxx.dashvector.aliyuncs.com</para>
@@ -158,7 +156,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public float? Threshold { get; set; }
 
             /// <summary>
-            /// <para>The request timeout period, in milliseconds.</para>
+            /// <para>The request timeout in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5000</para>
