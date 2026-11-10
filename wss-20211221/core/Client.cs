@@ -234,6 +234,250 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询 AI 调用明细</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于分页查询当前阿里云账号下指定业务版本、地域和时间范围内的AI模型调用明细。</description></item>
+        /// <item><description>支持按模型调用请求ID、请求模型和用户ID进行筛选。</description></item>
+        /// <item><description>查询结果按调用时间倒序返回。</description></item>
+        /// <item><description>默认查询北京时间当日零点至当前时间的数据，查询区间不超过30天且不得早于当前时间向前推算3个自然月。</description></item>
+        /// <item><description>调用方仅能查询当前调用身份所属主账号的数据，不能指定其他账号。</description></item>
+        /// <item><description><c>PageNumber</c>与<c>PageSize</c>的乘积不得超过1000000。</description></item>
+        /// <item><description><c>BizType</c>不传时默认为企业版。</description></item>
+        /// <item><description><c>GatewayRegion</c>不传时国内站默认上海，国际站默认新加坡。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAICallDetailsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAICallDetailsResponse
+        /// </returns>
+        public DescribeAICallDetailsResponse DescribeAICallDetailsWithOptions(DescribeAICallDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayRegion))
+            {
+                query["GatewayRegion"] = request.GatewayRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                query["ModelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchRequestId))
+            {
+                query["SearchRequestId"] = request.SearchRequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WyIds))
+            {
+                query["WyIds"] = request.WyIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAICallDetails",
+                Version = "2021-12-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAICallDetailsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 AI 调用明细</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于分页查询当前阿里云账号下指定业务版本、地域和时间范围内的AI模型调用明细。</description></item>
+        /// <item><description>支持按模型调用请求ID、请求模型和用户ID进行筛选。</description></item>
+        /// <item><description>查询结果按调用时间倒序返回。</description></item>
+        /// <item><description>默认查询北京时间当日零点至当前时间的数据，查询区间不超过30天且不得早于当前时间向前推算3个自然月。</description></item>
+        /// <item><description>调用方仅能查询当前调用身份所属主账号的数据，不能指定其他账号。</description></item>
+        /// <item><description><c>PageNumber</c>与<c>PageSize</c>的乘积不得超过1000000。</description></item>
+        /// <item><description><c>BizType</c>不传时默认为企业版。</description></item>
+        /// <item><description><c>GatewayRegion</c>不传时国内站默认上海，国际站默认新加坡。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAICallDetailsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAICallDetailsResponse
+        /// </returns>
+        public async Task<DescribeAICallDetailsResponse> DescribeAICallDetailsWithOptionsAsync(DescribeAICallDetailsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayRegion))
+            {
+                query["GatewayRegion"] = request.GatewayRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                query["ModelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchRequestId))
+            {
+                query["SearchRequestId"] = request.SearchRequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WyIds))
+            {
+                query["WyIds"] = request.WyIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAICallDetails",
+                Version = "2021-12-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAICallDetailsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 AI 调用明细</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于分页查询当前阿里云账号下指定业务版本、地域和时间范围内的AI模型调用明细。</description></item>
+        /// <item><description>支持按模型调用请求ID、请求模型和用户ID进行筛选。</description></item>
+        /// <item><description>查询结果按调用时间倒序返回。</description></item>
+        /// <item><description>默认查询北京时间当日零点至当前时间的数据，查询区间不超过30天且不得早于当前时间向前推算3个自然月。</description></item>
+        /// <item><description>调用方仅能查询当前调用身份所属主账号的数据，不能指定其他账号。</description></item>
+        /// <item><description><c>PageNumber</c>与<c>PageSize</c>的乘积不得超过1000000。</description></item>
+        /// <item><description><c>BizType</c>不传时默认为企业版。</description></item>
+        /// <item><description><c>GatewayRegion</c>不传时国内站默认上海，国际站默认新加坡。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAICallDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAICallDetailsResponse
+        /// </returns>
+        public DescribeAICallDetailsResponse DescribeAICallDetails(DescribeAICallDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAICallDetailsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 AI 调用明细</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于分页查询当前阿里云账号下指定业务版本、地域和时间范围内的AI模型调用明细。</description></item>
+        /// <item><description>支持按模型调用请求ID、请求模型和用户ID进行筛选。</description></item>
+        /// <item><description>查询结果按调用时间倒序返回。</description></item>
+        /// <item><description>默认查询北京时间当日零点至当前时间的数据，查询区间不超过30天且不得早于当前时间向前推算3个自然月。</description></item>
+        /// <item><description>调用方仅能查询当前调用身份所属主账号的数据，不能指定其他账号。</description></item>
+        /// <item><description><c>PageNumber</c>与<c>PageSize</c>的乘积不得超过1000000。</description></item>
+        /// <item><description><c>BizType</c>不传时默认为企业版。</description></item>
+        /// <item><description><c>GatewayRegion</c>不传时国内站默认上海，国际站默认新加坡。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeAICallDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAICallDetailsResponse
+        /// </returns>
+        public async Task<DescribeAICallDetailsResponse> DescribeAICallDetailsAsync(DescribeAICallDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAICallDetailsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the list of agents and usage summary information under the current username.</para>
         /// </summary>
         /// 
