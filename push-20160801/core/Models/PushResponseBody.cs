@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class PushResponseBody : TeaModel {
         /// <summary>
-        /// <para>The message ID that identifies a push operation.</para>
+        /// <para>The message ID that identifies a push notification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>501029</para>

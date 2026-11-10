@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class QueryPushRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Deprecated. This parameter is no longer used.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated and no longer used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i91D***********kXIh/dVBEQ==</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The current page number.</para>
+        /// <para>The current page number of the push records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11</para>

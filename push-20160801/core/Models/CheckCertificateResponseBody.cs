@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class CheckCertificateResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the AppKey belongs to an Android app:</para>
+        /// <para>Indicates whether the AppKey represents an Android app:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public bool? Android { get; set; }
 
         /// <summary>
-        /// <para>The information about the certificate for the development or sandbox environment.</para>
+        /// <para>The certificate information for accessing the development or sandbox environment.</para>
         /// </summary>
         [NameInMap("DevelopmentCertInfo")]
         [Validation(Required=false)]
@@ -43,18 +41,13 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public long? ExipreTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the certificate. Valid values:</para>
+            /// <para>The certificate status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>EXPIRED</b>: The certificate is expired.</para>
-            /// </description></item>
-            /// <item><description><para><b>NOT_CONFIGURED</b>: The certificate is not configured.</para>
-            /// </description></item>
-            /// <item><description><para><b>NO_PASSWORD</b>: The password for the certificate is not configured.</para>
-            /// </description></item>
-            /// <item><description><para><b>OK</b>: The certificate is normal.</para>
-            /// </description></item>
-            /// <item><description><para><b>REVOKED</b>: The certificate is revoked.</para>
-            /// </description></item>
+            /// <item><description><b>EXPIRED</b>: The certificate has expired.</description></item>
+            /// <item><description><b>NOT_CONFIGURED</b>: The certificate is not configured.</description></item>
+            /// <item><description><b>NO_PASSWORD</b>: The password is not configured.</description></item>
+            /// <item><description><b>OK</b>: The certificate is normal.</description></item>
+            /// <item><description><b>REVOKED</b>: The certificate is revoked.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -67,12 +60,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the AppKey belongs to an iOS app:</para>
+        /// <para>Indicates whether the AppKey represents an iOS app:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -83,7 +74,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public bool? IOS { get; set; }
 
         /// <summary>
-        /// <para>The information about the certificate for the production environment.</para>
+        /// <para>The certificate information for accessing the production environment.</para>
         /// </summary>
         [NameInMap("ProductionCertInfo")]
         [Validation(Required=false)]
@@ -100,18 +91,13 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             public long? ExipreTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the certificate. Valid values:</para>
+            /// <para>The certificate status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>EXPIRED</b>: The certificate is expired.</para>
-            /// </description></item>
-            /// <item><description><para><b>NOT_CONFIGURED</b>: The certificate is not configured.</para>
-            /// </description></item>
-            /// <item><description><para><b>NO_PASSWORD</b>: The password for the certificate is not configured.</para>
-            /// </description></item>
-            /// <item><description><para><b>OK</b>: The certificate is normal.</para>
-            /// </description></item>
-            /// <item><description><para><b>REVOKED</b>: The certificate is revoked.</para>
-            /// </description></item>
+            /// <item><description><b>EXPIRED</b>: The certificate has expired.</description></item>
+            /// <item><description><b>NOT_CONFIGURED</b>: The certificate is not configured.</description></item>
+            /// <item><description><b>NO_PASSWORD</b>: The password is not configured.</description></item>
+            /// <item><description><b>OK</b>: The certificate is normal.</description></item>
+            /// <item><description><b>REVOKED</b>: The certificate is revoked.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -124,7 +110,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</para>

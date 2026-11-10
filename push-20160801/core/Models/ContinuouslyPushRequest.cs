@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class ContinuouslyPushRequest : TeaModel {
         /// <summary>
-        /// <para>AppKey information.</para>
+        /// <para>The AppKey information.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public long? AppKey { get; set; }
 
         /// <summary>
-        /// <para>Message ID.</para>
-        /// <para>Obtain this MessageId by calling the Push API with Target set to TBD. It represents a message already saved in the push system.</para>
+        /// <para>The message ID.</para>
+        /// <para>The MessageId obtained after calling the Push operation and setting Target to TBD. It represents a message that has been saved to the push system.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,14 +33,11 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public string MessageId { get; set; }
 
         /// <summary>
-        /// <para>Push target:</para>
+        /// <para>The push target:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>DEVICE</b>: Push by device</para>
-        /// </description></item>
-        /// <item><description><para><b>ACCOUNT</b>: Push by account</para>
-        /// </description></item>
-        /// <item><description><para><b>ALIAS</b>: Push by alias</para>
-        /// </description></item>
+        /// <item><description><b>DEVICE</b>: Push based on devices.</description></item>
+        /// <item><description><b>ACCOUNT</b>: Push based on accounts.</description></item>
+        /// <item><description><b>ALIAS</b>: Push based on aliases.</description></item>
         /// </list>
         /// <para>Continuous push supports only these three target types.</para>
         /// <para>This parameter is required.</para>
@@ -53,14 +50,11 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public string Target { get; set; }
 
         /// <summary>
-        /// <para>Specify values based on Target. Separate multiple values with commas. If you exceed the limit, split the push into multiple calls.</para>
+        /// <para>Set this parameter based on Target. Separate multiple values with commas. If the limit is exceeded, push the message in multiple batches.</para>
         /// <list type="bullet">
-        /// <item><description><para>Target=DEVICE: values such as <c>deviceid1,deviceid2</c> (up to 1,000 supported).</para>
-        /// </description></item>
-        /// <item><description><para>Target=ACCOUNT: values such as <c>account1,account2</c> (up to 1,000 supported).</para>
-        /// </description></item>
-        /// <item><description><para>Target=ALIAS: values such as <c>alias1,alias2</c> (up to 1,000 supported).</para>
-        /// </description></item>
+        /// <item><description>If Target is set to DEVICE, the value is in the format of <c>deviceid1,deviceid2</c>. A maximum of 1,000 devices are supported.</description></item>
+        /// <item><description>If Target is set to ACCOUNT, the value is in the format of <c>account1,account2</c>. A maximum of 1,000 accounts are supported.</description></item>
+        /// <item><description>If Target is set to ALIAS, the value is in the format of <c>alias1,alias2</c>. A maximum of 1,000 aliases are supported.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

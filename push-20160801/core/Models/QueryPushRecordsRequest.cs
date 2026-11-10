@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class QueryPushRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The AppKey of the application.</para>
+        /// <para>The AppKey information.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public long? AppKey { get; set; }
 
         /// <summary>
-        /// <para>The end time for the query. Specify the time in UTC, using the ISO-8601 format <c>YYYY-MM-DDThh:mm:ssZ</c>.</para>
+        /// <para>The end time of the query. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,17 +32,17 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The keyword used for the query. The search covers the <c>MessageId</c>, <c>Title</c>, and <c>Body</c> fields. For <c>Title</c> and <c>Body</c>, the system applies Chinese word segmentation and matches whole tokens instead of substrings.</para>
+        /// <para>The query keyword. The query is performed based on the MessageId, Title, and Body fields. The system performs Chinese word segmentation on the title and body of the push, and uses the segmented words for the query instead of substring matching.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>统计数据测试通知805</para>
+        /// <para>Statistics data test notification 805</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated and no longer used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FFPpkmhCPm*****************xjk=</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number to query. Default: 1. Maximum: 10,000.</para>
+        /// <para>The current page number of the push records. Default value: 1. Maximum value: 10000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default: 20. Maximum: 100.</para>
+        /// <para>The number of entries per page. Default value: 20. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -74,11 +74,11 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         /// <summary>
         /// <para>The push type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>MESSAGE</b>: A message.</para>
+        /// <item><description><para><b>MESSAGE</b>: message</para>
         /// </description></item>
-        /// <item><description><para><b>NOTICE</b>: A notification.</para>
+        /// <item><description><para><b>NOTICE</b>: notification</para>
         /// </description></item>
-        /// <item><description><para><b>LIVE_ACTIVITY</b>: A Live Activity.</para>
+        /// <item><description><para><b>LIVE_ACTIVITY</b>: live activity</para>
         /// </description></item>
         /// </list>
         /// 
@@ -92,12 +92,9 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         /// <summary>
         /// <para>The push source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>API</b>: Pushes initiated via an OpenAPI call.</para>
-        /// </description></item>
-        /// <item><description><para><b>CONSOLE</b>: Pushes initiated from the Mobile Push console.</para>
-        /// </description></item>
-        /// <item><description><para><b>OpenAPIExplorer</b>: Pushes initiated from Alibaba Cloud OpenAPI Explorer.</para>
-        /// </description></item>
+        /// <item><description><b>API</b>: push initiated by OpenAPI, including pushes initiated from the OpenAPI platform console</description></item>
+        /// <item><description><b>CONSOLE</b>: push initiated from the Mobile Push console</description></item>
+        /// <item><description><b>OpenAPIExplorer</b>: push initiated from the Alibaba Cloud OpenAPI Explorer platform</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -108,7 +105,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The start time for the query. Specify the time in UTC, using the ISO-8601 format <c>YYYY-MM-DDThh:mm:ssZ</c>.</para>
+        /// <para>The start time of the query. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -121,17 +118,17 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         /// <summary>
         /// <para>The push target. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>DEVICE</b>: Push to devices.</para>
+        /// <item><description><para><b>DEVICE</b>: push by device</para>
         /// </description></item>
-        /// <item><description><para><b>ACCOUNT</b>: Push to accounts.</para>
+        /// <item><description><para><b>ACCOUNT</b>: push by account</para>
         /// </description></item>
-        /// <item><description><para><b>ALIAS</b>: Push to aliases.</para>
+        /// <item><description><para><b>ALIAS</b>: push by alias</para>
         /// </description></item>
-        /// <item><description><para><b>TAG</b>: Push to tags.</para>
+        /// <item><description><para><b>TAG</b>: push by tag</para>
         /// </description></item>
-        /// <item><description><para><b>ALL</b>: Push to all devices.</para>
+        /// <item><description><para><b>ALL</b>: push to all devices</para>
         /// </description></item>
-        /// <item><description><para><b>TBD</b>: Initializes a continuous push. The push target is specified in a subsequent call to the <c>ContinuouslyPush</c> API operation.</para>
+        /// <item><description><para><b>TBD</b>: initialize continuous push, where the push target is specified by the subsequent ContinuouslyPush operation</para>
         /// </description></item>
         /// </list>
         /// 

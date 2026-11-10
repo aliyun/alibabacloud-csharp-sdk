@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Push20160801
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "Push";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -666,8 +669,8 @@ namespace AlibabaCloud.SDK.Push20160801
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If the returned ExpireTime value is later than the current timestamp, the certificate is not necessarily valid. Also verify that the Status is OK.</description></item>
-        /// <item><description>The REVOKED status originates from the Apple Push Notification service (APNs) server. If a certificate has a REVOKED status, at least one push notification to APNs has failed in the corresponding environment.</description></item>
+        /// <item><description>If the returned ExpireTime is greater than the current timestamp, it does not necessarily mean that the certificate is available. You must also check whether the Status is OK.</description></item>
+        /// <item><description>The REVOKED status is returned by the APNs server. If the certificate is in the REVOKED status, at least one push notification sent to APNs in the corresponding environment has failed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -716,8 +719,8 @@ namespace AlibabaCloud.SDK.Push20160801
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If the returned ExpireTime value is later than the current timestamp, the certificate is not necessarily valid. Also verify that the Status is OK.</description></item>
-        /// <item><description>The REVOKED status originates from the Apple Push Notification service (APNs) server. If a certificate has a REVOKED status, at least one push notification to APNs has failed in the corresponding environment.</description></item>
+        /// <item><description>If the returned ExpireTime is greater than the current timestamp, it does not necessarily mean that the certificate is available. You must also check whether the Status is OK.</description></item>
+        /// <item><description>The REVOKED status is returned by the APNs server. If the certificate is in the REVOKED status, at least one push notification sent to APNs in the corresponding environment has failed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -766,8 +769,8 @@ namespace AlibabaCloud.SDK.Push20160801
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If the returned ExpireTime value is later than the current timestamp, the certificate is not necessarily valid. Also verify that the Status is OK.</description></item>
-        /// <item><description>The REVOKED status originates from the Apple Push Notification service (APNs) server. If a certificate has a REVOKED status, at least one push notification to APNs has failed in the corresponding environment.</description></item>
+        /// <item><description>If the returned ExpireTime is greater than the current timestamp, it does not necessarily mean that the certificate is available. You must also check whether the Status is OK.</description></item>
+        /// <item><description>The REVOKED status is returned by the APNs server. If the certificate is in the REVOKED status, at least one push notification sent to APNs in the corresponding environment has failed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -792,8 +795,8 @@ namespace AlibabaCloud.SDK.Push20160801
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If the returned ExpireTime value is later than the current timestamp, the certificate is not necessarily valid. Also verify that the Status is OK.</description></item>
-        /// <item><description>The REVOKED status originates from the Apple Push Notification service (APNs) server. If a certificate has a REVOKED status, at least one push notification to APNs has failed in the corresponding environment.</description></item>
+        /// <item><description>If the returned ExpireTime is greater than the current timestamp, it does not necessarily mean that the certificate is available. You must also check whether the Status is OK.</description></item>
+        /// <item><description>The REVOKED status is returned by the APNs server. If the certificate is in the REVOKED status, at least one push notification sent to APNs in the corresponding environment has failed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1245,12 +1248,12 @@ namespace AlibabaCloud.SDK.Push20160801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API addresses the limitations of the <a href="https://help.aliyun.com/document_detail/2249916.html">Push Advanced Push API</a>, where push-by-device, push-by-account, and push-by-alias operations each have a maximum target count per single call.</para>
+        /// <para>This operation resolves the issue of the maximum number of targets per call in the <a href="https://help.aliyun.com/document_detail/2249916.html">Push advanced push operation</a>, regardless of whether the push is based on devices, accounts, or aliases.</para>
         /// <list type="bullet">
-        /// <item><description>You can use continuous push when your scenario requires sending the same message to many devices. In this case, you can call the continuous push API repeatedly, each time specifying a group of targets for aggregation (the current limit is 1,000 targets per call for device, account, or alias pushes). The total number of pushes for the same MessageId is restricted to 10,000. If you need a higher limit, contact technical support to evaluate your specific scenario.</description></item>
-        /// <item><description>Before using this API, you must first call the Push API with Target set to TBD (To Be Determined) and include your message content. This returns a MessageId from the push system. You can then use this MessageId to repeatedly call the continuous push API, specifying different target groups to deliver the same message.</description></item>
-        /// <item><description>After calling the Push API with Target set to TBD and obtaining a MessageId, the message is stored in the push system for 24 hours by default. You can use this API to push to specified targets at any time before expiration. Pushes are not allowed after expiration or after reaching the total push limit.</description></item>
-        /// <item><description>Each call to this API sends the message immediately. Scheduled pushes are not supported.</description></item>
+        /// <item><description>Using continuous push indicates that the business scenario involves sending the same message to a large number of devices. In this case, call the continuous push operation appropriately. For each call, aggregate a group of devices for the push. Currently, the maximum number of targets per push is 1,000 for device-based, account-based, and alias-based pushes. The total number of pushes for the same MessageId is limited to 10,000. If a higher quota is required, contact technical support to evaluate the specific scenario.</description></item>
+        /// <item><description>Before using this operation, call the Push operation, set Target to TBD (To Be Determined), and specify the message content to obtain the MessageId of the message in the push system. Then, you can repeatedly call this operation based on the MessageId and specify different target groups to push the message to these targets.</description></item>
+        /// <item><description>After you call the Push operation and set the target to TBD to obtain the MessageId, the message is retained in the push system for 24 hours by default. Before the message expires, you can use this operation to push the message to specified targets at any time. Pushes are not allowed after the message expires or the maximum total number of pushes is exceeded.</description></item>
+        /// <item><description>Each time you call this operation to specify devices, the message is pushed immediately. Scheduled pushes are not supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1310,12 +1313,12 @@ namespace AlibabaCloud.SDK.Push20160801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API addresses the limitations of the <a href="https://help.aliyun.com/document_detail/2249916.html">Push Advanced Push API</a>, where push-by-device, push-by-account, and push-by-alias operations each have a maximum target count per single call.</para>
+        /// <para>This operation resolves the issue of the maximum number of targets per call in the <a href="https://help.aliyun.com/document_detail/2249916.html">Push advanced push operation</a>, regardless of whether the push is based on devices, accounts, or aliases.</para>
         /// <list type="bullet">
-        /// <item><description>You can use continuous push when your scenario requires sending the same message to many devices. In this case, you can call the continuous push API repeatedly, each time specifying a group of targets for aggregation (the current limit is 1,000 targets per call for device, account, or alias pushes). The total number of pushes for the same MessageId is restricted to 10,000. If you need a higher limit, contact technical support to evaluate your specific scenario.</description></item>
-        /// <item><description>Before using this API, you must first call the Push API with Target set to TBD (To Be Determined) and include your message content. This returns a MessageId from the push system. You can then use this MessageId to repeatedly call the continuous push API, specifying different target groups to deliver the same message.</description></item>
-        /// <item><description>After calling the Push API with Target set to TBD and obtaining a MessageId, the message is stored in the push system for 24 hours by default. You can use this API to push to specified targets at any time before expiration. Pushes are not allowed after expiration or after reaching the total push limit.</description></item>
-        /// <item><description>Each call to this API sends the message immediately. Scheduled pushes are not supported.</description></item>
+        /// <item><description>Using continuous push indicates that the business scenario involves sending the same message to a large number of devices. In this case, call the continuous push operation appropriately. For each call, aggregate a group of devices for the push. Currently, the maximum number of targets per push is 1,000 for device-based, account-based, and alias-based pushes. The total number of pushes for the same MessageId is limited to 10,000. If a higher quota is required, contact technical support to evaluate the specific scenario.</description></item>
+        /// <item><description>Before using this operation, call the Push operation, set Target to TBD (To Be Determined), and specify the message content to obtain the MessageId of the message in the push system. Then, you can repeatedly call this operation based on the MessageId and specify different target groups to push the message to these targets.</description></item>
+        /// <item><description>After you call the Push operation and set the target to TBD to obtain the MessageId, the message is retained in the push system for 24 hours by default. Before the message expires, you can use this operation to push the message to specified targets at any time. Pushes are not allowed after the message expires or the maximum total number of pushes is exceeded.</description></item>
+        /// <item><description>Each time you call this operation to specify devices, the message is pushed immediately. Scheduled pushes are not supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1375,12 +1378,12 @@ namespace AlibabaCloud.SDK.Push20160801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API addresses the limitations of the <a href="https://help.aliyun.com/document_detail/2249916.html">Push Advanced Push API</a>, where push-by-device, push-by-account, and push-by-alias operations each have a maximum target count per single call.</para>
+        /// <para>This operation resolves the issue of the maximum number of targets per call in the <a href="https://help.aliyun.com/document_detail/2249916.html">Push advanced push operation</a>, regardless of whether the push is based on devices, accounts, or aliases.</para>
         /// <list type="bullet">
-        /// <item><description>You can use continuous push when your scenario requires sending the same message to many devices. In this case, you can call the continuous push API repeatedly, each time specifying a group of targets for aggregation (the current limit is 1,000 targets per call for device, account, or alias pushes). The total number of pushes for the same MessageId is restricted to 10,000. If you need a higher limit, contact technical support to evaluate your specific scenario.</description></item>
-        /// <item><description>Before using this API, you must first call the Push API with Target set to TBD (To Be Determined) and include your message content. This returns a MessageId from the push system. You can then use this MessageId to repeatedly call the continuous push API, specifying different target groups to deliver the same message.</description></item>
-        /// <item><description>After calling the Push API with Target set to TBD and obtaining a MessageId, the message is stored in the push system for 24 hours by default. You can use this API to push to specified targets at any time before expiration. Pushes are not allowed after expiration or after reaching the total push limit.</description></item>
-        /// <item><description>Each call to this API sends the message immediately. Scheduled pushes are not supported.</description></item>
+        /// <item><description>Using continuous push indicates that the business scenario involves sending the same message to a large number of devices. In this case, call the continuous push operation appropriately. For each call, aggregate a group of devices for the push. Currently, the maximum number of targets per push is 1,000 for device-based, account-based, and alias-based pushes. The total number of pushes for the same MessageId is limited to 10,000. If a higher quota is required, contact technical support to evaluate the specific scenario.</description></item>
+        /// <item><description>Before using this operation, call the Push operation, set Target to TBD (To Be Determined), and specify the message content to obtain the MessageId of the message in the push system. Then, you can repeatedly call this operation based on the MessageId and specify different target groups to push the message to these targets.</description></item>
+        /// <item><description>After you call the Push operation and set the target to TBD to obtain the MessageId, the message is retained in the push system for 24 hours by default. Before the message expires, you can use this operation to push the message to specified targets at any time. Pushes are not allowed after the message expires or the maximum total number of pushes is exceeded.</description></item>
+        /// <item><description>Each time you call this operation to specify devices, the message is pushed immediately. Scheduled pushes are not supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1404,12 +1407,12 @@ namespace AlibabaCloud.SDK.Push20160801
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API addresses the limitations of the <a href="https://help.aliyun.com/document_detail/2249916.html">Push Advanced Push API</a>, where push-by-device, push-by-account, and push-by-alias operations each have a maximum target count per single call.</para>
+        /// <para>This operation resolves the issue of the maximum number of targets per call in the <a href="https://help.aliyun.com/document_detail/2249916.html">Push advanced push operation</a>, regardless of whether the push is based on devices, accounts, or aliases.</para>
         /// <list type="bullet">
-        /// <item><description>You can use continuous push when your scenario requires sending the same message to many devices. In this case, you can call the continuous push API repeatedly, each time specifying a group of targets for aggregation (the current limit is 1,000 targets per call for device, account, or alias pushes). The total number of pushes for the same MessageId is restricted to 10,000. If you need a higher limit, contact technical support to evaluate your specific scenario.</description></item>
-        /// <item><description>Before using this API, you must first call the Push API with Target set to TBD (To Be Determined) and include your message content. This returns a MessageId from the push system. You can then use this MessageId to repeatedly call the continuous push API, specifying different target groups to deliver the same message.</description></item>
-        /// <item><description>After calling the Push API with Target set to TBD and obtaining a MessageId, the message is stored in the push system for 24 hours by default. You can use this API to push to specified targets at any time before expiration. Pushes are not allowed after expiration or after reaching the total push limit.</description></item>
-        /// <item><description>Each call to this API sends the message immediately. Scheduled pushes are not supported.</description></item>
+        /// <item><description>Using continuous push indicates that the business scenario involves sending the same message to a large number of devices. In this case, call the continuous push operation appropriately. For each call, aggregate a group of devices for the push. Currently, the maximum number of targets per push is 1,000 for device-based, account-based, and alias-based pushes. The total number of pushes for the same MessageId is limited to 10,000. If a higher quota is required, contact technical support to evaluate the specific scenario.</description></item>
+        /// <item><description>Before using this operation, call the Push operation, set Target to TBD (To Be Determined), and specify the message content to obtain the MessageId of the message in the push system. Then, you can repeatedly call this operation based on the MessageId and specify different target groups to push the message to these targets.</description></item>
+        /// <item><description>After you call the Push operation and set the target to TBD to obtain the MessageId, the message is retained in the push system for 24 hours by default. Before the message expires, you can use this operation to push the message to specified targets at any time. Pushes are not allowed after the message expires or the maximum total number of pushes is exceeded.</description></item>
+        /// <item><description>Each time you call this operation to specify devices, the message is pushed immediately. Scheduled pushes are not supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1660,34 +1663,34 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Push different messages/notifications to different devices in batch.</para>
+        /// <para>Pushes different messages or notifications to different devices in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Before using this API, make sure you fully understand the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of the EMAS Mobile Push service.</em>*
-        /// In certain business scenarios, you may need to push different messages to different devices in a very short time. When the number of devices and messages is extremely large, this can generate high QPS and reach the QPS limit per source IP, causing some pushes to fail.
-        /// This API is designed to address this problem. It supports up to 100 independent push tasks in a single call, effectively reducing QPS through request aggregation and improving the stability and success rate of large-scale unicast pushes. Batch push is limited to 500 calls per second per account.
-        /// Each independent push task only supports three types of push targets: device, account, and alias, and does not currently support SMS integration configuration.</para>
+        /// <para><em>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of Mobile Push.</em>*
+        /// In some business scenarios, you may need to push different messages to a large number of different devices within a very short time. When the number of devices and messages is extremely large, a high queries per second (QPS) rate is generated. This may reach the QPS limit for a single source IP address and cause some push tasks to fail.
+        /// This operation is designed to address this issue. It allows you to pass up to 100 independent push tasks in a single call. By aggregating requests, it effectively reduces the QPS and improves the stability and success rate of mass single-target push tasks. The rate limit for batch push is 500 calls per second per account.
+        /// Each independent push task only supports three types of push targets: device, account, and alias. SMS integration configuration is currently not supported.</para>
         /// <remarks>
         /// <para>The SDK must be upgraded to version 3.11.0 or later.</para>
         /// </remarks>
-        /// <h2>PushTask Properties</h2>
+        /// <h2>PushTask properties</h2>
         /// <list type="bullet">
-        /// <item><description>The PushTask property format is: PushTask.N.Property. It includes:<list type="bullet">
+        /// <item><description>The PushTask property format is PushTask.N.Property. It includes:<list type="bullet">
         /// <item><description>Push target (destination)</description></item>
         /// <item><description>Push configuration (config)</description></item>
         /// <item><description>iOS notification task configuration</description></item>
         /// <item><description>Android notification task configuration</description></item>
-        /// <item><description>Android auxiliary popup configuration</description></item>
+        /// <item><description>Android auxiliary pop-up window configuration</description></item>
         /// <item><description>HarmonyOS notification task configuration </description></item>
         /// <item><description>Push control</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Each PushTask represents an independent push task, with a maximum of 100 supported. Push-related configurations are consistent with the Push API.</description></item>
-        /// <item><description>The PushTask.N.Target parameter only supports three types: DEVICE, ACCOUNT, and ALIAS.</description></item>
-        /// <item><description>PushTask does not support SMS integration configuration.</description></item>
-        /// <item><description>The product of parent nodes and child nodes cannot exceed 10,000; otherwise, the parameters are considered invalid.</description></item>
+        /// <item><description>Each PushTask represents an independent push task. A maximum of 100 push tasks are supported. The push-related configurations are the same as those in the Push operation.</description></item>
+        /// <item><description>The PushTask.N.Target parameter only supports the DEVICE, ACCOUNT, and ALIAS types.</description></item>
+        /// <item><description>PushTask does not support SMS linkage configuration.</description></item>
+        /// <item><description>The product of the number of parent nodes and child nodes cannot exceed 10,000. Otherwise, the parameter is considered invalid.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1740,34 +1743,34 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Push different messages/notifications to different devices in batch.</para>
+        /// <para>Pushes different messages or notifications to different devices in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Before using this API, make sure you fully understand the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of the EMAS Mobile Push service.</em>*
-        /// In certain business scenarios, you may need to push different messages to different devices in a very short time. When the number of devices and messages is extremely large, this can generate high QPS and reach the QPS limit per source IP, causing some pushes to fail.
-        /// This API is designed to address this problem. It supports up to 100 independent push tasks in a single call, effectively reducing QPS through request aggregation and improving the stability and success rate of large-scale unicast pushes. Batch push is limited to 500 calls per second per account.
-        /// Each independent push task only supports three types of push targets: device, account, and alias, and does not currently support SMS integration configuration.</para>
+        /// <para><em>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of Mobile Push.</em>*
+        /// In some business scenarios, you may need to push different messages to a large number of different devices within a very short time. When the number of devices and messages is extremely large, a high queries per second (QPS) rate is generated. This may reach the QPS limit for a single source IP address and cause some push tasks to fail.
+        /// This operation is designed to address this issue. It allows you to pass up to 100 independent push tasks in a single call. By aggregating requests, it effectively reduces the QPS and improves the stability and success rate of mass single-target push tasks. The rate limit for batch push is 500 calls per second per account.
+        /// Each independent push task only supports three types of push targets: device, account, and alias. SMS integration configuration is currently not supported.</para>
         /// <remarks>
         /// <para>The SDK must be upgraded to version 3.11.0 or later.</para>
         /// </remarks>
-        /// <h2>PushTask Properties</h2>
+        /// <h2>PushTask properties</h2>
         /// <list type="bullet">
-        /// <item><description>The PushTask property format is: PushTask.N.Property. It includes:<list type="bullet">
+        /// <item><description>The PushTask property format is PushTask.N.Property. It includes:<list type="bullet">
         /// <item><description>Push target (destination)</description></item>
         /// <item><description>Push configuration (config)</description></item>
         /// <item><description>iOS notification task configuration</description></item>
         /// <item><description>Android notification task configuration</description></item>
-        /// <item><description>Android auxiliary popup configuration</description></item>
+        /// <item><description>Android auxiliary pop-up window configuration</description></item>
         /// <item><description>HarmonyOS notification task configuration </description></item>
         /// <item><description>Push control</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Each PushTask represents an independent push task, with a maximum of 100 supported. Push-related configurations are consistent with the Push API.</description></item>
-        /// <item><description>The PushTask.N.Target parameter only supports three types: DEVICE, ACCOUNT, and ALIAS.</description></item>
-        /// <item><description>PushTask does not support SMS integration configuration.</description></item>
-        /// <item><description>The product of parent nodes and child nodes cannot exceed 10,000; otherwise, the parameters are considered invalid.</description></item>
+        /// <item><description>Each PushTask represents an independent push task. A maximum of 100 push tasks are supported. The push-related configurations are the same as those in the Push operation.</description></item>
+        /// <item><description>The PushTask.N.Target parameter only supports the DEVICE, ACCOUNT, and ALIAS types.</description></item>
+        /// <item><description>PushTask does not support SMS linkage configuration.</description></item>
+        /// <item><description>The product of the number of parent nodes and child nodes cannot exceed 10,000. Otherwise, the parameter is considered invalid.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1820,34 +1823,34 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Push different messages/notifications to different devices in batch.</para>
+        /// <para>Pushes different messages or notifications to different devices in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Before using this API, make sure you fully understand the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of the EMAS Mobile Push service.</em>*
-        /// In certain business scenarios, you may need to push different messages to different devices in a very short time. When the number of devices and messages is extremely large, this can generate high QPS and reach the QPS limit per source IP, causing some pushes to fail.
-        /// This API is designed to address this problem. It supports up to 100 independent push tasks in a single call, effectively reducing QPS through request aggregation and improving the stability and success rate of large-scale unicast pushes. Batch push is limited to 500 calls per second per account.
-        /// Each independent push task only supports three types of push targets: device, account, and alias, and does not currently support SMS integration configuration.</para>
+        /// <para><em>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of Mobile Push.</em>*
+        /// In some business scenarios, you may need to push different messages to a large number of different devices within a very short time. When the number of devices and messages is extremely large, a high queries per second (QPS) rate is generated. This may reach the QPS limit for a single source IP address and cause some push tasks to fail.
+        /// This operation is designed to address this issue. It allows you to pass up to 100 independent push tasks in a single call. By aggregating requests, it effectively reduces the QPS and improves the stability and success rate of mass single-target push tasks. The rate limit for batch push is 500 calls per second per account.
+        /// Each independent push task only supports three types of push targets: device, account, and alias. SMS integration configuration is currently not supported.</para>
         /// <remarks>
         /// <para>The SDK must be upgraded to version 3.11.0 or later.</para>
         /// </remarks>
-        /// <h2>PushTask Properties</h2>
+        /// <h2>PushTask properties</h2>
         /// <list type="bullet">
-        /// <item><description>The PushTask property format is: PushTask.N.Property. It includes:<list type="bullet">
+        /// <item><description>The PushTask property format is PushTask.N.Property. It includes:<list type="bullet">
         /// <item><description>Push target (destination)</description></item>
         /// <item><description>Push configuration (config)</description></item>
         /// <item><description>iOS notification task configuration</description></item>
         /// <item><description>Android notification task configuration</description></item>
-        /// <item><description>Android auxiliary popup configuration</description></item>
+        /// <item><description>Android auxiliary pop-up window configuration</description></item>
         /// <item><description>HarmonyOS notification task configuration </description></item>
         /// <item><description>Push control</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Each PushTask represents an independent push task, with a maximum of 100 supported. Push-related configurations are consistent with the Push API.</description></item>
-        /// <item><description>The PushTask.N.Target parameter only supports three types: DEVICE, ACCOUNT, and ALIAS.</description></item>
-        /// <item><description>PushTask does not support SMS integration configuration.</description></item>
-        /// <item><description>The product of parent nodes and child nodes cannot exceed 10,000; otherwise, the parameters are considered invalid.</description></item>
+        /// <item><description>Each PushTask represents an independent push task. A maximum of 100 push tasks are supported. The push-related configurations are the same as those in the Push operation.</description></item>
+        /// <item><description>The PushTask.N.Target parameter only supports the DEVICE, ACCOUNT, and ALIAS types.</description></item>
+        /// <item><description>PushTask does not support SMS linkage configuration.</description></item>
+        /// <item><description>The product of the number of parent nodes and child nodes cannot exceed 10,000. Otherwise, the parameter is considered invalid.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1866,34 +1869,34 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Push different messages/notifications to different devices in batch.</para>
+        /// <para>Pushes different messages or notifications to different devices in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Before using this API, make sure you fully understand the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of the EMAS Mobile Push service.</em>*
-        /// In certain business scenarios, you may need to push different messages to different devices in a very short time. When the number of devices and messages is extremely large, this can generate high QPS and reach the QPS limit per source IP, causing some pushes to fail.
-        /// This API is designed to address this problem. It supports up to 100 independent push tasks in a single call, effectively reducing QPS through request aggregation and improving the stability and success rate of large-scale unicast pushes. Batch push is limited to 500 calls per second per account.
-        /// Each independent push task only supports three types of push targets: device, account, and alias, and does not currently support SMS integration configuration.</para>
+        /// <para><em>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of Mobile Push.</em>*
+        /// In some business scenarios, you may need to push different messages to a large number of different devices within a very short time. When the number of devices and messages is extremely large, a high queries per second (QPS) rate is generated. This may reach the QPS limit for a single source IP address and cause some push tasks to fail.
+        /// This operation is designed to address this issue. It allows you to pass up to 100 independent push tasks in a single call. By aggregating requests, it effectively reduces the QPS and improves the stability and success rate of mass single-target push tasks. The rate limit for batch push is 500 calls per second per account.
+        /// Each independent push task only supports three types of push targets: device, account, and alias. SMS integration configuration is currently not supported.</para>
         /// <remarks>
         /// <para>The SDK must be upgraded to version 3.11.0 or later.</para>
         /// </remarks>
-        /// <h2>PushTask Properties</h2>
+        /// <h2>PushTask properties</h2>
         /// <list type="bullet">
-        /// <item><description>The PushTask property format is: PushTask.N.Property. It includes:<list type="bullet">
+        /// <item><description>The PushTask property format is PushTask.N.Property. It includes:<list type="bullet">
         /// <item><description>Push target (destination)</description></item>
         /// <item><description>Push configuration (config)</description></item>
         /// <item><description>iOS notification task configuration</description></item>
         /// <item><description>Android notification task configuration</description></item>
-        /// <item><description>Android auxiliary popup configuration</description></item>
+        /// <item><description>Android auxiliary pop-up window configuration</description></item>
         /// <item><description>HarmonyOS notification task configuration </description></item>
         /// <item><description>Push control</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Each PushTask represents an independent push task, with a maximum of 100 supported. Push-related configurations are consistent with the Push API.</description></item>
-        /// <item><description>The PushTask.N.Target parameter only supports three types: DEVICE, ACCOUNT, and ALIAS.</description></item>
-        /// <item><description>PushTask does not support SMS integration configuration.</description></item>
-        /// <item><description>The product of parent nodes and child nodes cannot exceed 10,000; otherwise, the parameters are considered invalid.</description></item>
+        /// <item><description>Each PushTask represents an independent push task. A maximum of 100 push tasks are supported. The push-related configurations are the same as those in the Push operation.</description></item>
+        /// <item><description>The PushTask.N.Target parameter only supports the DEVICE, ACCOUNT, and ALIAS types.</description></item>
+        /// <item><description>PushTask does not support SMS linkage configuration.</description></item>
+        /// <item><description>The product of the number of parent nodes and child nodes cannot exceed 10,000. Otherwise, the parameter is considered invalid.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2080,13 +2083,13 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Advanced Push API that pushes notifications or messages to different device endpoints. This API provides rich push customization parameters to implement push behavior in different scenarios.</para>
+        /// <para>Pushes notifications or messages to various device endpoints and provides rich custom parameters to implement push behaviors in different scenarios.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Please ensure that you have fully understood the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of the EMAS Mobile Push product before using this API.</em>*
-        /// This API differentiates between Android, iOS, and HarmonyOS platforms. For push calls on different platforms, you need to pass the corresponding platform\&quot;s AppKey.</para>
+        /// <para><em>Before you use this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of EMAS Mobile Push.</em>*
+        /// This operation distinguishes between Android, iOS, and HarmonyOS platforms. For push calls on different platforms, you must pass the AppKey corresponding to the platform.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2312,6 +2315,14 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidVivoReceiptId))
             {
                 query["AndroidVivoReceiptId"] = request.AndroidVivoReceiptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidVivoTemplateId))
+            {
+                query["AndroidVivoTemplateId"] = request.AndroidVivoTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidVivoTemplateParams))
+            {
+                query["AndroidVivoTemplateParams"] = request.AndroidVivoTemplateParams;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidXiaoMiActivity))
             {
@@ -2618,13 +2629,13 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Advanced Push API that pushes notifications or messages to different device endpoints. This API provides rich push customization parameters to implement push behavior in different scenarios.</para>
+        /// <para>Pushes notifications or messages to various device endpoints and provides rich custom parameters to implement push behaviors in different scenarios.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Please ensure that you have fully understood the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of the EMAS Mobile Push product before using this API.</em>*
-        /// This API differentiates between Android, iOS, and HarmonyOS platforms. For push calls on different platforms, you need to pass the corresponding platform\&quot;s AppKey.</para>
+        /// <para><em>Before you use this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of EMAS Mobile Push.</em>*
+        /// This operation distinguishes between Android, iOS, and HarmonyOS platforms. For push calls on different platforms, you must pass the AppKey corresponding to the platform.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2850,6 +2861,14 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidVivoReceiptId))
             {
                 query["AndroidVivoReceiptId"] = request.AndroidVivoReceiptId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidVivoTemplateId))
+            {
+                query["AndroidVivoTemplateId"] = request.AndroidVivoTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidVivoTemplateParams))
+            {
+                query["AndroidVivoTemplateParams"] = request.AndroidVivoTemplateParams;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidXiaoMiActivity))
             {
@@ -3156,13 +3175,13 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Advanced Push API that pushes notifications or messages to different device endpoints. This API provides rich push customization parameters to implement push behavior in different scenarios.</para>
+        /// <para>Pushes notifications or messages to various device endpoints and provides rich custom parameters to implement push behaviors in different scenarios.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Please ensure that you have fully understood the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of the EMAS Mobile Push product before using this API.</em>*
-        /// This API differentiates between Android, iOS, and HarmonyOS platforms. For push calls on different platforms, you need to pass the corresponding platform\&quot;s AppKey.</para>
+        /// <para><em>Before you use this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of EMAS Mobile Push.</em>*
+        /// This operation distinguishes between Android, iOS, and HarmonyOS platforms. For push calls on different platforms, you must pass the AppKey corresponding to the platform.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3180,13 +3199,13 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Advanced Push API that pushes notifications or messages to different device endpoints. This API provides rich push customization parameters to implement push behavior in different scenarios.</para>
+        /// <para>Pushes notifications or messages to various device endpoints and provides rich custom parameters to implement push behaviors in different scenarios.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Please ensure that you have fully understood the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of the EMAS Mobile Push product before using this API.</em>*
-        /// This API differentiates between Android, iOS, and HarmonyOS platforms. For push calls on different platforms, you need to pass the corresponding platform\&quot;s AppKey.</para>
+        /// <para><em>Before you use this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of EMAS Mobile Push.</em>*
+        /// This operation distinguishes between Android, iOS, and HarmonyOS platforms. For push calls on different platforms, you must pass the AppKey corresponding to the platform.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4860,7 +4879,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can query push records with pagination and basic filtering.</para>
+        /// <para>Performs a paging query of push records and provides basic filtering capabilities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4938,7 +4957,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can query push records with pagination and basic filtering.</para>
+        /// <para>Performs a paging query of push records and provides basic filtering capabilities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5016,7 +5035,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can query push records with pagination and basic filtering.</para>
+        /// <para>Performs a paging query of push records and provides basic filtering capabilities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5034,7 +5053,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can query push records with pagination and basic filtering.</para>
+        /// <para>Performs a paging query of push records and provides basic filtering capabilities.</para>
         /// </summary>
         /// 
         /// <param name="request">
