@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
 {
     public class StopAppResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>The resource group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The business region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
+        /// <para>The client ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
         public string ClientId { get; set; }
 
         /// <summary>
+        /// <para>The client IP address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1.2.3.4</para>
         /// </summary>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
         public string ClientIp { get; set; }
 
         /// <summary>
+        /// <para>The client operating system.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>windows_&quot;Windows 10 Enterprise&quot; 10.0 (Build 19042)</para>
         /// </summary>
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
         public string ClientOS { get; set; }
 
         /// <summary>
+        /// <para>The client version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7.2.0-R-20241008.110000</para>
         /// </summary>
@@ -62,6 +72,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
         public string ClientVersion { get; set; }
 
         /// <summary>
+        /// <para>The username.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>testUser</para>
         /// </summary>
@@ -70,6 +82,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
         public string EndUserId { get; set; }
 
         /// <summary>
+        /// <para>The region ID for office network logon.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -78,6 +92,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
         public string LoginRegionId { get; set; }
 
         /// <summary>
+        /// <para>The logon token.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,6 +103,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
         public string LoginToken { get; set; }
 
         /// <summary>
+        /// <para>The product type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -98,6 +114,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
         public string ProductType { get; set; }
 
         /// <summary>
+        /// <para>The list of resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceIds")]
@@ -105,6 +122,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
         public List<string> ResourceIds { get; set; }
 
         /// <summary>
+        /// <para>The session ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -115,6 +133,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
         public string SessionId { get; set; }
 
         /// <summary>
+        /// <para>The client UUID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C50973691A6D2BE23F2CDD73B85B****</para>
         /// </summary>

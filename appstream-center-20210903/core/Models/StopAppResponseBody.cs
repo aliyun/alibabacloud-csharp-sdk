@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
 {
     public class StopAppResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>83A9075B-C646-59A9-8232-CAE41AF4B9E3</para>
         /// </summary>

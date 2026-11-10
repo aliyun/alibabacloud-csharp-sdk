@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
 {
     public class ListRunningAppsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2DC3521C-3820-5EA5-9A9A-00BB7AF4E8E5</para>
@@ -19,11 +19,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of running cloud applications.</para>
+        /// </summary>
         [NameInMap("RunningCloudApps")]
         [Validation(Required=false)]
         public List<ListRunningAppsResponseBodyRunningCloudApps> RunningCloudApps { get; set; }
         public class ListRunningAppsResponseBodyRunningCloudApps : TeaModel {
             /// <summary>
+            /// <para>The application ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ca-dln05y44ze6esfl8x</para>
             /// </summary>
@@ -32,6 +37,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
             public string AppId { get; set; }
 
             /// <summary>
+            /// <para>The app instance group ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>aig-dk8p95irk9xs5xi6a</para>
             /// </summary>
@@ -40,6 +47,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
             public string AppInstanceGroupId { get; set; }
 
             /// <summary>
+            /// <para>The application instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ai-gc1gemx6vpa6vlync</para>
             /// </summary>
@@ -48,6 +57,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
             public string AppInstanceId { get; set; }
 
             /// <summary>
+            /// <para>The application name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>alihealth-keeper</para>
             /// </summary>
@@ -56,6 +67,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
             public string AppName { get; set; }
 
             /// <summary>
+            /// <para>The application version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>11.1</para>
             /// </summary>
@@ -64,6 +77,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
             public string AppVersion { get; set; }
 
             /// <summary>
+            /// <para>The application version name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test1.0</para>
             /// </summary>
@@ -72,6 +87,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
             public string AppVersionName { get; set; }
 
             /// <summary>
+            /// <para>The running duration of the cloud application instance. Unit: seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>87</para>
             /// </summary>
@@ -80,6 +97,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
             public long? Duration { get; set; }
 
             /// <summary>
+            /// <para>The URL of the application icon.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://app-icon-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/187465/18_bf1.jpg">https://app-icon-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/187465/18_bf1.jpg</a></para>
             /// </summary>
@@ -88,6 +107,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
             public string IconUrl { get; set; }
 
             /// <summary>
+            /// <para>The operating system type of the instance platform.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Windows</para>
             /// </summary>
@@ -96,6 +117,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
             public string OsType { get; set; }
 
             /// <summary>
+            /// <para>The region ID of the cloud application.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -104,6 +127,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The start time. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1642748400</para>
             /// </summary>
