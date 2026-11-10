@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetEdgeContainerAppLogRiverResponseBody : TeaModel {
         /// <summary>
-        /// <para>The log file path of the container. The path must be an absolute path that starts with a forward slash (/). Asterisks (*) and question marks (?) can be used as wildcards.</para>
+        /// <para>The log file path of the container. It must be an absolute path starting with a forward slash (/). Asterisks (*) and question marks (?) are supported as wildcards.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/root/hello.log</para>

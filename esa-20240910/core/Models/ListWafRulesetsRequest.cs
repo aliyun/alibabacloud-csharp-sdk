@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListWafRulesetsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Specifies the current page number for paging queries.</para>
+        /// <para>The page number. This parameter specifies the current page number for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size. Specifies the number of records per page for paging queries.</para>
+        /// <para>The page size. This parameter specifies the number of records per page for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Phase { get; set; }
 
         /// <summary>
-        /// <para>The query parameters, passed in JSON format, including various filter conditions.</para>
+        /// <para>The query parameters. The parameters are passed in JSON format and contain various filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>http_bot</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public ListWafRulesetsRequestQueryArgs QueryArgs { get; set; }
         public class ListWafRulesetsRequestQueryArgs : TeaModel {
             /// <summary>
-            /// <para>The fuzzy match string for the ruleset ID, ruleset name, rule ID, or rule name.</para>
+            /// <para>The ruleset ID, ruleset name, rule ID, or rule name for fuzzy match.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public bool? Desc { get; set; }
 
             /// <summary>
-            /// <para>The fuzzy match string for the ruleset name.</para>
+            /// <para>The ruleset name for fuzzy match.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</para>
+        /// <para>The site ID. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

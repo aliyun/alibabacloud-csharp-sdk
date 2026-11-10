@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ExpressionsShrink { get; set; }
 
         /// <summary>
-        /// <para>The plan instance ID.</para>
+        /// <para>The instance ID of the plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>esa-site-bitkull7uubk</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Phase { get; set; }
 
         /// <summary>
-        /// <para>The plan name (in English).</para>
+        /// <para>The name of the plan in English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>entranceplan</para>

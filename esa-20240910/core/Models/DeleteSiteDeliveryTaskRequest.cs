@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DeleteSiteDeliveryTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The site ID. You can obtain the site ID by calling <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a>.</para>
+        /// <para>The ID of the site. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The task name.</para>
+        /// <para>The name of the task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

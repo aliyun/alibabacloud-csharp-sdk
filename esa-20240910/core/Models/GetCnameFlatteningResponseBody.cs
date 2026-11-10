@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetCnameFlatteningResponseBody : TeaModel {
         /// <summary>
-        /// <para>The CNAME flattening mode. Valid values:</para>
+        /// <para>The flattening mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>flatten_all: flattens all CNAMEs.</description></item>
-        /// <item><description>flatten_all (default): flattens only the root domain.</description></item>
+        /// <item><description>flatten_all: Flattens all.</description></item>
+        /// <item><description>flatten_at_root: Flattens only the root domain. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

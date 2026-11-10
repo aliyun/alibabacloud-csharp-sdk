@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListQuotasMinEffectPlanRequest : TeaModel {
         /// <summary>
-        /// <para>The plan instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the instance ID. You must specify at least one of this parameter and SiteId.</para>
+        /// <para>The plan instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to query the ID. You must specify at least one of the InstanceId and SiteId parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>esa-site-aug976vv2u4g</para>
@@ -20,60 +20,60 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The plan quota names, separated by commas (,). Valid values:</para>
+        /// <para>The names of the plan quotas. Separate multiple names with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>waf:phase:http_anti_scan:actions</b>: WAF scan protection - action enumeration.</description></item>
-        /// <item><description><b>waf:phase:http_bot:actions</b>: WAF bot management - all action enumeration.</description></item>
-        /// <item><description><b>waf:phase:http_bot:http_custom_cc_dev:characteristic:fields</b>: WAF bot management - custom device rate limiting statistical object enumeration.</description></item>
-        /// <item><description><b>waf:phase:http_bot:http_custom_cc_ip:characteristic:fields</b>: WAF bot management - custom IP rate limiting statistical object enumeration.</description></item>
-        /// <item><description><b><b>waf:phase:http_bot:match:symbols</b></b>: WAF bot management - match operator enumeration.</description></item>
-        /// <item><description><b>waf:phase:http_bot:http_custom_cc:characteristic:fields</b>: WAF bot management - custom session rate limiting statistical object enumeration.</description></item>
-        /// <item><description><b>waf:phase:http_bot:match:fields</b>: WAF bot management - match field enumeration.</description></item>
-        /// <item><description><b>waf:phase:http_whitelist:match:symbols</b>: WAF whitelist - match operator enumeration.</description></item>
-        /// <item><description><b>waf:phase:http_whitelist:match:fields</b>: WAF whitelist - match field enumeration.</description></item>
-        /// <item><description><b>waf:phase:http_anti_scan:http_directory_traversal:characteristic:fields</b>: WAF scan protection - folder traverse blocking statistical object enumeration.</description></item>
-        /// <item><description><b>waf:phase:http_anti_scan:http_high_frequency:characteristic:fields</b>: WAF scan protection - high-frequency scan blocking statistical object enumeration.</description></item>
-        /// <item><description><b>waf:phase:http_anti_scan:match:symbols</b>: WAF scan protection - match operator enumeration.</description></item>
-        /// <item><description><b>waf:phase:http_anti_scan:match:fields</b>: WAF scan protection - match field enumeration.</description></item>
-        /// <item><description><b>waf:phase:http_managed:actions</b>: WAF managed rules - action enumeration.</description></item>
-        /// <item><description><b>waf:phase:http_managed:group:reference:ids</b>: WAF managed rules - referenced rule group enumeration.</description></item>
-        /// <item><description><b>waf:phase:http_ratelimit:actions</b>: WAF rate limiting - action enumeration.</description></item>
-        /// <item><description><b>waf:phase:http_ratelimit:ttls</b>: WAF rate limiting - duration enumeration.</description></item>
-        /// <item><description><b>waf:phase:http_ratelimit:intervals</b>: WAF rate limiting - statistical period.</description></item>
-        /// <item><description><b>waf:phase:http_ratelimit:http_ratelimit:characteristic:fields</b>: WAF rate limiting - control type rule match characteristic enumeration.</description></item>
-        /// <item><description><b>waf:phase:http_ratelimit:match:symbols</b>: WAF rate limiting rule phase match operator enumeration.</description></item>
-        /// <item><description><b>waf:phase:http_ratelimit:match:fields</b>: WAF rate limiting rule phase match field enumeration.</description></item>
-        /// <item><description><b>waf:phase:http_custom:actions</b>: WAF custom rule phase action enumeration.</description></item>
-        /// <item><description><b>waf:phase:http_custom:match:symbols</b>: WAF custom rule phase match operator enumeration.</description></item>
-        /// <item><description><b>waf:phase:http_custom:match:fields</b>: WAF custom rule phase match field.</description></item>
-        /// <item><description><b>waiting_room|queuing_method</b>: waiting room - queuing method.</description></item>
-        /// <item><description><b>origin_rules|origin_scheme</b>: back-to-origin rule - back-to-origin protocol.</description></item>
-        /// <item><description><b>origin_rules|origin_sni</b>: back-to-origin rule - back-to-origin SNI.</description></item>
-        /// <item><description><b>origin_rules|origin_host</b>: back-to-origin rule - back-to-origin host.</description></item>
-        /// <item><description><b>fourlayeracceleration</b>: Layer 4 acceleration.</description></item>
-        /// <item><description><b>rtlog_service</b>: real-time log feature switch.</description></item>
-        /// <item><description><b>dashboard_traffic</b>: value-added capability for network traffic analysis.</description></item>
-        /// <item><description><b>custom_name_server</b>: custom NS name.</description></item>
-        /// <item><description><b>waf:phase:http_bot:enable</b>: WAF bot management switch.</description></item>
-        /// <item><description><b>waf:phase:http_whitelist:enable</b>: WAF whitelist switch.</description></item>
-        /// <item><description><b>instantlog</b>: instant log active or not.</description></item>
-        /// <item><description><b>waf:phase:http_anti_scan:enable</b>: WAF scan protection switch.</description></item>
-        /// <item><description><b>waf:phase:http_managed:group:reference:enable</b>: WAF managed rules - referenced rule group configuration switch.</description></item>
-        /// <item><description><b>waf:phase:http_managed:enable</b>: WAF managed rules switch.</description></item>
-        /// <item><description><b>waf:phase:http_ratelimit:on_hit:enable</b>: WAF rate limiting - apply to cache-hit requests switch.</description></item>
-        /// <item><description><b>ddos</b>: DDoS instance.</description></item>
-        /// <item><description><b>waf:phase:http_ratelimit:enable</b>: WAF rate limiting rule phase switch.</description></item>
-        /// <item><description><b>waf:phase:http_custom:enable</b>: WAF custom rule phase switch.</description></item>
-        /// <item><description><b>waf:phase:all:page:reference:enable</b>: WAF custom response page switch.</description></item>
-        /// <item><description><b>rules_support_regex</b>: whether the DPI engine supports regular expressions.</description></item>
-        /// <item><description><b>waiting_room_event</b>: waiting room - scheduled event.</description></item>
-        /// <item><description><b>waiting_room_rule</b>: waiting room - bypass waiting room.</description></item>
-        /// <item><description><b>waiting_room|json_response</b>: waiting room - enable JSON response.</description></item>
-        /// <item><description><b>waiting_room|disable_session_renewal</b>: waiting room - disable session renewal.</description></item>
-        /// <item><description><b>origin_rules|dns_record</b>: back-to-origin rule - DNS record.</description></item>
-        /// <item><description><b>managed_transforms|add_client_geolocation_headers</b>: whether the real client IP header is active in transform rules.</description></item>
-        /// <item><description><b>tiered_cache|regional_enable</b>: area cache.</description></item>
-        /// <item><description><b>real_client_ip_header</b>: client IP header.</description></item>
+        /// <item><description><b>waf:phase:http_anti_scan:actions</b>: WAF scan protection - action enumeration</description></item>
+        /// <item><description><b>waf:phase:http_bot:actions</b>: WAF bot management - all action enumerations</description></item>
+        /// <item><description><b>waf:phase:http_bot:http_custom_cc_dev:characteristic:fields</b>: WAF bot management - statistical object enumeration for custom device rate limiting</description></item>
+        /// <item><description><b>waf:phase:http_bot:http_custom_cc_ip:characteristic:fields</b>: WAF bot management - statistical object enumeration for custom IP rate limiting</description></item>
+        /// <item><description><b><b>waf:phase:http_bot:match:symbols</b></b>: WAF bot management - match symbol enumeration</description></item>
+        /// <item><description><b>waf:phase:http_bot:http_custom_cc:characteristic:fields</b>: WAF bot management - statistical object enumeration for custom session rate limiting</description></item>
+        /// <item><description><b>waf:phase:http_bot:match:fields</b>: WAF bot management phase - match field enumeration</description></item>
+        /// <item><description><b>waf:phase:http_whitelist:match:symbols</b>: WAF whitelist - match symbol enumeration</description></item>
+        /// <item><description><b>waf:phase:http_whitelist:match:fields</b>: WAF whitelist - match field enumeration</description></item>
+        /// <item><description><b>waf:phase:http_anti_scan:http_directory_traversal:characteristic:fields</b>: WAF scan protection - statistical object enumeration for folder traverse blocking</description></item>
+        /// <item><description><b>waf:phase:http_anti_scan:http_high_frequency:characteristic:fields</b>: WAF scan protection - statistical object enumeration for high-frequency scan blocking</description></item>
+        /// <item><description><b>waf:phase:http_anti_scan:match:symbols</b>: WAF scan protection - match symbol enumeration</description></item>
+        /// <item><description><b>waf:phase:http_anti_scan:match:fields</b>: WAF scan protection - match field enumeration</description></item>
+        /// <item><description><b>waf:phase:http_managed:actions</b>: WAF managed rules - action enumeration</description></item>
+        /// <item><description><b>waf:phase:http_managed:group:reference:ids</b>: WAF managed rules - referenced rule group enumeration</description></item>
+        /// <item><description><b>waf:phase:http_ratelimit:actions</b>: WAF rate limiting - action enumeration</description></item>
+        /// <item><description><b>waf:phase:http_ratelimit:ttls</b>: WAF rate limiting - duration enumeration</description></item>
+        /// <item><description><b>waf:phase:http_ratelimit:intervals</b>: WAF rate limiting - statistical duration</description></item>
+        /// <item><description><b>waf:phase:http_ratelimit:http_ratelimit:characteristic:fields</b>: WAF rate limiting - match characteristic enumeration for control type rules</description></item>
+        /// <item><description><b>waf:phase:http_ratelimit:match:symbols</b>: WAF rate limiting rule phase - match symbol enumeration</description></item>
+        /// <item><description><b>waf:phase:http_ratelimit:match:fields</b>: WAF rate limiting rule phase - match field enumeration</description></item>
+        /// <item><description><b>waf:phase:http_custom:actions</b>: WAF custom rule phase - action enumeration</description></item>
+        /// <item><description><b>waf:phase:http_custom:match:symbols</b>: WAF custom rule phase - match symbol enumeration</description></item>
+        /// <item><description><b>waf:phase:http_custom:match:fields</b>: WAF custom rule phase - match fields</description></item>
+        /// <item><description><b>waiting_room|queuing_method</b>: Waiting room - queuing method</description></item>
+        /// <item><description><b>origin_rules|origin_scheme</b>: Back-to-origin rules - back-to-origin protocol</description></item>
+        /// <item><description><b>origin_rules|origin_sni</b>: Back-to-origin rules - back-to-origin SNI</description></item>
+        /// <item><description><b>origin_rules|origin_host</b>: Back-to-origin rules - back-to-origin host</description></item>
+        /// <item><description><b>fourlayeracceleration</b>: Layer 4 acceleration</description></item>
+        /// <item><description><b>rtlog_service</b>: Real-time log feature switch</description></item>
+        /// <item><description><b>dashboard_traffic</b>: Value-added capability for network traffic analysis</description></item>
+        /// <item><description><b>custom_name_server</b>: Custom NS name</description></item>
+        /// <item><description><b>waf:phase:http_bot:enable</b>: WAF bot management switch</description></item>
+        /// <item><description><b>waf:phase:http_whitelist:enable</b>: WAF whitelist switch</description></item>
+        /// <item><description><b>instantlog</b>: Whether instant logs are active</description></item>
+        /// <item><description><b>waf:phase:http_anti_scan:enable</b>: WAF scan protection switch</description></item>
+        /// <item><description><b>waf:phase:http_managed:group:reference:enable</b>: WAF managed rules - configure referenced rule group switch</description></item>
+        /// <item><description><b>waf:phase:http_managed:enable</b>: WAF managed rules switch</description></item>
+        /// <item><description><b>waf:phase:http_ratelimit:on_hit:enable</b>: WAF rate limiting - apply to cached requests switch</description></item>
+        /// <item><description><b>ddos</b>: DDoS instance</description></item>
+        /// <item><description><b>waf:phase:http_ratelimit:enable</b>: WAF rate limiting rule phase switch</description></item>
+        /// <item><description><b>waf:phase:http_custom:enable</b>: WAF custom rule phase switch</description></item>
+        /// <item><description><b>waf:phase:all:page:reference:enable</b>: WAF custom response page switch</description></item>
+        /// <item><description><b>rules_support_regex</b>: Whether the rule DPI engine supports regular expression operations</description></item>
+        /// <item><description><b>waiting_room_event</b>: Waiting room - scheduled events</description></item>
+        /// <item><description><b>waiting_room_rule</b>: Waiting room - bypass waiting room</description></item>
+        /// <item><description><b>waiting_room|json_response</b>: Waiting room - enable JSON response</description></item>
+        /// <item><description><b>waiting_room|disable_session_renewal</b>: Waiting room - disable session renewal</description></item>
+        /// <item><description><b>origin_rules|dns_record</b>: Back-to-origin rules - DNS record</description></item>
+        /// <item><description><b>managed_transforms|add_client_geolocation_headers</b>: Whether the real client IP header is active in transformation rules</description></item>
+        /// <item><description><b>tiered_cache|regional_enable</b>: Area cache</description></item>
+        /// <item><description><b>real_client_ip_header</b>: Client IP header</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string QuotaNames { get; set; }
 
         /// <summary>
-        /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</para>
+        /// <para>The ID of the site. You can call the <a href="~~ListSites~~">ListSites</a> operation to query the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456****</para>

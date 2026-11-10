@@ -10,11 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DeleteRoutineEnvironmentVariablesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The environment name.</para>
-        /// <para>Valid values:</para>
+        /// <para>The environment name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>staging</c>: staging environment</description></item>
-        /// <item><description><c>production</c>: production environment</description></item>
+        /// <item><description><c>staging</c>: the staging environment.</description></item>
+        /// <item><description><c>production</c>: the production environment.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Env { get; set; }
 
         /// <summary>
-        /// <para>The list of environment variable keys to delete.</para>
+        /// <para>The keys of the environment variables to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,7 +36,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string EnvironmentVariableKeysShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the Routine function.</para>
+        /// <para>The name of the routine.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

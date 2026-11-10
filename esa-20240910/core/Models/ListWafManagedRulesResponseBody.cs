@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// <para>The managed rule ID.</para>
+            /// <para>The ID of the managed rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100001</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The managed rule name.</para>
+            /// <para>The name of the managed rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SQL injection</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The total number of rules after filtering.</para>
+        /// <para>The total number of filtered rules.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

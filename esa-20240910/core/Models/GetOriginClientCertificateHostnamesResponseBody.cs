@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetOriginClientCertificateHostnamesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The associated hostnames.</para>
+        /// <para>The list of bound domain names.</para>
         /// </summary>
         [NameInMap("Hostnames")]
         [Validation(Required=false)]

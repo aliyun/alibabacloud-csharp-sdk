@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the delivery task. Valid values:</para>
+        /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>online</b></description></item>
-        /// <item><description><b>offline</b></description></item>
+        /// <item><description><para><b>online</b>: Delivering.</para>
+        /// </description></item>
+        /// <item><description><para><b>offline</b>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The name of the delivery task.</para>
+        /// <para>The name of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cdn-test-task</para>

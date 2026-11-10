@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListCiphersRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the cipher suite group, which can be: all, strict, custom.</para>
+        /// <para>The name of the cipher suite group. Valid values: all, strict, and custom.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

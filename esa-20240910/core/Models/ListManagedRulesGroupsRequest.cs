@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListManagedRulesGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number for the paged query.</para>
+        /// <para>The page number for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for the paged query.</para>
+        /// <para>The number of entries per page for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListSliderCaptchaPagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of custom slider CAPTCHA pages.</para>
+        /// <para>The list of custom slider pages.</para>
         /// </summary>
         [NameInMap("Pages")]
         [Validation(Required=false)]
         public List<ListSliderCaptchaPagesResponseBodyPages> Pages { get; set; }
         public class ListSliderCaptchaPagesResponseBodyPages : TeaModel {
             /// <summary>
-            /// <para>The ID of the custom slider CAPTCHA page.</para>
+            /// <para>The ID of the custom slider page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50000001</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the custom slider CAPTCHA page.</para>
+            /// <para>The name of the custom slider page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

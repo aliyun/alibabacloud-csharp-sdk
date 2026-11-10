@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CheckSiteProjectNameResponseBody : TeaModel {
         /// <summary>
-        /// <para>Valid values:</para>
+        /// <para>Indicates whether the project name can be added. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Can be added.</description></item>
-        /// <item><description><b>false</b>: Cannot be added.</description></item>
+        /// <item><description><b>true</b>: The name can be added.</description></item>
+        /// <item><description><b>false</b>: The name cannot be added.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? Check { get; set; }
 
         /// <summary>
-        /// <para>The result description.</para>
+        /// <para>The description of the result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>project name pass the check</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The real-time log project name.</para>
+        /// <para>The name of the real-time log project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dcdn_waf_userAccount_log</para>

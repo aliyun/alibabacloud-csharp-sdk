@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateSiteDeliveryTaskStatusRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the delivery task.</para>
+        /// <para>Specifies whether to enable or disable task delivery.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Method { get; set; }
 
         /// <summary>
-        /// <para>The website ID.</para>
+        /// <para>The site ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456****</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The name of the delivery task.</para>
+        /// <para>The name of the task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

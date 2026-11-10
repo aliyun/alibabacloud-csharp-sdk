@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetSliderCaptchaPageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The predefined configurations for the custom slider page.</para>
+        /// <para>The predefined configurations of the custom slider page.</para>
         /// </summary>
         [NameInMap("Configs")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public GetSliderCaptchaPageResponseBodyConfigsEn En { get; set; }
             public class GetSliderCaptchaPageResponseBodyConfigsEn : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to display the footer.</para>
+                /// <para>Specifies whether to show the footer.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public bool? ShowFooter { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to display the request ID.</para>
+                /// <para>Specifies whether to show the request ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public bool? ShowRequestId { get; set; }
 
                 /// <summary>
-                /// <para>The slider color.</para>
+                /// <para>The color of the slider.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>#FFFFFF</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public GetSliderCaptchaPageResponseBodyConfigsZh Zh { get; set; }
             public class GetSliderCaptchaPageResponseBodyConfigsZh : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to display the footer.</para>
+                /// <para>Specifies whether to show the footer.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public bool? ShowFooter { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to display the request ID.</para>
+                /// <para>Specifies whether to show the request ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public bool? ShowRequestId { get; set; }
 
                 /// <summary>
-                /// <para>The slider color.</para>
+                /// <para>The color of the slider.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>#FFFFFF</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CustomContent { get; set; }
 
         /// <summary>
-        /// <para>The forced language.</para>
+        /// <para>The forcibly specified language.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of bound site IDs.</para>
+        /// <para>The list of associated site IDs.</para>
         /// </summary>
         [NameInMap("SiteIds")]
         [Validation(Required=false)]

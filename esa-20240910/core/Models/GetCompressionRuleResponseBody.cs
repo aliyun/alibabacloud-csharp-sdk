@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetCompressionRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>Brotli compression. Possible values:</para>
+        /// <para>Brotli compression. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enabled.</description></item>
-        /// <item><description>off: Disabled.</description></item>
+        /// <item><description>on: enabled.</description></item>
+        /// <item><description>off: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Brotli { get; set; }
 
         /// <summary>
-        /// <para>Configuration ID.</para>
+        /// <para>The ID of the configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>35281609698****</para>
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>Configuration type. Possible values:</para>
+        /// <para>The type of the configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>global: Global configuration.</description></item>
-        /// <item><description>rule: Rule-based configuration.</description></item>
+        /// <item><description>global: global configuration.</description></item>
+        /// <item><description>rule: rule configuration.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,10 +48,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ConfigType { get; set; }
 
         /// <summary>
-        /// <para>Gzip compression. Possible values:</para>
+        /// <para>Gzip compression. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enabled.</description></item>
-        /// <item><description>off: Disabled.</description></item>
+        /// <item><description>on: enabled.</description></item>
+        /// <item><description>off: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Gzip { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>186C6DF2-D96A-5102-B04E-FB92C16C9867</para>
@@ -72,10 +72,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</para>
+        /// <para>The rule content, which uses a conditional expression to match user requests. You do not need to set this parameter when adding a global configuration. Two scenarios are supported:</para>
         /// <list type="bullet">
-        /// <item><description>Match all incoming requests: Set the value to true</description></item>
-        /// <item><description>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</description></item>
+        /// <item><description>Match all incoming requests: set the value to true.</description></item>
+        /// <item><description>Match specific requests: set the value to a custom expression, such as (http.host eq &quot;video.example.com&quot;).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -86,10 +86,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>Rule switch. This parameter is not required when adding a global configuration. Possible values:</para>
+        /// <para>The rule switch. You do not need to set this parameter when adding a global configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enabled.</description></item>
-        /// <item><description>off: Disabled.</description></item>
+        /// <item><description>on: enabled.</description></item>
+        /// <item><description>off: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>Rule name. This parameter is not required when adding a global configuration.</para>
+        /// <para>The name of the rule. You do not need to set this parameter when adding a global configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>Rule execution order. The smaller the value, the higher the priority.</para>
+        /// <para>The execution sequence of the rule. A smaller value indicates a higher priority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Sequence { get; set; }
 
         /// <summary>
-        /// <para>The version number of the site configuration. For sites with version management enabled, this parameter can specify the effective version of the configuration, defaulting to version 0.</para>
+        /// <para>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. The default value is version 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -130,9 +130,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? SiteVersion { get; set; }
 
         /// <summary>
-        /// <para>Zstd compression. Value range: </para>
+        /// <para>Zstd compression. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: enabled. </description></item>
+        /// <item><description>on: enabled.</description></item>
         /// <item><description>off: disabled.</description></item>
         /// </list>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateUserDeliveryTaskStatusRequest : TeaModel {
         /// <summary>
-        /// <para>Enables or disables the delivery task. Valid values: online and offline.</para>
+        /// <para>The method. Valid values: online and offline.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Method { get; set; }
 
         /// <summary>
-        /// <para>The name of the delivery task.</para>
+        /// <para>The task name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

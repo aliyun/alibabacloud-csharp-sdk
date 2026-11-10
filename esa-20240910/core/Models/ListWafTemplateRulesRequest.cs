@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The WAF running phase for filtering template rules.</para>
+        /// <para>The WAF phase used to filter template rules for a specific phase.</para>
         /// 
         /// <b>Example:</b>
         /// <para>http_anti_scan</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Phase { get; set; }
 
         /// <summary>
-        /// <para>The query parameters for filtering template rules by criteria such as the rule type.</para>
+        /// <para>The query parameters used to filter template rules based on conditions such as the rule type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>http_anti_scan</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public ListWafTemplateRulesRequestQueryArgs QueryArgs { get; set; }
         public class ListWafTemplateRulesRequestQueryArgs : TeaModel {
             /// <summary>
-            /// <para>A list of template kinds.</para>
+            /// <para>The list of template types.</para>
             /// </summary>
             [NameInMap("Kinds")]
             [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The site ID. To obtain this ID, call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</para>
+        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to query the site ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

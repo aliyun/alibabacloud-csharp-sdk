@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The application ID. You can call the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation to obtain the application ID.</para>
         /// <remarks>
-        /// <para>Notice: 1) Your account must have an ESA plan with the Edge Container feature enabled. 2) Call CreateEdgeContainerApp first to create an application and obtain the AppId. 3) Complete call chain example: CreateEdgeContainerApp → ListEdgeContainerApps → CreateEdgeContainerAppVersion.</notice></para>
+        /// <para>Notice: 1) Your account must be subscribed to an ESA plan that includes the Edge Container feature. 2) You must call CreateEdgeContainerApp to create an application and obtain the AppId. 3) A complete call chain example is provided (CreateEdgeContainerApp → ListEdgeContainerApps → CreateEdgeContainerAppVersion).</notice></para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The container group to be deployed for this version, including specific image information. The image information consists of the image address, startup command, parameters, environment variables, and probe rules. Multiple images are supported in a JSON array structure.</para>
+        /// <para>The container group to be deployed for this version, which includes specific image information. The image information consists of the image address, startup command, arguments, environment variables, and probe rules. Multiple images are supported and structured as a JSON array.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

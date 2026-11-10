@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListListsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total item usage.</para>
+        /// <para>The total usage of items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5000</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<ListListsResponseBodyLists> Lists { get; set; }
         public class ListListsResponseBodyLists : TeaModel {
             /// <summary>
-            /// <para>The list description.</para>
+            /// <para>The description of the list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a custom list</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The kind of the list.</para>
+            /// <para>The type of the list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ip</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Kind { get; set; }
 
             /// <summary>
-            /// <para>The length of the list content array, which indicates the number of items in the list.</para>
+            /// <para>The length of the list content array, which indicates the number of items contained in the list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? Length { get; set; }
 
             /// <summary>
-            /// <para>The list name.</para>
+            /// <para>The name of the list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -77,8 +77,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The time when the list was last modified.</para>
-            /// <para>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</para>
+            /// <para>The last update time of the list.</para>
+            /// <para>Format: RFC 3339 / ISO 8601, UTC standard time zone (ending with Z).</para>
             /// <para>Example: 2026-06-10T14:23:45Z</para>
             /// 
             /// <b>Example:</b>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The amount of usage consumed by the user.</para>
+        /// <para>The usage of the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

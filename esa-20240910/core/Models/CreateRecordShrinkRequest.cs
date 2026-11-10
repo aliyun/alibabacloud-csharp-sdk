@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateRecordShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The origin authentication information for the CNAME record.</para>
+        /// <para>The origin server authentication information for a CNAME record.</para>
         /// </summary>
         [NameInMap("AuthConf")]
         [Validation(Required=false)]
         public string AuthConfShrink { get; set; }
 
         /// <summary>
-        /// <para>Used to tag the business scenario of the DNS record. This parameter is required when proxy acceleration is enabled for the DNS record (i.e., when the proxied parameter is set to true), and is not required when proxy acceleration is disabled (i.e., when the proxied parameter is set to false). Valid values:</para>
+        /// <para>The business scenario used to tag the DNS record. This parameter is required when proxy acceleration is enabled for the DNS record. That is, the Proxied parameter is set to true. This parameter is not required when proxy acceleration is disabled. That is, the Proxied parameter is set to false. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>image_video</b>: Image and video.</description></item>
-        /// <item><description><b>api</b>: API.</description></item>
-        /// <item><description><b>web</b>: Web page.</description></item>
+        /// <item><description><b>image_video</b>: Images and videos.</description></item>
+        /// <item><description><b>api</b>: API operations.</description></item>
+        /// <item><description><b>web</b>: Web pages.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string BizName { get; set; }
 
         /// <summary>
-        /// <para>The comment for the record, with a maximum length of 100 characters.</para>
+        /// <para>The description of the record. The description can be up to 100 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a remark.</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The DNS information of the record. Different types of records require different content for this field. For more information, see
+        /// <para>The DNS information of the record. The required content for this field varies based on the record type. For more information, see
         /// &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/2708761.html">Documentation</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/doc-detail/2708761.html">Documentation</a>
         /// .</para>
         /// <para>This parameter is required.</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string DataShrink { get; set; }
 
         /// <summary>
-        /// <para>The origin host policy. This takes effect when the record type is CNAME. It specifies the host policy for back-to-origin requests. Two modes are available:</para>
+        /// <para>The back-to-origin host policy. This parameter takes effect when the record type is CNAME. Settings for the host policy in back-to-origin requests. Two patterns are available:</para>
         /// <list type="bullet">
-        /// <item><description><b>follow_hostname</b>: Follow the request host.</description></item>
-        /// <item><description><b>follow_origin_domain</b>: Follow the origin domain.</description></item>
+        /// <item><description><b>follow_hostname</b>: Follows the request host.</description></item>
+        /// <item><description><b>follow_origin_domain</b>: Follows the Origin Domain Name.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,19 +70,31 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string HostPolicy { get; set; }
 
+        /// <summary>
+        /// <para>The HTTP port. By default, port 80 is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>80,2052,2082,2086,2095,8080,8880</para>
+        /// </summary>
         [NameInMap("HttpPorts")]
         [Validation(Required=false)]
         public string HttpPorts { get; set; }
 
+        /// <summary>
+        /// <para>The HTTPS port. By default, port 443 is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>443,2053,2083,2087,2096,8443</para>
+        /// </summary>
         [NameInMap("HttpsPorts")]
         [Validation(Required=false)]
         public string HttpsPorts { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable proxy acceleration for the record. Only CNAME records or A/AAAA records (i.e., when the type parameter is set to A/AAAA or CNAME) can enable proxy acceleration. Valid values:</para>
+        /// <para>Specifies whether to enable proxy acceleration for the record. Proxy acceleration can be enabled only for CNAME, A, or AAAA records. That is, the Type parameter is set to CNAME, A, or AAAA. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enable proxy acceleration.</description></item>
-        /// <item><description><b>false</b>: Disable proxy acceleration.</description></item>
+        /// <item><description><b>true</b>: Enables proxy acceleration.</description></item>
+        /// <item><description><b>false</b>: Disables proxy acceleration.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -104,7 +116,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RecordName { get; set; }
 
         /// <summary>
-        /// <para>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</para>
+        /// <para>The site ID. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -115,15 +127,15 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The origin type of the CNAME record. This parameter is required when adding a CNAME record (i.e., when the type parameter is set to CNAME). Valid values:</para>
+        /// <para>The origin server type for a CNAME record. This parameter is required when you add a CNAME record. That is, the Type parameter is set to CNAME. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>OSS</b>: OSS origin.</description></item>
-        /// <item><description><b>S3</b>: S3 origin.</description></item>
-        /// <item><description><b>LB</b>: Load balancer origin.</description></item>
-        /// <item><description><b>OP</b>: Origin pool origin.</description></item>
-        /// <item><description><b>Domain</b>: Standard domain origin.</description></item>
+        /// <item><description><b>OSS</b>: OSS origin server.</description></item>
+        /// <item><description><b>S3</b>: S3 origin server.</description></item>
+        /// <item><description><b>LB</b>: Load balancing origin server.</description></item>
+        /// <item><description><b>OP</b>: IPAM pool origin server.</description></item>
+        /// <item><description><b>Domain</b>: Common domain name origin server.</description></item>
         /// </list>
-        /// <para>If this parameter is not specified or is left empty, it defaults to Domain, which is the standard domain origin type.</para>
+        /// <para>If this parameter is not specified or is left empty, the default value is Domain, which indicates a common domain name origin server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OSS</para>
@@ -133,7 +145,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The time-to-live (TTL) of the record, in seconds. When set to 1, the TTL is automatic.</para>
+        /// <para>The time-to-live (TTL) of the record, in seconds. A value of 1 indicates that the TTL is automatically determined.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -144,7 +156,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Ttl { get; set; }
 
         /// <summary>
-        /// <para>The DNS type of the record, such as <b>A/AAAA</b>, <b>CNAME</b>, <b>TXT</b>, etc.</para>
+        /// <para>The DNS record type, such as <b>A/AAAA</b>, <b>CNAME</b>, or <b>TXT</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

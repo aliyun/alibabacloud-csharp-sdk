@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListListsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number for paging.</para>
+        /// <para>The page number for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging.</para>
+        /// <para>The number of entries per page for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The query parameters passed in JSON format, which contain various filter conditions.</para>
+        /// <para>The query parameters, passed in JSON format, which include various filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ListLists</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public bool? Desc { get; set; }
 
             /// <summary>
-            /// <para>The value used to fuzzy match list descriptions.</para>
+            /// <para>The list description for fuzzy match.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a custom list</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DescriptionLike { get; set; }
 
             /// <summary>
-            /// <para>The value used to fuzzy match list IDs.</para>
+            /// <para>The list ID for fuzzy match.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40000001</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string IdLike { get; set; }
 
             /// <summary>
-            /// <para>The value used to fuzzy match list content.</para>
+            /// <para>The list content for fuzzy match.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.1.1.1</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ItemLike { get; set; }
 
             /// <summary>
-            /// <para>The kind of the custom list.</para>
+            /// <para>The type of the custom list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ip</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Kind { get; set; }
 
             /// <summary>
-            /// <para>The value used to fuzzy match both list content and list names simultaneously.</para>
+            /// <para>The list name and content for simultaneous fuzzy match.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.1.1.1</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string NameItemLike { get; set; }
 
             /// <summary>
-            /// <para>The value used to fuzzy match list names.</para>
+            /// <para>The list name for fuzzy match.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>

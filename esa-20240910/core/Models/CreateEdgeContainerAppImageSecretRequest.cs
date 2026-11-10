@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateEdgeContainerAppImageSecretRequest : TeaModel {
         /// <summary>
-        /// <para>Application ID, which can be obtained using the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> interface.</para>
+        /// <para>The application ID. You can call the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation to retrieve the application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>Image repository password.</para>
+        /// <para>The password for the image registry.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>Image repository address.</para>
+        /// <para>The address of the image registry.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Registry { get; set; }
 
         /// <summary>
-        /// <para>Image repository username.</para>
+        /// <para>The username for the image registry.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

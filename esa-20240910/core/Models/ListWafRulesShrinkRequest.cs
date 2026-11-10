@@ -30,16 +30,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The WAF rule execution phase. Valid values:</para>
+        /// <para>The execution phase of the WAF rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>http_whitelist: whitelist rule</description></item>
-        /// <item><description>http_custom: custom rule</description></item>
-        /// <item><description>http_managed: managed rule</description></item>
-        /// <item><description>http_anti_scan: scan protection rule</description></item>
-        /// <item><description>http_ratelimit: frequency control rule</description></item>
-        /// <item><description>ip_access_rule: IP access rule</description></item>
-        /// <item><description>http_bot: advanced mode bots</description></item>
-        /// <item><description>http_security_level_rule: security rule</description></item>
+        /// <item><description>http_whitelist: whitelist rules</description></item>
+        /// <item><description>http_custom: custom rules</description></item>
+        /// <item><description>http_managed: managed rules</description></item>
+        /// <item><description>http_anti_scan: scan protection rules</description></item>
+        /// <item><description>http_ratelimit: rate limiting rules</description></item>
+        /// <item><description>ip_access_rule: IP access rules</description></item>
+        /// <item><description>http_bot: advanced bot management</description></item>
+        /// <item><description>http_security_level_rule: security rules</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. The default value is 0.</para>
+        /// <para>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

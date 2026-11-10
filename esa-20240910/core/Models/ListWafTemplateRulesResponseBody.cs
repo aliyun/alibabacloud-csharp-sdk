@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of template rules.</para>
+        /// <para>The list of returned template rules.</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The WAF running phase.</para>
+            /// <para>The WAF phase.</para>
             /// 
             /// <b>Example:</b>
             /// <para>http_anti_scan</para>

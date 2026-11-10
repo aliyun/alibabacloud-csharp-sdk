@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the site. Call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</para>
+        /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

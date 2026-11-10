@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The application ID. You can call the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation to obtain the application ID.</para>
         /// <remarks>
-        /// <para>Notice: 1) Your account must have an ESA plan with the Edge Container feature enabled. 2) Call CreateEdgeContainerApp first to create an application and obtain the AppId. 3) Complete call chain example: CreateEdgeContainerApp → ListEdgeContainerApps → CreateEdgeContainerAppVersion.</notice></para>
+        /// <para>Notice: 1) Your account must be subscribed to an ESA plan that includes the Edge Container feature. 2) You must call CreateEdgeContainerApp to create an application and obtain the AppId. 3) A complete call chain example is provided (CreateEdgeContainerApp → ListEdgeContainerApps → CreateEdgeContainerAppVersion).</notice></para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The container group to be deployed for this version, including specific image information. The image information consists of the image address, startup command, parameters, environment variables, and probe rules. Multiple images are supported in a JSON array structure.</para>
+        /// <para>The container group to be deployed for this version, which includes specific image information. The image information consists of the image address, startup command, arguments, environment variables, and probe rules. Multiple images are supported and structured as a JSON array.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public CreateEdgeContainerAppVersionRequestContainersACRImageInfo ACRImageInfo { get; set; }
             public class CreateEdgeContainerAppVersionRequestContainersACRImageInfo : TeaModel {
                 /// <summary>
-                /// <para>The ACR image domain name.</para>
+                /// <para>The domain name of the ACR image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1500.***.net</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the image is an enterprise-level image.</para>
+                /// <para>Specifies whether the image is an enterprise edition image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public bool? IsEnterpriseRegistry { get; set; }
 
                 /// <summary>
-                /// <para>The region list of the ACR instance.</para>
+                /// <para>The list of regions for the ACR instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-shanghai</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string RepoId { get; set; }
 
                 /// <summary>
-                /// <para>The image repository name.</para>
+                /// <para>The name of the image repository.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test_71</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string RepoName { get; set; }
 
                 /// <summary>
-                /// <para>The namespace of the image repository.</para>
+                /// <para>The namespace name of the image repository.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>safeline</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string RepoNamespace { get; set; }
 
                 /// <summary>
-                /// <para>The ACR image tag.</para>
+                /// <para>The tag of the ACR image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3.40.2</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Tag { get; set; }
 
                 /// <summary>
-                /// <para>The ACR image tag URL.</para>
+                /// <para>The tag URL of the ACR image.</para>
                 /// </summary>
                 [NameInMap("TagUrl")]
                 [Validation(Required=false)]
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The startup parameters. Separate multiple parameters with spaces.</para>
+            /// <para>The startup arguments. Separate multiple arguments with spaces.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-a</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Args { get; set; }
 
             /// <summary>
-            /// <para>The startup command. Separate multiple commands with spaces.</para>
+            /// <para>The command to run. This indicates the startup command. Separate multiple commands with spaces.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nginx</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Image { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the image is an Alibaba Cloud Container Registry (ACR) image.</para>
+            /// <para>Specifies whether the image is an ACR image.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The command to execute before the container starts. Separate multiple commands with spaces. This command is executed before the service starts and is typically used for initialization operations.</para>
+            /// <para>The command to execute before the container starts. This indicates the command executed before the service starts. Separate multiple parts with spaces. It is generally used for initialization operations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sh poststart.sh &quot;echo hello world&quot;</para>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PostStart { get; set; }
 
             /// <summary>
-            /// <para>The command to execute before the container stops. Separate multiple commands with spaces. This command is executed before the service exits and is typically used for cleanup operations before exit.</para>
+            /// <para>The command to execute before the container stops. This indicates the command executed after startup. Separate multiple parts with spaces. It is executed before the service exits and is generally used for cleanup operations before exit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sh prestop.sh &quot;echo hello world&quot;</para>
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PreStop { get; set; }
 
             /// <summary>
-            /// <para>The container health probe content.</para>
+            /// <para>The content of the container health probe.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public CreateEdgeContainerAppVersionRequestContainersProbeContent ProbeContent { get; set; }
             public class CreateEdgeContainerAppVersionRequestContainersProbeContent : TeaModel {
                 /// <summary>
-                /// <para>The probe command for exec-type probes.</para>
+                /// <para>The probe command for the exec type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>echo ok</para>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Command { get; set; }
 
                 /// <summary>
-                /// <para>The number of consecutive failed health checks required.</para>
+                /// <para>The number of consecutive failed container health checks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string HttpHeaders { get; set; }
 
                 /// <summary>
-                /// <para>The initial delay time for the container probe. Unit: seconds. For example, 5 indicates that the initial delay time is set to 5 seconds.</para>
+                /// <para>The initial delay time for the container probe. Unit: seconds. For example, a value of 5 indicates that the initial delay time is set to 5 seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>The interval for the container health check. Unit: seconds. For example, 5 indicates that the health check interval is set to 5 seconds.</para>
+                /// <para>The interval for the container health check. Unit: seconds. For example, a value of 5 indicates that the health check interval is set to 5 seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -332,7 +332,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Scheme { get; set; }
 
                 /// <summary>
-                /// <para>The number of consecutive successful health checks required.</para>
+                /// <para>The number of consecutive successful health checks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public int? SuccessThreshold { get; set; }
 
                 /// <summary>
-                /// <para>The timeout period for the container health check. Unit: seconds. For example, 5 indicates that the timeout period is set to 5 seconds.</para>
+                /// <para>The timeout period for the container health check. Unit: seconds. For example, a value of 5 indicates that the timeout period is set to 5 seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -357,8 +357,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <para>The probe type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>exec</b>: Command-based.</description></item>
-            /// <item><description><b>tcpSocket</b>: TCP detection-based.</description></item>
-            /// <item><description><b>httpGet</b>: HTTP access-based.</description></item>
+            /// <item><description><b>tcpSocket</b>: TCP socket-based.</description></item>
+            /// <item><description><b>httpGet</b>: HTTP GET-based.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -370,7 +370,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ProbeType { get; set; }
 
             /// <summary>
-            /// <para>The container specifications. Specifies the computing specifications. Valid values: 1C2G, 2C4G, 2C8G, 4C8G, 4C16G, 8C16G, and 8C32G.</para>
+            /// <para>The container specifications. This indicates the computing power specifications. Valid values: 1C2G, 2C4G, 2C8G, 4C8G, 4C16G, 8C16G, and 8C32G.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -381,7 +381,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Spec { get; set; }
 
             /// <summary>
-            /// <para>The storage capacity. Valid values: 0.5G, 10G, 20G, and 30G.</para>
+            /// <para>The storage information. This indicates the storage space. Valid values: 0.5G, 10G, 20G, and 30G.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

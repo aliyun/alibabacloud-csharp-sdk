@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetDcvDelegationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The DCV managed domain name.</para>
+        /// <para>The DCV delegation domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456****.dcv.aliyun-esa.com</para>

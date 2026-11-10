@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ExportRecordCnamesRequest : TeaModel {
         /// <summary>
-        /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</para>
+        /// <para>The ID of the site. You can call the <a href="~~ListSites~~">ListSites</a> operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

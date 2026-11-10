@@ -1,3 +1,11 @@
+2026-11-10 Version: 3.15.0
+- Support API CreateErrorPagesRedirectRule.
+- Support API DeleteErrorPagesRedirectRule.
+- Support API GetErrorPagesRedirectRule.
+- Support API ListErrorPagesRedirectRules.
+- Support API UpdateErrorPagesRedirectRule.
+
+
 2026-10-20 Version: 3.14.0
 - Support API CreateSliderCaptchaPage.
 - Support API DeleteSliderCaptchaPage.

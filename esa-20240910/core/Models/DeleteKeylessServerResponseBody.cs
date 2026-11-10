@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DeleteKeylessServerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The keyless server ID.</para>
+        /// <para>The Keyless server ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>baba39055622c008b90285a8838e****</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DeleteRoutineEnvironmentVariablesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of environment variable keys that were deleted successfully.</para>
+        /// <para>The keys of the successfully deleted environment variables.</para>
         /// </summary>
         [NameInMap("DeletedKeys")]
         [Validation(Required=false)]
         public List<string> DeletedKeys { get; set; }
 
         /// <summary>
-        /// <para>The list of environment variable keys that failed to be deleted.</para>
+        /// <para>The keys of the environment variables that failed to be deleted.</para>
         /// </summary>
         [NameInMap("FailedKeys")]
         [Validation(Required=false)]

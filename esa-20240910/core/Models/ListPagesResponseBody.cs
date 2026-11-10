@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the custom response page. You can obtain it by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</para>
+            /// <para>The ID of the custom response page. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50000001</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
             /// <summary>
             /// <para>The last modification time of the custom response page.</para>
-            /// <para>Format: RFC 3339/ISO 8601, UTC standard time zone (ending with Z).</para>
+            /// <para>Format: RFC 3339 / ISO 8601, UTC standard time zone (ending with Z).</para>
             /// <para>Example: 2026-06-10T14:23:45Z</para>
             /// 
             /// <b>Example:</b>

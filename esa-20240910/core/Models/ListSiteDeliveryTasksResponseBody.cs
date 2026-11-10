@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListSiteDeliveryTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number. Default value: 0.</para>
+        /// <para>The page number. Default value: <b>0</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1 to 500</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries per page. Default value: <b>20</b>. Valid values: <b>1 to 500</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,19 +40,19 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The delivery tasks.</para>
+        /// <para>The list of tasks.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public List<ListSiteDeliveryTasksResponseBodyTasks> Tasks { get; set; }
         public class ListSiteDeliveryTasksResponseBodyTasks : TeaModel {
             /// <summary>
-            /// <para>The log category. Valid values:</para>
+            /// <para>The real-time log type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>dcdn_log_access_l1 (default): access logs.</description></item>
-            /// <item><description>dcdn_log_er: Edge Routine logs.</description></item>
-            /// <item><description>dcdn_log_waf: firewall logs.</description></item>
-            /// <item><description>dcdn_log_ipa: TCP/UDP proxy logs.</description></item>
+            /// <item><description><b>dcdn_log_access_l1</b> (default): Access logs.</description></item>
+            /// <item><description><b>dcdn_log_er</b>: Edge Routine logs.</description></item>
+            /// <item><description><b>dcdn_log_waf</b>: Security protection logs.</description></item>
+            /// <item><description><b>dcdn_log_ipa</b>: Layer 4 acceleration logs.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -65,8 +65,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The data center. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cn: the Chinese mainland.</description></item>
-            /// <item><description>sg: outside the Chinese mainland.</description></item>
+            /// <item><description><b>cn</b>: The Chinese mainland.</description></item>
+            /// <item><description><b>sg</b>: Global (excluding the Chinese mainland).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -77,15 +77,15 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DataCenter { get; set; }
 
             /// <summary>
-            /// <para>The destination of the delivery. Valid values:</para>
-            /// <ol>
-            /// <item><description>sls: Alibaba Cloud Simple Log Service (SLS).</description></item>
-            /// <item><description>http: HTTP server.</description></item>
-            /// <item><description>aws3: Amazon Simple Storage Service (S3).</description></item>
-            /// <item><description>oss: Alibaba Cloud Object Storage Service (OSS).</description></item>
-            /// <item><description>kafka: Kafka.</description></item>
-            /// <item><description>aws3cmpt: S3-compatible storage service.</description></item>
-            /// </ol>
+            /// <para>The delivery type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>sls</b>: Simple Log Service.</description></item>
+            /// <item><description><b>http</b>: HTTP service.</description></item>
+            /// <item><description><b>aws3</b>: Amazon S3 service.</description></item>
+            /// <item><description><b>oss</b>: Object Storage Service (OSS).</description></item>
+            /// <item><description><b>kafka</b>: Kafka service.</description></item>
+            /// <item><description><b>aws3cmpt</b>: Amazon S3-compatible service.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>sls</para>
@@ -95,10 +95,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DeliveryType { get; set; }
 
             /// <summary>
-            /// <para>The status of the delivery task.</para>
+            /// <para>The status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>online</b></description></item>
-            /// <item><description><b>offline</b></description></item>
+            /// <item><description><para><b>online</b>: Pushing.</para>
+            /// </description></item>
+            /// <item><description><para><b>offline</b>: Paused.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,7 +111,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The name of the delivery task.</para>
+            /// <para>The task name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cdn-test-task</para>
@@ -121,7 +123,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The total number of log delivery tasks.</para>
+        /// <para>The total number of real-time log projects.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

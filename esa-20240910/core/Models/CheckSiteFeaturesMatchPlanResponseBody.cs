@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? IsPassed { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>65705631-908C-5D24-997C-17E0397721C8</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<CheckSiteFeaturesMatchPlanResponseBodyUnPassedSiteQuotas> UnPassedSiteQuotas { get; set; }
         public class CheckSiteFeaturesMatchPlanResponseBodyUnPassedSiteQuotas : TeaModel {
             /// <summary>
-            /// <para>The quota value of the current site.</para>
+            /// <para>The current quota value of the site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DestQuotaValue { get; set; }
 
             /// <summary>
-            /// <para>The quota name.</para>
+            /// <para>The name of the quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cache_reserve</para>

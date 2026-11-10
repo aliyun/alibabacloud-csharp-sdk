@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListUserRatePlanInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The plan instances that meet the query conditions under the user.</para>
+        /// <para>The plan instances that meet the conditions under the user.</para>
         /// </summary>
         [NameInMap("InstanceInfo")]
         [Validation(Required=false)]
@@ -33,10 +33,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>If this parameter is empty, no bot protection instance is purchased for the plan. If a value is returned, a bot protection instance is purchased for the plan. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>enterprise_bot: Web edition.</para>
-            /// </description></item>
-            /// <item><description><para>enterprise_bot_with_app: App edition.</para>
-            /// </description></item>
+            /// <item><description>enterprise_bot: Web edition.</description></item>
+            /// <item><description>enterprise_bot_with_app: App edition.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -59,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The acceleration regions where the site can be bound. Multiple regions are separated by commas (,). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>domestic</b>: Chinese mainland.</description></item>
+            /// <item><description><b>domestic</b>: The Chinese mainland.</description></item>
             /// <item><description><b>overseas</b>: Global (excluding the Chinese mainland).</description></item>
             /// <item><description><b>global</b>: Global (including the Chinese mainland).</description></item>
             /// </list>
@@ -72,7 +70,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Coverages { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the plan instance. The time is displayed in UTC and formatted as yyyy-MM-ddTHH:mm:ssZ in accordance with ISO 8601.</para>
+            /// <para>The creation time of the plan instance. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-19T11:15:20Z</para>
@@ -92,7 +90,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CrossborderTraffic { get; set; }
 
             /// <summary>
-            /// <para>The specifications of the Anti-DDoS instance in the plan for the Chinese mainland.</para>
+            /// <para>The specifications of the Anti-DDoS instance in the Chinese mainland for the plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn_300</para>
@@ -102,7 +100,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DdosBurstableDomesticProtection { get; set; }
 
             /// <summary>
-            /// <para>The specifications of the Anti-DDoS instance in the plan for regions outside the Chinese mainland.</para>
+            /// <para>The specifications of the Anti-DDoS instance outside the Chinese mainland for the plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>overseas_300</para>
@@ -142,7 +140,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string EdgeRoutineRquest { get; set; }
 
             /// <summary>
-            /// <para>The prepaid number of Web Application Firewall (WAF) requests in the plan. Unit: 10,000 requests.</para>
+            /// <para>The prepaid number of WAF requests in the plan. Unit: 10,000 requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -152,7 +150,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string EdgeWafRequest { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the plan instance. The time is displayed in UTC and formatted as yyyy-MM-ddTHH:mm:ssZ in accordance with ISO 8601.</para>
+            /// <para>The expiration time of the plan instance. The time is displayed in UTC and formatted in accordance with the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-19T11:15:20Z</para>
@@ -162,7 +160,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The instance ID.</para>
+            /// <para>The instance ID of the plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sp-xcdn-96wblslz****</para>
@@ -191,6 +189,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string Layer4TrafficIntl { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1234567890123456</para>
+            /// </summary>
             [NameInMap("OwnerId")]
             [Validation(Required=false)]
             public string OwnerId { get; set; }
@@ -263,7 +265,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ShareType { get; set; }
 
             /// <summary>
-            /// <para>The quota for the number of sites under the plan instance.</para>
+            /// <para>The site quota under the plan instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -305,7 +307,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 /// <item><description><b>pending</b>: The site is pending configuration.</description></item>
                 /// <item><description><b>active</b>: The site is activated.</description></item>
                 /// <item><description><b>offline</b>: The site is offline.</description></item>
-                /// <item><description><b>moved</b>: The site is replaced.</description></item>
+                /// <item><description><b>moved</b>: The site has been replaced.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -338,11 +340,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string StaticRequest { get; set; }
 
             /// <summary>
-            /// <para>The instance status. Valid values:</para>
+            /// <para>The instance status of the plan. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>online</b>: The instance is in normal service status.</description></item>
-            /// <item><description><b>offline</b>: The instance has expired but is not overdue, and is in an inactive state.</description></item>
-            /// <item><description><b>disable</b>: The instance is released.</description></item>
+            /// <item><description><b>online</b>: The normal service status.</description></item>
+            /// <item><description><b>offline</b>: The instance has expired but not overdue, and is in an inactive state.</description></item>
+            /// <item><description><b>disable</b>: The released status.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

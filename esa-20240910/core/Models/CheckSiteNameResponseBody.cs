@@ -10,18 +10,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CheckSiteNameResponseBody : TeaModel {
         /// <summary>
-        /// <para>The description of the verification result. Valid values:</para>
+        /// <para>The description of the validation result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>success</b>: The verification is successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>Site.AlreadyExist</b>: The website domain name has already been added.</para>
-        /// </description></item>
-        /// <item><description><para><b>Site.InvalidName</b>: Invalid website domain name.</para>
-        /// </description></item>
-        /// <item><description><para><b>Site.SubSiteUnavailable</b>: Subdomains are not allowed.</para>
-        /// </description></item>
-        /// <item><description><para><b>Site.InternalError</b>: An internal error occurs.</para>
-        /// </description></item>
+        /// <item><description><b>success</b>: Success.</description></item>
+        /// <item><description><b>Site.AlreadyExist</b>: The user has already added this site.</description></item>
+        /// <item><description><b>Site.InvalidName</b>: The site name is invalid.</description></item>
+        /// <item><description><b>Site.SubSiteUnavailable</b>: The subsite is unavailable.</description></item>
+        /// <item><description><b>Site.InternalError</b>: Other errors.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -32,12 +27,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a subdomain is specified. Valid values:</para>
+        /// <para>Indicates whether the site is a subsite. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b></para>
-        /// </description></item>
-        /// <item><description><para><b>false</b></para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The site is a subsite.</description></item>
+        /// <item><description><b>false</b>: The site is not a subsite.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +41,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? IsSubSite { get; set; }
 
         /// <summary>
-        /// <para>The verification message.</para>
+        /// <para>The validation message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Site name is available.</para>
@@ -58,12 +51,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Messeage { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the verification passed.</para>
+        /// <para>Indicates whether the validation is passed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b></para>
-        /// </description></item>
-        /// <item><description><para><b>false</b></para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Passed.</description></item>
+        /// <item><description><b>false</b>: Not passed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

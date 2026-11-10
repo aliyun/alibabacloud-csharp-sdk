@@ -50,19 +50,19 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of rules returned.</para>
+        /// <para>The returned list of rules.</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public List<ListWafRulesResponseBodyRules> Rules { get; set; }
         public class ListWafRulesResponseBodyRules : TeaModel {
             /// <summary>
-            /// <para>The action associated with the rule. Valid values:</para>
+            /// <para>The action corresponding to the rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>deny: Block.</description></item>
-            /// <item><description>monitor: Monitor.</description></item>
-            /// <item><description>js: JavaScript Challenge.</description></item>
-            /// <item><description>captcha: Slider challenge.</description></item>
+            /// <item><description>deny: block</description></item>
+            /// <item><description>monitor: monitor</description></item>
+            /// <item><description>js: JavaScript challenge</description></item>
+            /// <item><description>captcha: slider challenge</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// <para>The list of statistical objects for frequency control rules.</para>
+            /// <para>The list of statistical objects for rate limiting rules.</para>
             /// </summary>
             [NameInMap("CharacteristicsFields")]
             [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public WafRuleConfig Config { get; set; }
 
             /// <summary>
-            /// <para>The list of matching fields for the rule.</para>
+            /// <para>The list of match fields for the rule.</para>
             /// </summary>
             [NameInMap("Fields")]
             [Validation(Required=false)]
@@ -114,16 +114,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The WAF rule execution phase. Valid values:</para>
+            /// <para>The execution phase of the WAF rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>http_whitelist: whitelist rule</description></item>
-            /// <item><description>http_custom: custom rule</description></item>
-            /// <item><description>http_managed: managed rule</description></item>
-            /// <item><description>http_anti_scan: scan protection rule</description></item>
-            /// <item><description>http_ratelimit: frequency control rule</description></item>
-            /// <item><description>ip_access_rule: IP access rule</description></item>
-            /// <item><description>http_bot: advanced mode bots</description></item>
-            /// <item><description>http_security_level_rule: security rule</description></item>
+            /// <item><description>http_whitelist: whitelist rules</description></item>
+            /// <item><description>http_custom: custom rules</description></item>
+            /// <item><description>http_managed: managed rules</description></item>
+            /// <item><description>http_anti_scan: scan protection rules</description></item>
+            /// <item><description>http_ratelimit: rate limiting rules</description></item>
+            /// <item><description>ip_access_rule: IP access rules</description></item>
+            /// <item><description>http_bot: advanced bot management</description></item>
+            /// <item><description>http_security_level_rule: security rules</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Phase { get; set; }
 
             /// <summary>
-            /// <para>The position of the rule in the corresponding ruleset.</para>
+            /// <para>The position sequence of the rule in the corresponding ruleset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The list of WAF phases to skip for whitelist rules.</para>
+            /// <para>The list of skipped WAF phases for whitelist rules.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -198,8 +198,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The last modification time of the rule.</para>
-            /// <para>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</para>
+            /// <para>The last update time of the rule.</para>
+            /// <para>Format: RFC 3339 or ISO 8601, UTC time zone (ending with Z).</para>
             /// <para>Example: 2026-06-10T14:23:45Z</para>
             /// 
             /// <b>Example:</b>

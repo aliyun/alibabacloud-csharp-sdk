@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateOriginProtectionRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to automatically enable the latest list of back-to-origin IP addresses.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>off</para>
         /// </summary>
@@ -18,12 +20,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AutoConfirmIPList { get; set; }
 
         /// <summary>
-        /// <para>The origin fetch convergence switch.</para>
+        /// <para>Specifies whether to enable back-to-origin convergence. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>on: Enable origin fetch convergence.</para>
-        /// </description></item>
-        /// <item><description><para>off: Disable origin fetch convergence.</para>
-        /// </description></item>
+        /// <item><description>on: Enables back-to-origin convergence.</description></item>
+        /// <item><description>off: Disables back-to-origin convergence.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string OriginConverge { get; set; }
 
         /// <summary>
-        /// <para>The site ID. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API to get it.</para>
+        /// <para>The site ID. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

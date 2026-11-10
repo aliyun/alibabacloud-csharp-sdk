@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateUserWafRulesetRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the WAF ruleset.</para>
+        /// <para>The description of the WAF rule set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The expression of the WAF ruleset.</para>
+        /// <para>The expression of the WAF rule set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ip.src == 1.1.1.1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Expression { get; set; }
 
         /// <summary>
-        /// <para>The WAF ruleset ID.</para>
+        /// <para>The WAF rule set ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the WAF ruleset.</para>
+        /// <para>The name of the WAF rule set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The position of the WAF ruleset.</para>
+        /// <para>The position of the WAF rule set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Position { get; set; }
 
         /// <summary>
-        /// <para>A list of rule configurations in the WAF ruleset.</para>
+        /// <para>The list of rule configurations in the WAF rule set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[
@@ -88,14 +88,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<WafRuleConfig> Rules { get; set; }
 
         /// <summary>
-        /// <para>The shared configuration of the WAF ruleset.</para>
+        /// <para>The sharing configuration of the WAF rule set.</para>
         /// </summary>
         [NameInMap("Shared")]
         [Validation(Required=false)]
         public WafBatchRuleShared Shared { get; set; }
 
         /// <summary>
-        /// <para>The status of the WAF ruleset.</para>
+        /// <para>The status of the WAF rule set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>on</para>

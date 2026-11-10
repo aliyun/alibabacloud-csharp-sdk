@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "ESA";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("esa", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -246,7 +249,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates the client based on the certificate ID.</para>
+        /// <para>Activates a client based on the certificate ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -284,7 +287,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates the client based on the certificate ID.</para>
+        /// <para>Activates a client based on the certificate ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -322,7 +325,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates the client based on the certificate ID.</para>
+        /// <para>Activates a client based on the certificate ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -340,7 +343,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activates the client based on the certificate ID.</para>
+        /// <para>Activates a client based on the certificate ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -358,14 +361,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables version management. This allows a site to support multiple configuration versions and multiple deployment environments, providing more flexible management of site traffic and configuration.</para>
+        /// <para>Enables version management to allow a site to support multiple configuration versions and deployment environments for more flexible management of site traffic and configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Prerequisites for enabling site version management:</para>
         /// <ol>
-        /// <item><description>The site plan must include the version management quota item <c>version_management_available</c>, and its value must be <c>true</c>.</description></item>
+        /// <item><description>The site plan must include the version management quota item <c>version_management_available</c> with the value set to <c>true</c>.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -408,14 +411,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables version management. This allows a site to support multiple configuration versions and multiple deployment environments, providing more flexible management of site traffic and configuration.</para>
+        /// <para>Enables version management to allow a site to support multiple configuration versions and deployment environments for more flexible management of site traffic and configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Prerequisites for enabling site version management:</para>
         /// <ol>
-        /// <item><description>The site plan must include the version management quota item <c>version_management_available</c>, and its value must be <c>true</c>.</description></item>
+        /// <item><description>The site plan must include the version management quota item <c>version_management_available</c> with the value set to <c>true</c>.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -458,14 +461,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables version management. This allows a site to support multiple configuration versions and multiple deployment environments, providing more flexible management of site traffic and configuration.</para>
+        /// <para>Enables version management to allow a site to support multiple configuration versions and deployment environments for more flexible management of site traffic and configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Prerequisites for enabling site version management:</para>
         /// <ol>
-        /// <item><description>The site plan must include the version management quota item <c>version_management_available</c>, and its value must be <c>true</c>.</description></item>
+        /// <item><description>The site plan must include the version management quota item <c>version_management_available</c> with the value set to <c>true</c>.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -484,14 +487,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables version management. This allows a site to support multiple configuration versions and multiple deployment environments, providing more flexible management of site traffic and configuration.</para>
+        /// <para>Enables version management to allow a site to support multiple configuration versions and deployment environments for more flexible management of site traffic and configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Prerequisites for enabling site version management:</para>
         /// <ol>
-        /// <item><description>The site plan must include the version management quota item <c>version_management_available</c>, and its value must be <c>true</c>.</description></item>
+        /// <item><description>The site plan must include the version management quota item <c>version_management_available</c> with the value set to <c>true</c>.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -510,7 +513,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a user opportunity order.</para>
+        /// <para>Creates a user opportunity ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -576,7 +579,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a user opportunity order.</para>
+        /// <para>Creates a user opportunity ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -642,7 +645,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a user opportunity order.</para>
+        /// <para>Creates a user opportunity ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -660,7 +663,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a user opportunity order.</para>
+        /// <para>Creates a user opportunity ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -822,7 +825,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Requests a new free certificate for a Software as a Service (SaaS) domain name. Call this operation only if the previous certificate request failed, or the current certificate is about to expire or has expired.</para>
+        /// <para>Reapplies for a free certificate for a SaaS domain name. This operation is supported only when the current free certificate application fails, is about to expire, or has expired.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -864,7 +867,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Requests a new free certificate for a Software as a Service (SaaS) domain name. Call this operation only if the previous certificate request failed, or the current certificate is about to expire or has expired.</para>
+        /// <para>Reapplies for a free certificate for a SaaS domain name. This operation is supported only when the current free certificate application fails, is about to expire, or has expired.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -906,7 +909,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Requests a new free certificate for a Software as a Service (SaaS) domain name. Call this operation only if the previous certificate request failed, or the current certificate is about to expire or has expired.</para>
+        /// <para>Reapplies for a free certificate for a SaaS domain name. This operation is supported only when the current free certificate application fails, is about to expire, or has expired.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -924,7 +927,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Requests a new free certificate for a Software as a Service (SaaS) domain name. Call this operation only if the previous certificate request failed, or the current certificate is about to expire or has expired.</para>
+        /// <para>Reapplies for a free certificate for a SaaS domain name. This operation is supported only when the current free certificate application fails, is about to expire, or has expired.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -942,13 +945,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple DNS records in a batch. Multiple record types are supported.</para>
+        /// <para>Adds DNS records in batches and supports multiple record types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation allows you to create or update multiple DNS records at a time. It is suitable for scenarios that require managing a large number of DNS configurations. Supported record types include but are not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. Detailed configuration items are provided to meet specific requirements, such as Priority, Flag, Tag, and Weight. In addition, for specific record types such as CERT, SSHFP, SMIMEA, and TLSA, advanced settings such as certificate information and encryption algorithms are supported.
-        /// Successfully and unsuccessfully processed records are listed separately in the response, so that you can identify which records are processed, which records failed, and the failure reasons.</para>
+        /// <para>This API operation allows you to create or update multiple DNS record entries at a time, which is suitable for scenarios that require managing a large number of DNS configurations. Supported record types include but are not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. Detailed configuration items are provided to meet specific requirements, such as priority, flag, tag, and weight. In addition, for specific record types such as CERT, SSHFP, SMIMEA, and TLSA, advanced settings such as certificate information and encryption algorithms are supported.
+        /// Successful and failed record operations are listed separately in the response, so that you can understand which records are processed successfully and which records fail and the reasons for the failures.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1000,13 +1003,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple DNS records in a batch. Multiple record types are supported.</para>
+        /// <para>Adds DNS records in batches and supports multiple record types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation allows you to create or update multiple DNS records at a time. It is suitable for scenarios that require managing a large number of DNS configurations. Supported record types include but are not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. Detailed configuration items are provided to meet specific requirements, such as Priority, Flag, Tag, and Weight. In addition, for specific record types such as CERT, SSHFP, SMIMEA, and TLSA, advanced settings such as certificate information and encryption algorithms are supported.
-        /// Successfully and unsuccessfully processed records are listed separately in the response, so that you can identify which records are processed, which records failed, and the failure reasons.</para>
+        /// <para>This API operation allows you to create or update multiple DNS record entries at a time, which is suitable for scenarios that require managing a large number of DNS configurations. Supported record types include but are not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. Detailed configuration items are provided to meet specific requirements, such as priority, flag, tag, and weight. In addition, for specific record types such as CERT, SSHFP, SMIMEA, and TLSA, advanced settings such as certificate information and encryption algorithms are supported.
+        /// Successful and failed record operations are listed separately in the response, so that you can understand which records are processed successfully and which records fail and the reasons for the failures.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1058,13 +1061,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple DNS records in a batch. Multiple record types are supported.</para>
+        /// <para>Adds DNS records in batches and supports multiple record types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation allows you to create or update multiple DNS records at a time. It is suitable for scenarios that require managing a large number of DNS configurations. Supported record types include but are not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. Detailed configuration items are provided to meet specific requirements, such as Priority, Flag, Tag, and Weight. In addition, for specific record types such as CERT, SSHFP, SMIMEA, and TLSA, advanced settings such as certificate information and encryption algorithms are supported.
-        /// Successfully and unsuccessfully processed records are listed separately in the response, so that you can identify which records are processed, which records failed, and the failure reasons.</para>
+        /// <para>This API operation allows you to create or update multiple DNS record entries at a time, which is suitable for scenarios that require managing a large number of DNS configurations. Supported record types include but are not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. Detailed configuration items are provided to meet specific requirements, such as priority, flag, tag, and weight. In addition, for specific record types such as CERT, SSHFP, SMIMEA, and TLSA, advanced settings such as certificate information and encryption algorithms are supported.
+        /// Successful and failed record operations are listed separately in the response, so that you can understand which records are processed successfully and which records fail and the reasons for the failures.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1082,13 +1085,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple DNS records in a batch. Multiple record types are supported.</para>
+        /// <para>Adds DNS records in batches and supports multiple record types.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation allows you to create or update multiple DNS records at a time. It is suitable for scenarios that require managing a large number of DNS configurations. Supported record types include but are not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. Detailed configuration items are provided to meet specific requirements, such as Priority, Flag, Tag, and Weight. In addition, for specific record types such as CERT, SSHFP, SMIMEA, and TLSA, advanced settings such as certificate information and encryption algorithms are supported.
-        /// Successfully and unsuccessfully processed records are listed separately in the response, so that you can identify which records are processed, which records failed, and the failure reasons.</para>
+        /// <para>This API operation allows you to create or update multiple DNS record entries at a time, which is suitable for scenarios that require managing a large number of DNS configurations. Supported record types include but are not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. Detailed configuration items are provided to meet specific requirements, such as priority, flag, tag, and weight. In addition, for specific record types such as CERT, SSHFP, SMIMEA, and TLSA, advanced settings such as certificate information and encryption algorithms are supported.
+        /// Successful and failed record operations are listed separately in the response, so that you can understand which records are processed successfully and which records fail and the reasons for the failures.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1106,7 +1109,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch creates rules in a specified WAF phase. You can create multiple rules at a time and configure shared settings for these rules.</para>
+        /// <para>Creates multiple rules in a specified WAF phase in a single batch and configures shared settings for the rules.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1180,7 +1183,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch creates rules in a specified WAF phase. You can create multiple rules at a time and configure shared settings for these rules.</para>
+        /// <para>Creates multiple rules in a specified WAF phase in a single batch and configures shared settings for the rules.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1254,7 +1257,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch creates rules in a specified WAF phase. You can create multiple rules at a time and configure shared settings for these rules.</para>
+        /// <para>Creates multiple rules in a specified WAF phase in a single batch and configures shared settings for the rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1272,7 +1275,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch creates rules in a specified WAF phase. You can create multiple rules at a time and configure shared settings for these rules.</para>
+        /// <para>Creates multiple rules in a specified WAF phase in a single batch and configures shared settings for the rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2762,7 +2765,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch updates rules in a specified WAF ruleset. You can use this operation to update the configurations of multiple rules at a time.</para>
+        /// <para>Modifies multiple rules in a specified WAF rule set in batches. You can use this operation to update the configurations of multiple rules at the same time.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2836,7 +2839,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch updates rules in a specified WAF ruleset. You can use this operation to update the configurations of multiple rules at a time.</para>
+        /// <para>Modifies multiple rules in a specified WAF rule set in batches. You can use this operation to update the configurations of multiple rules at the same time.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2910,7 +2913,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch updates rules in a specified WAF ruleset. You can use this operation to update the configurations of multiple rules at a time.</para>
+        /// <para>Modifies multiple rules in a specified WAF rule set in batches. You can use this operation to update the configurations of multiple rules at the same time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2928,7 +2931,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch updates rules in a specified WAF ruleset. You can use this operation to update the configurations of multiple rules at a time.</para>
+        /// <para>Modifies multiple rules in a specified WAF rule set in batches. You can use this operation to update the configurations of multiple rules at the same time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3190,7 +3193,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validates whether a site is compatible with the target plan during site plan migration.</para>
+        /// <para>Validates whether a site is compatible with the target plan during plan migration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3236,7 +3239,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validates whether a site is compatible with the target plan during site plan migration.</para>
+        /// <para>Validates whether a site is compatible with the target plan during plan migration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3282,7 +3285,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validates whether a site is compatible with the target plan during site plan migration.</para>
+        /// <para>Validates whether a site is compatible with the target plan during plan migration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3300,7 +3303,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validates whether a site is compatible with the target plan during site plan migration.</para>
+        /// <para>Validates whether a site is compatible with the target plan during plan migration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3318,7 +3321,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a specified website name is available.</para>
+        /// <para>Pre-validates whether a site name is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3360,7 +3363,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a specified website name is available.</para>
+        /// <para>Pre-validates whether a site name is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3402,7 +3405,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a specified website name is available.</para>
+        /// <para>Pre-validates whether a site name is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3420,7 +3423,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a specified website name is available.</para>
+        /// <para>Pre-validates whether a site name is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3438,7 +3441,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the project name of a real-time log delivery task.</para>
+        /// <para>Checks the project name of a real-time log task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3476,7 +3479,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the project name of a real-time log delivery task.</para>
+        /// <para>Checks the project name of a real-time log task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3514,7 +3517,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the project name of a real-time log delivery task.</para>
+        /// <para>Checks the project name of a real-time log task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3532,7 +3535,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the project name of a real-time log delivery task.</para>
+        /// <para>Checks the project name of a real-time log task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3790,8 +3793,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits the staging (unstable) code of an Edge Routine and generates a production version.
-        /// Prerequisite: Before calling this API operation, call GetRoutineStagingCodeUploadInfo to obtain OSS upload credentials. Upload the code file through OSS POST. After the upload callback succeeds, call this API operation to submit the code.</para>
+        /// <para>Submits the staging code of an Edge Routine to generate a production version. Before calling this API operation, you must call GetRoutineStagingCodeUploadInfo to obtain the Object Storage Service (OSS) upload credentials, upload the code file by using an OSS POST request, and then call this API operation after the upload callback succeeds.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3841,8 +3843,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits the staging (unstable) code of an Edge Routine and generates a production version.
-        /// Prerequisite: Before calling this API operation, call GetRoutineStagingCodeUploadInfo to obtain OSS upload credentials. Upload the code file through OSS POST. After the upload callback succeeds, call this API operation to submit the code.</para>
+        /// <para>Submits the staging code of an Edge Routine to generate a production version. Before calling this API operation, you must call GetRoutineStagingCodeUploadInfo to obtain the Object Storage Service (OSS) upload credentials, upload the code file by using an OSS POST request, and then call this API operation after the upload callback succeeds.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3892,8 +3893,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits the staging (unstable) code of an Edge Routine and generates a production version.
-        /// Prerequisite: Before calling this API operation, call GetRoutineStagingCodeUploadInfo to obtain OSS upload credentials. Upload the code file through OSS POST. After the upload callback succeeds, call this API operation to submit the code.</para>
+        /// <para>Submits the staging code of an Edge Routine to generate a production version. Before calling this API operation, you must call GetRoutineStagingCodeUploadInfo to obtain the Object Storage Service (OSS) upload credentials, upload the code file by using an OSS POST request, and then call this API operation after the upload callback succeeds.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3911,8 +3911,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits the staging (unstable) code of an Edge Routine and generates a production version.
-        /// Prerequisite: Before calling this API operation, call GetRoutineStagingCodeUploadInfo to obtain OSS upload credentials. Upload the code file through OSS POST. After the upload callback succeeds, call this API operation to submit the code.</para>
+        /// <para>Submits the staging code of an Edge Routine to generate a production version. Before calling this API operation, you must call GetRoutineStagingCodeUploadInfo to obtain the Object Storage Service (OSS) upload credentials, upload the code file by using an OSS POST request, and then call this API operation after the upload callback succeeds.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4822,7 +4821,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom response code rule for a site.</para>
+        /// <para>Creates a custom response code configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4892,7 +4891,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom response code rule for a site.</para>
+        /// <para>Creates a custom response code configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4962,7 +4961,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom response code rule for a site.</para>
+        /// <para>Creates a custom response code configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4980,7 +4979,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom response code rule for a site.</para>
+        /// <para>Creates a custom response code configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5386,7 +5385,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an image secret for the edge container application</para>
+        /// <para>Creates an image secret for an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5440,7 +5439,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an image secret for the edge container application</para>
+        /// <para>Creates an image secret for an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5494,7 +5493,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an image secret for the edge container application</para>
+        /// <para>Creates an image secret for an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5512,7 +5511,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an image secret for the edge container application</para>
+        /// <para>Creates an image secret for an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5666,12 +5665,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an edge container application version. You can iteratively release applications by version.
+        /// <para>Creates a version for an edge container application to support iterative releases.
         /// Note:</para>
         /// <ol>
-        /// <item><description>Your account must have an ESA plan with the Edge Container feature enabled.</description></item>
-        /// <item><description>Call CreateEdgeContainerApp first to create an application and obtain the AppId.</description></item>
-        /// <item><description>Complete call chain example: CreateEdgeContainerApp → ListEdgeContainerApps → CreateEdgeContainerAppVersion.</description></item>
+        /// <item><description>Your account must be subscribed to an ESA plan that includes the Edge Container feature.</description></item>
+        /// <item><description>You must call CreateEdgeContainerApp to create an application and obtain the AppId.</description></item>
+        /// <item><description>A complete call chain example is provided (CreateEdgeContainerApp → ListEdgeContainerApps → CreateEdgeContainerAppVersion).</description></item>
         /// </ol>
         /// </summary>
         /// 
@@ -5732,12 +5731,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an edge container application version. You can iteratively release applications by version.
+        /// <para>Creates a version for an edge container application to support iterative releases.
         /// Note:</para>
         /// <ol>
-        /// <item><description>Your account must have an ESA plan with the Edge Container feature enabled.</description></item>
-        /// <item><description>Call CreateEdgeContainerApp first to create an application and obtain the AppId.</description></item>
-        /// <item><description>Complete call chain example: CreateEdgeContainerApp → ListEdgeContainerApps → CreateEdgeContainerAppVersion.</description></item>
+        /// <item><description>Your account must be subscribed to an ESA plan that includes the Edge Container feature.</description></item>
+        /// <item><description>You must call CreateEdgeContainerApp to create an application and obtain the AppId.</description></item>
+        /// <item><description>A complete call chain example is provided (CreateEdgeContainerApp → ListEdgeContainerApps → CreateEdgeContainerAppVersion).</description></item>
         /// </ol>
         /// </summary>
         /// 
@@ -5798,12 +5797,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an edge container application version. You can iteratively release applications by version.
+        /// <para>Creates a version for an edge container application to support iterative releases.
         /// Note:</para>
         /// <ol>
-        /// <item><description>Your account must have an ESA plan with the Edge Container feature enabled.</description></item>
-        /// <item><description>Call CreateEdgeContainerApp first to create an application and obtain the AppId.</description></item>
-        /// <item><description>Complete call chain example: CreateEdgeContainerApp → ListEdgeContainerApps → CreateEdgeContainerAppVersion.</description></item>
+        /// <item><description>Your account must be subscribed to an ESA plan that includes the Edge Container feature.</description></item>
+        /// <item><description>You must call CreateEdgeContainerApp to create an application and obtain the AppId.</description></item>
+        /// <item><description>A complete call chain example is provided (CreateEdgeContainerApp → ListEdgeContainerApps → CreateEdgeContainerAppVersion).</description></item>
         /// </ol>
         /// </summary>
         /// 
@@ -5822,12 +5821,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an edge container application version. You can iteratively release applications by version.
+        /// <para>Creates a version for an edge container application to support iterative releases.
         /// Note:</para>
         /// <ol>
-        /// <item><description>Your account must have an ESA plan with the Edge Container feature enabled.</description></item>
-        /// <item><description>Call CreateEdgeContainerApp first to create an application and obtain the AppId.</description></item>
-        /// <item><description>Complete call chain example: CreateEdgeContainerApp → ListEdgeContainerApps → CreateEdgeContainerAppVersion.</description></item>
+        /// <item><description>Your account must be subscribed to an ESA plan that includes the Edge Container feature.</description></item>
+        /// <item><description>You must call CreateEdgeContainerApp to create an application and obtain the AppId.</description></item>
+        /// <item><description>A complete call chain example is provided (CreateEdgeContainerApp → ListEdgeContainerApps → CreateEdgeContainerAppVersion).</description></item>
         /// </ol>
         /// </summary>
         /// 
@@ -5986,6 +5985,186 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateEnvironmentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an error code redirection rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateErrorPagesRedirectRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateErrorPagesRedirectRuleResponse
+        /// </returns>
+        public CreateErrorPagesRedirectRuleResponse CreateErrorPagesRedirectRuleWithOptions(CreateErrorPagesRedirectRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateErrorPagesRedirectRuleShrinkRequest request = new CreateErrorPagesRedirectRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ErrorPagesRedirect))
+            {
+                request.ErrorPagesRedirectShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ErrorPagesRedirect, "ErrorPagesRedirect", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErrorPagesRedirectShrink))
+            {
+                query["ErrorPagesRedirect"] = request.ErrorPagesRedirectShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
+            {
+                query["Rule"] = request.Rule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleEnable))
+            {
+                query["RuleEnable"] = request.RuleEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sequence))
+            {
+                query["Sequence"] = request.Sequence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteVersion))
+            {
+                query["SiteVersion"] = request.SiteVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateErrorPagesRedirectRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateErrorPagesRedirectRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an error code redirection rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateErrorPagesRedirectRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateErrorPagesRedirectRuleResponse
+        /// </returns>
+        public async Task<CreateErrorPagesRedirectRuleResponse> CreateErrorPagesRedirectRuleWithOptionsAsync(CreateErrorPagesRedirectRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateErrorPagesRedirectRuleShrinkRequest request = new CreateErrorPagesRedirectRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ErrorPagesRedirect))
+            {
+                request.ErrorPagesRedirectShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ErrorPagesRedirect, "ErrorPagesRedirect", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErrorPagesRedirectShrink))
+            {
+                query["ErrorPagesRedirect"] = request.ErrorPagesRedirectShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
+            {
+                query["Rule"] = request.Rule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleEnable))
+            {
+                query["RuleEnable"] = request.RuleEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sequence))
+            {
+                query["Sequence"] = request.Sequence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteVersion))
+            {
+                query["SiteVersion"] = request.SiteVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateErrorPagesRedirectRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateErrorPagesRedirectRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an error code redirection rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateErrorPagesRedirectRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateErrorPagesRedirectRuleResponse
+        /// </returns>
+        public CreateErrorPagesRedirectRuleResponse CreateErrorPagesRedirectRule(CreateErrorPagesRedirectRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateErrorPagesRedirectRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an error code redirection rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateErrorPagesRedirectRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateErrorPagesRedirectRuleResponse
+        /// </returns>
+        public async Task<CreateErrorPagesRedirectRuleResponse> CreateErrorPagesRedirectRuleAsync(CreateErrorPagesRedirectRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateErrorPagesRedirectRuleWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7538,7 +7717,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom list. Custom lists are typically referenced by the rule matching engine for values used in various security policies to implement complex logic and control.</para>
+        /// <para>Creates a custom list for referencing values in rule matching engines to implement complex logic and control in various security policies.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7598,7 +7777,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom list. Custom lists are typically referenced by the rule matching engine for values used in various security policies to implement complex logic and control.</para>
+        /// <para>Creates a custom list for referencing values in rule matching engines to implement complex logic and control in various security policies.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7658,7 +7837,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom list. Custom lists are typically referenced by the rule matching engine for values used in various security policies to implement complex logic and control.</para>
+        /// <para>Creates a custom list for referencing values in rule matching engines to implement complex logic and control in various security policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7676,7 +7855,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom list. Custom lists are typically referenced by the rule matching engine for values used in various security policies to implement complex logic and control.</para>
+        /// <para>Creates a custom list for referencing values in rule matching engines to implement complex logic and control in various security policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7694,13 +7873,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a load balancer instance that supports custom routing policies, session persistence, monitoring configurations, and other advanced features.</para>
+        /// <para>Creates a load balancer instance with advanced features such as custom routing policies, session persistence, and monitoring configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a load balancing service based on your business requirements. You can configure settings such as adaptive routing, weighted polling, rule matching, and health checks to effectively manage and optimize traffic.
-        /// Only Enterprise plans support the load balancing service. To use this feature, contact Alibaba Cloud sales to apply for an Enterprise plan.</para>
+        /// <para>This API allows you to configure load balancing services based on your business requirements, including but not limited to adaptive routing, weighted round-robin, rule matching, and health checks, to achieve effective traffic management and optimization.
+        /// Only the Enterprise Edition plan supports the load balancer service. To use this service, contact Alibaba Cloud sales to apply for the Enterprise Edition plan.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7820,13 +7999,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a load balancer instance that supports custom routing policies, session persistence, monitoring configurations, and other advanced features.</para>
+        /// <para>Creates a load balancer instance with advanced features such as custom routing policies, session persistence, and monitoring configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a load balancing service based on your business requirements. You can configure settings such as adaptive routing, weighted polling, rule matching, and health checks to effectively manage and optimize traffic.
-        /// Only Enterprise plans support the load balancing service. To use this feature, contact Alibaba Cloud sales to apply for an Enterprise plan.</para>
+        /// <para>This API allows you to configure load balancing services based on your business requirements, including but not limited to adaptive routing, weighted round-robin, rule matching, and health checks, to achieve effective traffic management and optimization.
+        /// Only the Enterprise Edition plan supports the load balancer service. To use this service, contact Alibaba Cloud sales to apply for the Enterprise Edition plan.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7946,13 +8125,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a load balancer instance that supports custom routing policies, session persistence, monitoring configurations, and other advanced features.</para>
+        /// <para>Creates a load balancer instance with advanced features such as custom routing policies, session persistence, and monitoring configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a load balancing service based on your business requirements. You can configure settings such as adaptive routing, weighted polling, rule matching, and health checks to effectively manage and optimize traffic.
-        /// Only Enterprise plans support the load balancing service. To use this feature, contact Alibaba Cloud sales to apply for an Enterprise plan.</para>
+        /// <para>This API allows you to configure load balancing services based on your business requirements, including but not limited to adaptive routing, weighted round-robin, rule matching, and health checks, to achieve effective traffic management and optimization.
+        /// Only the Enterprise Edition plan supports the load balancer service. To use this service, contact Alibaba Cloud sales to apply for the Enterprise Edition plan.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7970,13 +8149,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a load balancer instance that supports custom routing policies, session persistence, monitoring configurations, and other advanced features.</para>
+        /// <para>Creates a load balancer instance with advanced features such as custom routing policies, session persistence, and monitoring configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a load balancing service based on your business requirements. You can configure settings such as adaptive routing, weighted polling, rule matching, and health checks to effectively manage and optimize traffic.
-        /// Only Enterprise plans support the load balancing service. To use this feature, contact Alibaba Cloud sales to apply for an Enterprise plan.</para>
+        /// <para>This API allows you to configure load balancing services based on your business requirements, including but not limited to adaptive routing, weighted round-robin, rule matching, and health checks, to achieve effective traffic management and optimization.
+        /// Only the Enterprise Edition plan supports the load balancer service. To use this service, contact Alibaba Cloud sales to apply for the Enterprise Edition plan.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7994,12 +8173,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a network optimization configuration for a site.</para>
+        /// <para>Creates a network optimization configuration for a site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The site plan must be Standard Edition or higher to use the WebSocket feature. When calling this API, you must provide at least one feature configuration parameter. Providing only SiteId returns an error.</para>
+        /// <para>The site plan must be Standard Edition or higher to use the WebSocket feature. In addition, when you call this API operation, you must specify at least one feature configuration parameter. Specifying only SiteId returns an error.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8081,12 +8260,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a network optimization configuration for a site.</para>
+        /// <para>Creates a network optimization configuration for a site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The site plan must be Standard Edition or higher to use the WebSocket feature. When calling this API, you must provide at least one feature configuration parameter. Providing only SiteId returns an error.</para>
+        /// <para>The site plan must be Standard Edition or higher to use the WebSocket feature. In addition, when you call this API operation, you must specify at least one feature configuration parameter. Specifying only SiteId returns an error.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8168,12 +8347,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a network optimization configuration for a site.</para>
+        /// <para>Creates a network optimization configuration for a site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The site plan must be Standard Edition or higher to use the WebSocket feature. When calling this API, you must provide at least one feature configuration parameter. Providing only SiteId returns an error.</para>
+        /// <para>The site plan must be Standard Edition or higher to use the WebSocket feature. In addition, when you call this API operation, you must specify at least one feature configuration parameter. Specifying only SiteId returns an error.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8191,12 +8370,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a network optimization configuration for a site.</para>
+        /// <para>Creates a network optimization configuration for a site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The site plan must be Standard Edition or higher to use the WebSocket feature. When calling this API, you must provide at least one feature configuration parameter. Providing only SiteId returns an error.</para>
+        /// <para>The site plan must be Standard Edition or higher to use the WebSocket feature. In addition, when you call this API operation, you must specify at least one feature configuration parameter. Specifying only SiteId returns an error.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8970,7 +9149,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a DNS record under a site.</para>
+        /// <para>Creates a DNS record under a site.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9070,7 +9249,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a DNS record under a site.</para>
+        /// <para>Creates a DNS record under a site.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9170,7 +9349,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a DNS record under a site.</para>
+        /// <para>Creates a DNS record under a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9188,7 +9367,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a DNS record under a site.</para>
+        /// <para>Creates a DNS record under a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14814,7 +14993,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete compression rule</para>
+        /// <para>Deletes the compression rule configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14860,7 +15039,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete compression rule</para>
+        /// <para>Deletes the compression rule configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14906,7 +15085,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete compression rule</para>
+        /// <para>Deletes the compression rule configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14924,7 +15103,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete compression rule</para>
+        /// <para>Deletes the compression rule configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15962,7 +16141,135 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a rule created by Deep Learning and Protection.</para>
+        /// <para>Deletes the error code redirection configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteErrorPagesRedirectRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteErrorPagesRedirectRuleResponse
+        /// </returns>
+        public DeleteErrorPagesRedirectRuleResponse DeleteErrorPagesRedirectRuleWithOptions(DeleteErrorPagesRedirectRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteErrorPagesRedirectRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteErrorPagesRedirectRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the error code redirection configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteErrorPagesRedirectRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteErrorPagesRedirectRuleResponse
+        /// </returns>
+        public async Task<DeleteErrorPagesRedirectRuleResponse> DeleteErrorPagesRedirectRuleWithOptionsAsync(DeleteErrorPagesRedirectRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteErrorPagesRedirectRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteErrorPagesRedirectRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the error code redirection configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteErrorPagesRedirectRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteErrorPagesRedirectRuleResponse
+        /// </returns>
+        public DeleteErrorPagesRedirectRuleResponse DeleteErrorPagesRedirectRule(DeleteErrorPagesRedirectRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteErrorPagesRedirectRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the error code redirection configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteErrorPagesRedirectRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteErrorPagesRedirectRuleResponse
+        /// </returns>
+        public async Task<DeleteErrorPagesRedirectRuleResponse> DeleteErrorPagesRedirectRuleAsync(DeleteErrorPagesRedirectRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteErrorPagesRedirectRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the rules issued by deep learning and protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16012,7 +16319,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a rule created by Deep Learning and Protection.</para>
+        /// <para>Deletes the rules issued by deep learning and protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16062,7 +16369,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a rule created by Deep Learning and Protection.</para>
+        /// <para>Deletes the rules issued by deep learning and protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16080,7 +16387,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a rule created by Deep Learning and Protection.</para>
+        /// <para>Deletes the rules issued by deep learning and protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16994,7 +17301,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a keyless server configuration.</para>
+        /// <para>Deletes a Keyless server configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17040,7 +17347,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a keyless server configuration.</para>
+        /// <para>Deletes a Keyless server configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17086,7 +17393,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a keyless server configuration.</para>
+        /// <para>Deletes a Keyless server configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17104,7 +17411,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a keyless server configuration.</para>
+        /// <para>Deletes a Keyless server configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17862,7 +18169,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an origin client certificate for a specific site.</para>
+        /// <para>Deletes a domain-level back-to-origin client certificate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17900,7 +18207,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an origin client certificate for a specific site.</para>
+        /// <para>Deletes a domain-level back-to-origin client certificate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17938,7 +18245,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an origin client certificate for a specific site.</para>
+        /// <para>Deletes a domain-level back-to-origin client certificate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17956,7 +18263,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an origin client certificate for a specific site.</para>
+        /// <para>Deletes a domain-level back-to-origin client certificate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18222,7 +18529,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Origin Rule Configuration</para>
+        /// <para>Deletes the back-to-origin rule configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18268,7 +18575,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Origin Rule Configuration</para>
+        /// <para>Deletes the back-to-origin rule configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18314,7 +18621,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Origin Rule Configuration</para>
+        /// <para>Deletes the back-to-origin rule configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18332,7 +18639,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Origin Rule Configuration</para>
+        /// <para>Deletes the back-to-origin rule configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18598,7 +18905,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a URL redirect rule for a website.</para>
+        /// <para>Deletes the redirect configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18644,7 +18951,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a URL redirect rule for a website.</para>
+        /// <para>Deletes the redirect configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18690,7 +18997,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a URL redirect rule for a website.</para>
+        /// <para>Deletes the redirect configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18708,7 +19015,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a URL redirect rule for a website.</para>
+        /// <para>Deletes the redirect configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18726,7 +19033,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a URL rewrite rule for a website.</para>
+        /// <para>Deletes the URL rewrite configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18772,7 +19079,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a URL rewrite rule for a website.</para>
+        /// <para>Deletes the URL rewrite configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18818,7 +19125,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a URL rewrite rule for a website.</para>
+        /// <para>Deletes the URL rewrite configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18836,7 +19143,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a URL rewrite rule for a website.</para>
+        /// <para>Deletes the URL rewrite configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19222,15 +19529,15 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes environment variables of a Routine.</para>
+        /// <para>Deletes the environment variables of a routine.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>When you create a Routine code version for deployment, the environment name <c>Env</c> supports only the staging environment <c>staging</c> or the production environment <c>production</c>.</description></item>
-        /// <item><description>The <c>CodeVersions</c> parameter supports canary release of up to two versions, and the total proportion of these versions must equal 100%.</description></item>
+        /// <item><description>When you create a deployment for a routine code version, the <c>Env</c> parameter only supports <c>staging</c> for the staging environment and <c>production</c> for the production environment.</description></item>
+        /// <item><description>The <c>CodeVersions</c> parameter supports canary releases for up to two versions, and the sum of the traffic ratios for these versions must equal 100%.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19287,15 +19594,15 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes environment variables of a Routine.</para>
+        /// <para>Deletes the environment variables of a routine.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>When you create a Routine code version for deployment, the environment name <c>Env</c> supports only the staging environment <c>staging</c> or the production environment <c>production</c>.</description></item>
-        /// <item><description>The <c>CodeVersions</c> parameter supports canary release of up to two versions, and the total proportion of these versions must equal 100%.</description></item>
+        /// <item><description>When you create a deployment for a routine code version, the <c>Env</c> parameter only supports <c>staging</c> for the staging environment and <c>production</c> for the production environment.</description></item>
+        /// <item><description>The <c>CodeVersions</c> parameter supports canary releases for up to two versions, and the sum of the traffic ratios for these versions must equal 100%.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19352,15 +19659,15 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes environment variables of a Routine.</para>
+        /// <para>Deletes the environment variables of a routine.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>When you create a Routine code version for deployment, the environment name <c>Env</c> supports only the staging environment <c>staging</c> or the production environment <c>production</c>.</description></item>
-        /// <item><description>The <c>CodeVersions</c> parameter supports canary release of up to two versions, and the total proportion of these versions must equal 100%.</description></item>
+        /// <item><description>When you create a deployment for a routine code version, the <c>Env</c> parameter only supports <c>staging</c> for the staging environment and <c>production</c> for the production environment.</description></item>
+        /// <item><description>The <c>CodeVersions</c> parameter supports canary releases for up to two versions, and the sum of the traffic ratios for these versions must equal 100%.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19379,15 +19686,15 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes environment variables of a Routine.</para>
+        /// <para>Deletes the environment variables of a routine.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>When you create a Routine code version for deployment, the environment name <c>Env</c> supports only the staging environment <c>staging</c> or the production environment <c>production</c>.</description></item>
-        /// <item><description>The <c>CodeVersions</c> parameter supports canary release of up to two versions, and the total proportion of these versions must equal 100%.</description></item>
+        /// <item><description>When you create a deployment for a routine code version, the <c>Env</c> parameter only supports <c>staging</c> for the staging environment and <c>production</c> for the production environment.</description></item>
+        /// <item><description>The <c>CodeVersions</c> parameter supports canary releases for up to two versions, and the sum of the traffic ratios for these versions must equal 100%.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20666,17 +20973,17 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a user task delivery configuration based on the specified task name and Alibaba Cloud UID.</para>
+        /// <para>Deletes the user task delivery configuration based on the specified task name and Alibaba Cloud UID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation allows you to delete an existing task delivery configuration based on the specified <b>task name</b> and <b>Alibaba Cloud UID</b>. Before proceeding, verify that the provided information is accurate to avoid disrupting the processing of related logs or data.
+        /// <para>This operation allows you to delete a configured task delivery configuration based on the specified <b>task name</b> and <b>Alibaba Cloud UID</b>. Before the operation, ensure that the provided information is accurate to avoid affecting the normal processing of related logs or data.
         /// <b>Note:</b></para>
         /// <list type="bullet">
-        /// <item><description>The deletion operation is irreversible. Proceed with caution.</description></item>
+        /// <item><description>The delete operation is irreversible. Proceed with caution.</description></item>
         /// <item><description>Only accounts with the required permissions can call this operation.</description></item>
-        /// <item><description>You can use the returned <c>RequestId</c> to track the request progress and troubleshoot issues.</description></item>
+        /// <item><description>The returned <c>RequestId</c> can be used to track the request processing progress and troubleshoot issues.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20719,17 +21026,17 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a user task delivery configuration based on the specified task name and Alibaba Cloud UID.</para>
+        /// <para>Deletes the user task delivery configuration based on the specified task name and Alibaba Cloud UID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation allows you to delete an existing task delivery configuration based on the specified <b>task name</b> and <b>Alibaba Cloud UID</b>. Before proceeding, verify that the provided information is accurate to avoid disrupting the processing of related logs or data.
+        /// <para>This operation allows you to delete a configured task delivery configuration based on the specified <b>task name</b> and <b>Alibaba Cloud UID</b>. Before the operation, ensure that the provided information is accurate to avoid affecting the normal processing of related logs or data.
         /// <b>Note:</b></para>
         /// <list type="bullet">
-        /// <item><description>The deletion operation is irreversible. Proceed with caution.</description></item>
+        /// <item><description>The delete operation is irreversible. Proceed with caution.</description></item>
         /// <item><description>Only accounts with the required permissions can call this operation.</description></item>
-        /// <item><description>You can use the returned <c>RequestId</c> to track the request progress and troubleshoot issues.</description></item>
+        /// <item><description>The returned <c>RequestId</c> can be used to track the request processing progress and troubleshoot issues.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20772,17 +21079,17 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a user task delivery configuration based on the specified task name and Alibaba Cloud UID.</para>
+        /// <para>Deletes the user task delivery configuration based on the specified task name and Alibaba Cloud UID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation allows you to delete an existing task delivery configuration based on the specified <b>task name</b> and <b>Alibaba Cloud UID</b>. Before proceeding, verify that the provided information is accurate to avoid disrupting the processing of related logs or data.
+        /// <para>This operation allows you to delete a configured task delivery configuration based on the specified <b>task name</b> and <b>Alibaba Cloud UID</b>. Before the operation, ensure that the provided information is accurate to avoid affecting the normal processing of related logs or data.
         /// <b>Note:</b></para>
         /// <list type="bullet">
-        /// <item><description>The deletion operation is irreversible. Proceed with caution.</description></item>
+        /// <item><description>The delete operation is irreversible. Proceed with caution.</description></item>
         /// <item><description>Only accounts with the required permissions can call this operation.</description></item>
-        /// <item><description>You can use the returned <c>RequestId</c> to track the request progress and troubleshoot issues.</description></item>
+        /// <item><description>The returned <c>RequestId</c> can be used to track the request processing progress and troubleshoot issues.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20801,17 +21108,17 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a user task delivery configuration based on the specified task name and Alibaba Cloud UID.</para>
+        /// <para>Deletes the user task delivery configuration based on the specified task name and Alibaba Cloud UID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation allows you to delete an existing task delivery configuration based on the specified <b>task name</b> and <b>Alibaba Cloud UID</b>. Before proceeding, verify that the provided information is accurate to avoid disrupting the processing of related logs or data.
+        /// <para>This operation allows you to delete a configured task delivery configuration based on the specified <b>task name</b> and <b>Alibaba Cloud UID</b>. Before the operation, ensure that the provided information is accurate to avoid affecting the normal processing of related logs or data.
         /// <b>Note:</b></para>
         /// <list type="bullet">
-        /// <item><description>The deletion operation is irreversible. Proceed with caution.</description></item>
+        /// <item><description>The delete operation is irreversible. Proceed with caution.</description></item>
         /// <item><description>Only accounts with the required permissions can call this operation.</description></item>
-        /// <item><description>You can use the returned <c>RequestId</c> to track the request progress and troubleshoot issues.</description></item>
+        /// <item><description>The returned <c>RequestId</c> can be used to track the request processing progress and troubleshoot issues.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -27398,7 +27705,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports the CNAME values of all records under the current site. When the site access mode is switched to CNAME access, you can call this operation to retrieve pre-configured CNAME values to prevent service interruptions.</para>
+        /// <para>Exports the CNAME values of all records for the current site. When you switch the site access mode to CNAME access, you can call this operation to retrieve pre-configured CNAME values and prevent service interruptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27436,7 +27743,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports the CNAME values of all records under the current site. When the site access mode is switched to CNAME access, you can call this operation to retrieve pre-configured CNAME values to prevent service interruptions.</para>
+        /// <para>Exports the CNAME values of all records for the current site. When you switch the site access mode to CNAME access, you can call this operation to retrieve pre-configured CNAME values and prevent service interruptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27474,7 +27781,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports the CNAME values of all records under the current site. When the site access mode is switched to CNAME access, you can call this operation to retrieve pre-configured CNAME values to prevent service interruptions.</para>
+        /// <para>Exports the CNAME values of all records for the current site. When you switch the site access mode to CNAME access, you can call this operation to retrieve pre-configured CNAME values and prevent service interruptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27492,7 +27799,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports the CNAME values of all records under the current site. When the site access mode is switched to CNAME access, you can call this operation to retrieve pre-configured CNAME values to prevent service interruptions.</para>
+        /// <para>Exports the CNAME values of all records for the current site. When you switch the site access mode to CNAME access, you can call this operation to retrieve pre-configured CNAME values and prevent service interruptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29134,7 +29441,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the CNAME flattening configuration of a website</para>
+        /// <para>Queries the CNAME flattening configuration of a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29172,7 +29479,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the CNAME flattening configuration of a website</para>
+        /// <para>Queries the CNAME flattening configuration of a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29210,7 +29517,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the CNAME flattening configuration of a website</para>
+        /// <para>Queries the CNAME flattening configuration of a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29228,7 +29535,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the CNAME flattening configuration of a website</para>
+        /// <para>Queries the CNAME flattening configuration of a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29246,7 +29553,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Compression Rule Details</para>
+        /// <para>Queries the details of compression rules for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29284,7 +29591,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Compression Rule Details</para>
+        /// <para>Queries the details of compression rules for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29322,7 +29629,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Compression Rule Details</para>
+        /// <para>Queries the details of compression rules for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29340,7 +29647,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Compression Rule Details</para>
+        /// <para>Queries the details of compression rules for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31482,6 +31789,134 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the details of the error code redirect configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetErrorPagesRedirectRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetErrorPagesRedirectRuleResponse
+        /// </returns>
+        public GetErrorPagesRedirectRuleResponse GetErrorPagesRedirectRuleWithOptions(GetErrorPagesRedirectRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetErrorPagesRedirectRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetErrorPagesRedirectRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of the error code redirect configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetErrorPagesRedirectRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetErrorPagesRedirectRuleResponse
+        /// </returns>
+        public async Task<GetErrorPagesRedirectRuleResponse> GetErrorPagesRedirectRuleWithOptionsAsync(GetErrorPagesRedirectRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetErrorPagesRedirectRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetErrorPagesRedirectRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of the error code redirect configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetErrorPagesRedirectRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetErrorPagesRedirectRuleResponse
+        /// </returns>
+        public GetErrorPagesRedirectRuleResponse GetErrorPagesRedirectRule(GetErrorPagesRedirectRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetErrorPagesRedirectRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of the error code redirect configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetErrorPagesRedirectRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetErrorPagesRedirectRuleResponse
+        /// </returns>
+        public async Task<GetErrorPagesRedirectRuleResponse> GetErrorPagesRedirectRuleAsync(GetErrorPagesRedirectRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetErrorPagesRedirectRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Downloads the failed file for a specified upload task.</para>
         /// </summary>
         /// 
@@ -31594,7 +32029,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration details of an HTTP request header modification rule for a website.</para>
+        /// <para>Queries the details of the HTTP incoming request header modification configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31632,7 +32067,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration details of an HTTP request header modification rule for a website.</para>
+        /// <para>Queries the details of the HTTP incoming request header modification configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31670,7 +32105,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration details of an HTTP request header modification rule for a website.</para>
+        /// <para>Queries the details of the HTTP incoming request header modification configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31688,7 +32123,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration details of an HTTP request header modification rule for a website.</para>
+        /// <para>Queries the details of the HTTP incoming request header modification configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31818,7 +32253,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an HTTP request header modification rule for a site.</para>
+        /// <para>Queries the details of the HTTP request header modification configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31856,7 +32291,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an HTTP request header modification rule for a site.</para>
+        /// <para>Queries the details of the HTTP request header modification configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31894,7 +32329,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an HTTP request header modification rule for a site.</para>
+        /// <para>Queries the details of the HTTP request header modification configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31912,7 +32347,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an HTTP request header modification rule for a site.</para>
+        /// <para>Queries the details of the HTTP request header modification configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32378,7 +32813,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a single site image transformation configuration.</para>
+        /// <para>Queries a single image transform configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32416,7 +32851,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a single site image transformation configuration.</para>
+        /// <para>Queries a single image transform configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32454,7 +32889,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a single site image transformation configuration.</para>
+        /// <para>Queries a single image transform configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32472,7 +32907,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a single site image transformation configuration.</para>
+        /// <para>Queries a single image transform configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33422,7 +33857,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the managed transform configuration for a site.</para>
+        /// <para>Queries the site hosting transition configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33460,7 +33895,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the managed transform configuration for a site.</para>
+        /// <para>Queries the site hosting transition configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33498,7 +33933,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the managed transform configuration for a site.</para>
+        /// <para>Queries the site hosting transition configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33516,7 +33951,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the managed transform configuration for a site.</para>
+        /// <para>Queries the site hosting transition configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33778,7 +34213,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the CA certificate information of an origin server.</para>
+        /// <para>Retrieves the CA certificate information of the origin server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33816,7 +34251,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the CA certificate information of an origin server.</para>
+        /// <para>Retrieves the CA certificate information of the origin server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33854,7 +34289,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the CA certificate information of an origin server.</para>
+        /// <para>Retrieves the CA certificate information of the origin server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33872,7 +34307,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the CA certificate information of an origin server.</para>
+        /// <para>Retrieves the CA certificate information of the origin server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34002,7 +34437,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the hostnames associated with a specific origin client certificate.</para>
+        /// <para>Retrieves the list of domain names bound to a back-to-origin client certificate at the domain name level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34040,7 +34475,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the hostnames associated with a specific origin client certificate.</para>
+        /// <para>Retrieves the list of domain names bound to a back-to-origin client certificate at the domain name level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34078,7 +34513,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the hostnames associated with a specific origin client certificate.</para>
+        /// <para>Retrieves the list of domain names bound to a back-to-origin client certificate at the domain name level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34096,7 +34531,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the hostnames associated with a specific origin client certificate.</para>
+        /// <para>Retrieves the list of domain names bound to a back-to-origin client certificate at the domain name level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34226,7 +34661,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries site origin protection configurations, including the origin protection switch, the origin convergence switch, whether the origin IP whitelist needs to be updated, and detailed information about the origin IP whitelist, including the current origin IP whitelist used by the site, the latest origin IP whitelist, and the differences between them.</para>
+        /// <para>Queries the origin server protection configurations for a site, including the origin server protection switch, the back-to-origin convergence switch, and whether the back-to-origin IP addresses whitelist needs to be updated. It also provides detailed information about the back-to-origin IP addresses whitelist, including the current whitelist used by the site, the latest whitelist, and the differences between them.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34264,7 +34699,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries site origin protection configurations, including the origin protection switch, the origin convergence switch, whether the origin IP whitelist needs to be updated, and detailed information about the origin IP whitelist, including the current origin IP whitelist used by the site, the latest origin IP whitelist, and the differences between them.</para>
+        /// <para>Queries the origin server protection configurations for a site, including the origin server protection switch, the back-to-origin convergence switch, and whether the back-to-origin IP addresses whitelist needs to be updated. It also provides detailed information about the back-to-origin IP addresses whitelist, including the current whitelist used by the site, the latest whitelist, and the differences between them.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34302,7 +34737,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries site origin protection configurations, including the origin protection switch, the origin convergence switch, whether the origin IP whitelist needs to be updated, and detailed information about the origin IP whitelist, including the current origin IP whitelist used by the site, the latest origin IP whitelist, and the differences between them.</para>
+        /// <para>Queries the origin server protection configurations for a site, including the origin server protection switch, the back-to-origin convergence switch, and whether the back-to-origin IP addresses whitelist needs to be updated. It also provides detailed information about the back-to-origin IP addresses whitelist, including the current whitelist used by the site, the latest whitelist, and the differences between them.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34320,7 +34755,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries site origin protection configurations, including the origin protection switch, the origin convergence switch, whether the origin IP whitelist needs to be updated, and detailed information about the origin IP whitelist, including the current origin IP whitelist used by the site, the latest origin IP whitelist, and the differences between them.</para>
+        /// <para>Queries the origin server protection configurations for a site, including the origin server protection switch, the back-to-origin convergence switch, and whether the back-to-origin IP addresses whitelist needs to be updated. It also provides detailed information about the back-to-origin IP addresses whitelist, including the current whitelist used by the site, the latest whitelist, and the differences between them.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35058,7 +35493,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed configuration of a single DNS record, including the record value, priority, and back-to-origin authentication configuration (exclusive to CNAME records).</para>
+        /// <para>Retrieves the detailed configuration information of a single DNS record, including the record value, priority, and back-to-origin authentication configuration (exclusive to CNAME records).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35096,7 +35531,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed configuration of a single DNS record, including the record value, priority, and back-to-origin authentication configuration (exclusive to CNAME records).</para>
+        /// <para>Retrieves the detailed configuration information of a single DNS record, including the record value, priority, and back-to-origin authentication configuration (exclusive to CNAME records).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35134,7 +35569,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed configuration of a single DNS record, including the record value, priority, and back-to-origin authentication configuration (exclusive to CNAME records).</para>
+        /// <para>Retrieves the detailed configuration information of a single DNS record, including the record value, priority, and back-to-origin authentication configuration (exclusive to CNAME records).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35152,7 +35587,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed configuration of a single DNS record, including the record value, priority, and back-to-origin authentication configuration (exclusive to CNAME records).</para>
+        /// <para>Retrieves the detailed configuration information of a single DNS record, including the record value, priority, and back-to-origin authentication configuration (exclusive to CNAME records).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37074,7 +37509,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the nameservers configured for a website.</para>
+        /// <para>Queries the DNS server names configured for the current site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37112,7 +37547,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the nameservers configured for a website.</para>
+        /// <para>Queries the DNS server names configured for the current site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37150,7 +37585,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the nameservers configured for a website.</para>
+        /// <para>Queries the DNS server names configured for the current site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37168,7 +37603,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the nameservers configured for a website.</para>
+        /// <para>Queries the DNS server names configured for the current site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39087,8 +39522,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>By calling the <c>GetUserWafRuleset</c> operation, you can retrieve information about a specific Web Application Firewall (WAF) ruleset based on the instance ID and ruleset ID. The returned information includes but is not limited to the position, name, description, status, and specific rules of the ruleset. Make sure that you correctly specify the required parameters to avoid request failures.</para>
+        /// <h2>Request instructions</h2>
+        /// <para>By calling the <c>GetUserWafRuleset</c> operation, you can retrieve specific Web Application Firewall (WAF) ruleset information based on the provided instance ID and ruleset ID. The information returned by this operation includes but is not limited to the position, name, description, and status of the ruleset, as well as detailed content such as the specific rules it contains. Correctly specify the required parameters when making a request to avoid request failures.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39139,8 +39574,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>By calling the <c>GetUserWafRuleset</c> operation, you can retrieve information about a specific Web Application Firewall (WAF) ruleset based on the instance ID and ruleset ID. The returned information includes but is not limited to the position, name, description, status, and specific rules of the ruleset. Make sure that you correctly specify the required parameters to avoid request failures.</para>
+        /// <h2>Request instructions</h2>
+        /// <para>By calling the <c>GetUserWafRuleset</c> operation, you can retrieve specific Web Application Firewall (WAF) ruleset information based on the provided instance ID and ruleset ID. The information returned by this operation includes but is not limited to the position, name, description, and status of the ruleset, as well as detailed content such as the specific rules it contains. Correctly specify the required parameters when making a request to avoid request failures.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39191,8 +39626,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>By calling the <c>GetUserWafRuleset</c> operation, you can retrieve information about a specific Web Application Firewall (WAF) ruleset based on the instance ID and ruleset ID. The returned information includes but is not limited to the position, name, description, status, and specific rules of the ruleset. Make sure that you correctly specify the required parameters to avoid request failures.</para>
+        /// <h2>Request instructions</h2>
+        /// <para>By calling the <c>GetUserWafRuleset</c> operation, you can retrieve specific Web Application Firewall (WAF) ruleset information based on the provided instance ID and ruleset ID. The information returned by this operation includes but is not limited to the position, name, description, and status of the ruleset, as well as detailed content such as the specific rules it contains. Correctly specify the required parameters when making a request to avoid request failures.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39215,8 +39650,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>By calling the <c>GetUserWafRuleset</c> operation, you can retrieve information about a specific Web Application Firewall (WAF) ruleset based on the instance ID and ruleset ID. The returned information includes but is not limited to the position, name, description, status, and specific rules of the ruleset. Make sure that you correctly specify the required parameters to avoid request failures.</para>
+        /// <h2>Request instructions</h2>
+        /// <para>By calling the <c>GetUserWafRuleset</c> operation, you can retrieve specific Web Application Firewall (WAF) ruleset information based on the provided instance ID and ruleset ID. The information returned by this operation includes but is not limited to the position, name, description, and status of the ruleset, as well as detailed content such as the specific rules it contains. Correctly specify the required parameters when making a request to avoid request failures.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41146,7 +41581,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query TLS Cipher Suite List</para>
+        /// <para>Queries the list of cipher suite names based on the cipher suite group name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41184,7 +41619,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query TLS Cipher Suite List</para>
+        /// <para>Queries the list of cipher suite names based on the cipher suite group name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41222,7 +41657,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query TLS Cipher Suite List</para>
+        /// <para>Queries the list of cipher suite names based on the cipher suite group name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41240,7 +41675,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query TLS Cipher Suite List</para>
+        /// <para>Queries the list of cipher suite names based on the cipher suite group name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43186,6 +43621,174 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the error code redirection configurations.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListErrorPagesRedirectRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListErrorPagesRedirectRulesResponse
+        /// </returns>
+        public ListErrorPagesRedirectRulesResponse ListErrorPagesRedirectRulesWithOptions(ListErrorPagesRedirectRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigType))
+            {
+                query["ConfigType"] = request.ConfigType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteVersion))
+            {
+                query["SiteVersion"] = request.SiteVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListErrorPagesRedirectRules",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListErrorPagesRedirectRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the error code redirection configurations.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListErrorPagesRedirectRulesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListErrorPagesRedirectRulesResponse
+        /// </returns>
+        public async Task<ListErrorPagesRedirectRulesResponse> ListErrorPagesRedirectRulesWithOptionsAsync(ListErrorPagesRedirectRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigType))
+            {
+                query["ConfigType"] = request.ConfigType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteVersion))
+            {
+                query["SiteVersion"] = request.SiteVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListErrorPagesRedirectRules",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListErrorPagesRedirectRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the error code redirection configurations.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListErrorPagesRedirectRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListErrorPagesRedirectRulesResponse
+        /// </returns>
+        public ListErrorPagesRedirectRulesResponse ListErrorPagesRedirectRules(ListErrorPagesRedirectRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListErrorPagesRedirectRulesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the error code redirection configurations.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListErrorPagesRedirectRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListErrorPagesRedirectRulesResponse
+        /// </returns>
+        public async Task<ListErrorPagesRedirectRulesResponse> ListErrorPagesRedirectRulesAsync(ListErrorPagesRedirectRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListErrorPagesRedirectRulesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the list of HTTP incoming request header modification configurations for a site.</para>
         /// </summary>
         /// 
@@ -44574,7 +45177,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all custom lists under the account along with their details. You can use query parameters to filter results and paginate to retrieve a specific set of lists.</para>
+        /// <para>Lists all custom lists and their details under the account. You can filter the results by using query parameters and paginate the results to retrieve a specific set of lists.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -44630,7 +45233,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all custom lists under the account along with their details. You can use query parameters to filter results and paginate to retrieve a specific set of lists.</para>
+        /// <para>Lists all custom lists and their details under the account. You can filter the results by using query parameters and paginate the results to retrieve a specific set of lists.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -44686,7 +45289,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all custom lists under the account along with their details. You can use query parameters to filter results and paginate to retrieve a specific set of lists.</para>
+        /// <para>Lists all custom lists and their details under the account. You can filter the results by using query parameters and paginate the results to retrieve a specific set of lists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44704,7 +45307,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all custom lists under the account along with their details. You can use query parameters to filter results and paginate to retrieve a specific set of lists.</para>
+        /// <para>Lists all custom lists and their details under the account. You can filter the results by using query parameters and paginate the results to retrieve a specific set of lists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45010,7 +45613,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of load balancers under a site and returns load balancing information. You can query by load balancer name. Paging is supported.</para>
+        /// <para>Queries the list of load balancing instances under a site and returns the load balancing information under the site. Supports querying by load balancing name and paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45048,7 +45651,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of load balancers under a site and returns load balancing information. You can query by load balancer name. Paging is supported.</para>
+        /// <para>Queries the list of load balancing instances under a site and returns the load balancing information under the site. Supports querying by load balancing name and paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45086,7 +45689,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of load balancers under a site and returns load balancing information. You can query by load balancer name. Paging is supported.</para>
+        /// <para>Queries the list of load balancing instances under a site and returns the load balancing information under the site. Supports querying by load balancing name and paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45104,7 +45707,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of load balancers under a site and returns load balancing information. You can query by load balancer name. Paging is supported.</para>
+        /// <para>Queries the list of load balancing instances under a site and returns the load balancing information under the site. Supports querying by load balancing name and paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45122,7 +45725,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all WAF managed rule groups under the current account. You can call this operation to retrieve a list of all rule groups and their summary information.</para>
+        /// <para>Lists all Web Application Firewall (WAF) managed rule groups within your account. You can use this operation to retrieve a list of all rule groups and their summary information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45168,7 +45771,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all WAF managed rule groups under the current account. You can call this operation to retrieve a list of all rule groups and their summary information.</para>
+        /// <para>Lists all Web Application Firewall (WAF) managed rule groups within your account. You can use this operation to retrieve a list of all rule groups and their summary information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45214,7 +45817,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all WAF managed rule groups under the current account. You can call this operation to retrieve a list of all rule groups and their summary information.</para>
+        /// <para>Lists all Web Application Firewall (WAF) managed rule groups within your account. You can use this operation to retrieve a list of all rule groups and their summary information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45232,7 +45835,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all WAF managed rule groups under the current account. You can call this operation to retrieve a list of all rule groups and their summary information.</para>
+        /// <para>Lists all Web Application Firewall (WAF) managed rule groups within your account. You can use this operation to retrieve a list of all rule groups and their summary information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45586,7 +46189,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all origin pools within a site. Supports pagination and searching by origin pool name (exact or fuzzy).</para>
+        /// <para>Queries all origin address pools under a site. Supports pagination and exact or fuzzy search by origin address pool name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45624,7 +46227,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all origin pools within a site. Supports pagination and searching by origin pool name (exact or fuzzy).</para>
+        /// <para>Queries all origin address pools under a site. Supports pagination and exact or fuzzy search by origin address pool name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45662,7 +46265,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all origin pools within a site. Supports pagination and searching by origin pool name (exact or fuzzy).</para>
+        /// <para>Queries all origin address pools under a site. Supports pagination and exact or fuzzy search by origin address pool name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45680,7 +46283,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all origin pools within a site. Supports pagination and searching by origin pool name (exact or fuzzy).</para>
+        /// <para>Queries all origin address pools under a site. Supports pagination and exact or fuzzy search by origin address pool name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45810,7 +46413,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all custom response pages created by the user. This operation supports pagination, allowing you to retrieve response pages by page number and page size.</para>
+        /// <para>Lists all custom response pages created by the user. This operation supports pagination and allows you to retrieve the response page list by page number and page size.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -45866,7 +46469,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all custom response pages created by the user. This operation supports pagination, allowing you to retrieve response pages by page number and page size.</para>
+        /// <para>Lists all custom response pages created by the user. This operation supports pagination and allows you to retrieve the response page list by page number and page size.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -45922,7 +46525,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all custom response pages created by the user. This operation supports pagination, allowing you to retrieve response pages by page number and page size.</para>
+        /// <para>Lists all custom response pages created by the user. This operation supports pagination and allows you to retrieve the response page list by page number and page size.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45940,7 +46543,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all custom response pages created by the user. This operation supports pagination, allowing you to retrieve response pages by page number and page size.</para>
+        /// <para>Lists all custom response pages created by the user. This operation supports pagination and allows you to retrieve the response page list by page number and page size.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45958,12 +46561,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries pay-as-you-go plan instances.</para>
+        /// <para>Queries the pay-as-you-go plan instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries pay-as-you-go plan instances under your account and supports filtering and sorting by various conditions.</para>
+        /// <para>Queries the pay-as-you-go plan instances under your account. You can filter and sort the instances based on various conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -46001,12 +46604,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries pay-as-you-go plan instances.</para>
+        /// <para>Queries the pay-as-you-go plan instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries pay-as-you-go plan instances under your account and supports filtering and sorting by various conditions.</para>
+        /// <para>Queries the pay-as-you-go plan instances under your account. You can filter and sort the instances based on various conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -46044,12 +46647,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries pay-as-you-go plan instances.</para>
+        /// <para>Queries the pay-as-you-go plan instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries pay-as-you-go plan instances under your account and supports filtering and sorting by various conditions.</para>
+        /// <para>Queries the pay-as-you-go plan instances under your account. You can filter and sort the instances based on various conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -46067,12 +46670,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries pay-as-you-go plan instances.</para>
+        /// <para>Queries the pay-as-you-go plan instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries pay-as-you-go plan instances under your account and supports filtering and sorting by various conditions.</para>
+        /// <para>Queries the pay-as-you-go plan instances under your account. You can filter and sort the instances based on various conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -46214,7 +46817,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the minimum plan edition required for a site plan quota to take effect, that is, the minimum plan edition to which the quota must be upgraded for use.</para>
+        /// <para>Queries the minimum required plan version for site plan quotas, indicating the lowest plan version to which you must upgrade to use a quota.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46252,7 +46855,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the minimum plan edition required for a site plan quota to take effect, that is, the minimum plan edition to which the quota must be upgraded for use.</para>
+        /// <para>Queries the minimum required plan version for site plan quotas, indicating the lowest plan version to which you must upgrade to use a quota.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46290,7 +46893,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the minimum plan edition required for a site plan quota to take effect, that is, the minimum plan edition to which the quota must be upgraded for use.</para>
+        /// <para>Queries the minimum required plan version for site plan quotas, indicating the lowest plan version to which you must upgrade to use a quota.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46308,7 +46911,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the minimum plan edition required for a site plan quota to take effect, that is, the minimum plan edition to which the quota must be upgraded for use.</para>
+        /// <para>Queries the minimum required plan version for site plan quotas, indicating the lowest plan version to which you must upgrade to use a quota.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46326,12 +46929,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of DNS records under a site, including record values, priorities, authentication configurations, etc. Supports filtering by conditions such as record name and record type.</para>
+        /// <para>Queries the DNS records of a site, including record values, priorities, and authentication configurations. Supports filtering by record name, record type, and other conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DNS records corresponding to edge containers, edge functions, and Layer 4 acceleration will not be returned by this API.</para>
+        /// <para>DNS records associated with edge containers, Edge Routines, and Layer 4 acceleration are not returned by this API operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -46369,12 +46972,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of DNS records under a site, including record values, priorities, authentication configurations, etc. Supports filtering by conditions such as record name and record type.</para>
+        /// <para>Queries the DNS records of a site, including record values, priorities, and authentication configurations. Supports filtering by record name, record type, and other conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DNS records corresponding to edge containers, edge functions, and Layer 4 acceleration will not be returned by this API.</para>
+        /// <para>DNS records associated with edge containers, Edge Routines, and Layer 4 acceleration are not returned by this API operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -46412,12 +47015,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of DNS records under a site, including record values, priorities, authentication configurations, etc. Supports filtering by conditions such as record name and record type.</para>
+        /// <para>Queries the DNS records of a site, including record values, priorities, and authentication configurations. Supports filtering by record name, record type, and other conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DNS records corresponding to edge containers, edge functions, and Layer 4 acceleration will not be returned by this API.</para>
+        /// <para>DNS records associated with edge containers, Edge Routines, and Layer 4 acceleration are not returned by this API operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -46435,12 +47038,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of DNS records under a site, including record values, priorities, authentication configurations, etc. Supports filtering by conditions such as record name and record type.</para>
+        /// <para>Queries the DNS records of a site, including record values, priorities, and authentication configurations. Supports filtering by record name, record type, and other conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DNS records corresponding to edge containers, edge functions, and Layer 4 acceleration will not be returned by this API.</para>
+        /// <para>DNS records associated with edge containers, Edge Routines, and Layer 4 acceleration are not returned by this API operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -47390,12 +47993,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The records associated with the function.</para>
+        /// <para>Queries the association records of an Edge Routine.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of related records for a specified edge routine. You can use pagination parameters to retrieve partial results, or use fuzzy keywords to filter specific record entries.</para>
+        /// <para>Queries the association records of a specified Edge Routine. You can set pagination parameters to retrieve partial results, or use fuzzy keywords to filter specific records.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -47449,12 +48052,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The records associated with the function.</para>
+        /// <para>Queries the association records of an Edge Routine.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of related records for a specified edge routine. You can use pagination parameters to retrieve partial results, or use fuzzy keywords to filter specific record entries.</para>
+        /// <para>Queries the association records of a specified Edge Routine. You can set pagination parameters to retrieve partial results, or use fuzzy keywords to filter specific records.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -47508,12 +48111,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The records associated with the function.</para>
+        /// <para>Queries the association records of an Edge Routine.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of related records for a specified edge routine. You can use pagination parameters to retrieve partial results, or use fuzzy keywords to filter specific record entries.</para>
+        /// <para>Queries the association records of a specified Edge Routine. You can set pagination parameters to retrieve partial results, or use fuzzy keywords to filter specific records.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -47531,12 +48134,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The records associated with the function.</para>
+        /// <para>Queries the association records of an Edge Routine.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of related records for a specified edge routine. You can use pagination parameters to retrieve partial results, or use fuzzy keywords to filter specific record entries.</para>
+        /// <para>Queries the association records of a specified Edge Routine. You can set pagination parameters to retrieve partial results, or use fuzzy keywords to filter specific records.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -47554,7 +48157,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the function route list of an Edge Routine.</para>
+        /// <para>Queries the function routes of an Edge Routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47604,7 +48207,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the function route list of an Edge Routine.</para>
+        /// <para>Queries the function routes of an Edge Routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47654,7 +48257,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the function route list of an Edge Routine.</para>
+        /// <para>Queries the function routes of an Edge Routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47672,7 +48275,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the function route list of an Edge Routine.</para>
+        /// <para>Queries the function routes of an Edge Routine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47914,7 +48517,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all log delivery tasks that are in progress.</para>
+        /// <para>Lists the delivery status of all ongoing real-time log tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47952,7 +48555,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all log delivery tasks that are in progress.</para>
+        /// <para>Lists the delivery status of all ongoing real-time log tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47990,7 +48593,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all log delivery tasks that are in progress.</para>
+        /// <para>Lists the delivery status of all ongoing real-time log tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48008,7 +48611,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all log delivery tasks that are in progress.</para>
+        /// <para>Lists the delivery status of all ongoing real-time log tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48138,7 +48741,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of back-to-origin client certificates at the site level.</para>
+        /// <para>Queries the site-level back-to-origin client certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48176,7 +48779,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of back-to-origin client certificates at the site level.</para>
+        /// <para>Queries the site-level back-to-origin client certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48214,7 +48817,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of back-to-origin client certificates at the site level.</para>
+        /// <para>Queries the site-level back-to-origin client certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48232,7 +48835,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of back-to-origin client certificates at the site level.</para>
+        /// <para>Queries the site-level back-to-origin client certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49402,7 +50005,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all delivery tasks in your Alibaba Cloud account by page. You can filter the delivery tasks by the category of the delivered real-time logs.</para>
+        /// <para>Lists all task delivery records for a user, and supports filtering by business type and paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49440,7 +50043,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all delivery tasks in your Alibaba Cloud account by page. You can filter the delivery tasks by the category of the delivered real-time logs.</para>
+        /// <para>Lists all task delivery records for a user, and supports filtering by business type and paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49478,7 +50081,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all delivery tasks in your Alibaba Cloud account by page. You can filter the delivery tasks by the category of the delivered real-time logs.</para>
+        /// <para>Lists all task delivery records for a user, and supports filtering by business type and paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49496,7 +50099,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all delivery tasks in your Alibaba Cloud account by page. You can filter the delivery tasks by the category of the delivered real-time logs.</para>
+        /// <para>Lists all task delivery records for a user, and supports filtering by business type and paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50274,7 +50877,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all managed rules under Web Application Firewall (WAF) or filters rules based on specific conditions. You can use this operation to query detailed information about WAF managed rules in a paginated manner.</para>
+        /// <para>Lists all managed rules under Web Application Firewall (WAF) or filters the rules based on specific conditions. You can use this operation to query the details of WAF managed rules in a paginated manner.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -50362,7 +50965,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all managed rules under Web Application Firewall (WAF) or filters rules based on specific conditions. You can use this operation to query detailed information about WAF managed rules in a paginated manner.</para>
+        /// <para>Lists all managed rules under Web Application Firewall (WAF) or filters the rules based on specific conditions. You can use this operation to query the details of WAF managed rules in a paginated manner.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -50450,7 +51053,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all managed rules under Web Application Firewall (WAF) or filters rules based on specific conditions. You can use this operation to query detailed information about WAF managed rules in a paginated manner.</para>
+        /// <para>Lists all managed rules under Web Application Firewall (WAF) or filters the rules based on specific conditions. You can use this operation to query the details of WAF managed rules in a paginated manner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50468,7 +51071,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all managed rules under Web Application Firewall (WAF) or filters rules based on specific conditions. You can use this operation to query detailed information about WAF managed rules in a paginated manner.</para>
+        /// <para>Lists all managed rules under Web Application Firewall (WAF) or filters the rules based on specific conditions. You can use this operation to query the details of WAF managed rules in a paginated manner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50614,7 +51217,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all rules or filters rules by specific conditions under Web Application Firewall (WAF). You can use this operation to query detailed information about WAF rules in a paged manner.</para>
+        /// <para>Lists all Web Application Firewall (WAF) rules or filters rules based on specific conditions. You can call this operation to query the details of WAF rules in a paginated manner.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -50686,7 +51289,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all rules or filters rules by specific conditions under Web Application Firewall (WAF). You can use this operation to query detailed information about WAF rules in a paged manner.</para>
+        /// <para>Lists all Web Application Firewall (WAF) rules or filters rules based on specific conditions. You can call this operation to query the details of WAF rules in a paginated manner.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -50758,7 +51361,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all rules or filters rules by specific conditions under Web Application Firewall (WAF). You can use this operation to query detailed information about WAF rules in a paged manner.</para>
+        /// <para>Lists all Web Application Firewall (WAF) rules or filters rules based on specific conditions. You can call this operation to query the details of WAF rules in a paginated manner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50776,7 +51379,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all rules or filters rules by specific conditions under Web Application Firewall (WAF). You can use this operation to query detailed information about WAF rules in a paged manner.</para>
+        /// <para>Lists all Web Application Firewall (WAF) rules or filters rules based on specific conditions. You can call this operation to query the details of WAF rules in a paginated manner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50794,7 +51397,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the rulesets under the current WAF execution phase. Queries basic information and status of rulesets with paging support.</para>
+        /// <para>Lists the rulesets in the current WAF phase and retrieves the basic information and status of the rulesets through paging in a paged query.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -50862,7 +51465,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the rulesets under the current WAF execution phase. Queries basic information and status of rulesets with paging support.</para>
+        /// <para>Lists the rulesets in the current WAF phase and retrieves the basic information and status of the rulesets through paging in a paged query.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -50930,7 +51533,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the rulesets under the current WAF execution phase. Queries basic information and status of rulesets with paging support.</para>
+        /// <para>Lists the rulesets in the current WAF phase and retrieves the basic information and status of the rulesets through paging in a paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50948,7 +51551,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the rulesets under the current WAF execution phase. Queries basic information and status of rulesets with paging support.</para>
+        /// <para>Lists the rulesets in the current WAF phase and retrieves the basic information and status of the rulesets through paging in a paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50966,7 +51569,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the template rules in WAF. These rules are typically predefined rulesets for quickly enabling protection against common attack types.</para>
+        /// <para>Lists the template rules in Web Application Firewall (WAF). These rules are typically predefined rule sets used to quickly enable protection against common attack types.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -51026,7 +51629,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the template rules in WAF. These rules are typically predefined rulesets for quickly enabling protection against common attack types.</para>
+        /// <para>Lists the template rules in Web Application Firewall (WAF). These rules are typically predefined rule sets used to quickly enable protection against common attack types.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -51086,7 +51689,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the template rules in WAF. These rules are typically predefined rulesets for quickly enabling protection against common attack types.</para>
+        /// <para>Lists the template rules in Web Application Firewall (WAF). These rules are typically predefined rule sets used to quickly enable protection against common attack types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51104,7 +51707,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the template rules in WAF. These rules are typically predefined rulesets for quickly enabling protection against common attack types.</para>
+        /// <para>Lists the template rules in Web Application Firewall (WAF). These rules are typically predefined rule sets used to quickly enable protection against common attack types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51258,12 +51861,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries waiting room events for a waiting room.</para>
+        /// <para>Queries the details of waiting room events.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Use this operation to query details of all waiting room events related to a waiting room in a website.</para>
+        /// <para>Queries the details of all waiting room events associated with a specified site ID and waiting room ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51301,12 +51904,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries waiting room events for a waiting room.</para>
+        /// <para>Queries the details of waiting room events.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Use this operation to query details of all waiting room events related to a waiting room in a website.</para>
+        /// <para>Queries the details of all waiting room events associated with a specified site ID and waiting room ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51344,12 +51947,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries waiting room events for a waiting room.</para>
+        /// <para>Queries the details of waiting room events.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Use this operation to query details of all waiting room events related to a waiting room in a website.</para>
+        /// <para>Queries the details of all waiting room events associated with a specified site ID and waiting room ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51367,12 +51970,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries waiting room events for a waiting room.</para>
+        /// <para>Queries the details of waiting room events.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Use this operation to query details of all waiting room events related to a waiting room in a website.</para>
+        /// <para>Queries the details of all waiting room events associated with a specified site ID and waiting room ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -58438,7 +59041,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cache Reserve Specification Change</para>
+        /// <para>Modifies the specifications of cache retention.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58492,7 +59095,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cache Reserve Specification Change</para>
+        /// <para>Modifies the specifications of cache retention.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58546,7 +59149,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cache Reserve Specification Change</para>
+        /// <para>Modifies the specifications of cache retention.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58564,7 +59167,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cache Reserve Specification Change</para>
+        /// <para>Modifies the specifications of cache retention.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61118,6 +61721,186 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Modifies the error code redirect configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateErrorPagesRedirectRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateErrorPagesRedirectRuleResponse
+        /// </returns>
+        public UpdateErrorPagesRedirectRuleResponse UpdateErrorPagesRedirectRuleWithOptions(UpdateErrorPagesRedirectRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateErrorPagesRedirectRuleShrinkRequest request = new UpdateErrorPagesRedirectRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ErrorPagesRedirect))
+            {
+                request.ErrorPagesRedirectShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ErrorPagesRedirect, "ErrorPagesRedirect", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErrorPagesRedirectShrink))
+            {
+                query["ErrorPagesRedirect"] = request.ErrorPagesRedirectShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
+            {
+                query["Rule"] = request.Rule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleEnable))
+            {
+                query["RuleEnable"] = request.RuleEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sequence))
+            {
+                query["Sequence"] = request.Sequence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateErrorPagesRedirectRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateErrorPagesRedirectRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the error code redirect configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateErrorPagesRedirectRuleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateErrorPagesRedirectRuleResponse
+        /// </returns>
+        public async Task<UpdateErrorPagesRedirectRuleResponse> UpdateErrorPagesRedirectRuleWithOptionsAsync(UpdateErrorPagesRedirectRuleRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateErrorPagesRedirectRuleShrinkRequest request = new UpdateErrorPagesRedirectRuleShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ErrorPagesRedirect))
+            {
+                request.ErrorPagesRedirectShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ErrorPagesRedirect, "ErrorPagesRedirect", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ErrorPagesRedirectShrink))
+            {
+                query["ErrorPagesRedirect"] = request.ErrorPagesRedirectShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rule))
+            {
+                query["Rule"] = request.Rule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleEnable))
+            {
+                query["RuleEnable"] = request.RuleEnable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sequence))
+            {
+                query["Sequence"] = request.Sequence;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateErrorPagesRedirectRule",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateErrorPagesRedirectRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the error code redirect configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateErrorPagesRedirectRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateErrorPagesRedirectRuleResponse
+        /// </returns>
+        public UpdateErrorPagesRedirectRuleResponse UpdateErrorPagesRedirectRule(UpdateErrorPagesRedirectRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateErrorPagesRedirectRuleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the error code redirect configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateErrorPagesRedirectRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateErrorPagesRedirectRuleResponse
+        /// </returns>
+        public async Task<UpdateErrorPagesRedirectRuleResponse> UpdateErrorPagesRedirectRuleAsync(UpdateErrorPagesRedirectRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateErrorPagesRedirectRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Modify HTTP incoming request header configuration.</para>
         /// </summary>
         /// 
@@ -61838,7 +62621,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the HTTPS Application Configuration.</para>
+        /// <para>Modifies the HTTPS application configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61952,7 +62735,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the HTTPS Application Configuration.</para>
+        /// <para>Modifies the HTTPS application configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -62066,7 +62849,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the HTTPS Application Configuration.</para>
+        /// <para>Modifies the HTTPS application configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -62084,7 +62867,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the HTTPS Application Configuration.</para>
+        /// <para>Modifies the HTTPS application configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -62818,12 +63601,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>To modify an existing load balancer, you must specify its load balancer ID.</para>
+        /// <para>Modifies the information of an existing load balancing instance. The load balancing instance ID is required to identify the load balancing instance to be modified.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation modifies multiple configurations for a load balancer, including its name, acceleration status, session persistence policy, and advanced traffic routing settings.&gt;Notice: Changes to certain parameters might affect the stability of existing services. Proceed with caution.</para>
+        /// <para>This operation allows you to modify multiple configurations of a load balancing instance, including but not limited to the load balancing instance name, acceleration status, session persistence policy, and various advanced settings related to traffic routing.&gt;Notice: Changes to certain parameters may affect the stability of existing services. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -62943,12 +63726,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>To modify an existing load balancer, you must specify its load balancer ID.</para>
+        /// <para>Modifies the information of an existing load balancing instance. The load balancing instance ID is required to identify the load balancing instance to be modified.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation modifies multiple configurations for a load balancer, including its name, acceleration status, session persistence policy, and advanced traffic routing settings.&gt;Notice: Changes to certain parameters might affect the stability of existing services. Proceed with caution.</para>
+        /// <para>This operation allows you to modify multiple configurations of a load balancing instance, including but not limited to the load balancing instance name, acceleration status, session persistence policy, and various advanced settings related to traffic routing.&gt;Notice: Changes to certain parameters may affect the stability of existing services. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -63068,12 +63851,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>To modify an existing load balancer, you must specify its load balancer ID.</para>
+        /// <para>Modifies the information of an existing load balancing instance. The load balancing instance ID is required to identify the load balancing instance to be modified.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation modifies multiple configurations for a load balancer, including its name, acceleration status, session persistence policy, and advanced traffic routing settings.&gt;Notice: Changes to certain parameters might affect the stability of existing services. Proceed with caution.</para>
+        /// <para>This operation allows you to modify multiple configurations of a load balancing instance, including but not limited to the load balancing instance name, acceleration status, session persistence policy, and various advanced settings related to traffic routing.&gt;Notice: Changes to certain parameters may affect the stability of existing services. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -63091,12 +63874,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>To modify an existing load balancer, you must specify its load balancer ID.</para>
+        /// <para>Modifies the information of an existing load balancing instance. The load balancing instance ID is required to identify the load balancing instance to be modified.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation modifies multiple configurations for a load balancer, including its name, acceleration status, session persistence policy, and advanced traffic routing settings.&gt;Notice: Changes to certain parameters might affect the stability of existing services. Proceed with caution.</para>
+        /// <para>This operation allows you to modify multiple configurations of a load balancing instance, including but not limited to the load balancing instance name, acceleration status, session persistence policy, and various advanced settings related to traffic routing.&gt;Notice: Changes to certain parameters may affect the stability of existing services. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -63114,7 +63897,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the site hosting transformation configuration.</para>
+        /// <para>Modifies the site hosting transformation configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -63172,7 +63955,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the site hosting transformation configuration.</para>
+        /// <para>Modifies the site hosting transformation configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -63230,7 +64013,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the site hosting transformation configuration.</para>
+        /// <para>Modifies the site hosting transformation configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -63248,7 +64031,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the site hosting transformation configuration.</para>
+        /// <para>Modifies the site hosting transformation configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -63622,7 +64405,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the origin protection feature to enable or disable origin fetch convergence.</para>
+        /// <para>Modifies the origin protection feature to enable or disable back-to-origin convergence.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -63672,7 +64455,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the origin protection feature to enable or disable origin fetch convergence.</para>
+        /// <para>Modifies the origin protection feature to enable or disable back-to-origin convergence.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -63722,7 +64505,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the origin protection feature to enable or disable origin fetch convergence.</para>
+        /// <para>Modifies the origin protection feature to enable or disable back-to-origin convergence.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -63740,7 +64523,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the origin protection feature to enable or disable origin fetch convergence.</para>
+        /// <para>Modifies the origin protection feature to enable or disable back-to-origin convergence.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -64626,19 +65409,19 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a DNS record. Various record types and origin authentication configurations are supported.</para>
+        /// <para>Updates a DNS record and supports multiple record types and origin server authentication configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation allows you to update a DNS record, including but not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI record types. You can modify the record content by specifying the corresponding record value, priority, flag, and other fields. For CNAME origin servers that require authentication, such as OSS and S3, this API operation also supports configuring origin authentication information to ensure secure access.</para>
-        /// <h3>Before you begin</h3>
+        /// <para>This API operation allows you to update DNS records, including but not limited to A, AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI types. You can modify the record content by passing the corresponding record value, priority, flag, and other fields. For CNAME origin servers that require authentication, such as OSS and S3, this API operation also supports configuring origin server authentication information to ensure secure access.</para>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>The record value (Value) must match the record type. For example, a CNAME record must correspond to a target domain name.</description></item>
-        /// <item><description>Certain record types, such as MX and SRV, require a priority (Priority) value.</description></item>
-        /// <item><description>CAA records require specific fields such as Flag and Tag.</description></item>
-        /// <item><description>When updating security records such as CERT and SSHFP, accurately set the Type, Algorithm, and other fields.</description></item>
-        /// <item><description>When using OSS or S3 as the origin server, configure the authentication details in AuthConf based on the permission settings.</description></item>
+        /// <item><description>The record value must match the record type. For example, a CNAME record must correspond to the target domain name.</description></item>
+        /// <item><description>You must specify the priority for certain record types, such as MX and SRV.</description></item>
+        /// <item><description>You must provide specific fields such as Flag and Tag for CAA records.</description></item>
+        /// <item><description>When updating security records such as CERT and SSHFP, you must accurately set fields such as Type and Algorithm.</description></item>
+        /// <item><description>When using OSS or S3 as the origin server, configure the authentication details in AuthConf based on the permissions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -64735,19 +65518,19 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a DNS record. Various record types and origin authentication configurations are supported.</para>
+        /// <para>Updates a DNS record and supports multiple record types and origin server authentication configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation allows you to update a DNS record, including but not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI record types. You can modify the record content by specifying the corresponding record value, priority, flag, and other fields. For CNAME origin servers that require authentication, such as OSS and S3, this API operation also supports configuring origin authentication information to ensure secure access.</para>
-        /// <h3>Before you begin</h3>
+        /// <para>This API operation allows you to update DNS records, including but not limited to A, AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI types. You can modify the record content by passing the corresponding record value, priority, flag, and other fields. For CNAME origin servers that require authentication, such as OSS and S3, this API operation also supports configuring origin server authentication information to ensure secure access.</para>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>The record value (Value) must match the record type. For example, a CNAME record must correspond to a target domain name.</description></item>
-        /// <item><description>Certain record types, such as MX and SRV, require a priority (Priority) value.</description></item>
-        /// <item><description>CAA records require specific fields such as Flag and Tag.</description></item>
-        /// <item><description>When updating security records such as CERT and SSHFP, accurately set the Type, Algorithm, and other fields.</description></item>
-        /// <item><description>When using OSS or S3 as the origin server, configure the authentication details in AuthConf based on the permission settings.</description></item>
+        /// <item><description>The record value must match the record type. For example, a CNAME record must correspond to the target domain name.</description></item>
+        /// <item><description>You must specify the priority for certain record types, such as MX and SRV.</description></item>
+        /// <item><description>You must provide specific fields such as Flag and Tag for CAA records.</description></item>
+        /// <item><description>When updating security records such as CERT and SSHFP, you must accurately set fields such as Type and Algorithm.</description></item>
+        /// <item><description>When using OSS or S3 as the origin server, configure the authentication details in AuthConf based on the permissions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -64844,19 +65627,19 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a DNS record. Various record types and origin authentication configurations are supported.</para>
+        /// <para>Updates a DNS record and supports multiple record types and origin server authentication configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation allows you to update a DNS record, including but not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI record types. You can modify the record content by specifying the corresponding record value, priority, flag, and other fields. For CNAME origin servers that require authentication, such as OSS and S3, this API operation also supports configuring origin authentication information to ensure secure access.</para>
-        /// <h3>Before you begin</h3>
+        /// <para>This API operation allows you to update DNS records, including but not limited to A, AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI types. You can modify the record content by passing the corresponding record value, priority, flag, and other fields. For CNAME origin servers that require authentication, such as OSS and S3, this API operation also supports configuring origin server authentication information to ensure secure access.</para>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>The record value (Value) must match the record type. For example, a CNAME record must correspond to a target domain name.</description></item>
-        /// <item><description>Certain record types, such as MX and SRV, require a priority (Priority) value.</description></item>
-        /// <item><description>CAA records require specific fields such as Flag and Tag.</description></item>
-        /// <item><description>When updating security records such as CERT and SSHFP, accurately set the Type, Algorithm, and other fields.</description></item>
-        /// <item><description>When using OSS or S3 as the origin server, configure the authentication details in AuthConf based on the permission settings.</description></item>
+        /// <item><description>The record value must match the record type. For example, a CNAME record must correspond to the target domain name.</description></item>
+        /// <item><description>You must specify the priority for certain record types, such as MX and SRV.</description></item>
+        /// <item><description>You must provide specific fields such as Flag and Tag for CAA records.</description></item>
+        /// <item><description>When updating security records such as CERT and SSHFP, you must accurately set fields such as Type and Algorithm.</description></item>
+        /// <item><description>When using OSS or S3 as the origin server, configure the authentication details in AuthConf based on the permissions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -64875,19 +65658,19 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a DNS record. Various record types and origin authentication configurations are supported.</para>
+        /// <para>Updates a DNS record and supports multiple record types and origin server authentication configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation allows you to update a DNS record, including but not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI record types. You can modify the record content by specifying the corresponding record value, priority, flag, and other fields. For CNAME origin servers that require authentication, such as OSS and S3, this API operation also supports configuring origin authentication information to ensure secure access.</para>
-        /// <h3>Before you begin</h3>
+        /// <para>This API operation allows you to update DNS records, including but not limited to A, AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI types. You can modify the record content by passing the corresponding record value, priority, flag, and other fields. For CNAME origin servers that require authentication, such as OSS and S3, this API operation also supports configuring origin server authentication information to ensure secure access.</para>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>The record value (Value) must match the record type. For example, a CNAME record must correspond to a target domain name.</description></item>
-        /// <item><description>Certain record types, such as MX and SRV, require a priority (Priority) value.</description></item>
-        /// <item><description>CAA records require specific fields such as Flag and Tag.</description></item>
-        /// <item><description>When updating security records such as CERT and SSHFP, accurately set the Type, Algorithm, and other fields.</description></item>
-        /// <item><description>When using OSS or S3 as the origin server, configure the authentication details in AuthConf based on the permission settings.</description></item>
+        /// <item><description>The record value must match the record type. For example, a CNAME record must correspond to the target domain name.</description></item>
+        /// <item><description>You must specify the priority for certain record types, such as MX and SRV.</description></item>
+        /// <item><description>You must provide specific fields such as Flag and Tag for CAA records.</description></item>
+        /// <item><description>When updating security records such as CERT and SSHFP, you must accurately set fields such as Type and Algorithm.</description></item>
+        /// <item><description>When using OSS or S3 as the origin server, configure the authentication details in AuthConf based on the permissions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -66754,7 +67537,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the status of a real-time log delivery task.</para>
+        /// <para>Modifies the delivery status of a real-time log task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -66792,7 +67575,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the status of a real-time log delivery task.</para>
+        /// <para>Modifies the delivery status of a real-time log task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -66830,7 +67613,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the status of a real-time log delivery task.</para>
+        /// <para>Modifies the delivery status of a real-time log task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -66848,7 +67631,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the status of a real-time log delivery task.</para>
+        /// <para>Modifies the delivery status of a real-time log task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -66866,7 +67649,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the plan instance associated with a site.</para>
+        /// <para>Replaces the plan instance for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -66916,7 +67699,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the plan instance associated with a site.</para>
+        /// <para>Replaces the plan instance for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -66966,7 +67749,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the plan instance associated with a site.</para>
+        /// <para>Replaces the plan instance for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -66984,7 +67767,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the plan instance associated with a site.</para>
+        /// <para>Replaces the plan instance for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -67278,12 +68061,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the custom nameserver (NS) names for a single site.</para>
+        /// <para>Modifies the custom NS names for a single site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The site plan must be Enterprise Edition or higher to use the custom NS feature.</para>
+        /// <para>The custom NS feature is available only for sites on the Enterprise edition plan.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -67329,12 +68112,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the custom nameserver (NS) names for a single site.</para>
+        /// <para>Modifies the custom NS names for a single site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The site plan must be Enterprise Edition or higher to use the custom NS feature.</para>
+        /// <para>The custom NS feature is available only for sites on the Enterprise edition plan.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -67380,12 +68163,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the custom nameserver (NS) names for a single site.</para>
+        /// <para>Modifies the custom NS names for a single site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The site plan must be Enterprise Edition or higher to use the custom NS feature.</para>
+        /// <para>The custom NS feature is available only for sites on the Enterprise edition plan.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -67403,12 +68186,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the custom nameserver (NS) names for a single site.</para>
+        /// <para>Modifies the custom NS names for a single site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The site plan must be Enterprise Edition or higher to use the custom NS feature.</para>
+        /// <para>The custom NS feature is available only for sites on the Enterprise edition plan.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -67426,7 +68209,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a slider CAPTCHA page.</para>
+        /// <para>Updates the slider CAPTCHA page.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -67498,7 +68281,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a slider CAPTCHA page.</para>
+        /// <para>Updates the slider CAPTCHA page.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -67570,7 +68353,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a slider CAPTCHA page.</para>
+        /// <para>Updates the slider CAPTCHA page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -67588,7 +68371,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a slider CAPTCHA page.</para>
+        /// <para>Updates the slider CAPTCHA page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -67734,13 +68517,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the forwarding rule configurations of a Layer 4 application under a specified site.</para>
+        /// <para>Modifies the configurations such as forwarding rules for a Layer 4 application under a specified site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If ListTransportLayerApplications returns an empty Layer 4 acceleration application list, use CreateTransportLayerApplication to create a Layer 4 acceleration application, and then use this API to modify the configurations of the Layer 4 acceleration application.
-        /// When creating a Layer 4 acceleration application, the selected site must be an activated site. After creating a site, call the VerifySite API to verify it. A site that passes verification is automatically activated, indicated by the response parameter Passed=true.</para>
+        /// <para>If ListTransportLayerApplications returns an empty list of Layer 4 accelerated applications, you must use CreateTransportLayerApplication to create a Layer 4 accelerated application, and then use this API operation to modify multiple configurations of the application.
+        /// When you create a Layer 4 accelerated application, the selected site must be activated. After you create a site, call the VerifySite API operation to verify the site. A site that passes the verification is automatically activated, which means the response parameter Passed is set to true.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -67816,13 +68599,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the forwarding rule configurations of a Layer 4 application under a specified site.</para>
+        /// <para>Modifies the configurations such as forwarding rules for a Layer 4 application under a specified site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If ListTransportLayerApplications returns an empty Layer 4 acceleration application list, use CreateTransportLayerApplication to create a Layer 4 acceleration application, and then use this API to modify the configurations of the Layer 4 acceleration application.
-        /// When creating a Layer 4 acceleration application, the selected site must be an activated site. After creating a site, call the VerifySite API to verify it. A site that passes verification is automatically activated, indicated by the response parameter Passed=true.</para>
+        /// <para>If ListTransportLayerApplications returns an empty list of Layer 4 accelerated applications, you must use CreateTransportLayerApplication to create a Layer 4 accelerated application, and then use this API operation to modify multiple configurations of the application.
+        /// When you create a Layer 4 accelerated application, the selected site must be activated. After you create a site, call the VerifySite API operation to verify the site. A site that passes the verification is automatically activated, which means the response parameter Passed is set to true.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -67898,13 +68681,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the forwarding rule configurations of a Layer 4 application under a specified site.</para>
+        /// <para>Modifies the configurations such as forwarding rules for a Layer 4 application under a specified site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If ListTransportLayerApplications returns an empty Layer 4 acceleration application list, use CreateTransportLayerApplication to create a Layer 4 acceleration application, and then use this API to modify the configurations of the Layer 4 acceleration application.
-        /// When creating a Layer 4 acceleration application, the selected site must be an activated site. After creating a site, call the VerifySite API to verify it. A site that passes verification is automatically activated, indicated by the response parameter Passed=true.</para>
+        /// <para>If ListTransportLayerApplications returns an empty list of Layer 4 accelerated applications, you must use CreateTransportLayerApplication to create a Layer 4 accelerated application, and then use this API operation to modify multiple configurations of the application.
+        /// When you create a Layer 4 accelerated application, the selected site must be activated. After you create a site, call the VerifySite API operation to verify the site. A site that passes the verification is automatically activated, which means the response parameter Passed is set to true.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -67922,13 +68705,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the forwarding rule configurations of a Layer 4 application under a specified site.</para>
+        /// <para>Modifies the configurations such as forwarding rules for a Layer 4 application under a specified site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If ListTransportLayerApplications returns an empty Layer 4 acceleration application list, use CreateTransportLayerApplication to create a Layer 4 acceleration application, and then use this API to modify the configurations of the Layer 4 acceleration application.
-        /// When creating a Layer 4 acceleration application, the selected site must be an activated site. After creating a site, call the VerifySite API to verify it. A site that passes verification is automatically activated, indicated by the response parameter Passed=true.</para>
+        /// <para>If ListTransportLayerApplications returns an empty list of Layer 4 accelerated applications, you must use CreateTransportLayerApplication to create a Layer 4 accelerated application, and then use this API operation to modify multiple configurations of the application.
+        /// When you create a Layer 4 accelerated application, the selected site must be activated. After you create a site, call the VerifySite API operation to verify the site. A site that passes the verification is automatically activated, which means the response parameter Passed is set to true.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -68082,12 +68865,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the delivery task configuration of a user, allowing you to set the task name, select fields, specify the real-time log type, and adjust the discard rate.</para>
+        /// <para>Modifies the task delivery configuration for a user, allowing you to set the task name, select fields, specify the real-time log type, and adjust the discard rate.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, you must have successfully created a task with the target TaskName by using CreateUserDeliveryTask. Only then can you use this operation to update the delivery task configuration.</para>
+        /// <para>Before calling this operation, you must create a task with the specified TaskName by calling CreateUserDeliveryTask. You can then use this operation to update the delivery task configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -68149,12 +68932,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the delivery task configuration of a user, allowing you to set the task name, select fields, specify the real-time log type, and adjust the discard rate.</para>
+        /// <para>Modifies the task delivery configuration for a user, allowing you to set the task name, select fields, specify the real-time log type, and adjust the discard rate.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, you must have successfully created a task with the target TaskName by using CreateUserDeliveryTask. Only then can you use this operation to update the delivery task configuration.</para>
+        /// <para>Before calling this operation, you must create a task with the specified TaskName by calling CreateUserDeliveryTask. You can then use this operation to update the delivery task configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -68216,12 +68999,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the delivery task configuration of a user, allowing you to set the task name, select fields, specify the real-time log type, and adjust the discard rate.</para>
+        /// <para>Modifies the task delivery configuration for a user, allowing you to set the task name, select fields, specify the real-time log type, and adjust the discard rate.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, you must have successfully created a task with the target TaskName by using CreateUserDeliveryTask. Only then can you use this operation to update the delivery task configuration.</para>
+        /// <para>Before calling this operation, you must create a task with the specified TaskName by calling CreateUserDeliveryTask. You can then use this operation to update the delivery task configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -68239,12 +69022,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the delivery task configuration of a user, allowing you to set the task name, select fields, specify the real-time log type, and adjust the discard rate.</para>
+        /// <para>Modifies the task delivery configuration for a user, allowing you to set the task name, select fields, specify the real-time log type, and adjust the discard rate.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, you must have successfully created a task with the target TaskName by using CreateUserDeliveryTask. Only then can you use this operation to update the delivery task configuration.</para>
+        /// <para>Before calling this operation, you must create a task with the specified TaskName by calling CreateUserDeliveryTask. You can then use this operation to update the delivery task configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -68262,13 +69045,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the status of a delivery task in your Alibaba Cloud account.</para>
+        /// <para>Enables or disables a user task delivery.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a></h2>
-        /// <para>Use this operation to enable or disable a delivery task by using TaskName and Method. The response includes the most recent status and operation result details of the task.</para>
+        /// <para>This operation enables or disables the data delivery feature of a task based on the task name and method. The method must be specified as online or offline. The response returns the latest status of the task and the operation result details.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -68306,13 +69088,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the status of a delivery task in your Alibaba Cloud account.</para>
+        /// <para>Enables or disables a user task delivery.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a></h2>
-        /// <para>Use this operation to enable or disable a delivery task by using TaskName and Method. The response includes the most recent status and operation result details of the task.</para>
+        /// <para>This operation enables or disables the data delivery feature of a task based on the task name and method. The method must be specified as online or offline. The response returns the latest status of the task and the operation result details.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -68350,13 +69131,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the status of a delivery task in your Alibaba Cloud account.</para>
+        /// <para>Enables or disables a user task delivery.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a></h2>
-        /// <para>Use this operation to enable or disable a delivery task by using TaskName and Method. The response includes the most recent status and operation result details of the task.</para>
+        /// <para>This operation enables or disables the data delivery feature of a task based on the task name and method. The method must be specified as online or offline. The response returns the latest status of the task and the operation result details.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -68374,13 +69154,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the status of a delivery task in your Alibaba Cloud account.</para>
+        /// <para>Enables or disables a user task delivery.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a></h2>
-        /// <para>Use this operation to enable or disable a delivery task by using TaskName and Method. The response includes the most recent status and operation result details of the task.</para>
+        /// <para>This operation enables or disables the data delivery feature of a task based on the task name and method. The method must be specified as online or offline. The response returns the latest status of the task and the operation result details.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -68398,16 +69177,16 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the WAF ruleset configuration for a specified instance, including its position, name, and other properties.</para>
+        /// <para>Modifies the configuration of a WAF rule set for a specified instance, including the position and name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation updates an existing WAF ruleset. You can modify the position, name, description, status, and expression of the ruleset.</description></item>
-        /// <item><description>Include only the parameters that you want to modify. Omit parameters that you do not want to change.</description></item>
-        /// <item><description>Note: Before you call this operation, ensure that the <c>InstanceId</c> and <c>Id</c> values are correct. Otherwise, the request may fail.</description></item>
+        /// <item><description>This operation allows you to update an existing WAF rule set. You can modify the position, name, description, status, and expression of the rule set.</description></item>
+        /// <item><description>Specify only the parameters that you want to modify. You do not need to pass the key of a parameter that remains unchanged.</description></item>
+        /// <item><description>Note: Make sure that you have obtained the correct <c>InstanceId</c> and <c>Id</c> values before you call this operation. Otherwise, the request may fail.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -68494,16 +69273,16 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the WAF ruleset configuration for a specified instance, including its position, name, and other properties.</para>
+        /// <para>Modifies the configuration of a WAF rule set for a specified instance, including the position and name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation updates an existing WAF ruleset. You can modify the position, name, description, status, and expression of the ruleset.</description></item>
-        /// <item><description>Include only the parameters that you want to modify. Omit parameters that you do not want to change.</description></item>
-        /// <item><description>Note: Before you call this operation, ensure that the <c>InstanceId</c> and <c>Id</c> values are correct. Otherwise, the request may fail.</description></item>
+        /// <item><description>This operation allows you to update an existing WAF rule set. You can modify the position, name, description, status, and expression of the rule set.</description></item>
+        /// <item><description>Specify only the parameters that you want to modify. You do not need to pass the key of a parameter that remains unchanged.</description></item>
+        /// <item><description>Note: Make sure that you have obtained the correct <c>InstanceId</c> and <c>Id</c> values before you call this operation. Otherwise, the request may fail.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -68590,16 +69369,16 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the WAF ruleset configuration for a specified instance, including its position, name, and other properties.</para>
+        /// <para>Modifies the configuration of a WAF rule set for a specified instance, including the position and name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation updates an existing WAF ruleset. You can modify the position, name, description, status, and expression of the ruleset.</description></item>
-        /// <item><description>Include only the parameters that you want to modify. Omit parameters that you do not want to change.</description></item>
-        /// <item><description>Note: Before you call this operation, ensure that the <c>InstanceId</c> and <c>Id</c> values are correct. Otherwise, the request may fail.</description></item>
+        /// <item><description>This operation allows you to update an existing WAF rule set. You can modify the position, name, description, status, and expression of the rule set.</description></item>
+        /// <item><description>Specify only the parameters that you want to modify. You do not need to pass the key of a parameter that remains unchanged.</description></item>
+        /// <item><description>Note: Make sure that you have obtained the correct <c>InstanceId</c> and <c>Id</c> values before you call this operation. Otherwise, the request may fail.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -68618,16 +69397,16 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the WAF ruleset configuration for a specified instance, including its position, name, and other properties.</para>
+        /// <para>Modifies the configuration of a WAF rule set for a specified instance, including the position and name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation updates an existing WAF ruleset. You can modify the position, name, description, status, and expression of the ruleset.</description></item>
-        /// <item><description>Include only the parameters that you want to modify. Omit parameters that you do not want to change.</description></item>
-        /// <item><description>Note: Before you call this operation, ensure that the <c>InstanceId</c> and <c>Id</c> values are correct. Otherwise, the request may fail.</description></item>
+        /// <item><description>This operation allows you to update an existing WAF rule set. You can modify the position, name, description, status, and expression of the rule set.</description></item>
+        /// <item><description>Specify only the parameters that you want to modify. You do not need to pass the key of a parameter that remains unchanged.</description></item>
+        /// <item><description>Note: Make sure that you have obtained the correct <c>InstanceId</c> and <c>Id</c> values before you call this operation. Otherwise, the request may fail.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -69166,7 +69945,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a WAF ruleset based on its ID.</para>
+        /// <para>Updates a WAF rule set based on the ID of the rule set.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -69222,7 +70001,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a WAF ruleset based on its ID.</para>
+        /// <para>Updates a WAF rule set based on the ID of the rule set.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -69278,7 +70057,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a WAF ruleset based on its ID.</para>
+        /// <para>Updates a WAF rule set based on the ID of the rule set.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -69296,7 +70075,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a WAF ruleset based on its ID.</para>
+        /// <para>Updates a WAF rule set based on the ID of the rule set.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListRoutineRelatedRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The list of records associated with the edge function.</para>
+        /// <para>The list of association records for the Edge Routine.</para>
         /// </summary>
         [NameInMap("RelatedRecords")]
         [Validation(Required=false)]
         public List<ListRoutineRelatedRecordsResponseBodyRelatedRecords> RelatedRecords { get; set; }
         public class ListRoutineRelatedRecordsResponseBodyRelatedRecords : TeaModel {
             /// <summary>
-            /// <para>The record ID of the domain name.</para>
+            /// <para>The ID of the record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>509348423011904</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RecordName { get; set; }
 
             /// <summary>
-            /// <para>The website ID.</para>
+            /// <para>The ID of the site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>54362329990032</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? SiteId { get; set; }
 
             /// <summary>
-            /// <para>The website name.</para>
+            /// <para>The name of the site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15C66C7B-671A-4297-9187-2C4477247A74</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListUserDeliveryTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number returned.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The delivery tasks.</para>
+        /// <para>The list of tasks.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public List<ListUserDeliveryTasksResponseBodyTasks> Tasks { get; set; }
         public class ListUserDeliveryTasksResponseBodyTasks : TeaModel {
             /// <summary>
-            /// <para>The log category.</para>
+            /// <para>The business type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dcdn_log_er</para>
@@ -58,10 +58,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
             /// <summary>
             /// <para>The data center. Valid values:</para>
-            /// <ol>
-            /// <item><description>cn: the Chinese mainland.</description></item>
-            /// <item><description>sg: outside the Chinese mainland.</description></item>
-            /// </ol>
+            /// <list type="bullet">
+            /// <item><description><b>cn</b>: The Chinese mainland.</description></item>
+            /// <item><description><b>sg</b>: Global (excluding the Chinese mainland).</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>cn</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DataCenter { get; set; }
 
             /// <summary>
-            /// <para>The delivery destination.</para>
+            /// <para>The delivery type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DeliveryType { get; set; }
 
             /// <summary>
-            /// <para>The status of the delivery task.</para>
+            /// <para>The status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>online</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The name of the delivery task.</para>
+            /// <para>The name of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testoss11</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The total number of delivery tasks.</para>
+        /// <para>The total number of tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>68</para>

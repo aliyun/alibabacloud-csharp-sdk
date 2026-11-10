@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? IsShared { get; set; }
 
         /// <summary>
-        /// <para>The page number Settings for a paging query. Default value: <b>1</b>. Valid values: <b>1</b> to <b>100000</b>.</para>
+        /// <para>The page number Settings for paging in a paged query. Default value: <b>1</b>. Valid values: <b>1</b> to <b>100000</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paging query. Valid values: 1 to 500.</para>
+        /// <para>The number of entries per page for paging in a paged query. Valid values: 1 to 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string PlanType { get; set; }
 
         /// <summary>
-        /// <para>Queries plan instances whose remaining validity period is less than or equal to the specified number of days. The value must be a positive integer. Unit: days.</para>
+        /// <para>Queries plan instances whose remaining validity period is within the specified number of days. The value must be a positive integer. Unit: days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -96,10 +96,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ResourceOwner { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the results. By default, the results are sorted by creation time. Valid values:</para>
+        /// <para>The sort field. By default, the instances are sorted by creation time. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CreateTime</b>: Sorts by creation time.</description></item>
-        /// <item><description><b>ExpireTime</b>: Sorts by expiration time.</description></item>
+        /// <item><description><b>CreateTime</b>: The creation time.</description></item>
+        /// <item><description><b>ExpireTime</b>: The expiration time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The sort order. By default, the results are sorted in descending order. Valid values:</para>
+        /// <para>The sort order. By default, the instances are sorted in descending order. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>asc</b>: Ascending order.</description></item>
         /// <item><description><b>desc</b>: Descending order.</description></item>
@@ -124,12 +124,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SortOrder { get; set; }
 
         /// <summary>
-        /// <para>The instance status. Valid values:</para>
+        /// <para>The instance status of the plan. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>online</b>: The instance is in normal service status.</description></item>
-        /// <item><description><b>offline</b>: The instance has expired but is not overdue, and is in an inactive state.</description></item>
-        /// <item><description><b>disable</b>: The instance is released.</description></item>
-        /// <item><description><b>overdue</b>: The instance has an overdue payment.</description></item>
+        /// <item><description><b>online</b>: The normal service status.</description></item>
+        /// <item><description><b>offline</b>: The instance has expired but not overdue, and is in an inactive state.</description></item>
+        /// <item><description><b>disable</b>: The released status.</description></item>
+        /// <item><description><b>overdue</b>: The overdue payment status.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -145,12 +145,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The subscription type of the plan. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>entranceplan: Free Edition (Chinese mainland)</description></item>
-        /// <item><description>entranceplan_intl: Free Edition (International)</description></item>
-        /// <item><description>basicplan: Basic Edition</description></item>
-        /// <item><description>standardplan: Standard Edition</description></item>
-        /// <item><description>advancedplan: Advanced Edition</description></item>
-        /// <item><description>enterpriseplan: Enterprise Edition</description></item>
+        /// <item><description>entranceplan: Free Edition (Chinese mainland).</description></item>
+        /// <item><description>entranceplan_intl: Free Edition (International).</description></item>
+        /// <item><description>basicplan: Basic Edition.</description></item>
+        /// <item><description>standardplan: Standard Edition.</description></item>
+        /// <item><description>advancedplan: Advanced Edition.</description></item>
+        /// <item><description>enterpriseplan: Enterprise Edition.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

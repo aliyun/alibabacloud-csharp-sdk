@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateEnvironmentRequest : TeaModel {
         /// <summary>
-        /// <para>The environment name.</para>
+        /// <para>The name of the environment.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>默认环境</para>
+        /// <para>Default environment</para>
         /// </summary>
         [NameInMap("EnvironmentName")]
         [Validation(Required=false)]
         public string EnvironmentName { get; set; }
 
         /// <summary>
-        /// <para>The new environment name.</para>
+        /// <para>The new name of the environment.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>环境A</para>
+        /// <para>Environment A</para>
         /// </summary>
         [NameInMap("NewName")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</para>
+        /// <para>The ID of the site. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The new site version number. Only the environment with the highest priority can be modified.</para>
+        /// <para>The new version number of the site. You can modify this parameter only for the environment with the highest priority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

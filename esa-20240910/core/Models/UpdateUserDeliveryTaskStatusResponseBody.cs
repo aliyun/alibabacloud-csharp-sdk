@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the delivery task.</para>
+        /// <para>The task status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>online</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The name of the delivery task.</para>
+        /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_project</para>

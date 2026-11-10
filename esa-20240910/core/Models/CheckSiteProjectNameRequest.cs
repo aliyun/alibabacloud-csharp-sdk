@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CheckSiteProjectNameRequest : TeaModel {
         /// <summary>
-        /// <para>The real-time log project name.</para>
+        /// <para>The name of the real-time log project.</para>
         /// <remarks>
-        /// <para>Allowed character set (hyphens only, no underscores), length range, and naming rule examples (such as \&quot;ali-dcdn-log-56\&quot;)</para>
+        /// <para>Allowed character set (hyphens only, no underscores), length limits, and naming convention examples (such as \&quot;ali-dcdn-log-56\&quot;).</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The site ID. You can call <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> to obtain the site ID.</para>
+        /// <para>The site ID. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12312312213212</para>

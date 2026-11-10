@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetHttpIncomingRequestHeaderModificationRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the configuration.</para>
+        /// <para>The configuration ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>402411533580288</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>The type of the configuration. Valid values:</para>
+        /// <para>The configuration type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>global: the global configuration.</description></item>
-        /// <item><description>rule: the rule configuration.</description></item>
+        /// <item><description>global: global configuration</description></item>
+        /// <item><description>rule: rule configuration</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ConfigType { get; set; }
 
         /// <summary>
-        /// <para>The configurations for modifying request headers. You can add, delete, or edit a request header.</para>
+        /// <para>The request header modification settings. Add, delete, and modify operations are supported.</para>
         /// </summary>
         [NameInMap("RequestHeaderModification")]
         [Validation(Required=false)]
@@ -51,11 +51,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The action. Valid values:</para>
+            /// <para>The operation type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>add: adds a response header.</description></item>
-            /// <item><description>del: deletes a response header.</description></item>
-            /// <item><description>modify: modifies a response header.</description></item>
+            /// <item><description>add: add</description></item>
+            /// <item><description>del: delete</description></item>
+            /// <item><description>modify: modify</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -68,8 +68,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The value type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>static</description></item>
-            /// <item><description>dynamic</description></item>
+            /// <item><description>static: static pattern</description></item>
+            /// <item><description>dynamic: dynamic schema</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -102,10 +102,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The content of the rule. A conditional expression is used to match a user request. You do not need to set this parameter when you add global configuration. Use cases:</para>
+        /// <para>The rule content, which uses a conditional expression to match user requests. You do not need to set this parameter when adding a global configuration. Two scenarios are supported:</para>
         /// <list type="bullet">
-        /// <item><description>true: Match all incoming requests.</description></item>
-        /// <item><description>Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;): Match the specified request.</description></item>
+        /// <item><description>Match all incoming requests: Set the value to true.</description></item>
+        /// <item><description>Match specific requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -116,10 +116,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the rule. Valid values: You do not need to set this parameter when you add global configuration. Valid values:</para>
+        /// <para>The rule switch. You do not need to set this parameter when adding a global configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on</description></item>
-        /// <item><description>off</description></item>
+        /// <item><description>on: enabled</description></item>
+        /// <item><description>off: disabled</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>The rule name. You do not need to set this parameter when you add global configuration.</para>
+        /// <para>The rule name. You do not need to set this parameter when adding a global configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The order in which the rule is executed. A smaller value gives priority to the rule.</para>
+        /// <para>The execution sequence of the rule. A smaller value indicates a higher priority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Sequence { get; set; }
 
         /// <summary>
-        /// <para>The version number of the website configurations. You can use this parameter to specify a version of your website to apply the feature settings. By default, version 0 is used.</para>
+        /// <para>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. The default value is version 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx有限公司</para>
+        /// <para>xxxx Co., Ltd</para>
         /// </summary>
         [NameInMap("Company")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>经理</para>
+        /// <para>Manager</para>
         /// </summary>
         [NameInMap("Position")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>Additional remarks.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>请尽快联系我们</para>
+        /// <para>Please contact us as soon as possible</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>张三</para>
+        /// <para>Zhang San</para>
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]

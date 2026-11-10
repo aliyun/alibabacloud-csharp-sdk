@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListCiphersResponseBody : TeaModel {
         /// <summary>
-        /// <para>Name of the cipher suite group.</para>
+        /// <para>The name of the cipher suite group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>all</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CiphersGroup { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned result.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<string> Result { get; set; }
 
         /// <summary>
-        /// <para>Total number of cipher suites.</para>
+        /// <para>The total number of cipher suites.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16</para>

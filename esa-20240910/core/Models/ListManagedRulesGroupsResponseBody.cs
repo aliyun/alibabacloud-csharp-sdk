@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records after filtering.</para>
+        /// <para>The total number of filtered records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

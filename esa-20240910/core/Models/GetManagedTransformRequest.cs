@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetManagedTransformRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the site. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The site version. If version management is enabled for the site, use this parameter to specify the version whose configuration you want to retrieve. The default is 0.</para>
+        /// <para>The site version number. For sites with version management enabled, you can use this parameter to specify the site version to which the configuration applies. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

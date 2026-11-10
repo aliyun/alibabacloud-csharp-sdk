@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<ListPostpaidRatePlanInstancesResponseBodyInstanceInfo> InstanceInfo { get; set; }
         public class ListPostpaidRatePlanInstancesResponseBodyInstanceInfo : TeaModel {
             /// <summary>
-            /// <para>The Billable methods. Valid values:</para>
+            /// <para>The billing method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>dps_month95: monthly 95th percentile billing.</description></item>
+            /// <item><description>dps_month95: Monthly 95th percentile billing.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The billing mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>POSTPAY: pay-as-you-go.</description></item>
+            /// <item><description>POSTPAY: Pay-as-you-go.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,9 +45,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The acceleration regions for sites that can be bound to the instance. Multiple values are separated by commas (,). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>domestic: the Chinese mainland.</description></item>
-            /// <item><description>overseas: global (excluding the Chinese mainland).</description></item>
-            /// <item><description>global: global (including the Chinese mainland).</description></item>
+            /// <item><description>domestic: The Chinese mainland.</description></item>
+            /// <item><description>overseas: Global (excluding the Chinese mainland).</description></item>
+            /// <item><description>global: Global (including the Chinese mainland).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Coverages { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was created. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+            /// <para>The time when the instance was created. The time is displayed in UTC and formatted as yyyy-MM-ddTHH:mm:ssZ in accordance with the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-19T11:15:20Z</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The scheduled time for upgrade or downgrade. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+            /// <para>The scheduled time for the specification change. The time is displayed in UTC and formatted as yyyy-MM-ddTHH:mm:ssZ in accordance with the ISO 8601 standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-19T11:15:20Z</para>
@@ -87,6 +87,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1234567890123456</para>
+            /// </summary>
             [NameInMap("OwnerId")]
             [Validation(Required=false)]
             public string OwnerId { get; set; }
@@ -102,7 +106,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PlanName { get; set; }
 
             /// <summary>
-            /// <para>The plan name in Chinese.</para>
+            /// <para>The Chinese name of the plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-plan</para>
@@ -112,10 +116,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PlanNameCn { get; set; }
 
             /// <summary>
-            /// <para>The plan type corresponding to the plan instance. Valid values:</para>
+            /// <para>The plan type of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>normal: fixed plan.</description></item>
-            /// <item><description>enterprise: enterprise plan.</description></item>
+            /// <item><description>normal: Standard plan.</description></item>
+            /// <item><description>enterprise: Enterprise plan.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,6 +129,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string PlanType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>sharing</para>
+            /// </summary>
             [NameInMap("ShareType")]
             [Validation(Required=false)]
             public string ShareType { get; set; }
@@ -172,7 +180,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 /// <item><description>pending: The site is pending configuration.</description></item>
                 /// <item><description>active: The site is activated.</description></item>
                 /// <item><description>offline: The site is offline.</description></item>
-                /// <item><description>moved: The site has been replaced.</description></item>
+                /// <item><description>moved: The site is replaced.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -227,7 +235,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

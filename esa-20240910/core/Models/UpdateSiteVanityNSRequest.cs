@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The list of custom NS names. You can specify 2 to 5 custom NS names, separated by commas (,).</para>
+        /// <para>The list of custom NS names. You can specify 2 to 5 custom NS names. Separate multiple names with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ns1.example.com,ns2.example.com</para>

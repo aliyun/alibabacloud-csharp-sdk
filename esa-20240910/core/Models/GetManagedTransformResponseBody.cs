@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetManagedTransformResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether a header that contains the visitor\&quot;s geolocation is added. Valid values:</para>
+        /// <para>Indicates whether the visitor geolocation header is added. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>on: Enables this feature.</para>
-        /// </description></item>
-        /// <item><description><para>off: Disables this feature.</para>
-        /// </description></item>
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,12 +24,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AddClientGeolocationHeader { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the &quot;ali-real-client-ip&quot; header is added to include the real client IP. Valid values:</para>
+        /// <para>Indicates whether the ali-real-client-ip header containing the real client IP address is added. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>on: Enables this feature.</para>
-        /// </description></item>
-        /// <item><description><para>off: Disables this feature.</para>
-        /// </description></item>
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,7 +38,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AddRealClientIpHeader { get; set; }
 
         /// <summary>
-        /// <para>The real client IP header name.</para>
+        /// <para>The name of the real client IP address header.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-header</para>
@@ -62,7 +58,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The version of the site for which the configuration is returned.</para>
+        /// <para>The site version number. For sites with version management enabled, you can use this parameter to specify the site version to which the configuration applies. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

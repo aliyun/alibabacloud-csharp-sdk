@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateListShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The new description of the list.</para>
+        /// <para>The updated description of the list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,15 +32,15 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The new list content. The value is a JSON array string, for example, <c>[&quot;1.1.1.1&quot;,&quot;2.2.2.2&quot;]</c>.</para>
-        /// <para><b>Full overwrite semantics</b>: The specified <c>Items</c> value completely overwrites the existing list content instead of appending to it.</para>
+        /// <para>The updated items in the list. The value is a JSON array string, such as <c>[&quot;1.1.1.1&quot;,&quot;2.2.2.2&quot;]</c>.</para>
+        /// <para><b>Full overwrite semantics</b>: The specified <c>Items</c> completely overwrites the original list content instead of appending to it.</para>
         /// <remarks>
-        /// <para>⚠️ <b>If this parameter is not specified or is set to an empty value, the existing list content is cleared</b>. To retain existing items and append new ones, call <c>GetList</c> to retrieve the current <c>Items</c>, merge them, and then submit the combined list.</para>
+        /// <para>⚠️ <b>If this parameter is not specified or is left empty, the original list content is cleared</b>. To retain the original items and append new ones, call <c>GetList</c> to retrieve the existing <c>Items</c>, concatenate them, and submit them at once.</para>
         /// </remarks>
-        /// <para><b>Element format</b>: The format depends on the <c>Kind</c> value specified when the list was created. UpdateList does not support modifying Kind.</para>
+        /// <para><b>Element format</b>: The format depends on the <c>Kind</c> specified when the list was created. UpdateList does not support modifying the kind.</para>
         /// <list type="bullet">
         /// <item><description>Kind = <c>ip</c>: Each element must be a valid IP address or CIDR block. If an element is invalid, <c>WrongValueMatched</c> is returned.</description></item>
-        /// <item><description>Other Kind values: The element format is subject to the relevant specifications. The number of elements is limited by the tenant quota <c>NumberItemsPerList</c>. This limit does not apply to the <c>ip</c> Kind.</description></item>
+        /// <item><description>Other kinds: The element format is subject to conventions, and the number of elements is limited by the tenant quota <c>NumberItemsPerList</c>. Only the <c>ip</c> kind is not subject to this limit.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,8 +52,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ItemsShrink { get; set; }
 
         /// <summary>
-        /// <para>The new name of the custom list. If this parameter is not specified, the original name is retained.</para>
-        /// <para><b>Naming rules</b>: Only letters, digits, and underscores are supported (<c>^\\w{1,64}$</c>). The name must be 1 to 64 characters in length.</para>
+        /// <para>The updated name of the custom list. If this parameter is not specified, the original name is retained.</para>
+        /// <para><b>Naming rules</b>: Only letters, digits, and underscores are supported. The regular expression is <c>^\\w{1,64}$</c>, and the length is 1 to 64 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

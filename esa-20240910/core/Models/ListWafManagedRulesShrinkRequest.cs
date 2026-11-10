@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>The attack type of the vulnerability prevention event. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>SQL injection</description></item>
-        /// <item><description>cross-site scripting (XSS)</description></item>
-        /// <item><description>code execute</description></item>
+        /// <item><description>Cross-site scripting (XSS)</description></item>
+        /// <item><description>Code execute</description></item>
         /// <item><description>CRLF</description></item>
-        /// <item><description>local file inclusion (LFI)</description></item>
-        /// <item><description>remote file inclusion (RFI)</description></item>
+        /// <item><description>Local file inclusion (LFI)</description></item>
+        /// <item><description>Remote file inclusion (RFI)</description></item>
         /// <item><description>webshell</description></item>
-        /// <item><description>cross-site request forgery</description></item>
-        /// <item><description>Others</description></item>
+        /// <item><description>Cross-site request forgery</description></item>
+        /// <item><description>Other</description></item>
         /// <item><description>SEMA</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -67,8 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The managed ruleset configuration in JSON string format.</para>
-        /// <para>Contains the AttackType, ProtectionLevel, Action, and ManagedRules subfields. When ProtectionLevel is set to -1 (custom mode), specify the status and action for each rule through the ManagedRules array.</para>
+        /// <para>The managed rule set configuration in JSON string format. This parameter includes the AttackType, ProtectionLevel, Action, and ManagedRules sub-fields. If ProtectionLevel is set to -1 (custom mode), you must specify the status and action for each rule in the ManagedRules array.</para>
         /// </summary>
         [NameInMap("ManagedRuleset")]
         [Validation(Required=false)]
@@ -85,7 +84,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -95,9 +94,15 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The currently saved protection level, which represents the existing configuration state in the database.</para>
-        /// <para>Valid values: -1 (custom mode), 1 (loose), 2 (medium), 3 (strict), 4 (super strict).</para>
-        /// <para>Difference from ManagedRuleset.ProtectionLevel: this parameter indicates the currently effective configuration, while ManagedRuleset.ProtectionLevel indicates the target value being passed in.</para>
+        /// <para>The currently saved protection level, which represents the existing configuration status in the database. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>-1: custom mode.</description></item>
+        /// <item><description>1: loose.</description></item>
+        /// <item><description>2: medium.</description></item>
+        /// <item><description>3: strict.</description></item>
+        /// <item><description>4: super strict.
+        /// Difference from ManagedRuleset.ProtectionLevel: This field indicates the currently effective configuration, whereas ManagedRuleset.ProtectionLevel indicates the target value passed in the request.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

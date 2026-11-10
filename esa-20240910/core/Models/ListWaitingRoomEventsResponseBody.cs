@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListWaitingRoomEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID, which is used to trace a call.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f3c3700a-4c0f-4a24-b576-fd7dbf9e7c55</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the waiting room events.</para>
+        /// <para>The list of waiting room events, which contains the specific information of each event.</para>
         /// </summary>
         [NameInMap("WaitingRoomEvents")]
         [Validation(Required=false)]
         public List<ListWaitingRoomEventsResponseBodyWaitingRoomEvents> WaitingRoomEvents { get; set; }
         public class ListWaitingRoomEventsResponseBodyWaitingRoomEvents : TeaModel {
             /// <summary>
-            /// <para>The content of the custom waiting room page. This parameter is returned when the waiting room type is set to custom. The content is URL-encoded.</para>
+            /// <para>The custom content of the waiting room page. This parameter is required when the waiting room type is custom. The content must be URL-encoded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>html-yets-maqi1111</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CustomPageHtml { get; set; }
 
             /// <summary>
-            /// <para>The event description.</para>
+            /// <para>The detailed description of the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>terraform-example</para>
@@ -47,12 +47,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether session renewal is disabled. Valid values:</para>
+            /// <para>Specifies whether session renewal is disabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>on</para>
-            /// </description></item>
-            /// <item><description><para>off</para>
-            /// </description></item>
+            /// <item><description><b>on</b>: Enabled.</description></item>
+            /// <item><description><b>off</b>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,12 +61,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DisableSessionRenewalEnable { get; set; }
 
             /// <summary>
-            /// <para>The event status. Valid values:</para>
+            /// <para>The enabled status of the event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>on</para>
-            /// </description></item>
-            /// <item><description><para>off</para>
-            /// </description></item>
+            /// <item><description><b>on</b>: Enabled.</description></item>
+            /// <item><description><b>off</b>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -79,7 +75,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Enable { get; set; }
 
             /// <summary>
-            /// <para>The end time of the event. This value is a UNIX timestamp.</para>
+            /// <para>The end time of the event. The value is a UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1719814497</para>
@@ -89,12 +85,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether JOSN response is enabled. If JSON response is enabled, a JSON body is returned for requests to the waiting room with the header Accept: application/json. Valid values:</para>
+            /// <para>Specifies whether to enable JSON responses. If this feature is enabled and the Accept request header contains &quot;application/json&quot;, JSON data is returned. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>on</para>
-            /// </description></item>
-            /// <item><description><para>off</para>
-            /// </description></item>
+            /// <item><description><b>on</b>: Enabled.</description></item>
+            /// <item><description><b>off</b>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,14 +99,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string JsonResponseEnable { get; set; }
 
             /// <summary>
-            /// <para>The language of the waiting room page. This parameter is returned when the waiting room type is set to default. Valid values:</para>
+            /// <para>The language of the waiting room page. This parameter is required when the waiting room type is default. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>enus: English.</para>
-            /// </description></item>
-            /// <item><description><para>zhcn: Simplified Chinese.</para>
-            /// </description></item>
-            /// <item><description><para>zhhk: Traditional Chinese.</para>
-            /// </description></item>
+            /// <item><description><b>enus</b>: English.</description></item>
+            /// <item><description><b>zhcn</b>: Simplified Chinese.</description></item>
+            /// <item><description><b>zhhk</b>: Traditional Chinese.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -123,7 +114,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>The custom event name.</para>
+            /// <para>The event name, which is a custom event description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test event</para>
@@ -133,7 +124,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of new users per minute.</para>
+            /// <para>The number of new users per minute.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11</para>
@@ -143,12 +134,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string NewUsersPerMinute { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether pre-queuing is enabled. Valid values:</para>
+            /// <para>Specifies whether to enable pre-queuing. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>on</para>
-            /// </description></item>
-            /// <item><description><para>off</para>
-            /// </description></item>
+            /// <item><description><b>on</b>: Enabled.</description></item>
+            /// <item><description><b>off</b>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -159,7 +148,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PreQueueEnable { get; set; }
 
             /// <summary>
-            /// <para>The start time for pre-queuing. This value is a UNIX timestamp. This parameter is valid only when pre-queuing is enabled.</para>
+            /// <para>The start time of pre-queuing. The value is a UNIX timestamp. This parameter is valid only when pre-queuing is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1719814097</para>
@@ -171,14 +160,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The queuing method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>random: Users gain access to the origin randomly, regardless of the arrival time.</para>
-            /// </description></item>
-            /// <item><description><para>fifo: Users gain access to the origin in order of arrival.</para>
-            /// </description></item>
-            /// <item><description><para>passthrough: Users pass through the waiting room and go straight to the origin.</para>
-            /// </description></item>
-            /// <item><description><para>reject-all: Users are blocked from reaching the origin.</para>
-            /// </description></item>
+            /// <item><description><b>random</b>: Random.</description></item>
+            /// <item><description><b>fifo</b>: First-in, first-out (FIFO).</description></item>
+            /// <item><description><b>passthrough</b>: Passthrough.</description></item>
+            /// <item><description><b>reject-all</b>: Reject all.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -189,14 +174,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string QueuingMethod { get; set; }
 
             /// <summary>
-            /// <para>The HTTP status code to return while a user is in the queue. Valid values:</para>
+            /// <para>The waiting room status code. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>200</para>
-            /// </description></item>
-            /// <item><description><para>202</para>
-            /// </description></item>
-            /// <item><description><para>429</para>
-            /// </description></item>
+            /// <item><description><b>200</b></description></item>
+            /// <item><description><b>202</b></description></item>
+            /// <item><description><b>429</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -207,12 +189,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string QueuingStatusCode { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether random queuing is enabled. Valid values:</para>
+            /// <para>Specifies whether to enable random pre-queuing. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>on</para>
-            /// </description></item>
-            /// <item><description><para>off</para>
-            /// </description></item>
+            /// <item><description><b>on</b>: Enabled.</description></item>
+            /// <item><description><b>off</b>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -223,7 +203,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RandomPreQueueEnable { get; set; }
 
             /// <summary>
-            /// <para>The maximum duration for which a session remains valid after a user leaves the origin. Unit: minutes.</para>
+            /// <para>The session duration, in minutes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -233,7 +213,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SessionDuration { get; set; }
 
             /// <summary>
-            /// <para>The start time of the event. This value is a UNIX timestamp.</para>
+            /// <para>The start time of the event. The value is a UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1719814398</para>
@@ -243,7 +223,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of active users.</para>
+            /// <para>The total number of active users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>22</para>
@@ -253,7 +233,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string TotalActiveUsers { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the waiting room event.</para>
+            /// <para>The event ID, which uniquely identifies a waiting room event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>89677721098****</para>
@@ -263,7 +243,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? WaitingRoomEventId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the waiting room associated with the event.</para>
+            /// <para>The ID of the associated waiting room.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5c938a045c9ca46607163d34966****</para>
@@ -273,12 +253,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string WaitingRoomId { get; set; }
 
             /// <summary>
-            /// <para>The type of the waiting room. Valid values:</para>
+            /// <para>The waiting room type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>default</para>
-            /// </description></item>
-            /// <item><description><para>custom</para>
-            /// </description></item>
+            /// <item><description><b>default</b>: Default type.</description></item>
+            /// <item><description><b>custom</b>: Custom type.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

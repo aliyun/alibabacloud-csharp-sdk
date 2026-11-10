@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetSiteCurrentNSResponseBody : TeaModel {
         /// <summary>
-        /// <para>The nameservers of the website.</para>
+        /// <para>The list of current name servers for the site.</para>
         /// </summary>
         [NameInMap("NSList")]
         [Validation(Required=false)]

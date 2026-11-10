@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public ListSliderCaptchaPagesRequestQueryArgs QueryArgs { get; set; }
         public class ListSliderCaptchaPagesRequestQueryArgs : TeaModel {
             /// <summary>
-            /// <para>The fuzzy search keyword for the name.</para>
+            /// <para>The fuzzy name search.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>

@@ -10,12 +10,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListOriginPoolsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies how to match the origin pool name. The default is <c>exact</c>. Valid values:</para>
+        /// <para>The match type for name-based queries. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>fuzzy</c>: Performs a fuzzy search.</para>
-        /// </description></item>
-        /// <item><description><para><c>exact</c>: Performs an exact match.</para>
-        /// </description></item>
+        /// <item><description>fuzzy: fuzzy search.</description></item>
+        /// <item><description>exact: exact search.
+        /// Default value: exact.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +25,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string MatchType { get; set; }
 
         /// <summary>
-        /// <para>The name of the origin pool.</para>
+        /// <para>The name of the origin address pool.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pool1</para>
@@ -36,12 +35,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Specifies how the results are sorted. By default, results are sorted by ID in descending order. To sort by ID in ascending order, set this parameter to <c>id</c>. IDs increase with creation time.</para>
+        /// <para>The sort order. Supports ascending or descending order by ID. The ID is positively correlated with the creation time. Default value: descending order by ID. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>id: Sorts by ID in descending order.</para>
-        /// </description></item>
-        /// <item><description><para>id: Sorts by ID in ascending order.</para>
-        /// </description></item>
+        /// <item><description>id: descending order by ID.</description></item>
+        /// <item><description>id: ascending order by ID.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +49,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The page number. The default value is 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -62,7 +59,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. The value must be an integer from 1 to 500. If you specify a value greater than 500, the system uses 500.</para>
+        /// <para>The number of entries per page. The value must be a positive integer. Maximum value: 500. If the value exceeds 500, it is reset to 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -72,7 +69,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The site ID. To get this ID, call the <a href="~~ListSites~~">ListSites</a> operation.</para>
+        /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
