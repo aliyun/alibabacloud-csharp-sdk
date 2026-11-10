@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class CreateRestoreTaskRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to automatically start the instance after an Oracle physical backup is restored.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("AutoOpenDatabase")]
         [Validation(Required=false)]
         public string AutoOpenDatabase { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to automatically shut down the instance after an Oracle physical backup is restored.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("AutoShutdownDatabase")]
         [Validation(Required=false)]
         public string AutoShutdownDatabase { get; set; }
 
         /// <summary>
-        /// <para>backup gateway ID.</para>
+        /// <para>The ID of the backup gateway.</para>
         /// <remarks>
-        /// <para>This parameter is required when <b>DestinationEndpointInstanceType</b> is agent.</para>
+        /// <para>This parameter is required if <b>DestinationEndpointInstanceType</b> is set to Agent.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -31,7 +43,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public long? BackupGatewayId { get; set; }
 
         /// <summary>
-        /// <para>backup plan ID.</para>
+        /// <para>The ID of the backup plan.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +54,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupPlanId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the full backup set used for restoration. Mutually exclusive with RestoreTime.</para>
+        /// <para>The ID of the full backup set used for restoration. This parameter and RestoreTime are mutually exclusive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dbs1hvb0w*****</para>
@@ -52,7 +64,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupSetId { get; set; }
 
         /// <summary>
-        /// <para>Ensures request idempotence and prevents duplicate submissions.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOC********</para>
@@ -62,7 +74,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>UID for cross-Alibaba Cloud account backup.</para>
+        /// <para>The UID of the Alibaba Cloud account used for cross-account backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2749528728********</para>
@@ -72,7 +84,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string CrossAliyunId { get; set; }
 
         /// <summary>
-        /// <para>RAM role name for cross-Alibaba Cloud account backup.</para>
+        /// <para>The name of the RAM role used for cross-account backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test123</para>
@@ -82,6 +94,8 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string CrossRoleName { get; set; }
 
         /// <summary>
+        /// <para>The instance specifications of the new database instance to which data is restored.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mysql.x4.large.2</para>
         /// </summary>
@@ -89,11 +103,19 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [Validation(Required=false)]
         public string DestDatabaseInstanceClass { get; set; }
 
+        /// <summary>
+        /// <para>The database engine version of the new database instance to which data is restored.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8.0</para>
+        /// </summary>
         [NameInMap("DestDatabaseInstanceDatabaseVersion")]
         [Validation(Required=false)]
         public string DestDatabaseInstanceDatabaseVersion { get; set; }
 
         /// <summary>
+        /// <para>The region of the new database instance to which data is restored.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>
@@ -102,6 +124,8 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string DestDatabaseInstanceRegion { get; set; }
 
         /// <summary>
+        /// <para>The instance storage size of the new database to recover.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>500</para>
         /// </summary>
@@ -110,6 +134,8 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string DestDatabaseInstanceStorageSize { get; set; }
 
         /// <summary>
+        /// <para>The instance type of the new database to which data is restored.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rds</para>
         /// </summary>
@@ -117,11 +143,19 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [Validation(Required=false)]
         public string DestDatabaseInstanceType { get; set; }
 
+        /// <summary>
+        /// <para>The vSwitch of the new database instance to which data is restored.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vsw-xx</para>
+        /// </summary>
         [NameInMap("DestDatabaseInstanceVSwitch")]
         [Validation(Required=false)]
         public string DestDatabaseInstanceVSwitch { get; set; }
 
         /// <summary>
+        /// <para>The VPC of the new database instance to which data is restored.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vpc-xx</para>
         /// </summary>
@@ -130,9 +164,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string DestDatabaseInstanceVpc { get; set; }
 
         /// <summary>
-        /// <para>database name.</para>
+        /// <para>The name of the database.</para>
         /// <remarks>
-        /// <para>This parameter is required when the database type is PostgreSQL or MongoDB.</para>
+        /// <para>This parameter is required if the database engine is PostgreSQL or MongoDB.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -143,9 +177,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string DestinationEndpointDatabaseName { get; set; }
 
         /// <summary>
-        /// <para>database endpoint.</para>
+        /// <para>The database connection address.</para>
         /// <remarks>
-        /// <para>This parameter is required when <b>DestinationEndpointInstanceType</b> is express, agent, or other.</para>
+        /// <para>This parameter is required if <b>DestinationEndpointInstanceType</b> is set to Express, Agent, or Other.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -156,9 +190,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string DestinationEndpointIP { get; set; }
 
         /// <summary>
-        /// <para>database instance ID.</para>
+        /// <para>The instance ID of the database.</para>
         /// <remarks>
-        /// <para>This parameter is required when <b>DestinationEndpointInstanceType</b> is RDS, ECS, DDS, or Express.</para>
+        /// <para>This parameter is required if <b>DestinationEndpointInstanceType</b> is set to RDS, ECS, DDS, or Express.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -169,22 +203,15 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string DestinationEndpointInstanceID { get; set; }
 
         /// <summary>
-        /// <para>database location. Valid values:</para>
+        /// <para>The location of the database. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>RDS</b></para>
-        /// </description></item>
-        /// <item><description><para><b>ECS</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Express</b>: databases accessed via leased line/VPN Gateway/Smart Gateway</para>
-        /// </description></item>
-        /// <item><description><para><b>Agent</b>: databases accessed via backup gateway</para>
-        /// </description></item>
-        /// <item><description><para><b>DDS</b>: Cloud MongoDB</para>
-        /// </description></item>
-        /// <item><description><para><b>Other</b>: databases directly connected via IP:Port</para>
-        /// </description></item>
-        /// <item><description><para><b>dg</b>: self-managed databases without public IP:Port (accessed via Database Gateway DG)</para>
-        /// </description></item>
+        /// <item><description><b>RDS</b></description></item>
+        /// <item><description><b>ECS</b></description></item>
+        /// <item><description><b>Express</b>: databases connected over Express Connect circuits, VPN gateways, or Smart Access Gateway (SAG)</description></item>
+        /// <item><description><b>Agent</b>: databases connected over backup gateways</description></item>
+        /// <item><description><b>DDS</b>: ApsaraDB for MongoDB</description></item>
+        /// <item><description><b>Other</b>: databases connected by using IP addresses and port numbers</description></item>
+        /// <item><description><b>dg</b>: self-managed databases that have no public IP addresses or port numbers and are connected over Database Gateway</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -196,9 +223,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string DestinationEndpointInstanceType { get; set; }
 
         /// <summary>
-        /// <para>Oracle SID name.</para>
+        /// <para>The Oracle SID.</para>
         /// <remarks>
-        /// <para>This parameter is required when the database type is Oracle.</para>
+        /// <para>This parameter is required if the database engine is Oracle.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -209,9 +236,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string DestinationEndpointOracleSID { get; set; }
 
         /// <summary>
-        /// <para>password.</para>
+        /// <para>The password of the database account.</para>
         /// <remarks>
-        /// <para>This parameter is optional when the database type is Redis, or when the database location is agent and the database type is MSSQL. It is required in all other scenarios.</para>
+        /// <para>This parameter is not required if the database engine is Redis, or if the database is connected over a backup gateway and the database engine is SQL Server. In other scenarios, this parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -222,9 +249,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string DestinationEndpointPassword { get; set; }
 
         /// <summary>
-        /// <para>database port.</para>
+        /// <para>The port number of the database.</para>
         /// <remarks>
-        /// <para>This parameter is required when <b>DestinationEndpointInstanceType</b> is express, agent, other, or ECS.</para>
+        /// <para>This parameter is required if <b>DestinationEndpointInstanceType</b> is set to Express, Agent, Other, or ECS.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -235,9 +262,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? DestinationEndpointPort { get; set; }
 
         /// <summary>
-        /// <para>region of the database instance.</para>
+        /// <para>The region of the database instance.</para>
         /// <remarks>
-        /// <para>This parameter is required when <b>DestinationEndpointInstanceType</b> is RDS, ECS, DDS, Express, or Agent.</para>
+        /// <para>This parameter is required if <b>DestinationEndpointInstanceType</b> is set to RDS, ECS, DDS, Express, or Agent.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -248,9 +275,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string DestinationEndpointRegion { get; set; }
 
         /// <summary>
-        /// <para>database account.</para>
+        /// <para>The username of the database account.</para>
         /// <remarks>
-        /// <para>This parameter is optional when the database type is Redis, or when the database location is agent and the database type is MSSQL. It is required in all other scenarios.</para>
+        /// <para>This parameter is not required if the database engine is Redis, or if the database is connected over a backup gateway and the database engine is SQL Server. In other scenarios, this parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -261,8 +288,10 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string DestinationEndpointUserName { get; set; }
 
         /// <summary>
-        /// <para>Conflict handling for objects with the same name. Currently supports:</para>
-        /// <para><b>renamenew</b>: Rename objects if names conflict.</para>
+        /// <para>The method used to handle conflicts between objects with the same name. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>renamenew</b>: renames the object if an object with the same name exists.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>renamenew</para>
@@ -271,6 +300,12 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [Validation(Required=false)]
         public string DuplicateConflict { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to connect to the destination by using an SSL-encrypted connection.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("EnableDestinationEndpointSsl")]
         [Validation(Required=false)]
         public bool? EnableDestinationEndpointSsl { get; set; }
@@ -280,15 +315,21 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The method used to restore data to the destination. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>EXIST_INSTANCE</b>: restores data to an existing instance.</description></item>
+        /// <item><description><b>NEW_INSTANCE</b>: restores data to a new instance.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
-        /// <para>exist_instance</para>
+        /// <para>EXIST_INSTANCE</para>
         /// </summary>
         [NameInMap("RestoreDestinationMode")]
         [Validation(Required=false)]
         public string RestoreDestinationMode { get; set; }
 
         /// <summary>
-        /// <para>Required when <b>DestinationEndpointInstanceType</b> is agent and the backup plan is MySQL.</para>
+        /// <para>This parameter is required if <b>DestinationEndpointInstanceType</b> is set to Agent and the backup plan is for MySQL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -298,7 +339,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string RestoreDir { get; set; }
 
         /// <summary>
-        /// <para>database program directory.</para>
+        /// <para>The directory of the database program.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -308,19 +349,17 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string RestoreHome { get; set; }
 
         /// <summary>
-        /// <para>restore objects.</para>
+        /// <para>The objects to be restored.</para>
         /// <list type="bullet">
-        /// <item><description><para>For details, see the <b>RestoreObjects</b> parameter definition below. This parameter is optional when the database location is agent, and required in all other scenarios.</para>
-        /// </description></item>
-        /// <item><description><para>Input template: <c>[{ &quot;DBName&quot;: &quot;database name to be restored&quot;, &quot;NewDBName&quot;: &quot;target database name to be restored&quot; }]</c></para>
-        /// </description></item>
+        /// <item><description>For more information, see the definition of the <b>RestoreObjects</b> parameter below. This parameter is not required if the database is connected over a backup gateway. In other scenarios, this parameter is required.</description></item>
+        /// <item><description>Template: <c>[{ &quot;DBName&quot;: &quot;Name of the database to be restored&quot;, &quot;NewDBName&quot;: &quot;Name of the destination database&quot; }]</c></description></item>
         /// </list>
         /// <remarks>
-        /// <para>This API only supports restoring objects at the database level. To configure table-level restoration, use the console. For details, see <a href="https://help.aliyun.com/document_detail/85543.html">Recover databases</a>.</para>
+        /// <para>Restoring objects by calling this API operation only supports restoration at the database level. To restore specific tables, go to the console. For more information, see <a href="https://help.aliyun.com/document_detail/85543.html">Restore a database</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>MySQL表级别恢复示例如下：
+        /// <para>Example of MySQL table-level restoration:
         /// [{\&quot;DBName\&quot;:\&quot;dbname\&quot;, \&quot;NewDBName\&quot;:\&quot;dbname1\&quot;}]</para>
         /// </summary>
         [NameInMap("RestoreObjects")]
@@ -328,7 +367,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string RestoreObjects { get; set; }
 
         /// <summary>
-        /// <para>restore job name.</para>
+        /// <para>The name of the restore task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -339,7 +378,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string RestoreTaskName { get; set; }
 
         /// <summary>
-        /// <para>restore time. Value: 1554560477000.</para>
+        /// <para>The point in time to which you want to restore the database. The value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1554560477000</para>
@@ -349,6 +388,8 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public long? RestoreTime { get; set; }
 
         /// <summary>
+        /// <para>The credential for the SSL-encrypted connection to the destination.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE----- ... -----END CERTIFICATE-----</para>
         /// </summary>

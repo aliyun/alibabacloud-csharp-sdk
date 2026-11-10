@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         }
 
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The error code string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidParameter</para>

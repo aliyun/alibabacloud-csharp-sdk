@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <summary>
         /// <para>Indicates whether this change triggers a precheck. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: A precheck is triggered. You must manually call the <a href="https://help.aliyun.com/document_detail/2869816.html">StartBackupPlan</a> operation to start the backup plan.</para>
+        /// <item><description><para>true: A precheck is triggered. You must then call <a href="https://help.aliyun.com/document_detail/2869816.html">StartBackupPlan</a> to start the backup plan.</para>
         /// </description></item>
         /// <item><description><para>false: No precheck is triggered.</para>
         /// </description></item>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public bool? NeedPrecheck { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D6E068C3-25BC-455A-85FE-45F0B22ECB1F</para>

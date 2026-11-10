@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -158,9 +158,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request succeeded. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// <item><description><para><b>true</b>: The request succeeded.</para>
         /// </description></item>
         /// <item><description><para><b>false</b>: The request failed.</para>
         /// </description></item>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of incremental backup tasks.</para>
+        /// <para>The total number of incremental backups.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

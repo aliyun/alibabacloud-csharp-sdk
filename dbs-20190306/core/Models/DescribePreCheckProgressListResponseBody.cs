@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         }
 
         /// <summary>
-        /// <para>The precheck progress. The value ranges from 0 to 100.</para>
+        /// <para>The precheck progress. Valid values: 0 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -106,12 +106,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <summary>
         /// <para>The precheck status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>running</b>: The precheck is in progress.</para>
-        /// </description></item>
-        /// <item><description><para><b>failed</b>: The precheck failed.</para>
-        /// </description></item>
-        /// <item><description><para><b>finish</b>: The precheck is complete.</para>
-        /// </description></item>
+        /// <item><description><b>running</b>: running</description></item>
+        /// <item><description><b>failed</b>: failed</description></item>
+        /// <item><description><b>finish</b>: completed</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -124,10 +121,8 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

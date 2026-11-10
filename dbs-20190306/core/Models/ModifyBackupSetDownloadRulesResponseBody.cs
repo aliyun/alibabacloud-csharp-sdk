@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class ModifyBackupSetDownloadRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup schedule.</para>
+        /// <para>The ID of the backup plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dbstooi01exxxx</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D6E068C3-25BC-455A-85FE-45F0B22ECB1F</para>

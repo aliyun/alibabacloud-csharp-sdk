@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether this change triggers a precheck. If this value is true, call StartBackupPlan to restart the backup plan.</para>
+        /// <para>Indicates whether the modification triggers a precheck. If this parameter is set to true, you must call the StartBackupPlan operation to start the backup plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -70,9 +70,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request succeeded.</para>
+        /// <item><description><para><b>true</b>: The request was successful.</para>
         /// </description></item>
         /// <item><description><para><b>false</b>: The request failed.</para>
         /// </description></item>

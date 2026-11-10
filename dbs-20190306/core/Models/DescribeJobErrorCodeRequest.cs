@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class DescribeJobErrorCodeRequest : TeaModel {
         /// <summary>
-        /// <para>A client token. It is used to ensure the idempotence of the request.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>

@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -158,12 +158,10 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -174,7 +172,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of download records for backup sets.</para>
+        /// <para>The total number of backup set download records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -23,7 +23,17 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public long? BackupGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The unique identifier of the backup gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4DF900B7082BC3****489D765C8D2ABE</para>
+        /// </summary>
+        [NameInMap("BackupGatewayIdentifier")]
+        [Validation(Required=false)]
+        public string BackupGatewayIdentifier { get; set; }
+
+        /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCzxxxxxxxxxx</para>
@@ -35,22 +45,14 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <summary>
         /// <para>The type of the database. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>MySQL</b></para>
-        /// </description></item>
-        /// <item><description><para><b>MSSQL</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Oracle</b></para>
-        /// </description></item>
-        /// <item><description><para><b>MariaDB</b></para>
-        /// </description></item>
-        /// <item><description><para><b>PostgreSQL</b></para>
-        /// </description></item>
-        /// <item><description><para><b>DRDS</b></para>
-        /// </description></item>
-        /// <item><description><para><b>MongoDB</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Redis</b></para>
-        /// </description></item>
+        /// <item><description><b>MySQL</b></description></item>
+        /// <item><description><b>MSSQL</b></description></item>
+        /// <item><description><b>Oracle</b></description></item>
+        /// <item><description><b>MariaDB</b></description></item>
+        /// <item><description><b>PostgreSQL</b></description></item>
+        /// <item><description><b>DRDS</b></description></item>
+        /// <item><description><b>MongoDB</b></description></item>
+        /// <item><description><b>Redis</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,7 +67,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The URL that is used to access the database.</para>
+        /// <para>The database connection address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123.0.XX.XX</para>
@@ -75,7 +77,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string SourceEndpointIP { get; set; }
 
         /// <summary>
-        /// <para>The port that is used to connect to the database.</para>
+        /// <para>The database connection port.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3306</para>
@@ -85,7 +87,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? SourceEndpointPort { get; set; }
 
         /// <summary>
-        /// <para>The region in which the backup gateway resides.</para>
+        /// <para>The region ID of the backup gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

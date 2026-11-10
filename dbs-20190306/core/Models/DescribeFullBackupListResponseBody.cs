@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>636BC118-6080-4119-A6B5-C199CEC1037D</para>
@@ -234,12 +234,10 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation succeeded. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The operation succeeded.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The operation failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -250,7 +248,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of full backup jobs.</para>
+        /// <para>The total number of full backup tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class EnableBackupLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup plan.</para>
+        /// <para>The backup plan ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dbstooi******</para>
@@ -50,11 +50,11 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the modification triggers a precheck. Valid values:</para>
+        /// <para>Indicates whether this change triggers a precheck. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: A precheck is triggered. Call the <a href="https://help.aliyun.com/document_detail/2869816.html">StartBackupPlan</a> operation to start the backup plan.</para>
+        /// <item><description><para><c>true</c>: A precheck is triggered. You must call the <a href="https://help.aliyun.com/document_detail/2869816.html">StartBackupPlan</a> operation to start the backup plan.</para>
         /// </description></item>
-        /// <item><description><para>false: A precheck is not triggered.</para>
+        /// <item><description><para><c>false</c>: No precheck is triggered.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public bool? NeedPrecheck { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D6E068C3-25BC-455A-85FE-45F0B22ECB1F</para>
@@ -76,11 +76,11 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <para>Indicates whether the operation succeeded. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The operation was successful.</para>
+        /// <item><description><para><c>true</c>: The operation succeeded.</para>
         /// </description></item>
-        /// <item><description><para>false: The operation failed.</para>
+        /// <item><description><para><c>false</c>: The operation failed.</para>
         /// </description></item>
         /// </list>
         /// 

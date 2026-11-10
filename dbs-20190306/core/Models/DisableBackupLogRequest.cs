@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class DisableBackupLogRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup plan. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to query it.</para>
+        /// <para>The ID of the backup plan. To get this ID, call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupPlanId { get; set; }
 
         /// <summary>
-        /// <para>Ensures idempotence and prevents duplicate requests.</para>
+        /// <para>A client token to ensure the idempotence of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCziJZNwH****</para>
@@ -31,6 +31,8 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to disable only the log backup feature for a physical backup of a MySQL database.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

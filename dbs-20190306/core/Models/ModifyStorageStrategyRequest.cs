@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class ModifyStorageStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>Backup plan ID. Obtain this parameter\&quot;s value by calling the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> API.</para>
+        /// <para>The ID of the backup plan. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the value of this parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupPlanId { get; set; }
 
         /// <summary>
-        /// <para>Backup data retention period, in days. Valid values: 0 to 1825.</para>
+        /// <para>The retention period of backup data. Unit: days. Valid values: 0 to 1825.</para>
         /// <remarks>
-        /// <para>Default value: 730 days.</para>
+        /// <para>Default value: 730.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,6 +35,8 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? BackupRetentionPeriod { get; set; }
 
         /// <summary>
+        /// <para>The encryption method for backup data storage.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>encrypted</para>
         /// </summary>
@@ -43,7 +45,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupStorageEncryptMethod { get; set; }
 
         /// <summary>
-        /// <para>An arbitrary string used to ensure the idempotence of the request and prevent duplicate submissions.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dbstest</para>
@@ -53,9 +55,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Time to convert to Archive Storage. This value must be less than the backup data retention period (BackupRetentionPeriod parameter). For more information about Archive Storage, see <a href="https://help.aliyun.com/document_detail/51374.html">Storage Type Overview</a>.</para>
+        /// <para>The period after which backup data is transitioned to Archive storage. The value must be less than the retention period of backup data (specified by the BackupRetentionPeriod parameter). For more information about Archive storage, see <a href="https://help.aliyun.com/document_detail/51374.html">Storage types</a>.</para>
         /// <remarks>
-        /// <para>Default value: 365 days.</para>
+        /// <para>Default value: 365.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -67,9 +69,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? DuplicationArchivePeriod { get; set; }
 
         /// <summary>
-        /// <para>Time to convert to Infrequent Access storage. This value must be less than the Archive Storage period (DuplicationArchivePeriod parameter). For more information about Infrequent Access storage, see <a href="https://help.aliyun.com/document_detail/51374.html">Storage Type Overview</a>.</para>
+        /// <para>The period after which backup data is transitioned to Infrequent Access storage. The value must be less than the period after which backup data is transitioned to Archive storage (specified by the DuplicationArchivePeriod parameter). For more information about Infrequent Access storage, see <a href="https://help.aliyun.com/document_detail/51374.html">Storage types</a>.</para>
         /// <remarks>
-        /// <para>Default value: 180 days.</para>
+        /// <para>Default value: 180.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -81,6 +83,8 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? DuplicationInfrequentAccessPeriod { get; set; }
 
         /// <summary>
+        /// <para>The retention period of incremental backup data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>365</para>
         /// </summary>
@@ -89,6 +93,8 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string IncrementBackupRetentionPeriod { get; set; }
 
         /// <summary>
+        /// <para>The period after which incremental backup data is transitioned to Archive storage.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>365</para>
         /// </summary>
@@ -97,6 +103,8 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string IncrementDuplicationArchivePeriod { get; set; }
 
         /// <summary>
+        /// <para>The period after which incremental backup data is transitioned to Infrequent Access storage.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>365</para>
         /// </summary>
@@ -105,6 +113,8 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string IncrementDuplicationInfrequentAccessPeriod { get; set; }
 
         /// <summary>
+        /// <para>The retention period of log backup data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>365</para>
         /// </summary>
@@ -113,6 +123,8 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string LogBackupRetentionPeriod { get; set; }
 
         /// <summary>
+        /// <para>The period after which log backup data is transitioned to Infrequent Access storage.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>365</para>
         /// </summary>
@@ -121,6 +133,8 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string LogDuplicationArchivePeriod { get; set; }
 
         /// <summary>
+        /// <para>The period after which log backup data is transitioned to Infrequent Access storage.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>365</para>
         /// </summary>

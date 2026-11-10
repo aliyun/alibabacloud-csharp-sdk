@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <summary>
         /// <para>The ID of the backup plan.</para>
         /// <remarks>
-        /// <para>Specify either BackupPlanId or RestoreTaskId.</para>
+        /// <para>Specify BackupPlanId or RestoreTaskId.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupPlanId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCziJZNwH****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the restore job.</para>
+        /// <para>The ID of the restore task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dbasdsa****</para>

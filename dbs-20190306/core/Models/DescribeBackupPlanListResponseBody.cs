@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class DescribeBackupPlanListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidParameterValid</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>Error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The specified parameter %s value is not valid.</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -39,6 +39,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>The response items.</para>
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeBackupPlanListResponseBodyItems Items { get; set; }
@@ -316,7 +319,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         }
 
         /// <summary>
-        /// <para>Page number.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -326,7 +329,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>Number of records per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -336,7 +339,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4F1888AC-1138-4995-B9FE-D2734F61C058</para>
@@ -346,7 +349,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -356,7 +359,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>Total number of backup plans.</para>
+        /// <para>The total number of backup plans.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -366,7 +369,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? TotalElements { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>

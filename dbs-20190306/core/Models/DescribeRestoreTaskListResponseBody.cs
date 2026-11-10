@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? TotalElements { get; set; }
 
         /// <summary>
-        /// <para>The total number of pages.</para>
+        /// <para>The total number of pages returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

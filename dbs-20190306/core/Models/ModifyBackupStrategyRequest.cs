@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class ModifyBackupStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>The interval at which you want to perform incremental log backups. Unit: seconds.</para>
+        /// <para>The incremental backup interval in seconds.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when physical backups are performed.</para>
+        /// <para>Only physical backups are supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,23 +23,19 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? BackupLogIntervalSeconds { get; set; }
 
         /// <summary>
-        /// <para>The day of each week when the full backup task runs. Valid values:</para>
+        /// <para>The full backup cycle. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Monday</para>
-        /// </description></item>
-        /// <item><description><para>Tuesday</para>
-        /// </description></item>
-        /// <item><description><para>Wednesday</para>
-        /// </description></item>
-        /// <item><description><para>Thursday</para>
-        /// </description></item>
-        /// <item><description><para>Friday</para>
-        /// </description></item>
-        /// <item><description><para>Saturday</para>
-        /// </description></item>
-        /// <item><description><para>Sunday</para>
-        /// </description></item>
+        /// <item><description>Monday: Monday</description></item>
+        /// <item><description>Tuesday: Tuesday</description></item>
+        /// <item><description>Wednesday: Wednesday</description></item>
+        /// <item><description>Thursday: Thursday</description></item>
+        /// <item><description>Friday: Friday</description></item>
+        /// <item><description>Saturday: Saturday</description></item>
+        /// <item><description>Sunday: Sunday</description></item>
         /// </list>
+        /// <remarks>
+        /// <para>You must specify at least two days of the week for BackupPeriod and separate the days with commas (,).</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +46,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupPeriod { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backup schedule.</para>
+        /// <para>The ID of the backup plan.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +57,10 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupPlanId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the full backup task. Specify the time in the HH:mm format.</para>
+        /// <para>The start time of the full backup. Format: HH:mm.</para>
+        /// <remarks>
+        /// <para>This parameter is required.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>14:22</para>
@@ -71,12 +70,10 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupStartTime { get; set; }
 
         /// <summary>
-        /// <para>The backup method that you want to use for full backups. Valid values:</para>
+        /// <para>The full backup epoch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>simple</b>: scheduled backup. If you specify this value for the BackupStrategyType parameter, you must also specify the BackupPeriod and BackupStartTime parameters.</para>
-        /// </description></item>
-        /// <item><description><para><b>Manual</b>: manual backup.</para>
-        /// </description></item>
+        /// <item><description><b>simple</b>: periodic backup. This value is used together with BackupPeriod and BackupStartTime.</description></item>
+        /// <item><description><b>manual</b>: manual backup.</description></item>
         /// </list>
         /// <remarks>
         /// <para>Default value: <b>simple</b>.</para>
@@ -90,7 +87,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupStrategyType { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCzxxxxxxx</para>

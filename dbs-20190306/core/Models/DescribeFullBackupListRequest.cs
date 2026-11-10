@@ -31,6 +31,8 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupSetId { get; set; }
 
         /// <summary>
+        /// <para>The status of the backup set.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>finish</para>
         /// </summary>
@@ -39,7 +41,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupSetStatus { get; set; }
 
         /// <summary>
-        /// <para>A token that ensures idempotence and prevents duplicate requests.</para>
+        /// <para>The client token that is used to ensure request idempotence and prevent duplicate submissions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCzxxxxxxx</para>
@@ -49,7 +51,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The end time of the backup, in UNIX timestamp format.</para>
+        /// <para>The end time of the backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1676887128</para>
@@ -63,7 +65,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: integers from 0 to the maximum integer value. Default value: 0.</para>
+        /// <para>The page number. The value must be greater than or equal to 0 and less than or equal to the maximum value of the Integer data type. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -75,12 +77,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         /// <summary>
         /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>30</para>
-        /// </description></item>
-        /// <item><description><para>50</para>
-        /// </description></item>
-        /// <item><description><para>100</para>
-        /// </description></item>
+        /// <item><description>30</description></item>
+        /// <item><description>50</description></item>
+        /// <item><description>100</description></item>
         /// </list>
         /// <para>Default value: 30.</para>
         /// 
@@ -92,6 +91,8 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to display the backup progress.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -100,7 +101,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string ShowProgress { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the storage class.</para>
+        /// <para>Specifies whether to display the storage type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

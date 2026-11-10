@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>400</para>

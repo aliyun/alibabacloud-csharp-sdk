@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class CreateRestoreTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>error code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Param.NotFound</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The specified parameter %s value is not valid.</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60AF7C5D-EF4D-4D48-8FD5-C0823FDF28AC</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>restore job ID.</para>
+        /// <para>The ID of the restore task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>s102h*****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string RestoreTaskId { get; set; }
 
         /// <summary>
-        /// <para>success.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

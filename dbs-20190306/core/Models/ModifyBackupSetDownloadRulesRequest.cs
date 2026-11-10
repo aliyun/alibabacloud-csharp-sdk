@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class ModifyBackupSetDownloadRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup gateway that is used to download the backup set.</para>
+        /// <para>The ID of the backup gateway used to download the backup set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23312323</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public long? BackupGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backup schedule.</para>
+        /// <para>The ID of the backup plan. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to query the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,9 +41,9 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupSetDownloadDir { get; set; }
 
         /// <summary>
-        /// <para>The type of the destination server to which the backup set is downloaded.</para>
+        /// <para>The target type for downloading the backup set.</para>
         /// <remarks>
-        /// <para>Set the value to agent, which indicates a server on which a backup gateway is installed.</para>
+        /// <para>Default value: agent. A backup gateway is installed. This is the only supported value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -54,16 +54,12 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupSetDownloadTargetType { get; set; }
 
         /// <summary>
-        /// <para>The type of the destination directory to which the backup set is downloaded. This parameter is required if the automatic download feature is enabled. Valid values:</para>
+        /// <para>The target directory type for downloading the backup set. This parameter is required if automatic download is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>local</para>
-        /// </description></item>
-        /// <item><description><para>nas</para>
-        /// </description></item>
-        /// <item><description><para>ftp</para>
-        /// </description></item>
-        /// <item><description><para>minio</para>
-        /// </description></item>
+        /// <item><description>local</description></item>
+        /// <item><description>nas</description></item>
+        /// <item><description>ftp</description></item>
+        /// <item><description>minio</description></item>
         /// </list>
         /// <remarks>
         /// <para>Default value: local.</para>
@@ -77,7 +73,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupSetDownloadTargetTypeLocation { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>The client token used to ensure the idempotence of the request and prevent duplicate request submissions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCzxxxxxxx</para>
@@ -87,16 +83,12 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The format in which the full backup set is downloaded. Valid values:</para>
+        /// <para>The format of the full data downloaded from the backup set. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Native</para>
-        /// </description></item>
-        /// <item><description><para>SQL</para>
-        /// </description></item>
-        /// <item><description><para>CSV</para>
-        /// </description></item>
-        /// <item><description><para>JSON</para>
-        /// </description></item>
+        /// <item><description>Native</description></item>
+        /// <item><description>SQL</description></item>
+        /// <item><description>CSV</description></item>
+        /// <item><description>JSON</description></item>
         /// </list>
         /// <remarks>
         /// <para>Default value: CSV.</para>
@@ -110,16 +102,12 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string FullDataFormat { get; set; }
 
         /// <summary>
-        /// <para>The format in which the incremental backup set is downloaded. Valid values:</para>
+        /// <para>The format of the incremental data downloaded from the backup set. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Native</para>
-        /// </description></item>
-        /// <item><description><para>SQL</para>
-        /// </description></item>
-        /// <item><description><para>CSV</para>
-        /// </description></item>
-        /// <item><description><para>JSON</para>
-        /// </description></item>
+        /// <item><description>Native</description></item>
+        /// <item><description>SQL</description></item>
+        /// <item><description>CSV</description></item>
+        /// <item><description>JSON</description></item>
         /// </list>
         /// <remarks>
         /// <para>Default value: Native.</para>
@@ -133,7 +121,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string IncrementDataFormat { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the automatic download feature. Default value: false.</para>
+        /// <para>Specifies whether to enable automatic download. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class DescribeDLAServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the feature of automatically adding incremental data to a data lake. If this feature is enabled, DBS adds the backup sets that are newly generated to the data lake that is created for the backup schedule. Valid values:</para>
+        /// <para>Indicates whether automatic data ingestion into the data lake for incremental data is enabled. If this feature is enabled, the system automatically adds newly generated backup sets to the data lake. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: enables the feature.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: disables the feature.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,12 +44,10 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a failed DLA task exists in the return result. Valid values:</para>
+        /// <para>Indicates whether the response contains failed DLA tasks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: A failed DLA task exists.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: No failed DLA task exists.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,14 +78,11 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the DLA service for the backup schedule. Valid values:</para>
+        /// <para>The DLA service status of the backup plan. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Running</b>: DLA is running.</para>
-        /// </description></item>
-        /// <item><description><para><b>Closing</b>: DLA is being disabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>Closed</b>: DLA is disabled.</para>
-        /// </description></item>
+        /// <item><description><b>Running</b>: The service is running.</description></item>
+        /// <item><description><b>Closing</b>: The service is being closed.</description></item>
+        /// <item><description><b>Closed</b>: The service is closed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -100,7 +93,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

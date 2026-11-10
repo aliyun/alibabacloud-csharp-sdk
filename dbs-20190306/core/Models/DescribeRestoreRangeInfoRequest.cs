@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
 {
     public class DescribeRestoreRangeInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup plan. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to get this value.</para>
+        /// <para>The ID of the backup plan. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the value of this parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string BackupPlanId { get; set; }
 
         /// <summary>
-        /// <para>The start timestamp of the restorable time range. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to get this value.</para>
+        /// <para>The start time of the recoverable time range to query. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the value of this parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public long? BeginTimestampForRestore { get; set; }
 
         /// <summary>
-        /// <para>A client token that ensures the idempotence of requests and prevents duplicate submissions.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCzxxxxxxx</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The end timestamp of the restorable time range. Call <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> to get this value.</para>
+        /// <para>The end time of the recoverable time range to query. You can call the <a href="https://help.aliyun.com/document_detail/2869825.html">DescribeBackupPlanList</a> operation to obtain the value of this parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dbs20190306.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable recent restore.</para>
+        /// <para>Specifies whether to enable recent restoration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
