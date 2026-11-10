@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The cloud database instance identity. Set this parameter to the InstanceId in the instance list.</para>
+        /// <para>The instance identity of the cloud database. Set this parameter to the InstanceId in the instance list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-2ze1abcdefgh****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string EngineType { get; set; }
 
         /// <summary>
-        /// <para>The compatible parameter for the instance identity. DataAssetSourceId takes precedence. If both are specified, DataAssetSourceId is used.</para>
+        /// <para>The compatible parameter for the instance identity. DataAssetSourceId takes precedence. If both parameters are specified, DataAssetSourceId is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-2ze1abcdefgh****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The language of the response description. Valid values: zh: Chinese; en: English.</para>
+        /// <para>The language of the response description. Valid values: zh: Chinese. en: English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -78,6 +78,16 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether the API operation returns only column names.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("OnlyColumnName")]
+        [Validation(Required=false)]
+        public int? OnlyColumnName { get; set; }
 
         /// <summary>
         /// <para>The number of entries to return on each page. Keep other filter conditions consistent when querying the next page.</para>
@@ -100,7 +110,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the sensitivity level. You can obtain this value from the return list of ListRiskLevels.</para>
+        /// <para>The identifier of the sensitivity level. You can obtain the value from the return list of ListRiskLevels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -130,7 +140,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public string TableName { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the data classification and grading template. You can obtain this value from Items[].Id returned by ListTemplates. Keep this parameter consistent with the selected sensitivity level and detection model.</para>
+        /// <para>The identifier of the data classification template. You can obtain the value from Items[].Id returned by ListTemplates. Keep this parameter consistent with the selected sensitivity level and detection model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

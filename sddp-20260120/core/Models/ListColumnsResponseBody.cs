@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The list of records returned by the current query.</para>
+        /// <para>The list of records returned in the current query.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<ListColumnsResponseBodyItems> Items { get; set; }
         public class ListColumnsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The creation time of the data object. The value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC.</para>
+            /// <para>The creation time of the data object. The value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1788566400000</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public long? CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The cloud instance identity.</para>
+            /// <para>The instance identity of the cloud instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rm-2ze1abcdefgh****</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The compatibility field for the column encryption status. To query column encryption results, call ListDataMaskingColumns.</para>
+            /// <para>The compatibility field for the column encryption status. To query the column encryption results, call ListDataMaskingColumns.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Sddp20260120.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which can be used to locate the current API call.</para>
+        /// <para>The request ID. You can use the ID to locate this API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7C6D8E9F-1234-5678-ABCD-0123456789AB</para>
