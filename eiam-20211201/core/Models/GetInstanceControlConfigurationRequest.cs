@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetInstanceControlConfigurationRequest : TeaModel {
+        /// <summary>
+        /// <para>The name of the instance control item.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>representative-value-2026</para>
+        /// </summary>
         [NameInMap("ElementName")]
         [Validation(Required=false)]
         public string ElementName { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListOrganizationalUnitsForResourceServerRequest : TeaModel {
         /// <summary>
-        /// <para>The resource server application ID.</para>
+        /// <para>The ResourceServer application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListOrganizationalUnitsForResourceServerRequestFilter> Filter { get; set; }
         public class ListOrganizationalUnitsForResourceServerRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The filter key.</para>
+            /// <para>The name of the filter condition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OrganizationalUnitIds</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The list of filter values.</para>
+            /// <para>The list of filter condition values.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page.</para>
+        /// <para>The number of rows per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. To retrieve the next page of results, set this parameter to the NextToken value from the previous response.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource server scope.</para>
+        /// <para>The permission ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ress_nbte4bb3qqqnaq73rlmkqixxxx</para>

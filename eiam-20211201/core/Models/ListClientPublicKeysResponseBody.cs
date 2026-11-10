@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListClientPublicKeysResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of client public keys for the application.</para>
+        /// <para>The list of ClientPublicKeys for the application.</para>
         /// </summary>
         [NameInMap("ClientPublicKeys")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the client public key.</para>
+            /// <para>The ID of the application ClientPublicKey.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KEYEqDnDJhztiEAwSin7MZoxGcihzCAuxxxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ClientPublicKeyId { get; set; }
 
             /// <summary>
-            /// <para>The time when the key was created.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1722006052000</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the key was last used.</para>
+            /// <para>The last used time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1762006052000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? LastUsedTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the key is used with priority.</para>
+            /// <para>Indicates whether this key is used with priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned on each page.</para>
+        /// <para>The number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page of results.</para>
+        /// <para>The pagination token returned by this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationUsername { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the application account was created. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1737510353000</para>

@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1758785994982</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The last used time.</para>
+            /// <para>The last used time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1758785994982</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigAzureVmConfig AzureVmConfig { get; set; }
                 public class GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigAzureVmConfig : TeaModel {
                     /// <summary>
-                    /// <para>The principal ID.</para>
+                    /// <para>The identity identifier.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5dee234a-1b4c-4ad7-a19f-fxxxxx</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public List<string> InstanceIds { get; set; }
 
                     /// <summary>
-                    /// <para>The GCP project ID.</para>
+                    /// <para>The GCP project ID to which the resource belongs.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>turnkey-axiom-475109-xx</para>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string ProjectId { get; set; }
 
                     /// <summary>
-                    /// <para>The subject corresponding to the service account.</para>
+                    /// <para>The sub claim that corresponds to the service account.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123456789</para>
@@ -327,7 +327,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1758785994982</para>

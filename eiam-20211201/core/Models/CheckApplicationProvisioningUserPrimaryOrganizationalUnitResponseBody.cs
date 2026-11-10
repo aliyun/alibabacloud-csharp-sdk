@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public CheckApplicationProvisioningUserPrimaryOrganizationalUnitResponseBodyCheckApplicationProvisioningUserPrimaryOuResult CheckApplicationProvisioningUserPrimaryOuResult { get; set; }
         public class CheckApplicationProvisioningUserPrimaryOrganizationalUnitResponseBodyCheckApplicationProvisioningUserPrimaryOuResult : TeaModel {
             /// <summary>
-            /// <para>Indicates whether authorization is allowed.</para>
+            /// <para>Indicates whether authorization is granted.</para>
             /// </summary>
             [NameInMap("AllowAuthorization")]
             [Validation(Required=false)]

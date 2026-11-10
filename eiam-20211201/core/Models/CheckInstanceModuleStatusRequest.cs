@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ModuleKey { get; set; }
 
         /// <summary>
-        /// <para>The resource label URN key.</para>
+        /// <para>The URN key of the resource label.</para>
         /// 
         /// <b>Example:</b>
         /// <para>urn:alibaba:idaas:license:label:template:app</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ResourceLabelKey { get; set; }
 
         /// <summary>
-        /// <para>The resource label name.</para>
+        /// <para>The name of the resource label.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apt_ram_user_sso</para>

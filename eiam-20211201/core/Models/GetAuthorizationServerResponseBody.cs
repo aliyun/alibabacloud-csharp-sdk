@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationServerId { get; set; }
 
             /// <summary>
-            /// <para>The name of the authorization server.</para>
+            /// <para>The authorization server name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>System_Default</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationServerName { get; set; }
 
             /// <summary>
-            /// <para>The time when the authorization server was created.</para>
+            /// <para>The time when the authorization server was created. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1754620108295</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CreationType { get; set; }
 
             /// <summary>
-            /// <para>The description of the authorization server.</para>
+            /// <para>The authorization server description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>description of authorization server</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The issuer of the authorization token.</para>
+            /// <para>The authorization token issuer.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2">https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2</a></para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string IssuerMode { get; set; }
 
             /// <summary>
-            /// <para>The time when the authorization server was last updated.</para>
+            /// <para>The time when the authorization server was last updated. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1781608572164</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? LastUpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The endpoint configuration of the authorization server.</para>
+            /// <para>The authorization server endpoint configuration.</para>
             /// </summary>
             [NameInMap("ProtocolEndpoint")]
             [Validation(Required=false)]
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The status of the authorization server.</para>
+            /// <para>The authorization server status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ENABLE</para>

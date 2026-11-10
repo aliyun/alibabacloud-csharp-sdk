@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "Eiam";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("eiam", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -39,7 +42,143 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an application account for a specified employee under the current application.</para>
+        /// <para>Activates privileged access hosting for a cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActivateCloudAccountPrivilegeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActivateCloudAccountPrivilegeResponse
+        /// </returns>
+        public ActivateCloudAccountPrivilegeResponse ActivateCloudAccountPrivilegeWithOptions(ActivateCloudAccountPrivilegeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ActivateCloudAccountPrivilege",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ActivateCloudAccountPrivilegeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates privileged access hosting for a cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActivateCloudAccountPrivilegeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActivateCloudAccountPrivilegeResponse
+        /// </returns>
+        public async Task<ActivateCloudAccountPrivilegeResponse> ActivateCloudAccountPrivilegeWithOptionsAsync(ActivateCloudAccountPrivilegeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ActivateCloudAccountPrivilege",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ActivateCloudAccountPrivilegeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates privileged access hosting for a cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActivateCloudAccountPrivilegeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActivateCloudAccountPrivilegeResponse
+        /// </returns>
+        public ActivateCloudAccountPrivilegeResponse ActivateCloudAccountPrivilege(ActivateCloudAccountPrivilegeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ActivateCloudAccountPrivilegeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates privileged access hosting for a cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ActivateCloudAccountPrivilegeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ActivateCloudAccountPrivilegeResponse
+        /// </returns>
+        public async Task<ActivateCloudAccountPrivilegeResponse> ActivateCloudAccountPrivilegeAsync(ActivateCloudAccountPrivilegeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ActivateCloudAccountPrivilegeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds an application account for a specified employee in the current application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -93,7 +232,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an application account for a specified employee under the current application.</para>
+        /// <para>Adds an application account for a specified employee in the current application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -147,7 +286,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an application account for a specified employee under the current application.</para>
+        /// <para>Adds an application account for a specified employee in the current application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -165,7 +304,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an application account for a specified employee under the current application.</para>
+        /// <para>Adds an application account for a specified employee in the current application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -347,7 +486,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds terms to a brand.</para>
+        /// <para>Adds custom privacy policies to a brand.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -397,7 +536,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds terms to a brand.</para>
+        /// <para>Adds custom privacy policies to a brand.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -447,7 +586,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds terms to a brand.</para>
+        /// <para>Adds custom privacy policies to a brand.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -465,7 +604,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds terms to a brand.</para>
+        /// <para>Adds custom privacy policies to a brand.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -811,7 +950,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a specified EIAM account to multiple EIAM organizations. If the account already exists in an organization, the operation returns a success response directly.</para>
+        /// <para>Adds a specified EIAM account to multiple EIAM organizations. If the account already belongs to an organization, the operation returns a success response.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -861,7 +1000,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a specified EIAM account to multiple EIAM organizations. If the account already exists in an organization, the operation returns a success response directly.</para>
+        /// <para>Adds a specified EIAM account to multiple EIAM organizations. If the account already belongs to an organization, the operation returns a success response.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -911,7 +1050,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a specified EIAM account to multiple EIAM organizations. If the account already exists in an organization, the operation returns a success response directly.</para>
+        /// <para>Adds a specified EIAM account to multiple EIAM organizations. If the account already belongs to an organization, the operation returns a success response.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -929,7 +1068,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a specified EIAM account to multiple EIAM organizations. If the account already exists in an organization, the operation returns a success response directly.</para>
+        /// <para>Adds a specified EIAM account to multiple EIAM organizations. If the account already belongs to an organization, the operation returns a success response.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -947,7 +1086,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds multiple Employee Identity and Access Management (EIAM) accounts to a specified EIAM account group.</para>
+        /// <para>Adds multiple EIAM accounts to a specified EIAM account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -997,7 +1136,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds multiple Employee Identity and Access Management (EIAM) accounts to a specified EIAM account group.</para>
+        /// <para>Adds multiple EIAM accounts to a specified EIAM account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1047,7 +1186,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds multiple Employee Identity and Access Management (EIAM) accounts to a specified EIAM account group.</para>
+        /// <para>Adds multiple EIAM accounts to a specified EIAM account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1065,7 +1204,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds multiple Employee Identity and Access Management (EIAM) accounts to a specified EIAM account group.</para>
+        /// <para>Adds multiple EIAM accounts to a specified EIAM account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1083,7 +1222,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants multiple EIAM groups access to an application in a batch.</para>
+        /// <para>Grants multiple EIAM groups access to an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1137,7 +1276,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants multiple EIAM groups access to an application in a batch.</para>
+        /// <para>Grants multiple EIAM groups access to an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1191,7 +1330,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants multiple EIAM groups access to an application in a batch.</para>
+        /// <para>Grants multiple EIAM groups access to an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1209,7 +1348,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants multiple EIAM groups access to an application in a batch.</para>
+        /// <para>Grants multiple EIAM groups access to an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1227,7 +1366,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants access to an application for multiple EIAM organizations in a batch operation.</para>
+        /// <para>Grants multiple EIAM organizations access to an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1281,7 +1420,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants access to an application for multiple EIAM organizations in a batch operation.</para>
+        /// <para>Grants multiple EIAM organizations access to an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1335,7 +1474,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants access to an application for multiple EIAM organizations in a batch operation.</para>
+        /// <para>Grants multiple EIAM organizations access to an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1353,7 +1492,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants access to an application for multiple EIAM organizations in a batch operation.</para>
+        /// <para>Grants multiple EIAM organizations access to an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1371,7 +1510,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants multiple EIAM accounts access to an application in a batch.</para>
+        /// <para>Grants multiple EIAM accounts access to an application in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1425,7 +1564,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants multiple EIAM accounts access to an application in a batch.</para>
+        /// <para>Grants multiple EIAM accounts access to an application in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1479,7 +1618,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants multiple EIAM accounts access to an application in a batch.</para>
+        /// <para>Grants multiple EIAM accounts access to an application in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1497,7 +1636,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants multiple EIAM accounts access to an application in a batch.</para>
+        /// <para>Grants multiple EIAM accounts access to an application in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1515,7 +1654,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants Scope permissions under a specified ResourceServer to a Client application.</para>
+        /// <para>Grants the scope permissions under a specified resource server to a client application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1569,7 +1708,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants Scope permissions under a specified ResourceServer to a Client application.</para>
+        /// <para>Grants the scope permissions under a specified resource server to a client application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1623,7 +1762,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants Scope permissions under a specified ResourceServer to a Client application.</para>
+        /// <para>Grants the scope permissions under a specified resource server to a client application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1641,7 +1780,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants Scope permissions under a specified ResourceServer to a Client application.</para>
+        /// <para>Grants the scope permissions under a specified resource server to a client application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1659,7 +1798,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants Scope permissions under a specified ResourceServer to a group.</para>
+        /// <para>Grants the scope permissions under a specified resource server to a group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1717,7 +1856,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants Scope permissions under a specified ResourceServer to a group.</para>
+        /// <para>Grants the scope permissions under a specified resource server to a group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1775,7 +1914,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants Scope permissions under a specified ResourceServer to a group.</para>
+        /// <para>Grants the scope permissions under a specified resource server to a group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1793,7 +1932,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants Scope permissions under a specified ResourceServer to a group.</para>
+        /// <para>Grants the scope permissions under a specified resource server to a group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1811,7 +1950,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants scope permissions under a specified ResourceServer to an organizational unit.</para>
+        /// <para>Grants the scope permissions of a specified resource server to an organizational unit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1869,7 +2008,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants scope permissions under a specified ResourceServer to an organizational unit.</para>
+        /// <para>Grants the scope permissions of a specified resource server to an organizational unit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1927,7 +2066,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants scope permissions under a specified ResourceServer to an organizational unit.</para>
+        /// <para>Grants the scope permissions of a specified resource server to an organizational unit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1945,7 +2084,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants scope permissions under a specified ResourceServer to an organizational unit.</para>
+        /// <para>Grants the scope permissions of a specified resource server to an organizational unit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1963,7 +2102,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants Scope permissions under a specified ResourceServer to an account.</para>
+        /// <para>Grants scope permissions of a specified resource server to an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2021,7 +2160,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants Scope permissions under a specified ResourceServer to an account.</para>
+        /// <para>Grants scope permissions of a specified resource server to an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2079,7 +2218,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants Scope permissions under a specified ResourceServer to an account.</para>
+        /// <para>Grants scope permissions of a specified resource server to an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2097,7 +2236,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants Scope permissions under a specified ResourceServer to an account.</para>
+        /// <para>Grants scope permissions of a specified resource server to an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2651,7 +2790,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether an instance has the feature of a specific module.</para>
+        /// <para>Checks whether an instance has a specific module feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2713,7 +2852,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether an instance has the feature of a specific module.</para>
+        /// <para>Checks whether an instance has a specific module feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2775,7 +2914,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether an instance has the feature of a specific module.</para>
+        /// <para>Checks whether an instance has a specific module feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2793,7 +2932,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether an instance has the feature of a specific module.</para>
+        /// <para>Checks whether an instance has a specific module feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2811,12 +2950,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application resource in a specified EIAM instance.</para>
+        /// <para>Creates an application resource in a specified Employee Identity and Access Management (EIAM) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>EIAM supports two standard SSO protocols for application access: SAML 2.0 and OIDC. This parameter cannot be changed after it is specified. Create the application based on the SSO protocol type used in your business scenario.</para>
+        /// <para>EIAM supports two standard SSO protocols for application access: SAML 2.0 and OIDC. This parameter cannot be changed after it is specified. Create the application based on the SSO protocol type used in your actual business scenario.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2894,12 +3033,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application resource in a specified EIAM instance.</para>
+        /// <para>Creates an application resource in a specified Employee Identity and Access Management (EIAM) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>EIAM supports two standard SSO protocols for application access: SAML 2.0 and OIDC. This parameter cannot be changed after it is specified. Create the application based on the SSO protocol type used in your business scenario.</para>
+        /// <para>EIAM supports two standard SSO protocols for application access: SAML 2.0 and OIDC. This parameter cannot be changed after it is specified. Create the application based on the SSO protocol type used in your actual business scenario.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2977,12 +3116,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application resource in a specified EIAM instance.</para>
+        /// <para>Creates an application resource in a specified Employee Identity and Access Management (EIAM) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>EIAM supports two standard SSO protocols for application access: SAML 2.0 and OIDC. This parameter cannot be changed after it is specified. Create the application based on the SSO protocol type used in your business scenario.</para>
+        /// <para>EIAM supports two standard SSO protocols for application access: SAML 2.0 and OIDC. This parameter cannot be changed after it is specified. Create the application based on the SSO protocol type used in your actual business scenario.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3000,12 +3139,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application resource in a specified EIAM instance.</para>
+        /// <para>Creates an application resource in a specified Employee Identity and Access Management (EIAM) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>EIAM supports two standard SSO protocols for application access: SAML 2.0 and OIDC. This parameter cannot be changed after it is specified. Create the application based on the SSO protocol type used in your business scenario.</para>
+        /// <para>EIAM supports two standard SSO protocols for application access: SAML 2.0 and OIDC. This parameter cannot be changed after it is specified. Create the application based on the SSO protocol type used in your actual business scenario.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3023,7 +3162,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a client secret for an EIAM application. You can create a maximum of two client secrets for each EIAM application.</para>
+        /// <para>Creates a client secret for an EIAM application. You can create a maximum of two client secrets for a single EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3073,7 +3212,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a client secret for an EIAM application. You can create a maximum of two client secrets for each EIAM application.</para>
+        /// <para>Creates a client secret for an EIAM application. You can create a maximum of two client secrets for a single EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3123,7 +3262,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a client secret for an EIAM application. You can create a maximum of two client secrets for each EIAM application.</para>
+        /// <para>Creates a client secret for an EIAM application. You can create a maximum of two client secrets for a single EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3141,7 +3280,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a client secret for an EIAM application. You can create a maximum of two client secrets for each EIAM application.</para>
+        /// <para>Creates a client secret for an EIAM application. You can create a maximum of two client secrets for a single EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4471,7 +4610,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud role for a specified Alibaba Cloud account.</para>
+        /// <para>Creates a cloud role resource under the specified cloud account resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4533,7 +4672,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud role for a specified Alibaba Cloud account.</para>
+        /// <para>Creates a cloud role resource under the specified cloud account resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4595,7 +4734,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud role for a specified Alibaba Cloud account.</para>
+        /// <para>Creates a cloud role resource under the specified cloud account resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4613,7 +4752,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud role for a specified Alibaba Cloud account.</para>
+        /// <para>Creates a cloud role resource under the specified cloud account resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4627,6 +4766,190 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCloudAccountRoleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a permission template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCloudPermissionTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCloudPermissionTemplateResponse
+        /// </returns>
+        public CreateCloudPermissionTemplateResponse CreateCloudPermissionTemplateWithOptions(CreateCloudPermissionTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowRequest))
+            {
+                query["AllowRequest"] = request.AllowRequest;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicableScope))
+            {
+                query["ApplicableScope"] = request.ApplicableScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountResources))
+            {
+                query["CloudAccountResources"] = request.CloudAccountResources;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudPermissionTemplateName))
+            {
+                query["CloudPermissionTemplateName"] = request.CloudPermissionTemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudPermissionTemplateUsageType))
+            {
+                query["CloudPermissionTemplateUsageType"] = request.CloudPermissionTemplateUsageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCloudPermissionTemplate",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCloudPermissionTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a permission template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCloudPermissionTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCloudPermissionTemplateResponse
+        /// </returns>
+        public async Task<CreateCloudPermissionTemplateResponse> CreateCloudPermissionTemplateWithOptionsAsync(CreateCloudPermissionTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowRequest))
+            {
+                query["AllowRequest"] = request.AllowRequest;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicableScope))
+            {
+                query["ApplicableScope"] = request.ApplicableScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountResources))
+            {
+                query["CloudAccountResources"] = request.CloudAccountResources;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudPermissionTemplateName))
+            {
+                query["CloudPermissionTemplateName"] = request.CloudPermissionTemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudPermissionTemplateUsageType))
+            {
+                query["CloudPermissionTemplateUsageType"] = request.CloudPermissionTemplateUsageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCloudPermissionTemplate",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCloudPermissionTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a permission template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCloudPermissionTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCloudPermissionTemplateResponse
+        /// </returns>
+        public CreateCloudPermissionTemplateResponse CreateCloudPermissionTemplate(CreateCloudPermissionTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateCloudPermissionTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a permission template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCloudPermissionTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCloudPermissionTemplateResponse
+        /// </returns>
+        public async Task<CreateCloudPermissionTemplateResponse> CreateCloudPermissionTemplateAsync(CreateCloudPermissionTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateCloudPermissionTemplateWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7635,7 +7958,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an EIAM account in a specified EIAM instance.</para>
+        /// <para>Creates an EIAM account under a specified EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7737,7 +8060,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an EIAM account in a specified EIAM instance.</para>
+        /// <para>Creates an EIAM account under a specified EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7839,7 +8162,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an EIAM account in a specified EIAM instance.</para>
+        /// <para>Creates an EIAM account under a specified EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7857,7 +8180,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an EIAM account in a specified EIAM instance.</para>
+        /// <para>Creates an EIAM account under a specified EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7871,6 +8194,142 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateUserWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes privileged access for a cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeactivateCloudAccountPrivilegeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeactivateCloudAccountPrivilegeResponse
+        /// </returns>
+        public DeactivateCloudAccountPrivilegeResponse DeactivateCloudAccountPrivilegeWithOptions(DeactivateCloudAccountPrivilegeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeactivateCloudAccountPrivilege",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeactivateCloudAccountPrivilegeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes privileged access for a cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeactivateCloudAccountPrivilegeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeactivateCloudAccountPrivilegeResponse
+        /// </returns>
+        public async Task<DeactivateCloudAccountPrivilegeResponse> DeactivateCloudAccountPrivilegeWithOptionsAsync(DeactivateCloudAccountPrivilegeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeactivateCloudAccountPrivilege",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeactivateCloudAccountPrivilegeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes privileged access for a cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeactivateCloudAccountPrivilegeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeactivateCloudAccountPrivilegeResponse
+        /// </returns>
+        public DeactivateCloudAccountPrivilegeResponse DeactivateCloudAccountPrivilege(DeactivateCloudAccountPrivilegeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeactivateCloudAccountPrivilegeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes privileged access for a cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeactivateCloudAccountPrivilegeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeactivateCloudAccountPrivilegeResponse
+        /// </returns>
+        public async Task<DeactivateCloudAccountPrivilegeResponse> DeactivateCloudAccountPrivilegeAsync(DeactivateCloudAccountPrivilegeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeactivateCloudAccountPrivilegeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8023,7 +8482,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a client secret of an EIAM application.</para>
+        /// <para>Deletes a client secret for an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8073,7 +8532,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a client secret of an EIAM application.</para>
+        /// <para>Deletes a client secret for an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8123,7 +8582,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a client secret of an EIAM application.</para>
+        /// <para>Deletes a client secret for an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8141,7 +8600,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a client secret of an EIAM application.</para>
+        /// <para>Deletes a client secret for an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9379,12 +9838,148 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes a permission template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCloudPermissionTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCloudPermissionTemplateResponse
+        /// </returns>
+        public DeleteCloudPermissionTemplateResponse DeleteCloudPermissionTemplateWithOptions(DeleteCloudPermissionTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudPermissionTemplateId))
+            {
+                query["CloudPermissionTemplateId"] = request.CloudPermissionTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCloudPermissionTemplate",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCloudPermissionTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a permission template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCloudPermissionTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCloudPermissionTemplateResponse
+        /// </returns>
+        public async Task<DeleteCloudPermissionTemplateResponse> DeleteCloudPermissionTemplateWithOptionsAsync(DeleteCloudPermissionTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudPermissionTemplateId))
+            {
+                query["CloudPermissionTemplateId"] = request.CloudPermissionTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCloudPermissionTemplate",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCloudPermissionTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a permission template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCloudPermissionTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCloudPermissionTemplateResponse
+        /// </returns>
+        public DeleteCloudPermissionTemplateResponse DeleteCloudPermissionTemplate(DeleteCloudPermissionTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteCloudPermissionTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a permission template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCloudPermissionTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCloudPermissionTemplateResponse
+        /// </returns>
+        public async Task<DeleteCloudPermissionTemplateResponse> DeleteCloudPermissionTemplateAsync(DeleteCloudPermissionTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteCloudPermissionTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a conditional access policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete a conditional access policy, make sure that the policy is no longer in use. After the policy is deleted, all configuration data is permanently removed and cannot be recovered.</para>
+        /// <para>Before deleting a specified conditional access policy, ensure that the policy is no longer in use. After the policy is deleted, all configuration data is deleted and cannot be recovered.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9435,7 +10030,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete a conditional access policy, make sure that the policy is no longer in use. After the policy is deleted, all configuration data is permanently removed and cannot be recovered.</para>
+        /// <para>Before deleting a specified conditional access policy, ensure that the policy is no longer in use. After the policy is deleted, all configuration data is deleted and cannot be recovered.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9486,7 +10081,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete a conditional access policy, make sure that the policy is no longer in use. After the policy is deleted, all configuration data is permanently removed and cannot be recovered.</para>
+        /// <para>Before deleting a specified conditional access policy, ensure that the policy is no longer in use. After the policy is deleted, all configuration data is deleted and cannot be recovered.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9509,7 +10104,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete a conditional access policy, make sure that the policy is no longer in use. After the policy is deleted, all configuration data is permanently removed and cannot be recovered.</para>
+        /// <para>Before deleting a specified conditional access policy, ensure that the policy is no longer in use. After the policy is deleted, all configuration data is deleted and cannot be recovered.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10039,7 +10634,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom domain name of a specified Employee Identity and Access Management (EIAM) instance. Deletion of the instance initialization domain name or default domain name is rejected.</para>
+        /// <para>Deletes a custom domain name of a specified EIAM instance. Deletion of the initial domain name and default domain name of the instance is rejected.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10085,7 +10680,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom domain name of a specified Employee Identity and Access Management (EIAM) instance. Deletion of the instance initialization domain name or default domain name is rejected.</para>
+        /// <para>Deletes a custom domain name of a specified EIAM instance. Deletion of the initial domain name and default domain name of the instance is rejected.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10131,7 +10726,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom domain name of a specified Employee Identity and Access Management (EIAM) instance. Deletion of the instance initialization domain name or default domain name is rejected.</para>
+        /// <para>Deletes a custom domain name of a specified EIAM instance. Deletion of the initial domain name and default domain name of the instance is rejected.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10149,7 +10744,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom domain name of a specified Employee Identity and Access Management (EIAM) instance. Deletion of the instance initialization domain name or default domain name is rejected.</para>
+        /// <para>Deletes a custom domain name of a specified EIAM instance. Deletion of the initial domain name and default domain name of the instance is rejected.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10167,7 +10762,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a proxy token for a specified domain name of an EIAM instance. Only proxy tokens in the disabled state can be deleted.</para>
+        /// <para>Deletes the proxy token for a specified domain name of an EIAM instance. Only disabled proxy tokens can be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10217,7 +10812,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a proxy token for a specified domain name of an EIAM instance. Only proxy tokens in the disabled state can be deleted.</para>
+        /// <para>Deletes the proxy token for a specified domain name of an EIAM instance. Only disabled proxy tokens can be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10267,7 +10862,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a proxy token for a specified domain name of an EIAM instance. Only proxy tokens in the disabled state can be deleted.</para>
+        /// <para>Deletes the proxy token for a specified domain name of an EIAM instance. Only disabled proxy tokens can be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10285,7 +10880,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a proxy token for a specified domain name of an EIAM instance. Only proxy tokens in the disabled state can be deleted.</para>
+        /// <para>Deletes the proxy token for a specified domain name of an EIAM instance. Only disabled proxy tokens can be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10687,12 +11282,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Employee Identity and Access Management (EIAM) instance that you no longer use.</para>
+        /// <para>Deletes an EIAM instance that is no longer in use.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Make sure that the instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</para>
+        /// <para>Ensure that the instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10734,12 +11329,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Employee Identity and Access Management (EIAM) instance that you no longer use.</para>
+        /// <para>Deletes an EIAM instance that is no longer in use.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Make sure that the instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</para>
+        /// <para>Ensure that the instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10781,12 +11376,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Employee Identity and Access Management (EIAM) instance that you no longer use.</para>
+        /// <para>Deletes an EIAM instance that is no longer in use.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Make sure that the instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</para>
+        /// <para>Ensure that the instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10804,12 +11399,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Employee Identity and Access Management (EIAM) instance that you no longer use.</para>
+        /// <para>Deletes an EIAM instance that is no longer in use.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Make sure that the instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</para>
+        /// <para>Ensure that the instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11083,7 +11678,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified EIAM organizational unit. The deletion fails if the organizational unit contains EIAM accounts or child organizational units.</para>
+        /// <para>Deletes a specified EIAM organization. The deletion fails if the organization contains EIAM accounts or sub-organizations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11129,7 +11724,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified EIAM organizational unit. The deletion fails if the organizational unit contains EIAM accounts or child organizational units.</para>
+        /// <para>Deletes a specified EIAM organization. The deletion fails if the organization contains EIAM accounts or sub-organizations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11175,7 +11770,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified EIAM organizational unit. The deletion fails if the organizational unit contains EIAM accounts or child organizational units.</para>
+        /// <para>Deletes a specified EIAM organization. The deletion fails if the organization contains EIAM accounts or sub-organizations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11193,7 +11788,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified EIAM organizational unit. The deletion fails if the organizational unit contains EIAM accounts or child organizational units.</para>
+        /// <para>Deletes a specified EIAM organization. The deletion fails if the organization contains EIAM accounts or sub-organizations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11211,7 +11806,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes all data of a specified organization. This operation can force delete all accounts and sub-organizations under the specified organization.</para>
+        /// <para>Deletes all data of a specified organization and can force delete all accounts and sub-organizations under the organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11257,7 +11852,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes all data of a specified organization. This operation can force delete all accounts and sub-organizations under the specified organization.</para>
+        /// <para>Deletes all data of a specified organization and can force delete all accounts and sub-organizations under the organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11303,7 +11898,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes all data of a specified organization. This operation can force delete all accounts and sub-organizations under the specified organization.</para>
+        /// <para>Deletes all data of a specified organization and can force delete all accounts and sub-organizations under the organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11321,7 +11916,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes all data of a specified organization. This operation can force delete all accounts and sub-organizations under the specified organization.</para>
+        /// <para>Deletes all data of a specified organization and can force delete all accounts and sub-organizations under the organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11475,8 +12070,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a trusted origin.</para>
+        /// <para>Deletes a trusted origin from a specified EIAM instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a trusted origin from a specified EIAM instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteTrustedOriginRequest
@@ -11525,8 +12125,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a trusted origin.</para>
+        /// <para>Deletes a trusted origin from a specified EIAM instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a trusted origin from a specified EIAM instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteTrustedOriginRequest
@@ -11575,8 +12180,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a trusted origin.</para>
+        /// <para>Deletes a trusted origin from a specified EIAM instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a trusted origin from a specified EIAM instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteTrustedOriginRequest
@@ -11593,8 +12203,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a trusted origin.</para>
+        /// <para>Deletes a trusted origin from a specified EIAM instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a trusted origin from a specified EIAM instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteTrustedOriginRequest
@@ -11611,7 +12226,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified EIAM account and purges all information associated with the account.</para>
+        /// <para>Deletes a specified EIAM account and clears all information related to the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11657,7 +12272,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified EIAM account and purges all information associated with the account.</para>
+        /// <para>Deletes a specified EIAM account and clears all information related to the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11703,7 +12318,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified EIAM account and purges all information associated with the account.</para>
+        /// <para>Deletes a specified EIAM account and clears all information related to the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11721,7 +12336,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified EIAM account and purges all information associated with the account.</para>
+        /// <para>Deletes a specified EIAM account and clears all information related to the account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11739,7 +12354,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes multiple accounts in a batch.</para>
+        /// <para>Deletes multiple accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11785,7 +12400,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes multiple accounts in a batch.</para>
+        /// <para>Deletes multiple accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11831,7 +12446,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes multiple accounts in a batch.</para>
+        /// <para>Deletes multiple accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11849,7 +12464,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes multiple accounts in a batch.</para>
+        /// <para>Deletes multiple accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11867,7 +12482,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified WebAuthn authenticator.</para>
+        /// <para>Deletes a specified WebAuthn authenticator name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11917,7 +12532,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified WebAuthn authenticator.</para>
+        /// <para>Deletes a specified WebAuthn authenticator name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11967,7 +12582,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified WebAuthn authenticator.</para>
+        /// <para>Deletes a specified WebAuthn authenticator name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11985,7 +12600,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified WebAuthn authenticator.</para>
+        /// <para>Deletes a specified WebAuthn authenticator name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12151,7 +12766,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the Developer API feature for an Employee Identity and Access Management (EIAM) application.</para>
+        /// <para>Disables the Developer API call feature for an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12197,7 +12812,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the Developer API feature for an Employee Identity and Access Management (EIAM) application.</para>
+        /// <para>Disables the Developer API call feature for an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12243,7 +12858,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the Developer API feature for an Employee Identity and Access Management (EIAM) application.</para>
+        /// <para>Disables the Developer API call feature for an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12261,7 +12876,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the Developer API feature for an Employee Identity and Access Management (EIAM) application.</para>
+        /// <para>Disables the Developer API call feature for an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12415,7 +13030,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a federated identity credential for an application.</para>
+        /// <para>Disables an application federated credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12465,7 +13080,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a federated identity credential for an application.</para>
+        /// <para>Disables an application federated credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12515,7 +13130,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a federated identity credential for an application.</para>
+        /// <para>Disables an application federated credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12533,7 +13148,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a federated identity credential for an application.</para>
+        /// <para>Disables an application federated credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12935,7 +13550,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the single sign-on (SSO) feature for an Employee Identity and Access Management (EIAM) application. This way, employees cannot log on to the application by using SSO.</para>
+        /// <para>Disables the single sign-on (SSO) feature for an EIAM application. After this feature is disabled, employees cannot use SSO to log on to the application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12981,7 +13596,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the single sign-on (SSO) feature for an Employee Identity and Access Management (EIAM) application. This way, employees cannot log on to the application by using SSO.</para>
+        /// <para>Disables the single sign-on (SSO) feature for an EIAM application. After this feature is disabled, employees cannot use SSO to log on to the application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13027,7 +13642,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the single sign-on (SSO) feature for an Employee Identity and Access Management (EIAM) application. This way, employees cannot log on to the application by using SSO.</para>
+        /// <para>Disables the single sign-on (SSO) feature for an EIAM application. After this feature is disabled, employees cannot use SSO to log on to the application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13045,7 +13660,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the single sign-on (SSO) feature for an Employee Identity and Access Management (EIAM) application. This way, employees cannot log on to the application by using SSO.</para>
+        /// <para>Disables the single sign-on (SSO) feature for an EIAM application. After this feature is disabled, employees cannot use SSO to log on to the application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13068,7 +13683,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that this operation may cause.</para>
+        /// <para>When you disable an application, all features of the application, such as SSO and account synchronization, become unavailable. Make sure that you are aware of the risks associated with this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13123,7 +13738,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that this operation may cause.</para>
+        /// <para>When you disable an application, all features of the application, such as SSO and account synchronization, become unavailable. Make sure that you are aware of the risks associated with this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13178,7 +13793,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that this operation may cause.</para>
+        /// <para>When you disable an application, all features of the application, such as SSO and account synchronization, become unavailable. Make sure that you are aware of the risks associated with this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13201,7 +13816,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that this operation may cause.</para>
+        /// <para>When you disable an application, all features of the application, such as SSO and account synchronization, become unavailable. Make sure that you are aware of the risks associated with this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13631,7 +14246,143 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a cloud role for a specified Alibaba Cloud account.</para>
+        /// <para>Disables privileges for a cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableCloudAccountPrivilegeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableCloudAccountPrivilegeResponse
+        /// </returns>
+        public DisableCloudAccountPrivilegeResponse DisableCloudAccountPrivilegeWithOptions(DisableCloudAccountPrivilegeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableCloudAccountPrivilege",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableCloudAccountPrivilegeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables privileges for a cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableCloudAccountPrivilegeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableCloudAccountPrivilegeResponse
+        /// </returns>
+        public async Task<DisableCloudAccountPrivilegeResponse> DisableCloudAccountPrivilegeWithOptionsAsync(DisableCloudAccountPrivilegeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableCloudAccountPrivilege",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableCloudAccountPrivilegeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables privileges for a cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableCloudAccountPrivilegeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableCloudAccountPrivilegeResponse
+        /// </returns>
+        public DisableCloudAccountPrivilegeResponse DisableCloudAccountPrivilege(DisableCloudAccountPrivilegeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DisableCloudAccountPrivilegeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables privileges for a cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableCloudAccountPrivilegeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableCloudAccountPrivilegeResponse
+        /// </returns>
+        public async Task<DisableCloudAccountPrivilegeResponse> DisableCloudAccountPrivilegeAsync(DisableCloudAccountPrivilegeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DisableCloudAccountPrivilegeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a cloud role under a specified cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13685,7 +14436,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a cloud role for a specified Alibaba Cloud account.</para>
+        /// <para>Disables a cloud role under a specified cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13739,7 +14490,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a cloud role for a specified Alibaba Cloud account.</para>
+        /// <para>Disables a cloud role under a specified cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13757,7 +14508,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a cloud role for a specified Alibaba Cloud account.</para>
+        /// <para>Disables a cloud role under a specified cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13771,6 +14522,142 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisableCloudAccountRoleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a permission template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableCloudPermissionTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableCloudPermissionTemplateResponse
+        /// </returns>
+        public DisableCloudPermissionTemplateResponse DisableCloudPermissionTemplateWithOptions(DisableCloudPermissionTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudPermissionTemplateId))
+            {
+                query["CloudPermissionTemplateId"] = request.CloudPermissionTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableCloudPermissionTemplate",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableCloudPermissionTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a permission template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableCloudPermissionTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableCloudPermissionTemplateResponse
+        /// </returns>
+        public async Task<DisableCloudPermissionTemplateResponse> DisableCloudPermissionTemplateWithOptionsAsync(DisableCloudPermissionTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudPermissionTemplateId))
+            {
+                query["CloudPermissionTemplateId"] = request.CloudPermissionTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableCloudPermissionTemplate",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableCloudPermissionTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a permission template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableCloudPermissionTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableCloudPermissionTemplateResponse
+        /// </returns>
+        public DisableCloudPermissionTemplateResponse DisableCloudPermissionTemplate(DisableCloudPermissionTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DisableCloudPermissionTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a permission template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableCloudPermissionTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableCloudPermissionTemplateResponse
+        /// </returns>
+        public async Task<DisableCloudPermissionTemplateResponse> DisableCloudPermissionTemplateAsync(DisableCloudPermissionTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DisableCloudPermissionTemplateWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -14579,7 +15466,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a federated credential provider.</para>
+        /// <para>Disables a federated trust source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14625,7 +15512,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a federated credential provider.</para>
+        /// <para>Disables a federated trust source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14671,7 +15558,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a federated credential provider.</para>
+        /// <para>Disables a federated trust source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14689,7 +15576,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a federated credential provider.</para>
+        /// <para>Disables a federated trust source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15231,7 +16118,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables an internal authentication source.</para>
+        /// <para>Disables the internal authentication source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15277,7 +16164,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables an internal authentication source.</para>
+        /// <para>Disables the internal authentication source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15323,7 +16210,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables an internal authentication source.</para>
+        /// <para>Disables the internal authentication source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15341,7 +16228,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables an internal authentication source.</para>
+        /// <para>Disables the internal authentication source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15487,8 +16374,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a trusted origin.</para>
+        /// <para>Disables a trusted origin in a specified EIAM instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables a trusted origin in a specified EIAM instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisableTrustedOriginRequest
@@ -15533,8 +16425,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a trusted origin.</para>
+        /// <para>Disables a trusted origin in a specified EIAM instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables a trusted origin in a specified EIAM instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisableTrustedOriginRequest
@@ -15579,8 +16476,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a trusted origin.</para>
+        /// <para>Disables a trusted origin in a specified EIAM instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables a trusted origin in a specified EIAM instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisableTrustedOriginRequest
@@ -15597,8 +16499,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a trusted origin.</para>
+        /// <para>Disables a trusted origin in a specified EIAM instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables a trusted origin in a specified EIAM instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisableTrustedOriginRequest
@@ -15615,7 +16522,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets an account status to disabled. If the account is already disabled, the operation returns success directly.</para>
+        /// <para>Sets the status of an account to disabled. If the account is already disabled, the operation returns a success response.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15661,7 +16568,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets an account status to disabled. If the account is already disabled, the operation returns success directly.</para>
+        /// <para>Sets the status of an account to disabled. If the account is already disabled, the operation returns a success response.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15707,7 +16614,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets an account status to disabled. If the account is already disabled, the operation returns success directly.</para>
+        /// <para>Sets the status of an account to disabled. If the account is already disabled, the operation returns a success response.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15725,7 +16632,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets an account status to disabled. If the account is already disabled, the operation returns success directly.</para>
+        /// <para>Sets the status of an account to disabled. If the account is already disabled, the operation returns a success response.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15871,7 +16778,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the EnableApplicationApiInvoke operation to enable Developer API calls for an EIAM application.</para>
+        /// <para>Enables the Developer API invocation feature for an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15917,7 +16824,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the EnableApplicationApiInvoke operation to enable Developer API calls for an EIAM application.</para>
+        /// <para>Enables the Developer API invocation feature for an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15963,7 +16870,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the EnableApplicationApiInvoke operation to enable Developer API calls for an EIAM application.</para>
+        /// <para>Enables the Developer API invocation feature for an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15981,7 +16888,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the EnableApplicationApiInvoke operation to enable Developer API calls for an EIAM application.</para>
+        /// <para>Enables the Developer API invocation feature for an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15999,7 +16906,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the client key of an application in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</para>
+        /// <para>Enables a client secret for an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16049,7 +16956,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the client key of an application in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</para>
+        /// <para>Enables a client secret for an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16099,7 +17006,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the client key of an application in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</para>
+        /// <para>Enables a client secret for an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16117,7 +17024,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the client key of an application in Identity as a Service (IDaaS) Employee Identity and Access Management (EIAM).</para>
+        /// <para>Enables a client secret for an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17187,7 +18094,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a specified application ClientPublicKey.</para>
+        /// <para>Enables the specified application ClientPublicKey.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17241,7 +18148,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a specified application ClientPublicKey.</para>
+        /// <para>Enables the specified application ClientPublicKey.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17295,7 +18202,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a specified application ClientPublicKey.</para>
+        /// <para>Enables the specified application ClientPublicKey.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17313,7 +18220,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a specified application ClientPublicKey.</para>
+        /// <para>Enables the specified application ClientPublicKey.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17331,7 +18238,143 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a cloud role for a specified Alibaba Cloud account.</para>
+        /// <para>Enables privileges for a cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableCloudAccountPrivilegeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableCloudAccountPrivilegeResponse
+        /// </returns>
+        public EnableCloudAccountPrivilegeResponse EnableCloudAccountPrivilegeWithOptions(EnableCloudAccountPrivilegeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableCloudAccountPrivilege",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableCloudAccountPrivilegeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables privileges for a cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableCloudAccountPrivilegeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableCloudAccountPrivilegeResponse
+        /// </returns>
+        public async Task<EnableCloudAccountPrivilegeResponse> EnableCloudAccountPrivilegeWithOptionsAsync(EnableCloudAccountPrivilegeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableCloudAccountPrivilege",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableCloudAccountPrivilegeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables privileges for a cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableCloudAccountPrivilegeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableCloudAccountPrivilegeResponse
+        /// </returns>
+        public EnableCloudAccountPrivilegeResponse EnableCloudAccountPrivilege(EnableCloudAccountPrivilegeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EnableCloudAccountPrivilegeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables privileges for a cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableCloudAccountPrivilegeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableCloudAccountPrivilegeResponse
+        /// </returns>
+        public async Task<EnableCloudAccountPrivilegeResponse> EnableCloudAccountPrivilegeAsync(EnableCloudAccountPrivilegeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EnableCloudAccountPrivilegeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a cloud role under a specified cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17385,7 +18428,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a cloud role for a specified Alibaba Cloud account.</para>
+        /// <para>Enables a cloud role under a specified cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17439,7 +18482,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a cloud role for a specified Alibaba Cloud account.</para>
+        /// <para>Enables a cloud role under a specified cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17457,7 +18500,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a cloud role for a specified Alibaba Cloud account.</para>
+        /// <para>Enables a cloud role under a specified cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17475,12 +18518,148 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Enables a permission template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableCloudPermissionTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableCloudPermissionTemplateResponse
+        /// </returns>
+        public EnableCloudPermissionTemplateResponse EnableCloudPermissionTemplateWithOptions(EnableCloudPermissionTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudPermissionTemplateId))
+            {
+                query["CloudPermissionTemplateId"] = request.CloudPermissionTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableCloudPermissionTemplate",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableCloudPermissionTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a permission template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableCloudPermissionTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableCloudPermissionTemplateResponse
+        /// </returns>
+        public async Task<EnableCloudPermissionTemplateResponse> EnableCloudPermissionTemplateWithOptionsAsync(EnableCloudPermissionTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudPermissionTemplateId))
+            {
+                query["CloudPermissionTemplateId"] = request.CloudPermissionTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableCloudPermissionTemplate",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableCloudPermissionTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a permission template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableCloudPermissionTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableCloudPermissionTemplateResponse
+        /// </returns>
+        public EnableCloudPermissionTemplateResponse EnableCloudPermissionTemplate(EnableCloudPermissionTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EnableCloudPermissionTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a permission template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableCloudPermissionTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableCloudPermissionTemplateResponse
+        /// </returns>
+        public async Task<EnableCloudPermissionTemplateResponse> EnableCloudPermissionTemplateAsync(EnableCloudPermissionTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EnableCloudPermissionTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Enables a conditional access policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Confirm that you are aware of the risks that this operation may cause.</para>
+        /// <para>When a conditional access policy is changed from the enabled state to the disabled state, it no longer intercepts requests. Make sure that you are aware of the potential risks of this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17531,7 +18710,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Confirm that you are aware of the risks that this operation may cause.</para>
+        /// <para>When a conditional access policy is changed from the enabled state to the disabled state, it no longer intercepts requests. Make sure that you are aware of the potential risks of this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17582,7 +18761,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Confirm that you are aware of the risks that this operation may cause.</para>
+        /// <para>When a conditional access policy is changed from the enabled state to the disabled state, it no longer intercepts requests. Make sure that you are aware of the potential risks of this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17605,7 +18784,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Confirm that you are aware of the risks that this operation may cause.</para>
+        /// <para>When a conditional access policy is changed from the enabled state to the disabled state, it no longer intercepts requests. Make sure that you are aware of the potential risks of this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18039,7 +19218,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a custom clause.</para>
+        /// <para>Enables custom terms.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18085,7 +19264,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a custom clause.</para>
+        /// <para>Enables custom terms.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18131,7 +19310,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a custom clause.</para>
+        /// <para>Enables custom terms.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18149,7 +19328,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a custom clause.</para>
+        /// <para>Enables custom terms.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18167,7 +19346,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a domain proxy token for a specified EIAM instance domain name to verify domain security.</para>
+        /// <para>Enables the domain proxy token of a specified EIAM instance to verify domain security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18217,7 +19396,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a domain proxy token for a specified EIAM instance domain name to verify domain security.</para>
+        /// <para>Enables the domain proxy token of a specified EIAM instance to verify domain security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18267,7 +19446,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a domain proxy token for a specified EIAM instance domain name to verify domain security.</para>
+        /// <para>Enables the domain proxy token of a specified EIAM instance to verify domain security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18285,7 +19464,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a domain proxy token for a specified EIAM instance domain name to verify domain security.</para>
+        /// <para>Enables the domain proxy token of a specified EIAM instance to verify domain security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18564,7 +19743,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Make sure that you are aware of the risks that this operation may cause.</para>
+        /// <para>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Make sure that you are aware of the potential risks of this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18615,7 +19794,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Make sure that you are aware of the risks that this operation may cause.</para>
+        /// <para>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Make sure that you are aware of the potential risks of this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18666,7 +19845,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Make sure that you are aware of the risks that this operation may cause.</para>
+        /// <para>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Make sure that you are aware of the potential risks of this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18689,7 +19868,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Make sure that you are aware of the risks that this operation may cause.</para>
+        /// <para>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Make sure that you are aware of the potential risks of this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19083,7 +20262,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the custom subject feature for a specified resource server. After this feature is enabled, the subject of an issued access token changes from <clientId> to <clientId>:&lt;client.activeSubjectUrn&gt;. The <c>client.activeSubjectUrn</c> is set in the attribute mapping of the application\&quot;s federated identity provider.</para>
+        /// <para>Enables the custom subject capability for a specified resource server. After the custom subject is enabled, the issued access token changes from <clientId> to <clientId>:&lt;client.activeSubjectUrn&gt;, where client.activeSubjectUrn is configured in the attribute mapping of the federated identity credential for the application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19129,7 +20308,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the custom subject feature for a specified resource server. After this feature is enabled, the subject of an issued access token changes from <clientId> to <clientId>:&lt;client.activeSubjectUrn&gt;. The <c>client.activeSubjectUrn</c> is set in the attribute mapping of the application\&quot;s federated identity provider.</para>
+        /// <para>Enables the custom subject capability for a specified resource server. After the custom subject is enabled, the issued access token changes from <clientId> to <clientId>:&lt;client.activeSubjectUrn&gt;, where client.activeSubjectUrn is configured in the attribute mapping of the federated identity credential for the application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19175,7 +20354,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the custom subject feature for a specified resource server. After this feature is enabled, the subject of an issued access token changes from <clientId> to <clientId>:&lt;client.activeSubjectUrn&gt;. The <c>client.activeSubjectUrn</c> is set in the attribute mapping of the application\&quot;s federated identity provider.</para>
+        /// <para>Enables the custom subject capability for a specified resource server. After the custom subject is enabled, the issued access token changes from <clientId> to <clientId>:&lt;client.activeSubjectUrn&gt;, where client.activeSubjectUrn is configured in the attribute mapping of the federated identity credential for the application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19193,7 +20372,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the custom subject feature for a specified resource server. After this feature is enabled, the subject of an issued access token changes from <clientId> to <clientId>:&lt;client.activeSubjectUrn&gt;. The <c>client.activeSubjectUrn</c> is set in the attribute mapping of the application\&quot;s federated identity provider.</para>
+        /// <para>Enables the custom subject capability for a specified resource server. After the custom subject is enabled, the issued access token changes from <clientId> to <clientId>:&lt;client.activeSubjectUrn&gt;, where client.activeSubjectUrn is configured in the attribute mapping of the federated identity credential for the application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19211,8 +20390,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a trusted origin.</para>
+        /// <para>Enables a trusted origin in a specified EIAM instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables a trusted origin in a specified EIAM instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableTrustedOriginRequest
@@ -19257,8 +20441,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a trusted origin.</para>
+        /// <para>Enables a trusted origin in a specified EIAM instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables a trusted origin in a specified EIAM instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableTrustedOriginRequest
@@ -19303,8 +20492,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a trusted origin.</para>
+        /// <para>Enables a trusted origin in a specified EIAM instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables a trusted origin in a specified EIAM instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableTrustedOriginRequest
@@ -19321,8 +20515,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a trusted origin.</para>
+        /// <para>Enables a trusted origin in a specified EIAM instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables a trusted origin in a specified EIAM instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableTrustedOriginRequest
@@ -19467,7 +20666,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resolves the metadata for an identity provider.</para>
+        /// <para>Parses IdP metadata.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19525,7 +20724,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resolves the metadata for an identity provider.</para>
+        /// <para>Parses IdP metadata.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19583,7 +20782,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resolves the metadata for an identity provider.</para>
+        /// <para>Parses IdP metadata.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19601,7 +20800,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resolves the metadata for an identity provider.</para>
+        /// <para>Parses IdP metadata.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19892,9 +21091,17 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FieldSelectionEnabled))
+            {
+                query["FieldSelectionEnabled"] = request.FieldSelectionEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedFieldNames))
+            {
+                query["SelectedFieldNames"] = request.SelectedFieldNames;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
             {
@@ -19938,9 +21145,17 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FieldSelectionEnabled))
+            {
+                query["FieldSelectionEnabled"] = request.FieldSelectionEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedFieldNames))
+            {
+                query["SelectedFieldNames"] = request.SelectedFieldNames;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
             {
@@ -20179,7 +21394,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Upload Authentication</para>
+        /// <para>Retrieves upload authentication.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20229,7 +21444,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Upload Authentication</para>
+        /// <para>Retrieves upload authentication.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20279,7 +21494,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Upload Authentication</para>
+        /// <para>Retrieves upload authentication.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20297,7 +21512,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Upload Authentication</para>
+        /// <para>Retrieves upload authentication.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20454,6 +21669,11 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// <para>Retrieves the details of a specified EIAM application.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you delete a specified EIAM application, make sure that the application is no longer in use. After the application is deleted, all configuration data is permanently removed and cannot be recovered.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetApplicationRequest
         /// </param>
@@ -20499,6 +21719,11 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// <summary>
         /// <para>Retrieves the details of a specified EIAM application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you delete a specified EIAM application, make sure that the application is no longer in use. After the application is deleted, all configuration data is permanently removed and cannot be recovered.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetApplicationRequest
@@ -20546,6 +21771,11 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// <para>Retrieves the details of a specified EIAM application.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you delete a specified EIAM application, make sure that the application is no longer in use. After the application is deleted, all configuration data is permanently removed and cannot be recovered.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetApplicationRequest
         /// </param>
@@ -20563,6 +21793,11 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// <summary>
         /// <para>Retrieves the details of a specified EIAM application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you delete a specified EIAM application, make sure that the application is no longer in use. After the application is deleted, all configuration data is permanently removed and cannot be recovered.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetApplicationRequest
@@ -20707,7 +21942,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves an application federated identity credential.</para>
+        /// <para>Retrieves the federated identity credential of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20757,7 +21992,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves an application federated identity credential.</para>
+        /// <para>Retrieves the federated identity credential of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20807,7 +22042,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves an application federated identity credential.</para>
+        /// <para>Retrieves the federated identity credential of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20825,7 +22060,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves an application federated identity credential.</para>
+        /// <para>Retrieves the federated identity credential of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20843,7 +22078,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Developer API authorization scope of an EIAM application.</para>
+        /// <para>Queries the Developer API authorization scopes of an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20889,7 +22124,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Developer API authorization scope of an EIAM application.</para>
+        /// <para>Queries the Developer API authorization scopes of an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20935,7 +22170,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Developer API authorization scope of an EIAM application.</para>
+        /// <para>Queries the Developer API authorization scopes of an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20953,7 +22188,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Developer API authorization scope of an EIAM application.</para>
+        /// <para>Queries the Developer API authorization scopes of an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20971,7 +22206,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the account synchronization configuration for an Entity Identity and Access Management (EIAM) application.</para>
+        /// <para>Queries the account synchronization configuration of an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21017,7 +22252,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the account synchronization configuration for an Entity Identity and Access Management (EIAM) application.</para>
+        /// <para>Queries the account synchronization configuration of an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21063,7 +22298,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the account synchronization configuration for an Entity Identity and Access Management (EIAM) application.</para>
+        /// <para>Queries the account synchronization configuration of an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21081,7 +22316,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the account synchronization configuration for an Entity Identity and Access Management (EIAM) application.</para>
+        /// <para>Queries the account synchronization configuration of an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21099,7 +22334,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the account synchronization scope of applications in Identity as a Service (IDaaS) Employee IAM (EIAM). This scope is the same as the scope within which developers can call the DeveloperAPI to query and manage accounts.</para>
+        /// <para>Queries the account synchronization scope of an EIAM application. This scope also defines the accounts that can be queried and managed by the Developer API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21145,7 +22380,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the account synchronization scope of applications in Identity as a Service (IDaaS) Employee IAM (EIAM). This scope is the same as the scope within which developers can call the DeveloperAPI to query and manage accounts.</para>
+        /// <para>Queries the account synchronization scope of an EIAM application. This scope also defines the accounts that can be queried and managed by the Developer API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21191,7 +22426,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the account synchronization scope of applications in Identity as a Service (IDaaS) Employee IAM (EIAM). This scope is the same as the scope within which developers can call the DeveloperAPI to query and manage accounts.</para>
+        /// <para>Queries the account synchronization scope of an EIAM application. This scope also defines the accounts that can be queried and managed by the Developer API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21209,7 +22444,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the account synchronization scope of applications in Identity as a Service (IDaaS) Employee IAM (EIAM). This scope is the same as the scope within which developers can call the DeveloperAPI to query and manage accounts.</para>
+        /// <para>Queries the account synchronization scope of an EIAM application. This scope also defines the accounts that can be queried and managed by the Developer API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21355,7 +22590,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves application role information.</para>
+        /// <para>Retrieves the application role information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21405,7 +22640,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves application role information.</para>
+        /// <para>Retrieves the application role information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21455,7 +22690,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves application role information.</para>
+        /// <para>Retrieves the application role information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21473,7 +22708,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves application role information.</para>
+        /// <para>Retrieves the application role information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22523,6 +23758,142 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the details of a specified cloud account resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCloudAccountResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCloudAccountResourceResponse
+        /// </returns>
+        public GetCloudAccountResourceResponse GetCloudAccountResourceWithOptions(GetCloudAccountResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountResourceId))
+            {
+                query["CloudAccountResourceId"] = request.CloudAccountResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCloudAccountResource",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCloudAccountResourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified cloud account resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCloudAccountResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCloudAccountResourceResponse
+        /// </returns>
+        public async Task<GetCloudAccountResourceResponse> GetCloudAccountResourceWithOptionsAsync(GetCloudAccountResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountResourceId))
+            {
+                query["CloudAccountResourceId"] = request.CloudAccountResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCloudAccountResource",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCloudAccountResourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified cloud account resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCloudAccountResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCloudAccountResourceResponse
+        /// </returns>
+        public GetCloudAccountResourceResponse GetCloudAccountResource(GetCloudAccountResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCloudAccountResourceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified cloud account resource.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCloudAccountResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCloudAccountResourceResponse
+        /// </returns>
+        public async Task<GetCloudAccountResourceResponse> GetCloudAccountResourceAsync(GetCloudAccountResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCloudAccountResourceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the resource information of a cloud role.</para>
         /// </summary>
         /// 
@@ -22659,12 +24030,148 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get a conditional access policy.</para>
+        /// <para>Queries a permission template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCloudPermissionTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCloudPermissionTemplateResponse
+        /// </returns>
+        public GetCloudPermissionTemplateResponse GetCloudPermissionTemplateWithOptions(GetCloudPermissionTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudPermissionTemplateId))
+            {
+                query["CloudPermissionTemplateId"] = request.CloudPermissionTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCloudPermissionTemplate",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCloudPermissionTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a permission template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCloudPermissionTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCloudPermissionTemplateResponse
+        /// </returns>
+        public async Task<GetCloudPermissionTemplateResponse> GetCloudPermissionTemplateWithOptionsAsync(GetCloudPermissionTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudPermissionTemplateId))
+            {
+                query["CloudPermissionTemplateId"] = request.CloudPermissionTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCloudPermissionTemplate",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCloudPermissionTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a permission template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCloudPermissionTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCloudPermissionTemplateResponse
+        /// </returns>
+        public GetCloudPermissionTemplateResponse GetCloudPermissionTemplate(GetCloudPermissionTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCloudPermissionTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a permission template.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCloudPermissionTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCloudPermissionTemplateResponse
+        /// </returns>
+        public async Task<GetCloudPermissionTemplateResponse> GetCloudPermissionTemplateAsync(GetCloudPermissionTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCloudPermissionTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a conditional access policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query a conditional access policy.</para>
+        /// <para>Queries a conditional access policy.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22710,12 +24217,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get a conditional access policy.</para>
+        /// <para>Retrieves a conditional access policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query a conditional access policy.</para>
+        /// <para>Queries a conditional access policy.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22761,12 +24268,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get a conditional access policy.</para>
+        /// <para>Retrieves a conditional access policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query a conditional access policy.</para>
+        /// <para>Queries a conditional access policy.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22784,12 +24291,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get a conditional access policy.</para>
+        /// <para>Retrieves a conditional access policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query a conditional access policy.</para>
+        /// <para>Queries a conditional access policy.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23063,7 +24570,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information about an extended field.</para>
+        /// <para>Retrieves the extended field information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23109,7 +24616,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information about an extended field.</para>
+        /// <para>Retrieves the extended field information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23155,7 +24662,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information about an extended field.</para>
+        /// <para>Retrieves the extended field information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23173,7 +24680,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the information about an extended field.</para>
+        /// <para>Retrieves the extended field information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23191,7 +24698,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a custom privacy policy.</para>
+        /// <para>Retrieves the custom privacy policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23237,7 +24744,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a custom privacy policy.</para>
+        /// <para>Retrieves the custom privacy policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23283,7 +24790,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a custom privacy policy.</para>
+        /// <para>Retrieves the custom privacy policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23301,7 +24808,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a custom privacy policy.</para>
+        /// <para>Retrieves the custom privacy policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23447,7 +24954,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the DNS Challenge record for a specified EIAM domain name. This record is used to verify domain ownership.</para>
+        /// <para>Queries the DNS challenge records of a specified EIAM domain name. The generated records are used to verify the ownership of the domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23493,7 +25000,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the DNS Challenge record for a specified EIAM domain name. This record is used to verify domain ownership.</para>
+        /// <para>Queries the DNS challenge records of a specified EIAM domain name. The generated records are used to verify the ownership of the domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23539,7 +25046,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the DNS Challenge record for a specified EIAM domain name. This record is used to verify domain ownership.</para>
+        /// <para>Queries the DNS challenge records of a specified EIAM domain name. The generated records are used to verify the ownership of the domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23557,7 +25064,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the DNS Challenge record for a specified EIAM domain name. This record is used to verify domain ownership.</para>
+        /// <para>Queries the DNS challenge records of a specified EIAM domain name. The generated records are used to verify the ownership of the domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23575,7 +25082,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a federated credential provider.</para>
+        /// <para>Retrieves a federated trust source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23621,7 +25128,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a federated credential provider.</para>
+        /// <para>Retrieves a federated trust source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23667,7 +25174,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a federated credential provider.</para>
+        /// <para>Retrieves a federated trust source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23685,7 +25192,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a federated credential provider.</para>
+        /// <para>Retrieves a federated trust source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23703,7 +25210,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the forgot password policy of a specified EIAM instance.</para>
+        /// <para>Queries the forgot password policy for a specified EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23745,7 +25252,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the forgot password policy of a specified EIAM instance.</para>
+        /// <para>Queries the forgot password policy for a specified EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23787,7 +25294,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the forgot password policy of a specified EIAM instance.</para>
+        /// <para>Queries the forgot password policy for a specified EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23805,7 +25312,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the forgot password policy of a specified EIAM instance.</para>
+        /// <para>Queries the forgot password policy for a specified EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23819,6 +25326,110 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetForgetPasswordConfigurationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the permission template for the global cloud account system role.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetGlobalCloudAccountSystemRolePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGlobalCloudAccountSystemRolePolicyResponse
+        /// </returns>
+        public GetGlobalCloudAccountSystemRolePolicyResponse GetGlobalCloudAccountSystemRolePolicyWithOptions(GetGlobalCloudAccountSystemRolePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetGlobalCloudAccountSystemRolePolicy",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetGlobalCloudAccountSystemRolePolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the permission template for the global cloud account system role.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetGlobalCloudAccountSystemRolePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGlobalCloudAccountSystemRolePolicyResponse
+        /// </returns>
+        public async Task<GetGlobalCloudAccountSystemRolePolicyResponse> GetGlobalCloudAccountSystemRolePolicyWithOptionsAsync(GetGlobalCloudAccountSystemRolePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetGlobalCloudAccountSystemRolePolicy",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetGlobalCloudAccountSystemRolePolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the permission template for the global cloud account system role.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetGlobalCloudAccountSystemRolePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGlobalCloudAccountSystemRolePolicyResponse
+        /// </returns>
+        public GetGlobalCloudAccountSystemRolePolicyResponse GetGlobalCloudAccountSystemRolePolicy(GetGlobalCloudAccountSystemRolePolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetGlobalCloudAccountSystemRolePolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the permission template for the global cloud account system role.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetGlobalCloudAccountSystemRolePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGlobalCloudAccountSystemRolePolicyResponse
+        /// </returns>
+        public async Task<GetGlobalCloudAccountSystemRolePolicyResponse> GetGlobalCloudAccountSystemRolePolicyAsync(GetGlobalCloudAccountSystemRolePolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetGlobalCloudAccountSystemRolePolicyWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -24079,7 +25690,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves advanced configuration information.</para>
+        /// <para>Retrieves the advanced configuration information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24125,7 +25736,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves advanced configuration information.</para>
+        /// <para>Retrieves the advanced configuration information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24171,7 +25782,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves advanced configuration information.</para>
+        /// <para>Retrieves the advanced configuration information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24189,7 +25800,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves advanced configuration information.</para>
+        /// <para>Retrieves the advanced configuration information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24207,7 +25818,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves an IdP check task.</para>
+        /// <para>Retrieves an IdP status check job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24257,7 +25868,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves an IdP check task.</para>
+        /// <para>Retrieves an IdP status check job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24307,7 +25918,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves an IdP check task.</para>
+        /// <para>Retrieves an IdP status check job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24325,7 +25936,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves an IdP check task.</para>
+        /// <para>Retrieves an IdP status check job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24343,7 +25954,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the inbound synchronization configuration of an identity provider (IdP).</para>
+        /// <para>Retrieves the inbound synchronization configuration of an Identity Provider (IdP).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24389,7 +26000,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the inbound synchronization configuration of an identity provider (IdP).</para>
+        /// <para>Retrieves the inbound synchronization configuration of an Identity Provider (IdP).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24435,7 +26046,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the inbound synchronization configuration of an identity provider (IdP).</para>
+        /// <para>Retrieves the inbound synchronization configuration of an Identity Provider (IdP).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24453,7 +26064,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the inbound synchronization configuration of an identity provider (IdP).</para>
+        /// <para>Retrieves the inbound synchronization configuration of an Identity Provider (IdP).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24972,7 +26583,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Make sure that your instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</para>
+        /// <para>Make sure that the instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25019,7 +26630,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Make sure that your instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</para>
+        /// <para>Make sure that the instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25066,7 +26677,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Make sure that your instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</para>
+        /// <para>Make sure that the instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25089,7 +26700,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Make sure that your instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</para>
+        /// <para>Make sure that the instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25107,7 +26718,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all module information under a first-level module.</para>
+        /// <para>Retrieves information about all modules under a level-1 module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25153,7 +26764,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all module information under a first-level module.</para>
+        /// <para>Retrieves information about all modules under a level-1 module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25199,7 +26810,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all module information under a first-level module.</para>
+        /// <para>Retrieves information about all modules under a level-1 module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25217,7 +26828,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all module information under a first-level module.</para>
+        /// <para>Retrieves information about all modules under a level-1 module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25483,6 +27094,134 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询资源同步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInventorySynchronizationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInventorySynchronizationJobResponse
+        /// </returns>
+        public GetInventorySynchronizationJobResponse GetInventorySynchronizationJobWithOptions(GetInventorySynchronizationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InventorySynchronizationJobId))
+            {
+                query["InventorySynchronizationJobId"] = request.InventorySynchronizationJobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetInventorySynchronizationJob",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetInventorySynchronizationJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资源同步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInventorySynchronizationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInventorySynchronizationJobResponse
+        /// </returns>
+        public async Task<GetInventorySynchronizationJobResponse> GetInventorySynchronizationJobWithOptionsAsync(GetInventorySynchronizationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InventorySynchronizationJobId))
+            {
+                query["InventorySynchronizationJobId"] = request.InventorySynchronizationJobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetInventorySynchronizationJob",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetInventorySynchronizationJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资源同步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInventorySynchronizationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInventorySynchronizationJobResponse
+        /// </returns>
+        public GetInventorySynchronizationJobResponse GetInventorySynchronizationJob(GetInventorySynchronizationJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetInventorySynchronizationJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资源同步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetInventorySynchronizationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInventorySynchronizationJobResponse
+        /// </returns>
+        public async Task<GetInventorySynchronizationJobResponse> GetInventorySynchronizationJobAsync(GetInventorySynchronizationJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetInventorySynchronizationJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Sets the post-logon redirect application for a brand.</para>
         /// </summary>
         /// 
@@ -25611,7 +27350,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a specified network access endpoint.</para>
+        /// <para>Queries the details of a specified network endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25657,7 +27396,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a specified network access endpoint.</para>
+        /// <para>Queries the details of a specified network endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25703,7 +27442,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a specified network access endpoint.</para>
+        /// <para>Queries the details of a specified network endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25721,7 +27460,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a specified network access endpoint.</para>
+        /// <para>Queries the details of a specified network endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25867,7 +27606,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of an EIAM organizational unit.</para>
+        /// <para>Queries the information of an EIAM organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25913,7 +27652,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of an EIAM organizational unit.</para>
+        /// <para>Queries the information of an EIAM organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25959,7 +27698,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of an EIAM organizational unit.</para>
+        /// <para>Queries the information of an EIAM organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25977,7 +27716,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of an EIAM organizational unit.</para>
+        /// <para>Queries the information of an EIAM organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26611,7 +28350,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the root organizational unit information of EIAM.</para>
+        /// <para>Queries the root organization information of EIAM.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26653,7 +28392,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the root organizational unit information of EIAM.</para>
+        /// <para>Queries the root organization information of EIAM.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26695,7 +28434,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the root organizational unit information of EIAM.</para>
+        /// <para>Queries the root organization information of EIAM.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26713,7 +28452,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the root organizational unit information of EIAM.</para>
+        /// <para>Queries the root organization information of EIAM.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26979,8 +28718,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a trusted origin.</para>
+        /// <para>Queries a trusted origin in a specified EIAM instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a trusted origin in a specified EIAM instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTrustedOriginRequest
@@ -27025,8 +28769,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a trusted origin.</para>
+        /// <para>Queries a trusted origin in a specified EIAM instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a trusted origin in a specified EIAM instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTrustedOriginRequest
@@ -27071,8 +28820,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a trusted origin.</para>
+        /// <para>Queries a trusted origin in a specified EIAM instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a trusted origin in a specified EIAM instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTrustedOriginRequest
@@ -27089,8 +28843,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a trusted origin.</para>
+        /// <para>Queries a trusted origin in a specified EIAM instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a trusted origin in a specified EIAM instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTrustedOriginRequest
@@ -27379,7 +29138,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the application accounts of an application by paging.</para>
+        /// <para>Queries application accounts under an application by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27433,7 +29192,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the application accounts of an application by paging.</para>
+        /// <para>Queries application accounts under an application by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27487,7 +29246,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the application accounts of an application by paging.</para>
+        /// <para>Queries application accounts under an application by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27505,7 +29264,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the application accounts of an application by paging.</para>
+        /// <para>Queries application accounts under an application by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27523,12 +29282,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all accounts that belong to a specified user in an application.</para>
+        /// <para>Queries all accounts of a specified user in the current application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries only applications that are directly assigned to an organization. You can use the <b>ApplicationIds</b> parameter to filter the applications.</para>
+        /// <para>This operation queries only the direct permissions of the organization, that is, applications directly assigned to the organization. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27578,12 +29337,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all accounts that belong to a specified user in an application.</para>
+        /// <para>Queries all accounts of a specified user in the current application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries only applications that are directly assigned to an organization. You can use the <b>ApplicationIds</b> parameter to filter the applications.</para>
+        /// <para>This operation queries only the direct permissions of the organization, that is, applications directly assigned to the organization. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27633,12 +29392,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all accounts that belong to a specified user in an application.</para>
+        /// <para>Queries all accounts of a specified user in the current application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries only applications that are directly assigned to an organization. You can use the <b>ApplicationIds</b> parameter to filter the applications.</para>
+        /// <para>This operation queries only the direct permissions of the organization, that is, applications directly assigned to the organization. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27656,12 +29415,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all accounts that belong to a specified user in an application.</para>
+        /// <para>Queries all accounts of a specified user in the current application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries only applications that are directly assigned to an organization. You can use the <b>ApplicationIds</b> parameter to filter the applications.</para>
+        /// <para>This operation queries only the direct permissions of the organization, that is, applications directly assigned to the organization. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27807,7 +29566,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of application federated identity credentials.</para>
+        /// <para>Queries a list of application federated identity credentials.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27869,7 +29628,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of application federated identity credentials.</para>
+        /// <para>Queries a list of application federated identity credentials.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27931,7 +29690,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of application federated identity credentials.</para>
+        /// <para>Queries a list of application federated identity credentials.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27949,7 +29708,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of application federated identity credentials.</para>
+        /// <para>Queries a list of application federated identity credentials.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27967,7 +29726,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of application federated credentials by federated trust source ID.</para>
+        /// <para>Queries a list of application federated credentials based on the federated trust source ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28025,7 +29784,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of application federated credentials by federated trust source ID.</para>
+        /// <para>Queries a list of application federated credentials based on the federated trust source ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28083,7 +29842,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of application federated credentials by federated trust source ID.</para>
+        /// <para>Queries a list of application federated credentials based on the federated trust source ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28101,7 +29860,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of application federated credentials by federated trust source ID.</para>
+        /// <para>Queries a list of application federated credentials based on the federated trust source ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29223,7 +30982,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of applications associated with a network domain.</para>
+        /// <para>Queries the applications associated with a network zone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29281,7 +31040,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of applications associated with a network domain.</para>
+        /// <para>Queries the applications associated with a network zone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29339,7 +31098,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of applications associated with a network domain.</para>
+        /// <para>Queries the applications associated with a network zone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29357,7 +31116,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of applications associated with a network domain.</para>
+        /// <para>Queries the applications associated with a network zone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29375,12 +31134,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of applications accessible to an EIAM organizational unit by paging. The response includes application IDs. To obtain detailed application information, call the GetApplication operation.</para>
+        /// <para>Performs a paging query for the list of applications accessible to an EIAM organization. The returned results include application IDs. To obtain detailed application information, call the GetApplication operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries only the direct permissions of the organizational unit, that is, applications directly assigned to the organizational unit. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
+        /// <para>This operation queries only the direct permissions of the organization, which are applications directly assigned to the organization. When you call this operation, you can filter applications by using the <b>ApplicationIds</b> parameter.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29438,12 +31197,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of applications accessible to an EIAM organizational unit by paging. The response includes application IDs. To obtain detailed application information, call the GetApplication operation.</para>
+        /// <para>Performs a paging query for the list of applications accessible to an EIAM organization. The returned results include application IDs. To obtain detailed application information, call the GetApplication operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries only the direct permissions of the organizational unit, that is, applications directly assigned to the organizational unit. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
+        /// <para>This operation queries only the direct permissions of the organization, which are applications directly assigned to the organization. When you call this operation, you can filter applications by using the <b>ApplicationIds</b> parameter.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29501,12 +31260,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of applications accessible to an EIAM organizational unit by paging. The response includes application IDs. To obtain detailed application information, call the GetApplication operation.</para>
+        /// <para>Performs a paging query for the list of applications accessible to an EIAM organization. The returned results include application IDs. To obtain detailed application information, call the GetApplication operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries only the direct permissions of the organizational unit, that is, applications directly assigned to the organizational unit. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
+        /// <para>This operation queries only the direct permissions of the organization, which are applications directly assigned to the organization. When you call this operation, you can filter applications by using the <b>ApplicationIds</b> parameter.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29524,12 +31283,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of applications accessible to an EIAM organizational unit by paging. The response includes application IDs. To obtain detailed application information, call the GetApplication operation.</para>
+        /// <para>Performs a paging query for the list of applications accessible to an EIAM organization. The returned results include application IDs. To obtain detailed application information, call the GetApplication operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries only the direct permissions of the organizational unit, that is, applications directly assigned to the organizational unit. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
+        /// <para>This operation queries only the direct permissions of the organization, which are applications directly assigned to the organization. When you call this operation, you can filter applications by using the <b>ApplicationIds</b> parameter.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29707,12 +31466,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists authorized resource information.</para>
+        /// <para>Lists the authorization resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries only the direct permissions of an organization, that is, applications directly assigned to the organization. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
+        /// <para>This operation queries only the direct permissions of an organization, which are applications directly assigned to the organization. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29770,12 +31529,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists authorized resource information.</para>
+        /// <para>Lists the authorization resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries only the direct permissions of an organization, that is, applications directly assigned to the organization. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
+        /// <para>This operation queries only the direct permissions of an organization, which are applications directly assigned to the organization. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29833,12 +31592,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists authorized resource information.</para>
+        /// <para>Lists the authorization resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries only the direct permissions of an organization, that is, applications directly assigned to the organization. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
+        /// <para>This operation queries only the direct permissions of an organization, which are applications directly assigned to the organization. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29856,12 +31615,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists authorized resource information.</para>
+        /// <para>Lists the authorization resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries only the direct permissions of an organization, that is, applications directly assigned to the organization. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
+        /// <para>This operation queries only the direct permissions of an organization, which are applications directly assigned to the organization. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30455,7 +32214,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of all authorization servers under an instance.</para>
+        /// <para>Retrieves a list of all authorization servers for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30505,7 +32264,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of all authorization servers under an instance.</para>
+        /// <para>Retrieves a list of all authorization servers for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30555,7 +32314,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of all authorization servers under an instance.</para>
+        /// <para>Retrieves a list of all authorization servers for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30573,7 +32332,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of all authorization servers under an instance.</para>
+        /// <para>Retrieves a list of all authorization servers for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30735,7 +32494,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the client public keys for a specified application using a cursor.</para>
+        /// <para>Queries the list of ClientPublicKeys for a specified application by using a cursor.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30789,7 +32548,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the client public keys for a specified application using a cursor.</para>
+        /// <para>Queries the list of ClientPublicKeys for a specified application by using a cursor.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30843,7 +32602,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the client public keys for a specified application using a cursor.</para>
+        /// <para>Queries the list of ClientPublicKeys for a specified application by using a cursor.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30861,7 +32620,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the client public keys for a specified application using a cursor.</para>
+        /// <para>Queries the list of ClientPublicKeys for a specified application by using a cursor.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30875,6 +32634,334 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListClientPublicKeysWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invokes ListCloudAccountResources to perform a paged query of cloud account resources by using paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCloudAccountResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCloudAccountResourcesResponse
+        /// </returns>
+        public ListCloudAccountResourcesResponse ListCloudAccountResourcesWithOptions(ListCloudAccountResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountResourceEntityType))
+            {
+                query["CloudAccountResourceEntityType"] = request.CloudAccountResourceEntityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountResourceNameContains))
+            {
+                query["CloudAccountResourceNameContains"] = request.CloudAccountResourceNameContains;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountResourceNamePrefix))
+            {
+                query["CloudAccountResourceNamePrefix"] = request.CloudAccountResourceNamePrefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCloudAccountResources",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCloudAccountResourcesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invokes ListCloudAccountResources to perform a paged query of cloud account resources by using paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCloudAccountResourcesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCloudAccountResourcesResponse
+        /// </returns>
+        public async Task<ListCloudAccountResourcesResponse> ListCloudAccountResourcesWithOptionsAsync(ListCloudAccountResourcesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountResourceEntityType))
+            {
+                query["CloudAccountResourceEntityType"] = request.CloudAccountResourceEntityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountResourceNameContains))
+            {
+                query["CloudAccountResourceNameContains"] = request.CloudAccountResourceNameContains;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountResourceNamePrefix))
+            {
+                query["CloudAccountResourceNamePrefix"] = request.CloudAccountResourceNamePrefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCloudAccountResources",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCloudAccountResourcesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invokes ListCloudAccountResources to perform a paged query of cloud account resources by using paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCloudAccountResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCloudAccountResourcesResponse
+        /// </returns>
+        public ListCloudAccountResourcesResponse ListCloudAccountResources(ListCloudAccountResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListCloudAccountResourcesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invokes ListCloudAccountResources to perform a paged query of cloud account resources by using paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCloudAccountResourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCloudAccountResourcesResponse
+        /// </returns>
+        public async Task<ListCloudAccountResourcesResponse> ListCloudAccountResourcesAsync(ListCloudAccountResourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListCloudAccountResourcesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询权限模板关联的资源列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCloudAccountResourcesForCloudPermissionTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCloudAccountResourcesForCloudPermissionTemplateResponse
+        /// </returns>
+        public ListCloudAccountResourcesForCloudPermissionTemplateResponse ListCloudAccountResourcesForCloudPermissionTemplateWithOptions(ListCloudAccountResourcesForCloudPermissionTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountResourceEntityType))
+            {
+                query["CloudAccountResourceEntityType"] = request.CloudAccountResourceEntityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudPermissionTemplateId))
+            {
+                query["CloudPermissionTemplateId"] = request.CloudPermissionTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCloudAccountResourcesForCloudPermissionTemplate",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCloudAccountResourcesForCloudPermissionTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询权限模板关联的资源列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCloudAccountResourcesForCloudPermissionTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCloudAccountResourcesForCloudPermissionTemplateResponse
+        /// </returns>
+        public async Task<ListCloudAccountResourcesForCloudPermissionTemplateResponse> ListCloudAccountResourcesForCloudPermissionTemplateWithOptionsAsync(ListCloudAccountResourcesForCloudPermissionTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountResourceEntityType))
+            {
+                query["CloudAccountResourceEntityType"] = request.CloudAccountResourceEntityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudPermissionTemplateId))
+            {
+                query["CloudPermissionTemplateId"] = request.CloudPermissionTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCloudAccountResourcesForCloudPermissionTemplate",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCloudAccountResourcesForCloudPermissionTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询权限模板关联的资源列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCloudAccountResourcesForCloudPermissionTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCloudAccountResourcesForCloudPermissionTemplateResponse
+        /// </returns>
+        public ListCloudAccountResourcesForCloudPermissionTemplateResponse ListCloudAccountResourcesForCloudPermissionTemplate(ListCloudAccountResourcesForCloudPermissionTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListCloudAccountResourcesForCloudPermissionTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询权限模板关联的资源列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCloudAccountResourcesForCloudPermissionTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCloudAccountResourcesForCloudPermissionTemplateResponse
+        /// </returns>
+        public async Task<ListCloudAccountResourcesForCloudPermissionTemplateResponse> ListCloudAccountResourcesForCloudPermissionTemplateAsync(ListCloudAccountResourcesForCloudPermissionTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListCloudAccountResourcesForCloudPermissionTemplateWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -31175,12 +33262,188 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List conditional access policies.</para>
+        /// <para>Queries the information of one or more permission templates by using paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCloudPermissionTemplatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCloudPermissionTemplatesResponse
+        /// </returns>
+        public ListCloudPermissionTemplatesResponse ListCloudPermissionTemplatesWithOptions(ListCloudPermissionTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudPermissionTemplateNamePrefix))
+            {
+                query["CloudPermissionTemplateNamePrefix"] = request.CloudPermissionTemplateNamePrefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudPermissionTemplateSharingMode))
+            {
+                query["CloudPermissionTemplateSharingMode"] = request.CloudPermissionTemplateSharingMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudPermissionTemplateUsageType))
+            {
+                query["CloudPermissionTemplateUsageType"] = request.CloudPermissionTemplateUsageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreatorType))
+            {
+                query["CreatorType"] = request.CreatorType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCloudPermissionTemplates",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCloudPermissionTemplatesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of one or more permission templates by using paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCloudPermissionTemplatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCloudPermissionTemplatesResponse
+        /// </returns>
+        public async Task<ListCloudPermissionTemplatesResponse> ListCloudPermissionTemplatesWithOptionsAsync(ListCloudPermissionTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudPermissionTemplateNamePrefix))
+            {
+                query["CloudPermissionTemplateNamePrefix"] = request.CloudPermissionTemplateNamePrefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudPermissionTemplateSharingMode))
+            {
+                query["CloudPermissionTemplateSharingMode"] = request.CloudPermissionTemplateSharingMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudPermissionTemplateUsageType))
+            {
+                query["CloudPermissionTemplateUsageType"] = request.CloudPermissionTemplateUsageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreatorType))
+            {
+                query["CreatorType"] = request.CreatorType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCloudPermissionTemplates",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCloudPermissionTemplatesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of one or more permission templates by using paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCloudPermissionTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCloudPermissionTemplatesResponse
+        /// </returns>
+        public ListCloudPermissionTemplatesResponse ListCloudPermissionTemplates(ListCloudPermissionTemplatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListCloudPermissionTemplatesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information of one or more permission templates by using paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCloudPermissionTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCloudPermissionTemplatesResponse
+        /// </returns>
+        public async Task<ListCloudPermissionTemplatesResponse> ListCloudPermissionTemplatesAsync(ListCloudPermissionTemplatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListCloudPermissionTemplatesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists conditional access policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the list of conditional access policies with pagination.</para>
+        /// <para>Queries conditional access policies by page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31234,12 +33497,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List conditional access policies.</para>
+        /// <para>Lists conditional access policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the list of conditional access policies with pagination.</para>
+        /// <para>Queries conditional access policies by page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31293,12 +33556,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List conditional access policies.</para>
+        /// <para>Lists conditional access policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the list of conditional access policies with pagination.</para>
+        /// <para>Queries conditional access policies by page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31316,12 +33579,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List conditional access policies.</para>
+        /// <para>Lists conditional access policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the list of conditional access policies with pagination.</para>
+        /// <para>Queries conditional access policies by page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31339,7 +33602,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List conditional access policies associated with an application.</para>
+        /// <para>Retrieves the list of conditional access policies associated with an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31385,7 +33648,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List conditional access policies associated with an application.</para>
+        /// <para>Retrieves the list of conditional access policies associated with an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31431,7 +33694,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List conditional access policies associated with an application.</para>
+        /// <para>Retrieves the list of conditional access policies associated with an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31449,7 +33712,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List conditional access policies associated with an application.</para>
+        /// <para>Retrieves the list of conditional access policies associated with an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32095,7 +34358,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of custom terms.</para>
+        /// <para>Queries custom privacy policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32153,7 +34416,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of custom terms.</para>
+        /// <para>Queries custom privacy policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32211,7 +34474,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of custom terms.</para>
+        /// <para>Queries custom privacy policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32229,7 +34492,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of custom terms.</para>
+        /// <para>Queries custom privacy policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32247,7 +34510,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the resources of brand-linked instances.</para>
+        /// <para>Retrieves the resources associated with a brand.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32305,7 +34568,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the resources of brand-linked instances.</para>
+        /// <para>Retrieves the resources associated with a brand.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32363,7 +34626,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the resources of brand-linked instances.</para>
+        /// <para>Retrieves the resources associated with a brand.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32381,7 +34644,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the resources of brand-linked instances.</para>
+        /// <para>Retrieves the resources associated with a brand.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32399,7 +34662,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of domain proxy tokens of an EIAM instance.</para>
+        /// <para>Lists the proxy tokens for the domain name of an EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32445,7 +34708,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of domain proxy tokens of an EIAM instance.</para>
+        /// <para>Lists the proxy tokens for the domain name of an EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32491,7 +34754,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of domain proxy tokens of an EIAM instance.</para>
+        /// <para>Lists the proxy tokens for the domain name of an EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32509,7 +34772,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of domain proxy tokens of an EIAM instance.</para>
+        /// <para>Lists the proxy tokens for the domain name of an EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32871,7 +35134,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the event list.</para>
+        /// <para>Lists events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32917,7 +35180,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the event list.</para>
+        /// <para>Lists events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32963,7 +35226,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the event list.</para>
+        /// <para>Lists events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32981,7 +35244,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the event list.</para>
+        /// <para>Lists events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33327,7 +35590,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to list the groups authorized to access an application. The response returns the group IDs. To obtain detailed information for a group, you can call the GetGroup operation.</para>
+        /// <para>Performs a paged query on the list of groups with authorization to access an application. The response includes group IDs and supports paging. To obtain detailed group information, invoke the GetGroup operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33389,7 +35652,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to list the groups authorized to access an application. The response returns the group IDs. To obtain detailed information for a group, you can call the GetGroup operation.</para>
+        /// <para>Performs a paged query on the list of groups with authorization to access an application. The response includes group IDs and supports paging. To obtain detailed group information, invoke the GetGroup operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33451,7 +35714,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to list the groups authorized to access an application. The response returns the group IDs. To obtain detailed information for a group, you can call the GetGroup operation.</para>
+        /// <para>Performs a paged query on the list of groups with authorization to access an application. The response includes group IDs and supports paging. To obtain detailed group information, invoke the GetGroup operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33469,7 +35732,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to list the groups authorized to access an application. The response returns the group IDs. To obtain detailed information for a group, you can call the GetGroup operation.</para>
+        /// <para>Performs a paged query on the list of groups with authorization to access an application. The response includes group IDs and supports paging. To obtain detailed group information, invoke the GetGroup operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33799,7 +36062,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of account groups to which a specified EIAM account belongs.</para>
+        /// <para>Queries the groups to which a specified EIAM account belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33853,7 +36116,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of account groups to which a specified EIAM account belongs.</para>
+        /// <para>Queries the groups to which a specified EIAM account belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33907,7 +36170,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of account groups to which a specified EIAM account belongs.</para>
+        /// <para>Queries the groups to which a specified EIAM account belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33925,7 +36188,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of account groups to which a specified EIAM account belongs.</para>
+        /// <para>Queries the groups to which a specified EIAM account belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33943,7 +36206,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of identity providers.</para>
+        /// <para>Queries the list of identity providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33997,7 +36260,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of identity providers.</para>
+        /// <para>Queries the list of identity providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34051,7 +36314,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of identity providers.</para>
+        /// <para>Queries the list of identity providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34069,7 +36332,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of identity providers.</para>
+        /// <para>Queries the list of identity providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34087,7 +36350,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about Identity Providers (IdPs) for a network endpoint.</para>
+        /// <para>Retrieves the IdP information for a network access endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34141,7 +36404,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about Identity Providers (IdPs) for a network endpoint.</para>
+        /// <para>Retrieves the IdP information for a network access endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34195,7 +36458,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about Identity Providers (IdPs) for a network endpoint.</para>
+        /// <para>Retrieves the IdP information for a network access endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34213,7 +36476,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about Identity Providers (IdPs) for a network endpoint.</para>
+        /// <para>Retrieves the IdP information for a network access endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34407,7 +36670,215 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the available regions for creating network access endpoints in IDaaS EIAM.</para>
+        /// <para>查询资源同步任务列表</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>支持以下两种方式查看返回数据：</para>
+        /// <list type="bullet">
+        /// <item><description>方式一：分页查询首页时，仅需设置MaxResults以限制返回信息的条目数，返回结果中的NextToken将作为查询后续页的凭证。查询后续页时，将NextToken参数设置为上一次返回结果中获取到的NextToken作为查询凭证，并设置MaxResults限制返回条目数。如果没有下一页时，NextToken不再返回。MaxResults最大值为100。</description></item>
+        /// <item><description>方式二：通过PageSize设置单页返回的条目数，再通过PageNumber设置页码。
+        /// 以上两种方式只能任选其中之一。当返回的条目数较多时，推荐使用方式一。如果设置了MaxResults或NextToken参数，则请求参数PageSize和PageNumber将失效。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListInventorySynchronizationJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInventorySynchronizationJobsResponse
+        /// </returns>
+        public ListInventorySynchronizationJobsResponse ListInventorySynchronizationJobsWithOptions(ListInventorySynchronizationJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InventorySourceIds))
+            {
+                query["InventorySourceIds"] = request.InventorySourceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInventorySynchronizationJobs",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInventorySynchronizationJobsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资源同步任务列表</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>支持以下两种方式查看返回数据：</para>
+        /// <list type="bullet">
+        /// <item><description>方式一：分页查询首页时，仅需设置MaxResults以限制返回信息的条目数，返回结果中的NextToken将作为查询后续页的凭证。查询后续页时，将NextToken参数设置为上一次返回结果中获取到的NextToken作为查询凭证，并设置MaxResults限制返回条目数。如果没有下一页时，NextToken不再返回。MaxResults最大值为100。</description></item>
+        /// <item><description>方式二：通过PageSize设置单页返回的条目数，再通过PageNumber设置页码。
+        /// 以上两种方式只能任选其中之一。当返回的条目数较多时，推荐使用方式一。如果设置了MaxResults或NextToken参数，则请求参数PageSize和PageNumber将失效。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListInventorySynchronizationJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInventorySynchronizationJobsResponse
+        /// </returns>
+        public async Task<ListInventorySynchronizationJobsResponse> ListInventorySynchronizationJobsWithOptionsAsync(ListInventorySynchronizationJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InventorySourceIds))
+            {
+                query["InventorySourceIds"] = request.InventorySourceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInventorySynchronizationJobs",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInventorySynchronizationJobsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资源同步任务列表</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>支持以下两种方式查看返回数据：</para>
+        /// <list type="bullet">
+        /// <item><description>方式一：分页查询首页时，仅需设置MaxResults以限制返回信息的条目数，返回结果中的NextToken将作为查询后续页的凭证。查询后续页时，将NextToken参数设置为上一次返回结果中获取到的NextToken作为查询凭证，并设置MaxResults限制返回条目数。如果没有下一页时，NextToken不再返回。MaxResults最大值为100。</description></item>
+        /// <item><description>方式二：通过PageSize设置单页返回的条目数，再通过PageNumber设置页码。
+        /// 以上两种方式只能任选其中之一。当返回的条目数较多时，推荐使用方式一。如果设置了MaxResults或NextToken参数，则请求参数PageSize和PageNumber将失效。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListInventorySynchronizationJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInventorySynchronizationJobsResponse
+        /// </returns>
+        public ListInventorySynchronizationJobsResponse ListInventorySynchronizationJobs(ListInventorySynchronizationJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListInventorySynchronizationJobsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资源同步任务列表</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>支持以下两种方式查看返回数据：</para>
+        /// <list type="bullet">
+        /// <item><description>方式一：分页查询首页时，仅需设置MaxResults以限制返回信息的条目数，返回结果中的NextToken将作为查询后续页的凭证。查询后续页时，将NextToken参数设置为上一次返回结果中获取到的NextToken作为查询凭证，并设置MaxResults限制返回条目数。如果没有下一页时，NextToken不再返回。MaxResults最大值为100。</description></item>
+        /// <item><description>方式二：通过PageSize设置单页返回的条目数，再通过PageNumber设置页码。
+        /// 以上两种方式只能任选其中之一。当返回的条目数较多时，推荐使用方式一。如果设置了MaxResults或NextToken参数，则请求参数PageSize和PageNumber将失效。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListInventorySynchronizationJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInventorySynchronizationJobsResponse
+        /// </returns>
+        public async Task<ListInventorySynchronizationJobsResponse> ListInventorySynchronizationJobsAsync(ListInventorySynchronizationJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListInventorySynchronizationJobsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of regions where IDaaS EIAM supports creating network endpoints.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -34437,7 +36908,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the available regions for creating network access endpoints in IDaaS EIAM.</para>
+        /// <para>Queries the list of regions where IDaaS EIAM supports creating network endpoints.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -34467,7 +36938,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the available regions for creating network access endpoints in IDaaS EIAM.</para>
+        /// <para>Queries the list of regions where IDaaS EIAM supports creating network endpoints.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -34481,7 +36952,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the available regions for creating network access endpoints in IDaaS EIAM.</para>
+        /// <para>Queries the list of regions where IDaaS EIAM supports creating network endpoints.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -34615,7 +37086,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of network access endpoints under an IDaaS EIAM instance.</para>
+        /// <para>Queries the network access endpoints of an IDaaS EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34681,7 +37152,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of network access endpoints under an IDaaS EIAM instance.</para>
+        /// <para>Queries the network access endpoints of an IDaaS EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34747,7 +37218,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of network access endpoints under an IDaaS EIAM instance.</para>
+        /// <para>Queries the network access endpoints of an IDaaS EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34765,7 +37236,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of network access endpoints under an IDaaS EIAM instance.</para>
+        /// <para>Queries the network access endpoints of an IDaaS EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34911,7 +37382,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of network zone objects.</para>
+        /// <para>Queries network zone objects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34969,7 +37440,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of network zone objects.</para>
+        /// <para>Queries network zone objects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35027,7 +37498,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of network zone objects.</para>
+        /// <para>Queries network zone objects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35045,7 +37516,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of network zone objects.</para>
+        /// <para>Queries network zone objects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35063,7 +37534,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all ancestor organizations of a specified EIAM organization. The organizations in the result list are sorted in hierarchical order from the top level to the bottom level.</para>
+        /// <para>Lists all ancestor organizations of a specified EIAM organization. The returned organization list is sorted in hierarchical order from the top level to the bottom level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35109,7 +37580,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all ancestor organizations of a specified EIAM organization. The organizations in the result list are sorted in hierarchical order from the top level to the bottom level.</para>
+        /// <para>Lists all ancestor organizations of a specified EIAM organization. The returned organization list is sorted in hierarchical order from the top level to the bottom level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35155,7 +37626,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all ancestor organizations of a specified EIAM organization. The organizations in the result list are sorted in hierarchical order from the top level to the bottom level.</para>
+        /// <para>Lists all ancestor organizations of a specified EIAM organization. The returned organization list is sorted in hierarchical order from the top level to the bottom level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35173,7 +37644,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all ancestor organizations of a specified EIAM organization. The organizations in the result list are sorted in hierarchical order from the top level to the bottom level.</para>
+        /// <para>Lists all ancestor organizations of a specified EIAM organization. The returned organization list is sorted in hierarchical order from the top level to the bottom level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35359,7 +37830,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to list the organizations that are granted access to an application. The response returns the IDs of the organizations. To obtain detailed information about a specific organization, call the GetOrganizationalUnit operation.</para>
+        /// <para>Performs a paging query for the list of organizational units that an application is authorized to access. The returned result includes the organizational unit IDs. To obtain detailed information about an organizational unit, call the GetOrganizationalUnit operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35421,7 +37892,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to list the organizations that are granted access to an application. The response returns the IDs of the organizations. To obtain detailed information about a specific organization, call the GetOrganizationalUnit operation.</para>
+        /// <para>Performs a paging query for the list of organizational units that an application is authorized to access. The returned result includes the organizational unit IDs. To obtain detailed information about an organizational unit, call the GetOrganizationalUnit operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35483,7 +37954,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to list the organizations that are granted access to an application. The response returns the IDs of the organizations. To obtain detailed information about a specific organization, call the GetOrganizationalUnit operation.</para>
+        /// <para>Performs a paging query for the list of organizational units that an application is authorized to access. The returned result includes the organizational unit IDs. To obtain detailed information about an organizational unit, call the GetOrganizationalUnit operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35501,7 +37972,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to list the organizations that are granted access to an application. The response returns the IDs of the organizations. To obtain detailed information about a specific organization, call the GetOrganizationalUnit operation.</para>
+        /// <para>Performs a paging query for the list of organizational units that an application is authorized to access. The returned result includes the organizational unit IDs. To obtain detailed information about an organizational unit, call the GetOrganizationalUnit operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35519,7 +37990,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a cursor-paginated list of scopes that the current resource server has granted to an organization.</para>
+        /// <para>Queries the list of scope permissions that the current ResourceServer has authorized to organizational units by using a cursor-based pagination method.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35581,7 +38052,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a cursor-paginated list of scopes that the current resource server has granted to an organization.</para>
+        /// <para>Queries the list of scope permissions that the current ResourceServer has authorized to organizational units by using a cursor-based pagination method.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35643,7 +38114,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a cursor-paginated list of scopes that the current resource server has granted to an organization.</para>
+        /// <para>Queries the list of scope permissions that the current ResourceServer has authorized to organizational units by using a cursor-based pagination method.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35661,7 +38132,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a cursor-paginated list of scopes that the current resource server has granted to an organization.</para>
+        /// <para>Queries the list of scope permissions that the current ResourceServer has authorized to organizational units by using a cursor-based pagination method.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36111,16 +38582,16 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of synchronization job details.</para>
+        /// <para>Lists the details of synchronization tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The following two methods are supported for viewing returned data:</para>
+        /// <para>You can view the returned data in one of the following ways:</para>
         /// <list type="bullet">
-        /// <item><description>Method 1: When querying the first page, you only need to set MaxResults to limit the number of entries returned. The NextToken in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response as the query credential, and set MaxResults to limit the number of entries returned. If there are no more pages, NextToken is no longer returned. The maximum value of MaxResults is 100.</description></item>
-        /// <item><description>Method 2: Set the number of entries returned per page using PageSize, and set the page number using PageNumber.
-        /// You can only choose one of the above two methods. When a large number of entries are returned, Method 1 is recommended. If the MaxResults or NextToken parameter is set, the PageSize and PageNumber request parameters become invalid.</description></item>
+        /// <item><description>Method 1: When performing a paged query for the first page, specify only MaxResults to limit the number of entries to return. The NextToken value in the response is used as the token to query the next page. When querying subsequent pages, set the NextToken parameter to the value obtained from the previous response and specify MaxResults to limit the number of entries to return. If no more pages exist, NextToken is not returned. The maximum value of MaxResults is 100.</description></item>
+        /// <item><description>Method 2: Use PageSize to specify the number of entries to return per page, and use PageNumber to specify the page number.
+        /// You can use only one of the preceding methods. Method 1 is recommended when a large number of entries are returned. If you specify MaxResults or NextToken, the PageSize and PageNumber request parameters become invalid.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -36207,16 +38678,16 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of synchronization job details.</para>
+        /// <para>Lists the details of synchronization tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The following two methods are supported for viewing returned data:</para>
+        /// <para>You can view the returned data in one of the following ways:</para>
         /// <list type="bullet">
-        /// <item><description>Method 1: When querying the first page, you only need to set MaxResults to limit the number of entries returned. The NextToken in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response as the query credential, and set MaxResults to limit the number of entries returned. If there are no more pages, NextToken is no longer returned. The maximum value of MaxResults is 100.</description></item>
-        /// <item><description>Method 2: Set the number of entries returned per page using PageSize, and set the page number using PageNumber.
-        /// You can only choose one of the above two methods. When a large number of entries are returned, Method 1 is recommended. If the MaxResults or NextToken parameter is set, the PageSize and PageNumber request parameters become invalid.</description></item>
+        /// <item><description>Method 1: When performing a paged query for the first page, specify only MaxResults to limit the number of entries to return. The NextToken value in the response is used as the token to query the next page. When querying subsequent pages, set the NextToken parameter to the value obtained from the previous response and specify MaxResults to limit the number of entries to return. If no more pages exist, NextToken is not returned. The maximum value of MaxResults is 100.</description></item>
+        /// <item><description>Method 2: Use PageSize to specify the number of entries to return per page, and use PageNumber to specify the page number.
+        /// You can use only one of the preceding methods. Method 1 is recommended when a large number of entries are returned. If you specify MaxResults or NextToken, the PageSize and PageNumber request parameters become invalid.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -36303,16 +38774,16 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of synchronization job details.</para>
+        /// <para>Lists the details of synchronization tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The following two methods are supported for viewing returned data:</para>
+        /// <para>You can view the returned data in one of the following ways:</para>
         /// <list type="bullet">
-        /// <item><description>Method 1: When querying the first page, you only need to set MaxResults to limit the number of entries returned. The NextToken in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response as the query credential, and set MaxResults to limit the number of entries returned. If there are no more pages, NextToken is no longer returned. The maximum value of MaxResults is 100.</description></item>
-        /// <item><description>Method 2: Set the number of entries returned per page using PageSize, and set the page number using PageNumber.
-        /// You can only choose one of the above two methods. When a large number of entries are returned, Method 1 is recommended. If the MaxResults or NextToken parameter is set, the PageSize and PageNumber request parameters become invalid.</description></item>
+        /// <item><description>Method 1: When performing a paged query for the first page, specify only MaxResults to limit the number of entries to return. The NextToken value in the response is used as the token to query the next page. When querying subsequent pages, set the NextToken parameter to the value obtained from the previous response and specify MaxResults to limit the number of entries to return. If no more pages exist, NextToken is not returned. The maximum value of MaxResults is 100.</description></item>
+        /// <item><description>Method 2: Use PageSize to specify the number of entries to return per page, and use PageNumber to specify the page number.
+        /// You can use only one of the preceding methods. Method 1 is recommended when a large number of entries are returned. If you specify MaxResults or NextToken, the PageSize and PageNumber request parameters become invalid.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -36331,16 +38802,16 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of synchronization job details.</para>
+        /// <para>Lists the details of synchronization tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The following two methods are supported for viewing returned data:</para>
+        /// <para>You can view the returned data in one of the following ways:</para>
         /// <list type="bullet">
-        /// <item><description>Method 1: When querying the first page, you only need to set MaxResults to limit the number of entries returned. The NextToken in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response as the query credential, and set MaxResults to limit the number of entries returned. If there are no more pages, NextToken is no longer returned. The maximum value of MaxResults is 100.</description></item>
-        /// <item><description>Method 2: Set the number of entries returned per page using PageSize, and set the page number using PageNumber.
-        /// You can only choose one of the above two methods. When a large number of entries are returned, Method 1 is recommended. If the MaxResults or NextToken parameter is set, the PageSize and PageNumber request parameters become invalid.</description></item>
+        /// <item><description>Method 1: When performing a paged query for the first page, specify only MaxResults to limit the number of entries to return. The NextToken value in the response is used as the token to query the next page. When querying subsequent pages, set the NextToken parameter to the value obtained from the previous response and specify MaxResults to limit the number of entries to return. If no more pages exist, NextToken is not returned. The maximum value of MaxResults is 100.</description></item>
+        /// <item><description>Method 2: Use PageSize to specify the number of entries to return per page, and use PageNumber to specify the page number.
+        /// You can use only one of the preceding methods. Method 1 is recommended when a large number of entries are returned. If you specify MaxResults or NextToken, the PageSize and PageNumber request parameters become invalid.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -36359,8 +38830,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of trusted origins.</para>
+        /// <para>Queries the list of trusted origins in a specified Employees Identity and Access Management (EIAM) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of trusted origins in a specified EIAM instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTrustedOriginsRequest
@@ -36425,8 +38901,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of trusted origins.</para>
+        /// <para>Queries the list of trusted origins in a specified Employees Identity and Access Management (EIAM) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of trusted origins in a specified EIAM instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTrustedOriginsRequest
@@ -36491,8 +38972,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of trusted origins.</para>
+        /// <para>Queries the list of trusted origins in a specified Employees Identity and Access Management (EIAM) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of trusted origins in a specified EIAM instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTrustedOriginsRequest
@@ -36509,8 +38995,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of trusted origins.</para>
+        /// <para>Queries the list of trusted origins in a specified Employees Identity and Access Management (EIAM) instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of trusted origins in a specified EIAM instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTrustedOriginsRequest
@@ -36527,12 +39018,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the mappings for third-party logon accounts.</para>
+        /// <para>Queries the binding relationships of third-party logon accounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries only the applications that are directly assigned to an organization. You can use the <b>ApplicationIds</b> parameter to filter the applications.</para>
+        /// <para>This operation queries only the direct permissions of an organization, namely the applications directly assigned to the organization. When you call this operation, you can filter applications by using the <b>ApplicationIds</b> parameter.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36598,12 +39089,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the mappings for third-party logon accounts.</para>
+        /// <para>Queries the binding relationships of third-party logon accounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries only the applications that are directly assigned to an organization. You can use the <b>ApplicationIds</b> parameter to filter the applications.</para>
+        /// <para>This operation queries only the direct permissions of an organization, namely the applications directly assigned to the organization. When you call this operation, you can filter applications by using the <b>ApplicationIds</b> parameter.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36669,12 +39160,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the mappings for third-party logon accounts.</para>
+        /// <para>Queries the binding relationships of third-party logon accounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries only the applications that are directly assigned to an organization. You can use the <b>ApplicationIds</b> parameter to filter the applications.</para>
+        /// <para>This operation queries only the direct permissions of an organization, namely the applications directly assigned to the organization. When you call this operation, you can filter applications by using the <b>ApplicationIds</b> parameter.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36692,12 +39183,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the mappings for third-party logon accounts.</para>
+        /// <para>Queries the binding relationships of third-party logon accounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries only the applications that are directly assigned to an organization. You can use the <b>ApplicationIds</b> parameter to filter the applications.</para>
+        /// <para>This operation queries only the direct permissions of an organization, namely the applications directly assigned to the organization. When you call this operation, you can filter applications by using the <b>ApplicationIds</b> parameter.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36715,12 +39206,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries EIAM account information by using paging.</para>
+        /// <para>Performs a paging query of EIAM account information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries only the direct permissions of an organizational unit, which are the applications directly assigned to the organizational unit. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
+        /// <para>This operation queries only the direct permissions of an organization, which are the applications directly assigned to the organization. When you call this operation, you can filter applications by using the <b>ApplicationIds</b> parameter.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36822,12 +39313,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries EIAM account information by using paging.</para>
+        /// <para>Performs a paging query of EIAM account information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries only the direct permissions of an organizational unit, which are the applications directly assigned to the organizational unit. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
+        /// <para>This operation queries only the direct permissions of an organization, which are the applications directly assigned to the organization. When you call this operation, you can filter applications by using the <b>ApplicationIds</b> parameter.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36929,12 +39420,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries EIAM account information by using paging.</para>
+        /// <para>Performs a paging query of EIAM account information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries only the direct permissions of an organizational unit, which are the applications directly assigned to the organizational unit. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
+        /// <para>This operation queries only the direct permissions of an organization, which are the applications directly assigned to the organization. When you call this operation, you can filter applications by using the <b>ApplicationIds</b> parameter.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36952,12 +39443,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries EIAM account information by using paging.</para>
+        /// <para>Performs a paging query of EIAM account information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries only the direct permissions of an organizational unit, which are the applications directly assigned to the organizational unit. When you call this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
+        /// <para>This operation queries only the direct permissions of an organization, which are the applications directly assigned to the organization. When you call this operation, you can filter applications by using the <b>ApplicationIds</b> parameter.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36975,7 +39466,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to list the accounts that have been granted access to an application. The response includes account IDs. To retrieve detailed information about an account, call the GetUser operation.</para>
+        /// <para>Performs a paging query to retrieve the list of accounts authorized to access an application. The response includes account IDs. To obtain detailed account information, call the GetUser operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37037,7 +39528,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to list the accounts that have been granted access to an application. The response includes account IDs. To retrieve detailed information about an account, call the GetUser operation.</para>
+        /// <para>Performs a paging query to retrieve the list of accounts authorized to access an application. The response includes account IDs. To obtain detailed account information, call the GetUser operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37099,7 +39590,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to list the accounts that have been granted access to an application. The response includes account IDs. To retrieve detailed information about an account, call the GetUser operation.</para>
+        /// <para>Performs a paging query to retrieve the list of accounts authorized to access an application. The response includes account IDs. To obtain detailed account information, call the GetUser operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37117,7 +39608,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to list the accounts that have been granted access to an application. The response includes account IDs. To retrieve detailed information about an account, call the GetUser operation.</para>
+        /// <para>Performs a paging query to retrieve the list of accounts authorized to access an application. The response includes account IDs. To obtain detailed account information, call the GetUser operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37439,7 +39930,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List the scope permissions granted by a Resource Server to user accounts using cursor-based pagination.</para>
+        /// <para>Queries the list of scope permissions that the current ResourceServer has granted to accounts by using a cursor-based pagination method.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37501,7 +39992,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List the scope permissions granted by a Resource Server to user accounts using cursor-based pagination.</para>
+        /// <para>Queries the list of scope permissions that the current ResourceServer has granted to accounts by using a cursor-based pagination method.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37563,7 +40054,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List the scope permissions granted by a Resource Server to user accounts using cursor-based pagination.</para>
+        /// <para>Queries the list of scope permissions that the current ResourceServer has granted to accounts by using a cursor-based pagination method.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37581,7 +40072,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List the scope permissions granted by a Resource Server to user accounts using cursor-based pagination.</para>
+        /// <para>Queries the list of scope permissions that the current ResourceServer has granted to accounts by using a cursor-based pagination method.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37740,7 +40231,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that may result from this operation.</para>
+        /// <para>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that may be caused by this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37795,7 +40286,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that may result from this operation.</para>
+        /// <para>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that may be caused by this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37850,7 +40341,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that may result from this operation.</para>
+        /// <para>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that may be caused by this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37873,7 +40364,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that may result from this operation.</para>
+        /// <para>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that may be caused by this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38999,7 +41490,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes Employee Identity and Access Management (EIAM) accounts from an EIAM group of Identity as a Service (IDaaS).</para>
+        /// <para>Removes multiple EIAM accounts from a specified EIAM account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39049,7 +41540,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes Employee Identity and Access Management (EIAM) accounts from an EIAM group of Identity as a Service (IDaaS).</para>
+        /// <para>Removes multiple EIAM accounts from a specified EIAM account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39099,7 +41590,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes Employee Identity and Access Management (EIAM) accounts from an EIAM group of Identity as a Service (IDaaS).</para>
+        /// <para>Removes multiple EIAM accounts from a specified EIAM account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39117,7 +41608,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes Employee Identity and Access Management (EIAM) accounts from an EIAM group of Identity as a Service (IDaaS).</para>
+        /// <para>Removes multiple EIAM accounts from a specified EIAM account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39255,7 +41746,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the permissions of multiple Employee Identity and Access Management (EIAM) groups to access an application in a batch.</para>
+        /// <para>Revokes application access permissions for multiple EIAM groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39309,7 +41800,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the permissions of multiple Employee Identity and Access Management (EIAM) groups to access an application in a batch.</para>
+        /// <para>Revokes application access permissions for multiple EIAM groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39363,7 +41854,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the permissions of multiple Employee Identity and Access Management (EIAM) groups to access an application in a batch.</para>
+        /// <para>Revokes application access permissions for multiple EIAM groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39381,7 +41872,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the permissions of multiple Employee Identity and Access Management (EIAM) groups to access an application in a batch.</para>
+        /// <para>Revokes application access permissions for multiple EIAM groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39399,7 +41890,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes application access from multiple EIAM organizations in a batch operation.</para>
+        /// <para>Revokes access to an application for multiple EIAM organizational units in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39453,7 +41944,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes application access from multiple EIAM organizations in a batch operation.</para>
+        /// <para>Revokes access to an application for multiple EIAM organizational units in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39507,7 +41998,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes application access from multiple EIAM organizations in a batch operation.</para>
+        /// <para>Revokes access to an application for multiple EIAM organizational units in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39525,7 +42016,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes application access from multiple EIAM organizations in a batch operation.</para>
+        /// <para>Revokes access to an application for multiple EIAM organizational units in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39543,7 +42034,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the permissions of multiple Enterprise Identity Access Management (EIAM) accounts to access an application in a batch.</para>
+        /// <para>Revokes access to an application for multiple EIAM accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39597,7 +42088,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the permissions of multiple Enterprise Identity Access Management (EIAM) accounts to access an application in a batch.</para>
+        /// <para>Revokes access to an application for multiple EIAM accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39651,7 +42142,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the permissions of multiple Enterprise Identity Access Management (EIAM) accounts to access an application in a batch.</para>
+        /// <para>Revokes access to an application for multiple EIAM accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39669,7 +42160,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the permissions of multiple Enterprise Identity Access Management (EIAM) accounts to access an application in a batch.</para>
+        /// <para>Revokes access to an application for multiple EIAM accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40399,7 +42890,143 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and immediately runs a new synchronization task.</para>
+        /// <para>运行资源同步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunInventorySynchronizationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunInventorySynchronizationJobResponse
+        /// </returns>
+        public RunInventorySynchronizationJobResponse RunInventorySynchronizationJobWithOptions(RunInventorySynchronizationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InventorySourceId))
+            {
+                query["InventorySourceId"] = request.InventorySourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InventoryTypes))
+            {
+                query["InventoryTypes"] = request.InventoryTypes;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunInventorySynchronizationJob",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunInventorySynchronizationJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>运行资源同步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunInventorySynchronizationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunInventorySynchronizationJobResponse
+        /// </returns>
+        public async Task<RunInventorySynchronizationJobResponse> RunInventorySynchronizationJobWithOptionsAsync(RunInventorySynchronizationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InventorySourceId))
+            {
+                query["InventorySourceId"] = request.InventorySourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InventoryTypes))
+            {
+                query["InventoryTypes"] = request.InventoryTypes;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunInventorySynchronizationJob",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunInventorySynchronizationJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>运行资源同步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunInventorySynchronizationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunInventorySynchronizationJobResponse
+        /// </returns>
+        public RunInventorySynchronizationJobResponse RunInventorySynchronizationJob(RunInventorySynchronizationJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RunInventorySynchronizationJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>运行资源同步任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunInventorySynchronizationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunInventorySynchronizationJobResponse
+        /// </returns>
+        public async Task<RunInventorySynchronizationJobResponse> RunInventorySynchronizationJobAsync(RunInventorySynchronizationJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RunInventorySynchronizationJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Runs a synchronization task. This creates a new synchronization task and immediately executes it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40420,6 +43047,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FieldSelectionEnabled))
+            {
+                query["FieldSelectionEnabled"] = request.FieldSelectionEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -40427,6 +43058,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PasswordInitialization))
             {
                 query["PasswordInitialization"] = request.PasswordInitialization;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedFieldNames))
+            {
+                query["SelectedFieldNames"] = request.SelectedFieldNames;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SynchronizationScopeConfig))
             {
@@ -40465,7 +43100,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and immediately runs a new synchronization task.</para>
+        /// <para>Runs a synchronization task. This creates a new synchronization task and immediately executes it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40486,6 +43121,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FieldSelectionEnabled))
+            {
+                query["FieldSelectionEnabled"] = request.FieldSelectionEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -40493,6 +43132,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PasswordInitialization))
             {
                 query["PasswordInitialization"] = request.PasswordInitialization;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedFieldNames))
+            {
+                query["SelectedFieldNames"] = request.SelectedFieldNames;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SynchronizationScopeConfig))
             {
@@ -40531,7 +43174,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and immediately runs a new synchronization task.</para>
+        /// <para>Runs a synchronization task. This creates a new synchronization task and immediately executes it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40549,7 +43192,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and immediately runs a new synchronization task.</para>
+        /// <para>Runs a synchronization task. This creates a new synchronization task and immediately executes it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41483,7 +44126,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets a specified domain name of an EIAM instance as the default domain name.</para>
+        /// <para>Sets the specified domain name of an EIAM instance as the default domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41529,7 +44172,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets a specified domain name of an EIAM instance as the default domain name.</para>
+        /// <para>Sets the specified domain name of an EIAM instance as the default domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41575,7 +44218,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets a specified domain name of an EIAM instance as the default domain name.</para>
+        /// <para>Sets the specified domain name of an EIAM instance as the default domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41593,7 +44236,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets a specified domain name of an EIAM instance as the default domain name.</para>
+        /// <para>Sets the specified domain name of an EIAM instance as the default domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41611,7 +44254,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the forgot password policy for an EIAM instance.</para>
+        /// <para>Configures the forgot password policy for EIAM.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41661,7 +44304,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the forgot password policy for an EIAM instance.</para>
+        /// <para>Configures the forgot password policy for EIAM.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41711,7 +44354,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the forgot password policy for an EIAM instance.</para>
+        /// <para>Configures the forgot password policy for EIAM.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41729,7 +44372,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the forgot password policy for an EIAM instance.</para>
+        /// <para>Configures the forgot password policy for EIAM.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42803,7 +45446,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the password expiration policy for a specified Enterprise Identity and Access Management (EIAM) instance.</para>
+        /// <para>Sets the password expiration policy for a specified EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42877,7 +45520,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the password expiration policy for a specified Enterprise Identity and Access Management (EIAM) instance.</para>
+        /// <para>Sets the password expiration policy for a specified EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42951,7 +45594,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the password expiration policy for a specified Enterprise Identity and Access Management (EIAM) instance.</para>
+        /// <para>Sets the password expiration policy for a specified EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42969,7 +45612,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the password expiration policy for a specified Enterprise Identity and Access Management (EIAM) instance.</para>
+        /// <para>Sets the password expiration policy for a specified EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42987,7 +45630,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the password history policy for a specified Enterprise Identity and Access Management (EIAM) instance.</para>
+        /// <para>Sets the password history policy for a specified EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43037,7 +45680,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the password history policy for a specified Enterprise Identity and Access Management (EIAM) instance.</para>
+        /// <para>Sets the password history policy for a specified EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43087,7 +45730,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the password history policy for a specified Enterprise Identity and Access Management (EIAM) instance.</para>
+        /// <para>Sets the password history policy for a specified EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43105,7 +45748,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the password history policy for a specified Enterprise Identity and Access Management (EIAM) instance.</para>
+        /// <para>Sets the password history policy for a specified EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43123,7 +45766,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the password initialization policy for a specified EIAM instance.</para>
+        /// <para>Configures the password initialization policy for a specified EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43181,7 +45824,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the password initialization policy for a specified EIAM instance.</para>
+        /// <para>Configures the password initialization policy for a specified EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43239,7 +45882,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the password initialization policy for a specified EIAM instance.</para>
+        /// <para>Configures the password initialization policy for a specified EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43257,7 +45900,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the password initialization policy for a specified EIAM instance.</para>
+        /// <para>Configures the password initialization policy for a specified EIAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43275,7 +45918,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the specified client public key as the primary key for an application.</para>
+        /// <para>Sets the specified application ClientPublicKey as preferred.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43329,7 +45972,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the specified client public key as the primary key for an application.</para>
+        /// <para>Sets the specified application ClientPublicKey as preferred.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43383,7 +46026,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the specified client public key as the primary key for an application.</para>
+        /// <para>Sets the specified application ClientPublicKey as preferred.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43401,7 +46044,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the specified client public key as the primary key for an application.</para>
+        /// <para>Sets the specified application ClientPublicKey as preferred.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43835,7 +46478,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a third-party logon account from a user.</para>
+        /// <para>Dissociates a third-party logon account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43889,7 +46532,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a third-party logon account from a user.</para>
+        /// <para>Dissociates a third-party logon account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43943,7 +46586,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a third-party logon account from a user.</para>
+        /// <para>Dissociates a third-party logon account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43961,7 +46604,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a third-party logon account from a user.</para>
+        /// <para>Dissociates a third-party logon account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44107,7 +46750,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the advanced configuration of an application.</para>
+        /// <para>Updates the advanced configurations of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44157,7 +46800,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the advanced configuration of an application.</para>
+        /// <para>Updates the advanced configurations of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44207,7 +46850,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the advanced configuration of an application.</para>
+        /// <para>Updates the advanced configurations of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44225,7 +46868,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the advanced configuration of an application.</para>
+        /// <para>Updates the advanced configurations of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44243,7 +46886,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the authorization type of an Employee Identity and Access Management (EIAM) application.</para>
+        /// <para>Updates the access authorization type of a specified EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44293,7 +46936,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the authorization type of an Employee Identity and Access Management (EIAM) application.</para>
+        /// <para>Updates the access authorization type of a specified EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44343,7 +46986,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the authorization type of an Employee Identity and Access Management (EIAM) application.</para>
+        /// <para>Updates the access authorization type of a specified EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44361,7 +47004,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the authorization type of an Employee Identity and Access Management (EIAM) application.</para>
+        /// <para>Updates the access authorization type of a specified EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44379,7 +47022,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the expiration time of a specified ClientSecret for an application.</para>
+        /// <para>Updates the expiration time of a specified client secret for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44433,7 +47076,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the expiration time of a specified ClientSecret for an application.</para>
+        /// <para>Updates the expiration time of a specified client secret for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44487,7 +47130,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the expiration time of a specified ClientSecret for an application.</para>
+        /// <para>Updates the expiration time of a specified client secret for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44505,7 +47148,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the expiration time of a specified ClientSecret for an application.</para>
+        /// <para>Updates the expiration time of a specified client secret for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44523,7 +47166,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of an Employee Identity and Access Management (EIAM) application.</para>
+        /// <para>Updates the description of an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44573,7 +47216,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of an Employee Identity and Access Management (EIAM) application.</para>
+        /// <para>Updates the description of an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44623,7 +47266,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of an Employee Identity and Access Management (EIAM) application.</para>
+        /// <para>Updates the description of an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44641,7 +47284,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of an Employee Identity and Access Management (EIAM) application.</para>
+        /// <para>Updates the description of an EIAM application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45599,7 +48242,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the expiration time of an application token.</para>
+        /// <para>Updates the expiration time of an ApplicationToken.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45653,7 +48296,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the expiration time of an application token.</para>
+        /// <para>Updates the expiration time of an ApplicationToken.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45707,7 +48350,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the expiration time of an application token.</para>
+        /// <para>Updates the expiration time of an ApplicationToken.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45725,7 +48368,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the expiration time of an application token.</para>
+        /// <para>Updates the expiration time of an ApplicationToken.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45743,7 +48386,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the basic properties of an authorization rule.</para>
+        /// <para>Updates the basic information of an authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45803,7 +48446,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the basic properties of an authorization rule.</para>
+        /// <para>Updates the basic information of an authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45863,7 +48506,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the basic properties of an authorization rule.</para>
+        /// <para>Updates the basic information of an authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45881,7 +48524,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the basic properties of an authorization rule.</para>
+        /// <para>Updates the basic information of an authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45899,7 +48542,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the properties of the relationship between an authorization rule and an application.</para>
+        /// <para>Updates the relationship properties between an authorization rule and an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45963,7 +48606,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the properties of the relationship between an authorization rule and an application.</para>
+        /// <para>Updates the relationship properties between an authorization rule and an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46027,7 +48670,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the properties of the relationship between an authorization rule and an application.</para>
+        /// <para>Updates the relationship properties between an authorization rule and an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46045,7 +48688,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the properties of the relationship between an authorization rule and an application.</para>
+        /// <para>Updates the relationship properties between an authorization rule and an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46375,7 +49018,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the relationship properties between an authorization rule and an account.</para>
+        /// <para>Updates the relationship attributes between an authorization rule and an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46439,7 +49082,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the relationship properties between an authorization rule and an account.</para>
+        /// <para>Updates the relationship attributes between an authorization rule and an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46503,7 +49146,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the relationship properties between an authorization rule and an account.</para>
+        /// <para>Updates the relationship attributes between an authorization rule and an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46521,7 +49164,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the relationship properties between an authorization rule and an account.</para>
+        /// <para>Updates the relationship attributes between an authorization rule and an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47427,6 +50070,210 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Updates a permission template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the list of application templates.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateCloudPermissionTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCloudPermissionTemplateResponse
+        /// </returns>
+        public UpdateCloudPermissionTemplateResponse UpdateCloudPermissionTemplateWithOptions(UpdateCloudPermissionTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowRequest))
+            {
+                query["AllowRequest"] = request.AllowRequest;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicableScope))
+            {
+                query["ApplicableScope"] = request.ApplicableScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountResources))
+            {
+                query["CloudAccountResources"] = request.CloudAccountResources;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudPermissionTemplateId))
+            {
+                query["CloudPermissionTemplateId"] = request.CloudPermissionTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudPermissionTemplateName))
+            {
+                query["CloudPermissionTemplateName"] = request.CloudPermissionTemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCloudPermissionTemplate",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCloudPermissionTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a permission template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the list of application templates.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateCloudPermissionTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCloudPermissionTemplateResponse
+        /// </returns>
+        public async Task<UpdateCloudPermissionTemplateResponse> UpdateCloudPermissionTemplateWithOptionsAsync(UpdateCloudPermissionTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowRequest))
+            {
+                query["AllowRequest"] = request.AllowRequest;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicableScope))
+            {
+                query["ApplicableScope"] = request.ApplicableScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountId))
+            {
+                query["CloudAccountId"] = request.CloudAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAccountResources))
+            {
+                query["CloudAccountResources"] = request.CloudAccountResources;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudPermissionTemplateId))
+            {
+                query["CloudPermissionTemplateId"] = request.CloudPermissionTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudPermissionTemplateName))
+            {
+                query["CloudPermissionTemplateName"] = request.CloudPermissionTemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCloudPermissionTemplate",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCloudPermissionTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a permission template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the list of application templates.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateCloudPermissionTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCloudPermissionTemplateResponse
+        /// </returns>
+        public UpdateCloudPermissionTemplateResponse UpdateCloudPermissionTemplate(UpdateCloudPermissionTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateCloudPermissionTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a permission template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the list of application templates.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateCloudPermissionTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCloudPermissionTemplateResponse
+        /// </returns>
+        public async Task<UpdateCloudPermissionTemplateResponse> UpdateCloudPermissionTemplateAsync(UpdateCloudPermissionTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateCloudPermissionTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Updates a conditional access policy.</para>
         /// </summary>
         /// 
@@ -47787,7 +50634,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update basic information for a credential.</para>
+        /// <para>Updates the basic information of a credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47845,7 +50692,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update basic information for a credential.</para>
+        /// <para>Updates the basic information of a credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47903,7 +50750,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update basic information for a credential.</para>
+        /// <para>Updates the basic information of a credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47921,7 +50768,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update basic information for a credential.</para>
+        /// <para>Updates the basic information of a credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49723,7 +52570,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of a private network access endpoint.</para>
+        /// <para>Updates the name of a dedicated network access endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49773,7 +52620,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of a private network access endpoint.</para>
+        /// <para>Updates the name of a dedicated network access endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49823,7 +52670,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of a private network access endpoint.</para>
+        /// <para>Updates the name of a dedicated network access endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49841,7 +52688,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of a private network access endpoint.</para>
+        /// <para>Updates the name of a dedicated network access endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50027,7 +52874,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the description of a network zone.</para>
+        /// <para>Updates the description of a network zone object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50081,7 +52928,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the description of a network zone.</para>
+        /// <para>Updates the description of a network zone object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50135,7 +52982,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the description of a network zone.</para>
+        /// <para>Updates the description of a network zone object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50153,7 +53000,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the description of a network zone.</para>
+        /// <para>Updates the description of a network zone object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50723,8 +53570,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a trusted origin.</para>
+        /// <para>Updates a trusted origin in a specified EIAM instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a trusted origin in a specified EIAM instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateTrustedOriginRequest
@@ -50781,8 +53633,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a trusted origin.</para>
+        /// <para>Updates a trusted origin in a specified EIAM instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a trusted origin in a specified EIAM instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateTrustedOriginRequest
@@ -50839,8 +53696,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a trusted origin.</para>
+        /// <para>Updates a trusted origin in a specified EIAM instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a trusted origin in a specified EIAM instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateTrustedOriginRequest
@@ -50857,8 +53719,13 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a trusted origin.</para>
+        /// <para>Updates a trusted origin in a specified EIAM instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a trusted origin in a specified EIAM instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateTrustedOriginRequest

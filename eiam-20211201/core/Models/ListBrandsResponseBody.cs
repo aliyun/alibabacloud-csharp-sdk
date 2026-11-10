@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListBrandsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of brand data.</para>
+        /// <para>The list of brands.</para>
         /// </summary>
         [NameInMap("Brands")]
         [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query.</para>
+        /// <para>The maximum number of entries per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned by this call.</para>
+        /// <para>The next token returned by this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned by this call.</para>
+        /// <para>The next token returned by this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxexample</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries in the list.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

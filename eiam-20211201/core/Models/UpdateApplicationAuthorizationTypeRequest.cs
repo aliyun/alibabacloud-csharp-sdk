@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateApplicationAuthorizationTypeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application that you want to modify.</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The authorization type of the application. Valid values:</para>
+        /// <para>The access authorization type of the application. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>authorize_required: Only the user with explicit authorization can access the application.</description></item>
-        /// <item><description>default_all: By default, all users can access the application.</description></item>
+        /// <item><description>authorize_required: Explicit authorization is required for access.</description></item>
+        /// <item><description>default_all: All members have access permissions by default.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

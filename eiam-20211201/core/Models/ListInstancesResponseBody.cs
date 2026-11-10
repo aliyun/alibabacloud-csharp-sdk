@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether cross-region replication is enabled. Valid values: enabled or disabled.</para>
+            /// <para>Indicates whether cross-region replication is enabled. Valid values: enabled and disabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CrossRegionReplication { get; set; }
 
             /// <summary>
-            /// <para>The cross-region replication role. Valid values: primary (primary instance) or backup (backup instance).</para>
+            /// <para>The cross-region replication role. Valid values: primary, which indicates the primary instance, and backup, which indicates the backup instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>primary</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The instance failover activation status. Valid values: active (activated) or inactive (not activated).</para>
+            /// <para>The failover activation status of the instance. Valid values: active, which indicates that failover is activated, and inactive, which indicates that failover is not activated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>inactive</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public ListInstancesResponseBodyInstancesReplicationConfiguration ReplicationConfiguration { get; set; }
             public class ListInstancesResponseBodyInstancesReplicationConfiguration : TeaModel {
                 /// <summary>
-                /// <para>The instance ID of the backup instance.</para>
+                /// <para>The instance ID of the disaster recovery instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>idaas_xxxxxx</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string BackupInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The region ID of the backup instance.</para>
+                /// <para>The region ID of the disaster recovery instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-beijing</para>

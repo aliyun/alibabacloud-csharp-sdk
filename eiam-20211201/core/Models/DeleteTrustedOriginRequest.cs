@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class DeleteTrustedOriginRequest : TeaModel {
         /// <summary>
-        /// <para>A client token that is used to ensure the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique among different requests. The value of ClientToken can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The idempotence token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-example</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the IDaaS EIAM instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trusted origin.</para>
+        /// <para>The trusted origin ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

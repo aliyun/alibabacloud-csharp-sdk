@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the private network access endpoint.</para>
+        /// <para>The ID of the dedicated network access endpoint.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NetworkAccessEndpointId { get; set; }
 
         /// <summary>
-        /// <para>The name of the private network access endpoint. The endpoint type must be private.</para>
+        /// <para>The name of the dedicated network access endpoint. You can only update the name of a network access endpoint whose NetworkEndpointType is dedicated (private). xx business VPC access endpoint.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

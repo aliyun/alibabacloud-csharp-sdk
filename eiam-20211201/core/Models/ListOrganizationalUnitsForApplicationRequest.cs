@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>应用角色ID。</para>
+        /// <para>The application role ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The list of organization IDs. A single request can contain up to 100 organization IDs.</para>
+        /// <para>The organizational unit IDs. A maximum of 100 organizational unit IDs can be specified in a single operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ou_wovwffm62xifdziem7an7xxxxx</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

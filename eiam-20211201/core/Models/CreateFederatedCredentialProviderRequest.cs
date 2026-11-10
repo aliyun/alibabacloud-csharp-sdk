@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateFederatedCredentialProviderRequest : TeaModel {
+        /// <summary>
+        /// <para>The identity provider configuration.</para>
+        /// </summary>
         [NameInMap("CloudIdPProviderConfig")]
         [Validation(Required=false)]
         public CreateFederatedCredentialProviderRequestCloudIdPProviderConfig CloudIdPProviderConfig { get; set; }
         public class CreateFederatedCredentialProviderRequestCloudIdPProviderConfig : TeaModel {
             /// <summary>
+            /// <para>The ID of the identity provider.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>idp_m7hk2hbnew5ir3ycfabug6xxxx</para>
             /// </summary>
@@ -91,7 +96,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> Audiences { get; set; }
 
             /// <summary>
-            /// <para>Issuer</para>
+            /// <para>The token issuer identifier (Issuer).</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com">https://example.com</a></para>
@@ -271,7 +276,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string TrustAnchorSource { get; set; }
 
             /// <summary>
-            /// <para>The trust condition for the root certificate.</para>
+            /// <para>The trust condition of the root certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IsNullOrEmpty(&quot;jwt.issuer&quot;)</para>

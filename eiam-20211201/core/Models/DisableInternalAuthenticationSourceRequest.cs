@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class DisableInternalAuthenticationSourceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the internal authentication source.</para>
+        /// <para>The internal authentication source ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ia_password</para>

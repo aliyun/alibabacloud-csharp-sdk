@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetIdentityProviderStatusCheckJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the IdP status check job.</para>
+        /// <para>The IdP status check job information.</para>
         /// </summary>
         [NameInMap("IdentityProviderStatusCheckJob")]
         [Validation(Required=false)]
         public GetIdentityProviderStatusCheckJobResponseBodyIdentityProviderStatusCheckJob IdentityProviderStatusCheckJob { get; set; }
         public class GetIdentityProviderStatusCheckJobResponseBodyIdentityProviderStatusCheckJob : TeaModel {
             /// <summary>
-            /// <para>The result of the check task.</para>
+            /// <para>The job check result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CheckResult { get; set; }
 
             /// <summary>
-            /// <para>The end time.</para>
+            /// <para>The end time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1763776265757</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the IdP.</para>
+            /// <para>The identity provider ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idp_ncehkms65fiefobrvwy2blrxxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string IdentityProviderId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the IdP status check job.</para>
+            /// <para>The IdP status check job ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>async_000036tfu8cgngmakngrr2rk75qgf87pf3rxxx</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The results of the status check subtasks.</para>
+            /// <para>The status check sub-item task result information.</para>
             /// </summary>
             [NameInMap("JobCheckItems")]
             [Validation(Required=false)]
             public List<GetIdentityProviderStatusCheckJobResponseBodyIdentityProviderStatusCheckJobJobCheckItems> JobCheckItems { get; set; }
             public class GetIdentityProviderStatusCheckJobResponseBodyIdentityProviderStatusCheckJobJobCheckItems : TeaModel {
                 /// <summary>
-                /// <para>The reason for the error.</para>
+                /// <para>The error reason.</para>
                 /// </summary>
                 [NameInMap("ErrorReason")]
                 [Validation(Required=false)]
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The start time.</para>
+            /// <para>The start time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1763776265757</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the check task.</para>
+            /// <para>The job check status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>

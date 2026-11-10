@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The list of accounts.</para>
+        /// <para>The list of account IDs.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<ListUsersForApplicationResponseBodyUsers> Users { get; set; }
         public class ListUsersForApplicationResponseBodyUsers : TeaModel {
             /// <summary>
-            /// <para>The list of application roles.</para>
+            /// <para>The list of application roles. No roles are returned for SAML applications.</para>
             /// </summary>
             [NameInMap("ApplicationRoles")]
             [Validation(Required=false)]

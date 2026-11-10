@@ -20,6 +20,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether field selection is enabled.</para>
+        /// </summary>
+        [NameInMap("FieldSelectionEnabled")]
+        [Validation(Required=false)]
+        public bool? FieldSelectionEnabled { get; set; }
+
+        /// <summary>
         /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -41,7 +48,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public bool? PasswordInitialization { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the synchronization scope.</para>
+        /// <para>The selected fields.</para>
+        /// </summary>
+        [NameInMap("SelectedFieldNames")]
+        [Validation(Required=false)]
+        public List<string> SelectedFieldNames { get; set; }
+
+        /// <summary>
+        /// <para>The synchronization scope configuration.</para>
         /// </summary>
         [NameInMap("SynchronizationScopeConfig")]
         [Validation(Required=false)]
@@ -84,9 +98,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <summary>
         /// <para>The type of the synchronization target. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>identity_provider: The identity provider.</para>
+        /// <item><description><para>identity_provider: identity provider</para>
         /// </description></item>
-        /// <item><description><para>application: The application.</para>
+        /// <item><description><para>application: application</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

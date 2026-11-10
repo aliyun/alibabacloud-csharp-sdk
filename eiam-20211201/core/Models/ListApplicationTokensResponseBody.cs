@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListApplicationTokensResponseBodyApplicationTokens> ApplicationTokens { get; set; }
         public class ListApplicationTokensResponseBodyApplicationTokens : TeaModel {
             /// <summary>
-            /// <para>aliUid。</para>
+            /// <para>The Alibaba Cloud account UID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1973166921975xxxx</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationTokenType { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1747796654000</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The expiration time.</para>
+            /// <para>The expiration time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1747796654000</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The last used time.</para>
+            /// <para>The last used time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1747796654000</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListUsersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page for paging.</para>
+        /// <para>The maximum number of entries per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token.</para>
+        /// <para>The query token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The list of account data.</para>
+        /// <para>The list of accounts.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<ListUsersResponseBodyUsers> Users { get; set; }
         public class ListUsersResponseBodyUsers : TeaModel {
             /// <summary>
-            /// <para>The account expiration time, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The expiration time of the account. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? AccountExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The account creation time, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The creation time of the account. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The display name of the account.</para>
+            /// <para>The display name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>display_name001</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the email address has been verified. A value of true indicates that the email address has been verified by the user or set as verified by the administrator. A value of false indicates that the email address has not been verified.</para>
+            /// <para>Indicates whether the email address is verified. A value of true indicates that the email address has been verified by the user or set as verified by the administrator. A value of false indicates that the email address is not verified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The account lock expiration time, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The expiration time of the account lock. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? LockExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The password expiration time, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The expiration time of the password. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? PasswordExpireTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a password has been set.</para>
+            /// <para>Indicates whether the password is set.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? PasswordSet { get; set; }
 
             /// <summary>
-            /// <para>The phone number of the account.</para>
+            /// <para>The phone number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>156xxxxxxx</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PhoneNumber { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the phone number has been verified. A value of true indicates that the phone number has been verified by the user or set as verified by the administrator. A value of false indicates that the phone number has not been verified.</para>
+            /// <para>Indicates whether the phone number is verified. A value of true indicates that the phone number has been verified by the user or set as verified by the administrator. A value of false indicates that the phone number is not verified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? PhoneNumberVerified { get; set; }
 
             /// <summary>
-            /// <para>The phone region code. Example: The region code for the Chinese mainland is 86, without the 00 or + prefix.</para>
+            /// <para>The phone region code. Example: 86 for the Chinese mainland, without 00 or +.</para>
             /// 
             /// <b>Example:</b>
             /// <para>86</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PhoneRegion { get; set; }
 
             /// <summary>
-            /// <para>The account registration time, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The registration time of the account. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>
@@ -197,10 +197,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? RegisterTime { get; set; }
 
             /// <summary>
-            /// <para>The account status. Valid values:</para>
+            /// <para>The status of the account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>enabled: Enabled.</description></item>
-            /// <item><description>disabled: Disabled.</description></item>
+            /// <item><description>enabled: enabled</description></item>
+            /// <item><description>disabled: disabled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the account was last updated, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The last update time of the account. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>
@@ -221,8 +221,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The external ID of the account, which is used to associate external data with IDaaS accounts. The default value is the IDaaS account ID.</para>
-            /// <para>Note: The external ID must be unique within the same source type and source ID.</para>
+            /// <para>The external ID of the account. This ID is used to map external data to IDaaS accounts. The default value is the IDaaS account ID. Note: The external ID must be unique within the same source type and source ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user_d6sbsuumeta4h66ec3il7yxxxx</para>
@@ -243,7 +242,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
             /// <summary>
             /// <para>The source ID of the account.</para>
-            /// <para>For self-built accounts, the default value is the instance ID. For other types, the value corresponds to the enterprise ID of the respective source. For example, for a DingTalk source, the value corresponds to the corpId of the DingTalk enterprise.</para>
+            /// <para>For the build-in type, the default value is the instance ID. For other types, the value corresponds to the enterprise ID of the source. For example, for the DingTalk source, the value is the corpId of the DingTalk enterprise.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -255,10 +254,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The source type of the account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>build_in: self-built.</description></item>
-            /// <item><description>ding_talk: imported from DingTalk.</description></item>
-            /// <item><description>ad: imported from AD.</description></item>
-            /// <item><description>ldap: imported from LDAP.</description></item>
+            /// <item><description>build_in: self-managed</description></item>
+            /// <item><description>ding_talk: imported from DingTalk</description></item>
+            /// <item><description>ad: imported from AD</description></item>
+            /// <item><description>ldap: imported from LDAP</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

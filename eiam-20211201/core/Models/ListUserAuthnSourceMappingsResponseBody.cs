@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListUserAuthnSourceMappingsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries returned on each page.</para>
+        /// <para>The maximum number of entries to return per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results.</para>
+        /// <para>The pagination token returned by the current call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the previous page of results.</para>
+        /// <para>The pagination token returned by the current call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxexample</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>A list of bindings for third-party account logons.</para>
+        /// <para>The list of third-party account logon bindings.</para>
         /// </summary>
         [NameInMap("UserAuthnSourceMappings")]
         [Validation(Required=false)]
         public List<ListUserAuthnSourceMappingsResponseBodyUserAuthnSourceMappings> UserAuthnSourceMappings { get; set; }
         public class ListUserAuthnSourceMappingsResponseBodyUserAuthnSourceMappings : TeaModel {
             /// <summary>
-            /// <para>The authentication source type.</para>
+            /// <para>The source IdP authentication source type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>urn:alibaba:idaas:authntype:oidc</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthnSourceType { get; set; }
 
             /// <summary>
-            /// <para>The time when the binding was created.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1762309642177</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Information about the associated third-party account.</para>
+            /// <para>The third-party account association information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;userId\&quot;:\&quot;xxxx\&quot;,\&quot;name\&quot;:\&quot;xxx\&quot;,\&quot;bindTime\&quot;:\&quot;1766050298872\&quot;,\&quot;description\&quot;:\&quot;bind request id: reqpre_xxx\&quot;}</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the binding was last updated.</para>
+            /// <para>The last update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1762309642177</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The external ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxxxxx</para>
+            /// <para>user_123131xxasasa</para>
             /// </summary>
             [NameInMap("UserExternalId")]
             [Validation(Required=false)]

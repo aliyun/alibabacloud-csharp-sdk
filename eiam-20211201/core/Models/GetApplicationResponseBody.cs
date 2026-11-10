@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public GetApplicationResponseBodyApplication Application { get; set; }
         public class GetApplicationResponseBodyApplication : TeaModel {
             /// <summary>
-            /// <para>The status of the Developer API feature for the application. Valid values:</para>
+            /// <para>The Developer API feature status of the application. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>enabled: Enabled.</description></item>
             /// <item><description>disabled: Disabled.</description></item>
@@ -68,20 +68,29 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>SAML application</para>
+            /// <para>SAML Application</para>
             /// </summary>
             [NameInMap("ApplicationName")]
             [Validation(Required=false)]
             public string ApplicationName { get; set; }
 
+            /// <summary>
+            /// <para>The application owner.</para>
+            /// </summary>
             [NameInMap("ApplicationOwner")]
             [Validation(Required=false)]
             public GetApplicationResponseBodyApplicationApplicationOwner ApplicationOwner { get; set; }
             public class GetApplicationResponseBodyApplicationApplicationOwner : TeaModel {
+                /// <summary>
+                /// <para>The list of group scopes for synchronization authorization.</para>
+                /// </summary>
                 [NameInMap("GroupIds")]
                 [Validation(Required=false)]
                 public List<string> GroupIds { get; set; }
 
+                /// <summary>
+                /// <para>The list of user IDs.</para>
+                /// </summary>
                 [NameInMap("UserIds")]
                 [Validation(Required=false)]
                 public List<string> UserIds { get; set; }
@@ -103,7 +112,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationSourceType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the application template associated during creation. This value is returned only when the application was created from an application template.</para>
+            /// <para>The application template ID associated during creation. This value is returned only when the application was created from an application template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apt_rpa_tdsxxx</para>
@@ -144,7 +153,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ClientId { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was created. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The time when the application was created, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -153,14 +162,29 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
+            /// <summary>
+            /// <para>The list of application custom fields.</para>
+            /// </summary>
             [NameInMap("CustomFields")]
             [Validation(Required=false)]
             public List<GetApplicationResponseBodyApplicationCustomFields> CustomFields { get; set; }
             public class GetApplicationResponseBodyApplicationCustomFields : TeaModel {
+                /// <summary>
+                /// <para>The identifier of the application custom field.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>agent_source_id</para>
+                /// </summary>
                 [NameInMap("FieldName")]
                 [Validation(Required=false)]
                 public string FieldName { get; set; }
 
+                /// <summary>
+                /// <para>The value of the application custom field. When FieldName is set to agentType, valid values are bailian, pai, dify, and volcano. When FieldName is set to agentExternalId, enter the corresponding value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>38899</para>
+                /// </summary>
                 [NameInMap("FieldValue")]
                 [Validation(Required=false)]
                 public string FieldValue { get; set; }
@@ -168,7 +192,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the custom Subject field in the token is enabled. After this feature is enabled, the issued Access Token changes from \&lt;clientId\&gt; to \&lt;clientId\&gt;:\&lt;client.activeSubjectUrn\&gt;, where client.activeSubjectUrn is configured in the attribute mapping of the federated identity credential of the application.</para>
+            /// <para>Indicates whether the custom Subject field in the token is enabled. After this feature is enabled, the issued Access Token changes from <clientId> to <clientId>:&lt;client.activeSubjectUrn&gt;, where client.activeSubjectUrn is configured in the attribute mapping of the federated identity credential of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -181,7 +205,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The application description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>An application for test environment</para>
+            /// <para>An application for the test environment</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -243,7 +267,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ManagedServiceCode { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the ResourceServer, which corresponds to the ResourceServer audience.</para>
+            /// <para>The unique identifier of the ResourceServer, corresponding to the ResourceServer audience.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://www.example.com">https://www.example.com</a></para>
@@ -282,6 +306,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public bool? ServiceManaged { get; set; }
 
+            /// <summary>
+            /// <para>The list of capabilities configured through smart configuration.</para>
+            /// </summary>
             [NameInMap("SmartConfigCapabilities")]
             [Validation(Required=false)]
             public List<string> SmartConfigCapabilities { get; set; }
@@ -317,7 +344,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was last updated. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The time when the application was last updated, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>

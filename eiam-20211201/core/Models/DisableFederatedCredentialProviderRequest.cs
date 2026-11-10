@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class DisableFederatedCredentialProviderRequest : TeaModel {
         /// <summary>
-        /// <para>The federated credential provider ID.</para>
+        /// <para>The federated trust source ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

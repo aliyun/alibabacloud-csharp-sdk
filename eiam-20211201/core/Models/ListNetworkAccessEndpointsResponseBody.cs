@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListNetworkAccessEndpointsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of network access endpoints.</para>
+        /// <para>The network access endpoints.</para>
         /// </summary>
         [NameInMap("NetworkAccessEndpoints")]
         [Validation(Required=false)]
         public List<ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpoints> NetworkAccessEndpoints { get; set; }
         public class ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpoints : TeaModel {
             /// <summary>
-            /// <para>The backup network access endpoint VPC configuration.</para>
+            /// <para>The VPC configurations of the backup network access endpoint.</para>
             /// </summary>
             [NameInMap("BackupVpcEndpoint")]
             [Validation(Required=false)]
             public ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpointsBackupVpcEndpoint BackupVpcEndpoint { get; set; }
             public class ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpointsBackupVpcEndpoint : TeaModel {
                 /// <summary>
-                /// <para>The list of private egress IP addresses of the backup network access endpoint.</para>
+                /// <para>The private egress IP addresses of the backup network access endpoint.</para>
                 /// </summary>
                 [NameInMap("BackupEgressPrivateIpAddresses")]
                 [Validation(Required=false)]
                 public List<string> BackupEgressPrivateIpAddresses { get; set; }
 
                 /// <summary>
-                /// <para>The list of public egress IP addresses of the backup network access endpoint.</para>
+                /// <para>The public egress IP addresses of the backup network access endpoint.</para>
                 /// </summary>
                 [NameInMap("BackupEgressPublicIpAddresses")]
                 [Validation(Required=false)]
                 public List<string> BackupEgressPublicIpAddresses { get; set; }
 
                 /// <summary>
-                /// <para>The security group ID of the backup network access endpoint.</para>
+                /// <para>The ID of the security group for the backup network access endpoint.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sg-examplexxx</para>
@@ -48,14 +48,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string BackupSecurityGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The list of vSwitches for the backup network access endpoint.</para>
+                /// <para>The IDs of the vSwitches for the backup network access endpoint.</para>
                 /// </summary>
                 [NameInMap("BackupVSwitchIds")]
                 [Validation(Required=false)]
                 public List<string> BackupVSwitchIds { get; set; }
 
                 /// <summary>
-                /// <para>The VPC ID of the backup network access endpoint.</para>
+                /// <para>The ID of the VPC for the backup network access endpoint.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-examplexxx</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string BackupVpcId { get; set; }
 
                 /// <summary>
-                /// <para>The region of the backup network access endpoint VPC.</para>
+                /// <para>The region of the VPC for the backup network access endpoint.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-beijing</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The creation time of the network access endpoint. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The time when the network access endpoint was created. The time is displayed in the UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The network access endpoint ID.</para>
+            /// <para>The ID of the network access endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nae_examplexxx</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string NetworkAccessEndpointId { get; set; }
 
             /// <summary>
-            /// <para>The network access endpoint name. For example, the VPC access endpoint for a specific business.</para>
+            /// <para>The name of the network access endpoint, such as the xx business VPC access endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VPC access endpoint for xx service</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The type of the network access endpoint. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>shared: shared network access endpoint.</description></item>
-            /// <item><description>private: dedicated network access endpoint.</description></item>
+            /// <item><description>private: private network access endpoint.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string NetworkAccessEndpointType { get; set; }
 
             /// <summary>
-            /// <para>The security group ID used by the dedicated network access endpoint.</para>
+            /// <para>The ID of the security group used by the private network access endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-examplexxx</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The last update time of the network access endpoint. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The time when the network access endpoint was last updated. The time is displayed in the UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The list of vSwitches for the dedicated network access endpoint.</para>
+            /// <para>The IDs of the vSwitches to which the private network access endpoint is connected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-examplexxx</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> VSwitchIds { get; set; }
 
             /// <summary>
-            /// <para>The VPC ID of the dedicated network access endpoint.</para>
+            /// <para>The ID of the VPC to which the private network access endpoint is connected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-examplexxx</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The region of the VPC for the dedicated network access endpoint.</para>
+            /// <para>The region of the VPC to which the private network access endpoint is connected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The pagination token returned by this call.</para>
+        /// <para>The pagination token returned for the current call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries in the list.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

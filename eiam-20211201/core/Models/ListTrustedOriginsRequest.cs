@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListTrustedOriginsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the IDaaS EIAM instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20. Maximum value: 100. If you set this parameter to 0, the default value is used.</para>
+        /// <para>The maximum number of results per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The NextToken returned by the previous call.</para>
+        /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NT_example</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Filters by the exact normalized origin.</para>
+        /// <para>The origin filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://console.qoder.com">https://console.qoder.com</a></para>
@@ -51,7 +51,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Origin { get; set; }
 
         /// <summary>
-        /// <para>Filters by exact status. Valid values: Enabled or Disabled.</para>
+        /// <para>The status filter. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Enabled: Enabled.</description></item>
+        /// <item><description>Disabled: Disabled.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Enabled</para>
@@ -61,7 +65,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Filters by exact name.</para>
+        /// <para>The name filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Qoder Production Console</para>
@@ -71,7 +75,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string TrustOriginName { get; set; }
 
         /// <summary>
-        /// <para>Filters by exact trusted origin scene. You can specify at most one value.</para>
+        /// <para>The trusted origin scene filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>iframe_embed</para>

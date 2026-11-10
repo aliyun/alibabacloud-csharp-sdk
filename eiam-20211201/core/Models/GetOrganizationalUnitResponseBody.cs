@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetOrganizationalUnitResponseBody : TeaModel {
         /// <summary>
-        /// <para>Organizational unit data object.</para>
+        /// <para>The organizational unit data object.</para>
         /// </summary>
         [NameInMap("OrganizationalUnit")]
         [Validation(Required=false)]
         public GetOrganizationalUnitResponseBodyOrganizationalUnit OrganizationalUnit { get; set; }
         public class GetOrganizationalUnitResponseBodyOrganizationalUnit : TeaModel {
             /// <summary>
-            /// <para>The time when the organizational unit was created, in Unix timestamp format, in milliseconds.</para>
+            /// <para>The time when the organizational unit was created. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Description of the organizational unit.</para>
+            /// <para>The description of the organizational unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test organization</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Instance ID.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the organizational unit is a leaf node. A value of true indicates that the organizational unit has no child nodes, and a value of false indicates that the organizational unit has child nodes.</para>
+            /// <para>Specifies whether the organizational unit is a leaf node. A value of true indicates that the organizational unit has no child nodes. A value of false indicates that the organizational unit has child nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -57,8 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? Leaf { get; set; }
 
             /// <summary>
-            /// <para>Organizational unit external ID, used for mapping between external data and IDaaS organizational units. The default value is the IDaaS organizational unit ID.</para>
-            /// <para>Note: The external ID is unique within the same source type and source ID.</para>
+            /// <para>The external ID of the organizational unit. It is used to map external data to IDaaS organizational units. The default value is the IDaaS organizational unit ID. Note: The external ID must be unique within the same source type and source ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ou_wovwffm62xifdziem7an7xxxxx</para>
@@ -68,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string OrganizationalUnitExternalId { get; set; }
 
             /// <summary>
-            /// <para>Organizational unit ID.</para>
+            /// <para>The organizational unit ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ou_wovwffm62xifdziem7an7xxxxx</para>
@@ -78,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string OrganizationalUnitId { get; set; }
 
             /// <summary>
-            /// <para>Organizational unit name.</para>
+            /// <para>The name of the organizational unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_organizationalUnit_name</para>
@@ -88,8 +87,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string OrganizationalUnitName { get; set; }
 
             /// <summary>
-            /// <para>Organizational unit source ID.</para>
-            /// <para>The default value for the self-built type is the instance ID. For other types, the value corresponds to the enterprise ID of the respective source. For example, the DingTalk source corresponds to the corpId of the DingTalk enterprise.</para>
+            /// <para>The source ID of the organizational unit. For self-managed organizational units, the default value is the instance ID. For other types, the value corresponds to the enterprise ID of the respective source. For example, for DingTalk, the value is the corpId of the DingTalk enterprise.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -99,13 +97,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string OrganizationalUnitSourceId { get; set; }
 
             /// <summary>
-            /// <para>Account source type. Valid values:</para>
+            /// <para>The account source type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>build_in: self-built.</description></item>
-            /// <item><description>ding_talk: imported from DingTalk.</description></item>
-            /// <item><description>ad: imported from AD.</description></item>
-            /// <item><description>ldap: imported from LDAP.</description></item>
-            /// <item><description>we_com: imported from WeCom.</description></item>
+            /// <item><description>build_in: Self-managed.</description></item>
+            /// <item><description>ding_talk: Imported from DingTalk.</description></item>
+            /// <item><description>ad: Imported from AD.</description></item>
+            /// <item><description>ldap: Imported from LDAP.</description></item>
+            /// <item><description>we_com: Imported from WeCom.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -116,7 +114,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string OrganizationalUnitSourceType { get; set; }
 
             /// <summary>
-            /// <para>Parent organizational unit ID.</para>
+            /// <para>The ID of the parent organizational unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ou_wovwffm62xifdziem7an7xxxxx</para>
@@ -126,7 +124,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ParentId { get; set; }
 
             /// <summary>
-            /// <para>The time when the organizational unit was last updated, in Unix timestamp format, in milliseconds.</para>
+            /// <para>The time when the organizational unit was last updated. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>
@@ -138,7 +136,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>

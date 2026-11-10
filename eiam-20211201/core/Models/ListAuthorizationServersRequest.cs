@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query.</para>
+        /// <para>The number of entries to return per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token.</para>
+        /// <para>The next token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>

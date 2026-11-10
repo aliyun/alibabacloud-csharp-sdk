@@ -1,3 +1,29 @@
+2026-11-10 Version: 2.1.0
+- Support API ActivateCloudAccountPrivilege.
+- Support API CreateCloudPermissionTemplate.
+- Support API DeactivateCloudAccountPrivilege.
+- Support API DeleteCloudPermissionTemplate.
+- Support API DisableCloudAccountPrivilege.
+- Support API DisableCloudPermissionTemplate.
+- Support API EnableCloudAccountPrivilege.
+- Support API EnableCloudPermissionTemplate.
+- Support API GetCloudAccountResource.
+- Support API GetCloudPermissionTemplate.
+- Support API GetGlobalCloudAccountSystemRolePolicy.
+- Support API GetInventorySynchronizationJob.
+- Support API ListCloudAccountResources.
+- Support API ListCloudAccountResourcesForCloudPermissionTemplate.
+- Support API ListCloudPermissionTemplates.
+- Support API ListInventorySynchronizationJobs.
+- Support API RunInventorySynchronizationJob.
+- Support API UpdateCloudPermissionTemplate.
+- Update API GenerateFileImportTemplate: add request parameters FieldSelectionEnabled.
+- Update API GenerateFileImportTemplate: add request parameters SelectedFieldNames.
+- Update API ListSynchronizationJobs: add response parameters Body.SynchronizationJobs.$.Result.OrganizationalUnitStatistics.Exported.
+- Update API RunSynchronizationJob: add request parameters FieldSelectionEnabled.
+- Update API RunSynchronizationJob: add request parameters SelectedFieldNames.
+
+
 2026-09-10 Version: 1.27.3
 - Update API CreateIdentityProvider: add request parameters WeComConfig.ContactSecret.
 - Update API GetIdentityProvider: add response parameters Body.IdentityProviderDetail.WeComConfig.ContactSecret.

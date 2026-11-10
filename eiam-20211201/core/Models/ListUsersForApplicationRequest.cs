@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>应用角色ID。</para>
+        /// <para>The application role ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The list of account IDs. A maximum of 100 account IDs are supported in a single request.</para>
+        /// <para>The list of account IDs. You can specify up to 100 account IDs in a single operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user_d6sbsuumeta4h66ec3il7yxxxx</para>

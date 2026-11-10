@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of recent password records to retain. This parameter is required when PasswordHistoryStatus is set to enabled.</para>
+        /// <para>The maximum number of recent password records to retain. This parameter is required when PasswordHistoryStatus is set to enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? PasswordHistoryMaxRetention { get; set; }
 
         /// <summary>
-        /// <para>The status of the password history configuration. Valid values:</para>
+        /// <para>The password history configuration status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>enabled: Enabled.</description></item>
         /// <item><description>disabled: Disabled.</description></item>

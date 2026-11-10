@@ -354,7 +354,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string IdentityProviderName { get; set; }
 
             /// <summary>
-            /// <para>The synchronization type of the identity provider. Valid values:</para>
+            /// <para>The sync type of the identity provider. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>urn:alibaba:idaas:idp:alibaba:dingtalk:pull: Inbound DingTalk.</para>
             /// </description></item>
@@ -412,7 +412,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// <para>The AppSecret of the Lark custom application.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <hr>
+                /// <para>REOQ6Cl55kriOd8NOBeqWYLKpHR4p6fdZxxxx</para>
                 /// </summary>
                 [NameInMap("AppSecret")]
                 [Validation(Required=false)]
@@ -471,7 +471,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// <para>The AD/LDAP administrator password.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>XXXX</para>
+                /// <para>123456</para>
                 /// </summary>
                 [NameInMap("AdministratorPassword")]
                 [Validation(Required=false)]
@@ -714,11 +714,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string GrantType { get; set; }
 
                 /// <summary>
-                /// <para>The PKCE algorithm. Valid values:</para>
+                /// <para>The PKCE challenge method. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><para>S256: SHA-256.</para>
                 /// </description></item>
-                /// <item><description><para>plain: plaintext.</para>
+                /// <item><description><para>plain: Plaintext.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -783,7 +783,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? NotAfter { get; set; }
 
                         /// <summary>
-                        /// <para>The date before which the certificate is not valid.</para>
+                        /// <para>The date before which the certificate is not yet valid.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1672531200000</para>
@@ -848,13 +848,19 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
                 /// <summary>
                 /// <para>Indicates whether the external IdP is required to sign assertions.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("WantAssertionsSigned")]
                 [Validation(Required=false)]
                 public bool? WantAssertionsSigned { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the external IdP is required to sign the Response.</para>
+                /// <para>Indicates whether the external IdP is required to sign responses.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("WantResponseSigned")]
                 [Validation(Required=false)]
@@ -863,7 +869,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The inbound sync configuration.</para>
+            /// <para>The inbound synchronization configuration.</para>
             /// </summary>
             [NameInMap("UdPullConfig")]
             [Validation(Required=false)]
@@ -872,9 +878,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// <summary>
                 /// <para>Indicates whether group synchronization is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>disabled: Disabled.</para>
+                /// <item><description><para>disabled</para>
                 /// </description></item>
-                /// <item><description><para>enabled: Enabled.</para>
+                /// <item><description><para>enabled</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -888,9 +894,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// <summary>
                 /// <para>The incremental callback status, which indicates whether incremental callback data from the IdP is processed. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>disabled: Disabled.</para>
+                /// <item><description><para>disabled</para>
                 /// </description></item>
-                /// <item><description><para>enabled: Enabled.</para>
+                /// <item><description><para>enabled</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -902,7 +908,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string IncrementalCallbackStatus { get; set; }
 
                 /// <summary>
-                /// <para>The sync scope configuration.</para>
+                /// <para>The synchronization scope configuration.</para>
                 /// </summary>
                 [NameInMap("UdSyncScopeConfig")]
                 [Validation(Required=false)]
@@ -930,11 +936,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the inbound sync feature is supported. Valid values:</para>
+            /// <para>Indicates whether the inbound synchronization feature is supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>disabled: Disabled.</para>
+            /// <item><description><para>disabled</para>
             /// </description></item>
-            /// <item><description><para>enabled: Enabled.</para>
+            /// <item><description><para>enabled</para>
             /// </description></item>
             /// </list>
             /// 
@@ -946,7 +952,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string UdPullStatus { get; set; }
 
             /// <summary>
-            /// <para>The outbound sync configuration.</para>
+            /// <para>The outbound synchronization configuration.</para>
             /// </summary>
             [NameInMap("UdPushConfig")]
             [Validation(Required=false)]
@@ -963,7 +969,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string IncrementalCallbackStatus { get; set; }
 
                 /// <summary>
-                /// <para>The list of sync scope configurations.</para>
+                /// <para>The list of synchronization scope configurations.</para>
                 /// </summary>
                 [NameInMap("UdSyncScopeConfigs")]
                 [Validation(Required=false)]
@@ -991,11 +997,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the outbound sync capability is enabled. Valid values:</para>
+            /// <para>Indicates whether the outbound synchronization capability is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>disabled: Disabled.</para>
+            /// <item><description><para>disabled</para>
             /// </description></item>
-            /// <item><description><para>enabled: Enabled.</para>
+            /// <item><description><para>enabled</para>
             /// </description></item>
             /// </list>
             /// 
@@ -1044,7 +1050,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string AuthorizeCallbackDomain { get; set; }
 
                 /// <summary>
-                /// <para>The WeCom contacts secret.</para>
+                /// <para>The WeCom contact secret.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mPLLiWv-_9witxxxEJCpk1xkF5hOgBzpRt4kBkxxxx</para>

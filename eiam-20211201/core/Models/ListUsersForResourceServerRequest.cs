@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListUsersForResourceServerRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Resource Server application.</para>
+        /// <para>The ResourceServer application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>A list of filter conditions.</para>
+        /// <para>The list of filter conditions.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>A list of values for the filter condition.</para>
+            /// <para>The list of filter condition values.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paged queries.</para>
+        /// <para>The number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page. Set this parameter to the value of NextToken returned by the previous API call.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>权限唯一标识。</para>
+        /// <para>The permission ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ress_nbte4bb3qqqnaq73rlmkqixxxx</para>

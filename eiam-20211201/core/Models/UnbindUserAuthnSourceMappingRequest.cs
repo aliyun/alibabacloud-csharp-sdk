@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UnbindUserAuthnSourceMappingRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the source identity provider.</para>
+        /// <para>The identity provider ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,11 +32,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The external ID associated with the user.</para>
+        /// <para>The external association ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxxxx</para>
+        /// <para>user_123131xxasasa</para>
         /// </summary>
         [NameInMap("UserExternalId")]
         [Validation(Required=false)]

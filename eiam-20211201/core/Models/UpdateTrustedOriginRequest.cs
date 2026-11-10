@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateTrustedOriginRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The idempotence token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-example</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the IDaaS EIAM instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>If this parameter is not specified, the trusted origin name is not modified.</para>
+        /// <para>The trusted origin name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Qoder Production Console</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string TrustOriginName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trusted origin.</para>
+        /// <para>The trusted origin ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string TrustedOriginId { get; set; }
 
         /// <summary>
-        /// <para>When specified, the existing values are entirely replaced. Only iframe_embed and cors are supported.</para>
+        /// <para>The trusted origin scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>iframe_embed</para>

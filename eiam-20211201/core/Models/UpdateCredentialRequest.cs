@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateCredentialRequest : TeaModel {
         /// <summary>
-        /// <para>Ensures idempotence. Generate a unique value on your client for each request. The ClientToken value must contain only ASCII characters and cannot exceed 64 characters. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
+        /// <para>Ensures the idempotence of the request. You can generate a parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and can be up to 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public UpdateCredentialRequestCredentialContent CredentialContent { get; set; }
         public class UpdateCredentialRequestCredentialContent : TeaModel {
             /// <summary>
-            /// <para>The credential content for an API key credential type.</para>
+            /// <para>The credential content for the API key credential type.</para>
             /// </summary>
             [NameInMap("ApiKeyContent")]
             [Validation(Required=false)]
             public UpdateCredentialRequestCredentialContentApiKeyContent ApiKeyContent { get; set; }
             public class UpdateCredentialRequestCredentialContentApiKeyContent : TeaModel {
                 /// <summary>
-                /// <para>The API key value.</para>
+                /// <para>The API key content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>nsklnertyt5ddwizncxxxx</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The credential content for an OAuth client authentication credential type.</para>
+            /// <para>The credential content for the OAuth client credential type.</para>
             /// </summary>
             [NameInMap("OAuthClientContent")]
             [Validation(Required=false)]
             public UpdateCredentialRequestCredentialContentOAuthClientContent OAuthClientContent { get; set; }
             public class UpdateCredentialRequestCredentialContentOAuthClientContent : TeaModel {
                 /// <summary>
-                /// <para>The client_id in the OAuth protocol.</para>
+                /// <para>The client_id of the OAuth protocol.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dmvncmxersdxxxxxx</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ClientId { get; set; }
 
                 /// <summary>
-                /// <para>The client_secret in the OAuth protocol.</para>
+                /// <para>The client_secret of the OAuth protocol.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>nsklncmwizncxxxx</para>

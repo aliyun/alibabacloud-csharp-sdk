@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The account ID.</para>
+        /// <para>The user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

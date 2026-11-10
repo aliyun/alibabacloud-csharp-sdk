@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListCustomPrivacyPoliciesForBrandResponseBodyBrandCustomPrivacyPolicies> BrandCustomPrivacyPolicies { get; set; }
         public class ListCustomPrivacyPoliciesForBrandResponseBodyBrandCustomPrivacyPolicies : TeaModel {
             /// <summary>
-            /// <para>The privacy policy ID.</para>
+            /// <para>The custom privacy policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pp_xxxx</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned on each page.</para>
+        /// <para>The maximum number of entries to return per page for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results.</para>
+        /// <para>The pagination token returned for this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the previous page of results.</para>
+        /// <para>The pagination token returned for this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxexample</para>

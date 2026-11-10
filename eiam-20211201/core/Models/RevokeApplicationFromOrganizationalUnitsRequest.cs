@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>应用角色ID。</para>
+        /// <para>The application role ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>A list of organizational unit IDs. A single operation supports up to 100 organizational unit IDs.</para>
+        /// <para>The list of organizational unit IDs. You can specify up to 100 organizational unit IDs in a single request.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListTrustedOriginsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page that takes effect for this request.</para>
+        /// <para>The maximum number of results per page that takes effect for this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page query.</para>
+        /// <para>The pagination token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NT_example</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListTrustedOriginsResponseBodyTrustedOrigins> TrustedOrigins { get; set; }
         public class ListTrustedOriginsResponseBodyTrustedOrigins : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time is in RFC 3339 format and in the UTC time zone.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> TrustedOriginScene { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The update time. The time is in RFC 3339 format and in the UTC time zone.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>

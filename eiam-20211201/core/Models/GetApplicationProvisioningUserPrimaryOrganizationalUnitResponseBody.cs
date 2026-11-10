@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The user\&quot;s primary organizational unit for application synchronization.</para>
+        /// <para>The user primary organizational unit for application synchronization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ou_12121xxxxxx</para>

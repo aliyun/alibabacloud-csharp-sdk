@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page.</para>
+        /// <para>The maximum number of records per page.</para>
         /// <list type="bullet">
         /// <item><description><para>Default value: 20.</para>
         /// </description></item>
@@ -48,9 +48,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that identifies the start position of the next page.</para>
+        /// <para>The token used to identify the starting position of the next page.</para>
         /// <list type="bullet">
-        /// <item><description>If this parameter is not specified, the query starts from the first page.</description></item>
+        /// <item><description>If this parameter is not specified, the query starts from the first page by default.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

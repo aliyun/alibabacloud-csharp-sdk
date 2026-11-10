@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Information about the WebAuthn authenticator registration URL.</para>
+        /// <para>The WebAuthn authenticator registration URL information.</para>
         /// </summary>
         [NameInMap("WebAuthnAuthenticatorRegistrationUrl")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string RegistrationUrl { get; set; }
 
             /// <summary>
-            /// <para>The parameters for the WebAuthn authenticator registration URL.</para>
+            /// <para>The WebAuthn authenticator registration URL parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIiwia2lkIjoia2V5X29ueWNzbXNib3Y1bmV2anlncHgyZnlsbjdhIn0</para>

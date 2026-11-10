@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListGroupsForApplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of groups.</para>
+        /// <para>The list of group IDs.</para>
         /// </summary>
         [NameInMap("Groups")]
         [Validation(Required=false)]
         public List<ListGroupsForApplicationResponseBodyGroups> Groups { get; set; }
         public class ListGroupsForApplicationResponseBodyGroups : TeaModel {
             /// <summary>
-            /// <para>The list of application roles. This parameter is not returned for SAML applications.</para>
+            /// <para>The list of application roles. No roles are returned for SAML applications.</para>
             /// </summary>
             [NameInMap("ApplicationRoles")]
             [Validation(Required=false)]
             public List<ListGroupsForApplicationResponseBodyGroupsApplicationRoles> ApplicationRoles { get; set; }
             public class ListGroupsForApplicationResponseBodyGroupsApplicationRoles : TeaModel {
                 /// <summary>
-                /// <para>The ID of the application role.</para>
+                /// <para>The application role ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</para>

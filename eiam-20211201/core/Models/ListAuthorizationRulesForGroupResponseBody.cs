@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public ListAuthorizationRulesForGroupResponseBodyAuthorizationRulesValidityPeriod ValidityPeriod { get; set; }
             public class ListAuthorizationRulesForGroupResponseBodyAuthorizationRulesValidityPeriod : TeaModel {
                 /// <summary>
-                /// <para>The end time of the validity period, in UNIX timestamp format. Unit: milliseconds.</para>
+                /// <para>The end time when the authorization expires. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1704042061000</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public long? EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the validity period, in UNIX timestamp format. Unit: milliseconds.</para>
+                /// <para>The start time when the authorization takes effect. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1704042061000</para>
@@ -68,8 +68,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The validity type of the relationship. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>permanent: permanent</description></item>
-            /// <item><description>time_bound: custom time range.</description></item>
+            /// <item><description>permanent: Permanent.</description></item>
+            /// <item><description>time_bound: Custom time range.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. This parameter specifies the paging size.</para>
+        /// <para>The number of entries per page for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned in this call. Use this token to query the next page.</para>
+        /// <para>The pagination token returned by the current call for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListNetworkZonesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of network zones.</para>
+        /// <para>The network zones.</para>
         /// </summary>
         [NameInMap("NetworkZones")]
         [Validation(Required=false)]
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The IPv4 CIDR blocks of the network zone.</para>
+            /// <para>The IPv4 CIDR blocks.</para>
             /// </summary>
             [NameInMap("Ipv4Cidrs")]
             [Validation(Required=false)]
             public List<string> Ipv4Cidrs { get; set; }
 
             /// <summary>
-            /// <para>The IPv6 CIDR blocks of the network zone.</para>
+            /// <para>The IPv6 CIDR blocks.</para>
             /// </summary>
             [NameInMap("Ipv6Cidrs")]
             [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The pagination token returned by this call.</para>
+        /// <para>The pagination token returned for this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries in the list.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

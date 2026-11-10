@@ -34,14 +34,23 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string ApplicationName { get; set; }
 
+        /// <summary>
+        /// <para>The application owner.</para>
+        /// </summary>
         [NameInMap("ApplicationOwner")]
         [Validation(Required=false)]
         public CreateApplicationRequestApplicationOwner ApplicationOwner { get; set; }
         public class CreateApplicationRequestApplicationOwner : TeaModel {
+            /// <summary>
+            /// <para>The list of group IDs.</para>
+            /// </summary>
             [NameInMap("GroupIds")]
             [Validation(Required=false)]
             public List<string> GroupIds { get; set; }
 
+            /// <summary>
+            /// <para>The list of user IDs.</para>
+            /// </summary>
             [NameInMap("UserIds")]
             [Validation(Required=false)]
             public List<string> UserIds { get; set; }
@@ -64,7 +73,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationSourceType { get; set; }
 
         /// <summary>
-        /// <para>The application template ID. This parameter is required when ApplicationSourceType is set to urn:alibaba:idaas:app:source:template.</para>
+        /// <para>The application template ID. This parameter is required when the ApplicationSourceType parameter is set to urn:alibaba:idaas:app:source:template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apt_ramuser_mjqrsi</para>
@@ -73,14 +82,29 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string ApplicationTemplateId { get; set; }
 
+        /// <summary>
+        /// <para>The list of application extension fields.</para>
+        /// </summary>
         [NameInMap("CustomFields")]
         [Validation(Required=false)]
         public List<CreateApplicationRequestCustomFields> CustomFields { get; set; }
         public class CreateApplicationRequestCustomFields : TeaModel {
+            /// <summary>
+            /// <para>The identifier of the application extension field.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>agent_type</para>
+            /// </summary>
             [NameInMap("FieldName")]
             [Validation(Required=false)]
             public string FieldName { get; set; }
 
+            /// <summary>
+            /// <para>The value of the application extension field. When FieldName is set to agentType, valid values are bailian, pai, dify, and volcano. When FieldName is set to agentExternalId, enter the relevant value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>bailian</para>
+            /// </summary>
             [NameInMap("FieldValue")]
             [Validation(Required=false)]
             public string FieldValue { get; set; }
@@ -119,7 +143,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string LogoUrl { get; set; }
 
         /// <summary>
-        /// <para>The single sign-on protocol. Valid values:</para>
+        /// <para>The single sign-on (SSO) protocol. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>saml2: SAML 2.0 protocol.</description></item>
         /// <item><description>oidc: OpenID Connect protocol.</description></item>

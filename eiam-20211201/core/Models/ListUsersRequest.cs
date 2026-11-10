@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListUsersRequest : TeaModel {
         /// <summary>
-        /// <para>The display name prefix. A left-match query is used.</para>
+        /// <para>The prefix of the display name. A left-match query is performed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging.</para>
+        /// <para>The number of entries per page for a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token.</para>
+        /// <para>The query token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxexample</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string PhoneNumber { get; set; }
 
         /// <summary>
-        /// <para>The phone region code. Example: The region code for the Chinese mainland is 86, without the 00 or + prefix.</para>
+        /// <para>The phone region code. Example: 86 for the Chinese mainland, without 00 or +.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string PhoneRegion { get; set; }
 
         /// <summary>
-        /// <para>The account status. Valid values:</para>
+        /// <para>The status of the account. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>enabled: Enabled.</description></item>
         /// <item><description>disabled: Disabled.</description></item>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The external ID, which is used to associate external data with IDaaS accounts.</para>
+        /// <para>The external ID, which is used to map external data to IDaaS accounts.</para>
         /// <para>Note: The external ID must be unique within the same source type and source ID.</para>
         /// 
         /// <b>Example:</b>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
         /// <summary>
         /// <para>The source ID of the account.</para>
-        /// <para>For self-built accounts, the default value is the instance ID. For other types, the value corresponds to the enterprise ID of the respective source. For example, for a DingTalk source, the value corresponds to the corpId of the DingTalk enterprise.</para>
+        /// <para>For the build-in type, the default value is the instance ID. For other types, the value corresponds to the enterprise ID of the source. For example, for the DingTalk source, the value is the corpId of the DingTalk enterprise.</para>
         /// 
         /// <b>Example:</b>
         /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -159,11 +159,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <summary>
         /// <para>The source type of the account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>build_in: self-built.</description></item>
-        /// <item><description>ding_talk: imported from DingTalk.</description></item>
-        /// <item><description>ad: imported from AD.</description></item>
-        /// <item><description>ldap: imported from LDAP.</description></item>
-        /// <item><description>we_com: imported from WeCom.</description></item>
+        /// <item><description>build_in: Built-in.</description></item>
+        /// <item><description>ding_talk: Imported from DingTalk.</description></item>
+        /// <item><description>ad: Imported from AD.</description></item>
+        /// <item><description>ldap: Imported from LDAP.</description></item>
+        /// <item><description>we_com: Imported from WeCom.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string UserSourceType { get; set; }
 
         /// <summary>
-        /// <para>The username prefix. A left-match query is used.</para>
+        /// <para>The prefix of the username. A left-match query is performed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name_001</para>

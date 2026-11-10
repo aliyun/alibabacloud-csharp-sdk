@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The client secret ID of the application.</para>
+        /// <para>The ID of the client secret for the application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -29,8 +29,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The group synchronization status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>disabled</description></item>
-            /// <item><description>enabled.</description></item>
+            /// <item><description><para>disabled: Disabled.</para>
+            /// </description></item>
+            /// <item><description><para>enabled: Enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,8 +55,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The incremental callback status, which specifies whether to process incremental callback data from the IdP. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>disabled</description></item>
-            /// <item><description>enabled.</description></item>
+            /// <item><description><para>disabled: Disabled.</para>
+            /// </description></item>
+            /// <item><description><para>enabled: Enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -82,7 +86,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationLdapUdPullConfig LdapUdPullConfig { get; set; }
             public class GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationLdapUdPullConfig : TeaModel {
                 /// <summary>
-                /// <para>The group member identifier attribute.</para>
+                /// <para>The group member attribute name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>group</para>
@@ -112,7 +116,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string GroupObjectClassCustomFilter { get; set; }
 
                 /// <summary>
-                /// <para>The organizational unit ObjectClass.</para>
+                /// <para>The organization ObjectClass.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ou,top</para>
@@ -161,7 +165,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string PeriodicSyncCron { get; set; }
 
                 /// <summary>
-                /// <para>The execution time points. For example, [3, 5] indicates that synchronization runs once between 3:00 and 4:00 and once between 5:00 and 6:00.</para>
+                /// <para>The execution time points. For example, [3, 5] indicates that the task runs once between 3:00 and 4:00 and once between 5:00 and 6:00.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[3,5]</para>
@@ -185,8 +189,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The periodic verification status, which specifies whether to periodically verify data differences between IDaaS and the identity provider. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>disabled</description></item>
-            /// <item><description>enabled.</description></item>
+            /// <item><description><para>disabled: Disabled.</para>
+            /// </description></item>
+            /// <item><description><para>enabled: Enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -243,14 +249,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationUdSyncScopeConfig UdSyncScopeConfig { get; set; }
             public class GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationUdSyncScopeConfig : TeaModel {
                 /// <summary>
-                /// <para>The list of source nodes for synchronization.</para>
+                /// <para>The list of source scope nodes.</para>
                 /// </summary>
                 [NameInMap("SourceScopes")]
                 [Validation(Required=false)]
                 public List<string> SourceScopes { get; set; }
 
                 /// <summary>
-                /// <para>The target node for synchronization.</para>
+                /// <para>The target scope node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ou_asjdfhaskfhw213mnsj33sXXX</para>

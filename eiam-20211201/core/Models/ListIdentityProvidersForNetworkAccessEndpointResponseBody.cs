@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListIdentityProvidersForNetworkAccessEndpointResponseBody : TeaModel {
         /// <summary>
-        /// <para>The collection of IdPs for the network endpoint.</para>
+        /// <para>The IdPs under the network access endpoint.</para>
         /// </summary>
         [NameInMap("IdentityProvidersForNetworkAccessEndpoint")]
         [Validation(Required=false)]
         public List<ListIdentityProvidersForNetworkAccessEndpointResponseBodyIdentityProvidersForNetworkAccessEndpoint> IdentityProvidersForNetworkAccessEndpoint { get; set; }
         public class ListIdentityProvidersForNetworkAccessEndpointResponseBodyIdentityProvidersForNetworkAccessEndpoint : TeaModel {
             /// <summary>
-            /// <para>The ID of the IdP.</para>
+            /// <para>The IdP ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idp_nbq7i4ylodmm64iy6t5muxxxxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string IdentityProviderId { get; set; }
 
             /// <summary>
-            /// <para>The name of the IdP.</para>
+            /// <para>The IdP name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OIDC Provider</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The token that is returned from the call.</para>
+        /// <para>The pagination token returned by this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>

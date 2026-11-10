@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListApplicationsForOrganizationalUnitRequest : TeaModel {
         /// <summary>
-        /// <para>The list of application IDs. A maximum of 100 application IDs are supported in a single operation.</para>
+        /// <para>The list of application IDs. You can specify up to 100 application IDs in a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app_mkv7rgt4d7i4u7zqtzev2mxxxx</para>

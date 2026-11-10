@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListOrganizationalUnitsForApplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of organizations.</para>
+        /// <para>The list of organizational unit IDs.</para>
         /// </summary>
         [NameInMap("OrganizationalUnits")]
         [Validation(Required=false)]
         public List<ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnits> OrganizationalUnits { get; set; }
         public class ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnits : TeaModel {
             /// <summary>
-            /// <para>The list of application roles.</para>
+            /// <para>The application roles.</para>
             /// </summary>
             [NameInMap("ApplicationRoles")]
             [Validation(Required=false)]
             public List<ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnitsApplicationRoles> ApplicationRoles { get; set; }
             public class ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnitsApplicationRoles : TeaModel {
                 /// <summary>
-                /// <para>The ID of the application role.</para>
+                /// <para>The application role ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The organization ID.</para>
+            /// <para>The organizational unit ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ou_wovwffm62xifdziem7an7xxxxx</para>

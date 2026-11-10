@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ElementName { get; set; }
 
                 /// <summary>
-                /// <para>The Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) authenticate configuration.</para>
+                /// <para>The Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) authentication configuration.</para>
                 /// </summary>
                 [NameInMap("HumanVerificationConfig")]
                 [Validation(Required=false)]
                 public GetInstanceControlConfigurationResponseBodyInstanceControlConfigurationControlElementsHumanVerificationConfig HumanVerificationConfig { get; set; }
                 public class GetInstanceControlConfigurationResponseBodyInstanceControlConfigurationControlElementsHumanVerificationConfig : TeaModel {
                     /// <summary>
-                    /// <para>The CAPTCHA type.</para>
+                    /// <para>The CAPTCHA verification type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>urn:alibaba:idaas:humanverification:alibaba-cloud-jigsaw-verification</para>

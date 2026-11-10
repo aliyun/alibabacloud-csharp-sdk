@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateAuthorizationRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The scope of the authorized resources. Valid values:</para>
+        /// <para>The authorization resource scope. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>global: global resources within the project.</para>
-        /// </description></item>
-        /// <item><description><para>custom: specified resources within the project.</para>
-        /// </description></item>
+        /// <item><description>global: global resources under the project</description></item>
+        /// <item><description>custom: resources under a specified project scope</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,7 +35,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationRuleId { get; set; }
 
         /// <summary>
-        /// <para>The name of the authorization rule. The name can be up to 64 characters long.</para>
+        /// <para>The name of the authorization rule. The name can be up to 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_rule</para>
@@ -47,7 +45,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationRuleName { get; set; }
 
         /// <summary>
-        /// <para>A client token that ensures the idempotence of the request. Generate a unique value for this parameter from your client. The token can contain only ASCII characters and must be no more than 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
+        /// <para>Ensures the idempotence of the request. You can generate a parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

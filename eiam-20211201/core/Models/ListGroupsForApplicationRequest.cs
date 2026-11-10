@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationRoleId { get; set; }
 
         /// <summary>
-        /// <para>A list of group IDs. You can specify up to 100 group IDs in a single operation.</para>
+        /// <para>The list of group IDs. You can specify up to 100 group IDs in a single operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>group_miu8e4t4d7i4u7uwezgr54xxxx</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the list.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

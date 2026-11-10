@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetApplicationTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The application template ID.</para>
+        /// <para>The ID of the application template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

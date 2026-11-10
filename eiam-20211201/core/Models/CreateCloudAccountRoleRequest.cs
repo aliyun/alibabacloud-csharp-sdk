@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateCloudAccountRoleRequest : TeaModel {
         /// <summary>
-        /// <para>A client token used to ensure the idempotence of the request. Generate a unique value for this parameter from your client. The token can contain only ASCII characters and must be no more than 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account.</para>
+        /// <para>The cloud account ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string CloudAccountId { get; set; }
 
         /// <summary>
-        /// <para>The name of the cloud role.</para>
+        /// <para>The cloud role name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,9 +43,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string CloudAccountRoleName { get; set; }
 
         /// <summary>
-        /// <para>The type of the cloud role. The format of this parameter depends on the type of the Alibaba Cloud account. The supported value is:</para>
+        /// <para>The cloud role type. The specific format depends on the cloud account type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>role: applies to Alibaba Cloud accounts.</description></item>
+        /// <item><description>role: applicable to Alibaba Cloud accounts.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string CloudAccountRoleType { get; set; }
 
         /// <summary>
-        /// <para>The description of the cloud role.</para>
+        /// <para>The cloud role description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloud_account_role_description</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -17,44 +17,54 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public GetForgetPasswordConfigurationResponseBodyOpenForgetPasswordConfiguration OpenForgetPasswordConfiguration { get; set; }
         public class GetForgetPasswordConfigurationResponseBodyOpenForgetPasswordConfiguration : TeaModel {
             /// <summary>
-            /// <para>The list of authentication channels for forgot password. This parameter is required when ForgetPasswordStatus is set to enabled. Valid values: email, sms (SMS), totp (OTP), and web_authn (WebAuthn).</para>
+            /// <para>The list of forgot password authentication channels. Required when ForgetPasswordStatus is set to enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>email: Email.</description></item>
+            /// <item><description>sms: SMS.</description></item>
+            /// <item><description>totp: OTP dynamic password.</description></item>
+            /// <item><description>web_authn: WebAuthn.</description></item>
+            /// </list>
             /// </summary>
             [NameInMap("AuthenticationChannels")]
             [Validation(Required=false)]
             public List<string> AuthenticationChannels { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the forgot password feature is enabled. This parameter is deprecated. Use the ForgetPasswordStatus parameter instead.</para>
+            /// <para><b>[Deprecated]</b> Indicates whether the forgot password feature is enabled. This parameter is deprecated. Use the ForgetPasswordStatus parameter instead.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>true</para>
+            /// <para>deprecated: true</para>
             /// </summary>
             [NameInMap("Enable")]
             [Validation(Required=false)]
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether email is enabled as an authentication method for forgot password. This parameter is deprecated. Use the AuthenticationChannels parameter instead.</para>
+            /// <para><b>[Deprecated]</b> Indicates whether email is enabled as a forgot password authentication method. This parameter is deprecated. Use the AuthenticationChannels parameter instead.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>false</para>
+            /// <para>deprecated: true</para>
             /// </summary>
             [NameInMap("EnableEmail")]
             [Validation(Required=false)]
             public bool? EnableEmail { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether SMS is enabled as an authentication method for forgot password. This parameter is deprecated. Use the AuthenticationChannels parameter instead.</para>
+            /// <para><b>[Deprecated]</b> Indicates whether SMS is enabled as a forgot password authentication method. This parameter is deprecated. Use the AuthenticationChannels parameter instead.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>true</para>
+            /// <para>deprecated: true</para>
             /// </summary>
             [NameInMap("EnableSms")]
             [Validation(Required=false)]
             public bool? EnableSms { get; set; }
 
             /// <summary>
-            /// <para>The status of the forgot password configuration. Valid values: enabled and disabled.</para>
+            /// <para>The forgot password configuration status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>enabled: Enabled.</description></item>
+            /// <item><description>disabled: Disabled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>

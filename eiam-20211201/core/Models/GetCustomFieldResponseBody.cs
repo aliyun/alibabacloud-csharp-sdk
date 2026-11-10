@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public GetCustomFieldResponseBodyCustomField CustomField { get; set; }
         public class GetCustomFieldResponseBodyCustomField : TeaModel {
             /// <summary>
-            /// <para>The time when the extended field was created, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The creation time of the extended field. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17642960730</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? Encrypted { get; set; }
 
             /// <summary>
-            /// <para>The entity type to which the field belongs.</para>
+            /// <para>The entity type of the field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string EntityType { get; set; }
 
             /// <summary>
-            /// <para>The field value configuration items.</para>
+            /// <para>The configuration items for the field values.</para>
             /// </summary>
             [NameInMap("FieldDataConfig")]
             [Validation(Required=false)]
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? Unique { get; set; }
 
             /// <summary>
-            /// <para>The time when the extended field was last updated, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The last update time of the extended field. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17642960730</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The user-side (portal-side) permission.</para>
+            /// <para>The permissions on the user portal side.</para>
             /// 
             /// <b>Example:</b>
             /// <para>read_only</para>

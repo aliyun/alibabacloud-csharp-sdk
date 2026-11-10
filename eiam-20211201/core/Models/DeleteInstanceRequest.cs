@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class DeleteInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the instance to delete.</para>
+        /// <para>The instance ID to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

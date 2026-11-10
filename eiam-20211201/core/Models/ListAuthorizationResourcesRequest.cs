@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The name of the filter field. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>AuthorizationResourceEntityType: the type of the resource entity associated with the authorized resource.</para>
+            /// <item><description><para>AuthorizationResourceEntityType: the type of the resource entity associated with the authorization resource.</para>
             /// </description></item>
-            /// <item><description><para>AuthorizationResourceEntityId: the ID of the resource entity associated with the authorized resource.</para>
+            /// <item><description><para>AuthorizationResourceEntityId: the ID of the resource entity associated with the authorization resource.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The list of filter field values.</para>
+            /// <para>The list of values for the filter field.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records per page.</para>
+        /// <para>The maximum number of entries to return per page.</para>
         /// <list type="bullet">
         /// <item><description><para>If you do not specify this parameter, the default value is 20.</para>
         /// </description></item>
@@ -80,9 +80,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that marks the starting position of the next page.</para>
+        /// <para>The pagination token that specifies the starting position for the next page.</para>
         /// <list type="bullet">
-        /// <item><description>If you do not specify this parameter, the query starts from the first page.</description></item>
+        /// <item><description>If you do not specify this parameter, the query starts from the first page by default.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

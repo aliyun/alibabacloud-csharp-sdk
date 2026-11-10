@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GenerateFileImportTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether field selection mode is enabled.</para>
+        /// </summary>
+        [NameInMap("FieldSelectionEnabled")]
+        [Validation(Required=false)]
+        public bool? FieldSelectionEnabled { get; set; }
+
+        /// <summary>
         /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -21,12 +28,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The synchronization target type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>identity_provider: identity provider</description></item>
-        /// <item><description>application: application</description></item>
-        /// <item><description>eiam_v2_user_import: IDaaS 2.0 user import.</description></item>
-        /// </list>
+        /// <para>The selected fields.</para>
+        /// </summary>
+        [NameInMap("SelectedFieldNames")]
+        [Validation(Required=false)]
+        public List<string> SelectedFieldNames { get; set; }
+
+        /// <summary>
+        /// <para>The synchronization target type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

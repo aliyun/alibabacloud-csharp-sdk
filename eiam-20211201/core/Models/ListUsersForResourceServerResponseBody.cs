@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListUsersForResourceServerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page for paged queries.</para>
+        /// <para>The number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page.</para>
+        /// <para>The pagination token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>A list of user accounts.</para>
+        /// <para>The list of accounts.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<ListUsersForResourceServerResponseBodyUsers> Users { get; set; }
         public class ListUsersForResourceServerResponseBodyUsers : TeaModel {
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_qsw77zl5vrllwzyrrfwbmpxxxx</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>A list of granted scope permissions.</para>
+            /// <para>The list of granted scope permissions.</para>
             /// </summary>
             [NameInMap("ResourceServerScopes")]
             [Validation(Required=false)]
             public List<ListUsersForResourceServerResponseBodyUsersResourceServerScopes> ResourceServerScopes { get; set; }
             public class ListUsersForResourceServerResponseBodyUsersResourceServerScopes : TeaModel {
                 /// <summary>
-                /// <para>The ID of the scope permission.</para>
+                /// <para>The scope permission ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ress_nbte4bb3qqqnaq73rlmkqixxxx</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ResourceServerScopeId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the scope permission.</para>
+                /// <para>The scope permission name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Read All User</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The ID of the user account.</para>
+            /// <para>The account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user_nbsomva32b6utec3hgi7scxxxx</para>

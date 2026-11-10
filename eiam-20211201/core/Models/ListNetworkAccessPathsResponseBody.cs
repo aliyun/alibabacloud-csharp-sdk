@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListNetworkAccessPathsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of network access endpoint paths.</para>
+        /// <para>The list of network access endpoint access paths.</para>
         /// </summary>
         [NameInMap("NetworkAccessPaths")]
         [Validation(Required=false)]
         public List<ListNetworkAccessPathsResponseBodyNetworkAccessPaths> NetworkAccessPaths { get; set; }
         public class ListNetworkAccessPathsResponseBodyNetworkAccessPaths : TeaModel {
             /// <summary>
-            /// <para>The creation time of the dedicated network access endpoint path. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The time when the dedicated network access endpoint access path was created, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -26,6 +26,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
+            /// <summary>
+            /// <para>The role of the network access endpoint path.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>primary</para>
+            /// </summary>
             [NameInMap("CrossRegionReplicationRole")]
             [Validation(Required=false)]
             public string CrossRegionReplicationRole { get; set; }
@@ -51,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string NetworkAccessEndpointId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the dedicated network access endpoint path.</para>
+            /// <para>The ID of the dedicated network access endpoint access path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nap_examplexxx</para>
@@ -61,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string NetworkAccessPathId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ENI used by the dedicated network access endpoint path.</para>
+            /// <para>The ID of the ENI used by the dedicated network access endpoint access path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eni-examplexxx</para>
@@ -71,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string NetworkInterfaceId { get; set; }
 
             /// <summary>
-            /// <para>The private endpoint of the ENI used by the dedicated network access endpoint path.</para>
+            /// <para>The private endpoint of the ENI on the private network used by the dedicated network access endpoint access path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -81,7 +87,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PrivateIpAddress { get; set; }
 
             /// <summary>
-            /// <para>The status of the dedicated network access endpoint path. Valid values:</para>
+            /// <para>The status of the dedicated network access endpoint access path. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>pending: Pending initialization.</description></item>
             /// <item><description>creating: Being created.</description></item>
@@ -97,7 +103,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The last update time of the dedicated network access endpoint path. The value is a UNIX timestamp in milliseconds.</para>
+            /// <para>The time when the dedicated network access endpoint access path was last updated, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -107,7 +113,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch to which the ENI of the dedicated network access endpoint path belongs.</para>
+            /// <para>The ID of the vSwitch to which the ENI of the dedicated network access endpoint access path belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-examplexxx</para>
@@ -116,10 +122,22 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
+            /// <summary>
+            /// <para>The VPC ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vpc-bp1a2b3c4d5e6f7g8</para>
+            /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
 
+            /// <summary>
+            /// <para>The VPC region information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
+            /// </summary>
             [NameInMap("VpcRegionId")]
             [Validation(Required=false)]
             public string VpcRegionId { get; set; }

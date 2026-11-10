@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token.</para>
+        /// <para>The pagination token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The token used to query the previous page.</para>
+        /// <para>The pagination token for the previous page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxxxexample</para>

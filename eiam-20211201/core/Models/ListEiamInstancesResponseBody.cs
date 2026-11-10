@@ -67,7 +67,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceStatus { get; set; }
 
             /// <summary>
-            /// <para>The instance version.</para>
+            /// <para>The instance version. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>EIAM 2~0: EIAM 2.0.</description></item>
+            /// <item><description>EIAM 1<del>0: EIAM 1.0.
+            /// [_single.resp.200.props.Instances.items.InstanceVersion.enum.EIAM 2</del>0]EIAM 2.0
+            /// [_single.resp.200.props.Instances.items.InstanceVersion.enum.EIAM 1~0]EIAM 1.0</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>EIAM 2.0</para>
@@ -107,7 +113,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string SSODomain { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was created.</para>
+            /// <para>The time when the instance was created. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1677810869300</para>

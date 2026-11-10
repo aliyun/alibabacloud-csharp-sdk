@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GenerateFileImportTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The download URL of the template.</para>
+        /// <para>The template download URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://test.oss-cn-hangzhou.aliyuncs.com/idaas_ly77wa2oexrciw5v672vxxxx/tmp/eiam_v2_user_import_1766469463365.csv">https://test.oss-cn-hangzhou.aliyuncs.com/idaas_ly77wa2oexrciw5v672vxxxx/tmp/eiam_v2_user_import_1766469463365.csv</a></para>

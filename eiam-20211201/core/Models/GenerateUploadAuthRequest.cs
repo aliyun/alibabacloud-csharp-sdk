@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GenerateUploadAuthRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>File purpose.</para>
+        /// <para>The file purpose.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user_import</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Purpose { get; set; }
 
         /// <summary>
-        /// <para>File type.</para>
+        /// <para>The file type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>image</para>

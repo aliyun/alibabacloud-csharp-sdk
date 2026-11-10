@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public SetIdentityProviderUdPullConfigurationRequestLdapUdPullConfig LdapUdPullConfig { get; set; }
         public class SetIdentityProviderUdPullConfigurationRequestLdapUdPullConfig : TeaModel {
             /// <summary>
-            /// <para>The group member identifier.</para>
+            /// <para>The group member attribute name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>member</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string GroupObjectClassCustomFilter { get; set; }
 
             /// <summary>
-            /// <para>The organizational unit ObjectClass.</para>
+            /// <para>The organization ObjectClass.</para>
             /// 
             /// <b>Example:</b>
             /// <para>organizationUnit,top</para>
@@ -151,14 +151,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PeriodicSyncCron { get; set; }
 
             /// <summary>
-            /// <para>The execution time points. This parameter is required when periodicSyncType is set to time. For example, [3, 5] indicates that the task runs once between 3:00 and 4:00 and once between 5:00 and 6:00.</para>
+            /// <para>The execution time points. This parameter is required when periodicSyncType is set to time. For example, [3, 5] indicates that the synchronization runs once between 3:00 and 4:00 and once between 5:00 and 6:00.</para>
             /// </summary>
             [NameInMap("PeriodicSyncTimes")]
             [Validation(Required=false)]
             public List<int?> PeriodicSyncTimes { get; set; }
 
             /// <summary>
-            /// <para>The type of periodic synchronization.</para>
+            /// <para>The periodic synchronization type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cron</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public int? GroupDeletedThreshold { get; set; }
 
             /// <summary>
-            /// <para>The threshold for the number of deleted organizational units. If the number of deleted organizational units exceeds this value, the synchronization task is terminated.</para>
+            /// <para>The threshold for the number of deleted organizations. If the number of deleted organizations exceeds this value, the synchronization task is terminated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -225,21 +225,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The inbound synchronization scope configuration.</para>
+        /// <para>The inbound synchronization configuration.</para>
         /// </summary>
         [NameInMap("UdSyncScopeConfig")]
         [Validation(Required=false)]
         public SetIdentityProviderUdPullConfigurationRequestUdSyncScopeConfig UdSyncScopeConfig { get; set; }
         public class SetIdentityProviderUdPullConfigurationRequestUdSyncScopeConfig : TeaModel {
             /// <summary>
-            /// <para>The list of source nodes for synchronization.</para>
+            /// <para>The list of source scope nodes.</para>
             /// </summary>
             [NameInMap("SourceScopes")]
             [Validation(Required=false)]
             public List<string> SourceScopes { get; set; }
 
             /// <summary>
-            /// <para>The target node for synchronization.</para>
+            /// <para>The target scope node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ou_asdaq1addsxzdq1XXX</para>

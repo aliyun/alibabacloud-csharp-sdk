@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1758785994982</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The last used time.</para>
+            /// <para>The last used time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1758785994982</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public List<string> InstanceIds { get; set; }
 
                     /// <summary>
-                    /// <para>The GCP project ID.</para>
+                    /// <para>The GCP project ID to which the resource belongs.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>6193072600270353961</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string ProjectId { get; set; }
 
                     /// <summary>
-                    /// <para>The sub claim corresponding to the service account.</para>
+                    /// <para>The subject (sub) that corresponds to the service account.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123456789</para>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1758785994982</para>
@@ -320,8 +320,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The verification mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>freedom: free mode.</description></item>
-            /// <item><description>structured: structured mode.</description></item>
+            /// <item><description>freedom: Free mode.</description></item>
+            /// <item><description>structured: Structured mode.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

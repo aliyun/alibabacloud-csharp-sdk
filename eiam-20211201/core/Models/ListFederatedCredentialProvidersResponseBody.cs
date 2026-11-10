@@ -10,16 +10,25 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListFederatedCredentialProvidersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of federated trust sources.</para>
+        /// <para>The list of federated credential providers.</para>
         /// </summary>
         [NameInMap("FederatedCredentialProviders")]
         [Validation(Required=false)]
         public List<ListFederatedCredentialProvidersResponseBodyFederatedCredentialProviders> FederatedCredentialProviders { get; set; }
         public class ListFederatedCredentialProvidersResponseBodyFederatedCredentialProviders : TeaModel {
+            /// <summary>
+            /// <para>The configuration of the cloud identity provider for federated credentials.</para>
+            /// </summary>
             [NameInMap("CloudIdPProviderConfig")]
             [Validation(Required=false)]
             public ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersCloudIdPProviderConfig CloudIdPProviderConfig { get; set; }
             public class ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersCloudIdPProviderConfig : TeaModel {
+                /// <summary>
+                /// <para>The ID of the identity provider.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>idp_1234567890</para>
+                /// </summary>
                 [NameInMap("IdentityProviderId")]
                 [Validation(Required=false)]
                 public string IdentityProviderId { get; set; }
@@ -27,7 +36,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1729061324000</para>
@@ -47,7 +56,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The federated trust source ID.</para>
+            /// <para>The federated credential provider ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fcp_asda123XXX</para>
@@ -131,7 +140,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string DynamicJwks { get; set; }
 
                 /// <summary>
-                /// <para>Issuer</para>
+                /// <para>The token issuer identifier (Issuer).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.com">https://example.com</a></para>
@@ -141,7 +150,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string Issuer { get; set; }
 
                 /// <summary>
-                /// <para>The time when the JWKS was last obtained.</para>
+                /// <para>The time when the JWKS was last obtained. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1729061324000</para>
@@ -280,7 +289,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string CmsVerificationMode { get; set; }
 
                 /// <summary>
-                /// <para>The signature effective time.</para>
+                /// <para>The signature effective time. The value indicates the duration for which the signature is valid, in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3600</para>
@@ -290,7 +299,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public long? SignatureEffectiveTime { get; set; }
 
                 /// <summary>
-                /// <para>The expression used to retrieve the signing time.</para>
+                /// <para>The expression used to obtain the signing time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pkcs7.payload.jsonData.audience.signingTime</para>
@@ -365,7 +374,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     }
 
                     /// <summary>
-                    /// <para>The root certificate content.</para>
+                    /// <para>The content of the root certificate.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>-----BEGIN CERTIFICATE-----
@@ -377,7 +386,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string Content { get; set; }
 
                     /// <summary>
-                    /// <para>The root certificate fingerprint.</para>
+                    /// <para>The fingerprint of the root certificate.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2b18947a6a9fc7764fd8b5fb18a863b0c6daxxx</para>
@@ -421,7 +430,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1729061324000</para>
@@ -443,7 +452,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned by this call.</para>
+        /// <para>The query token (Token) value returned by this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -453,7 +462,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned by this call.</para>
+        /// <para>The query token (Token) value returned by this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxexample</para>

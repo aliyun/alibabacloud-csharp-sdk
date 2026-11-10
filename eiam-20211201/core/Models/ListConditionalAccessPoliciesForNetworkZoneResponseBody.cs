@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ConditionalAccessPolicyId { get; set; }
 
             /// <summary>
-            /// <para>The conditional access policy name.</para>
+            /// <para>The Policy Name of the conditional access policy.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>My policy</para>
+            /// <para>MyPolicy</para>
             /// </summary>
             [NameInMap("ConditionalAccessPolicyName")]
             [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the policy was created. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1741857554000</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ActiveSessionReuseStatus { get; set; }
 
                 /// <summary>
-                /// <para>The decision action of the conditional access policy.</para>
+                /// <para>The decision action effect of the conditional access policy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>allow</para>
@@ -259,7 +259,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The last updated time.</para>
+            /// <para>The time when the policy was last updated. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1741857554000</para>
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? LastUpdatedTime { get; set; }
 
             /// <summary>
-            /// <para>The priority.</para>
+            /// <para>The priority of the conditional access policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

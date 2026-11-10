@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The name of the filter field. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ApplicationId: the application ID.</description></item>
+            /// <item><description>ApplicationId: the application ID</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The values of the filter field.</para>
+            /// <para>The list of filter field values.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -61,13 +61,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page.</para>
-        /// <list type="bullet">
-        /// <item><description><para>Default value: 20.</para>
-        /// </description></item>
-        /// <item><description><para>Maximum value: 100.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The maximum number of entries per page. Default value: 20. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -77,10 +71,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that indicates the start position of the next page.</para>
-        /// <list type="bullet">
-        /// <item><description>If this parameter is not specified, the query starts from the first page.</description></item>
-        /// </list>
+        /// <para>The pagination token that specifies the starting position for the next page. If you do not specify this parameter, the query starts from the first page by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>

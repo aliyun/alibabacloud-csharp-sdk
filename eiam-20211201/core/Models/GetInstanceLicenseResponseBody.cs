@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetInstanceLicenseResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response result.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("License")]
         [Validation(Required=false)]
@@ -94,14 +94,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public long? NetworkAccessEndpointQuota { get; set; }
 
                 /// <summary>
-                /// <para>The PAM privileged management license status. Valid values: enabled and disabled.</para>
+                /// <para>The PAM privileged access management license status.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>enabled</para>
                 /// </summary>
                 [NameInMap("PamLicenseStatus")]
                 [Validation(Required=false)]
                 public string PamLicenseStatus { get; set; }
 
                 /// <summary>
-                /// <para>The number of prepaid active accounts.</para>
+                /// <para>The number of prepaid active users.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -133,7 +136,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string LicenseChargeType { get; set; }
 
             /// <summary>
-            /// <para>The detailed license configuration in JSON string format.</para>
+            /// <para>The detailed license configuration as a JSON string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;modules&quot;:[{&quot;features&quot;:[{&quot;name&quot;:&quot;urn:alibaba:idaas:license:module:ud:customField&quot;,&quot;status&quot;:&quot;enabled&quot;}]……{&quot;name&quot;:&quot;urn:alibaba:idaas:license:tag:enterprise&quot;,&quot;status&quot;:&quot;enabled&quot;}],&quot;version&quot;:&quot;1.0&quot;}</para>
@@ -183,7 +186,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PurchaseChannel { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the external product associated with the license.</para>
+            /// <para>The unique identifier of the external commodity associated with the license.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eiam-cn-xxxxx</para>

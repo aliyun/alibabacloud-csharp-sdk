@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadata IdentityProviderMetadata { get; set; }
         public class ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadata : TeaModel {
             /// <summary>
-            /// <para>The OIDC identity provider metadata.</para>
+            /// <para>The OIDC IdP metadata.</para>
             /// </summary>
             [NameInMap("OidcOpenIdConfiguration")]
             [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string AuthorizationEndpoint { get; set; }
 
                 /// <summary>
-                /// <para>The OIDC issuer.</para>
+                /// <para>The OIDC issuer information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://demo.com/fe974231-3454-4b70-9326-70fb71e41bce/v2.0/">https://demo.com/fe974231-3454-4b70-9326-70fb71e41bce/v2.0/</a></para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string Issuer { get; set; }
 
                 /// <summary>
-                /// <para>The OIDC JSON Web Key Set (JWKS) URI.</para>
+                /// <para>The OIDC JWKS URI.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://demo.com/oauth2/v1/keys">https://demo.com/oauth2/v1/keys</a></para>
@@ -76,21 +76,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The SAML identity provider metadata.</para>
+            /// <para>The SAML IdP metadata.</para>
             /// </summary>
             [NameInMap("SamlMetadataConfiguration")]
             [Validation(Required=false)]
             public ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfiguration SamlMetadataConfiguration { get; set; }
             public class ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfiguration : TeaModel {
                 /// <summary>
-                /// <para>The certificates.</para>
+                /// <para>The IdP certificate list.</para>
                 /// </summary>
                 [NameInMap("Certificates")]
                 [Validation(Required=false)]
                 public List<ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfigurationCertificates> Certificates { get; set; }
                 public class ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfigurationCertificates : TeaModel {
                     /// <summary>
-                    /// <para>The content of the certificate.</para>
+                    /// <para>The certificate content.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>-----BEGIN CERTIFICATE----- MIIE+zCCA0egAwIBAgIJAJZY0ZY0ZY0Z -----END CERTIFICATE-----</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The entity ID of the SAML identity provider.</para>
+                /// <para>The IdP entity ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://dc.test.com/adfs/services/trust">http://dc.test.com/adfs/services/trust</a></para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string IdPEntityId { get; set; }
 
                 /// <summary>
-                /// <para>The SSO URL of the SAML identity provider.</para>
+                /// <para>The IdP logon URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://dc.test.com/adfs/ls/">https://dc.test.com/adfs/ls/</a></para>

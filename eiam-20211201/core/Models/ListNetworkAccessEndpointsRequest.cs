@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of rows per page in a paged query. Maximum value: 100.</para>
+        /// <para>The number of entries to return per page in a paging query. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <para>The type of the network access endpoint. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>shared: shared network access endpoint.</description></item>
-        /// <item><description>private: dedicated network access endpoint.</description></item>
+        /// <item><description>private: private network access endpoint.</description></item>
         /// </list>
         /// <para>Default value: private.</para>
         /// 
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NetworkAccessEndpointType { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call. Leave this parameter empty for the first query.</para>
+        /// <para>The pagination token. Set the value to the NextToken value returned from the previous API call. Leave this parameter empty for the first call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The VPC ID of the dedicated network access endpoint. This parameter does not take effect when NetworkAccessEndpointType is set to shared.</para>
+        /// <para>The ID of the VPC to which the private network access endpoint is connected. This parameter does not take effect when NetworkAccessEndpointType is set to shared.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-examplexxx</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The region of the VPC for the dedicated network access endpoint. The region must be one of the regions returned by the ListNetworkAccessEndpointAvailableRegions operation. This parameter does not take effect when NetworkAccessEndpointType is set to shared.</para>
+        /// <para>The region of the VPC to which the private network access endpoint is connected. The region must be returned by the ListNetworkAccessEndpointAvailableRegions operation. This parameter does not take effect when NetworkAccessEndpointType is set to shared.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

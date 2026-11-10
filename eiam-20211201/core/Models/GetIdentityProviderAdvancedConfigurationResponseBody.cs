@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetIdentityProviderAdvancedConfigurationResponseBody : TeaModel {
         /// <summary>
-        /// <para>Advanced configuration information</para>
+        /// <para>The advanced configuration information.</para>
         /// </summary>
         [NameInMap("AdvancedConfiguration")]
         [Validation(Required=false)]
         public GetIdentityProviderAdvancedConfigurationResponseBodyAdvancedConfiguration AdvancedConfiguration { get; set; }
         public class GetIdentityProviderAdvancedConfigurationResponseBodyAdvancedConfiguration : TeaModel {
             /// <summary>
-            /// <para>DingTalk advanced configuration</para>
+            /// <para>The DingTalk advanced configuration.</para>
             /// </summary>
             [NameInMap("DingtalkAdvancedConfig")]
             [Validation(Required=false)]
             public GetIdentityProviderAdvancedConfigurationResponseBodyAdvancedConfigurationDingtalkAdvancedConfig DingtalkAdvancedConfig { get; set; }
             public class GetIdentityProviderAdvancedConfigurationResponseBodyAdvancedConfigurationDingtalkAdvancedConfig : TeaModel {
                 /// <summary>
-                /// <para>AppKey of the DingTalk first-party application</para>
+                /// <para>The AppKey of the DingTalk first-party application.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ding5xo9rg0csw3f6xxx</para>
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string AppKey { get; set; }
 
                 /// <summary>
-                /// <para>App secret of the DingTalk first-party application</para>
+                /// <para>The AppSecret of the DingTalk first-party application.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <hr>
+                /// <para>REOQ6Cl55kriOd8NOBeqWYLKpHR4p6fdZxxxx</para>
                 /// </summary>
                 [NameInMap("AppSecret")]
                 [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>Identity provider ID</para>
+            /// <para>The identity provider ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idp_na2rzpyc67zr7ixdfy35zgrxxx</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string IdentityProviderId { get; set; }
 
             /// <summary>
-            /// <para>Instance ID</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_kpvmhktvun6u66dgpjh3l4wxxx</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>

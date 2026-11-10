@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListDomainProxyTokensResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of domain proxy token objects.</para>
+        /// <para>The list of proxy tokens for the domain name.</para>
         /// </summary>
         [NameInMap("DomainProxyTokens")]
         [Validation(Required=false)]
         public List<ListDomainProxyTokensResponseBodyDomainProxyTokens> DomainProxyTokens { get; set; }
         public class ListDomainProxyTokensResponseBodyDomainProxyTokens : TeaModel {
             /// <summary>
-            /// <para>The creation time of the domain proxy token, in Unix timestamp format, in milliseconds.</para>
+            /// <para>The creation time of the domain proxy token. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The domain ID.</para>
+            /// <para>The domain name ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dm_examplexxxx</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The most recent usage time of the domain proxy token, in Unix timestamp format, in milliseconds.</para>
+            /// <para>The last used time of the domain proxy token. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -79,9 +79,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The token status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>enabled: The token is enabled.</para>
+            /// <item><description><para>enabled: Enabled.</para>
             /// </description></item>
-            /// <item><description><para>disabled: The token is disabled.</para>
+            /// <item><description><para>disabled: Disabled.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The most recent update time of the domain proxy token, in Unix timestamp format, in milliseconds.</para>
+            /// <para>The last update time of the domain proxy token. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>

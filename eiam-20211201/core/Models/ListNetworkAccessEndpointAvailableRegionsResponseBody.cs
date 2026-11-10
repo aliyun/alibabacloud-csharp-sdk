@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListNetworkAccessEndpointAvailableRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The collection of available regions.</para>
+        /// <para>The list of available regions.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public GetApplicationTemplateResponseBodyApplicationTemplate ApplicationTemplate { get; set; }
         public class GetApplicationTemplateResponseBodyApplicationTemplate : TeaModel {
             /// <summary>
-            /// <para>The application template ID.</para>
+            /// <para>The ID of the application template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apt_ramintlrole_ixxxxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationTemplateId { get; set; }
 
             /// <summary>
-            /// <para>The application template name.</para>
+            /// <para>The name of the application template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alibaba Cloud</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationTemplateName { get; set; }
 
             /// <summary>
-            /// <para>The time when the application template was created.</para>
+            /// <para>The creation time of the application template. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1730341123000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The application template description.</para>
+            /// <para>The description of the application template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alibaba Cloud SSO</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string LogoUrl { get; set; }
 
             /// <summary>
-            /// <para>The service code of the Alibaba Cloud service that manages the application template.</para>
+            /// <para>The service code of the cloud service that manages the application template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bastionhost</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The console URL of the Alibaba Cloud service that manages the application template.</para>
+            /// <para>The console URL of the cloud service that manages the application template.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/?p=bastion">https://example.com/?p=bastion</a></para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ServiceConsoleUrl { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the application template is managed by an Alibaba Cloud service.</para>
+            /// <para>Indicates whether the application template is managed by a cloud service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> SsoTypes { get; set; }
 
             /// <summary>
-            /// <para>The time when the application template was last updated.</para>
+            /// <para>The update time of the application template. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1730341124000</para>

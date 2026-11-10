@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ExecIdentityProviderMetadataUrlResolutionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the identity provider in IDaaS.</para>
+        /// <para>The IDaaS identity provider ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>idp_mwpcwnhrimlr2horxXXXX</para>
@@ -51,6 +51,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string OidcIssuer { get; set; }
 
         /// <summary>
+        /// <para>The SAML metadata URL.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://dc.test.com/FederationMetadata/2007-06/FederationMetadata.xml">https://dc.test.com/FederationMetadata/2007-06/FederationMetadata.xml</a></para>
         /// </summary>

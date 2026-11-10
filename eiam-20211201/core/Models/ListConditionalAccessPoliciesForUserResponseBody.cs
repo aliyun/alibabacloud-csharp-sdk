@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ConditionalAccessPolicyName { get; set; }
 
             /// <summary>
-            /// <para>The type of the conditional access policy.</para>
+            /// <para>The conditional access policy type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>arn:alibaba:idaas:authn:access:policy:system</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the policy was created. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1741857554000</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The execution configuration of the conditional access policy.</para>
+            /// <para>The decision configuration of the conditional access policy.</para>
             /// </summary>
             [NameInMap("DecisionConfig")]
             [Validation(Required=false)]
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public long? MfaAuthenticationIntervalSeconds { get; set; }
 
                 /// <summary>
-                /// <para>The MFA methods allowed by the conditional access policy.</para>
+                /// <para>The MFA types allowed by the conditional access policy.</para>
                 /// </summary>
                 [NameInMap("MfaAuthenticationMethods")]
                 [Validation(Required=false)]
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The execution type of the conditional access policy.</para>
+            /// <para>The decision type of the conditional access policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enforcement</para>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string DecisionType { get; set; }
 
             /// <summary>
-            /// <para>The description of the conditional access policy.</para>
+            /// <para>The conditional access policy description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testPolicy</para>
@@ -259,7 +259,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The last updated time.</para>
+            /// <para>The time when the policy was last updated. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1741857554000</para>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationRuleId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but you must ensure that the parameter value is unique among different requests. The ClientToken parameter can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The time range of the validity period. This parameter takes effect only when <b>ValidityType</b> is set to <b>time_bound</b>.</para>
+        /// <para>The time range of the validity period. This parameter takes effect when <b>ValidityType</b> is set to <b>time_bound</b>.</para>
         /// </summary>
         [NameInMap("ValidityPeriod")]
         [Validation(Required=false)]
@@ -85,8 +85,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <summary>
         /// <para>The validity type of the relationship. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>permanent: permanent</description></item>
-        /// <item><description>time_bound: custom time range.</description></item>
+        /// <item><description>permanent: Permanent.</description></item>
+        /// <item><description>time_bound: Custom time range.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetDomainDnsChallengeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The DNS Challenge record.</para>
+        /// <para>The DNS challenge record.</para>
         /// </summary>
         [NameInMap("DomainDnsChallenge")]
         [Validation(Required=false)]
         public GetDomainDnsChallengeResponseBodyDomainDnsChallenge DomainDnsChallenge { get; set; }
         public class GetDomainDnsChallengeResponseBodyDomainDnsChallenge : TeaModel {
             /// <summary>
-            /// <para>The name of the DNS Challenge.</para>
+            /// <para>The DNS challenge name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>_idaas-challenge.login.example.com</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string DnsChallengeName { get; set; }
 
             /// <summary>
-            /// <para>The value of the DNS Challenge.</para>
+            /// <para>The DNS challenge value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yriov8FD/rIGjQTU3/JjqkwxRbo5dyGftHWOtP5xfCI=</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string DnsChallengeValue { get; set; }
 
             /// <summary>
-            /// <para>The type of the DNS record.</para>
+            /// <para>The DNS record type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>txt</para>

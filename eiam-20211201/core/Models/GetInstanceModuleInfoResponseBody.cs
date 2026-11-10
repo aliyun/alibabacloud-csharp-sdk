@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public GetInstanceModuleInfoResponseBodyModule Module { get; set; }
         public class GetInstanceModuleInfoResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>The second-level module information.</para>
+            /// <para>The level-2 module information.</para>
             /// </summary>
             [NameInMap("Features")]
             [Validation(Required=false)]
             public List<GetInstanceModuleInfoResponseBodyModuleFeatures> Features { get; set; }
             public class GetInstanceModuleInfoResponseBodyModuleFeatures : TeaModel {
                 /// <summary>
-                /// <para>The identifier of the second-level module.</para>
+                /// <para>The level-2 module identifier.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>urn:alibaba:idaas:license:module:application:standard:oidc</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string FeatureKey { get; set; }
 
                 /// <summary>
-                /// <para>The status of the second-level module.</para>
+                /// <para>The level-2 module status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>enabled</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The identifier of the first-level module.</para>
+            /// <para>The level-1 module identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>urn:alibaba:idaas:license:module:application</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ModuleKey { get; set; }
 
             /// <summary>
-            /// <para>The status of the first-level module.</para>
+            /// <para>The level-1 module status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>

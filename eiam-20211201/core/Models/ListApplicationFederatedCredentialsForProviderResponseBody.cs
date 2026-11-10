@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListApplicationFederatedCredentialsForProviderResponseBodyApplicationFederatedCredentials> ApplicationFederatedCredentials { get; set; }
         public class ListApplicationFederatedCredentialsForProviderResponseBodyApplicationFederatedCredentials : TeaModel {
             /// <summary>
-            /// <para>The application federated credential ID.</para>
+            /// <para>The ID of the application federated credential.</para>
             /// 
             /// <b>Example:</b>
             /// <para>afc_dads12sadxxxxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationFederatedCredentialId { get; set; }
 
             /// <summary>
-            /// <para>The application federated credential name.</para>
+            /// <para>The name of the application federated credential.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationFederatedCredentialName { get; set; }
 
             /// <summary>
-            /// <para>The application federated credential type.</para>
+            /// <para>The type of the application federated credential.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oidc</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationFederatedCredentialType { get; set; }
 
             /// <summary>
-            /// <para>The application ID.</para>
+            /// <para>The ID of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app_asda1dsadxxxxx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1758785994982</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The application federated credential description.</para>
+            /// <para>The description of the application federated credential.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The last used time.</para>
+            /// <para>The last used time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1758785994982</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string PrincipalId { get; set; }
 
                     /// <summary>
-                    /// <para>The Azure resource group name.</para>
+                    /// <para>The name of the Azure resource group.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>user_default</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public List<string> InstanceIds { get; set; }
 
                     /// <summary>
-                    /// <para>The GCP project ID.</para>
+                    /// <para>The ID of the GCP project to which the resource belongs.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>turnkey-axiom-475109-xx</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string ProjectId { get; set; }
 
                     /// <summary>
-                    /// <para>The subject corresponding to the service account.</para>
+                    /// <para>The sub claim corresponding to the service account.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123456789</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string PodNamePrefix { get; set; }
 
                     /// <summary>
-                    /// <para>The K8s service account name.</para>
+                    /// <para>The name of the K8s service account.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>default</para>
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The application federated credential status.</para>
+            /// <para>The status of the application federated credential.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1758785994982</para>
@@ -320,8 +320,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The verification mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>freedom: free mode.</description></item>
-            /// <item><description>structured: structured mode.</description></item>
+            /// <item><description>freedom: free mode</description></item>
+            /// <item><description>structured: structured mode</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -334,7 +334,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paged query.</para>
+        /// <para>The maximum number of rows per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -344,7 +344,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned by this call.</para>
+        /// <para>The pagination token returned by the current call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -354,7 +354,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned by this call.</para>
+        /// <para>The pagination token returned by the current call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxexample</para>
@@ -374,7 +374,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries in the list.</para>
+        /// <para>The total number of items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

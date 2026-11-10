@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateUserRequest : TeaModel {
         /// <summary>
-        /// <para>The list of custom field objects.</para>
+        /// <para>The list of extended field objects.</para>
         /// </summary>
         [NameInMap("CustomFields")]
         [Validation(Required=false)]
         public List<UpdateUserRequestCustomFields> CustomFields { get; set; }
         public class UpdateUserRequestCustomFields : TeaModel {
             /// <summary>
-            /// <para>The identifier of the custom field. Create the custom field in advance. For more information, refer to the custom fields module in the console.</para>
+            /// <para>The identifier of the extended field. You must create the extended field in advance. For more information, see the Extended Fields module in the console.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nick_name</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string FieldName { get; set; }
 
             /// <summary>
-            /// <para>The value of the custom field. The value must comply with the property constraints of the corresponding custom field.</para>
+            /// <para>The value of the extended field. The value must comply with the attribute limits of the corresponding extended field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_value</para>
@@ -37,11 +37,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string FieldValue { get; set; }
 
             /// <summary>
-            /// <para>The operation type for the custom field. Valid values:</para>
+            /// <para>The operation type of the extended field. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>add: adds a custom field value to the account.</description></item>
-            /// <item><description>replace: replaces an existing custom field value of the account. If the custom field value does not exist, the operation is converted to an add operation.</description></item>
-            /// <item><description>remove: removes the custom field value from the account.</description></item>
+            /// <item><description>add: adds a value for the extended field of the account.</description></item>
+            /// <item><description>replace: replaces an existing value of the extended field. If the value does not exist, the operation is converted to add.</description></item>
+            /// <item><description>remove: removes the value of the extended field from the account.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The display name of the account. The name can be up to 256 characters in length.</para>
+        /// <para>The display name of the account. The maximum length is 256 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_name</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The email address. The prefix of the email address can contain uppercase letters, lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</para>
+        /// <para>The email address. The prefix can contain uppercase letters, lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:example@example.com">example@example.com</a></para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Email { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the email address is verified. This parameter is required if an email address is specified. If no special business requirements exist, set this parameter to true.</para>
+        /// <para>Specifies whether the email address is verified. If the email address is specified, this parameter is required. Set this parameter to true unless otherwise specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The phone number. The value must be 6 to 15 digits in length.</para>
+        /// <para>The phone number. It must be 6 to 15 digits in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>156xxxxxxxxx</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string PhoneNumber { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the phone number is verified as a trusted phone number. This parameter is required if a phone number is specified. If no special business requirements exist, set this parameter to true.</para>
+        /// <para>Specifies whether the phone number is verified. If the phone number is specified, this parameter is required. Set this parameter to true unless otherwise specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public bool? PhoneNumberVerified { get; set; }
 
         /// <summary>
-        /// <para>The phone region code. Example: 86 for the Chinese mainland, without the 00 or + prefix. This parameter is required if a phone number is specified.</para>
+        /// <para>The phone region code. For example, the region code for the Chinese mainland is 86. Do not include 00 or +. This parameter is required if the phone number is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>The account name. The name can contain letters, digits, underscores (_), periods (.), at signs (@), and hyphens (-). The name can be up to 256 characters in length.</para>
+        /// <para>The username. It can contain letters, digits, and the following special characters: underscores (_), periods (.), at signs (@), and hyphens (-). The maximum length is 256 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>username_test</para>

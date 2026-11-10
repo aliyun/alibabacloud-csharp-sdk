@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountExternalId { get; set; }
 
             /// <summary>
-            /// <para>The health status of the cloud account. Valid values:</para>
+            /// <para>The cloud account health status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>healthy: Healthy.</description></item>
             /// <item><description>unhealthy: Unhealthy.</description></item>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountHealth { get; set; }
 
             /// <summary>
-            /// <para>The health check result of the cloud account.</para>
+            /// <para>The cloud account health check result.</para>
             /// </summary>
             [NameInMap("CloudAccountHealthCheckResult")]
             [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The time of the last health check. The value is a UNIX timestamp in milliseconds.</para>
+                /// <para>The last check time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1649830226000</para>
@@ -88,10 +88,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public long? LastCheckTime { get; set; }
 
                 /// <summary>
-                /// <para>The health check result of the cloud account. Valid values:</para>
+                /// <para>The cloud account health check result. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>success: Succeeded.</description></item>
-                /// <item><description>failed: Failed.</description></item>
+                /// <item><description>success: Success.</description></item>
+                /// <item><description>failed: Failure.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string AuthorizationServerId { get; set; }
 
                 /// <summary>
-                /// <para>Issuer。</para>
+                /// <para>The issuer.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://xxxxx.aliyunidaas.com/api/v2/iauths_system/oauth2">https://xxxxx.aliyunidaas.com/api/v2/iauths_system/oauth2</a></para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string Issuer { get; set; }
 
                 /// <summary>
-                /// <para>The signature verification public key endpoint.</para>
+                /// <para>The public key endpoint for signature verification.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://xxxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/jwks">https://xxxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/jwks</a></para>
@@ -181,16 +181,6 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [NameInMap("CloudAccountProviderName")]
             [Validation(Required=false)]
             public string CloudAccountProviderName { get; set; }
-
-            /// <summary>
-            /// <para>The cloud account role creation type.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>test</para>
-            /// </summary>
-            [NameInMap("CloudAccountRoleCreationType")]
-            [Validation(Required=false)]
-            public string CloudAccountRoleCreationType { get; set; }
 
             /// <summary>
             /// <para>The cloud account site. Valid values:</para>
@@ -257,7 +247,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> PrivilegeApplicationIds { get; set; }
 
             /// <summary>
-            /// <para>The reason for the privilege hosting or removal failure.</para>
+            /// <para>The cause of the privilege hosting or removal failure.</para>
             /// </summary>
             [NameInMap("PrivilegeHostingError")]
             [Validation(Required=false)]
@@ -286,14 +276,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The hosting state of the cloud account. The default value is hosting_unmanaged. Valid values:</para>
+            /// <para>The cloud account hosting status. Default value: hosting_unmanaged. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>hosting_unmanaged: Unmanaged. The cloud account has not initiated hosting and is in the initial state.</description></item>
-            /// <item><description>hosting_pending: Hosting in progress. The hosting task has been submitted and is being executed asynchronously. Wait for the hosting process to complete before the final state is reached.</description></item>
-            /// <item><description>hosting_completed: Hosting completed. The cloud account hosting process was executed successfully. The related permission templates and hosting bindings have taken effect.</description></item>
-            /// <item><description>hosting_failed: Hosting failed. The hosting process encountered an exception. View the failure reason and re-initiate hosting.</description></item>
-            /// <item><description>hosting_removing: Removal in progress. The removal task has been submitted and is being executed asynchronously. Wait for the removal process to complete before the final state is reached.</description></item>
-            /// <item><description>hosting_remove_failed: Removal failed. The removal process encountered an exception. View the failure reason and re-initiate removal.</description></item>
+            /// <item><description>hosting_pending: Hosting. The hosting task is submitted and executed asynchronously. You must wait for the hosting process to complete to enter the final state.</description></item>
+            /// <item><description>hosting_completed: Hosting completed. The hosting process is executed successfully, and the relevant permission templates and hosting bindings take effect.</description></item>
+            /// <item><description>hosting_failed: Hosting failed. An exception occurs during the hosting process. You can view the failure cause and initiate hosting again.</description></item>
+            /// <item><description>hosting_removing: Removing. The removal task is submitted and executed asynchronously. You must wait for the removal process to complete to enter the final state.</description></item>
+            /// <item><description>hosting_remove_failed: Removal failed. An exception occurs during the removal process. You can view the failure cause and initiate removal again.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -307,7 +297,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The privilege switch status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>enabled: Enabled. The resource is active and can be used normally.</description></item>
-            /// <item><description>disabled: Disabled. The resource is deactivated and no longer takes effect. You can re-enable it to restore functionality.</description></item>
+            /// <item><description>disabled: Disabled. The resource is deactivated and no longer takes effect. You can re-enable it to restore the resource.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

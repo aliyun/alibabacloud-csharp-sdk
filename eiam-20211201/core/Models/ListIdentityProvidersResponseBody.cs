@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListIdentityProvidersResponseBody : TeaModel {
         /// <summary>
-        /// <para>List of identity provider information.</para>
+        /// <para>The list of identity providers.</para>
         /// </summary>
         [NameInMap("IdentityProviders")]
         [Validation(Required=false)]
         public List<ListIdentityProvidersResponseBodyIdentityProviders> IdentityProviders { get; set; }
         public class ListIdentityProvidersResponseBodyIdentityProviders : TeaModel {
             /// <summary>
-            /// <para>Whether the advanced configuration is enabled. Valid values:</para>
+            /// <para>Specifies whether the advanced configuration capability is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Disabled: disabled</para>
+            /// <item><description><para>disabled: Disabled.</para>
             /// </description></item>
-            /// <item><description><para>Enabled: enabled</para>
+            /// <item><description><para>enabled: Enabled.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -33,24 +33,23 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AdvancedStatus { get; set; }
 
             /// <summary>
-            /// <para>The authentication source product, such as Okta, Google, or Azure AD.
-            /// Valid values:</para>
+            /// <para>The authentication source product, such as Okta, Google, or Azure AD. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>DingTalk: urn:alibaba:idaas:idp:alibaba:dingtalk</para>
+            /// <item><description><para>urn:alibaba:idaas:idp:alibaba:dingtalk: DingTalk.</para>
             /// </description></item>
-            /// <item><description><para>LDAP: urn:alibaba:idaas:idp:unknown:ldap</para>
+            /// <item><description><para>urn:alibaba:idaas:idp:unknown:ldap: LDAP.</para>
             /// </description></item>
-            /// <item><description><para>Alibaba Cloud IDaaS: urn:alibaba:idaas:idp:alibaba:idaas</para>
+            /// <item><description><para>urn:alibaba:idaas:idp:alibaba:idaas: Alibaba Cloud IDaaS.</para>
             /// </description></item>
-            /// <item><description><para>WeCom: urn:alibaba:idaas:idp:tencent:wecom</para>
+            /// <item><description><para>urn:alibaba:idaas:idp:tencent:wecom: WeCom.</para>
             /// </description></item>
-            /// <item><description><para>Lark: urn:alibaba:idaas:idp:bytedance:lark</para>
+            /// <item><description><para>urn:alibaba:idaas:idp:bytedance:lark: Lark.</para>
             /// </description></item>
-            /// <item><description><para>Active Directory: urn:alibaba:idaas:idp:microsoft:ad</para>
+            /// <item><description><para>urn:alibaba:idaas:idp:microsoft:ad: Active Directory.</para>
             /// </description></item>
-            /// <item><description><para>Azure Active Directory: urn:alibaba:idaas:idp:microsoft:aad</para>
+            /// <item><description><para>urn:alibaba:idaas:idp:microsoft:aad: Azure Active Directory.</para>
             /// </description></item>
-            /// <item><description><para>Alibaba Cloud SASE: urn:alibaba:idaas:idp:alibaba:sase</para>
+            /// <item><description><para>urn:alibaba:idaas:idp:alibaba:sase: Alibaba Cloud SASE.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -62,11 +61,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthnSourceSupplier { get; set; }
 
             /// <summary>
-            /// <para>The authentication source type, OIDC or SAML. Valid values:</para>
+            /// <para>The authentication method type, which can be OIDC or SAML. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>OIDC: urn:alibaba:idaas:authntype:oidc</para>
+            /// <item><description><para>urn:alibaba:idaas:authntype:oidc: OIDC.</para>
             /// </description></item>
-            /// <item><description><para>SAML: urn:alibaba:idaas:authntype:saml2</para>
+            /// <item><description><para>urn:alibaba:idaas:authntype:saml2: SAML.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -78,11 +77,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthnSourceType { get; set; }
 
             /// <summary>
-            /// <para>Whether the corresponding IdP supports authentication. Valid values:</para>
+            /// <para>Specifies whether the IdP supports authentication. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Disabled: disabled</para>
+            /// <item><description><para>disabled: Disabled.</para>
             /// </description></item>
-            /// <item><description><para>Enabled: enabled</para>
+            /// <item><description><para>enabled: Enabled.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -94,7 +93,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthnStatus { get; set; }
 
             /// <summary>
-            /// <para>The creation time, in Unix timestamp format, measured in milliseconds.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1712561597000</para>
@@ -104,7 +103,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Description of the identity provider.</para>
+            /// <para>The description of the identity provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -114,7 +113,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>External ID of the identity provider.</para>
+            /// <para>The external ID of the identity provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_123</para>
@@ -124,7 +123,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string IdentityProviderExternalId { get; set; }
 
             /// <summary>
-            /// <para>Identity provider ID.</para>
+            /// <para>The identity provider ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idp_m5b5wd5s2hpq4t6iaehhXXX</para>
@@ -134,33 +133,33 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string IdentityProviderId { get; set; }
 
             /// <summary>
-            /// <para>Name of the identity provider.</para>
+            /// <para>The name of the identity provider.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxxx</para>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("IdentityProviderName")]
             [Validation(Required=false)]
             public string IdentityProviderName { get; set; }
 
             /// <summary>
-            /// <para>The synchronization type of the identity provider.</para>
+            /// <para>The identity provider synchronization type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Inbound DingTalk: urn:alibaba:idaas:idp:alibaba:dingtalk:pull</para>
+            /// <item><description><para>urn:alibaba:idaas:idp:alibaba:dingtalk:pull: Inbound DingTalk.</para>
             /// </description></item>
-            /// <item><description><para>Outbound DingTalk: urn:alibaba:idaas:idp:alibaba:dingtalk:push</para>
+            /// <item><description><para>urn:alibaba:idaas:idp:alibaba:dingtalk:push: Outbound DingTalk.</para>
             /// </description></item>
-            /// <item><description><para>Inbound WeCom: urn:alibaba:idaas:idp:tencent:wecom:pull</para>
+            /// <item><description><para>urn:alibaba:idaas:idp:tencent:wecom:pull: Inbound WeCom.</para>
             /// </description></item>
-            /// <item><description><para>Inbound Lark: urn:alibaba:idaas:idp:bytedance:lark:pull</para>
+            /// <item><description><para>urn:alibaba:idaas:idp:bytedance:lark:pull: Inbound Lark.</para>
             /// </description></item>
-            /// <item><description><para>Inbound AD: urn:alibaba:idaas:idp:microsoft:ad:pull</para>
+            /// <item><description><para>urn:alibaba:idaas:idp:microsoft:ad:pull: Inbound Active Directory.</para>
             /// </description></item>
-            /// <item><description><para>Inbound LDAP: urn:alibaba:idaas:idp:unknown:ldap:pull</para>
+            /// <item><description><para>urn:alibaba:idaas:idp:unknown:ldap:pull: Inbound LDAP.</para>
             /// </description></item>
-            /// <item><description><para>Standard OIDC: urn:alibaba:idaas:idp:standard:oidc</para>
+            /// <item><description><para>urn:alibaba:idaas:idp:standard:oidc: Standard OIDC.</para>
             /// </description></item>
-            /// <item><description><para>SASE Customized OIDC: urn:alibaba:idaas:idp:alibaba:sase</para>
+            /// <item><description><para>urn:alibaba:idaas:idp:alibaba:sase: SASE custom OIDC.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -172,11 +171,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string IdentityProviderType { get; set; }
 
             /// <summary>
-            /// <para>The incremental callback status, indicating whether incremental callback data from the IdP is processed. Valid values:</para>
+            /// <para>The incremental callback status, which specifies whether to process incremental callback data from the IdP. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Disabled: disabled</para>
+            /// <item><description><para>disabled: Disabled.</para>
             /// </description></item>
-            /// <item><description><para>Enabled: enabled</para>
+            /// <item><description><para>enabled: Enabled.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -188,7 +187,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string IncrementalCallbackStatus { get; set; }
 
             /// <summary>
-            /// <para>Instance ID.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_pbf4dth34l2qb7mydpntXXX</para>
@@ -198,7 +197,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The last status check result. Before synchronization, a sync task can only be triggered when the identity provider status check result is success.</para>
+            /// <para>The result of the last status check. A synchronization task can be triggered only when the identity provider status check result is success before synchronization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -228,7 +227,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string LogoUrl { get; set; }
 
             /// <summary>
-            /// <para>The periodic sync status, indicating whether the data differences between EIAM and the identity provider are periodically checked.</para>
+            /// <para>The periodic verification status, which specifies whether to periodically verify data differences between EIAM and the identity provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>disabled</para>
@@ -238,11 +237,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PeriodicSyncStatus { get; set; }
 
             /// <summary>
-            /// <para>Whether the inbound sync feature is supported. Valid values:</para>
+            /// <para>Specifies whether the inbound synchronization feature is supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Disabled: disabled</para>
+            /// <item><description><para>disabled: Disabled.</para>
             /// </description></item>
-            /// <item><description><para>Enabled: enabled</para>
+            /// <item><description><para>enabled: Enabled.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -254,7 +253,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string UdPullStatus { get; set; }
 
             /// <summary>
-            /// <para>The target node for synchronization.</para>
+            /// <para>The synchronization target node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ou_2buqmxsa3ltyqkjgpwfijurXXX</para>
@@ -264,11 +263,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string UdPullTargetScope { get; set; }
 
             /// <summary>
-            /// <para>Whether the outbound sync feature is enabled. Valid values:</para>
+            /// <para>Specifies whether the outbound synchronization capability is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Disabled: disabled</para>
+            /// <item><description><para>disabled: Disabled.</para>
             /// </description></item>
-            /// <item><description><para>Enabled: enabled</para>
+            /// <item><description><para>enabled: Enabled.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -280,7 +279,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string UdPushStatus { get; set; }
 
             /// <summary>
-            /// <para>The update time, in Unix timestamp format, measured in milliseconds.</para>
+            /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1712561597000</para>
@@ -292,7 +291,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
@@ -302,7 +301,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of entries.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

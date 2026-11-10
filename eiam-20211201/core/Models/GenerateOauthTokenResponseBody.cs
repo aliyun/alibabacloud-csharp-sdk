@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public GenerateOauthTokenResponseBodyTokenResponse TokenResponse { get; set; }
         public class GenerateOauthTokenResponseBodyTokenResponse : TeaModel {
             /// <summary>
-            /// <para>Access Token。</para>
+            /// <para>The access token.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJlaWFtIn0.signature</para>
             /// </summary>
             [NameInMap("AccessToken")]
             [Validation(Required=false)]
@@ -56,6 +56,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public long? ExpiresIn { get; set; }
 
+            /// <summary>
+            /// <para>The issued token type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>standard</para>
+            /// </summary>
             [NameInMap("IssuedTokenType")]
             [Validation(Required=false)]
             public string IssuedTokenType { get; set; }

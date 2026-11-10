@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationTokenType { get; set; }
 
         /// <summary>
-        /// <para>The expiration time.</para>
+        /// <para>The expiration time. Specify a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1735530123762</para>

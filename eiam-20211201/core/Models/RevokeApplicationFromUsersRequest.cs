@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The list of account IDs. A maximum of 100 account IDs are supported in a single operation.</para>
+        /// <para>The list of account IDs. You can specify up to 100 account IDs in a single request.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

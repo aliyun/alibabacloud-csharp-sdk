@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListUserAuthnSourceMappingsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the source identity provider (IdP).</para>
+        /// <para>The source IdP ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>idp_11111</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page.</para>
+        /// <para>The maximum number of entries to return per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token.</para>
+        /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The token for the previous page of results.</para>
+        /// <para>The pagination token for the previous page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxxxexample</para>
@@ -61,10 +61,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string PreviousToken { get; set; }
 
         /// <summary>
-        /// <para>The external ID.</para>
+        /// <para>The external association ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxxxx</para>
+        /// <para>user_123131xxasasa</para>
         /// </summary>
         [NameInMap("UserExternalId")]
         [Validation(Required=false)]

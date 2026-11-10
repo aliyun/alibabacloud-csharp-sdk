@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <summary>
         /// <para>The list of authentication channels. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>email: email.</description></item>
-        /// <item><description>sms: text message.</description></item>
+        /// <item><description>email: Email.</description></item>
+        /// <item><description>sms: SMS.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <summary>
         /// <para>The forgot password configuration status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>enabled: enabled.</description></item>
-        /// <item><description>disabled: disabled.</description></item>
+        /// <item><description>enabled: Enabled.</description></item>
+        /// <item><description>disabled: Disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

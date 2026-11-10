@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListResourceServersForUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page in a paged query.</para>
+        /// <para>The number of rows per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -86,8 +86,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// <summary>
                 /// <para>Indicates whether direct authorization exists. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: Direct authorization exists.</description></item>
-                /// <item><description>false: Direct authorization does not exist.</description></item>
+                /// <item><description>true: Yes.</description></item>
+                /// <item><description>false: No.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

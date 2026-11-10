@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public GetCustomPrivacyPolicyResponseBodyCustomPrivacyPolicy CustomPrivacyPolicy { get; set; }
         public class GetCustomPrivacyPolicyResponseBodyCustomPrivacyPolicy : TeaModel {
             /// <summary>
-            /// <para>The content details of the custom privacy policy.</para>
+            /// <para>The details of the custom privacy policy content.</para>
             /// </summary>
             [NameInMap("CustomPrivacyPolicyContents")]
             [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string CustomPrivacyPolicyItemName { get; set; }
 
                     /// <summary>
-                    /// <para>The URL of the custom privacy policy item. The URL must start with https://.</para>
+                    /// <para>The access URL of the custom privacy policy item. The URL must start with https://.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="https://example.com">https://example.com</a></para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The tip for the custom privacy policy content.</para>
+                /// <para>The prompt for the custom privacy policy content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Please read and agree：</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string CustomPrivacyPolicyTip { get; set; }
 
                 /// <summary>
-                /// <para>The language of the custom privacy policy. The value is obtained from the LanguageCode parameter returned by the ListLanguages operation.</para>
+                /// <para>The language of the custom privacy policy. The value is the LanguageCode returned by the ListLanguages operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>zh-Hans-CN</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CustomPrivacyPolicyName { get; set; }
 
             /// <summary>
-            /// <para>The language of the custom privacy policy. The value is obtained from the LanguageCode parameter returned by the ListLanguages operation.</para>
+            /// <para>The language of the custom privacy policy. The value is the LanguageCode returned by the ListLanguages operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zh-Hans-CN</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The status of the custom privacy policy. Valid values:</para>
+            /// <para>The account status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>enabled: Enabled.</description></item>
             /// <item><description>disabled: Disabled.</description></item>

@@ -19,8 +19,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>Specifies whether the corresponding IdP supports authentication. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>disabled: Disabled.</description></item>
-            /// <item><description>enabled: Enabled.</description></item>
+            /// <item><description><para>disabled: Disabled.</para>
+            /// </description></item>
+            /// <item><description><para>enabled: Enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,8 +35,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>Specifies whether automatic password update is supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>disabled: Disabled.</description></item>
-            /// <item><description>enabled: Enabled.</description></item>
+            /// <item><description><para>disabled: Disabled.</para>
+            /// </description></item>
+            /// <item><description><para>enabled: Enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -120,8 +124,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// <summary>
                 /// <para>The type of the expression. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>field: field</description></item>
-                /// <item><description>expression: expression</description></item>
+                /// <item><description><para>field: Field.</para>
+                /// </description></item>
+                /// <item><description><para>expression: Expression.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -166,8 +172,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>Specifies whether automatic account matching is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>disabled: Disabled.</description></item>
-            /// <item><description>enabled: Enabled.</description></item>
+            /// <item><description><para>disabled: Disabled.</para>
+            /// </description></item>
+            /// <item><description><para>enabled: Enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -178,10 +186,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AutoMatchUserStatus { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the manual account binding feature is enabled. Valid values:</para>
+            /// <para>Specifies whether the manual account binding feature is enabled for users. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>disabled: Disabled.</description></item>
-            /// <item><description>enabled: Enabled.</description></item>
+            /// <item><description>disabled</description></item>
+            /// <item><description>enabled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -204,7 +212,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The DingTalk configuration.</para>
+        /// <para>The DingTalk configuration information.</para>
         /// </summary>
         [NameInMap("DingtalkAppConfig")]
         [Validation(Required=false)]
@@ -243,9 +251,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The DingTalk version. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>public_dingtalk: standard DingTalk</para>
+            /// <item><description><para>public_dingtalk: Standard DingTalk.</para>
             /// </description></item>
-            /// <item><description><para>private_dingtalk: exclusive DingTalk</para>
+            /// <item><description><para>private_dingtalk: Dedicated DingTalk.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -279,7 +287,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The name of the identity provider.</para>
+        /// <para>The identity provider name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -292,14 +300,22 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <summary>
         /// <para>The synchronization type of the identity provider. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>urn:alibaba:idaas:idp:alibaba:dingtalk:pull: inbound DingTalk</description></item>
-        /// <item><description>urn:alibaba:idaas:idp:alibaba:dingtalk:push: outbound DingTalk</description></item>
-        /// <item><description>urn:alibaba:idaas:idp:tencent:wecom:pull: inbound WeCom</description></item>
-        /// <item><description>urn:alibaba:idaas:idp:bytedance:lark:pull: inbound Lark</description></item>
-        /// <item><description>urn:alibaba:idaas:idp:microsoft:ad:pull: inbound AD</description></item>
-        /// <item><description>urn:alibaba:idaas:idp:unknown:ldap:pull: inbound LDAP</description></item>
-        /// <item><description>urn:alibaba:idaas:idp:standard:oidc: standard OIDC</description></item>
-        /// <item><description>urn:alibaba:idaas:idp:alibaba:sase: SASE custom OIDC</description></item>
+        /// <item><description><para>Inbound DingTalk: urn:alibaba:idaas:idp:alibaba:dingtalk:pull</para>
+        /// </description></item>
+        /// <item><description><para>Outbound DingTalk: urn:alibaba:idaas:idp:alibaba:dingtalk:push</para>
+        /// </description></item>
+        /// <item><description><para>Inbound WeCom: urn:alibaba:idaas:idp:tencent:wecom:pull</para>
+        /// </description></item>
+        /// <item><description><para>Inbound Lark: urn:alibaba:idaas:idp:bytedance:lark:pull</para>
+        /// </description></item>
+        /// <item><description><para>Inbound AD: urn:alibaba:idaas:idp:microsoft:ad:pull</para>
+        /// </description></item>
+        /// <item><description><para>Inbound LDAP: urn:alibaba:idaas:idp:unknown:ldap:pull</para>
+        /// </description></item>
+        /// <item><description><para>Standard OIDC: urn:alibaba:idaas:idp:standard:oidc</para>
+        /// </description></item>
+        /// <item><description><para>SASE custom OIDC: urn:alibaba:idaas:idp:alibaba:sase</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -391,7 +407,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The administrator password.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxxx</para>
+            /// <para>123456</para>
             /// </summary>
             [NameInMap("AdministratorPassword")]
             [Validation(Required=false)]
@@ -408,12 +424,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AdministratorUsername { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to verify the certificate fingerprint. Valid values:</para>
+            /// <para>Specifies whether certificate fingerprint verification is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>disabled: Disabled.</para>
-            /// </description></item>
-            /// <item><description><para>enabled: Enabled.</para>
-            /// </description></item>
+            /// <item><description>disabled</description></item>
+            /// <item><description>enabled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -431,7 +445,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> CertificateFingerprints { get; set; }
 
             /// <summary>
-            /// <para>The group member attribute name.</para>
+            /// <para>The group member identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>member</para>
@@ -523,10 +537,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>Specifies whether StartTLS is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>disabled: Disabled.</para>
-            /// </description></item>
-            /// <item><description><para>enabled: Enabled.</para>
-            /// </description></item>
+            /// <item><description>disabled</description></item>
+            /// <item><description>enabled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -579,7 +591,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The URL of the application logo.</para>
+        /// <para>The application logo URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx-image://xxxx_23aqr2ye554csg33dqpch5eu3q/tmp/d17d9adc-a943-45e7-ba0c-2838dddea678</para>
@@ -859,8 +871,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>Specifies whether group synchronization is supported. Default value: disabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>disabled: Disabled.</description></item>
-            /// <item><description>enabled: Enabled.</description></item>
+            /// <item><description><para>disabled: Disabled.</para>
+            /// </description></item>
+            /// <item><description><para>enabled: Enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -873,8 +887,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>Specifies whether to process incremental callback data from the IdP. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>disabled: Disabled.</description></item>
-            /// <item><description>enabled: Enabled.</description></item>
+            /// <item><description><para>disabled: Disabled.</para>
+            /// </description></item>
+            /// <item><description><para>enabled: Enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -923,8 +939,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>Specifies whether to periodically verify data differences between EIAM and the identity provider. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>disabled: Disabled.</description></item>
-            /// <item><description>enabled: Enabled.</description></item>
+            /// <item><description><para>disabled: Disabled.</para>
+            /// </description></item>
+            /// <item><description><para>enabled: Enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -970,7 +988,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public CreateIdentityProviderRequestUdPushConfig UdPushConfig { get; set; }
         public class CreateIdentityProviderRequestUdPushConfig : TeaModel {
             /// <summary>
-            /// <para>The incremental callback status. This field is not yet available. Ignore this field.</para>
+            /// <para>The incremental callback status. This field is not yet enabled. Ignore this field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>disabled</para>
@@ -1016,7 +1034,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The periodic verification status. This field is not yet available. Ignore this field.</para>
+            /// <para>The periodic verification status. This field is not yet enabled. Ignore this field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>disabled</para>
@@ -1081,7 +1099,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizeCallbackDomain { get; set; }
 
             /// <summary>
-            /// <para>The WeCom address book secret.</para>
+            /// <para>The WeCom contacts secret.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mPLLiWv-_9wittxxxEJCpk1xkF5hOgBzpRt4kBkxxx</para>
@@ -1111,7 +1129,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CorpSecret { get; set; }
 
             /// <summary>
-            /// <para>The trusted domain.</para>
+            /// <para>The trusted domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://xxx.aliyunidaas.com/">https://xxx.aliyunidaas.com/</a></para>

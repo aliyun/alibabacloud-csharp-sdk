@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public GetRootOrganizationalUnitResponseBodyOrganizationalUnit OrganizationalUnit { get; set; }
         public class GetRootOrganizationalUnitResponseBodyOrganizationalUnit : TeaModel {
             /// <summary>
-            /// <para>The time when the organizational unit was created, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The time when the organizational unit was created. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string OrganizationalUnitName { get; set; }
 
             /// <summary>
-            /// <para>The time when the organizational unit was last updated, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The time when the organizational unit was last updated. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>

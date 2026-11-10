@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListAuthorizationResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of authorized resources.</para>
+        /// <para>The list of authorization resources.</para>
         /// </summary>
         [NameInMap("AuthorizationResources")]
         [Validation(Required=false)]
         public List<ListAuthorizationResourcesResponseBodyAuthorizationResources> AuthorizationResources { get; set; }
         public class ListAuthorizationResourcesResponseBodyAuthorizationResources : TeaModel {
             /// <summary>
-            /// <para>The ID of the resource entity associated with the authorized resource.</para>
+            /// <para>The ID of the resource entity associated with the authorization resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>carole_01kmek49aqxxxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationResourceEntityId { get; set; }
 
             /// <summary>
-            /// <para>The type of the resource entity associated with the authorized resource. Valid values:</para>
+            /// <para>The type of the resource entity associated with the authorization resource. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>cloud_account_role: cloud role.</description></item>
             /// </list>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationRuleId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud account to which the resource entity associated with the authorized resource belongs.</para>
+            /// <para>The ID of the cloud account to which the resource entity associated with the authorization resource belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ca_01kmegjc11qa1txxxxx</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountId { get; set; }
 
             /// <summary>
-            /// <para>The effective condition.</para>
+            /// <para>The effective conditions.</para>
             /// </summary>
             [NameInMap("Condition")]
             [Validation(Required=false)]
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The creation time, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1768789292000</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The update time, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1768789292000</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The number of rows per page in a paging query.</para>
+        /// <para>The maximum number of entries returned per page for paging in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token returned in this call, which is used for the next paged query.</para>
+        /// <para>The pagination token returned in the current response for the next paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

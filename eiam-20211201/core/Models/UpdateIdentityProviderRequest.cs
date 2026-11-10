@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The DingTalk configuration basic information.</para>
+        /// <para>The basic DingTalk configuration information.</para>
         /// </summary>
         [NameInMap("DingtalkAppConfig")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AppSecret { get; set; }
 
             /// <summary>
-            /// <para>The DingTalk QR code login version.</para>
+            /// <para>The DingTalk scan-to-logon version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>new_version</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AppSecret { get; set; }
 
             /// <summary>
-            /// <para>The encryptKey of the custom Lark application.</para>
+            /// <para>The EncryptKey of the custom Lark application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VkdWw91mdkrjVFr3ObNwefap21dfbZbKxxxx</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string EncryptKey { get; set; }
 
             /// <summary>
-            /// <para>The verificationToken of the custom Lark application.</para>
+            /// <para>The VerificationToken of the custom Lark application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>feishuVerifyTokenxxxxx</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The AD/LDAP basic information.</para>
+        /// <para>The basic AD/LDAP information.</para>
         /// </summary>
         [NameInMap("LdapConfig")]
         [Validation(Required=false)]
@@ -170,14 +170,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The administrator password.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxxxxx</para>
+            /// <para>ExamplePassword123!</para>
             /// </summary>
             [NameInMap("AdministratorPassword")]
             [Validation(Required=false)]
             public string AdministratorPassword { get; set; }
 
             /// <summary>
-            /// <para>The administrator account.</para>
+            /// <para>The administrator username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DC=example,DC=com</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public int? LdapServerPort { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether StartTLS is enabled. Valid values:</para>
+            /// <para>Specifies whether to enable StartTLS. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>disabled: Disabled.</para>
             /// </description></item>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string LogoUrl { get; set; }
 
         /// <summary>
-        /// <para>The network endpoint ID.</para>
+        /// <para>The network access endpoint ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nae_examplexxxx</para>
@@ -367,7 +367,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string TokenEndpoint { get; set; }
 
                 /// <summary>
-                /// <para>The OIDC UserInfo endpoint.</para>
+                /// <para>The OIDC userinfo endpoint.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.com/oauth/userinfo">https://example.com/oauth/userinfo</a></para>
@@ -415,7 +415,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PkceChallengeMethod { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to use PKCE in the AuthorizationCode grant mode.</para>
+            /// <para>Specifies whether to use PKCE in authorization code mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -434,7 +434,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public UpdateIdentityProviderRequestSamlConfig SamlConfig { get; set; }
         public class UpdateIdentityProviderRequestSamlConfig : TeaModel {
             /// <summary>
-            /// <para>The binding type.</para>
+            /// <para>The binding method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HTTP-REDIRECT</para>
@@ -444,7 +444,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string BindingMethod { get; set; }
 
             /// <summary>
-            /// <para>The certificate list of the IdP.</para>
+            /// <para>The list of certificates for the IdP.</para>
             /// </summary>
             [NameInMap("Certificates")]
             [Validation(Required=false)]
@@ -493,7 +493,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? MaxClockSkew { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the request must be signed.</para>
+            /// <para>Specifies whether to require the request to be signed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -503,14 +503,20 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? RequireRequestSigned { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the external IdP is required to sign the Assertion.</para>
+            /// <para>Specifies whether to require the external IdP to sign the assertion.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("WantAssertionsSigned")]
             [Validation(Required=false)]
             public bool? WantAssertionsSigned { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the external IdP is required to sign the Response.</para>
+            /// <para>Specifies whether to require the external IdP to sign the response.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("WantResponseSigned")]
             [Validation(Required=false)]
@@ -519,14 +525,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The WeCom basic information.</para>
+        /// <para>The basic WeCom information.</para>
         /// </summary>
         [NameInMap("WeComConfig")]
         [Validation(Required=false)]
         public UpdateIdentityProviderRequestWeComConfig WeComConfig { get; set; }
         public class UpdateIdentityProviderRequestWeComConfig : TeaModel {
             /// <summary>
-            /// <para>The AgentId of the WeCom self-built application.</para>
+            /// <para>The AgentId of the WeCom custom application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1237403</para>
@@ -546,6 +552,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizeCallbackDomain { get; set; }
 
             /// <summary>
+            /// <para>The WeCom contacts secret.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>mPLLiWv-_9witxxxEJCpk1xkF5hOgBzpRt4kBkxxx</para>
             /// </summary>
@@ -554,7 +562,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ContactSecret { get; set; }
 
             /// <summary>
-            /// <para>The CorpSecret of the WeCom self-built application.</para>
+            /// <para>The CorpSecret of the WeCom custom application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CSEHDddddddxxxxuxkJEHPveWRXBGqVqRsxxxx</para>
@@ -564,7 +572,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CorpSecret { get; set; }
 
             /// <summary>
-            /// <para>The trusted domain name.</para>
+            /// <para>The trusted domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://xxx.aliyunidaas.com">https://xxx.aliyunidaas.com</a></para>
