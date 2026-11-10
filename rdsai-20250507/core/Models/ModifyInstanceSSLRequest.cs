@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ModifyInstanceSSLRequest : TeaModel {
+        /// <summary>
+        /// <para>The reserved parameter.</para>
+        /// </summary>
         [NameInMap("BranchName")]
         [Validation(Required=false)]
         public string BranchName { get; set; }
 
         /// <summary>
-        /// <para>The certificate type. Currently, only <b>custom</b> is supported, which indicates that a custom certificate is used.</para>
+        /// <para>The certificate type. Only <b>custom</b> is supported, which indicates that a custom certificate is used.</para>
         /// <remarks>
         /// <para>This parameter is required when <b>SSLEnabled</b> is set to <b>1</b>.</para>
         /// </remarks>
@@ -48,10 +51,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable or disable SSL. Valid values:</para>
+        /// <para>Specifies whether to enable SSL. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Enable.</description></item>
-        /// <item><description><b>0</b>: Disable.</description></item>
+        /// <item><description><b>1</b>: Enabled.</description></item>
+        /// <item><description><b>0</b>: Disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -63,7 +66,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public int? SSLEnabled { get; set; }
 
         /// <summary>
-        /// <para>The custom certificate content.</para>
+        /// <para>The content of the custom certificate.</para>
         /// <remarks>
         /// <para>This parameter is required when <b>CAType</b> is set to <b>custom</b>.</para>
         /// </remarks>

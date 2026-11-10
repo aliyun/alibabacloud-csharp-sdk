@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class EnableAgentRuntimeRequest : TeaModel {
+        /// <summary>
+        /// <para>The reserved parameter.</para>
+        /// </summary>
         [NameInMap("BranchName")]
         [Validation(Required=false)]
         public string BranchName { get; set; }
@@ -45,11 +48,11 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The security group ID. This parameter is used to create an endpoint.</para>
-        /// <para><b>If this parameter is not specified</b>: The system performs automatic creation of a security group named <b>sg-aliyun-rds-created-supabase-sandbox</b> in the VPC where the instance resides. No manual operation is required.</para>
-        /// <para><b>If this parameter is specified</b>: Make sure that the specified security group allows traffic from the CIDR block of the VPC where the Supabase instance resides in both the inbound and outbound directions. Otherwise, network connectivity issues may occur.</para>
+        /// <para>The security group ID used to create an endpoint.</para>
+        /// <para><b>If not specified</b>: The system automatically creates a security group named <b>sg-aliyun-rds-created-supabase-sandbox</b> in the VPC where the instance resides. No manual operation is required.</para>
+        /// <para><b>If manually specified</b>: Make sure that the specified security group allows traffic from the CIDR block of the VPC where the Supabase instance resides in both the inbound and outbound directions. Otherwise, network connectivity may fail.</para>
         /// <remarks>
-        /// <para>Notice: An endpoint is created only once. When the first Supabase instance in a VPC enables the sandbox and Edge Routine function capabilities, the system performs automatic creation of the endpoint. When subsequent Supabase instances in the same VPC enable these capabilities, the existing endpoint is reused and no new endpoint is created.</para>
+        /// <para>Notice: The endpoint is created only once. When the first Supabase instance in a VPC enables the sandbox and Edge Routine capabilities, the system automatically creates an endpoint. When other Supabase instances in the same VPC enable these capabilities later, the existing endpoint is reused and not created again.</notice></para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,9 +63,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID. This parameter is used to create an endpoint. If this parameter is not specified, the vSwitch of the Supabase instance is used by default.</para>
+        /// <para>The vSwitch ID used to create an endpoint. If this parameter is not specified, the vSwitch of the Supabase instance is used by default.</para>
         /// <remarks>
-        /// <para>Notice: An endpoint is created only once. When the first Supabase instance in a VPC enables the sandbox and Edge Routine function capabilities, the system performs automatic creation of the endpoint. When subsequent Supabase instances in the same VPC enable these capabilities, the existing endpoint is reused and no new endpoint is created.</para>
+        /// <para>Notice: The endpoint is created only once. When the first Supabase instance in a VPC enables the sandbox and Edge Routine capabilities, the system automatically creates an endpoint. When other Supabase instances in the same VPC enable these capabilities later, the existing endpoint is reused and not created again.</notice></para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

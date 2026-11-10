@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class UpdateApiKeyQuotaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -34,6 +34,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string ApiKey { get; set; }
 
                 /// <summary>
+                /// <para>The daily quota of the API key.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1000000000</para>
                 /// </summary>
@@ -42,7 +44,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public long? DailyTokenQuota { get; set; }
 
                 /// <summary>
-                /// <para>The quota ratio.</para>
+                /// <para>The quota limit ratio.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.2</para>
@@ -52,11 +54,11 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public float? LimitRate { get; set; }
 
                 /// <summary>
-                /// <para>The quota type. Valid values:</para>
+                /// <para>The quota limit type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ratio: by ratio.</description></item>
-                /// <item><description>fixed: by fixed value.</description></item>
-                /// <item><description>auto: automatic allocation of EPS resource.</description></item>
+                /// <item><description>ratio: Proportional limit.</description></item>
+                /// <item><description>fixed: Fixed value.</description></item>
+                /// <item><description>auto: Automatic allocation.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -67,7 +69,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string LimitType { get; set; }
 
                 /// <summary>
-                /// <para>The quota of the current key.</para>
+                /// <para>The quota limit of the current key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10000</para>
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -101,7 +103,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The request result.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

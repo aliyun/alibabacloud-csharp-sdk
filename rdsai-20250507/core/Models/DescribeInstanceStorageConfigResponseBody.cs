@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeInstanceStorageConfigResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A reserved parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>A reserved parameter</para>
+        /// </summary>
         [NameInMap("BranchName")]
         [Validation(Required=false)]
         public string BranchName { get; set; }
@@ -23,13 +29,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             /// <summary>
             /// <para>The name of the configuration item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>AWS_SESSION_TOKEN</b>: the temporary access token (Session Token) of OSS.</description></item>
-            /// <item><description><b>AWS_ACCESS_KEY_ID</b>: the AccessKey ID of OSS.</description></item>
-            /// <item><description><b>AWS_SECRET_ACCESS_KEY</b>: the AccessKey Secret of OSS.</description></item>
-            /// <item><description><b>GLOBAL_S3_BUCKET</b>: the bucket name of OSS.</description></item>
-            /// <item><description><b>TENANT_ID</b>: the tenant ID of the OSS prefix (prefix or directory).</description></item>
-            /// <item><description><b>GLOBAL_S3_ENDPOINT</b>: the endpoint of OSS.</description></item>
-            /// <item><description><b>REGION</b>: the region of OSS.</description></item>
+            /// <item><description><b>AWS_SESSION_TOKEN</b>: The temporary access token (session token) for OSS.</description></item>
+            /// <item><description><b>AWS_ACCESS_KEY_ID</b>: The AccessKey ID for OSS.</description></item>
+            /// <item><description><b>AWS_SECRET_ACCESS_KEY</b>: The AccessKey secret for OSS.</description></item>
+            /// <item><description><b>GLOBAL_S3_BUCKET</b>: The name of the OSS bucket.</description></item>
+            /// <item><description><b>TENANT_ID</b>: The tenant ID of the OSS prefix (prefix or directory).</description></item>
+            /// <item><description><b>GLOBAL_S3_ENDPOINT</b>: The endpoint of OSS.</description></item>
+            /// <item><description><b>REGION</b>: The region of OSS.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

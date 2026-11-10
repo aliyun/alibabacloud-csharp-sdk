@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeInstanceSSLResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Reserved parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Reserved parameter</para>
+        /// </summary>
         [NameInMap("BranchName")]
         [Validation(Required=false)]
         public string BranchName { get; set; }
 
         /// <summary>
-        /// <para>The certificate type. The value is <b>custom</b>, which indicates that a custom certificate is used.</para>
+        /// <para>The certificate type. A value of <b>custom</b> indicates that a custom certificate is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom</para>
@@ -62,7 +68,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string SSLExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>The custom certificate content.</para>
+        /// <para>The content of the custom certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----MIID*****QqEP-----END CERTIFICATE-----</para>

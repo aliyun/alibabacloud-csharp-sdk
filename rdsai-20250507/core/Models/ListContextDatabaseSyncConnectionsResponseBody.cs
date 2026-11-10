@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public ListContextDatabaseSyncConnectionsResponseBodyData Data { get; set; }
         public class ListContextDatabaseSyncConnectionsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of datasource configurations.</para>
+            /// <para>The list of data sources.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{&quot;Id&quot;:&quot;conn-as1llqmkol****&quot;, &quot;PluginId&quot;:&quot;dingtalk&quot;, &quot;DisplayName&quot;:&quot;R&amp;D Team DingTalk Datasource&quot;, &quot;AuthKind&quot;:&quot;app&quot;}]</para>
+            /// <para>[{&quot;Id&quot;:&quot;conn-as1llqmkol****&quot;, &quot;PluginId&quot;:&quot;dingtalk&quot;, &quot;DisplayName&quot;:&quot;R&amp;D team DingTalk data source&quot;, &quot;AuthKind&quot;:&quot;app&quot;}]</para>
             /// </summary>
             [NameInMap("Connections")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string AuthState { get; set; }
 
                 /// <summary>
-                /// <para>The time when the datasource configuration was created.</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-09-23T10:00:00+08:00</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 /// <para>The display name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>R&amp;D Team DingTalk Datasource</para>
+                /// <para>R&amp;D team DingTalk data source</para>
                 /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The plug-in ID.</para>
+                /// <para>The plugin ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dingtalk</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 /// <para>The remediation suggestion.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Re-authorize the datasource configuration</para>
+                /// <para>Re-authorize the data source</para>
                 /// </summary>
                 [NameInMap("Remediation")]
                 [Validation(Required=false)]
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string SecretFingerprint { get; set; }
 
                 /// <summary>
-                /// <para>The time when the credential was last updated.</para>
+                /// <para>The credential update time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-09-23T10:00:00+08:00</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string SecretUpdatedAt { get; set; }
 
                 /// <summary>
-                /// <para>The time when the datasource configuration was last updated.</para>
+                /// <para>The update time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-09-23T10:00:00+08:00</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string UpdatedAt { get; set; }
 
                 /// <summary>
-                /// <para>The time when the datasource configuration was last verified.</para>
+                /// <para>The verification time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-09-23T10:00:00+08:00</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             }
 
             /// <summary>
-            /// <para>The page number. Pages start from 1.</para>
+            /// <para>The page number, starting from 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -201,10 +201,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

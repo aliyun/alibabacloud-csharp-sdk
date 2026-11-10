@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetScheduledReportsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successfully retrieved the inspection report list</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>The inspection end time. Format: YYYY-MM-DDTHH:mm:ssZ.</para>
+            /// <para>The end time of the inspection. Format: YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-01T23:59:59Z</para>
@@ -70,6 +70,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string InspectionItems { get; set; }
 
+            /// <summary>
+            /// <para>The region ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-beijing</para>
+            /// </summary>
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
@@ -83,7 +89,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string ReportType { get; set; }
 
             /// <summary>
-            /// <para>The inspection start time. Format: YYYY-MM-DDTHH:mm:ssZ.</para>
+            /// <para>The start time of the inspection. Format: YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-01T00:00:00Z</para>
@@ -103,7 +109,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The inspection report ID.</para>
+            /// <para>The ID of the inspection report.</para>
             /// 
             /// <b>Example:</b>
             /// <para>65f0053b-f933-49f5-bf65-4e4593e1****</para>
@@ -125,7 +131,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The request result.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

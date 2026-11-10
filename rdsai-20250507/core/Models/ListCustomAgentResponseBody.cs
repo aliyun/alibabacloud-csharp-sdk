@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether tools are enabled.</para>
+            /// <para>Specifies whether tools are enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public bool? EnableTools { get; set; }
 
             /// <summary>
-            /// <para>AgentId。</para>
+            /// <para>The agent ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d1b7d639-f34e-44c7-8231-987da14d****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             /// <para>The name of the dedicated agent.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Log Analysis Agent</para>
+            /// <para>Log analysis agent</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             /// <para>The system prompt.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>I am your dedicated agent for querying instance lists</para>
+            /// <para>I am your dedicated agent for querying the instance list</para>
             /// </summary>
             [NameInMap("SystemPrompt")]
             [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -115,22 +115,49 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of associated skill details.</para>
+        /// </summary>
         [NameInMap("Skills")]
         [Validation(Required=false)]
         public List<ListCustomAgentResponseBodySkills> Skills { get; set; }
         public class ListCustomAgentResponseBodySkills : TeaModel {
+            /// <summary>
+            /// <para>The description of the skill.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SQL query optimization skill</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// <para>The unique identifier of the skill.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>82cf3d62-0add-47bd-869f-877131f7****</para>
+            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
+            /// <summary>
+            /// <para>The name of the skill.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>query-optimization</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The type of the skill.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>user</para>
+            /// </summary>
             [NameInMap("SkillType")]
             [Validation(Required=false)]
             public string SkillType { get; set; }
@@ -138,7 +165,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The total number of data records that meet the request conditions. This parameter is optional and is not returned by default.</para>
+        /// <para>The total number of entries that meet the request conditions. This parameter is optional and is not returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

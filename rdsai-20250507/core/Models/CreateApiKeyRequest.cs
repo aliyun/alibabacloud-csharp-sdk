@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class CreateApiKeyRequest : TeaModel {
         /// <summary>
-        /// <para>The daily quota of the API key.</para>
+        /// <para>The daily token quota for the API key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000000000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? DailyTokenQuota { get; set; }
 
         /// <summary>
-        /// <para>The instance name.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds_copilot***_public_cn-*********6</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string KeyName { get; set; }
 
         /// <summary>
-        /// <para>The quota percentage.</para>
+        /// <para>The quota limit percentage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.2</para>
@@ -50,11 +50,11 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public double? LimitRate { get; set; }
 
         /// <summary>
-        /// <para>The quota type. Valid values:</para>
+        /// <para>The quota limit type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ratio: by percentage.</description></item>
-        /// <item><description>fixed: by fixed value.</description></item>
-        /// <item><description>auto: automatic allocation.</description></item>
+        /// <item><description>ratio: Percentage-based.</description></item>
+        /// <item><description>fixed: Fixed value.</description></item>
+        /// <item><description>auto: Automatic allocation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RoleName { get; set; }
 
         /// <summary>
-        /// <para>The quota limit for the current key.</para>
+        /// <para>The token quota for the current key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000</para>

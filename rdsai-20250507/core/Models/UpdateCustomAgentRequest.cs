@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class UpdateCustomAgentRequest : TeaModel {
         /// <summary>
-        /// <para>AgentId。</para>
+        /// <para>The agent ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,15 +31,18 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public bool? EnableTools { get; set; }
 
         /// <summary>
-        /// <para>The name of the dedicated agent.</para>
+        /// <para>The name of the custom agent.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Query Instance List Agent</para>
+        /// <para>Query instance list agent</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <para>The list of associated skill IDs.</para>
+        /// </summary>
         [NameInMap("SkillIds")]
         [Validation(Required=false)]
         public List<string> SkillIds { get; set; }
@@ -48,7 +51,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The system prompt.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>I am your dedicated Agent for querying instance lists</para>
+        /// <para>I am your custom agent for querying the instance list</para>
         /// </summary>
         [NameInMap("SystemPrompt")]
         [Validation(Required=false)]

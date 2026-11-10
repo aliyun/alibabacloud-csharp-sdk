@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public ListContextDatabaseSyncJobsResponseBodyData Data { get; set; }
         public class ListContextDatabaseSyncJobsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of import tasks.</para>
+            /// <para>The list of import jobs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;Id&quot;:&quot;job-as1llqmkol****&quot;, &quot;SourceId&quot;:&quot;src-as1llqmkol****&quot;, &quot;TargetId&quot;:&quot;tg-as1llqmkol****&quot;, &quot;KnowledgeBaseId&quot;:&quot;kb-as1llqmkol****&quot;}]</para>
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public List<ListContextDatabaseSyncJobsResponseBodyDataJobs> Jobs { get; set; }
             public class ListContextDatabaseSyncJobsResponseBodyDataJobs : TeaModel {
                 /// <summary>
-                /// <para>The reason for automatic pause.</para>
+                /// <para>The auto-pause reason.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Failed 3 consecutive times</para>
+                /// <para>Three consecutive run failures</para>
                 /// </summary>
                 [NameInMap("AutoPauseReason")]
                 [Validation(Required=false)]
                 public string AutoPauseReason { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the task is automatically paused.</para>
+                /// <para>Indicates whether the job is automatically paused.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public int? ConfigVersion { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the task is enabled.</para>
+                /// <para>Indicates whether the job is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 /// <para>The filter conditions.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{&quot;include&quot;:[&quot;/研发文档/<b>&quot;],&quot;exclude&quot;:[&quot;/归档文档/</b>&quot;],&quot;excludedDocumentIds&quot;:[],&quot;sizeLimit&quot;:2147483648,&quot;typeAllowlist&quot;:[&quot;docx&quot;,&quot;pdf&quot;]}</para>
+                /// <para>{&quot;include&quot;:[&quot;/R&amp;D documents/<b>&quot;],&quot;exclude&quot;:[&quot;/Archived documents/</b>&quot;],&quot;excludedDocumentIds&quot;:[],&quot;sizeLimit&quot;:2147483648,&quot;typeAllowlist&quot;:[&quot;docx&quot;,&quot;pdf&quot;]}</para>
                 /// </summary>
                 [NameInMap("Filters")]
                 [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                     /// <para>The list of exclusion rules.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>[&quot;/Archived Documents&quot;]</para>
+                    /// <para>[&quot;/Archived documents&quot;]</para>
                     /// </summary>
                     [NameInMap("Exclude")]
                     [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                     /// <para>The list of inclusion rules.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>[&quot;/R&amp;D Documents&quot;]</para>
+                    /// <para>[&quot;/R&amp;D documents&quot;]</para>
                     /// </summary>
                     [NameInMap("Include")]
                     [Validation(Required=false)]
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 }
 
                 /// <summary>
-                /// <para>The task ID, which is a system-generated UUID.</para>
+                /// <para>The job ID, which is a system-generated UUID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>550e8400-e29b-41d4-a716-446655440000</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the target knowledge base.</para>
+                /// <para>The destination knowledge base ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>kb-as1llqmkol****</para>
@@ -162,14 +162,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 /// <para>The name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>R&amp;D Team Document Import</para>
+                /// <para>R&amp;D team document import</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The time of the next run.</para>
+                /// <para>The next run time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-09-23T10:00:00+08:00</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string NextRunAt { get; set; }
 
                 /// <summary>
-                /// <para>The scheduling type. Valid values: interval, daily-times.</para>
+                /// <para>The schedule type. Valid values: interval and daily-times.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>daily-times</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string SourceId { get; set; }
 
                 /// <summary>
-                /// <para>The target ID, which is a system-generated UUID.</para>
+                /// <para>The destination ID, which is a system-generated UUID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>550e8400-e29b-41d4-a716-446655440000</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             }
 
             /// <summary>
-            /// <para>The page number. The value starts from 1.</para>
+            /// <para>The page number, starting from 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Sample value</para>
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

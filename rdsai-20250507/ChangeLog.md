@@ -1,3 +1,25 @@
+2026-11-10 Version: 3.10.1
+- Update API CreateContextDatabaseWorkspace: add request parameters ClusterId.
+- Update API CreateContextDatabaseWorkspace: add request parameters GenerateInitialKey.
+- Update API CreateContextDatabaseWorkspace: add request parameters PermissionMode.
+- Update API CreateContextDatabaseWorkspace: add response parameters Body.Capabilities.
+- Update API CreateContextDatabaseWorkspace: add response parameters Body.ClusterId.
+- Update API CreateContextDatabaseWorkspace: add response parameters Body.ConsolePermissionMode.
+- Update API CreateContextDatabaseWorkspace: add response parameters Body.PermissionMode.
+- Update API CreateContextDatabaseWorkspace: add response parameters Body.Viewer.
+- Update API DeleteContextDatabaseWorkspace: add response parameters Body.Capabilities.
+- Update API DeleteContextDatabaseWorkspace: add response parameters Body.ClusterId.
+- Update API DeleteContextDatabaseWorkspace: add response parameters Body.ConsolePermissionMode.
+- Update API DeleteContextDatabaseWorkspace: add response parameters Body.PermissionMode.
+- Update API DeleteContextDatabaseWorkspace: add response parameters Body.Viewer.
+- Update API DescribeAppInstanceAttribute: add response parameters Body.MinorVersionReleaseNotes.
+- Update API UpdateContextDatabaseWorkspace: add response parameters Body.Capabilities.
+- Update API UpdateContextDatabaseWorkspace: add response parameters Body.ClusterId.
+- Update API UpdateContextDatabaseWorkspace: add response parameters Body.ConsolePermissionMode.
+- Update API UpdateContextDatabaseWorkspace: add response parameters Body.PermissionMode.
+- Update API UpdateContextDatabaseWorkspace: add response parameters Body.Viewer.
+
+
 2026-10-13 Version: 3.10.0
 - Support API AddContextDatabaseSyncJobExclusion.
 - Support API CancelContextDatabaseSyncDiscovery.

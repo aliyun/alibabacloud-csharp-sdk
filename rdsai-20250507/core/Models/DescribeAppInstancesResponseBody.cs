@@ -36,14 +36,23 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string AppType { get; set; }
 
+            /// <summary>
+            /// <para>The list of components.</para>
+            /// </summary>
             [NameInMap("Components")]
             [Validation(Required=false)]
             public List<DescribeAppInstancesResponseBodyInstancesComponents> Components { get; set; }
             public class DescribeAppInstancesResponseBodyInstancesComponents : TeaModel {
+                /// <summary>
+                /// <para>The component status.</para>
+                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// <para>The component type.</para>
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -51,7 +60,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             }
 
             /// <summary>
-            /// <para>The instance ID of the ApsaraDB RDS for PostgreSQL database that is connected to the AI application.</para>
+            /// <para>The instance ID of the RDS PostgreSQL database to which the AI application is connected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pgm-2ze49qv594vi****</para>
@@ -143,7 +152,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>A reserved parameter. You can ignore this parameter.</para>
+        /// <para>A reserved parameter. You can ignore it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -183,7 +192,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

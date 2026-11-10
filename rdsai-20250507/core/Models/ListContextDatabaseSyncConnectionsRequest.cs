@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ListContextDatabaseSyncConnectionsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Pages start from 1.</para>
+        /// <para>The page number, starting from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The plug-in ID.</para>
+        /// <para>The plugin ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dingtalk</para>

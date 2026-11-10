@@ -44,7 +44,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string ApiKey { get; set; }
 
                 /// <summary>
-                /// <para>The daily quota of the API key.</para>
+                /// <para>The daily token quota for the API key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("DailyTokenQuota")]
                 [Validation(Required=false)]
@@ -61,7 +64,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string KeyName { get; set; }
 
                 /// <summary>
-                /// <para>The quota percentage.</para>
+                /// <para>The quota limit percentage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.2</para>
@@ -71,11 +74,11 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public float? LimitRate { get; set; }
 
                 /// <summary>
-                /// <para>The quota type. Valid values:</para>
+                /// <para>The quota limit type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>fixed</b>: By fixed value.</para>
+                /// <item><description><para><b>fixed</b>: Fixed value.</para>
                 /// </description></item>
-                /// <item><description><para><b>ratio</b>: By percentage.</para>
+                /// <item><description><para><b>ratio</b>: Percentage-based.</para>
                 /// </description></item>
                 /// <item><description><para><b>auto</b>: Automatic allocation.</para>
                 /// </description></item>
@@ -93,7 +96,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string RoleArn { get; set; }
 
                 /// <summary>
-                /// <para>The quota limit for the current key.</para>
+                /// <para>The token quota for the current key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100000</para>

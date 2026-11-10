@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ListContextDatabaseSyncJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the target knowledge base.</para>
+        /// <para>The destination knowledge base ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>kb-as1llqmkol****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string KnowledgeBaseId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value starts from 1.</para>
+        /// <para>The page number, starting from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

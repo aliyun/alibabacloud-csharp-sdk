@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public bool? EnableTools { get; set; }
 
         /// <summary>
-        /// <para>The name of the agent.</para>
+        /// <para>The name of the custom agent.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>QueryInstanceListAgent</para>
+        /// <para>Instance List Query Agent</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>I am your dedicated agent for querying instance lists</para>
+        /// <para>I am your custom agent for querying the instance list</para>
         /// </summary>
         [NameInMap("SystemPrompt")]
         [Validation(Required=false)]

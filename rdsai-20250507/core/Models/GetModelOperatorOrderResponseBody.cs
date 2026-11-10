@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public bool? HasValidOrder { get; set; }
 
             /// <summary>
-            /// <para>The list of instances.</para>
+            /// <para>The instance list.</para>
             /// </summary>
             [NameInMap("InstanceList")]
             [Validation(Required=false)]
             public List<GetModelOperatorOrderResponseBodyDataInstanceList> InstanceList { get; set; }
             public class GetModelOperatorOrderResponseBodyDataInstanceList : TeaModel {
                 /// <summary>
-                /// <para>The instance type.</para>
+                /// <para>The billing method of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PREPAY</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string ChargeType { get; set; }
 
                 /// <summary>
-                /// <para>The end time of the instance. Format: Timestamp.</para>
+                /// <para>The end time of the instance (format: timestamp).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1775145600000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string InstanceClass { get; set; }
 
                 /// <summary>
-                /// <para>The instance name.</para>
+                /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rds_copilot***_public_cn-*********6</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the instance. Format: Timestamp.</para>
+                /// <para>The start time of the instance (format: timestamp).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1772439028000</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The return message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The request result.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

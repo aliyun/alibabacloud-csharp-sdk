@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeInstanceAuthInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>API Keys。</para>
+        /// <para>The API keys.</para>
         /// </summary>
         [NameInMap("ApiKeys")]
         [Validation(Required=false)]
@@ -42,12 +42,18 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
         }
 
+        /// <summary>
+        /// <para>Reserved parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Reserved parameter</para>
+        /// </summary>
         [NameInMap("BranchName")]
         [Validation(Required=false)]
         public string BranchName { get; set; }
 
         /// <summary>
-        /// <para>The list of authentication configurations.</para>
+        /// <para>The list of authentication information.</para>
         /// </summary>
         [NameInMap("ConfigList")]
         [Validation(Required=false)]
@@ -56,17 +62,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             /// <summary>
             /// <para>The name of the configuration item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>GOTRUE_EXTERNAL_EMAIL_ENABLED</b>: Specifies whether external email is allowed.</description></item>
+            /// <item><description><b>GOTRUE_EXTERNAL_EMAIL_ENABLED</b>: Specifies whether external emails are allowed.</description></item>
             /// <item><description><b>GOTRUE_SITE_URL</b>: The website URL displayed when the AI application sends emails.</description></item>
-            /// <item><description><b>GOTRUE_SMTP_PORT</b>: The port of the SMTP provider.</description></item>
+            /// <item><description><b>GOTRUE_SMTP_PORT</b>: The port of the SMTP service provider.</description></item>
             /// <item><description><b>GOTRUE_SMTP_SENDER_NAME</b>: The name of the email sender.</description></item>
-            /// <item><description><b>GOTRUE_SMTP_USER</b>: The username of the SMTP provider.</description></item>
-            /// <item><description><b>GOTRUE_SMTP_PASS</b>: The secret key of the SMTP provider.</description></item>
-            /// <item><description><b>GOTRUE_SMTP_ADMIN_EMAIL</b>: The email address of the SMTP provider.</description></item>
-            /// <item><description><b>GOTRUE_SMTP_HOST</b>: The host address of the SMTP provider.</description></item>
+            /// <item><description><b>GOTRUE_SMTP_USER</b>: The username of the SMTP service provider.</description></item>
+            /// <item><description><b>GOTRUE_SMTP_PASS</b>: The password of the SMTP service provider.</description></item>
+            /// <item><description><b>GOTRUE_SMTP_ADMIN_EMAIL</b>: The email address of the SMTP service provider.</description></item>
+            /// <item><description><b>GOTRUE_SMTP_HOST</b>: The host address of the SMTP service provider.</description></item>
             /// <item><description><b>GOTRUE_MAILER_AUTOCONFIRM</b>: Specifies whether automatic confirmation is enabled.</description></item>
             /// <item><description><b>GOTRUE_MAILER_OTP_EXP</b>: The validity period of the one-time password (OTP). Unit: seconds.</description></item>
-            /// <item><description><b>GOTRUE_MAILER_OTP_LENGTH</b>: The length of the one-time password (OTP) verification code. The value must be an integer greater than or equal to 6.</description></item>
+            /// <item><description><b>GOTRUE_MAILER_OTP_LENGTH</b>: The length of the one-time password (OTP). The value must be an integer greater than or equal to 6.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

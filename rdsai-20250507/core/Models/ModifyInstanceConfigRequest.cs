@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ModifyInstanceConfigRequest : TeaModel {
+        /// <summary>
+        /// <para>The reserved parameter.</para>
+        /// </summary>
         [NameInMap("BranchName")]
         [Validation(Required=false)]
         public string BranchName { get; set; }
 
         /// <summary>
-        /// <para>The idempotence parameter.</para>
+        /// <para>The idempotency parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The name of the configuration item to modify. This parameter is used together with ConfigValue.</para>
+        /// <para>The name of the configuration item to modify. This parameter must be used together with ConfigValue.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eip、nat</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ConfigName { get; set; }
 
         /// <summary>
-        /// <para>The value of the configuration item to modify. This parameter is used together with ConfigName.</para>
+        /// <para>The value of the configuration item to modify. This parameter must be used together with ConfigName.</para>
         /// 
         /// <b>Example:</b>
         /// <para>on、off</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ConfigValue { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the AI application.</para>
+        /// <para>The ID of the AI application instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
