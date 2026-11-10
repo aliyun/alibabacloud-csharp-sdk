@@ -13679,6 +13679,136 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>集群休眠</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// HibernateClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// HibernateClusterResponse
+        /// </returns>
+        public HibernateClusterResponse HibernateClusterWithOptions(string clusterId, HibernateClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "HibernateCluster",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/hibernate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<HibernateClusterResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>集群休眠</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// HibernateClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// HibernateClusterResponse
+        /// </returns>
+        public async Task<HibernateClusterResponse> HibernateClusterWithOptionsAsync(string clusterId, HibernateClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "HibernateCluster",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/hibernate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<HibernateClusterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>集群休眠</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// HibernateClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// HibernateClusterResponse
+        /// </returns>
+        public HibernateClusterResponse HibernateCluster(string clusterId, HibernateClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return HibernateClusterWithOptions(clusterId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>集群休眠</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// HibernateClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// HibernateClusterResponse
+        /// </returns>
+        public async Task<HibernateClusterResponse> HibernateClusterAsync(string clusterId, HibernateClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await HibernateClusterWithOptionsAsync(clusterId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>To enhance Kubernetes capabilities, ACK clusters support various components, such as managed core components, and application, logging and monitoring, networking, storage, and security components. You can call the InstallClusterAddons operation to install components by specifying the component name and version.</para>
         /// </summary>
         /// 
@@ -13945,12 +14075,12 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起智能助手会话运行（AG-UI 协议）</para>
+        /// <para>Initiates an intelligent assistant session run over the AG-UI protocol.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>独立的原生 AG-UI 接口，成功建流后返回 text/event-stream。</para>
+        /// <para>The standalone native AG-UI API that returns a text/event-stream response upon successful stream establishment.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14028,12 +14158,12 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起智能助手会话运行（AG-UI 协议）</para>
+        /// <para>Initiates an intelligent assistant session run over the AG-UI protocol.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>独立的原生 AG-UI 接口，成功建流后返回 text/event-stream。</para>
+        /// <para>The standalone native AG-UI API that returns a text/event-stream response upon successful stream establishment.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14111,12 +14241,12 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起智能助手会话运行（AG-UI 协议）</para>
+        /// <para>Initiates an intelligent assistant session run over the AG-UI protocol.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>独立的原生 AG-UI 接口，成功建流后返回 text/event-stream。</para>
+        /// <para>The standalone native AG-UI API that returns a text/event-stream response upon successful stream establishment.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14135,12 +14265,12 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起智能助手会话运行（AG-UI 协议）</para>
+        /// <para>Initiates an intelligent assistant session run over the AG-UI protocol.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>独立的原生 AG-UI 接口，成功建流后返回 text/event-stream。</para>
+        /// <para>The standalone native AG-UI API that returns a text/event-stream response upon successful stream establishment.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23445,6 +23575,136 @@ namespace AlibabaCloud.SDK.CS20151215
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpgradeClusterNodepoolWithOptionsAsync(ClusterId, NodepoolId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>集群唤醒</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WakeUpClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// WakeUpClusterResponse
+        /// </returns>
+        public WakeUpClusterResponse WakeUpClusterWithOptions(string clusterId, WakeUpClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "WakeUpCluster",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/wakeUp",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<WakeUpClusterResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>集群唤醒</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WakeUpClusterRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// WakeUpClusterResponse
+        /// </returns>
+        public async Task<WakeUpClusterResponse> WakeUpClusterWithOptionsAsync(string clusterId, WakeUpClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "WakeUpCluster",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/wakeUp",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<WakeUpClusterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>集群唤醒</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WakeUpClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// WakeUpClusterResponse
+        /// </returns>
+        public WakeUpClusterResponse WakeUpCluster(string clusterId, WakeUpClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return WakeUpClusterWithOptions(clusterId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>集群唤醒</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WakeUpClusterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// WakeUpClusterResponse
+        /// </returns>
+        public async Task<WakeUpClusterResponse> WakeUpClusterAsync(string clusterId, WakeUpClusterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await WakeUpClusterWithOptionsAsync(clusterId, request, headers, runtime);
         }
 
     }
