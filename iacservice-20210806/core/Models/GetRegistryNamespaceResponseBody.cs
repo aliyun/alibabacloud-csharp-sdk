@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Acl { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-03-20T02:18:29Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Maintainer { get; set; }
 
             /// <summary>
-            /// <para>The number of Registry templates in the workspace.</para>
+            /// <para>The number of registry templates in the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>21</para>

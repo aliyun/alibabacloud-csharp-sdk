@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class CreateModuleRequest : TeaModel {
         /// <summary>
-        /// <para>The idempotency parameter. We recommend that you use a UUID.</para>
+        /// <para>The idempotency token. Use a UUID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,8 +63,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// <para>The name of the template. The name must meet the following requirements:</para>
         /// <list type="bullet">
         /// <item><description>The name must be 2 to 128 characters in length.</description></item>
-        /// <item><description>The name can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). The name cannot start or end with a hyphen, underscore, or period.</description></item>
-        /// <item><description>The name must be unique among all templates under the current account.</description></item>
+        /// <item><description>The name can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). It cannot start or end with a hyphen, underscore, or period.</description></item>
+        /// <item><description>The name must be unique among the template resources within the current account.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -76,13 +76,13 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The source from which the template is created. Valid values:</para>
+        /// <para>The source of the template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>OSS: imports from a ZIP file stored in OSS.</description></item>
-        /// <item><description>Registry: creates from a module in the template registry.</description></item>
-        /// <item><description>ExportTask: references a template exported by a resource export task.</description></item>
-        /// <item><description>Editor: creates a blank template that supports online editing.</description></item>
-        /// <item><description>Upload: uploads a local template file to generate the template.</description></item>
+        /// <item><description>OSS: Imports a template from a ZIP file stored in OSS.</description></item>
+        /// <item><description>Registry: Creates a template by using a module from the template center.</description></item>
+        /// <item><description>ExportTask: References a template exported by a resource export task.</description></item>
+        /// <item><description>Editor: Creates a blank template that supports online editing.</description></item>
+        /// <item><description>Upload: Generates a template by uploading a local template file.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -94,11 +94,11 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The path of the template source. This parameter takes effect when source is set to Registry, OSS, or ExportTask.</para>
+        /// <para>The path of the template source. This parameter is valid only when source is set to Registry, OSS, or ExportTask.</para>
         /// <list type="bullet">
-        /// <item><description>If source is set to Registry, the value is in the format of \<workspace name>/\<module name>:\<module version>. Example: terraform-alicloud-modules/rds:1.0.0.</description></item>
-        /// <item><description>If source is set to OSS, the value is in the format of oss::<file URL>. The file must be a ZIP file. Example: oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>.</description></item>
-        /// <item><description>If source is set to ExportTask, the value is in the format of \<export task ID>:\<exported version>. Example: ex-3b6cb9fa4751afff298da723c24ac:v1.</description></item>
+        /// <item><description>If source is set to Registry, the value is in the <workspace name>/<module name>:<module version> format, such as terraform-alicloud-modules/rds:1.0.0.</description></item>
+        /// <item><description>If source is set to OSS, the value is in the oss::<file URL> format. The file must be a ZIP file, such as oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>.</description></item>
+        /// <item><description>If source is set to ExportTask, the value is in the <export task ID>:<exported version> format, such as ex-3b6cb9fa4751afff298da723c24ac:v1.</description></item>
         /// <item><description>If source is set to Editor or Upload, leave this parameter empty.</description></item>
         /// </list>
         /// 
@@ -110,8 +110,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string SourcePath { get; set; }
 
         /// <summary>
-        /// <para>The path of the State file that corresponds to the template. This parameter is valid only when source is set to OSS.
-        /// The value is in the format of oss::\<OSS file path>/terraform.tfstate.</para>
+        /// <para>The path of the state file corresponding to the template. This parameter is valid only when source is set to OSS.
+        /// The value is in the oss::<OSS path of the file>/terraform.tfstate format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/terraform.tfstate">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/terraform.tfstate</a></para>
@@ -152,8 +152,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// <summary>
         /// <para>The version generation strategy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Manual: manually generates a version. This is the default value.</description></item>
-        /// <item><description>SourcePathUpdated: generates a new version when sourcePath is modified.</description></item>
+        /// <item><description>Manual: Manually generates a version. This is the default value.</description></item>
+        /// <item><description>SourcePathUpdated: Generates a new version when sourcePath is modified.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

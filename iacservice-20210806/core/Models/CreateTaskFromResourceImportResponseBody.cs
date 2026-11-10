@@ -10,12 +10,21 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class CreateTaskFromResourceImportResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CD478792-6952-5A1C-9F57-78932BF0FAC6</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The task ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>task-433aead756057fffeaba4828f5195</para>
+        /// </summary>
         [NameInMap("taskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }

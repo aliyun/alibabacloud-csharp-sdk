@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class CreateResourceExportTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The resource export task ID.</para>
+        /// <para>The ID of the resource export task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ex-4a1ec8b7003d24528326821be</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ExportTaskId { get; set; }
 
         /// <summary>
-        /// <para>The resource export version.</para>
+        /// <para>The version of the resource export task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ListModuleVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The search keyword. Fuzzy match on version names is supported.</para>
+        /// <para>The search keyword, which supports fuzzy search for version names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>key</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</para>
+        /// <para>The number of results to return per page. Default value: 20. Minimum value: 1. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

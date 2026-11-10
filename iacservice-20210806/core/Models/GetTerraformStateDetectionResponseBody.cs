@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                     public string RemoteValue { get; set; }
 
                     /// <summary>
-                    /// <para>The template-declared value.</para>
+                    /// <para>The value declared in the template.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test_hcl</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The identifier of the resource in the Terraform template. For a Stack task, the value is in the format of &lt;$componetName&gt;:&lt;$resourceName&gt;. For a Task task, the value is &lt;$resourceName&gt;.</para>
+                /// <para>The identifier of the resource in the Terraform template. The format is &lt;$componetName&gt;:&lt;$resourceName&gt; for stack tasks and &lt;$resourceName&gt; for tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc:alicloud_vpc.default</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The identifier of the resource in the Terraform template. For a Stack task, the value is in the format of &lt;$componetName&gt;:&lt;$resourceName&gt;. For a Task task, the value is &lt;$resourceName&gt;.</para>
+                /// <para>The identifier of the resource in the Terraform template. The format is &lt;$componetName&gt;:&lt;$resourceName&gt; for stack tasks and &lt;$resourceName&gt; for tasks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc:alicloud_vpc.default2</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The task identifier. For a Stack task, the value is in the format of &lt;$stackId&gt;:&lt;$deploymentName&gt;. For a Task task, the value is &lt;$TaskId&gt;.</para>
+            /// <para>The job identifier. The format is &lt;$stackId&gt;:&lt;$deploymentName&gt; for stack tasks and &lt;$TaskId&gt; for tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>stack-as181axxxxxx:development_xxxx</para>
@@ -205,12 +205,12 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// <summary>
             /// <para>The job status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Pending: the initial status after the job is created.</description></item>
-            /// <item><description>PlanQueued: the job is queued because no containers are available after the job is created.</description></item>
-            /// <item><description>Planning: the resource job is in the Plan execution phase.</description></item>
-            /// <item><description>Planned: the resource job has completed the Plan execution.</description></item>
-            /// <item><description>PlannedAndFinished: no differences are found after the Plan execution is complete. The job is in a final status.</description></item>
-            /// <item><description>Errored: the job execution encountered an error and entered a final status.</description></item>
+            /// <item><description>Pending: The initial state after the job is created.</description></item>
+            /// <item><description>PlanQueued: The job is queued and waiting because no containers are available after creation.</description></item>
+            /// <item><description>Planning: The resource job is in the plan execution phase.</description></item>
+            /// <item><description>Planned: The resource job has completed plan execution.</description></item>
+            /// <item><description>PlannedAndFinished: The job is in the final state because no differences are found after plan execution.</description></item>
+            /// <item><description>Errored: The job has entered the final state due to an execution error.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The task type.</para>
+            /// <para>The job type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Stack</para>

@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class GetRegistryModuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The Registry module.</para>
+        /// <para>The Registry template.</para>
         /// </summary>
         [NameInMap("registryModule")]
         [Validation(Required=false)]
         public GetRegistryModuleResponseBodyRegistryModule RegistryModule { get; set; }
         public class GetRegistryModuleResponseBodyRegistryModule : TeaModel {
             /// <summary>
-            /// <para>The permission. Valid values:</para>
+            /// <para>The permissions. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>private: private.</description></item>
+            /// <item><description>private: Private.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Acl { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time in the YYYY-MM-DD HH:mm:ss format. The returned value does not include a time zone identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-05-28 13:39:05</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The module description.</para>
+            /// <para>The template description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>description</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public int? Downloads { get; set; }
 
             /// <summary>
-            /// <para>The module name.</para>
+            /// <para>The name of the template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs-cluster</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ModuleName { get; set; }
 
             /// <summary>
-            /// <para>The workspace name.</para>
+            /// <para>The name of the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NamespaceName</para>
@@ -93,14 +93,14 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Provider { get; set; }
 
             /// <summary>
-            /// <para>The list of accounts with which the Registry module is shared.</para>
+            /// <para>The list of accounts that share the Registry template.</para>
             /// </summary>
             [NameInMap("sharedAccounts")]
             [Validation(Required=false)]
             public List<long?> SharedAccounts { get; set; }
 
             /// <summary>
-            /// <para>The module source, which is a concatenation of <NamespaceName>/<ModuleName>.</para>
+            /// <para>The template source, which is concatenated in the <NamespaceName>/<ModuleName> format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>namespaceName/ModuleName</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The module source URL.</para>
+            /// <para>The URL of the template source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>URL</para>
@@ -122,10 +122,14 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// <summary>
             /// <para>The workspace type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>system: public module</description></item>
-            /// <item><description>self: custom module</description></item>
-            /// <item><description>shared: shared module</description></item>
-            /// <item><description>community: community module.</description></item>
+            /// <item><description><para>system: Public module.</para>
+            /// </description></item>
+            /// <item><description><para>self: Custom module.</para>
+            /// </description></item>
+            /// <item><description><para>shared: Shared module.</para>
+            /// </description></item>
+            /// <item><description><para>community: Community module.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

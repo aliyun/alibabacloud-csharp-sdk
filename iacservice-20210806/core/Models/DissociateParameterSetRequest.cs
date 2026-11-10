@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public List<string> ParameterSetIds { get; set; }
 
         /// <summary>
-        /// <para>The resource ID. If the resource type is ModuleVersion, the value is a combination of <moduleId>-<moduleversion>, such as mod-34535345df123fr-v3.</para>
+        /// <para>The resource ID. If the resource type is ModuleVersion, the ID is concatenated in the format of <moduleId>-<moduleversion>, such as mod-34535345df123fr-v3.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// <list type="bullet">
         /// <item><description>Module: template</description></item>
         /// <item><description>ModuleVersion: template version</description></item>
-        /// <item><description>Task: node</description></item>
-        /// <item><description>Stack: resource stack.</description></item>
+        /// <item><description>Task: task</description></item>
+        /// <item><description>Stack: stack</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records to retrieve in a single request.</para>
+        /// <para>The maximum number of records to return per request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. A value of null indicates that no more pages are available.</para>
+        /// <para>The token for the next page. A null value indicates that there are no more pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ar9lHbaidqWequN5orMba54dD+2BRJj42DLT6GrZysw=</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The usage. Set to Explorer to retrieve meta information.</para>
+        /// <para>The purpose. Used to retrieve metadata for display in Explorer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Explorer</para>

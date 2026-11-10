@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of results to return per page. Default value: 20. Minimum value: 1. Maximum value: 100.</para>
+        /// <para>The number of results returned per page. Default value: 20. Minimum value: 1. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

@@ -12,9 +12,9 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// <summary>
         /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Task: regular task (default)</description></item>
-        /// <item><description>SceneTestingTask: scenario-based testing task</description></item>
-        /// <item><description>Stack: resource stack.</description></item>
+        /// <item><description>Task: Regular task (default).</description></item>
+        /// <item><description>SceneTestingTask: Scenario-based testing task.</description></item>
+        /// <item><description>Stack: Resource stack.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

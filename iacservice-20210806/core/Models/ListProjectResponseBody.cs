@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</para>
+        /// <para>The number of results returned per page. Default value: 20. Minimum value: 1. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public List<ListProjectResponseBodyProjects> Projects { get; set; }
         public class ListProjectResponseBodyProjects : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-10T10:08:34Z</para>

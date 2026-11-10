@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ListExplorerRegistryModuleExamplesRequest : TeaModel {
         /// <summary>
-        /// <para>The example name of the module.</para>
+        /// <para>The name of the module example.</para>
         /// 
         /// <b>Example:</b>
         /// <para>complete</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ExampleName { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. Supports fuzzy match based on the module name or module example name.</para>
+        /// <para>The search keyword. Supports fuzzy matching based on the module name or module example name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>key</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ModuleVersion { get; set; }
 
         /// <summary>
-        /// <para>The name of the workspace to which the module belongs.</para>
+        /// <para>The name of the workspace where the module is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alibaba</para>
@@ -72,8 +72,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string NamespaceName { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page of results.</para>
-        /// <para>If the total number of entries exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</para>
+        /// <para>The token used to query the next page of results.</para>
+        /// <para>If the total number of entries exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IbuvZbAXFOiB4nKg8iOH447bhHWDavGTOMijI2Jep7c=</para>

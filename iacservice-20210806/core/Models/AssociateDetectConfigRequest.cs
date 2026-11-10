@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string DetectConfigId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the association target. The value is a StackId or TaskId.</para>
+        /// <para>The ID of the association target. The value is a stack ID or a task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,8 +34,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// <summary>
         /// <para>The type of the association target. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Task: orchestration task.</description></item>
-        /// <item><description>Stack: resource stack.</description></item>
+        /// <item><description>Task: orchestration task</description></item>
+        /// <item><description>Stack: stack</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -18,11 +18,11 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string AccountIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource to unshare.</para>
+        /// <para>The ID of the resource to be unshared.</para>
         /// <list type="bullet">
-        /// <item><description><para>If the type is Namespace, set this parameter to the workspace name. </para>
+        /// <item><description><para>If the type is Namespace, the value is the workspace name. </para>
         /// </description></item>
-        /// <item><description><para>If the type is RegistryModule, set this parameter to \<namespaceName>/\<ModuleName>.</para>
+        /// <item><description><para>If the type is RegistryModule, the value is \<namespaceName>/\<ModuleName>.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>RegistryModule: Registry template.</description></item>
-        /// <item><description>Namespace: workspace.</description></item>
+        /// <item><description>Namespace: Workspace.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

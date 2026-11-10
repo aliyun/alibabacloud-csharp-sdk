@@ -57,13 +57,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string KeyId { get; set; }
 
             /// <summary>
-            /// <para>The key status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Enabled</description></item>
-            /// <item><description>Disabled</description></item>
-            /// <item><description>PendingDeletion</description></item>
-            /// <item><description>PendingImport</description></item>
-            /// </list>
+            /// <para>The key status. Valid values: Enabled, Disabled, PendingDeletion, and PendingImport.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Enabled</para>

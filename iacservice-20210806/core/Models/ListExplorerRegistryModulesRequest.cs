@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ListExplorerRegistryModulesRequest : TeaModel {
         /// <summary>
-        /// <para>The search keyword for the module name. Fuzzy matching is performed based on <c>moduleName</c>.</para>
+        /// <para>The search keyword for the module name. A fuzzy match is performed based on <c>moduleName</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>key</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 
         /// <summary>
         /// <para>The name of the module.</para>
-        /// <para>Note: The module name is not necessarily the same as the product name or resource name.</para>
+        /// <para>Note: The module name may differ from the product name or resource name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc</para>
@@ -43,8 +43,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ModuleName { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page of results.</para>
-        /// <para>If the total number of entries exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</para>
+        /// <para>The token used to query the next page of results.</para>
+        /// <para>If the total number of entries exceeds the value of <c>maxResults</c>, the returned data is truncated. You can use <c>nextToken</c> to query the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DxEkv+3w0EDAQgcRFBp8Ep4dD+2BRJj42DLT6GrZysw=</para>
@@ -54,9 +54,9 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The sort order of the returned results. Valid values:</para>
+        /// <para>The sorting method for the returned results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Normal (default): returns results in normal order.</description></item>
+        /// <item><description>Normal: returns results in default order. This is the default value.</description></item>
         /// <item><description>Top: returns results sorted by popularity.</description></item>
         /// </list>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class PublishRegistryModuleVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</para>
+        /// <para>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string NamespaceName { get; set; }
 
         /// <summary>
-        /// <para>The version number. The value must conform to the <a href="http://semver.org/">semantic version</a> specification, such as 1.0.1. The initial version is 1.0.0.</para>
+        /// <para>The version number. It must comply with the <a href="http://semver.org/">semantic versioning</a> specification, such as 1.0.1.
+        /// The initial version is 1.0.0.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

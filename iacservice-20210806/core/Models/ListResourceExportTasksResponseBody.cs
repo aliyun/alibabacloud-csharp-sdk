@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public List<ListResourceExportTasksResponseBodyExportTasks> ExportTasks { get; set; }
         public class ListResourceExportTasksResponseBodyExportTasks : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-02-20T02:10:06Z</para>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// <para>The export status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Queue: queued</description></item>
-            /// <item><description>Pending: preparing to run</description></item>
+            /// <item><description>Pending: pending</description></item>
             /// <item><description>Success: succeeded</description></item>
             /// <item><description>Errored: failed</description></item>
-            /// <item><description>Canceled: canceled.</description></item>
+            /// <item><description>Canceled: canceled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -74,17 +74,17 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ExportTaskId { get; set; }
 
             /// <summary>
-            /// <para>The module to which the exported template is saved. If this parameter is not set, the template is automatically saved in the Registry.</para>
+            /// <para>Saves the exported template as a module. If this parameter is not specified, the template is automatically saved in the registry.</para>
             /// </summary>
             [NameInMap("exportToModule")]
             [Validation(Required=false)]
             public ListResourceExportTasksResponseBodyExportTasksExportToModule ExportToModule { get; set; }
             public class ListResourceExportTasksResponseBodyExportTasksExportToModule : TeaModel {
                 /// <summary>
-                /// <para>The module type to which the exported template is saved. Valid values:</para>
+                /// <para>The module type where the exported template is saved. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>OSS: OSS</description></item>
-                /// <item><description>Registry: Terraform Registry.</description></item>
+                /// <item><description>Registry: Terraform Registry</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -97,10 +97,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 /// <summary>
                 /// <para>The path where the template content is saved.</para>
                 /// <list type="bullet">
-                /// <item><description><para>If Source is set to Registry, the format is: &quot;cloudregistry::iacservice//&quot;</para>
-                /// </description></item>
-                /// <item><description><para>If Source is set to OSS, the format is: &quot;oss::https://.oss-ap-southeast-1.aliyuncs.com/xxx.zip&quot;.</para>
-                /// </description></item>
+                /// <item><description>When Source is Registry, the format is: &quot;cloudregistry::iacservice//&quot;.</description></item>
+                /// <item><description>When Source is OSS, the format is: &quot;oss::https://.oss-cn-hangzhou.aliyuncs.com/xxx.zip&quot;.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -111,7 +109,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string SourcePath { get; set; }
 
                 /// <summary>
-                /// <para>The path where the template state file is saved.</para>
+                /// <para>The path where the state file of the template is saved.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/</para>
@@ -133,22 +131,22 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ExportVersion { get; set; }
 
             /// <summary>
-            /// <para>The values of the include rules for resource export.</para>
+            /// <para>The values of the inclusion rules for resource export.</para>
             /// </summary>
             [NameInMap("includeRules")]
             [Validation(Required=false)]
             public List<ListResourceExportTasksResponseBodyExportTasksIncludeRules> IncludeRules { get; set; }
             public class ListResourceExportTasksResponseBodyExportTasksIncludeRules : TeaModel {
                 /// <summary>
-                /// <para>The name of the include rule for resource export. Valid values:</para>
+                /// <para>The name of the inclusion rule for resource export. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ResourceType: required. The resource type, such as ALIYUN::VPC::VPC.</description></item>
-                /// <item><description>RegionId: required. The region to which the resource belongs. Only one region is supported, such as ap-southeast-1.</description></item>
-                /// <item><description>\<ResourceType>:Id: the resource ID, such as ALIYUN::VPC::VPC:Id.</description></item>
-                /// <item><description>ResourceGroupId: the resource group ID, such as rg-1234.</description></item>
-                /// <item><description>ZoneId: the zone to which the resource belongs. Only one zone is supported, such as ap-southeast-1h.</description></item>
+                /// <item><description>ResourceType: required. The resource type. Example: ALIYUN::VPC::VPC.</description></item>
+                /// <item><description>RegionId: required. The region to which the resource belongs. Only one region is supported. Example: cn-chengdu.</description></item>
+                /// <item><description>\<ResourceType>:Id: the resource ID. Example: ALIYUN::VPC::VPC:Id.</description></item>
+                /// <item><description>ResourceGroupId: the resource group ID. Example: rg-1234.</description></item>
+                /// <item><description>ZoneId: the zone to which the resource belongs. Only one zone is supported. Example: cn-hangzhou-h.</description></item>
                 /// </list>
-                /// <para>By default, the relationship between multiple filter conditions is AND. A resource is considered matched only when all filter conditions are met.</para>
+                /// <para>By default, multiple filter conditions use the AND logical operator. A resource matches the filter conditions only when it meets all the conditions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>RegionId</para>
@@ -158,7 +156,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The values of the include rules for resource export.</para>
+                /// <para>The values of the inclusion rules for resource export.</para>
                 /// </summary>
                 [NameInMap("values")]
                 [Validation(Required=false)]
@@ -167,7 +165,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             }
 
             /// <summary>
-            /// <para>The module configuration of the exported resources.</para>
+            /// <para>The module configurations for the exported resources.</para>
             /// </summary>
             [NameInMap("modules")]
             [Validation(Required=false)]
@@ -186,10 +184,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 /// <summary>
                 /// <para>The download URL of the module where the exported template is stored.</para>
                 /// <list type="bullet">
-                /// <item><description><para>If Source is set to CloudRegistry, the format is: &quot;cloudregistry::iacservice/<exportTaskId>/<Provider Name>&quot;</para>
-                /// </description></item>
-                /// <item><description><para>If Source is set to OSS, the format is: &quot;oss::https://<BucketName>.oss-ap-southeast-1.aliyuncs.com/xxx.zip&quot;.</para>
-                /// </description></item>
+                /// <item><description>When Source is CloudRegistry, the format is: &quot;cloudregistry::iacservice/<exportTaskId>/<Provider Name>&quot;.</description></item>
+                /// <item><description>When Source is OSS, the format is: &quot;oss::https://<BucketName>.oss-cn-hangzhou.aliyuncs.com/xxx.zip&quot;.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -225,7 +221,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Available: available</description></item>
-            /// <item><description>Running: running.</description></item>
+            /// <item><description>Running: running</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -243,7 +239,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public List<ListResourceExportTasksResponseBodyExportTasksVariables> Variables { get; set; }
             public class ListResourceExportTasksResponseBodyExportTasksVariables : TeaModel {
                 /// <summary>
-                /// <para>The list of Terraform resource properties corresponding to the resource type.</para>
+                /// <para>The list of properties for the Terraform resource that corresponds to the resource type.</para>
                 /// </summary>
                 [NameInMap("properties")]
                 [Validation(Required=false)]
@@ -274,7 +270,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</para>
+        /// <para>The number of results to return per page. Default value: 20. Minimum value: 1. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

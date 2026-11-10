@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public Dictionary<string, object> ModuleFile { get; set; }
 
             /// <summary>
-            /// <para>The module name.</para>
+            /// <para>The name of the module.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eip-slb-ecs-polardb</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ModuleName { get; set; }
 
             /// <summary>
-            /// <para>The workspace name.</para>
+            /// <para>The name of the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>namespace-test</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries per page.</para>
+        /// <para>The maximum number of entries to return per page.</para>
         /// <para>Valid values: 0 to 200.</para>
         /// <para>Default value: 100.</para>
         /// 
@@ -101,8 +101,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page of results.</para>
-        /// <para>If the total number of entries exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</para>
+        /// <para>The token used to return the next page of query results.</para>
+        /// <para>If the total number of entries exceeds the value of maxResults, the returned results are truncated. You can use nextToken to query the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oIM6ssGyh00noi5zoDR1hJ4dD+2BRJj42DLT6GrZysw=</para>

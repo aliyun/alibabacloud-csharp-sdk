@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public GetModuleResponseBodyModule Module { get; set; }
         public class GetModuleResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>The time when the template was created.</para>
+            /// <para>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-09-06T06:11:27Z</para>
@@ -126,14 +126,14 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string OutputPath { get; set; }
 
             /// <summary>
-            /// <para>The template source. Valid values:</para>
+            /// <para>The source of the template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>OSS: Imported from OSS.</description></item>
-            /// <item><description>Registry: Created from a template in the template center.</description></item>
-            /// <item><description>ExportTask: Exported from a resource export task.</description></item>
-            /// <item><description>Upload: Uploaded as a file.</description></item>
-            /// <item><description>Shared: Cloned from a shared template.</description></item>
-            /// <item><description>Editor: Created by using the online editor.</description></item>
+            /// <item><description>OSS: imported from OSS</description></item>
+            /// <item><description>Registry: created by using a template from the template center</description></item>
+            /// <item><description>ExportTask: referenced from a template exported by a resource export task</description></item>
+            /// <item><description>Upload: uploaded as a file</description></item>
+            /// <item><description>Shared: cloned from a shared template</description></item>
+            /// <item><description>Editor: edited online</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -144,11 +144,11 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The source path of the template.</para>
+            /// <para>The path value of the template source.</para>
             /// <list type="bullet">
-            /// <item><description>If the source is Registry, the value is in the format of <workspace name>/<module name>:<module version>, such as terraform-alicloud-modules/rds:1.0.0.</description></item>
-            /// <item><description>If the source is OSS, the value is in the format of oss::<file link>, such as oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>.</description></item>
-            /// <item><description>If the source is ExportTask, the value is in the format of <export task ID>:<exported version>, such as ex-3b6cb9fa4751afff298da723c24ac:v1.</description></item>
+            /// <item><description>If the source is Registry, the value is in the <Workspace name>/<Module name>:<Module version> format. Example: terraform-alicloud-modules/rds:1.0.0.</description></item>
+            /// <item><description>If the source is OSS, the value is in the oss::<File URL> format. Example: oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>.</description></item>
+            /// <item><description>If the source is ExportTask, the value is in the <Export task ID>:<Exported version> format. Example: ex-3b6cb9fa4751afff298da723c24ac:v1.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string SourcePath { get; set; }
 
             /// <summary>
-            /// <para>The path of the state file that corresponds to the template. Currently, only OSS paths are supported. The value is in the format of oss::<file OSS path>/terraform.tfstate.</para>
+            /// <para>The path of the state file corresponding to the template. This parameter is applicable only to OSS paths. The value is in the oss::<OSS path of the file>/terraform.tfstate format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/terraform.tfstate">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/terraform.tfstate</a></para>
@@ -169,12 +169,12 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string StatePath { get; set; }
 
             /// <summary>
-            /// <para>The template status. Valid values:</para>
+            /// <para>The status of the template. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Creating: The template is being created.</description></item>
-            /// <item><description>Created: The template is created.</description></item>
+            /// <item><description>Created: The template is created.
+            /// You can publish a version after the template is created.</description></item>
             /// </list>
-            /// <para>After the template is created, you can publish a version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Created</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tags of the template.</para>
+            /// <para>The list of tags for the template.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
@@ -215,8 +215,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// <summary>
             /// <para>The version generation strategy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Manual: Versions are generated manually. This is the default value.</description></item>
-            /// <item><description>SourcePathUpdated: A new version is generated when the sourcePath is modified.</description></item>
+            /// <item><description>Manual: manually generates versions (default)</description></item>
+            /// <item><description>SourcePathUpdated: generates a new version when sourcePath is modified</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

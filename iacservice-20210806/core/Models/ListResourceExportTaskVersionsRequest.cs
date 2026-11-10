@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ExportVersion { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. Fuzzy search on export version names is supported.</para>
+        /// <para>The search keyword. Fuzzy search is supported for export version names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>key</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</para>
+        /// <para>The number of results to return per page. Default value: 20. Minimum value: 1. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -52,11 +52,11 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// <summary>
         /// <para>The export status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Queue: queued</description></item>
-        /// <item><description>Pending: preparing to run</description></item>
-        /// <item><description>Success: succeeded</description></item>
-        /// <item><description>Errored: failed</description></item>
-        /// <item><description>Canceled: canceled</description></item>
+        /// <item><description>Queue: Queued.</description></item>
+        /// <item><description>Pending: Ready to run.</description></item>
+        /// <item><description>Success: Succeeded.</description></item>
+        /// <item><description>Errored: Failed.</description></item>
+        /// <item><description>Canceled: Canceled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

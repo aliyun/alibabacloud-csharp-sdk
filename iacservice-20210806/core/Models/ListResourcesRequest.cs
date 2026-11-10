@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 200.</para>
+        /// <para>The number of results to return per page. Default value: 20. Minimum value: 1. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -32,11 +32,11 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// <summary>
         /// <para>The type of the resource source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ExportTaskId: resource export ID</para>
+        /// <item><description><para>ExportTaskId: The resource export ID.</para>
         /// </description></item>
-        /// <item><description><para>TaskId: Module execution task ID</para>
+        /// <item><description><para>TaskId: The ID of the module execution task.</para>
         /// </description></item>
-        /// <item><description><para>StatePath: the OSS path where the resource state is stored.</para>
+        /// <item><description><para>StatePath: The OSS address where the resource state is stored.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// </description></item>
         /// <item><description><para>If sourceType is set to TaskId, the format is TaskId.</para>
         /// </description></item>
-        /// <item><description><para>If sourceType is set to StatePath, the format is the download URL of the State file.</para>
+        /// <item><description><para>If sourceType is set to StatePath, the format is the download URL of the state file.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string SourceValue { get; set; }
 
         /// <summary>
-        /// <para>The specification that resource properties follow in the response. Valid values: CloudSpec, Terraform.
+        /// <para>The specification that resource properties follow in the response. Valid values: CloudSpec and Terraform.
         /// Default value: CloudSpec.</para>
         /// <para>This parameter is required.</para>
         /// 

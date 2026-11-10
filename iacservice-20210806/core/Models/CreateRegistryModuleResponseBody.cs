@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The template source, which is a concatenation of \<namespaceName>/\<ModuleName>.</para>
+        /// <para>The template source, which is concatenated in the \<namespaceName>/\<ModuleName> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>namespaceName/ModuleName</para>

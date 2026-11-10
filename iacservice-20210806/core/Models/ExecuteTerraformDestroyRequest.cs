@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ExecuteTerraformDestroyRequest : TeaModel {
         /// <summary>
-        /// <para>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</para>
+        /// <para>The idempotency token. The format is [0-9a-zA-Z-]{1,64}. A UUID is recommended.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The state file ID.</para>
+        /// <para>The ID of the state file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

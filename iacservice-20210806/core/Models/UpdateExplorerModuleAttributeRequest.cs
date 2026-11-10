@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The template description. Length: 0 to 255 characters.</para>
+        /// <para>The description of the template. The length is 0 to 255 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The template name. Length: 1 to 128 characters. The name must be unique.</para>
+        /// <para>The name of the template. The length is 1 to 128 characters. The name must be unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

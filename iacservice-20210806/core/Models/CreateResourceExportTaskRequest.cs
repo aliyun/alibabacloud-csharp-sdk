@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class CreateResourceExportTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</para>
+        /// <para>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. A UUID is recommended.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Saves the exported template as a module. If this parameter is not specified, the template is automatically saved in the Registry.</para>
+        /// <para>The configuration for saving the exported template as a module. If this parameter is not specified, the template is automatically saved in the registry.</para>
         /// </summary>
         [NameInMap("exportToModule")]
         [Validation(Required=false)]
         public CreateResourceExportTaskRequestExportToModule ExportToModule { get; set; }
         public class CreateResourceExportTaskRequestExportToModule : TeaModel {
             /// <summary>
-            /// <para>The module type in which the exported template is saved. Valid values:</para>
+            /// <para>The module type for saving the exported template. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>OSS: OSS.</description></item>
             /// <item><description>Registry: Terraform Registry.</description></item>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The path for saving the template content. Set this parameter when source is set to OSS.</para>
+            /// <para>The path for saving the template content. This parameter is required when source is set to OSS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss::<a href="https://iac-daily.oss-ap-southeast-1.aliyuncs.com/iacservice/vpc.zip">https://iac-daily.oss-ap-southeast-1.aliyuncs.com/iacservice/vpc.zip</a></para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string SourcePath { get; set; }
 
             /// <summary>
-            /// <para>The path for saving the template state file. Set this parameter when source is set to OSS.</para>
+            /// <para>The path for saving the state file of the template. This parameter is required when source is set to OSS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss::<a href="https://iac-daily.oss-ap-southeast-1.aliyuncs.com/default/terraform.tfstate">https://iac-daily.oss-ap-southeast-1.aliyuncs.com/default/terraform.tfstate</a></para>
@@ -83,13 +83,13 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// <summary>
             /// <para>The name of the inclusion rule used when exporting resources. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ResourceType: required. The resource type. Call <b>ListResourceTypes</b> to view the list of supported resources. Example: ALIYUN::VPC::VPC.</description></item>
+            /// <item><description>ResourceType: required. The resource type. You can call the <b>ListResourceTypes</b> operation to query the supported resources. Example: ALIYUN::VPC::VPC.</description></item>
             /// <item><description>RegionId: required. The region to which the resource belongs. Only one region is supported. Example: cn-chengdu.</description></item>
             /// <item><description>\<ResourceType>:Id: the resource ID. Example: ALIYUN::VPC::VPC:Id.</description></item>
             /// <item><description>ResourceGroupId: the resource group ID. Example: rg-1234.</description></item>
             /// <item><description>ZoneId: the zone to which the resource belongs. Only one zone is supported. Example: cn-hangzhou-h.</description></item>
             /// </list>
-            /// <para>By default, multiple filter conditions are evaluated using the AND operator. A resource is considered a match only when all filter conditions are met.</para>
+            /// <para>By default, multiple filter conditions are connected by the AND operator. A resource matches the filter conditions only when it meets all the conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RegionId</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The list of values for the inclusion rule used when exporting resources.</para>
+            /// <para>The list of values for an inclusion rule used when exporting a group of resources.</para>
             /// </summary>
             [NameInMap("values")]
             [Validation(Required=false)]
@@ -111,8 +111,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// <para>The name of the resource export task. The name must meet the following requirements:</para>
         /// <list type="bullet">
         /// <item><description>The name must be 3 to 63 characters in length.</description></item>
-        /// <item><description>The name can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). The name cannot start or end with a hyphen, underscore, or period.</description></item>
-        /// <item><description>The name must be unique among resource export tasks within the current account.</description></item>
+        /// <item><description>The name can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). It cannot start or end with a hyphen, underscore, or period.</description></item>
+        /// <item><description>The name must be unique among the resource export tasks within the current account.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The RAM role (1 to 128 characters). The system assumes this role to execute the template when a new job is triggered. This parameter is required when the job trigger method is not manual.</para>
+        /// <para>The Resource Access Management (RAM) role. The role name must be 1 to 128 characters in length. The system assumes this role to execute the template when a new job is triggered. This parameter is required when the job is not triggered manually.</para>
         /// 
         /// <b>Example:</b>
         /// <para>role-name</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string RamRole { get; set; }
 
         /// <summary>
-        /// <para>The Terraform provider version. Call <b>ListTerraformProviderVersions</b> to view the list of supported versions. Default value: the latest version.</para>
+        /// <para>The Terraform provider version. You can call the <b>ListTerraformProviderVersions</b> operation to query the supported versions. Default value: the latest version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.247.0</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string TerraformProviderVersion { get; set; }
 
         /// <summary>
-        /// <para>The Terraform version. Call <b>ListAvailableTerraformVersions</b> to view the list of supported versions. Default value: 1.5.7.</para>
+        /// <para>The Terraform version. You can call the <b>ListAvailableTerraformVersions</b> operation to query the supported versions. Default value: 1.5.7.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.5.7</para>
@@ -156,8 +156,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// <summary>
         /// <para>The trigger strategy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Auto: triggered when rules are modified or the trigger strategy is changed to Auto.</description></item>
-        /// <item><description>Manual: manually triggered.</description></item>
+        /// <item><description>Auto: automatically triggers the task when a rule is modified or the trigger strategy is changed to Auto.</description></item>
+        /// <item><description>Manual: manually triggers the task.</description></item>
         /// </list>
         /// <para>Default value: Manual.</para>
         /// 
@@ -169,21 +169,21 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string TriggerStrategy { get; set; }
 
         /// <summary>
-        /// <para>The list of variables. Exported resource parameters are set as variables.</para>
+        /// <para>The list of variables. The parameters of the exported resources are set as variables.</para>
         /// </summary>
         [NameInMap("variables")]
         [Validation(Required=false)]
         public List<CreateResourceExportTaskRequestVariables> Variables { get; set; }
         public class CreateResourceExportTaskRequestVariables : TeaModel {
             /// <summary>
-            /// <para>The list of properties of the Terraform resource that corresponds to the resource type.</para>
+            /// <para>The list of properties for the Terraform resource that corresponds to the resource type.</para>
             /// </summary>
             [NameInMap("properties")]
             [Validation(Required=false)]
             public List<string> Properties { get; set; }
 
             /// <summary>
-            /// <para>The resource type. Call <b>ListResourceTypes</b> to view the list of supported resources.</para>
+            /// <para>The resource type. You can call the <b>ListResourceTypes</b> operation to query the supported resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALIYUN::VPC::VSwitch</para>

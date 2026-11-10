@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ListProductsRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword for searching products. Fuzzy match is supported.</para>
+        /// <para>The keyword used to search for products. Fuzzy matching is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results per page. Valid values: 0 to 200. Default value: 100.</para>
+        /// <para>The maximum number of entries to return on each page. Valid values: 0 to 200. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values:</para>
+        /// <para>The sorting method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Normal: default sorting (default value)</description></item>
-        /// <item><description>Top: sorted by popularity.</description></item>
+        /// <item><description>Normal: Default sorting. This is the default value.</description></item>
+        /// <item><description>Top: Sorting by popularity.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,11 +54,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// <para>The status. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Available</description></item>
-        /// <item><description>Deprecated.</description></item>
-        /// </list>
+        /// <para>The status. Valid values: Available and Deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Available</para>
@@ -78,7 +74,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public bool? SupportTerraformer { get; set; }
 
         /// <summary>
-        /// <para>The Terraform Provider version. If this parameter is left empty, the latest version is used by default.</para>
+        /// <para>The Terraform provider version. If this parameter is left empty, the latest version is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.227.0</para>

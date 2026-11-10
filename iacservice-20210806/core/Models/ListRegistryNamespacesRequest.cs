@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ListRegistryNamespacesRequest : TeaModel {
         /// <summary>
-        /// <para>The search keyword. Fuzzy search by workspace name is supported.</para>
+        /// <para>The search keyword. Fuzzy match is supported for workspace names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>key</para>
@@ -20,8 +20,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Maximum value: 100.
-        /// Default value: 20.</para>
+        /// <para>The number of entries per page for a paging query. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -31,7 +30,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token. Set this parameter to the NextToken value returned in the previous API call.</para>
+        /// <para>The query token. Set the value to the NextToken value returned from the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hg7nXVngyM6tQtvCagmtY=</para>
@@ -43,16 +42,12 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// <summary>
         /// <para>The workspace type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>system: public workspace</para>
-        /// </description></item>
-        /// <item><description><para>self: custom workspace</para>
-        /// </description></item>
-        /// <item><description><para>shared: shared workspace</para>
-        /// </description></item>
-        /// <item><description><para>community: community workspace</para>
-        /// </description></item>
+        /// <item><description>system: public workspace</description></item>
+        /// <item><description>self: custom workspace</description></item>
+        /// <item><description>shared: shared workspace</description></item>
+        /// <item><description>community: community workspace
+        /// By default, all types are returned.</description></item>
         /// </list>
-        /// <para>By default, all workspaces are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>self</para>

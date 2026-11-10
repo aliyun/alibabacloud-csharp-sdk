@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The state file ID.</para>
+        /// <para>The ID of the state file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>task-xxxx</para>

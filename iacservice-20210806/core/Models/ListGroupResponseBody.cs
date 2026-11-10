@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public List<ListGroupResponseBodyGroups> Groups { get; set; }
         public class ListGroupResponseBodyGroups : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-09-14T07:19:13Z</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size, which indicates the maximum number of results returned per page.</para>
+        /// <para>The page size, which specifies the maximum number of results returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

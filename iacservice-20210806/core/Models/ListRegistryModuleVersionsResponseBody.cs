@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public long? Count { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Maximum value: 100. Default value: 20.</para>
+        /// <para>The number of entries to return per page for paging in a paged query. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public List<ListRegistryModuleVersionsResponseBodyModuleVersions> ModuleVersions { get; set; }
         public class ListRegistryModuleVersionsResponseBodyModuleVersions : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The format is YYYY-MM-DD HH:mm:ss. The returned value does not include a time zone identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-05-28 11:15:57</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The template name.</para>
+            /// <para>The name of the template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ModuleName</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ModuleName { get; set; }
 
             /// <summary>
-            /// <para>The workspace name.</para>
+            /// <para>The name of the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NamespaceName</para>
@@ -67,10 +67,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string NamespaceName { get; set; }
 
             /// <summary>
-            /// <para>The provider type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>alicloud: Alibaba Cloud.</description></item>
-            /// </list>
+            /// <para>The provider type. Valid value: alicloud: Alibaba Cloud.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alicloud</para>
@@ -80,7 +77,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Provider { get; set; }
 
             /// <summary>
-            /// <para>The template source, in the format of namespaceName/ModuleName.</para>
+            /// <para>The template source. Format: namespaceName/ModuleName.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_namespace/RegistryModule-test0e</para>
@@ -112,7 +109,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</para>
+        /// <para>The pagination token. Set the value to the NextToken value returned from the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IbuvZ8iOH447bhHWDavGTOMijI2Jep7c=</para>

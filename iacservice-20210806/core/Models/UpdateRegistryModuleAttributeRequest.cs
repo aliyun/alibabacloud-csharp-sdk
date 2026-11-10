@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class UpdateRegistryModuleAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The access permission. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>private: private.</description></item>
-        /// </list>
+        /// <para>The permissions. Valid values: private: Private.</para>
         /// 
         /// <b>Example:</b>
         /// <para>private</para>

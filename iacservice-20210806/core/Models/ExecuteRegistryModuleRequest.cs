@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ExecuteRegistryModuleRequest : TeaModel {
         /// <summary>
-        /// <para>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</para>
+        /// <para>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. A UUID is recommended.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

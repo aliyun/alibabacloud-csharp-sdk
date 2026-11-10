@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</para>
+        /// <para>The number of results to return per page. Default value: 20. Minimum value: 1. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The list of version information.</para>
+        /// <para>The list of versions.</para>
         /// </summary>
         [NameInMap("versions")]
         [Validation(Required=false)]
         public List<ListModuleVersionResponseBodyVersions> Versions { get; set; }
         public class ListModuleVersionResponseBodyVersions : TeaModel {
             /// <summary>
-            /// <para>The time when the version was created.</para>
+            /// <para>The time when the version was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-13T02:21:49Z</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The source path of the version.</para>
+            /// <para>The path value of the version source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a></para>

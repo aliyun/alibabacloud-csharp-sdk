@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public List<ListResourcesResponseBodyResources> Resources { get; set; }
         public class ListResourcesResponseBodyResources : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud account ID.</para>
+            /// <para>The Alibaba Cloud user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>365845</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-05-03T02:22:59Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The dependent resources.</para>
+            /// <para>The list of dependent resources.</para>
             /// </summary>
             [NameInMap("dependsOnResourceIds")]
             [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The resource ARN.</para>
+            /// <para>The ARN of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:vpc:cn-hangzhou:12345:test</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 200.</para>
+        /// <para>The number of results to return per page. Default value: 20. Minimum value: 1. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

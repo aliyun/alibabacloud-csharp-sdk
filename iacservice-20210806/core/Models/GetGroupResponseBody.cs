@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public bool? AutoTrigger { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-21T10:57:11Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the group configuration is forcibly used.</para>
+            /// <para>Indicates whether the group configuration is forcibly applied.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -104,8 +104,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string NotifyPath { get; set; }
 
                 /// <summary>
-                /// <para>The notification type. Valid values:
-                /// DingDing.</para>
+                /// <para>The notification type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>DingDing</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DingDing</para>
@@ -134,7 +136,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The RAM role (1 to 128 characters). The system assumes this role to execute the template when a new job is triggered. This parameter is required when the job trigger mode is not manual.</para>
+            /// <para>The Resource Access Management (RAM) role. Length: 1 to 128 characters. The system assumes this role to execute the template when a new job is triggered. This parameter is required when the job is not triggered manually.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ramRoleName</para>
@@ -144,14 +146,14 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string RamRole { get; set; }
 
             /// <summary>
-            /// <para>The list of report export field options.</para>
+            /// <para>The list of report export fields.</para>
             /// </summary>
             [NameInMap("reportExportField")]
             [Validation(Required=false)]
             public List<string> ReportExportField { get; set; }
 
             /// <summary>
-            /// <para>The export address for the execution report. OSS addresses are supported. Format: https://<OSS bucket address>/<path>.</para>
+            /// <para>The export path for execution reports. OSS paths are supported, such as https://<OSS bucket endpoint>/<path>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/</para>
@@ -171,7 +173,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public long? TaskCnt { get; set; }
 
             /// <summary>
-            /// <para>The Terraform provider version. Select a Terraform provider version. Tasks in the group are executed based on the specified Terraform provider version. The version configured on a task takes higher priority. This version may conflict with the Terraform provider version specified in the module.</para>
+            /// <para>The Terraform provider version. Select a Terraform provider version. Tasks in the group execute plans based on the specified Terraform provider version. The version configured on the task takes precedence. This setting may conflict with the Terraform provider version specified in the module.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.191.0</para>
@@ -190,8 +192,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 /// <summary>
                 /// <para>The trigger strategy. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ProviderNewVersion: triggered when a new provider version is released</description></item>
-                /// <item><description>Cron: triggered on a schedule.</description></item>
+                /// <item><description>ProviderNewVersion: Triggered when a new provider version is released.</description></item>
+                /// <item><description>Cron: Triggered on a schedule.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -202,7 +204,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string TriggerStrategy { get; set; }
 
                 /// <summary>
-                /// <para>The policy value that must be maintained for scheduled triggering. This value is a cron expression.</para>
+                /// <para>The policy value for scheduled triggers. Specify a cron expression.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0 0 8 * * ?</para>
@@ -214,10 +216,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             }
 
             /// <summary>
-            /// <para>The resource type that triggers execution. Valid values:</para>
+            /// <para>The resource type for triggered execution. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Task: regular task</description></item>
-            /// <item><description>SceneTestingTask: scenario-based testing task.</description></item>
+            /// <item><description>Task: Regular task.</description></item>
+            /// <item><description>SceneTestingTask: Scenario-based testing task.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("triggerResourceType")]

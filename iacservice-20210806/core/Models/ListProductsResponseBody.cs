@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results per page. Valid values: 0 to 200. Default value: 100.</para>
+        /// <para>The maximum number of entries to return on each page. Valid values: 0 to 200. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30BaZ9ekYWXJdqshYecA++coNg7qT1Zbm3RfLyFIZeY=</para>
@@ -30,24 +30,24 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The product list.</para>
+        /// <para>The list of products.</para>
         /// </summary>
         [NameInMap("products")]
         [Validation(Required=false)]
         public List<ListProductsResponseBodyProducts> Products { get; set; }
         public class ListProductsResponseBodyProducts : TeaModel {
             /// <summary>
-            /// <para>The first-level category name.</para>
+            /// <para>The name of the level-1 category.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>企业应用</para>
+            /// <para>Enterprise Applications</para>
             /// </summary>
             [NameInMap("firstCategoryName")]
             [Validation(Required=false)]
             public string FirstCategoryName { get; set; }
 
             /// <summary>
-            /// <para>The first-level category name in English.</para>
+            /// <para>The English name of the level-1 category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Enterprise application</para>
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// <para>The product name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>微服务引擎</para>
+            /// <para>Microservices Engine</para>
             /// </summary>
             [NameInMap("productName")]
             [Validation(Required=false)]
             public string ProductName { get; set; }
 
             /// <summary>
-            /// <para>The product name in English.</para>
+            /// <para>The English name of the product.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Microservices Engine</para>
@@ -87,17 +87,17 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ProductNameEn { get; set; }
 
             /// <summary>
-            /// <para>The second-level category name.</para>
+            /// <para>The name of the level-2 category.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>应用服务</para>
+            /// <para>Application Services</para>
             /// </summary>
             [NameInMap("secondCategoryName")]
             [Validation(Required=false)]
             public string SecondCategoryName { get; set; }
 
             /// <summary>
-            /// <para>The second-level category name in English.</para>
+            /// <para>The English name of the level-2 category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Application service</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public bool? SupportTerraformer { get; set; }
 
             /// <summary>
-            /// <para>The Terraform Provider version.</para>
+            /// <para>The Terraform provider version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.229.0</para>

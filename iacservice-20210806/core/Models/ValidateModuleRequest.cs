@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ValidateModuleRequest : TeaModel {
         /// <summary>
-        /// <para>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</para>
+        /// <para>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. A UUID is recommended.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2daf4227f747cbf11a5501f18cc5e004</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The template text that is directly passed in when source is set to Upload.</para>
+        /// <para>The template text. This parameter is required when source is set to Upload.</para>
         /// 
         /// <b>Example:</b>
         /// <para>code</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Specifies multiple configuration files to pass in.</para>
+        /// <para>The configuration file map. You can pass multiple configuration files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;main.tf&quot;:&quot;xxx&quot;}</para>
@@ -40,8 +40,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public Dictionary<string, object> CodeMap { get; set; }
 
         /// <summary>
-        /// <para>The template source. Valid values:
-        /// Upload: text upload.</para>
+        /// <para>The template source. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Upload: text upload.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Upload</para>

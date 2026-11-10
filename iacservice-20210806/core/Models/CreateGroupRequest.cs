@@ -20,11 +20,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public bool? AutoDestroy { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the automatic trigger policy. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b>: enabled.</description></item>
-        /// <item><description><b>false</b>: disabled.</description></item>
-        /// </list>
+        /// <para>Specifies whether to enable the automatic trigger policy. Valid values: <b>true</b>: Enabled. <b>false</b>: Disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -34,7 +30,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public bool? AutoTrigger { get; set; }
 
         /// <summary>
-        /// <para>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</para>
+        /// <para>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. A UUID is recommended.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +51,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcibly use the group configuration.</para>
+        /// <para>Specifies whether to force the use of the group configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -93,8 +89,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string NotifyPath { get; set; }
 
             /// <summary>
-            /// <para>The notification type:
-            /// DingDing.</para>
+            /// <para>The notification type. Valid values: DingDing.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DingDing</para>
@@ -124,9 +119,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The RAM role (1-128 characters).
-        /// The system assumes this role to execute the template when a new job is triggered.
-        /// This parameter is required when the job trigger method is not manual.</para>
+        /// <para>The RAM role. Length: 1 to 128 characters. The system assumes this role to execute the template when a new job is triggered. This parameter is required when the job trigger method is not manual.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ramName</para>
@@ -143,8 +136,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public List<string> ReportExportField { get; set; }
 
         /// <summary>
-        /// <para>The export address for the execution report. OSS addresses are supported.
-        /// https://<OSS bucket address>/<path>.</para>
+        /// <para>The export address for the execution report. OSS addresses are supported. Format: https://<OSS bucket endpoint>/<path>.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://test.oss-cn-hangzhou.aliyuncs.com/test/test">https://test.oss-cn-hangzhou.aliyuncs.com/test/test</a></para>
@@ -154,8 +146,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ReportExportPath { get; set; }
 
         /// <summary>
-        /// <para>The Terraform Provider version.
-        /// Select a Terraform Provider version. The version configured on the task takes higher priority.</para>
+        /// <para>The Terraform provider version. Select a Terraform provider version. The version configured on the task takes precedence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.189.0</para>
@@ -165,8 +156,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string TerraformProviderVersion { get; set; }
 
         /// <summary>
-        /// <para>The trigger policy.
-        /// This parameter cannot be empty when autoTrigger is set to true.</para>
+        /// <para>The trigger policy. This parameter is required when autoTrigger is set to true.</para>
         /// </summary>
         [NameInMap("triggerConfig")]
         [Validation(Required=false)]
@@ -175,8 +165,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// <summary>
             /// <para>The trigger policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ProviderNewVersion: triggered when a new Provider version is released.</description></item>
-            /// <item><description>Cron: triggered on a schedule.</description></item>
+            /// <item><description>ProviderNewVersion: Triggered when a new provider version is released.</description></item>
+            /// <item><description>Cron: Triggered on a schedule.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -187,7 +177,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string TriggerStrategy { get; set; }
 
             /// <summary>
-            /// <para>The policy value to maintain for scheduled triggering. This is a cron expression.</para>
+            /// <para>The policy value for scheduled triggers. Specify a cron expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0 0 19 * * ？</para>
@@ -201,8 +191,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// <summary>
         /// <para>The resource type for triggered execution. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Task: regular task.</description></item>
-        /// <item><description>SceneTestingTask: scenario-based testing task.</description></item>
+        /// <item><description>Task: Regular task.</description></item>
+        /// <item><description>SceneTestingTask: Scenario-based testing task.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("triggerResourceType")]

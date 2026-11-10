@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public GetModuleVersionResponseBodyVersion Version { get; set; }
         public class GetModuleVersionResponseBodyVersion : TeaModel {
             /// <summary>
-            /// <para>The time when the version was created.</para>
+            /// <para>The time when the version was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-09-08T18:07:40Z</para>
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The version source. Valid values:</para>
+            /// <para>The source of the version. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>OSS: imported from OSS.</description></item>
-            /// <item><description>Registry: created by using a template from the template center.</description></item>
-            /// <item><description>ExportTask: exported from a resource export task.</description></item>
-            /// <item><description>Upload: uploaded as a file.</description></item>
-            /// <item><description>Shared: cloned from a shared source.</description></item>
-            /// <item><description>Editor: edited online.</description></item>
+            /// <item><description>OSS: imported from OSS</description></item>
+            /// <item><description>Registry: created by using a template in the template center</description></item>
+            /// <item><description>ExportTask: referenced from a template exported by a resource export task</description></item>
+            /// <item><description>Upload: uploaded as a file</description></item>
+            /// <item><description>Shared: cloned from a shared template</description></item>
+            /// <item><description>Editor: edited online</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,11 +95,11 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The path of the version source.</para>
+            /// <para>The path value of the version source.</para>
             /// <list type="bullet">
-            /// <item><description>If the source is Registry, the value is in the format of <workspace name>/<module name>:<module version>. Example: terraform-alicloud-modules/rds:1.0.0.</description></item>
-            /// <item><description>If the source is OSS, the value is in the format of oss::<file link>. Example: oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>.</description></item>
-            /// <item><description>If the source is ExportTask, the value is in the format of <export task ID>:<exported version>. Example: ex-3b6cb9fa4751afff298da723c24ac:v1.</description></item>
+            /// <item><description>If the source is Registry, the value is in the <Workspace name>/<Module name>:<Module version> format. Example: terraform-alicloud-modules/rds:1.0.0.</description></item>
+            /// <item><description>If the source is OSS, the value is in the oss::<File URL> format. Example: oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>.</description></item>
+            /// <item><description>If the source is ExportTask, the value is in the <Export task ID>:<Exported version> format. Example: ex-3b6cb9fa4751afff298da723c24ac:v1.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string SourcePath { get; set; }
 
             /// <summary>
-            /// <para>The path of the State file that corresponds to the template. Currently, only OSS paths are supported. The value is in the format of oss::<OSS file path>/terraform.tfstate.</para>
+            /// <para>The path value of the state file corresponding to the template. Currently, only OSS paths are supported. The value is in the oss::<OSS path of the file>/terraform.tfstate format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/terraform.tfstate">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/terraform.tfstate</a></para>
@@ -129,8 +129,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// <summary>
             /// <para>The version generation strategy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Manual: manually generate a version. This is the default value.</description></item>
-            /// <item><description>SourcePathUpdated: a new version is generated when the sourcePath is modified.</description></item>
+            /// <item><description>Manual: manually generated version (default)</description></item>
+            /// <item><description>SourcePathUpdated: a new version is generated when sourcePath is modified</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

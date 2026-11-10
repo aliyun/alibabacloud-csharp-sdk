@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ExecuteTerraformPlanRequest : TeaModel {
         /// <summary>
-        /// <para>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</para>
+        /// <para>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. A UUID is recommended.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The Terraform code to execute. If the execution content has not changed, you can specify only stateId.</para>
+        /// <para>The Terraform code to execute. If the code remains unchanged, you can specify only stateId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>terraform {
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The ID of the state file. If this parameter is specified, the Plan command continues to run based on the existing state file.</para>
+        /// <para>The ID of the state file. If this parameter is specified, the plan command continues to execute based on the existing state file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>task-xxx</para>

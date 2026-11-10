@@ -16,11 +16,16 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [Validation(Required=false)]
         public GetJobResponseBodyJob Job { get; set; }
         public class GetJobResponseBodyJob : TeaModel {
+            /// <summary>
+            /// <para>The full set of job parameters, including sensitive and non-sensitive parameters.</para>
+            /// </summary>
             [NameInMap("allParameters")]
             [Validation(Required=false)]
             public List<GetJobResponseBodyJobAllParameters> AllParameters { get; set; }
             public class GetJobResponseBodyJobAllParameters : TeaModel {
                 /// <summary>
+                /// <para>The parameter name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>regionId</para>
                 /// </summary>
@@ -29,6 +34,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>Specifies whether the parameter is confidential. Confidential parameters are hidden in API responses and console displays, and are stored in an encrypted manner.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
                 /// </summary>
@@ -37,6 +44,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public bool? Secret { get; set; }
 
                 /// <summary>
+                /// <para>The parameter value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cn-zhangjiakou</para>
                 /// </summary>
@@ -47,7 +56,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             }
 
             /// <summary>
-            /// <para>The list of assertion checks. This parameter applies to scenario-based testing tasks.</para>
+            /// <para>The list of assertion checks, applicable to scenario-based testing tasks.</para>
             /// </summary>
             [NameInMap("assertCheckDetail")]
             [Validation(Required=false)]
@@ -56,11 +65,11 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 /// <summary>
                 /// <para>The comparison operator. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>eq: equal to</description></item>
-                /// <item><description>n_eq: not equal to</description></item>
-                /// <item><description>ctn: contains</description></item>
-                /// <item><description>n_ctn: does not contain</description></item>
-                /// <item><description>regex: regular expression match.</description></item>
+                /// <item><description>eq: Equal to.</description></item>
+                /// <item><description>n_eq: Not equal to.</description></item>
+                /// <item><description>ctn: Contains.</description></item>
+                /// <item><description>n_ctn: Does not contain.</description></item>
+                /// <item><description>regex: Regular expression match.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -74,14 +83,14 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 /// <para>The expected value.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>期望值</para>
+                /// <para>Expected value</para>
                 /// </summary>
                 [NameInMap("expectedValue")]
                 [Validation(Required=false)]
                 public string ExpectedValue { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the assertion check is passed.</para>
+                /// <para>Indicates whether the check is passed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -93,9 +102,9 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 /// <summary>
                 /// <para>The assertion type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>state: task status</description></item>
-                /// <item><description>result: execution result</description></item>
-                /// <item><description>resourceChange: resource change.</description></item>
+                /// <item><description>state: Task status.</description></item>
+                /// <item><description>result: Execution result.</description></item>
+                /// <item><description>resourceChange: Resource change.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -125,7 +134,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public bool? AutoApply { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether compliance pre-check is performed for this job.</para>
+                /// <para>Specifies whether this job performs a compliance pre-check.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -155,7 +164,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string ModuleVersion { get; set; }
 
                 /// <summary>
-                /// <para>The resource change content.</para>
+                /// <para>The resource changes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>+0 ~0 -0</para>
@@ -177,7 +186,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             }
 
             /// <summary>
-            /// <para>The time when the job was created.</para>
+            /// <para>The job creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-31T03:38:40Z</para>
@@ -219,8 +228,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// <summary>
             /// <para>The execution type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Manual: manual execution (default)</description></item>
-            /// <item><description>Auto: automatic execution.</description></item>
+            /// <item><description>Manual: Manual execution (default).</description></item>
+            /// <item><description>Auto: Automatic execution.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -261,18 +270,13 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string JobType { get; set; }
 
             /// <summary>
-            /// <para>The run logs. The following log content (key values) is currently supported:</para>
+            /// <para>The runtime logs. Currently, the following log content (that is, the values of the key) can be returned:</para>
             /// <list type="bullet">
-            /// <item><description><para>tf-init.run.error.log</para>
-            /// </description></item>
-            /// <item><description><para>tf-init.plan.log</para>
-            /// </description></item>
-            /// <item><description><para>tf-plan.run.log</para>
-            /// </description></item>
-            /// <item><description><para>tf-apply.run.log</para>
-            /// </description></item>
-            /// <item><description><para>tf-init.apply.log.</para>
-            /// </description></item>
+            /// <item><description>tf-init.run.error.log</description></item>
+            /// <item><description>tf-init.plan.log</description></item>
+            /// <item><description>tf-plan.run.log</description></item>
+            /// <item><description>tf-apply.run.log</description></item>
+            /// <item><description>tf-init.apply.log</description></item>
             /// </list>
             /// </summary>
             [NameInMap("logFile")]
@@ -329,7 +333,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public object OutputJsonPlan { get; set; }
 
             /// <summary>
-            /// <para>The collection of parameters.</para>
+            /// <para>The parameter collection.</para>
             /// </summary>
             [NameInMap("parameters")]
             [Validation(Required=false)]
@@ -338,21 +342,21 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// <summary>
             /// <para>The job status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Pending: the initial status after the job is created.</description></item>
-            /// <item><description>PlanQueued: the job is queued because no available worker is ready after the job is created.</description></item>
-            /// <item><description>Planning: the resource job is in the Plan phase.</description></item>
-            /// <item><description>ConfigProactiveInProgress: compliance pre-check is in progress. The compliance pre-check feature must be enabled for the account.</description></item>
-            /// <item><description>ConfigProactiveSuccess: compliance pre-check succeeded. The compliance pre-check feature must be enabled for the account.</description></item>
-            /// <item><description>Planned: the resource job has completed the Plan phase.</description></item>
-            /// <item><description>PlannedAndFinished: no diff is found after the Plan phase is completed. This is a final status.</description></item>
-            /// <item><description>Confirmed: the resource job is waiting for confirmation after the Plan phase is completed.</description></item>
-            /// <item><description>ApplyQueued: the job is queued because no available worker is ready during execution.</description></item>
-            /// <item><description>Applying: the resource job is in the Apply phase.</description></item>
-            /// <item><description>Applied: the resource job has completed the Apply phase. This is a final status.</description></item>
-            /// <item><description>Errored: the job execution encountered an error. This is a final status.</description></item>
-            /// <item><description>Canceled: the job execution was canceled. This is a final status.</description></item>
-            /// <item><description>Discarded: the plan of the resource job was discarded. This is a final status.</description></item>
-            /// <item><description>ConfigProactiveFailure: compliance pre-check failed. The compliance pre-check feature must be enabled for the account.</description></item>
+            /// <item><description>Pending: The initial state after the job is created.</description></item>
+            /// <item><description>PlanQueued: The state where the job is queued and waiting because no workflow is available after creation.</description></item>
+            /// <item><description>Planning: The state where the job is in the Plan phase.</description></item>
+            /// <item><description>ConfigProactiveInProgress: The state where the compliance pre-check is in progress. This requires the compliance pre-check feature to be enabled for the account.</description></item>
+            /// <item><description>ConfigProactiveSuccess: The state where the compliance pre-check is successful. This requires the compliance pre-check feature to be enabled for the account.</description></item>
+            /// <item><description>Planned: The state where the job has completed the Plan phase.</description></item>
+            /// <item><description>PlannedAndFinished: The final state where no differences are found after the Plan phase is completed.</description></item>
+            /// <item><description>Confirmed: The state where the job is waiting for confirmation after the Plan phase is completed.</description></item>
+            /// <item><description>ApplyQueued: The state where the job is queued and waiting because no workflow is available during execution.</description></item>
+            /// <item><description>Applying: The state where the job is in the Apply phase.</description></item>
+            /// <item><description>Applied: The final state where the job has completed the Apply phase.</description></item>
+            /// <item><description>Errored: The final state where an error occurs during job execution.</description></item>
+            /// <item><description>Canceled: The final state where the job execution is canceled.</description></item>
+            /// <item><description>Discarded: The final state where the plan of the job is discarded.</description></item>
+            /// <item><description>ConfigProactiveFailure: The state where the compliance pre-check fails. This requires the compliance pre-check feature to be enabled for the account.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -382,8 +386,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// <summary>
             /// <para>The task type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Task: regular task (default)</description></item>
-            /// <item><description>SceneTestingTask: scenario-based testing task.</description></item>
+            /// <item><description>Task: Regular task (default).</description></item>
+            /// <item><description>SceneTestingTask: Scenario-based testing task.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

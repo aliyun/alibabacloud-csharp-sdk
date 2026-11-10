@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public List<ListExplorerRegistryModuleExamplesResponseBodyExplorerRegistryModuleExamples> ExplorerRegistryModuleExamples { get; set; }
         public class ListExplorerRegistryModuleExamplesResponseBodyExplorerRegistryModuleExamples : TeaModel {
             /// <summary>
-            /// <para>The example name.</para>
+            /// <para>The name of the example.</para>
             /// 
             /// <b>Example:</b>
             /// <para>201-use-case-create-actiontrail-trail</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ExampleName { get; set; }
 
             /// <summary>
-            /// <para>The example path.</para>
+            /// <para>The path of the example.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public Dictionary<string, object> ExampleSchema { get; set; }
 
             /// <summary>
-            /// <para>The module name.</para>
+            /// <para>The name of the module.</para>
             /// 
             /// <b>Example:</b>
             /// <para>iactestname1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ModuleName { get; set; }
 
             /// <summary>
-            /// <para>The module version.</para>
+            /// <para>The version of the module.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.11.0</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ModuleVersion { get; set; }
 
             /// <summary>
-            /// <para>The workspace name.</para>
+            /// <para>The name of the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alibaba</para>
@@ -101,8 +101,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page of results.</para>
-        /// <para>If the total number of entries exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</para>
+        /// <para>The token used to query the next page of results.</para>
+        /// <para>If the total number of entries exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VSjwD+sJ8OZJ8fNjV89AZs7o2AdSD25ZQLeWZ8REjXA=</para>

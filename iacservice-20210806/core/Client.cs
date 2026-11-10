@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "IaCService";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
@@ -250,12 +253,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds shared accounts.</para>
+        /// <para>Adds a shared account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Per-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -309,12 +312,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds shared accounts.</para>
+        /// <para>Adds a shared account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Per-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -368,12 +371,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds shared accounts.</para>
+        /// <para>Adds a shared account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Per-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -392,12 +395,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds shared accounts.</para>
+        /// <para>Adds a shared account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Per-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -716,16 +719,16 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates parameter sets.</para>
+        /// <para>Associates parameter sets with a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After creating a parameter set, you need to associate it with a resource. Valid values for the resource type:</para>
+        /// <para>After you create a parameter set, you must associate it with a resource. Valid values for the resource type:</para>
         /// <list type="bullet">
         /// <item><description>Module: template</description></item>
         /// <item><description>ModuleVersion: template version</description></item>
-        /// <item><description>Task: node.</description></item>
+        /// <item><description>Task: task.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -780,16 +783,16 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates parameter sets.</para>
+        /// <para>Associates parameter sets with a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After creating a parameter set, you need to associate it with a resource. Valid values for the resource type:</para>
+        /// <para>After you create a parameter set, you must associate it with a resource. Valid values for the resource type:</para>
         /// <list type="bullet">
         /// <item><description>Module: template</description></item>
         /// <item><description>ModuleVersion: template version</description></item>
-        /// <item><description>Task: node.</description></item>
+        /// <item><description>Task: task.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -844,16 +847,16 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates parameter sets.</para>
+        /// <para>Associates parameter sets with a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After creating a parameter set, you need to associate it with a resource. Valid values for the resource type:</para>
+        /// <para>After you create a parameter set, you must associate it with a resource. Valid values for the resource type:</para>
         /// <list type="bullet">
         /// <item><description>Module: template</description></item>
         /// <item><description>ModuleVersion: template version</description></item>
-        /// <item><description>Task: node.</description></item>
+        /// <item><description>Task: task.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -873,16 +876,16 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates parameter sets.</para>
+        /// <para>Associates parameter sets with a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After creating a parameter set, you need to associate it with a resource. Valid values for the resource type:</para>
+        /// <para>After you create a parameter set, you must associate it with a resource. Valid values for the resource type:</para>
         /// <list type="bullet">
         /// <item><description>Module: template</description></item>
         /// <item><description>ModuleVersion: template version</description></item>
-        /// <item><description>Task: node.</description></item>
+        /// <item><description>Task: task.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -907,7 +910,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -958,7 +961,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1009,7 +1012,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1033,7 +1036,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1521,7 +1524,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1584,7 +1587,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1647,7 +1650,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1671,7 +1674,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1690,12 +1693,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Terraform template. Multiple source methods are supported, such as OSS import, Registry import, file upload, and online editing.</para>
+        /// <para>Creates a Terraform template by using various source methods such as OSS import, Registry import, file upload, and online editing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit for a single user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1773,12 +1776,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Terraform template. Multiple source methods are supported, such as OSS import, Registry import, file upload, and online editing.</para>
+        /// <para>Creates a Terraform template by using various source methods such as OSS import, Registry import, file upload, and online editing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit for a single user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1856,12 +1859,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Terraform template. Multiple source methods are supported, such as OSS import, Registry import, file upload, and online editing.</para>
+        /// <para>Creates a Terraform template by using various source methods such as OSS import, Registry import, file upload, and online editing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit for a single user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1880,12 +1883,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Terraform template. Multiple source methods are supported, such as OSS import, Registry import, file upload, and online editing.</para>
+        /// <para>Creates a Terraform template by using various source methods such as OSS import, Registry import, file upload, and online editing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit for a single user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1909,9 +1912,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use the <c>clientToken</c> parameter to ensure idempotence of the request and prevent duplicate submissions caused by network retries.</description></item>
+        /// <item><description>Use the <c>clientToken</c> parameter to ensure the idempotence of the request and prevent duplicate submissions caused by network retries.</description></item>
         /// <item><description>Use semantic versioning (such as <c>v1.0.0</c>).</description></item>
         /// </list>
         /// </description>
@@ -1972,9 +1975,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use the <c>clientToken</c> parameter to ensure idempotence of the request and prevent duplicate submissions caused by network retries.</description></item>
+        /// <item><description>Use the <c>clientToken</c> parameter to ensure the idempotence of the request and prevent duplicate submissions caused by network retries.</description></item>
         /// <item><description>Use semantic versioning (such as <c>v1.0.0</c>).</description></item>
         /// </list>
         /// </description>
@@ -2035,9 +2038,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use the <c>clientToken</c> parameter to ensure idempotence of the request and prevent duplicate submissions caused by network retries.</description></item>
+        /// <item><description>Use the <c>clientToken</c> parameter to ensure the idempotence of the request and prevent duplicate submissions caused by network retries.</description></item>
         /// <item><description>Use semantic versioning (such as <c>v1.0.0</c>).</description></item>
         /// </list>
         /// </description>
@@ -2063,9 +2066,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Use the <c>clientToken</c> parameter to ensure idempotence of the request and prevent duplicate submissions caused by network retries.</description></item>
+        /// <item><description>Use the <c>clientToken</c> parameter to ensure the idempotence of the request and prevent duplicate submissions caused by network retries.</description></item>
         /// <item><description>Use semantic versioning (such as <c>v1.0.0</c>).</description></item>
         /// </list>
         /// </description>
@@ -2439,7 +2442,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Per-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2514,7 +2517,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Per-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2589,7 +2592,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Per-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2613,7 +2616,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Per-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2637,7 +2640,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>Rate limit per user: 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2704,7 +2707,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>Rate limit per user: 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2771,7 +2774,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>Rate limit per user: 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2795,7 +2798,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>Rate limit per user: 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2819,7 +2822,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2906,7 +2909,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2993,7 +2996,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3017,7 +3020,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3036,7 +3039,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource stack and triggers deployment.</para>
+        /// <para>Creates a stack and triggers a deployment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3076,6 +3079,10 @@ namespace AlibabaCloud.SDK.IaCService20210806
             {
                 body["ramRole"] = request.RamRole;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkipPropertyValidation))
+            {
+                body["skipPropertyValidation"] = request.SkipPropertyValidation;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 body["source"] = request.Source;
@@ -3110,7 +3117,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource stack and triggers deployment.</para>
+        /// <para>Creates a stack and triggers a deployment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3150,6 +3157,10 @@ namespace AlibabaCloud.SDK.IaCService20210806
             {
                 body["ramRole"] = request.RamRole;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkipPropertyValidation))
+            {
+                body["skipPropertyValidation"] = request.SkipPropertyValidation;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 body["source"] = request.Source;
@@ -3184,7 +3195,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource stack and triggers deployment.</para>
+        /// <para>Creates a stack and triggers a deployment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3203,7 +3214,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource stack and triggers deployment.</para>
+        /// <para>Creates a stack and triggers a deployment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3516,7 +3527,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node from a resource import result.</para>
+        /// <para>Creates a task from a resource import result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3574,7 +3585,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node from a resource import result.</para>
+        /// <para>Creates a task from a resource import result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3632,7 +3643,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node from a resource import result.</para>
+        /// <para>Creates a task from a resource import result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3651,7 +3662,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node from a resource import result.</para>
+        /// <para>Creates a task from a resource import result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3670,7 +3681,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a bias detection configuration.</para>
+        /// <para>Deletes the bias detection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3710,7 +3721,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a bias detection configuration.</para>
+        /// <para>Deletes the bias detection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3750,7 +3761,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a bias detection configuration.</para>
+        /// <para>Deletes the bias detection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3769,7 +3780,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a bias detection configuration.</para>
+        /// <para>Deletes the bias detection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3911,10 +3922,10 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation deletes a specified template.</description></item>
-        /// <item><description>Deletion is irreversible. Proceed with caution.</description></item>
+        /// <item><description>The deletion operation is irreversible. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3960,10 +3971,10 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation deletes a specified template.</description></item>
-        /// <item><description>Deletion is irreversible. Proceed with caution.</description></item>
+        /// <item><description>The deletion operation is irreversible. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4009,10 +4020,10 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation deletes a specified template.</description></item>
-        /// <item><description>Deletion is irreversible. Proceed with caution.</description></item>
+        /// <item><description>The deletion operation is irreversible. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4037,10 +4048,10 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation deletes a specified template.</description></item>
-        /// <item><description>Deletion is irreversible. Proceed with caution.</description></item>
+        /// <item><description>The deletion operation is irreversible. Proceed with caution.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4060,12 +4071,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified parameter set by parameter set ID.</para>
+        /// <para>Deletes a specified parameter set by its ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a specified parameter set.</para>
+        /// <para>Deletes a parameter set.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4105,12 +4116,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified parameter set by parameter set ID.</para>
+        /// <para>Deletes a specified parameter set by its ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a specified parameter set.</para>
+        /// <para>Deletes a parameter set.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4150,12 +4161,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified parameter set by parameter set ID.</para>
+        /// <para>Deletes a specified parameter set by its ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a specified parameter set.</para>
+        /// <para>Deletes a parameter set.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4174,12 +4185,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a specified parameter set by parameter set ID.</para>
+        /// <para>Deletes a specified parameter set by its ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a specified parameter set.</para>
+        /// <para>Deletes a parameter set.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4321,7 +4332,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4366,7 +4377,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4411,7 +4422,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4435,7 +4446,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4454,12 +4465,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Registry template version.</para>
+        /// <para>Deletes a registry template version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>Rate limit per user: 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4499,12 +4510,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Registry template version.</para>
+        /// <para>Deletes a registry template version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>Rate limit per user: 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4544,12 +4555,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Registry template version.</para>
+        /// <para>Deletes a registry template version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>Rate limit per user: 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4568,12 +4579,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Registry template version.</para>
+        /// <para>Deletes a registry template version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>Rate limit per user: 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4597,7 +4608,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4642,7 +4653,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4687,7 +4698,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4711,7 +4722,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4735,7 +4746,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The call frequency per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4780,7 +4791,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The call frequency per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4825,7 +4836,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The call frequency per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4849,7 +4860,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The call frequency per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4998,13 +5009,13 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a node.</para>
+        /// <para>Deletes a task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.
-        /// Deletes a node. If the node has resources that have not been destroyed, the deletion is not allowed.</para>
+        /// <para>Rate limit per user: 100 calls per second.
+        /// Deletes a task. If the task has unreleased resources, it cannot be deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5050,13 +5061,13 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a node.</para>
+        /// <para>Deletes a task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.
-        /// Deletes a node. If the node has resources that have not been destroyed, the deletion is not allowed.</para>
+        /// <para>Rate limit per user: 100 calls per second.
+        /// Deletes a task. If the task has unreleased resources, it cannot be deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5102,13 +5113,13 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a node.</para>
+        /// <para>Deletes a task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.
-        /// Deletes a node. If the node has resources that have not been destroyed, the deletion is not allowed.</para>
+        /// <para>Rate limit per user: 100 calls per second.
+        /// Deletes a task. If the task has unreleased resources, it cannot be deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5127,13 +5138,13 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a node.</para>
+        /// <para>Deletes a task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.
-        /// Deletes a node. If the node has resources that have not been destroyed, the deletion is not allowed.</para>
+        /// <para>Rate limit per user: 100 calls per second.
+        /// Deletes a task. If the task has unreleased resources, it cannot be deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5157,7 +5168,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to perform drift detection on the state files of resource orchestration tasks and stack tasks in the automated service desk.</para>
+        /// <para>This API is primarily used to perform drift detection on the state files of resource orchestration tasks and stack tasks on the automated service desk.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5216,7 +5227,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to perform drift detection on the state files of resource orchestration tasks and stack tasks in the automated service desk.</para>
+        /// <para>This API is primarily used to perform drift detection on the state files of resource orchestration tasks and stack tasks on the automated service desk.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5275,7 +5286,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to perform drift detection on the state files of resource orchestration tasks and stack tasks in the automated service desk.</para>
+        /// <para>This API is primarily used to perform drift detection on the state files of resource orchestration tasks and stack tasks on the automated service desk.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5299,7 +5310,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to perform drift detection on the state files of resource orchestration tasks and stack tasks in the automated service desk.</para>
+        /// <para>This API is primarily used to perform drift detection on the state files of resource orchestration tasks and stack tasks on the automated service desk.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5464,7 +5475,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Dissociates a resource group.</para>
+        /// <para>Dissociates resources from a group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5518,7 +5529,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Dissociates a resource group.</para>
+        /// <para>Dissociates resources from a group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5572,7 +5583,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Dissociates a resource group.</para>
+        /// <para>Dissociates resources from a group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5591,7 +5602,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Dissociates a resource group.</para>
+        /// <para>Dissociates resources from a group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5610,7 +5621,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Dissociates a parameter set from other resources.</para>
+        /// <para>Dissociates parameter sets from other resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5664,7 +5675,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Dissociates a parameter set from other resources.</para>
+        /// <para>Dissociates parameter sets from other resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5718,7 +5729,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Dissociates a parameter set from other resources.</para>
+        /// <para>Dissociates parameter sets from other resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5737,7 +5748,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Dissociates a parameter set from other resources.</para>
+        /// <para>Dissociates parameter sets from other resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5756,12 +5767,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a Module officially provided by Alibaba Cloud Terraform.</para>
+        /// <para>Executes an official Alibaba Cloud Terraform module.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation is used to execute Terraform Module code to create or update cloud resources. Before using this API operation, make sure that all required authentication information is correctly configured and that the Terraform code corresponding to the Module meets the expected functional requirements.</para>
+        /// <para>This API is primarily used to execute Terraform module code to create or update cloud resources. Before using this API, ensure that all necessary authentication information is correctly configured and that the Terraform code for the module meets the expected functional requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5811,12 +5822,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a Module officially provided by Alibaba Cloud Terraform.</para>
+        /// <para>Executes an official Alibaba Cloud Terraform module.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation is used to execute Terraform Module code to create or update cloud resources. Before using this API operation, make sure that all required authentication information is correctly configured and that the Terraform code corresponding to the Module meets the expected functional requirements.</para>
+        /// <para>This API is primarily used to execute Terraform module code to create or update cloud resources. Before using this API, ensure that all necessary authentication information is correctly configured and that the Terraform code for the module meets the expected functional requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5866,12 +5877,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a Module officially provided by Alibaba Cloud Terraform.</para>
+        /// <para>Executes an official Alibaba Cloud Terraform module.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation is used to execute Terraform Module code to create or update cloud resources. Before using this API operation, make sure that all required authentication information is correctly configured and that the Terraform code corresponding to the Module meets the expected functional requirements.</para>
+        /// <para>This API is primarily used to execute Terraform module code to create or update cloud resources. Before using this API, ensure that all necessary authentication information is correctly configured and that the Terraform code for the module meets the expected functional requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5890,12 +5901,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a Module officially provided by Alibaba Cloud Terraform.</para>
+        /// <para>Executes an official Alibaba Cloud Terraform module.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation is used to execute Terraform Module code to create or update cloud resources. Before using this API operation, make sure that all required authentication information is correctly configured and that the Terraform code corresponding to the Module meets the expected functional requirements.</para>
+        /// <para>This API is primarily used to execute Terraform module code to create or update cloud resources. Before using this API, ensure that all necessary authentication information is correctly configured and that the Terraform code for the module meets the expected functional requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5914,12 +5925,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a resource export task.</para>
+        /// <para>Executes a resource export task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5965,12 +5976,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a resource export task.</para>
+        /// <para>Executes a resource export task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6016,12 +6027,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a resource export task.</para>
+        /// <para>Executes a resource export task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6040,12 +6051,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a resource export task.</para>
+        /// <para>Executes a resource export task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6064,13 +6075,13 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes TerraformApply.</para>
+        /// <para>Executes Terraform Apply.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Executes the Terraform Apply command to create or update cloud resources based on the provided Terraform code. This API can handle complex scenarios such as operations that depend on a previous state.
-        /// Before calling this API, ensure that all required authentication information is properly configured and that the Terraform code meets the expected functional requirements.</para>
+        /// <para>This API executes the Terraform Apply command to create or update cloud resources by using the provided Terraform code. It handles complex scenarios, such as operations that depend on the previous state.
+        /// Before you use this API, ensure that all required authentication information is correctly configured and the Terraform code meets your functional requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6124,13 +6135,13 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes TerraformApply.</para>
+        /// <para>Executes Terraform Apply.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Executes the Terraform Apply command to create or update cloud resources based on the provided Terraform code. This API can handle complex scenarios such as operations that depend on a previous state.
-        /// Before calling this API, ensure that all required authentication information is properly configured and that the Terraform code meets the expected functional requirements.</para>
+        /// <para>This API executes the Terraform Apply command to create or update cloud resources by using the provided Terraform code. It handles complex scenarios, such as operations that depend on the previous state.
+        /// Before you use this API, ensure that all required authentication information is correctly configured and the Terraform code meets your functional requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6184,13 +6195,13 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes TerraformApply.</para>
+        /// <para>Executes Terraform Apply.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Executes the Terraform Apply command to create or update cloud resources based on the provided Terraform code. This API can handle complex scenarios such as operations that depend on a previous state.
-        /// Before calling this API, ensure that all required authentication information is properly configured and that the Terraform code meets the expected functional requirements.</para>
+        /// <para>This API executes the Terraform Apply command to create or update cloud resources by using the provided Terraform code. It handles complex scenarios, such as operations that depend on the previous state.
+        /// Before you use this API, ensure that all required authentication information is correctly configured and the Terraform code meets your functional requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6209,13 +6220,13 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes TerraformApply.</para>
+        /// <para>Executes Terraform Apply.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Executes the Terraform Apply command to create or update cloud resources based on the provided Terraform code. This API can handle complex scenarios such as operations that depend on a previous state.
-        /// Before calling this API, ensure that all required authentication information is properly configured and that the Terraform code meets the expected functional requirements.</para>
+        /// <para>This API executes the Terraform Apply command to create or update cloud resources by using the provided Terraform code. It handles complex scenarios, such as operations that depend on the previous state.
+        /// Before you use this API, ensure that all required authentication information is correctly configured and the Terraform code meets your functional requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6234,12 +6245,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes Terraform Destroy.</para>
+        /// <para>Executes the Terraform destroy command.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Executes the Terraform Destroy command to destroy resources created by Terraform.</para>
+        /// <para>Executes the Terraform destroy command to destroy resources created by using Terraform.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6289,12 +6300,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes Terraform Destroy.</para>
+        /// <para>Executes the Terraform destroy command.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Executes the Terraform Destroy command to destroy resources created by Terraform.</para>
+        /// <para>Executes the Terraform destroy command to destroy resources created by using Terraform.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6344,12 +6355,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes Terraform Destroy.</para>
+        /// <para>Executes the Terraform destroy command.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Executes the Terraform Destroy command to destroy resources created by Terraform.</para>
+        /// <para>Executes the Terraform destroy command to destroy resources created by using Terraform.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6368,12 +6379,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes Terraform Destroy.</para>
+        /// <para>Executes the Terraform destroy command.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Executes the Terraform Destroy command to destroy resources created by Terraform.</para>
+        /// <para>Executes the Terraform destroy command to destroy resources created by using Terraform.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6397,8 +6408,8 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Executes a Terraform Plan command by using the provided Terraform code to create or update cloud resources. This API operation can handle complex scenarios such as operations that depend on a previous state.
-        /// Before calling this API operation, ensure that all required authentication information is properly configured and that the Terraform code meets the expected functional requirements.</para>
+        /// <para>This API executes the Terraform plan command to create or update cloud resources based on the provided Terraform code. It can also handle complex scenarios, such as operations that depend on the previous state.
+        /// Before you call this API, ensure that all required authentication information is correctly configured and that the Terraform code meets your functional requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6457,8 +6468,8 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Executes a Terraform Plan command by using the provided Terraform code to create or update cloud resources. This API operation can handle complex scenarios such as operations that depend on a previous state.
-        /// Before calling this API operation, ensure that all required authentication information is properly configured and that the Terraform code meets the expected functional requirements.</para>
+        /// <para>This API executes the Terraform plan command to create or update cloud resources based on the provided Terraform code. It can also handle complex scenarios, such as operations that depend on the previous state.
+        /// Before you call this API, ensure that all required authentication information is correctly configured and that the Terraform code meets your functional requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6517,8 +6528,8 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Executes a Terraform Plan command by using the provided Terraform code to create or update cloud resources. This API operation can handle complex scenarios such as operations that depend on a previous state.
-        /// Before calling this API operation, ensure that all required authentication information is properly configured and that the Terraform code meets the expected functional requirements.</para>
+        /// <para>This API executes the Terraform plan command to create or update cloud resources based on the provided Terraform code. It can also handle complex scenarios, such as operations that depend on the previous state.
+        /// Before you call this API, ensure that all required authentication information is correctly configured and that the Terraform code meets your functional requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6542,8 +6553,8 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Executes a Terraform Plan command by using the provided Terraform code to create or update cloud resources. This API operation can handle complex scenarios such as operations that depend on a previous state.
-        /// Before calling this API operation, ensure that all required authentication information is properly configured and that the Terraform code meets the expected functional requirements.</para>
+        /// <para>This API executes the Terraform plan command to create or update cloud resources based on the provided Terraform code. It can also handle complex scenarios, such as operations that depend on the previous state.
+        /// Before you call this API, ensure that all required authentication information is correctly configured and that the Terraform code meets your functional requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6976,12 +6987,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the result of a Terraform run.</para>
+        /// <para>Retrieves the Terraform execution results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the result of a Terraform run.</para>
+        /// <para>Retrieves the Terraform execution results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7021,12 +7032,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the result of a Terraform run.</para>
+        /// <para>Retrieves the Terraform execution results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the result of a Terraform run.</para>
+        /// <para>Retrieves the Terraform execution results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7066,12 +7077,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the result of a Terraform run.</para>
+        /// <para>Retrieves the Terraform execution results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the result of a Terraform run.</para>
+        /// <para>Retrieves the Terraform execution results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7090,12 +7101,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the result of a Terraform run.</para>
+        /// <para>Retrieves the Terraform execution results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the result of a Terraform run.</para>
+        /// <para>Retrieves the Terraform execution results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7237,7 +7248,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>Rate limit per user: 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7288,7 +7299,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>Rate limit per user: 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7339,7 +7350,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>Rate limit per user: 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7363,7 +7374,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>Rate limit per user: 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7387,8 +7398,8 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>You can call this operation to query the details of a specified template, including but not limited to the template name, description, source, status, and latest version. You must specify the template ID and include authentication information in the request.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation retrieves the details of a specified template, including but not limited to the template name, description, source, status, and latest version. The request must include the template ID and authentication information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7433,8 +7444,8 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>You can call this operation to query the details of a specified template, including but not limited to the template name, description, source, status, and latest version. You must specify the template ID and include authentication information in the request.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation retrieves the details of a specified template, including but not limited to the template name, description, source, status, and latest version. The request must include the template ID and authentication information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7479,8 +7490,8 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>You can call this operation to query the details of a specified template, including but not limited to the template name, description, source, status, and latest version. You must specify the template ID and include authentication information in the request.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation retrieves the details of a specified template, including but not limited to the template name, description, source, status, and latest version. The request must include the template ID and authentication information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7504,8 +7515,8 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>You can call this operation to query the details of a specified template, including but not limited to the template name, description, source, status, and latest version. You must specify the template ID and include authentication information in the request.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation retrieves the details of a specified template, including but not limited to the template name, description, source, status, and latest version. The request must include the template ID and authentication information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7529,8 +7540,8 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>You can call this operation to query the details of a specific version of a specified template, including the version number, description, and release time. Make sure that the template ID and version number are correct.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation retrieves the details of a specific version of a specified template, including the version number, description, and release time. Make sure that the provided template ID and version number are correct.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7575,8 +7586,8 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>You can call this operation to query the details of a specific version of a specified template, including the version number, description, and release time. Make sure that the template ID and version number are correct.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation retrieves the details of a specific version of a specified template, including the version number, description, and release time. Make sure that the provided template ID and version number are correct.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7621,8 +7632,8 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>You can call this operation to query the details of a specific version of a specified template, including the version number, description, and release time. Make sure that the template ID and version number are correct.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation retrieves the details of a specific version of a specified template, including the version number, description, and release time. Make sure that the provided template ID and version number are correct.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7646,8 +7657,8 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>You can call this operation to query the details of a specific version of a specified template, including the version number, description, and release time. Make sure that the template ID and version number are correct.</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation retrieves the details of a specific version of a specified template, including the version number, description, and release time. Make sure that the provided template ID and version number are correct.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7942,7 +7953,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the resource documentation of a Terraform provider.</para>
+        /// <para>Retrieves the Terraform provider resource document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7992,7 +8003,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the resource documentation of a Terraform provider.</para>
+        /// <para>Retrieves the Terraform provider resource document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8042,7 +8053,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the resource documentation of a Terraform provider.</para>
+        /// <para>Retrieves the Terraform provider resource document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8061,7 +8072,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the resource documentation of a Terraform provider.</para>
+        /// <para>Retrieves the Terraform provider resource document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8080,12 +8091,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a Registry module.</para>
+        /// <para>Queries a Registry template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 200 calls per second.</para>
+        /// <para>The rate limit per user is 200 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8125,12 +8136,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a Registry module.</para>
+        /// <para>Queries a Registry template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 200 calls per second.</para>
+        /// <para>The rate limit per user is 200 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8170,12 +8181,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a Registry module.</para>
+        /// <para>Queries a Registry template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 200 calls per second.</para>
+        /// <para>The rate limit per user is 200 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8194,12 +8205,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a Registry module.</para>
+        /// <para>Queries a Registry template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 200 calls per second.</para>
+        /// <para>The rate limit per user is 200 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8218,12 +8229,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a Registry template version.</para>
+        /// <para>Queries the registry template version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 200 calls per second.</para>
+        /// <para>The rate limit per user is 200 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8263,12 +8274,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a Registry template version.</para>
+        /// <para>Queries the registry template version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 200 calls per second.</para>
+        /// <para>The rate limit per user is 200 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8308,12 +8319,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a Registry template version.</para>
+        /// <para>Queries the registry template version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 200 calls per second.</para>
+        /// <para>The rate limit per user is 200 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8332,12 +8343,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a Registry template version.</para>
+        /// <para>Queries the registry template version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 200 calls per second.</para>
+        /// <para>The rate limit per user is 200 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8356,12 +8367,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a workspace.</para>
+        /// <para>Retrieves a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 200 calls per second.</para>
+        /// <para>The rate limit per user is 200 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8401,12 +8412,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a workspace.</para>
+        /// <para>Retrieves a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 200 calls per second.</para>
+        /// <para>The rate limit per user is 200 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8446,12 +8457,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a workspace.</para>
+        /// <para>Retrieves a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 200 calls per second.</para>
+        /// <para>The rate limit per user is 200 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8470,12 +8481,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a workspace.</para>
+        /// <para>Retrieves a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 200 calls per second.</para>
+        /// <para>The rate limit per user is 200 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8499,7 +8510,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8550,7 +8561,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8601,7 +8612,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8625,7 +8636,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8813,6 +8824,11 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>Queries a stack.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the results of a Terraform run.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetStackRequest
         /// </param>
@@ -8852,6 +8868,11 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <summary>
         /// <para>Queries a stack.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the results of a Terraform run.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetStackRequest
@@ -8893,6 +8914,11 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>Queries a stack.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the results of a Terraform run.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetStackRequest
         /// </param>
@@ -8912,6 +8938,11 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>Queries a stack.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the results of a Terraform run.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetStackRequest
         /// </param>
@@ -8928,7 +8959,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of deployments for a stack.</para>
+        /// <para>Queries the deployments of a stack.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8994,7 +9025,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of deployments for a stack.</para>
+        /// <para>Queries the deployments of a stack.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9060,7 +9091,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of deployments for a stack.</para>
+        /// <para>Queries the deployments of a stack.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9079,7 +9110,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of deployments for a stack.</para>
+        /// <para>Queries the deployments of a stack.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9098,7 +9129,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the trigger result of a Stack.</para>
+        /// <para>Retrieves the stack trigger results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9138,7 +9169,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the trigger result of a Stack.</para>
+        /// <para>Retrieves the stack trigger results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9178,7 +9209,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the trigger result of a Stack.</para>
+        /// <para>Retrieves the stack trigger results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9197,7 +9228,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the trigger result of a Stack.</para>
+        /// <para>Retrieves the stack trigger results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9354,12 +9385,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detection result of a state file.</para>
+        /// <para>Retrieves the state file detection results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to retrieve the detection results of state files for resource orchestration tasks and stack tasks on the automation service desk.</para>
+        /// <para>Retrieves the detection results of state files for resource orchestration tasks and stack tasks on the automated service desk.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9399,12 +9430,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detection result of a state file.</para>
+        /// <para>Retrieves the state file detection results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to retrieve the detection results of state files for resource orchestration tasks and stack tasks on the automation service desk.</para>
+        /// <para>Retrieves the detection results of state files for resource orchestration tasks and stack tasks on the automated service desk.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9444,12 +9475,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detection result of a state file.</para>
+        /// <para>Retrieves the state file detection results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to retrieve the detection results of state files for resource orchestration tasks and stack tasks on the automation service desk.</para>
+        /// <para>Retrieves the detection results of state files for resource orchestration tasks and stack tasks on the automated service desk.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9468,12 +9499,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detection result of a state file.</para>
+        /// <para>Retrieves the state file detection results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to retrieve the detection results of state files for resource orchestration tasks and stack tasks on the automation service desk.</para>
+        /// <para>Retrieves the detection results of state files for resource orchestration tasks and stack tasks on the automated service desk.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9784,22 +9815,22 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of official Terraform Module examples.</para>
+        /// <para>Retrieves the list of official Terraform module examples.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the example information of Terraform Modules officially provided by Alibaba Cloud.
-        /// You can use the <c>maxResults</c> parameter to adjust the maximum number of entries to return.</para>
+        /// <para>This operation queries example information for Terraform modules officially provided by Alibaba Cloud.
+        /// You can specify the maxResults parameter to adjust the maximum number of returned entries.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>nextToken</c> is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <c>nextToken</c> parameter of the ListExplorerRegistryModuleExamples operation to the <c>nextToken</c> value returned in the previous response. If the <c>NextToken</c> parameter is not specified, the first page of data is returned by default.</description></item>
-        /// <item><description>You can use keyword, namespaceName, moduleName, moduleVersion, and exampleName as conditional filter settings to narrow down the search scope. Multiple filter conditions have a logical <c>AND</c> relationship, and only resources that meet all filter conditions are returned.<list type="bullet">
-        /// <item><description>keyword: optional. Searches by keyword and supports fuzzy match on exampleName. For example, if keyword is set to ecs, module examples whose names contain ecs are returned.</description></item>
-        /// <item><description>namespaceName: optional. Filters module examples by a specific workspace. For example, if namespaceName is set to alibaba, module examples in the alibaba workspace are returned.</description></item>
-        /// <item><description>moduleName: optional. Filters module examples by a specific module name. For example, if moduleName is set to ecs, module examples whose module name is ecs are returned.</description></item>
-        /// <item><description>moduleVersion: optional. Filters module examples by a specific module version. For example, if moduleVersion is set to 1.0.0, module examples whose module version is 1.0.0 are returned.</description></item>
-        /// <item><description>exampleName: optional. Filters module examples by a specific example name. For example, if exampleName is set to ecs, module examples whose example name is ecs are returned.
-        /// The response contains the request ID, total number of entries, data of the current page, and pagination information, which facilitates processing of query results.</description></item>
+        /// <item><description>If nextToken is not present in the response, no more data is available. Otherwise, more data is available. To query the next page, set the nextToken parameter of the ListExplorerRegistryModuleExamples operation to the nextToken value returned in the previous response. If the NextToken parameter is not specified, the first page of data is returned by default.</description></item>
+        /// <item><description>You can set keyword, namespaceName, moduleName, moduleVersion, and exampleName as filter conditions to narrow the search scope. Multiple filter conditions are connected by the logical AND operator. Only resources that meet all filter conditions are returned.<list type="bullet">
+        /// <item><description>keyword: Optional. Keyword search. Supports fuzzy matching for exampleName. For example, if keyword is set to ecs, the system queries module examples whose names contain ecs.</description></item>
+        /// <item><description>namespaceName: Optional. Filters module examples in a specific workspace. For example, if namespaceName is set to alibaba, the system queries module examples in the alibaba workspace.</description></item>
+        /// <item><description>moduleName: Optional. Filters module examples with a specific name. For example, if moduleName is set to ecs, the system queries module examples named ecs.</description></item>
+        /// <item><description>moduleVersion: Optional. Filters module examples of a specific version. For example, if moduleVersion is set to 1.0.0, the system queries module examples of version 1.0.0.</description></item>
+        /// <item><description>exampleName: Optional. Filters module examples with a specific example name. For example, if exampleName is set to ecs, the system queries module examples named ecs.
+        /// The response structure includes the request ID, total number of entries, current page data, and pagination information to facilitate processing the query results.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -9872,22 +9903,22 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of official Terraform Module examples.</para>
+        /// <para>Retrieves the list of official Terraform module examples.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the example information of Terraform Modules officially provided by Alibaba Cloud.
-        /// You can use the <c>maxResults</c> parameter to adjust the maximum number of entries to return.</para>
+        /// <para>This operation queries example information for Terraform modules officially provided by Alibaba Cloud.
+        /// You can specify the maxResults parameter to adjust the maximum number of returned entries.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>nextToken</c> is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <c>nextToken</c> parameter of the ListExplorerRegistryModuleExamples operation to the <c>nextToken</c> value returned in the previous response. If the <c>NextToken</c> parameter is not specified, the first page of data is returned by default.</description></item>
-        /// <item><description>You can use keyword, namespaceName, moduleName, moduleVersion, and exampleName as conditional filter settings to narrow down the search scope. Multiple filter conditions have a logical <c>AND</c> relationship, and only resources that meet all filter conditions are returned.<list type="bullet">
-        /// <item><description>keyword: optional. Searches by keyword and supports fuzzy match on exampleName. For example, if keyword is set to ecs, module examples whose names contain ecs are returned.</description></item>
-        /// <item><description>namespaceName: optional. Filters module examples by a specific workspace. For example, if namespaceName is set to alibaba, module examples in the alibaba workspace are returned.</description></item>
-        /// <item><description>moduleName: optional. Filters module examples by a specific module name. For example, if moduleName is set to ecs, module examples whose module name is ecs are returned.</description></item>
-        /// <item><description>moduleVersion: optional. Filters module examples by a specific module version. For example, if moduleVersion is set to 1.0.0, module examples whose module version is 1.0.0 are returned.</description></item>
-        /// <item><description>exampleName: optional. Filters module examples by a specific example name. For example, if exampleName is set to ecs, module examples whose example name is ecs are returned.
-        /// The response contains the request ID, total number of entries, data of the current page, and pagination information, which facilitates processing of query results.</description></item>
+        /// <item><description>If nextToken is not present in the response, no more data is available. Otherwise, more data is available. To query the next page, set the nextToken parameter of the ListExplorerRegistryModuleExamples operation to the nextToken value returned in the previous response. If the NextToken parameter is not specified, the first page of data is returned by default.</description></item>
+        /// <item><description>You can set keyword, namespaceName, moduleName, moduleVersion, and exampleName as filter conditions to narrow the search scope. Multiple filter conditions are connected by the logical AND operator. Only resources that meet all filter conditions are returned.<list type="bullet">
+        /// <item><description>keyword: Optional. Keyword search. Supports fuzzy matching for exampleName. For example, if keyword is set to ecs, the system queries module examples whose names contain ecs.</description></item>
+        /// <item><description>namespaceName: Optional. Filters module examples in a specific workspace. For example, if namespaceName is set to alibaba, the system queries module examples in the alibaba workspace.</description></item>
+        /// <item><description>moduleName: Optional. Filters module examples with a specific name. For example, if moduleName is set to ecs, the system queries module examples named ecs.</description></item>
+        /// <item><description>moduleVersion: Optional. Filters module examples of a specific version. For example, if moduleVersion is set to 1.0.0, the system queries module examples of version 1.0.0.</description></item>
+        /// <item><description>exampleName: Optional. Filters module examples with a specific example name. For example, if exampleName is set to ecs, the system queries module examples named ecs.
+        /// The response structure includes the request ID, total number of entries, current page data, and pagination information to facilitate processing the query results.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -9960,22 +9991,22 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of official Terraform Module examples.</para>
+        /// <para>Retrieves the list of official Terraform module examples.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the example information of Terraform Modules officially provided by Alibaba Cloud.
-        /// You can use the <c>maxResults</c> parameter to adjust the maximum number of entries to return.</para>
+        /// <para>This operation queries example information for Terraform modules officially provided by Alibaba Cloud.
+        /// You can specify the maxResults parameter to adjust the maximum number of returned entries.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>nextToken</c> is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <c>nextToken</c> parameter of the ListExplorerRegistryModuleExamples operation to the <c>nextToken</c> value returned in the previous response. If the <c>NextToken</c> parameter is not specified, the first page of data is returned by default.</description></item>
-        /// <item><description>You can use keyword, namespaceName, moduleName, moduleVersion, and exampleName as conditional filter settings to narrow down the search scope. Multiple filter conditions have a logical <c>AND</c> relationship, and only resources that meet all filter conditions are returned.<list type="bullet">
-        /// <item><description>keyword: optional. Searches by keyword and supports fuzzy match on exampleName. For example, if keyword is set to ecs, module examples whose names contain ecs are returned.</description></item>
-        /// <item><description>namespaceName: optional. Filters module examples by a specific workspace. For example, if namespaceName is set to alibaba, module examples in the alibaba workspace are returned.</description></item>
-        /// <item><description>moduleName: optional. Filters module examples by a specific module name. For example, if moduleName is set to ecs, module examples whose module name is ecs are returned.</description></item>
-        /// <item><description>moduleVersion: optional. Filters module examples by a specific module version. For example, if moduleVersion is set to 1.0.0, module examples whose module version is 1.0.0 are returned.</description></item>
-        /// <item><description>exampleName: optional. Filters module examples by a specific example name. For example, if exampleName is set to ecs, module examples whose example name is ecs are returned.
-        /// The response contains the request ID, total number of entries, data of the current page, and pagination information, which facilitates processing of query results.</description></item>
+        /// <item><description>If nextToken is not present in the response, no more data is available. Otherwise, more data is available. To query the next page, set the nextToken parameter of the ListExplorerRegistryModuleExamples operation to the nextToken value returned in the previous response. If the NextToken parameter is not specified, the first page of data is returned by default.</description></item>
+        /// <item><description>You can set keyword, namespaceName, moduleName, moduleVersion, and exampleName as filter conditions to narrow the search scope. Multiple filter conditions are connected by the logical AND operator. Only resources that meet all filter conditions are returned.<list type="bullet">
+        /// <item><description>keyword: Optional. Keyword search. Supports fuzzy matching for exampleName. For example, if keyword is set to ecs, the system queries module examples whose names contain ecs.</description></item>
+        /// <item><description>namespaceName: Optional. Filters module examples in a specific workspace. For example, if namespaceName is set to alibaba, the system queries module examples in the alibaba workspace.</description></item>
+        /// <item><description>moduleName: Optional. Filters module examples with a specific name. For example, if moduleName is set to ecs, the system queries module examples named ecs.</description></item>
+        /// <item><description>moduleVersion: Optional. Filters module examples of a specific version. For example, if moduleVersion is set to 1.0.0, the system queries module examples of version 1.0.0.</description></item>
+        /// <item><description>exampleName: Optional. Filters module examples with a specific example name. For example, if exampleName is set to ecs, the system queries module examples named ecs.
+        /// The response structure includes the request ID, total number of entries, current page data, and pagination information to facilitate processing the query results.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -9997,22 +10028,22 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of official Terraform Module examples.</para>
+        /// <para>Retrieves the list of official Terraform module examples.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the example information of Terraform Modules officially provided by Alibaba Cloud.
-        /// You can use the <c>maxResults</c> parameter to adjust the maximum number of entries to return.</para>
+        /// <para>This operation queries example information for Terraform modules officially provided by Alibaba Cloud.
+        /// You can specify the maxResults parameter to adjust the maximum number of returned entries.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>nextToken</c> is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <c>nextToken</c> parameter of the ListExplorerRegistryModuleExamples operation to the <c>nextToken</c> value returned in the previous response. If the <c>NextToken</c> parameter is not specified, the first page of data is returned by default.</description></item>
-        /// <item><description>You can use keyword, namespaceName, moduleName, moduleVersion, and exampleName as conditional filter settings to narrow down the search scope. Multiple filter conditions have a logical <c>AND</c> relationship, and only resources that meet all filter conditions are returned.<list type="bullet">
-        /// <item><description>keyword: optional. Searches by keyword and supports fuzzy match on exampleName. For example, if keyword is set to ecs, module examples whose names contain ecs are returned.</description></item>
-        /// <item><description>namespaceName: optional. Filters module examples by a specific workspace. For example, if namespaceName is set to alibaba, module examples in the alibaba workspace are returned.</description></item>
-        /// <item><description>moduleName: optional. Filters module examples by a specific module name. For example, if moduleName is set to ecs, module examples whose module name is ecs are returned.</description></item>
-        /// <item><description>moduleVersion: optional. Filters module examples by a specific module version. For example, if moduleVersion is set to 1.0.0, module examples whose module version is 1.0.0 are returned.</description></item>
-        /// <item><description>exampleName: optional. Filters module examples by a specific example name. For example, if exampleName is set to ecs, module examples whose example name is ecs are returned.
-        /// The response contains the request ID, total number of entries, data of the current page, and pagination information, which facilitates processing of query results.</description></item>
+        /// <item><description>If nextToken is not present in the response, no more data is available. Otherwise, more data is available. To query the next page, set the nextToken parameter of the ListExplorerRegistryModuleExamples operation to the nextToken value returned in the previous response. If the NextToken parameter is not specified, the first page of data is returned by default.</description></item>
+        /// <item><description>You can set keyword, namespaceName, moduleName, moduleVersion, and exampleName as filter conditions to narrow the search scope. Multiple filter conditions are connected by the logical AND operator. Only resources that meet all filter conditions are returned.<list type="bullet">
+        /// <item><description>keyword: Optional. Keyword search. Supports fuzzy matching for exampleName. For example, if keyword is set to ecs, the system queries module examples whose names contain ecs.</description></item>
+        /// <item><description>namespaceName: Optional. Filters module examples in a specific workspace. For example, if namespaceName is set to alibaba, the system queries module examples in the alibaba workspace.</description></item>
+        /// <item><description>moduleName: Optional. Filters module examples with a specific name. For example, if moduleName is set to ecs, the system queries module examples named ecs.</description></item>
+        /// <item><description>moduleVersion: Optional. Filters module examples of a specific version. For example, if moduleVersion is set to 1.0.0, the system queries module examples of version 1.0.0.</description></item>
+        /// <item><description>exampleName: Optional. Filters module examples with a specific example name. For example, if exampleName is set to ecs, the system queries module examples named ecs.
+        /// The response structure includes the request ID, total number of entries, current page data, and pagination information to facilitate processing the query results.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -10034,21 +10065,21 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the version information of official Terraform modules provided by Alibaba Cloud.</para>
+        /// <para>Lists the version information of modules officially provided by Alibaba Cloud Terraform.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the version information of official Terraform modules provided by Alibaba Cloud.
-        /// You can use the <c>maxResults</c> parameter to adjust the maximum number of entries to return.</para>
+        /// <para>This operation queries the version information of modules officially provided by Alibaba Cloud Terraform.
+        /// You can specify the maxResults parameter to adjust the maximum number of returned entries.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>nextToken</c> is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <c>nextToken</c> parameter of the ListExplorerRegistryModules operation to the <c>nextToken</c> value returned in the previous response. If the <c>NextToken</c> parameter is not specified, the first page of data is returned by default.</description></item>
-        /// <item><description>You can use keyword, namespaceName, moduleName, and moduleVersion as conditional filter Settings to narrow the search scope. Multiple filter conditions have a logical <c>AND</c> relationship. Only resources that meet all filter conditions are returned.<list type="bullet">
-        /// <item><description>keyword: optional. Performs a fuzzy match on the module name. For example, if keyword is set to ecs, modules whose names contain ecs are returned.</description></item>
-        /// <item><description>namespaceName: optional. Filters modules by a specific workspace. For example, if namespaceName is set to alibaba, modules whose workspace is alibaba are returned. When moduleName is specified, namespaceName must also be specified. You can call the ListExplorerRegistryModule operation to obtain the namespaceName information.</description></item>
-        /// <item><description>moduleName: optional. Filters modules by a specific name. For example, if moduleName is set to ecs, modules whose name is ecs are returned.</description></item>
-        /// <item><description>moduleVersion: optional. Filters modules by a specific version. For example, if moduleVersion is set to 1.0.0, modules whose version is 1.0.0 are returned.
-        /// The response contains the request ID, total number of entries, data on the current page, and pagination information, which facilitates the processing of query results.</description></item>
+        /// <item><description>If nextToken is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the nextToken parameter of the ListExplorerRegistryModules operation to the nextToken value returned in the previous response. If the NextToken parameter is not specified, the first page of data is returned by default.</description></item>
+        /// <item><description>By using the Settings of keyword, namespaceName, moduleName, and moduleVersion as conditional filters, you can narrow down the search scope. Multiple conditional filters are connected by the logical AND operator. Only resources that meet all conditional filters are returned.<list type="bullet">
+        /// <item><description>keyword: optional. The keyword for fuzzy matching against the module name. For example, if you set keyword to ecs, the system queries modules whose names contain ecs.</description></item>
+        /// <item><description>namespaceName: optional. Supports filtering modules in a specific workspace. For example, if you set namespaceName to alibaba, the system queries modules whose workspace is alibaba. If you specify moduleName, you must also specify namespaceName. You can call the ListExplorerRegistryModule operation to obtain the namespaceName.</description></item>
+        /// <item><description>moduleName: optional. Supports filtering modules with a specific name. For example, if you set keyword to ecs, the system queries the module named ecs.</description></item>
+        /// <item><description>moduleVersion: optional. Supports filtering modules with a specific version. For example, if you set keyword to 1.0.0, the system queries modules whose version is 1.0.0.
+        /// The response structure includes the request ID, total number of entries, current page data, and pagination information to facilitate result processing.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -10117,21 +10148,21 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the version information of official Terraform modules provided by Alibaba Cloud.</para>
+        /// <para>Lists the version information of modules officially provided by Alibaba Cloud Terraform.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the version information of official Terraform modules provided by Alibaba Cloud.
-        /// You can use the <c>maxResults</c> parameter to adjust the maximum number of entries to return.</para>
+        /// <para>This operation queries the version information of modules officially provided by Alibaba Cloud Terraform.
+        /// You can specify the maxResults parameter to adjust the maximum number of returned entries.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>nextToken</c> is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <c>nextToken</c> parameter of the ListExplorerRegistryModules operation to the <c>nextToken</c> value returned in the previous response. If the <c>NextToken</c> parameter is not specified, the first page of data is returned by default.</description></item>
-        /// <item><description>You can use keyword, namespaceName, moduleName, and moduleVersion as conditional filter Settings to narrow the search scope. Multiple filter conditions have a logical <c>AND</c> relationship. Only resources that meet all filter conditions are returned.<list type="bullet">
-        /// <item><description>keyword: optional. Performs a fuzzy match on the module name. For example, if keyword is set to ecs, modules whose names contain ecs are returned.</description></item>
-        /// <item><description>namespaceName: optional. Filters modules by a specific workspace. For example, if namespaceName is set to alibaba, modules whose workspace is alibaba are returned. When moduleName is specified, namespaceName must also be specified. You can call the ListExplorerRegistryModule operation to obtain the namespaceName information.</description></item>
-        /// <item><description>moduleName: optional. Filters modules by a specific name. For example, if moduleName is set to ecs, modules whose name is ecs are returned.</description></item>
-        /// <item><description>moduleVersion: optional. Filters modules by a specific version. For example, if moduleVersion is set to 1.0.0, modules whose version is 1.0.0 are returned.
-        /// The response contains the request ID, total number of entries, data on the current page, and pagination information, which facilitates the processing of query results.</description></item>
+        /// <item><description>If nextToken is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the nextToken parameter of the ListExplorerRegistryModules operation to the nextToken value returned in the previous response. If the NextToken parameter is not specified, the first page of data is returned by default.</description></item>
+        /// <item><description>By using the Settings of keyword, namespaceName, moduleName, and moduleVersion as conditional filters, you can narrow down the search scope. Multiple conditional filters are connected by the logical AND operator. Only resources that meet all conditional filters are returned.<list type="bullet">
+        /// <item><description>keyword: optional. The keyword for fuzzy matching against the module name. For example, if you set keyword to ecs, the system queries modules whose names contain ecs.</description></item>
+        /// <item><description>namespaceName: optional. Supports filtering modules in a specific workspace. For example, if you set namespaceName to alibaba, the system queries modules whose workspace is alibaba. If you specify moduleName, you must also specify namespaceName. You can call the ListExplorerRegistryModule operation to obtain the namespaceName.</description></item>
+        /// <item><description>moduleName: optional. Supports filtering modules with a specific name. For example, if you set keyword to ecs, the system queries the module named ecs.</description></item>
+        /// <item><description>moduleVersion: optional. Supports filtering modules with a specific version. For example, if you set keyword to 1.0.0, the system queries modules whose version is 1.0.0.
+        /// The response structure includes the request ID, total number of entries, current page data, and pagination information to facilitate result processing.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -10200,21 +10231,21 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the version information of official Terraform modules provided by Alibaba Cloud.</para>
+        /// <para>Lists the version information of modules officially provided by Alibaba Cloud Terraform.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the version information of official Terraform modules provided by Alibaba Cloud.
-        /// You can use the <c>maxResults</c> parameter to adjust the maximum number of entries to return.</para>
+        /// <para>This operation queries the version information of modules officially provided by Alibaba Cloud Terraform.
+        /// You can specify the maxResults parameter to adjust the maximum number of returned entries.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>nextToken</c> is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <c>nextToken</c> parameter of the ListExplorerRegistryModules operation to the <c>nextToken</c> value returned in the previous response. If the <c>NextToken</c> parameter is not specified, the first page of data is returned by default.</description></item>
-        /// <item><description>You can use keyword, namespaceName, moduleName, and moduleVersion as conditional filter Settings to narrow the search scope. Multiple filter conditions have a logical <c>AND</c> relationship. Only resources that meet all filter conditions are returned.<list type="bullet">
-        /// <item><description>keyword: optional. Performs a fuzzy match on the module name. For example, if keyword is set to ecs, modules whose names contain ecs are returned.</description></item>
-        /// <item><description>namespaceName: optional. Filters modules by a specific workspace. For example, if namespaceName is set to alibaba, modules whose workspace is alibaba are returned. When moduleName is specified, namespaceName must also be specified. You can call the ListExplorerRegistryModule operation to obtain the namespaceName information.</description></item>
-        /// <item><description>moduleName: optional. Filters modules by a specific name. For example, if moduleName is set to ecs, modules whose name is ecs are returned.</description></item>
-        /// <item><description>moduleVersion: optional. Filters modules by a specific version. For example, if moduleVersion is set to 1.0.0, modules whose version is 1.0.0 are returned.
-        /// The response contains the request ID, total number of entries, data on the current page, and pagination information, which facilitates the processing of query results.</description></item>
+        /// <item><description>If nextToken is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the nextToken parameter of the ListExplorerRegistryModules operation to the nextToken value returned in the previous response. If the NextToken parameter is not specified, the first page of data is returned by default.</description></item>
+        /// <item><description>By using the Settings of keyword, namespaceName, moduleName, and moduleVersion as conditional filters, you can narrow down the search scope. Multiple conditional filters are connected by the logical AND operator. Only resources that meet all conditional filters are returned.<list type="bullet">
+        /// <item><description>keyword: optional. The keyword for fuzzy matching against the module name. For example, if you set keyword to ecs, the system queries modules whose names contain ecs.</description></item>
+        /// <item><description>namespaceName: optional. Supports filtering modules in a specific workspace. For example, if you set namespaceName to alibaba, the system queries modules whose workspace is alibaba. If you specify moduleName, you must also specify namespaceName. You can call the ListExplorerRegistryModule operation to obtain the namespaceName.</description></item>
+        /// <item><description>moduleName: optional. Supports filtering modules with a specific name. For example, if you set keyword to ecs, the system queries the module named ecs.</description></item>
+        /// <item><description>moduleVersion: optional. Supports filtering modules with a specific version. For example, if you set keyword to 1.0.0, the system queries modules whose version is 1.0.0.
+        /// The response structure includes the request ID, total number of entries, current page data, and pagination information to facilitate result processing.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -10236,21 +10267,21 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the version information of official Terraform modules provided by Alibaba Cloud.</para>
+        /// <para>Lists the version information of modules officially provided by Alibaba Cloud Terraform.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the version information of official Terraform modules provided by Alibaba Cloud.
-        /// You can use the <c>maxResults</c> parameter to adjust the maximum number of entries to return.</para>
+        /// <para>This operation queries the version information of modules officially provided by Alibaba Cloud Terraform.
+        /// You can specify the maxResults parameter to adjust the maximum number of returned entries.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>nextToken</c> is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <c>nextToken</c> parameter of the ListExplorerRegistryModules operation to the <c>nextToken</c> value returned in the previous response. If the <c>NextToken</c> parameter is not specified, the first page of data is returned by default.</description></item>
-        /// <item><description>You can use keyword, namespaceName, moduleName, and moduleVersion as conditional filter Settings to narrow the search scope. Multiple filter conditions have a logical <c>AND</c> relationship. Only resources that meet all filter conditions are returned.<list type="bullet">
-        /// <item><description>keyword: optional. Performs a fuzzy match on the module name. For example, if keyword is set to ecs, modules whose names contain ecs are returned.</description></item>
-        /// <item><description>namespaceName: optional. Filters modules by a specific workspace. For example, if namespaceName is set to alibaba, modules whose workspace is alibaba are returned. When moduleName is specified, namespaceName must also be specified. You can call the ListExplorerRegistryModule operation to obtain the namespaceName information.</description></item>
-        /// <item><description>moduleName: optional. Filters modules by a specific name. For example, if moduleName is set to ecs, modules whose name is ecs are returned.</description></item>
-        /// <item><description>moduleVersion: optional. Filters modules by a specific version. For example, if moduleVersion is set to 1.0.0, modules whose version is 1.0.0 are returned.
-        /// The response contains the request ID, total number of entries, data on the current page, and pagination information, which facilitates the processing of query results.</description></item>
+        /// <item><description>If nextToken is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the nextToken parameter of the ListExplorerRegistryModules operation to the nextToken value returned in the previous response. If the NextToken parameter is not specified, the first page of data is returned by default.</description></item>
+        /// <item><description>By using the Settings of keyword, namespaceName, moduleName, and moduleVersion as conditional filters, you can narrow down the search scope. Multiple conditional filters are connected by the logical AND operator. Only resources that meet all conditional filters are returned.<list type="bullet">
+        /// <item><description>keyword: optional. The keyword for fuzzy matching against the module name. For example, if you set keyword to ecs, the system queries modules whose names contain ecs.</description></item>
+        /// <item><description>namespaceName: optional. Supports filtering modules in a specific workspace. For example, if you set namespaceName to alibaba, the system queries modules whose workspace is alibaba. If you specify moduleName, you must also specify namespaceName. You can call the ListExplorerRegistryModule operation to obtain the namespaceName.</description></item>
+        /// <item><description>moduleName: optional. Supports filtering modules with a specific name. For example, if you set keyword to ecs, the system queries the module named ecs.</description></item>
+        /// <item><description>moduleVersion: optional. Supports filtering modules with a specific version. For example, if you set keyword to 1.0.0, the system queries modules whose version is 1.0.0.
+        /// The response structure includes the request ID, total number of entries, current page data, and pagination information to facilitate result processing.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -10272,19 +10303,19 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists information about official Terraform modules provided by Alibaba Cloud.</para>
+        /// <para>Lists the official Terraform modules provided by Alibaba Cloud.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries information about official Terraform modules provided by Alibaba Cloud.
-        /// You can use the <c>maxResults</c> parameter to adjust the maximum number of entries to return.</para>
+        /// <para>This operation queries the official Terraform modules provided by Alibaba Cloud.
+        /// You can specify the <c>maxResults</c> parameter to adjust the maximum number of entries to return.</para>
         /// <list type="bullet">
-        /// <item><description>If the <c>nextToken</c> parameter is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <c>nextToken</c> parameter of the ListExplorerRegistryModules operation to the <c>nextToken</c> value returned in the previous response. If you do not specify the <c>NextToken</c> parameter, the first page of data is returned by default.</description></item>
-        /// <item><description>You can use keyword and moduleName as filter conditions to narrow the search scope. Multiple filter conditions are evaluated by using a logical <c>AND</c>. Only resources that meet all filter conditions are returned.<list type="bullet">
-        /// <item><description>keyword: optional. Searches by keyword through fuzzy matching against ModuleName. For example, if keyword is set to ecs, modules whose names contain ecs are returned.</description></item>
-        /// <item><description>moduleName: optional. Filters modules by a specific name. For example, if moduleName is set to ecs, only the module whose name is exactly ecs is returned.
-        /// The response contains the request ID, total number of entries, data of the current page, and pagination information, which facilitates the processing of query results.</description></item>
+        /// <item><description>If <c>nextToken</c> is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <c>nextToken</c> parameter of the ListExplorerRegistryModules operation to the <c>nextToken</c> value returned in the previous response. If you do not specify the <c>nextToken</c> parameter, the first page of data is returned by default.</description></item>
+        /// <item><description>You can set <c>keyword</c> and <c>moduleName</c> as filter conditions to narrow down the search scope. Multiple filter conditions are connected by the logical <c>AND</c> operator. Only resources that meet all filter conditions are returned.<list type="bullet">
+        /// <item><description><c>keyword</c>: optional. The keyword for search. The system performs a fuzzy match on the module name. For example, if you set this parameter to ecs, the system queries modules whose names contain ecs.</description></item>
+        /// <item><description><c>moduleName</c>: optional. The name of the module. You can use this parameter to filter modules by a specific name. For example, if you set this parameter to ecs, the system queries the module whose name is ecs.
+        /// The response structure includes the request ID, total number of entries, data on the current page, and pagination information to help you process the query results.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -10349,19 +10380,19 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists information about official Terraform modules provided by Alibaba Cloud.</para>
+        /// <para>Lists the official Terraform modules provided by Alibaba Cloud.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries information about official Terraform modules provided by Alibaba Cloud.
-        /// You can use the <c>maxResults</c> parameter to adjust the maximum number of entries to return.</para>
+        /// <para>This operation queries the official Terraform modules provided by Alibaba Cloud.
+        /// You can specify the <c>maxResults</c> parameter to adjust the maximum number of entries to return.</para>
         /// <list type="bullet">
-        /// <item><description>If the <c>nextToken</c> parameter is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <c>nextToken</c> parameter of the ListExplorerRegistryModules operation to the <c>nextToken</c> value returned in the previous response. If you do not specify the <c>NextToken</c> parameter, the first page of data is returned by default.</description></item>
-        /// <item><description>You can use keyword and moduleName as filter conditions to narrow the search scope. Multiple filter conditions are evaluated by using a logical <c>AND</c>. Only resources that meet all filter conditions are returned.<list type="bullet">
-        /// <item><description>keyword: optional. Searches by keyword through fuzzy matching against ModuleName. For example, if keyword is set to ecs, modules whose names contain ecs are returned.</description></item>
-        /// <item><description>moduleName: optional. Filters modules by a specific name. For example, if moduleName is set to ecs, only the module whose name is exactly ecs is returned.
-        /// The response contains the request ID, total number of entries, data of the current page, and pagination information, which facilitates the processing of query results.</description></item>
+        /// <item><description>If <c>nextToken</c> is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <c>nextToken</c> parameter of the ListExplorerRegistryModules operation to the <c>nextToken</c> value returned in the previous response. If you do not specify the <c>nextToken</c> parameter, the first page of data is returned by default.</description></item>
+        /// <item><description>You can set <c>keyword</c> and <c>moduleName</c> as filter conditions to narrow down the search scope. Multiple filter conditions are connected by the logical <c>AND</c> operator. Only resources that meet all filter conditions are returned.<list type="bullet">
+        /// <item><description><c>keyword</c>: optional. The keyword for search. The system performs a fuzzy match on the module name. For example, if you set this parameter to ecs, the system queries modules whose names contain ecs.</description></item>
+        /// <item><description><c>moduleName</c>: optional. The name of the module. You can use this parameter to filter modules by a specific name. For example, if you set this parameter to ecs, the system queries the module whose name is ecs.
+        /// The response structure includes the request ID, total number of entries, data on the current page, and pagination information to help you process the query results.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -10426,19 +10457,19 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists information about official Terraform modules provided by Alibaba Cloud.</para>
+        /// <para>Lists the official Terraform modules provided by Alibaba Cloud.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries information about official Terraform modules provided by Alibaba Cloud.
-        /// You can use the <c>maxResults</c> parameter to adjust the maximum number of entries to return.</para>
+        /// <para>This operation queries the official Terraform modules provided by Alibaba Cloud.
+        /// You can specify the <c>maxResults</c> parameter to adjust the maximum number of entries to return.</para>
         /// <list type="bullet">
-        /// <item><description>If the <c>nextToken</c> parameter is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <c>nextToken</c> parameter of the ListExplorerRegistryModules operation to the <c>nextToken</c> value returned in the previous response. If you do not specify the <c>NextToken</c> parameter, the first page of data is returned by default.</description></item>
-        /// <item><description>You can use keyword and moduleName as filter conditions to narrow the search scope. Multiple filter conditions are evaluated by using a logical <c>AND</c>. Only resources that meet all filter conditions are returned.<list type="bullet">
-        /// <item><description>keyword: optional. Searches by keyword through fuzzy matching against ModuleName. For example, if keyword is set to ecs, modules whose names contain ecs are returned.</description></item>
-        /// <item><description>moduleName: optional. Filters modules by a specific name. For example, if moduleName is set to ecs, only the module whose name is exactly ecs is returned.
-        /// The response contains the request ID, total number of entries, data of the current page, and pagination information, which facilitates the processing of query results.</description></item>
+        /// <item><description>If <c>nextToken</c> is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <c>nextToken</c> parameter of the ListExplorerRegistryModules operation to the <c>nextToken</c> value returned in the previous response. If you do not specify the <c>nextToken</c> parameter, the first page of data is returned by default.</description></item>
+        /// <item><description>You can set <c>keyword</c> and <c>moduleName</c> as filter conditions to narrow down the search scope. Multiple filter conditions are connected by the logical <c>AND</c> operator. Only resources that meet all filter conditions are returned.<list type="bullet">
+        /// <item><description><c>keyword</c>: optional. The keyword for search. The system performs a fuzzy match on the module name. For example, if you set this parameter to ecs, the system queries modules whose names contain ecs.</description></item>
+        /// <item><description><c>moduleName</c>: optional. The name of the module. You can use this parameter to filter modules by a specific name. For example, if you set this parameter to ecs, the system queries the module whose name is ecs.
+        /// The response structure includes the request ID, total number of entries, data on the current page, and pagination information to help you process the query results.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -10460,19 +10491,19 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists information about official Terraform modules provided by Alibaba Cloud.</para>
+        /// <para>Lists the official Terraform modules provided by Alibaba Cloud.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries information about official Terraform modules provided by Alibaba Cloud.
-        /// You can use the <c>maxResults</c> parameter to adjust the maximum number of entries to return.</para>
+        /// <para>This operation queries the official Terraform modules provided by Alibaba Cloud.
+        /// You can specify the <c>maxResults</c> parameter to adjust the maximum number of entries to return.</para>
         /// <list type="bullet">
-        /// <item><description>If the <c>nextToken</c> parameter is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <c>nextToken</c> parameter of the ListExplorerRegistryModules operation to the <c>nextToken</c> value returned in the previous response. If you do not specify the <c>NextToken</c> parameter, the first page of data is returned by default.</description></item>
-        /// <item><description>You can use keyword and moduleName as filter conditions to narrow the search scope. Multiple filter conditions are evaluated by using a logical <c>AND</c>. Only resources that meet all filter conditions are returned.<list type="bullet">
-        /// <item><description>keyword: optional. Searches by keyword through fuzzy matching against ModuleName. For example, if keyword is set to ecs, modules whose names contain ecs are returned.</description></item>
-        /// <item><description>moduleName: optional. Filters modules by a specific name. For example, if moduleName is set to ecs, only the module whose name is exactly ecs is returned.
-        /// The response contains the request ID, total number of entries, data of the current page, and pagination information, which facilitates the processing of query results.</description></item>
+        /// <item><description>If <c>nextToken</c> is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <c>nextToken</c> parameter of the ListExplorerRegistryModules operation to the <c>nextToken</c> value returned in the previous response. If you do not specify the <c>nextToken</c> parameter, the first page of data is returned by default.</description></item>
+        /// <item><description>You can set <c>keyword</c> and <c>moduleName</c> as filter conditions to narrow down the search scope. Multiple filter conditions are connected by the logical <c>AND</c> operator. Only resources that meet all filter conditions are returned.<list type="bullet">
+        /// <item><description><c>keyword</c>: optional. The keyword for search. The system performs a fuzzy match on the module name. For example, if you set this parameter to ecs, the system queries modules whose names contain ecs.</description></item>
+        /// <item><description><c>moduleName</c>: optional. The name of the module. You can use this parameter to filter modules by a specific name. For example, if you set this parameter to ecs, the system queries the module whose name is ecs.
+        /// The response structure includes the request ID, total number of entries, data on the current page, and pagination information to help you process the query results.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -10855,7 +10886,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10914,7 +10945,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10973,7 +11004,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10997,7 +11028,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11598,17 +11629,17 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of all products.</para>
+        /// <para>Lists all products.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Keyword search</b>: Use the <c>keyword</c> parameter for fuzzy matching.</description></item>
-        /// <item><description><b>Paged query</b>: Use <c>nextToken</c> for pagination and <c>maxResults</c> to specify the maximum number of results per page (default: 100, maximum: 200).</description></item>
-        /// <item><description><b>Terraform Provider version</b>: The optional <c>terraformProviderVersion</c> parameter filters products associated with a specific Provider version.</description></item>
-        /// <item><description><b>Response structure</b>: The response contains the request ID, total number of entries, data of the current page, and pagination information for easy processing of query results.</description></item>
+        /// <item><description><b>Keyword search</b>: Uses the <c>keyword</c> parameter for fuzzy matching.</description></item>
+        /// <item><description><b>Paged query</b>: Uses <c>nextToken</c> for pagination and <c>maxResults</c> to specify the maximum number of results to return on each page. Default value: 100. Maximum value: 200.</description></item>
+        /// <item><description><b>Terraform provider version</b>: The optional <c>terraformProviderVersion</c> parameter is used to filter products related to a specific provider version.</description></item>
+        /// <item><description><b>Response structure</b>: Includes the request ID, total number of entries, data on the current page, and pagination information to facilitate the processing of query results.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11679,17 +11710,17 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of all products.</para>
+        /// <para>Lists all products.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Keyword search</b>: Use the <c>keyword</c> parameter for fuzzy matching.</description></item>
-        /// <item><description><b>Paged query</b>: Use <c>nextToken</c> for pagination and <c>maxResults</c> to specify the maximum number of results per page (default: 100, maximum: 200).</description></item>
-        /// <item><description><b>Terraform Provider version</b>: The optional <c>terraformProviderVersion</c> parameter filters products associated with a specific Provider version.</description></item>
-        /// <item><description><b>Response structure</b>: The response contains the request ID, total number of entries, data of the current page, and pagination information for easy processing of query results.</description></item>
+        /// <item><description><b>Keyword search</b>: Uses the <c>keyword</c> parameter for fuzzy matching.</description></item>
+        /// <item><description><b>Paged query</b>: Uses <c>nextToken</c> for pagination and <c>maxResults</c> to specify the maximum number of results to return on each page. Default value: 100. Maximum value: 200.</description></item>
+        /// <item><description><b>Terraform provider version</b>: The optional <c>terraformProviderVersion</c> parameter is used to filter products related to a specific provider version.</description></item>
+        /// <item><description><b>Response structure</b>: Includes the request ID, total number of entries, data on the current page, and pagination information to facilitate the processing of query results.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11760,17 +11791,17 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of all products.</para>
+        /// <para>Lists all products.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Keyword search</b>: Use the <c>keyword</c> parameter for fuzzy matching.</description></item>
-        /// <item><description><b>Paged query</b>: Use <c>nextToken</c> for pagination and <c>maxResults</c> to specify the maximum number of results per page (default: 100, maximum: 200).</description></item>
-        /// <item><description><b>Terraform Provider version</b>: The optional <c>terraformProviderVersion</c> parameter filters products associated with a specific Provider version.</description></item>
-        /// <item><description><b>Response structure</b>: The response contains the request ID, total number of entries, data of the current page, and pagination information for easy processing of query results.</description></item>
+        /// <item><description><b>Keyword search</b>: Uses the <c>keyword</c> parameter for fuzzy matching.</description></item>
+        /// <item><description><b>Paged query</b>: Uses <c>nextToken</c> for pagination and <c>maxResults</c> to specify the maximum number of results to return on each page. Default value: 100. Maximum value: 200.</description></item>
+        /// <item><description><b>Terraform provider version</b>: The optional <c>terraformProviderVersion</c> parameter is used to filter products related to a specific provider version.</description></item>
+        /// <item><description><b>Response structure</b>: Includes the request ID, total number of entries, data on the current page, and pagination information to facilitate the processing of query results.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11790,17 +11821,17 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of all products.</para>
+        /// <para>Lists all products.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Keyword search</b>: Use the <c>keyword</c> parameter for fuzzy matching.</description></item>
-        /// <item><description><b>Paged query</b>: Use <c>nextToken</c> for pagination and <c>maxResults</c> to specify the maximum number of results per page (default: 100, maximum: 200).</description></item>
-        /// <item><description><b>Terraform Provider version</b>: The optional <c>terraformProviderVersion</c> parameter filters products associated with a specific Provider version.</description></item>
-        /// <item><description><b>Response structure</b>: The response contains the request ID, total number of entries, data of the current page, and pagination information for easy processing of query results.</description></item>
+        /// <item><description><b>Keyword search</b>: Uses the <c>keyword</c> parameter for fuzzy matching.</description></item>
+        /// <item><description><b>Paged query</b>: Uses <c>nextToken</c> for pagination and <c>maxResults</c> to specify the maximum number of results to return on each page. Default value: 100. Maximum value: 200.</description></item>
+        /// <item><description><b>Terraform provider version</b>: The optional <c>terraformProviderVersion</c> parameter is used to filter products related to a specific provider version.</description></item>
+        /// <item><description><b>Response structure</b>: Includes the request ID, total number of entries, data on the current page, and pagination information to facilitate the processing of query results.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11986,12 +12017,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Registry template versions.</para>
+        /// <para>Queries registry template versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 200 calls per second.</para>
+        /// <para>Rate limit per user: 200 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12049,12 +12080,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Registry template versions.</para>
+        /// <para>Queries registry template versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 200 calls per second.</para>
+        /// <para>Rate limit per user: 200 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12112,12 +12143,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Registry template versions.</para>
+        /// <para>Queries registry template versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 200 calls per second.</para>
+        /// <para>Rate limit per user: 200 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12136,12 +12167,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Registry template versions.</para>
+        /// <para>Queries registry template versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 200 calls per second.</para>
+        /// <para>Rate limit per user: 200 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12355,7 +12386,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 200 calls per second.</para>
+        /// <para>The maximum call frequency per user is 200 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12418,7 +12449,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 200 calls per second.</para>
+        /// <para>The maximum call frequency per user is 200 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12481,7 +12512,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 200 calls per second.</para>
+        /// <para>The maximum call frequency per user is 200 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12505,7 +12536,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 200 calls per second.</para>
+        /// <para>The maximum call frequency per user is 200 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12524,12 +12555,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of resource export task versions.</para>
+        /// <para>Retrieves the versions of a resource export task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit for a single user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12591,12 +12622,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of resource export task versions.</para>
+        /// <para>Retrieves the versions of a resource export task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit for a single user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12658,12 +12689,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of resource export task versions.</para>
+        /// <para>Retrieves the versions of a resource export task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit for a single user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12682,12 +12713,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of resource export task versions.</para>
+        /// <para>Retrieves the versions of a resource export task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit for a single user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12706,12 +12737,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of resource export tasks.</para>
+        /// <para>Queries a list of resource export tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Rate limit per user: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12769,12 +12800,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of resource export tasks.</para>
+        /// <para>Queries a list of resource export tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Rate limit per user: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12832,12 +12863,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of resource export tasks.</para>
+        /// <para>Queries a list of resource export tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Rate limit per user: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12856,12 +12887,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of resource export tasks.</para>
+        /// <para>Queries a list of resource export tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Rate limit per user: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13126,7 +13157,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the resources of a node.</para>
+        /// <para>Retrieves the list of resources for a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13188,7 +13219,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the resources of a node.</para>
+        /// <para>Retrieves the list of resources for a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13250,7 +13281,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the resources of a node.</para>
+        /// <para>Retrieves the list of resources for a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13269,7 +13300,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the resources of a node.</para>
+        /// <para>Retrieves the list of resources for a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13288,7 +13319,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of stack configurations.</para>
+        /// <para>Queries stack configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13346,7 +13377,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of stack configurations.</para>
+        /// <para>Queries stack configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13404,7 +13435,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of stack configurations.</para>
+        /// <para>Queries stack configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13423,7 +13454,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of stack configurations.</para>
+        /// <para>Queries stack configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13854,7 +13885,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of Terraform provider versions.</para>
+        /// <para>Retrieves a list of Terraform provider versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13912,7 +13943,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of Terraform provider versions.</para>
+        /// <para>Retrieves a list of Terraform provider versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13970,7 +14001,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of Terraform provider versions.</para>
+        /// <para>Retrieves a list of Terraform provider versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13989,7 +14020,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of Terraform provider versions.</para>
+        /// <para>Retrieves a list of Terraform provider versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14008,13 +14039,13 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Supports resource import and removal for state files.</para>
+        /// <para>Imports and removes resources from state files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to manage state files for resource orchestration tasks and stack tasks on the automated service desk.
-        /// Before using this API, make sure that all required authentication information is correctly configured and that the Terraform code meets the expected functional requirements.</para>
+        /// <para>This API is primarily used to manage state files for resource orchestration tasks and stack tasks on the automated service desk.
+        /// Before you use this API, ensure that all required authentication information is correctly configured and that the Terraform code meets the expected functional requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14080,13 +14111,13 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Supports resource import and removal for state files.</para>
+        /// <para>Imports and removes resources from state files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to manage state files for resource orchestration tasks and stack tasks on the automated service desk.
-        /// Before using this API, make sure that all required authentication information is correctly configured and that the Terraform code meets the expected functional requirements.</para>
+        /// <para>This API is primarily used to manage state files for resource orchestration tasks and stack tasks on the automated service desk.
+        /// Before you use this API, ensure that all required authentication information is correctly configured and that the Terraform code meets the expected functional requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14152,13 +14183,13 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Supports resource import and removal for state files.</para>
+        /// <para>Imports and removes resources from state files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to manage state files for resource orchestration tasks and stack tasks on the automated service desk.
-        /// Before using this API, make sure that all required authentication information is correctly configured and that the Terraform code meets the expected functional requirements.</para>
+        /// <para>This API is primarily used to manage state files for resource orchestration tasks and stack tasks on the automated service desk.
+        /// Before you use this API, ensure that all required authentication information is correctly configured and that the Terraform code meets the expected functional requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14177,13 +14208,13 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Supports resource import and removal for state files.</para>
+        /// <para>Imports and removes resources from state files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to manage state files for resource orchestration tasks and stack tasks on the automated service desk.
-        /// Before using this API, make sure that all required authentication information is correctly configured and that the Terraform code meets the expected functional requirements.</para>
+        /// <para>This API is primarily used to manage state files for resource orchestration tasks and stack tasks on the automated service desk.
+        /// Before you use this API, ensure that all required authentication information is correctly configured and that the Terraform code meets the expected functional requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14202,13 +14233,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After a job is created, you can perform the <b>Cancel</b> operation to stop the job while it is running.
-        /// After a job reaches the pending confirmation state, you can perform the <b>Abolish</b> operation to stop the job, or perform the <b>Execute</b> operation to continue the job execution.</para>
+        /// <para>Cancels a running job, aborts a job that is waiting for confirmation, or continues the execution of a job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Per-user call frequency: 100 calls per second.</para>
+        /// <para>The maximum call frequency for a single user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14258,13 +14288,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After a job is created, you can perform the <b>Cancel</b> operation to stop the job while it is running.
-        /// After a job reaches the pending confirmation state, you can perform the <b>Abolish</b> operation to stop the job, or perform the <b>Execute</b> operation to continue the job execution.</para>
+        /// <para>Cancels a running job, aborts a job that is waiting for confirmation, or continues the execution of a job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Per-user call frequency: 100 calls per second.</para>
+        /// <para>The maximum call frequency for a single user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14314,13 +14343,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After a job is created, you can perform the <b>Cancel</b> operation to stop the job while it is running.
-        /// After a job reaches the pending confirmation state, you can perform the <b>Abolish</b> operation to stop the job, or perform the <b>Execute</b> operation to continue the job execution.</para>
+        /// <para>Cancels a running job, aborts a job that is waiting for confirmation, or continues the execution of a job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Per-user call frequency: 100 calls per second.</para>
+        /// <para>The maximum call frequency for a single user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14339,13 +14367,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After a job is created, you can perform the <b>Cancel</b> operation to stop the job while it is running.
-        /// After a job reaches the pending confirmation state, you can perform the <b>Abolish</b> operation to stop the job, or perform the <b>Execute</b> operation to continue the job execution.</para>
+        /// <para>Cancels a running job, aborts a job that is waiting for confirmation, or continues the execution of a job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Per-user call frequency: 100 calls per second.</para>
+        /// <para>The maximum call frequency for a single user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14364,12 +14391,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a Registry template version.</para>
+        /// <para>Publishes a registry template version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>Rate limit for a single user: 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14427,12 +14454,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a Registry template version.</para>
+        /// <para>Publishes a registry template version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>Rate limit for a single user: 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14490,12 +14517,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a Registry template version.</para>
+        /// <para>Publishes a registry template version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>Rate limit for a single user: 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14514,12 +14541,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a Registry template version.</para>
+        /// <para>Publishes a registry template version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>Rate limit for a single user: 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14538,12 +14565,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a shared account.</para>
+        /// <para>Removes shared accounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -14603,12 +14630,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a shared account.</para>
+        /// <para>Removes shared accounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -14668,12 +14695,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a shared account.</para>
+        /// <para>Removes shared accounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14692,12 +14719,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a shared account.</para>
+        /// <para>Removes shared accounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15254,12 +15281,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an Explorer template.</para>
+        /// <para>Updates the Explorer template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates an Explorer template.</para>
+        /// <para>Updates the Explorer template.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15313,12 +15340,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an Explorer template.</para>
+        /// <para>Updates the Explorer template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates an Explorer template.</para>
+        /// <para>Updates the Explorer template.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15372,12 +15399,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an Explorer template.</para>
+        /// <para>Updates the Explorer template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates an Explorer template.</para>
+        /// <para>Updates the Explorer template.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15396,12 +15423,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an Explorer template.</para>
+        /// <para>Updates the Explorer template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates an Explorer template.</para>
+        /// <para>Updates the Explorer template.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15663,8 +15690,8 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <list type="bullet">
         /// <item><description>This operation allows you to modify the basic attributes of an existing template, including but not limited to the template name, description, and tags.</description></item>
         /// <item><description>The update operation does not affect the content or version information of the template.</description></item>
-        /// <item><description>To enable or disable deletion protection, use the deletionProtection parameter.</description></item>
-        /// <item><description>Use clientToken to ensure the idempotence of the request and avoid duplicate submissions caused by network issues.</description></item>
+        /// <item><description>To enable or disable deletion protection, set the <c>deletionProtection</c> parameter.</description></item>
+        /// <item><description>Use <c>clientToken</c> to ensure the idempotence of the request and prevent duplicate submissions caused by network issues.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15748,8 +15775,8 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <list type="bullet">
         /// <item><description>This operation allows you to modify the basic attributes of an existing template, including but not limited to the template name, description, and tags.</description></item>
         /// <item><description>The update operation does not affect the content or version information of the template.</description></item>
-        /// <item><description>To enable or disable deletion protection, use the deletionProtection parameter.</description></item>
-        /// <item><description>Use clientToken to ensure the idempotence of the request and avoid duplicate submissions caused by network issues.</description></item>
+        /// <item><description>To enable or disable deletion protection, set the <c>deletionProtection</c> parameter.</description></item>
+        /// <item><description>Use <c>clientToken</c> to ensure the idempotence of the request and prevent duplicate submissions caused by network issues.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15833,8 +15860,8 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <list type="bullet">
         /// <item><description>This operation allows you to modify the basic attributes of an existing template, including but not limited to the template name, description, and tags.</description></item>
         /// <item><description>The update operation does not affect the content or version information of the template.</description></item>
-        /// <item><description>To enable or disable deletion protection, use the deletionProtection parameter.</description></item>
-        /// <item><description>Use clientToken to ensure the idempotence of the request and avoid duplicate submissions caused by network issues.</description></item>
+        /// <item><description>To enable or disable deletion protection, set the <c>deletionProtection</c> parameter.</description></item>
+        /// <item><description>Use <c>clientToken</c> to ensure the idempotence of the request and prevent duplicate submissions caused by network issues.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15863,8 +15890,8 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <list type="bullet">
         /// <item><description>This operation allows you to modify the basic attributes of an existing template, including but not limited to the template name, description, and tags.</description></item>
         /// <item><description>The update operation does not affect the content or version information of the template.</description></item>
-        /// <item><description>To enable or disable deletion protection, use the deletionProtection parameter.</description></item>
-        /// <item><description>Use clientToken to ensure the idempotence of the request and avoid duplicate submissions caused by network issues.</description></item>
+        /// <item><description>To enable or disable deletion protection, set the <c>deletionProtection</c> parameter.</description></item>
+        /// <item><description>Use <c>clientToken</c> to ensure the idempotence of the request and prevent duplicate submissions caused by network issues.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16229,7 +16256,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16288,7 +16315,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16347,7 +16374,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16371,7 +16398,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit per user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16390,12 +16417,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a workspace.</para>
+        /// <para>Updates a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit for a single user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16449,12 +16476,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a workspace.</para>
+        /// <para>Updates a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit for a single user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16508,12 +16535,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a workspace.</para>
+        /// <para>Updates a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit for a single user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16532,12 +16559,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a workspace.</para>
+        /// <para>Updates a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit for a single user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16556,12 +16583,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a resource export task.</para>
+        /// <para>Updates a resource export task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit for a single user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16643,12 +16670,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a resource export task.</para>
+        /// <para>Updates a resource export task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit for a single user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16730,12 +16757,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a resource export task.</para>
+        /// <para>Updates a resource export task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit for a single user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16754,12 +16781,12 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a resource export task.</para>
+        /// <para>Updates a resource export task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Single-user call frequency: 100 calls per second.</para>
+        /// <para>The rate limit for a single user is 100 calls per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16778,7 +16805,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a stack. When the configuration changes, a stack deployment is triggered.</para>
+        /// <para>Updates a stack and triggers stack deployment when configuration changes occur.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16814,6 +16841,10 @@ namespace AlibabaCloud.SDK.IaCService20210806
             {
                 body["ramRole"] = request.RamRole;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkipPropertyValidation))
+            {
+                body["skipPropertyValidation"] = request.SkipPropertyValidation;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcePath))
             {
                 body["sourcePath"] = request.SourcePath;
@@ -16844,7 +16875,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a stack. When the configuration changes, a stack deployment is triggered.</para>
+        /// <para>Updates a stack and triggers stack deployment when configuration changes occur.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16880,6 +16911,10 @@ namespace AlibabaCloud.SDK.IaCService20210806
             {
                 body["ramRole"] = request.RamRole;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkipPropertyValidation))
+            {
+                body["skipPropertyValidation"] = request.SkipPropertyValidation;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourcePath))
             {
                 body["sourcePath"] = request.SourcePath;
@@ -16910,7 +16945,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a stack. When the configuration changes, a stack deployment is triggered.</para>
+        /// <para>Updates a stack and triggers stack deployment when configuration changes occur.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16929,7 +16964,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a stack. When the configuration changes, a stack deployment is triggered.</para>
+        /// <para>Updates a stack and triggers stack deployment when configuration changes occur.</para>
         /// </summary>
         /// 
         /// <param name="request">

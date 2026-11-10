@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public List<ListStackConfigsResponseBodyConfigsComponentConfigComponent> Component { get; set; }
                 public class ListStackConfigsResponseBodyConfigsComponentConfigComponent : TeaModel {
                     /// <summary>
-                    /// <para>The component name.</para>
+                    /// <para>The name of the component.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>log</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public List<ListStackConfigsResponseBodyConfigsComponentConfigOutput> Output { get; set; }
                 public class ListStackConfigsResponseBodyConfigsComponentConfigOutput : TeaModel {
                     /// <summary>
-                    /// <para>The output description.</para>
+                    /// <para>The description of the output.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>the name of sls project</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>The output name.</para>
+                    /// <para>The name of the output.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>project_name</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The output type.</para>
+                    /// <para>The type of the output.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>string</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The output value.</para>
+                    /// <para>The value of the output.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>log-test</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>The variable name.</para>
+                    /// <para>The name of the variable.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>region</para>
@@ -128,16 +128,23 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    /// <summary>
+                    /// <para>Specifies whether the parameter is sensitive. The values of sensitive parameters are invisible in both the console and API. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>true: The parameter is sensitive.</description></item>
+                    /// <item><description>false: The parameter is not sensitive.</description></item>
+                    /// </list>
+                    /// </summary>
                     [NameInMap("sensitive")]
                     [Validation(Required=false)]
                     public bool? Sensitive { get; set; }
 
                     /// <summary>
-                    /// <para>The variable type, such as:</para>
+                    /// <para>The type of the variable. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>string</description></item>
                     /// <item><description>list(string)</description></item>
-                    /// <item><description>map(string).</description></item>
+                    /// <item><description>map(string)</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -186,7 +193,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public List<ListStackConfigsResponseBodyConfigsDeploymentConfigDeployment> Deployment { get; set; }
                 public class ListStackConfigsResponseBodyConfigsDeploymentConfigDeployment : TeaModel {
                     /// <summary>
-                    /// <para>The deployment name.</para>
+                    /// <para>The name of the deployment.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>production</para>
@@ -205,7 +212,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public List<ListStackConfigsResponseBodyConfigsDeploymentConfigPublishOutput> PublishOutput { get; set; }
                 public class ListStackConfigsResponseBodyConfigsDeploymentConfigPublishOutput : TeaModel {
                     /// <summary>
-                    /// <para>The output description.</para>
+                    /// <para>The description of the output.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>the name of sls project</para>
@@ -215,7 +222,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>The output name.</para>
+                    /// <para>The name of the output.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>project_name</para>
@@ -225,7 +232,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The actual output value after the stack deployment is complete.</para>
+                    /// <para>The actual output value after the stack is deployed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>log-test</para>
@@ -235,7 +242,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                     public string Result { get; set; }
 
                     /// <summary>
-                    /// <para>The output type, such as string or list(string).</para>
+                    /// <para>The type of the output, such as string or list(string).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>string</para>
@@ -245,7 +252,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The original definition of the output value. Currently, string or list(string) is supported. You can reference a deployment output in the format: deployment.{deploymentName}.{deploymentOutputName}.</para>
+                    /// <para>The original definition of the output value. Currently, string or list(string) is supported. You can reference deployment outputs in the format of deployment.{DeploymentName}.{DeploymentOutputName}.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>deployment.production.project_name</para>
@@ -264,7 +271,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public List<ListStackConfigsResponseBodyConfigsDeploymentConfigUpstreamInput> UpstreamInput { get; set; }
                 public class ListStackConfigsResponseBodyConfigsDeploymentConfigUpstreamInput : TeaModel {
                     /// <summary>
-                    /// <para>The input name.</para>
+                    /// <para>The name of the input.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>network</para>
@@ -274,7 +281,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The input source. Currently, only an upstream stack can be specified. The format is {iacEndpoint}/{accountId}/{upstreamStackName}.</para>
+                    /// <para>The source of the input. Currently, only upstream stacks are supported. The format is {iacEndpoint}/{accountId}/{upstreamStackName}.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>IacEndpoint/156718871222312/stack_network</para>
@@ -297,12 +304,15 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public string DeploymentContent { get; set; }
 
+            /// <summary>
+            /// <para>The error message indicating that the configuration processing failed.</para>
+            /// </summary>
             [NameInMap("failedReason")]
             [Validation(Required=false)]
             public string FailedReason { get; set; }
 
             /// <summary>
-            /// <para>The status of the stack configuration.</para>
+            /// <para>The status of the stack configuration. Valid values:</para>
             /// <table>
             /// <thead>
             /// <tr>
@@ -312,43 +322,43 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// </thead>
             /// <tbody><tr>
             /// <td>Creating</td>
-            /// <td>Being created.</td>
+            /// <td>Creating</td>
             /// </tr>
             /// <tr>
             /// <td>Created</td>
-            /// <td>Created.</td>
+            /// <td>Created</td>
             /// </tr>
             /// <tr>
             /// <td>Waiting</td>
-            /// <td>Waiting for deployment.</td>
+            /// <td>Waiting for deployment</td>
             /// </tr>
             /// <tr>
             /// <td>Deploying</td>
-            /// <td>Being deployed.</td>
+            /// <td>Deploying</td>
             /// </tr>
             /// <tr>
             /// <td>Deployed</td>
-            /// <td>Deployed.</td>
+            /// <td>Deployed</td>
             /// </tr>
             /// <tr>
             /// <td>Errored</td>
-            /// <td>Deployment failed.</td>
+            /// <td>Deployment failed</td>
             /// </tr>
             /// <tr>
             /// <td>Deleting</td>
-            /// <td>Being deleted.</td>
+            /// <td>Deleting</td>
             /// </tr>
             /// <tr>
             /// <td>Deleted</td>
-            /// <td>Deleted.</td>
+            /// <td>Deleted</td>
             /// </tr>
             /// <tr>
             /// <td>DeleteFailed</td>
-            /// <td>Deletion failed.</td>
+            /// <td>Deletion failed</td>
             /// </tr>
             /// <tr>
             /// <td>DetectTriggered</td>
-            /// <td>Drift detection triggered.</td>
+            /// <td>Drift detection triggered successfully</td>
             /// </tr>
             /// </tbody></table>
             /// 
@@ -360,7 +370,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The configuration version number, such as v1. The initial value is v1. The version number increments each time the stack is updated or refreshed and the configuration changes.</para>
+            /// <para>The version number of the configuration, such as v1. The initial value is v1. The version number increments each time the stack is updated or refreshed and the configuration is changed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1</para>
@@ -372,7 +382,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records returned in this request.</para>
+        /// <para>The maximum number of records returned for the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24</para>
@@ -382,7 +392,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The position from which the current call starts reading. An empty value indicates that all data has been read.</para>
+        /// <para>The token that indicates the position up to which the current call has read. An empty value indicates that all data has been read.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -403,7 +413,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records that match the request conditions. This parameter is optional and may not be returned by default.</para>
+        /// <para>The total number of records that meet the request conditions. This parameter is optional and is not returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>43</para>

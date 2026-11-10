@@ -13,9 +13,9 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// <para>The generation source. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Resource: Generates a Terraform HCL template based on resource properties.</description></item>
-        /// <item><description>VariableToCode: Generates a final Terraform HCL template by combining variables with an existing Terraform HCL template.</description></item>
+        /// <item><description>VariableToCode: Generates the final combined Terraform HCL template based on variables and a Terraform HCL template.</description></item>
         /// <item><description>CodeToVariable: Extracts variable information from a Terraform HCL template.</description></item>
-        /// <item><description>Module: Generates Terraform Module code based on variables.</description></item>
+        /// <item><description>Module: Generates Terraform module code based on variables.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string GenerateSource { get; set; }
 
         /// <summary>
-        /// <para>The collection of parameters, passed in key:value format, such as {&quot;vpc_name&quot;:&quot;vpc-test&quot;}.</para>
+        /// <para>The parameter set. Pass parameters in the key:value format, such as {&quot;vpc_name&quot;:&quot;vpc-test&quot;}.</para>
         /// </summary>
         [NameInMap("parameters")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// <summary>
         /// <para>The syntax. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>hcl (default).</description></item>
+        /// <item><description>hcl: Default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string Syntax { get; set; }
 
         /// <summary>
-        /// <para>The existing Terraform HCL template content.</para>
+        /// <para>The original Terraform HCL template content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>terraform {

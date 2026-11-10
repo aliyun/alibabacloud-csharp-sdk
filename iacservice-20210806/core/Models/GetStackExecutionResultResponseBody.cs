@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The execution results of the triggered Stacks.</para>
+        /// <para>The execution results of the triggered stack.</para>
         /// </summary>
         [NameInMap("stackResults")]
         [Validation(Required=false)]
         public List<GetStackExecutionResultResponseBodyStackResults> StackResults { get; set; }
         public class GetStackExecutionResultResponseBodyStackResults : TeaModel {
             /// <summary>
-            /// <para>The deployment results of the Stack.</para>
+            /// <para>The deployment results of the stack.</para>
             /// </summary>
             [NameInMap("deployments")]
             [Validation(Required=false)]
             public List<GetStackExecutionResultResponseBodyStackResultsDeployments> Deployments { get; set; }
             public class GetStackExecutionResultResponseBodyStackResultsDeployments : TeaModel {
                 /// <summary>
-                /// <para>The deployment name.</para>
+                /// <para>The name of the deployment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>prod</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string JobResult { get; set; }
 
                 /// <summary>
-                /// <para>The deployment status.</para>
+                /// <para>The status of the deployment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Applied</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The URL for viewing deployment details.</para>
+                /// <para>The URL to view the deployment details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://iacnext.console.aliyun.com/stack/stack-al181av2bloah5s53hacbp4/details?deploymentName=production&deploymentNo=6&configVersion=v1">https://iacnext.console.aliyun.com/stack/stack-al181av2bloah5s53hacbp4/details?deploymentName=production&amp;deploymentNo=6&amp;configVersion=v1</a></para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             }
 
             /// <summary>
-            /// <para>Error code of the stack execution</para>
+            /// <para>The error code for the stack execution.</para>
             /// </summary>
             [NameInMap("errorCode")]
             [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the Stack.</para>
+            /// <para>The unique ID of the stack.</para>
             /// 
             /// <b>Example:</b>
             /// <para>stack-al181av2bloah5s53hacbp4</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string StackId { get; set; }
 
             /// <summary>
-            /// <para>The Stack name.</para>
+            /// <para>The name of the stack.</para>
             /// 
             /// <b>Example:</b>
             /// <para>stack-demo</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string StackName { get; set; }
 
             /// <summary>
-            /// <para>The execution status of the Stack.</para>
+            /// <para>The execution status of the stack.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Deployed</para>
@@ -135,12 +135,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string TriggerId { get; set; }
 
         /// <summary>
-        /// <para>The overall execution status of this trigger task. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Waiting: Processing.</description></item>
-        /// <item><description>Success: Processing succeeded.</description></item>
-        /// <item><description>Errored: Processing failed.</description></item>
-        /// </list>
+        /// <para>The overall execution status of the current trigger task. Valid values: Waiting (Processing), Success (Succeeded), and Errored (Failed).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

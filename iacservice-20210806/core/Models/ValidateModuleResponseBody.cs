@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ValidateModuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The validation message.</para>
+        /// <para>The check message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The validation ID.</para>
+        /// <para>The check ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BF72A6FB-B07</para>
@@ -40,12 +40,12 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The validation result. Valid values:</para>
+        /// <para>The check result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Initializing: initialization in progress.</description></item>
-        /// <item><description>Validating: validation in progress.</description></item>
-        /// <item><description>Validated: validation succeeded.</description></item>
-        /// <item><description>Errored: validation failed.</description></item>
+        /// <item><description>Initializing: The check is being initialized.</description></item>
+        /// <item><description>Validating: The check is in progress.</description></item>
+        /// <item><description>Validated: The check succeeded.</description></item>
+        /// <item><description>Errored: The check failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

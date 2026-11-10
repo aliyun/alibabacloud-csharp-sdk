@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class UpdateModuleAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</para>
+        /// <para>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The template description. The description can be up to 256 characters in length.</para>
+        /// <para>The description of the template. The description can be up to 256 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is description</para>
@@ -60,11 +60,11 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         }
 
         /// <summary>
-        /// <para>The template name. The name must meet the following requirements:</para>
+        /// <para>The name of the template. The name must meet the following requirements:</para>
         /// <list type="bullet">
         /// <item><description>The name must be 2 to 128 characters in length.</description></item>
         /// <item><description>The name can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). It cannot start or end with a hyphen, underscore, or period.</description></item>
-        /// <item><description>The name must be unique among all templates within the current account.</description></item>
+        /// <item><description>The name must be unique among the template resources within the current account.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,11 +75,11 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The path of the template source.</para>
+        /// <para>The path value of the template source.</para>
         /// <list type="bullet">
-        /// <item><description>If the source is Registry, set this parameter to <workspace name>/<module name>:<module version>. Example: terraform-alicloud-modules/rds:1.0.0.</description></item>
-        /// <item><description>If the source is OSS, set this parameter to oss::<file URL>. The file must be a ZIP file. Example: oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>.</description></item>
-        /// <item><description>If the source is ExportTask, set this parameter to <export task ID>:<exported version>. Example: ex-3b6cb9fa4751afff298da723c24ac:v1.</description></item>
+        /// <item><description>If the source is Registry, the value is in the <Workspace name>/<Module name>:<Module version> format. Example: terraform-alicloud-modules/rds:1.0.0.</description></item>
+        /// <item><description>If the source is OSS, the value is in the oss::<File URL> format. The file must be a ZIP file. Example: oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>.</description></item>
+        /// <item><description>If the source is ExportTask, the value is in the <Export task ID>:<Exported version> format. Example: ex-3b6cb9fa4751afff298da723c24ac:v1.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string SourcePath { get; set; }
 
         /// <summary>
-        /// <para>The path of the state file that corresponds to the template. Currently, only OSS paths are supported. Set this parameter to oss::<OSS file path>/terraform.tfstate.</para>
+        /// <para>The path value of the state file corresponding to the template. Currently, only OSS paths are supported. The value is in the oss::<OSS path of the file>/terraform.tfstate format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/terraform.tfstate">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/terraform.tfstate</a></para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string StatePath { get; set; }
 
         /// <summary>
-        /// <para>The tags of the template.</para>
+        /// <para>The list of tags for the template.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// <summary>
         /// <para>The version generation strategy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Manual: manually generate versions. This is the default value.</description></item>
+        /// <item><description>Manual: manually generated version (default).</description></item>
         /// <item><description>SourcePathUpdated: a new version is generated when sourcePath is modified.</description></item>
         /// </list>
         /// 

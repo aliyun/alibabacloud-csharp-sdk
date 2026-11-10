@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public GetProjectResponseBodyProject Project { get; set; }
         public class GetProjectResponseBodyProject : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-09-06T06:11:27Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The project description. Length: 0 to 1024 characters.</para>
+            /// <para>The project description. The length ranges from 0 to 1,024 characters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc</para>

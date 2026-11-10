@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The stack ID. This is the unique identifier of the stack after it is created.</para>
+        /// <para>The stack ID, which is the unique identifier of the stack after it is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>stack-as1d4vld898ppnqbxxxxx</para>

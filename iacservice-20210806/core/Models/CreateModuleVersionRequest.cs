@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The version description. The description can be up to 256 characters in length.</para>
+        /// <para>The version description. The length cannot exceed 256 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is description</para>
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The template version name. The name must meet the following requirements:</para>
+        /// <para>The template version name. It must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The name must be 2 to 128 characters in length.</description></item>
-        /// <item><description>The name can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). The name cannot start or end with a hyphen, underscore, or period.</description></item>
+        /// <item><description>The length is 2 to 128 characters.</description></item>
+        /// <item><description>It can contain uppercase and lowercase letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). It cannot start or end with a hyphen, underscore, or period.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

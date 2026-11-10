@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class ListTerraformProviderVersionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of records retrieved in a single request.</para>
+        /// <para>The maximum number of records returned per request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. An empty value indicates that no more pages are available.</para>
+        /// <para>The pagination token for the next page. An empty value indicates that there are no more pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rnD7wyAII+yDi0UGlV519J4dD+2BRJj42DLT6GrZysw=</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public List<ListTerraformProviderVersionsResponseBodyVersions> Versions { get; set; }
         public class ListTerraformProviderVersionsResponseBodyVersions : TeaModel {
             /// <summary>
-            /// <para>The publish time.</para>
+            /// <para>The release time in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-24T05:06:51Z</para>

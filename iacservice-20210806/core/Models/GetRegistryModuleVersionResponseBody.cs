@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public GetRegistryModuleVersionResponseBodyModuleVersion ModuleVersion { get; set; }
         public class GetRegistryModuleVersionResponseBodyModuleVersion : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-02-08T02:22:16Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The product page URL.</para>
+            /// <para>The URL of the details page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>URL</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Downloads { get; set; }
 
             /// <summary>
-            /// <para>The template name.</para>
+            /// <para>The name of the template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs-cluster</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ModuleName { get; set; }
 
             /// <summary>
-            /// <para>The workspace name.</para>
+            /// <para>The name of the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alibabacloud</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The template source URL.</para>
+            /// <para>The URL of the template source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>URL</para>

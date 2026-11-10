@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class CreateProjectRequest : TeaModel {
         /// <summary>
-        /// <para>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</para>
+        /// <para>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. A UUID is recommended.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The project description. Length: 0 to 1024 characters.</para>
+        /// <para>The project description.
+        /// Length: 0 to 1024 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -31,7 +32,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The project name. Length: 1 to 128 characters.</para>
+        /// <para>The project name.
+        /// Length: 1 to 128 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

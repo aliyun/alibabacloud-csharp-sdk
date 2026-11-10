@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string LatestVersion { get; set; }
 
             /// <summary>
-            /// <para>The module name.</para>
+            /// <para>The name of the module.</para>
             /// 
             /// <b>Example:</b>
             /// <para>terraform-alicloud-modules/mongodb</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ModuleName { get; set; }
 
             /// <summary>
-            /// <para>The workspace name.</para>
+            /// <para>The name of the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_namespace</para>
@@ -101,8 +101,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page of results.</para>
-        /// <para>If the total number of entries exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</para>
+        /// <para>The token used to query the next page of results.</para>
+        /// <para>If the total number of entries exceeds the value of <c>maxResults</c>, the returned data is truncated. You can use <c>nextToken</c> to query the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DxEkv+3w0EDAQgcRFBp8Ep4dD+2BRJj42DLT6GrZysw=</para>
