@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class DescribeZonesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of zones.</para>
+        /// <para>The list of zones.</para>
         /// </summary>
         [NameInMap("Zones")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// <para>The zone name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ap_southeast_2</para>
+            /// <para>Hangzhou Zone G</para>
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]

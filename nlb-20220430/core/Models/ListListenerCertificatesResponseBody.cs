@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public List<ListListenerCertificatesResponseBodyCertificates> Certificates { get; set; }
         public class ListListenerCertificatesResponseBodyCertificates : TeaModel {
             /// <summary>
-            /// <para>The ID of the certificate. Only one server certificate is supported.</para>
+            /// <para>The certificate ID. Only server certificates are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12315790343_166f8204689_1714763408_70998****</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string CertificateId { get; set; }
 
             /// <summary>
-            /// <para>The type of the certificate.</para>
+            /// <para>The certificate type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Server</para>
@@ -44,10 +44,12 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string CertificateType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the certificate is the default certificate of the listener. Valid values:</para>
+            /// <para>Specifies whether the certificate is the default certificate for the listener. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: The certificate is the default certificate.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The certificate is an additional certificate.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -58,11 +60,14 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public bool? IsDefault { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the certificate is associated with the listener. Valid values:</para>
+            /// <para>The association status between the certificate and the listener. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Associating</b></description></item>
-            /// <item><description><b>Associated</b></description></item>
-            /// <item><description><b>Diassociating</b></description></item>
+            /// <item><description><para><b>Associating</b>: The certificate is being associated.</para>
+            /// </description></item>
+            /// <item><description><para><b>Associated</b>: The certificate is associated.</para>
+            /// </description></item>
+            /// <item><description><para><b>Diassociating</b>: The certificate is being dissociated.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +80,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned per page. Valid values: <b>1</b> to <b>50</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return per page. Valid values: <b>1</b> to <b>50</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -85,10 +90,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The pagination token for the next query.</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter for the first request.</description></item>
-        /// <item><description>You must specify the token that is obtained from the previous query as the value of NextToken.</description></item>
+        /// <item><description>Leave this parameter empty for the first query or when no subsequent query is required.</description></item>
+        /// <item><description>For subsequent queries, set this parameter to the NextToken value returned by the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -109,7 +114,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

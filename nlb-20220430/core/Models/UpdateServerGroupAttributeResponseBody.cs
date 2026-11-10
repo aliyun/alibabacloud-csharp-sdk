@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The server group ID.</para>
+        /// <para>The ID of the server group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sgp-atstuj3rtoptyui****</para>

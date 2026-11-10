@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class ListListenersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The listeners.</para>
+        /// <para>The list of Network Load Balancer (NLB) listeners.</para>
         /// </summary>
         [NameInMap("Listeners")]
         [Validation(Required=false)]
@@ -19,8 +19,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// <summary>
             /// <para>Indicates whether Application-Layer Protocol Negotiation (ALPN) is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -47,9 +49,9 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string AlpnPolicy { get; set; }
 
             /// <summary>
-            /// <para>A list of CA certificates.</para>
+            /// <para>The list of CA certificates.</para>
             /// <remarks>
-            /// <para> This parameter takes effect only for listeners that use SSL over TCP.</para>
+            /// <para>This parameter takes effect only for TCPSSL listeners.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("CaCertificateIds")]
@@ -59,8 +61,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// <summary>
             /// <para>Indicates whether mutual authentication is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,9 +75,9 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public bool? CaEnabled { get; set; }
 
             /// <summary>
-            /// <para>The server certificate.</para>
+            /// <para>The list of server certificates.</para>
             /// <remarks>
-            /// <para> This parameter takes effect only for listeners that use SSL over TCP.</para>
+            /// <para>This parameter takes effect only for TCPSSL listeners.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("CertificateIds")]
@@ -81,7 +85,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public List<string> CertificateIds { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of new connections per second supported by the listener in each zone (virtual IP address). Valid values: <b>0</b> to <b>1000000</b>. <b>0</b> indicates that the number of connections is unlimited.</para>
+            /// <para>The maximum number of new connections per second that the listener can process in each zone (VIP). Valid values: <b>0</b> to <b>1000000</b>. A value of <b>0</b> indicates that no limit is applied.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -91,7 +95,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public int? Cps { get; set; }
 
             /// <summary>
-            /// <para>The last port in the listener port range.</para>
+            /// <para>The end port for all-port listening.</para>
             /// 
             /// <b>Example:</b>
             /// <para>455</para>
@@ -101,7 +105,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string EndPort { get; set; }
 
             /// <summary>
-            /// <para>The timeout period of idle connections. Unit: seconds. Valid values: <b>1</b> to <b>900</b>. Default value: <b>900</b>.</para>
+            /// <para>The idle timeout period for connections. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>900</para>
@@ -111,8 +115,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public int? IdleTimeout { get; set; }
 
             /// <summary>
-            /// <para>The name of the listener.</para>
-            /// <para>The name must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).</para>
+            /// <para>The custom name of the listener.</para>
+            /// <para>The name must be 2 to 256 characters in length and can contain Chinese characters, English letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).</para>
             /// 
             /// <b>Example:</b>
             /// <para>tcpssl_443</para>
@@ -132,7 +136,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string ListenerId { get; set; }
 
             /// <summary>
-            /// <para>The information about the listener port of your server.</para>
+            /// <para>The listener port.</para>
             /// 
             /// <b>Example:</b>
             /// <para>443</para>
@@ -154,14 +158,22 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// <summary>
             /// <para>The status of the listener. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Provisioning</b>: The listener is being created.</description></item>
-            /// <item><description><b>Running</b>: The listener is running.</description></item>
-            /// <item><description><b>Configuring</b>: The listener is being configured.</description></item>
-            /// <item><description><b>Stopping</b>: The listener is being stopped.</description></item>
-            /// <item><description><b>Stopped</b>: The listener is stopped.</description></item>
-            /// <item><description><b>Starting</b>: The listener is being started.</description></item>
-            /// <item><description><b>Deleting</b>: The listener is being deleted.</description></item>
-            /// <item><description><b>Deleted</b>: The listener is deleted.</description></item>
+            /// <item><description><para><b>Provisioning</b>: The listener is being created.</para>
+            /// </description></item>
+            /// <item><description><para><b>Running</b>: The listener is running.</para>
+            /// </description></item>
+            /// <item><description><para><b>Configuring</b>: The listener is being configured.</para>
+            /// </description></item>
+            /// <item><description><para><b>Stopping</b>: The listener is being stopped.</para>
+            /// </description></item>
+            /// <item><description><para><b>Stopped</b>: The listener is stopped.</para>
+            /// </description></item>
+            /// <item><description><para><b>Starting</b>: The listener is being started.</para>
+            /// </description></item>
+            /// <item><description><para><b>Deleting</b>: The listener is being deleted.</para>
+            /// </description></item>
+            /// <item><description><para><b>Deleted</b>: The listener is deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -172,7 +184,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string ListenerStatus { get; set; }
 
             /// <summary>
-            /// <para>The CLB instance ID.</para>
+            /// <para>The ID of the Network Load Balancer (NLB) instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nlb-83ckzc8d4xlp8o****</para>
@@ -182,9 +194,9 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string LoadBalancerId { get; set; }
 
             /// <summary>
-            /// <para>The size of the largest TCP packet segment. Unit: bytes. Valid values: <b>0</b> to <b>1500</b>. <b>0</b> indicates that the Mss value of TCP packets remains unchanged.</para>
+            /// <para>The maximum segment size (MSS) of TCP packets. Unit: bytes. Valid values: <b>0</b> to <b>1500</b>. A value of <b>0</b> indicates that the MSS value of user TCP packets is not modified.</para>
             /// <remarks>
-            /// <para> This parameter takes effect only for listeners that use SSL over TCP.</para>
+            /// <para>This parameter is supported only by TCP and TCPSSL listeners.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -195,10 +207,12 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public int? Mss { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Proxy protocol passes source client IP addresses to backend servers. Valid values:</para>
+            /// <para>Indicates whether the Proxy Protocol is enabled to pass the client source IP address to backend servers. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -209,17 +223,35 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public bool? ProxyProtocolEnabled { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Proxy protocol passes the VpcId, PrivateLinkEpId, and PrivateLinkEpsId parameters to backend servers.</para>
+            /// <para>The configuration for passing the VpcId, PrivateLinkEpId, and PrivateLinkEpsId information to backend servers by using the Proxy Protocol.</para>
             /// </summary>
             [NameInMap("ProxyProtocolV2Config")]
             [Validation(Required=false)]
             public ListListenersResponseBodyListenersProxyProtocolV2Config ProxyProtocolV2Config { get; set; }
             public class ListListenersResponseBodyListenersProxyProtocolV2Config : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the Proxy protocol passes the PrivateLinkEpId parameter to backend servers. Valid values:</para>
+                /// <para>Indicates whether the Common Name (CN) field of the client certificate is passed to backend servers by using Proxy Protocol V2. Note: This parameter takes effect only when the listener protocol is TCPSSL, mutual authentication (mTLS) is enabled, and Proxy Protocol V2 is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b>: enabled.</para>
+                /// </description></item>
+                /// <item><description><para><b>false</b>: disabled.</para>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
+                [NameInMap("Ppv2CnIdEnabled")]
+                [Validation(Required=false)]
+                public bool? Ppv2CnIdEnabled { get; set; }
+
+                /// <summary>
+                /// <para>Indicates whether the Proxy Protocol is enabled to pass the PrivateLinkEpId to backend servers. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><b>true</b>: enabled.</para>
+                /// </description></item>
+                /// <item><description><para><b>false</b>: disabled.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -230,10 +262,12 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
                 public bool? Ppv2PrivateLinkEpIdEnabled { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the Proxy protocol passes the PrivateLinkEpsId parameter to backend servers. Valid values:</para>
+                /// <para>Indicates whether the Proxy Protocol is enabled to pass the PrivateLinkEpsId to backend servers. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b>: enabled.</para>
+                /// </description></item>
+                /// <item><description><para><b>false</b>: disabled.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -244,10 +278,12 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
                 public bool? Ppv2PrivateLinkEpsIdEnabled { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the Proxy protocol passes the VpcId parameter to backend servers. Valid values:</para>
+                /// <para>Indicates whether the Proxy Protocol is enabled to pass the VpcId to backend servers. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b>: enabled.</para>
+                /// </description></item>
+                /// <item><description><para><b>false</b>: disabled.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -260,7 +296,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             }
 
             /// <summary>
-            /// <para>The region ID of the NLB instance.</para>
+            /// <para>The region ID of the Network Load Balancer (NLB) instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -270,10 +306,12 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether fine-grained monitoring is enabled. Valid values:</para>
+            /// <para>Indicates whether second-level monitoring is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -286,7 +324,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// <summary>
             /// <para>The ID of the security policy.</para>
             /// <remarks>
-            /// <para> This parameter takes effect only for listeners that use SSL over TCP.</para>
+            /// <para>This parameter takes effect only for TCPSSL listeners.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -297,7 +335,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string SecurityPolicyId { get; set; }
 
             /// <summary>
-            /// <para>The server group ID.</para>
+            /// <para>The ID of the server group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sgp-ppdpc14gdm3x4o****</para>
@@ -307,7 +345,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string ServerGroupId { get; set; }
 
             /// <summary>
-            /// <para>The first port in the listener port range.</para>
+            /// <para>The start port for all-port listening.</para>
             /// 
             /// <b>Example:</b>
             /// <para>233</para>
@@ -317,7 +355,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string StartPort { get; set; }
 
             /// <summary>
-            /// <para>A list of tags.</para>
+            /// <para>The list of tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -358,10 +396,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used for the next query. Valid values:</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, it indicates that no next query is to be sent.</description></item>
-        /// <item><description>If a value of <b>NextToken</b> is returned, the value is the token used for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query is required.</description></item>
+        /// <item><description>If <b>NextToken</b> returns a value, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -372,7 +410,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</para>
@@ -382,7 +420,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>

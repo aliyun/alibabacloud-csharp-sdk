@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>54B48E3D-DF70-471B-AA93-08E683A1B45</para>

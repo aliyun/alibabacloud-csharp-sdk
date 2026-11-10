@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
+            this._productId = "Nlb";
+            AlibabaCloud.GatewayPop.Client gatewayClient = new AlibabaCloud.GatewayPop.Client();
+            this._spi = gatewayClient;
             this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("nlb", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -39,7 +42,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds backend servers to a specified server group.</para>
+        /// <para>Adds backend servers to a Network Load Balancer (NLB) server group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -103,7 +106,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds backend servers to a specified server group.</para>
+        /// <para>Adds backend servers to a Network Load Balancer (NLB) server group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -167,7 +170,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds backend servers to a specified server group.</para>
+        /// <para>Adds backend servers to a Network Load Balancer (NLB) server group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -185,7 +188,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds backend servers to a specified server group.</para>
+        /// <para>Adds backend servers to a Network Load Balancer (NLB) server group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -203,15 +206,15 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates additional certificates with a listener that uses SSL over TCP.</para>
+        /// <para>Associates additional certificates with a TCPSSL listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/615175.html">ListListenerCertificates</a> operation to query the status of the task:</para>
+        /// <para><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. The system returns a request ID, but the additional certificates are not immediately added. The addition task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/615175.html">ListListenerCertificates</a> to query the addition status of the additional certificates:</para>
         /// <list type="bullet">
-        /// <item><description>If the listener is in the <b>Associating</b> state, the additional certificates are being associated.</description></item>
-        /// <item><description>If the listener is in the <b>Associated</b> state, the additional certificates are associated.</description></item>
+        /// <item><description>When the TCPSSL listener is in the <b>Associating</b> state, the additional certificates are being added.</description></item>
+        /// <item><description>When the TCPSSL listener is in the <b>Associated</b> state, the additional certificates are added.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -270,15 +273,15 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates additional certificates with a listener that uses SSL over TCP.</para>
+        /// <para>Associates additional certificates with a TCPSSL listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/615175.html">ListListenerCertificates</a> operation to query the status of the task:</para>
+        /// <para><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. The system returns a request ID, but the additional certificates are not immediately added. The addition task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/615175.html">ListListenerCertificates</a> to query the addition status of the additional certificates:</para>
         /// <list type="bullet">
-        /// <item><description>If the listener is in the <b>Associating</b> state, the additional certificates are being associated.</description></item>
-        /// <item><description>If the listener is in the <b>Associated</b> state, the additional certificates are associated.</description></item>
+        /// <item><description>When the TCPSSL listener is in the <b>Associating</b> state, the additional certificates are being added.</description></item>
+        /// <item><description>When the TCPSSL listener is in the <b>Associated</b> state, the additional certificates are added.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -337,15 +340,15 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates additional certificates with a listener that uses SSL over TCP.</para>
+        /// <para>Associates additional certificates with a TCPSSL listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/615175.html">ListListenerCertificates</a> operation to query the status of the task:</para>
+        /// <para><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. The system returns a request ID, but the additional certificates are not immediately added. The addition task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/615175.html">ListListenerCertificates</a> to query the addition status of the additional certificates:</para>
         /// <list type="bullet">
-        /// <item><description>If the listener is in the <b>Associating</b> state, the additional certificates are being associated.</description></item>
-        /// <item><description>If the listener is in the <b>Associated</b> state, the additional certificates are associated.</description></item>
+        /// <item><description>When the TCPSSL listener is in the <b>Associating</b> state, the additional certificates are being added.</description></item>
+        /// <item><description>When the TCPSSL listener is in the <b>Associated</b> state, the additional certificates are added.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -364,15 +367,15 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates additional certificates with a listener that uses SSL over TCP.</para>
+        /// <para>Associates additional certificates with a TCPSSL listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/615175.html">ListListenerCertificates</a> operation to query the status of the task:</para>
+        /// <para><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. The system returns a request ID, but the additional certificates are not immediately added. The addition task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/615175.html">ListListenerCertificates</a> to query the addition status of the additional certificates:</para>
         /// <list type="bullet">
-        /// <item><description>If the listener is in the <b>Associating</b> state, the additional certificates are being associated.</description></item>
-        /// <item><description>If the listener is in the <b>Associated</b> state, the additional certificates are associated.</description></item>
+        /// <item><description>When the TCPSSL listener is in the <b>Associating</b> state, the additional certificates are being added.</description></item>
+        /// <item><description>When the TCPSSL listener is in the <b>Associated</b> state, the additional certificates are added.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -391,7 +394,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates an Internet Shared Bandwidth instance with a Network Load Balancer (NLB) instance.</para>
+        /// <para>Associates an Internet Shared Bandwidth with a Network Load Balancer (NLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -449,7 +452,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates an Internet Shared Bandwidth instance with a Network Load Balancer (NLB) instance.</para>
+        /// <para>Associates an Internet Shared Bandwidth with a Network Load Balancer (NLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -507,7 +510,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates an Internet Shared Bandwidth instance with a Network Load Balancer (NLB) instance.</para>
+        /// <para>Associates an Internet Shared Bandwidth with a Network Load Balancer (NLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -525,7 +528,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates an Internet Shared Bandwidth instance with a Network Load Balancer (NLB) instance.</para>
+        /// <para>Associates an Internet Shared Bandwidth with a Network Load Balancer (NLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -543,12 +546,12 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds the elastic IP address (EIP) and virtual IP address (VIP) of a zone to the DNS record.</para>
+        /// <para>Adds the EIP or VIP of a zone back to DNS resolution.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, the zone of the Network Load Balancer (NLB) instance is removed from the DNS record by using the console or calling the <a href="https://help.aliyun.com/document_detail/2411999.html">StartShiftLoadBalancerZones</a> API operation.</para>
+        /// <para>When you call this operation, you must have already removed a zone from the NLB instance by calling the <a href="https://help.aliyun.com/document_detail/2411999.html">StartShiftLoadBalancerZones</a> operation or in the console.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -606,12 +609,12 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds the elastic IP address (EIP) and virtual IP address (VIP) of a zone to the DNS record.</para>
+        /// <para>Adds the EIP or VIP of a zone back to DNS resolution.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, the zone of the Network Load Balancer (NLB) instance is removed from the DNS record by using the console or calling the <a href="https://help.aliyun.com/document_detail/2411999.html">StartShiftLoadBalancerZones</a> API operation.</para>
+        /// <para>When you call this operation, you must have already removed a zone from the NLB instance by calling the <a href="https://help.aliyun.com/document_detail/2411999.html">StartShiftLoadBalancerZones</a> operation or in the console.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -669,12 +672,12 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds the elastic IP address (EIP) and virtual IP address (VIP) of a zone to the DNS record.</para>
+        /// <para>Adds the EIP or VIP of a zone back to DNS resolution.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, the zone of the Network Load Balancer (NLB) instance is removed from the DNS record by using the console or calling the <a href="https://help.aliyun.com/document_detail/2411999.html">StartShiftLoadBalancerZones</a> API operation.</para>
+        /// <para>When you call this operation, you must have already removed a zone from the NLB instance by calling the <a href="https://help.aliyun.com/document_detail/2411999.html">StartShiftLoadBalancerZones</a> operation or in the console.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -692,12 +695,12 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds the elastic IP address (EIP) and virtual IP address (VIP) of a zone to the DNS record.</para>
+        /// <para>Adds the EIP or VIP of a zone back to DNS resolution.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, the zone of the Network Load Balancer (NLB) instance is removed from the DNS record by using the console or calling the <a href="https://help.aliyun.com/document_detail/2411999.html">StartShiftLoadBalancerZones</a> API operation.</para>
+        /// <para>When you call this operation, you must have already removed a zone from the NLB instance by calling the <a href="https://help.aliyun.com/document_detail/2411999.html">StartShiftLoadBalancerZones</a> operation or in the console.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -715,7 +718,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a TCP or UDP listener, or a listener that uses SSL over TCP for a Network Load Balancer (NLB) instance.</para>
+        /// <para>Creates a TCP, UDP, or TCPSSL listener on a Network Load Balancer (NLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -851,7 +854,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a TCP or UDP listener, or a listener that uses SSL over TCP for a Network Load Balancer (NLB) instance.</para>
+        /// <para>Creates a TCP, UDP, or TCPSSL listener on a Network Load Balancer (NLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -987,7 +990,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a TCP or UDP listener, or a listener that uses SSL over TCP for a Network Load Balancer (NLB) instance.</para>
+        /// <para>Creates a TCP, UDP, or TCPSSL listener on a Network Load Balancer (NLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1005,7 +1008,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a TCP or UDP listener, or a listener that uses SSL over TCP for a Network Load Balancer (NLB) instance.</para>
+        /// <para>Creates a TCP, UDP, or TCPSSL listener on a Network Load Balancer (NLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1023,16 +1026,16 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Network Load Balancer (NLB) instance in a specified region.</para>
+        /// <para>Creates a Network Load Balancing (NLB) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  When you create an NLB instance, the service-linked role AliyunServiceRoleForNlb is automatically created and assigned to you.</para>
         /// <list type="bullet">
-        /// <item><description><b>CreateLoadBalancer</b> is an asynchronous operation. After you send a request, the system returns an instance ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> to query the status of an NLB instance.<list type="bullet">
-        /// <item><description>If an NLB instance is in the <b>Provisioning</b> state, the NLB instance is being created.</description></item>
-        /// <item><description>If an NLB instance is in the <b>Active</b> state, the NLB instance is created.</description></item>
+        /// <item><description>When you create a Network Load Balancing (NLB) instance, the system automatically creates the AliyunServiceRoleForNlb service-linked role for you.</description></item>
+        /// <item><description>The <b>CreateLoadBalancer</b> operation is asynchronous. The system returns an instance ID, but the Network Load Balancing (NLB) instance is not yet created and the creation task is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> operation to query the creation status of the Network Load Balancing (NLB) instance:<list type="bullet">
+        /// <item><description>If the Network Load Balancing (NLB) instance is in the <b>Provisioning</b> state, the Network Load Balancing (NLB) instance is being created.</description></item>
+        /// <item><description>If the Network Load Balancing (NLB) instance is in the <b>Active</b> state, the Network Load Balancing (NLB) instance is created.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -1139,16 +1142,16 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Network Load Balancer (NLB) instance in a specified region.</para>
+        /// <para>Creates a Network Load Balancing (NLB) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  When you create an NLB instance, the service-linked role AliyunServiceRoleForNlb is automatically created and assigned to you.</para>
         /// <list type="bullet">
-        /// <item><description><b>CreateLoadBalancer</b> is an asynchronous operation. After you send a request, the system returns an instance ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> to query the status of an NLB instance.<list type="bullet">
-        /// <item><description>If an NLB instance is in the <b>Provisioning</b> state, the NLB instance is being created.</description></item>
-        /// <item><description>If an NLB instance is in the <b>Active</b> state, the NLB instance is created.</description></item>
+        /// <item><description>When you create a Network Load Balancing (NLB) instance, the system automatically creates the AliyunServiceRoleForNlb service-linked role for you.</description></item>
+        /// <item><description>The <b>CreateLoadBalancer</b> operation is asynchronous. The system returns an instance ID, but the Network Load Balancing (NLB) instance is not yet created and the creation task is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> operation to query the creation status of the Network Load Balancing (NLB) instance:<list type="bullet">
+        /// <item><description>If the Network Load Balancing (NLB) instance is in the <b>Provisioning</b> state, the Network Load Balancing (NLB) instance is being created.</description></item>
+        /// <item><description>If the Network Load Balancing (NLB) instance is in the <b>Active</b> state, the Network Load Balancing (NLB) instance is created.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -1255,16 +1258,16 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Network Load Balancer (NLB) instance in a specified region.</para>
+        /// <para>Creates a Network Load Balancing (NLB) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  When you create an NLB instance, the service-linked role AliyunServiceRoleForNlb is automatically created and assigned to you.</para>
         /// <list type="bullet">
-        /// <item><description><b>CreateLoadBalancer</b> is an asynchronous operation. After you send a request, the system returns an instance ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> to query the status of an NLB instance.<list type="bullet">
-        /// <item><description>If an NLB instance is in the <b>Provisioning</b> state, the NLB instance is being created.</description></item>
-        /// <item><description>If an NLB instance is in the <b>Active</b> state, the NLB instance is created.</description></item>
+        /// <item><description>When you create a Network Load Balancing (NLB) instance, the system automatically creates the AliyunServiceRoleForNlb service-linked role for you.</description></item>
+        /// <item><description>The <b>CreateLoadBalancer</b> operation is asynchronous. The system returns an instance ID, but the Network Load Balancing (NLB) instance is not yet created and the creation task is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> operation to query the creation status of the Network Load Balancing (NLB) instance:<list type="bullet">
+        /// <item><description>If the Network Load Balancing (NLB) instance is in the <b>Provisioning</b> state, the Network Load Balancing (NLB) instance is being created.</description></item>
+        /// <item><description>If the Network Load Balancing (NLB) instance is in the <b>Active</b> state, the Network Load Balancing (NLB) instance is created.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -1285,16 +1288,16 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Network Load Balancer (NLB) instance in a specified region.</para>
+        /// <para>Creates a Network Load Balancing (NLB) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  When you create an NLB instance, the service-linked role AliyunServiceRoleForNlb is automatically created and assigned to you.</para>
         /// <list type="bullet">
-        /// <item><description><b>CreateLoadBalancer</b> is an asynchronous operation. After you send a request, the system returns an instance ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> to query the status of an NLB instance.<list type="bullet">
-        /// <item><description>If an NLB instance is in the <b>Provisioning</b> state, the NLB instance is being created.</description></item>
-        /// <item><description>If an NLB instance is in the <b>Active</b> state, the NLB instance is created.</description></item>
+        /// <item><description>When you create a Network Load Balancing (NLB) instance, the system automatically creates the AliyunServiceRoleForNlb service-linked role for you.</description></item>
+        /// <item><description>The <b>CreateLoadBalancer</b> operation is asynchronous. The system returns an instance ID, but the Network Load Balancing (NLB) instance is not yet created and the creation task is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> operation to query the creation status of the Network Load Balancing (NLB) instance:<list type="bullet">
+        /// <item><description>If the Network Load Balancing (NLB) instance is in the <b>Provisioning</b> state, the Network Load Balancing (NLB) instance is being created.</description></item>
+        /// <item><description>If the Network Load Balancing (NLB) instance is in the <b>Active</b> state, the Network Load Balancing (NLB) instance is created.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -1315,7 +1318,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom security policy for a TCP/SSL listener.</para>
+        /// <para>Creates a custom security policy for a TCPSSL listener in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1385,7 +1388,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom security policy for a TCP/SSL listener.</para>
+        /// <para>Creates a custom security policy for a TCPSSL listener in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1455,7 +1458,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom security policy for a TCP/SSL listener.</para>
+        /// <para>Creates a custom security policy for a TCPSSL listener in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1473,7 +1476,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom security policy for a TCP/SSL listener.</para>
+        /// <para>Creates a custom security policy for a TCPSSL listener in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1491,15 +1494,15 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a server group in a region.</para>
+        /// <para>Creates a server group in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the task.</para>
+        /// <para>The <b>CreateServerGroup</b> operation is asynchronous. The system returns a request ID, but the server group of the Network Load Balancer (NLB) is not yet created, and the creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the server group:</para>
         /// <list type="bullet">
-        /// <item><description>If the task is in the <b>Succeeded</b> status, the server group is created.</description></item>
-        /// <item><description>If the task is in the <b>Processing</b> status, the server group is being created.</description></item>
+        /// <item><description>If the task status is <b>Succeeded</b>, the server group is created.</description></item>
+        /// <item><description>If the task status is <b>Processing</b>, the server group is being created. In this state, you can only perform query operations and cannot perform other operations.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1612,15 +1615,15 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a server group in a region.</para>
+        /// <para>Creates a server group in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the task.</para>
+        /// <para>The <b>CreateServerGroup</b> operation is asynchronous. The system returns a request ID, but the server group of the Network Load Balancer (NLB) is not yet created, and the creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the server group:</para>
         /// <list type="bullet">
-        /// <item><description>If the task is in the <b>Succeeded</b> status, the server group is created.</description></item>
-        /// <item><description>If the task is in the <b>Processing</b> status, the server group is being created.</description></item>
+        /// <item><description>If the task status is <b>Succeeded</b>, the server group is created.</description></item>
+        /// <item><description>If the task status is <b>Processing</b>, the server group is being created. In this state, you can only perform query operations and cannot perform other operations.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1733,15 +1736,15 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a server group in a region.</para>
+        /// <para>Creates a server group in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the task.</para>
+        /// <para>The <b>CreateServerGroup</b> operation is asynchronous. The system returns a request ID, but the server group of the Network Load Balancer (NLB) is not yet created, and the creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the server group:</para>
         /// <list type="bullet">
-        /// <item><description>If the task is in the <b>Succeeded</b> status, the server group is created.</description></item>
-        /// <item><description>If the task is in the <b>Processing</b> status, the server group is being created.</description></item>
+        /// <item><description>If the task status is <b>Succeeded</b>, the server group is created.</description></item>
+        /// <item><description>If the task status is <b>Processing</b>, the server group is being created. In this state, you can only perform query operations and cannot perform other operations.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1760,15 +1763,15 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a server group in a region.</para>
+        /// <para>Creates a server group in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the task.</para>
+        /// <para>The <b>CreateServerGroup</b> operation is asynchronous. The system returns a request ID, but the server group of the Network Load Balancer (NLB) is not yet created, and the creation task is still running in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the server group:</para>
         /// <list type="bullet">
-        /// <item><description>If the task is in the <b>Succeeded</b> status, the server group is created.</description></item>
-        /// <item><description>If the task is in the <b>Processing</b> status, the server group is being created.</description></item>
+        /// <item><description>If the task status is <b>Succeeded</b>, the server group is created.</description></item>
+        /// <item><description>If the task status is <b>Processing</b>, the server group is being created. In this state, you can only perform query operations and cannot perform other operations.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2075,7 +2078,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom TLS security policy from a Network Load Balancer (NLB) instance.</para>
+        /// <para>Deletes a custom TLS security policy for Network Load Balancer (NLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2129,7 +2132,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom TLS security policy from a Network Load Balancer (NLB) instance.</para>
+        /// <para>Deletes a custom TLS security policy for Network Load Balancer (NLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2183,7 +2186,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom TLS security policy from a Network Load Balancer (NLB) instance.</para>
+        /// <para>Deletes a custom TLS security policy for Network Load Balancer (NLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2201,7 +2204,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom TLS security policy from a Network Load Balancer (NLB) instance.</para>
+        /// <para>Deletes a custom TLS security policy for Network Load Balancer (NLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2219,12 +2222,12 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Network Load Balancer (NLB) server group.</para>
+        /// <para>Deletes a server group of a Network Load Balancer (NLB).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete server groups that are not associated with listeners.</para>
+        /// <para>You can delete a server group only when it is not used by any listener.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2278,12 +2281,12 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Network Load Balancer (NLB) server group.</para>
+        /// <para>Deletes a server group of a Network Load Balancer (NLB).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete server groups that are not associated with listeners.</para>
+        /// <para>You can delete a server group only when it is not used by any listener.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2337,12 +2340,12 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Network Load Balancer (NLB) server group.</para>
+        /// <para>Deletes a server group of a Network Load Balancer (NLB).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete server groups that are not associated with listeners.</para>
+        /// <para>You can delete a server group only when it is not used by any listener.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2360,12 +2363,12 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Network Load Balancer (NLB) server group.</para>
+        /// <para>Deletes a server group of a Network Load Balancer (NLB).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can delete server groups that are not associated with listeners.</para>
+        /// <para>You can delete a server group only when it is not used by any listener.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2383,8 +2386,13 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage configurations of fine-grained monitoring.</para>
+        /// <para>Queries the storage configuration for second-level monitoring.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the data warehouse configured for second-level monitoring storage in the current region.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeHdMonitorRegionConfigRequest
@@ -2425,8 +2433,13 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage configurations of fine-grained monitoring.</para>
+        /// <para>Queries the storage configuration for second-level monitoring.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the data warehouse configured for second-level monitoring storage in the current region.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeHdMonitorRegionConfigRequest
@@ -2467,8 +2480,13 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage configurations of fine-grained monitoring.</para>
+        /// <para>Queries the storage configuration for second-level monitoring.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the data warehouse configured for second-level monitoring storage in the current region.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeHdMonitorRegionConfigRequest
@@ -2485,8 +2503,13 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage configurations of fine-grained monitoring.</para>
+        /// <para>Queries the storage configuration for second-level monitoring.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the data warehouse configured for second-level monitoring storage in the current region.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeHdMonitorRegionConfigRequest
@@ -2503,7 +2526,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries regions that support Network Load Balancer (NLB) instances.</para>
+        /// <para>Queries the available regions for NLB.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2555,7 +2578,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries regions that support Network Load Balancer (NLB) instances.</para>
+        /// <para>Queries the available regions for NLB.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2607,7 +2630,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries regions that support Network Load Balancer (NLB) instances.</para>
+        /// <para>Queries the available regions for NLB.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2625,7 +2648,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries regions that support Network Load Balancer (NLB) instances.</para>
+        /// <para>Queries the available regions for NLB.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2643,7 +2666,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the zones of a region in which a Network Load Balancer (NLB) instance is deployed.</para>
+        /// <para>Queries the zones in a region for Network Load Balancer (NLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2697,7 +2720,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the zones of a region in which a Network Load Balancer (NLB) instance is deployed.</para>
+        /// <para>Queries the zones in a region for Network Load Balancer (NLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2751,7 +2774,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the zones of a region in which a Network Load Balancer (NLB) instance is deployed.</para>
+        /// <para>Queries the zones in a region for Network Load Balancer (NLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2769,7 +2792,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the zones of a region in which a Network Load Balancer (NLB) instance is deployed.</para>
+        /// <para>Queries the zones in a region for Network Load Balancer (NLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2787,7 +2810,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a Network Load Balancer (NLB) instance from an Internet Shared Bandwidth instance.</para>
+        /// <para>Disassociates an Internet Shared Bandwidth plan from a Network Load Balancer (NLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2845,7 +2868,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a Network Load Balancer (NLB) instance from an Internet Shared Bandwidth instance.</para>
+        /// <para>Disassociates an Internet Shared Bandwidth plan from a Network Load Balancer (NLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2903,7 +2926,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a Network Load Balancer (NLB) instance from an Internet Shared Bandwidth instance.</para>
+        /// <para>Disassociates an Internet Shared Bandwidth plan from a Network Load Balancer (NLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2921,7 +2944,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a Network Load Balancer (NLB) instance from an Internet Shared Bandwidth instance.</para>
+        /// <para>Disassociates an Internet Shared Bandwidth plan from a Network Load Balancer (NLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2939,7 +2962,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the public IPv6 address of a dual-stack Network Load Balancer (NLB) instance to a private IPv6 address.</para>
+        /// <para>Changes the IPv6 address of a dual-stack Network Load Balancer (NLB) instance from public to private.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2993,7 +3016,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the public IPv6 address of a dual-stack Network Load Balancer (NLB) instance to a private IPv6 address.</para>
+        /// <para>Changes the IPv6 address of a dual-stack Network Load Balancer (NLB) instance from public to private.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3047,7 +3070,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the public IPv6 address of a dual-stack Network Load Balancer (NLB) instance to a private IPv6 address.</para>
+        /// <para>Changes the IPv6 address of a dual-stack Network Load Balancer (NLB) instance from public to private.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3065,7 +3088,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the public IPv6 address of a dual-stack Network Load Balancer (NLB) instance to a private IPv6 address.</para>
+        /// <para>Changes the IPv6 address of a dual-stack Network Load Balancer (NLB) instance from public to private.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3415,7 +3438,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of an asynchronous operation performed on a Network Load Balancer (NLB) instance.</para>
+        /// <para>Queries the execution result of an asynchronous task for Network Load Balancer (NLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3461,7 +3484,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of an asynchronous operation performed on a Network Load Balancer (NLB) instance.</para>
+        /// <para>Queries the execution result of an asynchronous task for Network Load Balancer (NLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3507,7 +3530,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of an asynchronous operation performed on a Network Load Balancer (NLB) instance.</para>
+        /// <para>Queries the execution result of an asynchronous task for Network Load Balancer (NLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3525,7 +3548,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of an asynchronous operation performed on a Network Load Balancer (NLB) instance.</para>
+        /// <para>Queries the execution result of an asynchronous task for Network Load Balancer (NLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3543,7 +3566,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a Network Load Balancer (NLB) listener.</para>
+        /// <para>Queries the details of a listener on a Network Load Balancer (NLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3597,7 +3620,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a Network Load Balancer (NLB) listener.</para>
+        /// <para>Queries the details of a listener on a Network Load Balancer (NLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3651,7 +3674,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a Network Load Balancer (NLB) listener.</para>
+        /// <para>Queries the details of a listener on a Network Load Balancer (NLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3669,7 +3692,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a Network Load Balancer (NLB) listener.</para>
+        /// <para>Queries the details of a listener on a Network Load Balancer (NLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3815,7 +3838,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a Network Load Balancer (NLB) instance.</para>
+        /// <para>Queries the details of a specified Network Load Balancer (NLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3869,7 +3892,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a Network Load Balancer (NLB) instance.</para>
+        /// <para>Queries the details of a specified Network Load Balancer (NLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3923,7 +3946,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a Network Load Balancer (NLB) instance.</para>
+        /// <para>Queries the details of a specified Network Load Balancer (NLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3941,7 +3964,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a Network Load Balancer (NLB) instance.</para>
+        /// <para>Queries the details of a specified Network Load Balancer (NLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4079,7 +4102,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the server certificate of a TCP/SSL listener.</para>
+        /// <para>Queries the server certificates of a TCPSSL listener.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4141,7 +4164,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the server certificate of a TCP/SSL listener.</para>
+        /// <para>Queries the server certificates of a TCPSSL listener.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4203,7 +4226,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the server certificate of a TCP/SSL listener.</para>
+        /// <para>Queries the server certificates of a TCPSSL listener.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4221,7 +4244,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the server certificate of a TCP/SSL listener.</para>
+        /// <para>Queries the server certificates of a TCPSSL listener.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4239,7 +4262,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries listeners added to a Network Load Balancer (NLB) instance.</para>
+        /// <para>Queries the list of Network Load Balancer (NLB) listeners.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4309,7 +4332,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries listeners added to a Network Load Balancer (NLB) instance.</para>
+        /// <para>Queries the list of Network Load Balancer (NLB) listeners.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4379,7 +4402,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries listeners added to a Network Load Balancer (NLB) instance.</para>
+        /// <para>Queries the list of Network Load Balancer (NLB) listeners.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4397,7 +4420,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries listeners added to a Network Load Balancer (NLB) instance.</para>
+        /// <para>Queries the list of Network Load Balancer (NLB) listeners.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4415,7 +4438,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information about Network Load Balancer (NLB) instances.</para>
+        /// <para>Queries the basic information about created Network Load Balancer (NLB) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4517,7 +4540,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information about Network Load Balancer (NLB) instances.</para>
+        /// <para>Queries the basic information about created Network Load Balancer (NLB) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4619,7 +4642,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information about Network Load Balancer (NLB) instances.</para>
+        /// <para>Queries the basic information about created Network Load Balancer (NLB) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4637,7 +4660,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information about Network Load Balancer (NLB) instances.</para>
+        /// <para>Queries the basic information about created Network Load Balancer (NLB) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4987,7 +5010,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the server groups of a Network Load Balancer (NLB) instance.</para>
+        /// <para>Queries the server group list of a Network Load Balancer (NLB) load balancing instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5063,7 +5086,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the server groups of a Network Load Balancer (NLB) instance.</para>
+        /// <para>Queries the server group list of a Network Load Balancer (NLB) load balancing instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5139,7 +5162,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the server groups of a Network Load Balancer (NLB) instance.</para>
+        /// <para>Queries the server group list of a Network Load Balancer (NLB) load balancing instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5157,7 +5180,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the server groups of a Network Load Balancer (NLB) instance.</para>
+        /// <para>Queries the server group list of a Network Load Balancer (NLB) load balancing instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7135,7 +7158,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the attributes of a listener, such as the name and the idle connection timeout period.</para>
+        /// <para>Updates the configuration of a Network Load Balancer (NLB) listener.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7251,7 +7274,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the attributes of a listener, such as the name and the idle connection timeout period.</para>
+        /// <para>Updates the configuration of a Network Load Balancer (NLB) listener.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7367,7 +7390,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the attributes of a listener, such as the name and the idle connection timeout period.</para>
+        /// <para>Updates the configuration of a Network Load Balancer (NLB) listener.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7385,7 +7408,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the attributes of a listener, such as the name and the idle connection timeout period.</para>
+        /// <para>Updates the configuration of a Network Load Balancer (NLB) listener.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7783,15 +7806,8 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the deletion protection feature.</para>
+        /// <para>create operation</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> operation to query the details about deletion protection and the configuration read-only mode.</para>
-        /// </remarks>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLoadBalancerProtectionRequest
@@ -7860,15 +7876,8 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the deletion protection feature.</para>
+        /// <para>create operation</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> operation to query the details about deletion protection and the configuration read-only mode.</para>
-        /// </remarks>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLoadBalancerProtectionRequest
@@ -7937,15 +7946,8 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the deletion protection feature.</para>
+        /// <para>create operation</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> operation to query the details about deletion protection and the configuration read-only mode.</para>
-        /// </remarks>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLoadBalancerProtectionRequest
@@ -7962,15 +7964,8 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the deletion protection feature.</para>
+        /// <para>create operation</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> operation to query the details about deletion protection and the configuration read-only mode.</para>
-        /// </remarks>
-        /// </description>
         /// 
         /// <param name="request">
         /// UpdateLoadBalancerProtectionRequest
@@ -8367,7 +8362,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a Network Load Balancer (NLB) server group.</para>
+        /// <para>Updates the configuration of a Network Load Balancer (NLB) server group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8384,6 +8379,10 @@ namespace AlibabaCloud.SDK.Nlb20220430
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressIPVersion))
+            {
+                body["AddressIPVersion"] = request.AddressIPVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 body["ClientToken"] = request.ClientToken;
@@ -8455,7 +8454,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a Network Load Balancer (NLB) server group.</para>
+        /// <para>Updates the configuration of a Network Load Balancer (NLB) server group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8472,6 +8471,10 @@ namespace AlibabaCloud.SDK.Nlb20220430
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressIPVersion))
+            {
+                body["AddressIPVersion"] = request.AddressIPVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 body["ClientToken"] = request.ClientToken;
@@ -8543,7 +8546,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a Network Load Balancer (NLB) server group.</para>
+        /// <para>Updates the configuration of a Network Load Balancer (NLB) server group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8561,7 +8564,7 @@ namespace AlibabaCloud.SDK.Nlb20220430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a Network Load Balancer (NLB) server group.</para>
+        /// <para>Updates the configuration of a Network Load Balancer (NLB) server group.</para>
         /// </summary>
         /// 
         /// <param name="request">

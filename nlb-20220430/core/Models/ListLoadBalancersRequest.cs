@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class ListLoadBalancersRequest : TeaModel {
         /// <summary>
-        /// <para>The IP version of the NLB instance. Valid values:</para>
+        /// <para>The protocol version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ipv4</b>: IPv4</description></item>
-        /// <item><description><b>DualStack</b>: dual-stack</description></item>
+        /// <item><description><b>ipv4</b>: IPv4.</description></item>
+        /// <item><description><b>DualStack</b>: dual-stack.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string AddressIpVersion { get; set; }
 
         /// <summary>
-        /// <para>The type of IPv4 address used by the NLB instance. Valid values:</para>
+        /// <para>The IPv4 address type of the NLB instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Internet</b>: The NLB instance uses a public IP address. The domain name of the NLB instance is resolved to the public IP address. The NLB instance can be accessed over the Internet.</description></item>
-        /// <item><description><b>Intranet</b>: The NLB instance uses a private IP address. The domain name of the NLB instance is resolved to the private IP address. The NLB instance can be accessed over the VPC where the NLB instance is deployed.</description></item>
+        /// <item><description><b>Internet</b>: The load balancing instance has a public IP address. The DNS domain name is resolved to the public IP address. Therefore, the instance is accessible over the Internet.</description></item>
+        /// <item><description><b>Intranet</b>: The load balancing instance has only a private IP address. The DNS domain name is resolved to the private IP address. Therefore, the instance is accessible only within the internal network environment of the VPC where the load balancing instance is deployed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string AddressType { get; set; }
 
         /// <summary>
-        /// <para>The domain name of the NLB instance.</para>
+        /// <para>The DNS domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nlb-wb7r6dlwetvt5j****.cn-hangzhou.nlb.aliyuncs.com</para>
@@ -48,10 +48,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string DNSName { get; set; }
 
         /// <summary>
-        /// <para>The type of IPv6 address used by the NLB instance. Valid values:</para>
+        /// <para>The IPv6 address type of the NLB instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Internet</b>: The NLB instance uses a public IP address. The domain name of the NLB instance is resolved to the public IP address. The NLB instance can be accessed over the Internet.</description></item>
-        /// <item><description><b>Intranet</b>: The NLB instance uses a private IP address. The domain name of the NLB instance is resolved to the private IP address. The NLB instance can be accessed over the VPC where the NLB instance is deployed.</description></item>
+        /// <item><description><b>Internet</b>: The load balancing instance has a public IP address. The DNS domain name is resolved to the public IP address. Therefore, the instance is accessible over the Internet.</description></item>
+        /// <item><description><b>Intranet</b>: The load balancing instance has only a private IP address. The DNS domain name is resolved to the private IP address. Therefore, the instance is accessible only within the internal network environment of the VPC where the load balancing instance is deployed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,8 +64,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// <para>The business status of the NLB instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Abnormal</b>: The NLB instance is not working as expected.</description></item>
-        /// <item><description><b>Normal</b>: The NLB instance is working as expected.</description></item>
+        /// <item><description><b>Abnormal</b>: The instance is in an abnormal state.</description></item>
+        /// <item><description><b>Normal</b>: The instance is in a normal state.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,14 +76,14 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string LoadBalancerBusinessStatus { get; set; }
 
         /// <summary>
-        /// <para>The NLB instance IDs. You can specify up to 20 IDs in each call.</para>
+        /// <para>The IDs of the NLB instances. You can query up to 20 instances at a time.</para>
         /// </summary>
         [NameInMap("LoadBalancerIds")]
         [Validation(Required=false)]
         public List<string> LoadBalancerIds { get; set; }
 
         /// <summary>
-        /// <para>The names of the NLB instances. You can specify up to 20 names in each call.</para>
+        /// <para>The names of the NLB instances. You can query up to 20 instance names at a time.</para>
         /// </summary>
         [NameInMap("LoadBalancerNames")]
         [Validation(Required=false)]
@@ -92,12 +92,12 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// <para>The status of the NLB instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Inactive</b>: The NLB instance is disabled. Listeners of an NLB instance in the Inactive state do not forward traffic.</description></item>
-        /// <item><description><b>Active</b>: The NLB instance is running.</description></item>
-        /// <item><description><b>Provisioning</b>: The NLB instance is being created.</description></item>
-        /// <item><description><b>Configuring</b>: The NLB instance is being modified.</description></item>
-        /// <item><description><b>Deleting</b>: The NLB instance is being deleted.</description></item>
-        /// <item><description><b>Deleted</b>: The NLB instance is deleted.</description></item>
+        /// <item><description><b>Inactive</b>: The instance is stopped. Listeners of the instance no longer forward traffic.</description></item>
+        /// <item><description><b>Active</b>: The instance is running.</description></item>
+        /// <item><description><b>Provisioning</b>: The instance is being created.</description></item>
+        /// <item><description><b>Configuring</b>: Upgrade/Downgrade in progress.</description></item>
+        /// <item><description><b>Deleting</b>: The instance is being deleted.</description></item>
+        /// <item><description><b>Deleted</b>: The instance is deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string LoadBalancerStatus { get; set; }
 
         /// <summary>
-        /// <para>The type of the Server Load Balancer (SLB) instances. Set the value to <b>network</b>, which specifies NLB.</para>
+        /// <para>The type of load balancing. Only <b>network</b> is returned, which indicates Network Load Balancer (NLB).</para>
         /// 
         /// <b>Example:</b>
         /// <para>network</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string LoadBalancerType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return in each call. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -128,10 +128,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token used to specify a particular page of results. Valid values:</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Leave this parameter empty for the first query or the only query.</description></item>
-        /// <item><description>Set this parameter to the value of NextToken obtained from the previous query.</description></item>
+        /// <item><description>If this is the first request or no next request exists, you do not need to specify this parameter.</description></item>
+        /// <item><description>If a next request exists, set the value to the NextToken value returned in the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the NLB instance is deployed.</para>
+        /// <para>The region ID of the NLB instance. </para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-atstuj3rtop****</para>
@@ -163,15 +163,15 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags of the NLB instance.</para>
+        /// <para>The labels of the NLB instance.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListLoadBalancersRequestTag> Tag { get; set; }
         public class ListLoadBalancersRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag. You can specify up to 20 tags. The tag key cannot be an empty string.</para>
-            /// <para>It must be 1 to 64 characters in length, cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the instance. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KeyTest</para>
@@ -181,8 +181,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag. You can specify up to 20 tags. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length, cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the instance. You can specify up to 20 tag values. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ValueTest</para>
@@ -194,14 +194,14 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         }
 
         /// <summary>
-        /// <para>The IDs of the virtual private clouds (VPCs) where the NLB instances are deployed. You can specify up to 10 VPC IDs in each call.</para>
+        /// <para>The VPC ID of the NLB instance. You can query up to 10 VPC IDs at a time.</para>
         /// </summary>
         [NameInMap("VpcIds")]
         [Validation(Required=false)]
         public List<string> VpcIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone. You can call the <a href="https://help.aliyun.com/document_detail/443890.html">DescribeZones</a> operation to query the most recent zone list.</para>
+        /// <para>The zone name. You can call the <a href="https://help.aliyun.com/document_detail/443890.html">DescribeZones</a> operation to query zones.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-a</para>

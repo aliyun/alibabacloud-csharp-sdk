@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class ListListenerCertificatesRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the certificate. Valid values:</para>
+        /// <para>The certificate type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Ca</b>: CA certificate.</description></item>
-        /// <item><description><b>Server</b>: server certificate</description></item>
+        /// <item><description><b>Server</b>: Server certificate.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string CertType { get; set; }
 
         /// <summary>
-        /// <para>The server certificate. Only one server certificate is supported.</para>
+        /// <para>The server certificates. You can add only one server certificate.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only for TCP/SSL listeners.</para>
+        /// <para>This parameter takes effect only for TCPSSL listeners.</para>
         /// </remarks>
         /// 
         /// <b>if can be null:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public List<string> CertificateIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the listener. Specify the ID of a listener that uses SSL over TCP.</para>
+        /// <para>The listener ID. This parameter is valid only for TCPSSL listeners.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string ListenerId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>50</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return per page. Valid values: <b>1</b> to <b>50</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -58,10 +58,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The pagination token for the next query.</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter for the first request.</description></item>
-        /// <item><description>You must specify the token that is obtained from the previous query as the value of NextToken.</description></item>
+        /// <item><description>Leave this parameter empty for the first query or when no subsequent query is required.</description></item>
+        /// <item><description>For subsequent queries, set this parameter to the NextToken value returned by the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,8 +72,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the Network Load Balancer (NLB) instance is deployed.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the Network Load Balancer (NLB) instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// <para>The protocol version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ipv4</b>: IPv4</description></item>
-        /// <item><description><b>DualStack</b>: dual stack</description></item>
+        /// <item><description><b>ipv4</b>: IPv4.</description></item>
+        /// <item><description><b>DualStack</b>: dual stack.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string AddressIpVersion { get; set; }
 
         /// <summary>
-        /// <para>The IPv4 network type of the NLB instance. Valid values:</para>
+        /// <para>The IPv4 network address type of the NLB instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Internet</b> The domain name of the NLB instance is resolved to the public IP address. Therefore, the NLB instance can be accessed over the Internet.</description></item>
-        /// <item><description><b>Intranet</b> The domain name of the NLB instance is resolved to the private IP address. Therefore, the NLB instance can be accessed over the VPC in which the NLB instance is deployed.</description></item>
+        /// <item><description><b>Internet</b>: The load balancing instance has a public IP address. The DNS domain name is resolved to the public IP address. Therefore, the instance can be accessed over the Internet.</description></item>
+        /// <item><description><b>Intranet</b>: The load balancing instance has only a private IP address. The DNS domain name is resolved to the private IP address. Therefore, the instance can be accessed only within the internal network of the VPC where the load balancing instance is deployed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string AddressType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the EIP bandwidth plan.</para>
+        /// <para>The ID of the Internet Shared Bandwidth instance associated with the Internet-facing NLB instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cbwp-bp1vevu8h3ieh****</para>
@@ -48,8 +48,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string BandwidthPackageId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of new connections per second supported by the NLB instance in each zone (virtual IP address). Valid values: <b>0</b> to <b>1000000</b>.</para>
-        /// <para><b>0</b> indicates that the number of connections is unlimited.</para>
+        /// <para>The maximum number of new connections per second that the NLB instance can process per zone (VIP). Valid values: <b>0</b> to <b>1000000</b>.</para>
+        /// <para><b>0</b> indicates that no limit is imposed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -59,8 +59,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public int? Cps { get; set; }
 
         /// <summary>
-        /// <para>The time when the NLB instance was created. This value is a UNIX timestamp.</para>
-        /// <para>Unit: milliseconds.</para>
+        /// <para>The time when the resource was created. The time is displayed in UTC in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-07-02T02:49:05Z</para>
@@ -70,10 +69,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the NLB instance is accessible across zones. Valid values:</para>
+        /// <para>Indicates whether cross-zone is enabled for the NLB instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: enabled.</description></item>
+        /// <item><description><b>false</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,17 +93,17 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string DNSName { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the deletion protection feature.</para>
+        /// <para>The deletion protection configuration.</para>
         /// </summary>
         [NameInMap("DeletionProtectionConfig")]
         [Validation(Required=false)]
         public GetLoadBalancerAttributeResponseBodyDeletionProtectionConfig DeletionProtectionConfig { get; set; }
         public class GetLoadBalancerAttributeResponseBodyDeletionProtectionConfig : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable deletion protection. Valid values:</para>
+            /// <para>The deletion protection status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b> (default): no</description></item>
+            /// <item><description><b>true</b>: enabled.</description></item>
+            /// <item><description><b>false</b>: disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -115,7 +114,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The time when the deletion protection feature was enabled. The time follows the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time is displayed in UTC.</para>
+            /// <para>The time when deletion protection was enabled. The time is displayed in UTC in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-11-02T02:49:05Z</para>
@@ -125,10 +124,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string EnabledTime { get; set; }
 
             /// <summary>
-            /// <para>The reason why the deletion protection feature is enabled or disabled. The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The value must start with a letter.</para>
+            /// <para>The reason for changing the deletion protection status. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The reason must start with a letter or a Chinese character.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>create-by-mse-can-not-delete</para>
+            /// <para>Instance running.</para>
             /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
@@ -137,10 +136,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         }
 
         /// <summary>
-        /// <para>The IPv6 network type of the NLB instance. Valid values:</para>
+        /// <para>The IPv6 address type of the NLB instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Internet</b>: The NLB instance uses a public IP address. The domain name of the NLB instance is resolved to the public IP address. Therefore, the NLB instance can be accessed over the Internet.</description></item>
-        /// <item><description><b>Intranet</b>: The NLB instance uses a private IP address. The domain name of the NLB instance is resolved to the private IP address. In this case, the NLB instance can be accessed over the VPC where the NLB instance is deployed.</description></item>
+        /// <item><description><b>Internet</b>: The load balancing instance has a public IP address. The DNS domain name is resolved to the public IP address. Therefore, the instance can be accessed over the Internet.</description></item>
+        /// <item><description><b>Intranet</b>: The load balancing instance has only a private IP address. The DNS domain name is resolved to the private IP address. Therefore, the instance can be accessed only within the internal network of the VPC where the load balancing instance is deployed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -151,14 +150,15 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string Ipv6AddressType { get; set; }
 
         /// <summary>
-        /// <para>The billing information of the NLB instance.</para>
+        /// <para>The billing configuration of the load balancing instance.</para>
         /// </summary>
         [NameInMap("LoadBalancerBillingConfig")]
         [Validation(Required=false)]
         public GetLoadBalancerAttributeResponseBodyLoadBalancerBillingConfig LoadBalancerBillingConfig { get; set; }
         public class GetLoadBalancerAttributeResponseBodyLoadBalancerBillingConfig : TeaModel {
             /// <summary>
-            /// <para>The billing method of the NLB instance. Set the value to <b>PostPay</b>, which specifies the pay-as-you-go billing method.</para>
+            /// <para>The billing type of the NLB instance.
+            /// Only <b>PostPay</b> is returned, which indicates the pay-as-you-go billing method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PostPay</para>
@@ -170,10 +170,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         }
 
         /// <summary>
-        /// <para>The status of workloads on the NLB instance. Valid values:</para>
+        /// <para>The business status of the NLB instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Abnormal</b></description></item>
-        /// <item><description><b>Normal</b></description></item>
+        /// <item><description><b>Abnormal</b>: The NLB instance is in an abnormal state.</description></item>
+        /// <item><description><b>Normal</b>: The NLB instance is in a normal state.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -194,8 +194,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string LoadBalancerId { get; set; }
 
         /// <summary>
-        /// <para>The NLB instance name.</para>
-        /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</para>
+        /// <para>The name of the NLB instance.</para>
+        /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter or a Chinese character.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NLB1</para>
@@ -207,11 +207,11 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// <para>The NLB instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Inactive</b>: The NLB instance is disabled. The listeners of NLB instances in the Inactive state do not forward traffic.</description></item>
+        /// <item><description><b>Inactive</b>: The NLB instance is stopped. The listeners of the instance no longer forward traffic.</description></item>
         /// <item><description><b>Active</b>: The NLB instance is running.</description></item>
         /// <item><description><b>Provisioning</b>: The NLB instance is being created.</description></item>
-        /// <item><description><b>Configuring</b>: The NLB instance is being modified.</description></item>
-        /// <item><description><b>CreateFailed</b>: The system failed to create the NLB instance. In this case, you are not charged for the NLB instance. You can only delete the NLB instance.</description></item>
+        /// <item><description><b>Configuring</b>: The NLB instance is being reconfigured (Upgrade/Downgrade).</description></item>
+        /// <item><description><b>CreateFailed</b>: The NLB instance failed to be created. In this case, no fees are incurred, and the instance can only be deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string LoadBalancerStatus { get; set; }
 
         /// <summary>
-        /// <para>The type of the Server Load Balancer (SLB) instance. Set the value to <b>network</b>, which specifies NLB.</para>
+        /// <para>The load balancing type. Only <b>network</b> is returned, which indicates Network Load Balancer (NLB).</para>
         /// 
         /// <b>Example:</b>
         /// <para>network</para>
@@ -232,14 +232,14 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string LoadBalancerType { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the configuration read-only mode.</para>
+        /// <para>The modification protection configuration.</para>
         /// </summary>
         [NameInMap("ModificationProtectionConfig")]
         [Validation(Required=false)]
         public GetLoadBalancerAttributeResponseBodyModificationProtectionConfig ModificationProtectionConfig { get; set; }
         public class GetLoadBalancerAttributeResponseBodyModificationProtectionConfig : TeaModel {
             /// <summary>
-            /// <para>The time when the modification protection feature was enabled. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when modification protection was enabled. The time is displayed in UTC in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-12-02T02:49:05Z</para>
@@ -249,26 +249,24 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string EnabledTime { get; set; }
 
             /// <summary>
-            /// <para>The reason why the configuration read-only mode is enabled. The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The value must start with a letter.</para>
-            /// <remarks>
-            /// <para> This parameter takes effect only if the <b>Status</b> parameter is set to <b>ConsoleProtection</b>.</para>
-            /// </remarks>
+            /// <para>The reason for enabling modification protection. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The reason must start with a letter or a Chinese character.</para>
+            /// <para>This parameter is valid and required only when <b>Status</b> is set to <b>ConsoleProtection</b>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>create-by-mse-cannot-modify</para>
+            /// <para>Business protection period.</para>
             /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
             public string Reason { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the configuration read-only mode. Valid values:</para>
+            /// <para>The modification protection status of the Network Load Balancer (NLB) instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>NonProtection</b>: does not enable the configuration read-only mode. You cannot set the <b>Reason</b> parameter. If the <b>Reason</b> parameter is set, the value is cleared.</description></item>
-            /// <item><description><b>ConsoleProtection</b>: enables the configuration read-only mode. You can set the <b>Reason</b> parameter.</description></item>
+            /// <item><description><b>NonProtection</b>: Modification protection is disabled. You cannot specify the <b>Reason</b> parameter. If the <b>Reason</b> parameter is specified, the value is cleared.</description></item>
+            /// <item><description><b>ConsoleProtection</b>: Console modification protection is enabled. You can specify the <b>Reason</b> parameter.</description></item>
             /// </list>
             /// <remarks>
-            /// <para> If you set this parameter to <b>ConsoleProtection</b>, you cannot use the NLB console to modify instance configurations. However, you can call API operations to modify instance configurations.</para>
+            /// <para>If the value is <b>ConsoleProtection</b>, you cannot modify the instance configuration in the load balancing console, but you can modify the instance configuration by invoking API operations.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -281,17 +279,17 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         }
 
         /// <summary>
-        /// <para>The information about the locked NLB instance. This parameter is returned only when <c>LoadBalancerBussinessStatus</c> is <b>Abnormal</b>.</para>
+        /// <para>The lock state list of the NLB instance. This parameter is returned only when <c>LoadBalancerBussinessStatus</c> is <b>Abnormal</b>.</para>
         /// </summary>
         [NameInMap("OperationLocks")]
         [Validation(Required=false)]
         public List<GetLoadBalancerAttributeResponseBodyOperationLocks> OperationLocks { get; set; }
         public class GetLoadBalancerAttributeResponseBodyOperationLocks : TeaModel {
             /// <summary>
-            /// <para>The reason why the NLB instance is locked.</para>
+            /// <para>The reason for the lock.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>security</para>
+            /// <para>Business exception.</para>
             /// </summary>
             [NameInMap("LockReason")]
             [Validation(Required=false)]
@@ -300,10 +298,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// <summary>
             /// <para>The type of the lock. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>SecurityLocked</b>: The NLB instance is locked due to security reasons.</description></item>
-            /// <item><description><b>RelatedResourceLocked</b>: The NLB instance is locked due to other resources associated with the NLB instance.</description></item>
-            /// <item><description><b>FinancialLocked</b>: The NLB instance is locked due to overdue payments.</description></item>
-            /// <item><description><b>ResidualLocked</b>: The NLB instance is locked because the associated resources have overdue payments and the resources are released.</description></item>
+            /// <item><description><b>SecurityLocked</b>: The instance is locked due to security reasons.</description></item>
+            /// <item><description><b>RelatedResourceLocked</b>: The instance is locked due to associate lock.</description></item>
+            /// <item><description><b>FinancialLocked</b>: The instance is locked due to overdue payment.</description></item>
+            /// <item><description><b>ResidualLocked</b>: The instance is locked due to residual resources.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -336,7 +334,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-atstuj3rtop****</para>
@@ -346,21 +344,21 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security group associated with the NLB instance.</para>
+        /// <para>The security group IDs associated with the NLB instance.</para>
         /// </summary>
         [NameInMap("SecurityGroupIds")]
         [Validation(Required=false)]
         public List<string> SecurityGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The tag list.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<GetLoadBalancerAttributeResponseBodyTags> Tags { get; set; }
         public class GetLoadBalancerAttributeResponseBodyTags : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The tag key of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KeyTest</para>
@@ -370,7 +368,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The tag value of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ValueTest</para>
@@ -392,21 +390,21 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The list of zones and vSwitches in the zones. You must specify 2 to 10 zones.</para>
+        /// <para>The mappings between zones and vSwitches. A maximum of 10 zones are returned. If the current region supports two or more zones, at least two zones are returned.</para>
         /// </summary>
         [NameInMap("ZoneMappings")]
         [Validation(Required=false)]
         public List<GetLoadBalancerAttributeResponseBodyZoneMappings> ZoneMappings { get; set; }
         public class GetLoadBalancerAttributeResponseBodyZoneMappings : TeaModel {
             /// <summary>
-            /// <para>The information about the IP addresses used by the NLB instance.</para>
+            /// <para>The Network Load Balancing (NLB) instance address information.</para>
             /// </summary>
             [NameInMap("LoadBalancerAddresses")]
             [Validation(Required=false)]
             public List<GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses> LoadBalancerAddresses { get; set; }
             public class GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses : TeaModel {
                 /// <summary>
-                /// <para>The ID of the elastic IP address (EIP).</para>
+                /// <para>The Elastic IP Address (EIP) instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eip-bp1aedxso6u80u0qf****</para>
@@ -416,7 +414,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
                 public string AllocationId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the elastic network interface (ENI).</para>
+                /// <para>The ID of the ENI.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eni-bp12f1xhs5yal61a****</para>
@@ -426,14 +424,14 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
                 public string EniId { get; set; }
 
                 /// <summary>
-                /// <para>The IPv4 link-local addresses. The IP addresses that the NLB instance uses to communicate with the backend servers.</para>
+                /// <para>The list of IPv4 local addresses. These are the addresses used for communication between the NLB instance and backend servers.</para>
                 /// </summary>
                 [NameInMap("Ipv4LocalAddresses")]
                 [Validation(Required=false)]
                 public List<string> Ipv4LocalAddresses { get; set; }
 
                 /// <summary>
-                /// <para>The IPv6 address of the NLB instance.</para>
+                /// <para>The IPv6 VIP address. The IPv6 address that the NLB instance uses to provide services.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2001:db8:1:1:1:1:1:1</para>
@@ -443,14 +441,14 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
                 public string Ipv6Address { get; set; }
 
                 /// <summary>
-                /// <para>The IPv6 link-local addresses. The IP addresses that the NLB instance uses to communicate with the backend servers.</para>
+                /// <para>The list of IPv6 local addresses. These are the addresses used for communication between the NLB instance and backend servers.</para>
                 /// </summary>
                 [NameInMap("Ipv6LocalAddresses")]
                 [Validation(Required=false)]
                 public List<string> Ipv6LocalAddresses { get; set; }
 
                 /// <summary>
-                /// <para>The private IPv4 address of the NLB instance.</para>
+                /// <para>The private IPv4 VIP address. The private IPv4 address that the NLB instance uses to provide services.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.168.3.32</para>
@@ -460,13 +458,13 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
                 public string PrivateIPv4Address { get; set; }
 
                 /// <summary>
-                /// <para>The health status of the private IPv4 address of the NLB instance. Valid values:</para>
+                /// <para>The health check status of the private IPv4 address of the NLB instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Healthy</b></description></item>
-                /// <item><description><b>Unhealthy</b></description></item>
+                /// <item><description><b>Healthy</b>: healthy.</description></item>
+                /// <item><description><b>Unhealthy</b>: unhealthy.</description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>This parameter is returned only when the <b>Status</b> of the zone is <b>Active</b>.</para>
+                /// <para>This parameter is returned only when the zone status (<b>Status</b>) is Active.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -477,13 +475,13 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
                 public string PrivateIPv4HcStatus { get; set; }
 
                 /// <summary>
-                /// <para>The health status of the IPv6 address of the NLB instance. Valid values:</para>
+                /// <para>The health check status of the IPv6 address of the NLB instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Healthy</b></description></item>
-                /// <item><description><b>Unhealthy</b></description></item>
+                /// <item><description><b>Healthy</b>: healthy.</description></item>
+                /// <item><description><b>Unhealthy</b>: unhealthy.</description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>This parameter is returned only when the <b>Status</b> of the zone is <b>Active</b>.</para>
+                /// <para>This parameter is returned only when the zone status (<b>Status</b>) is Active.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -508,11 +506,12 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// <summary>
             /// <para>The zone status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Active</b>: The zone is available.</description></item>
-            /// <item><description><b>Stopped</b>: The zone is disabled. You can set the zone to this status only by using Cloud Architect Design Tools (CADT).</description></item>
-            /// <item><description><b>Shifted</b>: The DNS record is removed.</description></item>
-            /// <item><description><b>Starting</b>: The zone is being enabled. You can set the zone to this status only by using CADT.</description></item>
-            /// <item><description><b>Stopping</b> You can set the zone to this status only by using CADT.</description></item>
+            /// <item><description><b>Active</b>: enabled.</description></item>
+            /// <item><description><b>Stopped</b>: stopped. This status can be set only through the CADT disaster recovery management service invocation.</description></item>
+            /// <item><description><b>Shifted</b>: DNS manually removed. You can call the <a href="https://help.aliyun.com/document_detail/2412000.html">CancelShiftLoadBalancerZones</a> operation to restore the DNS of the zone.</description></item>
+            /// <item><description><b>AutoShifted</b>: DNS automatically removed. When a zone encounters an exception, the system automatically removes the IP address of the abnormal zone to ensure that you can access services normally through the NLB domain name. The IP address is automatically restored when the zone recovers. No manual operation is required.</description></item>
+            /// <item><description><b>Starting</b>: starting. This status can be set only through the CADT disaster recovery management service invocation.</description></item>
+            /// <item><description><b>Stopping</b>: stopping. This status can be set only through the CADT disaster recovery management service invocation.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -523,7 +522,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch in the zone. By default, each zone contains one vSwitch and one subnet.</para>
+            /// <para>The vSwitch in the zone. Each zone uses one vSwitch and one subnet by default.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-bp1rmcrwg3erh1fh8****</para>
@@ -533,7 +532,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the zone. You can call the <a href="https://help.aliyun.com/document_detail/443890.html">DescribeZones</a> operation to query the most recent zone list.</para>
+            /// <para>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/443890.html">DescribeZones</a> operation to query the most recent zone list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-a</para>

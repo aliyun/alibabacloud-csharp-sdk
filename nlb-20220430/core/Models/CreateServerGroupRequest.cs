@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class CreateServerGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The IP version. Valid values:</para>
+        /// <para>The protocol version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ipv4</b> (default): IPv4</description></item>
-        /// <item><description><b>DualStack</b>: dual-stack</description></item>
+        /// <item><description><para><b>ipv4</b> (default): IPv4.</para>
+        /// </description></item>
+        /// <item><description><para><b>DualStack</b>: dual-stack.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +26,12 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string AddressIPVersion { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable multi-port forwarding. Valid values:</para>
+        /// <para>Specifies whether to enable all-port forwarding. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b>: enables all-port forwarding.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): disables all-port forwarding.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,10 +42,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public bool? AnyPortEnabled { get; set; }
 
         /// <summary>
-        /// <para>The client token used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token. Ensure that the token is unique among different requests. Only ASCII characters are allowed.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, the value of <b>RequestId</b> is used.**** The value of <b>RequestId</b> is different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -54,8 +58,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// <para>Specifies whether to enable connection draining. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b>: enables connection draining.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): disables connection draining.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +72,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public bool? ConnectionDrainEnabled { get; set; }
 
         /// <summary>
-        /// <para>Specifies a timeout period for connection draining. Unit: seconds. Valid values: <b>0</b> to <b>900</b>.</para>
+        /// <para>The timeout period for connection draining. Unit: seconds.
+        /// Valid values: <b>0</b> to <b>900</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -76,10 +83,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public int? ConnectionDrainTimeout { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to only precheck the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true:</b>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): validates the request and performs the operation. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: prechecks the request without creating the server group. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,16 +97,16 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The configurations of health checks.</para>
+        /// <para>The health check configuration.</para>
         /// </summary>
         [NameInMap("HealthCheckConfig")]
         [Validation(Required=false)]
         public CreateServerGroupRequestHealthCheckConfig HealthCheckConfig { get; set; }
         public class CreateServerGroupRequestHealthCheckConfig : TeaModel {
             /// <summary>
-            /// <para>The port that you want to use for health checks on backend servers.</para>
+            /// <para>The port of the backend server used for health checks.</para>
             /// <para>Valid values: <b>0</b> to <b>65535</b>.</para>
-            /// <para>Default value: <b>0</b>. If you set this parameter to 0, the port that the backend server uses to provide services is also used for health checks.</para>
+            /// <para>Default value: <b>0</b>. This value indicates that the port of the backend server is used for health checks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -109,7 +116,9 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public int? HealthCheckConnectPort { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for a health check response. Unit: seconds. Valid values: <b>1</b> to <b>300</b>. Default value: <b>5</b>.</para>
+            /// <para>The maximum timeout period for a health check response. Unit: seconds.
+            /// Valid values: <b>1</b> to <b>300</b>.
+            /// Default value: <b>5</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -119,13 +128,15 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public int? HealthCheckConnectTimeout { get; set; }
 
             /// <summary>
-            /// <para>The domain name that is used for health checks. Valid values:</para>
+            /// <para>The domain name used for health checks. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>$SERVER_IP</b>: the internal IP address of a backend server.</description></item>
-            /// <item><description><b>domain</b>: a domain name. The domain name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), and periods (.).</description></item>
+            /// <item><description><para><b>$SERVER_IP</b>: the internal IP address of the backend server.</para>
+            /// </description></item>
+            /// <item><description><para><b>domain</b>: a specified domain name. The domain name must be 1 to 80 characters in length, and can contain only letters, digits, hyphens (-), and periods (.).</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter takes effect only if you set <b>HealthCheckType</b> to <b>HTTP</b>.</para>
+            /// <para>This parameter takes effect only when <b>HealthCheckType</b> is set to <b>HTTP</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -138,8 +149,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// <summary>
             /// <para>Specifies whether to enable health checks. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b> (default)</description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b> (default): enables health checks.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: disables health checks.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -150,7 +163,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public bool? HealthCheckEnabled { get; set; }
 
             /// <summary>
-            /// <para>The response string that backend servers return to UDP listeners for health checks. The string must be 1 to 512 characters in length and can contain only letters and digits.</para>
+            /// <para>The query string in the request for UDP listener health checks. The string can contain only letters and digits, and can be up to 512 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ok</para>
@@ -160,9 +173,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string HealthCheckExp { get; set; }
 
             /// <summary>
-            /// <para>The HTTP status codes to return for health checks. Separate multiple HTTP status codes with commas (,). Valid values: <b>http_2xx</b> (default), <b>http_3xx</b>, <b>http_4xx</b>, and <b>http_5xx</b>.</para>
+            /// <para>The HTTP status codes for healthy responses. Separate multiple status codes with commas (,).
+            /// Valid values: <b>http_2xx</b> (default), <b>http_3xx</b>, <b>http_4xx</b>, and <b>http_5xx</b>.</para>
             /// <remarks>
-            /// <para> This parameter takes effect only if you set <b>HealthCheckType</b> to <b>HTTP</b>.</para>
+            /// <para>This parameter takes effect only when <b>HealthCheckType</b> is set to <b>HTTP</b>.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("HealthCheckHttpCode")]
@@ -170,9 +184,9 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public List<string> HealthCheckHttpCode { get; set; }
 
             /// <summary>
-            /// <para>The HTTP version used for health checks. Valid values: <b>HTTP1.0</b> (default) and <b>HTTP1.1</b>.</para>
+            /// <para>The HTTP protocol version for health checks. Valid values: <b>HTTP1.0</b> (default) and <b>HTTP1.1</b>.</para>
             /// <remarks>
-            /// <para> This parameter takes effect only if you set <b>HealthCheckType</b> to <b>HTTP</b>.</para>
+            /// <para>This parameter takes effect only when <b>HealthCheckType</b> is set to <b>HTTP</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -183,10 +197,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string HealthCheckHttpVersion { get; set; }
 
             /// <summary>
-            /// <para>The interval at which health checks are performed. Unit: seconds. Default value: <b>5</b>.</para>
+            /// <para>The interval between two consecutive health checks. Unit: seconds. Default value: <b>5</b>.</para>
             /// <list type="bullet">
-            /// <item><description>If you set <b>HealthCheckType</b> to <b>TCP</b> or <b>HTTP</b>, valid values are <b>1</b> to <b>50</b>.</description></item>
-            /// <item><description>If you set <b>HealthCheckType</b> to <b>UDP</b>, valid values are <b>1</b> to <b>300</b>. Set the health check interval equal to or larger than the response timeout period to ensure that UDP response timeouts are not determined as no responses.</description></item>
+            /// <item><description>If <b>HealthCheckType</b> is set to <b>TCP</b> or <b>HTTP</b>, valid values are <b>1</b> to <b>50</b>.</description></item>
+            /// <item><description>If <b>HealthCheckType</b> is set to <b>UDP</b>, valid values are <b>1</b> to <b>300</b>. You must set the interval to be greater than or equal to the response timeout period to ensure that UDP probe responses are not misjudged as unresponsive due to a timeout.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -197,7 +211,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public int? HealthCheckInterval { get; set; }
 
             /// <summary>
-            /// <para>The request string that UDP listeners send to backend servers for health checks. The string must be 1 to 512 characters in length and can contain only letters and digits.</para>
+            /// <para>The query string in the request for UDP listener health checks. The string can contain only letters and digits, and can be up to 512 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hello</para>
@@ -207,7 +221,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string HealthCheckReq { get; set; }
 
             /// <summary>
-            /// <para>The protocol that you want to use for health checks. Valid values:</para>
+            /// <para>The protocol used for health checks. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>TCP</b></description></item>
             /// <item><description><b>HTTP</b></description></item>
@@ -222,10 +236,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string HealthCheckType { get; set; }
 
             /// <summary>
-            /// <para>The URL path to which health check probes are sent.</para>
-            /// <para>The URL path must be 1 to 80 characters in length, and can contain letters, digits, and the following special characters: <c>- / . % ? # &amp; </c>. It must start with a forward slash (/).</para>
+            /// <para>The health check path.</para>
+            /// <para>The path must be 1 to 80 characters in length, and can contain only letters, digits, and the following special characters: <c>-/.%?#&amp;</c>. It must start with a forward slash (/).</para>
             /// <remarks>
-            /// <para> This parameter takes effect only if you set <b>HealthCheckType</b> to <b>HTTP</b>.</para>
+            /// <para>This parameter takes effect only when <b>HealthCheckType</b> is set to <b>HTTP</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -236,7 +250,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string HealthCheckUrl { get; set; }
 
             /// <summary>
-            /// <para>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status changes from <b>fail</b> to <b>success</b>.</para>
+            /// <para>The number of consecutive successful health checks that must occur before the health check status of a backend server is changed from <b>fail</b> to <b>success</b>.</para>
             /// <para>Valid values: <b>2</b> to <b>10</b>.</para>
             /// <para>Default value: <b>2</b>.</para>
             /// 
@@ -248,9 +262,9 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public int? HealthyThreshold { get; set; }
 
             /// <summary>
-            /// <para>The HTTP method that is used for health checks. Valid values: <b>GET</b> (default) and <b>HEAD</b>.</para>
+            /// <para>The HTTP method used for health checks. Valid values: <b>GET</b> (default) and <b>HEAD</b>.</para>
             /// <remarks>
-            /// <para> This parameter takes effect only if you set <b>HealthCheckType</b> to <b>HTTP</b>.</para>
+            /// <para>This parameter takes effect only when <b>HealthCheckType</b> is set to <b>HTTP</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -261,7 +275,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string HttpCheckMethod { get; set; }
 
             /// <summary>
-            /// <para>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status changes from <b>success</b> to <b>fail</b>.</para>
+            /// <para>The number of consecutive failed health checks that must occur before the health check status of a backend server is changed from <b>success</b> to <b>fail</b>.</para>
             /// <para>Valid values: <b>2</b> to <b>10</b>.</para>
             /// <para>Default value: <b>2</b>.</para>
             /// 
@@ -274,18 +288,31 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 
         }
 
+        /// <summary>
+        /// <para>The traffic scheduling policy in dual-stack mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>NonAffinity (default): non-affinity mode. Traffic is forwarded to healthy backend servers based on the scheduling algorithm regardless of the IP protocol version of the source.</description></item>
+        /// <item><description>Affinity: affinity mode. Traffic is forwarded based on the IP protocol version of the request source. IPv4 requests are forwarded only to IPv4 backend servers, and IPv6 requests are forwarded only to IPv6 backend servers.<remarks>
+        /// <para>This parameter takes effect only when <b>AddressIPVersion</b> is set to <b>DualStack</b>.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Affinity</para>
+        /// </summary>
         [NameInMap("IpVersionAffinityMode")]
         [Validation(Required=false)]
         public string IpVersionAffinityMode { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable client IP preservation. Valid values:</para>
+        /// <para>Specifies whether to enable client IP address preservation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b> (default)</description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b> (default): enables client IP address preservation.</description></item>
+        /// <item><description><b>false</b>: disables client IP address preservation.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you set this parameter to <b>true</b> and <b>Protocol</b> to <b>TCP</b>, the server group cannot be associated with <b>TCPSSL</b> listeners.</para>
+        /// <para>If <b>Protocol</b> is set to <b>TCP</b> and this parameter is set to <b>true</b>, the server group cannot be associated with <b>TCPSSL</b> listeners.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -299,20 +326,20 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public bool? PreserveClientIpEnabled { get; set; }
 
         /// <summary>
-        /// <para>The protocol between the NLB instance and backend servers. Valid values:</para>
+        /// <para>The communication protocol used to forward traffic to backend servers. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>TCP</b> (default)</description></item>
         /// <item><description><b>UDP</b></description></item>
-        /// <item><description><b>TCP_UDP</b></description></item>
-        /// </list>
-        /// <remarks>
+        /// <item><description><b>TCP_UDP</b><remarks>
         /// <list type="bullet">
-        /// <item><description>If you set this parameter to <b>UDP</b>, you can associate the server group only with <b>UDP</b> listeners.</description></item>
-        /// <item><description>If you set this parameter to <b>TCP</b> and <b>PreserveClientIpEnabled</b> to <b>true</b>, you can associate the server group only with <b>TCP</b> listeners.</description></item>
-        /// <item><description>If you set this parameter to <b>TCP</b> and <b>PreserveClientIpEnabled</b> to <b>false</b>, you can associate the server group with <b>TCPSSL</b> and <b>TCP</b> listeners.</description></item>
-        /// <item><description>If you set this parameter to <b>TCP_UDP</b>, you can associate the server group with <b>TCP</b> and <b>UDP</b> listeners.</description></item>
+        /// <item><description>If this parameter is set to <b>UDP</b>, the server group can be associated only with <b>UDP</b> listeners.</description></item>
+        /// <item><description>If this parameter is set to <b>TCP</b> and <b>PreserveClientIpEnabled</b> is set to <b>true</b>, the server group can be associated only with <b>TCP</b> listeners.</description></item>
+        /// <item><description>If this parameter is set to <b>TCP</b> and <b>PreserveClientIpEnabled</b> is set to <b>false</b>, the server group can be associated with <b>TCPSSL</b> and <b>TCP</b> listeners.</description></item>
+        /// <item><description>If this parameter is set to <b>TCP_UDP</b>, the server group can be associated with <b>TCP</b> and <b>UDP</b> listeners.</description></item>
         /// </list>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>TCP</para>
@@ -322,7 +349,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the NLB instance is deployed.</para>
+        /// <para>The region ID of the Network Load Balancer (NLB) instance. </para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
@@ -345,15 +372,21 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// <para>The scheduling algorithm. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Wrr</b> (default): weighted round-robin. Backend servers with higher weights receive more requests.</description></item>
-        /// <item><description><b>Wlc</b>: weighted least connections. Requests are distributed based on the weights and the number of connections to backend servers. If multiple backend servers have the same weight, requests are forwarded to the backend server with the least connections.</description></item>
-        /// <item><description><b>rr</b>: Requests are forwarded to backend servers in sequence.</description></item>
-        /// <item><description><b>sch</b>: source IP hash. Requests from the same source IP address are forwarded to the same backend server.</description></item>
-        /// <item><description><b>tch</b>: consistent hashing based on four factors: source IP address, destination IP address, source port, and destination port. Requests that contain the same four factors are forwarded to the same backend server.</description></item>
-        /// <item><description><b>qch</b>: QUIC ID hash. Requests that contain the same QUIC ID are forwarded to the same backend server.</description></item>
+        /// <item><description><para><b>Wrr</b> (default): weighted round-robin. Backend servers with higher weights are more likely to be polled.</para>
+        /// </description></item>
+        /// <item><description><para><b>Wlc</b>: weighted least connections. In addition to the weight of each backend server, the actual load (number of connections) of the backend server is also considered. If the weights are the same, backend servers with fewer current connections are more likely to be polled.</para>
+        /// </description></item>
+        /// <item><description><para><b>rr</b>: round-robin. External requests are distributed to backend servers in sequence.</para>
+        /// </description></item>
+        /// <item><description><para><b>sch</b>: source IP hash. Requests from the same source IP address are scheduled to the same backend server.</para>
+        /// </description></item>
+        /// <item><description><para><b>tch</b>: 4-tuple hash. Consistent hashing based on the 4-tuple (source IP address, destination IP address, source port, and destination port). Requests from the same flow are scheduled to the same backend server.</para>
+        /// </description></item>
+        /// <item><description><para><b>qch</b>: QUIC ID hash. Requests with the same QUIC ID are scheduled to the same backend server.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> QUIC ID hash is supported only when the backend protocol is set to UDP.</para>
+        /// <para>QUIC ID hash is supported only when the backend protocol is UDP.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -364,8 +397,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string Scheduler { get; set; }
 
         /// <summary>
-        /// <para>The server group name.</para>
-        /// <para>The name must be 2 to 128 characters in length, can contain digits, periods (.), underscores (_), and hyphens (-), and must start with a letter.</para>
+        /// <para>The name of the server group.</para>
+        /// <para>The name must be 2 to 128 characters in length, and must start with a letter or Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -376,10 +409,12 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string ServerGroupName { get; set; }
 
         /// <summary>
-        /// <para>The type of the server group. Valid values:</para>
+        /// <para>The server group type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Instance</b> (default): allows you to specify servers of the <b>Ecs</b>, <b>Eni</b>, or <b>Eci</b> type.</description></item>
-        /// <item><description><b>Ip</b>: allows you to specify IP addresses.</description></item>
+        /// <item><description><para><b>Instance</b> (default): server type. This type of server group supports adding <b>Ecs</b>, <b>Eni</b>, and <b>Eci</b> instances.</para>
+        /// </description></item>
+        /// <item><description><para><b>Ip</b>: IP address type. This type of server group supports directly adding backend servers by IP address.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -390,7 +425,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string ServerGroupType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -400,8 +435,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public List<CreateServerGroupRequestTag> Tag { get; set; }
         public class CreateServerGroupRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag. The tag key can be up to 64 characters in length, cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>. The tag key can contain letters, digits, and the following special characters: _ . : / = + - @</para>
-            /// <para>You can specify up to 20 tags in each call.</para>
+            /// <para>The tag key. The tag key can be up to 64 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>. It can contain letters, digits, underscores (_), periods (.), colons (:), forward slashes (/), equal signs (=), plus signs (+), hyphens (-), and at signs (@).</para>
+            /// <para>You can add up to 20 tags in a single call.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env</para>
@@ -411,8 +446,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag. The tag value can be up to 128 characters in length, cannot start with <c>acs:</c> or <c>aliyun</c>, and cannot contain <c>http://</c> or <c>https://</c>. The tag value can contain letters, digits, and the following special characters: _ . : / = + - @</para>
-            /// <para>You can specify up to 20 tags in each call.</para>
+            /// <para>The tag value. The tag value can be up to 128 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>. It can contain letters, digits, underscores (_), periods (.), colons (:), forward slashes (/), equal signs (=), plus signs (+), hyphens (-), and at signs (@).</para>
+            /// <para>You can add up to 20 tags in a single call.</para>
             /// 
             /// <b>Example:</b>
             /// <para>product</para>
@@ -424,9 +459,9 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) where the server group is deployed.</para>
+        /// <para>The ID of the VPC where the server group is deployed.</para>
         /// <remarks>
-        /// <para> If <b>ServerGroupType</b> is set to <b>Instance</b>, only servers in the specified VPC can be added to the server group.</para>
+        /// <para>If <b>ServerGroupType</b> is set to <b>Instance</b>, only servers in this VPC can be added to the server group.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

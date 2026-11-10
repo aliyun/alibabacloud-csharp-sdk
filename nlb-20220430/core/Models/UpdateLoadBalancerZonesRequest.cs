@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <para>The client token used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token. Ensure that the token is unique among different requests. Only ASCII characters are allowed.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, the value of <b>RequestId</b> is used.**** The value of <b>RequestId</b> is different for each request.</para>
+        /// <para>If you do not set this parameter, the value of <b>RequestId</b> is used.\<em>\</em>\<em>\</em> The value of <b>RequestId</b> is different for each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,8 +26,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): validates the request and performs the request. If the request passes the validation, an HTTP 2xx status code is returned and the operation is performed.</description></item>
+        /// <item><description><para><b>true</b>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <c>DryRunOperation</c> error code is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): validates the request and performs the request. If the request passes the validation, an HTTP 2xx status code is returned and the operation is performed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,11 +82,13 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// <summary>
             /// <para>The type of the EIP. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Common</b>: an EIP</description></item>
-            /// <item><description><b>Anycast</b>: an Anycast EIP</description></item>
+            /// <item><description><para><b>Common</b>: an EIP</para>
+            /// </description></item>
+            /// <item><description><para><b>Anycast</b>: an Anycast EIP</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> For regions that support Anycast EIPs, see <a href="https://help.aliyun.com/document_detail/470000.html">Limits</a>.This parameter is required if <b>AddressType</b> is set to <b>Internet</b>.</para>
+            /// <para>For regions that support Anycast EIPs, see <a href="https://help.aliyun.com/document_detail/470000.html">Limits</a>.This parameter is required if <b>AddressType</b> is set to <b>Internet</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

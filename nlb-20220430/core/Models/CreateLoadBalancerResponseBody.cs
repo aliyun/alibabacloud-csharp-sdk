@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class CreateLoadBalancerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the NLB instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nlb-83ckzc8d4xlp8o****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string LoadbalancerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order for the NLB instance.</para>
+        /// <para>The order ID of the Network Load Balancing (NLB) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20230000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</para>

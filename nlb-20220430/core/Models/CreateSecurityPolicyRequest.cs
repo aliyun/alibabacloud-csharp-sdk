@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class CreateSecurityPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The cipher suites supported by the security policy. Valid values of this parameter vary based on the value of TlsVersions. You can specify up to 32 cipher suites.</para>
-        /// <para>TLSv1.0 and TLSv1.1 support the following cipher suites:</para>
+        /// <para>The supported cipher suites, which depend on the TLSVersion value. You can add up to 32 cipher suites.</para>
+        /// <para>Supported by TLSv1.0 and TLSv1.1:</para>
         /// <list type="bullet">
         /// <item><description><b>ECDHE-ECDSA-AES128-SHA</b></description></item>
         /// <item><description><b>ECDHE-ECDSA-AES256-SHA</b></description></item>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <item><description><b>AES256-SHA</b></description></item>
         /// <item><description><b>DES-CBC3-SHA</b></description></item>
         /// </list>
-        /// <para>TLSv1.2 supports the following cipher suites:</para>
+        /// <para>Supported by TLSv1.2:</para>
         /// <list type="bullet">
         /// <item><description><b>ECDHE-ECDSA-AES128-SHA</b></description></item>
         /// <item><description><b>ECDHE-ECDSA-AES256-SHA</b></description></item>
@@ -42,8 +42,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <item><description><b>AES256-GCM-SHA384</b></description></item>
         /// <item><description><b>AES128-SHA256</b></description></item>
         /// <item><description><b>AES256-SHA256</b></description></item>
+        /// <item><description><b>ECDHE-ECDSA-CHACHA20-POLY1305</b></description></item>
+        /// <item><description><b>ECDHE-RSA-CHACHA20-POLY1305</b></description></item>
         /// </list>
-        /// <para>TLSv1.3 supports the following cipher suites:</para>
+        /// <para>Supported by TLSv1.3:</para>
         /// <list type="bullet">
         /// <item><description><b>TLS_AES_128_GCM_SHA256</b></description></item>
         /// <item><description><b>TLS_AES_256_GCM_SHA384</b></description></item>
@@ -58,10 +60,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public List<string> Ciphers { get; set; }
 
         /// <summary>
-        /// <para>The client token used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token. Ensure that the token is unique among different requests. Only ASCII characters are allowed.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, the value of <b>RequestId</b> is used.**** The value of <b>RequestId</b> is different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -72,10 +74,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to only precheck the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): validates the request and performs the operation. If the request passes the validation, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: prechecks the request without creating the custom security policy. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the precheck, an error is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -86,8 +88,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the NLB instance is deployed.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the Network Load Balancer (NLB) instance. </para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -97,7 +99,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the security policy belongs.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-atstuj3rtop****</para>
@@ -107,8 +109,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the security policy.</para>
-        /// <para>It must be 1 to 200 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</para>
+        /// <para>Policy Name of the security policy.</para>
+        /// <para>Policy Name must be 1 to 200 characters in length, and can contain Chinese characters, uppercase and lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>TLSCipherPolicy</para>
@@ -118,7 +120,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string SecurityPolicyName { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -128,8 +130,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public List<CreateSecurityPolicyRequestTag> Tag { get; set; }
         public class CreateSecurityPolicyRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag. It must be 1 to 64 characters in length, cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>. It can contain letters, digits, underscores (_), periods (.), colons (:), forward slashes (/), equal signs (=), plus signs (+), minus signs (-), and at signs (@).</para>
-            /// <para>You can add up to 20 tags for the security policy in each call.</para>
+            /// <para>The tag key. The key can be up to 64 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>. Supported characters include letters, digits, underscores (_), periods (.), colons (:), forward slashes (/), equal signs (=), plus signs (+), hyphens (-), and at signs (@).</para>
+            /// <para>You can add up to 20 tags in a single call.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KeyTest</para>
@@ -139,8 +141,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag. It must be 1 to 128 characters in length, cannot start with <c>acs:</c> or <c>aliyun</c>, and cannot contain <c>http://</c> or <c>https://</c>. It can contain letters, digits, underscores (_), periods (.), colons (:), forward slashes (/), equal signs (=), plus signs (+), minus signs (-), and at signs (@).</para>
-            /// <para>You can add up to 20 tags for the security policy in each call.</para>
+            /// <para>The tag value. The value can be up to 128 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>. Supported characters include letters, digits, underscores (_), periods (.), colons (:), forward slashes (/), equal signs (=), plus signs (+), hyphens (-), and at signs (@).</para>
+            /// <para>You can add up to 20 tags in a single call.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ValueTest</para>
@@ -152,7 +154,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         }
 
         /// <summary>
-        /// <para>The Transport Layer Security (TLS) versions supported by the security policy. Valid values: <b>TLSv1.0</b>, <b>TLSv1.1</b>, <b>TLSv1.2</b>, and <b>TLSv1.3</b>.</para>
+        /// <para>The supported TLS versions. Valid values: <b>TLSv1.0</b>, <b>TLSv1.1</b>, <b>TLSv1.2</b>, and <b>TLSv1.3</b>.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TlsVersions")]

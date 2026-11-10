@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class ListListenersRequest : TeaModel {
         /// <summary>
-        /// <para>The listener IDs. You can specify up to 20 listeners.</para>
+        /// <para>The instance IDs. You can specify up to 20 instance IDs.</para>
         /// </summary>
         [NameInMap("ListenerIds")]
         [Validation(Required=false)]
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string ListenerProtocol { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the NLB instances. You can specify up to 20 instances.</para>
+        /// <para>The IDs of the Network Load Balancer (NLB) instances. You can specify up to 20 instance IDs.</para>
         /// </summary>
         [NameInMap("LoadBalancerIds")]
         [Validation(Required=false)]
         public List<string> LoadBalancerIds { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return in each call. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b></para>
+        /// <para>The number of entries to return per page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token used to specify a particular page of results. Valid values:</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Leave this parameter empty for the first query or the only query.</description></item>
-        /// <item><description>Set this parameter to the value of NextToken obtained from the previous query.</description></item>
+        /// <item><description>If this is the first query or no next query is required, you do not need to specify this parameter.</description></item>
+        /// <item><description>If a next query is required, the value is the NextToken value returned from the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,8 +58,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the NLB instance is deployed.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the Network Load Balancer (NLB) instance. </para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -69,10 +69,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable fine-grained monitoring. Valid values:</para>
+        /// <para>Specifies whether to enable second-level monitoring. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: enabled.</description></item>
+        /// <item><description><b>false</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -83,15 +83,15 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string SecSensorEnabled { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListListenersRequestTag> Tag { get; set; }
         public class ListListenersRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag. You can specify up to 20 tags. The tag key cannot be an empty string.</para>
-            /// <para>It can be up to 64 characters in length, cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the instance. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>The tag key can be up to 64 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env</para>
@@ -101,8 +101,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag. You can specify up to 20 tags. The tag value can be an empty string.</para>
-            /// <para>It can be up to 128 characters in length, cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the instance. You can specify up to 20 tag values. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>product</para>

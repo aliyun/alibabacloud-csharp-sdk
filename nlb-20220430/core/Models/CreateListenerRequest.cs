@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class CreateListenerRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable Application-Layer Protocol Negotiation (ALPN). Valid values:</para>
+        /// <para>Specifies whether to enable ALPN. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b>: enables ALPN.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): disables ALPN.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,13 +28,13 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// <para>The ALPN policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>HTTP1Only</b>: uses only HTTP 1.x. The priority of HTTP 1.1 is higher than that of HTTP 1.0.</description></item>
-        /// <item><description><b>HTTP2Only</b>: uses only HTTP 2.0.</description></item>
-        /// <item><description><b>HTTP2Optional</b>: preferentially uses HTTP 1.x over HTTP 2.0. The priority of HTTP 1.1 is higher than that of HTTP 1.0, and the priority of HTTP 1.0 is higher than that of HTTP 2.0.</description></item>
-        /// <item><description><b>HTTP2Preferred</b>: preferentially uses HTTP 2.0 over HTTP 1.x. The priority of HTTP 2.0 is higher than that of HTTP 1.1, and the priority of HTTP 1.1 is higher than that of HTTP 1.0.</description></item>
+        /// <item><description><b>HTTP1Only</b>: negotiates only HTTP/1.x. The priority is HTTP/1.1 &gt; HTTP/1.0.</description></item>
+        /// <item><description><b>HTTP2Only</b>: negotiates only HTTP/2.</description></item>
+        /// <item><description><b>HTTP2Optional</b>: prefers HTTP/1.x but also accepts HTTP/2. The priority is HTTP/1.1 &gt; HTTP/1.0 &gt; HTTP/2.</description></item>
+        /// <item><description><b>HTTP2Preferred</b>: prefers HTTP/2 but also accepts HTTP/1.x. The priority is HTTP/2 &gt; HTTP/1.1 &gt; HTTP/1.0.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is required if <b>AlpnEnabled</b> is set to true.</para>
+        /// <para>You must configure this parameter after <b>AlpnEnabled</b> is enabled.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,9 +45,9 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string AlpnPolicy { get; set; }
 
         /// <summary>
-        /// <para>The certificate authority (CA) certificate. This parameter is supported only by TCLSSL listeners.</para>
+        /// <para>The CA certificate list. This parameter takes effect only for TCPSSL listeners.</para>
         /// <remarks>
-        /// <para> You can specify only one CA certificate.</para>
+        /// <para>Currently, you can add only one CA certificate.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("CaCertificateIds")]
@@ -55,8 +57,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// <para>Specifies whether to enable mutual authentication. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b>: enables mutual authentication.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): disables mutual authentication.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,9 +71,9 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public bool? CaEnabled { get; set; }
 
         /// <summary>
-        /// <para>The server certificate. This parameter is supported only by TCLSSL listeners.</para>
+        /// <para>The server certificate list. This parameter takes effect only for TCPSSL listeners.</para>
         /// <remarks>
-        /// <para> You can specify only one server certificate.</para>
+        /// <para>Currently, you can add only one server certificate.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("CertificateIds")]
@@ -77,10 +81,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public List<string> CertificateIds { get; set; }
 
         /// <summary>
-        /// <para>The client token used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token. Ensure that the token is unique among different requests. Only ASCII characters are allowed.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can generate a parameter value on your client to ensure that the value is unique across different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, the value of <b>RequestId</b> is used.**** The value of <b>RequestId</b> is different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -91,7 +95,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of new connections per second supported by the listener in each zone (virtual IP address). Valid values: <b>0</b> to <b>1000000</b>. <b>0</b> indicates that the number of connections is unlimited.</para>
+        /// <para>The limit on the number of new connections processed per second by the listener in each zone (VIP). Valid values: <b>0</b> to <b>1000000</b>. <b>0</b> indicates that no limit is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -101,10 +105,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public int? Cps { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run, without sending the actual request. Valid values:</para>
+        /// <para>Specifies whether to only precheck the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): validates the request and performs the operation. If the request passes the validation, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: sends a precheck request without creating the listener. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the DryRunOperation error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a regular request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -115,9 +119,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The last port in the listener port range. Valid values: <b>0</b> to <b>65535</b>. The port number of the last port must be greater than the port number of the first port.</para>
+        /// <para>The end port for all-port listening. Valid values: <b>1</b> to <b>65535</b>.
+        /// The end port must be greater than the start port.</para>
         /// <remarks>
-        /// <para> This parameter is required when <b>ListenerPort</b> is set to <b>0</b>.</para>
+        /// <para>You must configure this parameter when <b>ListenerPort</b> is set to <b>0</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -128,10 +133,12 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public int? EndPort { get; set; }
 
         /// <summary>
-        /// <para>The timeout period for idle connections. Unit: seconds.</para>
+        /// <para>The idle timeout period for connections. Unit: seconds.</para>
         /// <list type="bullet">
-        /// <item><description>If you set <b>ListenerProtocol</b> to <b>TCP</b> or <b>TCPSSL</b>, this parameter can be set to a value ranging from <b>10</b> to <b>900</b>. Default value: <b>900</b>.</description></item>
-        /// <item><description>If <b>ListenerProtocol</b> is set to <b>UDP</b>, this parameter can be set to a value ranging from <b>10</b> to <b>20</b>. Default value: <b>20</b>.</description></item>
+        /// <item><description><para>If <b>ListenerProtocol</b> is set to <b>TCP</b> or <b>TCPSSL</b>, the valid values are <b>10</b> to <b>900</b>. Default value: <b>900</b>.</para>
+        /// </description></item>
+        /// <item><description><para>If <b>ListenerProtocol</b> is set to <b>UDP</b>, the valid values are <b>10</b> to <b>90</b>. Default value: <b>90</b>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -142,8 +149,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public int? IdleTimeout { get; set; }
 
         /// <summary>
-        /// <para>The name of the listener.</para>
-        /// <para>The name must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).</para>
+        /// <para>The custom listener name.</para>
+        /// <para>The name must be 2 to 256 characters in length, and can contain Chinese characters, English letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>tcp_80</para>
@@ -154,7 +161,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 
         /// <summary>
         /// <para>The listener port. Valid values: <b>0</b> to <b>65535</b>.</para>
-        /// <para>If you set this parameter to <b>0</b>, the listener listens by port range. If you set this parameter to <b>0</b>, you must also set the <b>StartPort</b> and <b>EndPort</b> parameters.</para>
+        /// <para><b>0</b>: indicates that the all-port feature is used. If you set this parameter to <b>0</b>, you must configure <b>StartPort</b> and <b>EndPort</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -176,7 +183,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string ListenerProtocol { get; set; }
 
         /// <summary>
-        /// <para>The ID of the NLB instance.</para>
+        /// <para>The Network Load Balancer (NLB) instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -187,9 +194,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string LoadBalancerId { get; set; }
 
         /// <summary>
-        /// <para>The size of the largest TCP packet segment. Unit: bytes. Valid values: <b>0</b> to <b>1500</b>. <b>0</b> indicates that the maximum segment size (MSS) value of TCP packets remains unchanged.</para>
+        /// <para>The maximum segment size (MSS) of TCP packets. Unit: bytes. Valid values: <b>0</b> to <b>1500</b>.
+        /// <b>0</b>: indicates that the MSS value of user TCP packets is not modified.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only for TCP and TCPSSL listeners.</para>
+        /// <para>This parameter is supported only by TCP and TCPSSL listeners.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -200,10 +208,12 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public int? Mss { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the Proxy protocol to pass client IP addresses to backend servers. Valid values:</para>
+        /// <para>Specifies whether to use the Proxy Protocol to pass the client source IP address to backend servers. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b>: enables the feature.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): disables the feature.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -214,17 +224,26 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public bool? ProxyProtocolEnabled { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the Proxy protocol to pass the VpcId, PrivateLinkEpId, and PrivateLinkEpsId parameters to backend servers.</para>
+        /// <para>The configuration for passing the VpcId, PrivateLinkEpId, and PrivateLinkEpsId information to backend servers by using the Proxy Protocol.</para>
         /// </summary>
         [NameInMap("ProxyProtocolV2Config")]
         [Validation(Required=false)]
         public CreateListenerRequestProxyProtocolV2Config ProxyProtocolV2Config { get; set; }
         public class CreateListenerRequestProxyProtocolV2Config : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to use the Proxy protocol to pass the Ppv2PrivateLinkEpId parameter to backend servers. Valid values:</para>
+            /// <para>Ppv2CnIdEnabled</para>
+            /// </summary>
+            [NameInMap("Ppv2CnIdEnabled")]
+            [Validation(Required=false)]
+            public bool? Ppv2CnIdEnabled { get; set; }
+
+            /// <summary>
+            /// <para>Specifies whether to use the Proxy Protocol to pass the Ppv2PrivateLinkEpId to backend servers. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b> (default)</description></item>
+            /// <item><description><para><b>true</b>: enables the feature.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b> (default): disables the feature.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -235,10 +254,12 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public bool? Ppv2PrivateLinkEpIdEnabled { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to use the Proxy protocol to pass the PrivateLinkEpsId parameter to backend servers. Valid values:</para>
+            /// <para>Specifies whether to use the Proxy Protocol to pass the PrivateLinkEpsId to backend servers. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b> (default)</description></item>
+            /// <item><description><para><b>true</b>: enables the feature.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b> (default): disables the feature.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -249,10 +270,12 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public bool? Ppv2PrivateLinkEpsIdEnabled { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to use the Proxy protocol to pass the VpcId parameter to backend servers. Valid values:</para>
+            /// <para>Specifies whether to use the Proxy Protocol to pass the VpcId to backend servers. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b> (default)</description></item>
+            /// <item><description><para><b>true</b>: enables the feature.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b> (default): disables the feature.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -265,8 +288,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         }
 
         /// <summary>
-        /// <para>The ID of the region where the NLB instance is deployed.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the Network Load Balancer (NLB) instance. </para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -276,10 +299,12 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable fine-grained monitoring. Valid values:</para>
+        /// <para>Specifies whether to enable second-level monitoring. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b>: enables second-level monitoring.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): disables second-level monitoring.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -292,17 +317,15 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// <para>The ID of the security policy. System security policies and custom security policies are supported.</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values for system security policies: <b>tls_cipher_policy_1_0</b> (default), <b>tls_cipher_policy_1_1</b>, <b>tls_cipher_policy_1_2</b>, <b>tls_cipher_policy_1_2_strict</b>, and <b>tls_cipher_policy_1_2_strict_with_1_3</b>.</para>
-        /// </description></item>
-        /// <item><description><para>For a custom security policy, enter the policy ID.</para>
-        /// <list type="bullet">
-        /// <item><description>For information about creating a custom security policy, see <a href="https://help.aliyun.com/document_detail/445901.html">CreateSecurityPolicy</a>.</description></item>
-        /// <item><description>For information about querying security policies, see <a href="https://help.aliyun.com/document_detail/445900.html">ListSecurityPolicy</a>.</description></item>
+        /// <item><description>System policies: <b>tls_cipher_policy_1_0</b> (default), <b>tls_cipher_policy_1_1</b>, <b>tls_cipher_policy_1_2</b>, <b>tls_cipher_policy_1_2_strict</b>, and <b>tls_cipher_policy_1_2_strict_with_1_3</b>.</description></item>
+        /// <item><description>Custom security policies: Enter the ID of a custom security policy.<list type="bullet">
+        /// <item><description>To create a custom policy, refer to <a href="https://help.aliyun.com/document_detail/445901.html">CreateSecurityPolicy</a>.</description></item>
+        /// <item><description>To query security policies, refer to <a href="https://help.aliyun.com/document_detail/445900.html">ListSecurityPolicy</a>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter takes effect only for TCPSSL listeners.</para>
+        /// <para>This parameter takes effect only for TCPSSL listeners.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -313,12 +336,12 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string SecurityPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The server group ID.</para>
+        /// <para>The ID of the server group.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you set <b>ListenerProtocol</b> to <b>TCP</b>, you can associate the listener with server groups whose backend protocol is <b>TCP</b> or <b>TCP_UDP</b>. You cannot associate the listener with server groups whose backend protocol is <b>UDP</b>.</description></item>
-        /// <item><description>If you set <b>ListenerProtocol</b> to <b>UDP</b>, you can associate the listener with server groups whose backend protocol is <b>UDP</b> or <b>TCP_UDP</b>. You cannot associate the listener with server groups whose backend protocol is <b>TCP</b>.</description></item>
-        /// <item><description>If you set <b>ListenerProtocol</b> to <b>TCPSSL</b>, you can associate the listener with server groups whose backend protocol is <b>TCP</b> and have <b>client IP preservation disabled</b>. You cannot associate the listener with server groups whose backend protocol is <b>TCP</b> and have <b>client IP preservation enabled</b> or server groups whose backend protocol is <b>UDP</b> or <b>TCP_UDP</b>.</description></item>
+        /// <item><description>If <b>ListenerProtocol</b> is set to <b>TCP</b>, the listener supports server groups whose backend protocol is <b>TCP</b> or <b>TCP_UDP</b>, but does not support server groups whose backend protocol is <b>UDP</b>.</description></item>
+        /// <item><description>If <b>ListenerProtocol</b> is set to <b>UDP</b>, the listener supports server groups whose backend protocol is <b>UDP</b> or <b>TCP_UDP</b>, but does not support server groups whose backend protocol is <b>TCP</b>.</description></item>
+        /// <item><description>If <b>ListenerProtocol</b> is set to <b>TCPSSL</b>, the listener supports server groups whose backend protocol is <b>TCP</b> and for which <b>client address preservation is disabled</b>. It does not support server groups whose backend protocol is <b>TCP</b> and for which <b>client address preservation is enabled</b>, or server groups whose backend protocol is <b>UDP</b> or <b>TCP_UDP</b>.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -330,9 +353,9 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string ServerGroupId { get; set; }
 
         /// <summary>
-        /// <para>The first port in the listener port range. Valid values: <b>0</b> to <b>65535</b>.</para>
+        /// <para>The start port for all-port listening. Valid values: <b>1</b> to <b>65535</b>.</para>
         /// <remarks>
-        /// <para> This parameter is required when <b>ListenerPort</b> is set to <b>0</b>.</para>
+        /// <para>You must configure this parameter when <b>ListenerPort</b> is set to <b>0</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -343,7 +366,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public int? StartPort { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -353,8 +376,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public List<CreateListenerRequestTag> Tag { get; set; }
         public class CreateListenerRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag. The tag key can be up to 64 characters in length, cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>. The tag value can contain letters, digits, and the following special characters: _ . : / = + - @</para>
-            /// <para>You can specify up to 20 tags in each call.</para>
+            /// <para>The tag key. The key can be up to 64 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>, or contain <c>http://</c> or <c>https://</c>. Supported characters include letters, digits, underscores (_), periods (.), colons (:), forward slashes (/), equal signs (=), plus signs (+), hyphens (-), and at signs (@).</para>
+            /// <para>You can add up to 20 tags in a single call.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KeyTest</para>
@@ -364,8 +387,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag. The tag value can be up to 128 characters in length, cannot start with <c>acs:</c> or <c>aliyun</c>, and cannot contain <c>http://</c> or <c>https://</c>. The tag value can contain letters, digits, and the following special characters: _ . : / = + - @</para>
-            /// <para>You can specify up to 20 tags in each call.</para>
+            /// <para>The tag value. The value can be up to 128 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>, or contain <c>http://</c> or <c>https://</c>. Supported characters include letters, digits, underscores (_), periods (.), colons (:), forward slashes (/), equal signs (=), plus signs (+), hyphens (-), and at signs (@).</para>
+            /// <para>You can add up to 20 tags in a single call.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test</para>

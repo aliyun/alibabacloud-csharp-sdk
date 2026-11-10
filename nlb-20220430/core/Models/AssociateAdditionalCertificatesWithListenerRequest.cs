@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class AssociateAdditionalCertificatesWithListenerRequest : TeaModel {
         /// <summary>
-        /// <para>The additional certificates. You can associate up to 15 additional certificates with a listener in each call.</para>
+        /// <para>The list of additional certificates. You can associate up to 15 additional certificates with a listener in a single call.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AdditionalCertificateIds")]
@@ -18,10 +18,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public List<string> AdditionalCertificateIds { get; set; }
 
         /// <summary>
-        /// <para>The client token used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token. Ensure that the token is unique among different requests. Only ASCII characters are allowed.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can generate a value for this parameter on your client to ensure that the value is unique across different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, the value of <b>RequestId</b> is used.**** The value of <b>RequestId</b> is different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -32,10 +32,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to only precheck this request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): validates the request and performs the operation. If the request passes the validation, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: sends a check request and does not add the additional certificates to the TCPSSL listener. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the check, the system returns an error. If the request passes the check, the system returns the error code <c>DryRunOperation</c>.</description></item>
+        /// <item><description><b>false</b> (default): sends a standard request. If the request passes the check, the system returns an HTTP 2xx status code and performs the operation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The listener ID. Only TCPSSL listener IDs are supported.</para>
+        /// <para>The ID of the listener. This operation only supports TCPSSL listener IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,8 +57,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string ListenerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the NLB instance is deployed.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region where the Network Load Balancer (NLB) instance is deployed. </para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

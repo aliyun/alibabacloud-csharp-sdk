@@ -10,10 +10,20 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class UpdateServerGroupAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The client token used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token. Ensure that the token is unique among different requests. Only ASCII characters are allowed.</para>
+        /// <para>The IP version. Valid values: <b>ipv4</b> and <b>dualStack</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ipv4</para>
+        /// </summary>
+        [NameInMap("AddressIPVersion")]
+        [Validation(Required=false)]
+        public string AddressIPVersion { get; set; }
+
+        /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the value of <b>RequestId</b> is used.**** The value of <b>RequestId</b> is different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,8 +36,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// <para>Specifies whether to enable connection draining. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: Enables connection draining.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Disables connection draining.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +50,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public bool? ConnectionDrainEnabled { get; set; }
 
         /// <summary>
-        /// <para>Specify a timeout period for connection draining. Unit: seconds. Valid values: <b>0</b> to <b>900</b>.</para>
+        /// <para>The timeout period for connection draining. Unit: seconds. Valid values: <b>0</b> to <b>900</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,8 +62,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): validates the request and performs the operation. If the request passes the validation, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: performs a dry run without updating the server group. The system checks whether required parameters are specified, the request format is valid, and the service limits are met. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and sends the actual request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,14 +74,14 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Health check configurations.</para>
+        /// <para>The health check configuration.</para>
         /// </summary>
         [NameInMap("HealthCheckConfig")]
         [Validation(Required=false)]
         public UpdateServerGroupAttributeRequestHealthCheckConfig HealthCheckConfig { get; set; }
         public class UpdateServerGroupAttributeRequestHealthCheckConfig : TeaModel {
             /// <summary>
-            /// <para>The backend port that is used for health checks. Valid values: <b>0</b> to <b>65535</b>. If you set this parameter to <b>0</b>, the port that the backend server uses to provide services is also used for health checks.</para>
+            /// <para>The port used for health checks on backend servers. Valid values: <b>0</b> to <b>65535</b>. A value of <b>0</b> indicates that the port of the backend server is used for health checks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -79,7 +91,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public int? HealthCheckConnectPort { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for a health check response. Unit: seconds. Valid values: <b>1 to 300</b>. Default value: <b>5</b>.</para>
+            /// <para>The maximum timeout period for a health check response. Unit: seconds. Valid values: <b>1</b> to <b>300</b>. Default value: <b>5</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -91,11 +103,11 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// <summary>
             /// <para>The domain name used for health checks. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>$SERVER_IP</b>: the internal IP address of a backend server.</description></item>
-            /// <item><description><b>domain</b>: the specified domain name. The domain name must be 1 to 80 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.).</description></item>
+            /// <item><description><b>$SERVER_IP</b>: the internal IP address of the backend server.</description></item>
+            /// <item><description><b>domain</b>: a custom domain name. The domain name must be 1 to 80 characters in length, and can contain only lowercase letters, digits, hyphens (-), and periods (.).</description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter takes effect only if you set <b>HealthCheckType</b> to <b>HTTP</b>.</para>
+            /// <para>This parameter takes effect only when <b>HealthCheckType</b> is set to <b>HTTP</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -108,8 +120,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// <summary>
             /// <para>Specifies whether to enable health checks. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: Enables health checks.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Disables health checks.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -120,7 +134,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public bool? HealthCheckEnabled { get; set; }
 
             /// <summary>
-            /// <para>The response string of UDP health checks. The string must be 1 to 512 characters in length, and can contain letters and digits.</para>
+            /// <para>The response string used for UDP health checks. The string can contain only letters and digits, and can be up to 512 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ok</para>
@@ -130,9 +144,9 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string HealthCheckExp { get; set; }
 
             /// <summary>
-            /// <para>The HTTP status codes to return for health checks. Separate multiple HTTP status codes with commas (,). Valid values: <b>http_2xx</b> (default), <b>http_3xx</b>, <b>http_4xx</b>, and <b>http_5xx</b>.</para>
+            /// <para>The HTTP status codes that indicate a successful health check. Separate multiple HTTP status codes with commas (,). Valid values: <b>http_2xx</b> (default), <b>http_3xx</b>, <b>http_4xx</b>, and <b>http_5xx</b>.</para>
             /// <remarks>
-            /// <para> This parameter takes effect only if you set <b>HealthCheckType</b> to <b>HTTP</b>.</para>
+            /// <para>This parameter takes effect only when <b>HealthCheckType</b> is set to <b>HTTP</b>.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("HealthCheckHttpCode")]
@@ -140,9 +154,9 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public List<string> HealthCheckHttpCode { get; set; }
 
             /// <summary>
-            /// <para>The version of the HTTP protocol. Valid values: <b>HTTP1.0</b> and <b>HTTP1.1</b>.</para>
+            /// <para>The HTTP version used for health checks. Valid values: <b>HTTP1.0</b> and <b>HTTP1.1</b>.</para>
             /// <remarks>
-            /// <para> This parameter takes effect only if you set <b>HealthCheckType</b> to <b>HTTP</b>.</para>
+            /// <para>This parameter takes effect only when <b>HealthCheckType</b> is set to <b>HTTP</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -153,10 +167,12 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string HealthCheckHttpVersion { get; set; }
 
             /// <summary>
-            /// <para>The interval at which health checks are performed. Unit: seconds. Default value: <b>5</b>.</para>
+            /// <para>The interval between two consecutive health checks. Unit: seconds. Default value: <b>5</b>.</para>
             /// <list type="bullet">
-            /// <item><description>If you set <b>HealthCheckType</b> to <b>TCP</b> or <b>HTTP</b>, valid values are <b>1 to 50</b>.</description></item>
-            /// <item><description>If you set <b>HealthCheckType</b> to <b>UDP</b>, valid values are <b>1 to 300</b>. Set the health check interval equal to or larger than the response timeout period to ensure that UDP response timeouts are not determined as no responses.</description></item>
+            /// <item><description><para>If <b>HealthCheckType</b> is set to <b>TCP</b> or <b>HTTP</b>, valid values are <b>1</b> to <b>50</b>.</para>
+            /// </description></item>
+            /// <item><description><para>If <b>HealthCheckType</b> is set to <b>UDP</b>, valid values are <b>1</b> to <b>300</b>. You must set the interval to a value greater than or equal to the response timeout period to ensure that UDP probe responses are not mistakenly identified as timeouts.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -167,7 +183,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public int? HealthCheckInterval { get; set; }
 
             /// <summary>
-            /// <para>The request string of UDP health checks. The string must be 1 to 512 characters in length, and can contain letters and digits.</para>
+            /// <para>The request string used for UDP health checks. The string can contain only letters and digits, and can be up to 512 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hello</para>
@@ -177,7 +193,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string HealthCheckReq { get; set; }
 
             /// <summary>
-            /// <para>The protocol that is used for health checks. Valid values:</para>
+            /// <para>The health check protocol. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>TCP</b></description></item>
             /// <item><description><b>HTTP</b></description></item>
@@ -192,10 +208,10 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string HealthCheckType { get; set; }
 
             /// <summary>
-            /// <para>The path to which health check probes are sent.</para>
-            /// <para>The path must be 1 to 80 characters in length and can contain only letters, digits, and the following special characters: <c>- / . % ? # &amp; =</c>. It can also contain the following extended characters: <c>_ ; ~ ! ( ) * [ ] @ $ ^ : \\&quot; , +</c>. It must start with a forward slash (/).</para>
+            /// <para>The health check path.</para>
+            /// <para>The path must be 1 to 80 characters in length. It can contain only letters, digits, the characters <c>-/.%?#&amp;=</c>, and extension characters <c>_;~!()*[]@$^:\\&quot;,+</c>. It must start with a forward slash (/).</para>
             /// <remarks>
-            /// <para> This parameter takes effect only if you set <b>HealthCheckType</b> to <b>HTTP</b>.</para>
+            /// <para>This parameter takes effect only when <b>HealthCheckType</b> is set to <b>HTTP</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -206,7 +222,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string HealthCheckUrl { get; set; }
 
             /// <summary>
-            /// <para>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status changes from <b>fail</b> to <b>success</b>. Valid values: <b>2</b> to <b>10</b>.</para>
+            /// <para>The number of consecutive successful health checks required to change the health status of a backend server from <b>Failed</b> to <b>Success</b>. Valid values: <b>2</b> to <b>10</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -218,7 +234,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             /// <summary>
             /// <para>The HTTP method used for health checks. Valid values: <b>GET</b> and <b>HEAD</b>.</para>
             /// <remarks>
-            /// <para> This parameter takes effect only if you set <b>HealthCheckType</b> to <b>HTTP</b>.</para>
+            /// <para>This parameter takes effect only when <b>HealthCheckType</b> is set to <b>HTTP</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -229,7 +245,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
             public string HttpCheckMethod { get; set; }
 
             /// <summary>
-            /// <para>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status changes from <b>success</b> to <b>fail</b>. Valid values: <b>2</b> to <b>10</b>.</para>
+            /// <para>The number of consecutive failed health checks required to change the health status of a backend server from <b>Success</b> to <b>Failed</b>. Valid values: <b>2</b> to <b>10</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -240,6 +256,19 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 
         }
 
+        /// <summary>
+        /// <para>The traffic scheduling policy in dual-stack mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>NonAffinity</b>: non-affinity mode. Requests are forwarded to healthy backend servers based on the scheduling algorithm regardless of the IP version of the source address. This is the default value.</description></item>
+        /// <item><description><b>Affinity</b>: affinity mode. Requests are forwarded to backend servers based on the IP version of the source address. IPv4 requests are forwarded only to IPv4 backend servers, and IPv6 requests are forwarded only to IPv6 backend servers.<remarks>
+        /// <para>This parameter takes effect only when <b>AddressIPVersion</b> is set to <b>DualStack</b>.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Affinity</para>
+        /// </summary>
         [NameInMap("IpVersionAffinityMode")]
         [Validation(Required=false)]
         public string IpVersionAffinityMode { get; set; }
@@ -247,11 +276,13 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// <para>Specifies whether to enable client IP preservation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: Enables client IP preservation.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Disables client IP preservation.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You cannot set this parameter to <b>true</b> if <b>PreserveClientIpEnabled</b> is set to <b>false</b> and the server group is associated with a listener that uses <b>SSL over TCP</b>.</para>
+        /// <para>If <b>PreserveClientIpEnabled</b> is set to <b>false</b> and the server group is associated with a <b>TCPSSL</b> listener, you cannot change the value of this parameter to <b>true</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -262,8 +293,8 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public bool? PreserveClientIpEnabled { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the NLB instance is deployed.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the network load balancing instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to obtain the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -275,15 +306,21 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <summary>
         /// <para>The scheduling algorithm. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Wrr</b>: weighted round-robin. Backend servers with higher weights receive more requests.</description></item>
-        /// <item><description><b>Wlc</b>: weighted least connections. Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If multiple backend servers have the same weight, requests are forwarded to the backend server with the least connections.</description></item>
-        /// <item><description><b>rr</b>: Requests are forwarded to backend servers in sequence.</description></item>
-        /// <item><description><b>sch</b>: source IP hash. Requests from the same source IP address are forwarded to the same backend server.</description></item>
-        /// <item><description><b>tch</b>: consistent hashing based on four factors: source IP address, destination IP address, source port, and destination port. Requests that contain the same four factors are forwarded to the same backend server.</description></item>
-        /// <item><description><b>qch</b>: QUIC ID hash. Requests that contain the same QUIC ID are forwarded to the same backend server.</description></item>
+        /// <item><description><para><b>Wrr</b>: weighted round-robin. Backend servers with higher weights receive more requests.</para>
+        /// </description></item>
+        /// <item><description><para><b>Wlc</b>: weighted least connections. Requests are distributed based on the weights and actual loads (number of connections) of backend servers. If weights are the same, backend servers with fewer connections receive more requests.</para>
+        /// </description></item>
+        /// <item><description><para><b>rr</b>: round-robin. Requests are distributed to backend servers in sequence.</para>
+        /// </description></item>
+        /// <item><description><para><b>sch</b>: source IP hash. Requests from the same source IP address are distributed to the same backend server.</para>
+        /// </description></item>
+        /// <item><description><para><b>tch</b>: 4-tuple hash. Consistent hashing based on the 4-tuple (source IP address, destination IP address, source port, and destination port). Requests from the same flow are distributed to the same backend server.</para>
+        /// </description></item>
+        /// <item><description><para><b>qch</b>: QUIC ID hash. Requests with the same QUIC ID are distributed to the same backend server.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> QUIC ID hash is supported only when the backend protocol is set to UDP.</para>
+        /// <para>QUIC ID hash is supported only when the backend protocol is UDP.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -294,7 +331,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string Scheduler { get; set; }
 
         /// <summary>
-        /// <para>The server group ID.</para>
+        /// <para>The ID of the server group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -306,7 +343,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 
         /// <summary>
         /// <para>The new name of the server group.</para>
-        /// <para>The name must be 2 to 128 characters in length, can contain digits, periods (.), underscores (_), and hyphens (-), and must start with a letter.</para>
+        /// <para>The name must be 2 to 128 characters in length, and must start with a letter or Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>NLB_ServerGroup1</para>

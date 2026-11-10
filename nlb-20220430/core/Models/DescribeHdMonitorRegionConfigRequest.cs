@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
 {
     public class DescribeHdMonitorRegionConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the region where the resources are deployed.</para>
+        /// <para>The ID of the region where the resource resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

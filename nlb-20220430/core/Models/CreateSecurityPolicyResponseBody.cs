@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D7A8875F-373A-5F48-8484-25B07A61F2AF</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Nlb20220430.Models
         /// <para>The ID of the TLS security policy.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>tls-bp14bb1e7dll4f****</para>
+        /// <para>sp-wuytp9pa******</para>
         /// </summary>
         [NameInMap("SecurityPolicyId")]
         [Validation(Required=false)]
