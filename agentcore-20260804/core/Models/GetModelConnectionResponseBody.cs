@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class GetModelConnectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value is SUCCESS when the operation is successful.</para>
+        /// <para>The business status code. The value is SUCCESS if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public int? ApiKeyCount { get; set; }
 
             /// <summary>
-            /// <para>The list of API keys used to access the upstream model service. The list contains at least one non-empty value.</para>
+            /// <para>The list of API keys used to access the upstream model service. The list must contain at least one non-empty value.</para>
             /// </summary>
             [NameInMap("apiKeys")]
             [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// <para>The name of the model connection. The name is 1 to 128 non-whitespace characters in length.</para>
+            /// <para>The name of the model connection. The name must be 1 to 128 non-whitespace characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The protocol to invoke the model. Currently, only OpenAI/v1 is supported. If the Settings are not specified during model creation, this default value is used.</para>
+            /// <para>The model invocation protocol. Currently, only OpenAI/v1 is supported. If this parameter is not specified when the model connection is created, this default value is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OpenAI/v1</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ProviderType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region to which the resource belongs.</para>
+            /// <para>The region ID of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The failure summary returned when the model connection fails to be published, or when deletion fails but the connection remains in the deleting state. This field is empty in other states.</para>
+            /// <para>The failure summary returned when the model connection fails to be published, or when deletion fails but the status remains Deleting. Empty for other statuses.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GatewayOperationException</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. The value is 200 if the request is successful.</para>
+        /// <para>The HTTP status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message about the request processing result.</para>
+        /// <para>The request processing result message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

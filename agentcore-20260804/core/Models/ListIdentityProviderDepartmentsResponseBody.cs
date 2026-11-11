@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListIdentityProviderDepartmentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code of the API request. SUCCESS indicates that the current request is successful, but does not indicate that the asynchronous synchronization task is completed.</para>
+        /// <para>The business status code for the current API request. SUCCESS indicates that the current request is successful, but does not indicate that the asynchronous synchronization task is completed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code of the API request. This does not indicate the execution result of an asynchronous task.</para>
+        /// <para>The HTTP status code for the current API request. This does not indicate the execution result of an asynchronous task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The direct child departments on the current page under the current parent department. For details about the child departments, query them separately.</para>
+        /// <para>The direct child departments on the current page under the current parent department. For details about the child departments, you must make another query.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;id&quot;:&quot;10001&quot;,&quot;name&quot;:&quot;研发部&quot;,&quot;parentId&quot;:&quot;1&quot;,&quot;memberCount&quot;:12,&quot;hasChildren&quot;:true}]</para>
+        /// <para>[{&quot;id&quot;:&quot;10001&quot;,&quot;name&quot;:&quot;R&amp;D Department&quot;,&quot;parentId&quot;:&quot;1&quot;,&quot;memberCount&quot;:12,&quot;hasChildren&quot;:true}]</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ListIdentityProviderDepartmentsResponseBodyItems> Items { get; set; }
         public class ListIdentityProviderDepartmentsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the department has child departments. A value of true indicates that the department has child departments, and an expansion entry can be displayed based on this value. A value of false indicates a leaf node. If this parameter is not returned, the value is unknown. To obtain details about the child departments, use the ID of the current node to query them separately.</para>
+            /// <para>A value of true indicates that the department has child departments, and you can display an expansion entry based on this. A value of false indicates a leaf node. If this parameter is not returned, the value is unknown. For details about the child departments, you must make another query by using the id of the current node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The number of department members returned by the identity provider. This parameter is not returned when the value is unknown. Do not treat a missing value as 0.</para>
+            /// <para>The number of department members returned by the identity provider. This parameter is not returned when the value is unknown. A missing value should not be treated as 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The response message of the API request.</para>
+        /// <para>The response message for the current API request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API request is successful. To check whether an asynchronous task is completed, query the task status.</para>
+        /// <para>Indicates whether the current API request is successful. To check whether an asynchronous task is completed, query the task status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of departments. This operation does not calculate the total number of departments. Currently, JSON null is actually returned. To determine whether pagination has ended, check whether nextToken is an empty string.</para>
+        /// <para>This operation does not calculate the total number of departments. Currently, it actually returns JSON null. To determine whether pagination has ended, check whether nextToken is an empty string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>

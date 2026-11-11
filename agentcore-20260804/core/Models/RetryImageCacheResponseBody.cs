@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The image cache creation failed. Please retry</para>
+                /// <para>The image cache creation failed. Please try again</para>
                 /// </summary>
                 [NameInMap("message")]
                 [Validation(Required=false)]

@@ -35,14 +35,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? LoginEnabled { get; set; }
 
             /// <summary>
-            /// <para>The application configuration of the external identity provider. When you bind DingTalk, you must provide appKey, appSecret, and corpId. When you bind Lark, you must provide appId and appSecret.</para>
+            /// <para>The application configuration of the external identity provider. When binding DingTalk, you must provide appKey, appSecret, and corpId. When binding Lark, you must provide appId and appSecret.</para>
             /// </summary>
             [NameInMap("metadata")]
             [Validation(Required=false)]
             public CreateIdentityProviderRequestBodyMetadata Metadata { get; set; }
             public class CreateIdentityProviderRequestBodyMetadata : TeaModel {
                 /// <summary>
-                /// <para>The app ID of the Lark application. This parameter is required when the binding type is Feishu.</para>
+                /// <para>The App ID of the Lark application. This parameter is required when the binding type is Lark.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cli_exampleappid01</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AppKey { get; set; }
 
                 /// <summary>
-                /// <para>Required. The secret of the external identity provider application. This parameter is used only for write operations and is not returned by query operations.</para>
+                /// <para>Required. The secret of the external identity provider application. This parameter is used only for writing and is not returned by query APIs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example-app-secret</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string CorpId { get; set; }
 
                 /// <summary>
-                /// <para>The data encryption key for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for write operations and is not returned by query operations.</para>
+                /// <para>The data encryption key for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for writing and is not returned by query APIs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example-encrypt-key</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string EncryptKey { get; set; }
 
                 /// <summary>
-                /// <para>The verification token for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for write operations and is not returned by query operations.</para>
+                /// <para>The verification token for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for writing and is not returned by query APIs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example-verification-token</para>
@@ -111,14 +111,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? SyncEnabled { get; set; }
 
             /// <summary>
-            /// <para>Controls the initial synchronization when DingTalk or Feishu is bound. If this parameter is omitted or set to null, the default value is true. If this parameter is set to false, only the configuration is saved, and synchronization must be explicitly triggered later. CustomSSO does not use the provider pull channel.</para>
+            /// <para>Controls the initial synchronization when DingTalk or Lark is bound. If this parameter is omitted or is null, the default value is true. If this parameter is set to false, only the configuration is saved, and synchronization is explicitly triggered later. CustomSSO does not use the vendor pull pipeline.</para>
             /// </summary>
             [NameInMap("syncOnBind")]
             [Validation(Required=false)]
             public bool? SyncOnBind { get; set; }
 
             /// <summary>
-            /// <para>Uses the department-based synchronization scope definition. If this parameter is omitted during creation, the default value is AllAuthorized. The initial provider synchronization is determined by syncOnBind. If this parameter is omitted or set to null during an update, the original value is retained. Updating and saving the scope does not automatically trigger full synchronization.</para>
+            /// <para>Follows the department-based synchronization scope definition. If omitted during creation, the default value is AllAuthorized, and the initial vendor synchronization is determined by syncOnBind. If omitted or null during an update, the original value is retained. Updating and saving the scope does not automatically trigger full synchronization.</para>
             /// </summary>
             [NameInMap("syncScope")]
             [Validation(Required=false)]
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public List<string> DepartmentIds { get; set; }
 
                 /// <summary>
-                /// <para>AllAuthorized: the entire authorized scope, which is limited by the application address book authorization. SelectedDepartments: the selected departments and all their sub-departments. When you explicitly submit syncScope, you must provide a valid mode, which is verified by the backend.</para>
+                /// <para>AllAuthorized: the full authorization scope, which is limited by the application address book authorization. SelectedDepartments: the selected departments and all their sub-departments. When explicitly submitting syncScope, you must provide a valid mode, which is verified by the backend.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SelectedDepartments</para>

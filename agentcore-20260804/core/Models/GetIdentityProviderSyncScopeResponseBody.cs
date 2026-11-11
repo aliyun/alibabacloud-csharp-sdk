@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         /// <para>The business data returned in the response.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;syncScope&quot;:{&quot;mode&quot;:&quot;SelectedDepartments&quot;,&quot;departmentIds&quot;:[&quot;10001&quot;]},&quot;selectedDepartments&quot;:[{&quot;id&quot;:&quot;10001&quot;,&quot;name&quot;:&quot;研发部&quot;,&quot;exists&quot;:true}],&quot;estimateStatus&quot;:&quot;Ready&quot;,&quot;expandedDepartmentCount&quot;:2,&quot;estimatedUserCount&quot;:12}</para>
+        /// <para>{&quot;syncScope&quot;:{&quot;mode&quot;:&quot;SelectedDepartments&quot;,&quot;departmentIds&quot;:[&quot;10001&quot;]},&quot;selectedDepartments&quot;:[{&quot;id&quot;:&quot;10001&quot;,&quot;name&quot;:&quot;R&amp;D Department&quot;,&quot;exists&quot;:true}],&quot;estimateStatus&quot;:&quot;Ready&quot;,&quot;expandedDepartmentCount&quot;:2,&quot;estimatedUserCount&quot;:12}</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string EstimateStatus { get; set; }
 
             /// <summary>
-            /// <para>The estimated number of users in the saved synchronization scope. This value is returned only when estimateStatus is Ready and the downstream system provides the value. It does not represent the number of users that have already been synchronized.</para>
+            /// <para>The estimated number of users in the saved synchronization scope. This is returned only when estimateStatus is Ready and the downstream system provides the value. This does not represent the number of users that have already been synchronized.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? EstimatedUserCount { get; set; }
 
             /// <summary>
-            /// <para>The estimated number of departments, including child departments. This value is returned only when estimateStatus is Ready and the downstream system provides the value.</para>
+            /// <para>The estimated number of departments, including sub-departments. This is returned only when estimateStatus is Ready and the downstream system provides the value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The names and validity of the saved selected departments. This can be an empty array when the mode is AllAuthorized. An empty array does not indicate that the organization has no departments.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{&quot;id&quot;:&quot;10001&quot;,&quot;name&quot;:&quot;研发部&quot;,&quot;exists&quot;:true}]</para>
+            /// <para>[{&quot;id&quot;:&quot;10001&quot;,&quot;name&quot;:&quot;R&amp;D Department&quot;,&quot;exists&quot;:true}]</para>
             /// </summary>
             [NameInMap("selectedDepartments")]
             [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? Exists { get; set; }
 
                 /// <summary>
-                /// <para>The unique identifier of the department returned by the identity provider. When querying the child departments of this node, use this value as parentDepartmentId.</para>
+                /// <para>The unique identifier of the department returned by the identity provider. When querying the sub-departments of this node, use this value as parentDepartmentId.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10001</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public List<string> DepartmentIds { get; set; }
 
                 /// <summary>
-                /// <para>AllAuthorized: the full authorized scope, which is restricted by the application\&quot;s address book authorization. SelectedDepartments: the selected departments and all their child departments. When explicitly submitting syncScope, you must provide a valid mode, which is verified by the backend.</para>
+                /// <para>AllAuthorized: the full authorized scope, which is restricted by the application\&quot;s address book authorization. SelectedDepartments: the selected departments and all their sub-departments. When explicitly submitting syncScope, you must provide a valid mode, which is verified by the backend.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SelectedDepartments</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request. Provide this value when troubleshooting issues.</para>
+        /// <para>The unique identifier of the request. Provide this value when you troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>01234567-89AB-CDEF-0123-456789ABCDEF</para>

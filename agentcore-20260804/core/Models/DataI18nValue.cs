@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class DataI18nValue : TeaModel {
         /// <summary>
-        /// <para>The MCP service description in this language.</para>
+        /// <para>The description of the MCP service in the language.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MCP service for querying knowledge bases</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The MCP marketplace template name in this language.</para>
+        /// <para>The name of the MCP marketplace template in the language.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Knowledge base</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The MCP marketplace template instructions in this language.</para>
+        /// <para>The instructions for the MCP marketplace template in the language.</para>
         /// 
         /// <b>Example:</b>
         /// <h1>Knowledge base\nKnowledge base query service</h1>

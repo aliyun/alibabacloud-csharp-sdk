@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ExpiresAt { get; set; }
 
             /// <summary>
-            /// <para>The HTTP request headers, where the key is the header name and the value is the header content.</para>
+            /// <para>The HTTP request headers. The key is the header name, and the value is the header content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;Content-Type&quot;:&quot;application/zip&quot;}</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public Dictionary<string, string> Headers { get; set; }
 
             /// <summary>
-            /// <para>The maximum allowed size of the code package to upload, in bytes.</para>
+            /// <para>The maximum allowed size of the code package to be uploaded, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>52428800</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string UploadMethod { get; set; }
 
             /// <summary>
-            /// <para>The presigned upload URL for the code package.</para>
+            /// <para>The presigned upload URL of the code package.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example-bucket.oss-cn-hangzhou.aliyuncs.com/server.zip?Signature=example-signature">https://example-bucket.oss-cn-hangzhou.aliyuncs.com/server.zip?Signature=example-signature</a></para>

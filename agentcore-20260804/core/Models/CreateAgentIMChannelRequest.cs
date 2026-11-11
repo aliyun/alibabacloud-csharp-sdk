@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ChannelType { get; set; }
 
             /// <summary>
-            /// <para>The channel credentials. You must pass all credential fields and ensure that the field values are non-empty strings. For DingTalk, use clientID and clientSecret. For Lark, use appId and appSecret. For WeCom, use botId and secret.</para>
+            /// <para>The channel credential. All fields must be provided and their values must be non-empty strings. DingTalk uses clientID and clientSecret, Lark uses appId and appSecret, and WeCom uses botId and secret.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("credential")]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The ID of the bound service endpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a publicly accessible address.</para>
+            /// <para>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, and must be ready and have a public address.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

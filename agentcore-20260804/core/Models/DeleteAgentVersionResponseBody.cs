@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate and troubleshoot requests.</para>
+        /// <para>The request ID, which is used to locate and troubleshoot the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5E8F3C2A-1B4D-4F6E-9A7C-0D2B8E6F4A1C</para>

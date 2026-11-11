@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request is processed successfully</para>
+        /// <para>The request was processed successfully</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]

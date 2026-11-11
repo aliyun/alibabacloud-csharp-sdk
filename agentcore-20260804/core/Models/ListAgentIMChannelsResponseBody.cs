@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The IM channels.</para>
+        /// <para>The list of IM channels.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AgentId { get; set; }
 
             /// <summary>
-            /// <para>The channel behavior configuration.</para>
+            /// <para>The behavior configuration of the channel.</para>
             /// </summary>
             [NameInMap("channelConfig")]
             [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The IM channel type. Valid values: DINGTALK (DingTalk), FEISHU (Lark), and WECOM (WeCom).</para>
+            /// <para>The IM channel type. Valid values: DINGTALK (DingTalk), FEISHU (Lark), WECOM (WeCom).</para>
             /// 
             /// <b>Example:</b>
             /// <para>DINGTALK</para>
@@ -113,14 +113,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether the IM channel is enabled. Default value: true.</para>
+            /// <para>Specifies whether the IM channel is enabled. The default value is true upon creation.</para>
             /// </summary>
             [NameInMap("enabled")]
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The public network access address of the attached ServiceEndpoint.</para>
+            /// <para>The public network access URL of the attached ServiceEndpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://agent.example.com">https://agent.example.com</a></para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ImChannelId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the bound service endpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public endpoint URL.</para>
+            /// <para>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the Ready state, and have a public network address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>se-1</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ServiceEndpointId { get; set; }
 
             /// <summary>
-            /// <para>The IM channel status. Valid values: CREATING (Creating), READY (Ready), UPDATING (Updating), FAILED (Failed), DELETING (Deleting), and DELETE_FAILED (Delete failed).</para>
+            /// <para>The IM channel status. Valid values: CREATING (Creating), READY (Ready), UPDATING (Updating), FAILED (Failed), DELETING (Deleting), DELETE_FAILED (Deletion failed).</para>
             /// 
             /// <b>Example:</b>
             /// <para>READY</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per page for this request.</para>
+        /// <para>The maximum number of entries returned per page for the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The result message of the request.</para>
+        /// <para>The message about the request processing result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

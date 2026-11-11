@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public AddMemoriesResponseBodyData Data { get; set; }
         public class AddMemoriesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The memory references. This parameter is returned only when sync is set to true. An empty array is allowed. This parameter is not returned together with taskId.</para>
+            /// <para>The memory references. This parameter is returned only when sync is set to true, and an empty array is allowed. It is not returned together with taskId.</para>
             /// </summary>
             [NameInMap("memories")]
             [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The task ID. This parameter is returned only when sync is set to false. This parameter is not returned together with memories.</para>
+            /// <para>The task ID. This parameter is returned only when sync is set to false. It is not returned together with memories.</para>
             /// 
             /// <b>Example:</b>
             /// <para>task-2f5f9c5a8d0e4c3b</para>

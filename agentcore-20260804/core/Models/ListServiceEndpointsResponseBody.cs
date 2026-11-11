@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<ListServiceEndpointsResponseBodyItemsAccessUrls> AccessUrls { get; set; }
             public class ListServiceEndpointsResponseBodyItemsAccessUrls : TeaModel {
                 /// <summary>
-                /// <para>The access URL type. Valid values: INTERNET and VPC.</para>
+                /// <para>The type of the access URL. Valid values: INTERNET and VPC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>INTERNET</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public ListServiceEndpointsResponseBodyItemsAuthentication Authentication { get; set; }
             public class ListServiceEndpointsResponseBodyItemsAuthentication : TeaModel {
                 /// <summary>
-                /// <para>The authentication method. NONE indicates that no authentication is required, and API_KEY indicates that authentication is performed by passing an API key through the x-api-key request header.</para>
+                /// <para>The authentication method. NONE indicates that no authentication is required. API_KEY indicates that authentication is performed by passing an API key in the x-api-key request header.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>API_KEY</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The creation time in RFC 3339 UTC format.</para>
+            /// <para>The creation time in UTC format compliant with RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -115,21 +115,188 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The result of combining publicAccessEnabled with the workspace public access inbound upper limit. It is true only when both allow it. This only indicates the policy target and does not mean that the public access entry has been published. The actual status is subject to accessUrls and status.</para>
+            /// <para>Read-only. This is a shared response field. The list operation does not query RM row by row and returns null. For details, call the GetServiceEndpoint operation to query sandboxPhaseCounts.RUNNING based on the endpoint runtimeKey. Do not replace it with the baseline upper and lower limits, target quantity, or READY status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// 
+            /// <b>if can be null:</b>
+            /// <c>true</c>
+            /// </summary>
+            [NameInMap("currentInstances")]
+            [Validation(Required=false)]
+            public int? CurrentInstances { get; set; }
+
+            /// <summary>
+            /// <para>The result of combining publicAccessEnabled with the public inbound access upper limit of the workspace. The value is true only when both allow public inbound access. This only indicates the policy target and does not mean that the public endpoint has been published. The actual status is subject to accessUrls and status.</para>
             /// </summary>
             [NameInMap("effectivePublicAccessEnabled")]
             [Validation(Required=false)]
             public bool? EffectivePublicAccessEnabled { get; set; }
 
             /// <summary>
-            /// <para>Returned only when elastic override values are set for the service endpoint. Can be set for Router-type service endpoints and DEFAULT service endpoints of the GATEWAY_API_WITH_VPC_INGRESS type. If no override values are set, this object is not returned, indicating that the source configuration of the agent is inherited. It must not be treated as an empty object or a default policy. When returned, all three fields are always included.</para>
+            /// <para>Includes the enabled status, basic minSandboxCount and maxSandboxCount, and dynamicPolicy. This does not represent the currently effective limits or the actual number of instances. If the basic configuration lacks dynamicPolicy before the feature is released, it is supplemented with enabled=false and policies=[]. This parameter is null if the endpoint configuration is not saved, and the list does not backfill the version source. Historical basic capacity can exceed 100. Retrieve the details again when you open the edit page.</para>
+            /// 
+            /// <b>if can be null:</b>
+            /// <c>true</c>
             /// </summary>
             [NameInMap("elasticityPolicy")]
             [Validation(Required=false)]
             public ListServiceEndpointsResponseBodyItemsElasticityPolicy ElasticityPolicy { get; set; }
             public class ListServiceEndpointsResponseBodyItemsElasticityPolicy : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether elasticity is enabled.</para>
+                /// <para>Returns the saved dynamic configuration. If the basic configuration lacks dynamicPolicy before the feature is released, it is supplemented with enabled=false and policies=[].</para>
+                /// </summary>
+                [NameInMap("dynamicPolicy")]
+                [Validation(Required=false)]
+                public ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicy DynamicPolicy { get; set; }
+                public class ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicy : TeaModel {
+                    /// <summary>
+                    /// <para>Required during creation. If omitted during an update, the original value is retained. Disabling it retains existing policies and restores the basic upper and lower limits. Enabling it again triggers immediate calculation. When finally enabled, policies must not be empty.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
+                    [NameInMap("enabled")]
+                    [Validation(Required=false)]
+                    public bool? Enabled { get; set; }
+
+                    /// <summary>
+                    /// <para>Required during creation. If omitted during an update, the original list is retained. If provided, it replaces the entire list and is not merged by ID. To clear the list, you must also ensure that the final enabled status is false. Each item must be complete. Conditional requirements and cross-field constraints are validated by the server. The display order does not indicate priority.</para>
+                    /// </summary>
+                    [NameInMap("policies")]
+                    [Validation(Required=false)]
+                    public List<ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPolicies> Policies { get; set; }
+                    public class ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPolicies : TeaModel {
+                        /// <summary>
+                        /// <para>Required only when validity is set to range. The format is the same as startTime, and the seconds are fixed at 00. The value must be later than startTime. The interval does not include the end time. If validity is set to forever, the start and end times must be omitted. Valid dates and cross-field constraints are verified by the console.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>2026-12-01T00:00:00</para>
+                        /// </summary>
+                        [NameInMap("endTime")]
+                        [Validation(Required=false)]
+                        public string EndTime { get; set; }
+
+                        /// <summary>
+                        /// <para>Required. It must be unique and stable within the endpoint. It is generated by the frontend when added, and retained during editing and retries.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>policy-weekday</para>
+                        /// </summary>
+                        [NameInMap("id")]
+                        [Validation(Required=false)]
+                        public string Id { get; set; }
+
+                        /// <summary>
+                        /// <para>Required. Valid values: 5 for regular and 10 for high priority. New policies default to regular priority. It must be explicitly provided during submission, and no default value is set by the API. When dynamicPolicy.enabled is finally true, the validity periods of high-priority policies must not overlap, except for end-to-end connections. Long-term high-priority policies can overlap with other high-priority policies. Overlapping drafts can be saved when disabled, and the final configuration is validated when re-enabled. The validity of other fields and trigger conflicts within the policy are always validated. The priority must be explicitly provided.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>5</para>
+                        /// </summary>
+                        [NameInMap("priority")]
+                        [Validation(Required=false)]
+                        public int? Priority { get; set; }
+
+                        /// <summary>
+                        /// <para>Required. Valid values: daily for every day, weekly for every week, and monthly for every month. Only submit the fields corresponding to the specified cycle.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>weekly</para>
+                        /// </summary>
+                        [NameInMap("repeat")]
+                        [Validation(Required=false)]
+                        public string Repeat { get; set; }
+
+                        /// <summary>
+                        /// <para>Required only when validity is set to range. The format is YYYY-MM-DDTHH:mm:ss in the time zone of the policy, without a time zone offset. The seconds are fixed at 00. The interval includes the start time. When editing, the existing past start time is retained, and updates or retries are not rejected even if it is earlier than the current time.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>2026-11-01T00:00:00</para>
+                        /// </summary>
+                        [NameInMap("startTime")]
+                        [Validation(Required=false)]
+                        public string StartTime { get; set; }
+
+                        /// <summary>
+                        /// <para>Required and non-empty. Each item must be complete. The day of the week or day of the month is configured independently for each item. Within the same policy, daily policies conflict if they have the same time. Weekly and monthly policies conflict only if they have the same time and their date sets intersect. This is validated by the console.</para>
+                        /// </summary>
+                        [NameInMap("timePoints")]
+                        [Validation(Required=false)]
+                        public List<ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPoliciesTimePoints> TimePoints { get; set; }
+                        public class ListServiceEndpointsResponseBodyItemsElasticityPolicyDynamicPolicyPoliciesTimePoints : TeaModel {
+                            /// <summary>
+                            /// <para>Required. The value ranges from 1 to 100.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>5</para>
+                            /// </summary>
+                            [NameInMap("maxInstances")]
+                            [Validation(Required=false)]
+                            public int? MaxInstances { get; set; }
+
+                            /// <summary>
+                            /// <para>Required. The value ranges from 0 to 100 and must not be greater than the maxInstances value in the same item.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>1</para>
+                            /// </summary>
+                            [NameInMap("minInstances")]
+                            [Validation(Required=false)]
+                            public int? MinInstances { get; set; }
+
+                            /// <summary>
+                            /// <para>Required only for each trigger point of the monthly cycle. Must be non-empty and contain unique integers from 1 to 31. Each row is selected independently. If a date does not exist in a specific month, the trigger does not occur and is not postponed to the end of the month. Must be omitted for other cycles.</para>
+                            /// </summary>
+                            [NameInMap("monthDays")]
+                            [Validation(Required=false)]
+                            public List<int?> MonthDays { get; set; }
+
+                            /// <summary>
+                            /// <para>Required. The format is HH:mm:ss. The time is interpreted based on the time zone of the associated policy. The precision is down to the minute, and the seconds are fixed at 00.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>09:00:00</para>
+                            /// </summary>
+                            [NameInMap("time")]
+                            [Validation(Required=false)]
+                            public string Time { get; set; }
+
+                            /// <summary>
+                            /// <para>Required only for each trigger point of weekly policies. It must be non-empty and deduplicated. Valid values are integers from 1 to 7, where 1 represents Monday and 7 represents Sunday. Each row is selected independently. It must be omitted for other cycles.</para>
+                            /// </summary>
+                            [NameInMap("weekdays")]
+                            [Validation(Required=false)]
+                            public List<int?> Weekdays { get; set; }
+
+                        }
+
+                        /// <summary>
+                        /// <para>Required. It must be a valid IANA time zone. All dates and times in this policy are interpreted in this time zone.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>Asia/Shanghai</para>
+                        /// </summary>
+                        [NameInMap("timeZone")]
+                        [Validation(Required=false)]
+                        public string TimeZone { get; set; }
+
+                        /// <summary>
+                        /// <para>Required. Valid values: forever: The policy is permanently valid. range: The policy is valid for a specific period. After expiration, the policy and its trigger results exit the current calculation, and the remaining policies are recalculated. If no candidates are available, the baseline values are restored, and the saved configurations are not automatically deleted.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>range</para>
+                        /// </summary>
+                        [NameInMap("validity")]
+                        [Validation(Required=false)]
+                        public string Validity { get; set; }
+
+                    }
+
+                }
+
+                /// <summary>
+                /// <para>Independent of dynamicPolicy.enabled. If omitted during an update, the original value is retained.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -139,7 +306,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? Enabled { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of instances, which must be no less than 1.</para>
+                /// <para>The saved or backfilled basic maximum number of instances. It must not be less than minSandboxCount. Historical values can exceed 100 and are not truncated when read. The basic value is used when dynamic scaling is disabled or no candidates are available.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -149,7 +316,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public int? MaxSandboxCount { get; set; }
 
                 /// <summary>
-                /// <para>The minimum number of instances, which must be no less than 0 and no greater than maxSandboxCount.</para>
+                /// <para>The saved or backfilled basic minimum number of instances. It must be a non-negative integer and not greater than maxSandboxCount. Historical values can exceed 100 and are not truncated when read. However, newly written complete configurations must still meet the 0 to 100 range.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -161,7 +328,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The type of the service endpoint. DEFAULT indicates a default endpoint created and maintained by the platform, and NAMED indicates a named endpoint explicitly created by a user.</para>
+            /// <para>The type of the service endpoint. DEFAULT indicates a default endpoint created and maintained by the platform. NAMED indicates a named endpoint explicitly created by a user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NAMED</para>
@@ -171,7 +338,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string EndpointType { get; set; }
 
             /// <summary>
-            /// <para>The name of the service endpoint. It must be unique within the workspace and 1 to 128 characters in length.</para>
+            /// <para>The name of the service endpoint. The name must be unique within the workspace and 1 to 128 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-agent-endpoint</para>
@@ -181,7 +348,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The expected public access inbound setting configured by the user on the service endpoint. For legacy service endpoints where this has not been set, true is returned. This only indicates the configuration expectation. The actual availability of the public access URL is subject to accessUrls and status.</para>
+            /// <para>The expected public inbound access configured by the user on the service endpoint. For historical service endpoints that have not been configured, true is returned. This only indicates the configuration expectation. The actual availability of the public IP address is subject to accessUrls and status.</para>
             /// </summary>
             [NameInMap("publicAccessEnabled")]
             [Validation(Required=false)]
@@ -287,7 +454,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The time of the last modification in RFC 3339 UTC format.</para>
+            /// <para>The time of the last modification in UTC format compliant with RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -309,7 +476,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records per page returned in this query.</para>
+        /// <para>The maximum number of records per page that takes effect in this query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -329,7 +496,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The cursor for the next page. Empty if there is no next page.</para>
+        /// <para>The cursor for the next page. This parameter is empty if there is no next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>djE6YWdlbnRjb3JlLnNlcnZpY2UtZW5kcG9pbnQubGlzdDoyMA</para>

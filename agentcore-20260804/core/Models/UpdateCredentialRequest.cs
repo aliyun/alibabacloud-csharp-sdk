@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public UpdateCredentialRequestBody Body { get; set; }
         public class UpdateCredentialRequestBody : TeaModel {
             /// <summary>
-            /// <para>The credential content, submitted as a JSON string. For the apiKey type, it contains only a non-empty apiKey. For the mcpHeader type, it contains a non-empty headers array, where each item includes a name and a value.</para>
+            /// <para>The credential content, submitted as a JSON string. For the apiKey type, it only contains a non-empty apiKey. For the mcpHeader type, it contains a non-empty headers array, where each item includes a name and a value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;apiKey&quot;:&quot;sk-example-value&quot;}</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CredentialMetadata { get; set; }
 
             /// <summary>
-            /// <para>The new credential description. The description can be up to 256 characters in length. If omitted, the original description is retained. It can be updated independently of the credential content or application scope.</para>
+            /// <para>The new credential description. The description can be up to 256 characters in length. If omitted, the original description is retained. It can be updated separately from the credential content or application scope.</para>
             /// 
             /// <b>Example:</b>
             /// <para>API key used to call the model service in the production environment</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The list of applicable resources for the MCP header credential. If submitted, resourceScope must also be submitted. An empty array [] is allowed when the scope is SPECIFIED. Omit this field when the scope is ALL.</para>
+            /// <para>The list of applicable resources for the MCP header credential. If submitted, resourceScope must also be submitted. An empty array [] is allowed when the value is SPECIFIED. Omit this field when the value is ALL.</para>
             /// </summary>
             [NameInMap("resourceRefs")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The resource name. This field is empty if the resource has been deleted.</para>
+                /// <para>The resource name. This field is empty if the resource is deleted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my-mcp-service</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string ResourceName { get; set; }
 
                 /// <summary>
-                /// <para>The resource type. Currently, the value is mcpServer, which indicates an MCP service.</para>
+                /// <para>The resource type. The current value is mcpServer, which indicates an MCP service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mcpServer</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The application scope of the MCP header credential. This field is supported only for the mcpHeader type. ALL indicates all MCP services, and SPECIFIED indicates the MCP services specified in resourceRefs. Do not submit this field for the apiKey type.</para>
+            /// <para>The application scope of the MCP header credential. Only the mcpHeader type is supported. ALL indicates all MCP services, and SPECIFIED indicates the MCP services specified in resourceRefs. Do not submit this field for the apiKey type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>

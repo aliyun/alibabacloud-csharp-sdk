@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>A sample description used to explain the purpose of the resource</para>
+            /// <para>Sample description used to illustrate the purpose of the resource</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]

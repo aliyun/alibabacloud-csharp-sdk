@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public GetMemoryResponseBodyDataScope Scope { get; set; }
             public class GetMemoryResponseBodyDataScope : TeaModel {
                 /// <summary>
-                /// <para>The agent ID. The length is limited to 1 to 128 UTF-8 bytes. Slashes (/) and asterisks (*) are not allowed. This field is not returned if the memory is not associated with an agent ID.</para>
+                /// <para>The agent ID. The length is limited to 1 to 128 UTF-8 bytes. It cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with an agent ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>agent-001</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AgentId { get; set; }
 
                 /// <summary>
-                /// <para>The session ID. The length is limited to 1 to 128 UTF-8 bytes. Slashes (/) and asterisks (*) are not allowed. This field is not returned if the memory is not associated with a session ID.</para>
+                /// <para>The session ID. The length is limited to 1 to 128 UTF-8 bytes. It cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with a session ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>session-001</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string SessionId { get; set; }
 
                 /// <summary>
-                /// <para>The user ID. The length is limited to 1 to 128 UTF-8 bytes. Slashes (/) and asterisks (*) are not allowed. This field is not returned if the memory is not associated with a user ID.</para>
+                /// <para>The user ID. The length is limited to 1 to 128 UTF-8 bytes. It cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with a user ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user-001</para>

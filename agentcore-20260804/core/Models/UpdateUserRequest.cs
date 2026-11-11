@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class UpdateUserRequest : TeaModel {
         /// <summary>
-        /// <para>The request body for updating the user.</para>
+        /// <para>The request body for updating a user.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public UpdateUserRequestBody Body { get; set; }
         public class UpdateUserRequestBody : TeaModel {
             /// <summary>
-            /// <para>The display name of the user. The name must be 1 to 32 characters in length. At least one of displayName, email, and note must be specified.</para>
+            /// <para>The display name of the user. The name must be 1 to 32 characters in length. You must specify at least one of the displayName, email, and note parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>John Doe</para>

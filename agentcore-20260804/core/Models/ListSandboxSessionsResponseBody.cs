@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records per page for the current query.</para>
+        /// <para>The maximum number of records per page for this query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. A value of true indicates that the request is successful. A value of false indicates that the request fails.</para>
+        /// <para>Indicates whether the request is successful. A value of true indicates success, and a value of false indicates failure.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

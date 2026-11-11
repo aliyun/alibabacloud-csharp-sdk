@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string BodyShrink { get; set; }
 
         /// <summary>
-        /// <para>The idempotency token passed through query parameters. Required when explicitly submitting customImage or container.type=custom. Optional for ACR image and code package submissions. The length is 1 to 128 characters. Letters, digits, periods, underscores, colons, and hyphens are allowed. Reuse the same token for retries of the same submission. Using the same token for different parameters is rejected.</para>
+        /// <para>The idempotency token passed as a query parameter. This parameter is required when you explicitly submit a customImage or set container.type to custom. It is optional when you submit an ACR image or a code package. The token must be 1 to 128 characters in length and can contain letters, digits, periods, underscores, colons, and hyphens. Reuse the same token for retries of the same submission. Requests with the same token but different parameters are rejected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom-agent-request-20261010-001</para>

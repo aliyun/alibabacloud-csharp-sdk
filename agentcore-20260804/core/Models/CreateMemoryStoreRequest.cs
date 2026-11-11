@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class CreateMemoryStoreRequest : TeaModel {
         /// <summary>
-        /// <para>The MemoryStore creation request.</para>
+        /// <para>The request to create a memory store.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]
@@ -18,27 +18,27 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateMemoryStoreRequestBody Body { get; set; }
         public class CreateMemoryStoreRequestBody : TeaModel {
             /// <summary>
-            /// <para>The description of the MemoryStore, up to 1,024 characters.</para>
+            /// <para>The description of the memory store. The description can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Used to save long-term user preferences</para>
+            /// <para>Used to store long-term user preferences</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The custom extraction instructions, up to 4,096 characters.</para>
+            /// <para>The custom extraction instructions. The instructions can be up to 4,096 characters in length.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Extract only explicitly expressed long-term user preferences</para>
+            /// <para>Extract only long-term preferences explicitly expressed by the user</para>
             /// </summary>
             [NameInMap("extractInstructions")]
             [Validation(Required=false)]
             public string ExtractInstructions { get; set; }
 
             /// <summary>
-            /// <para>The name of the MemoryStore. The name must be 1 to 64 characters in length and can contain only lowercase letters, digits, and hyphens (-). The name cannot be modified after creation.</para>
+            /// <para>The name of the memory store. The name must be 1 to 64 characters in length and can contain only lowercase letters, digits, and hyphens (-). The name cannot be modified after creation.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

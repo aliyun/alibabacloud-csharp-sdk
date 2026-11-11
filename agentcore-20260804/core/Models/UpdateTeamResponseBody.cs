@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AgentId { get; set; }
 
                 /// <summary>
-                /// <para>The role of the agent in the team. Valid values: LEADER, WORKER. Each team must have exactly one LEADER.</para>
+                /// <para>The role of the agent in the team. Valid values: LEADER and WORKER. Each team must have exactly one LEADER.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>WORKER</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The creation time in RFC 3339 UTC format.</para>
+            /// <para>The creation time in UTC format based on RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -69,14 +69,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The team description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Team responsible for intelligent customer service</para>
+            /// <para>The team responsible for intelligent customer service</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The team name. It can contain only lowercase letters, digits, and hyphens. It must start and end with a lowercase letter or a digit, and must be 1 to 128 characters in length.</para>
+            /// <para>The team name. The name can contain only lowercase letters, digits, and hyphens. It must start and end with a lowercase letter or a digit, and must be 1 to 128 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>team-01</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The team status. Valid values: Creating, Active, Updating, Deleting, Failed, Deleted.</para>
+            /// <para>The team status. Valid values: Creating, Active, Updating, Deleting, Failed, and Deleted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string TeamId { get; set; }
 
             /// <summary>
-            /// <para>The time of the last update in RFC 3339 UTC format.</para>
+            /// <para>The time of the last modification in UTC format based on RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<UpdateTeamResponseBodyDataUsers> Users { get; set; }
             public class UpdateTeamResponseBodyDataUsers : TeaModel {
                 /// <summary>
-                /// <para>The role of the user in the team. Valid values: ADMIN, MEMBER. Each team must have exactly one ADMIN.</para>
+                /// <para>The role of the user in the team. Valid values: ADMIN and MEMBER. Each team must have exactly one ADMIN.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ADMIN</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class UpdateMemoryStoreRequest : TeaModel {
         /// <summary>
-        /// <para>The update MemoryStore request.</para>
+        /// <para>The update memory store request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]
@@ -18,17 +18,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public UpdateMemoryStoreRequestBody Body { get; set; }
         public class UpdateMemoryStoreRequestBody : TeaModel {
             /// <summary>
-            /// <para>The MemoryStore description. The maximum length is 1,024 characters.</para>
+            /// <para>The description of the memory store. Maximum length: 1024 characters.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Memory store used to save customers\&quot; long-term preferences</para>
+            /// <para>A memory store used to save long-term customer preferences</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The custom memory extraction instructions. The maximum length is 4,096 characters.</para>
+            /// <para>The custom memory extraction instructions. Maximum length: 4096 characters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Extract only long-term preferences explicitly expressed by the user</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The client request token.</para>
+        /// <para>The client token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>memory-store-update-20260909-001</para>

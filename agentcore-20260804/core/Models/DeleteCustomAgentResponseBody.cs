@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The summary of the custom code or image agent whose deletion is accepted. Runtime resources are subsequently cleaned up in the background.</para>
+        /// <para>The summary of the custom code or image agent whose deletion has been accepted. Runtime resources are subsequently cleaned up in the background.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AgentId { get; set; }
 
             /// <summary>
-            /// <para>The creation mode of the agent. The value is CUSTOM for custom code or image agents.</para>
+            /// <para>The creation method of the agent. The value is CUSTOM for custom code or image agents.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CUSTOM</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreateMode { get; set; }
 
             /// <summary>
-            /// <para>The time when the agent was created. The time is in ISO 8601 format, with a trailing Z indicating the UTC time zone. Fractional seconds may be included.</para>
+            /// <para>The time when the agent was created. The time is in ISO 8601 format. A trailing Z indicates the UTC time zone. Fractional seconds may be included.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-10T06:00:00Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The deployment mode of the agent. The value is MANAGED for custom code or image agents because they are deployed and managed by the platform.</para>
+            /// <para>The deployment method of the agent. Custom code or image agents are deployed and managed by the platform, and the value is MANAGED.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MANAGED</para>
@@ -87,17 +87,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string DeployType { get; set; }
 
             /// <summary>
-            /// <para>The description of the agent\&quot;s purpose.</para>
+            /// <para>The description of the agent.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Custom agent providing conversation services</para>
+            /// <para>Custom agent that provides conversation services</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The latest configuration version number. Updates with the same configuration may retain the original version number. This field does not indicate that the configuration has taken effect.</para>
+            /// <para>The current latest configuration version number. Updates with the same configuration may retain the original version number. This field does not indicate that the configuration has taken effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The compute specification of the agent. Valid values: INTERACTIVE, STANDARD, and HEAVY.</para>
+            /// <para>The compute specifications of the agent. Valid values: INTERACTIVE, STANDARD, and HEAVY.</para>
             /// 
             /// <b>Example:</b>
             /// <para>STANDARD</para>
@@ -127,16 +127,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Runtime { get; set; }
 
             /// <summary>
-            /// <para>The overall status of the agent. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Creating: The agent is being created.</description></item>
-            /// <item><description>Running: The agent is running.</description></item>
-            /// <item><description>Failed: The agent failed.</description></item>
-            /// <item><description>Updating: The agent is being updated.</description></item>
-            /// <item><description>Deleting: The agent is being deleted.</description></item>
-            /// <item><description>Deleted: The agent is deleted.</description></item>
-            /// </list>
-            /// <para>Call GetCustomAgent to query the execution progress of the latest configuration.</para>
+            /// <para>The overall status of the agent. Valid values: Creating (the agent is being created), Running (the agent is running), Failed (the agent failed), Updating (the agent is being updated), Deleting (the agent is being deleted), and Deleted (the agent is deleted). Call GetCustomAgent to query the execution progress of the latest configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -146,7 +137,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the agent was last updated. The time is in ISO 8601 format, with a trailing Z indicating the UTC time zone. Fractional seconds may be included.</para>
+            /// <para>The time when the agent was last updated. The time is in ISO 8601 format. A trailing Z indicates the UTC time zone. Fractional seconds may be included.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-10T06:05:00Z</para>
@@ -178,7 +169,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The processing result message of the request. The value is success if the request is successful.</para>
+        /// <para>The processing result description of the request. The value is success if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -188,7 +179,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The unique identifier of the request. It is used to locate and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>550E8400-E29B-41D4-A716-446655440000</para>

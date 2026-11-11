@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AgentId { get; set; }
 
                 /// <summary>
-                /// <para>The role of the agent in the team. Valid values: LEADER and WORKER. Each team must have exactly one LEADER.</para>
+                /// <para>The role of the agent in the team. Valid values: LEADER, WORKER. Each team must have exactly one LEADER.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>WORKER</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The team description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Team responsible for intelligent customer service</para>
+            /// <para>Team responsible for intelligent customer service operations</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The team status. Valid values: Creating, Active, Updating, Deleting, Failed, and Deleted.</para>
+            /// <para>The team status. Valid values: Creating, Active, Updating, Deleting, Failed, Deleted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<CreateTeamResponseBodyDataUsers> Users { get; set; }
             public class CreateTeamResponseBodyDataUsers : TeaModel {
                 /// <summary>
-                /// <para>The role of the user in the team. Valid values: ADMIN and MEMBER. Each team must have exactly one ADMIN.</para>
+                /// <para>The role of the user in the team. Valid values: ADMIN, MEMBER. Each team must have exactly one ADMIN.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ADMIN</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message. An error description is returned if the request fails.</para>
+        /// <para>The response message. An error description is returned when the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

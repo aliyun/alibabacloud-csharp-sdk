@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class DeleteManagedAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value is SUCCESS if the request is successful.</para>
+        /// <para>The business status code. The value is SUCCESS for a successful request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public DeleteManagedAgentResponseBodyData Data { get; set; }
         public class DeleteManagedAgentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The inbound access mode.</para>
+            /// <para>The inbound access method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>API_KEY</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AccessScope { get; set; }
 
             /// <summary>
-            /// <para>The ID of the managed Harness agent.</para>
+            /// <para>The managed Harness agent ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent-1</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. The value is 200 if the request is successful.</para>
+        /// <para>The HTTP status code. The value is 200 for a successful request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public List<PrecheckSkillUploadViaOssResponseBodyData> Data { get; set; }
         public class PrecheckSkillUploadViaOssResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The draft mode. Valid values: HEAD and VERSIONED. The value is determined by the server.</para>
+            /// <para>The draft mode: HEAD or VERSIONED, determined by the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HEAD</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? Exists { get; set; }
 
             /// <summary>
-            /// <para>The content revision identifier of the persistent draft, which is used to determine whether the local cache has expired. This parameter is returned only in HEAD draft mode.</para>
+            /// <para>The content revision identifier of the persistent draft, used to determine whether the local cache is expired, returned only in HEAD draft mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rev-1a2b3c4d</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string HeadRevision { get; set; }
 
             /// <summary>
-            /// <para>The status of the persistent draft. Valid values: draft, reviewing, and reviewed. This parameter is returned only in HEAD draft mode.</para>
+            /// <para>The status of the persistent draft: draft, reviewing, or reviewed, returned only in HEAD draft mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>draft</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ParsedVersion { get; set; }
 
             /// <summary>
-            /// <para>The precheck result code. HEAD_EXISTS indicates that the upload will overwrite the existing persistent draft and requires secondary confirmation. HEAD_LOCKED indicates that the draft is under review and cannot be overwritten. You must withdraw the review first.</para>
+            /// <para>The precheck result code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VALIDATION_FAILED</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string PrecheckCode { get; set; }
 
             /// <summary>
-            /// <para>The reason description.</para>
+            /// <para>The reason.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Resource processing completed</para>

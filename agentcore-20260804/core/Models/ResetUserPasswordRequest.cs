@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AgentCoreUserId { get; set; }
 
             /// <summary>
-            /// <para>The new password. The password must be 8 to 32 characters in length and must contain uppercase letters, lowercase letters, digits, and special characters. It cannot contain the username. If you do not specify this parameter, the server generates a random password.</para>
+            /// <para>The new password. The password must be 8 to 32 characters in length and must contain uppercase letters, lowercase letters, digits, and special characters. The password cannot contain the username. If this parameter is not specified, the server generates a random password.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Example@2026</para>

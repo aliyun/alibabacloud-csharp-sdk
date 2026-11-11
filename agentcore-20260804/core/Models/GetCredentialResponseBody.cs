@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The creation time in RFC 3339 UTC format.</para>
+            /// <para>The creation time in UTC format based on RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CredentialId { get; set; }
 
             /// <summary>
-            /// <para>The masked result of the credential content. For the apiKey type, the key mask is returned. For the mcpHeader type, only the header name is returned without the value.</para>
+            /// <para>The masked credential content. For the apiKey type, the masked key is returned. For the mcpHeader type, only the header name is returned, and the value is not returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;apiKey&quot;:&quot;****************&quot;}</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CredentialType { get; set; }
 
             /// <summary>
-            /// <para>The credential description. The length cannot exceed 256 characters.</para>
+            /// <para>The credential description. It can be up to 256 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>API key used to call the model service in the production environment</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The credential name. It must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 99 characters in length. Runtime reserved names cannot be used.</para>
+            /// <para>The credential name. It must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 99 characters in length. Runtime reserved names are not allowed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>model-api-key</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The list of MCP services to which the credential applies.</para>
+            /// <para>The list of MCP services applicable to the credential.</para>
             /// </summary>
             [NameInMap("resourceRefs")]
             [Validation(Required=false)]
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The resource name. This field is empty if the resource is deleted.</para>
+                /// <para>The resource name. This field is empty if the resource has been deleted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my-mcp-service</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The application scope of the credential. ALL indicates all scopes, and SPECIFIED indicates specified MCP services.</para>
+            /// <para>The application scope of the credential. ALL indicates all scopes, and SPECIFIED indicates specific MCP services.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ResourceScope { get; set; }
 
             /// <summary>
-            /// <para>The time of the last modification in RFC 3339 UTC format.</para>
+            /// <para>The last modification time in UTC format based on RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>

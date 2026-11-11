@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string AgentSpaceName { get; set; }
 
                     /// <summary>
-                    /// <para>The creation time of the AgentSpace, in UTC format compliant with RFC 3339.</para>
+                    /// <para>The creation time of the AgentSpace, in UTC time formatted according to RFC 3339.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2026-08-12T03:04:05Z</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string CreatedAt { get; set; }
 
                     /// <summary>
-                    /// <para>The region ID where the AgentSpace resides.</para>
+                    /// <para>The ID of the region where the AgentSpace is located.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-hangzhou</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public GetWorkspacePluginResponseBodyDataConfigNetworkInternet Internet { get; set; }
                     public class GetWorkspacePluginResponseBodyDataConfigNetworkInternet : TeaModel {
                         /// <summary>
-                        /// <para>Specifies whether public network access is enabled.</para>
+                        /// <para>Indicates whether public network access is enabled.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public GetWorkspacePluginResponseBodyDataConfigNetworkVpc Vpc { get; set; }
                     public class GetWorkspacePluginResponseBodyDataConfigNetworkVpc : TeaModel {
                         /// <summary>
-                        /// <para>Indicates whether VPC network access is currently enabled for the collaboration component.</para>
+                        /// <para>Indicates whether the VPC network is currently enabled for the collaboration component.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public List<string> VSwitchIds { get; set; }
 
                         /// <summary>
-                        /// <para>The VPC ID used for component deployment.</para>
+                        /// <para>The ID of the VPC used for component deployment.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>vpc-bp1example</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message. An error description is returned when the request fails.</para>
+        /// <para>The response message. An error description is returned if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListConnectorsRequest : TeaModel {
         /// <summary>
-        /// <para>The page size. This parameter is not supported in the current version.</para>
+        /// <para>The maximum number of results to return. This parameter is not supported in the current version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

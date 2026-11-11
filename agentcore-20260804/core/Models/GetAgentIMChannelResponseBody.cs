@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public GetAgentIMChannelResponseBodyDataChannelConfig ChannelConfig { get; set; }
             public class GetAgentIMChannelResponseBodyDataChannelConfig : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to display the thinking process in IM messages. Default value: false.</para>
+                /// <para>Indicates whether to display the thinking process in IM messages. Default value: false.</para>
                 /// </summary>
                 [NameInMap("showThinking")]
                 [Validation(Required=false)]
                 public bool? ShowThinking { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to display the tool calling process in IM messages. Default value: false.</para>
+                /// <para>Indicates whether to display the tool calling process in IM messages. Default value: false.</para>
                 /// </summary>
                 [NameInMap("showToolCalls")]
                 [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The IM channel type. Valid values: DINGTALK (DingTalk), FEISHU (Lark), and WECOM (WeCom).</para>
+            /// <para>The IM channel type. Valid values: DINGTALK (DingTalk), FEISHU (Lark), WECOM (WeCom).</para>
             /// 
             /// <b>Example:</b>
             /// <para>DINGTALK</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ImChannelId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the bound service endpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public address.</para>
+            /// <para>The ID of the bound service endpoint. The endpoint must belong to the specified agent and its current version, be ready, and have a public network address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>se-1</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ServiceEndpointId { get; set; }
 
             /// <summary>
-            /// <para>The IM channel status. Valid values: CREATING (creating), READY (ready), UPDATING (updating), FAILED (failed), DELETING (deleting), and DELETE_FAILED (deletion failed).</para>
+            /// <para>The IM channel status. Valid values: CREATING (creating), READY (ready), UPDATING (updating), FAILED (failed), DELETING (deleting), DELETE_FAILED (delete failed).</para>
             /// 
             /// <b>Example:</b>
             /// <para>READY</para>

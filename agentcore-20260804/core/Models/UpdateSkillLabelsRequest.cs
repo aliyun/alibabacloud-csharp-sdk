@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public UpdateSkillLabelsRequestBody Body { get; set; }
         public class UpdateSkillLabelsRequestBody : TeaModel {
             /// <summary>
-            /// <para>The JSON string for version label mapping.</para>
+            /// <para>The version label mapping JSON string.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AcrInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The mount status of the policy for the current target repository.</para>
+            /// <para>The current mount status of the target repository policy.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AuthorizationStatus { get; set; }
 
             /// <summary>
-            /// <para>The onboarding prerequisite, which is not Secret Ready.</para>
+            /// <para>The prerequisite status for access. This is not the Secret Ready status.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string EligibilityStatus { get; set; }
 
             /// <summary>
-            /// <para>The stable reason code for unauthorized or unmet conditions. This field is omitted when no reason is available.</para>
+            /// <para>The stable reason code for unauthorized or ineligible status. This field is omitted when there is no reason.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AcrRamUnauthorized</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ReasonCode { get; set; }
 
             /// <summary>
-            /// <para>The user-readable reason. This field is omitted when no reason is available.</para>
+            /// <para>The user-readable reason. This field is omitted when there is no reason.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Authorize the Workspace role for this ACR instance.</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ReasonMessage { get; set; }
 
             /// <summary>
-            /// <para>The name of the shared role selected by the backend. This field is not editable on the frontend.</para>
+            /// <para>The shared role name selected by the backend. This field is not editable on the frontend.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ConnectionId { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource was created. The time is displayed in the RFC 3339 UTC format.</para>
+            /// <para>The time when the resource was created. The time is in RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-09T00:00:00Z</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// <para>The list of summaries of models associated with the model connection.</para>
+            /// <para>The list of model summaries associated with the model connection.</para>
             /// </summary>
             [NameInMap("models")]
             [Validation(Required=false)]
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The name of the model connection. The name must be 1 to 128 characters in length and cannot contain whitespace characters.</para>
+            /// <para>The name of the model connection. The name must be 1 to 128 non-whitespace characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The model invocation protocol. Currently, only OpenAI/v1 is supported. If this parameter is not specified during model connection creation, this default value is used.</para>
+            /// <para>The model invocation protocol. Currently, only OpenAI/v1 is supported. If this parameter is not specified when you create a model connection, this default value is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OpenAI/v1</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The failure summary returned when the model connection fails to be published, or when deletion fails but the connection remains in the deleting state. This field is empty in other states.</para>
+            /// <para>The failure summary returned when the model connection fails to be published, or when deletion fails but the status remains Deleting. This field is empty for other statuses.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GatewayOperationException</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string StatusReason { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource was last updated. The time is displayed in the RFC 3339 UTC format.</para>
+            /// <para>The time when the resource was last updated. The time is in RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-09T00:00:00Z</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page. Valid values: 0 to 100. Default value: 10. If this parameter is not specified or is set to 0, the default value is used.</para>
+        /// <para>The maximum number of entries to return per page. Valid values: 0 to 100. Default value: 10. If this parameter is not specified or is set to 0, the default value is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Pass the token returned in the previous query for the current request. An empty response indicates that no more pages are available.</para>
+        /// <para>The pagination token. Pass the token returned in the previous response to query the next page. If the response is empty, no more pages are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bW9kZWwtbWFuYWdlbWVudC1vZmZzZXQ6bW9kZWwtY29ubmVjdGlvbjoxMA</para>

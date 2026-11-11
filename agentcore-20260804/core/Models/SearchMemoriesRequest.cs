@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class SearchMemoriesRequest : TeaModel {
         /// <summary>
-        /// <para>The semantic retrieval request.</para>
+        /// <para>The semantic search request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? EnableRerank { get; set; }
 
             /// <summary>
-            /// <para>The string key-value metadata for exact match. A maximum of 16 keys are supported. Each key can be up to 64 characters in length, and each value can be up to 1,024 characters in length.</para>
+            /// <para>The string key-value metadata for exact matching. You can specify up to 16 keys. The maximum length of a key is 64 characters, and the maximum length of a value is 1,024 characters.</para>
             /// </summary>
             [NameInMap("metadata")]
             [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public float? MinScore { get; set; }
 
             /// <summary>
-            /// <para>The minimum similarity. Valid values: 0 to 1. Default value: 0.3. If both minScore and minSimilarity are specified, the AND logic is applied for filtering.</para>
+            /// <para>The minimum similarity. Valid values: 0 to 1. Default value: 0.3. If both minSimilarity and minScore are specified, the AND logic is applied for filtering.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.3</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public float? MinSimilarity { get; set; }
 
             /// <summary>
-            /// <para>The query text. The text can be up to 8,192 characters in length.</para>
+            /// <para>The query text. The maximum length is 8,192 characters.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -63,14 +63,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Query { get; set; }
 
             /// <summary>
-            /// <para>The retrieval scope. UserId, AgentId, and SessionId are all optional.</para>
+            /// <para>The search scope. UserId, AgentId, and SessionId are all optional.</para>
             /// </summary>
             [NameInMap("scope")]
             [Validation(Required=false)]
             public SearchMemoriesRequestBodyScope Scope { get; set; }
             public class SearchMemoriesRequestBodyScope : TeaModel {
                 /// <summary>
-                /// <para>The agent ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain forward slashes (/) or asterisks (*). If the memory is not associated with an agent ID, this field is not returned.</para>
+                /// <para>The agent ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with an agent ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>agent-001</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AgentId { get; set; }
 
                 /// <summary>
-                /// <para>The session ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain forward slashes (/) or asterisks (*). If the memory is not associated with a session ID, this field is not returned.</para>
+                /// <para>The session ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with a session ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>session-001</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string SessionId { get; set; }
 
                 /// <summary>
-                /// <para>The user ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain forward slashes (/) or asterisks (*). If the memory is not associated with a user ID, this field is not returned.</para>
+                /// <para>The user ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with a user ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user-001</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The number of returned results.</para>
+            /// <para>The number of results to return.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

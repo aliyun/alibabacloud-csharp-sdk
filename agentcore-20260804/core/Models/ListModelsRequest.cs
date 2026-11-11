@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string ConnectionId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: 0 to 100. If this parameter is not specified or is set to 0, the default value is 10.</para>
+        /// <para>The maximum number of entries to return per page. Valid values: 0 to 100. If this parameter is not specified or is set to 0, the default value is 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string ModelName { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Specify the token returned from the previous request to retrieve the next page. An empty response indicates that no more pages are available.</para>
+        /// <para>The pagination token. Specify the token returned from the previous query. An empty response indicates that no more pages are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bW9kZWwtbWFuYWdlbWVudC1vZmZzZXQ6bW9kZWw6MTA</para>

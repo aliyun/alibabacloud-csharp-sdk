@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListAgentSpecsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the AgentSpec, used as a search keyword in combination with the search parameter.</para>
+        /// <para>The AgentSpec name, used as a search keyword in combination with the search parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-worker</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string AgentSpecName { get; set; }
 
         /// <summary>
-        /// <para>The business tag used for fuzzy filtering.</para>
+        /// <para>The business tag for fuzzy filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ai</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string BizTag { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the results. Supports download_count. By default, the results are sorted by update time.</para>
+        /// <para>The sort field. Supports download_count. By default, results are sorted by update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>download_count</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Search { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the lists of skills and MCP servers. Default value: false.</para>
+        /// <para>Specifies whether to return the Skills and McpServers lists. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

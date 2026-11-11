@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateSkillDraftRequestBody Body { get; set; }
         public class CreateSkillDraftRequestBody : TeaModel {
             /// <summary>
-            /// <para>The version to fork from. If you do not specify this parameter, a new skill is created.</para>
+            /// <para>The version from which the draft is derived. If you leave this parameter empty, a new skill is created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.1</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string SkillName { get; set; }
 
             /// <summary>
-            /// <para>Specifies the draft version number. If not specified, the version number automatically increments.</para>
+            /// <para>The target version number of the draft. If you do not specify this parameter, the version number automatically increments.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.2</para>

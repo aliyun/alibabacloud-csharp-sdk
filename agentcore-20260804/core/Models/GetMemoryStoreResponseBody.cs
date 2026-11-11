@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ExtractInstructions { get; set; }
 
             /// <summary>
-            /// <para>The MemoryStore identifier.</para>
+            /// <para>The MemoryStore ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ms-2f5f9c5a8d0e4c3b</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string MemoryStoreName { get; set; }
 
             /// <summary>
-            /// <para>The lifecycle state of the MemoryStore.</para>
+            /// <para>The lifecycle status of the MemoryStore.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Ready</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class DeleteExternalAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value is SUCCESS when the request is successful.</para>
+        /// <para>The business status code. A value of SUCCESS indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public DeleteExternalAgentResponseBodyData Data { get; set; }
         public class DeleteExternalAgentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The inbound access mode.</para>
+            /// <para>The inbound access method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>API_KEY</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AccessScope { get; set; }
 
             /// <summary>
-            /// <para>The managed agent ID.</para>
+            /// <para>The ID of the managed agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent-1</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The latest specification version number.</para>
+            /// <para>The latest specification version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. The value is 200 when the request is successful.</para>
+        /// <para>The HTTP status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message about the request processing result.</para>
+        /// <para>The request result message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

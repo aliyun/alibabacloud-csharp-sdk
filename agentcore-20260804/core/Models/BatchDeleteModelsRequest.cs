@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The client token used to ensure idempotence. This parameter is not supported.</para>
+        /// <para>The client token used for idempotence. This parameter is not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-1</para>

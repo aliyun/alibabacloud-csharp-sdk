@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>A sample description used to explain the purpose of the resource</para>
+            /// <para>A sample description to illustrate the purpose of the resource</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The referenced version selector. If omitted, the default is LABEL/latest.</para>
+                /// <para>The referenced version selector. If omitted, the default value is LABEL/latest.</para>
                 /// </summary>
                 [NameInMap("versionSelector")]
                 [Validation(Required=false)]
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the selector. If the type is LABEL, the value is the label name, such as latest. If the type is VERSION, the value is the specific version number.</para>
+                    /// <para>The value of the selector. When the type is LABEL, this is the label name, such as latest. When the type is VERSION, this is the specific version number.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>latest</para>

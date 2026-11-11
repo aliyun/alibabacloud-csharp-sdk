@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? CanDelete { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource was created. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</para>
+            /// <para>The time when the resource was created. The time follows the RFC 3339 format. The trailing Z in the example indicates the UTC time zone.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Image cache creation failed. Try again</para>
+                /// <para>The image cache creation failed. Please try again</para>
                 /// </summary>
                 [NameInMap("message")]
                 [Validation(Required=false)]

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public VerifyWorkspaceOssMountRamAuthorizationResponseBodyData Data { get; set; }
         public class VerifyWorkspaceOssMountRamAuthorizationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The authorization status of the OSS storage.</para>
+            /// <para>The OSS storage authorization status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AUTHORIZED</para>

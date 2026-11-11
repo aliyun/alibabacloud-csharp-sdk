@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         /// <para>The list of managed agents.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;agentId&quot;:&quot;agent-1&quot;,&quot;workspaceId&quot;:&quot;ws-1&quot;,&quot;name&quot;:&quot;my-external-agent&quot;,&quot;description&quot;:&quot;运行在用户环境中的代码评审智能体&quot;,&quot;status&quot;:&quot;Running&quot;,&quot;latestSpecVersion&quot;:1,&quot;effectiveSpecVersion&quot;:1,&quot;createMode&quot;:&quot;CUSTOM&quot;,&quot;runtime&quot;:&quot;qwenpaw&quot;,&quot;deployType&quot;:&quot;SELF_HOSTED&quot;,&quot;createdAt&quot;:&quot;2026-01-01T00:00:00Z&quot;,&quot;updatedAt&quot;:&quot;2026-01-01T00:00:00Z&quot;}]</para>
+        /// <para>[{&quot;agentId&quot;:&quot;agent-1&quot;,&quot;workspaceId&quot;:&quot;ws-1&quot;,&quot;name&quot;:&quot;my-external-agent&quot;,&quot;description&quot;:&quot;Code review agent running in the user environment&quot;,&quot;status&quot;:&quot;Running&quot;,&quot;latestSpecVersion&quot;:1,&quot;effectiveSpecVersion&quot;:1,&quot;createMode&quot;:&quot;CUSTOM&quot;,&quot;runtime&quot;:&quot;qwenpaw&quot;,&quot;deployType&quot;:&quot;SELF_HOSTED&quot;,&quot;createdAt&quot;:&quot;2026-01-01T00:00:00Z&quot;,&quot;updatedAt&quot;:&quot;2026-01-01T00:00:00Z&quot;}]</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ListExternalAgentsResponseBodyItems> Items { get; set; }
         public class ListExternalAgentsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The ID of the managed agent.</para>
+            /// <para>The managed agent ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent-1</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per page for this request.</para>
+        /// <para>The maximum number of entries returned per page for the current request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

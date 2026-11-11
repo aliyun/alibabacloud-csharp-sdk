@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string TargetScope { get; set; }
 
             /// <summary>
-            /// <para>The list of targets to which the rule applies.</para>
+            /// <para>The list of rule targets.</para>
             /// </summary>
             [NameInMap("targets")]
             [Validation(Required=false)]
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned in the current request.</para>
+        /// <para>The maximum number of results returned in this response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The message about the request processing result.</para>
+        /// <para>The request processing result message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of rules that meet the conditions.</para>
+        /// <para>The total number of rules that match the criteria.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class VerifyConnectorShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The verification request body.</para>
+        /// <para>The validation request body.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

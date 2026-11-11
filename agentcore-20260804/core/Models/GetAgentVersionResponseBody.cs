@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public GetAgentVersionResponseBodyData Data { get; set; }
         public class GetAgentVersionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the managed or custom agent that owns the version.</para>
+            /// <para>The ID of the managed or custom agent to which the version belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent-0123456789abcdef0123456789abcdef</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AgentId { get; set; }
 
             /// <summary>
-            /// <para>The system-generated version number that increments for each agent, such as v1 and v2. This is used when querying or deleting versions, and when referencing versions in service endpoints.</para>
+            /// <para>The system-generated version number that increments for the agent, such as v1 and v2. This is used when querying or deleting versions, and when server endpoints reference the version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AgentVersion { get; set; }
 
             /// <summary>
-            /// <para>Indicates only whether the version template and artifact archiving are complete, and does not represent the deployment or running status. A value of READY indicates that the archiving is complete. A value of INVALID indicates that the archiving is missing or inconsistent.</para>
+            /// <para>Indicates only whether the version template and artifact archive are complete, and does not represent the deployment or running status. Valid values: READY indicates that the archive is complete. INVALID indicates that the archive is missing or inconsistent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>READY</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ArtifactStatus { get; set; }
 
             /// <summary>
-            /// <para>For managed agents, the structure is consistent with the data structure of GetManagedAgent. For custom agents, the structure is consistent with the data structure of GetCustomAgent. The desensitization rules are the same.</para>
+            /// <para>For managed agents, the structure is consistent with the data structure of GetManagedAgent. For custom agents, the structure is consistent with the data structure of GetCustomAgent. The data masking rules are the same.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;agentId&quot;:&quot;agent-0123456789abcdef0123456789abcdef&quot;,&quot;workspaceId&quot;:&quot;ws-0123456789abcdef01234&quot;,&quot;name&quot;:&quot;customer-service&quot;,&quot;description&quot;:&quot;Customer service agent&quot;,&quot;status&quot;:&quot;Running&quot;,&quot;latestSpecVersion&quot;:2,&quot;instruction&quot;:&quot;You are a customer service assistant.&quot;}</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The UID of the Alibaba Cloud account of the caller who saved the version. If the API is called by a RAM user, this value is the UID of the Alibaba Cloud account to which the RAM user belongs.</para>
+            /// <para>The UID of the Alibaba Cloud account of the caller who saved the version. If the API is called by a RAM user, this is the UID of the Alibaba Cloud account to which the RAM user belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234567890123456</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedBy { get; set; }
 
             /// <summary>
-            /// <para>The version description provided when the version was saved. It can contain up to 1,024 characters. If no description was provided when the version was saved, this field is empty.</para>
+            /// <para>The version description provided when the version was saved. It can be up to 1,024 characters in length. If no description was provided when the version was saved, this field is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Stable version for the production environment</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The effective release serial number of the agent when the version was saved, which is the effectiveSpecVersion at that time. This value does not change after the version is saved.</para>
+            /// <para>The effective release sequence number of the agent when the version was saved, which is the effectiveSpecVersion at that time. This value does not change after the version is saved.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? TargetSpecVersion { get; set; }
 
             /// <summary>
-            /// <para>The display name specified by the user when the version was saved. For earlier saved versions that did not record a name, the agentVersion is returned.</para>
+            /// <para>The display name specified by the user when the version was saved. For earlier saved versions where no name was recorded, the agentVersion is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Production stable version V1.0</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string VersionName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the AgentCore workspace where the agent that owns the version resides.</para>
+            /// <para>The ID of the AgentCore workspace where the agent that owns this version resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ws-0123456789abcdef01234</para>

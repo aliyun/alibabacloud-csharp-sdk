@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class GetIdentityProviderSCIMResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business result code. If the request fails, handle the issue based on the HTTP status code and the message.</para>
+        /// <para>If the request fails, handle the error based on the HTTP status code and the message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The result structure. For details, see the response fields of this operation. The response of an asynchronous write operation indicates that the request is accepted, but does not guarantee that the background task is completed.</para>
+        /// <para>For the result structure, see the response fields of this operation. The response of an asynchronous write operation indicates that the request is accepted, but does not guarantee that the background task is completed.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string BaseUrl { get; set; }
 
                 /// <summary>
-                /// <para>A value of Enabled indicates that SCIM receiving is enabled, and Disabled indicates that it is disabled. This is not equivalent to the expected value of syncEnabled in AgentCore.</para>
+                /// <para>Enabled indicates that SCIM receiving is enabled, and Disabled indicates that it is disabled. This is not equivalent to the expected value of syncEnabled in AgentCore.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Enabled</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Do not pass true during CustomSSO initialization. It can only be updated later through UpdateIdentityProviderSCIM. Determine the result in combination with operationStatus.</para>
+            /// <para>Do not pass true during CustomSSO initialization. Subsequently, it can only be updated through UpdateIdentityProviderSCIM, and the result is determined in combination with operationStatus.</para>
             /// </summary>
             [NameInMap("syncEnabled")]
             [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The processing status of the current request, which is not equivalent to the final result of the background task.</para>
+        /// <para>The processing status of this request, which is not equivalent to the final result of the background task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request acceptance or error message. For asynchronous tasks, check the task result by using the corresponding query operation.</para>
+        /// <para>The request acceptance or error message. For asynchronous tasks, verify the task result by using the corresponding query operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID. Used to associate this call with troubleshooting. Keep the ID if the request fails.</para>
+        /// <para>Used to associate this call with troubleshooting. Retain this ID if the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request-example</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current request is successful. A value of true indicates that the request is processed successfully. For asynchronous writes, you must continue to query the task results.</para>
+        /// <para>A value of true indicates that the current request is processed successfully. For asynchronous writes, you must continue to query the task results.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

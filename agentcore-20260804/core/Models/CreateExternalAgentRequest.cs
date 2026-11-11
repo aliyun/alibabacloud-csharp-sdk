@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The agent instructions used to guide the behavior of the agent.</para>
+            /// <para>The agent instructions, which are used to guide the behavior of the agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>You are a code review assistant</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Instruction { get; set; }
 
             /// <summary>
-            /// <para>The model configuration. Available only when modelSource is set to PLATFORM.</para>
+            /// <para>The model configuration. Available only when modelSource is PLATFORM.</para>
             /// </summary>
             [NameInMap("model")]
             [Validation(Required=false)]
@@ -66,14 +66,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string ModelName { get; set; }
 
                 /// <summary>
-                /// <para>The model token quota configuration. If this parameter is not provided, no quota is configured.</para>
+                /// <para>The model token quota configuration. If not passed, no quota is configured.</para>
                 /// </summary>
                 [NameInMap("quota")]
                 [Validation(Required=false)]
                 public CreateExternalAgentRequestBodyModelQuota Quota { get; set; }
                 public class CreateExternalAgentRequestBodyModelQuota : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to enable the token quota. If this parameter is not specified, the default value is true. If you set this parameter to false, the quota is disabled and existing quota rules are deleted.</para>
+                    /// <para>Specifies whether to enable the token quota. Default value: true. If set to false, the quota is disabled and existing quota rules are deleted.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>The quota limit type. This parameter is required and validated by the backend when the quota is enabled. Fixed value: token.</para>
+                    /// <para>The quota limit type. Required and validated by the backend when the quota is enabled. Fixed value: token.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>token</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string LimitType { get; set; }
 
                     /// <summary>
-                    /// <para>The quota statistical period. This parameter is required and validated by the backend when the quota is enabled. Valid values: day (daily) and month (monthly).</para>
+                    /// <para>The quota statistical period. Required and validated by the backend when the quota is enabled. Valid values: day (daily) and month (monthly).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>day</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string PeriodType { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of tokens that can be consumed in a single period. This parameter is required and validated by the backend when the quota is enabled. The value must be greater than 0.</para>
+                    /// <para>The maximum number of tokens allowed to be consumed in a single period. Required and validated by the backend when the quota is enabled, and must be greater than 0.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1000000</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The source of the model configuration. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model, and the model parameter cannot be provided at the same time. Valid values: PLATFORM (platform model) and RUNTIME (runtime model).</para>
+            /// <para>The source of the model configuration. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model, and the model parameter cannot be passed at the same time. Valid values: PLATFORM (platform model) and RUNTIME (runtime model).</para>
             /// 
             /// <b>Example:</b>
             /// <para>PLATFORM</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The skill source type. Valid values: REFERENCE (references the AI Registry) and STATIC (statically provided with the package).</para>
+                /// <para>The skill source type. REFERENCE references AI Registry, and STATIC is statically provided with the package.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>REFERENCE</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The skill version field for compatibility with legacy requests. For new requests, use sourceType and versionSelector. Do not submit this parameter in combination with sourceType.</para>
+                /// <para>The skill version field for compatibility with legacy requests. For new requests, use sourceType and versionSelector. Do not submit this field in combination with sourceType.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0.0</para>
@@ -176,14 +176,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Version { get; set; }
 
                 /// <summary>
-                /// <para>The skill reference version selector. Supports LABEL for tags and VERSION for specific versions. If omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</para>
+                /// <para>The skill reference version selector, which supports LABEL tags and VERSION specific versions. If omitted, LABEL/latest is used. STATIC sources do not provide a selector.</para>
                 /// </summary>
                 [NameInMap("versionSelector")]
                 [Validation(Required=false)]
                 public CreateExternalAgentRequestBodySkillsVersionSelector VersionSelector { get; set; }
                 public class CreateExternalAgentRequestBodySkillsVersionSelector : TeaModel {
                     /// <summary>
-                    /// <para>The version selector type. Valid values: LABEL (selects by tag) and VERSION (selects by specific version).</para>
+                    /// <para>The version selector type. LABEL selects by tag, and VERSION selects by specific version.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>LABEL</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The selector value. When the type is LABEL, this is the tag name, such as latest. When the type is VERSION, this is the specific version number.</para>
+                    /// <para>The selector value. For LABEL, it is the tag name (such as latest). For VERSION, it is the specific version number.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>latest</para>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public CreateExternalAgentRequestBodyTemplateAiRegistry AiRegistry { get; set; }
                 public class CreateExternalAgentRequestBodyTemplateAiRegistry : TeaModel {
                     /// <summary>
-                    /// <para>The name of the template in the AI Registry.</para>
+                    /// <para>The name of the template in AI Registry.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The version of the template in the AI Registry.</para>
+                    /// <para>The version of the template in AI Registry.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -280,7 +280,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>A reserved query parameter. Currently, the backend does not provide idempotency guarantees for deduplication or restoring the original processing result based on this identifier.</para>
+        /// <para>The reserved query parameter. Currently, the backend does not provide idempotency guarantees for deduplication or restoring the original acceptance result based on this identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-1</para>

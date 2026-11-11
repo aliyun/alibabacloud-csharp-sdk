@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class UpdateModelShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The model update request body. At least one of the description, contextSize, maxTokens, and capabilities parameters must be non-null.</para>
+        /// <para>The model update request body. At least one non-null parameter among description, contextSize, maxTokens, and capabilities must be provided.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

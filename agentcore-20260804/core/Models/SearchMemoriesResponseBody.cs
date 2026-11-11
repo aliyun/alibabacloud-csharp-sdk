@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The retrieval results.</para>
+        /// <para>The search results.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public SearchMemoriesResponseBodyData Data { get; set; }
         public class SearchMemoriesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of retrieval results.</para>
+            /// <para>The list of search results.</para>
             /// </summary>
             [NameInMap("memories")]
             [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public SearchMemoriesResponseBodyDataMemoriesMemoryScope Scope { get; set; }
                     public class SearchMemoriesResponseBodyDataMemoriesMemoryScope : TeaModel {
                         /// <summary>
-                        /// <para>The agent ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain forward slashes (/) or asterisks (*). If the memory is not associated with an agent ID, this field is not returned.</para>
+                        /// <para>The agent ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with an agent ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>agent-001</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string AgentId { get; set; }
 
                         /// <summary>
-                        /// <para>The session ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain forward slashes (/) or asterisks (*). If the memory is not associated with a session ID, this field is not returned.</para>
+                        /// <para>The session ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with a session ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>session-001</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string SessionId { get; set; }
 
                         /// <summary>
-                        /// <para>The user ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain forward slashes (/) or asterisks (*). If the memory is not associated with a user ID, this field is not returned.</para>
+                        /// <para>The user ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*). This field is not returned if the memory is not associated with a user ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>user-001</para>

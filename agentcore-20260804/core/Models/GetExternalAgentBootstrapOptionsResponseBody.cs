@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class GetExternalAgentBootstrapOptionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value is SUCCESS if the request is successful.</para>
+        /// <para>The business status code. The value is SUCCESS for a successful request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. The value is 200 if the request is successful.</para>
+        /// <para>The HTTP status code. The value is 200 for a successful request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

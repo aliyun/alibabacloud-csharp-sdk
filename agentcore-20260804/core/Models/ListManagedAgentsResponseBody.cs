@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListManagedAgentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. A value of SUCCESS indicates success.</para>
+        /// <para>The business status code. The value is SUCCESS if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code. A value of 200 indicates success.</para>
+        /// <para>The HTTP status code. The value is 200 if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>Returned only in queries. The server calculates this value based on the complete instance distribution, which is not affected by the pagination and filtering of the instance list. If the image tag is missing, pagination is incomplete, or the value cannot be confirmed, this parameter is empty, which is not equivalent to 0.</para>
+                /// <para>The total number of instances that are not aligned with the pool target image tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>Returned only in queries. Currently returns the tag of the pool target image. If the tag cannot be parsed, this parameter is empty and cannot be replaced by the agent configuration version.</para>
+                /// <para>The Harness version corresponding to the pool target image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>202611031754</para>
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page. An empty value indicates that the end of the list is reached.</para>
+        /// <para>The token for the next page. An empty value indicates that the last page is reached.</para>
         /// 
         /// <b>Example:</b>
         /// <para>next-token-1</para>

@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? Document { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the model is able to invoke multiple tool calling operations in a single response.</para>
+                /// <para>Specifies whether the model is able to invoke multiple tool calling operations in a single response.</para>
                 /// </summary>
                 [NameInMap("multiToolCall")]
                 [Validation(Required=false)]
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? ContextSize { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the resource, in RFC 3339 UTC format.</para>
+            /// <para>The time when the resource was created, in RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-09T00:00:00Z</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The model description. The maximum length is 255 characters.</para>
+            /// <para>The model description, which can be up to 255 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>description</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The last update time of the resource, in RFC 3339 UTC format.</para>
+            /// <para>The time when the resource was last updated, in RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-09T00:00:00Z</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message indicating the request processing result.</para>
+        /// <para>The message about the request processing result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

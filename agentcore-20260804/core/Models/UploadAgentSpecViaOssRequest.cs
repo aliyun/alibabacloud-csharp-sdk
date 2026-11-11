@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public UploadAgentSpecViaOssRequestBody Body { get; set; }
         public class UploadAgentSpecViaOssRequestBody : TeaModel {
             /// <summary>
-            /// <para>The name of the OSS object, including the full path.</para>
+            /// <para>The OSS object name (full path).</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string OssObjectName { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to overwrite the existing draft. Default value: false.</para>
+            /// <para>Specifies whether to overwrite existing drafts. Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? Overwrite { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to publish and bring the agent online immediately after the upload. Default value: false.</para>
+            /// <para>Specifies whether to publish and bring online directly after the upload. Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>

@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NameLike { get; set; }
 
         /// <summary>
-        /// <para>The cursor for querying the next page. Do not specify this parameter in the first call. Specify the nextToken value returned in the previous call for subsequent calls.</para>
+        /// <para>The cursor for querying the next page. Do not specify this parameter for the first call. For subsequent calls, specify the nextToken value returned from the previous call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dXNlci1vZmZzZXQ6MTA</para>

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string McpType { get; set; }
 
         /// <summary>
-        /// <para>The pagination token used to query the next page.</para>
+        /// <para>The pagination token for querying the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

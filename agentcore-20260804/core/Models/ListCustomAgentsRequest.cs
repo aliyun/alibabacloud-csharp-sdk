@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The opaque token used to query the next page. Omit this parameter in the first request. For subsequent requests, use the <c>nextToken</c> value returned in the previous response as is, and keep the same workspace. Do not construct this token manually.</para>
+        /// <para>The opaque token for querying the next page. Omit this parameter in the first request. For subsequent requests, use the <c>nextToken</c> value from the previous response as is and keep the same workspace. Do not construct the token manually.</para>
         /// 
         /// <b>Example:</b>
         /// <para>djE6YWdlbnRjb3JlLmFnZW50Lmxpc3QuY3VzdG9tOjIw</para>

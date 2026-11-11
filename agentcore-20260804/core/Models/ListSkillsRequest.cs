@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The sort field. Valid value: download_count. Default value: gmt_modified.</para>
+        /// <para>The field used for sorting. Supported value: download_count. Default value: gmt_modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>download_count</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>Filters the skills by owner.</para>
+        /// <para>The owner used to filter results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user123</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Filters the skills by visibility. Valid values: PUBLIC and PRIVATE.</para>
+        /// <para>The visibility used to filter results. Valid values: PUBLIC and PRIVATE.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PUBLIC</para>

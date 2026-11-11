@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The records on the current page. If no matching items are found, an empty array is returned.</para>
+        /// <para>The records on the current page. An empty array is returned if no matching items are found.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("items")]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public List<ListImageCachesResponseBodyItems> Items { get; set; }
         public class ListImageCachesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The ID of the source ACR instance.</para>
+            /// <para>The source ACR instance ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AcrInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The number of agents that use the cache.</para>
+            /// <para>The number of agents using the cache.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? AgentCount { get; set; }
 
             /// <summary>
-            /// <para>The size of the cache in bytes.</para>
+            /// <para>The cache size in bytes.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? CanDelete { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource was created. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</para>
+            /// <para>The resource creation time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Image cache creation failed. Please try again</para>
+                /// <para>Image cache creation failed. Try again</para>
                 /// </summary>
                 [NameInMap("message")]
                 [Validation(Required=false)]
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The ID of the image cache.</para>
+            /// <para>The image cache ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The domain name of the source image.</para>
+            /// <para>The source image domain name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Registry { get; set; }
 
             /// <summary>
-            /// <para>The repository path of the source image.</para>
+            /// <para>The source image repository path.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Repository { get; set; }
 
             /// <summary>
-            /// <para>The cache status.</para>
+            /// <para>The image cache status.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tag of the source image.</para>
+            /// <para>The source image tag.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The actual page size used for this request. This is not the number of items on the current page.</para>
+        /// <para>The actual page size used for this request, which is not the number of items on the current page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The opaque cursor for the next page. An empty string indicates that there are no more pages.</para>
+        /// <para>The opaque cursor for the next page. An empty string indicates the end of the list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -259,7 +259,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID used for troubleshooting.</para>
+        /// <para>The request ID, which is used for troubleshooting.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. A successful request does not indicate that the cache creation is complete.</para>
+        /// <para>Indicates whether the request is successful. This does not indicate that the cache creation is complete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -281,7 +281,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of records that match the current filter conditions. Do not use this value to determine whether the traversal is complete.</para>
+        /// <para>The total number of records under the current filter conditions. Do not use this value to determine whether the traversal is complete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

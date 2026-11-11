@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The supported code runtime environments.</para>
+        /// <para>The list of supported code runtime environments.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]

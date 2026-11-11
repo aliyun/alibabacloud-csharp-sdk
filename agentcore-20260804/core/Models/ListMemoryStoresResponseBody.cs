@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public List<ListMemoryStoresResponseBodyItems> Items { get; set; }
         public class ListMemoryStoresResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The creation time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</para>
+            /// <para>The creation time in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-23T10:00:00Z</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The description of the MemoryStore.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Used to store the long-term preferences of users</para>
+            /// <para>Used to store long-term user preferences</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The custom extraction instructions.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Extract only the long-term preferences explicitly expressed by the user</para>
+            /// <para>Extract only long-term preferences explicitly expressed by users</para>
             /// </summary>
             [NameInMap("extractInstructions")]
             [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The last update time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</para>
+            /// <para>The last update time in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-23T10:05:00Z</para>

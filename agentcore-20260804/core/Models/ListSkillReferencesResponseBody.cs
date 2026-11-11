@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListSkillReferencesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The skill reference data returned in the paging query.</para>
+        /// <para>The skill reference relationships returned in the paging query.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<ListSkillReferencesResponseBodyDataPageItems> PageItems { get; set; }
             public class ListSkillReferencesResponseBodyDataPageItems : TeaModel {
                 /// <summary>
-                /// <para>The ID of the referencing entity, which is the identifier of the agent or AgentSpec.</para>
+                /// <para>The ID of the referencing entity, which identifies the agent or AgentSpec.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>agent-1234567890abcdef</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The current page number. Pages start from 1.</para>
+            /// <para>The current page number, starting from 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public int? PagesAvailable { get; set; }
 
             /// <summary>
-            /// <para>The total number of reference relationships that meet the specified conditions.</para>
+            /// <para>The total number of reference relationships that meet the filter conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The request ID used for troubleshooting.</para>
+        /// <para>The request ID, which is used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5C6D9E10-1234-5678-9ABC-DEF012345678</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class EnableConnectorShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The request body for enabling the connector.</para>
+        /// <para>The request body for the enable operation.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

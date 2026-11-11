@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListIdentityProviderSCIMCredentialsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business result code. In case of failure, evaluate this code together with the HTTP status code and message.</para>
+        /// <para>The business result code. If the call fails, use this code in combination with the HTTP status code and message for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CredentialId { get; set; }
 
             /// <summary>
-            /// <para>The expiration time returned by AgentIdentity. Only credentials with the Enabled status that have not expired are considered available.</para>
+            /// <para>The expiration time returned by AgentIdentity. Only credentials with the <c>Enabled</c> status that have not expired are considered available.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2027-10-26T00:00:00Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The credential status. Only credentials with the Enabled status that have not expired are considered available. This field is not the operationStatus of a SCIM task.</para>
+            /// <para>The credential status. Only credentials with the <c>Enabled</c> status that have not expired are considered available. This field is not the operationStatus of a SCIM task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>READY</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The processing status of the current request. This does not indicate the final result of the background task.</para>
+        /// <para>The processing status of the current request, which does not equate to the final result of the background task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message indicating request acceptance or an error. For asynchronous task results, verify them by using the corresponding query operation.</para>
+        /// <para>The request acceptance or error message. For asynchronous task results, check the corresponding query operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID. Used to correlate this call for troubleshooting. Retain this ID in case of failure.</para>
+        /// <para>The request ID used to correlate the current call for troubleshooting. Retain this ID if the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request-example</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. A value of true indicates that the request was processed successfully. For asynchronous writes, you must continue to query the task result.</para>
+        /// <para>Indicates whether the current request is processed successfully. For asynchronous writes, you must continue to query the task result even if this value is true.</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]

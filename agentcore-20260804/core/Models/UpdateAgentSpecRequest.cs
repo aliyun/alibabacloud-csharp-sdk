@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public UpdateAgentSpecRequestBody Body { get; set; }
         public class UpdateAgentSpecRequestBody : TeaModel {
             /// <summary>
-            /// <para>The business tags as a JSON-formatted string.</para>
+            /// <para>The business tags in JSON format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;ai&quot;,&quot;agent&quot;]</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string BizTags { get; set; }
 
             /// <summary>
-            /// <para>The label mapping as a JSON-formatted string.</para>
+            /// <para>The label mapping in JSON format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;latest&quot;:&quot;0.0.1&quot;}</para>

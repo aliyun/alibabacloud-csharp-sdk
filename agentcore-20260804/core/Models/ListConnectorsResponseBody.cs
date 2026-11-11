@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? BoundAgentCount { get; set; }
 
             /// <summary>
-            /// <para>The activation time.</para>
+            /// <para>The time when the connector was enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-01T08:00:00Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string EnabledAt { get; set; }
 
             /// <summary>
-            /// <para>The JSON string of the connector configuration. It may contain sensitive credentials after being enabled.</para>
+            /// <para>The JSON string of the connector configuration, which may contain sensitive credentials after the connector is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;site&quot;:&quot;global&quot;,&quot;organizationId&quot;:&quot;org-xxxx&quot;}</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The number of connectors returned in this request.</para>
+        /// <para>The number of connectors returned in the current response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

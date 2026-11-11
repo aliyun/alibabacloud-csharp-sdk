@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request processing result message.</para>
+        /// <para>The message about the request processing result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

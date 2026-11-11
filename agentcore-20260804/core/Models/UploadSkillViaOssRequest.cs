@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public UploadSkillViaOssRequestBody Body { get; set; }
         public class UploadSkillViaOssRequestBody : TeaModel {
             /// <summary>
-            /// <para>The commit message. This parameter is optional.</para>
+            /// <para>The commit message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Update documentation</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CommitMsg { get; set; }
 
             /// <summary>
-            /// <para>The name or path of the OSS object.</para>
+            /// <para>The name of the OSS object.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? Overwrite { get; set; }
 
             /// <summary>
-            /// <para>The target version to upload. This parameter is optional and serves as a fallback when no version information is included in the ZIP package.</para>
+            /// <para>Specifies the target version number for the upload. This parameter is optional and serves as a fallback when no version information is included in the ZIP package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>

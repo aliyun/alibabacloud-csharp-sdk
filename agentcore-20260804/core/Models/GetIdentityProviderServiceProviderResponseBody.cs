@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class GetIdentityProviderServiceProviderResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business result code. If a failure occurs, handle it based on the HTTP status code and the message.</para>
+        /// <para>The business result code. If the request fails, handle the error based on the HTTP status code and the message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data structure of the result. For details, see the response fields of this operation. The response of an asynchronous write operation indicates that the request is accepted, but does not ensure that the background task is completed.</para>
+        /// <para>The SP information. For the result structure, see the response fields of this operation. The response of an asynchronous write operation indicates that the request is accepted, which does not guarantee that the background task is complete.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetIdentityProviderServiceProviderResponseBodyData Data { get; set; }
         public class GetIdentityProviderServiceProviderResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The SAML assertion consumer service (ACS) URL of the local SP. Configure it in the external IdP.</para>
+            /// <para>The SAML assertion consumer URL of the local SP. Configure it in the external IdP.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://sp.example.com/saml/acs">https://sp.example.com/saml/acs</a></para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string EntityId { get; set; }
 
             /// <summary>
-            /// <para>The SP metadata XML of the local SP. Import it to the external IdP. You cannot use it as the IdP XML to submit the SAML configuration.</para>
+            /// <para>The SP metadata XML of the local SP. Use it for import in the external IdP. Do not submit it as the IdP XML for SAML configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para><EntityDescriptor xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sp.example.com/entity"><SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol"><AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sp.example.com/saml/acs" index="0"/></SPSSODescriptor></EntityDescriptor></para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request acceptance or error message. For asynchronous tasks, check the task results by calling the corresponding query operation.</para>
+        /// <para>The message about request acceptance or errors. Check the asynchronous task result by calling the corresponding query operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. You can use the ID to associate the call with troubleshooting. Keep the ID when a failure occurs.</para>
+        /// <para>The ID of the request. You can use the ID to associate the call with troubleshooting. Keep the ID if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request-example</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The agent instructions used to guide the behavior of the agent.</para>
+            /// <para>The agent instruction, which is used to guide the behavior of the agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>You are a code review assistant</para>
@@ -93,7 +93,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string LimitType { get; set; }
 
                     /// <summary>
-                    /// <para>The quota statistical period. This parameter is required and verified by the backend when the quota is enabled. Valid values: day (daily) and month (monthly).</para>
+                    /// <para>The statistical period of the quota. This parameter is required and verified by the backend when the quota is enabled. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>day: Daily.</description></item>
+                    /// <item><description>month: Monthly.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>day</para>
@@ -103,7 +107,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string PeriodType { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of tokens allowed to be consumed in a single period. This parameter is required and verified by the backend when the quota is enabled, and must be greater than 0.</para>
+                    /// <para>The maximum number of tokens allowed to be consumed in a single period. This parameter is required and verified by the backend when the quota is enabled. The value must be greater than 0.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1000000</para>
@@ -117,7 +121,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The model configuration source. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model itself, and the model parameter cannot be passed at the same time. Valid values: PLATFORM (platform model) and RUNTIME (runtime model).</para>
+            /// <para>The source of the model configuration. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model independently, and the model parameter cannot be passed at the same time. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PLATFORM: Platform model.</description></item>
+            /// <item><description>RUNTIME: Runtime model.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>PLATFORM</para>
@@ -155,7 +163,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The skill source type. Valid values: REFERENCE (references AI Registry) and STATIC (statically provided with the package).</para>
+                /// <para>The skill source type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>REFERENCE: References AI Registry assets.</description></item>
+                /// <item><description>STATIC: Statically provided with deployment artifacts.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>REFERENCE</para>
@@ -165,7 +177,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The skill version field compatible with legacy requests. New requests use sourceType and versionSelector, and this parameter is not submitted in combination with sourceType.</para>
+                /// <para>The skill version field for compatibility with legacy requests. For new requests, use sourceType and versionSelector. Do not submit this parameter in combination with sourceType.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0.0</para>
@@ -175,14 +187,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Version { get; set; }
 
                 /// <summary>
-                /// <para>The skill reference version selector, which supports LABEL tags and specific VERSION numbers. If this parameter is omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</para>
+                /// <para>The skill reference version selector, which supports LABEL tags and VERSION specific versions. If this parameter is omitted, LABEL/latest is used. Selectors are not provided for STATIC sources.</para>
                 /// </summary>
                 [NameInMap("versionSelector")]
                 [Validation(Required=false)]
                 public UpdateExternalAgentRequestBodySkillsVersionSelector VersionSelector { get; set; }
                 public class UpdateExternalAgentRequestBodySkillsVersionSelector : TeaModel {
                     /// <summary>
-                    /// <para>The version selector type. Valid values: LABEL (by tag) and VERSION (by specific version).</para>
+                    /// <para>The version selector type. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>LABEL: Selects by tag.</description></item>
+                    /// <item><description>VERSION: Selects by specific version.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>LABEL</para>
@@ -264,7 +280,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The tool type. Valid values: MCP (MCP tool).</para>
+                /// <para>The tool type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>MCP: MCP tool.</description></item>
+                /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -279,7 +298,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The reserved query parameter. The backend does not currently provide idempotence guarantees for deduplication or restoring the original acceptance result based on this identifier.</para>
+        /// <para>The reserved query parameter. The backend does not provide idempotence guarantees for deduplication or recovery of original acceptance results based on this identifier at this time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-1</para>

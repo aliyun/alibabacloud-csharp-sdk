@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The deletion request result.</para>
+        /// <para>The result of the deletion request.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]

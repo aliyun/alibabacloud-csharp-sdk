@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The information about the deleted user.</para>
+        /// <para>The deleted user information.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]

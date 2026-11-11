@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The model debugging result.</para>
+        /// <para>The model test result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ConnectionId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the model debugging is successful.</para>
+            /// <para>Indicates whether the model test is successful.</para>
             /// </summary>
             [NameInMap("debugSuccess")]
             [Validation(Required=false)]
             public bool? DebugSuccess { get; set; }
 
             /// <summary>
-            /// <para>The error code returned when debugging fails.</para>
+            /// <para>The error code for a test failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>UPSTREAM_MODEL_ERROR</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error description returned when debugging fails.</para>
+            /// <para>The error description for a test failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The model endpoint rejected the debug request.</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The number of input tokens consumed by this model debugging request.</para>
+            /// <para>The number of input tokens consumed by the model test request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? InputTokens { get; set; }
 
             /// <summary>
-            /// <para>The duration of this model debugging invocation, in milliseconds.</para>
+            /// <para>The duration of the model test call, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ModelId { get; set; }
 
             /// <summary>
-            /// <para>The number of output tokens consumed by this model debugging response.</para>
+            /// <para>The number of output tokens consumed by the model test response.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? OutputTokens { get; set; }
 
             /// <summary>
-            /// <para>The text response returned by the model when model debugging succeeds. This field is empty if debugging fails.</para>
+            /// <para>The text response returned by the model when the model test succeeds. This field is empty if the test fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ok</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Response { get; set; }
 
             /// <summary>
-            /// <para>The debugging result status.</para>
+            /// <para>The test result status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NORMAL</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message about the request processing result.</para>
+        /// <para>The request processing result message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class GetSkillDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Sample description to illustrate the purpose of the resource</para>
+            /// <para>Sample description used to illustrate the purpose of the resource</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? DownloadCount { get; set; }
 
             /// <summary>
-            /// <para>The draft pattern. A value of HEAD indicates that the skill has a persistent draft, and a value of VERSIONED indicates that a draft with a version number is created for each edit. This is determined by the server, and the client uses this value to invoke routing for What to do next.</para>
+            /// <para>The draft pattern. A value of HEAD indicates that the skill has a persistent draft. A value of VERSIONED indicates that each edit creates a draft with a version number. This pattern is determined by the server, and the client uses it for routing What to do next when they invoke the API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HEAD</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string DraftMode { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the root data is editable.</para>
+            /// <para>Indicates whether the root data is editable.</para>
             /// </summary>
             [NameInMap("editable")]
             [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string EditingVersion { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the skill is enabled.</para>
+            /// <para>Indicates whether the skill is enabled.</para>
             /// </summary>
             [NameInMap("enable")]
             [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string From { get; set; }
 
             /// <summary>
-            /// <para>The label mapping.</para>
+            /// <para>The tag mapping.</para>
             /// </summary>
             [NameInMap("labels")]
             [Validation(Required=false)]
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Scope { get; set; }
 
             /// <summary>
-            /// <para>The update time. It is a UNIX timestamp in milliseconds.</para>
+            /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1787671022000</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<GetSkillDetailResponseBodyDataVersions> Versions { get; set; }
             public class GetSkillDetailResponseBodyDataVersions : TeaModel {
                 /// <summary>
-                /// <para>The version author.</para>
+                /// <para>The author of the version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>alice</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string CommitMsg { get; set; }
 
                 /// <summary>
-                /// <para>The MD5 checksum of the skill content package for this version, which is used to verify content consistency.</para>
+                /// <para>The MD5 checksum of the skill content package for this version, used to verify content consistency.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9e107d9d372bb6826bd81d3542a419d6</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string ContentMd5 { get; set; }
 
                 /// <summary>
-                /// <para>The creation time. It is a UNIX timestamp in milliseconds.</para>
+                /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1787671022000</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Sample description to illustrate the purpose of the resource</para>
+                /// <para>Sample description used to illustrate the purpose of the resource</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public long? DownloadCount { get; set; }
 
                 /// <summary>
-                /// <para>The publish pipeline information.</para>
+                /// <para>The release pipeline information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;status&quot;:&quot;SUCCESS&quot;}</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The update time. It is a UNIX timestamp in milliseconds.</para>
+                /// <para>The update time. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1787671022000</para>
@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string WorkspaceId { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the current user has write permissions.</para>
+            /// <para>Indicates whether the current user has write permissions.</para>
             /// </summary>
             [NameInMap("writeable")]
             [Validation(Required=false)]

@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// <para>The name of the model connection. It must be 1 to 128 non-whitespace characters in length.</para>
+            /// <para>The name of the model connection. The name must be 1 to 128 non-whitespace characters in length.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The model invoke protocol. Currently, only OpenAI/v1 is supported. If this parameter is not specified in Settings during model creation, this default value is used.</para>
+            /// <para>The model invoke protocol. Currently, only OpenAI/v1 is supported. If the connection Settings are not specified during model creation, this default value is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OpenAI/v1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The model provider type.</para>
+            /// <para>The type of the model provider.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

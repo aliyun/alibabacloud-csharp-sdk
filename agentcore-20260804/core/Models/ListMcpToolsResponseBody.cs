@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per page.</para>
+        /// <para>The maximum number of entries to return per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Request processed successfully</para>
+        /// <para>The request is processed successfully</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]

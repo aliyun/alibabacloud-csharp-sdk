@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListAgentTeamsRequest : TeaModel {
         /// <summary>
-        /// <para>The request parameters for querying the list of agent teams.</para>
+        /// <para>The request parameters for querying agent teams.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

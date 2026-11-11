@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetMcpMarketItemResponseBodyData Data { get; set; }
         public class GetMcpMarketItemResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The MCP marketplace template category.</para>
+            /// <para>The category of the MCP marketplace template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>knowledge</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The MCP service description.</para>
+            /// <para>The description of the MCP service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MCP service for querying knowledge bases</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The template display metadata.</para>
+            /// <para>The display metadata of the template.</para>
             /// </summary>
             [NameInMap("displayMetadata")]
             [Validation(Required=false)]
             public Dictionary<string, object> DisplayMetadata { get; set; }
 
             /// <summary>
-            /// <para>The multilingual display content organized by BCP-47 language tags. If a language is not matched, the default fields are used.</para>
+            /// <para>The multilingual display content, organized by BCP-47 language tags. If a language is not matched, the system falls back to the default fields.</para>
             /// </summary>
             [NameInMap("i18n")]
             [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string IconUrl { get; set; }
 
             /// <summary>
-            /// <para>The template installation count.</para>
+            /// <para>The number of times the template has been installed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string McpType { get; set; }
 
             /// <summary>
-            /// <para>The MCP marketplace template name.</para>
+            /// <para>The name of the MCP marketplace template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Knowledge</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The MCP marketplace template instructions.</para>
+            /// <para>The instructions for the MCP marketplace template.</para>
             /// 
             /// <b>Example:</b>
             /// <h1>Knowledge\nKnowledge base query service</h1>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Readme { get; set; }
 
             /// <summary>
-            /// <para>The template schema version.</para>
+            /// <para>The schema version of the template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string SchemaVersion { get; set; }
 
             /// <summary>
-            /// <para>The template input schema, represented as a JSON Schema string.</para>
+            /// <para>The input schema of the template, represented as a JSON Schema string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;addresses&quot;:{&quot;type&quot;:&quot;array&quot;,&quot;items&quot;:{&quot;type&quot;:&quot;string&quot;}}}}</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string TemplateInputSchema { get; set; }
 
             /// <summary>
-            /// <para>The MCP marketplace template version.</para>
+            /// <para>The version of the MCP marketplace template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID used to locate and troubleshoot the request.</para>
+        /// <para>The request ID, which is used to locate and troubleshoot the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request-123456</para>

@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public UpdateWorkspaceRequestBodyNetworkConfiguration NetworkConfiguration { get; set; }
             public class UpdateWorkspaceRequestBodyNetworkConfiguration : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to allow public outbound access from the platform. If this parameter is not specified, the original value is retained. Disabling this feature asynchronously cascades to disable the public network switch for agents. Re-enabling it does not automatically restore the agent switch. This parameter only controls whether the latest versions of managed and custom agents use the public outbound endpoint of the platform. It does not control fixed historical versions, model or MCP proxy endpoints, or the public outbound endpoint of the user VPC.</para>
+                /// <para>Specifies whether to allow public outbound access from the platform. If this parameter is not specified, the original value is retained. Disabling this feature asynchronously cascades to disable the public network switch for agents. Re-enabling it does not automatically restore the agent switch. This parameter only controls whether the latest versions of managed and custom agents use the public outbound gateway of the platform. It does not control fixed historical versions, model or MCP proxy gateways, or the public outbound gateway of the user VPC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>The list of vSwitch IDs. When VPC networking is enabled, the list must contain at least one vSwitch, and all vSwitches must belong to the VPC specified by VpcId.</para>
+                    /// <para>The list of vSwitch IDs. When VPC networking is enabled, at least one vSwitch must be included, and all vSwitches must belong to the VPC specified by VpcId.</para>
                     /// </summary>
                     [NameInMap("vSwitchIds")]
                     [Validation(Required=false)]

@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AgentId { get; set; }
 
                 /// <summary>
-                /// <para>The creation method of the agent. A value of CUSTOM indicates custom creation, and a value of TEMPLATE indicates creation from a template.</para>
+                /// <para>The creation method of the agent. A value of CUSTOM indicates that the agent is custom-created. A value of TEMPLATE indicates that the agent is created from a template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CUSTOM</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string CreateMode { get; set; }
 
                 /// <summary>
-                /// <para>The creation time in UTC format compliant with RFC 3339.</para>
+                /// <para>The creation time in UTC format based on RFC 3339.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-08-12T03:04:05Z</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string CreatedAt { get; set; }
 
                 /// <summary>
-                /// <para>The deployment method of the agent. A value of MANAGED indicates platform-managed deployment, and a value of SELF_HOSTED indicates self-hosted deployment.</para>
+                /// <para>The deployment method of the agent. A value of MANAGED indicates platform-managed deployment. A value of SELF_HOSTED indicates user-managed deployment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MANAGED</para>
@@ -74,10 +74,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string DeployType { get; set; }
 
                 /// <summary>
-                /// <para>The description of the agent.</para>
+                /// <para>The agent description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Agent for handling after-sales inquiries</para>
+                /// <para>Agent that handles after-sales consultations</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public long? LatestSpecVersion { get; set; }
 
                 /// <summary>
-                /// <para>The name of the agent.</para>
+                /// <para>The agent name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>agent-01</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Runtime { get; set; }
 
                 /// <summary>
-                /// <para>The status of the agent. Valid values: Creating, Running, Failed, Updating, Deleting, and Deleted.</para>
+                /// <para>The agent status. Valid values: Creating, Running, Failed, Updating, Deleting, and Deleted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Running</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string TeamRole { get; set; }
 
                 /// <summary>
-                /// <para>The time of the last update in UTC format compliant with RFC 3339.</para>
+                /// <para>The last modification time in UTC format based on RFC 3339.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-08-12T03:04:05Z</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The creation time in UTC format compliant with RFC 3339.</para>
+            /// <para>The creation time in UTC format based on RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -166,17 +166,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The description of the team.</para>
+            /// <para>The team description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Team responsible for AI customer service operations</para>
+            /// <para>Team responsible for intelligent customer service</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The name of the team. The name must be 1 to 128 characters in length and can contain only lowercase letters, digits, and hyphens. It must start and end with a lowercase letter or a digit.</para>
+            /// <para>The team name. It can contain only lowercase letters, digits, and hyphens, must start and end with a lowercase letter or a digit, and must be 1 to 128 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>team-01</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The status of the team. Valid values: Creating, Active, Updating, Deleting, Failed, and Deleted.</para>
+            /// <para>The team status. Valid values: Creating, Active, Updating, Deleting, Failed, and Deleted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string TeamId { get; set; }
 
             /// <summary>
-            /// <para>The time of the last update in UTC format compliant with RFC 3339.</para>
+            /// <para>The last modification time in UTC format based on RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<GetTeamResponseBodyDataUsers> Users { get; set; }
             public class GetTeamResponseBodyDataUsers : TeaModel {
                 /// <summary>
-                /// <para>The authentication method of the user. A value of password indicates local password authentication in the workspace. A value of dingtalk or feishu indicates synchronization and authentication by the corresponding external identity provider.</para>
+                /// <para>The authentication method of the user. A value of password indicates that the local password authentication of the workspace is used. A value of dingtalk or feishu indicates that the user is synchronized and authenticated by the corresponding external identity provider.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>password</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AuthMethod { get; set; }
 
                 /// <summary>
-                /// <para>The creation time in UTC format compliant with RFC 3339.</para>
+                /// <para>The creation time in UTC format based on RFC 3339.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-08-12T03:04:05Z</para>
@@ -253,17 +253,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string CreatedAt { get; set; }
 
                 /// <summary>
-                /// <para>The display name of the user. The name must be 1 to 32 characters in length.</para>
+                /// <para>The display name of the user. It must be 1 to 32 characters in length.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Zhang San</para>
+                /// <para>John Doe</para>
                 /// </summary>
                 [NameInMap("displayName")]
                 [Validation(Required=false)]
                 public string DisplayName { get; set; }
 
                 /// <summary>
-                /// <para>The email address of the user. The address can be up to 256 characters in length.</para>
+                /// <para>The email address of the user. It can be up to 256 characters in length.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="mailto:user-01@example.com">user-01@example.com</a></para>
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Email { get; set; }
 
                 /// <summary>
-                /// <para>The initial password of the user. If a password is specified during creation, the specified password is returned. Otherwise, a random password generated by the server is returned.</para>
+                /// <para>The initial password of the user. If a password is specified during creation, the specified password is returned. If no password is specified, a random password generated by the server is returned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Example@2026</para>
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string InitialPassword { get; set; }
 
                 /// <summary>
-                /// <para>The name of the user. The name must be unique within the workspace, 1 to 32 characters in length, and can contain only lowercase letters, digits, and hyphens. It must start and end with a lowercase letter or a digit.</para>
+                /// <para>The username. It must be unique within the workspace, contain only lowercase letters, digits, and hyphens, start and end with a lowercase letter or a digit, and be 1 to 32 characters in length.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user-01</para>
@@ -293,7 +293,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The note for the user. The note can be up to 1,024 characters in length.</para>
+                /// <para>The user note. It can be up to 1,024 characters in length.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Member of the agent operations team</para>
@@ -303,7 +303,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Note { get; set; }
 
                 /// <summary>
-                /// <para>The status of the user. Valid values: Creating, Active, Updating, Deleting, Failed, and DeleteFailed.</para>
+                /// <para>The user status. Valid values: Creating, Active, Updating, Deleting, Failed, and DeleteFailed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Active</para>
@@ -323,7 +323,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string TeamRole { get; set; }
 
                 /// <summary>
-                /// <para>The time of the last update in UTC format compliant with RFC 3339.</para>
+                /// <para>The last modification time in UTC format based on RFC 3339.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-08-12T03:04:05Z</para>

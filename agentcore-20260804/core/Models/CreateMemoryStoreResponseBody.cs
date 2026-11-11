@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The MemoryStore details.</para>
+        /// <para>The memory store details.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The MemoryStore description.</para>
+            /// <para>The description of the memory store.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Used to save long-term user preferences</para>
+            /// <para>Used to store long-term user preferences</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The custom extraction instructions.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Extract only explicitly expressed long-term user preferences</para>
+            /// <para>Extract only long-term preferences explicitly expressed by the user</para>
             /// </summary>
             [NameInMap("extractInstructions")]
             [Validation(Required=false)]
             public string ExtractInstructions { get; set; }
 
             /// <summary>
-            /// <para>The MemoryStore ID.</para>
+            /// <para>The memory store ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ms-2f5f9c5a8d0e4c3b</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string MemoryStoreId { get; set; }
 
             /// <summary>
-            /// <para>The name of the MemoryStore. The name cannot be modified after creation.</para>
+            /// <para>The name of the memory store. The name cannot be modified after creation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>customer-memory</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string MemoryStoreName { get; set; }
 
             /// <summary>
-            /// <para>The lifecycle state of the MemoryStore.</para>
+            /// <para>The lifecycle state of the memory store.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Ready</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The last update time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</para>
+            /// <para>The last updated time. The time is in RFC 3339 format. The Z at the end of the example indicates the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-09-23T10:05:00Z</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public bool? IncludeModels { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page. Valid values: 0 to 100. Default value: 10. If this parameter is not specified or is set to 0, the default value is used.</para>
+        /// <para>The maximum number of entries to return per page. Valid values: 0 to 100. Default value: 10. If this parameter is not specified or is set to 0, the default value is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The name of the model connection. The name must be 1 to 128 characters in length and cannot contain whitespace characters.</para>
+        /// <para>The name of the model connection. The name must be 1 to 128 non-whitespace characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Pass the token returned in the previous query for the current request. An empty response indicates that no more pages are available.</para>
+        /// <para>The pagination token. Pass the token returned in the previous response to query the next page. If the response is empty, no more pages are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bW9kZWwtbWFuYWdlbWVudC1vZmZzZXQ6bW9kZWwtY29ubmVjdGlvbjoxMA</para>

@@ -1,3 +1,11 @@
+2026-11-11 Version: 3.4.1
+- Update API GetServiceEndpoint: add response parameters Body.data.currentInstances.
+- Update API GetServiceEndpoint: add response parameters Body.data.effectiveCapacity.
+- Update API GetServiceEndpoint: add response parameters Body.data.elasticityPolicy.dynamicPolicy.
+- Update API ListServiceEndpoints: add response parameters Body.items.$.currentInstances.
+- Update API ListServiceEndpoints: add response parameters Body.items.$.elasticityPolicy.dynamicPolicy.
+
+
 2026-11-09 Version: 3.4.0
 - Support API GetSandboxRebuildOperation.
 - Support API RebuildSandbox.

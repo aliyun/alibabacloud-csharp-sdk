@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public UpdateAgentIMChannelCredentialRequestBody Body { get; set; }
         public class UpdateAgentIMChannelCredentialRequestBody : TeaModel {
             /// <summary>
-            /// <para>The channel credentials. You must pass all fields and ensure that the field values are non-empty strings. DingTalk uses clientID and clientSecret. Lark uses appId and appSecret. WeCom uses botId and secret.</para>
+            /// <para>The channel credentials. All credentials must be provided, and field values must be non-empty strings. DingTalk uses clientID and clientSecret, Lark uses appId and appSecret, and WeCom uses botId and secret.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("credential")]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The reserved idempotence token. The backend does not provide persistent idempotence guarantees in the current phase.</para>
+        /// <para>The reserved idempotency token. The backend does not provide persistent idempotency guarantees in the current phase.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-1</para>

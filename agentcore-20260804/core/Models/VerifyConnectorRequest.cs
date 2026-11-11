@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class VerifyConnectorRequest : TeaModel {
         /// <summary>
-        /// <para>The verification request body.</para>
+        /// <para>The validation request body.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public VerifyConnectorRequestBody Body { get; set; }
         public class VerifyConnectorRequestBody : TeaModel {
             /// <summary>
-            /// <para>The JSON string of the connector configuration to be verified. The site value can be global or cn, and serviceAccountKeys must contain at least one item with a serviceAccountKey.</para>
+            /// <para>The JSON string of the connector configuration to be validated. Set site to global or cn. The serviceAccountKeys field must contain at least one item with a serviceAccountKey.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Metadata { get; set; }
 
             /// <summary>
-            /// <para>The connector name. The current value is qodercli.</para>
+            /// <para>The name of the connector. Currently, the value is qodercli.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qodercli</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The connector status.</para>
+            /// <para>The status of the connector.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ENABLED</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The domain name of the target access point. Obtain the value from the DomainName parameter returned by the NAS ListAccessPoints operation. Do not include the protocol, port, or path.</para>
+        /// <para>The domain name of the target access point. Use the DomainName returned by the NAS ListAccessPoints operation. Do not include the protocol, port, or path.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public List<ListPredefinedModelsResponseBodyData> Data { get; set; }
         public class ListPredefinedModelsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The model capability configurations.</para>
+            /// <para>The model capability configuration.</para>
             /// </summary>
             [NameInMap("capabilities")]
             [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? Document { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the model is able to invoke multiple tool calling operations in a single response.</para>
+                /// <para>Specifies whether the model is able to invoke multiple tools in a single response through tool calling.</para>
                 /// </summary>
                 [NameInMap("multiToolCall")]
                 [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? Reasoning { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the model is able to invoke streaming tool calling.</para>
+                /// <para>Specifies whether the model is able to invoke tools through streaming tool calling.</para>
                 /// </summary>
                 [NameInMap("streamToolCall")]
                 [Validation(Required=false)]
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message about the request processing result.</para>
+        /// <para>The request processing result message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

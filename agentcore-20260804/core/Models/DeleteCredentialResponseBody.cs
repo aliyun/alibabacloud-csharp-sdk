@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The information about the deleted credential.</para>
+        /// <para>The deleted credential information.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CredentialId { get; set; }
 
             /// <summary>
-            /// <para>The credential name. The name must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 99 characters in length. You cannot use runtime reserved names.</para>
+            /// <para>The credential name. It must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 99 characters in length. You cannot use runtime reserved names.</para>
             /// 
             /// <b>Example:</b>
             /// <para>model-api-key</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message. An error description is returned if the request fails.</para>
+        /// <para>The response message. Returns an error description when the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

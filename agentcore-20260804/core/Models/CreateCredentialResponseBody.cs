@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateCredentialResponseBodyData Data { get; set; }
         public class CreateCredentialResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the credential was created. The time is in UTC and follows the RFC 3339 format.</para>
+            /// <para>The creation time in RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CredentialType { get; set; }
 
             /// <summary>
-            /// <para>The description of the credential. The description can be up to 256 characters in length.</para>
+            /// <para>The credential description. It can be up to 256 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>API key used to call the model service in the production environment</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The name of the credential. The name must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 99 characters in length. Runtime reserved names cannot be used.</para>
+            /// <para>The credential name. It must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 99 characters in length. Runtime reserved names cannot be used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>model-api-key</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the resource resides.</para>
+            /// <para>The region ID of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the resource. This parameter is empty if the resource is deleted.</para>
+                /// <para>The resource name. This field is empty if the resource is deleted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my-mcp-service</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string ResourceName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the resource. Set the value to mcpServer, which indicates an MCP service.</para>
+                /// <para>The resource type. Currently, only mcpServer is supported, which indicates an MCP service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mcpServer</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The application scope of the credential. ALL indicates all scopes, and SPECIFIED indicates the specified MCP services.</para>
+            /// <para>The applicable scope of the credential. ALL indicates all scopes, and SPECIFIED indicates the specified MCP services.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ResourceScope { get; set; }
 
             /// <summary>
-            /// <para>The time when the credential was last modified. The time is in UTC and follows the RFC 3339 format.</para>
+            /// <para>The last modification time in RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>

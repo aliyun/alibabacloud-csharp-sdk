@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class AddMemoriesRequest : TeaModel {
         /// <summary>
-        /// <para>The write memory request.</para>
+        /// <para>The memory write request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public AddMemoriesRequestBody Body { get; set; }
         public class AddMemoriesRequestBody : TeaModel {
             /// <summary>
-            /// <para>The message list. You must provide either this parameter or Text, but not both. You can specify 1 to 20 messages, and the total size of the content cannot exceed 32,000 UTF-8 bytes.</para>
+            /// <para>The message list. You must provide either this parameter or Text, but not both. The list can contain 1 to 20 messages, and the total size of Content cannot exceed 32,000 UTF-8 bytes.</para>
             /// </summary>
             [NameInMap("messages")]
             [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public Dictionary<string, string> Metadata { get; set; }
 
             /// <summary>
-            /// <para>The time reference point for the batch of messages or text. The value must be in RFC 3339 format with a time zone and support fractional seconds.</para>
+            /// <para>The time reference point for this batch of messages or text. The time must be in RFC 3339 format with a time zone and support fractional seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-05-08T13:56:00+08:00</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public AddMemoriesRequestBodyScope Scope { get; set; }
             public class AddMemoriesRequestBodyScope : TeaModel {
                 /// <summary>
-                /// <para>The agent ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*).</para>
+                /// <para>The agent ID. The length is limited to 1 to 128 UTF-8 bytes. The ID cannot contain a forward slash (/) or an asterisk (*).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>agent-001</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AgentId { get; set; }
 
                 /// <summary>
-                /// <para>The session ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*).</para>
+                /// <para>The session ID. The length is limited to 1 to 128 UTF-8 bytes. The ID cannot contain a forward slash (/) or an asterisk (*).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>session-001</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string SessionId { get; set; }
 
                 /// <summary>
-                /// <para>The user ID. The length is limited to 1 to 128 UTF-8 bytes. The value cannot contain a forward slash (/) or an asterisk (*).</para>
+                /// <para>The user ID. The length is limited to 1 to 128 UTF-8 bytes. The ID cannot contain a forward slash (/) or an asterisk (*).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user-001</para>
@@ -105,14 +105,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to synchronously wait for the memory extraction to complete. Default value: true.</para>
+            /// <para>Specifies whether to synchronously wait for memory extraction to complete. Default value: true.</para>
             /// </summary>
             [NameInMap("sync")]
             [Validation(Required=false)]
             public bool? Sync { get; set; }
 
             /// <summary>
-            /// <para>The text to be written directly. You must provide either this parameter or Messages, but not both. The size cannot exceed 32,000 UTF-8 bytes.</para>
+            /// <para>The text to write directly. You must provide either this parameter or Messages, but not both. The size cannot exceed 32,000 UTF-8 bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The user likes hiking</para>

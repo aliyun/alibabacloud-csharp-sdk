@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListPermissionRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return per page.</para>
+        /// <para>The maximum number of results to return per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The target of the rule.</para>
+        /// <para>The rule target.</para>
         /// 
         /// <b>Example:</b>
         /// <para>agent-1234567890</para>

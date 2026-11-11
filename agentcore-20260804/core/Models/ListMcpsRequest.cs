@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListMcpsRequest : TeaModel {
         /// <summary>
-        /// <para>Filters the results by custom tags. An exact match with the tags is required.</para>
+        /// <para>The custom tag used for filtering. An exact match is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Knowledge base</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string CustomTag { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page.</para>
+        /// <para>The maximum number of entries to return per page. Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The service name or ID of the MCP service. This parameter is used in conjunction with SearchType.</para>
+        /// <para>The MCP service name or service ID. This parameter is used in conjunction with SearchType.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-mcp-server</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Filters the results by official usage tags.</para>
+        /// <para>The official usage tag used for filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>KNOWLEDGE_BASE</para>
@@ -60,12 +60,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string OfficialTag { get; set; }
 
         /// <summary>
-        /// <para>The name matching mode. This parameter takes effect only when Name is specified. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>accurate: Exact match.</description></item>
-        /// <item><description>blur: Fuzzy match.
-        /// Default value: blur.</description></item>
-        /// </list>
+        /// <para>The name match type. This parameter takes effect only when Name is specified. Valid values: accurate (exact match) and blur (fuzzy match). Default value: blur.</para>
         /// 
         /// <b>Example:</b>
         /// <para>blur</para>

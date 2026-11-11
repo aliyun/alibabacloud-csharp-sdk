@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The credential list.</para>
+        /// <para>The list of credentials.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public int? BoundAgentsCounts { get; set; }
 
             /// <summary>
-            /// <para>The creation time in UTC format compliant with RFC 3339.</para>
+            /// <para>The creation time in UTC, formatted according to RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CredentialId { get; set; }
 
             /// <summary>
-            /// <para>The desensitized credential content. For the apiKey type, a key mask is returned. For the mcpHeader type, only the header name is returned, and the value is not returned.</para>
+            /// <para>The masked credential content. For the apiKey type, a key mask is returned. For the mcpHeader type, only the header name is returned, and the header value is not returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;apiKey&quot;:&quot;****************&quot;}</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The credential name. The name must be unique within the workspace, can contain only letters, digits, periods, underscores, and hyphens, and must be 3 to 99 characters in length. Runtime reserved names cannot be used.</para>
+            /// <para>The credential name. The name must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 99 characters in length. You cannot use runtime reserved names.</para>
             /// 
             /// <b>Example:</b>
             /// <para>model-api-key</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string ResourceName { get; set; }
 
                 /// <summary>
-                /// <para>The resource type. Currently, the value is mcpServer, which indicates an MCP service.</para>
+                /// <para>The resource type. The current value is mcpServer, which indicates an MCP service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mcpServer</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The application scope of the credential. ALL indicates all scopes. SPECIFIED indicates specified MCP services.</para>
+            /// <para>The applicable scope of the credential. A value of ALL indicates all scopes. A value of SPECIFIED indicates specified MCP services.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ResourceScope { get; set; }
 
             /// <summary>
-            /// <para>The time of the last modification in UTC format compliant with RFC 3339.</para>
+            /// <para>The time of the last modification in UTC, formatted according to RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records per page that takes effect in the current query.</para>
+        /// <para>The actual maximum number of records returned per page in the current query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

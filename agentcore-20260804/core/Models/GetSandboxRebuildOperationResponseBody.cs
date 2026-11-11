@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class GetSandboxRebuildOperationResponseBody : TeaModel {
         /// <summary>
-        /// <para>Task result code of the API request. A successful request returns SUCCESS. Query task result of the asynchronous task separately.</para>
+        /// <para>The result code of the API request. A successful request returns SUCCESS. Query the asynchronous task result separately.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public GetSandboxRebuildOperationResponseBodyData Data { get; set; }
         public class GetSandboxRebuildOperationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The task error that can be publicly displayed. This is returned upon task failure, cancellation, or override by subsequent operations. This field can be empty in other states.</para>
+            /// <para>The publicly accessible node error. This error is returned when the node fails, is canceled, or subsequent operations override it. It can be empty in other states.</para>
             /// </summary>
             [NameInMap("error")]
             [Validation(Required=false)]
             public GetSandboxRebuildOperationResponseBodyDataError Error { get; set; }
             public class GetSandboxRebuildOperationResponseBodyDataError : TeaModel {
                 /// <summary>
-                /// <para>The task error code, which is used to distinguish between rebuild failures, subsequent instance creation failures, cancellations, or supersessions.</para>
+                /// <para>The task error code. This code is used to distinguish between rebuild failures, subsequent instance creation failures, cancellations, or supersessions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SandboxRebuild.Failed</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The task error description that can be publicly displayed. Keep the task ID for troubleshooting.</para>
+                /// <para>The publicly accessible task error message. Keep the task ID for troubleshooting.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>The Sandbox rebuild did not complete. Contact support with the operation ID.</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string OperationId { get; set; }
 
             /// <summary>
-            /// <para>The logical sandbox ID corresponding to the rebuild. The logical ID remains unchanged after the rebuild.</para>
+            /// <para>The logical sandbox ID corresponding to this rebuild. The logical ID remains unchanged after the rebuild.</para>
             /// 
             /// <b>Example:</b>
             /// <para>01a1b56a-b00f-7aa3-bacf-cc9d04b0****</para>
@@ -76,7 +76,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string SandboxId { get; set; }
 
             /// <summary>
-            /// <para>The overall rebuild status. Valid values: PENDING: waiting to be processed. RUNNING: execute. SUCCEEDED: overall success. FAILED: failed. CANCELED: canceled. SUPERSEDED: override by subsequent operations. UNKNOWN: unconfirmed. Only SUCCEEDED indicates completion. Do not treat UNKNOWN, missing status, or query exceptions as success, and do not automatically resubmit the rebuild.</para>
+            /// <para>The overall rebuild status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PENDING: Waiting to be processed.</description></item>
+            /// <item><description>RUNNING: execute in progress.</description></item>
+            /// <item><description>SUCCEEDED: Overall success.</description></item>
+            /// <item><description>FAILED: Failed.</description></item>
+            /// <item><description>CANCELED: Canceled.</description></item>
+            /// <item><description>SUPERSEDED: override by subsequent operations.</description></item>
+            /// <item><description>UNKNOWN: Unconfirmed.
+            /// Only SUCCEEDED indicates completion. Do not treat UNKNOWN, missing status, or query exceptions as success, and do not automatically resubmit the rebuild.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -88,7 +98,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code corresponding to the API request.</para>
+        /// <para>The HTTP status code of the API request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -98,7 +108,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The result description of the API request. This does not indicate that the asynchronous rebuild task is completed.</para>
+        /// <para>The result message of the API request. This message does not indicate that the asynchronous rebuild task is completed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -108,7 +118,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate the API call.</para>
+        /// <para>The request ID used to trace the API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>01A1BE93-46A7-1A2A-BD62-159FCDAA****</para>

@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string BucketName { get; set; }
 
             /// <summary>
-            /// <para>The name of the workspace.</para>
+            /// <para>The workspace name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>production-agents-v2</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The network configuration of the workspace.</para>
+            /// <para>The workspace network configuration.</para>
             /// </summary>
             [NameInMap("networkConfiguration")]
             [Validation(Required=false)]
             public UpdateWorkspaceResponseBodyDataNetworkConfiguration NetworkConfiguration { get; set; }
             public class UpdateWorkspaceResponseBodyDataNetworkConfiguration : TeaModel {
                 /// <summary>
-                /// <para>Returns the target configuration value. Updating indicates that the change is still in progress, and UpdateFailed indicates that the current change failed. This parameter only controls whether the latest versions of managed and custom agents use the public network egress of the platform. It does not control fixed historical versions, model or MCP proxy egresses, or the public network egress of the user VPC.</para>
+                /// <para>Returns the target configuration value. Updating indicates that the change is still in progress, and UpdateFailed indicates that the current change failed. This setting only controls whether the latest versions of managed and custom agents use the public network egress of the platform. It does not control fixed historical versions, model or MCP proxy egresses, or the public network egress of the user VPC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? PublicEgressEnabled { get; set; }
 
                 /// <summary>
-                /// <para>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. When disabled, the public network ingress for all agent endpoints in the workspace is closed, and the original public network ingress is restored when re-enabled. INNER_DIRECT and user VPC ingress are not affected, and collaboration and Element Web ingress are not controlled by this parameter.</para>
+                /// <para>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. When disabled, the public network ingress of all agent endpoints in the workspace is closed. When re-enabled, the original public network ingress is restored. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this setting.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The region ID of the workspace.</para>
+            /// <para>The ID of the region where the workspace resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The status of the workspace. Valid values: Initializing, Initialized, Deleting, and Deleted.</para>
+            /// <para>The workspace status. Valid values: Initializing, Initialized, Deleting, and Deleted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Initialized</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The storage type of the workspace.</para>
+            /// <para>The workspace storage type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PRIVATE</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string StorageType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the tenant to which the workspace belongs.</para>
+            /// <para>The ID of the tenant.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tenant-123456</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class DeleteModelConnectionRequest : TeaModel {
         /// <summary>
-        /// <para>The client token used for idempotence. This parameter is not currently supported.</para>
+        /// <para>The client token used for idempotence. This parameter is currently not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-1</para>

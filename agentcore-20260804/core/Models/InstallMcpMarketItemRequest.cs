@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class InstallMcpMarketItemRequest : TeaModel {
         /// <summary>
-        /// <para>The MCP configuration submitted when installing the template. The configuration must comply with the input schema of the template.</para>
+        /// <para>The MCP configuration submitted when installing the template. The configuration must conform to the input schema of the template.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? Enabled { get; set; }
 
                 /// <summary>
-                /// <para>The list of backend authentication configurations for HTTP-to-MCP.</para>
+                /// <para>The list of backend authentication configurations for HTTP to MCP.</para>
                 /// </summary>
                 [NameInMap("httpToMcp")]
                 [Validation(Required=false)]
@@ -128,28 +128,28 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The custom tags. Multiple tags are supported. Custom tags are merged and deduplicated with the fixed tags of the template.</para>
+            /// <para>The custom tags. Multiple tags are supported. These tags are merged and deduplicated with the fixed tags of the template.</para>
             /// </summary>
             [NameInMap("customTags")]
             [Validation(Required=false)]
             public List<string> CustomTags { get; set; }
 
             /// <summary>
-            /// <para>The deployment configuration for a code-deployed MCP.</para>
+            /// <para>The deployment configuration for code-deployed MCP.</para>
             /// </summary>
             [NameInMap("deploymentConfig")]
             [Validation(Required=false)]
             public InstallMcpMarketItemRequestBodyDeploymentConfig DeploymentConfig { get; set; }
             public class InstallMcpMarketItemRequestBodyDeploymentConfig : TeaModel {
                 /// <summary>
-                /// <para>The access control for the MCP entry point.</para>
+                /// <para>The MCP ingress access control configuration.</para>
                 /// </summary>
                 [NameInMap("accessControl")]
                 [Validation(Required=false)]
                 public InstallMcpMarketItemRequestBodyDeploymentConfigAccessControl AccessControl { get; set; }
                 public class InstallMcpMarketItemRequestBodyDeploymentConfigAccessControl : TeaModel {
                     /// <summary>
-                    /// <para>The AgentCore credential referenced when the mode is set to CREDENTIAL.</para>
+                    /// <para>The ID of the AgentCore credential referenced when the mode is set to CREDENTIAL.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>credential-id</para>
@@ -159,14 +159,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string CredentialId { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether entry point access control is enabled.</para>
+                    /// <para>Specifies whether to enable ingress access control.</para>
                     /// </summary>
                     [NameInMap("enabled")]
                     [Validation(Required=false)]
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>The access control mode. ANONYMOUS indicates anonymous access, and CREDENTIAL indicates the use of AgentCore access credentials.</para>
+                    /// <para>The access control mode. ANONYMOUS indicates anonymous access. CREDENTIAL indicates authentication by using AgentCore credentials.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>CREDENTIAL</para>
@@ -178,14 +178,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The Agent Identity configuration.</para>
+                /// <para>The agent identity configuration.</para>
                 /// </summary>
                 [NameInMap("agentIdentityConfiguration")]
                 [Validation(Required=false)]
                 public InstallMcpMarketItemRequestBodyDeploymentConfigAgentIdentityConfiguration AgentIdentityConfiguration { get; set; }
                 public class InstallMcpMarketItemRequestBodyDeploymentConfigAgentIdentityConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether authorization is enabled.</para>
+                    /// <para>Specifies whether to enable authorization.</para>
                     /// </summary>
                     [NameInMap("authorizationEnabled")]
                     [Validation(Required=false)]
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string CredentialProviderType { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether Agent Identity is enabled.</para>
+                    /// <para>Specifies whether to enable agent identity.</para>
                     /// </summary>
                     [NameInMap("enabled")]
                     [Validation(Required=false)]
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public InstallMcpMarketItemRequestBodyDeploymentConfigCodeConfiguration CodeConfiguration { get; set; }
                 public class InstallMcpMarketItemRequestBodyDeploymentConfigCodeConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>The temporary code package token returned by GetMcpCodePackageUploadUrl. It is used to create a code deployment after a presigned upload is completed. This parameter and CodePackageUrl are mutually exclusive.</para>
+                    /// <para>The temporary code package token returned by GetMcpCodePackageUploadUrl. It is used to create a code deployment after the presigned upload is completed. This parameter and CodePackageUrl are mutually exclusive.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>upload-token</para>
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public List<string> Command { get; set; }
 
                     /// <summary>
-                    /// <para>The runtime environment for the code package: python3.13, nodejs22, or java17.</para>
+                    /// <para>The runtime environment for the code package, such as python3.13, nodejs22, or java17.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>python3.13</para>
@@ -301,7 +301,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public List<string> Command { get; set; }
 
                     /// <summary>
-                    /// <para>The container entrypoint parameters.</para>
+                    /// <para>The entrypoint arguments for the container.</para>
                     /// </summary>
                     [NameInMap("entrypoint")]
                     [Validation(Required=false)]
@@ -318,7 +318,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string Image { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the image registry.</para>
+                    /// <para>The type of the image repository.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ACR</para>
@@ -328,7 +328,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string ImageRegistryType { get; set; }
 
                     /// <summary>
-                    /// <para>The MCP runtime mode. Custom containers must currently expose the standard MCP themselves. Valid value: SELF_HOSTED.</para>
+                    /// <para>The MCP runtime mode. Custom containers must currently expose the standard MCP themselves. Set this parameter to SELF_HOSTED.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>SELF_HOSTED</para>
@@ -338,7 +338,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string McpRuntimeMode { get; set; }
 
                     /// <summary>
-                    /// <para>The source type of the container. The value is fixed to CONTAINER_IMAGE.</para>
+                    /// <para>The container source type. Currently, this parameter is fixed to CONTAINER_IMAGE.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>CONTAINER_IMAGE</para>
@@ -357,7 +357,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public InstallMcpMarketItemRequestBodyDeploymentConfigHookConfiguration HookConfiguration { get; set; }
                 public class InstallMcpMarketItemRequestBodyDeploymentConfigHookConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>Executes PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in the order of the array.</para>
+                    /// <para>The ordered list of hooks. The system executes the PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in the order of the array.</para>
                     /// </summary>
                     [NameInMap("hooks")]
                     [Validation(Required=false)]
@@ -384,7 +384,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string Description { get; set; }
 
                         /// <summary>
-                        /// <para>Specifies whether the hook is enabled.</para>
+                        /// <para>Specifies whether to enable the hook.</para>
                         /// </summary>
                         [NameInMap("enabled")]
                         [Validation(Required=false)]
@@ -408,7 +408,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public Dictionary<string, string> Headers { get; set; }
 
                         /// <summary>
-                        /// <para>The timeout period in milliseconds.</para>
+                        /// <para>The timeout period of the hook, in milliseconds.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>3000</para>
@@ -418,7 +418,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public int? Timeout { get; set; }
 
                         /// <summary>
-                        /// <para>The hook callback URL.</para>
+                        /// <para>The callback URL of the hook.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para><a href="https://example.com/mcp-hook">https://example.com/mcp-hook</a></para>
@@ -492,7 +492,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public InstallMcpMarketItemRequestBodyDeploymentConfigMcpConfiguration McpConfiguration { get; set; }
                 public class InstallMcpMarketItemRequestBodyDeploymentConfigMcpConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>The path of the MCP endpoint, such as /mcp or /sse.</para>
+                    /// <para>The MCP endpoint path, such as /mcp or /sse.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>/mcp</para>
@@ -502,7 +502,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string EndpointPath { get; set; }
 
                     /// <summary>
-                    /// <para>The number of concurrent sessions per instance. The value is fixed to 1.</para>
+                    /// <para>The number of concurrent sessions per instance. Currently, this parameter is fixed to 1.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -512,7 +512,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? SessionConcurrencyPerInstance { get; set; }
 
                     /// <summary>
-                    /// <para>The session idle timeout in seconds. Default value: 1800.</para>
+                    /// <para>The session idle timeout period. Unit: seconds. Default value: 1800.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1800</para>
@@ -522,7 +522,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? SessionIdleTimeoutSeconds { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum session lifetime in seconds. Default value: 21600.</para>
+                    /// <para>The maximum session lifetime. Unit: seconds. Default value: 21600.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>21600</para>
@@ -541,7 +541,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public InstallMcpMarketItemRequestBodyDeploymentConfigNasConfiguration NasConfiguration { get; set; }
                 public class InstallMcpMarketItemRequestBodyDeploymentConfigNasConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the execution user group.</para>
+                    /// <para>The group ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1000</para>
@@ -587,7 +587,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     }
 
                     /// <summary>
-                    /// <para>The ID of the execution user.</para>
+                    /// <para>The user ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1000</para>
@@ -679,7 +679,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public string BucketPath { get; set; }
 
                         /// <summary>
-                        /// <para>The OSS service endpoint.</para>
+                        /// <para>The OSS endpoint.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para><a href="https://oss-cn-hangzhou.aliyuncs.com">https://oss-cn-hangzhou.aliyuncs.com</a></para>
@@ -724,7 +724,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>The reserved reference to the parameter transformation and result enhancement rule set.</para>
+                    /// <para>The reserved reference for the parameter transformation and result enhancement rule set.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>rules-1</para>
@@ -734,7 +734,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string RuleSetId { get; set; }
 
                     /// <summary>
-                    /// <para>The transformation rule version.</para>
+                    /// <para>The version of the transformation rule.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1.0</para>
@@ -769,7 +769,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public InstallMcpMarketItemRequestBodyDeploymentConfigRuntimeConfiguration RuntimeConfiguration { get; set; }
                 public class InstallMcpMarketItemRequestBodyDeploymentConfigRuntimeConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>The CPU specification in cores. Default value: 0.25.</para>
+                    /// <para>The CPU specifications. Unit: cores. Default value: 0.25.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.25</para>
@@ -779,7 +779,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public double? Cpu { get; set; }
 
                     /// <summary>
-                    /// <para>The ephemeral disk size in MB. Valid values: 512 and 10240.</para>
+                    /// <para>The size of the temporary disk. Unit: MB. Valid values: 512 and 10240.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>512</para>
@@ -796,7 +796,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public Dictionary<string, string> EnvironmentVariables { get; set; }
 
                     /// <summary>
-                    /// <para>The ARN of the RAM role used by user code to access downstream Alibaba Cloud resources.</para>
+                    /// <para>The ARN of the RAM role used when user code accesses downstream Alibaba Cloud resources.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>acs:ram::1234567890123456:role/agentcore-mcp-execution</para>
@@ -816,7 +816,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? InstanceConcurrency { get; set; }
 
                     /// <summary>
-                    /// <para>The memory specification in MB. Default value: 512.</para>
+                    /// <para>The memory specifications. Unit: MB. Default value: 512.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>512</para>
@@ -836,7 +836,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public int? Port { get; set; }
 
                     /// <summary>
-                    /// <para>The function timeout period in seconds. Default value: 300.</para>
+                    /// <para>The function timeout period. Unit: seconds. Default value: 300.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>300</para>
@@ -880,7 +880,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The OpenAPI configuration used for HTTP-to-MCP conversion, represented as a JSON string.</para>
+            /// <para>The OpenAPI configuration used for HTTP to MCP, represented as a JSON string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;openapi&quot;:&quot;3.0.3&quot;,&quot;info&quot;:{&quot;title&quot;:&quot;Knowledge API&quot;,&quot;version&quot;:&quot;1.0.0&quot;},&quot;paths&quot;:{}}</para>
@@ -890,7 +890,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string SwaggerConfig { get; set; }
 
             /// <summary>
-            /// <para>The MCP type. Valid values: DIRECT_PROXY (direct proxy), HTTP_TO_MCP (HTTP-to-MCP), and CODE_PACKAGE (code deployment).</para>
+            /// <para>The MCP type. Valid values: DIRECT_PROXY (direct proxy), HTTP_TO_MCP (HTTP to MCP), and CODE_PACKAGE (code deployment).</para>
             /// 
             /// <b>Example:</b>
             /// <para>CODE_PACKAGE</para>
@@ -902,7 +902,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The reserved query request identifier. The console backend does not read this parameter and does not provide idempotency guarantees, such as deduplication or recovery of the original processing result, based on this identifier.</para>
+        /// <para>The reserved query request identifier. The console backend does not read this parameter and does not provide idempotency guarantees for deduplication or restoring original results based on this identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -912,7 +912,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The template version to install. You can query available versions by calling GetMcpMarketItem.</para>
+        /// <para>The template version to be installed. You can call GetMcpMarketItem to query available versions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class UpdateUserShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The request body for updating the user.</para>
+        /// <para>The request body for updating a user.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

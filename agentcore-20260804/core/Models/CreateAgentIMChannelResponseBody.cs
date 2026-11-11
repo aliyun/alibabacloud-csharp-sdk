@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The information about the created IM channel.</para>
+        /// <para>The IM channel information after creation.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The summary of the channel credentials. Only non-sensitive fields and the names of configured secret fields are returned. Secret values are not returned.</para>
+            /// <para>The channel credential summary. Only non-sensitive fields and the names of configured secret fields are returned. Secret values are not returned.</para>
             /// </summary>
             [NameInMap("credentialSummary")]
             [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The public network access address of the attached ServiceEndpoint.</para>
+            /// <para>The public network access URL of the attached ServiceEndpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://agent.example.com">https://agent.example.com</a></para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ImChannelId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the bound service endpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a publicly accessible address.</para>
+            /// <para>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, and must be ready and have a public address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>se-1</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ServiceEndpointId { get; set; }
 
             /// <summary>
-            /// <para>The status of the IM channel. Valid values: CREATING (creating), READY (ready), UPDATING (updating), FAILED (failed), DELETING (deleting), and DELETE_FAILED (deletion failed).</para>
+            /// <para>The IM channel status. Valid values: CREATING (Creating), READY (Ready), UPDATING (Updating), FAILED (Failed), DELETING (Deleting), and DELETE_FAILED (Deletion failed).</para>
             /// 
             /// <b>Example:</b>
             /// <para>READY</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message about the request processing result.</para>
+        /// <para>The request processing result message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

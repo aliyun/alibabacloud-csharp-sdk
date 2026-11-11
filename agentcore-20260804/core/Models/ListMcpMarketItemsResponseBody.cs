@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The description of the MCP service.</para>
+            /// <para>The MCP service description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MCP service for querying knowledge bases</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public Dictionary<string, object> DisplayMetadata { get; set; }
 
             /// <summary>
-            /// <para>The multilingual display content organized by BCP-47 language tags. If a language is not matched, the system falls back to the default fields.</para>
+            /// <para>The multilingual display content, organized by BCP-47 language tags. Falls back to default fields if the language is not matched.</para>
             /// </summary>
             [NameInMap("i18n")]
             [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? InstallCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the MCP marketplace template.</para>
+            /// <para>The MCP marketplace template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>market-1</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string McpType { get; set; }
 
             /// <summary>
-            /// <para>The name of the MCP marketplace template.</para>
+            /// <para>The MCP marketplace template name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Knowledge</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The usage instructions of the MCP marketplace template.</para>
+            /// <para>The usage instructions for the MCP marketplace template.</para>
             /// 
             /// <b>Example:</b>
             /// <h1>Knowledge\nKnowledge base query service</h1>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Readme { get; set; }
 
             /// <summary>
-            /// <para>The schema version of the template.</para>
+            /// <para>The template schema version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string SchemaVersion { get; set; }
 
             /// <summary>
-            /// <para>The input schema of the template, represented as a JSON Schema string.</para>
+            /// <para>The template input schema, represented as a JSON Schema string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;addresses&quot;:{&quot;type&quot;:&quot;array&quot;,&quot;items&quot;:{&quot;type&quot;:&quot;string&quot;}}}}</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string TemplateInputSchema { get; set; }
 
             /// <summary>
-            /// <para>The version of the MCP marketplace template.</para>
+            /// <para>The MCP marketplace template version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token used to query the next page.</para>
+        /// <para>The pagination token for querying the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID used to locate and troubleshoot the request.</para>
+        /// <para>The request ID, used to locate and troubleshoot the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request-123456</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. If not specified, the server default value is used.</para>
+        /// <para>The number of entries per page. If omitted, the server default value is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

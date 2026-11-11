@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AgentId { get; set; }
 
             /// <summary>
-            /// <para>The error. This parameter is returned only when the task fails. Otherwise, the value is null.</para>
+            /// <para>The error details. This parameter is returned only when the task fails. Otherwise, the value is null.</para>
             /// </summary>
             [NameInMap("error")]
             [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Phase { get; set; }
 
             /// <summary>
-            /// <para>The Console task ID for the current submission.</para>
+            /// <para>The console task ID for the current submission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>agent-example:1</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call is successful.</para>
+        /// <para>Indicates whether the current API call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

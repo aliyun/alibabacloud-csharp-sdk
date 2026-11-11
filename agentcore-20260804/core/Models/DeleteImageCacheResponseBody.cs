@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public DeleteImageCacheResponseBodyData Data { get; set; }
         public class DeleteImageCacheResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the deletion is in progress. The current implementation always returns false. To confirm the visibility of the cache, call GetImageCache or ListImageCaches.</para>
+            /// <para>The flag indicating whether deletion is in progress. The current implementation always returns false. To confirm cache visibility, call GetImageCache or ListImageCaches.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. A successful request does not mean that the cache creation is complete.</para>
+        /// <para>Indicates whether the request is successful. This does not mean that the cache creation is complete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

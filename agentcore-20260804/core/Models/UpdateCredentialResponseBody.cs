@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The credential name. The name must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 99 characters in length. Runtime reserved names cannot be used.</para>
+            /// <para>The credential name. It must be unique within the workspace, contain only letters, digits, periods, underscores, and hyphens, and be 3 to 99 characters in length. Runtime reserved names cannot be used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>model-api-key</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The resource name. This field is empty if the resource has been deleted.</para>
+                /// <para>The resource name. This field is empty if the resource is deleted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my-mcp-service</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string ResourceName { get; set; }
 
                 /// <summary>
-                /// <para>The resource type. Currently, the value is mcpServer, which indicates an MCP service.</para>
+                /// <para>The resource type. The current value is mcpServer, which indicates an MCP service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mcpServer</para>

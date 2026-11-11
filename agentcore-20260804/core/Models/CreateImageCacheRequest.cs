@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateImageCacheRequestBody Body { get; set; }
         public class CreateImageCacheRequestBody : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to allow public network access for the current source reading and transfer. At least one of this parameter and <c>accessVpc</c> must be set to true. The server validates the access conditions of the current workspace.</para>
+            /// <para>Specifies whether to allow the use of the public network for the current source reading and transfer. At least one of this parameter and accessVpc must be set to true. The server validates the access conditions of the current workspace.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? AccessInternet { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to allow the use of a VPC for the current source reading and transfer. At least one of this parameter and <c>accessInternet</c> must be set to true. The server resolves the trusted network of the current workspace and does not modify the runtime network of the agent.</para>
+            /// <para>Specifies whether to allow the use of a VPC for the current source reading and transfer. At least one of this parameter and accessInternet must be set to true. The server resolves the trusted network of the current workspace and does not modify the runtime network of the agent.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The name of the repository under the namespace. Do not include the namespace in the repository name.</para>
+            /// <para>The name of the repository under the namespace. Do not repeat the namespace in this field.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The non-empty request token passed as a query parameter. The current implementation does not guarantee deduplication by this token or recovery of the original acceptance result.</para>
+        /// <para>The non-empty request identifier passed as a query parameter. The current implementation does not guarantee deduplication based on this identifier or recovery of the original acceptance result.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The product entry region, passed as a query parameter. It must match the selected region endpoint and the workspace region.</para>
+        /// <para>The product entry region. This parameter is passed as a query parameter and must match the selected region endpoint and the workspace region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

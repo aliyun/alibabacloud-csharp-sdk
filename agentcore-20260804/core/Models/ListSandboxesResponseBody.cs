@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public int? ActiveSessionCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the sandbox was created, in RFC 3339 UTC format.</para>
+            /// <para>The time when the sandbox was created. The time is in RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-29T00:00:00Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string HarnessVersion { get; set; }
 
             /// <summary>
-            /// <para>The time of the last activity of the sandbox, in RFC 3339 UTC format.</para>
+            /// <para>The time of the last activity of the sandbox. The time is in RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-29T00:02:00Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string LastActiveAt { get; set; }
 
             /// <summary>
-            /// <para>The time of the last heartbeat of the sandbox, in RFC 3339 UTC format.</para>
+            /// <para>The time of the last heartbeat of the sandbox. The time is in RFC 3339 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-29T00:01:00Z</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string LastHeartbeatAt { get; set; }
 
             /// <summary>
-            /// <para>Used to continue calling GetSandboxRebuildOperation to query the overall result after a page refresh. This parameter is empty if there is no historical rebuild. Do not use the ID of a subsequently created task instead.</para>
+            /// <para>Used to continue calling GetSandboxRebuildOperation to query the overall result after the page is refreshed. This parameter is empty if there is no historical rebuild. Do not use the ID of a subsequently created task instead.</para>
             /// 
             /// <b>Example:</b>
             /// <para>01a19f98-906d-7e82-96aa-8b7ea1d1a29d</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Phase { get; set; }
 
             /// <summary>
-            /// <para>The sandbox ID, which can be queried by calling ListSandboxes.</para>
+            /// <para>The sandbox ID. You can query it by calling ListSandboxes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sbx-2</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string SandboxId { get; set; }
 
             /// <summary>
-            /// <para>The server compares the actual image tag of the instance with the pool target image tag. The value is true if the tags are different during the RUNNING, HIBERNATED, or FAILED phase. The value is false if the tags are the same or during other known phases. This parameter is empty if the tag or phase cannot be confirmed, and it cannot be treated as false. The version sequence is not determined by the tag size.</para>
+            /// <para>The server compares the actual image tag of the instance with the target image tag of the pool. The value is true if the tags are different during the RUNNING, HIBERNATED, or FAILED phase. The value is false if the tags are the same or during other known phases. This parameter is empty if the tag or phase cannot be confirmed, and it cannot be treated as false. The version sequence is not determined by the tag size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

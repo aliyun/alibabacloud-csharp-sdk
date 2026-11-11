@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ConvertMcpToFreeEditRequest : TeaModel {
         /// <summary>
-        /// <para>The reserved query request identifier. The current console backend does not read this parameter and does not provide idempotency guarantees for deduplication or recovery of the original processing result based on this identifier.</para>
+        /// <para>The reserved query request identifier. The console backend does not read this parameter and does not provide idempotency guarantees, such as deduplication or restoration of the original processing result, based on this identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>

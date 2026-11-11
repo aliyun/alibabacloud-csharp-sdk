@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string EnabledAt { get; set; }
 
             /// <summary>
-            /// <para>The updated JSON string for the connector configuration. This is sensitive information.</para>
+            /// <para>The updated JSON string of the connector configuration. This is sensitive information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;site&quot;:&quot;global&quot;,&quot;organizationId&quot;:&quot;org-xxxx&quot;}</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Metadata { get; set; }
 
             /// <summary>
-            /// <para>The name of the connector. Currently, the value is qodercli.</para>
+            /// <para>The connector name. Currently, the value is qodercli.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qodercli</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The status of the connector.</para>
+            /// <para>The connector status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ENABLED</para>

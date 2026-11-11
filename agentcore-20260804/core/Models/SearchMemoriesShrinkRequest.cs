@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class SearchMemoriesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The semantic retrieval request.</para>
+        /// <para>The semantic search request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

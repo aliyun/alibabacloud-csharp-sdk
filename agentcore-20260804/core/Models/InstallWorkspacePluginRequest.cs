@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public InstallWorkspacePluginRequestBodyConfigNetworkInternet Internet { get; set; }
                     public class InstallWorkspacePluginRequestBodyConfigNetworkInternet : TeaModel {
                         /// <summary>
-                        /// <para>Specifies whether to enable Internet access. If this parameter is set to true and no VPC is specified, PUB_NET is used. If this parameter is set to true and a VPC is specified, PRIVATE_PUBNET is used. If only a VPC is specified, PRIVATE_NET is used. You must configure at least one of Internet access and VPC access.</para>
+                        /// <para>If set to true and no VPC is specified, PUB_NET is used. If set to true and a VPC is specified, PRIVATE_PUBNET is used. If only a VPC is specified, PRIVATE_NET is used. You must configure at least one of Internet access and VPC.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     }
 
                     /// <summary>
-                    /// <para>The user VPC and the list of vSwitches used to deploy the collaboration component. The zones corresponding to the vSwitches are queried by the server. You do not need to pass the Zones parameter.</para>
+                    /// <para>The user VPC and the list of vSwitches used to deploy the collaboration component. The zones corresponding to the vSwitches are queried by the server, so you do not need to specify the zones.</para>
                     /// </summary>
                     [NameInMap("vpc")]
                     [Validation(Required=false)]
                     public InstallWorkspacePluginRequestBodyConfigNetworkVpc Vpc { get; set; }
                     public class InstallWorkspacePluginRequestBodyConfigNetworkVpc : TeaModel {
                         /// <summary>
-                        /// <para>Explicitly controls whether the collaboration component uses a VPC network. If this parameter is set to false, vpcId and vSwitchIds are ignored. If this parameter is set to true, you must provide a vpcId and at least two vSwitchIds.</para>
+                        /// <para>Explicitly specifies whether the collaboration component uses the VPC network. If set to false, vpcId and vSwitchIds are ignored. If set to true, you must provide both vpcId and at least two vSwitchIds.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                         public List<string> VSwitchIds { get; set; }
 
                         /// <summary>
-                        /// <para>The ID of the user VPC.</para>
+                        /// <para>The user VPC ID.</para>
                         /// <para>This parameter is required.</para>
                         /// 
                         /// <b>Example:</b>
